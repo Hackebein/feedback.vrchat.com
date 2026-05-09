@@ -563,17 +563,21 @@ def get_board_totals(slug_to_urlname=None):
     return totals
 
 
-def compute_newest_scrape_horizon(fresh_by_board):
+def compute_newest_scrape_horizon(fresh_by_board, board_totals, min_posts=500):
     """Return the youngest of each board's oldest `created` from the newest sweep.
 
-    For each board, the oldest `created` in the newest scrape is the cutoff
-    beyond which "newest" alone cannot discover posts. The youngest (most
-    recent) of those per-board cutoffs is the global horizon: any post created
-    before this time on at least one board may be missed by newest sweeps.
-    Returns a datetime (UTC) or None if no boards yielded posts.
+    Only boards with at least `min_posts` total posts are considered, since
+    smaller boards are fully covered by a single newest scrape and have no
+    meaningful horizon. For each qualifying board, the oldest `created` in
+    the newest scrape is the cutoff beyond which "newest" alone cannot
+    discover posts. The youngest (most recent) of those per-board cutoffs is
+    the global horizon. Returns a datetime (UTC) or None.
     """
     horizon = None
-    for posts in fresh_by_board.values():
+    for slug, posts in fresh_by_board.items():
+        total = board_totals.get(slug)
+        if total is None or total < min_posts:
+            continue
         oldest_created = None
         for p in posts:
             c = p.get("created")
@@ -775,7 +779,9 @@ def main():
     t0 = time.time()
 
     fresh_by_board = fetch_newest_all(boards)
-    newest_scrape_horizon = compute_newest_scrape_horizon(fresh_by_board)
+    board_totals = {b["urlName"]: b.get("postCount") or 0
+                    for b in fetch_boards() if b.get("urlName")}
+    newest_scrape_horizon = compute_newest_scrape_horizon(fresh_by_board, board_totals)
     if newest_scrape_horizon:
         print(f"[UPDATE] newest-scrape horizon: {newest_scrape_horizon.isoformat()}")
     stored, deduped = load_all_stored(boards)
