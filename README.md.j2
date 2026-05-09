@@ -1,0 +1,22 @@
+# VRChat Feedback Board Data
+
+Collected **{{ total_collected | comma }}** posts. Freshness: **{{ oldest_updated }}**.
+
+## Boards
+
+| Board | Posts |
+|-------|------:|
+{%- for board in boards %}
+| `{{ board.slug }}` | {{ board.collected | comma }}{% if board.total is not none %} / {{ board.total | comma }} ({{ board.coverage_str }}){% endif %} |
+{%- endfor %}
+| **Total** | **{{ total_row.collected | comma }}** ({{ total_row.coverage_str }}) |
+
+## Data format
+
+Each board file (`boards/<board>.jsonl`) contains one JSON object per line:
+
+```
+{_id, authorID, boardID, categoryID, details, score, status,
+ title, urlName, created, viewerVote, board, boardCommentsArePrivate,
+ category, voteSettings, updatedAt, comments[]}
+```
