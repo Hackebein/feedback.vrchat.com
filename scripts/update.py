@@ -563,7 +563,36 @@ def get_board_totals(slug_to_urlname=None):
     return totals
 
 
-def generate_readme(slug_to_urlname=None):
+def compute_newest_scrape_horizon(fresh_by_board):
+    """Return the youngest of each board's oldest `created` from the newest sweep.
+
+    For each board, the oldest `created` in the newest scrape is the cutoff
+    beyond which "newest" alone cannot discover posts. The youngest (most
+    recent) of those per-board cutoffs is the global horizon: any post created
+    before this time on at least one board may be missed by newest sweeps.
+    Returns a datetime (UTC) or None if no boards yielded posts.
+    """
+    horizon = None
+    for posts in fresh_by_board.values():
+        oldest_created = None
+        for p in posts:
+            c = p.get("created")
+            if not c:
+                continue
+            try:
+                dt = datetime.fromisoformat(c.replace("Z", "+00:00"))
+            except Exception:
+                continue
+            if oldest_created is None or dt < oldest_created:
+                oldest_created = dt
+        if oldest_created is None:
+            continue
+        if horizon is None or oldest_created > horizon:
+            horizon = oldest_created
+    return horizon
+
+
+def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
     """Render README.md from README.md.j2 template with board statistics."""
     import jinja2
 
@@ -664,6 +693,23 @@ def generate_readme(slug_to_urlname=None):
     else:
         oldest_updated_str = "unknown"
 
+    if newest_scrape_horizon:
+        delta = now - newest_scrape_horizon
+        secs = int(delta.total_seconds())
+        if secs < 60:
+            horizon_age = f"{max(secs, 0)}s ago"
+        elif secs < 3600:
+            horizon_age = f"{secs // 60}m ago"
+        elif secs < 86400:
+            horizon_age = f"{secs // 3600}h ago"
+        else:
+            horizon_age = f"{secs // 86400}d ago"
+        newest_scrape_horizon_str = (
+            f"{newest_scrape_horizon.strftime('%Y-%m-%d %H:%M UTC')} ({horizon_age})"
+        )
+    else:
+        newest_scrape_horizon_str = None
+
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(str(ROOT)),
         keep_trailing_newline=True,
@@ -680,6 +726,7 @@ def generate_readme(slug_to_urlname=None):
         total_unknown=total_unknown,
         overall_coverage=overall_coverage,
         oldest_updated=oldest_updated_str,
+        newest_scrape_horizon=newest_scrape_horizon_str,
     )
 
     README_FILE.write_text(rendered)
@@ -728,6 +775,9 @@ def main():
     t0 = time.time()
 
     fresh_by_board = fetch_newest_all(boards)
+    newest_scrape_horizon = compute_newest_scrape_horizon(fresh_by_board)
+    if newest_scrape_horizon:
+        print(f"[UPDATE] newest-scrape horizon: {newest_scrape_horizon.isoformat()}")
     stored, deduped = load_all_stored(boards)
     print(f"[UPDATE] {len(stored)} stored across {len(boards)} board(s)")
     if deduped:
@@ -758,7 +808,7 @@ def main():
 
     try:
         print("[UPDATE] Regenerating README...")
-        generate_readme()
+        generate_readme(newest_scrape_horizon=newest_scrape_horizon)
         print("[UPDATE] README regenerated")
     except Exception as e:
         print(f"[UPDATE] README generation skipped: {e}")
