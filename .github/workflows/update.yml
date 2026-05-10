@@ -36,7 +36,7 @@ jobs:
         run: pip install jinja2
 
       - name: Run update
-        run: python3 scripts/update.py --limit ${{ github.event.inputs.limit || '1500' }}
+        run: python3 scripts/update.py --limit ${{ github.event.inputs.limit || '2500' }}
 
       - name: Commit and push changes
         run: |
