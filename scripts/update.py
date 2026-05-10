@@ -553,6 +553,19 @@ def apply_results(stored, results, now):
 # ---------------------------------------------------------------------------
 # README rendering
 # ---------------------------------------------------------------------------
+def format_coverage_str(collected, total):
+    """Format coverage percent; never show 100%% unless collected >= total."""
+    if total is None or total <= 0:
+        return None
+    if collected >= total:
+        return "100.0%"
+    pct = 100.0 * collected / total
+    for decimals in range(1, 8):
+        if round(pct, decimals) < 100.0:
+            return f"{pct:.{decimals}f}%"
+    return f"{pct:.8f}%"
+
+
 def get_board_totals(slug_to_urlname=None):
     """Return {urlName: postCount} sourced from the public homepage."""
     totals = {}
@@ -636,8 +649,7 @@ def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
         else:
             hidden = None
             unknown = None
-        coverage = (collected / total * 100) if (total and total > 0) else None
-        pct = f"{coverage:.1f}%" if coverage is not None else None
+        pct = format_coverage_str(collected, total) if total is not None else None
         boards.append({
             "slug": slug,
             "collected": collected,
@@ -659,9 +671,10 @@ def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
         "collected": total_collected,
         "hidden": total_hidden,
         "unknown": total_unknown,
-        "total": total_known,
-        "total_str": f"{total_known:,}",
-        "coverage_str": f"{overall_coverage:.1f}%",
+        "total": total_known if total_known > 0 else None,
+        "coverage_str": format_coverage_str(total_from_known, total_known)
+        if total_known > 0
+        else "0.0%",
     }
 
     freshness = None
