@@ -11,7 +11,7 @@ Scrape horizon: **{{ newest_scrape_horizon }}**.
 {%- for board in boards %}
 | `{{ board.slug }}` | {{ board.collected | comma }}{% if board.total is not none %} / {{ board.total | comma }} ({{ board.coverage_str }}){% endif %} |
 {%- endfor %}
-| **Total** | **{{ total_row.collected | comma }}** ({{ total_row.coverage_str }}) |
+| **Total** | **{{ total_row.collected | comma }}**{% if total_row.total is not none %} / **{{ total_row.total | comma }}**{% endif %} ({{ total_row.coverage_str }}) |
 
 ## Data format
 
