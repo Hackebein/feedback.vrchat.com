@@ -230,26 +230,6 @@ def fetch_board_posts(board_slug, sort="newest"):
     return out, seen
 
 
-def _normalize_comment(c):
-    """Map a __data comment object into the on-disk comment shape."""
-    author = c.get("author") or {}
-    reactions = c.get("reactions") or {}
-    if isinstance(reactions, dict):
-        like_count = reactions.get("like") or reactions.get("likes") or 0
-        if not isinstance(like_count, int):
-            like_count = 0
-    else:
-        like_count = 0
-    return {
-        "id": c.get("_id", ""),
-        "body": c.get("value", "") or "",
-        "authorName": (author.get("name") or "") if isinstance(author, dict) else "",
-        "likeCount": like_count,
-        "created": c.get("created", "") or "",
-        "internal": bool(c.get("internal", False)),
-    }
-
-
 def fetch_post_page(board_slug, url_slug, retries=3):
     """
     GET /{board_slug}/p/{url_slug}, parse the embedded `window.__data`.
@@ -318,7 +298,7 @@ def fetch_post_page(board_slug, url_slug, retries=3):
                     continue
                 if not c.get("value"):
                     continue
-                comments.append(_normalize_comment(c))
+                comments.append(dict(c))
             comments.sort(key=lambda x: x.get("created") or "")
 
         return post, comments, False, False
