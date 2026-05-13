@@ -5,7 +5,7 @@ Requires=feedback-ingest.service
 [Timer]
 Unit=feedback-ingest.service
 OnBootSec=5min
-OnUnitActiveSec=10min
+OnUnitActiveSec=1min
 
 [Install]
 WantedBy=timers.target
