@@ -2,10 +2,18 @@ server {
     listen 443 ssl http2;
     server_name @FEEDBACK_PUBLIC_DOMAIN@;
 
-    ssl_certificate /etc/letsencrypt/live/@FEEDBACK_PUBLIC_DOMAIN@/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/@FEEDBACK_PUBLIC_DOMAIN@/privkey.pem;
+    ssl_certificate /etc/ssl/cloudflare/origin/cert.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/origin/key.pem;
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_prefer_server_ciphers off;
+
+    server_tokens off;
+
+    # Strip OpenSearch-injected response headers that fingerprint the upstream.
+    proxy_hide_header X-Opaque-Id;
+    proxy_hide_header X-Elastic-Product;
+    proxy_hide_header X-Opensearch-Product;
+    proxy_hide_header X-Opensearch-Version;
 
     client_max_body_size 25m;
 
@@ -41,11 +49,15 @@ server {
 
     location = /_mapping {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
+        include /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc;
+        include /etc/nginx/conf.d/feedback-search-upstream-auth.inc;
         limit_except GET {
             deny all;
         }
         limit_conn os_search_parallel 10;
         limit_conn_status 429;
+        limit_req zone=os_search_rps burst=20 nodelay;
+        limit_req_status 429;
         proxy_pass http://127.0.0.1:9200/feedback-posts/_mapping$is_args$args;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -55,11 +67,15 @@ server {
 
     location = /_count {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
+        include /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc;
+        include /etc/nginx/conf.d/feedback-search-upstream-auth.inc;
         limit_except GET POST {
             deny all;
         }
         limit_conn os_search_parallel 10;
         limit_conn_status 429;
+        limit_req zone=os_search_rps burst=20 nodelay;
+        limit_req_status 429;
         proxy_pass http://127.0.0.1:9200/feedback-posts/_count$is_args$args;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -69,26 +85,16 @@ server {
 
     location = /_field_caps {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
+        include /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc;
+        include /etc/nginx/conf.d/feedback-search-upstream-auth.inc;
         limit_except GET POST {
             deny all;
         }
         limit_conn os_search_parallel 10;
         limit_conn_status 429;
+        limit_req zone=os_search_rps burst=20 nodelay;
+        limit_req_status 429;
         proxy_pass http://127.0.0.1:9200/feedback-posts/_field_caps$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location ~ ^/_explain/([^/]+)$ {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/feedback-posts/_explain/$1$is_args$args;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -97,11 +103,15 @@ server {
 
     location ~ ^/_doc/([^/]+)$ {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
+        include /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc;
+        include /etc/nginx/conf.d/feedback-search-upstream-auth.inc;
         limit_except GET HEAD {
             deny all;
         }
         limit_conn os_search_parallel 10;
         limit_conn_status 429;
+        limit_req zone=os_search_rps burst=20 nodelay;
+        limit_req_status 429;
         proxy_pass http://127.0.0.1:9200/feedback-posts/_doc/$1$is_args$args;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -111,152 +121,16 @@ server {
 
     location ~ ^/_source/([^/]+)$ {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
+        include /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc;
+        include /etc/nginx/conf.d/feedback-search-upstream-auth.inc;
         limit_except GET HEAD {
             deny all;
         }
         limit_conn os_search_parallel 10;
         limit_conn_status 429;
+        limit_req zone=os_search_rps burst=20 nodelay;
+        limit_req_status 429;
         proxy_pass http://127.0.0.1:9200/feedback-posts/_source/$1$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location = /_mget {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/feedback-posts/_mget$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location = /_validate/query {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/feedback-posts/_validate/query$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location = /_rank_eval {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/feedback-posts/_rank_eval$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location = /_render/template {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/_render/template$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location ~ ^/_render/template/([^/]+)$ {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/_render/template/$1$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location = /_termvectors {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/feedback-posts/_termvectors$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location ~ ^/_termvectors/([^/]+)$ {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/feedback-posts/_termvectors/$1$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location = /_analyze {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 10;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200/_analyze$is_args$args;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location = /_msearch {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST {
-            deny all;
-        }
-        limit_conn os_search_parallel 6;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location ~ ^/_search/scroll($|/) {
-        include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        limit_except GET POST DELETE {
-            deny all;
-        }
-        limit_conn os_search_parallel 6;
-        limit_conn_status 429;
-        proxy_pass http://127.0.0.1:9200;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -265,8 +139,15 @@ server {
 
     location = /_search {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
+        include /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc;
+        include /etc/nginx/conf.d/feedback-search-upstream-auth.inc;
+        limit_except GET POST {
+            deny all;
+        }
         limit_conn os_search_parallel 6;
         limit_conn_status 429;
+        limit_req zone=os_search_rps burst=20 nodelay;
+        limit_req_status 429;
         proxy_pass http://127.0.0.1:9200/feedback-posts/_search$is_args$args;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -276,6 +157,13 @@ server {
 
     location = /health {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
+        include /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc;
+        include /etc/nginx/conf.d/feedback-search-upstream-auth.inc;
+        limit_except GET {
+            deny all;
+        }
+        limit_req zone=os_search_rps burst=20 nodelay;
+        limit_req_status 429;
         proxy_pass http://127.0.0.1:9200/_cluster/health$is_args$args;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -293,10 +181,5 @@ server {
 server {
     listen 80;
     server_name @FEEDBACK_PUBLIC_DOMAIN@;
-    location /.well-known/acme-challenge/ {
-        root /var/www/certbot;
-    }
-    location / {
-        return 301 https://$host$request_uri;
-    }
+    return 301 https://$host$request_uri;
 }

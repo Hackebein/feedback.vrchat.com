@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Create or update a Cloudflare DNS-only (grey cloud) A record for a subdomain.
-# Requires: CF_API_TOKEN, jq, curl.
+# Create or update a Cloudflare PROXIED (orange cloud) A record for a subdomain.
+# Cloudflare is the only origin: ttl is forced to 1 (auto, required when proxied).
+# Requires: CF_API_TOKEN with Zone:DNS:Edit, jq, curl.
 # Usage: CF_API_TOKEN=... ./cloudflare_set_subdomain_a.sh 203.0.113.10
 # Optional: ZONE_NAME=hackebein.dev RECORD_NAME=vrchat-canny
 
@@ -33,7 +34,7 @@ LIST_JSON="$(curl -sS -H "Authorization: Bearer ${CF_API_TOKEN}" \
 ID="$(echo "${LIST_JSON}" | jq -r '.result[0].id // empty')"
 
 PAYLOAD="$(jq -n --arg ip "${IP}" --arg name "${FQDN}" \
-  '{type:"A", name:$name, content:$ip, ttl:300, proxied:false}')"
+  '{type:"A", name:$name, content:$ip, ttl:1, proxied:true}')"
 
 if [[ -n "${ID}" ]]; then
   RES="$(curl -sS -X PATCH \
@@ -54,4 +55,4 @@ if [[ "$(echo "${RES}" | jq -r '.success')" != "true" ]]; then
   exit 1
 fi
 
-echo "OK: ${FQDN} -> ${IP} (DNS only, proxied=false)" >&2
+echo "OK: ${FQDN} -> ${IP} (Cloudflare proxied, orange cloud)" >&2

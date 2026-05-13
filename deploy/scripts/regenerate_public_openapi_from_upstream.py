@@ -38,29 +38,14 @@ MAIN_LATEST_ASSET = f"{SPEC_REPO_RELEASE_BASE}/main-latest/opensearch-openapi.ya
 HTTP_OPS = frozenset({"get", "post", "put", "patch", "delete", "options", "head", "trace"})
 INDEX_PATH_PARAM_REF = "___path.index"
 
-
-# (public_path, upstream_path, allowed HTTP methods) — must match nginx allowlist in
-# deploy/nginx/sites/https-public.conf.template
-ROUTES: list[tuple[str, str, frozenset[str]]] = [
-    ("/health", "/_cluster/health", frozenset({"get"})),
-    ("/_mapping", "/{index}/_mapping", frozenset({"get"})),
-    ("/_count", "/{index}/_count", frozenset({"get", "post"})),
-    ("/_field_caps", "/{index}/_field_caps", frozenset({"get", "post"})),
-    ("/_explain/{id}", "/{index}/_explain/{id}", frozenset({"get", "post"})),
-    ("/_doc/{id}", "/{index}/_doc/{id}", frozenset({"get", "head"})),
-    ("/_source/{id}", "/{index}/_source/{id}", frozenset({"get", "head"})),
-    ("/_mget", "/{index}/_mget", frozenset({"get", "post"})),
-    ("/_validate/query", "/{index}/_validate/query", frozenset({"get", "post"})),
-    ("/_rank_eval", "/{index}/_rank_eval", frozenset({"get", "post"})),
-    ("/_render/template", "/_render/template", frozenset({"get", "post"})),
-    ("/_render/template/{id}", "/_render/template/{id}", frozenset({"get", "post"})),
-    ("/_termvectors", "/{index}/_termvectors", frozenset({"get", "post"})),
-    ("/_termvectors/{id}", "/{index}/_termvectors/{id}", frozenset({"get", "post"})),
-    ("/_analyze", "/_analyze", frozenset({"get", "post"})),
-    ("/_msearch", "/_msearch", frozenset({"get", "post"})),
-    ("/_search/scroll", "/_search/scroll", frozenset({"get", "post", "delete"})),
-    ("/_search/scroll/{scroll_id}", "/_search/scroll/{scroll_id}", frozenset({"get", "post", "delete"})),
-    ("/_search", "/{index}/_search", frozenset({"get", "post"})),
+ROUTES: list[tuple[str, str, frozenset[str], str]] = [
+    ("/health", "/_cluster/health", frozenset({"get"}), "Cluster"),
+    ("/_mapping", "/{index}/_mapping", frozenset({"get"}), "Index"),
+    ("/_count", "/{index}/_count", frozenset({"get", "post"}), "Index"),
+    ("/_field_caps", "/{index}/_field_caps", frozenset({"get", "post"}), "Search"),
+    ("/_doc/{id}", "/{index}/_doc/{id}", frozenset({"get", "head"}), "Index"),
+    ("/_source/{id}", "/{index}/_source/{id}", frozenset({"get", "head"}), "Index"),
+    ("/_search", "/{index}/_search", frozenset({"get", "post"}), "Search"),
 ]
 
 
@@ -121,6 +106,7 @@ def build_path_item(
     upstream_paths: dict[str, Any],
     upstream_key: str,
     allowed: frozenset[str],
+    tag: str,
 ) -> dict[str, Any]:
     if upstream_key not in upstream_paths:
         raise KeyError(f"upstream paths missing {upstream_key!r}")
@@ -136,6 +122,7 @@ def build_path_item(
                 continue
             op_copy = copy.deepcopy(val)
             strip_index_path_parameters(op_copy)
+            op_copy["tags"] = [tag]
             out[key] = op_copy
         else:
             out[key] = copy.deepcopy(val)
@@ -271,17 +258,16 @@ def main() -> int:
         },
         "servers": [{"url": "/", "description": "OpenSearch-shaped paths (same origin as this spec)"}],
         "tags": [
-            {"name": "Search", "description": "Search, scroll, multi-search, explain, field capabilities."},
+            {"name": "Search", "description": "Single-index search and field capabilities."},
             {"name": "Index", "description": "Read-only mapping, counts, documents."},
             {"name": "Cluster", "description": "Cluster health."},
-            {"name": "Analysis", "description": "Text analysis (`/_analyze`)."},
         ],
         "paths": {},
         "components": {},
     }
 
-    for public_path, upstream_path, methods in ROUTES:
-        doc["paths"][public_path] = build_path_item(upstream_paths, upstream_path, methods)
+    for public_path, upstream_path, methods, tag in ROUTES:
+        doc["paths"][public_path] = build_path_item(upstream_paths, upstream_path, methods, tag)
 
     absorb_components(upstream, doc, doc["paths"])
 
