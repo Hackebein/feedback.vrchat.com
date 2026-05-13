@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer git pull ingest + alias-swap
+Requires=feedback-ingest.service
+
+[Timer]
+Unit=feedback-ingest.service
+OnBootSec=5min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target

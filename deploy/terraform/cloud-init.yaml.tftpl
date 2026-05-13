@@ -1,0 +1,27 @@
+#cloud-config
+package_update: true
+
+write_files:
+  - path: /etc/sysctl.d/99-feedback-opensearch-vm.conf
+    content: |
+      vm.max_map_count = 262144
+    permissions: "0644"
+
+runcmd:
+  - [sysctl, --system]
+  - |
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update -y
+    apt-get install -y docker.io docker-compose-v2 git python3-venv
+  - [systemctl, enable, --now, docker]
+  - |
+    set -eux
+    install -d "$(dirname '${repo_clone_dir}')"
+    if [ ! -d '${repo_clone_dir}/.git' ]; then
+      git clone --depth 1 '${repo_url}' '${repo_clone_dir}'
+    fi
+  - |
+    set -eux
+    cd '${repo_clone_dir}'
+    docker compose -f deploy/docker-compose.yml up -d

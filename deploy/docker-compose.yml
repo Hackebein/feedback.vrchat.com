@@ -1,0 +1,24 @@
+services:
+  opensearch:
+    image: opensearchproject/opensearch:3.6.0
+    environment:
+      - discovery.type=single-node
+      - DISABLE_SECURITY_PLUGIN=true
+      - OPENSEARCH_JAVA_OPTS=-Xms768m -Xmx768m
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - opensearch_data:/usr/share/opensearch/data
+    ports:
+      - "127.0.0.1:9200:9200"
+    expose:
+      - "9200"
+    restart: unless-stopped
+
+volumes:
+  opensearch_data:
