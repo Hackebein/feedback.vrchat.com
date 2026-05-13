@@ -14,6 +14,7 @@ FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/bootstrap_securit
 
 install -d /var/www/vrchat-feedback-search
 install -m 0644 "${REPO}/deploy/nginx/vrchat-feedback-search-openapi.json" /var/www/vrchat-feedback-search/openapi.json
+install -m 0644 "${REPO}/deploy/nginx/scalar-api-reference.html" /var/www/vrchat-feedback-search/scalar-api-reference.html
 
 DOMAIN="vrchat-canny.hackebein.dev"
 if ! command -v nginx >/dev/null 2>&1; then

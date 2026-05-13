@@ -37,7 +37,9 @@ server {
 
     location = / {
         include /etc/nginx/conf.d/vrchat-feedback-search-cors.inc;
-        return 302 /openapi.json;
+        default_type text/html;
+        charset utf-8;
+        alias /var/www/vrchat-feedback-search/scalar-api-reference.html;
     }
 
     location = /openapi.json {
