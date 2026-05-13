@@ -42,6 +42,7 @@ DOMAIN="${DOMAIN}" CF_API_TOKEN="${CF_API_TOKEN}" \
 
 install -d /var/www/vrchat-feedback-search
 install -m 0644 "${NGINX_SRC}/vrchat-feedback-search-openapi.json" /var/www/vrchat-feedback-search/openapi.json
+install -m 0644 "${NGINX_SRC}/scalar-api-reference.html" /var/www/vrchat-feedback-search/scalar-api-reference.html
 
 rm -f /etc/nginx/sites-enabled/default
 
