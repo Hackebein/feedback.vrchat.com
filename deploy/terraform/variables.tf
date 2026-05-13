@@ -22,9 +22,9 @@ variable "image" {
   default     = "ubuntu-24.04"
 }
 
-variable "ssh_public_key" {
+variable "SSH_PUBLIC_KEY" {
   type        = string
-  description = "SSH public key for admin access."
+  description = "SSH public key for admin access (TF_VAR_SSH_PUBLIC_KEY)."
 }
 
 variable "allowed_ssh_cidr" {
@@ -43,10 +43,4 @@ variable "repo_url" {
   type        = string
   description = "Git clone URL for this repository"
   default     = "https://github.com/Hackebein/feedback.vrchat.com.git"
-}
-
-variable "repo_clone_dir" {
-  type        = string
-  description = "Directory on the VPS where the repo is cloned."
-  default     = "/srv/feedback.vrchat.com"
 }

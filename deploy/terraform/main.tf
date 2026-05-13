@@ -1,13 +1,13 @@
 locals {
   user_data = templatefile("${path.module}/cloud-init.yaml.tftpl", {
-    repo_clone_dir = var.repo_clone_dir
-    repo_url       = var.repo_url
+    repo_url             = var.repo_url
+    enable_public_https  = var.enable_public_https
   })
 }
 
 resource "hcloud_ssh_key" "admin" {
   name       = "${var.server_name}-admin"
-  public_key = var.ssh_public_key
+  public_key = var.SSH_PUBLIC_KEY
 }
 
 resource "hcloud_firewall" "opensearch" {

@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# First-time Hetzner provision (Terraform). Expects HCLOUD_TOKEN in the environment.
+# First-time provision: Hetzner (Terraform) + Cloudflare DNS A record at server IPv4.
+# Expects HCLOUD_TOKEN, CF_API_TOKEN in the environment.
 # Optionally pass -y to use terraform apply -auto-approve.
 #
 # Repo root (parent of deploy/):
 #   export HCLOUD_TOKEN='...'
-#   deploy/scripts/provision_hetzner.sh
+#   export CF_API_TOKEN='...'
+#   deploy/scripts/provision.sh [-y]
 #
 # Uses deploy/terraform/terraform.auto.tfvars if present (gitignored).
 
@@ -23,15 +25,22 @@ if [[ -z "${HCLOUD_TOKEN:-}" ]]; then
   exit 1
 fi
 
+if [[ -z "${CF_API_TOKEN:-}" ]]; then
+  echo "Set CF_API_TOKEN (see deploy/credentials.local.md)." >&2
+  exit 1
+fi
+
 cd "${TF_DIR}"
 terraform init -input=false
 terraform apply -input=false "${AUTO_APPROVE[@]}"
 
 IP="$(terraform output -raw server_ipv4)"
+"${ROOT}/deploy/scripts/cloudflare_set_subdomain_a.sh" "${IP}"
+
 echo >&2
 echo "SSH:" >&2
 if KEY_OUT="$("${ROOT}/deploy/scripts/hetzner_ssh_identity.sh" 2>/dev/null)"; then
   echo "  ssh -i ${KEY_OUT} root@${IP}" >&2
 else
-  echo "  ssh root@${IP}  # use -i path after setting HETZNER_SSH_PRIVATE_KEY or ${TF_DIR}/.ssh/hetzner_admin" >&2
+  echo "  ssh root@${IP}" >&2
 fi
