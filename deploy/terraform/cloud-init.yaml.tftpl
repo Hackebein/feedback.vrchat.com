@@ -1,5 +1,6 @@
 #cloud-config
 package_update: true
+package_upgrade: true
 
 write_files:
   - path: /etc/sysctl.d/99-feedback-opensearch-vm.conf
@@ -17,11 +18,16 @@ runcmd:
   - [systemctl, enable, --now, docker]
   - |
     set -eux
-    install -d "$(dirname '${repo_clone_dir}')"
-    if [ ! -d '${repo_clone_dir}/.git' ]; then
-      git clone --depth 1 '${repo_url}' '${repo_clone_dir}'
+    install -d /srv
+    if [ ! -d '/srv/feedback.vrchat.com/.git' ]; then
+      git clone --depth 1 '${repo_url}' /srv/feedback.vrchat.com
     fi
   - |
     set -eux
-    cd '${repo_clone_dir}'
+    cd /srv/feedback.vrchat.com
     docker compose -f deploy/docker-compose.yml up -d
+%{ if enable_public_https ~}
+  - |
+    set -eux
+    bash /srv/feedback.vrchat.com/deploy/scripts/bootstrap_https_on_server.sh
+%{ endif ~}
