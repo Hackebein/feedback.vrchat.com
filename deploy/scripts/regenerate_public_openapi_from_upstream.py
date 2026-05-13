@@ -1,24 +1,20 @@
 #!/usr/bin/env python3
 """
-Build deploy/nginx/vrchat-feedback-search-openapi.json from the amalgamated
-OpenSearch API spec (opensearch-api-specification).
+Build deploy/nginx/vrchat-feedback-search-openapi.json by slicing the
+amalgamated OpenSearch API specification down to the public routes nginx
+exposes.
 
-Requires PyYAML (same machine as ingest): pip install PyYAML
+Requires PyYAML: pip install PyYAML
 
-By default the tool downloads the rolling **main-latest** amalgamated YAML.
-The OpenSearch **image tag** from ``deploy/docker-compose.yml`` is still read
-for ``info`` metadata only; it often will not equal the bundle's
-``info.x-api-version`` (see upstream ``spec/_info.yaml``).
-
-Use ``--strict-spec-api-version-match`` to fail when those versions differ.
-Override the download with ``--upstream-url`` or ``--upstream-file``.
+By default the tool downloads the rolling **main-latest** amalgamated YAML
+from the opensearch-api-specification GitHub releases. Override with
+``--upstream-url`` or ``--upstream-file``.
 """
 from __future__ import annotations
 
 import argparse
 import copy
 import json
-import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -47,19 +43,6 @@ ROUTES: list[tuple[str, str, frozenset[str], str]] = [
     ("/_source/{id}", "/{index}/_source/{id}", frozenset({"get", "head"}), "Index"),
     ("/_search", "/{index}/_search", frozenset({"get", "post"}), "Search"),
 ]
-
-
-def norm_engine_version(v: str) -> str:
-    return v.strip().lstrip("v").lower()
-
-
-def parse_opensearch_engine_version(compose_path: Path) -> str:
-    text = compose_path.read_text(encoding="utf-8")
-    for line in text.splitlines():
-        m = re.search(r"^\s*image:\s*opensearchproject/opensearch:([\w][\w.-]*)", line, re.IGNORECASE)
-        if m:
-            return m.group(1).strip()
-    raise ValueError(f"Could not find opensearchproject/opensearch image in {compose_path}")
 
 
 def load_yaml_from_url(url: str) -> dict[str, Any]:
@@ -156,15 +139,8 @@ def absorb_components(upstream: dict[str, Any], doc: dict[str, Any], root: Any) 
 
 def main() -> int:
     deploy_dir = Path(__file__).resolve().parents[1]
-    default_compose = deploy_dir / "docker-compose.yml"
 
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument(
-        "--compose-file",
-        type=Path,
-        default=default_compose,
-        help="docker-compose.yml containing opensearchproject/opensearch image (default: deploy/docker-compose.yml)",
-    )
     ap.add_argument(
         "--upstream-url",
         default=MAIN_LATEST_ASSET,
@@ -178,14 +154,6 @@ def main() -> int:
         help="Local path to opensearch-openapi.yaml (overrides --upstream-url)",
     )
     ap.add_argument(
-        "--strict-spec-api-version-match",
-        action="store_true",
-        help=(
-            "Exit non-zero if info.x-api-version from the bundle does not equal the "
-            "OpenSearch engine tag from compose (normally they differ for main-latest)"
-        ),
-    )
-    ap.add_argument(
         "-o",
         "--out",
         default=str(deploy_dir / "nginx" / "vrchat-feedback-search-openapi.json"),
@@ -193,32 +161,12 @@ def main() -> int:
     )
     args = ap.parse_args()
 
-    try:
-        engine_version = parse_opensearch_engine_version(args.compose_file)
-    except FileNotFoundError:
-        sys.stderr.write(f"[openapi-gen] Compose file not found: {args.compose_file}\n")
-        return 1
-    except ValueError as e:
-        sys.stderr.write(f"[openapi-gen] {e}\n")
-        return 1
-
     if args.upstream_file:
         upstream = load_upstream(args.upstream_file, None)
         download_url = f"file:{Path(args.upstream_file).resolve()}"
     else:
         upstream = load_upstream(None, args.upstream_url)
         download_url = args.upstream_url
-
-    spec_api_v = str((upstream.get("info") or {}).get("x-api-version") or "")
-    if norm_engine_version(spec_api_v) != norm_engine_version(engine_version):
-        msg = (
-            f"[openapi-gen] Compose OpenSearch tag is {engine_version!r} but upstream bundle "
-            f"has x-api-version {spec_api_v!r} (source {download_url}).\n"
-        )
-        if args.strict_spec_api_version_match:
-            sys.stderr.write(msg)
-            return 1
-        sys.stderr.write(msg + "[openapi-gen] Continuing (use --strict-spec-api-version-match to fail here).\n")
 
     upstream_paths = upstream.get("paths") or {}
 
@@ -233,16 +181,11 @@ def main() -> int:
                 "Schemas and operations are sliced from the OpenSearch Project "
                 "[opensearch-api-specification](https://github.com/opensearch-project/opensearch-api-specification) "
                 "amalgamated OpenAPI document. "
-                f"Target OpenSearch image tag (from docker-compose): **{engine_version}**. "
                 f"Bundle URL: {download_url}. "
                 f"Upstream bundle `info.version` is {ui.get('version', '?')!r} "
                 f"(`x-api-version`: {ui.get('x-api-version', '?')!r}). "
                 "`{index}` path parameters from the upstream spec are omitted here because the alias is fixed."
             ),
-            "x-opensearch-deployment": {
-                "compose_service": "opensearch",
-                "image": f"opensearchproject/opensearch:{engine_version}",
-            },
             "x-upstream-download": {
                 "url": download_url,
             },
@@ -256,7 +199,7 @@ def main() -> int:
             "description": "OpenSearch — Search API reference",
             "url": "https://opensearch.org/docs/latest/api-reference/search/",
         },
-        "servers": [{"url": "/", "description": "OpenSearch-shaped paths (same origin as this spec)"}],
+        "servers": [{"url": "https://vrchat-canny.hackebein.dev"}],
         "tags": [
             {"name": "Search", "description": "Single-index search and field capabilities."},
             {"name": "Index", "description": "Read-only mapping, counts, documents."},
