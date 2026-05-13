@@ -3,11 +3,7 @@
   "info": {
     "title": "VRChat Feedback Search",
     "version": "2.0.0",
-    "description": "Read-only public HTTP surface for feedback search. Schemas and operations are sliced from the OpenSearch Project [opensearch-api-specification](https://github.com/opensearch-project/opensearch-api-specification) amalgamated OpenAPI document. Target OpenSearch image tag (from docker-compose): **latest**. Bundle URL: https://github.com/opensearch-project/opensearch-api-specification/releases/download/main-latest/opensearch-openapi.yaml. Upstream bundle `info.version` is '0.3.0' (`x-api-version`: '2.16.0'). `{index}` path parameters from the upstream spec are omitted here because the alias is fixed.",
-    "x-opensearch-deployment": {
-      "compose_service": "opensearch",
-      "image": "opensearchproject/opensearch:latest"
-    },
+    "description": "Read-only public HTTP surface for feedback search. Schemas and operations are sliced from the OpenSearch Project [opensearch-api-specification](https://github.com/opensearch-project/opensearch-api-specification) amalgamated OpenAPI document. Bundle URL: https://github.com/opensearch-project/opensearch-api-specification/releases/download/main-latest/opensearch-openapi.yaml. Upstream bundle `info.version` is '0.3.0' (`x-api-version`: '2.16.0'). `{index}` path parameters from the upstream spec are omitted here because the alias is fixed.",
     "x-upstream-download": {
       "url": "https://github.com/opensearch-project/opensearch-api-specification/releases/download/main-latest/opensearch-openapi.yaml"
     },
@@ -23,8 +19,7 @@
   },
   "servers": [
     {
-      "url": "/",
-      "description": "OpenSearch-shaped paths (same origin as this spec)"
+      "url": "https://vrchat-canny.hackebein.dev"
     }
   ],
   "tags": [
