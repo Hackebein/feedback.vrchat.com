@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    server_name @FEEDBACK_PUBLIC_DOMAIN@;
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+    location / {
+        return 404;
+    }
+}

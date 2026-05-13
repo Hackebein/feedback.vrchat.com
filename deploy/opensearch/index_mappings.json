@@ -1,0 +1,173 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "mappings": {
+    "properties": {
+      "post_id": { "type": "keyword" },
+      "title": {
+        "type": "text",
+        "analyzer": "standard",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+      },
+      "details": {
+        "type": "text",
+        "analyzer": "standard"
+      },
+      "combined_text": {
+        "type": "text",
+        "analyzer": "standard"
+      },
+      "board_slug": { "type": "keyword" },
+      "board_name": { "type": "text", "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } } },
+      "board_id": { "type": "keyword" },
+      "status": { "type": "keyword" },
+      "score": { "type": "integer" },
+      "comment_count": { "type": "integer" },
+      "has_images": { "type": "boolean" },
+      "has_files": { "type": "boolean" },
+      "created_at": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "updated_at": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "url_name": { "type": "keyword" },
+      "comments": {
+        "type": "nested",
+        "dynamic": false,
+        "properties": {
+          "__v": { "type": "integer" },
+          "_id": { "type": "keyword" },
+          "id": { "type": "keyword" },
+          "aiGenerated": { "type": "boolean" },
+          "author": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
+          },
+          "authorID": { "type": "keyword" },
+          "boardID": { "type": "keyword" },
+          "companyID": { "type": "keyword" },
+          "body": { "type": "text", "analyzer": "standard" },
+          "authorName": {
+            "type": "keyword",
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text",
+                "analyzer": "standard"
+              }
+            }
+          },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "updatedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deleted": { "type": "boolean" },
+          "deletedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "fileURLs": { "type": "keyword", "ignore_above": 2048 },
+          "files": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "mimeType": { "type": "keyword", "ignore_above": 256 },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "url": { "type": "keyword", "ignore_above": 2048 }
+            }
+          },
+          "imageURLs": { "type": "keyword", "ignore_above": 2048 },
+          "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
+          "internal": { "type": "boolean" },
+          "itemSourceType": { "type": "keyword", "ignore_above": 256 },
+          "likeCount": { "type": "integer" },
+          "mentionedUserIDs": { "type": "keyword" },
+          "mentionedUsers": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
+          },
+          "mergeID": { "type": "keyword" },
+          "parentID": { "type": "keyword" },
+          "pinned": { "type": "boolean" },
+          "postDeleted": { "type": "boolean" },
+          "postID": { "type": "keyword" },
+          "private": { "type": "boolean" },
+          "reactions": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "like": { "type": "integer" }
+            }
+          },
+          "restoredAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "sourceFeatureExtractionItemID": { "type": "keyword" },
+          "sourceLink": { "type": "keyword", "ignore_above": 2048 },
+          "spam": { "type": "boolean" },
+          "statusChangeID": { "type": "keyword" },
+          "value": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "voteID": { "type": "keyword" },
+          "viewerReactions": {
+            "type": "object",
+            "enabled": false
+          }
+        }
+      }
+    }
+  }
+}
