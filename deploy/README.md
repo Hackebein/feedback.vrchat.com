@@ -18,4 +18,3 @@ deploy/scripts/provision.sh -y
 export HCLOUD_TOKEN='…'
 cd deploy/terraform && terraform destroy && cd ../..
 ```
-

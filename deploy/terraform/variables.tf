@@ -35,7 +35,7 @@ variable "allowed_ssh_cidr" {
 
 variable "enable_public_https" {
   type        = bool
-  description = "Open inbound TCP 80 (ACME / redirect) and 443 when nginx + TLS front OpenSearch."
+  description = "Open inbound TCP 80 (HTTPS redirect) and 443 when nginx fronts OpenSearch."
   default     = true
 }
 
@@ -43,4 +43,10 @@ variable "repo_url" {
   type        = string
   description = "Git clone URL for this repository"
   default     = "https://github.com/Hackebein/feedback.vrchat.com.git"
+}
+
+variable "CF_API_TOKEN" {
+  type        = string
+  description = "Cloudflare API token (TF_VAR_CF_API_TOKEN). Needs Zone:DNS:Edit + Zone:SSL and Certificates:Edit on the zone. Provisioned to /etc/feedback-search/cf.env on first boot for Cloudflare Origin CA cert issuance."
+  sensitive   = true
 }

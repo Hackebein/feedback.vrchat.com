@@ -30,6 +30,12 @@ if [[ -z "${CF_API_TOKEN:-}" ]]; then
   exit 1
 fi
 
+# Cloud-init on first boot reads CF_API_TOKEN from /etc/feedback-search/cf.env
+# (written by the cloud-init template), then deploy/scripts/install_origin_ca_cert.sh
+# uses it to mint a Cloudflare Origin CA certificate. Same scope as the local
+# token: Zone:DNS:Edit + Zone:SSL and Certificates:Edit.
+export TF_VAR_CF_API_TOKEN="${CF_API_TOKEN}"
+
 cd "${TF_DIR}"
 terraform init -input=false
 terraform apply -input=false "${AUTO_APPROVE[@]}"

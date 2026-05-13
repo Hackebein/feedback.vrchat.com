@@ -14,7 +14,7 @@ runcmd:
     set -eux
     export DEBIAN_FRONTEND=noninteractive
     apt-get update -y
-    apt-get install -y docker.io docker-compose-v2 git python3-venv
+    apt-get install -y docker.io docker-compose-v2 git python3-venv openssl ca-certificates curl
   - [systemctl, enable, --now, docker]
   - |
     set -eux
@@ -24,10 +24,28 @@ runcmd:
     fi
   - |
     set -eux
+    install -d -m 0700 -o root -g root /etc/feedback-search
+    # Cloudflare API token (Zone:DNS:Edit + Zone:SSL and Certificates:Edit).
+    # Consumed by deploy/scripts/install_origin_ca_cert.sh on first boot to
+    # issue a Cloudflare Origin CA certificate for the public hostname.
+    umask 077
+    cat > /etc/feedback-search/cf.env <<'CF_ENV_EOF'
+    CF_API_TOKEN=${cf_api_token}
+    CF_ENV_EOF
+    chmod 0600 /etc/feedback-search/cf.env
+  - |
+    set -eux
     cd /srv/feedback.vrchat.com
-    docker compose -f deploy/docker-compose.yml up -d
+    # bootstrap_security.sh generates secrets, starts opensearch, then
+    # provisions the proxy/ingest users and writes the nginx auth include.
+    FEEDBACK_REPO_ROOT=/srv/feedback.vrchat.com \
+      /bin/bash deploy/scripts/bootstrap_security.sh
 %{ if enable_public_https ~}
   - |
     set -eux
     bash /srv/feedback.vrchat.com/deploy/scripts/bootstrap_https_on_server.sh
 %{ endif ~}
+  - |
+    set -eux
+    FEEDBACK_REPO_ROOT=/srv/feedback.vrchat.com \
+      bash /srv/feedback.vrchat.com/deploy/scripts/install_systemd_ingest_on_server.sh

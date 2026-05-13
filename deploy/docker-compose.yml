@@ -1,10 +1,13 @@
 services:
   opensearch:
     image: opensearchproject/opensearch:latest
+    env_file:
+      - /etc/feedback-search/admin.env
     environment:
       - discovery.type=single-node
-      - DISABLE_SECURITY_PLUGIN=true
       - OPENSEARCH_JAVA_OPTS=-Xms768m -Xmx768m
+      - plugins.security.ssl.http.enabled=false
+      - script.allowed_types=none
     ulimits:
       nofile:
         soft: 262144
