@@ -51,6 +51,8 @@ install -m 0644 "${TMP_UNIT}" /etc/systemd/system/feedback-search-gateway.servic
 install -d "${WWW_ROOT}"
 cp -a "${REPO_ROOT}/search-ui/dist/web/"* "${WWW_ROOT}/"
 
+chmod -R a+rX "${WWW_ROOT}"
+
 systemctl daemon-reload
 systemctl enable feedback-search-gateway.service
 systemctl restart feedback-search-gateway.service

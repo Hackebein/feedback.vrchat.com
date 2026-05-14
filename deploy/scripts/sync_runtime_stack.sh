@@ -33,6 +33,8 @@ else
   echo "npm not installed — skipping search-ui build (run deploy/scripts/install_search_gateway_on_server.sh)." >&2
 fi
 
+chmod -R a+rX "${WWW_ROOT}"
+
 DOMAIN="${DOMAIN:-vrchat-canny.hackebein.dev}"
 
 if ! command -v nginx >/dev/null 2>&1; then
