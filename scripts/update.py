@@ -201,7 +201,10 @@ def fetch_boards():
 
 
 def fetch_board_posts(board_slug, sort="newest"):
-    """Pull posts via /api/posts/get. Returns (posts_list, ids_set)."""
+    """Pull posts via /api/posts/get.
+
+    Returns (posts_list, ids_set, has_next_page).
+    """
     body = {
         "__canny_requestID": f"update-{board_slug}-{sort}",
         "__host": CANNY_HOST,
@@ -213,13 +216,16 @@ def fetch_board_posts(board_slug, sort="newest"):
     }
     raw = _curl_post_json(API_URL, body, timeout=15)
     if not raw.strip():
-        return [], set()
+        return [], set(), None
     try:
         data = json.loads(raw)
     except Exception as e:
         print(f"[WARN] {board_slug}: failed to parse posts/get response: {e}")
-        return [], set()
-    posts = data.get("result", {}).get("posts", []) or []
+        return [], set(), None
+    result = data.get("result") or {}
+    raw_next = result.get("hasNextPage")
+    has_next = None if raw_next is None else bool(raw_next)
+    posts = result.get("posts", []) or []
     seen = set()
     out = []
     for p in posts:
@@ -227,7 +233,7 @@ def fetch_board_posts(board_slug, sort="newest"):
         if pid and pid not in seen:
             seen.add(pid)
             out.append(p)
-    return out, seen
+    return out, seen, has_next
 
 
 def fetch_post_page(board_slug, url_slug, retries=3):
@@ -345,22 +351,25 @@ def iso_now():
 def fetch_newest_all(boards):
     """Parallel newest sweep per board.
 
-    Returns {board_slug: [post_dicts]}.
+    Returns (fresh_by_board, single_page_totals).
     """
     fresh_by_board = {}
+    single_page_totals = {}
     print(f"[UPDATE] Fetching newest from {len(boards)} board(s)...")
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
         futures = {ex.submit(fetch_board_posts, b, "newest"): b for b in boards}
         for fut in as_completed(futures):
             slug = futures[fut]
             try:
-                posts, _ = fut.result()
+                posts, _, has_next = fut.result()
                 fresh_by_board[slug] = posts
+                if has_next is False:
+                    single_page_totals[slug] = len(posts)
                 print(f"[UPDATE] {slug}: {len(posts)} from API")
             except Exception as e:
                 print(f"[ERROR] {slug} newest fetch failed: {e}")
                 fresh_by_board[slug] = []
-    return fresh_by_board
+    return fresh_by_board, single_page_totals
 
 
 def load_all_stored(boards):
@@ -589,8 +598,17 @@ def compute_newest_scrape_horizon(fresh_by_board, board_totals, min_posts=500):
     return horizon
 
 
-def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
-    """Render README.md from README.md.j2 template with board statistics."""
+def generate_readme(
+    slug_to_urlname=None,
+    newest_scrape_horizon=None,
+    inferred_totals=None,
+):
+    """Render README.md from README.md.j2 template with board statistics.
+
+    `inferred_totals` comes from `main()`'s newest sweep for homepage-missing
+    boards. If omitted (standalone regen), one quiet newest sweep fills both
+    inferred totals (single-page boards) and scrape horizon when needed.
+    """
     import jinja2
 
     if not BOARD_FILES.exists():
@@ -598,6 +616,36 @@ def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
 
     slug_to_urlname = slug_to_urlname or {}
     board_totals = get_board_totals(slug_to_urlname)
+
+    jsonl_slugs = sorted(
+        f.stem for f in BOARD_FILES.iterdir() if f.suffix == ".jsonl"
+    )
+
+    needs_meta_fetch = (
+        newest_scrape_horizon is None or inferred_totals is None
+    )
+    fresh_h = None
+    single_page = {}
+    totals_h = None
+    if needs_meta_fetch:
+        fresh_h, single_page = fetch_newest_all(jsonl_slugs)
+        totals_h = {
+            b["urlName"]: b.get("postCount") or 0
+            for b in fetch_boards() if b.get("urlName")
+        }
+
+    inferred = dict(inferred_totals or {})
+    if inferred_totals is None:
+        inferred.update(single_page)
+
+    if newest_scrape_horizon is None:
+        effective_horizon = (
+            compute_newest_scrape_horizon(fresh_h, totals_h)
+            if fresh_h is not None and totals_h is not None
+            else None
+        )
+    else:
+        effective_horizon = newest_scrape_horizon
 
     boards = []
     total_collected = 0
@@ -618,6 +666,8 @@ def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
         url_name = slug_to_urlname.get(slug, slug) if slug_to_urlname else slug
 
         total = board_totals.get(url_name) if url_name in board_totals else None
+        if total is None:
+            total = inferred.get(slug)
         collected = api_count
         if total is not None:
             if total > 500:
@@ -690,8 +740,8 @@ def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
     else:
         oldest_updated_str = "unknown"
 
-    if newest_scrape_horizon:
-        delta = now - newest_scrape_horizon
+    if effective_horizon:
+        delta = now - effective_horizon
         secs = int(delta.total_seconds())
         if secs < 60:
             horizon_age = f"{max(secs, 0)}s ago"
@@ -702,10 +752,10 @@ def generate_readme(slug_to_urlname=None, newest_scrape_horizon=None):
         else:
             horizon_age = f"{secs // 86400}d ago"
         newest_scrape_horizon_str = (
-            f"{newest_scrape_horizon.strftime('%Y-%m-%d %H:%M UTC')} ({horizon_age})"
+            f"{effective_horizon.strftime('%Y-%m-%d %H:%M UTC')} ({horizon_age})"
         )
     else:
-        newest_scrape_horizon_str = None
+        newest_scrape_horizon_str = "unknown"
 
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(str(ROOT)),
@@ -771,7 +821,7 @@ def main():
 
     t0 = time.time()
 
-    fresh_by_board = fetch_newest_all(boards)
+    fresh_by_board, single_page_totals = fetch_newest_all(boards)
     board_totals = {b["urlName"]: b.get("postCount") or 0
                     for b in fetch_boards() if b.get("urlName")}
     newest_scrape_horizon = compute_newest_scrape_horizon(fresh_by_board, board_totals)
@@ -807,7 +857,10 @@ def main():
 
     try:
         print("[UPDATE] Regenerating README...")
-        generate_readme(newest_scrape_horizon=newest_scrape_horizon)
+        generate_readme(
+            newest_scrape_horizon=newest_scrape_horizon,
+            inferred_totals=single_page_totals,
+        )
         print("[UPDATE] README regenerated")
     except Exception as e:
         print(f"[UPDATE] README generation skipped: {e}")
