@@ -2,20 +2,26 @@
   "openapi": "3.1.0",
   "info": {
     "title": "VRChat Feedback Search (SearchKit gateway)",
-    "version": "3.1.0",
-    "description": "HTTP API exposed at the nginx search edge: `POST /api/search` carries the Algolia multi-query payload used by `@searchkit/instantsearch-client`. `GET /api/search` supports discovery and simple query-string searches. Responses are Algolia-shaped results over the indexed `feedback-posts` alias. Reference: SearchKit Express proxy overview."
+    "version": "3.1.2",
+    "description": "Nginx exposes this API at the public search host. `POST /api/search` accepts the Algolia multi-query JSON array used by `@searchkit/instantsearch-client`. `GET /api/search` implements **only** the single-query subset described under that path: same index (`feedback-posts`), same `params.query` / `hitsPerPage` / `page` mapping to SearchKit, and the same Algolia-shaped **search** response as an equivalent one-element POST. **GET adds non-search discovery responses** (no POST equivalent — see GET operation / *Contract gaps & GET-only botches*). Full contract notes live in this file only (served at `/openapi.json`)."
   },
   "externalDocs": {
     "description": "SearchKit — proxy Elasticsearch/OpenSearch",
     "url": "https://www.searchkit.co/docs/proxy-elasticsearch/with-express-js"
   },
   "servers": [{ "url": "/" }],
-  "tags": [{ "name": "Search", "description": "/api/search" }],
+  "tags": [
+    {
+      "name": "Search",
+      "description": "`/api/search` — POST is the full InstantSearch client payload; GET is a thin query-string projection of **one** query worth of `params` plus GET-only discovery."
+    }
+  ],
   "paths": {
     "/api/search": {
       "post": {
         "operationId": "searchkit.instantsearch.multiSearch",
-        "summary": "Run search queries (InstantSearch-compatible)",
+        "summary": "Full multi-query search (InstantSearch-compatible)",
+        "description": "Passes the request body verbatim to SearchKit `handleRequest`. This is the only method that supports multiple queries per request, replica / sort indices, facets, filters, and every other InstantSearch `params` field. **There is no POST discovery mode** (no body shape returns the small JSON stub that GET returns with no params). **400** if the body is not a JSON array.",
         "tags": ["Search"],
         "requestBody": {
           "required": true,
@@ -23,15 +29,30 @@
             "application/json": {
               "schema": {
                 "type": "array",
-                "description": "JSON array of InstantSearch multiple-queries objects (`@searchkit/instantsearch-client` POST body).",
+                "description": "InstantSearch multiple-queries array. Minimum useful element for parity with GET “simple search” is a single object with `indexName`: `feedback-posts` and `params` containing at most `query`, `hitsPerPage`, and `page` (other keys are GET-inexpressible).",
                 "items": { "type": "object", "additionalProperties": true }
+              },
+              "examples": {
+                "minimalSameAsGet": {
+                  "summary": "Same search as GET /api/search?q=ui&hitsPerPage=15&page=0",
+                  "value": [
+                    {
+                      "indexName": "feedback-posts",
+                      "params": {
+                        "query": "ui",
+                        "hitsPerPage": 15,
+                        "page": 0
+                      }
+                    }
+                  ]
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Algolia-compatible search results envelope.",
+            "description": "Algolia-compatible search results envelope (never the GET discovery stub).",
             "content": {
               "application/json": {
                 "schema": {
@@ -51,43 +72,39 @@
       },
       "get": {
         "operationId": "searchkit.simpleSearch",
-        "summary": "Simple search via query parameters, or discovery JSON when no params",
+        "summary": "Single-query search via query string (POST subset only) or discovery JSON",
+        "description": "## Search parity with POST\n\nIf **any** of `q`, `query`, `hitsPerPage`, or `page` is present, the handler builds exactly **one** `MultipleQueriesQuery`:\n\n- `indexName`: `feedback-posts`\n- `params.query`: from `q` if set, else `query` (**see botch:** both present → `query` ignored)\n- `params.hitsPerPage`: parsed integer in **1…100**, default **15** if missing; invalid or **≤0** → **15** (**GET-only coercion** — POST leaves omitted keys to SearchKit defaults)\n- `params.page`: non-negative integer, default **0** if missing; invalid or negative → **0**\n\nThat array is passed to the same `handleRequest` as POST. So for the **intersection** of features (plain text query + page size + page index on the primary index only), **GET and POST return the same search payload shape**.\n\n## POST-only (not expressible on GET)\n\nExtra `params` keys (facets, numeric filters, `sortBy` / replica index names, geo, etc.), a second query object, or a different `indexName` — **POST only**.\n\n## Contract gaps & GET-only botches\n\n1. **Discovery JSON** — With **no** `q`, `query`, `hitsPerPage`, or `page`, the response is a small JSON stub (`endpoints`, `description`) pointing at POST and `/openapi.json`. **POST has no equivalent.**\n2. **Duplicate query keys** — If `q` or `query` is repeated (`?q=a&q=b`), Express may supply an array; **only the first value** is used.\n3. **`q` vs `query`** — If both are set, **`q` wins**; `query` is ignored.\n4. **`help` removed** — The gateway no longer treats `help` as a special query parameter. It is **ignored** for routing (same as any other unknown key). If **no** search parameters are present, the response is still the discovery stub — so `GET /api/search?help=1` alone behaves like a bare `GET /api/search`.",
         "tags": ["Search"],
         "parameters": [
           {
             "name": "q",
             "in": "query",
             "schema": { "type": "string" },
-            "description": "Search text (synonym of `query`)."
+            "description": "Maps to `params.query`. Takes precedence over `query` when both are sent.",
+            "examples": { "term": { "value": "desktop crash" } }
           },
           {
             "name": "query",
             "in": "query",
             "schema": { "type": "string" },
-            "description": "Same as `q`."
+            "description": "Synonym of `q`; ignored if `q` is also set."
           },
           {
             "name": "hitsPerPage",
             "in": "query",
-            "schema": { "type": "integer", "default": 15, "maximum": 100 },
-            "description": "Page size (1–100, default 15)."
+            "schema": { "type": "integer", "default": 15, "minimum": 1, "maximum": 100 },
+            "description": "Maps to `params.hitsPerPage`. Omitted → 15. Invalid or ≤0 → 15 (server coercion)."
           },
           {
             "name": "page",
             "in": "query",
             "schema": { "type": "integer", "default": 0, "minimum": 0 },
-            "description": "Zero-based page index."
-          },
-          {
-            "name": "help",
-            "in": "query",
-            "schema": { "type": "string", "enum": ["1", "true"] },
-            "description": "If set, return discovery JSON only."
+            "description": "Maps to `params.page`. Omitted → 0. Invalid or negative → 0."
           }
         ],
         "responses": {
           "200": {
-            "description": "Discovery JSON (no search params) or search `results` envelope (same shape as POST).",
+            "description": "Either (a) Algolia-shaped **search** results — same envelope as POST for the parity case — or (b) the **discovery** stub JSON when none of `q`, `query`, `hitsPerPage`, or `page` is sent.",
             "content": {
               "application/json": {
                 "schema": { "type": "object", "additionalProperties": true }
@@ -95,13 +112,14 @@
             }
           },
           "500": {
-            "description": "Search execution failed upstream."
+            "description": "Search execution failed upstream (discovery mode does not use SearchKit)."
           }
         }
       },
       "options": {
         "operationId": "searchkit.corsPreflightStub",
-        "summary": "CORS handled by nginx (418 chain); omitted if same-origin.",
+        "summary": "CORS preflight; often answered by nginx before the gateway.",
+        "description": "The edge may return **204** via nginx (`OPTIONS` → 418 internal route). Behavior depends on deployment; not part of search parity.",
         "tags": ["Search"],
         "responses": { "204": { "description": "No content" } }
       }

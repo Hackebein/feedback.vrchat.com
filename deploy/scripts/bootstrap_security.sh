@@ -8,8 +8,8 @@
 #   ingest.env          — systemd feedback-ingest: bulk-write user + repo root
 #   gateway.env         — systemd feedback-search-gateway: read-only user → OpenSearch
 #
-# Naming: secrets.env retains PROXY_* keys for backwards compatibility with existing hosts;
-# those credentials are used exclusively by the SearchKit gateway to query the index alias.
+# secrets.env uses PROXY_* for the read-only gateway OpenSearch identity
+# (${PROXY_USER} / gateway.env); INGEST_* is the bulk indexer.
 
 
 set -euo pipefail
@@ -69,7 +69,7 @@ EOF
 
   install -m 0600 -o root -g root /dev/null "${INGEST_ENV}"
   cat >"${INGEST_ENV}" <<EOF
-FEEDBACK_REPO_ROOT=${FEEDBACK_REPO_ROOT:-/srv/feedback.vrchat.com}
+FEEDBACK_REPO_ROOT=${FEEDBACK_REPO_ROOT}
 OPENSEARCH_URL=${OS_URL}
 OPENSEARCH_USER=${INGEST_USER}
 OPENSEARCH_PASSWORD=${INGEST_PASSWORD}
@@ -217,6 +217,7 @@ main() {
   require_root
   need openssl
   need curl
+  : "${FEEDBACK_REPO_ROOT:?FEEDBACK_REPO_ROOT must be set}"
 
   ensure_dirs
   local FIRST_RUN=0
@@ -227,7 +228,7 @@ main() {
 
   if [[ "${FIRST_RUN}" -eq 1 ]]; then
     echo "[bootstrap_security] Generated new secrets — recreating OpenSearch container so admin password activates." >&2
-    if [[ -n "${FEEDBACK_REPO_ROOT:-}" && -f "${FEEDBACK_REPO_ROOT}/deploy/docker-compose.yml" ]]; then
+    if [[ -f "${FEEDBACK_REPO_ROOT}/deploy/docker-compose.yml" ]]; then
       docker compose -f "${FEEDBACK_REPO_ROOT}/deploy/docker-compose.yml" up -d --force-recreate opensearch
     fi
   fi

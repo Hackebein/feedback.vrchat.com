@@ -36,8 +36,8 @@ runcmd:
   - |
     set -eux
     cd /srv/feedback.vrchat.com
-    # bootstrap_security.sh generates secrets, starts opensearch, then
-    # provisions the proxy/ingest users and writes the nginx auth include.
+    # bootstrap_security.sh generates secrets, starts OpenSearch when needed,
+    # provisions gateway/ingest users, writes gateway.env and ingest.env.
     FEEDBACK_REPO_ROOT=/srv/feedback.vrchat.com \
       /bin/bash deploy/scripts/bootstrap_security.sh
 %{ if enable_public_https ~}

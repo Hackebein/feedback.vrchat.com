@@ -37,13 +37,10 @@ fi
 
 SERVICE_TEMPLATE="${REPO_ROOT}/deploy/systemd/feedback-search-gateway.service"
 
-install -m 0644 "${SERVICE_TEMPLATE}" /etc/systemd/system/feedback-search-gateway.service
-
 TMP_UNIT="$(mktemp)"
 trap 'rm -f "${TMP_UNIT}"' EXIT
 
-sed -e "s|FEEDBACK_REPO_ROOT_STUB|${REPO_ROOT}|g" \
-  "${SERVICE_TEMPLATE}" >"${TMP_UNIT}"
+sed "s#@FEEDBACK_REPO_ROOT@#${REPO_ROOT}#g" "${SERVICE_TEMPLATE}" >"${TMP_UNIT}"
 install -m 0644 "${TMP_UNIT}" /etc/systemd/system/feedback-search-gateway.service
 
 (cd "${REPO_ROOT}/search-ui" && npm ci && npm run build)
@@ -57,4 +54,4 @@ systemctl daemon-reload
 systemctl enable feedback-search-gateway.service
 systemctl restart feedback-search-gateway.service
 
-echo "[install_search_gateway] unit=feedback-search-gateway www=${WWW_ROOT} (journalctl -u feedback-search-gateway -n 50)" >&2
+echo "[install_search_gateway] unit=feedback-search-gateway www=${WWW_ROOT} (curl -fsS http://127.0.0.1:3333/health)" >&2
