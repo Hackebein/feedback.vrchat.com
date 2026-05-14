@@ -13,12 +13,6 @@ Scrape horizon: **{{ newest_scrape_horizon }}**.
 {%- endfor %}
 | **Total** | **{{ total_row.collected | comma }}**{% if total_row.total is not none %} / **{{ total_row.total | comma }}**{% endif %} ({{ total_row.coverage_str }}) |
 
-## Data format
+## OpenSearch
 
-Each board file (`boards/<board>.jsonl`) contains one JSON object per line:
-
-```
-{_id, authorID, boardID, categoryID, details, score, status,
- title, urlName, created, viewerVote, board, boardCommentsArePrivate,
- category, voteSettings, updatedAt, comments[]}
-```
+Query the scraped corpus via [vrchat-canny.hackebein.dev](https://vrchat-canny.hackebein.dev).
