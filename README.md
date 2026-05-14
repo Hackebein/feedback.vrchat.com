@@ -32,12 +32,6 @@ Scrape horizon: **2026-02-06 04:27 UTC (97d ago)**.
 | `website` | 802 / 801 (100.0%) |
 | **Total** | **33,731** / **33,732** (99.997%) |
 
-## Data format
+## OpenSearch
 
-Each board file (`boards/<board>.jsonl`) contains one JSON object per line:
-
-```
-{_id, authorID, boardID, categoryID, details, score, status,
- title, urlName, created, viewerVote, board, boardCommentsArePrivate,
- category, voteSettings, updatedAt, comments[]}
-```
+Query the scraped corpus via [vrchat-canny.hackebein.dev](https://vrchat-canny.hackebein.dev).
