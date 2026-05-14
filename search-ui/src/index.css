@@ -40,15 +40,20 @@ body {
 }
 
 .search-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 0.75rem 1rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
 }
 
 .searchbox-root {
-  flex: 1 1 220px;
+  width: 100%;
+}
+
+.stats-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .searchbox-form {
@@ -89,7 +94,7 @@ body {
 }
 
 .stats-line {
-  margin: 0 0 1.25rem;
+  margin: 0;
   font-size: 0.875rem;
   color: #7d8699;
 }
