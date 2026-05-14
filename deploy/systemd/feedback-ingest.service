@@ -1,5 +1,5 @@
 [Unit]
-Description=VRChat feedback ingest (git ff-only, compose/openapi/nginx sync, OpenSearch bulk)
+Description=VRChat feedback scheduled ingest (git ff-only, runtime sync, OpenSearch bulk write)
 After=docker.service network-online.target network.target
 
 [Service]

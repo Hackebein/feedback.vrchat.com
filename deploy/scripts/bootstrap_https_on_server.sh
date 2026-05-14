@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# Run as root on the OpenSearch VPS. Installs nginx and issues a Cloudflare
-# Origin CA cert, then publishes the HTTPS vhost.
 #
-# Env (optional):
-#   DOMAIN          default vrchat-canny.hackebein.dev
-#   CF_API_TOKEN    sourced from /etc/feedback-search/cf.env if not in env.
-#                   Needs Zone:SSL and Certificates:Edit on the zone.
+# Feedback search HTTPS edge — run as root once (or after cert rotation).
+#
+# Prerequisites: deploy/scripts/bootstrap_security.sh (writes gateway.env)
+#
+# Installs nginx, publishes static UI + openapi under /var/www/feedback-search,
+# wires TLS via Cloudflare Origin CA, delegates /api/** to localhost SearchKit gateway.
+#
 
 set -euo pipefail
 
@@ -13,36 +14,46 @@ DOMAIN="${DOMAIN:-vrchat-canny.hackebein.dev}"
 
 DEPLOY_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 NGINX_SRC="${DEPLOY_ROOT}/nginx"
+REPO_ROOT="$(cd "${DEPLOY_ROOT}/.." && pwd)"
+FEEDBACK_REPO_ROOT="${FEEDBACK_REPO_ROOT:-${REPO_ROOT}}"
+WWW_ROOT="/var/www/feedback-search"
 
 if [[ -z "${CF_API_TOKEN:-}" && -f /etc/feedback-search/cf.env ]]; then
   # shellcheck disable=SC1091
   . /etc/feedback-search/cf.env
 fi
-[[ -n "${CF_API_TOKEN:-}" ]] || { echo "CF_API_TOKEN must be set (Zone:SSL and Certificates:Edit)." >&2; exit 1; }
+[[ -n "${CF_API_TOKEN:-}" ]] || { echo "CF_API_TOKEN must be set (Zone:SSL + Origin CA issuance)." >&2; exit 1; }
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -y
 apt-get install -y nginx jq openssl ca-certificates curl
 
 install -d /etc/nginx/conf.d
-install -m 0644 "${NGINX_SRC}/conf.d/opensearch-limits.conf" /etc/nginx/conf.d/opensearch-limits.conf
-install -m 0644 "${NGINX_SRC}/conf.d/vrchat-feedback-search-cors.inc" /etc/nginx/conf.d/vrchat-feedback-search-cors.inc
-install -m 0644 "${NGINX_SRC}/conf.d/vrchat-feedback-search-proxy-extra.inc" /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc
+
+# Remove retired nginx snippets (direct Browser→OpenSearch path + old naming).
+rm -f \
+  /etc/nginx/conf.d/feedback-search-upstream-auth.inc \
+  /etc/nginx/conf.d/opensearch-limits.conf \
+  /etc/nginx/conf.d/vrchat-feedback-search-cors.inc \
+  /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc
+
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-limit-zones.conf" /etc/nginx/conf.d/feedback-search-limit-zones.conf
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-public-cors.inc" /etc/nginx/conf.d/feedback-search-public-cors.inc
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-http-proxy-defaults.inc" /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.inc" /etc/nginx/conf.d/feedback-search-gateway-upstream.inc
 
 bash "${DEPLOY_ROOT}/scripts/install_cloudflare_real_ip.sh"
 
-if [[ ! -f /etc/nginx/conf.d/feedback-search-upstream-auth.inc ]]; then
-  echo "Missing /etc/nginx/conf.d/feedback-search-upstream-auth.inc — run deploy/scripts/bootstrap_security.sh first." >&2
+if [[ ! -f /etc/feedback-search/gateway.env ]]; then
+  echo "Missing /etc/feedback-search/gateway.env — run deploy/scripts/bootstrap_security.sh first." >&2
   exit 1
 fi
 
-# Issue (or refresh) the Cloudflare Origin CA cert. Idempotent.
 DOMAIN="${DOMAIN}" CF_API_TOKEN="${CF_API_TOKEN}" \
   bash "${DEPLOY_ROOT}/scripts/install_origin_ca_cert.sh"
 
-install -d /var/www/vrchat-feedback-search
-install -m 0644 "${NGINX_SRC}/vrchat-feedback-search-openapi.json" /var/www/vrchat-feedback-search/openapi.json
-install -m 0644 "${NGINX_SRC}/scalar-api-reference.html" /var/www/vrchat-feedback-search/scalar-api-reference.html
+install -d "${WWW_ROOT}"
+install -m 0644 "${NGINX_SRC}/search-gateway-openapi.json" "${WWW_ROOT}/openapi.json"
 
 rm -f /etc/nginx/sites-enabled/default
 
@@ -53,4 +64,10 @@ systemctl enable --now nginx
 nginx -t
 systemctl reload nginx
 
-echo "HTTPS ready: https://${DOMAIN}" >&2
+echo "Listening: https://${DOMAIN}" >&2
+
+FEEDBACK_REPO_ROOT="${FEEDBACK_REPO_ROOT}" WWW_ROOT="${WWW_ROOT}" \
+  bash "${DEPLOY_ROOT}/scripts/install_search_gateway_on_server.sh"
+
+# Retired static root (prior HTTP surface). Remove after migrating traffic.
+rm -rf /var/www/vrchat-feedback-search

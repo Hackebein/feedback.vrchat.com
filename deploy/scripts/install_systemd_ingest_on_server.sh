@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install systemd units on the OpenSearch host for git-pull, compose/nginx/OpenAPI refresh, and reindex.
+# Install systemd units for scheduled ingest / reindex refresh.
 # Run ON THE SERVER as root after the repo exists at FEEDBACK_REPO_ROOT and
 # bootstrap_security.sh has populated /etc/feedback-search/ingest.env.
 #
@@ -11,7 +11,7 @@ set -euo pipefail
 REPO_ROOT="${FEEDBACK_REPO_ROOT:?Set FEEDBACK_REPO_ROOT (e.g. /srv/feedback.vrchat.com)}"
 
 if [[ "$(id -u)" -ne 0 ]]; then
-  echo "Run as root on the OpenSearch host." >&2
+  echo "Run as root on the indexer host." >&2
   exit 1
 fi
 

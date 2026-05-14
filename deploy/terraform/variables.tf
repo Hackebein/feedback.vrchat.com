@@ -35,7 +35,7 @@ variable "allowed_ssh_cidr" {
 
 variable "enable_public_https" {
   type        = bool
-  description = "Open inbound TCP 80 (HTTPS redirect) and 443 when nginx fronts OpenSearch."
+  description = "Open inbound TCP 80 (HTTPS redirect) and 443 for the nginx search edge."
   default     = true
 }
 
