@@ -38,7 +38,7 @@ function getDiscoveryJson() {
       openapi: "/openapi.json",
     },
     description:
-      "POST: JSON array of InstantSearch queries (same as @searchkit/instantsearch-client). GET: discovery when no params, otherwise a single main search via q/query, hitsPerPage, page.",
+      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Contract: openapi.json.",
   };
 }
 
@@ -51,11 +51,6 @@ app.get("/health", (_req, res) => {
 
 app.get("/api/search", async (req, res) => {
   try {
-    if (req.query.help === "1" || req.query.help === "true") {
-      res.json(getDiscoveryJson());
-      return;
-    }
-
     const qRaw = req.query.q ?? req.query.query;
     const queryText =
       typeof qRaw === "string" ? qRaw : Array.isArray(qRaw) ? String(qRaw[0] ?? "") : "";

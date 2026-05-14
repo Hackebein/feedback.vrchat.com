@@ -1,11 +1,12 @@
 [Unit]
-Description=VRChat feedback search gateway (HTTPS /api goes to localhost SearchKit to OpenSearch)After=network-online.target docker.service
+Description=VRChat feedback search gateway (HTTPS /api goes to localhost SearchKit to OpenSearch)
+After=network-online.target docker.service
 Wants=network-online.target
 
 [Service]
 Type=simple
 EnvironmentFile=/etc/feedback-search/gateway.env
-WorkingDirectory=FEEDBACK_REPO_ROOT_STUB/search-ui
+WorkingDirectory=@FEEDBACK_REPO_ROOT@/search-ui
 ExecStart=/usr/bin/node dist/server.js
 Restart=on-failure
 RestartSec=3

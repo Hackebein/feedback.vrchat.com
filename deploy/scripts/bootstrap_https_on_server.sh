@@ -15,7 +15,6 @@ DOMAIN="${DOMAIN:-vrchat-canny.hackebein.dev}"
 DEPLOY_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 NGINX_SRC="${DEPLOY_ROOT}/nginx"
 REPO_ROOT="$(cd "${DEPLOY_ROOT}/.." && pwd)"
-FEEDBACK_REPO_ROOT="${FEEDBACK_REPO_ROOT:-${REPO_ROOT}}"
 WWW_ROOT="/var/www/feedback-search"
 
 if [[ -z "${CF_API_TOKEN:-}" && -f /etc/feedback-search/cf.env ]]; then
@@ -29,14 +28,6 @@ apt-get update -y
 apt-get install -y nginx jq openssl ca-certificates curl
 
 install -d /etc/nginx/conf.d
-
-# Remove retired nginx snippets (direct Browser→OpenSearch path + old naming).
-rm -f \
-  /etc/nginx/conf.d/feedback-search-upstream-auth.inc \
-  /etc/nginx/conf.d/feedback-search-gateway-upstream.inc \
-  /etc/nginx/conf.d/opensearch-limits.conf \
-  /etc/nginx/conf.d/vrchat-feedback-search-cors.inc \
-  /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc
 
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-limit-zones.conf" /etc/nginx/conf.d/feedback-search-limit-zones.conf
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-public-cors.inc" /etc/nginx/conf.d/feedback-search-public-cors.inc
@@ -67,8 +58,5 @@ systemctl reload nginx
 
 echo "Listening: https://${DOMAIN}" >&2
 
-FEEDBACK_REPO_ROOT="${FEEDBACK_REPO_ROOT}" WWW_ROOT="${WWW_ROOT}" \
+FEEDBACK_REPO_ROOT="${REPO_ROOT}" WWW_ROOT="${WWW_ROOT}" \
   bash "${DEPLOY_ROOT}/scripts/install_search_gateway_on_server.sh"
-
-# Retired static root (prior HTTP surface). Remove after migrating traffic.
-rm -rf /var/www/vrchat-feedback-search
