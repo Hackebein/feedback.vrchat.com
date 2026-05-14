@@ -49,7 +49,7 @@ export function App() {
         <header className="top">
           <h1>VRChat feedback search</h1>
           <p className="lede">
-            Search VRChat feedback posts. Narrow by board or status or change sort order.
+            Search VRChat feedback posts. Optionally filter by board or status below.
           </p>
         </header>
 
@@ -63,6 +63,11 @@ export function App() {
               submit: "searchbox-submit",
             }}
           />
+        </div>
+        <div className="stats-toolbar">
+          <p className="stats-line">
+            <Stats />
+          </p>
           <SortBy
             classNames={{ root: "sort-root", select: "sort-select" }}
             items={[
@@ -72,14 +77,10 @@ export function App() {
             ]}
           />
         </div>
-        <p className="stats-line">
-          <Stats />
-        </p>
 
         <div className="panels">
           <aside className="facets">
-            <RefinementList attribute="board_name" searchable showMore />
-            <RefinementList attribute="board_slug" searchable showMore />
+            <RefinementList attribute="board_name" showMore />
             <RefinementList attribute="status" />
           </aside>
           <section className="results">
