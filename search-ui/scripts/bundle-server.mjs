@@ -9,7 +9,9 @@ await build({
   entryPoints: [path.join(root, "server/index.ts")],
   bundle: true,
   platform: "node",
-  format: "esm",
+  // Express and deps rely on dynamic require(); ESM bundle injects a shim that
+  // breaks builtins like "path". CJS output runs under Node's real require().
+  format: "cjs",
   target: "node20",
-  outfile: path.join(root, "dist/server.js"),
+  outfile: path.join(root, "dist/server.cjs"),
 });

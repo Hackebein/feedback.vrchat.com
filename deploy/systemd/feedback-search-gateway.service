@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=simple
 EnvironmentFile=/etc/feedback-search/gateway.env
 WorkingDirectory=@FEEDBACK_REPO_ROOT@/search-ui
-ExecStart=/usr/bin/node dist/server.js
+ExecStart=/usr/bin/node dist/server.cjs
 Restart=on-failure
 RestartSec=3
 

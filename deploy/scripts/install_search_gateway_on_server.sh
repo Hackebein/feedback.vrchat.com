@@ -54,4 +54,4 @@ systemctl daemon-reload
 systemctl enable feedback-search-gateway.service
 systemctl restart feedback-search-gateway.service
 
-echo "[install_search_gateway] unit=feedback-search-gateway www=${WWW_ROOT} (curl -fsS http://127.0.0.1:3333/health)" >&2
+echo "[install_search_gateway] unit=feedback-search-gateway www=${WWW_ROOT} (curl -fsS http://127.0.0.1:3333/health) entry=dist/server.cjs" >&2
