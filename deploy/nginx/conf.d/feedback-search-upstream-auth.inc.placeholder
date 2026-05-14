@@ -1,9 +1,0 @@
-# NOT INSTALLED VERBATIM. The real /etc/nginx/conf.d/feedback-search-upstream-auth.inc
-# is written by deploy/scripts/bootstrap_security.sh once the OpenSearch security
-# plugin is configured. It looks like:
-#
-#   proxy_set_header Authorization "Basic <base64(feedback-search:<password>)>";
-#
-# The password lives in /etc/feedback-search/secrets.env (chmod 0600) and never
-# leaves the host. nginx fails to load if this file is missing — that is
-# intentional: the public surface MUST NOT proxy to OpenSearch without auth.

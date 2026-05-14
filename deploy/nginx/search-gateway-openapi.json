@@ -1,0 +1,110 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "VRChat Feedback Search (SearchKit gateway)",
+    "version": "3.1.0",
+    "description": "HTTP API exposed at the nginx search edge: `POST /api/search` carries the Algolia multi-query payload used by `@searchkit/instantsearch-client`. `GET /api/search` supports discovery and simple query-string searches. Responses are Algolia-shaped results over the indexed `feedback-posts` alias. Reference: SearchKit Express proxy overview."
+  },
+  "externalDocs": {
+    "description": "SearchKit — proxy Elasticsearch/OpenSearch",
+    "url": "https://www.searchkit.co/docs/proxy-elasticsearch/with-express-js"
+  },
+  "servers": [{ "url": "/" }],
+  "tags": [{ "name": "Search", "description": "/api/search" }],
+  "paths": {
+    "/api/search": {
+      "post": {
+        "operationId": "searchkit.instantsearch.multiSearch",
+        "summary": "Run search queries (InstantSearch-compatible)",
+        "tags": ["Search"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "description": "JSON array of InstantSearch multiple-queries objects (`@searchkit/instantsearch-client` POST body).",
+                "items": { "type": "object", "additionalProperties": true }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Algolia-compatible search results envelope.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Body was not a JSON array."
+          },
+          "500": {
+            "description": "Search execution failed upstream."
+          }
+        }
+      },
+      "get": {
+        "operationId": "searchkit.simpleSearch",
+        "summary": "Simple search via query parameters, or discovery JSON when no params",
+        "tags": ["Search"],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": { "type": "string" },
+            "description": "Search text (synonym of `query`)."
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "schema": { "type": "string" },
+            "description": "Same as `q`."
+          },
+          {
+            "name": "hitsPerPage",
+            "in": "query",
+            "schema": { "type": "integer", "default": 15, "maximum": 100 },
+            "description": "Page size (1–100, default 15)."
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": { "type": "integer", "default": 0, "minimum": 0 },
+            "description": "Zero-based page index."
+          },
+          {
+            "name": "help",
+            "in": "query",
+            "schema": { "type": "string", "enum": ["1", "true"] },
+            "description": "If set, return discovery JSON only."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Discovery JSON (no search params) or search `results` envelope (same shape as POST).",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object", "additionalProperties": true }
+              }
+            }
+          },
+          "500": {
+            "description": "Search execution failed upstream."
+          }
+        }
+      },
+      "options": {
+        "operationId": "searchkit.corsPreflightStub",
+        "summary": "CORS handled by nginx (418 chain); omitted if same-origin.",
+        "tags": ["Search"],
+        "responses": { "204": { "description": "No content" } }
+      }
+    }
+  }
+}
