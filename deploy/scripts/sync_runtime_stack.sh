@@ -51,6 +51,7 @@ install -d /etc/nginx/conf.d
 
 rm -f \
   /etc/nginx/conf.d/feedback-search-upstream-auth.inc \
+  /etc/nginx/conf.d/feedback-search-gateway-upstream.inc \
   /etc/nginx/conf.d/opensearch-limits.conf \
   /etc/nginx/conf.d/vrchat-feedback-search-cors.inc \
   /etc/nginx/conf.d/vrchat-feedback-search-proxy-extra.inc
@@ -58,7 +59,7 @@ rm -f \
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-limit-zones.conf" /etc/nginx/conf.d/feedback-search-limit-zones.conf
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-public-cors.inc" /etc/nginx/conf.d/feedback-search-public-cors.inc
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-http-proxy-defaults.inc" /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc
-install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.inc" /etc/nginx/conf.d/feedback-search-gateway-upstream.inc
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.conf" /etc/nginx/conf.d/feedback-search-gateway-upstream.conf
 
 bash "${REPO}/deploy/scripts/install_cloudflare_real_ip.sh"
 
