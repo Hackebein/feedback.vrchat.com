@@ -1,13 +1,12 @@
 import API from "@searchkit/api";
 import express from "express";
 import type { MultipleQueriesQuery } from "searchkit";
-import { mergeLuceneFilters } from "./merge-lucene-filters.js";
 import {
-  FACET_ATTRIBUTE_MAP,
   gatewayEnv,
-  luceneQuery,
+  instantSearchLuceneQuery,
+  instantSearchStrictQuery,
   searchkitConfig,
-} from "./searchkit-config.js";
+} from "./searchkit-config";
 
 const INDEX_NAME = "feedback-posts";
 
@@ -16,9 +15,49 @@ const { opensearchUrl, opensearchUser, opensearchPassword, bind, port } =
 
 const apiClient = API(searchkitConfig(opensearchUrl, opensearchUser, opensearchPassword));
 
-const searchRequestOptions = {
-  getQuery: luceneQuery,
-};
+function parseMode(raw: unknown): string {
+  const v =
+    typeof raw === "string" ? raw : Array.isArray(raw) ? String(raw[0] ?? "") : "";
+  return v.trim().toLowerCase();
+}
+
+function isLuceneMode(req: express.Request): boolean {
+  return parseMode(req.query.mode) === "lucene";
+}
+
+function searchRequestOptions(lucene: boolean) {
+  return {
+    getQuery: lucene ? instantSearchLuceneQuery : instantSearchStrictQuery,
+  };
+}
+
+function extractElasticsearchBadRequestDetail(err: unknown): string | undefined {
+  if (!(err instanceof Error)) {
+    return undefined;
+  }
+  const msg = err.message;
+  try {
+    const parsed = JSON.parse(msg) as {
+      responses?: Array<{ status?: number; error?: unknown }>;
+      status?: number;
+    };
+    const first = parsed.responses?.[0];
+    if (parsed.status === 400 || first?.status === 400) {
+      if (first?.error !== undefined && first.error !== null) {
+        return typeof first.error === "string"
+          ? first.error
+          : JSON.stringify(first.error);
+      }
+      return msg;
+    }
+  } catch {
+    /* not Searchkit JSON error */
+  }
+  if (/Elasticsearch request failed with status 400\b/.test(msg)) {
+    return msg;
+  }
+  return undefined;
+}
 
 function parseNonNegativeInt(
   raw: unknown,
@@ -48,7 +87,7 @@ function getDiscoveryJson() {
       openapi: "/openapi.json",
     },
     description:
-      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). params.query is a Lucene query_string. GET: discovery when no search params; otherwise one-query search (q/query is Lucene, hitsPerPage, page) — subset of POST. Contract: openapi.json.",
+      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Optional query param mode=lucene uses OpenSearch query_string (Lucene) for params.query instead of strict multi_match. Contract: openapi.json.",
   };
 }
 
@@ -89,14 +128,16 @@ app.get("/api/search", async (req, res) => {
       },
     ];
 
-    mergeLuceneFilters(instantsearchRequests, FACET_ATTRIBUTE_MAP);
+    const opts = searchRequestOptions(isLuceneMode(req));
 
-    const results = await apiClient.handleRequest(
-      instantsearchRequests,
-      searchRequestOptions,
-    );
+    const results = await apiClient.handleRequest(instantsearchRequests, opts);
     res.json(results);
   } catch (err) {
+    const detail = extractElasticsearchBadRequestDetail(err);
+    if (detail !== undefined) {
+      res.status(400).json({ message: "Invalid search query", detail });
+      return;
+    }
     console.error("[search-gateway]", err);
     res.status(500).json({ message: "search failed" });
   }
@@ -113,15 +154,19 @@ app.post("/api/search", async (req, res) => {
         });
       return;
     }
-    const body = req.body as MultipleQueriesQuery[];
-    mergeLuceneFilters(body, FACET_ATTRIBUTE_MAP);
+    const opts = searchRequestOptions(isLuceneMode(req));
 
     const results = await apiClient.handleRequest(
-      body,
-      searchRequestOptions,
+      req.body as MultipleQueriesQuery[],
+      opts,
     );
     res.json(results);
   } catch (err) {
+    const detail = extractElasticsearchBadRequestDetail(err);
+    if (detail !== undefined) {
+      res.status(400).json({ message: "Invalid search query", detail });
+      return;
+    }
     console.error("[search-gateway]", err);
     res.status(500).json({ message: "search failed" });
   }

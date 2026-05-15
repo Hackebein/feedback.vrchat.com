@@ -1,6 +1,5 @@
 import type {
   ElasticsearchQuery,
-  FacetFieldConfig,
   SearchAttribute,
   SearchSettingsConfig,
 } from "searchkit";
@@ -13,76 +12,9 @@ function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
   );
 }
 
-/** Facet definitions shared with `mergeLuceneFilters` (same shape as Searchkit `facet_attributes`). */
-export const FACET_ATTRIBUTES: FacetFieldConfig[] = [
-  { attribute: "board_slug", field: "board.urlName", type: "string" },
-  { attribute: "board_name", field: "board.name.keyword", type: "string" },
-  { attribute: "status", field: "status", type: "string" },
-  { attribute: "category_name", field: "category.name.keyword", type: "string" },
-  { attribute: "author_name", field: "author.name.keyword", type: "string" },
-  {
-    attribute: "vote_highEngagement",
-    field: "voteSettings.highEngagement",
-    type: "string",
-  },
-  {
-    attribute: "vote_lowEngagement",
-    field: "voteSettings.lowEngagement",
-    type: "string",
-  },
-  {
-    attribute: "vote_moderateEngagement",
-    field: "voteSettings.moderateEngagement",
-    type: "string",
-  },
-  { attribute: "score", field: "score", type: "numeric" },
-  { attribute: "maxScore", field: "maxScore", type: "numeric" },
-  { attribute: "commentCount", field: "commentCount", type: "numeric" },
-  { attribute: "mergeCount", field: "mergeCount", type: "numeric" },
-  { attribute: "trendingScore", field: "trendingScore", type: "numeric" },
-  {
-    attribute: "comment_author_name",
-    field: "author.name.keyword",
-    type: "string",
-    nestedPath: "comments",
-  },
-  {
-    attribute: "comment_pinned",
-    field: "pinned",
-    type: "string",
-    nestedPath: "comments",
-  },
-  {
-    attribute: "comment_likeCount",
-    field: "likeCount",
-    type: "numeric",
-    nestedPath: "comments",
-  },
-];
-
-export type FacetMapEntry = {
-  field: string;
-  type: "string" | "numeric" | "date";
-  nestedPath?: string;
-};
-
-export const FACET_ATTRIBUTE_MAP: Record<string, FacetMapEntry> = Object.fromEntries(
-  FACET_ATTRIBUTES.map((f) => [
-    f.attribute,
-    {
-      field: f.field,
-      type: f.type,
-      ...(f.nestedPath ? { nestedPath: f.nestedPath } : {}),
-    },
-  ]),
-);
-
-/**
- * Full-text query using Lucene `query_string` grammar against boosted search fields.
- */
-export function luceneQuery(
+export function instantSearchLuceneQuery(
   query: string,
-  searchAttributes: SearchAttribute[],
+  _searchAttributes: SearchAttribute[],
   _config: SearchSettingsConfig,
 ): ElasticsearchQuery {
   const q = query.trim();
@@ -92,12 +24,51 @@ export function luceneQuery(
   return {
     query_string: {
       query: q,
-      fields: fieldsWithBoost(searchAttributes, 1),
       default_operator: "AND",
-      allow_leading_wildcard: false,
-      analyze_wildcard: true,
-      fuzzy_max_expansions: 50,
       lenient: true,
+      analyze_wildcard: true,
+      fields: ["combined_text^3", "title^2", "details", "author.name"],
+    },
+  };
+}
+
+export function instantSearchStrictQuery(
+  query: string,
+  searchAttributes: SearchAttribute[],
+  _config: SearchSettingsConfig,
+): ElasticsearchQuery {
+  const q = query.trim();
+  if (!q) {
+    return { match_all: {} };
+  }
+  // For very short queries (1 character) we keep behavior conservative: require
+  // the *entire* analyzed query to appear as a phrase so that typing "G" while
+  // searching for "Group" doesn't sweep in every document that happens to
+  // contain a stray bare letter token.
+  const primary = fieldsWithBoost(searchAttributes, 1);
+  const phrase = fieldsWithBoost(searchAttributes, 2);
+  return {
+    bool: {
+      should: [
+        {
+          multi_match: {
+            query: q,
+            fields: primary,
+            type: "best_fields",
+            operator: "and",
+            fuzziness: 0,
+            auto_generate_synonyms_phrase_query: false,
+          },
+        },
+        {
+          multi_match: {
+            query: q,
+            type: "phrase",
+            fields: phrase,
+          },
+        },
+      ],
+      minimum_should_match: 1,
     },
   };
 }
@@ -197,7 +168,39 @@ export function searchkitConfig(host: string, username: string, password: string
       ],
       highlight_attributes: ["title", "details", "author.name"],
       snippet_attributes: ["details:200"],
-      facet_attributes: FACET_ATTRIBUTES,
+      facet_attributes: [
+        { attribute: "board_slug", field: "board.urlName", type: "string" },
+        { attribute: "board_name", field: "board.name.keyword", type: "string" },
+        { attribute: "status", field: "status", type: "string" },
+        { attribute: "category_name", field: "category.name.keyword", type: "string" },
+        { attribute: "author_name", field: "author.name.keyword", type: "string" },
+        { attribute: "vote_highEngagement", field: "voteSettings.highEngagement", type: "string" },
+        { attribute: "vote_lowEngagement", field: "voteSettings.lowEngagement", type: "string" },
+        { attribute: "vote_moderateEngagement", field: "voteSettings.moderateEngagement", type: "string" },
+        { attribute: "score", field: "score", type: "numeric" },
+        { attribute: "maxScore", field: "maxScore", type: "numeric" },
+        { attribute: "commentCount", field: "commentCount", type: "numeric" },
+        { attribute: "mergeCount", field: "mergeCount", type: "numeric" },
+        { attribute: "trendingScore", field: "trendingScore", type: "numeric" },
+        {
+          attribute: "comment_author_name",
+          field: "author.name.keyword",
+          type: "string",
+          nestedPath: "comments",
+        },
+        {
+          attribute: "comment_pinned",
+          field: "pinned",
+          type: "string",
+          nestedPath: "comments",
+        },
+        {
+          attribute: "comment_likeCount",
+          field: "likeCount",
+          type: "numeric",
+          nestedPath: "comments",
+        },
+      ],
       sorting: {
         // Default (unsuffixed index name) sorts newest-first.
         default: {

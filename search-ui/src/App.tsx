@@ -1,5 +1,5 @@
 import Client from "@searchkit/instantsearch-client";
-import { Fragment, type ReactNode, useMemo } from "react";
+import { Fragment, type ReactNode, useEffect, useMemo, useState } from "react";
 import {
   ClearRefinements,
   Configure,
@@ -14,60 +14,21 @@ import {
   SortBy,
   Stats,
   ToggleRefinement,
+  useInstantSearch,
   useSearchBox,
 } from "react-instantsearch";
 import { MarkdownText } from "./MarkdownText";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
 
-const LUCENE_OPERATOR_WORDS = new Set([
-  "and",
-  "or",
-  "not",
-  "to",
-]);
-
-/**
- * Terms for client-side highlighting from a Lucene-style `query_string` in the search box.
- * Strips field prefixes, boolean/range noise, and quoted delimiters; not a full Lucene parser.
- */
 function tokenizeQuery(q: string): string[] {
-  if (!q.trim()) return [];
-
-  let s = q.replace(/\s+/g, " ").trim();
-  // Unwrap double-quoted phrases to surface words for highlighting
-  s = s.replace(/"([^"]*)"/g, " $1 ");
-
-  s = s.replace(
-    /\b(AND|OR|NOT|TO)\b|[()[\]{}]|(?<=\s|^)[+\-](?=\s|$)/gi,
-    " ",
-  );
-
-  const raw = s.split(/\s+/).filter(Boolean);
-  const seen = new Set<string>();
-
-  for (const t of raw) {
-    let x = t.replace(/^[+^]+/, "").replace(/\*+$/, "");
-    if (!x) continue;
-
-    const colon = x.indexOf(":");
-    if (colon !== -1) {
-      const maybeField = x.slice(0, colon);
-      if (/^[\w.]+$/.test(maybeField)) {
-        x = x.slice(colon + 1);
-      }
-    }
-
-    if (!x || x === "*" || x === "?") continue;
-    if (LUCENE_OPERATOR_WORDS.has(x.toLowerCase())) continue;
-
-    const trimmed = x.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
-    if (!trimmed) continue;
-    if (!seen.has(trimmed)) {
-      seen.add(trimmed);
-    }
+  if (!q) return [];
+  const out: string[] = [];
+  for (const raw of q.split(/\s+/)) {
+    const trimmed = raw.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
+    if (trimmed) out.push(trimmed);
   }
-  return [...seen];
+  return out;
 }
 
 function useQueryTerms(): string[] {
@@ -93,11 +54,168 @@ function highlightInline(text: string, terms: string[]): ReactNode {
   );
 }
 
-const searchClient = Client({
-  url: "/api/search",
-});
-
 const indexName = "feedback-posts";
+
+const LUCENE_MODE_STORAGE_KEY = "feedback-search:luceneMode";
+
+function readStoredLuceneMode(): boolean {
+  try {
+    return typeof localStorage !== "undefined" &&
+      localStorage.getItem(LUCENE_MODE_STORAGE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+/** POST /api/search; throws on HTTP error so InstantSearch exposes status `error`. */
+function createFeedbackSearchClient(apiUrl: string) {
+  const inner = Client({ url: apiUrl });
+  async function fetchSearchJson(body: unknown) {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    const text = await response.text();
+    let parsed: unknown = null;
+    if (text) {
+      try {
+        parsed = JSON.parse(text) as Record<string, unknown>;
+      } catch {
+        throw new Error(
+          response.ok
+            ? `Invalid JSON from search: ${text.slice(0, 200)}`
+            : `${response.status} ${response.statusText} — ${text.slice(0, 500)}`,
+        );
+      }
+    }
+    if (!response.ok) {
+      const o = parsed as { message?: string; detail?: unknown } | undefined;
+      const msg = typeof o?.message === "string" ? o.message : `Search failed (${response.status})`;
+      const err = new Error(msg) as Error & { statusCode?: number; detail?: unknown };
+      err.statusCode = response.status;
+      err.detail = o?.detail ?? (text || undefined);
+      throw err;
+    }
+    return parsed;
+  }
+  return Object.assign(inner, {
+    async search(requests: unknown) {
+      return fetchSearchJson(requests);
+    },
+  });
+}
+
+type LuceneAttrRow = { field: string; kind: string; example: string };
+
+const LUCENE_ATTRIBUTE_ROWS: LuceneAttrRow[] = [
+  { field: "title", kind: "text", example: `title:avatar` },
+  { field: "details", kind: "text", example: `details:"network lag"` },
+  { field: "combined_text", kind: "text", example: `combined_text:performance` },
+  { field: "author.name", kind: "text", example: `author.name:Alice` },
+  { field: "status", kind: "keyword", example: `status:open` },
+  { field: "board.urlName", kind: "keyword", example: `board.urlName:bug-reports` },
+  { field: "board.name.keyword", kind: "keyword", example: `board.name.keyword:"Feature Requests"` },
+  { field: "category.name.keyword", kind: "keyword", example: `category.name.keyword:SDK` },
+  { field: "author.name.keyword", kind: "keyword", example: `author.name.keyword:"Jane Doe"` },
+  { field: "score", kind: "numeric", example: `score:[10 TO *]` },
+  { field: "maxScore", kind: "numeric", example: `maxScore:[100 TO *]` },
+  { field: "commentCount", kind: "numeric", example: `commentCount:[1 TO 50]` },
+  { field: "mergeCount", kind: "numeric", example: `mergeCount:[1 TO *]` },
+  { field: "trendingScore", kind: "numeric", example: `trendingScore:[500 TO *]` },
+  {
+    field: "voteSettings.highEngagement",
+    kind: "keyword/bool-like",
+    example: `voteSettings.highEngagement:true`,
+  },
+  {
+    field: "voteSettings.moderateEngagement",
+    kind: "keyword/bool-like",
+    example: `voteSettings.moderateEngagement:true`,
+  },
+  {
+    field: "voteSettings.lowEngagement",
+    kind: "keyword/bool-like",
+    example: `voteSettings.lowEngagement:true`,
+  },
+  {
+    field: "created",
+    kind: "date",
+    example: `created:["2025-01-01" TO "2026-01-01"]`,
+  },
+  {
+    field: "updatedAt",
+    kind: "date",
+    example: `updatedAt:["2025-01-01" TO "*"]`,
+  },
+  {
+    field: "statusChanged",
+    kind: "date",
+    example: `statusChanged:["2025-01-01" TO "*"]`,
+  },
+];
+
+function LuceneAttributesPanel() {
+  return (
+    <aside className="lucene-attributes" aria-labelledby="lucene-attributes-heading">
+      <div className="lucene-attributes-intro">
+        <h2 id="lucene-attributes-heading" className="lucene-attributes-heading">
+          Field reference
+        </h2>
+        <p className="lucene-attributes-note">
+          Post-level OpenSearch fields only (nested <code className="lucene-inline-code">comments.*</code>{" "}
+          is not available in this mode). Bare terms search default text fields (combined title, body,
+          author name). Combine with <code className="lucene-inline-code">AND</code>,{" "}
+          <code className="lucene-inline-code">OR</code>, <code className="lucene-inline-code">NOT</code>.
+        </p>
+      </div>
+      <ul className="lucene-attributes-list">
+        {LUCENE_ATTRIBUTE_ROWS.map((row) => (
+          <li key={row.field} className="lucene-attributes-item">
+            <div className="lucene-attributes-field">
+              <span className="lucene-sr-label">Field</span>
+              <code className="lucene-field-name">{row.field}</code>
+            </div>
+            <div className="lucene-attributes-kind">{row.kind}</div>
+            <div className="lucene-attributes-example">
+              <span className="lucene-sr-label">Example</span>
+              <code className="lucene-example-code">{row.example}</code>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
+
+function LuceneSearchError() {
+  const { status, error } = useInstantSearch({ catchError: true });
+
+  if (status !== "error") {
+    return null;
+  }
+
+  const message = error?.message ?? "Unknown error";
+  const ext = error as Error & { detail?: unknown };
+  const detailStr =
+    ext.detail === undefined
+      ? ""
+      : typeof ext.detail === "string"
+        ? ext.detail
+        : `\n${JSON.stringify(ext.detail, null, 2)}`;
+
+  return (
+    <div className="lucene-search-error" role="alert">
+      <strong>Search error</strong>
+      <pre className="lucene-search-error-body">
+        {message}
+        {detailStr}
+      </pre>
+    </div>
+  );
+}
 
 const CANNY_ORIGIN = "https://feedback.vrchat.com";
 
@@ -517,8 +635,27 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
 }
 
 export function App() {
+  const [luceneMode, setLuceneMode] = useState(readStoredLuceneMode);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(LUCENE_MODE_STORAGE_KEY, luceneMode ? "1" : "0");
+    } catch {
+      /* ignore */
+    }
+  }, [luceneMode]);
+
+  const searchClient = useMemo(
+    () =>
+      createFeedbackSearchClient(
+        luceneMode ? "/api/search?mode=lucene" : "/api/search",
+      ),
+    [luceneMode],
+  );
+
   return (
     <InstantSearch
+      key={luceneMode ? "lucene" : "normal"}
       searchClient={searchClient}
       indexName={indexName}
       stalledSearchDelay={0}
@@ -538,17 +675,21 @@ export function App() {
             </a>
           </h1>
           <p className="lede">
-            Search VRChat feedback posts (Lucene <code>query_string</code>).{" "}
-            <a href="/lucene-syntax.md" target="_blank" rel="noreferrer">
-              Lucene cheat sheet
+            Search VRChat feedback posts.{" "}
+            <a href="/openapi.json" target="_blank" rel="noreferrer">
+              OpenAPI spec
             </a>
-            , <a href="/openapi.json" target="_blank" rel="noreferrer">OpenAPI spec</a>.
+            .
           </p>
         </header>
 
         <div className="search-row">
           <SearchBox
-            placeholder='Lucene query, e.g. title:crash AND status:open'
+            placeholder={
+              luceneMode
+                ? "Lucene query (field:value, ranges, booleans)…"
+                : "Search title or body…"
+            }
             searchAsYouType
             classNames={{
               root: "searchbox-root",
@@ -559,142 +700,160 @@ export function App() {
               loadingIndicator: "searchbox-loading",
             }}
           />
-          <SortBy
-            classNames={{ root: "sort-root", select: "sort-select" }}
-            items={[
-              { label: "Newest", value: indexName },
-              { label: "Oldest", value: `${indexName}_created_asc` },
-              { label: "Most voters", value: `${indexName}_score_desc` },
-              { label: "Fewest voters", value: `${indexName}_score_asc` },
-              { label: "Relevance", value: `${indexName}_relevance_desc` },
-            ]}
-          />
+          <label className="lucene-toggle">
+            <input
+              type="checkbox"
+              role="switch"
+              checked={luceneMode}
+              onChange={(e) => setLuceneMode(e.target.checked)}
+            />
+            <span className="lucene-toggle-label">Lucene syntax</span>
+          </label>
+          {luceneMode ? null : (
+            <SortBy
+              classNames={{ root: "sort-root", select: "sort-select" }}
+              items={[
+                { label: "Newest", value: indexName },
+                { label: "Oldest", value: `${indexName}_created_asc` },
+                { label: "Most voters", value: `${indexName}_score_desc` },
+                { label: "Fewest voters", value: `${indexName}_score_asc` },
+                { label: "Relevance", value: `${indexName}_relevance_desc` },
+              ]}
+            />
+          )}
         </div>
+        {luceneMode ? <LuceneAttributesPanel /> : null}
+        {luceneMode ? <LuceneSearchError /> : null}
+
         <div className="stats-toolbar">
           <p className="stats-line">
             <Stats />
           </p>
         </div>
-        <CurrentRefinements
-          classNames={{
-            root: "current-refinements-root",
-            list: "current-refinements-list",
-            item: "current-refinements-item",
-            label: "current-refinements-label",
-            category: "current-refinements-category",
-            categoryLabel: "current-refinements-category-label",
-            delete: "current-refinements-delete",
-          }}
-        />
+        {luceneMode ? null : (
+          <CurrentRefinements
+            classNames={{
+              root: "current-refinements-root",
+              list: "current-refinements-list",
+              item: "current-refinements-item",
+              label: "current-refinements-label",
+              category: "current-refinements-category",
+              categoryLabel: "current-refinements-category-label",
+              delete: "current-refinements-delete",
+            }}
+          />
+        )}
 
-        <div className="panels">
-          <aside className="facets">
-            <ClearRefinements
-              classNames={{
-                root: "clear-refinements-root",
-                button: "clear-refinements-button",
-                disabledButton: "clear-refinements-button-disabled",
-              }}
-              translations={{ resetButtonText: "Clear all filters" }}
-            />
-            <section className="facet-section">
-              <h2 className="facet-heading">Board</h2>
-              <RefinementList
-                attribute="board_name"
-                searchable
-                searchablePlaceholder="Filter boards…"
-                showMore
-                limit={20}
-                showMoreLimit={500}
+        <div className={luceneMode ? "panels lucene" : "panels"}>
+          {luceneMode ? null : (
+            <aside className="facets">
+              <ClearRefinements
+                classNames={{
+                  root: "clear-refinements-root",
+                  button: "clear-refinements-button",
+                  disabledButton: "clear-refinements-button-disabled",
+                }}
+                translations={{ resetButtonText: "Clear all filters" }}
               />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Status</h2>
-              <RefinementList attribute="status" limit={50} />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Category</h2>
-              <RefinementList
-                attribute="category_name"
-                searchable
-                searchablePlaceholder="Filter categories…"
-                showMore
-                limit={10}
-                showMoreLimit={200}
-              />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Author</h2>
-              <RefinementList
-                attribute="author_name"
-                searchable
-                searchablePlaceholder="Filter authors…"
-                showMore
-                limit={10}
-                showMoreLimit={500}
-              />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Votes</h2>
-              <RangeInput attribute="score" />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Max votes</h2>
-              <RangeInput attribute="maxScore" />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Comment count</h2>
-              <RangeInput attribute="commentCount" />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Merge count</h2>
-              <RangeInput attribute="mergeCount" />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Trending</h2>
-              <RangeInput attribute="trendingScore" />
-            </section>
-            <section className="facet-section facet-toggle-group">
-              <h2 className="facet-heading">Vote settings</h2>
-              <ToggleRefinement
-                attribute="vote_highEngagement"
-                on="true"
-                label="High engagement votes"
-              />
-              <ToggleRefinement
-                attribute="vote_moderateEngagement"
-                on="true"
-                label="Moderate engagement votes"
-              />
-              <ToggleRefinement
-                attribute="vote_lowEngagement"
-                on="true"
-                label="Low engagement votes"
-              />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Comments</h2>
-              <p className="facet-hint">
-                Posts with at least one comment matching the selected criteria.
-              </p>
-              <h3 className="facet-subheading">Comment author</h3>
-              <RefinementList
-                attribute="comment_author_name"
-                searchable
-                searchablePlaceholder="Filter comment authors…"
-                showMore
-                limit={10}
-                showMoreLimit={500}
-              />
-              <h3 className="facet-subheading">Comment like count</h3>
-              <RangeInput attribute="comment_likeCount" />
-              <ToggleRefinement
-                attribute="comment_pinned"
-                on="true"
-                label="Has pinned comment"
-              />
-            </section>
-          </aside>
+              <section className="facet-section">
+                <h2 className="facet-heading">Board</h2>
+                <RefinementList
+                  attribute="board_name"
+                  searchable
+                  searchablePlaceholder="Filter boards…"
+                  showMore
+                  limit={20}
+                  showMoreLimit={500}
+                />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Status</h2>
+                <RefinementList attribute="status" limit={50} />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Category</h2>
+                <RefinementList
+                  attribute="category_name"
+                  searchable
+                  searchablePlaceholder="Filter categories…"
+                  showMore
+                  limit={10}
+                  showMoreLimit={200}
+                />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Author</h2>
+                <RefinementList
+                  attribute="author_name"
+                  searchable
+                  searchablePlaceholder="Filter authors…"
+                  showMore
+                  limit={10}
+                  showMoreLimit={500}
+                />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Votes</h2>
+                <RangeInput attribute="score" />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Max votes</h2>
+                <RangeInput attribute="maxScore" />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Comment count</h2>
+                <RangeInput attribute="commentCount" />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Merge count</h2>
+                <RangeInput attribute="mergeCount" />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Trending</h2>
+                <RangeInput attribute="trendingScore" />
+              </section>
+              <section className="facet-section facet-toggle-group">
+                <h2 className="facet-heading">Vote settings</h2>
+                <ToggleRefinement
+                  attribute="vote_highEngagement"
+                  on="true"
+                  label="High engagement votes"
+                />
+                <ToggleRefinement
+                  attribute="vote_moderateEngagement"
+                  on="true"
+                  label="Moderate engagement votes"
+                />
+                <ToggleRefinement
+                  attribute="vote_lowEngagement"
+                  on="true"
+                  label="Low engagement votes"
+                />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">Comments</h2>
+                <p className="facet-hint">
+                  Posts with at least one comment matching the selected criteria.
+                </p>
+                <h3 className="facet-subheading">Comment author</h3>
+                <RefinementList
+                  attribute="comment_author_name"
+                  searchable
+                  searchablePlaceholder="Filter comment authors…"
+                  showMore
+                  limit={10}
+                  showMoreLimit={500}
+                />
+                <h3 className="facet-subheading">Comment like count</h3>
+                <RangeInput attribute="comment_likeCount" />
+                <ToggleRefinement
+                  attribute="comment_pinned"
+                  on="true"
+                  label="Has pinned comment"
+                />
+              </section>
+            </aside>
+          )}
           <section className="results">
             <Hits
               hitComponent={FeedbackHit}
