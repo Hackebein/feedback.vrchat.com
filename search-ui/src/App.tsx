@@ -323,6 +323,7 @@ function readBoardName(hit: Record<string, unknown>): string | undefined {
 
 type CommentLike = Record<string, unknown> & {
   _id?: string;
+  parentID?: unknown;
   value?: string;
   mergeID?: string;
   statusChangeID?: string;
@@ -356,15 +357,73 @@ function readVisibleComments(raw: unknown): CommentLike[] {
     }
     visible.push(obj);
   }
-  visible.sort((a, b) => {
-    const ta = typeof a.created === "string" ? Date.parse(a.created) : NaN;
-    const tb = typeof b.created === "string" ? Date.parse(b.created) : NaN;
-    if (Number.isNaN(ta) && Number.isNaN(tb)) return 0;
-    if (Number.isNaN(ta)) return 1;
-    if (Number.isNaN(tb)) return -1;
-    return ta - tb;
-  });
+  visible.sort(compareCommentsByCreated);
   return visible;
+}
+
+function compareCommentsByCreated(a: CommentLike, b: CommentLike): number {
+  const ta = typeof a.created === "string" ? Date.parse(a.created) : NaN;
+  const tb = typeof b.created === "string" ? Date.parse(b.created) : NaN;
+  if (Number.isNaN(ta) && Number.isNaN(tb)) return 0;
+  if (Number.isNaN(ta)) return 1;
+  if (Number.isNaN(tb)) return -1;
+  return ta - tb;
+}
+
+function readCommentParentId(c: CommentLike): string | undefined {
+  const raw = c.parentID;
+  if (raw === null || raw === undefined) {
+    return undefined;
+  }
+  if (typeof raw === "string" && raw.trim()) {
+    return raw.trim();
+  }
+  return undefined;
+}
+
+type CommentThreadNode = {
+  comment: CommentLike;
+  replies: CommentThreadNode[];
+};
+
+function buildCommentThreadTree(visible: CommentLike[]): CommentThreadNode[] {
+  const sorted = [...visible].sort(compareCommentsByCreated);
+  const idSet = new Set<string>();
+  for (const c of sorted) {
+    if (typeof c._id === "string" && c._id) {
+      idSet.add(c._id);
+    }
+  }
+  const childrenMap = new Map<string, CommentLike[]>();
+  for (const c of sorted) {
+    const pid = readCommentParentId(c);
+    if (pid && idSet.has(pid)) {
+      let bucket = childrenMap.get(pid);
+      if (!bucket) {
+        bucket = [];
+        childrenMap.set(pid, bucket);
+      }
+      bucket.push(c);
+    }
+  }
+  for (const bucket of childrenMap.values()) {
+    bucket.sort(compareCommentsByCreated);
+  }
+  const topLevel = sorted.filter((c) => {
+    const pid = readCommentParentId(c);
+    return !pid || !idSet.has(pid);
+  });
+
+  function toNode(c: CommentLike): CommentThreadNode {
+    const id = typeof c._id === "string" ? c._id : "";
+    const rawReplies = id ? (childrenMap.get(id) ?? []) : [];
+    return {
+      comment: c,
+      replies: rawReplies.map(toNode),
+    };
+  }
+
+  return topLevel.map(toNode);
 }
 
 function readCommentBody(c: CommentLike): string {
@@ -493,12 +552,16 @@ function Attachments({
 }
 
 function CommentItem({
-  comment,
+  node,
   terms,
+  depth,
 }: {
-  comment: CommentLike;
+  node: CommentThreadNode;
   terms: string[];
+  depth: number;
 }) {
+  const { comment, replies } = node;
+  const displayDepth = Math.min(depth, 3);
   const author = comment.author;
   const authorName = readString(author, "name") || "Anonymous";
   const avatarUrl = readString(author, "avatarURL");
@@ -523,7 +586,7 @@ function CommentItem({
     Boolean(newStatus) && !valueRaw && !isMerge;
 
   return (
-    <li className="comment">
+    <li className="comment" data-comment-depth={displayDepth}>
       <div className="comment-header">
         <AuthorAvatar avatarUrl={avatarUrl} name={authorName} />
         <span className="comment-author">{highlightInline(authorName, terms)}</span>
@@ -563,6 +626,22 @@ function CommentItem({
           <Attachments imageUrls={images} files={files} />
         </div>
       ) : null}
+      {replies.length > 0 ? (
+        <ul className="comment-replies">
+          {replies.map((child, idx) => (
+            <CommentItem
+              key={
+                typeof child.comment._id === "string" && child.comment._id
+                  ? child.comment._id
+                  : `r-${depth}-${idx}`
+              }
+              node={child}
+              terms={terms}
+              depth={depth + 1}
+            />
+          ))}
+        </ul>
+      ) : null}
     </li>
   );
 }
@@ -577,15 +656,21 @@ function CommentsThread({
   if (comments.length === 0) {
     return null;
   }
+  const roots = buildCommentThreadTree(comments);
   return (
     <section className="comments-thread">
       <h3 className="comments-heading">{formatCommentLabel(comments.length)}</h3>
       <ul className="comments-list">
-        {comments.map((c, idx) => (
+        {roots.map((node, idx) => (
           <CommentItem
-            key={typeof c._id === "string" && c._id ? c._id : `c-${idx}`}
-            comment={c}
+            key={
+              typeof node.comment._id === "string" && node.comment._id
+                ? node.comment._id
+                : `c-${idx}`
+            }
+            node={node}
             terms={terms}
+            depth={0}
           />
         ))}
       </ul>
