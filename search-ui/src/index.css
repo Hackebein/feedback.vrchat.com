@@ -730,6 +730,21 @@ body {
   margin-bottom: 0.35rem;
 }
 
+.comment .hit-body {
+  margin-top: 0.2rem;
+}
+
+.comment-status-change {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #c8d0e5;
+  line-height: 1.5;
+}
+
+.comment-status-change .hit-status {
+  vertical-align: baseline;
+}
+
 .author-avatar {
   width: 22px;
   height: 22px;
