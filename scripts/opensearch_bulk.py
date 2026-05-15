@@ -146,19 +146,22 @@ def list_backing_indices_sorted(client: OpenSearch, alias: str, newest_first: bo
     return [t[1] for t in keyed]
 
 
-def indices_for_alias(client: OpenSearch, alias_name: str) -> list[str]:
-    try:
-        r = client.indices.get_alias(name=alias_name)
-    except Exception:
-        return []
-    return list(r.keys()) if isinstance(r, dict) else []
-
-
 def atomic_alias_swap(client: OpenSearch, alias: str, new_index: str) -> None:
+    """Atomically point `alias` at `new_index`, removing it from any other backing index.
+
+    We avoid `indices.get_alias` because the ingest role typically lacks
+    `indices:admin/aliases/get` permission (silent 403 would skip removals and
+    leave the alias pointing at multiple indices). Instead we enumerate
+    backing indices via `indices.get(index="{alias}-*")`, which only requires
+    `indices:admin/get`, and issue `remove` actions for every backing index
+    except the new one. `update_aliases` ignores `remove` actions for indices
+    that don't currently hold the alias, so the operation stays idempotent.
+    """
     actions: list[dict[str, Any]] = []
-    current = indices_for_alias(client, alias)
-    for ix in current:
-        actions.append({"remove": {"index": ix, "alias": alias}})
+    for ix in list_backing_indices_sorted(client, alias):
+        if ix == new_index:
+            continue
+        actions.append({"remove": {"index": ix, "alias": alias, "must_exist": False}})
     actions.append({"add": {"index": new_index, "alias": alias}})
     resp = client.indices.update_aliases(body={"actions": actions})
     acknowledged = resp.get("acknowledged", True)

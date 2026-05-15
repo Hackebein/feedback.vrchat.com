@@ -1,40 +1,45 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "VRChat Feedback Search (SearchKit gateway)",
-    "version": "3.1.2",
-    "description": "Nginx exposes this API at the public search host. `POST /api/search` accepts the Algolia multi-query JSON array used by `@searchkit/instantsearch-client`. `GET /api/search` implements **only** the single-query subset described under that path: same index (`feedback-posts`), same `params.query` / `hitsPerPage` / `page` mapping to SearchKit, and the same Algolia-shaped **search** response as an equivalent one-element POST. **GET adds non-search discovery responses** (no POST equivalent — see GET operation / *Contract gaps & GET-only botches*). Full contract notes live in this file only (served at `/openapi.json`)."
+    "title": "VRChat Feedback Search Gateway",
+    "version": "1.0.0",
+    "summary": "Public Algolia-shaped search API backed by SearchKit and OpenSearch.",
   },
   "externalDocs": {
-    "description": "SearchKit — proxy Elasticsearch/OpenSearch",
+    "description": "SearchKit gateway reference (request/response shape, Algolia parity).",
     "url": "https://www.searchkit.co/docs/proxy-elasticsearch/with-express-js"
   },
-  "servers": [{ "url": "/" }],
+  "servers": [
+    {
+      "url": "/",
+      "description": "Same-origin"
+    }
+  ],
+  "security": [],
   "tags": [
     {
       "name": "Search",
-      "description": "`/api/search` — POST is the full InstantSearch client payload; GET is a thin query-string projection of **one** query worth of `params` plus GET-only discovery."
+      "description": "Algolia-compatible search endpoints backed by SearchKit and OpenSearch."
+    },
+    {
+      "name": "Operations",
+      "description": "Operational endpoints (health checks, service discovery)."
     }
   ],
   "paths": {
     "/api/search": {
       "post": {
-        "operationId": "searchkit.instantsearch.multiSearch",
-        "summary": "Full multi-query search (InstantSearch-compatible)",
-        "description": "Passes the request body verbatim to SearchKit `handleRequest`. This is the only method that supports multiple queries per request, replica / sort indices, facets, filters, and every other InstantSearch `params` field. **There is no POST discovery mode** (no body shape returns the small JSON stub that GET returns with no params). **400** if the body is not a JSON array.",
+        "operationId": "searchMultiQuery",
+        "summary": "Run one or more InstantSearch queries.",
         "tags": ["Search"],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "schema": {
-                "type": "array",
-                "description": "InstantSearch multiple-queries array. Minimum useful element for parity with GET “simple search” is a single object with `indexName`: `feedback-posts` and `params` containing at most `query`, `hitsPerPage`, and `page` (other keys are GET-inexpressible).",
-                "items": { "type": "object", "additionalProperties": true }
-              },
+              "schema": { "$ref": "#/components/schemas/MultiQueryRequest" },
               "examples": {
-                "minimalSameAsGet": {
-                  "summary": "Same search as GET /api/search?q=ui&hitsPerPage=15&page=0",
+                "minimalQuery": {
+                  "summary": "Single query, equivalent to GET /api/search?q=ui&hitsPerPage=15&page=0",
                   "value": [
                     {
                       "indexName": "feedback-posts",
@@ -45,6 +50,21 @@
                       }
                     }
                   ]
+                },
+                "facetedQuery": {
+                  "summary": "Faceted query with filters and a sort replica",
+                  "value": [
+                    {
+                      "indexName": "feedback-posts_created_desc",
+                      "params": {
+                        "query": "desktop crash",
+                        "hitsPerPage": 20,
+                        "page": 0,
+                        "facets": ["status", "board_slug"],
+                        "facetFilters": [["status:open"]]
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -52,76 +72,303 @@
         },
         "responses": {
           "200": {
-            "description": "Algolia-compatible search results envelope (never the GET discovery stub).",
+            "description": "Algolia-compatible search-results envelope.",
             "content": {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": true
-                }
+                "schema": { "$ref": "#/components/schemas/SearchResponse" }
               }
             }
           },
           "400": {
-            "description": "Body was not a JSON array."
+            "description": "The request body was not a JSON array.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Error" },
+                "example": {
+                  "message": "Expected a JSON array of InstantSearch multiple-queries payloads"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Search execution failed upstream."
+            "description": "Search execution failed upstream (OpenSearch error, network failure, etc.).",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Error" },
+                "example": { "message": "search failed" }
+              }
+            }
           }
         }
       },
       "get": {
-        "operationId": "searchkit.simpleSearch",
-        "summary": "Single-query search via query string (POST subset only) or discovery JSON",
-        "description": "## Search parity with POST\n\nIf **any** of `q`, `query`, `hitsPerPage`, or `page` is present, the handler builds exactly **one** `MultipleQueriesQuery`:\n\n- `indexName`: `feedback-posts`\n- `params.query`: from `q` if set, else `query` (**see botch:** both present → `query` ignored)\n- `params.hitsPerPage`: parsed integer in **1…100**, default **15** if missing; invalid or **≤0** → **15** (**GET-only coercion** — POST leaves omitted keys to SearchKit defaults)\n- `params.page`: non-negative integer, default **0** if missing; invalid or negative → **0**\n\nThat array is passed to the same `handleRequest` as POST. So for the **intersection** of features (plain text query + page size + page index on the primary index only), **GET and POST return the same search payload shape**.\n\n## POST-only (not expressible on GET)\n\nExtra `params` keys (facets, numeric filters, `sortBy` / replica index names, geo, etc.), a second query object, or a different `indexName` — **POST only**.\n\n## Contract gaps & GET-only botches\n\n1. **Discovery JSON** — With **no** `q`, `query`, `hitsPerPage`, or `page`, the response is a small JSON stub (`endpoints`, `description`) pointing at POST and `/openapi.json`. **POST has no equivalent.**\n2. **Duplicate query keys** — If `q` or `query` is repeated (`?q=a&q=b`), Express may supply an array; **only the first value** is used.\n3. **`q` vs `query`** — If both are set, **`q` wins**; `query` is ignored.\n4. **`help` removed** — The gateway no longer treats `help` as a special query parameter. It is **ignored** for routing (same as any other unknown key). If **no** search parameters are present, the response is still the discovery stub — so `GET /api/search?help=1` alone behaves like a bare `GET /api/search`.",
+        "operationId": "searchSingleQueryOrDiscovery",
+        "summary": "Run a single query via query string, or return a discovery document.",
+        "description": "Two behaviours are multiplexed onto this endpoint:\n\n### 1. Single-query search (parity with POST)\n\nIf any of `q`, `query`, `hitsPerPage`, or `page` is supplied, the gateway constructs exactly **one** multi-query element targeting the `feedback-posts` index and forwards it through the same `@searchkit/api#handleRequest` pipeline as POST. The response is therefore the same Algolia-shaped envelope.\n\nMapping:\n\n| Query parameter | Maps to            | Default | Coercion                                                            |\n| --------------- | ------------------ | ------- | ------------------------------------------------------------------- |\n| `q` or `query`  | `params.query`     | `\"\"`    | `q` takes precedence when both are present.                         |\n| `hitsPerPage`   | `params.hitsPerPage` | `50`  | Clamped to the inclusive range `[1, 500]`; invalid input falls back to `50`. |\n| `page`          | `params.page`      | `0`     | Clamped to `[0, 9999]`; invalid input falls back to `0`.            |\n\nFeatures that cannot be expressed via query string (multiple queries, facets, filters, custom `indexName`, sort replicas, etc.) require POST.\n\n### 2. Service discovery\n\nWith **none** of `q`, `query`, `hitsPerPage`, or `page` present, the gateway returns a small JSON discovery document describing the available endpoints. POST has no equivalent of this mode.",
         "tags": ["Search"],
         "parameters": [
           {
             "name": "q",
             "in": "query",
+            "required": false,
             "schema": { "type": "string" },
-            "description": "Maps to `params.query`. Takes precedence over `query` when both are sent.",
-            "examples": { "term": { "value": "desktop crash" } }
+            "description": "Search terms. Maps to `params.query`. Takes precedence over `query` when both are supplied.",
+            "example": "desktop crash"
           },
           {
             "name": "query",
             "in": "query",
+            "required": false,
             "schema": { "type": "string" },
-            "description": "Synonym of `q`; ignored if `q` is also set."
+            "description": "Alias of `q`. Ignored when `q` is also present."
           },
           {
             "name": "hitsPerPage",
             "in": "query",
-            "schema": { "type": "integer", "default": 15, "minimum": 1, "maximum": 100 },
-            "description": "Maps to `params.hitsPerPage`. Omitted → 15. Invalid or ≤0 → 15 (server coercion)."
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "minimum": 1,
+              "maximum": 500
+            },
+            "description": "Page size. Defaults to `50`. Values outside `[1, 500]` or non-numeric input fall back to `50`."
           },
           {
             "name": "page",
             "in": "query",
-            "schema": { "type": "integer", "default": 0, "minimum": 0 },
-            "description": "Maps to `params.page`. Omitted → 0. Invalid or negative → 0."
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 9999
+            },
+            "description": "Zero-based page index. Defaults to `0`. Values outside `[0, 9999]` or non-numeric input fall back to `0`."
           }
         ],
         "responses": {
           "200": {
-            "description": "Either (a) Algolia-shaped **search** results — same envelope as POST for the parity case — or (b) the **discovery** stub JSON when none of `q`, `query`, `hitsPerPage`, or `page` is sent.",
+            "description": "Either a search-results envelope (when search parameters are supplied) or the discovery document (when none are supplied).",
             "content": {
               "application/json": {
-                "schema": { "type": "object", "additionalProperties": true }
+                "schema": {
+                  "oneOf": [
+                    { "$ref": "#/components/schemas/SearchResponse" },
+                    { "$ref": "#/components/schemas/DiscoveryResponse" }
+                  ]
+                },
+                "examples": {
+                  "discovery": {
+                    "summary": "Discovery (no query parameters)",
+                    "value": {
+                      "endpoints": {
+                        "POST": "/api/search",
+                        "GET": "/api/search?q=terms&hitsPerPage=50&page=0",
+                        "openapi": "/openapi.json"
+                      },
+                      "description": "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Contract: openapi.json."
+                    }
+                  }
+                }
               }
             }
           },
           "500": {
-            "description": "Search execution failed upstream (discovery mode does not use SearchKit)."
+            "description": "Search execution failed upstream. Discovery mode never reaches SearchKit and therefore never produces this status.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Error" },
+                "example": { "message": "search failed" }
+              }
+            }
           }
         }
       },
       "options": {
-        "operationId": "searchkit.corsPreflightStub",
-        "summary": "CORS preflight; often answered by nginx before the gateway.",
-        "description": "The edge may return **204** via nginx (`OPTIONS` → 418 internal route). Behavior depends on deployment; not part of search parity.",
+        "operationId": "searchCorsPreflight",
+        "summary": "CORS preflight.",
+        "description": "Answered by nginx with `204 No Content` and the public CORS headers (`Access-Control-Allow-Origin: *`, `Access-Control-Allow-Methods: GET, POST, OPTIONS, HEAD`, `Access-Control-Allow-Headers: Authorization, Content-Type, Accept, X-Requested-With`, `Access-Control-Max-Age: 86400`). The gateway process is not involved.",
         "tags": ["Search"],
-        "responses": { "204": { "description": "No content" } }
+        "responses": {
+          "204": { "description": "No content." }
+        }
+      }
+    },
+    "/healthz": {
+      "get": {
+        "operationId": "health",
+        "summary": "Liveness probe.",
+        "description": "Proxied by nginx to the gateway's internal `/health` endpoint. Returns `200 OK` with the plain-text body `ok` when the gateway process is reachable. A `502 Bad Gateway` indicates that nginx cannot reach the gateway upstream.",
+        "tags": ["Operations"],
+        "responses": {
+          "200": {
+            "description": "Gateway is reachable.",
+            "content": {
+              "text/plain": {
+                "schema": { "type": "string", "const": "ok" }
+              }
+            }
+          },
+          "502": { "description": "nginx cannot reach the gateway upstream." }
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "operationId": "openapi",
+        "summary": "This OpenAPI document.",
+        "description": "Served as a static file by nginx. Always reflects the contract of the gateway running on the same host.",
+        "tags": ["Operations"],
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1 document.",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MultiQueryRequest": {
+        "type": "array",
+        "description": "InstantSearch multi-query payload. Each element describes one query against one index. Field semantics follow the Algolia search API; see SearchKit and Algolia documentation for the full set of `params` keys.",
+        "minItems": 1,
+        "items": { "$ref": "#/components/schemas/MultiQueryRequestItem" }
+      },
+      "MultiQueryRequestItem": {
+        "type": "object",
+        "required": ["indexName", "params"],
+        "properties": {
+          "indexName": {
+            "type": "string",
+            "description": "Target index. The primary index is `feedback-posts`. Sort replicas exposed by the gateway are `feedback-posts_created_desc` and `feedback-posts_score_desc`.",
+            "examples": ["feedback-posts", "feedback-posts_created_desc"]
+          },
+          "params": {
+            "type": "object",
+            "description": "Algolia-compatible search parameters. Only the most common fields are listed here; any field accepted by `@searchkit/api` may be supplied.",
+            "additionalProperties": true,
+            "properties": {
+              "query": { "type": "string", "description": "Free-text query. Empty string matches everything." },
+              "hitsPerPage": { "type": "integer", "minimum": 1, "description": "Page size." },
+              "page": { "type": "integer", "minimum": 0, "description": "Zero-based page index." },
+              "facets": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Facet attributes to compute. Configured attributes: `board_slug`, `board_name`, `status`, `score`, `commentCount`."
+              },
+              "facetFilters": {
+                "description": "Algolia-style facet filter expression (string, array of strings, or array of arrays for OR-of-AND).",
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "array", "items": { "type": "string" } },
+                  { "type": "array", "items": { "type": "array", "items": { "type": "string" } } }
+                ]
+              },
+              "numericFilters": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Algolia-style numeric filter expressions, e.g. `score>=10`."
+              },
+              "filters": {
+                "type": "string",
+                "description": "Algolia-style filter expression."
+              },
+              "maxValuesPerFacet": { "type": "integer", "minimum": 1 }
+            }
+          }
+        }
+      },
+      "SearchResponse": {
+        "type": "object",
+        "description": "Algolia-compatible search-results envelope produced by `@searchkit/api`. The `results` array contains one entry per query in the request, in order.",
+        "required": ["results"],
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/SearchResult" }
+          }
+        },
+        "additionalProperties": true
+      },
+      "SearchResult": {
+        "type": "object",
+        "description": "Single-query result. Mirrors the Algolia `SearchResponse` shape; only the most commonly consumed fields are documented here.",
+        "properties": {
+          "hits": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Hit" },
+            "description": "Documents returned for this page."
+          },
+          "nbHits": { "type": "integer", "minimum": 0, "description": "Total number of matching documents." },
+          "page": { "type": "integer", "minimum": 0, "description": "Zero-based page index of this result." },
+          "nbPages": { "type": "integer", "minimum": 0, "description": "Total number of pages available." },
+          "hitsPerPage": { "type": "integer", "minimum": 1, "description": "Page size used for this result." },
+          "processingTimeMS": { "type": "integer", "minimum": 0 },
+          "query": { "type": "string", "description": "Echo of the query string that was executed." },
+          "facets": {
+            "type": "object",
+            "description": "Facet counts keyed by facet attribute, then by facet value.",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      "Hit": {
+        "type": "object",
+        "description": "Indexed feedback post document. Includes the full `_source` plus standard Algolia hit metadata (`objectID`, `_highlightResult`, `_snippetResult`). Only the fields the gateway is configured to return are listed below; consult `index_mappings.json` for the canonical field set.",
+        "properties": {
+          "objectID": { "type": "string" },
+          "post_id": { "type": "string" },
+          "title": { "type": "string" },
+          "details": { "type": "string" },
+          "urlName": { "type": "string" },
+          "status": { "type": "string" },
+          "score": { "type": "integer" },
+          "commentCount": { "type": "integer" },
+          "created": { "type": "string", "format": "date-time" },
+          "author": { "type": "object", "additionalProperties": true },
+          "board": { "type": "object", "additionalProperties": true },
+          "_highlightResult": { "type": "object", "additionalProperties": true },
+          "_snippetResult": { "type": "object", "additionalProperties": true }
+        },
+        "additionalProperties": true
+      },
+      "DiscoveryResponse": {
+        "type": "object",
+        "description": "Returned by `GET /api/search` when no search parameters are supplied.",
+        "required": ["endpoints", "description"],
+        "properties": {
+          "endpoints": {
+            "type": "object",
+            "required": ["POST", "GET", "openapi"],
+            "properties": {
+              "POST": { "type": "string", "description": "Canonical search endpoint." },
+              "GET": { "type": "string", "description": "Example single-query GET URL." },
+              "openapi": { "type": "string", "description": "Path to this OpenAPI document." }
+            },
+            "additionalProperties": false
+          },
+          "description": { "type": "string" }
+        },
+        "additionalProperties": false
+      },
+      "Error": {
+        "type": "object",
+        "required": ["message"],
+        "properties": {
+          "message": { "type": "string", "description": "Human-readable error description." }
+        },
+        "additionalProperties": false
       }
     }
   }
