@@ -60,11 +60,16 @@ body {
 }
 
 .search-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5rem;
   margin-bottom: 0.75rem;
 }
 
 .searchbox-root {
-  width: 100%;
+  flex: 1 1 320px;
+  min-width: 0;
 }
 
 .stats-toolbar {
@@ -77,13 +82,13 @@ body {
 }
 
 .searchbox-form {
-  display: flex;
-  gap: 0.5rem;
+  position: relative;
+  display: block;
 }
 
 .searchbox-input {
-  flex: 1;
-  padding: 0.55rem 0.75rem;
+  width: 100%;
+  padding: 0.55rem 2.25rem 0.55rem 0.75rem;
   border-radius: 8px;
   border: 1px solid #2a3142;
   background: #151a24;
@@ -91,8 +96,49 @@ body {
   font-size: 1rem;
 }
 
-.searchbox-submit {
+.searchbox-input:focus {
+  outline: none;
+  border-color: #3b6fd9;
+  box-shadow: 0 0 0 2px rgba(59, 111, 217, 0.25);
+}
+
+.searchbox-submit,
+.searchbox-loading {
   display: none;
+}
+
+.searchbox-reset {
+  position: absolute;
+  top: 50%;
+  right: 0.45rem;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #7d8699;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.searchbox-reset:hover {
+  background: #232a3a;
+  color: #eaeaf0;
+}
+
+.searchbox-reset[hidden] {
+  display: none;
+}
+
+.searchbox-reset svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  fill: currentColor;
 }
 
 .sort-root {
@@ -100,11 +146,13 @@ body {
 }
 
 .sort-select {
+  height: 100%;
   padding: 0.52rem 0.65rem;
   border-radius: 8px;
   border: 1px solid #2a3142;
   background: #151a24;
   color: #f2f4fa;
+  font-size: 0.95rem;
 }
 
 .stats-line {
