@@ -479,7 +479,7 @@ export function App() {
             </a>
           </h1>
           <p className="lede">
-            Search VRChat feedback posts. Optionally filter by board or status below.
+            Search VRChat feedback posts. <a href="/openapi.json" target="_blank" rel="noreferrer">OpenAPI spec</a>.
           </p>
         </header>
 
@@ -572,11 +572,11 @@ export function App() {
               />
             </section>
             <section className="facet-section">
-              <h2 className="facet-heading">Score</h2>
+              <h2 className="facet-heading">Votes</h2>
               <RangeInput attribute="score" />
             </section>
             <section className="facet-section">
-              <h2 className="facet-heading">Max score</h2>
+              <h2 className="facet-heading">Max votes</h2>
               <RangeInput attribute="maxScore" />
             </section>
             <section className="facet-section">
@@ -588,7 +588,7 @@ export function App() {
               <RangeInput attribute="mergeCount" />
             </section>
             <section className="facet-section">
-              <h2 className="facet-heading">Trending score</h2>
+              <h2 className="facet-heading">Trending</h2>
               <RangeInput attribute="trendingScore" />
             </section>
             <section className="facet-section facet-toggle-group">
