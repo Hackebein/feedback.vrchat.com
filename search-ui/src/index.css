@@ -72,13 +72,7 @@ body {
 }
 
 .searchbox-submit {
-  padding: 0.55rem 1rem;
-  border-radius: 8px;
-  border: none;
-  background: #3b6fd9;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
+  display: none;
 }
 
 .sort-root {
@@ -157,6 +151,12 @@ body {
   color: #7d8699;
 }
 
+.hit-stats {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  color: #8b95a8;
+}
+
 .hit-code {
   font-size: 0.78rem;
   background: #0f1218;
@@ -211,4 +211,13 @@ mark {
 
 .ais-RefinementList-item {
   margin: 0.2rem 0;
+}
+
+/* Wrap facet hit counts as " (123)" after the label */
+.facets .ais-RefinementList-count::before {
+  content: " (";
+}
+
+.facets .ais-RefinementList-count::after {
+  content: ")";
 }

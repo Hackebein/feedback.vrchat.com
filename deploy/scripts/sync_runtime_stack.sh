@@ -18,6 +18,55 @@ fi
 
 FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/bootstrap_security.sh"
 
+# Redeploy often refreshes the stack without a new git commit; scheduled ingest then
+# never runs (see scripts/run_reindex_maybe.py). If the OpenSearch alias is missing
+# (empty volume, first boot), populate it from boards/ so /api/search stops returning 500.
+ensure_search_index_if_missing() {
+  local ingest_env="/etc/feedback-search/ingest.env"
+  [[ -f "${ingest_env}" ]] || return 0
+
+  local boards_dir="${REPO}/boards"
+  if [[ ! -d "${boards_dir}" ]]; then
+    echo "Search auto-index skipped: no boards dir at ${boards_dir}" >&2
+    return 0
+  fi
+
+  set -a
+  # shellcheck disable=SC1090
+  source "${ingest_env}"
+  set +a
+  export FEEDBACK_REPO_ROOT="${REPO}"
+
+  local alias="${OPENSEARCH_ALIAS:-feedback-posts}"
+  local os_url="${OPENSEARCH_URL:-http://127.0.0.1:9200}"
+  os_url="${os_url%/}"
+
+  local code
+  if ! code="$(
+    curl -sS -o /dev/null -w '%{http_code}' -m 15 \
+      -u "${OPENSEARCH_USER}:${OPENSEARCH_PASSWORD}" \
+      -X HEAD "${os_url}/${alias}"
+  )"; then
+    echo "Search auto-index skipped: cannot reach ${os_url} (curl failed)." >&2
+    return 0
+  fi
+
+  if [[ "${code}" == "200" ]]; then
+    return 0
+  fi
+  if [[ "${code}" != "404" ]]; then
+    echo "Search auto-index skipped: HEAD ${os_url}/${alias} -> HTTP ${code} (auto-ingest only on 404)." >&2
+    return 0
+  fi
+
+  echo "OpenSearch alias ${alias} missing; running scripts/opensearch_bulk.py" >&2
+  local py="/opt/feedback-ingest/venv/bin/python"
+  [[ -x "${py}" ]] || py="python3"
+  "${py}" "${REPO}/scripts/opensearch_bulk.py"
+}
+
+ensure_search_index_if_missing
+
 install -d "${WWW_ROOT}"
 install -m 0644 "${REPO}/deploy/nginx/search-gateway-openapi.json" "${WWW_ROOT}/openapi.json"
 

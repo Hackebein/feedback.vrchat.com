@@ -66,11 +66,13 @@ export function searchkitConfig(host: string, username: string, password: string
           field: "_score",
           order: "desc" as const,
         },
-        created_at_desc: {
+        // Keys must include the leading "_" so Searchkit's strip logic removes
+        // "feedback-posts_created_at_desc" -> "feedback-posts", not "feedback-posts_".
+        _created_at_desc: {
           field: "created_at",
           order: "desc" as const,
         },
-        score_desc: {
+        _score_desc: {
           field: "score",
           order: "desc" as const,
         },
