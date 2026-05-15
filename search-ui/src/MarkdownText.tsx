@@ -5,6 +5,7 @@ import type { PluggableList } from "react-markdown/lib";
 import remarkGfm from "remark-gfm";
 import { SKIP, visit } from "unist-util-visit";
 import { detectVideoEmbed } from "./videoEmbed";
+import { VideoEmbedView } from "./VideoEmbedView";
 
 function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -85,6 +86,11 @@ const components: Components = {
     if (!safe) {
       return <span className="markdown-disabled-link">{children}</span>;
     }
+    const embed = detectVideoEmbed(safe);
+    if (embed) {
+      const linkText = typeof children === "string" ? children : undefined;
+      return <VideoEmbedView embed={embed} title={linkText} />;
+    }
     return (
       <a {...rest} href={safe} target="_blank" rel="noopener noreferrer">
         {children}
@@ -97,17 +103,7 @@ const components: Components = {
     }
     const embed = detectVideoEmbed(src);
     if (embed) {
-      return (
-        <iframe
-          className="video-embed"
-          src={embed.src}
-          title={alt || title || embed.title}
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      );
+      return <VideoEmbedView embed={embed} title={alt || title} />;
     }
     const safe = safeHref(src);
     if (!safe) return null;
