@@ -1,7 +1,13 @@
 import API from "@searchkit/api";
 import express from "express";
 import type { MultipleQueriesQuery } from "searchkit";
-import { gatewayEnv, instantSearchStrictQuery, searchkitConfig } from "./searchkit-config";
+import { mergeLuceneFilters } from "./merge-lucene-filters.js";
+import {
+  FACET_ATTRIBUTE_MAP,
+  gatewayEnv,
+  luceneQuery,
+  searchkitConfig,
+} from "./searchkit-config.js";
 
 const INDEX_NAME = "feedback-posts";
 
@@ -11,7 +17,7 @@ const { opensearchUrl, opensearchUser, opensearchPassword, bind, port } =
 const apiClient = API(searchkitConfig(opensearchUrl, opensearchUser, opensearchPassword));
 
 const searchRequestOptions = {
-  getQuery: instantSearchStrictQuery,
+  getQuery: luceneQuery,
 };
 
 function parseNonNegativeInt(
@@ -42,7 +48,7 @@ function getDiscoveryJson() {
       openapi: "/openapi.json",
     },
     description:
-      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Contract: openapi.json.",
+      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). params.query is a Lucene query_string. GET: discovery when no search params; otherwise one-query search (q/query is Lucene, hitsPerPage, page) — subset of POST. Contract: openapi.json.",
   };
 }
 
@@ -83,6 +89,8 @@ app.get("/api/search", async (req, res) => {
       },
     ];
 
+    mergeLuceneFilters(instantsearchRequests, FACET_ATTRIBUTE_MAP);
+
     const results = await apiClient.handleRequest(
       instantsearchRequests,
       searchRequestOptions,
@@ -105,8 +113,11 @@ app.post("/api/search", async (req, res) => {
         });
       return;
     }
+    const body = req.body as MultipleQueriesQuery[];
+    mergeLuceneFilters(body, FACET_ATTRIBUTE_MAP);
+
     const results = await apiClient.handleRequest(
-      req.body as MultipleQueriesQuery[],
+      body,
       searchRequestOptions,
     );
     res.json(results);

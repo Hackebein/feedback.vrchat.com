@@ -20,14 +20,54 @@ import { MarkdownText } from "./MarkdownText";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
 
+const LUCENE_OPERATOR_WORDS = new Set([
+  "and",
+  "or",
+  "not",
+  "to",
+]);
+
+/**
+ * Terms for client-side highlighting from a Lucene-style `query_string` in the search box.
+ * Strips field prefixes, boolean/range noise, and quoted delimiters; not a full Lucene parser.
+ */
 function tokenizeQuery(q: string): string[] {
-  if (!q) return [];
-  const out: string[] = [];
-  for (const raw of q.split(/\s+/)) {
-    const trimmed = raw.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
-    if (trimmed) out.push(trimmed);
+  if (!q.trim()) return [];
+
+  let s = q.replace(/\s+/g, " ").trim();
+  // Unwrap double-quoted phrases to surface words for highlighting
+  s = s.replace(/"([^"]*)"/g, " $1 ");
+
+  s = s.replace(
+    /\b(AND|OR|NOT|TO)\b|[()[\]{}]|(?<=\s|^)[+\-](?=\s|$)/gi,
+    " ",
+  );
+
+  const raw = s.split(/\s+/).filter(Boolean);
+  const seen = new Set<string>();
+
+  for (const t of raw) {
+    let x = t.replace(/^[+^]+/, "").replace(/\*+$/, "");
+    if (!x) continue;
+
+    const colon = x.indexOf(":");
+    if (colon !== -1) {
+      const maybeField = x.slice(0, colon);
+      if (/^[\w.]+$/.test(maybeField)) {
+        x = x.slice(colon + 1);
+      }
+    }
+
+    if (!x || x === "*" || x === "?") continue;
+    if (LUCENE_OPERATOR_WORDS.has(x.toLowerCase())) continue;
+
+    const trimmed = x.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
+    if (!trimmed) continue;
+    if (!seen.has(trimmed)) {
+      seen.add(trimmed);
+    }
   }
-  return out;
+  return [...seen];
 }
 
 function useQueryTerms(): string[] {
@@ -498,13 +538,17 @@ export function App() {
             </a>
           </h1>
           <p className="lede">
-            Search VRChat feedback posts. <a href="/openapi.json" target="_blank" rel="noreferrer">OpenAPI spec</a>.
+            Search VRChat feedback posts (Lucene <code>query_string</code>).{" "}
+            <a href="/lucene-syntax.md" target="_blank" rel="noreferrer">
+              Lucene cheat sheet
+            </a>
+            , <a href="/openapi.json" target="_blank" rel="noreferrer">OpenAPI spec</a>.
           </p>
         </header>
 
         <div className="search-row">
           <SearchBox
-            placeholder="Search title or body…"
+            placeholder='Lucene query, e.g. title:crash AND status:open'
             searchAsYouType
             classNames={{
               root: "searchbox-root",
