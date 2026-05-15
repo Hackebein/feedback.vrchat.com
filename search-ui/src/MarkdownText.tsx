@@ -4,6 +4,7 @@ import type { Components } from "react-markdown";
 import type { PluggableList } from "react-markdown/lib";
 import remarkGfm from "remark-gfm";
 import { SKIP, visit } from "unist-util-visit";
+import { EmbeddedImageView } from "./EmbeddedImageView";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
 
@@ -108,15 +109,11 @@ const components: Components = {
     const safe = safeHref(src);
     if (!safe) return null;
     return (
-      <a href={safe} target="_blank" rel="noopener noreferrer">
-        <img
-          src={safe}
-          alt={alt || ""}
-          title={title || undefined}
-          loading="lazy"
-          referrerPolicy="no-referrer"
-        />
-      </a>
+      <EmbeddedImageView
+        src={safe}
+        alt={alt || ""}
+        title={title || undefined}
+      />
     );
   },
 };

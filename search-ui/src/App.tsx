@@ -25,6 +25,7 @@ import {
   useRange,
   useSearchBox,
 } from "react-instantsearch";
+import { EmbeddedImageView } from "./EmbeddedImageView";
 import { MarkdownText } from "./MarkdownText";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
@@ -698,14 +699,7 @@ function Attachments({
         {embed ? (
           <VideoEmbedView embed={embed} />
         ) : (
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="attachment-image-link"
-          >
-            <img src={url} alt="" loading="lazy" referrerPolicy="no-referrer" />
-          </a>
+          <EmbeddedImageView src={url} alt="" className="attachment-image-wrap" />
         )}
       </li>,
     );
