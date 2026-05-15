@@ -302,7 +302,12 @@ def fetch_post_page(board_slug, url_slug, retries=3):
                     continue
                 if c.get("deleted") or c.get("postDeleted"):
                     continue
-                if not c.get("value"):
+                if (
+                    not c.get("value")
+                    and not c.get("imageURLs")
+                    and not c.get("fileURLs")
+                    and not c.get("statusChangeID")
+                ):
                     continue
                 comments.append(dict(c))
             comments.sort(key=lambda x: x.get("created") or "")
@@ -418,16 +423,19 @@ def load_all_stored(boards):
 def build_scan_targets(stored, fresh_by_board, limit):
     """Build the global scan list.
 
-    Always includes every NEW pid found in any board's newest sweep, then fills
-    the rest of the list with the globally oldest-updatedAt stored posts up to
-    `limit`. If `limit` is None all stored posts are included.
+    Always includes every NEW pid found in any board's newest sweep, then any
+    EXISTING pid in the newest sweep whose visible fields (commentCount,
+    status, title) diverge from the stored copy, then fills the rest of the
+    list with the globally oldest-updatedAt stored posts up to `limit`. If
+    `limit` is None all stored posts are included.
 
-    Returns (scan_targets, new_count, oldest_count) where scan_targets is a
-    list of (search_board_slug, pid, url_slug).
+    Returns (scan_targets, new_count, updated_count, oldest_count) where
+    scan_targets is a list of (search_board_slug, pid, url_slug).
     """
     scan_targets = []
     seen = set()
     new_count = 0
+    updated_count = 0
 
     for b, fresh_posts in fresh_by_board.items():
         for p in fresh_posts:
@@ -440,6 +448,27 @@ def build_scan_targets(stored, fresh_by_board, limit):
             scan_targets.append((b, pid, slug))
             seen.add(pid)
             new_count += 1
+
+    for b, fresh_posts in fresh_by_board.items():
+        for p in fresh_posts:
+            pid = p.get("_id")
+            if not pid or pid in seen or pid not in stored:
+                continue
+            stored_post = stored[pid]["post"]
+            fields_match = all(
+                p.get(k) == stored_post.get(k)
+                for k in ("commentCount", "status", "title")
+            )
+            stored_comments = stored_post.get("comments") or []
+            count_consistent = len(stored_comments) == (p.get("commentCount") or 0)
+            if fields_match and count_consistent:
+                continue
+            slug = p.get("urlName") or stored_post.get("urlName") or ""
+            if not slug:
+                continue
+            scan_targets.append((b, pid, slug))
+            seen.add(pid)
+            updated_count += 1
 
     oldest_sorted = sorted(
         stored.items(),
@@ -462,7 +491,7 @@ def build_scan_targets(stored, fresh_by_board, limit):
         seen.add(pid)
         oldest_count += 1
 
-    return scan_targets, new_count, oldest_count
+    return scan_targets, new_count, updated_count, oldest_count
 
 
 def fetch_all_pages(scan_targets):
@@ -832,11 +861,11 @@ def main():
     if deduped:
         print(f"[UPDATE] {deduped} cross-board duplicate(s) consolidated")
 
-    scan_targets, new_count, oldest_count = build_scan_targets(
+    scan_targets, new_count, updated_count, oldest_count = build_scan_targets(
         stored, fresh_by_board, args.limit,
     )
     print(f"[UPDATE] scanning {len(scan_targets)} posts "
-          f"(new={new_count}, oldest={oldest_count})...")
+          f"(new={new_count}, updated={updated_count}, oldest={oldest_count})...")
 
     results = fetch_all_pages(scan_targets)
 

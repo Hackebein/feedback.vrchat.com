@@ -10,6 +10,7 @@ import {
   SortBy,
   Stats,
 } from "react-instantsearch";
+import { MarkdownText } from "./MarkdownText";
 
 const searchClient = Client({
   url: "/api/search",
@@ -162,6 +163,40 @@ function readPositiveInt(raw: unknown): number | undefined {
   return undefined;
 }
 
+function AttachmentImages({ urls }: { urls: string[] }) {
+  if (urls.length === 0) return null;
+  return (
+    <div className="attachment-images">
+      {urls.map((url) => (
+        <a
+          key={url}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="attachment-image-link"
+        >
+          <img src={url} alt="" loading="lazy" referrerPolicy="no-referrer" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function AttachmentFiles({ files }: { files: AttachmentFile[] }) {
+  if (files.length === 0) return null;
+  return (
+    <ul className="attachment-files">
+      {files.map((f) => (
+        <li key={f.url}>
+          <a href={f.url} target="_blank" rel="noopener noreferrer">
+            {f.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function CommentItem({ comment }: { comment: CommentLike }) {
   const author = comment.author;
   const authorName = readString(author, "name") || "Anonymous";
@@ -207,33 +242,9 @@ function CommentItem({ comment }: { comment: CommentLike }) {
           </span>
         ) : null}
       </div>
-      {body ? <div className="comment-body">{body}</div> : null}
-      {images.length > 0 ? (
-        <div className="comment-attachments comment-images">
-          {images.map((url) => (
-            <a
-              key={url}
-              href={url}
-              target="_blank"
-              rel="noreferrer"
-              className="comment-image-link"
-            >
-              <img src={url} alt="" loading="lazy" referrerPolicy="no-referrer" />
-            </a>
-          ))}
-        </div>
-      ) : null}
-      {files.length > 0 ? (
-        <ul className="comment-attachments comment-files">
-          {files.map((f) => (
-            <li key={f.url}>
-              <a href={f.url} target="_blank" rel="noreferrer">
-                {f.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      {body ? <MarkdownText source={body} /> : null}
+      <AttachmentImages urls={images} />
+      <AttachmentFiles files={files} />
     </li>
   );
 }
@@ -266,7 +277,11 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const commentCount = parseCommentCount(hit.commentCount);
   const createdLabel = formatCreatedAt(hit.created);
   const status = typeof hit.status === "string" ? hit.status.trim() : "";
+  const details = typeof hit.details === "string" ? hit.details : "";
+  const postImages = readImageUrls(hit.imageURLs);
+  const postFiles = readFileAttachments(hit.files);
   const visibleComments = readVisibleComments(hit.comments);
+  const boardLabel = boardName || boardSlug;
   const showStats =
     Boolean(authorName) ||
     commentCount !== undefined ||
@@ -290,22 +305,8 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
             <Highlight attribute="title" hit={hit} />
           )}
         </span>
-        {urlName && boardSlug ? (
-          <span className="hit-meta-muted">
-            {boardName || boardSlug} ·{" "}
-            {postUrl ? (
-              <a
-                className="hit-slug-link"
-                href={postUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <code className="hit-code">{urlName}</code>
-              </a>
-            ) : (
-              <code className="hit-code">{urlName}</code>
-            )}
-          </span>
+        {boardLabel ? (
+          <span className="hit-meta-muted">{boardLabel}</span>
         ) : null}
       </header>
       {showStats ? (
@@ -325,9 +326,9 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
           {createdLabel ? `Created ${createdLabel}` : null}
         </p>
       ) : null}
-      <p className="hit-snippet">
-        <Highlight attribute="details" hit={hit} />
-      </p>
+      <MarkdownText source={details} />
+      <AttachmentImages urls={postImages} />
+      <AttachmentFiles files={postFiles} />
       <CommentsThread comments={visibleComments} />
     </article>
   );
