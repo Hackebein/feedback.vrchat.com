@@ -278,6 +278,89 @@ function readString(obj: unknown, key: string): string {
   return typeof v === "string" ? v.trim() : "";
 }
 
+const CANNY_USER_ID_RE = /^[0-9a-f]{24}$/;
+/** Canny encodes `@DisplayName` as `@{mongoId|full_name}` in post/comment bodies. */
+const CANNY_MENTION_TOKEN_RE = /@\{([0-9a-f]{24})\|full_name\}/g;
+
+function registerCannyUser(
+  map: Map<string, string>,
+  user: unknown,
+): void {
+  if (!user || typeof user !== "object" || Array.isArray(user)) {
+    return;
+  }
+  const o = user as Record<string, unknown>;
+  const idRaw = typeof o._id === "string" ? o._id.trim() : "";
+  if (!idRaw || !CANNY_USER_ID_RE.test(idRaw)) {
+    return;
+  }
+  const name = typeof o.name === "string" ? o.name.trim() : "";
+  if (!name || map.has(idRaw)) {
+    return;
+  }
+  map.set(idRaw, name);
+}
+
+function appendUsersFromComments(
+  map: Map<string, string>,
+  comments: unknown,
+): void {
+  if (!Array.isArray(comments)) {
+    return;
+  }
+  for (const raw of comments) {
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) continue;
+    const c = raw as Record<string, unknown>;
+    registerCannyUser(map, c.author);
+    const mentioned = c.mentionedUsers;
+    if (Array.isArray(mentioned)) {
+      for (const m of mentioned) {
+        registerCannyUser(map, m);
+      }
+    }
+  }
+}
+
+/** Aggregate Canny `_id` → display name from everything shipped on this hit. */
+function buildCannyUserNameMap(hit: Record<string, unknown>): Map<string, string> {
+  const map = new Map<string, string>();
+  registerCannyUser(map, hit.author);
+  registerCannyUser(map, hit.by);
+  registerCannyUser(map, hit.updatedBy);
+  const voters = hit.voters;
+  if (Array.isArray(voters)) {
+    for (const v of voters) {
+      registerCannyUser(map, v);
+    }
+  }
+  appendUsersFromComments(map, hit.comments);
+  const pinned = hit.pinnedComment;
+  if (pinned && typeof pinned === "object" && !Array.isArray(pinned)) {
+    const p = pinned as Record<string, unknown>;
+    registerCannyUser(map, p.author);
+    const mentioned = p.mentionedUsers;
+    if (Array.isArray(mentioned)) {
+      for (const m of mentioned) {
+        registerCannyUser(map, m);
+      }
+    }
+  }
+  return map;
+}
+
+function substituteCannyMentions(
+  text: string,
+  userNameById: Map<string, string>,
+): string {
+  if (!text || userNameById.size === 0) {
+    return text;
+  }
+  return text.replace(CANNY_MENTION_TOKEN_RE, (fullMatch, oid: string) => {
+    const name = userNameById.get(oid);
+    return name !== undefined ? `@${name}` : fullMatch;
+  });
+}
+
 function readPostAuthorName(hit: Record<string, unknown>): string {
   return readString(hit.author, "name");
 }
@@ -555,10 +638,12 @@ function CommentItem({
   node,
   terms,
   depth,
+  userNameById,
 }: {
   node: CommentThreadNode;
   terms: string[];
   depth: number;
+  userNameById: Map<string, string>;
 }) {
   const { comment, replies } = node;
   const displayDepth = Math.min(depth, 3);
@@ -568,7 +653,8 @@ function CommentItem({
   const valueRaw =
     typeof comment.value === "string" ? comment.value.trim() : "";
   const newStatus = readString(comment, "statusChangeNewStatus");
-  const body = readCommentBody(comment);
+  const bodyRaw = readCommentBody(comment);
+  const body = substituteCannyMentions(bodyRaw, userNameById);
   const createdLabel =
     typeof comment.created === "string"
       ? formatCreatedAt(comment.created)
@@ -637,6 +723,7 @@ function CommentItem({
               }
               node={child}
               terms={terms}
+              userNameById={userNameById}
               depth={depth + 1}
             />
           ))}
@@ -649,9 +736,11 @@ function CommentItem({
 function CommentsThread({
   comments,
   terms,
+  userNameById,
 }: {
   comments: CommentLike[];
   terms: string[];
+  userNameById: Map<string, string>;
 }) {
   if (comments.length === 0) {
     return null;
@@ -670,6 +759,7 @@ function CommentsThread({
             }
             node={node}
             terms={terms}
+            userNameById={userNameById}
             depth={0}
           />
         ))}
@@ -692,6 +782,7 @@ function readHitVoteCount(hit: Record<string, unknown>): number | undefined {
 
 function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const terms = useQueryTerms();
+  const userNameById = useMemo(() => buildCannyUserNameMap(hit), [hit]);
   const urlName = typeof hit.urlName === "string" ? hit.urlName : undefined;
   const boardSlug = readBoardSlug(hit);
   const boardName = readBoardName(hit);
@@ -701,7 +792,8 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const createdLabel = formatCreatedAt(hit.created);
   const status = typeof hit.status === "string" ? hit.status.trim() : "";
   const voteCount = readHitVoteCount(hit);
-  const details = typeof hit.details === "string" ? hit.details : "";
+  const detailsRaw = typeof hit.details === "string" ? hit.details : "";
+  const details = substituteCannyMentions(detailsRaw, userNameById);
   const postImages = readImageUrls(hit.imageURLs);
   const postFiles = readFileAttachments(hit.files);
   const hasAttachments = postImages.length > 0 || postFiles.length > 0;
@@ -769,7 +861,7 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
         </div>
         <Attachments imageUrls={postImages} files={postFiles} />
       </div>
-      <CommentsThread comments={visibleComments} terms={terms} />
+      <CommentsThread comments={visibleComments} terms={terms} userNameById={userNameById} />
     </article>
   );
 }
