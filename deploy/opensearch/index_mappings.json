@@ -1,48 +1,188 @@
 {
   "settings": {
     "number_of_shards": 1,
-    "number_of_replicas": 0
+    "number_of_replicas": 0,
+    "index.mapping.total_fields.limit": 2000
   },
   "mappings": {
+    "dynamic": false,
     "properties": {
       "post_id": { "type": "keyword" },
+      "combined_text": { "type": "text", "analyzer": "standard" },
+
+      "__v": { "type": "integer" },
+
       "title": {
         "type": "text",
         "analyzer": "standard",
         "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
       },
-      "details": {
-        "type": "text",
-        "analyzer": "standard"
-      },
-      "combined_text": {
-        "type": "text",
-        "analyzer": "standard"
-      },
-      "board_slug": { "type": "keyword" },
-      "board_name": { "type": "text", "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } } },
-      "board_id": { "type": "keyword" },
+      "details": { "type": "text", "analyzer": "standard" },
+      "urlName": { "type": "keyword", "ignore_above": 512 },
+
+      "ideaID": { "type": "keyword" },
+      "boardID": { "type": "keyword" },
+      "categoryID": { "type": "keyword" },
+      "subCategoryID": { "type": "keyword" },
+      "companyID": { "type": "keyword" },
+      "authorID": { "type": "keyword" },
+      "deleteID": { "type": "keyword" },
+      "deletedBy": { "type": "keyword" },
+      "updatedBy": { "type": "keyword" },
+      "by": { "type": "keyword" },
+      "byID": { "type": "keyword" },
+
       "status": { "type": "keyword" },
       "score": { "type": "integer" },
-      "comment_count": { "type": "integer" },
-      "has_images": { "type": "boolean" },
-      "has_files": { "type": "boolean" },
-      "created_at": {
+      "maxScore": { "type": "integer" },
+      "mergeCount": { "type": "integer" },
+      "trendingScore": { "type": "float" },
+      "commentCount": { "type": "integer" },
+      "viewerVote": { "type": "integer" },
+      "viewerIsAuthor": { "type": "boolean" },
+      "loading": { "type": "boolean" },
+      "notFound": { "type": "boolean" },
+      "etaPublic": { "type": "boolean" },
+      "eta": { "type": "keyword", "ignore_above": 256 },
+
+      "ogImageURL": { "type": "keyword", "ignore_above": 2048 },
+      "imageURLs": { "type": "keyword", "ignore_above": 2048 },
+      "fileURLs": { "type": "keyword", "ignore_above": 2048 },
+      "opportunities": { "type": "keyword", "ignore_above": 1024 },
+
+      "created": {
         "type": "date",
         "format": "strict_date_optional_time||epoch_millis||epoch_second"
       },
-      "updated_at": {
+      "updatedAt": {
         "type": "date",
         "format": "strict_date_optional_time||epoch_millis||epoch_second"
       },
-      "url_name": { "type": "keyword" },
+      "statusChanged": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "deletedAt": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "lastUpdated": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+
+      "error": { "type": "object", "enabled": false },
+      "linkedEntry": { "type": "object", "enabled": false },
+      "sourceFeatureExtractionItem": { "type": "object", "enabled": false },
+
+      "files": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "mimeType": { "type": "keyword", "ignore_above": 256 },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+          },
+          "url": { "type": "keyword", "ignore_above": 2048 }
+        }
+      },
+
+      "author": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "alias": { "type": "keyword", "ignore_above": 256 },
+          "aliasID": { "type": "keyword" },
+          "anonymized": { "type": "boolean" },
+          "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+          },
+          "serviceAccount": { "type": "boolean" },
+          "urlName": { "type": "keyword", "ignore_above": 512 }
+        }
+      },
+
+      "board": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "urlName": { "type": "keyword", "ignore_above": 256 }
+        }
+      },
+
+      "category": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "parentID": { "type": "keyword" },
+          "postCount": { "type": "integer" },
+          "urlName": { "type": "keyword", "ignore_above": 256 }
+        }
+      },
+
+      "voteSettings": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "highEngagement": { "type": "boolean" },
+          "lowEngagement": { "type": "boolean" },
+          "moderateEngagement": { "type": "boolean" },
+          "votesHidden": { "type": "boolean" }
+        }
+      },
+
+      "voters": {
+        "type": "nested",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "alias": { "type": "keyword", "ignore_above": 256 },
+          "aliasID": { "type": "keyword" },
+          "anonymized": { "type": "boolean" },
+          "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+          "companies": { "type": "object", "enabled": false },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+          },
+          "urlName": { "type": "keyword", "ignore_above": 512 },
+          "voteID": { "type": "keyword" }
+        }
+      },
+
       "comments": {
         "type": "nested",
         "dynamic": false,
         "properties": {
           "__v": { "type": "integer" },
           "_id": { "type": "keyword" },
-          "id": { "type": "keyword" },
           "aiGenerated": { "type": "boolean" },
           "author": {
             "type": "object",
@@ -69,16 +209,19 @@
           "authorID": { "type": "keyword" },
           "boardID": { "type": "keyword" },
           "companyID": { "type": "keyword" },
-          "body": { "type": "text", "analyzer": "standard" },
-          "authorName": {
-            "type": "keyword",
-            "ignore_above": 1024,
-            "fields": {
-              "text": {
-                "type": "text",
-                "analyzer": "standard"
-              }
-            }
+          "postID": { "type": "keyword" },
+          "parentID": { "type": "keyword" },
+          "mergeID": { "type": "keyword" },
+          "voteID": { "type": "keyword" },
+          "statusChangeID": { "type": "keyword" },
+          "sourceFeatureExtractionItemID": { "type": "keyword" },
+          "sourceLink": { "type": "keyword", "ignore_above": 2048 },
+          "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
+          "itemSourceType": { "type": "keyword", "ignore_above": 256 },
+          "value": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
           },
           "created": {
             "type": "date",
@@ -88,12 +231,31 @@
             "type": "date",
             "format": "strict_date_optional_time||epoch_millis||epoch_second"
           },
-          "deleted": { "type": "boolean" },
           "deletedAt": {
             "type": "date",
             "format": "strict_date_optional_time||epoch_millis||epoch_second"
           },
+          "restoredAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deleted": { "type": "boolean" },
+          "internal": { "type": "boolean" },
+          "private": { "type": "boolean" },
+          "pinned": { "type": "boolean" },
+          "spam": { "type": "boolean" },
+          "postDeleted": { "type": "boolean" },
+          "likeCount": { "type": "integer" },
+          "reactions": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "like": { "type": "integer" }
+            }
+          },
+          "viewerReactions": { "type": "object", "enabled": false },
           "fileURLs": { "type": "keyword", "ignore_above": 2048 },
+          "imageURLs": { "type": "keyword", "ignore_above": 2048 },
           "files": {
             "type": "object",
             "dynamic": false,
@@ -107,11 +269,6 @@
               "url": { "type": "keyword", "ignore_above": 2048 }
             }
           },
-          "imageURLs": { "type": "keyword", "ignore_above": 2048 },
-          "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
-          "internal": { "type": "boolean" },
-          "itemSourceType": { "type": "keyword", "ignore_above": 256 },
-          "likeCount": { "type": "integer" },
           "mentionedUserIDs": { "type": "keyword" },
           "mentionedUsers": {
             "type": "object",
@@ -134,13 +291,80 @@
               "serviceAccount": { "type": "boolean" },
               "urlName": { "type": "keyword", "ignore_above": 512 }
             }
+          }
+        }
+      },
+
+      "pinnedComment": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "__v": { "type": "integer" },
+          "_id": { "type": "keyword" },
+          "aiGenerated": { "type": "boolean" },
+          "isAdminComment": { "type": "boolean" },
+          "author": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
           },
-          "mergeID": { "type": "keyword" },
-          "parentID": { "type": "keyword" },
-          "pinned": { "type": "boolean" },
-          "postDeleted": { "type": "boolean" },
+          "authorID": { "type": "keyword" },
+          "boardID": { "type": "keyword" },
+          "companyID": { "type": "keyword" },
           "postID": { "type": "keyword" },
+          "parentID": { "type": "keyword" },
+          "mergeID": { "type": "keyword" },
+          "voteID": { "type": "keyword" },
+          "statusChangeID": { "type": "keyword" },
+          "sourceFeatureExtractionItemID": { "type": "keyword" },
+          "sourceLink": { "type": "keyword", "ignore_above": 2048 },
+          "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
+          "itemSourceType": { "type": "keyword", "ignore_above": 256 },
+          "value": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "updatedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deletedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "restoredAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deleted": { "type": "boolean" },
+          "internal": { "type": "boolean" },
           "private": { "type": "boolean" },
+          "pinned": { "type": "boolean" },
+          "spam": { "type": "boolean" },
+          "postDeleted": { "type": "boolean" },
+          "likeCount": { "type": "integer" },
           "reactions": {
             "type": "object",
             "dynamic": false,
@@ -148,23 +372,44 @@
               "like": { "type": "integer" }
             }
           },
-          "restoredAt": {
-            "type": "date",
-            "format": "strict_date_optional_time||epoch_millis||epoch_second"
-          },
-          "sourceFeatureExtractionItemID": { "type": "keyword" },
-          "sourceLink": { "type": "keyword", "ignore_above": 2048 },
-          "spam": { "type": "boolean" },
-          "statusChangeID": { "type": "keyword" },
-          "value": {
-            "type": "text",
-            "analyzer": "standard",
-            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
-          },
-          "voteID": { "type": "keyword" },
-          "viewerReactions": {
+          "viewerReactions": { "type": "object", "enabled": false },
+          "fileURLs": { "type": "keyword", "ignore_above": 2048 },
+          "imageURLs": { "type": "keyword", "ignore_above": 2048 },
+          "files": {
             "type": "object",
-            "enabled": false
+            "dynamic": false,
+            "properties": {
+              "mimeType": { "type": "keyword", "ignore_above": 256 },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "url": { "type": "keyword", "ignore_above": 2048 }
+            }
+          },
+          "mentionedUserIDs": { "type": "keyword" },
+          "mentionedUsers": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
           }
         }
       }
