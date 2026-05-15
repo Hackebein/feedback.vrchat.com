@@ -29,7 +29,6 @@ apt-get install -y nginx jq openssl ca-certificates curl
 
 install -d /etc/nginx/conf.d
 
-install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-limit-zones.conf" /etc/nginx/conf.d/feedback-search-limit-zones.conf
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-public-cors.inc" /etc/nginx/conf.d/feedback-search-public-cors.inc
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-http-proxy-defaults.inc" /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.conf" /etc/nginx/conf.d/feedback-search-gateway-upstream.conf
