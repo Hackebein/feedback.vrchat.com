@@ -261,7 +261,7 @@
               "facets": {
                 "type": "array",
                 "items": { "type": "string" },
-                "description": "Facet attributes to compute. Configured attributes: `board_slug`, `board_name`, `status`, `score`, `commentCount`."
+                "description": "Facet attributes to compute. Post-level attributes: `board_slug`, `board_name`, `status`, `category_name`, `author_name`, `author_anonymized`, `author_serviceAccount`, `eta`, `etaPublic`, `viewerIsAuthor`, `by`, `vote_highEngagement`, `vote_lowEngagement`, `vote_moderateEngagement`, `vote_votesHidden`, `score`, `maxScore`, `commentCount`, `mergeCount`, `trendingScore`, `viewerVote`. Nested comment-level attributes (match posts with at least one comment satisfying the filter): `comment_author_name`, `comment_author_anonymized`, `comment_author_serviceAccount`, `comment_aiGenerated`, `comment_pinned`, `comment_internal`, `comment_private`, `comment_integrationSourceType`, `comment_itemSourceType`, `comment_likeCount`."
               },
               "facetFilters": {
                 "description": "Algolia-style facet filter expression (string, array of strings, or array of arrays for OR-of-AND).",
