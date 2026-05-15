@@ -113,7 +113,7 @@ body {
 }
 
 .lucene-toggle input[type="checkbox"]:checked::after {
-  transform: translateX(100%);
+  transform: translateX(calc(100% + 4px));
   background: #9bb6f0;
 }
 
@@ -123,6 +123,7 @@ body {
 }
 
 .lucene-attributes {
+  position: relative;
   margin: 0 0 1rem;
   padding: 0.75rem 0.95rem;
   border: 1px solid #2a3142;
@@ -130,8 +131,33 @@ body {
   background: #151a24;
 }
 
+.lucene-attributes-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.55rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #7d8699;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lucene-attributes-close:hover {
+  color: #eaeaf0;
+  background: #232a3a;
+}
+
 .lucene-attributes-intro {
   margin-bottom: 0.65rem;
+  padding-right: 2.35rem;
 }
 
 .lucene-attributes-heading {

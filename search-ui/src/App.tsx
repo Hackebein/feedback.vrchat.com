@@ -155,20 +155,50 @@ const LUCENE_ATTRIBUTE_ROWS: LuceneAttrRow[] = [
     kind: "date",
     example: `statusChanged:["2025-01-01" TO "*"]`,
   },
+  { field: "comments.value", kind: "text", example: `comments.value:"network lag"` },
+  { field: "comments.author.name", kind: "text", example: `comments.author.name:Alice` },
+  {
+    field: "comments.author.name.keyword",
+    kind: "keyword",
+    example: `comments.author.name.keyword:"Jane Doe"`,
+  },
+  { field: "comments.pinned", kind: "keyword", example: `comments.pinned:true` },
+  {
+    field: "comments.likeCount",
+    kind: "numeric",
+    example: `comments.likeCount:[1 TO *]`,
+  },
+  {
+    field: "comments.created",
+    kind: "date",
+    example: `comments.created:["2025-01-01" TO "*"]`,
+  },
 ];
 
-function LuceneAttributesPanel() {
+function LuceneAttributesPanel({ onClose }: { onClose: () => void }) {
   return (
     <aside className="lucene-attributes" aria-labelledby="lucene-attributes-heading">
+      <button
+        type="button"
+        className="lucene-attributes-close"
+        aria-label="Hide field reference"
+        onClick={onClose}
+      >
+        ×
+      </button>
       <div className="lucene-attributes-intro">
         <h2 id="lucene-attributes-heading" className="lucene-attributes-heading">
           Field reference
         </h2>
         <p className="lucene-attributes-note">
-          Post-level OpenSearch fields only (nested <code className="lucene-inline-code">comments.*</code>{" "}
-          is not available in this mode). Bare terms search default text fields (combined title, body,
-          author name). Combine with <code className="lucene-inline-code">AND</code>,{" "}
-          <code className="lucene-inline-code">OR</code>, <code className="lucene-inline-code">NOT</code>.
+          Post-level OpenSearch fields plus nested{" "}
+          <code className="lucene-inline-code">comments.*</code>. Each{" "}
+          <code className="lucene-inline-code">comments.*</code> clause matches if{" "}
+          <strong>any</strong> single comment satisfies it; combine segments with{" "}
+          <code className="lucene-inline-code"> AND </code>. Top-level boolean grouping with{" "}
+          <code className="lucene-inline-code">OR</code> or parentheses spanning post-level vs
+          comment-level fields is not supported. Bare terms target the default text fields
+          (combined title, body, author name).
         </p>
       </div>
       <ul className="lucene-attributes-list">
@@ -636,6 +666,7 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
 
 export function App() {
   const [luceneMode, setLuceneMode] = useState(readStoredLuceneMode);
+  const [attrPanelDismissed, setAttrPanelDismissed] = useState(false);
 
   useEffect(() => {
     try {
@@ -722,7 +753,9 @@ export function App() {
             />
           )}
         </div>
-        {luceneMode ? <LuceneAttributesPanel /> : null}
+        {luceneMode && !attrPanelDismissed ? (
+          <LuceneAttributesPanel onClose={() => setAttrPanelDismissed(true)} />
+        ) : null}
         {luceneMode ? <LuceneSearchError /> : null}
 
         <div className="stats-toolbar">
