@@ -191,14 +191,7 @@ function LuceneAttributesPanel({ onClose }: { onClose: () => void }) {
           Field reference
         </h2>
         <p className="lucene-attributes-note">
-          Post-level OpenSearch fields plus nested{" "}
-          <code className="lucene-inline-code">comments.*</code>. Each{" "}
-          <code className="lucene-inline-code">comments.*</code> clause matches if{" "}
-          <strong>any</strong> single comment satisfies it; combine segments with{" "}
-          <code className="lucene-inline-code"> AND </code>. Top-level boolean grouping with{" "}
-          <code className="lucene-inline-code">OR</code> or parentheses spanning post-level vs
-          comment-level fields is not supported. Bare terms target the default text fields
-          (combined title, body, author name).
+          <code className="lucene-inline-code">comments.*</code> clause matches if <strong>any</strong> single comment satisfies it. Bare terms target the default text fields (combined title, body, author name).
         </p>
       </div>
       <ul className="lucene-attributes-list">
