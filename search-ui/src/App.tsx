@@ -596,6 +596,7 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const details = typeof hit.details === "string" ? hit.details : "";
   const postImages = readImageUrls(hit.imageURLs);
   const postFiles = readFileAttachments(hit.files);
+  const hasAttachments = postImages.length > 0 || postFiles.length > 0;
   const visibleComments = readVisibleComments(hit.comments);
   const boardLabel = boardName || boardSlug;
   const statsParts: ReactNode[] = [];
@@ -650,8 +651,16 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
           ))}
         </p>
       ) : null}
-      <MarkdownText source={details} highlightTerms={terms} />
-      <Attachments imageUrls={postImages} files={postFiles} />
+      <div
+        className={
+          "hit-body" + (hasAttachments ? " has-attachments" : "")
+        }
+      >
+        <div className="hit-body-text">
+          <MarkdownText source={details} highlightTerms={terms} />
+        </div>
+        <Attachments imageUrls={postImages} files={postFiles} />
+      </div>
       <CommentsThread comments={visibleComments} terms={terms} />
     </article>
   );
@@ -707,78 +716,81 @@ export function App() {
           </p>
         </header>
 
-        <div className="search-row">
-          <SearchBox
-            placeholder={
-              luceneMode
-                ? "Lucene query (field:value, ranges, booleans)…"
-                : "Search title or body…"
-            }
-            searchAsYouType
-            classNames={{
-              root: "searchbox-root",
-              form: "searchbox-form",
-              input: "searchbox-input",
-              submit: "searchbox-submit",
-              reset: "searchbox-reset",
-              loadingIndicator: "searchbox-loading",
-            }}
-          />
-          <label className="lucene-toggle">
-            <input
-              type="checkbox"
-              role="switch"
-              checked={luceneMode}
-              onChange={(e) => setLuceneMode(e.target.checked)}
-            />
-            <span className="lucene-toggle-label">Lucene syntax</span>
-          </label>
-          <SortBy
-            classNames={{ root: "sort-root", select: "sort-select" }}
-            items={[
-              { label: "Newest", value: indexName },
-              { label: "Oldest", value: `${indexName}_created_asc` },
-              { label: "Most voters", value: `${indexName}_score_desc` },
-              { label: "Fewest voters", value: `${indexName}_score_asc` },
-              { label: "Relevance", value: `${indexName}_relevance_desc` },
-            ]}
-          />
-        </div>
-        {luceneMode && !attrPanelDismissed ? (
-          <LuceneAttributesPanel onClose={() => setAttrPanelDismissed(true)} />
-        ) : null}
-        {luceneMode ? <LuceneSearchError /> : null}
-
-        <div className="stats-toolbar">
-          <p className="stats-line">
-            <Stats />
-          </p>
-        </div>
-        {luceneMode ? null : (
-          <CurrentRefinements
-            classNames={{
-              root: "current-refinements-root",
-              list: "current-refinements-list",
-              item: "current-refinements-item",
-              label: "current-refinements-label",
-              category: "current-refinements-category",
-              categoryLabel: "current-refinements-category-label",
-              delete: "current-refinements-delete",
-            }}
-          />
-        )}
-
-        <div className={luceneMode ? "panels lucene" : "panels"}>
-          {luceneMode ? null : (
-            <aside className="facets">
-              <ClearRefinements
+        <div className="panels">
+          <aside className="facets">
+            <div className="search-row">
+              <SearchBox
+                placeholder={
+                  luceneMode
+                    ? "Lucene query (field:value, ranges, booleans)…"
+                    : "Search title or body…"
+                }
+                searchAsYouType
                 classNames={{
-                  root: "clear-refinements-root",
-                  button: "clear-refinements-button",
-                  disabledButton: "clear-refinements-button-disabled",
+                  root: "searchbox-root",
+                  form: "searchbox-form",
+                  input: "searchbox-input",
+                  submit: "searchbox-submit",
+                  reset: "searchbox-reset",
+                  loadingIndicator: "searchbox-loading",
                 }}
-                translations={{ resetButtonText: "Clear all filters" }}
               />
+              <label className="lucene-toggle">
+                <input
+                  type="checkbox"
+                  role="switch"
+                  checked={luceneMode}
+                  onChange={(e) => setLuceneMode(e.target.checked)}
+                />
+                <span className="lucene-toggle-label">Lucene syntax</span>
+              </label>
+              <SortBy
+                classNames={{ root: "sort-root", select: "sort-select" }}
+                items={[
+                  { label: "Newest", value: indexName },
+                  { label: "Oldest", value: `${indexName}_created_asc` },
+                  { label: "Most voters", value: `${indexName}_score_desc` },
+                  { label: "Fewest voters", value: `${indexName}_score_asc` },
+                  { label: "Relevance", value: `${indexName}_relevance_desc` },
+                ]}
+              />
+            </div>
+            <div className="stats-toolbar">
+              <p className="stats-line">
+                <Stats />
+              </p>
+            </div>
+            {luceneMode ? <LuceneSearchError /> : null}
+            {luceneMode && !attrPanelDismissed ? (
+              <LuceneAttributesPanel
+                onClose={() => setAttrPanelDismissed(true)}
+              />
+            ) : null}
+            {luceneMode ? null : (
+              <>
+                <CurrentRefinements
+                  classNames={{
+                    root: "current-refinements-root",
+                    list: "current-refinements-list",
+                    item: "current-refinements-item",
+                    label: "current-refinements-label",
+                    category: "current-refinements-category",
+                    categoryLabel: "current-refinements-category-label",
+                    delete: "current-refinements-delete",
+                  }}
+                />
+                <ClearRefinements
+                  classNames={{
+                    root: "clear-refinements-root",
+                    button: "clear-refinements-button",
+                    disabledButton: "clear-refinements-button-disabled",
+                  }}
+                  translations={{ resetButtonText: "Clear all filters" }}
+                />
+              </>
+            )}
+            {luceneMode ? null : (
+              <>
               <section className="facet-section">
                 <h2 className="facet-heading">Board</h2>
                 <RefinementList
@@ -876,8 +888,9 @@ export function App() {
                   label="Has pinned comment"
                 />
               </section>
-            </aside>
-          )}
+              </>
+            )}
+          </aside>
           <section className="results">
             <Hits
               hitComponent={FeedbackHit}
