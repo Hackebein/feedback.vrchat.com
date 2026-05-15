@@ -740,18 +740,16 @@ export function App() {
             />
             <span className="lucene-toggle-label">Lucene syntax</span>
           </label>
-          {luceneMode ? null : (
-            <SortBy
-              classNames={{ root: "sort-root", select: "sort-select" }}
-              items={[
-                { label: "Newest", value: indexName },
-                { label: "Oldest", value: `${indexName}_created_asc` },
-                { label: "Most voters", value: `${indexName}_score_desc` },
-                { label: "Fewest voters", value: `${indexName}_score_asc` },
-                { label: "Relevance", value: `${indexName}_relevance_desc` },
-              ]}
-            />
-          )}
+          <SortBy
+            classNames={{ root: "sort-root", select: "sort-select" }}
+            items={[
+              { label: "Newest", value: indexName },
+              { label: "Oldest", value: `${indexName}_created_asc` },
+              { label: "Most voters", value: `${indexName}_score_desc` },
+              { label: "Fewest voters", value: `${indexName}_score_asc` },
+              { label: "Relevance", value: `${indexName}_relevance_desc` },
+            ]}
+          />
         </div>
         {luceneMode && !attrPanelDismissed ? (
           <LuceneAttributesPanel onClose={() => setAttrPanelDismissed(true)} />
