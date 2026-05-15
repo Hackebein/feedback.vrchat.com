@@ -169,38 +169,8 @@ export function searchkitConfig(host: string, username: string, password: string
           nestedPath: "comments",
         },
         {
-          attribute: "comment_aiGenerated",
-          field: "aiGenerated",
-          type: "string",
-          nestedPath: "comments",
-        },
-        {
           attribute: "comment_pinned",
           field: "pinned",
-          type: "string",
-          nestedPath: "comments",
-        },
-        {
-          attribute: "comment_internal",
-          field: "internal",
-          type: "string",
-          nestedPath: "comments",
-        },
-        {
-          attribute: "comment_private",
-          field: "private",
-          type: "string",
-          nestedPath: "comments",
-        },
-        {
-          attribute: "comment_integrationSourceType",
-          field: "integrationSourceType",
-          type: "string",
-          nestedPath: "comments",
-        },
-        {
-          attribute: "comment_itemSourceType",
-          field: "itemSourceType",
           type: "string",
           nestedPath: "comments",
         },

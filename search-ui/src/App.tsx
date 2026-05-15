@@ -344,7 +344,8 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   if (authorName)
     statsParts.push(
       <span key="author" className="hit-author">
-        By <AuthorAvatar avatarUrl={authorAvatarUrl} name={authorName} />
+        By
+        <AuthorAvatar avatarUrl={authorAvatarUrl} name={authorName} />
         {highlightInline(authorName, terms)}
       </span>,
     );
@@ -558,47 +559,12 @@ export function App() {
                 limit={10}
                 showMoreLimit={500}
               />
-              <h3 className="facet-subheading">Integration source</h3>
-              <RefinementList
-                attribute="comment_integrationSourceType"
-                showMore
-                limit={10}
-                showMoreLimit={100}
-              />
-              <h3 className="facet-subheading">Item source</h3>
-              <RefinementList
-                attribute="comment_itemSourceType"
-                showMore
-                limit={10}
-                showMoreLimit={100}
-              />
               <h3 className="facet-subheading">Comment like count</h3>
               <RangeInput attribute="comment_likeCount" />
-            </section>
-            <section className="facet-section facet-toggle-group">
-              <h2 className="facet-heading">Comment flags</h2>
-              <p className="facet-hint">
-                Posts with at least one comment matching the flag.
-              </p>
               <ToggleRefinement
                 attribute="comment_pinned"
                 on="true"
                 label="Has pinned comment"
-              />
-              <ToggleRefinement
-                attribute="comment_internal"
-                on="true"
-                label="Has internal comment"
-              />
-              <ToggleRefinement
-                attribute="comment_private"
-                on="true"
-                label="Has private comment"
-              />
-              <ToggleRefinement
-                attribute="comment_aiGenerated"
-                on="true"
-                label="Has AI-generated comment"
               />
             </section>
           </aside>
