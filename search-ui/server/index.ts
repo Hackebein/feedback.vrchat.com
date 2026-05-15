@@ -1,7 +1,7 @@
 import API from "@searchkit/api";
 import express from "express";
 import type { MultipleQueriesQuery } from "searchkit";
-import { gatewayEnv, searchkitConfig } from "./searchkit-config";
+import { gatewayEnv, instantSearchStrictQuery, searchkitConfig } from "./searchkit-config";
 
 const INDEX_NAME = "feedback-posts";
 
@@ -9,6 +9,10 @@ const { opensearchUrl, opensearchUser, opensearchPassword, bind, port } =
   gatewayEnv();
 
 const apiClient = API(searchkitConfig(opensearchUrl, opensearchUser, opensearchPassword));
+
+const searchRequestOptions = {
+  getQuery: instantSearchStrictQuery,
+};
 
 function parseNonNegativeInt(
   raw: unknown,
@@ -34,7 +38,7 @@ function getDiscoveryJson() {
   return {
     endpoints: {
       POST: "/api/search",
-      GET: "/api/search?q=terms&hitsPerPage=15&page=0",
+      GET: "/api/search?q=terms&hitsPerPage=50&page=0",
       openapi: "/openapi.json",
     },
     description:
@@ -65,7 +69,7 @@ app.get("/api/search", async (req, res) => {
       return;
     }
 
-    const hitsPerPage = parsePositiveInt(req.query.hitsPerPage, 15, 100);
+    const hitsPerPage = parsePositiveInt(req.query.hitsPerPage, 50, 500);
     const page = parseNonNegativeInt(req.query.page, 0, 9999);
 
     const instantsearchRequests: MultipleQueriesQuery[] = [
@@ -79,7 +83,10 @@ app.get("/api/search", async (req, res) => {
       },
     ];
 
-    const results = await apiClient.handleRequest(instantsearchRequests);
+    const results = await apiClient.handleRequest(
+      instantsearchRequests,
+      searchRequestOptions,
+    );
     res.json(results);
   } catch (err) {
     console.error("[search-gateway]", err);
@@ -100,6 +107,7 @@ app.post("/api/search", async (req, res) => {
     }
     const results = await apiClient.handleRequest(
       req.body as MultipleQueriesQuery[],
+      searchRequestOptions,
     );
     res.json(results);
   } catch (err) {

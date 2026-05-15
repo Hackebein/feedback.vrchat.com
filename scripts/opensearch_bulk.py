@@ -43,105 +43,59 @@ def load_index_body(mapping_path: Path) -> dict[str, Any]:
     return raw
 
 
-def has_nonempty_urls(val: Any) -> bool:
-    if not val:
-        return False
-    if isinstance(val, list):
-        return len(val) > 0
-    return True
-
-
-def json_safe_comment(c: dict[str, Any]) -> dict[str, Any]:
+def json_safe(value: Any) -> Any:
     """Round-trip via JSON so only ES-friendly scalars/objects survive; stray types become strings."""
     try:
-        safe = json.loads(json.dumps(c, default=str))
+        return json.loads(json.dumps(value, default=str))
     except (TypeError, ValueError):
-        return {}
-    return safe if isinstance(safe, dict) else {}
+        return None
 
 
-def comment_search_snippets(c: dict[str, Any]) -> list[str]:
-    """Plain-text contributions for combined_text (explicit common fields + light author/name)."""
+def comment_text_snippets(c: dict[str, Any]) -> list[str]:
+    """Plain-text contributions from a comment (body/value + author name) for combined_text."""
     out: list[str] = []
-    for key in ("body", "value", "authorName"):
-        v = c.get(key)
-        if isinstance(v, str) and v.strip():
-            out.append(v.strip())
+    v = c.get("value")
+    if isinstance(v, str) and v.strip():
+        out.append(v.strip())
     au = c.get("author")
     if isinstance(au, dict):
         nm = au.get("name")
         if isinstance(nm, str) and nm.strip():
             out.append(nm.strip())
-        un = au.get("urlName")
-        if isinstance(un, str) and un.strip():
-            out.append(un.strip())
     return out
-
-
-def comment_indexable(c: dict[str, Any]) -> dict[str, Any] | None:
-    raw = json_safe_comment(c)
-    cid = str(raw.get("id") or raw.get("_id") or "").strip()
-    if not cid:
-        return None
-    raw["id"] = cid
-    return raw
 
 
 def transform_post(line: dict[str, Any]) -> dict[str, Any] | None:
     pid = (line.get("_id") or "").strip()
     if not pid:
         return None
-    board = line.get("board") or {}
-    comments_in = line.get("comments") or []
-    nested: list[dict[str, Any]] = []
 
-    title = line.get("title") or ""
-    details = line.get("details") or ""
-    parts: list[str] = [title, details]
+    safe = json_safe(line)
+    if not isinstance(safe, dict):
+        return None
 
-    for c in comments_in:
-        if not isinstance(c, dict):
-            continue
-        idx = comment_indexable(c)
-        if idx:
-            nested.append(idx)
-            parts.extend(comment_search_snippets(idx))
+    # _id is reserved by OpenSearch as a metadata field at the document root.
+    safe.pop("_id", None)
 
-    combined_text = "\n\n".join(p for p in parts if str(p).strip())
+    title = safe.get("title") or ""
+    details = safe.get("details") or ""
+    parts: list[str] = [str(title), str(details)]
 
-    cc = line.get("commentCount")
-    if cc is None:
-        cc = len(nested)
+    author = safe.get("author")
+    if isinstance(author, dict):
+        nm = author.get("name")
+        if isinstance(nm, str) and nm.strip():
+            parts.append(nm.strip())
 
-    score = line.get("score")
-    try:
-        score_i = int(float(score)) if score is not None else 0
-    except (TypeError, ValueError):
-        score_i = 0
+    comments_in = safe.get("comments") or []
+    if isinstance(comments_in, list):
+        for c in comments_in:
+            if isinstance(c, dict):
+                parts.extend(comment_text_snippets(c))
 
-    doc: dict[str, Any] = {
-        "post_id": pid,
-        "title": title,
-        "details": details,
-        "combined_text": combined_text,
-        "board_slug": str(board.get("urlName") or ""),
-        "board_name": str(board.get("name") or ""),
-        "board_id": str(board.get("_id") or ""),
-        "status": str(line.get("status") or ""),
-        "score": score_i,
-        "comment_count": int(cc) if cc is not None else len(nested),
-        "has_images": has_nonempty_urls(line.get("imageURLs")),
-        "has_files": has_nonempty_urls(line.get("fileURLs")),
-        "url_name": str(line.get("urlName") or ""),
-        "comments": nested,
-    }
-    cre = line.get("created")
-    upd = line.get("updatedAt")
-    if cre:
-        doc["created_at"] = str(cre)
-    if upd:
-        doc["updated_at"] = str(upd)
-    return doc
+    safe["post_id"] = pid
+    safe["combined_text"] = "\n\n".join(p for p in parts if p and str(p).strip())
+    return safe
 
 
 def iter_jsonl_documents(boards_root: Path) -> Iterator[tuple[str, dict[str, Any]]]:

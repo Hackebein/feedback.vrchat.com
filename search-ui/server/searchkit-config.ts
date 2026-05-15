@@ -1,3 +1,53 @@
+import type {
+  ElasticsearchQuery,
+  SearchAttribute,
+  SearchSettingsConfig,
+} from "searchkit";
+
+function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
+  return attrs.map((a) =>
+    typeof a === "string"
+      ? `${a}^${mult}`
+      : `${a.field}^${(a.weight ?? 1) * mult}`,
+  );
+}
+
+export function instantSearchStrictQuery(
+  query: string,
+  searchAttributes: SearchAttribute[],
+  _config: SearchSettingsConfig,
+): ElasticsearchQuery {
+  const q = query.trim();
+  if (!q) {
+    return { match_all: {} };
+  }
+  const primary = fieldsWithBoost(searchAttributes, 1);
+  const phrase = fieldsWithBoost(searchAttributes, 2);
+  return {
+    bool: {
+      should: [
+        {
+          multi_match: {
+            query: q,
+            fields: primary,
+            type: "best_fields",
+            operator: "and",
+            fuzziness: 0,
+          },
+        },
+        {
+          multi_match: {
+            query: q,
+            type: "phrase",
+            fields: phrase,
+          },
+        },
+      ],
+      minimum_should_match: 1,
+    },
+  };
+}
+
 export function gatewayEnv(): {
   opensearchUrl: string;
   opensearchUser: string;
@@ -35,31 +85,18 @@ export function searchkitConfig(host: string, username: string, password: string
       search_attributes: [
         { field: "combined_text", weight: 3 },
         { field: "title", weight: 2 },
+        { field: "author.name", weight: 1 },
         "details",
       ],
-      result_attributes: [
-        "post_id",
-        "title",
-        "details",
-        "board_slug",
-        "board_name",
-        "status",
-        "score",
-        "comment_count",
-        "created_at",
-        "updated_at",
-        "url_name",
-        "has_images",
-        "has_files",
-      ],
-      highlight_attributes: ["title", "details"],
+      result_attributes: ["*"],
+      highlight_attributes: ["title", "details", "author.name"],
       snippet_attributes: ["details:200"],
       facet_attributes: [
-        { attribute: "board_slug", field: "board_slug", type: "string" },
-        { attribute: "board_name", field: "board_name.keyword", type: "string" },
+        { attribute: "board.urlName", field: "board.urlName", type: "string" },
+        { attribute: "board.name", field: "board.name.keyword", type: "string" },
         { attribute: "status", field: "status", type: "string" },
         { attribute: "score", field: "score", type: "numeric" },
-        { attribute: "comment_count", field: "comment_count", type: "numeric" },
+        { attribute: "commentCount", field: "commentCount", type: "numeric" },
       ],
       sorting: {
         default: {
@@ -67,9 +104,9 @@ export function searchkitConfig(host: string, username: string, password: string
           order: "desc" as const,
         },
         // Keys must include the leading "_" so Searchkit's strip logic removes
-        // "feedback-posts_created_at_desc" -> "feedback-posts", not "feedback-posts_".
-        _created_at_desc: {
-          field: "created_at",
+        // "feedback-posts_created_desc" -> "feedback-posts", not "feedback-posts_".
+        _created_desc: {
+          field: "created",
           order: "desc" as const,
         },
         _score_desc: {
