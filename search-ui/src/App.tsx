@@ -1,5 +1,12 @@
 import Client from "@searchkit/instantsearch-client";
-import { Fragment, type ReactNode, useEffect, useMemo, useState } from "react";
+import {
+  Fragment,
+  type FormEvent,
+  type ReactNode,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import {
   ClearRefinements,
   Configure,
@@ -15,6 +22,7 @@ import {
   Stats,
   ToggleRefinement,
   useInstantSearch,
+  useRange,
   useSearchBox,
 } from "react-instantsearch";
 import { MarkdownText } from "./MarkdownText";
@@ -51,6 +59,115 @@ function highlightInline(text: string, terms: string[]): ReactNode {
   const parts = text.split(pattern);
   return parts.map((part, i) =>
     i % 2 === 1 ? <mark key={i}>{part}</mark> : part,
+  );
+}
+
+function pad2(n: number): string {
+  return String(n).padStart(2, "0");
+}
+
+function msToDatetimeLocalValue(ms: number): string {
+  const d = new Date(ms);
+  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}T${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+}
+
+function EpochMsRangeInput({ attribute }: { attribute: string }) {
+  const { start, range, refine, canRefine } = useRange({
+    attribute,
+    precision: 0,
+  });
+  const rmin = range.min;
+  const rmax = range.max;
+  const [fromLocal, setFromLocal] = useState("");
+  const [toLocal, setToLocal] = useState("");
+
+  useEffect(() => {
+    const [low, high] = start;
+    const hasFrom =
+      typeof low === "number" &&
+      Number.isFinite(low) &&
+      low !== -Infinity &&
+      rmin !== undefined &&
+      low !== rmin;
+    const hasTo =
+      typeof high === "number" &&
+      Number.isFinite(high) &&
+      high !== Infinity &&
+      rmax !== undefined &&
+      high !== rmax;
+    setFromLocal(hasFrom ? msToDatetimeLocalValue(low) : "");
+    setToLocal(hasTo ? msToDatetimeLocalValue(high) : "");
+  }, [start, rmin, rmax]);
+
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    const trimmedFrom = fromLocal.trim();
+    const trimmedTo = toLocal.trim();
+    const loMs = trimmedFrom ? new Date(trimmedFrom).getTime() : undefined;
+    const hiMs = trimmedTo ? new Date(trimmedTo).getTime() : undefined;
+    const lowOk =
+      loMs !== undefined && Number.isFinite(loMs) ? Math.floor(loMs) : undefined;
+    const highOk =
+      hiMs !== undefined && Number.isFinite(hiMs) ? Math.floor(hiMs) : undefined;
+    if (
+      lowOk !== undefined &&
+      highOk !== undefined &&
+      lowOk > highOk
+    ) {
+      return;
+    }
+    refine([lowOk, highOk]);
+  }
+
+  function onResetClick() {
+    setFromLocal("");
+    setToLocal("");
+    refine([undefined, undefined]);
+  }
+
+  return (
+    <form className="epoch-ms-range-form" onSubmit={onSubmit}>
+      <div className="epoch-ms-range-inputs">
+        <label className="epoch-ms-range-label">
+          <span className="epoch-ms-range-label-text">From</span>
+          <input
+            type="datetime-local"
+            step={60}
+            className="epoch-ms-range-datetime"
+            value={fromLocal}
+            disabled={!canRefine}
+            onChange={(e) => setFromLocal(e.target.value)}
+          />
+        </label>
+        <span aria-hidden className="epoch-ms-range-sep">
+          —
+        </span>
+        <label className="epoch-ms-range-label">
+          <span className="epoch-ms-range-label-text">To</span>
+          <input
+            type="datetime-local"
+            step={60}
+            className="epoch-ms-range-datetime"
+            disabled={!canRefine}
+            value={toLocal}
+            onChange={(e) => setToLocal(e.target.value)}
+          />
+        </label>
+      </div>
+      <div className="epoch-ms-range-actions">
+        <button type="submit" className="epoch-ms-range-submit" disabled={!canRefine}>
+          Apply
+        </button>
+        <button
+          type="button"
+          className="epoch-ms-range-reset"
+          disabled={!canRefine}
+          onClick={onResetClick}
+        >
+          Clear
+        </button>
+      </div>
+    </form>
   );
 }
 
@@ -1031,6 +1148,18 @@ export function App() {
                 />
               </section>
               <section className="facet-section">
+                <h2 className="facet-heading">Post dates</h2>
+                <p className="facet-hint">
+                  Local date/time; range uses epoch milliseconds in the index. Clear removes the bound on that side.
+                </p>
+                <h3 className="facet-subheading">Created</h3>
+                <EpochMsRangeInput attribute="post_created" />
+                <h3 className="facet-subheading">Updated</h3>
+                <EpochMsRangeInput attribute="post_updated" />
+                <h3 className="facet-subheading">Status changed</h3>
+                <EpochMsRangeInput attribute="post_statusChanged" />
+              </section>
+              <section className="facet-section">
                 <h2 className="facet-heading">Votes</h2>
                 <RangeInput attribute="score" />
               </section>
@@ -1084,6 +1213,8 @@ export function App() {
                 />
                 <h3 className="facet-subheading">Comment like count</h3>
                 <RangeInput attribute="comment_likeCount" />
+                <h3 className="facet-subheading">Comment created</h3>
+                <EpochMsRangeInput attribute="comment_created" />
                 <ToggleRefinement
                   attribute="comment_pinned"
                   on="true"

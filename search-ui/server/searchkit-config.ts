@@ -171,6 +171,9 @@ export function searchkitConfig(host: string, username: string, password: string
         { attribute: "commentCount", field: "commentCount", type: "numeric" },
         { attribute: "mergeCount", field: "mergeCount", type: "numeric" },
         { attribute: "trendingScore", field: "trendingScore", type: "numeric" },
+        { attribute: "post_created", field: "created", type: "numeric" },
+        { attribute: "post_updated", field: "updatedAt", type: "numeric" },
+        { attribute: "post_statusChanged", field: "statusChanged", type: "numeric" },
         {
           attribute: "comment_author_name",
           field: "author.name.keyword",
@@ -186,6 +189,12 @@ export function searchkitConfig(host: string, username: string, password: string
         {
           attribute: "comment_likeCount",
           field: "likeCount",
+          type: "numeric",
+          nestedPath: "comments",
+        },
+        {
+          attribute: "comment_created",
+          field: "created",
           type: "numeric",
           nestedPath: "comments",
         },
