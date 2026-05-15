@@ -17,6 +17,8 @@ import {
   useSearchBox,
 } from "react-instantsearch";
 import { MarkdownText } from "./MarkdownText";
+import { detectVideoEmbed } from "./videoEmbed";
+import { VideoEmbedView } from "./VideoEmbedView";
 
 function tokenizeQuery(q: string): string[] {
   if (!q) return [];
@@ -222,17 +224,23 @@ function AttachmentImages({ urls }: { urls: string[] }) {
   if (urls.length === 0) return null;
   return (
     <div className="attachment-images">
-      {urls.map((url) => (
-        <a
-          key={url}
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="attachment-image-link"
-        >
-          <img src={url} alt="" loading="lazy" referrerPolicy="no-referrer" />
-        </a>
-      ))}
+      {urls.map((url) => {
+        const embed = detectVideoEmbed(url);
+        if (embed) {
+          return <VideoEmbedView key={url} embed={embed} />;
+        }
+        return (
+          <a
+            key={url}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="attachment-image-link"
+          >
+            <img src={url} alt="" loading="lazy" referrerPolicy="no-referrer" />
+          </a>
+        );
+      })}
     </div>
   );
 }
@@ -241,13 +249,23 @@ function AttachmentFiles({ files }: { files: AttachmentFile[] }) {
   if (files.length === 0) return null;
   return (
     <ul className="attachment-files">
-      {files.map((f) => (
-        <li key={f.url}>
-          <a href={f.url} target="_blank" rel="noopener noreferrer">
-            {f.name}
-          </a>
-        </li>
-      ))}
+      {files.map((f) => {
+        const embed = detectVideoEmbed(f.url);
+        if (embed) {
+          return (
+            <li key={f.url} className="attachment-file-video">
+              <VideoEmbedView embed={embed} title={f.name} />
+            </li>
+          );
+        }
+        return (
+          <li key={f.url}>
+            <a href={f.url} target="_blank" rel="noopener noreferrer">
+              {f.name}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 }
