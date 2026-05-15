@@ -402,21 +402,25 @@ export function App() {
               form: "searchbox-form",
               input: "searchbox-input",
               submit: "searchbox-submit",
+              reset: "searchbox-reset",
+              loadingIndicator: "searchbox-loading",
             }}
+          />
+          <SortBy
+            classNames={{ root: "sort-root", select: "sort-select" }}
+            items={[
+              { label: "Newest", value: indexName },
+              { label: "Oldest", value: `${indexName}_created_asc` },
+              { label: "Most voters", value: `${indexName}_score_desc` },
+              { label: "Fewest voters", value: `${indexName}_score_asc` },
+              { label: "Relevance", value: `${indexName}_relevance_desc` },
+            ]}
           />
         </div>
         <div className="stats-toolbar">
           <p className="stats-line">
             <Stats />
           </p>
-          <SortBy
-            classNames={{ root: "sort-root", select: "sort-select" }}
-            items={[
-              { label: "Relevance", value: indexName },
-              { label: "Newest", value: `${indexName}_created_desc` },
-              { label: "Highest score", value: `${indexName}_score_desc` },
-            ]}
-          />
         </div>
 
         <div className="panels">

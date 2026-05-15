@@ -156,18 +156,27 @@ export function searchkitConfig(host: string, username: string, password: string
         { attribute: "commentCount", field: "commentCount", type: "numeric" },
       ],
       sorting: {
+        // Default (unsuffixed index name) sorts newest-first.
         default: {
-          field: "_score",
-          order: "desc" as const,
-        },
-        // Keys must include the leading "_" so Searchkit's strip logic removes
-        // "feedback-posts_created_desc" -> "feedback-posts", not "feedback-posts_".
-        _created_desc: {
           field: "created",
           order: "desc" as const,
         },
+        // Keys must include the leading "_" so Searchkit's strip logic removes
+        // "feedback-posts_created_asc" -> "feedback-posts", not "feedback-posts_".
+        _created_asc: {
+          field: "created",
+          order: "asc" as const,
+        },
         _score_desc: {
           field: "score",
+          order: "desc" as const,
+        },
+        _score_asc: {
+          field: "score",
+          order: "asc" as const,
+        },
+        _relevance_desc: {
+          field: "_score",
           order: "desc" as const,
         },
       },
