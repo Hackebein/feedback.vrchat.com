@@ -507,14 +507,6 @@ export function App() {
               />
             </section>
             <section className="facet-section">
-              <h2 className="facet-heading">Source (by)</h2>
-              <RefinementList attribute="by" showMore limit={10} showMoreLimit={100} />
-            </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">ETA</h2>
-              <RefinementList attribute="eta" showMore limit={10} showMoreLimit={100} />
-            </section>
-            <section className="facet-section">
               <h2 className="facet-heading">Score</h2>
               <RangeInput attribute="score" />
             </section>
@@ -534,32 +526,8 @@ export function App() {
               <h2 className="facet-heading">Trending score</h2>
               <RangeInput attribute="trendingScore" />
             </section>
-            <section className="facet-section">
-              <h2 className="facet-heading">Viewer vote</h2>
-              <RangeInput attribute="viewerVote" />
-            </section>
             <section className="facet-section facet-toggle-group">
-              <h2 className="facet-heading">Post flags</h2>
-              <ToggleRefinement
-                attribute="etaPublic"
-                on="true"
-                label="ETA is public"
-              />
-              <ToggleRefinement
-                attribute="viewerIsAuthor"
-                on="true"
-                label="Viewer is author"
-              />
-              <ToggleRefinement
-                attribute="author_anonymized"
-                on="true"
-                label="Author anonymized"
-              />
-              <ToggleRefinement
-                attribute="author_serviceAccount"
-                on="true"
-                label="Author is service account"
-              />
+              <h2 className="facet-heading">Vote settings</h2>
               <ToggleRefinement
                 attribute="vote_highEngagement"
                 on="true"
@@ -574,11 +542,6 @@ export function App() {
                 attribute="vote_lowEngagement"
                 on="true"
                 label="Low engagement votes"
-              />
-              <ToggleRefinement
-                attribute="vote_votesHidden"
-                on="true"
-                label="Votes hidden"
               />
             </section>
             <section className="facet-section">
@@ -636,16 +599,6 @@ export function App() {
                 attribute="comment_aiGenerated"
                 on="true"
                 label="Has AI-generated comment"
-              />
-              <ToggleRefinement
-                attribute="comment_author_anonymized"
-                on="true"
-                label="Has anonymized commenter"
-              />
-              <ToggleRefinement
-                attribute="comment_author_serviceAccount"
-                on="true"
-                label="Has service-account commenter"
               />
             </section>
           </aside>
