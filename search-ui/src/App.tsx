@@ -389,6 +389,18 @@ function CommentsThread({
   );
 }
 
+function readHitVoteCount(hit: Record<string, unknown>): number | undefined {
+  const raw = hit.score;
+  if (typeof raw === "number" && Number.isFinite(raw)) {
+    return Math.trunc(raw);
+  }
+  if (typeof raw === "string" && raw.trim()) {
+    const n = Number(raw);
+    if (Number.isFinite(n)) return Math.trunc(n);
+  }
+  return undefined;
+}
+
 function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const terms = useQueryTerms();
   const urlName = typeof hit.urlName === "string" ? hit.urlName : undefined;
@@ -399,6 +411,7 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const postUrl = cannyPostUrl(boardSlug, urlName);
   const createdLabel = formatCreatedAt(hit.created);
   const status = typeof hit.status === "string" ? hit.status.trim() : "";
+  const voteCount = readHitVoteCount(hit);
   const details = typeof hit.details === "string" ? hit.details : "";
   const postImages = readImageUrls(hit.imageURLs);
   const postFiles = readFileAttachments(hit.files);
@@ -418,6 +431,12 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
     statsParts.push(
       <span key="status" className="hit-status">
         {status}
+      </span>,
+    );
+  if (voteCount !== undefined)
+    statsParts.push(
+      <span key="votes" className="hit-votes">
+        {voteCount === 1 ? "1 vote" : `${voteCount} votes`}
       </span>,
     );
   if (createdLabel) statsParts.push(<span key="created">Created {createdLabel}</span>);
