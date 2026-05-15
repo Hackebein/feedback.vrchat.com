@@ -3,7 +3,7 @@
   "info": {
     "title": "VRChat Feedback Search Gateway",
     "version": "1.0.0",
-    "summary": "Public Algolia-shaped search API backed by SearchKit and OpenSearch.",
+    "summary": "Public Algolia-shaped search API backed by SearchKit and OpenSearch"
   },
   "externalDocs": {
     "description": "SearchKit gateway reference (request/response shape, Algolia parity).",
@@ -51,17 +51,16 @@
                     }
                   ]
                 },
-                "facetedQuery": {
-                  "summary": "Faceted query with filters and a sort replica",
+                "luceneQuery": {
+                  "summary": "Lucene query_string with facets (filters folded server-side where possible)",
                   "value": [
                     {
-                      "indexName": "feedback-posts_created_desc",
+                      "indexName": "feedback-posts",
                       "params": {
-                        "query": "desktop crash",
+                        "query": "desktop crash AND -status:closed",
                         "hitsPerPage": 20,
                         "page": 0,
-                        "facets": ["status", "board_slug"],
-                        "facetFilters": [["status:open"]]
+                        "facets": ["status", "board_slug"]
                       }
                     }
                   ]
@@ -104,7 +103,7 @@
       "get": {
         "operationId": "searchSingleQueryOrDiscovery",
         "summary": "Run a single query via query string, or return a discovery document.",
-        "description": "Two behaviours are multiplexed onto this endpoint:\n\n### 1. Single-query search (parity with POST)\n\nIf any of `q`, `query`, `hitsPerPage`, or `page` is supplied, the gateway constructs exactly **one** multi-query element targeting the `feedback-posts` index and forwards it through the same `@searchkit/api#handleRequest` pipeline as POST. The response is therefore the same Algolia-shaped envelope.\n\nMapping:\n\n| Query parameter | Maps to            | Default | Coercion                                                            |\n| --------------- | ------------------ | ------- | ------------------------------------------------------------------- |\n| `q` or `query`  | `params.query`     | `\"\"`    | `q` takes precedence when both are present.                         |\n| `hitsPerPage`   | `params.hitsPerPage` | `50`  | Clamped to the inclusive range `[1, 500]`; invalid input falls back to `50`. |\n| `page`          | `params.page`      | `0`     | Clamped to `[0, 9999]`; invalid input falls back to `0`.            |\n\nFeatures that cannot be expressed via query string (multiple queries, facets, filters, custom `indexName`, sort replicas, etc.) require POST.\n\n### 2. Service discovery\n\nWith **none** of `q`, `query`, `hitsPerPage`, or `page` present, the gateway returns a small JSON discovery document describing the available endpoints. POST has no equivalent of this mode.",
+        "description": "Two behaviours are multiplexed onto this endpoint:\n\n### 1. Single-query search (parity with POST)\n\nIf any of `q`, `query`, `hitsPerPage`, or `page` is supplied, the gateway constructs exactly **one** multi-query element targeting the `feedback-posts` index and forwards it through the same `@searchkit/api#handleRequest` pipeline as POST. The response is therefore the same Algolia-shaped envelope. **`q` / `query` are Lucene `query_string` expressions** (same as `params.query` on POST).\n\nMapping:\n\n| Query parameter | Maps to            | Default | Coercion                                                            |\n| --------------- | ------------------ | ------- | ------------------------------------------------------------------- |\n| `q` or `query`  | `params.query`     | `\"\"`    | Lucene `query_string`. `q` takes precedence when both are present.  |\n| `hitsPerPage`   | `params.hitsPerPage` | `50`  | Clamped to the inclusive range `[1, 500]`; invalid input falls back to `50`. |\n| `page`          | `params.page`      | `0`     | Clamped to `[0, 9999]`; invalid input falls back to `0`.            |\n\nFeatures that cannot be expressed via query string (multiple queries, facets, filters, custom `indexName`, sort replicas, etc.) require POST.\n\n### 2. Service discovery\n\nWith **none** of `q`, `query`, `hitsPerPage`, or `page` present, the gateway returns a small JSON discovery document describing the available endpoints. POST has no equivalent of this mode.",
         "tags": ["Search"],
         "parameters": [
           {
@@ -112,15 +111,15 @@
             "in": "query",
             "required": false,
             "schema": { "type": "string" },
-            "description": "Search terms. Maps to `params.query`. Takes precedence over `query` when both are supplied.",
-            "example": "desktop crash"
+            "description": "Lucene `query_string` to map to `params.query` (OpenSearch). Takes precedence over `query` when both are supplied.",
+            "example": "title:crash AND status:open"
           },
           {
             "name": "query",
             "in": "query",
             "required": false,
             "schema": { "type": "string" },
-            "description": "Alias of `q`. Ignored when `q` is also present."
+            "description": "Alias of `q` (Lucene `query_string`). Ignored when `q` is also present."
           },
           {
             "name": "hitsPerPage",
@@ -167,7 +166,7 @@
                         "GET": "/api/search?q=terms&hitsPerPage=50&page=0",
                         "openapi": "/openapi.json"
                       },
-                      "description": "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Contract: openapi.json."
+                      "description": "POST: JSON array of InstantSearch multiple-queries (see /openapi.json); `params.query` is Lucene query_string. GET: discovery when no search params; otherwise one-query search (q/query as Lucene, hitsPerPage, page) — subset of POST. Contract: openapi.json."
                     }
                   }
                 }
@@ -255,7 +254,7 @@
             "description": "Algolia-compatible search parameters. Only the most common fields are listed here; any field accepted by `@searchkit/api` may be supplied.",
             "additionalProperties": true,
             "properties": {
-              "query": { "type": "string", "description": "Free-text query. Empty string matches everything." },
+              "query": { "type": "string", "description": "Lucene query_string expression (`params.query`). Empty string matches everything. See OpenSearch `query_string` syntax." },
               "hitsPerPage": { "type": "integer", "minimum": 1, "description": "Page size." },
               "page": { "type": "integer", "minimum": 0, "description": "Zero-based page index." },
               "facets": {
@@ -264,7 +263,7 @@
                 "description": "Facet attributes to compute. Post-level attributes: `board_slug`, `board_name`, `status`, `category_name`, `author_name`, `vote_highEngagement`, `vote_lowEngagement`, `vote_moderateEngagement`, `score`, `maxScore`, `commentCount`, `mergeCount`, `trendingScore`. Nested comment-level attributes (match posts with at least one comment satisfying the filter): `comment_author_name`, `comment_pinned`, `comment_likeCount`."
               },
               "facetFilters": {
-                "description": "Algolia-style facet filter expression (string, array of strings, or array of arrays for OR-of-AND).",
+                "description": "Algolia-style facet filter (string, array of strings, or array of arrays for OR-of-AND). The gateway folds **non-nested** filters into `params.query` as Lucene term clauses before SearchKit runs. Filters on nested comment facets (`comment_author_name`, `comment_pinned`) are left here for SearchKit nested queries.",
                 "oneOf": [
                   { "type": "string" },
                   { "type": "array", "items": { "type": "string" } },
@@ -274,7 +273,7 @@
               "numericFilters": {
                 "type": "array",
                 "items": { "type": "string" },
-                "description": "Algolia-style numeric filter expressions, e.g. `score>=10`."
+                "description": "Algolia-style numeric expressions (e.g. `score>=10`, `score:1 TO 100`). Non-nested attributes are folded into `params.query` as Lucene ranges; `comment_likeCount` stays here (nested)."
               },
               "filters": {
                 "type": "string",
