@@ -292,7 +292,19 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
         </span>
         {urlName && boardSlug ? (
           <span className="hit-meta-muted">
-            {boardName || boardSlug} · <code className="hit-code">{urlName}</code>
+            {boardName || boardSlug} ·{" "}
+            {postUrl ? (
+              <a
+                className="hit-slug-link"
+                href={postUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <code className="hit-code">{urlName}</code>
+              </a>
+            ) : (
+              <code className="hit-code">{urlName}</code>
+            )}
           </span>
         ) : null}
       </header>
@@ -375,13 +387,21 @@ export function App() {
 
         <div className="panels">
           <aside className="facets">
-            <RefinementList
-              attribute="board.name"
-              showMore
-              limit={100}
-              showMoreLimit={500}
-            />
-            <RefinementList attribute="status" limit={50} />
+            <section className="facet-section">
+              <h2 className="facet-heading">Board</h2>
+              <RefinementList
+                attribute="board_name"
+                searchable
+                searchablePlaceholder="Filter boards…"
+                showMore
+                limit={20}
+                showMoreLimit={500}
+              />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Status</h2>
+              <RefinementList attribute="status" limit={50} />
+            </section>
           </aside>
           <section className="results">
             <Hits
