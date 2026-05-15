@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   font-family:
     ui-sans-serif,
     system-ui,
@@ -19,6 +20,32 @@
 
 body {
   margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #3a4258 #1a1f2a;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a1f2a;
+  border-radius: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #3a4258;
+  border-radius: 6px;
+  border: 2px solid #1a1f2a;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #4e5a70;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #1a1f2a;
 }
 
 .layout {
@@ -299,6 +326,7 @@ body {
   background: #151a24;
   color: #f2f4fa;
   font-size: 1rem;
+  color-scheme: dark;
 }
 
 .searchbox-input::-webkit-search-decoration,
@@ -359,12 +387,17 @@ body {
 .sort-select {
   width: 100%;
   min-height: 2.5rem;
-  padding: 0.52rem 0.65rem;
+  padding: 0.52rem 2rem 0.52rem 0.65rem;
   border-radius: 8px;
   border: 1px solid #2a3142;
-  background: #151a24;
+  background-color: #151a24;
   color: #f2f4fa;
   font-size: 0.95rem;
+  color-scheme: dark;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='%239aa3b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
 }
 
 .stats-line {
@@ -375,9 +408,23 @@ body {
 
 .panels {
   display: grid;
-  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  grid-template-columns: minmax(288px, 360px) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
+}
+
+@media (min-width: 1920px) {
+  .panels {
+    grid-template-columns: minmax(312px, 400px) minmax(0, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .panels {
+    grid-template-columns: minmax(336px, min(440px, 24vw)) minmax(0, 1fr);
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 820px) {
@@ -397,6 +444,8 @@ body {
   top: 1rem;
   max-height: calc(100vh - 2rem);
   overflow: auto;
+  padding-inline-end: 0.75rem;
+  scrollbar-gutter: stable;
 }
 
 .facets > div,
@@ -1051,6 +1100,7 @@ body {
 
 .markdown-body input[type="checkbox"] {
   margin-right: 0.35rem;
+  accent-color: #5b8bff;
 }
 
 .video-embed {
@@ -1105,6 +1155,45 @@ mark {
 
 .ais-RefinementList-item {
   margin: 0.2rem 0;
+}
+
+.facets .ais-RefinementList-checkbox {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  accent-color: #5b8bff;
+  cursor: pointer;
+}
+
+.facets .ais-RefinementList-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  color: #eaeaf0;
+  font-size: 0.85rem;
+}
+
+.facets .ais-RefinementList-showMore {
+  margin-top: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid #2a3142;
+  background: #151a24;
+  color: #f2f4fa;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.facets .ais-RefinementList-showMore:hover:not(:disabled) {
+  background: #1c2330;
+  border-color: #3a4258;
+}
+
+.facets .ais-RefinementList-showMore:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 /* Wrap facet hit counts as " (123)" after the label */
