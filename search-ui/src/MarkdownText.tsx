@@ -1,7 +1,74 @@
+import { useMemo } from "react";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
+import type { PluggableList } from "react-markdown/lib";
 import remarkGfm from "remark-gfm";
+import { SKIP, visit } from "unist-util-visit";
 import { detectVideoEmbed } from "./videoEmbed";
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+const HIGHLIGHT_SKIP_TAGS = new Set(["mark", "code", "pre"]);
+
+function rehypeHighlight(terms: string[]) {
+  const filtered = terms.filter((t) => t.length > 0);
+  return (tree: unknown) => {
+    if (filtered.length === 0) return;
+    const pattern = new RegExp(
+      `(${filtered.map(escapeRegExp).join("|")})`,
+      "gi",
+    );
+    visit(
+      tree as Parameters<typeof visit>[0],
+      "text",
+      (node, index, parent) => {
+        if (parent == null || index == null) return;
+        if (
+          parent.type === "element" &&
+          HIGHLIGHT_SKIP_TAGS.has(
+            (parent as { tagName?: string }).tagName ?? "",
+          )
+        ) {
+          return;
+        }
+        const text = (node as { value: string }).value;
+        if (!text) return;
+        const newChildren: Array<Record<string, unknown>> = [];
+        let lastIdx = 0;
+        pattern.lastIndex = 0;
+        let m: RegExpExecArray | null;
+        while ((m = pattern.exec(text)) !== null) {
+          if (m.index > lastIdx) {
+            newChildren.push({
+              type: "text",
+              value: text.slice(lastIdx, m.index),
+            });
+          }
+          newChildren.push({
+            type: "element",
+            tagName: "mark",
+            properties: {},
+            children: [{ type: "text", value: m[0] }],
+          });
+          lastIdx = m.index + m[0].length;
+          if (m[0].length === 0) pattern.lastIndex++;
+        }
+        if (newChildren.length === 0) return;
+        if (lastIdx < text.length) {
+          newChildren.push({ type: "text", value: text.slice(lastIdx) });
+        }
+        (parent as { children: unknown[] }).children.splice(
+          index,
+          1,
+          ...newChildren,
+        );
+        return [SKIP, index + newChildren.length];
+      },
+    );
+  };
+}
 
 const SAFE_HREF = /^(?:https?:|mailto:|#)/i;
 
@@ -58,13 +125,28 @@ const components: Components = {
   },
 };
 
-export function MarkdownText({ source }: { source: string }) {
+export function MarkdownText({
+  source,
+  highlightTerms,
+}: {
+  source: string;
+  highlightTerms?: string[];
+}) {
+  const rehypePlugins = useMemo<PluggableList>(() => {
+    const terms = highlightTerms?.filter((t) => t.length > 0) ?? [];
+    return terms.length > 0 ? [[rehypeHighlight, terms]] : [];
+  }, [highlightTerms]);
+
   if (!source || !source.trim()) {
     return null;
   }
   return (
     <div className="markdown-body">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={rehypePlugins}
+        components={components}
+      >
         {source}
       </ReactMarkdown>
     </div>

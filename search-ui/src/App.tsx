@@ -1,4 +1,5 @@
 import Client from "@searchkit/instantsearch-client";
+import { Fragment, type ReactNode, useMemo } from "react";
 import {
   Configure,
   Highlight,
@@ -9,8 +10,42 @@ import {
   SearchBox,
   SortBy,
   Stats,
+  useSearchBox,
 } from "react-instantsearch";
 import { MarkdownText } from "./MarkdownText";
+
+function tokenizeQuery(q: string): string[] {
+  if (!q) return [];
+  const out: string[] = [];
+  for (const raw of q.split(/\s+/)) {
+    const trimmed = raw.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
+    if (trimmed) out.push(trimmed);
+  }
+  return out;
+}
+
+function useQueryTerms(): string[] {
+  const { query } = useSearchBox();
+  return useMemo(() => tokenizeQuery(query), [query]);
+}
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightInline(text: string, terms: string[]): ReactNode {
+  if (!text) return text;
+  const filtered = terms.filter((t) => t.length > 0);
+  if (filtered.length === 0) return text;
+  const pattern = new RegExp(
+    `(${filtered.map(escapeRegExp).join("|")})`,
+    "gi",
+  );
+  const parts = text.split(pattern);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <mark key={i}>{part}</mark> : part,
+  );
+}
 
 const searchClient = Client({
   url: "/api/search",
@@ -28,19 +63,6 @@ function cannyPostUrl(
     return undefined;
   }
   return `${CANNY_ORIGIN}/${encodeURIComponent(boardSlug)}/p/${encodeURIComponent(urlName)}`;
-}
-
-function parseCommentCount(raw: unknown): number | undefined {
-  if (typeof raw === "number" && Number.isFinite(raw) && raw >= 0) {
-    return raw;
-  }
-  if (typeof raw === "string" && raw.trim()) {
-    const n = Number.parseInt(raw, 10);
-    if (Number.isFinite(n) && n >= 0) {
-      return n;
-    }
-  }
-  return undefined;
 }
 
 function formatCommentLabel(count: number): string {
@@ -197,7 +219,13 @@ function AttachmentFiles({ files }: { files: AttachmentFile[] }) {
   );
 }
 
-function CommentItem({ comment }: { comment: CommentLike }) {
+function CommentItem({
+  comment,
+  terms,
+}: {
+  comment: CommentLike;
+  terms: string[];
+}) {
   const author = comment.author;
   const authorName = readString(author, "name") || "Anonymous";
   const avatarUrl = readString(author, "avatarURL");
@@ -229,7 +257,7 @@ function CommentItem({ comment }: { comment: CommentLike }) {
             {authorName.slice(0, 1).toUpperCase()}
           </span>
         )}
-        <span className="comment-author">{authorName}</span>
+        <span className="comment-author">{highlightInline(authorName, terms)}</span>
         {createdLabel ? (
           <span className="comment-meta">{createdLabel}</span>
         ) : null}
@@ -242,14 +270,20 @@ function CommentItem({ comment }: { comment: CommentLike }) {
           </span>
         ) : null}
       </div>
-      {body ? <MarkdownText source={body} /> : null}
+      {body ? <MarkdownText source={body} highlightTerms={terms} /> : null}
       <AttachmentImages urls={images} />
       <AttachmentFiles files={files} />
     </li>
   );
 }
 
-function CommentsThread({ comments }: { comments: CommentLike[] }) {
+function CommentsThread({
+  comments,
+  terms,
+}: {
+  comments: CommentLike[];
+  terms: string[];
+}) {
   if (comments.length === 0) {
     return null;
   }
@@ -261,6 +295,7 @@ function CommentsThread({ comments }: { comments: CommentLike[] }) {
           <CommentItem
             key={typeof c._id === "string" && c._id ? c._id : `c-${idx}`}
             comment={c}
+            terms={terms}
           />
         ))}
       </ul>
@@ -269,12 +304,12 @@ function CommentsThread({ comments }: { comments: CommentLike[] }) {
 }
 
 function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
+  const terms = useQueryTerms();
   const urlName = typeof hit.urlName === "string" ? hit.urlName : undefined;
   const boardSlug = readBoardSlug(hit);
   const boardName = readBoardName(hit);
   const authorName = readPostAuthorName(hit);
   const postUrl = cannyPostUrl(boardSlug, urlName);
-  const commentCount = parseCommentCount(hit.commentCount);
   const createdLabel = formatCreatedAt(hit.created);
   const status = typeof hit.status === "string" ? hit.status.trim() : "";
   const details = typeof hit.details === "string" ? hit.details : "";
@@ -282,11 +317,19 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const postFiles = readFileAttachments(hit.files);
   const visibleComments = readVisibleComments(hit.comments);
   const boardLabel = boardName || boardSlug;
-  const showStats =
-    Boolean(authorName) ||
-    commentCount !== undefined ||
-    Boolean(createdLabel) ||
-    Boolean(status);
+  const statsParts: ReactNode[] = [];
+  if (boardLabel) statsParts.push(<span key="board">{boardLabel}</span>);
+  if (authorName)
+    statsParts.push(
+      <span key="author">By {highlightInline(authorName, terms)}</span>,
+    );
+  if (status)
+    statsParts.push(
+      <span key="status" className="hit-status">
+        {status}
+      </span>,
+    );
+  if (createdLabel) statsParts.push(<span key="created">Created {createdLabel}</span>);
 
   return (
     <article className="hit-card">
@@ -305,31 +348,21 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
             <Highlight attribute="title" hit={hit} />
           )}
         </span>
-        {boardLabel ? (
-          <span className="hit-meta-muted">{boardLabel}</span>
-        ) : null}
       </header>
-      {showStats ? (
+      {statsParts.length > 0 ? (
         <p className="hit-stats">
-          {authorName ? (
-            <>
-              By <Highlight attribute="author.name" hit={hit} />
-            </>
-          ) : null}
-          {authorName && (commentCount !== undefined || createdLabel || status)
-            ? " · "
-            : null}
-          {status ? <span className="hit-status">{status}</span> : null}
-          {status && (commentCount !== undefined || createdLabel) ? " · " : null}
-          {commentCount !== undefined ? formatCommentLabel(commentCount) : null}
-          {commentCount !== undefined && createdLabel ? " · " : null}
-          {createdLabel ? `Created ${createdLabel}` : null}
+          {statsParts.map((part, idx) => (
+            <Fragment key={idx}>
+              {idx > 0 ? " · " : null}
+              {part}
+            </Fragment>
+          ))}
         </p>
       ) : null}
-      <MarkdownText source={details} />
+      <MarkdownText source={details} highlightTerms={terms} />
       <AttachmentImages urls={postImages} />
       <AttachmentFiles files={postFiles} />
-      <CommentsThread comments={visibleComments} />
+      <CommentsThread comments={visibleComments} terms={terms} />
     </article>
   );
 }
