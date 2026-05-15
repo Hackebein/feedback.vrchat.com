@@ -1,15 +1,19 @@
 import Client from "@searchkit/instantsearch-client";
 import { Fragment, type ReactNode, useMemo } from "react";
 import {
+  ClearRefinements,
   Configure,
+  CurrentRefinements,
   Highlight,
   Hits,
   InstantSearch,
   Pagination,
+  RangeInput,
   RefinementList,
   SearchBox,
   SortBy,
   Stats,
+  ToggleRefinement,
   useSearchBox,
 } from "react-instantsearch";
 import { MarkdownText } from "./MarkdownText";
@@ -93,6 +97,35 @@ function readString(obj: unknown, key: string): string {
 
 function readPostAuthorName(hit: Record<string, unknown>): string {
   return readString(hit.author, "name");
+}
+
+function readPostAuthorAvatarUrl(hit: Record<string, unknown>): string {
+  return readString(hit.author, "avatarURL");
+}
+
+function AuthorAvatar({
+  avatarUrl,
+  name,
+}: {
+  avatarUrl: string;
+  name: string;
+}) {
+  if (avatarUrl) {
+    return (
+      <img
+        className="author-avatar"
+        src={avatarUrl}
+        alt=""
+        loading="lazy"
+        referrerPolicy="no-referrer"
+      />
+    );
+  }
+  return (
+    <span className="author-avatar author-avatar-placeholder" aria-hidden="true">
+      {name.slice(0, 1).toUpperCase()}
+    </span>
+  );
 }
 
 function readBoardSlug(hit: Record<string, unknown>): string | undefined {
@@ -244,19 +277,7 @@ function CommentItem({
   return (
     <li className="comment">
       <div className="comment-header">
-        {avatarUrl ? (
-          <img
-            className="comment-avatar"
-            src={avatarUrl}
-            alt=""
-            loading="lazy"
-            referrerPolicy="no-referrer"
-          />
-        ) : (
-          <span className="comment-avatar comment-avatar-placeholder" aria-hidden="true">
-            {authorName.slice(0, 1).toUpperCase()}
-          </span>
-        )}
+        <AuthorAvatar avatarUrl={avatarUrl} name={authorName} />
         <span className="comment-author">{highlightInline(authorName, terms)}</span>
         {createdLabel ? (
           <span className="comment-meta">{createdLabel}</span>
@@ -309,6 +330,7 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const boardSlug = readBoardSlug(hit);
   const boardName = readBoardName(hit);
   const authorName = readPostAuthorName(hit);
+  const authorAvatarUrl = readPostAuthorAvatarUrl(hit);
   const postUrl = cannyPostUrl(boardSlug, urlName);
   const createdLabel = formatCreatedAt(hit.created);
   const status = typeof hit.status === "string" ? hit.status.trim() : "";
@@ -321,7 +343,10 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   if (boardLabel) statsParts.push(<span key="board">{boardLabel}</span>);
   if (authorName)
     statsParts.push(
-      <span key="author">By {highlightInline(authorName, terms)}</span>,
+      <span key="author" className="hit-author">
+        By <AuthorAvatar avatarUrl={authorAvatarUrl} name={authorName} />
+        {highlightInline(authorName, terms)}
+      </span>,
     );
   if (status)
     statsParts.push(
@@ -422,9 +447,28 @@ export function App() {
             <Stats />
           </p>
         </div>
+        <CurrentRefinements
+          classNames={{
+            root: "current-refinements-root",
+            list: "current-refinements-list",
+            item: "current-refinements-item",
+            label: "current-refinements-label",
+            category: "current-refinements-category",
+            categoryLabel: "current-refinements-category-label",
+            delete: "current-refinements-delete",
+          }}
+        />
 
         <div className="panels">
           <aside className="facets">
+            <ClearRefinements
+              classNames={{
+                root: "clear-refinements-root",
+                button: "clear-refinements-button",
+                disabledButton: "clear-refinements-button-disabled",
+              }}
+              translations={{ resetButtonText: "Clear all filters" }}
+            />
             <section className="facet-section">
               <h2 className="facet-heading">Board</h2>
               <RefinementList
@@ -439,6 +483,170 @@ export function App() {
             <section className="facet-section">
               <h2 className="facet-heading">Status</h2>
               <RefinementList attribute="status" limit={50} />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Category</h2>
+              <RefinementList
+                attribute="category_name"
+                searchable
+                searchablePlaceholder="Filter categories…"
+                showMore
+                limit={10}
+                showMoreLimit={200}
+              />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Author</h2>
+              <RefinementList
+                attribute="author_name"
+                searchable
+                searchablePlaceholder="Filter authors…"
+                showMore
+                limit={10}
+                showMoreLimit={500}
+              />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Source (by)</h2>
+              <RefinementList attribute="by" showMore limit={10} showMoreLimit={100} />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">ETA</h2>
+              <RefinementList attribute="eta" showMore limit={10} showMoreLimit={100} />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Score</h2>
+              <RangeInput attribute="score" />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Max score</h2>
+              <RangeInput attribute="maxScore" />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Comment count</h2>
+              <RangeInput attribute="commentCount" />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Merge count</h2>
+              <RangeInput attribute="mergeCount" />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Trending score</h2>
+              <RangeInput attribute="trendingScore" />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Viewer vote</h2>
+              <RangeInput attribute="viewerVote" />
+            </section>
+            <section className="facet-section facet-toggle-group">
+              <h2 className="facet-heading">Post flags</h2>
+              <ToggleRefinement
+                attribute="etaPublic"
+                on="true"
+                label="ETA is public"
+              />
+              <ToggleRefinement
+                attribute="viewerIsAuthor"
+                on="true"
+                label="Viewer is author"
+              />
+              <ToggleRefinement
+                attribute="author_anonymized"
+                on="true"
+                label="Author anonymized"
+              />
+              <ToggleRefinement
+                attribute="author_serviceAccount"
+                on="true"
+                label="Author is service account"
+              />
+              <ToggleRefinement
+                attribute="vote_highEngagement"
+                on="true"
+                label="High engagement votes"
+              />
+              <ToggleRefinement
+                attribute="vote_moderateEngagement"
+                on="true"
+                label="Moderate engagement votes"
+              />
+              <ToggleRefinement
+                attribute="vote_lowEngagement"
+                on="true"
+                label="Low engagement votes"
+              />
+              <ToggleRefinement
+                attribute="vote_votesHidden"
+                on="true"
+                label="Votes hidden"
+              />
+            </section>
+            <section className="facet-section">
+              <h2 className="facet-heading">Comments</h2>
+              <p className="facet-hint">
+                Posts with at least one comment matching the selected criteria.
+              </p>
+              <h3 className="facet-subheading">Comment author</h3>
+              <RefinementList
+                attribute="comment_author_name"
+                searchable
+                searchablePlaceholder="Filter comment authors…"
+                showMore
+                limit={10}
+                showMoreLimit={500}
+              />
+              <h3 className="facet-subheading">Integration source</h3>
+              <RefinementList
+                attribute="comment_integrationSourceType"
+                showMore
+                limit={10}
+                showMoreLimit={100}
+              />
+              <h3 className="facet-subheading">Item source</h3>
+              <RefinementList
+                attribute="comment_itemSourceType"
+                showMore
+                limit={10}
+                showMoreLimit={100}
+              />
+              <h3 className="facet-subheading">Comment like count</h3>
+              <RangeInput attribute="comment_likeCount" />
+            </section>
+            <section className="facet-section facet-toggle-group">
+              <h2 className="facet-heading">Comment flags</h2>
+              <p className="facet-hint">
+                Posts with at least one comment matching the flag.
+              </p>
+              <ToggleRefinement
+                attribute="comment_pinned"
+                on="true"
+                label="Has pinned comment"
+              />
+              <ToggleRefinement
+                attribute="comment_internal"
+                on="true"
+                label="Has internal comment"
+              />
+              <ToggleRefinement
+                attribute="comment_private"
+                on="true"
+                label="Has private comment"
+              />
+              <ToggleRefinement
+                attribute="comment_aiGenerated"
+                on="true"
+                label="Has AI-generated comment"
+              />
+              <ToggleRefinement
+                attribute="comment_author_anonymized"
+                on="true"
+                label="Has anonymized commenter"
+              />
+              <ToggleRefinement
+                attribute="comment_author_serviceAccount"
+                on="true"
+                label="Has service-account commenter"
+              />
             </section>
           </aside>
           <section className="results">
