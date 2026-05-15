@@ -52,11 +52,20 @@ def json_safe(value: Any) -> Any:
 
 
 def comment_text_snippets(c: dict[str, Any]) -> list[str]:
-    """Plain-text contributions from a comment (body/value + author name) for combined_text."""
+    """Plain-text contributions from a comment (body/value + enrichments + author name) for combined_text."""
     out: list[str] = []
     v = c.get("value")
     if isinstance(v, str) and v.strip():
         out.append(v.strip())
+    sns = c.get("statusChangeNewStatus")
+    if isinstance(sns, str) and sns.strip():
+        out.append(sns.strip())
+    mt = c.get("mergedPostTitle")
+    if isinstance(mt, str) and mt.strip():
+        out.append(mt.strip())
+    md = c.get("mergedPostDetails")
+    if isinstance(md, str) and md.strip():
+        out.append(md.strip())
     au = c.get("author")
     if isinstance(au, dict):
         nm = au.get("name")

@@ -236,6 +236,89 @@ def fetch_board_posts(board_slug, sort="newest"):
     return out, seen, has_next
 
 
+def _merge_payload_into_comment(comment, payload):
+    """Copy merged-post title/details from a postsActivity.mergedPosts entry."""
+    if not isinstance(payload, dict):
+        return
+    title = payload.get("postTitle")
+    details = payload.get("postDetails")
+    if isinstance(title, str) and title.strip():
+        comment["mergedPostTitle"] = title.strip()
+    if isinstance(details, str) and details.strip():
+        comment["mergedPostDetails"] = details.strip()
+
+
+def enrich_comments_from_activity(comments: list, activity: dict) -> None:
+    """Attach statusChangeNewStatus and merged post fields; append synthetic merge rows."""
+    if not isinstance(activity, dict):
+        return
+
+    status_histories = activity.get("statusHistories") or {}
+    merged_posts = activity.get("mergedPosts") or {}
+    if not isinstance(status_histories, dict):
+        status_histories = {}
+    if not isinstance(merged_posts, dict):
+        merged_posts = {}
+
+    merge_ids_from_comments: set[str] = set()
+    comment_doc_ids = {
+        str(c["_id"]) for c in comments if isinstance(c, dict) and c.get("_id") is not None
+    }
+
+    for c in comments:
+        if not isinstance(c, dict):
+            continue
+
+        scid = c.get("statusChangeID")
+        if isinstance(scid, str) and scid.strip():
+            hist = status_histories.get(scid.strip())
+            if isinstance(hist, dict):
+                st = hist.get("status")
+                if isinstance(st, str) and st.strip():
+                    c["statusChangeNewStatus"] = st.strip()
+
+        mid = c.get("mergeID")
+        if isinstance(mid, str) and mid.strip():
+            mk = mid.strip()
+            merge_ids_from_comments.add(mk)
+            _merge_payload_into_comment(c, merged_posts.get(mk))
+
+    # Merges only listed under mergedPosts (no matching comment row from Canny).
+    for raw_key, mp in merged_posts.items():
+        if not isinstance(mp, dict):
+            continue
+        merge_record_id = mp.get("_id") or raw_key
+        if merge_record_id is None:
+            continue
+        mk = str(merge_record_id)
+        if mk in merge_ids_from_comments:
+            continue
+        if mk in comment_doc_ids:
+            continue
+        synthetic = {
+            "_id": mk,
+            "mergeID": mk,
+            "value": "",
+            "created": mp.get("created"),
+            "author": mp.get("member"),
+            "postID": mp.get("mergeIntoPostID"),
+            "boardID": mp.get("boardID"),
+            "companyID": mp.get("companyID"),
+            "deleted": False,
+            "spam": False,
+            "internal": False,
+            "private": False,
+            "pinned": False,
+            "imageURLs": [],
+            "fileURLs": [],
+            "files": [],
+        }
+        _merge_payload_into_comment(synthetic, mp)
+        comments.append(synthetic)
+
+    comments.sort(key=lambda x: x.get("created") or "")
+
+
 def fetch_post_page(board_slug, url_slug, retries=3):
     """
     GET /{board_slug}/p/{url_slug}, parse the embedded `window.__data`.
@@ -307,10 +390,12 @@ def fetch_post_page(board_slug, url_slug, retries=3):
                     and not c.get("imageURLs")
                     and not c.get("fileURLs")
                     and not c.get("statusChangeID")
+                    and not c.get("mergeID")
                 ):
                     continue
                 comments.append(dict(c))
             comments.sort(key=lambda x: x.get("created") or "")
+            enrich_comments_from_activity(comments, activity)
 
         return post, comments, False, False
 
