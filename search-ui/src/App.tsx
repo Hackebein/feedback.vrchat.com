@@ -373,10 +373,6 @@ function readCommentBody(c: CommentLike): string {
   if (raw) {
     return raw;
   }
-  const newStatus = readString(c, "statusChangeNewStatus");
-  if (newStatus) {
-    return newStatus;
-  }
   const mergedTitle = readString(c, "mergedPostTitle");
   const mergedDetails = readString(c, "mergedPostDetails");
   const mergedParts = [mergedTitle, mergedDetails].filter(Boolean);
@@ -506,6 +502,9 @@ function CommentItem({
   const author = comment.author;
   const authorName = readString(author, "name") || "Anonymous";
   const avatarUrl = readString(author, "avatarURL");
+  const valueRaw =
+    typeof comment.value === "string" ? comment.value.trim() : "";
+  const newStatus = readString(comment, "statusChangeNewStatus");
   const body = readCommentBody(comment);
   const createdLabel =
     typeof comment.created === "string"
@@ -514,11 +513,14 @@ function CommentItem({
   const likeCount = readPositiveInt(comment.likeCount);
   const images = readImageUrls(comment.imageURLs);
   const files = readFileAttachments(comment.files);
+  const hasAttachments = images.length > 0 || files.length > 0;
   const isPinned = comment.pinned === true;
   const isInternal = comment.internal === true;
   const isPrivate = comment.private === true;
   const isMerge =
     typeof comment.mergeID === "string" && comment.mergeID.trim().length > 0;
+  const isStatusChangeComment =
+    Boolean(newStatus) && !valueRaw && !isMerge;
 
   return (
     <li className="comment">
@@ -538,8 +540,29 @@ function CommentItem({
           </span>
         ) : null}
       </div>
-      {body ? <MarkdownText source={body} highlightTerms={terms} /> : null}
-      <Attachments imageUrls={images} files={files} />
+      {isStatusChangeComment ||
+      body ||
+      hasAttachments ? (
+        <div
+          className={
+            "hit-body" + (hasAttachments ? " has-attachments" : "")
+          }
+        >
+          <div className="hit-body-text">
+            {isStatusChangeComment ? (
+              <p className="comment-status-change">
+                {highlightInline(authorName, terms)} marked this post as{" "}
+                <span className="hit-status">
+                  {highlightInline(newStatus, terms)}
+                </span>
+              </p>
+            ) : body ? (
+              <MarkdownText source={body} highlightTerms={terms} />
+            ) : null}
+          </div>
+          <Attachments imageUrls={images} files={files} />
+        </div>
+      ) : null}
     </li>
   );
 }
