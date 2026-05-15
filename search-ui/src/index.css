@@ -169,7 +169,7 @@ body {
 
 .panels {
   display: grid;
-  grid-template-columns: minmax(200px, 260px) 1fr;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
   gap: 1.5rem;
 }
 
@@ -399,6 +399,7 @@ body {
 
 .hit-list-item {
   margin: 0;
+  min-width: 0;
 }
 
 .hit-card {
@@ -406,6 +407,8 @@ body {
   border-radius: 10px;
   padding: 0.9rem 1rem;
   background: #151a24;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .hit-title-row {
@@ -541,41 +544,91 @@ body {
   border: 1px solid #2a3142;
 }
 
-.attachment-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+.attachments-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
   margin: 0.6rem 0 0;
   padding: 0;
 }
 
-.attachment-image-link img {
-  display: block;
-  max-width: 200px;
-  max-height: 160px;
-  border-radius: 6px;
+.attachment-tile {
+  position: relative;
+  aspect-ratio: 16 / 9;
   border: 1px solid #2a3142;
-  object-fit: cover;
-}
-
-.attachment-files {
-  list-style: none;
+  border-radius: 8px;
+  background: #0d1117;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  margin: 0.5rem 0 0;
-  padding: 0;
 }
 
-.attachment-files a {
+.attachment-image-link,
+.attachment-image-link img,
+.attachment-tile .video-embed,
+.attachment-text,
+.attachment-text-frame {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.attachment-image-link img {
+  object-fit: contain;
+  max-width: none;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.attachment-tile .video-embed {
+  margin: 0;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  aspect-ratio: auto;
+}
+
+.attachment-text {
+  position: relative;
+}
+
+.attachment-text-frame {
+  border: 0;
+  background: #fff;
+}
+
+.attachment-text-link {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #9bb6f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.attachment-file-link {
+  margin: auto;
+  padding: 0.5rem;
   color: #9bb6f0;
   text-decoration: none;
   font-size: 0.85rem;
   word-break: break-all;
+  text-align: center;
 }
 
-.attachment-files a:hover {
+.attachment-file-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .attachments-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .markdown-body {
@@ -704,6 +757,12 @@ body {
   height: auto;
   border-radius: 6px;
   border: 1px solid #2a3142;
+}
+
+.markdown-body video,
+.markdown-body iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 .markdown-body table {

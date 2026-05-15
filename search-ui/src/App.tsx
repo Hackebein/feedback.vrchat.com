@@ -143,6 +143,11 @@ function readBoardName(hit: Record<string, unknown>): string | undefined {
 type CommentLike = Record<string, unknown> & {
   _id?: string;
   value?: string;
+  mergeID?: string;
+  statusChangeID?: string;
+  statusChangeNewStatus?: string;
+  mergedPostTitle?: string;
+  mergedPostDetails?: string;
   created?: string;
   author?: Record<string, unknown>;
   imageURLs?: unknown;
@@ -182,7 +187,22 @@ function readVisibleComments(raw: unknown): CommentLike[] {
 }
 
 function readCommentBody(c: CommentLike): string {
-  return typeof c.value === "string" && c.value.trim() ? c.value : "";
+  const raw =
+    typeof c.value === "string" && c.value.trim() ? c.value.trim() : "";
+  if (raw) {
+    return raw;
+  }
+  const newStatus = readString(c, "statusChangeNewStatus");
+  if (newStatus) {
+    return newStatus;
+  }
+  const mergedTitle = readString(c, "mergedPostTitle");
+  const mergedDetails = readString(c, "mergedPostDetails");
+  const mergedParts = [mergedTitle, mergedDetails].filter(Boolean);
+  if (mergedParts.length > 0) {
+    return mergedParts.join("\n\n");
+  }
+  return "";
 }
 
 function readImageUrls(raw: unknown): string[] {
@@ -220,18 +240,27 @@ function readPositiveInt(raw: unknown): number | undefined {
   return undefined;
 }
 
-function AttachmentImages({ urls }: { urls: string[] }) {
-  if (urls.length === 0) return null;
-  return (
-    <div className="attachment-images">
-      {urls.map((url) => {
-        const embed = detectVideoEmbed(url);
-        if (embed) {
-          return <VideoEmbedView key={url} embed={embed} />;
-        }
-        return (
+function isTextFile(f: AttachmentFile): boolean {
+  return /\.txt(\?|#|$)/i.test(f.url) || /\.txt$/i.test(f.name);
+}
+
+function Attachments({
+  imageUrls,
+  files,
+}: {
+  imageUrls: string[];
+  files: AttachmentFile[];
+}) {
+  const tiles: ReactNode[] = [];
+
+  for (const url of imageUrls) {
+    const embed = detectVideoEmbed(url);
+    tiles.push(
+      <li key={`img-${url}`} className="attachment-tile">
+        {embed ? (
+          <VideoEmbedView embed={embed} />
+        ) : (
           <a
-            key={url}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -239,35 +268,51 @@ function AttachmentImages({ urls }: { urls: string[] }) {
           >
             <img src={url} alt="" loading="lazy" referrerPolicy="no-referrer" />
           </a>
-        );
-      })}
-    </div>
-  );
-}
+        )}
+      </li>,
+    );
+  }
 
-function AttachmentFiles({ files }: { files: AttachmentFile[] }) {
-  if (files.length === 0) return null;
-  return (
-    <ul className="attachment-files">
-      {files.map((f) => {
-        const embed = detectVideoEmbed(f.url);
-        if (embed) {
-          return (
-            <li key={f.url} className="attachment-file-video">
-              <VideoEmbedView embed={embed} title={f.name} />
-            </li>
-          );
-        }
-        return (
-          <li key={f.url}>
-            <a href={f.url} target="_blank" rel="noopener noreferrer">
-              {f.name}
-            </a>
-          </li>
-        );
-      })}
-    </ul>
-  );
+  for (const f of files) {
+    const embed = detectVideoEmbed(f.url);
+    let body: ReactNode;
+    if (embed) {
+      body = <VideoEmbedView embed={embed} title={f.name} />;
+    } else if (isTextFile(f)) {
+      body = (
+        <div className="attachment-text">
+          <iframe className="attachment-text-frame" src={f.url} title={f.name} />
+          <a
+            className="attachment-text-link"
+            href={f.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {f.name}
+          </a>
+        </div>
+      );
+    } else {
+      body = (
+        <a
+          className="attachment-file-link"
+          href={f.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {f.name}
+        </a>
+      );
+    }
+    tiles.push(
+      <li key={`file-${f.url}`} className="attachment-tile">
+        {body}
+      </li>,
+    );
+  }
+
+  if (tiles.length === 0) return null;
+  return <ul className="attachments-grid">{tiles}</ul>;
 }
 
 function CommentItem({
@@ -291,6 +336,8 @@ function CommentItem({
   const isPinned = comment.pinned === true;
   const isInternal = comment.internal === true;
   const isPrivate = comment.private === true;
+  const isMerge =
+    typeof comment.mergeID === "string" && comment.mergeID.trim().length > 0;
 
   return (
     <li className="comment">
@@ -303,6 +350,7 @@ function CommentItem({
         {isPinned ? <span className="comment-badge">pinned</span> : null}
         {isInternal ? <span className="comment-badge">internal</span> : null}
         {isPrivate ? <span className="comment-badge">private</span> : null}
+        {isMerge ? <span className="comment-badge">merged post</span> : null}
         {likeCount !== undefined ? (
           <span className="comment-meta">
             {likeCount === 1 ? "1 like" : `${likeCount} likes`}
@@ -310,8 +358,7 @@ function CommentItem({
         ) : null}
       </div>
       {body ? <MarkdownText source={body} highlightTerms={terms} /> : null}
-      <AttachmentImages urls={images} />
-      <AttachmentFiles files={files} />
+      <Attachments imageUrls={images} files={files} />
     </li>
   );
 }
@@ -404,8 +451,7 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
         </p>
       ) : null}
       <MarkdownText source={details} highlightTerms={terms} />
-      <AttachmentImages urls={postImages} />
-      <AttachmentFiles files={postFiles} />
+      <Attachments imageUrls={postImages} files={postFiles} />
       <CommentsThread comments={visibleComments} terms={terms} />
     </article>
   );

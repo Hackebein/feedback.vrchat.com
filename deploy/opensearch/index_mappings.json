@@ -214,6 +214,19 @@
           "mergeID": { "type": "keyword" },
           "voteID": { "type": "keyword" },
           "statusChangeID": { "type": "keyword" },
+          "statusChangeNewStatus": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "mergedPostTitle": {
+            "type": "text",
+            "analyzer": "standard"
+          },
+          "mergedPostDetails": {
+            "type": "text",
+            "analyzer": "standard"
+          },
           "sourceFeatureExtractionItemID": { "type": "keyword" },
           "sourceLink": { "type": "keyword", "ignore_above": 2048 },
           "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
@@ -333,6 +346,19 @@
           "mergeID": { "type": "keyword" },
           "voteID": { "type": "keyword" },
           "statusChangeID": { "type": "keyword" },
+          "statusChangeNewStatus": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "mergedPostTitle": {
+            "type": "text",
+            "analyzer": "standard"
+          },
+          "mergedPostDetails": {
+            "type": "text",
+            "analyzer": "standard"
+          },
           "sourceFeatureExtractionItemID": { "type": "keyword" },
           "sourceLink": { "type": "keyword", "ignore_above": 2048 },
           "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
