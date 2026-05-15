@@ -3,6 +3,7 @@ import type {
   SearchAttribute,
   SearchSettingsConfig,
 } from "searchkit";
+import { buildLuceneQueryBody } from "./lucene-query";
 
 function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
   return attrs.map((a) =>
@@ -17,19 +18,7 @@ export function instantSearchLuceneQuery(
   _searchAttributes: SearchAttribute[],
   _config: SearchSettingsConfig,
 ): ElasticsearchQuery {
-  const q = query.trim();
-  if (!q) {
-    return { match_all: {} };
-  }
-  return {
-    query_string: {
-      query: q,
-      default_operator: "AND",
-      lenient: true,
-      analyze_wildcard: true,
-      fields: ["combined_text^3", "title^2", "details", "author.name"],
-    },
-  };
+  return buildLuceneQueryBody(query.trim());
 }
 
 export function instantSearchStrictQuery(
