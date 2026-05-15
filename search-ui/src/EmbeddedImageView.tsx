@@ -8,11 +8,16 @@ function IconEnterFullscreen() {
       width="18"
       height="18"
       aria-hidden
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      <path
-        fill="currentColor"
-        d="M7 2h2v5H4V5h3V2zm0 15h2v5H4v-2H7v-3zm10-15v3h3v2h-5V2h2zm3 12h-3v5h-2v-5h5v2z"
-      />
+      <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+      <path d="M16 3h3a2 2 0 0 1 2 2v3" />
+      <path d="M8 21H5a2 2 0 0 1-2-2v-3" />
+      <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
     </svg>
   );
 }
@@ -25,11 +30,16 @@ function IconExitFullscreen() {
       width="18"
       height="18"
       aria-hidden
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      <path
-        fill="currentColor"
-        d="M4 8V4h4V2H2v6h2zm2 12v-4H4v4H2v6h6v-2H6zm12-4h4v4h-2v2h6v-6h-2v2h-4v-2zm0-8V4h-4V2h6v6h-2V6h-2V4z"
-      />
+      <path d="M4 14v3a2 2 0 0 0 2 2h3" />
+      <path d="M14 4h3a2 2 0 0 1 2 2v3" />
+      <path d="M20 4l-5 5" />
+      <path d="M4 20l5-5" />
     </svg>
   );
 }
