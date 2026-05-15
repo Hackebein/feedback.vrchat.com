@@ -312,6 +312,7 @@ def enrich_comments_from_activity(comments: list, activity: dict) -> None:
             "imageURLs": [],
             "fileURLs": [],
             "files": [],
+            "synthetic": True,
         }
         _merge_payload_into_comment(synthetic, mp)
         comments.append(synthetic)
@@ -545,7 +546,10 @@ def build_scan_targets(stored, fresh_by_board, limit):
                 for k in ("commentCount", "status", "title")
             )
             stored_comments = stored_post.get("comments") or []
-            count_consistent = len(stored_comments) == (p.get("commentCount") or 0)
+            real_comment_count = sum(
+                1 for c in stored_comments if isinstance(c, dict) and not c.get("synthetic")
+            )
+            count_consistent = real_comment_count == (p.get("commentCount") or 0)
             if fields_match and count_consistent:
                 continue
             slug = p.get("urlName") or stored_post.get("urlName") or ""
@@ -627,8 +631,7 @@ def apply_results(stored, results, now):
             continue
 
         post["updatedAt"] = now
-        comment_count = post.get("commentCount", 0) or 0
-        post["comments"] = comments if comment_count > 0 else []
+        post["comments"] = comments
 
         actual_board = (post.get("board") or {}).get("urlName") or original
         if not actual_board:
