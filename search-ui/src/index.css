@@ -43,14 +43,25 @@ body {
   color: #c8d0e5;
 }
 
-.hit-title-link {
+.hit-title-link,
+.hit-slug-link {
   color: inherit;
   text-decoration: none;
 }
 
-.hit-title-link:hover {
+.hit-title-link:hover,
+.hit-slug-link:hover {
   text-decoration: underline;
   color: #d5dbe8;
+}
+
+.hit-slug-link .hit-code {
+  cursor: pointer;
+}
+
+.hit-slug-link:hover .hit-code {
+  background: #1d2533;
+  color: #f2f4fa;
 }
 
 .lede {
@@ -125,8 +136,45 @@ body {
   }
 }
 
-.facets > div {
+.facets > div,
+.facets > section {
   margin-bottom: 1.25rem;
+}
+
+.facet-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.facet-heading {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #c8d0e5;
+}
+
+.facets .ais-SearchBox-form {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.facets .ais-SearchBox-input {
+  flex: 1;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid #2a3142;
+  background: #0f1218;
+  color: #f2f4fa;
+  font-size: 0.85rem;
+}
+
+.facets .ais-SearchBox-submit,
+.facets .ais-SearchBox-reset {
+  display: none;
 }
 
 .hit-list-root {

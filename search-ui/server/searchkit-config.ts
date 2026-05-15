@@ -21,6 +21,10 @@ export function instantSearchStrictQuery(
   if (!q) {
     return { match_all: {} };
   }
+  // For very short queries (1 character) we keep behavior conservative: require
+  // the *entire* analyzed query to appear as a phrase so that typing "G" while
+  // searching for "Group" doesn't sweep in every document that happens to
+  // contain a stray bare letter token.
   const primary = fieldsWithBoost(searchAttributes, 1);
   const phrase = fieldsWithBoost(searchAttributes, 2);
   return {
@@ -33,6 +37,7 @@ export function instantSearchStrictQuery(
             type: "best_fields",
             operator: "and",
             fuzziness: 0,
+            auto_generate_synonyms_phrase_query: false,
           },
         },
         {
@@ -88,12 +93,64 @@ export function searchkitConfig(host: string, username: string, password: string
         { field: "author.name", weight: 1 },
         "details",
       ],
-      result_attributes: ["*"],
+      // Explicit list of every top-level field we want to return so that the
+      // gateway-side _source filter does not accidentally drop nested objects
+      // (comments, board, author, ...). Keep this in sync with index_mappings.json.
+      result_attributes: [
+        "post_id",
+        "__v",
+        "title",
+        "details",
+        "urlName",
+        "ideaID",
+        "boardID",
+        "categoryID",
+        "subCategoryID",
+        "companyID",
+        "authorID",
+        "deleteID",
+        "deletedBy",
+        "updatedBy",
+        "by",
+        "byID",
+        "status",
+        "score",
+        "maxScore",
+        "mergeCount",
+        "trendingScore",
+        "commentCount",
+        "viewerVote",
+        "viewerIsAuthor",
+        "loading",
+        "notFound",
+        "etaPublic",
+        "eta",
+        "ogImageURL",
+        "imageURLs",
+        "fileURLs",
+        "opportunities",
+        "created",
+        "updatedAt",
+        "statusChanged",
+        "deletedAt",
+        "lastUpdated",
+        "error",
+        "linkedEntry",
+        "sourceFeatureExtractionItem",
+        "files",
+        "author",
+        "board",
+        "category",
+        "voteSettings",
+        "voters",
+        "comments",
+        "pinnedComment",
+      ],
       highlight_attributes: ["title", "details", "author.name"],
       snippet_attributes: ["details:200"],
       facet_attributes: [
-        { attribute: "board.urlName", field: "board.urlName", type: "string" },
-        { attribute: "board.name", field: "board.name.keyword", type: "string" },
+        { attribute: "board_slug", field: "board.urlName", type: "string" },
+        { attribute: "board_name", field: "board.name.keyword", type: "string" },
         { attribute: "status", field: "status", type: "string" },
         { attribute: "score", field: "score", type: "numeric" },
         { attribute: "commentCount", field: "commentCount", type: "numeric" },
