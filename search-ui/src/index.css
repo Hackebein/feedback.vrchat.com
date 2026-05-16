@@ -1007,12 +1007,18 @@ body {
 
 .attachment-image-wrap,
 .attachment-image-wrap img,
-.attachment-tile .video-embed,
+.attachment-tile .video-embed-root,
+.attachment-tile .video-embed-root .video-embed,
 .attachment-text,
 .attachment-text-frame {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.attachment-tile .video-embed-root {
+  position: relative;
+  box-sizing: border-box;
 }
 
 .attachment-image-wrap img {
@@ -1046,7 +1052,18 @@ body {
 }
 
 .embedded-image-root:hover .embedded-image-fullscreen-btn,
-.embedded-image-root:focus-within .embedded-image-fullscreen-btn {
+.embedded-image-root:focus-within .embedded-image-fullscreen-btn,
+.attachment-text:hover .embedded-image-fullscreen-btn,
+.attachment-text:focus-within .embedded-image-fullscreen-btn {
+  opacity: 1;
+}
+
+.embedded-image-root:hover .attachment-name-overlay,
+.embedded-image-root:focus-within .attachment-name-overlay,
+.attachment-text:hover .attachment-name-overlay,
+.attachment-text:focus-within .attachment-name-overlay,
+.video-embed-root:hover .attachment-name-overlay,
+.video-embed-root:focus-within .attachment-name-overlay {
   opacity: 1;
 }
 
@@ -1078,12 +1095,38 @@ body {
   border-radius: 0;
 }
 
-.attachment-tile .video-embed {
+.attachment-name-overlay {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+  max-width: calc(100% - 56px);
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #9bb6f0;
+  font-size: 0.75rem;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.attachment-name-overlay:focus-visible {
+  opacity: 1;
+  outline: 2px solid #5b8bff;
+  outline-offset: 2px;
+}
+
+.attachment-tile .video-embed-root .video-embed {
   margin: 0;
   max-width: none;
   border: 0;
   border-radius: 0;
   aspect-ratio: auto;
+  object-fit: contain;
 }
 
 .attachment-text {
@@ -1096,16 +1139,18 @@ body {
   color-scheme: light;
 }
 
-.attachment-text-link {
-  position: absolute;
-  right: 6px;
-  bottom: 6px;
-  font-size: 0.75rem;
-  background: rgba(0, 0, 0, 0.55);
-  color: #9bb6f0;
-  padding: 2px 6px;
-  border-radius: 4px;
-  text-decoration: none;
+.attachment-text:fullscreen {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.attachment-text:fullscreen .attachment-text-frame {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .attachment-file-link {
@@ -1293,6 +1338,11 @@ body {
 .markdown-body input[type="checkbox"] {
   margin-right: 0.35rem;
   accent-color: #5b8bff;
+}
+
+.video-embed-root {
+  display: block;
+  position: relative;
 }
 
 .video-embed {

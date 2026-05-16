@@ -26,6 +26,7 @@ import {
   useSearchBox,
 } from "react-instantsearch";
 import type { RefinementListItem } from "instantsearch.js/es/connectors/refinement-list/connectRefinementList";
+import { AttachmentTextView } from "./AttachmentTextView";
 import { EmbeddedImageView } from "./EmbeddedImageView";
 import { aiCategoryDescription, aiCategoryName } from "./featureTree";
 import { MarkdownText } from "./MarkdownText";
@@ -685,6 +686,16 @@ function readFileAttachments(raw: unknown): AttachmentFile[] {
   return out;
 }
 
+function urlBasename(url: string): string {
+  try {
+    const parts = new URL(url).pathname.split("/").filter(Boolean);
+    const last = parts[parts.length - 1];
+    return last ?? url;
+  } catch {
+    return url;
+  }
+}
+
 function readPositiveInt(raw: unknown): number | undefined {
   if (typeof raw === "number" && Number.isFinite(raw) && raw > 0) {
     return Math.floor(raw);
@@ -711,12 +722,21 @@ function Attachments({
 
   for (const url of imageUrls) {
     const embed = detectVideoEmbed(url);
+    const basename = urlBasename(url);
     tiles.push(
       <li key={`img-${url}`} className="attachment-tile">
         {embed ? (
-          <VideoEmbedView embed={embed} />
+          <VideoEmbedView
+            embed={embed}
+            downloadName={embed.kind === "video" ? basename : undefined}
+          />
         ) : (
-          <EmbeddedImageView src={url} alt="" className="attachment-image-wrap" />
+          <EmbeddedImageView
+            src={url}
+            alt=""
+            className="attachment-image-wrap"
+            downloadName={basename}
+          />
         )}
       </li>,
     );
@@ -726,21 +746,15 @@ function Attachments({
     const embed = detectVideoEmbed(f.url);
     let body: ReactNode;
     if (embed) {
-      body = <VideoEmbedView embed={embed} title={f.name} />;
-    } else if (isTextFile(f)) {
       body = (
-        <div className="attachment-text">
-          <iframe className="attachment-text-frame" src={f.url} title={f.name} />
-          <a
-            className="attachment-text-link"
-            href={f.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {f.name}
-          </a>
-        </div>
+        <VideoEmbedView
+          embed={embed}
+          title={f.name}
+          downloadName={embed.kind === "video" ? f.name : undefined}
+        />
       );
+    } else if (isTextFile(f)) {
+      body = <AttachmentTextView name={f.name} url={f.url} />;
     } else {
       body = (
         <a
