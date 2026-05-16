@@ -34,12 +34,23 @@ BOARD_FILES          = ROOT / "boards"
 README_FILE          = ROOT / "README.md"
 README_TEMPLATE_NAME = "README.md.j2"
 MAX_WORKERS          = 4
+AI_WORKERS           = 8
 CANNY_HOST           = "feedback.vrchat.com"
 API_URL              = f"https://{CANNY_HOST}/api/posts/get"
 SITE_URL             = f"https://{CANNY_HOST}"
 USER_AGENT           = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
 
 BOARD_FILES.mkdir(parents=True, exist_ok=True)
+
+
+def _minimax_workers():
+    raw = (os.environ.get("MINIMAX_WORKERS") or "").strip()
+    if raw:
+        try:
+            return max(1, int(raw))
+        except ValueError:
+            pass
+    return AI_WORKERS
 
 
 # ---------------------------------------------------------------------------
@@ -624,6 +635,8 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         boards_to_write.setdefault(info["board_slug"], {})[pid] = info["post"]
 
     added = deleted = refreshed = moved = 0
+    eff_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or (api_key or "").strip()
+    tag_jobs: list[tuple[dict, str]] = []
     for pid, (post, comments, not_found, transient) in results.items():
         original = stored.get(pid, {}).get("board_slug")
         if transient:
@@ -645,9 +658,14 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
             continue
 
         prev_post = stored.get(pid, {}).get("post")
-        categorize.apply_ai_tags(
-            post, actual_board, prev_post, tree, system_prompt, api_key,
-        )
+        if not categorize.needs_ai_retag(prev_post, post):
+            categorize.carry_over_ai_tags(post, prev_post)
+        elif not eff_key:
+            categorize.apply_ai_tags(
+                post, actual_board, prev_post, tree, system_prompt, api_key,
+            )
+        else:
+            tag_jobs.append((post, actual_board))
 
         if original and original != actual_board:
             boards_to_write.get(original, {}).pop(pid, None)
@@ -659,6 +677,25 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         else:
             added += 1
         boards_to_write.setdefault(actual_board, {})[pid] = post
+
+    if tag_jobs:
+        workers = _minimax_workers()
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            futures = {
+                ex.submit(
+                    categorize.tag_post, post, board_slug, tree, system_prompt, api_key,
+                ): post
+                for post, board_slug in tag_jobs
+            }
+            for fut in as_completed(futures):
+                post = futures[fut]
+                try:
+                    tags = fut.result()
+                    post["aiCategories"] = tags["aiCategories"]
+                    post["aiTaggedAt"] = tags["aiTaggedAt"]
+                except Exception as e:
+                    pid = post.get("_id", "?")
+                    print(f"[ERROR] AI categorize crashed for {pid}: {e}")
 
     return boards_to_write, {
         "added": added,
