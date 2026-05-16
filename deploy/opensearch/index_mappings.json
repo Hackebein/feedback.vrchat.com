@@ -10,6 +10,12 @@
       "post_id": { "type": "keyword" },
       "combined_text": { "type": "text", "analyzer": "standard" },
 
+      "aiCategories": { "type": "keyword" },
+      "aiTaggedAt": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+
       "__v": { "type": "integer" },
 
       "title": {
