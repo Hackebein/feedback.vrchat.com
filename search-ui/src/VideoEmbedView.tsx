@@ -1,11 +1,14 @@
+import { DownloadNameOverlay } from "./attachmentOverlay";
 import type { VideoEmbed } from "./videoEmbed";
 
 export function VideoEmbedView({
   embed,
   title,
+  downloadName,
 }: {
   embed: VideoEmbed;
   title?: string;
+  downloadName?: string;
 }) {
   if (embed.kind === "iframe") {
     return (
@@ -21,13 +24,18 @@ export function VideoEmbedView({
     );
   }
   return (
-    <video
-      className="video-embed"
-      controls
-      preload="metadata"
-      referrerPolicy="no-referrer"
-    >
-      <source src={embed.src} type={embed.mime} />
-    </video>
+    <span className="video-embed-root">
+      <video
+        className="video-embed"
+        controls
+        preload="metadata"
+        referrerPolicy="no-referrer"
+      >
+        <source src={embed.src} type={embed.mime} />
+      </video>
+      {downloadName ? (
+        <DownloadNameOverlay name={downloadName} url={embed.src} />
+      ) : null}
+    </span>
   );
 }
