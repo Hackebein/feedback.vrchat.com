@@ -25,7 +25,9 @@ import {
   useRange,
   useSearchBox,
 } from "react-instantsearch";
+import type { RefinementListItem } from "instantsearch.js/es/connectors/refinement-list/connectRefinementList";
 import { EmbeddedImageView } from "./EmbeddedImageView";
+import { aiCategoryDescription, aiCategoryName } from "./featureTree";
 import { MarkdownText } from "./MarkdownText";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
@@ -292,6 +294,21 @@ const LUCENE_ATTRIBUTE_ROWS: LuceneAttrRow[] = [
     field: "comments.created",
     kind: "date",
     example: `comments.created:["2025-01-01" TO "*"]`,
+  },
+  {
+    field: "aiCategories",
+    kind: "text",
+    example: `aiCategories:groups`,
+  },
+  {
+    field: "aiCategories.keyword",
+    kind: "keyword",
+    example: `aiCategories.keyword:"groups.calendar"`,
+  },
+  {
+    field: "aiTaggedAt",
+    kind: "date",
+    example: `aiTaggedAt:["2025-01-01" TO "*"]`,
   },
 ];
 
@@ -881,6 +898,16 @@ function CommentsThread({
   );
 }
 
+function readAiCategories(hit: Record<string, unknown>): string[] {
+  const raw = hit.aiCategories;
+  if (!Array.isArray(raw)) return [];
+  const out: string[] = [];
+  for (const v of raw) {
+    if (typeof v === "string" && v.trim()) out.push(v.trim());
+  }
+  return out;
+}
+
 function readHitVoteCount(hit: Record<string, unknown>): number | undefined {
   const raw = hit.score;
   if (typeof raw === "number" && Number.isFinite(raw)) {
@@ -911,6 +938,7 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
   const postFiles = readFileAttachments(hit.files);
   const hasAttachments = postImages.length > 0 || postFiles.length > 0;
   const visibleComments = readVisibleComments(hit.comments);
+  const aiCategories = readAiCategories(hit);
   const boardLabel = boardName || boardSlug;
   const statsParts: ReactNode[] = [];
   if (boardLabel) statsParts.push(<span key="board">{boardLabel}</span>);
@@ -963,6 +991,19 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
             </Fragment>
           ))}
         </p>
+      ) : null}
+      {aiCategories.length > 0 ? (
+        <ul className="ai-category-list" aria-label="AI categories">
+          {aiCategories.map((cid) => (
+            <li
+              key={cid}
+              className="ai-category-chip"
+              title={aiCategoryDescription(cid) ?? cid}
+            >
+              {aiCategoryName(cid)}
+            </li>
+          ))}
+        </ul>
       ) : null}
       <div
         className={
@@ -1128,6 +1169,23 @@ export function App() {
                   showMore
                   limit={10}
                   showMoreLimit={200}
+                />
+              </section>
+              <section className="facet-section">
+                <h2 className="facet-heading">AI category</h2>
+                <RefinementList
+                  attribute="aiCategories"
+                  searchable
+                  searchablePlaceholder="Filter AI categories…"
+                  showMore
+                  limit={15}
+                  showMoreLimit={500}
+                  transformItems={(items: RefinementListItem[]) =>
+                    items.map((it) => ({
+                      ...it,
+                      label: aiCategoryName(it.label),
+                    }))
+                  }
                 />
               </section>
               <section className="facet-section">
