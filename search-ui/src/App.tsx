@@ -18,6 +18,7 @@ import {
   RangeInput,
   RefinementList,
   SearchBox,
+  Snippet,
   SortBy,
   Stats,
   ToggleRefinement,
@@ -25,6 +26,7 @@ import {
   useRange,
   useSearchBox,
 } from "react-instantsearch";
+import type { Hit } from "instantsearch.js/es/types/results";
 import type { RefinementListItem } from "instantsearch.js/es/connectors/refinement-list/connectRefinementList";
 import { AttachmentTextView } from "./AttachmentTextView";
 import { EmbeddedImageView } from "./EmbeddedImageView";
@@ -416,6 +418,20 @@ function readString(obj: unknown, key: string): string {
   return typeof v === "string" ? v.trim() : "";
 }
 
+/** Like readString but coerces numbers and a single-element string array (nested hits vary). */
+function readScalarString(obj: unknown, key: string): string {
+  if (!obj || typeof obj !== "object" || Array.isArray(obj)) {
+    return "";
+  }
+  const v = (obj as Record<string, unknown>)[key];
+  if (typeof v === "string") return v.trim();
+  if (typeof v === "number" && Number.isFinite(v)) return String(v);
+  if (Array.isArray(v) && v.length > 0 && typeof v[0] === "string") {
+    return v[0].trim();
+  }
+  return "";
+}
+
 const CANNY_USER_ID_RE = /^[0-9a-f]{24}$/;
 /** Canny encodes `@DisplayName` as `@{mongoId|full_name}` in post/comment bodies. */
 const CANNY_MENTION_TOKEN_RE = /@\{([0-9a-f]{24})\|full_name\}/g;
@@ -794,9 +810,8 @@ function CommentItem({
   const author = comment.author;
   const authorName = readString(author, "name") || "Anonymous";
   const avatarUrl = readString(author, "avatarURL");
-  const valueRaw =
-    typeof comment.value === "string" ? comment.value.trim() : "";
-  const newStatus = readString(comment, "statusChangeNewStatus");
+  const newStatus = readScalarString(comment, "statusChangeNewStatus");
+  const statusChangeId = readScalarString(comment, "statusChangeID");
   const bodyRaw = readCommentBody(comment);
   const body = substituteCannyMentions(bodyRaw, userNameById);
   const createdLabel =
@@ -812,8 +827,8 @@ function CommentItem({
   const isPrivate = comment.private === true;
   const isMerge =
     typeof comment.mergeID === "string" && comment.mergeID.trim().length > 0;
-  const isStatusChangeComment =
-    Boolean(newStatus) && !valueRaw && !isMerge;
+  const hasStatusChange =
+    !isMerge && (Boolean(newStatus) || Boolean(statusChangeId));
 
   return (
     <li className="comment" data-comment-depth={displayDepth}>
@@ -833,7 +848,7 @@ function CommentItem({
           </span>
         ) : null}
       </div>
-      {isStatusChangeComment ||
+      {hasStatusChange ||
       body ||
       hasAttachments ? (
         <div
@@ -842,14 +857,24 @@ function CommentItem({
           }
         >
           <div className="hit-body-text">
-            {isStatusChangeComment ? (
+            {hasStatusChange ? (
               <p className="comment-status-change">
-                {highlightInline(authorName, terms)} marked this post as{" "}
-                <span className="hit-status">
-                  {highlightInline(newStatus, terms)}
-                </span>
+                {newStatus ? (
+                  <>
+                    {highlightInline(authorName, terms)} marked this post as{" "}
+                    <span className="hit-status">
+                      {highlightInline(newStatus, terms)}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    {highlightInline(authorName, terms)} updated this post&apos;s
+                    status.
+                  </>
+                )}
               </p>
-            ) : body ? (
+            ) : null}
+            {body ? (
               <MarkdownText source={body} highlightTerms={terms} />
             ) : null}
           </div>
@@ -969,6 +994,8 @@ function readHitVoteCount(hit: Record<string, unknown>): number | undefined {
 }
 
 function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
+  const { query: searchQuery } = useSearchBox();
+  const matchQuery = searchQuery.trim();
   const terms = useQueryTerms();
   const userNameById = useMemo(() => buildCannyUserNameMap(hit), [hit]);
   const urlName = typeof hit.urlName === "string" ? hit.urlName : undefined;
@@ -1038,6 +1065,14 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
               {part}
             </Fragment>
           ))}
+        </p>
+      ) : null}
+      {matchQuery ? (
+        <p className="hit-match-snippet" aria-label="Search match snippet">
+          <Snippet
+            hit={hit as Hit<Record<string, unknown>>}
+            attribute="combined_text"
+          />
         </p>
       ) : null}
       {aiCategories.length > 0 ? (
