@@ -10,6 +10,7 @@ const POST_QUERY_STRING_FIELDS = [
   "title^2",
   "details",
   "author.name",
+  "aiCategories",
 ] as const;
 
 const QUERY_STRING_COMMON = {
