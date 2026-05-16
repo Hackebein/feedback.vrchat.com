@@ -2,19 +2,81 @@
   "buckets": [
     {
       "id": "user-support",
-      "description": "Personal help or account trouble; not a product bug report or feature change request to VRChat."
+      "description": "Individual or self-inflicted help: forgot password, account recovery, \"my friend banned me\", personal config trouble. Not a VRChat product bug or feature report."
     },
     {
       "id": "vrchat-meta",
-      "description": "About VRChat the company, team, policy, community programs, or release notes chatter—not a specific in-product feature."
+      "description": "VRChat the company, team, policy, legal or ToS complaints, community programs, release-note chatter—not a specific in-product feature."
     },
     {
       "id": "off-topic",
-      "description": "Not related to VRChat."
+      "description": "Not about VRChat (another game, random rants)."
     },
     {
       "id": "spam",
-      "description": "Spam, nonsense, abuse, or junk."
+      "description": "Ads, scams, abuse, junk."
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc.main-menu",
+      "name": "Main menu",
+      "description": "Main menu tabs, home screen navigation in the VRChat client."
+    },
+    {
+      "id": "loc.quick-menu",
+      "name": "Quick menu",
+      "description": "Quick menu / radial, quick launcher."
+    },
+    {
+      "id": "loc.action-menu",
+      "name": "Action menu",
+      "description": "Action menu and radial menus for actions."
+    },
+    {
+      "id": "loc.hud",
+      "name": "HUD",
+      "description": "Heads-up display elements in the client."
+    },
+    {
+      "id": "loc.in-world",
+      "name": "In-world",
+      "description": "Inside an instance: players, world content, in-world interactions."
+    },
+    {
+      "id": "loc.loading-screen",
+      "name": "Loading screen",
+      "description": "Splash, loading UI, world transition screens."
+    },
+    {
+      "id": "loc.login",
+      "name": "Login",
+      "description": "Login and authentication screens."
+    },
+    {
+      "id": "loc.website",
+      "name": "Website",
+      "description": "VRChat-owned web properties (vrchat.com, store, feedback, creators)."
+    },
+    {
+      "id": "loc.unity-sdk",
+      "name": "Unity / SDK",
+      "description": "Unity Editor with the VRChat SDK."
+    },
+    {
+      "id": "loc.creator-companion",
+      "name": "Creator Companion",
+      "description": "The VCC standalone application."
+    },
+    {
+      "id": "loc.mobile-app",
+      "name": "Mobile app",
+      "description": "iOS mobile beta client."
+    },
+    {
+      "id": "loc.external",
+      "name": "External platform",
+      "description": "Third-party platforms: Discord, Steam community, Reddit, VRCX, etc."
     }
   ],
   "features": [
@@ -110,12 +172,12 @@
     {
       "id": "worlds",
       "name": "Worlds",
-      "description": "Worlds, persistence, world UI—not SDK scripting (see sdk.udon).",
+      "description": "World systems and content—not SDK scripting (see sdk.udon).",
       "children": [
         {
-          "id": "worlds.general",
-          "name": "Worlds & loading",
-          "description": "Joining worlds, portals, mirrors, loading screens, world thumbnail."
+          "id": "worlds.travel",
+          "name": "Travel & joining",
+          "description": "Portals, mirrors, joining instances, world thumbnails (feature area, not the loading screen shell)."
         },
         {
           "id": "worlds.content-gating",
@@ -142,17 +204,12 @@
     {
       "id": "sdk",
       "name": "SDK & creation tools",
-      "description": "Creation pipeline: Unity SDK, Creator Companion, packages.",
+      "description": "Creation pipeline: Unity SDK, packages, scripting tools.",
       "children": [
         {
           "id": "sdk.vrcsdk",
           "name": "VRChat SDK",
           "description": "Unity VRChat SDK builds, panels, SDK errors."
-        },
-        {
-          "id": "sdk.creator-companion",
-          "name": "Creator Companion (VCC)",
-          "description": "VCC app, project management, package resolution in VCC."
         },
         {
           "id": "sdk.vpm",
@@ -179,23 +236,8 @@
     {
       "id": "client",
       "name": "VRChat client",
-      "description": "The VRChat application UI and controls.",
+      "description": "In-client features other than main/quick/action menu and HUD (those are Locations).",
       "children": [
-        {
-          "id": "client.main-menu",
-          "name": "Main Menu",
-          "description": "Main menu tabs, navigation, home screen in client."
-        },
-        {
-          "id": "client.quick-menu",
-          "name": "Quick Menu",
-          "description": "Quick menu / radial, quick launcher."
-        },
-        {
-          "id": "client.action-menu",
-          "name": "Action Menu",
-          "description": "Action menu, radial menus for actions."
-        },
         {
           "id": "client.camera",
           "name": "Camera & recording",
@@ -222,11 +264,6 @@
           "description": "In-world chatbox, emoji, text chat UX."
         },
         {
-          "id": "client.hud",
-          "name": "HUD",
-          "description": "Heads-up display elements."
-        },
-        {
           "id": "client.inventory",
           "name": "Inventory & items",
           "description": "VRChat inventory, items if user-facing."
@@ -241,23 +278,8 @@
     {
       "id": "platforms",
       "name": "Platforms",
-      "description": "Platform-specific client behavior.",
+      "description": "Cross-platform parity and behavior.",
       "children": [
-        {
-          "id": "platforms.pcvr",
-          "name": "PC VR (PCVR)",
-          "description": "SteamVR, desktop VR, PC-specific rendering."
-        },
-        {
-          "id": "platforms.android",
-          "name": "Android / Quest",
-          "description": "Quest and Android client-specific issues."
-        },
-        {
-          "id": "platforms.ios",
-          "name": "iOS Mobile",
-          "description": "iOS mobile beta client."
-        },
         {
           "id": "platforms.cross-platform",
           "name": "Cross-platform",
@@ -317,7 +339,7 @@
     {
       "id": "account",
       "name": "Account",
-      "description": "Login and identity.",
+      "description": "Login and identity (product flows, not individual support tickets).",
       "children": [
         {
           "id": "account.auth",
@@ -403,13 +425,8 @@
     {
       "id": "web",
       "name": "Websites & web services",
-      "description": "Web properties outside the Unity client.",
+      "description": "What is wrong or requested on web/API surfaces (where is loc.website).",
       "children": [
-        {
-          "id": "web.vrchat-home",
-          "name": "VRChat Home & profiles",
-          "description": "vrchat.com home, profiles, web UI."
-        },
         {
           "id": "web.feedback",
           "name": "Feedback site (Canny)",
