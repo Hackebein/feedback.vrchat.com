@@ -48,6 +48,7 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
+          git pull
           git add -A
           git commit -m "Boards updated ($(date -u '+%Y-%m-%d %H:%M'))"
           git push origin HEAD:${GITHUB_REF_NAME}
