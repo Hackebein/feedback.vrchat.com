@@ -10,6 +10,7 @@ Usage:
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -18,6 +19,12 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
+
+try:
+    import categorize
+except ImportError:  # when run as script
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import categorize  # type: ignore
 
 # --------------------------------------------------------------------------
 # Config
@@ -605,7 +612,7 @@ def fetch_all_pages(scan_targets):
     return results
 
 
-def apply_results(stored, results, now):
+def apply_results(stored, results, now, tree, system_prompt, api_key):
     """Merge fetch results back into per-board write buckets.
 
     Returns (boards_to_write, stats) where:
@@ -636,6 +643,11 @@ def apply_results(stored, results, now):
         actual_board = (post.get("board") or {}).get("urlName") or original
         if not actual_board:
             continue
+
+        prev_post = stored.get(pid, {}).get("post")
+        categorize.apply_ai_tags(
+            post, actual_board, prev_post, tree, system_prompt, api_key,
+        )
 
         if original and original != actual_board:
             boards_to_write.get(original, {}).pop(pid, None)
@@ -958,7 +970,12 @@ def main():
     results = fetch_all_pages(scan_targets)
 
     now = iso_now()
-    boards_to_write, totals = apply_results(stored, results, now)
+    tree = categorize.load_tree()
+    system_prompt = categorize.build_system_prompt(tree)
+    api_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or None
+    boards_to_write, totals = apply_results(
+        stored, results, now, tree, system_prompt, api_key,
+    )
     totals["deduped"] = deduped
 
     for slug, posts in sorted(boards_to_write.items()):

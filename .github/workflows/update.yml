@@ -36,6 +36,8 @@ jobs:
         run: pip install jinja2
 
       - name: Run update
+        env:
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
         run: python3 scripts/update.py --limit ${{ github.event.inputs.limit || '2500' }}
 
       - name: Commit and push changes

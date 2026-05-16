@@ -1,0 +1,448 @@
+{
+  "version": 1,
+  "generated_from": "github.com/hackebein/wiki.vrchat.com@562a6e8485d61ace988cf437e892cd84f9048ff0",
+  "buckets": [
+    {
+      "id": "user-support",
+      "description": "Personal help or account trouble; not a product bug report or feature change request to VRChat."
+    },
+    {
+      "id": "vrchat-meta",
+      "description": "About VRChat the company, team, policy, community programs, or release notes chatter—not a specific in-product feature."
+    },
+    {
+      "id": "off-topic",
+      "description": "Not related to VRChat."
+    },
+    {
+      "id": "spam",
+      "description": "Spam, nonsense, abuse, or junk."
+    }
+  ],
+  "features": [
+    {
+      "id": "groups",
+      "name": "Groups",
+      "description": "Social groups: membership, roles, visibility, banners, group UI.",
+      "children": [
+        {
+          "id": "groups.calendar",
+          "name": "Group calendar & events",
+          "description": "Scheduled events, calendar UI, RSVPs, web calendar; always tied to groups."
+        },
+        {
+          "id": "groups.instances",
+          "name": "Group instances",
+          "description": "Group-owned instances, queues, join rules, group activity row."
+        },
+        {
+          "id": "groups.roles",
+          "name": "Group roles & permissions",
+          "description": "Roles, invites, joinability, admin tools for groups."
+        },
+        {
+          "id": "groups.creation",
+          "name": "Creating & owning groups",
+          "description": "Creating a group, ownership limits, transferring ownership."
+        },
+        {
+          "id": "groups.nameplates",
+          "name": "Representing groups & nameplates",
+          "description": "Representing a group on profile, group banner on nameplate."
+        }
+      ]
+    },
+    {
+      "id": "avatars",
+      "name": "Avatars",
+      "description": "Avatar systems in VRChat generally.",
+      "children": [
+        {
+          "id": "avatars.upload-performance",
+          "name": "Avatar upload & performance",
+          "description": "Performance ranking, limits, upload errors, fallback avatars."
+        },
+        {
+          "id": "avatars.descriptor",
+          "name": "Avatar Descriptor",
+          "description": "Avatar 3.0 descriptor, viewpoint, preview, pipeline id."
+        },
+        {
+          "id": "avatars.dynamics",
+          "name": "Avatar Dynamics & PhysBones",
+          "description": "PhysBones, constraints, avatar dynamics, SquishBones."
+        },
+        {
+          "id": "avatars.dynamic-bones",
+          "name": "Dynamic Bones (legacy)",
+          "description": "Legacy dynamic bones behavior and migration topics."
+        },
+        {
+          "id": "avatars.accessories",
+          "name": "Avatar accessories",
+          "description": "Accessories attachment system."
+        },
+        {
+          "id": "avatars.fbt",
+          "name": "Full-Body Tracking on avatars",
+          "description": "FBT / IK on avatars, tracking offsets."
+        },
+        {
+          "id": "avatars.marketplace",
+          "name": "Avatar Marketplace",
+          "description": "Buying/selling/listing avatars in the marketplace."
+        },
+        {
+          "id": "avatars.expressions",
+          "name": "Expressions & emotes",
+          "description": "Gesture-based expressions, AV3 emotes, selfie expression."
+        },
+        {
+          "id": "avatars.tracking",
+          "name": "Face & hand tracking",
+          "description": "Face tracking, eye tracking, hand tracking on avatars."
+        },
+        {
+          "id": "avatars.impostors",
+          "name": "Impostors",
+          "description": "Avatar impostors for distant/out-of-view rendering."
+        }
+      ]
+    },
+    {
+      "id": "worlds",
+      "name": "Worlds",
+      "description": "Worlds, persistence, world UI—not SDK scripting (see sdk.udon).",
+      "children": [
+        {
+          "id": "worlds.general",
+          "name": "Worlds & loading",
+          "description": "Joining worlds, portals, mirrors, loading screens, world thumbnail."
+        },
+        {
+          "id": "worlds.content-gating",
+          "name": "Content gating & trust",
+          "description": "Content gating, blocked URLs, trusted/untrusted URLs in worlds."
+        },
+        {
+          "id": "worlds.video",
+          "name": "Video players",
+          "description": "In-world video, allowlisted media URLs, stream issues in worlds."
+        },
+        {
+          "id": "worlds.persistence",
+          "name": "Persistence & stations",
+          "description": "World persistence, saved data, spawn/station setups."
+        },
+        {
+          "id": "worlds.layers",
+          "name": "Layers & lighting",
+          "description": "Quality presets, lighting, layers where relevant to worlds."
+        }
+      ]
+    },
+    {
+      "id": "sdk",
+      "name": "SDK & creation tools",
+      "description": "Creation pipeline: Unity SDK, Creator Companion, packages.",
+      "children": [
+        {
+          "id": "sdk.vrcsdk",
+          "name": "VRChat SDK",
+          "description": "Unity VRChat SDK builds, panels, SDK errors."
+        },
+        {
+          "id": "sdk.creator-companion",
+          "name": "Creator Companion (VCC)",
+          "description": "VCC app, project management, package resolution in VCC."
+        },
+        {
+          "id": "sdk.vpm",
+          "name": "VPM & curated packages",
+          "description": "VRChat Package Manager, curated listing, package install."
+        },
+        {
+          "id": "sdk.udon",
+          "name": "Udon & UdonSharp",
+          "description": "World scripting Udon, UdonSharp, graph/runtime in worlds."
+        },
+        {
+          "id": "sdk.clientsim",
+          "name": "ClientSim",
+          "description": "Unity Client Simulator for testing in editor."
+        },
+        {
+          "id": "sdk.world-building",
+          "name": "World building (Unity/Blender)",
+          "description": "Scene setup, Blender world tools, baked lightmaps workflows."
+        }
+      ]
+    },
+    {
+      "id": "client",
+      "name": "VRChat client",
+      "description": "The VRChat application UI and controls.",
+      "children": [
+        {
+          "id": "client.main-menu",
+          "name": "Main Menu",
+          "description": "Main menu tabs, navigation, home screen in client."
+        },
+        {
+          "id": "client.quick-menu",
+          "name": "Quick Menu",
+          "description": "Quick menu / radial, quick launcher."
+        },
+        {
+          "id": "client.action-menu",
+          "name": "Action Menu",
+          "description": "Action menu, radial menus for actions."
+        },
+        {
+          "id": "client.camera",
+          "name": "Camera & recording",
+          "description": "In-app camera, drone, dolly, streamer mode."
+        },
+        {
+          "id": "client.third-person",
+          "name": "Third-person view",
+          "description": "Third-person camera mode."
+        },
+        {
+          "id": "client.settings",
+          "name": "Settings",
+          "description": "Client settings, toggles, controls bindings."
+        },
+        {
+          "id": "client.controls",
+          "name": "Controls & input",
+          "description": "Bindings, comfort settings, launch options."
+        },
+        {
+          "id": "client.chatbox",
+          "name": "Chatbox & text",
+          "description": "In-world chatbox, emoji, text chat UX."
+        },
+        {
+          "id": "client.hud",
+          "name": "HUD",
+          "description": "Heads-up display elements."
+        },
+        {
+          "id": "client.inventory",
+          "name": "Inventory & items",
+          "description": "VRChat inventory, items if user-facing."
+        },
+        {
+          "id": "client.osc",
+          "name": "OSC & OSCQuery",
+          "description": "OSC integration from external apps into VRChat."
+        }
+      ]
+    },
+    {
+      "id": "platforms",
+      "name": "Platforms",
+      "description": "Platform-specific client behavior.",
+      "children": [
+        {
+          "id": "platforms.pcvr",
+          "name": "PC VR (PCVR)",
+          "description": "SteamVR, desktop VR, PC-specific rendering."
+        },
+        {
+          "id": "platforms.android",
+          "name": "Android / Quest",
+          "description": "Quest and Android client-specific issues."
+        },
+        {
+          "id": "platforms.ios",
+          "name": "iOS Mobile",
+          "description": "iOS mobile beta client."
+        },
+        {
+          "id": "platforms.cross-platform",
+          "name": "Cross-platform",
+          "description": "Crossplay, platform parity, cross-platform instances."
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "description": "Voice, spatial audio, related client audio.",
+      "children": [
+        {
+          "id": "audio.voice",
+          "name": "Voice & spatial audio",
+          "description": "Voice loudness, falloff, voice issues in instances."
+        },
+        {
+          "id": "audio.earmuffs",
+          "name": "Earmuff mode",
+          "description": "Earmuffs / hearing range limiting."
+        },
+        {
+          "id": "audio.steam-audio",
+          "name": "Steam Audio",
+          "description": "Steam Audio / occlusion in supported contexts."
+        },
+        {
+          "id": "audio.boop",
+          "name": "Boop & Booping",
+          "description": "Boop interactions and related audio/social cues."
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social",
+      "description": "Friends, invites, presence, social graph.",
+      "children": [
+        {
+          "id": "social.friends",
+          "name": "Friends & invites",
+          "description": "Friend list, invites, mutuals."
+        },
+        {
+          "id": "social.instances",
+          "name": "Instances (non-group)",
+          "description": "Public/private/friend instances, instance management not specific to groups."
+        },
+        {
+          "id": "social.nameplates",
+          "name": "Nameplates & status",
+          "description": "Nameplates, social status display."
+        }
+      ]
+    },
+    {
+      "id": "account",
+      "name": "Account",
+      "description": "Login and identity.",
+      "children": [
+        {
+          "id": "account.auth",
+          "name": "Login & security",
+          "description": "Login, sessions, password, security flows."
+        },
+        {
+          "id": "account.2fa",
+          "name": "Two-factor authentication (2FA)",
+          "description": "2FA enrollment and recovery."
+        },
+        {
+          "id": "account.linking",
+          "name": "Account linking",
+          "description": "Linking Steam/Oculus/etc. accounts."
+        },
+        {
+          "id": "account.merging",
+          "name": "Account merging",
+          "description": "Merging accounts, migration between accounts."
+        },
+        {
+          "id": "account.age-verification",
+          "name": "Age verification",
+          "description": "Age verification flows and gates."
+        },
+        {
+          "id": "account.trust",
+          "name": "Trust & Safety rank",
+          "description": "Trust rank progression, visitor/new user, limitations."
+        }
+      ]
+    },
+    {
+      "id": "moderation",
+      "name": "Moderation & safety",
+      "description": "User and content safety tooling.",
+      "children": [
+        {
+          "id": "moderation.safety-system",
+          "name": "Safety & blocking",
+          "description": "Safety systems, mutes, blocks, reporting UI."
+        },
+        {
+          "id": "moderation.bans",
+          "name": "Bans & enforcement",
+          "description": "Account/world bans, moderation outcomes."
+        }
+      ]
+    },
+    {
+      "id": "monetization",
+      "name": "Monetization & economy",
+      "description": "Paid offerings and creator payouts.",
+      "children": [
+        {
+          "id": "monetization.vrc-plus",
+          "name": "VRChat Plus (VRC+)",
+          "description": "VRC+ subscription, perks, gallery."
+        },
+        {
+          "id": "monetization.creator-economy",
+          "name": "Creator Economy",
+          "description": "Creator payouts, paid roles, group economy features."
+        },
+        {
+          "id": "monetization.shop",
+          "name": "Shop & cosmetics",
+          "description": "VRChat Store, cosmetics, stickers, gifting."
+        },
+        {
+          "id": "monetization.merch",
+          "name": "Merchandise",
+          "description": "Physical merch, merch store topics."
+        },
+        {
+          "id": "monetization.credits",
+          "name": "Credits & currency",
+          "description": "VRChat credits, virtual currency where applicable."
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "name": "Websites & web services",
+      "description": "Web properties outside the Unity client.",
+      "children": [
+        {
+          "id": "web.vrchat-home",
+          "name": "VRChat Home & profiles",
+          "description": "vrchat.com home, profiles, web UI."
+        },
+        {
+          "id": "web.feedback",
+          "name": "Feedback site (Canny)",
+          "description": "feedback.vrchat.com itself—only if the post is about the feedback platform."
+        },
+        {
+          "id": "web.api",
+          "name": "API & developer web",
+          "description": "VRChat API, developer docs sites, status pages."
+        },
+        {
+          "id": "web.creators-portal",
+          "name": "Creators & docs portals",
+          "description": "creators.vrchat.com, docs subsites, package/web tooling."
+        }
+      ]
+    },
+    {
+      "id": "open-beta",
+      "name": "Open Beta program",
+      "description": "Open beta branch, beta-specific regressions."
+    },
+    {
+      "id": "localization",
+      "name": "Localization & languages",
+      "description": "Translations, locale-specific UI or text."
+    },
+    {
+      "id": "content-official-events",
+      "name": "Official events & seasonal content",
+      "description": "Official VRChat seasonal hubs, jams, or one-off official worlds (not core product bugs)."
+    }
+  ]
+}
