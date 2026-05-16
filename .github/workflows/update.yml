@@ -38,7 +38,7 @@ jobs:
       - name: Run update
         env:
           MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
-        run: python3 scripts/update.py --limit ${{ github.event.inputs.limit || '500' }}
+        run: python3 scripts/update.py --limit ${{ github.event.inputs.limit || '100' }}
 
       - name: Commit and push changes
         run: |
