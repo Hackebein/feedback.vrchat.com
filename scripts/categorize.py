@@ -352,7 +352,7 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
         ],
         "temperature": 0.1,
         # Room for thinking tags + JSON (finish_reason:length yields empty categories otherwise).
-        "max_completion_tokens": 512,
+        "max_completion_tokens": 2048,
     }
     return _urllib_post_minimax(_minimax_chat_url(), api_key, payload, timeout=90)
 
