@@ -38,6 +38,7 @@ BUG_BOARDS = frozenset({"bug-reports", "sdk-bug-reports"})
 _missing_key_warned = False
 _missing_tree_warned = False
 _minimax_401_warned = False
+_warn_lock = threading.Lock()
 _tree_lock = threading.Lock()
 _cached_tree: dict | None = None
 
@@ -58,31 +59,27 @@ def iso_now_z():
 
 def _warn_missing_key():
     global _missing_key_warned
-    if not _missing_key_warned:
-        print("[WARN] MINIMAX_API_KEY unset; AI categorization skipped for posts that need tagging")
-        _missing_key_warned = True
+    with _warn_lock:
+        if not _missing_key_warned:
+            print("[WARN] MINIMAX_API_KEY unset; AI categorization skipped for posts that need tagging")
+            _missing_key_warned = True
 
 
 def _warn_minimax_401_once(key_len: int) -> None:
     global _minimax_401_warned
-    if _minimax_401_warned:
-        return
-    _minimax_401_warned = True
-    print(
-        "[WARN] MiniMax returned HTTP 401 (login fail). Typical causes:\n"
-        "  - This Python process has no key: run `export MINIMAX_API_KEY=...` in the **same** terminal before\n"
-        "    `python3 scripts/update.py`, or prefix: `MINIMAX_API_KEY=... python3 scripts/update.py ...`\n"
-        "  - Wrong regional host: international `https://api.minimax.io/...` vs China `https://api.minimaxi.com/...`.\n"
-        "  - If key length looks correct but auth still fails, double-check the key in MiniMax Account > API Keys.\n"
-        f"  - Key length visible to this process: {key_len} (sanity-check; should match your real key length)."
-    )
+    with _warn_lock:
+        if _minimax_401_warned:
+            return
+        _minimax_401_warned = True
+        print("[WARN] MiniMax returned HTTP 401 (login fail).")
 
 
 def _warn_missing_tree(msg: str):
     global _missing_tree_warned
-    if not _missing_tree_warned:
-        print(f"[WARN] {msg}")
-        _missing_tree_warned = True
+    with _warn_lock:
+        if not _missing_tree_warned:
+            print(f"[WARN] {msg}")
+            _missing_tree_warned = True
 
 
 def _walk_features(nodes, out_flat: set[str]):
