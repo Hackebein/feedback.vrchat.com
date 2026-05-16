@@ -778,6 +778,19 @@ body {
   color: #8b95a8;
 }
 
+.hit-match-snippet {
+  margin: 0 0 0.55rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #9ca6bb;
+}
+
+.hit-match-snippet em {
+  font-style: normal;
+  font-weight: 600;
+  color: #dce2f0;
+}
+
 .ai-category-list {
   display: flex;
   flex-wrap: wrap;
