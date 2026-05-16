@@ -908,6 +908,40 @@ function readAiCategories(hit: Record<string, unknown>): string[] {
   return out;
 }
 
+function AiCategoryRefinement() {
+  const [q, setQ] = useState("");
+  const needle = q.trim().toLowerCase();
+  return (
+    <>
+      <input
+        type="search"
+        className="ai-category-search"
+        placeholder="Filter AI categories…"
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        aria-label="Filter AI categories"
+      />
+      <RefinementList
+        attribute="aiCategories"
+        showMore={false}
+        limit={200}
+        transformItems={(items: RefinementListItem[]) => {
+          const mapped = items.map((it) => ({
+            ...it,
+            label: aiCategoryName(it.value),
+          }));
+          if (!needle) return mapped;
+          return mapped.filter(
+            (it) =>
+              it.label.toLowerCase().includes(needle) ||
+              it.value.toLowerCase().includes(needle),
+          );
+        }}
+      />
+    </>
+  );
+}
+
 function readHitVoteCount(hit: Record<string, unknown>): number | undefined {
   const raw = hit.score;
   if (typeof raw === "number" && Number.isFinite(raw)) {
@@ -1173,20 +1207,7 @@ export function App() {
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">AI category</h2>
-                <RefinementList
-                  attribute="aiCategories"
-                  searchable
-                  searchablePlaceholder="Filter AI categories…"
-                  showMore
-                  limit={15}
-                  showMoreLimit={500}
-                  transformItems={(items: RefinementListItem[]) =>
-                    items.map((it) => ({
-                      ...it,
-                      label: aiCategoryName(it.label),
-                    }))
-                  }
-                />
+                <AiCategoryRefinement />
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">Author</h2>

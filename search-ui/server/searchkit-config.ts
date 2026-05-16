@@ -5,6 +5,25 @@ import type {
 } from "searchkit";
 import { buildLuceneQueryBody } from "./lucene-query";
 
+/** OpenSearch `terms.include` is anchored to the full bucket string. Searchkit's default regex prepends `([a-zA-Z]+ )+?` for queries longer than 2 chars, which never matches slug-like tokens without spaces. */
+function slugSafeFacetQuery(
+  field: string,
+  size: number,
+  search?: string,
+): { terms: { field: string; size: number; include?: string } } {
+  if (!search || search.length === 0) {
+    return { terms: { field, size } };
+  }
+  const escaped = search.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+  const ci = escaped
+    .split("")
+    .map((c) =>
+      /[A-Za-z]/.test(c) ? `[${c.toLowerCase()}${c.toUpperCase()}]` : c,
+    )
+    .join("");
+  return { terms: { field, size, include: `.*${ci}.*` } };
+}
+
 function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
   return attrs.map((a) =>
     typeof a === "string"
@@ -160,12 +179,42 @@ export function searchkitConfig(host: string, username: string, password: string
       highlight_attributes: ["title", "details", "author.name"],
       snippet_attributes: ["details:200"],
       facet_attributes: [
-        { attribute: "board_slug", field: "board.urlName", type: "string" },
-        { attribute: "board_name", field: "board.name.keyword", type: "string" },
-        { attribute: "status", field: "status", type: "string" },
-        { attribute: "category_name", field: "category.name.keyword", type: "string" },
-        { attribute: "author_name", field: "author.name.keyword", type: "string" },
-        { attribute: "aiCategories", field: "aiCategories.keyword", type: "string" },
+        {
+          attribute: "board_slug",
+          field: "board.urlName",
+          type: "string",
+          facetQuery: slugSafeFacetQuery,
+        },
+        {
+          attribute: "board_name",
+          field: "board.name.keyword",
+          type: "string",
+          facetQuery: slugSafeFacetQuery,
+        },
+        {
+          attribute: "status",
+          field: "status",
+          type: "string",
+          facetQuery: slugSafeFacetQuery,
+        },
+        {
+          attribute: "category_name",
+          field: "category.name.keyword",
+          type: "string",
+          facetQuery: slugSafeFacetQuery,
+        },
+        {
+          attribute: "author_name",
+          field: "author.name.keyword",
+          type: "string",
+          facetQuery: slugSafeFacetQuery,
+        },
+        {
+          attribute: "aiCategories",
+          field: "aiCategories.keyword",
+          type: "string",
+          facetQuery: slugSafeFacetQuery,
+        },
         { attribute: "vote_highEngagement", field: "voteSettings.highEngagement", type: "string" },
         { attribute: "vote_lowEngagement", field: "voteSettings.lowEngagement", type: "string" },
         { attribute: "vote_moderateEngagement", field: "voteSettings.moderateEngagement", type: "string" },
@@ -182,6 +231,7 @@ export function searchkitConfig(host: string, username: string, password: string
           field: "author.name.keyword",
           type: "string",
           nestedPath: "comments",
+          facetQuery: slugSafeFacetQuery,
         },
         {
           attribute: "comment_pinned",

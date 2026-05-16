@@ -796,6 +796,18 @@ body {
   color: #c8d0e5;
 }
 
+.ai-category-search {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0.45rem;
+  background: #0f1218;
+  border: 1px solid #2a3142;
+  border-radius: 6px;
+  color: #c8d0e5;
+  font-size: 0.85rem;
+  box-sizing: border-box;
+}
+
 .hit-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
