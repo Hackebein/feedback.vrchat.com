@@ -1008,6 +1008,16 @@ def main():
 
     now = iso_now()
     tree = categorize.load_tree()
+    sanitized = 0
+    if tree:
+        for info in stored.values():
+            if categorize.sanitize_ai_tags(info["post"], tree):
+                sanitized += 1
+        if sanitized:
+            print(
+                f"[UPDATE] Sanitized AI tags on {sanitized} post(s) "
+                "(removed unknown or stale ids)",
+            )
     system_prompt = categorize.build_system_prompt(tree)
     api_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or None
     boards_to_write, totals = apply_results(

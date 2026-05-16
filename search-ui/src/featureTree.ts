@@ -1,6 +1,7 @@
-import tree from "../../boards/_feature_tree.json" with { type: "json" };
+import tree from "../../feature_tree.json" with { type: "json" };
 
 type Bucket = { id: string; description?: string };
+type Location = { id: string; name?: string; description?: string };
 type FeatureNode = {
   id: string;
   name?: string;
@@ -10,6 +11,7 @@ type FeatureNode = {
 
 type TreeFile = {
   buckets?: Bucket[];
+  locations?: Location[];
   features?: FeatureNode[];
 };
 
@@ -52,6 +54,21 @@ function buildLookup(): Map<string, { name: string; description: string }> {
           ? b.description.trim()
           : "";
       map.set(b.id, { name, description: desc });
+    }
+  }
+
+  if (Array.isArray(data.locations)) {
+    for (const loc of data.locations) {
+      if (!loc?.id?.trim()) continue;
+      const name =
+        typeof loc.name === "string" && loc.name.trim()
+          ? loc.name.trim()
+          : titleizeId(loc.id);
+      const desc =
+        typeof loc.description === "string" && loc.description.trim()
+          ? loc.description.trim()
+          : "";
+      map.set(loc.id, { name, description: desc });
     }
   }
 

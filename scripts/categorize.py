@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MiniMax-based post categorization against boards/_feature_tree.json.
+MiniMax-based post categorization against feature_tree.json at repo root.
 
 Used by update.py. Requires MINIMAX_API_KEY in the environment for live calls.
 """
@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_TREE_PATH = ROOT / "boards" / "_feature_tree.json"
+DEFAULT_TREE_PATH = ROOT / "feature_tree.json"
 # International default is api.minimax.io; China accounts often need api.minimaxi.com.
 DEFAULT_MINIMAX_CHAT_URL = "https://api.minimax.io/v1/chat/completions"
 
@@ -32,8 +32,6 @@ def _minimax_model() -> str:
     return (os.environ.get("MINIMAX_MODEL") or "MiniMax-M2.7").strip()
 
 USER_AGENT = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
-
-BUG_BOARDS = frozenset({"bug-reports", "sdk-bug-reports"})
 
 _missing_key_warned = False
 _missing_tree_warned = False
@@ -97,7 +95,7 @@ def _walk_features(nodes, out_flat: set[str]):
 
 
 def load_tree(path: Path | None = None) -> dict | None:
-    """Load feature tree; return dict with raw, flat_ids, bucket_ids or None on failure."""
+    """Load taxonomy; return dict with raw, flat_ids, bucket_ids, location_ids, feature_ids or None."""
     global _cached_tree
     p = path or DEFAULT_TREE_PATH
     with _tree_lock:
@@ -111,20 +109,51 @@ def load_tree(path: Path | None = None) -> dict | None:
         except Exception as e:
             _warn_missing_tree(f"Failed to read feature tree {p}: {e}")
             return None
-        flat: set[str] = set()
-        buckets = raw.get("buckets") or []
+
         bucket_ids: set[str] = set()
+        buckets = raw.get("buckets") or []
         if isinstance(buckets, list):
             for b in buckets:
                 if isinstance(b, dict):
                     bid = b.get("id")
                     if isinstance(bid, str) and bid.strip():
-                        bid = bid.strip()
-                        bucket_ids.add(bid)
-                        flat.add(bid)
+                        bucket_ids.add(bid.strip())
+
+        location_ids: set[str] = set()
+        locs = raw.get("locations") or []
+        if isinstance(locs, list):
+            for loc in locs:
+                if isinstance(loc, dict):
+                    lid = loc.get("id")
+                    if isinstance(lid, str) and lid.strip():
+                        location_ids.add(lid.strip())
+
+        feature_ids: set[str] = set()
         feats = raw.get("features")
-        _walk_features(feats if isinstance(feats, list) else [], flat)
-        bundle = {"raw": raw, "flat_ids": flat, "bucket_ids": bucket_ids}
+        _walk_features(feats if isinstance(feats, list) else [], feature_ids)
+
+        collide = (
+            (feature_ids & bucket_ids)
+            | (feature_ids & location_ids)
+            | (bucket_ids & location_ids)
+        )
+        if collide:
+            _warn_missing_tree(f"Feature tree ids overlap across buckets/locations/features: {sorted(collide)[:10]}")
+            return None
+
+        bad_loc = {fid for fid in feature_ids if fid.startswith("loc.")}
+        if bad_loc:
+            _warn_missing_tree(f"Feature tree: feature ids must not use loc.* prefix: {sorted(bad_loc)[:10]}")
+            return None
+
+        flat_ids = bucket_ids | location_ids | feature_ids
+        bundle = {
+            "raw": raw,
+            "flat_ids": flat_ids,
+            "bucket_ids": bucket_ids,
+            "location_ids": location_ids,
+            "feature_ids": feature_ids,
+        }
         if path is None:
             _cached_tree = bundle
         return bundle
@@ -137,14 +166,24 @@ def build_system_prompt(tree: dict | None) -> str:
     lines = [
         "You classify VRChat Canny feedback posts into categories from a fixed taxonomy.",
         "Return ONLY valid JSON: {\"categories\": [\"id\", ...]} with no other keys.",
-        "Each id must appear exactly as listed. Use the most specific applicable ids.",
+        "Each id must appear exactly as listed below. Use every applicable id; dedupe within your list.",
         "",
         "Rules:",
-        "- Bucket ids (user-support, vrchat-meta, off-topic, spam) mean the post is NOT about product features.",
-        "- Never mix bucket ids with feature ids in the same response.",
-        "- For board type bug-reports or sdk-bug-reports: output exactly ONE id (one feature OR one bucket).",
-        "- For other boards: output one or MORE feature ids if the post spans multiple features, OR exactly ONE bucket id.",
-        "- If you cannot classify: {\"categories\": []}.",
+        "First decide: is this post real product feedback (a bug, request, or feature comment about VRChat)?",
+        "",
+        "If NO — output EXACTLY ONE bucket id, alone, no other ids:",
+        "  user-support: individual help / self-inflicted issues (forgot password, account recovery, "
+        "\"my friend banned me\", personal config trouble).",
+        "  vrchat-meta: VRChat company / team / policy / legal / ToS / community programs / release-note chatter.",
+        "  off-topic: not about VRChat (posted about another game, random rants).",
+        "  spam: ads, scams, abuse, junk.",
+        "",
+        "If YES — output at least one location id (loc.*) AND at least one feature id. Never mix a bucket with loc/feature ids.",
+        "  A bug may list multiple feature ids when several features are affected.",
+        "  Prefer the most specific feature ids (leaf children over parent ids when both apply).",
+        "  List every location where the issue manifests (e.g. menu + website).",
+        "",
+        "If you truly cannot classify: {\"categories\": []}.",
         "",
         "Buckets:",
     ]
@@ -152,6 +191,21 @@ def build_system_prompt(tree: dict | None) -> str:
         if isinstance(b, dict) and b.get("id"):
             desc = (b.get("description") or "").strip()
             lines.append(f"  {b['id']}: {desc}")
+    lines.append("")
+    lines.append("Locations (id: name — description):")
+
+    def fmt_flat(nodes, indent: int = 0):
+        pad = "  " * indent
+        for n in nodes or []:
+            if not isinstance(n, dict):
+                continue
+            nid = n.get("id", "")
+            name = (n.get("name") or "").strip()
+            desc = (n.get("description") or "").strip()
+            lines.append(f"{pad}{nid}: /{name}/ — {desc}")
+
+    fmt_flat(raw.get("locations") if isinstance(raw.get("locations"), list) else [])
+
     lines.append("")
     lines.append("Features (id: name — description):")
 
@@ -171,6 +225,51 @@ def build_system_prompt(tree: dict | None) -> str:
     fmt_nodes(raw.get("features") if isinstance(raw.get("features"), list) else [])
 
     return "\n".join(lines)
+
+
+def sanitize_ai_tags(post: dict, tree: dict | None) -> bool:
+    """Remove aiCategories ids not in the current tree. Returns True if post was modified.
+
+    Clears aiTaggedAt when anything is dropped or normalized so needs_ai_retag() can fire.
+    """
+    if not tree:
+        return False
+    raw = post.get("aiCategories")
+    if raw is None:
+        return False
+    flat = tree["flat_ids"]
+
+    if not isinstance(raw, list):
+        post["aiCategories"] = []
+        post.pop("aiTaggedAt", None)
+        return True
+
+    malformed = any(not isinstance(x, str) for x in raw) or any(
+        isinstance(x, str) and not x.strip() for x in raw
+    )
+
+    original: list[str] = []
+    for x in raw:
+        if isinstance(x, str) and x.strip():
+            original.append(x.strip())
+
+    cleaned: list[str] = []
+    seen: set[str] = set()
+    for c in original:
+        if c not in flat:
+            continue
+        if c not in seen:
+            seen.add(c)
+            cleaned.append(c)
+
+    unknown_removed = any(c not in flat for c in original)
+
+    if malformed or unknown_removed or cleaned != original:
+        post["aiCategories"] = cleaned
+        post.pop("aiTaggedAt", None)
+        return True
+
+    return False
 
 
 def needs_ai_retag(previous_post: dict | None, current_post: dict | None) -> bool:
@@ -297,12 +396,13 @@ def _parse_categories_from_response(body: str) -> tuple[list[str] | None, str | 
 
 
 def _validate_categories(
-    board_slug: str,
     categories: list[str],
     tree: dict,
 ) -> tuple[list[str] | None, str | None]:
     flat = tree["flat_ids"]
     bucket_ids = tree["bucket_ids"]
+    location_ids = tree["location_ids"]
+    feature_ids = tree["feature_ids"]
     seen: set[str] = set()
     deduped: list[str] = []
     for c in categories:
@@ -313,11 +413,6 @@ def _validate_categories(
     for c in categories:
         if c not in flat:
             return None, f"unknown category id: {c!r}"
-    is_bug = board_slug in BUG_BOARDS
-    if is_bug:
-        if len(categories) > 1:
-            return None, "bug board allows at most one category"
-        return categories, None
     if not categories:
         return [], None
     has_bucket = any(c in bucket_ids for c in categories)
@@ -325,6 +420,12 @@ def _validate_categories(
         if len(categories) != 1:
             return None, "bucket id must be alone"
         return categories, None
+    has_loc = any(c in location_ids for c in categories)
+    has_feat = any(c in feature_ids for c in categories)
+    if not has_loc:
+        return None, "product feedback needs at least one location id (loc.*)"
+    if not has_feat:
+        return None, "product feedback needs at least one feature id"
     return categories, None
 
 
@@ -336,11 +437,6 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
     api_key = api_key.strip()
     if not api_key:
         return 0, '{"error":"missing MINIMAX_API_KEY in environment"}'
-    # Request shape per official OpenAPI:
-    # https://platform.minimax.io/docs/api-reference/text/api/openapi-chat-openai.json
-    # POST {server}/v1/chat/completions with bearerAuth; required: model, messages.
-    # Documented optional fields: stream, max_completion_tokens, temperature, top_p.
-    # (max_tokens / response_format are OpenAI-client conveniences; not in that schema.)
     payload = {
         "model": _minimax_model(),
         "messages": [
@@ -348,7 +444,6 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
             {"role": "user", "content": user_prompt},
         ],
         "temperature": 0.1,
-        # Room for thinking tags + JSON (finish_reason:length yields empty categories otherwise).
         "max_completion_tokens": 2048,
     }
     return _urllib_post_minimax(_minimax_chat_url(), api_key, payload, timeout=90)
@@ -388,7 +483,7 @@ def tag_post(
             if code == 200 and body:
                 cats, err = _parse_categories_from_response(body)
                 if err is None and cats is not None:
-                    ok, verr = _validate_categories(board_slug, cats, tree)
+                    ok, verr = _validate_categories(cats, tree)
                     if verr is None and ok is not None:
                         return ok, None
                     return None, verr or "validation failed"
