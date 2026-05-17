@@ -559,16 +559,10 @@ def build_scan_targets(stored, fresh_by_board, limit):
             if not pid or pid in seen or pid not in stored:
                 continue
             stored_post = stored[pid]["post"]
-            fields_match = all(
+            if all(
                 p.get(k) == stored_post.get(k)
                 for k in ("commentCount", "status", "title")
-            )
-            stored_comments = stored_post.get("comments") or []
-            real_comment_count = sum(
-                1 for c in stored_comments if isinstance(c, dict) and not c.get("synthetic")
-            )
-            count_consistent = real_comment_count == (p.get("commentCount") or 0)
-            if fields_match and count_consistent:
+            ):
                 continue
             slug = p.get("urlName") or stored_post.get("urlName") or ""
             if not slug:
