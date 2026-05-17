@@ -357,10 +357,12 @@
         "properties": {
           "indexName": {
             "type": "string",
-            "description": "Index replica to query. Use **`feedback-posts`** for the default sort (newest activity first). Additional replicas include **`feedback-posts_created_asc`**, **`feedback-posts_score_desc`**, **`feedback-posts_score_asc`**, and **`feedback-posts_relevance_desc`** for alternate sort orders. **`feedback-posts_created_desc`** does not exist; rely on **`feedback-posts`** for newest-first browsing.",
+            "description": "Index replica to query. Use **`feedback-posts`** for the default sort (newest post first by **`created`**). Activity sorts use **`lastActivityAt`** (max of **`created`**, **`statusChanged`**, and visible comment **`created`**). Additional replicas include **`feedback-posts_created_asc`**, **`feedback-posts_activity_desc`**, **`feedback-posts_activity_asc`**, **`feedback-posts_score_desc`**, **`feedback-posts_score_asc`**, and **`feedback-posts_relevance_desc`**. **`feedback-posts_created_desc`** does not exist; rely on **`feedback-posts`** for newest-created browsing.",
             "examples": [
               "feedback-posts",
               "feedback-posts_created_asc",
+              "feedback-posts_activity_desc",
+              "feedback-posts_activity_asc",
               "feedback-posts_score_desc",
               "feedback-posts_relevance_desc"
             ]

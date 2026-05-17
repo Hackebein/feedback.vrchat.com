@@ -74,6 +74,10 @@
         "type": "date",
         "format": "strict_date_optional_time||epoch_millis||epoch_second"
       },
+      "lastActivityAt": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
       "deletedAt": {
         "type": "date",
         "format": "strict_date_optional_time||epoch_millis||epoch_second"
