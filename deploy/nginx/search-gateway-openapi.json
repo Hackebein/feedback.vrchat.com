@@ -315,7 +315,7 @@
               "facets": {
                 "type": "array",
                 "items": { "type": "string" },
-                "description": "Facet attributes whose counts should accompany the hits. Typical post facets include **`board_slug`**, **`board_name`**, **`status`**, **`category_name`**, **`author_name`**, **`aiCategories`**, **`vote_*Engagement`** flags; numeric/date facets **`score`**, **`maxScore`**, **`commentCount`**, **`mergeCount`**, **`trendingScore`**, **`post_created`**, **`post_updated`**, **`post_statusChanged`**; nested comment facets **`comment_author_name`**, **`comment_pinned`**, **`comment_likeCount`**, **`comment_created`**."
+                "description": "Facet attributes whose counts accompany the hits. Common post facets: **`board_slug`**, **`board_name`**, **`status`**, **`category_name`**, **`author_name`**, **`aiCategories`**, **`vote_highEngagement`**, **`vote_moderateEngagement`**, **`vote_lowEngagement`**; quantitative facets **`score`**, **`maxScore`**, **`commentCount`**, **`mergeCount`**, **`trendingScore`**, **`post_created`**, **`post_updated`**, **`post_statusChanged`**; nested comment facets **`comment_author_name`**, **`comment_pinned`**, **`comment_likeCount`**, **`comment_created`**."
               },
               "facetFilters": {
                 "description": "Algolia-style facet filter expression (string, array of strings, or array of arrays for OR-of-AND).",
