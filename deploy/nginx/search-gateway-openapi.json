@@ -4,27 +4,27 @@
     "title": "VRChat Feedback Search Gateway",
     "version": "1.0.0",
     "summary": "Public search API with Algolia-compatible InstantSearch requests and responses.",
-    "description": "## Overview\n\nUse this gateway to query indexed VRChat Feedback posts using the same JSON request and response shape as Algolia InstantSearch.\n\n## Query modes\n\n- **Default**: Free-text searches match searchable post attributes, including combined text, title, body (`details`), author name, and related fields. Whitespace-only or empty `params.query` does not restrict by text.\n- **Lucene syntax** (`?mode=lucene` on POST or GET `/api/search`): Interprets `params.query` with Lucene query syntax. Grammar and operators follow OpenSearch; see **[query_string query](https://opensearch.org/docs/latest/query-dsl/full-text/query-string/)**.\n\nOn **GET** `/api/search`, Lucene mode does not execute a search by itself—you must also supply at least one of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**.\n\n## Lucene field reference\n\n| Field | Kind | Example |\n| ----- | ----- | ------- |\n| `title` | text | `title:avatar` |\n| `details` | text | `details:\"network lag\"` |\n| `combined_text` | text | `combined_text:performance` |\n| `author.name` | text | `author.name:Alice` |\n| `status` | keyword | `status:open` |\n| `board.urlName` | keyword | `board.urlName:bug-reports` |\n| `board.name` | text | `board.name:bug` |\n| `board.name.keyword` | keyword | `board.name.keyword:\"Feature Requests\"` |\n| `category.name` | text | `category.name:sdk` |\n| `category.name.keyword` | keyword | `category.name.keyword:SDK` |\n| `author.name.keyword` | keyword | `author.name.keyword:\"Jane Doe\"` |\n| `score` | numeric | `score:[10 TO *]` |\n| `maxScore` | numeric | `maxScore:[100 TO *]` |\n| `commentCount` | numeric | `commentCount:[1 TO 50]` |\n| `mergeCount` | numeric | `mergeCount:[1 TO *]` |\n| `trendingScore` | numeric | `trendingScore:[500 TO *]` |\n| `voteSettings.highEngagement` | keyword / bool-like | `voteSettings.highEngagement:true` |\n| `voteSettings.moderateEngagement` | keyword / bool-like | `voteSettings.moderateEngagement:true` |\n| `voteSettings.lowEngagement` | keyword / bool-like | `voteSettings.lowEngagement:true` |\n| `created` | date | `created:[\"2025-01-01\" TO \"2026-01-01\"]` |\n| `updatedAt` | date | `updatedAt:[\"2025-01-01\" TO *]` |\n| `statusChanged` | date | `statusChanged:[\"2025-01-01\" TO *]` |\n| `comments.value` | text | `comments.value:\"network lag\"` |\n| `comments.author.name` | text | `comments.author.name:Alice` |\n| `comments.author.name.keyword` | keyword | `comments.author.name.keyword:\"Jane Doe\"` |\n| `comments.pinned` | keyword | `comments.pinned:true` |\n| `comments.likeCount` | numeric | `comments.likeCount:[1 TO *]` |\n| `comments.created` | date | `comments.created:[\"2025-01-01\" TO *]` |\n| `aiCategories` | text | `aiCategories:groups` |\n| `aiCategories.keyword` | keyword | `aiCategories.keyword:\"groups.calendar\"` |\n| `aiTaggedAt` | date | `aiTaggedAt:[\"2025-01-01\" TO *]` |\n\nField types and normalization follow the backing search index mapping."
+    "description": "## Overview\n\nUse this gateway to query indexed VRChat Feedback posts using the same JSON request and response shape as **Algolia** **InstantSearch**.\n\n## Query modes\n\n- **Default**: Free-text searches match searchable post attributes, including combined text, title, body (**`details`**), author name, and related fields. Whitespace-only or empty **`params.query`** does not restrict by text.\n- **Lucene syntax** (**`?mode=lucene`** on **POST** or **GET** **`/api/search`**): Interprets **`params.query`** with Lucene query syntax. Grammar and operators follow OpenSearch; see **[query_string query](https://opensearch.org/docs/latest/query-dsl/full-text/query-string/)**.\n\nOn **GET** **`/api/search`**, Lucene mode does not execute a search by itself\u2014you must also supply at least one of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**.\n\n## Lucene field reference\n\n| **`Field`** | **`Kind`** | **`Example`** |\n| ----- | ----- | ------- |\n| **`title`** | **`text`** | **`title:avatar`** |\n| **`details`** | **`text`** | **`details:\"network lag\"`** |\n| **`combined_text`** | **`text`** | **`combined_text:performance`** |\n| **`author.name`** | **`text`** | **`author.name:Alice`** |\n| **`status`** | **`keyword`** | **`status:open`** |\n| **`board.urlName`** | **`keyword`** | **`board.urlName:bug-reports`** |\n| **`board.name`** | **`text`** | **`board.name:bug`** |\n| **`board.name.keyword`** | **`keyword`** | **`board.name.keyword:\"Feature Requests\"`** |\n| **`category.name`** | **`text`** | **`category.name:sdk`** |\n| **`category.name.keyword`** | **`keyword`** | **`category.name.keyword:SDK`** |\n| **`author.name.keyword`** | **`keyword`** | **`author.name.keyword:\"Jane Doe\"`** |\n| **`score`** | **`numeric`** | **`score:[10 TO *]`** |\n| **`maxScore`** | **`numeric`** | **`maxScore:[100 TO *]`** |\n| **`commentCount`** | **`numeric`** | **`commentCount:[1 TO 50]`** |\n| **`mergeCount`** | **`numeric`** | **`mergeCount:[1 TO *]`** |\n| **`trendingScore`** | **`numeric`** | **`trendingScore:[500 TO *]`** |\n| **`voteSettings.highEngagement`** | **`keyword / bool-like`** | **`voteSettings.highEngagement:true`** |\n| **`voteSettings.moderateEngagement`** | **`keyword / bool-like`** | **`voteSettings.moderateEngagement:true`** |\n| **`voteSettings.lowEngagement`** | **`keyword / bool-like`** | **`voteSettings.lowEngagement:true`** |\n| **`created`** | **`date`** | **`created:[\"2025-01-01\" TO \"2026-01-01\"]`** |\n| **`updatedAt`** | **`date`** | **`updatedAt:[\"2025-01-01\" TO *]`** |\n| **`statusChanged`** | **`date`** | **`statusChanged:[\"2025-01-01\" TO *]`** |\n| **`comments.value`** | **`text`** | **`comments.value:\"network lag\"`** |\n| **`comments.author.name`** | **`text`** | **`comments.author.name:Alice`** |\n| **`comments.author.name.keyword`** | **`keyword`** | **`comments.author.name.keyword:\"Jane Doe\"`** |\n| **`comments.pinned`** | **`keyword`** | **`comments.pinned:true`** |\n| **`comments.likeCount`** | **`numeric`** | **`comments.likeCount:[1 TO *]`** |\n| **`comments.created`** | **`date`** | **`comments.created:[\"2025-01-01\" TO *]`** |\n| **`aiCategories`** | **`text`** | **`aiCategories:groups`** |\n| **`aiCategories.keyword`** | **`keyword`** | **`aiCategories.keyword:\"groups.calendar\"`** |\n| **`aiTaggedAt`** | **`date`** | **`aiTaggedAt:[\"2025-01-01\" TO *]`** |\n\n**`Kind`** values (**`text`**, **`keyword`**, **`numeric`**, **`date`**, \u2026) mirror index behavior; each **`Example`** uses Lucene syntax for the adjoining **`Field`**."
   },
   "externalDocs": {
-    "description": "InstantSearch client integration reference (Algolia-compatible request and response formats).",
+    "description": "**InstantSearch** client integration (**Algolia**-compatible request and response formats).",
     "url": "https://www.searchkit.co/docs/proxy-elasticsearch/with-express-js"
   },
   "servers": [
     {
       "url": "/",
-      "description": "Same-origin"
+      "description": "Same-origin; server URL **`/`**."
     }
   ],
   "security": [],
   "tags": [
     {
       "name": "Search",
-      "description": "Search queries using Algolia-compatible request and response formats."
+      "description": "**`POST`**/**`GET`** **`/api/search`** (**Algolia**/**InstantSearch** request and response shapes)."
     },
     {
       "name": "Operations",
-      "description": "Service metadata, discovery, and health endpoints."
+      "description": "**`GET`** **`/healthz`**, **`GET`** **`/openapi.json`**; **`GET`** **`/api/search`** (**discovery**)."
     }
   ],
   "paths": {
@@ -32,8 +32,10 @@
       "post": {
         "operationId": "searchMultiQuery",
         "summary": "Run one or more InstantSearch queries.",
-        "description": "Accepts an array of InstantSearch multi-query payloads. Submit `mode` as a URL query parameter (not inside the JSON body); use `mode=lucene` for Lucene syntax in each item's `params.query`. Maximum request body size is **512 KiB**.",
-        "tags": ["Search"],
+        "description": "Accepts a JSON **`array`** of **InstantSearch** multi-query payloads. Supply **`mode`** as an HTTP **`query`** parameter (never inside the request **`body`**); **`mode=lucene`** enables Lucene syntax for each **`params.query`**. Maximum **`body`** size **512 KiB**.",
+        "tags": [
+          "Search"
+        ],
         "parameters": [
           {
             "name": "mode",
@@ -41,19 +43,23 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["lucene"]
+              "enum": [
+                "lucene"
+              ]
             },
-            "description": "Parsing mode for `params.query`. Omit for default full-text matching. Use **`lucene`** for Lucene query syntax; see API overview."
+            "description": "Parsing mode for each item's **`params.query`**. Omit for default matching. **`lucene`** selects Lucene syntax; see overview."
           }
         ],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/MultiQueryRequest" },
+              "schema": {
+                "$ref": "#/components/schemas/MultiQueryRequest"
+              },
               "examples": {
                 "minimalQuery": {
-                  "summary": "Single query, equivalent to GET /api/search?q=ui&hitsPerPage=15&page=0",
+                  "summary": "Single query, equivalent to **GET** **`/api/search?q=ui&hitsPerPage=15&page=0`**",
                   "value": [
                     {
                       "indexName": "feedback-posts",
@@ -66,7 +72,7 @@
                   ]
                 },
                 "facetedQuery": {
-                  "summary": "Faceted query with filters and sort replica score_desc",
+                  "summary": "Faceted query with **`facetFilters`** and **`indexName`** **`feedback-posts_score_desc`**",
                   "value": [
                     {
                       "indexName": "feedback-posts_score_desc",
@@ -74,8 +80,15 @@
                         "query": "desktop crash",
                         "hitsPerPage": 20,
                         "page": 0,
-                        "facets": ["status", "board_slug"],
-                        "facetFilters": [["status:open"]]
+                        "facets": [
+                          "status",
+                          "board_slug"
+                        ],
+                        "facetFilters": [
+                          [
+                            "status:open"
+                          ]
+                        ]
                       }
                     }
                   ]
@@ -86,27 +99,31 @@
         },
         "responses": {
           "200": {
-            "description": "Successful search containing hits, paging, facets, and metadata in Algolia-compatible form.",
+            "description": "Successful (**`200`**) **`application/json`** response: **`SearchResponse`** **`results`** entries with **`hits`**, paging, **`facets`**, and metadata (**`nbHits`**, **`nbPages`**, **`processingTimeMS`**, etc.).",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/SearchResponse" }
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
               }
             }
           },
           "400": {
-            "description": "Invalid request payload or malformed search expression.",
+            "description": "**`400`**: **`body`** is not a JSON **`array`**, or search expression is **`Invalid search query`** (bad Lucene/filter syntax).",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/Error" },
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
                 "examples": {
                   "malformedBody": {
-                    "summary": "Expected JSON array",
+                    "summary": "Expected **`InstantSearch`** **`multi-query`** **`array`**",
                     "value": {
                       "message": "Expected a JSON array of InstantSearch multiple-queries payloads"
                     }
                   },
                   "invalidSearch": {
-                    "summary": "Malformed search syntax",
+                    "summary": "Invalid Lucene/filter (**`Invalid search query`**)",
                     "value": {
                       "message": "Invalid search query",
                       "detail": "Search service rejected the request (HTTP 400): ..."
@@ -117,14 +134,18 @@
             }
           },
           "413": {
-            "description": "Request body exceeds the maximum allowed size (**512 KiB**). The payload may be returned as plain text."
+            "description": "**`413`**: **`request`** **`body`** exceeds **512 KiB**. The response may omit **`application/json`** and use **`text/plain`**."
           },
           "500": {
-            "description": "The search operation could not be completed.",
+            "description": "**`500`**: Search operation could not be completed.",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/Error" },
-                "example": { "message": "search failed" }
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "message": "search failed"
+                }
               }
             }
           }
@@ -133,14 +154,18 @@
       "get": {
         "operationId": "searchSingleQueryOrDiscovery",
         "summary": "Run a single query via query string, or return a discovery document.",
-        "description": "Runs a streamlined single-query search when any of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** appears; otherwise returns a discovery document (**`DiscoveryResponse`**).\n\n### Single-query search\n\nProviding any query parameter noted above invokes one search against **`feedback-posts`**, equivalent to a one-element **`POST`** payload. **`?mode=lucene`** applies Lucene parsing to the text query consistently with **`POST`**.\n\n| Parameter | Equivalent body field | Default | Constraints |\n| ----- | ----- | ----- | ----- |\n| **`q`** or **`query`** | **`params.query`** | `\"\"` | **`q`** overrides **`query`** |\n| **`hitsPerPage`** | **`params.hitsPerPage`** | `50` | Clamped to **`[1, 500]`**; invalid inputs use **`50`** |\n| **`page`** | **`params.page`** | `0` | Clamped to **`[0, 9999]`**; invalid inputs use **`0`** |\n| **`mode`** | Query parsing profile | _(omitted ⇒ default)_ | **`lucene`** only; ineffective without parameters above |\n\nAdvanced behaviours—multiple simultaneous queries, faceting definitions, granular filters beyond these shortcuts, choice of sort replica—require **`POST`**.\n\n### Discovery\n\nAbsent all of **`q`**, **`query`**, **`hitsPerPage`**, and **`page`** (even if **`mode=lucene`** is present), **`GET`** returns endpoint metadata rather than hits.",
-        "tags": ["Search"],
+        "description": "Runs a streamlined single-query search when any of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** appears; otherwise returns a discovery document (**`DiscoveryResponse`**).\n\n### Single-query search\n\nProviding any query parameter noted above invokes one search against **`feedback-posts`**, equivalent to a one-element **`POST`** payload. **`?mode=lucene`** applies Lucene parsing to the text query consistently with **`POST`**.\n\n| **`Parameter`** | Equivalent **`InstantSearch`** field | **`Default`** | **`Constraints`** |\n| ----- | ----- | ----- | ----- |\n| **`q`** or **`query`** | **`params.query`** | `\"\"` | **`q`** overrides **`query`** |\n| **`hitsPerPage`** | **`params.hitsPerPage`** | **`50`** | Clamped to **`[1, 500]`**; invalid inputs use **`50`** |\n| **`page`** | **`params.page`** | **`0`** | Clamped to **`[0, 9999]`**; invalid inputs use **`0`** |\n| **`mode`** | Parsing profile for **`params.query`** | _(omit \u21d2 default)_ | **`lucene`** only; ineffective without **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** above |\n\nAdvanced behaviours\u2014multiple simultaneous queries, faceting definitions, granular filters beyond these shortcuts, choice of sort replica\u2014require **`POST`**.\n\n### Discovery\n\nAbsent all of **`q`**, **`query`**, **`hitsPerPage`**, and **`page`** (even if **`mode=lucene`** is present), **`GET`** returns endpoint metadata rather than hits.",
+        "tags": [
+          "Search"
+        ],
         "parameters": [
           {
             "name": "q",
             "in": "query",
             "required": false,
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "description": "Search terms. Maps to **`params.query`**. Takes precedence over **`query`** when both are supplied.",
             "example": "desktop crash"
           },
@@ -148,7 +173,9 @@
             "name": "query",
             "in": "query",
             "required": false,
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "description": "Alias of **`q`**. Ignored when **`q`** is also present."
           },
           {
@@ -181,9 +208,11 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["lucene"]
+              "enum": [
+                "lucene"
+              ]
             },
-            "description": "Interpretation mode for textual query terms. Omit for default matching. **`lucene`** selects Lucene query syntax; **`mode` alone never performs a search**—pair it with **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**."
+            "description": "Interpretation mode for the URL **`q`**/**`query`** search terms (**`params.query`** after mapping). Omit for default matching. **`lucene`** enables Lucene syntax; **`mode`** alone never runs a search\u2014pair it with **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**."
           }
         ],
         "responses": {
@@ -193,20 +222,24 @@
               "application/json": {
                 "schema": {
                   "oneOf": [
-                    { "$ref": "#/components/schemas/SearchResponse" },
-                    { "$ref": "#/components/schemas/DiscoveryResponse" }
+                    {
+                      "$ref": "#/components/schemas/SearchResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/DiscoveryResponse"
+                    }
                   ]
                 },
                 "examples": {
                   "discovery": {
-                    "summary": "Discovery (no search query parameters)",
+                    "summary": "Discovery (**`GET`** missing **`q`**, **`query`**, **`hitsPerPage`**, **`page`**)",
                     "value": {
                       "endpoints": {
                         "POST": "/api/search",
                         "GET": "/api/search?q=terms&hitsPerPage=50&page=0",
                         "openapi": "/openapi.json"
                       },
-                      "description": "POST accepts an InstantSearch multi-query array; GET exposes the same capability with simplified query-string parameters."
+                      "description": "**`endpoints`** object: **`POST`**, **`GET`**, **`openapi`** paths (**`openapi.json`** is the contract)."
                     }
                   }
                 }
@@ -214,10 +247,12 @@
             }
           },
           "400": {
-            "description": "The query could not be parsed or satisfied.",
+            "description": "**`400`**: invalid search expression (**`Invalid search query`**).",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/Error" },
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
                 "example": {
                   "message": "Invalid search query",
                   "detail": "failed to parse ..."
@@ -226,11 +261,15 @@
             }
           },
           "500": {
-            "description": "The search operation could not be completed. Discovery responses do not use this status.",
+            "description": "**`500`**: Search failed. Not used for **`DiscoveryResponse`**-only **`GET`** calls.",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/Error" },
-                "example": { "message": "search failed" }
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "message": "search failed"
+                }
               }
             }
           }
@@ -240,9 +279,13 @@
         "operationId": "searchCorsPreflight",
         "summary": "CORS preflight.",
         "description": "Cross-origin resource sharing (CORS) preflight. Returns **`204`** with permissive **`Access-Control-*`** headers for browser clients.",
-        "tags": ["Search"],
+        "tags": [
+          "Search"
+        ],
         "responses": {
-          "204": { "description": "No content." }
+          "204": {
+            "description": "**`HTTP`** **`204`**: **`No`** **`Content`**."
+          }
         }
       }
     },
@@ -251,17 +294,24 @@
         "operationId": "health",
         "summary": "Liveness probe.",
         "description": "Reports whether this search service responds to HTTP requests. Response body is the plain-text string **`ok`**.",
-        "tags": ["Operations"],
+        "tags": [
+          "Operations"
+        ],
         "responses": {
           "200": {
             "description": "Probe succeeded; body is **`ok`**.",
             "content": {
               "text/plain": {
-                "schema": { "type": "string", "const": "ok" }
+                "schema": {
+                  "type": "string",
+                  "const": "ok"
+                }
               }
             }
           },
-          "502": { "description": "The service is unreachable from the deployment edge." }
+          "502": {
+            "description": "The service is unreachable from the deployment edge."
+          }
         }
       }
     },
@@ -269,14 +319,18 @@
       "get": {
         "operationId": "openapi",
         "summary": "This OpenAPI document.",
-        "description": "Machine-readable specification for this gateway on the same host.",
-        "tags": ["Operations"],
+        "description": "This **`resource`** (**`openapi.json`**): **`OpenAPI`** **`3.1`**, **`application/json`** **`Content-Type`** on success.",
+        "tags": [
+          "Operations"
+        ],
         "responses": {
           "200": {
-            "description": "OpenAPI 3.1 document.",
+            "description": "**`200`** body: **`OpenAPI`** **`3.1`** document (**`application/json`**).",
             "content": {
               "application/json": {
-                "schema": { "type": "object" }
+                "schema": {
+                  "type": "object"
+                }
               }
             }
           }
@@ -288,53 +342,94 @@
     "schemas": {
       "MultiQueryRequest": {
         "type": "array",
-        "description": "Array of InstantSearch multi-query definitions. Each object targets one index replica. Supported **`params`** fields match Algolia-compatible usage; **`params.query`** meaning depends on the HTTP **`mode`** parameter (see API overview).",
+        "description": "InstantSearch **`array`**; each **`object`** has **`indexName`** + **`params`**. Allowed **`params`** keys follow Algolia conventions; **`params.query`** parsing depends on URL **`mode`** (**`lucene`** or omitted \u2014 see overview).",
         "minItems": 1,
-        "items": { "$ref": "#/components/schemas/MultiQueryRequestItem" }
+        "items": {
+          "$ref": "#/components/schemas/MultiQueryRequestItem"
+        }
       },
       "MultiQueryRequestItem": {
         "type": "object",
-        "required": ["indexName", "params"],
+        "required": [
+          "indexName",
+          "params"
+        ],
         "properties": {
           "indexName": {
             "type": "string",
             "description": "Index replica to query. Use **`feedback-posts`** for the default sort (newest activity first). Additional replicas include **`feedback-posts_created_asc`**, **`feedback-posts_score_desc`**, **`feedback-posts_score_asc`**, and **`feedback-posts_relevance_desc`** for alternate sort orders. **`feedback-posts_created_desc`** does not exist; rely on **`feedback-posts`** for newest-first browsing.",
-            "examples": ["feedback-posts", "feedback-posts_created_asc", "feedback-posts_score_desc", "feedback-posts_relevance_desc"]
+            "examples": [
+              "feedback-posts",
+              "feedback-posts_created_asc",
+              "feedback-posts_score_desc",
+              "feedback-posts_relevance_desc"
+            ]
           },
           "params": {
             "type": "object",
-            "description": "Algolia-compatible search parameters supported by InstantSearch integrations. Listed keys are illustrative; additional **`params`** may be accepted consistent with Algolia InstantSearch semantics.",
+            "description": "Algolia/**InstantSearch** **`params`** object\u2014keys below plus any additional keys your client sends. Listed keys are illustrative; semantics follow **`InstantSearch`** when applicable.",
             "additionalProperties": true,
             "properties": {
               "query": {
                 "type": "string",
-                "description": "Free-text keywords for the query. Empty or whitespace-only values do not apply a text filter."
+                "description": "Free-text search string (**`InstantSearch`** **`params.query`**). Empty/whitespace does not constrain text."
               },
-              "hitsPerPage": { "type": "integer", "minimum": 1, "description": "Page size." },
-              "page": { "type": "integer", "minimum": 0, "description": "Zero-based page index." },
+              "hitsPerPage": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "**`hitsPerPage`** page size."
+              },
+              "page": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "**`page`** (**`0`**-based)."
+              },
               "facets": {
                 "type": "array",
-                "items": { "type": "string" },
+                "items": {
+                  "type": "string"
+                },
                 "description": "Facet attributes whose counts accompany the hits. Common post facets: **`board_slug`**, **`board_name`**, **`status`**, **`category_name`**, **`author_name`**, **`aiCategories`**, **`vote_highEngagement`**, **`vote_moderateEngagement`**, **`vote_lowEngagement`**; quantitative facets **`score`**, **`maxScore`**, **`commentCount`**, **`mergeCount`**, **`trendingScore`**, **`post_created`**, **`post_updated`**, **`post_statusChanged`**; nested comment facets **`comment_author_name`**, **`comment_pinned`**, **`comment_likeCount`**, **`comment_created`**."
               },
               "facetFilters": {
-                "description": "Algolia-style facet filter expression (string, array of strings, or array of arrays for OR-of-AND).",
+                "description": "Algolia **`facetFilters`**: a **`string`**, **`string[]`**, or nested **`array`** (**OR-of-AND** groups).",
                 "oneOf": [
-                  { "type": "string" },
-                  { "type": "array", "items": { "type": "string" } },
-                  { "type": "array", "items": { "type": "array", "items": { "type": "string" } } }
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 ]
               },
               "numericFilters": {
                 "type": "array",
-                "items": { "type": "string" },
-                "description": "Algolia-style numeric filter expressions, e.g. **`score>=10`**."
+                "items": {
+                  "type": "string"
+                },
+                "description": "Algolia **`numericFilters`** entries such as **`score>=10`**."
               },
               "filters": {
                 "type": "string",
-                "description": "Algolia-style filter expression."
+                "description": "Algolia **`filters`** (**`string`** expression)."
               },
-              "maxValuesPerFacet": { "type": "integer", "minimum": 1 }
+              "maxValuesPerFacet": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Algolia **`maxValuesPerFacet`** cap."
+              }
             }
           }
         }
@@ -342,11 +437,15 @@
       "SearchResponse": {
         "type": "object",
         "description": "Algolia-style search-response envelope listing one **`results`** entry per submitted query.",
-        "required": ["results"],
+        "required": [
+          "results"
+        ],
         "properties": {
           "results": {
             "type": "array",
-            "items": { "$ref": "#/components/schemas/SearchResult" }
+            "items": {
+              "$ref": "#/components/schemas/SearchResult"
+            }
           }
         },
         "additionalProperties": true
@@ -357,21 +456,49 @@
         "properties": {
           "hits": {
             "type": "array",
-            "items": { "$ref": "#/components/schemas/Hit" },
-            "description": "Documents returned for this page."
+            "items": {
+              "$ref": "#/components/schemas/Hit"
+            },
+            "description": "**`hits`** (**`Hit`** **`array`**) returned for **`page`**."
           },
-          "nbHits": { "type": "integer", "minimum": 0, "description": "Total number of matching documents." },
-          "page": { "type": "integer", "minimum": 0, "description": "Zero-based page index of this result." },
-          "nbPages": { "type": "integer", "minimum": 0, "description": "Total number of pages available." },
-          "hitsPerPage": { "type": "integer", "minimum": 1, "description": "Page size used for this result." },
-          "processingTimeMS": { "type": "integer", "minimum": 0 },
-          "query": { "type": "string", "description": "Echo of the executed query." },
+          "nbHits": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "**`nbHits`** total hits."
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "**`page`** (**`0`**-based)."
+          },
+          "nbPages": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "**`nbPages`** total pages."
+          },
+          "hitsPerPage": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "**`hitsPerPage`** for **`page`**."
+          },
+          "processingTimeMS": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "**`processingTimeMS`** latency."
+          },
+          "query": {
+            "type": "string",
+            "description": "Echo of **`params.query`** (or mapped **`GET`** **`q`**/**`query`**)."
+          },
           "facets": {
             "type": "object",
-            "description": "Facet counts keyed by facet attribute → value.",
+            "description": "**`facets`**: each **`facetName`** maps (**`facetValue`** \u2192 **`count`**).",
             "additionalProperties": {
               "type": "object",
-              "additionalProperties": { "type": "integer", "minimum": 0 }
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": 0
+              }
             }
           }
         },
@@ -379,94 +506,279 @@
       },
       "Hit": {
         "type": "object",
-        "description": "Feedback post returned as a hit, including **`objectID`**, searchable fields, relational objects, Algolia-compatible highlighting metadata, and other attributes present on the indexed document.",
+        "description": "Indexed **`Hit`** document: **`objectID`**, post fields and nested **`author`**, **`board`**, **`category`**, **`comments`**, **`_highlightResult`**, **`_snippetResult`**, etc.",
         "properties": {
-          "objectID": { "type": "string" },
-          "post_id": { "type": "string" },
-          "__v": { "type": "integer" },
-          "title": { "type": "string" },
-          "details": { "type": "string" },
-          "urlName": { "type": "string" },
-          "ideaID": { "type": "string" },
-          "boardID": { "type": "string" },
-          "categoryID": { "type": "string" },
-          "subCategoryID": { "type": "string" },
-          "companyID": { "type": "string" },
-          "authorID": { "type": "string" },
-          "deleteID": { "type": "string" },
-          "deletedBy": { "type": "string" },
-          "updatedBy": { "type": "string" },
-          "by": { "type": "string" },
-          "byID": { "type": "string" },
-          "status": { "type": "string" },
-          "score": { "type": "integer" },
-          "maxScore": { "type": "integer" },
-          "mergeCount": { "type": "integer" },
-          "trendingScore": { "type": "number" },
-          "commentCount": { "type": "integer" },
-          "viewerVote": { "type": "integer", "nullable": true },
-          "viewerIsAuthor": { "type": "boolean", "nullable": true },
-          "loading": { "type": "boolean", "nullable": true },
-          "notFound": { "type": "boolean", "nullable": true },
-          "etaPublic": { "type": "boolean", "nullable": true },
-          "eta": { "type": "string", "nullable": true },
-          "ogImageURL": { "type": "string", "nullable": true },
-          "imageURLs": { "type": "array", "items": { "type": "string" }, "nullable": true },
-          "fileURLs": { "type": "array", "items": { "type": "string" }, "nullable": true },
-          "opportunities": { "type": "string", "nullable": true },
-          "created": { "type": "string", "format": "date-time" },
-          "updatedAt": { "type": "string", "format": "date-time", "nullable": true },
-          "statusChanged": { "type": "string", "format": "date-time", "nullable": true },
-          "deletedAt": { "type": "string", "format": "date-time", "nullable": true },
-          "lastUpdated": { "type": "string", "format": "date-time", "nullable": true },
-          "error": { "type": "object", "additionalProperties": true, "nullable": true },
-          "linkedEntry": { "type": "object", "additionalProperties": true, "nullable": true },
-          "sourceFeatureExtractionItem": { "type": "object", "additionalProperties": true, "nullable": true },
-          "files": { "type": "object", "additionalProperties": true, "nullable": true },
-          "author": { "type": "object", "additionalProperties": true },
-          "board": { "type": "object", "additionalProperties": true },
-          "category": { "type": "object", "additionalProperties": true },
-          "voteSettings": { "type": "object", "additionalProperties": true, "nullable": true },
-          "voters": { "type": "array", "items": { "type": "object", "additionalProperties": true }, "nullable": true },
-          "comments": { "type": "array", "items": { "type": "object", "additionalProperties": true }, "nullable": true },
-          "pinnedComment": { "type": "object", "additionalProperties": true, "nullable": true },
-          "aiCategories": { "type": "array", "items": { "type": "string" }, "nullable": true },
-          "aiTaggedAt": { "type": "string", "format": "date-time", "nullable": true },
-          "_highlightResult": { "type": "object", "additionalProperties": true },
-          "_snippetResult": { "type": "object", "additionalProperties": true }
+          "objectID": {
+            "type": "string"
+          },
+          "post_id": {
+            "type": "string"
+          },
+          "__v": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "urlName": {
+            "type": "string"
+          },
+          "ideaID": {
+            "type": "string"
+          },
+          "boardID": {
+            "type": "string"
+          },
+          "categoryID": {
+            "type": "string"
+          },
+          "subCategoryID": {
+            "type": "string"
+          },
+          "companyID": {
+            "type": "string"
+          },
+          "authorID": {
+            "type": "string"
+          },
+          "deleteID": {
+            "type": "string"
+          },
+          "deletedBy": {
+            "type": "string"
+          },
+          "updatedBy": {
+            "type": "string"
+          },
+          "by": {
+            "type": "string"
+          },
+          "byID": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "maxScore": {
+            "type": "integer"
+          },
+          "mergeCount": {
+            "type": "integer"
+          },
+          "trendingScore": {
+            "type": "number"
+          },
+          "commentCount": {
+            "type": "integer"
+          },
+          "viewerVote": {
+            "type": "integer",
+            "nullable": true
+          },
+          "viewerIsAuthor": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "loading": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "notFound": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "etaPublic": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "eta": {
+            "type": "string",
+            "nullable": true
+          },
+          "ogImageURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageURLs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "fileURLs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "opportunities": {
+            "type": "string",
+            "nullable": true
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "statusChanged": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deletedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdated": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "error": {
+            "type": "object",
+            "additionalProperties": true,
+            "nullable": true
+          },
+          "linkedEntry": {
+            "type": "object",
+            "additionalProperties": true,
+            "nullable": true
+          },
+          "sourceFeatureExtractionItem": {
+            "type": "object",
+            "additionalProperties": true,
+            "nullable": true
+          },
+          "files": {
+            "type": "object",
+            "additionalProperties": true,
+            "nullable": true
+          },
+          "author": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "board": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "category": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "voteSettings": {
+            "type": "object",
+            "additionalProperties": true,
+            "nullable": true
+          },
+          "voters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "nullable": true
+          },
+          "comments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "nullable": true
+          },
+          "pinnedComment": {
+            "type": "object",
+            "additionalProperties": true,
+            "nullable": true
+          },
+          "aiCategories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "aiTaggedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "_highlightResult": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "_snippetResult": {
+            "type": "object",
+            "additionalProperties": true
+          }
         },
         "additionalProperties": true
       },
       "DiscoveryResponse": {
         "type": "object",
-        "description": "Discovery payload emitted by **`GET /api/search`** when no search-driving query parameters are supplied (see operation description); **`mode` alone does not perform a search**.",
-        "required": ["endpoints", "description"],
+        "description": "Discovery payload from **`GET /api/search`** when none of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** are present; **`mode`** alone never performs a search.",
+        "required": [
+          "endpoints",
+          "description"
+        ],
         "properties": {
           "endpoints": {
             "type": "object",
-            "required": ["POST", "GET", "openapi"],
+            "required": [
+              "POST",
+              "GET",
+              "openapi"
+            ],
             "properties": {
-              "POST": { "type": "string", "description": "Canonical search endpoint." },
-              "GET": { "type": "string", "description": "Example single-query GET URL." },
-              "openapi": { "type": "string", "description": "Path to this OpenAPI document." }
+              "POST": {
+                "type": "string",
+                "description": "**`POST`** **`/api/search`** URL."
+              },
+              "GET": {
+                "type": "string",
+                "description": "**`GET`** example (**`/api/search`** URL **`query`** string)."
+              },
+              "openapi": {
+                "type": "string",
+                "description": "**`openapi`** key: **`/openapi.json`** path **`string`**."
+              }
             },
             "additionalProperties": false
           },
-          "description": { "type": "string" }
+          "description": {
+            "type": "string",
+            "description": "Synthesized **`discovery`** narration (**Markdown** tolerated)."
+          }
         },
         "additionalProperties": false
       },
       "Error": {
         "type": "object",
-        "required": ["message"],
+        "required": [
+          "message"
+        ],
         "properties": {
           "message": {
             "type": "string",
-            "description": "Human-readable error description."
+            "description": "**`message`**: **`string`**; **`detail`**: supplemental **`diagnostics`** (optional)."
           },
           "detail": {
             "type": "string",
-            "description": "Supplemental diagnostics when **`message`** is **`Invalid search query`**; omit for structural client mistakes such as a non-array body."
+            "description": "Supplemental diagnostics when **`message`** is **`Invalid search query`**; omit when **`body`** is not an **`InstantSearch`** **`array`**, etc."
           }
         },
         "additionalProperties": false
