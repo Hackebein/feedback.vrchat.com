@@ -74,6 +74,36 @@ def comment_text_snippets(c: dict[str, Any]) -> list[str]:
     return out
 
 
+def _parse_activity_datetime(v: Any) -> datetime | None:
+    if not isinstance(v, str) or not v.strip():
+        return None
+    try:
+        return datetime.fromisoformat(v.strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def compute_last_activity_iso(post: dict[str, Any]) -> str | None:
+    candidates: list[datetime] = []
+    for key in ("created", "statusChanged"):
+        dt = _parse_activity_datetime(post.get(key))
+        if dt is not None:
+            candidates.append(dt)
+    comments_in = post.get("comments") or []
+    if isinstance(comments_in, list):
+        for c in comments_in:
+            if not isinstance(c, dict):
+                continue
+            if c.get("deleted") is True or c.get("spam") is True:
+                continue
+            ct = _parse_activity_datetime(c.get("created"))
+            if ct is not None:
+                candidates.append(ct)
+    if not candidates:
+        return None
+    return max(candidates).isoformat()
+
+
 def transform_post(line: dict[str, Any]) -> dict[str, Any] | None:
     pid = (line.get("_id") or "").strip()
     if not pid:
@@ -104,6 +134,9 @@ def transform_post(line: dict[str, Any]) -> dict[str, Any] | None:
 
     safe["post_id"] = pid
     safe["combined_text"] = "\n\n".join(p for p in parts if p and str(p).strip())
+    last_activity = compute_last_activity_iso(safe)
+    if last_activity is not None:
+        safe["lastActivityAt"] = last_activity
     return safe
 
 

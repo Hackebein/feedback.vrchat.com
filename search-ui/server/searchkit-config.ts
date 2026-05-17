@@ -161,6 +161,7 @@ export function searchkitConfig(host: string, username: string, password: string
         "created",
         "updatedAt",
         "statusChanged",
+        "lastActivityAt",
         "deletedAt",
         "lastUpdated",
         "error",
@@ -276,6 +277,14 @@ export function searchkitConfig(host: string, username: string, password: string
         _relevance_desc: {
           field: "_score",
           order: "desc" as const,
+        },
+        _activity_desc: {
+          field: "lastActivityAt",
+          order: "desc" as const,
+        },
+        _activity_asc: {
+          field: "lastActivityAt",
+          order: "asc" as const,
         },
       },
       query_rules: [],

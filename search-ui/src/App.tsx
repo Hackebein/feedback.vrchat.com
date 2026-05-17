@@ -1186,6 +1186,8 @@ export function App() {
                 items={[
                   { label: "Newest", value: indexName },
                   { label: "Oldest", value: `${indexName}_created_asc` },
+                  { label: "Newest activity", value: `${indexName}_activity_desc` },
+                  { label: "Oldest activity", value: `${indexName}_activity_asc` },
                   { label: "Most voters", value: `${indexName}_score_desc` },
                   { label: "Fewest voters", value: `${indexName}_score_asc` },
                   { label: "Relevance", value: `${indexName}_relevance_desc` },
