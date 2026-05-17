@@ -169,6 +169,10 @@ def build_system_prompt(tree: dict | None) -> str:
         "Each id must appear exactly as listed below. Use every applicable id; dedupe within your list.",
         "",
         "Rules:",
+        "If a Comments: section is provided, treat it as additional context "
+        "(status changes, follow-ups, merged posts). Still classify the original feedback, "
+        "not the comments themselves.",
+        "",
         "First decide: is this post real product feedback (a bug, request, or feature comment about VRChat)?",
         "",
         "If NO — output EXACTLY ONE bucket id, alone, no other ids:",
@@ -272,6 +276,18 @@ def sanitize_ai_tags(post: dict, tree: dict | None) -> bool:
     return False
 
 
+def _comment_ids(post: dict | None) -> set[str]:
+    out: set[str] = set()
+    if not post:
+        return out
+    for c in post.get("comments") or []:
+        if isinstance(c, dict):
+            cid = c.get("_id")
+            if isinstance(cid, str) and cid:
+                out.add(cid)
+    return out
+
+
 def needs_ai_retag(previous_post: dict | None, current_post: dict | None) -> bool:
     if current_post is None:
         return False
@@ -279,13 +295,19 @@ def needs_ai_retag(previous_post: dict | None, current_post: dict | None) -> boo
         return True
     if not previous_post.get("aiTaggedAt"):
         return True
-    return (
+    if (
         previous_post.get("title"),
         previous_post.get("details"),
+        previous_post.get("status"),
     ) != (
         current_post.get("title"),
         current_post.get("details"),
-    )
+        current_post.get("status"),
+    ):
+        return True
+    if _comment_ids(current_post) - _comment_ids(previous_post):
+        return True
+    return False
 
 
 def carry_over_ai_tags(target: dict, previous: dict | None) -> None:
@@ -449,6 +471,74 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
     return _urllib_post_minimax(_minimax_chat_url(), api_key, payload, timeout=90)
 
 
+def _comment_row_has_content(c: dict) -> bool:
+    v = c.get("value")
+    if isinstance(v, str) and v.strip():
+        return True
+    st = c.get("statusChangeNewStatus")
+    if isinstance(st, str) and st.strip():
+        return True
+    mt = c.get("mergedPostTitle")
+    if isinstance(mt, str) and mt.strip():
+        return True
+    md = c.get("mergedPostDetails")
+    if isinstance(md, str) and md.strip():
+        return True
+    return False
+
+
+def _author_display_name(author) -> str:
+    if not isinstance(author, dict):
+        return "unknown"
+    name = author.get("name")
+    if isinstance(name, str) and name.strip():
+        return name.strip()
+    alias = author.get("alias")
+    if isinstance(alias, str) and alias.strip():
+        return alias.strip()
+    return "unknown"
+
+
+def _build_comments_prompt_block(post: dict) -> str:
+    comments = post.get("comments") or []
+    if not isinstance(comments, list):
+        return ""
+    lines: list[str] = []
+    for c in comments:
+        if not isinstance(c, dict):
+            continue
+        if not _comment_row_has_content(c):
+            continue
+        created = c.get("created")
+        created_s = created.strip() if isinstance(created, str) else ""
+        who = _author_display_name(c.get("author"))
+        prefix = f"[{created_s}] {who}" if created_s else who
+
+        parts: list[str] = []
+        st = c.get("statusChangeNewStatus")
+        if isinstance(st, str) and st.strip():
+            parts.append(f"[status -> {st.strip()}]")
+        mt = c.get("mergedPostTitle")
+        md = c.get("mergedPostDetails")
+        m_t = mt.strip() if isinstance(mt, str) and mt.strip() else ""
+        m_d = md.strip() if isinstance(md, str) and md.strip() else ""
+        if m_t or m_d:
+            esc_t = m_t.replace('"', '\\"')
+            if m_d:
+                parts.append(f'[merged from "{esc_t}": {m_d}]')
+            else:
+                parts.append(f'[merged from "{esc_t}"]')
+        v = c.get("value")
+        if isinstance(v, str) and v.strip():
+            parts.append(v.strip())
+
+        lines.append(f"{prefix}: {' '.join(parts)}")
+
+    if not lines:
+        return ""
+    return "\nComments:\n" + "\n".join(lines) + "\n"
+
+
 def tag_post(
     post: dict,
     board_slug: str,
@@ -467,7 +557,10 @@ def tag_post(
         return empty
     title = post.get("title") if isinstance(post.get("title"), str) else ""
     details = post.get("details") if isinstance(post.get("details"), str) else ""
-    user_base = f"Board: {board_slug}\nTitle: {title}\n\nDetails:\n{details}\n"
+    user_base = (
+        f"Board: {board_slug}\nTitle: {title}\n\nDetails:\n{details}\n"
+        + _build_comments_prompt_block(post)
+    )
 
     def run_attempt(extra: str | None) -> tuple[list[str] | None, str | None]:
         user = user_base if not extra else user_base + "\n" + extra
