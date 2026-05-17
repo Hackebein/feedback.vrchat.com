@@ -3,11 +3,11 @@
   "info": {
     "title": "VRChat Feedback Search Gateway",
     "version": "1.0.0",
-    "summary": "Public Algolia-shaped search API backed by SearchKit and OpenSearch.",
-    "description": "### Query modes\n\n- **Strict mode** (default): `params.query` is interpreted as InstantSearch/searchkit strict full-text search: `bool`/`should` of boosted `multi_match` (`best_fields` with `operator: and`) over **`combined_text`**, **`title`**, **`author.name`**, and **`details`**, plus a phrase `multi_match`; short single-character queries bias toward phrase behavior. Trimmed empty string becomes **`match_all`**.\n- **Lucene mode**: Pass **`mode=lucene`** as a query parameter on either **GET** or **POST** `/api/search` (alongside whatever body or query-string fields you normally send). Non-empty **`params.query`** is compiled via OpenSearch **`query_string`** instead of strict `multi_match`. On GET, **`mode` alone does not start a search**: at least one of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** must be present.\n\n### Lucene semantics (`mode=lucene`)\n\nEach **`query_string`** clause uses **`default_operator: AND`**, **`lenient: true`**, **`analyze_wildcard: true`**. Grammar follows OpenSearch; see **[query_string query](https://opensearch.org/docs/latest/query-dsl/full-text/query-string/)**.\n\n**Post-level bare terms** (no leading `field:` after routing): **`query_string`** over **`combined_text^3`**, **`title^2`**, **`details`**, **`author.name`**, **`aiCategories`**.\n\n**Comment routing**: The user's string is split on **` AND `** (spaces required — avoids **`fooANDbar`**) only at parenthesis depth 0 and outside **`'`** / **`\"`** quotes. Each chunk has leading **`NOT`** prefixes removed (each flips overall negation for that chunk), redundant outer parentheses stripped until stable (**quote-aware**, balanced `()`), then **`classifyClause`** examines the **`field`** in **`field:value`**. If the field is **`comments`** or **`comments.*`**, the chunk becomes a **`nested`** query on path **`comments`** with an inner **`query_string`** (**no explicit `fields` list** → all mapped `comments` fields). Otherwise it is a post-level **`query_string`**. Positive post clauses are merged into **one** post **`query_string`** joined with **` AND `**. Each positive routed comment clause is its own **`must`** nested **`query_string`**. Negated clauses are **`must_not`** (post **`query_string`** or nested **`comments`** **`query_string`** as appropriate).\n\n**Empty / whitespace-only queries** behave as **`match_all`**.\n\n### Lucene field quick reference\n\n| Field | Kind | Example |\n| ----- | ----- | ------- |\n| `title` | text | `title:avatar` |\n| `details` | text | `details:\"network lag\"` |\n| `combined_text` | text | `combined_text:performance` |\n| `author.name` | text | `author.name:Alice` |\n| `status` | keyword | `status:open` |\n| `board.urlName` | keyword | `board.urlName:bug-reports` |\n| `board.name` | text | `board.name:bug` |\n| `board.name.keyword` | keyword | `board.name.keyword:\"Feature Requests\"` |\n| `category.name` | text | `category.name:sdk` |\n| `category.name.keyword` | keyword | `category.name.keyword:SDK` |\n| `author.name.keyword` | keyword | `author.name.keyword:\"Jane Doe\"` |\n| `score` | numeric | `score:[10 TO *]` |\n| `maxScore` | numeric | `maxScore:[100 TO *]` |\n| `commentCount` | numeric | `commentCount:[1 TO 50]` |\n| `mergeCount` | numeric | `mergeCount:[1 TO *]` |\n| `trendingScore` | numeric | `trendingScore:[500 TO *]` |\n| `voteSettings.highEngagement` | keyword / bool-like | `voteSettings.highEngagement:true` |\n| `voteSettings.moderateEngagement` | keyword / bool-like | `voteSettings.moderateEngagement:true` |\n| `voteSettings.lowEngagement` | keyword / bool-like | `voteSettings.lowEngagement:true` |\n| `created` | date | `created:[\"2025-01-01\" TO \"2026-01-01\"]` |\n| `updatedAt` | date | `updatedAt:[\"2025-01-01\" TO *]` |\n| `statusChanged` | date | `statusChanged:[\"2025-01-01\" TO *]` |\n| `comments.value` | text | `comments.value:\"network lag\"` |\n| `comments.author.name` | text | `comments.author.name:Alice` |\n| `comments.author.name.keyword` | keyword | `comments.author.name.keyword:\"Jane Doe\"` |\n| `comments.pinned` | keyword | `comments.pinned:true` |\n| `comments.likeCount` | numeric | `comments.likeCount:[1 TO *]` |\n| `comments.created` | date | `comments.created:[\"2025-01-01\" TO *]` |\n| `aiCategories` | text | `aiCategories:groups` |\n| `aiCategories.keyword` | keyword | `aiCategories.keyword:\"groups.calendar\"` |\n| `aiTaggedAt` | date | `aiTaggedAt:[\"2025-01-01\" TO *]` |\n\nCanonical mappings: **`deploy/opensearch/index_mappings.json`** in this repository."
+    "summary": "Public search API with Algolia-compatible InstantSearch requests and responses.",
+    "description": "## Overview\n\nUse this gateway to query indexed VRChat Feedback posts using the same JSON request and response shape as Algolia InstantSearch.\n\n## Query modes\n\n- **Default**: Free-text searches match searchable post attributes, including combined text, title, body (`details`), author name, and related fields. Whitespace-only or empty `params.query` does not restrict by text.\n- **Lucene syntax** (`?mode=lucene` on POST or GET `/api/search`): Interprets `params.query` with Lucene query syntax. Grammar and operators follow OpenSearch; see **[query_string query](https://opensearch.org/docs/latest/query-dsl/full-text/query-string/)**.\n\nOn **GET** `/api/search`, Lucene mode does not execute a search by itself—you must also supply at least one of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**.\n\n## Lucene field reference\n\n| Field | Kind | Example |\n| ----- | ----- | ------- |\n| `title` | text | `title:avatar` |\n| `details` | text | `details:\"network lag\"` |\n| `combined_text` | text | `combined_text:performance` |\n| `author.name` | text | `author.name:Alice` |\n| `status` | keyword | `status:open` |\n| `board.urlName` | keyword | `board.urlName:bug-reports` |\n| `board.name` | text | `board.name:bug` |\n| `board.name.keyword` | keyword | `board.name.keyword:\"Feature Requests\"` |\n| `category.name` | text | `category.name:sdk` |\n| `category.name.keyword` | keyword | `category.name.keyword:SDK` |\n| `author.name.keyword` | keyword | `author.name.keyword:\"Jane Doe\"` |\n| `score` | numeric | `score:[10 TO *]` |\n| `maxScore` | numeric | `maxScore:[100 TO *]` |\n| `commentCount` | numeric | `commentCount:[1 TO 50]` |\n| `mergeCount` | numeric | `mergeCount:[1 TO *]` |\n| `trendingScore` | numeric | `trendingScore:[500 TO *]` |\n| `voteSettings.highEngagement` | keyword / bool-like | `voteSettings.highEngagement:true` |\n| `voteSettings.moderateEngagement` | keyword / bool-like | `voteSettings.moderateEngagement:true` |\n| `voteSettings.lowEngagement` | keyword / bool-like | `voteSettings.lowEngagement:true` |\n| `created` | date | `created:[\"2025-01-01\" TO \"2026-01-01\"]` |\n| `updatedAt` | date | `updatedAt:[\"2025-01-01\" TO *]` |\n| `statusChanged` | date | `statusChanged:[\"2025-01-01\" TO *]` |\n| `comments.value` | text | `comments.value:\"network lag\"` |\n| `comments.author.name` | text | `comments.author.name:Alice` |\n| `comments.author.name.keyword` | keyword | `comments.author.name.keyword:\"Jane Doe\"` |\n| `comments.pinned` | keyword | `comments.pinned:true` |\n| `comments.likeCount` | numeric | `comments.likeCount:[1 TO *]` |\n| `comments.created` | date | `comments.created:[\"2025-01-01\" TO *]` |\n| `aiCategories` | text | `aiCategories:groups` |\n| `aiCategories.keyword` | keyword | `aiCategories.keyword:\"groups.calendar\"` |\n| `aiTaggedAt` | date | `aiTaggedAt:[\"2025-01-01\" TO *]` |\n\nField types and normalization follow the backing search index mapping."
   },
   "externalDocs": {
-    "description": "SearchKit gateway reference (request/response shape, Algolia parity).",
+    "description": "InstantSearch client integration reference (Algolia-compatible request and response formats).",
     "url": "https://www.searchkit.co/docs/proxy-elasticsearch/with-express-js"
   },
   "servers": [
@@ -20,11 +20,11 @@
   "tags": [
     {
       "name": "Search",
-      "description": "Algolia-compatible search endpoints backed by SearchKit and OpenSearch."
+      "description": "Search queries using Algolia-compatible request and response formats."
     },
     {
       "name": "Operations",
-      "description": "Operational endpoints (health checks, service discovery)."
+      "description": "Service metadata, discovery, and health endpoints."
     }
   ],
   "paths": {
@@ -32,7 +32,7 @@
       "post": {
         "operationId": "searchMultiQuery",
         "summary": "Run one or more InstantSearch queries.",
-        "description": "Request body must be a JSON array of InstantSearch multi-query items. **`mode`** is read from the URL query string (not the JSON body): use **`mode=lucene`** for Lucene/query_string semantics (see **`info.description`**). Maximum JSON body size is **512 KiB**.",
+        "description": "Accepts an array of InstantSearch multi-query payloads. Submit `mode` as a URL query parameter (not inside the JSON body); use `mode=lucene` for Lucene syntax in each item's `params.query`. Maximum request body size is **512 KiB**.",
         "tags": ["Search"],
         "parameters": [
           {
@@ -43,7 +43,7 @@
               "type": "string",
               "enum": ["lucene"]
             },
-            "description": "Omit for strict boosted `multi_match` over search attributes (`combined_text`, `title`, `author.name`, `details`). **`lucene`**: compile each item's **`params.query`** using OpenSearch **`query_string`** (see **`info.description`**, Lucene sections)."
+            "description": "Parsing mode for `params.query`. Omit for default full-text matching. Use **`lucene`** for Lucene query syntax; see API overview."
           }
         ],
         "requestBody": {
@@ -86,7 +86,7 @@
         },
         "responses": {
           "200": {
-            "description": "Algolia-compatible search-results envelope.",
+            "description": "Successful search containing hits, paging, facets, and metadata in Algolia-compatible form.",
             "content": {
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/SearchResponse" }
@@ -94,7 +94,7 @@
             }
           },
           "400": {
-            "description": "**Malformed**: body is not a JSON array. **Invalid query**: upstream OpenSearch returned HTTP 400 (bad Lucene/filter syntax); body uses **`Invalid search query`** plus optional **`detail`**. Same schema for both cases.",
+            "description": "Invalid request payload or malformed search expression.",
             "content": {
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/Error" },
@@ -106,10 +106,10 @@
                     }
                   },
                   "invalidSearch": {
-                    "summary": "OpenSearch rejected query_string or filters",
+                    "summary": "Malformed search syntax",
                     "value": {
                       "message": "Invalid search query",
-                      "detail": "Elasticsearch request failed with status 400: ..."
+                      "detail": "Search service rejected the request (HTTP 400): ..."
                     }
                   }
                 }
@@ -117,10 +117,10 @@
             }
           },
           "413": {
-            "description": "JSON body exceeds the gateway parser limit **512 KiB** (`express.json({ limit: \"512kb\" })`). Typical Express response is plain **`Payload Too Large`** text; treat as **`413`** regardless of **`Content-Type`**."
+            "description": "Request body exceeds the maximum allowed size (**512 KiB**). The payload may be returned as plain text."
           },
           "500": {
-            "description": "Search execution failed upstream (OpenSearch error, network failure, etc.).",
+            "description": "The search operation could not be completed.",
             "content": {
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/Error" },
@@ -133,7 +133,7 @@
       "get": {
         "operationId": "searchSingleQueryOrDiscovery",
         "summary": "Run a single query via query string, or return a discovery document.",
-        "description": "Two behaviours are multiplexed onto this endpoint:\n\n### 1. Single-query search (parity with POST)\n\nIf **any** of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** is supplied, the gateway constructs exactly **one** multi-query element targeting **`feedback-posts`** and forwards it through the same **`@searchkit/api#handleRequest`** pipeline as POST. **`mode=lucene`** in the URL opts into Lucene/`query_string` for **`params.query`** (same as POST).\n\n| Query parameter | Maps to | Default | Notes |\n| ----- | ----- | ----- | ----- |\n| **`q`** or **`query`** | **`params.query`** | `\"\"` | **`q`** wins when both appear. |\n| **`hitsPerPage`** | **`params.hitsPerPage`** | `50` | Clamped **`[1, 500]`**; invalid ⇒ `50`. |\n| **`page`** | **`params.page`** | `0` | Clamped **`[0, 9999]`**; invalid ⇒ `0`. |\n| **`mode`** | query parser selection | _(omit ⇒ strict)_ | **`lucene`** only. Does **not** trigger search unless one of **`q`**/**`query`**/**`hitsPerPage`**/**`page`** is present. |\n\nFeatures that cannot be expressed via query string (multiple queries, facets, **`filters`**, custom **`indexName`**, sort replicas, etc.) require POST.\n\n### 2. Service discovery\n\nWith **none** of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** present (even if **`mode=lucene`** appears alone), the gateway returns JSON describing endpoints. POST has no equivalent mode.",
+        "description": "Runs a streamlined single-query search when any of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** appears; otherwise returns a discovery document (**`DiscoveryResponse`**).\n\n### Single-query search\n\nProviding any query parameter noted above invokes one search against **`feedback-posts`**, equivalent to a one-element **`POST`** payload. **`?mode=lucene`** applies Lucene parsing to the text query consistently with **`POST`**.\n\n| Parameter | Equivalent body field | Default | Constraints |\n| ----- | ----- | ----- | ----- |\n| **`q`** or **`query`** | **`params.query`** | `\"\"` | **`q`** overrides **`query`** |\n| **`hitsPerPage`** | **`params.hitsPerPage`** | `50` | Clamped to **`[1, 500]`**; invalid inputs use **`50`** |\n| **`page`** | **`params.page`** | `0` | Clamped to **`[0, 9999]`**; invalid inputs use **`0`** |\n| **`mode`** | Query parsing profile | _(omitted ⇒ default)_ | **`lucene`** only; ineffective without parameters above |\n\nAdvanced behaviours—multiple simultaneous queries, faceting definitions, granular filters beyond these shortcuts, choice of sort replica—require **`POST`**.\n\n### Discovery\n\nAbsent all of **`q`**, **`query`**, **`hitsPerPage`**, and **`page`** (even if **`mode=lucene`** is present), **`GET`** returns endpoint metadata rather than hits.",
         "tags": ["Search"],
         "parameters": [
           {
@@ -183,12 +183,12 @@
               "type": "string",
               "enum": ["lucene"]
             },
-            "description": "Omit for strict boosted `multi_match`. **`lucene`** for **`query_string`** (**see **`info.description`**)**. Alone does **not** switch out of discovery; needs **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**."
+            "description": "Interpretation mode for textual query terms. Omit for default matching. **`lucene`** selects Lucene query syntax; **`mode` alone never performs a search**—pair it with **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**."
           }
         ],
         "responses": {
           "200": {
-            "description": "Either a search-results envelope (when search parameters are supplied) or the discovery document (when none are supplied).",
+            "description": "Either search results (**`SearchResponse`**) when search parameters were included, or a discovery document (**`DiscoveryResponse`**).",
             "content": {
               "application/json": {
                 "schema": {
@@ -206,7 +206,7 @@
                         "GET": "/api/search?q=terms&hitsPerPage=50&page=0",
                         "openapi": "/openapi.json"
                       },
-                      "description": "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Optional query param mode=lucene uses OpenSearch query_string (Lucene) for params.query instead of strict multi_match. Contract: openapi.json."
+                      "description": "POST accepts an InstantSearch multi-query array; GET exposes the same capability with simplified query-string parameters."
                     }
                   }
                 }
@@ -214,7 +214,7 @@
             }
           },
           "400": {
-            "description": "OpenSearch rejected the assembled query (**`query_string`**, **`filters`**, etc.). **`detail`** echoes upstream error detail when parseable.",
+            "description": "The query could not be parsed or satisfied.",
             "content": {
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/Error" },
@@ -226,7 +226,7 @@
             }
           },
           "500": {
-            "description": "Search execution failed upstream. Discovery mode never reaches SearchKit and therefore never produces this status.",
+            "description": "The search operation could not be completed. Discovery responses do not use this status.",
             "content": {
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/Error" },
@@ -239,7 +239,7 @@
       "options": {
         "operationId": "searchCorsPreflight",
         "summary": "CORS preflight.",
-        "description": "Answered by nginx with `204 No Content` and the public CORS headers (`Access-Control-Allow-Origin: *`, `Access-Control-Allow-Methods: GET, POST, OPTIONS, HEAD`, `Access-Control-Allow-Headers: Authorization, Content-Type, Accept, X-Requested-With`, `Access-Control-Max-Age: 86400`). The gateway process is not involved.",
+        "description": "Cross-origin resource sharing (CORS) preflight. Returns **`204`** with permissive **`Access-Control-*`** headers for browser clients.",
         "tags": ["Search"],
         "responses": {
           "204": { "description": "No content." }
@@ -250,18 +250,18 @@
       "get": {
         "operationId": "health",
         "summary": "Liveness probe.",
-        "description": "Proxied by nginx to the gateway's internal `/health` endpoint. Returns `200 OK` with the plain-text body `ok` when the gateway process is reachable. A `502 Bad Gateway` indicates that nginx cannot reach the gateway upstream.",
+        "description": "Reports whether this search service responds to HTTP requests. Response body is the plain-text string **`ok`**.",
         "tags": ["Operations"],
         "responses": {
           "200": {
-            "description": "Gateway is reachable.",
+            "description": "Probe succeeded; body is **`ok`**.",
             "content": {
               "text/plain": {
                 "schema": { "type": "string", "const": "ok" }
               }
             }
           },
-          "502": { "description": "nginx cannot reach the gateway upstream." }
+          "502": { "description": "The service is unreachable from the deployment edge." }
         }
       }
     },
@@ -269,7 +269,7 @@
       "get": {
         "operationId": "openapi",
         "summary": "This OpenAPI document.",
-        "description": "Served as a static file by nginx. Always reflects the contract of the gateway running on the same host.",
+        "description": "Machine-readable specification for this gateway on the same host.",
         "tags": ["Operations"],
         "responses": {
           "200": {
@@ -288,7 +288,7 @@
     "schemas": {
       "MultiQueryRequest": {
         "type": "array",
-        "description": "InstantSearch multi-query payload. Each element describes one query against one index. Field semantics follow the Algolia search API; see SearchKit and Algolia docs for **`params`** keys accepted by **`@searchkit/api`**. Query semantics for **`params.query`** also depend on URL **`mode=lucene`** (see **`info.description`**).",
+        "description": "Array of InstantSearch multi-query definitions. Each object targets one index replica. Supported **`params`** fields match Algolia-compatible usage; **`params.query`** meaning depends on the HTTP **`mode`** parameter (see API overview).",
         "minItems": 1,
         "items": { "$ref": "#/components/schemas/MultiQueryRequestItem" }
       },
@@ -298,24 +298,24 @@
         "properties": {
           "indexName": {
             "type": "string",
-            "description": "Target InstantSearch/Sort replica name. **`feedback-posts`** is the primary index (**default sort: `created desc`** via Searchkit **`default`**). Explicit sort replicas exposed by gateway config: **`feedback-posts_created_asc`**, **`feedback-posts_score_desc`**, **`feedback-posts_score_asc`**, **`feedback-posts_relevance_desc`** (sort `_score desc`). Names follow Searchkit stripping rules (suffix **`_`** + sort key).\nThere is **`no`** **`feedback-posts_created_desc`** replica — newest-first sorting is **`feedback-posts`** unsuffixed.",
+            "description": "Index replica to query. Use **`feedback-posts`** for the default sort (newest activity first). Additional replicas include **`feedback-posts_created_asc`**, **`feedback-posts_score_desc`**, **`feedback-posts_score_asc`**, and **`feedback-posts_relevance_desc`** for alternate sort orders. **`feedback-posts_created_desc`** does not exist; rely on **`feedback-posts`** for newest-first browsing.",
             "examples": ["feedback-posts", "feedback-posts_created_asc", "feedback-posts_score_desc", "feedback-posts_relevance_desc"]
           },
           "params": {
             "type": "object",
-            "description": "Algolia-compatible search parameters. Only common fields enumerated; **`additionalProperties`** allowed for other Searchkit-supported keys.",
+            "description": "Algolia-compatible search parameters supported by InstantSearch integrations. Listed keys are illustrative; additional **`params`** may be accepted consistent with Algolia InstantSearch semantics.",
             "additionalProperties": true,
             "properties": {
               "query": {
                 "type": "string",
-                "description": "**Free-text** InstantSearch **`params.query`**. Empty or whitespace-only ⇒ **`match_all`**. Interpretation (strict boosted `multi_match` vs `query_string`) is controlled by **`?mode=lucene`** on the HTTP request; see **`info.description`**."
+                "description": "Free-text keywords for the query. Empty or whitespace-only values do not apply a text filter."
               },
               "hitsPerPage": { "type": "integer", "minimum": 1, "description": "Page size." },
               "page": { "type": "integer", "minimum": 0, "description": "Zero-based page index." },
               "facets": {
                 "type": "array",
                 "items": { "type": "string" },
-                "description": "Facet attributes to compute. Post-level (**string**/keyword unless noted): **`board_slug`**, **`board_name`**, **`status`**, **`category_name`**, **`author_name`**, **`aiCategories`**, **`vote_highEngagement`**, **`vote_lowEngagement`**, **`vote_moderateEngagement`**; numeric/date-style post facets (**numeric** facets in SearchKit): **`score`**, **`maxScore`**, **`commentCount`**, **`mergeCount`**, **`trendingScore`**, **`post_created`** (`created`), **`post_updated`** (`updatedAt`), **`post_statusChanged`** (`statusChanged`). Nested (**comment**) facets (post matches if ≥1 nested comment satisfies): **`comment_author_name`**, **`comment_pinned`**, **`comment_likeCount`**, **`comment_created`** (~`comments.created`)."
+                "description": "Facet attributes whose counts should accompany the hits. Typical post facets include **`board_slug`**, **`board_name`**, **`status`**, **`category_name`**, **`author_name`**, **`aiCategories`**, **`vote_*Engagement`** flags; numeric/date facets **`score`**, **`maxScore`**, **`commentCount`**, **`mergeCount`**, **`trendingScore`**, **`post_created`**, **`post_updated`**, **`post_statusChanged`**; nested comment facets **`comment_author_name`**, **`comment_pinned`**, **`comment_likeCount`**, **`comment_created`**."
               },
               "facetFilters": {
                 "description": "Algolia-style facet filter expression (string, array of strings, or array of arrays for OR-of-AND).",
@@ -341,7 +341,7 @@
       },
       "SearchResponse": {
         "type": "object",
-        "description": "Algolia-compatible search-results envelope produced by **`@searchkit/api`**. The **`results`** array contains one entry per query in order.",
+        "description": "Algolia-style search-response envelope listing one **`results`** entry per submitted query.",
         "required": ["results"],
         "properties": {
           "results": {
@@ -379,7 +379,7 @@
       },
       "Hit": {
         "type": "object",
-        "description": "Indexed feedback-post `_source` as returned via Searchkit **`result_attributes`**, plus Algolia **`objectID`**, **`_highlightResult`**, **`_snippetResult`**. Canonical field types/shapes: **`deploy/opensearch/index_mappings.json`**.",
+        "description": "Feedback post returned as a hit, including **`objectID`**, searchable fields, relational objects, Algolia-compatible highlighting metadata, and other attributes present on the indexed document.",
         "properties": {
           "objectID": { "type": "string" },
           "post_id": { "type": "string" },
@@ -439,7 +439,7 @@
       },
       "DiscoveryResponse": {
         "type": "object",
-        "description": "Returned by **`GET /api/search`** when **`q`**, **`query`**, **`hitsPerPage`**, and **`page`** are all absent (**`mode`** alone does not imply search). Mirrors runtime **`getDiscoveryJson()`** string.",
+        "description": "Discovery payload emitted by **`GET /api/search`** when no search-driving query parameters are supplied (see operation description); **`mode` alone does not perform a search**.",
         "required": ["endpoints", "description"],
         "properties": {
           "endpoints": {
@@ -466,7 +466,7 @@
           },
           "detail": {
             "type": "string",
-            "description": "Upstream parse/validation detail when **`message`** is **`Invalid search query`** (Elasticsearch/OpenSearch **`400`** body extracted by gateway). Omit for simple client errors (**expected JSON array**, etc.)."
+            "description": "Supplemental diagnostics when **`message`** is **`Invalid search query`**; omit for structural client mistakes such as a non-array body."
           }
         },
         "additionalProperties": false
