@@ -1592,24 +1592,53 @@ export function App() {
                   />
                   <span className="lucene-toggle-label">Lucene syntax</span>
                 </label>
-                <SortBy
-                  classNames={{ root: "sort-root", select: "sort-select" }}
-                  items={[
-                    { label: "Newest", value: indexName },
-                    { label: "Oldest", value: `${indexName}_created_asc` },
-                    {
-                      label: "Newest activity",
-                      value: `${indexName}_activity_desc`,
-                    },
-                    {
-                      label: "Oldest activity",
-                      value: `${indexName}_activity_asc`,
-                    },
-                    { label: "Most voters", value: `${indexName}_score_desc` },
-                    { label: "Fewest voters", value: `${indexName}_score_asc` },
-                    { label: "Relevance", value: `${indexName}_relevance_desc` },
-                  ]}
-                />
+                <div className="sort-filter-row">
+                  <SortBy
+                    classNames={{ root: "sort-root", select: "sort-select" }}
+                    items={[
+                      { label: "Newest", value: indexName },
+                      { label: "Oldest", value: `${indexName}_created_asc` },
+                      {
+                        label: "Newest activity",
+                        value: `${indexName}_activity_desc`,
+                      },
+                      {
+                        label: "Oldest activity",
+                        value: `${indexName}_activity_asc`,
+                      },
+                      {
+                        label: "Most voters",
+                        value: `${indexName}_score_desc`,
+                      },
+                      {
+                        label: "Fewest voters",
+                        value: `${indexName}_score_asc`,
+                      },
+                      {
+                        label: "Relevance",
+                        value: `${indexName}_relevance_desc`,
+                      },
+                    ]}
+                  />
+                  {!luceneMode ? (
+                    <button
+                      type="button"
+                      className="mobile-filter-toggle"
+                      onClick={() => setFiltersOpen(true)}
+                    >
+                      Filters
+                    </button>
+                  ) : null}
+                  {luceneMode && !attrPanelDismissed ? (
+                    <button
+                      type="button"
+                      className="mobile-filter-toggle mobile-field-reference-toggle"
+                      onClick={() => setFiltersOpen(true)}
+                    >
+                      Field reference
+                    </button>
+                  ) : null}
+                </div>
               </div>
               <div className="stats-toolbar">
                 <p className="stats-line">
@@ -1644,24 +1673,6 @@ export function App() {
                   }}
                 />
               )}
-              {!luceneMode ? (
-                <button
-                  type="button"
-                  className="mobile-filter-toggle"
-                  onClick={() => setFiltersOpen(true)}
-                >
-                  Filters
-                </button>
-              ) : null}
-              {luceneMode && !attrPanelDismissed ? (
-                <button
-                  type="button"
-                  className="mobile-filter-toggle mobile-field-reference-toggle"
-                  onClick={() => setFiltersOpen(true)}
-                >
-                  Field reference
-                </button>
-              ) : null}
             </div>
             <div
               className={
