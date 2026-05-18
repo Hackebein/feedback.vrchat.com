@@ -99,7 +99,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful (**`200`**) **`application/json`** response: **`SearchResponse`** **`results`** entries with **`hits`**, paging, **`facets`**, and metadata (**`nbHits`**, **`nbPages`**, **`processingTimeMS`**, etc.).",
+            "description": "**`SearchResponse`** **`results`** entries with **`hits`**, paging, **`facets`**, and metadata (**`nbHits`**, **`nbPages`**, **`processingTimeMS`**, etc.).",
             "content": {
               "application/json": {
                 "schema": {
@@ -109,7 +109,7 @@
             }
           },
           "400": {
-            "description": "**`400`**: **`body`** is not a JSON **`array`**, or search expression is **`Invalid search query`** (bad Lucene/filter syntax).",
+            "description": "**`body`** is not a JSON **`array`**, or search expression is **`Invalid search query`** (bad Lucene/filter syntax).",
             "content": {
               "application/json": {
                 "schema": {
@@ -134,10 +134,10 @@
             }
           },
           "413": {
-            "description": "**`413`**: **`request`** **`body`** exceeds **512 KiB**. The response may omit **`application/json`** and use **`text/plain`**."
+            "description": "**`request`** **`body`** exceeds **512 KiB**. The response may omit **`application/json`** and use **`text/plain`**."
           },
           "500": {
-            "description": "**`500`**: Search operation could not be completed.",
+            "description": "Search operation could not be completed.",
             "content": {
               "application/json": {
                 "schema": {
@@ -247,7 +247,7 @@
             }
           },
           "400": {
-            "description": "**`400`**: invalid search expression (**`Invalid search query`**).",
+            "description": "invalid search expression (**`Invalid search query`**).",
             "content": {
               "application/json": {
                 "schema": {
@@ -261,7 +261,7 @@
             }
           },
           "500": {
-            "description": "**`500`**: Search failed. Not used for **`DiscoveryResponse`**-only **`GET`** calls.",
+            "description": "Search failed. Not used for **`DiscoveryResponse`**-only **`GET`** calls.",
             "content": {
               "application/json": {
                 "schema": {
@@ -284,7 +284,7 @@
         ],
         "responses": {
           "204": {
-            "description": "**`HTTP`** **`204`**: **`No`** **`Content`**."
+            "description": "**`No`** **`Content`**."
           }
         }
       }
@@ -325,7 +325,7 @@
         ],
         "responses": {
           "200": {
-            "description": "**`200`** body: **`OpenAPI`** **`3.1`** document (**`application/json`**).",
+            "description": "**`OpenAPI`** **`3.1`** document (**`application/json`**).",
             "content": {
               "application/json": {
                 "schema": {
