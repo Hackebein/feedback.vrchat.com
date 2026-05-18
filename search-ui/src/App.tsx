@@ -1470,9 +1470,14 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
 export function App() {
   const [luceneMode, setLuceneMode] = useState(readUrlLuceneMode);
   const [attrPanelDismissed, setAttrPanelDismissed] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   useEffect(() => {
     writeUrlLuceneMode(luceneMode);
+  }, [luceneMode]);
+
+  useEffect(() => {
+    setFiltersOpen(false);
   }, [luceneMode]);
 
   useEffect(() => {
@@ -1482,6 +1487,30 @@ export function App() {
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
+
+  useEffect(() => {
+    if (!filtersOpen) {
+      return;
+    }
+    const mq = window.matchMedia("(max-width: 820px)");
+    function applyBodyScrollLock() {
+      document.body.style.overflow = mq.matches ? "hidden" : "";
+    }
+    applyBodyScrollLock();
+    mq.addEventListener("change", applyBodyScrollLock);
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setFiltersOpen(false);
+      }
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      mq.removeEventListener("change", applyBodyScrollLock);
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [filtersOpen]);
 
   const routing = useMemo(
     () => ({
@@ -1532,62 +1561,63 @@ export function App() {
 
         <div className="panels">
           <aside className="facets">
-            <div className="search-row">
-              <SearchBox
-                placeholder={
-                  luceneMode
-                    ? "Lucene query (field:value, ranges, booleans)…"
-                    : "Search title or body…"
-                }
-                searchAsYouType
-                classNames={{
-                  root: "searchbox-root",
-                  form: "searchbox-form",
-                  input: "searchbox-input",
-                  submit: "searchbox-submit",
-                  reset: "searchbox-reset",
-                  loadingIndicator: "searchbox-loading",
-                }}
-              />
-              <label className="lucene-toggle">
-                <input
-                  type="checkbox"
-                  role="switch"
-                  checked={luceneMode}
-                  onChange={(e) => {
-                    const checked = e.target.checked;
-                    writeUrlLuceneMode(checked);
-                    setLuceneMode(checked);
+            <div className="facets-toolbar">
+              <div className="search-row">
+                <SearchBox
+                  placeholder={
+                    luceneMode
+                      ? "Lucene query (field:value, ranges, booleans)…"
+                      : "Search title or body…"
+                  }
+                  searchAsYouType
+                  classNames={{
+                    root: "searchbox-root",
+                    form: "searchbox-form",
+                    input: "searchbox-input",
+                    submit: "searchbox-submit",
+                    reset: "searchbox-reset",
+                    loadingIndicator: "searchbox-loading",
                   }}
                 />
-                <span className="lucene-toggle-label">Lucene syntax</span>
-              </label>
-              <SortBy
-                classNames={{ root: "sort-root", select: "sort-select" }}
-                items={[
-                  { label: "Newest", value: indexName },
-                  { label: "Oldest", value: `${indexName}_created_asc` },
-                  { label: "Newest activity", value: `${indexName}_activity_desc` },
-                  { label: "Oldest activity", value: `${indexName}_activity_asc` },
-                  { label: "Most voters", value: `${indexName}_score_desc` },
-                  { label: "Fewest voters", value: `${indexName}_score_asc` },
-                  { label: "Relevance", value: `${indexName}_relevance_desc` },
-                ]}
-              />
-            </div>
-            <div className="stats-toolbar">
-              <p className="stats-line">
-                <Stats />
-              </p>
-            </div>
-            {luceneMode ? <LuceneSearchError /> : null}
-            {luceneMode && !attrPanelDismissed ? (
-              <LuceneAttributesPanel
-                onClose={() => setAttrPanelDismissed(true)}
-              />
-            ) : null}
-            {luceneMode ? null : (
-              <>
+                <label className="lucene-toggle">
+                  <input
+                    type="checkbox"
+                    role="switch"
+                    checked={luceneMode}
+                    onChange={(e) => {
+                      const checked = e.target.checked;
+                      writeUrlLuceneMode(checked);
+                      setLuceneMode(checked);
+                    }}
+                  />
+                  <span className="lucene-toggle-label">Lucene syntax</span>
+                </label>
+                <SortBy
+                  classNames={{ root: "sort-root", select: "sort-select" }}
+                  items={[
+                    { label: "Newest", value: indexName },
+                    { label: "Oldest", value: `${indexName}_created_asc` },
+                    {
+                      label: "Newest activity",
+                      value: `${indexName}_activity_desc`,
+                    },
+                    {
+                      label: "Oldest activity",
+                      value: `${indexName}_activity_asc`,
+                    },
+                    { label: "Most voters", value: `${indexName}_score_desc` },
+                    { label: "Fewest voters", value: `${indexName}_score_asc` },
+                    { label: "Relevance", value: `${indexName}_relevance_desc` },
+                  ]}
+                />
+              </div>
+              <div className="stats-toolbar">
+                <p className="stats-line">
+                  <Stats />
+                </p>
+              </div>
+              {luceneMode ? <LuceneSearchError /> : null}
+              {luceneMode ? null : (
                 <CurrentRefinements
                   transformItems={(items) =>
                     items.map((it) => ({
@@ -1613,132 +1643,180 @@ export function App() {
                     delete: "current-refinements-delete",
                   }}
                 />
-                <ClearRefinements
-                  classNames={{
-                    root: "clear-refinements-root",
-                    button: "clear-refinements-button",
-                    disabledButton: "clear-refinements-button-disabled",
+              )}
+              {!luceneMode ? (
+                <button
+                  type="button"
+                  className="mobile-filter-toggle"
+                  onClick={() => setFiltersOpen(true)}
+                >
+                  Filters
+                </button>
+              ) : null}
+              {luceneMode && !attrPanelDismissed ? (
+                <button
+                  type="button"
+                  className="mobile-filter-toggle mobile-field-reference-toggle"
+                  onClick={() => setFiltersOpen(true)}
+                >
+                  Field reference
+                </button>
+              ) : null}
+            </div>
+            <div
+              className={
+                "facets-drawer" + (filtersOpen ? " facets-drawer--open" : "")
+              }
+            >
+              <button
+                type="button"
+                className="mobile-filter-close"
+                aria-label="Close filters"
+                onClick={() => setFiltersOpen(false)}
+              >
+                ×
+              </button>
+              {luceneMode && !attrPanelDismissed ? (
+                <LuceneAttributesPanel
+                  onClose={() => {
+                    setAttrPanelDismissed(true);
+                    setFiltersOpen(false);
                   }}
-                  translations={{ resetButtonText: "Clear all filters" }}
                 />
-              </>
-            )}
-            {luceneMode ? null : (
-              <>
-              <section className="facet-section">
-                <h2 className="facet-heading">Board</h2>
-                <RefinementList
-                  attribute="board_name"
-                  searchable
-                  searchablePlaceholder="Filter boards…"
-                  showMore
-                  limit={20}
-                  showMoreLimit={500}
-                />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Status</h2>
-                <RefinementList attribute="status" limit={50} />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Category</h2>
-                <RefinementList
-                  attribute="category_name"
-                  searchable
-                  searchablePlaceholder="Filter categories…"
-                  showMore
-                  limit={10}
-                  showMoreLimit={200}
-                />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">AI category</h2>
-                <AiCategoryRefinement />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Author</h2>
-                <RefinementList
-                  attribute="author_name"
-                  searchable
-                  searchablePlaceholder="Filter authors…"
-                  showMore
-                  limit={10}
-                  showMoreLimit={500}
-                />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Post dates</h2>
-                <h3 className="facet-subheading">Created</h3>
-                <EpochMsRangeInput attribute="post_created" />
-                <h3 className="facet-subheading">Updated</h3>
-                <EpochMsRangeInput attribute="post_updated" />
-                <h3 className="facet-subheading">Status changed</h3>
-                <EpochMsRangeInput attribute="post_statusChanged" />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Votes</h2>
-                <AutoNumericRangeInput attribute="score" />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Max votes</h2>
-                <AutoNumericRangeInput attribute="maxScore" />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Comment count</h2>
-                <AutoNumericRangeInput attribute="commentCount" />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Merge count</h2>
-                <AutoNumericRangeInput attribute="mergeCount" />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Trending</h2>
-                <AutoNumericRangeInput attribute="trendingScore" />
-              </section>
-              <section className="facet-section facet-toggle-group">
-                <h2 className="facet-heading">Vote settings</h2>
-                <ToggleRefinement
-                  attribute="vote_highEngagement"
-                  on="true"
-                  label="High engagement votes"
-                />
-                <ToggleRefinement
-                  attribute="vote_moderateEngagement"
-                  on="true"
-                  label="Moderate engagement votes"
-                />
-                <ToggleRefinement
-                  attribute="vote_lowEngagement"
-                  on="true"
-                  label="Low engagement votes"
-                />
-              </section>
-              <section className="facet-section">
-                <h2 className="facet-heading">Comments</h2>
-                <p className="facet-hint">
-                  Posts with at least one comment matching the selected criteria.
-                </p>
-                <h3 className="facet-subheading">Comment author</h3>
-                <RefinementList
-                  attribute="comment_author_name"
-                  searchable
-                  searchablePlaceholder="Filter comment authors…"
-                  showMore
-                  limit={10}
-                  showMoreLimit={500}
-                />
-                <h3 className="facet-subheading">Comment like count</h3>
-                <AutoNumericRangeInput attribute="comment_likeCount" />
-                <h3 className="facet-subheading">Comment created</h3>
-                <EpochMsRangeInput attribute="comment_created" />
-                <ToggleRefinement
-                  attribute="comment_pinned"
-                  on="true"
-                  label="Has pinned comment"
-                />
-              </section>
-              </>
-            )}
+              ) : null}
+              {luceneMode ? null : (
+                <>
+                  <ClearRefinements
+                    classNames={{
+                      root: "clear-refinements-root",
+                      button: "clear-refinements-button",
+                      disabledButton: "clear-refinements-button-disabled",
+                    }}
+                    translations={{ resetButtonText: "Clear all filters" }}
+                  />
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Board</h2>
+                    <RefinementList
+                      attribute="board_name"
+                      searchable
+                      searchablePlaceholder="Filter boards…"
+                      showMore
+                      limit={20}
+                      showMoreLimit={500}
+                    />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Status</h2>
+                    <RefinementList attribute="status" limit={50} />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Category</h2>
+                    <RefinementList
+                      attribute="category_name"
+                      searchable
+                      searchablePlaceholder="Filter categories…"
+                      showMore
+                      limit={10}
+                      showMoreLimit={200}
+                    />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">AI category</h2>
+                    <AiCategoryRefinement />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Author</h2>
+                    <RefinementList
+                      attribute="author_name"
+                      searchable
+                      searchablePlaceholder="Filter authors…"
+                      showMore
+                      limit={10}
+                      showMoreLimit={500}
+                    />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Post dates</h2>
+                    <h3 className="facet-subheading">Created</h3>
+                    <EpochMsRangeInput attribute="post_created" />
+                    <h3 className="facet-subheading">Updated</h3>
+                    <EpochMsRangeInput attribute="post_updated" />
+                    <h3 className="facet-subheading">Status changed</h3>
+                    <EpochMsRangeInput attribute="post_statusChanged" />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Votes</h2>
+                    <AutoNumericRangeInput attribute="score" />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Max votes</h2>
+                    <AutoNumericRangeInput attribute="maxScore" />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Comment count</h2>
+                    <AutoNumericRangeInput attribute="commentCount" />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Merge count</h2>
+                    <AutoNumericRangeInput attribute="mergeCount" />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Trending</h2>
+                    <AutoNumericRangeInput attribute="trendingScore" />
+                  </section>
+                  <section className="facet-section facet-toggle-group">
+                    <h2 className="facet-heading">Vote settings</h2>
+                    <ToggleRefinement
+                      attribute="vote_highEngagement"
+                      on="true"
+                      label="High engagement votes"
+                    />
+                    <ToggleRefinement
+                      attribute="vote_moderateEngagement"
+                      on="true"
+                      label="Moderate engagement votes"
+                    />
+                    <ToggleRefinement
+                      attribute="vote_lowEngagement"
+                      on="true"
+                      label="Low engagement votes"
+                    />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Comments</h2>
+                    <p className="facet-hint">
+                      Posts with at least one comment matching the selected
+                      criteria.
+                    </p>
+                    <h3 className="facet-subheading">Comment author</h3>
+                    <RefinementList
+                      attribute="comment_author_name"
+                      searchable
+                      searchablePlaceholder="Filter comment authors…"
+                      showMore
+                      limit={10}
+                      showMoreLimit={500}
+                    />
+                    <h3 className="facet-subheading">Comment like count</h3>
+                    <AutoNumericRangeInput attribute="comment_likeCount" />
+                    <h3 className="facet-subheading">Comment created</h3>
+                    <EpochMsRangeInput attribute="comment_created" />
+                    <ToggleRefinement
+                      attribute="comment_pinned"
+                      on="true"
+                      label="Has pinned comment"
+                    />
+                  </section>
+                </>
+              )}
+            </div>
+            {filtersOpen ? (
+              <div
+                className="facets-backdrop"
+                aria-hidden
+                onClick={() => setFiltersOpen(false)}
+              />
+            ) : null}
           </aside>
           <section className="results">
             <Hits
