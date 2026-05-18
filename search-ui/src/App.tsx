@@ -1523,8 +1523,8 @@ export function App() {
           </h1>
           <p className="lede">
             Search VRChat feedback posts.{" "}
-            <a href="/openapi.json" target="_blank" rel="noreferrer">
-              OpenAPI spec
+            <a href="/openapi.html" target="_blank" rel="noreferrer">
+              API reference
             </a>
             .
           </p>
