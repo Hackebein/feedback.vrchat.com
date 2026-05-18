@@ -1,7 +1,7 @@
 # VRChat Feedback Board Data
 
 Collected: **33,785** posts.<br>
-Freshness: **2026-05-15 23:38 UTC (2d ago)**.<br>
+Freshness: **2026-05-16 01:11 UTC (2d ago)**.<br>
 Scrape horizon: **2026-02-09 14:46 UTC (98d ago)**.
 
 ## Boards
