@@ -568,43 +568,6 @@ body {
   color: #f2f4fa;
 }
 
-.facets .ais-RangeInput-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.facets .ais-RangeInput-input {
-  width: 4.5rem;
-  padding: 0.3rem 0.4rem;
-  border-radius: 6px;
-  border: 1px solid #2a3142;
-  background: #0f1218;
-  color: #f2f4fa;
-  font-size: 0.8rem;
-}
-
-.facets .ais-RangeInput-separator {
-  color: #7d8699;
-  font-size: 0.8rem;
-}
-
-.facets .ais-RangeInput-submit {
-  padding: 0.3rem 0.55rem;
-  border-radius: 6px;
-  border: 1px solid #2a3142;
-  background: #151a24;
-  color: #f2f4fa;
-  font-size: 0.78rem;
-  cursor: pointer;
-}
-
-.facets .ais-RangeInput-submit:hover {
-  background: #1c2330;
-  border-color: #3a4258;
-}
-
 .facets .epoch-ms-range-form {
   display: flex;
   flex-direction: column;
@@ -613,9 +576,10 @@ body {
 
 .facets .epoch-ms-range-inputs {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: flex-end;
   gap: 0.35rem 0.5rem;
+  min-width: 0;
 }
 
 .facets .epoch-ms-range-label {
@@ -624,10 +588,13 @@ body {
   gap: 0.2rem;
   font-size: 0.72rem;
   color: #7d8699;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .facets .epoch-ms-range-datetime {
-  min-width: 10.5rem;
+  min-width: 0;
+  width: 100%;
   padding: 0.35rem 0.45rem;
   border-radius: 6px;
   border: 1px solid #2a3142;
@@ -645,38 +612,11 @@ body {
   color: #7d8699;
   font-size: 0.8rem;
   padding-bottom: 0.35rem;
+  flex: 0 0 auto;
 }
 
-.facets .epoch-ms-range-actions {
-  display: flex;
-  gap: 0.35rem;
-}
-
-.facets .epoch-ms-range-submit,
-.facets .epoch-ms-range-reset {
-  padding: 0.3rem 0.55rem;
-  border-radius: 6px;
-  border: 1px solid #2a3142;
-  background: #151a24;
-  color: #f2f4fa;
-  font-size: 0.78rem;
-  cursor: pointer;
-}
-
-.facets .epoch-ms-range-reset {
-  background: #0f1218;
-}
-
-.facets .epoch-ms-range-submit:hover:not(:disabled),
-.facets .epoch-ms-range-reset:hover:not(:disabled) {
-  background: #1c2330;
-  border-color: #3a4258;
-}
-
-.facets .epoch-ms-range-submit:disabled,
-.facets .epoch-ms-range-reset:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
+.facets .auto-range-num-input {
+  font-variant-numeric: tabular-nums;
 }
 
 .facets .ais-ToggleRefinement-label {
