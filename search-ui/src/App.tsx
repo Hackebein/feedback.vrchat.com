@@ -1,12 +1,5 @@
 import Client from "@searchkit/instantsearch-client";
-import {
-  Fragment,
-  type FormEvent,
-  type ReactNode,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { Fragment, type ReactNode, useEffect, useMemo, useState } from "react";
 import {
   ClearRefinements,
   Configure,
@@ -15,7 +8,6 @@ import {
   Hits,
   InstantSearch,
   Pagination,
-  RangeInput,
   RefinementList,
   SearchBox,
   Snippet,
@@ -105,16 +97,17 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
     setToLocal(hasTo ? msToDatetimeLocalValue(high) : "");
   }, [start, rmin, rmax]);
 
-  function onSubmit(e: FormEvent) {
-    e.preventDefault();
-    const trimmedFrom = fromLocal.trim();
-    const trimmedTo = toLocal.trim();
+  function applyRange(nextFrom: string, nextTo: string): void {
+    const trimmedFrom = nextFrom.trim();
+    const trimmedTo = nextTo.trim();
     const loMs = trimmedFrom ? new Date(trimmedFrom).getTime() : undefined;
     const hiMs = trimmedTo ? new Date(trimmedTo).getTime() : undefined;
     const lowOk =
       loMs !== undefined && Number.isFinite(loMs) ? Math.floor(loMs) : undefined;
     const highOk =
-      hiMs !== undefined && Number.isFinite(hiMs) ? Math.floor(hiMs) : undefined;
+      hiMs !== undefined && Number.isFinite(hiMs)
+        ? Math.floor(hiMs)
+        : undefined;
     if (
       lowOk !== undefined &&
       highOk !== undefined &&
@@ -125,14 +118,8 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
     refine([lowOk, highOk]);
   }
 
-  function onResetClick() {
-    setFromLocal("");
-    setToLocal("");
-    refine([undefined, undefined]);
-  }
-
   return (
-    <form className="epoch-ms-range-form" onSubmit={onSubmit}>
+    <div className="epoch-ms-range-form">
       <div className="epoch-ms-range-inputs">
         <label className="epoch-ms-range-label">
           <span className="epoch-ms-range-label-text">From</span>
@@ -142,7 +129,11 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
             className="epoch-ms-range-datetime"
             value={fromLocal}
             disabled={!canRefine}
-            onChange={(e) => setFromLocal(e.target.value)}
+            onChange={(e) => {
+              const v = e.target.value;
+              setFromLocal(v);
+              applyRange(v, toLocal);
+            }}
           />
         </label>
         <span aria-hidden className="epoch-ms-range-sep">
@@ -156,24 +147,110 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
             className="epoch-ms-range-datetime"
             disabled={!canRefine}
             value={toLocal}
-            onChange={(e) => setToLocal(e.target.value)}
+            onChange={(e) => {
+              const v = e.target.value;
+              setToLocal(v);
+              applyRange(fromLocal, v);
+            }}
           />
         </label>
       </div>
-      <div className="epoch-ms-range-actions">
-        <button type="submit" className="epoch-ms-range-submit" disabled={!canRefine}>
-          Apply
-        </button>
-        <button
-          type="button"
-          className="epoch-ms-range-reset"
-          disabled={!canRefine}
-          onClick={onResetClick}
-        >
-          Clear
-        </button>
+    </div>
+  );
+}
+
+function parseNumericRangeBound(s: string): number | undefined {
+  const t = s.trim();
+  if (!t) return undefined;
+  const n = Number(t);
+  return Number.isFinite(n) ? n : undefined;
+}
+
+/** Same layout as EpochMsRangeInput; refines immediately on input change (no Apply/Go button). */
+function AutoNumericRangeInput({ attribute }: { attribute: string }) {
+  const { start, range, refine, canRefine } = useRange({ attribute });
+  const rmin = range.min;
+  const rmax = range.max;
+  const [minLocal, setMinLocal] = useState("");
+  const [maxLocal, setMaxLocal] = useState("");
+
+  useEffect(() => {
+    const [low, high] = start;
+    const hasMin =
+      typeof low === "number" &&
+      Number.isFinite(low) &&
+      low !== -Infinity &&
+      rmin !== undefined &&
+      low !== rmin;
+    const hasMax =
+      typeof high === "number" &&
+      Number.isFinite(high) &&
+      high !== Infinity &&
+      rmax !== undefined &&
+      high !== rmax;
+    setMinLocal(hasMin ? String(low) : "");
+    setMaxLocal(hasMax ? String(high) : "");
+  }, [start, rmin, rmax]);
+
+  function applyRange(nextMin: string, nextMax: string): void {
+    const lowOk = parseNumericRangeBound(nextMin);
+    const highOk = parseNumericRangeBound(nextMax);
+    if (
+      lowOk !== undefined &&
+      highOk !== undefined &&
+      lowOk > highOk
+    ) {
+      return;
+    }
+    refine([lowOk, highOk]);
+  }
+
+  return (
+    <div className="epoch-ms-range-form">
+      <div className="epoch-ms-range-inputs">
+        <label className="epoch-ms-range-label">
+          <span className="epoch-ms-range-label-text">From</span>
+          <input
+            type="text"
+            inputMode="decimal"
+            className="epoch-ms-range-datetime auto-range-num-input"
+            autoComplete="off"
+            spellCheck={false}
+            aria-label={`${attribute} minimum`}
+            placeholder="Min"
+            value={minLocal}
+            disabled={!canRefine}
+            onChange={(e) => {
+              const v = e.target.value;
+              setMinLocal(v);
+              applyRange(v, maxLocal);
+            }}
+          />
+        </label>
+        <span aria-hidden className="epoch-ms-range-sep">
+          —
+        </span>
+        <label className="epoch-ms-range-label">
+          <span className="epoch-ms-range-label-text">To</span>
+          <input
+            type="text"
+            inputMode="decimal"
+            className="epoch-ms-range-datetime auto-range-num-input"
+            autoComplete="off"
+            spellCheck={false}
+            aria-label={`${attribute} maximum`}
+            placeholder="Max"
+            value={maxLocal}
+            disabled={!canRefine}
+            onChange={(e) => {
+              const v = e.target.value;
+              setMaxLocal(v);
+              applyRange(minLocal, v);
+            }}
+          />
+        </label>
       </div>
-    </form>
+    </div>
   );
 }
 
@@ -1282,23 +1359,23 @@ export function App() {
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">Votes</h2>
-                <RangeInput attribute="score" />
+                <AutoNumericRangeInput attribute="score" />
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">Max votes</h2>
-                <RangeInput attribute="maxScore" />
+                <AutoNumericRangeInput attribute="maxScore" />
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">Comment count</h2>
-                <RangeInput attribute="commentCount" />
+                <AutoNumericRangeInput attribute="commentCount" />
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">Merge count</h2>
-                <RangeInput attribute="mergeCount" />
+                <AutoNumericRangeInput attribute="mergeCount" />
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">Trending</h2>
-                <RangeInput attribute="trendingScore" />
+                <AutoNumericRangeInput attribute="trendingScore" />
               </section>
               <section className="facet-section facet-toggle-group">
                 <h2 className="facet-heading">Vote settings</h2>
@@ -1333,7 +1410,7 @@ export function App() {
                   showMoreLimit={500}
                 />
                 <h3 className="facet-subheading">Comment like count</h3>
-                <RangeInput attribute="comment_likeCount" />
+                <AutoNumericRangeInput attribute="comment_likeCount" />
                 <h3 className="facet-subheading">Comment created</h3>
                 <EpochMsRangeInput attribute="comment_created" />
                 <ToggleRefinement
