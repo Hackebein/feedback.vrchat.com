@@ -27,7 +27,7 @@ import {
   useRange,
   useSearchBox,
 } from "react-instantsearch";
-import type { Hit, UiState } from "instantsearch.js/es/types";
+import type { Hit, StateMapping, UiState } from "instantsearch.js/es/types";
 import type { RefinementListItem } from "instantsearch.js/es/connectors/refinement-list/connectRefinementList";
 import qs from "qs";
 import historyRouter from "instantsearch.js/es/lib/routers/history";
@@ -379,75 +379,92 @@ const TOGGLE_ATTRS: AttrEntry[] = [
 
 type RouteState = Record<string, unknown>;
 
-const feedbackStateMapping = {
-  $$type: "ais.feedbackFlat" as const,
-  stateToRoute(uiState: UiState): RouteState {
-    const idx = uiState[indexName] ?? {};
-    const route: RouteState = {};
-    if (idx.query) route.q = idx.query;
-    if (typeof idx.page === "number" && idx.page > 1) route.page = idx.page;
-    if (idx.sortBy && SORT_INDEX_TO_PARAM[idx.sortBy]) {
-      route.sort = SORT_INDEX_TO_PARAM[idx.sortBy];
-    }
-    const rl = idx.refinementList ?? {};
-    for (const { urlKey, attr } of REFINEMENT_LIST_ATTRS) {
-      const v = rl[attr];
-      if (Array.isArray(v) && v.length > 0) route[urlKey] = v;
-    }
-    const rg = idx.range ?? {};
-    for (const { urlKey, attr } of RANGE_ATTRS) {
-      const v = rg[attr];
-      if (typeof v === "string" && v) route[urlKey] = v;
-    }
-    const tg = idx.toggle ?? {};
-    for (const { urlKey, attr } of TOGGLE_ATTRS) {
-      if (tg[attr] === true) route[urlKey] = "1";
-    }
-    return route;
-  },
-  routeToState(routeParam: RouteState = {}): UiState {
-    const route = routeParam;
-    const rl: Record<string, string[]> = {};
-    const rg: Record<string, string> = {};
-    const tg: Record<string, boolean> = {};
-    type IndexSlice = Record<string, unknown>;
-    const idx: IndexSlice = {};
-    if (typeof route.q === "string" && route.q) idx.query = route.q;
-    const pageRaw = route.page;
-    const page =
-      typeof pageRaw === "number"
-        ? pageRaw
-        : typeof pageRaw === "string"
-          ? Number.parseInt(pageRaw, 10)
-          : NaN;
-    if (Number.isFinite(page) && page > 1) idx.page = page;
-    if (typeof route.sort === "string") {
-      const mapped = SORT_PARAM_TO_INDEX[route.sort];
-      if (mapped) idx.sortBy = mapped;
-    }
-    for (const { urlKey, attr } of REFINEMENT_LIST_ATTRS) {
-      const raw = route[urlKey];
-      if (Array.isArray(raw)) {
-        const list = raw.map(String).filter(Boolean);
-        if (list.length > 0) rl[attr] = list;
-      } else if (typeof raw === "string" && raw) {
-        rl[attr] = [raw];
+/** Lucene-style field names shown in chips (maps InstantSearch facet `attribute` strings). */
+const ATTR_DISPLAY_LABEL: Record<string, string> = Object.fromEntries([
+  ...REFINEMENT_LIST_ATTRS.map((e) => [e.attr, e.urlKey]),
+  ...RANGE_ATTRS.map((e) => [e.attr, e.urlKey]),
+  ...TOGGLE_ATTRS.map((e) => [e.attr, e.urlKey]),
+]);
+
+function makeFeedbackStateMapping(
+  luceneMode: boolean,
+): StateMapping<UiState, RouteState> {
+  return {
+    $$type: "ais.feedbackFlat" as const,
+    stateToRoute(uiState: UiState): RouteState {
+      const idx = uiState[indexName] ?? {};
+      const route: RouteState = {};
+      if (idx.query) route.q = idx.query;
+      if (typeof idx.page === "number" && idx.page > 1) route.page = idx.page;
+      if (idx.sortBy && SORT_INDEX_TO_PARAM[idx.sortBy]) {
+        route.sort = SORT_INDEX_TO_PARAM[idx.sortBy];
       }
-    }
-    if (Object.keys(rl).length > 0) idx.refinementList = rl;
-    for (const { urlKey, attr } of RANGE_ATTRS) {
-      const raw = route[urlKey];
-      if (typeof raw === "string" && raw) rg[attr] = raw;
-    }
-    if (Object.keys(rg).length > 0) idx.range = rg;
-    for (const { urlKey, attr } of TOGGLE_ATTRS) {
-      const raw = route[urlKey];
-      if (raw === "1" || raw === "true" || raw === true) tg[attr] = true;
-    }
-    if (Object.keys(tg).length > 0) idx.toggle = tg;
-    return { [indexName]: idx };
-  },
-};
+      if (luceneMode) {
+        return route;
+      }
+      const rl = idx.refinementList ?? {};
+      for (const { urlKey, attr } of REFINEMENT_LIST_ATTRS) {
+        const v = rl[attr];
+        if (Array.isArray(v) && v.length > 0) route[urlKey] = v;
+      }
+      const rg = idx.range ?? {};
+      for (const { urlKey, attr } of RANGE_ATTRS) {
+        const v = rg[attr];
+        if (typeof v === "string" && v) route[urlKey] = v;
+      }
+      const tg = idx.toggle ?? {};
+      for (const { urlKey, attr } of TOGGLE_ATTRS) {
+        if (tg[attr] === true) route[urlKey] = "1";
+      }
+      return route;
+    },
+    routeToState(routeParam: RouteState = {}): UiState {
+      const route = routeParam;
+      const rl: Record<string, string[]> = {};
+      const rg: Record<string, string> = {};
+      const tg: Record<string, boolean> = {};
+      type IndexSlice = Record<string, unknown>;
+      const idx: IndexSlice = {};
+      if (typeof route.q === "string" && route.q) idx.query = route.q;
+      const pageRaw = route.page;
+      const page =
+        typeof pageRaw === "number"
+          ? pageRaw
+          : typeof pageRaw === "string"
+            ? Number.parseInt(pageRaw, 10)
+            : NaN;
+      if (Number.isFinite(page) && page > 1) idx.page = page;
+      if (typeof route.sort === "string") {
+        const mapped = SORT_PARAM_TO_INDEX[route.sort];
+        if (mapped) idx.sortBy = mapped;
+      }
+      if (luceneMode) {
+        return { [indexName]: idx };
+      }
+      for (const { urlKey, attr } of REFINEMENT_LIST_ATTRS) {
+        const raw = route[urlKey];
+        if (Array.isArray(raw)) {
+          const list = raw.map(String).filter(Boolean);
+          if (list.length > 0) rl[attr] = list;
+        } else if (typeof raw === "string" && raw) {
+          rl[attr] = [raw];
+        }
+      }
+      if (Object.keys(rl).length > 0) idx.refinementList = rl;
+      for (const { urlKey, attr } of RANGE_ATTRS) {
+        const raw = route[urlKey];
+        if (typeof raw === "string" && raw) rg[attr] = raw;
+      }
+      if (Object.keys(rg).length > 0) idx.range = rg;
+      for (const { urlKey, attr } of TOGGLE_ATTRS) {
+        const raw = route[urlKey];
+        if (raw === "1" || raw === "true" || raw === true) tg[attr] = true;
+      }
+      if (Object.keys(tg).length > 0) idx.toggle = tg;
+      return { [indexName]: idx };
+    },
+  };
+}
 
 /** Query params not controlled by InstantSearch routing; preserved on URL writes */
 const PRESERVED_URL_PARAMS = ["lucene"] as const;
@@ -500,6 +517,8 @@ function makeSearchHistoryRouter(): ReturnType<typeof historyRouter> {
 
 const LUCENE_URL_PARAM = "lucene";
 
+const LUCENE_KEEP_PARAMS = new Set(["q", "sort", "page", LUCENE_URL_PARAM]);
+
 function readUrlLuceneMode(): boolean {
   if (typeof window === "undefined") return false;
   return new URLSearchParams(window.location.search).get(LUCENE_URL_PARAM) === "1";
@@ -508,11 +527,17 @@ function readUrlLuceneMode(): boolean {
 function writeUrlLuceneMode(on: boolean): void {
   if (typeof window === "undefined") return;
   const params = new URLSearchParams(window.location.search);
-  if (on) params.set(LUCENE_URL_PARAM, "1");
-  else params.delete(LUCENE_URL_PARAM);
-  const qs = params.toString();
-  const next = qs
-    ? `${window.location.pathname}?${qs}${window.location.hash}`
+  if (on) {
+    for (const key of Array.from(params.keys())) {
+      if (!LUCENE_KEEP_PARAMS.has(key)) params.delete(key);
+    }
+    params.set(LUCENE_URL_PARAM, "1");
+  } else {
+    params.delete(LUCENE_URL_PARAM);
+  }
+  const urlQs = params.toString();
+  const next = urlQs
+    ? `${window.location.pathname}?${urlQs}${window.location.hash}`
     : `${window.location.pathname}${window.location.hash}`;
   window.history.replaceState(null, "", next);
 }
@@ -1461,7 +1486,7 @@ export function App() {
   const routing = useMemo(
     () => ({
       router: makeSearchHistoryRouter(),
-      stateMapping: feedbackStateMapping,
+      stateMapping: makeFeedbackStateMapping(luceneMode),
     }),
     [luceneMode],
   );
@@ -1529,7 +1554,11 @@ export function App() {
                   type="checkbox"
                   role="switch"
                   checked={luceneMode}
-                  onChange={(e) => setLuceneMode(e.target.checked)}
+                  onChange={(e) => {
+                    const checked = e.target.checked;
+                    writeUrlLuceneMode(checked);
+                    setLuceneMode(checked);
+                  }}
                 />
                 <span className="lucene-toggle-label">Lucene syntax</span>
               </label>
@@ -1560,6 +1589,20 @@ export function App() {
             {luceneMode ? null : (
               <>
                 <CurrentRefinements
+                  transformItems={(items) =>
+                    items.map((it) => ({
+                      ...it,
+                      label:
+                        ATTR_DISPLAY_LABEL[it.attribute] ?? it.label,
+                      refinements:
+                        it.attribute === "aiCategories"
+                          ? it.refinements.map((r) => ({
+                              ...r,
+                              label: aiCategoryName(String(r.value)),
+                            }))
+                          : it.refinements,
+                    }))
+                  }
                   classNames={{
                     root: "current-refinements-root",
                     list: "current-refinements-list",
