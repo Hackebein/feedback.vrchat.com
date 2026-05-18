@@ -1,5 +1,14 @@
 import Client from "@searchkit/instantsearch-client";
-import { Fragment, type ReactNode, useEffect, useMemo, useState } from "react";
+import {
+  Fragment,
+  type ChangeEvent,
+  type FocusEvent,
+  type FormEvent,
+  type ReactNode,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import {
   ClearRefinements,
   Configure,
@@ -69,6 +78,46 @@ function msToDatetimeLocalValue(ms: number): string {
   return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}T${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
 }
 
+/**
+ * InstantSearch range connector drops refinements equal to facet stats min/max and
+ * then skips search(); nudge inward by 1ms so an explicit picker choice always applies.
+ */
+function nudgeEpochRangeBounds(
+  lowOk: number | undefined,
+  highOk: number | undefined,
+  rmin: number | undefined,
+  rmax: number | undefined,
+): [number | undefined, number | undefined] {
+  let lo = lowOk;
+  let hi = highOk;
+  if (
+    lo !== undefined &&
+    rmin !== undefined &&
+    Number.isFinite(lo) &&
+    Number.isFinite(rmin) &&
+    lo <= rmin
+  ) {
+    lo = Math.min(rmin + 1, hi ?? Infinity);
+  }
+  if (
+    hi !== undefined &&
+    rmax !== undefined &&
+    Number.isFinite(hi) &&
+    Number.isFinite(rmax) &&
+    hi >= rmax
+  ) {
+    hi = Math.max(rmax - 1, lo ?? -Infinity);
+  }
+  if (
+    lo !== undefined &&
+    hi !== undefined &&
+    lo > hi
+  ) {
+    return [lowOk, highOk];
+  }
+  return [lo, hi];
+}
+
 function EpochMsRangeInput({ attribute }: { attribute: string }) {
   const { start, range, refine, canRefine } = useRange({
     attribute,
@@ -115,7 +164,41 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
     ) {
       return;
     }
-    refine([lowOk, highOk]);
+    const [lo, hi] = nudgeEpochRangeBounds(lowOk, highOk, rmin, rmax);
+    refine([lo, hi]);
+  }
+
+  function attachEpochInputHandlers(which: "from" | "to") {
+    return {
+      onInput: (e: FormEvent<HTMLInputElement>) => {
+        const v = e.currentTarget.value;
+        if (which === "from") {
+          setFromLocal(v);
+          applyRange(v, toLocal);
+        } else {
+          setToLocal(v);
+          applyRange(fromLocal, v);
+        }
+      },
+      onChange: (e: ChangeEvent<HTMLInputElement>) => {
+        const v = e.target.value;
+        if (which === "from") {
+          setFromLocal(v);
+          applyRange(v, toLocal);
+        } else {
+          setToLocal(v);
+          applyRange(fromLocal, v);
+        }
+      },
+      onBlur: (e: FocusEvent<HTMLInputElement>) => {
+        const v = e.target.value;
+        if (which === "from") {
+          applyRange(v, toLocal);
+        } else {
+          applyRange(fromLocal, v);
+        }
+      },
+    };
   }
 
   return (
@@ -129,11 +212,7 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
             className="epoch-ms-range-datetime"
             value={fromLocal}
             disabled={!canRefine}
-            onChange={(e) => {
-              const v = e.target.value;
-              setFromLocal(v);
-              applyRange(v, toLocal);
-            }}
+            {...attachEpochInputHandlers("from")}
           />
         </label>
         <span aria-hidden className="epoch-ms-range-sep">
@@ -147,11 +226,7 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
             className="epoch-ms-range-datetime"
             disabled={!canRefine}
             value={toLocal}
-            onChange={(e) => {
-              const v = e.target.value;
-              setToLocal(v);
-              applyRange(fromLocal, v);
-            }}
+            {...attachEpochInputHandlers("to")}
           />
         </label>
       </div>
