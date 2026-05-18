@@ -3,10 +3,10 @@ import {
   Fragment,
   type ChangeEvent,
   type FocusEvent,
+  type FormEvent,
   type ReactNode,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from "react";
 import {
@@ -80,8 +80,7 @@ function msToDatetimeLocalValue(ms: number): string {
 
 /**
  * InstantSearch range connector drops refinements equal to facet stats min/max and
- * then skips search(); nudge inward by 1ms so an explicit picker choice still applies
- * after clamping to stats.
+ * then skips search(); nudge inward by 1ms so an explicit picker choice always applies.
  */
 function nudgeEpochRangeBounds(
   lowOk: number | undefined,
@@ -119,27 +118,6 @@ function nudgeEpochRangeBounds(
   return [lo, hi];
 }
 
-/** Clamp into facet stats range so connectRange validates; then nudge off exact min/max. */
-function normalizeEpochRefinementBounds(
-  lowOk: number | undefined,
-  highOk: number | undefined,
-  rmin: number | undefined,
-  rmax: number | undefined,
-): [number | undefined, number | undefined] {
-  let lo = lowOk;
-  let hi = highOk;
-  if (lo !== undefined && rmin !== undefined && Number.isFinite(lo) && Number.isFinite(rmin)) {
-    if (lo < rmin) lo = rmin;
-  }
-  if (hi !== undefined && rmax !== undefined && Number.isFinite(hi) && Number.isFinite(rmax)) {
-    if (hi > rmax) hi = rmax;
-  }
-  if (lo !== undefined && hi !== undefined && lo > hi) {
-    return [lowOk, highOk];
-  }
-  return nudgeEpochRangeBounds(lo, hi, rmin, rmax);
-}
-
 function EpochMsRangeInput({ attribute }: { attribute: string }) {
   const { start, range, refine, canRefine } = useRange({
     attribute,
@@ -149,13 +127,6 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
   const rmax = range.max;
   const [fromLocal, setFromLocal] = useState("");
   const [toLocal, setToLocal] = useState("");
-  const boundsRef = useRef({ from: "", to: "" });
-  const fromFocused = useRef(false);
-  const toFocused = useRef(false);
-  const fromBlurTimer = useRef<number | undefined>(undefined);
-  const toBlurTimer = useRef<number | undefined>(undefined);
-
-  boundsRef.current = { from: fromLocal, to: toLocal };
 
   useEffect(() => {
     const [low, high] = start;
@@ -171,20 +142,9 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
       high !== Infinity &&
       rmax !== undefined &&
       high !== rmax;
-    const nextFrom = hasFrom ? msToDatetimeLocalValue(low) : "";
-    const nextTo = hasTo ? msToDatetimeLocalValue(high) : "";
-    // Avoid overwriting the native picker mid-interaction; connector can lag one response.
-    if (!fromFocused.current) setFromLocal(nextFrom);
-    if (!toFocused.current) setToLocal(nextTo);
+    setFromLocal(hasFrom ? msToDatetimeLocalValue(low) : "");
+    setToLocal(hasTo ? msToDatetimeLocalValue(high) : "");
   }, [start, rmin, rmax]);
-
-  useEffect(
-    () => () => {
-      window.clearTimeout(fromBlurTimer.current);
-      window.clearTimeout(toBlurTimer.current);
-    },
-    [],
-  );
 
   function applyRange(nextFrom: string, nextTo: string): void {
     const trimmedFrom = nextFrom.trim();
@@ -204,15 +164,41 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
     ) {
       return;
     }
-    const [lo, hi] = normalizeEpochRefinementBounds(lowOk, highOk, rmin, rmax);
+    const [lo, hi] = nudgeEpochRangeBounds(lowOk, highOk, rmin, rmax);
     refine([lo, hi]);
   }
 
-  function scheduleApply(nextFrom: string, nextTo: string): void {
-    boundsRef.current = { from: nextFrom, to: nextTo };
-    queueMicrotask(() => {
-      applyRange(boundsRef.current.from, boundsRef.current.to);
-    });
+  function attachEpochInputHandlers(which: "from" | "to") {
+    return {
+      onInput: (e: FormEvent<HTMLInputElement>) => {
+        const v = e.currentTarget.value;
+        if (which === "from") {
+          setFromLocal(v);
+          applyRange(v, toLocal);
+        } else {
+          setToLocal(v);
+          applyRange(fromLocal, v);
+        }
+      },
+      onChange: (e: ChangeEvent<HTMLInputElement>) => {
+        const v = e.target.value;
+        if (which === "from") {
+          setFromLocal(v);
+          applyRange(v, toLocal);
+        } else {
+          setToLocal(v);
+          applyRange(fromLocal, v);
+        }
+      },
+      onBlur: (e: FocusEvent<HTMLInputElement>) => {
+        const v = e.target.value;
+        if (which === "from") {
+          applyRange(v, toLocal);
+        } else {
+          applyRange(fromLocal, v);
+        }
+      },
+    };
   }
 
   return (
@@ -226,25 +212,7 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
             className="epoch-ms-range-datetime"
             value={fromLocal}
             disabled={!canRefine}
-            onFocus={() => {
-              window.clearTimeout(fromBlurTimer.current);
-              fromFocused.current = true;
-            }}
-            onBlur={(e: FocusEvent<HTMLInputElement>) => {
-              const v = e.target.value;
-              boundsRef.current.from = v;
-              applyRange(v, boundsRef.current.to);
-              window.clearTimeout(fromBlurTimer.current);
-              fromBlurTimer.current = window.setTimeout(() => {
-                fromBlurTimer.current = undefined;
-                fromFocused.current = false;
-              }, 400);
-            }}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => {
-              const v = e.target.value;
-              setFromLocal(v);
-              scheduleApply(v, boundsRef.current.to);
-            }}
+            {...attachEpochInputHandlers("from")}
           />
         </label>
         <span aria-hidden className="epoch-ms-range-sep">
@@ -258,25 +226,7 @@ function EpochMsRangeInput({ attribute }: { attribute: string }) {
             className="epoch-ms-range-datetime"
             disabled={!canRefine}
             value={toLocal}
-            onFocus={() => {
-              window.clearTimeout(toBlurTimer.current);
-              toFocused.current = true;
-            }}
-            onBlur={(e: FocusEvent<HTMLInputElement>) => {
-              const v = e.target.value;
-              boundsRef.current.to = v;
-              applyRange(boundsRef.current.from, v);
-              window.clearTimeout(toBlurTimer.current);
-              toBlurTimer.current = window.setTimeout(() => {
-                toBlurTimer.current = undefined;
-                toFocused.current = false;
-              }, 400);
-            }}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => {
-              const v = e.target.value;
-              setToLocal(v);
-              scheduleApply(boundsRef.current.from, v);
-            }}
+            {...attachEpochInputHandlers("to")}
           />
         </label>
       </div>
