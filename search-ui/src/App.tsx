@@ -29,6 +29,9 @@ import {
 } from "react-instantsearch";
 import type { Hit } from "instantsearch.js/es/types/results";
 import type { RefinementListItem } from "instantsearch.js/es/connectors/refinement-list/connectRefinementList";
+import qs from "qs";
+import historyRouter from "instantsearch.js/es/lib/routers/history";
+import singleIndexStateMapping from "instantsearch.js/es/lib/stateMappings/singleIndex";
 import { AttachmentTextView } from "./AttachmentTextView";
 import { EmbeddedImageView } from "./EmbeddedImageView";
 import { aiCategoryDescription, aiCategoryName } from "./featureTree";
@@ -331,15 +334,67 @@ function AutoNumericRangeInput({ attribute }: { attribute: string }) {
 
 const indexName = "feedback-posts";
 
-const LUCENE_MODE_STORAGE_KEY = "feedback-search:luceneMode";
+/** Query params not controlled by InstantSearch routing; preserved on URL writes */
+const PRESERVED_URL_PARAMS = ["lucene"] as const;
 
-function readStoredLuceneMode(): boolean {
-  try {
-    return typeof localStorage !== "undefined" &&
-      localStorage.getItem(LUCENE_MODE_STORAGE_KEY) === "1";
-  } catch {
-    return false;
-  }
+function makeSearchHistoryRouter(): ReturnType<typeof historyRouter> {
+  return historyRouter({
+    createURL({
+      qsModule,
+      routeState,
+      location,
+    }: {
+      qsModule: typeof qs;
+      routeState: Record<string, unknown>;
+      location: Location;
+    }) {
+      const existing = qsModule.parse(location.search.slice(1), {
+        arrayLimit: 99,
+      }) as Record<string, unknown>;
+      const preserved: Record<string, unknown> = {};
+      for (const k of PRESERVED_URL_PARAMS) {
+        if (existing[k] !== undefined) preserved[k] = existing[k];
+      }
+      const merged = { ...preserved, ...routeState };
+      const qs = qsModule.stringify(merged);
+      const { pathname, hash } = location;
+      return qs ? `${pathname}?${qs}${hash}` : `${pathname}${hash}`;
+    },
+    parseURL({
+      qsModule,
+      location,
+    }: {
+      qsModule: typeof qs;
+      location: Location;
+    }) {
+      const parsed = qsModule.parse(location.search.slice(1), {
+        arrayLimit: 99,
+      }) as Record<string, unknown>;
+      for (const k of PRESERVED_URL_PARAMS) {
+        delete parsed[k];
+      }
+      return parsed;
+    },
+  });
+}
+
+const LUCENE_URL_PARAM = "lucene";
+
+function readUrlLuceneMode(): boolean {
+  if (typeof window === "undefined") return false;
+  return new URLSearchParams(window.location.search).get(LUCENE_URL_PARAM) === "1";
+}
+
+function writeUrlLuceneMode(on: boolean): void {
+  if (typeof window === "undefined") return;
+  const params = new URLSearchParams(window.location.search);
+  if (on) params.set(LUCENE_URL_PARAM, "1");
+  else params.delete(LUCENE_URL_PARAM);
+  const qs = params.toString();
+  const next = qs
+    ? `${window.location.pathname}?${qs}${window.location.hash}`
+    : `${window.location.pathname}${window.location.hash}`;
+  window.history.replaceState(null, "", next);
 }
 
 /** POST /api/search; throws on HTTP error so InstantSearch exposes status `error`. */
@@ -386,70 +441,6 @@ function createFeedbackSearchClient(apiUrl: string) {
 type LuceneAttrRow = { field: string; kind: string; example: string };
 
 const LUCENE_ATTRIBUTE_ROWS: LuceneAttrRow[] = [
-  { field: "title", kind: "text", example: `title:avatar` },
-  { field: "details", kind: "text", example: `details:"network lag"` },
-  { field: "combined_text", kind: "text", example: `combined_text:performance` },
-  { field: "author.name", kind: "text", example: `author.name:Alice` },
-  { field: "status", kind: "keyword", example: `status:open` },
-  { field: "board.urlName", kind: "keyword", example: `board.urlName:bug-reports` },
-  { field: "board.name", kind: "text", example: `board.name:bug` },
-  { field: "board.name.keyword", kind: "keyword", example: `board.name.keyword:"Feature Requests"` },
-  { field: "category.name", kind: "text", example: `category.name:sdk` },
-  { field: "category.name.keyword", kind: "keyword", example: `category.name.keyword:SDK` },
-  { field: "author.name.keyword", kind: "keyword", example: `author.name.keyword:"Jane Doe"` },
-  { field: "score", kind: "numeric", example: `score:[10 TO *]` },
-  { field: "maxScore", kind: "numeric", example: `maxScore:[100 TO *]` },
-  { field: "commentCount", kind: "numeric", example: `commentCount:[1 TO 50]` },
-  { field: "mergeCount", kind: "numeric", example: `mergeCount:[1 TO *]` },
-  { field: "trendingScore", kind: "numeric", example: `trendingScore:[500 TO *]` },
-  {
-    field: "voteSettings.highEngagement",
-    kind: "keyword/bool-like",
-    example: `voteSettings.highEngagement:true`,
-  },
-  {
-    field: "voteSettings.moderateEngagement",
-    kind: "keyword/bool-like",
-    example: `voteSettings.moderateEngagement:true`,
-  },
-  {
-    field: "voteSettings.lowEngagement",
-    kind: "keyword/bool-like",
-    example: `voteSettings.lowEngagement:true`,
-  },
-  {
-    field: "created",
-    kind: "date",
-    example: `created:["2025-01-01" TO "2026-01-01"]`,
-  },
-  {
-    field: "updatedAt",
-    kind: "date",
-    example: `updatedAt:["2025-01-01" TO "*"]`,
-  },
-  {
-    field: "statusChanged",
-    kind: "date",
-    example: `statusChanged:["2025-01-01" TO "*"]`,
-  },
-  { field: "comments.value", kind: "text", example: `comments.value:"network lag"` },
-  { field: "comments.author.name", kind: "text", example: `comments.author.name:Alice` },
-  {
-    field: "comments.author.name.keyword",
-    kind: "keyword",
-    example: `comments.author.name.keyword:"Jane Doe"`,
-  },
-  { field: "comments.pinned", kind: "keyword", example: `comments.pinned:true` },
-  {
-    field: "comments.likeCount",
-    kind: "numeric",
-    example: `comments.likeCount:[1 TO *]`,
-  },
-  {
-    field: "comments.created",
-    kind: "date",
-    example: `comments.created:["2025-01-01" TO "*"]`,
-  },
   {
     field: "aiCategories",
     kind: "text",
@@ -464,6 +455,82 @@ const LUCENE_ATTRIBUTE_ROWS: LuceneAttrRow[] = [
     field: "aiTaggedAt",
     kind: "date",
     example: `aiTaggedAt:["2025-01-01" TO "*"]`,
+  },
+  { field: "author.name", kind: "text", example: `author.name:Alice` },
+  {
+    field: "author.name.keyword",
+    kind: "keyword",
+    example: `author.name.keyword:"Jane Doe"`,
+  },
+  { field: "board.name", kind: "text", example: `board.name:bug` },
+  {
+    field: "board.name.keyword",
+    kind: "keyword",
+    example: `board.name.keyword:"Feature Requests"`,
+  },
+  { field: "board.urlName", kind: "keyword", example: `board.urlName:bug-reports` },
+  { field: "category.name", kind: "text", example: `category.name:sdk` },
+  {
+    field: "category.name.keyword",
+    kind: "keyword",
+    example: `category.name.keyword:SDK`,
+  },
+  { field: "combined_text", kind: "text", example: `combined_text:performance` },
+  { field: "commentCount", kind: "numeric", example: `commentCount:[1 TO 50]` },
+  { field: "comments.author.name", kind: "text", example: `comments.author.name:Alice` },
+  {
+    field: "comments.author.name.keyword",
+    kind: "keyword",
+    example: `comments.author.name.keyword:"Jane Doe"`,
+  },
+  {
+    field: "comments.created",
+    kind: "date",
+    example: `comments.created:["2025-01-01" TO "*"]`,
+  },
+  {
+    field: "comments.likeCount",
+    kind: "numeric",
+    example: `comments.likeCount:[1 TO *]`,
+  },
+  { field: "comments.pinned", kind: "keyword", example: `comments.pinned:true` },
+  { field: "comments.value", kind: "text", example: `comments.value:"network lag"` },
+  {
+    field: "created",
+    kind: "date",
+    example: `created:["2025-01-01" TO "2026-01-01"]`,
+  },
+  { field: "details", kind: "text", example: `details:"network lag"` },
+  { field: "maxScore", kind: "numeric", example: `maxScore:[100 TO *]` },
+  { field: "mergeCount", kind: "numeric", example: `mergeCount:[1 TO *]` },
+  { field: "score", kind: "numeric", example: `score:[10 TO *]` },
+  { field: "status", kind: "keyword", example: `status:open` },
+  {
+    field: "statusChanged",
+    kind: "date",
+    example: `statusChanged:["2025-01-01" TO "*"]`,
+  },
+  { field: "title", kind: "text", example: `title:avatar` },
+  { field: "trendingScore", kind: "numeric", example: `trendingScore:[500 TO *]` },
+  {
+    field: "updatedAt",
+    kind: "date",
+    example: `updatedAt:["2025-01-01" TO "*"]`,
+  },
+  {
+    field: "voteSettings.highEngagement",
+    kind: "keyword/bool-like",
+    example: `voteSettings.highEngagement:true`,
+  },
+  {
+    field: "voteSettings.lowEngagement",
+    kind: "keyword/bool-like",
+    example: `voteSettings.lowEngagement:true`,
+  },
+  {
+    field: "voteSettings.moderateEngagement",
+    kind: "keyword/bool-like",
+    example: `voteSettings.moderateEngagement:true`,
   },
 ];
 
@@ -1256,16 +1323,28 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
 }
 
 export function App() {
-  const [luceneMode, setLuceneMode] = useState(readStoredLuceneMode);
+  const [luceneMode, setLuceneMode] = useState(readUrlLuceneMode);
   const [attrPanelDismissed, setAttrPanelDismissed] = useState(false);
 
   useEffect(() => {
-    try {
-      localStorage.setItem(LUCENE_MODE_STORAGE_KEY, luceneMode ? "1" : "0");
-    } catch {
-      /* ignore */
-    }
+    writeUrlLuceneMode(luceneMode);
   }, [luceneMode]);
+
+  useEffect(() => {
+    function onPopState() {
+      setLuceneMode(readUrlLuceneMode());
+    }
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  const routing = useMemo(
+    () => ({
+      router: makeSearchHistoryRouter(),
+      stateMapping: singleIndexStateMapping(indexName),
+    }),
+    [luceneMode],
+  );
 
   const searchClient = useMemo(
     () =>
@@ -1281,6 +1360,7 @@ export function App() {
       searchClient={searchClient}
       indexName={indexName}
       stalledSearchDelay={0}
+      routing={routing}
       future={{ preserveSharedStateOnUnmount: true }}
     >
       <Configure hitsPerPage={50} maxValuesPerFacet={200} />
