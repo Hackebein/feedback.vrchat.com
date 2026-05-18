@@ -1273,9 +1273,6 @@ export function App() {
               </section>
               <section className="facet-section">
                 <h2 className="facet-heading">Post dates</h2>
-                <p className="facet-hint">
-                  Local date/time; range uses epoch milliseconds in the index. Clear removes the bound on that side.
-                </p>
                 <h3 className="facet-subheading">Created</h3>
                 <EpochMsRangeInput attribute="post_created" />
                 <h3 className="facet-subheading">Updated</h3>
