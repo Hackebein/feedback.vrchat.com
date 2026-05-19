@@ -10,10 +10,10 @@ Scrape horizon: **2026-02-09 15:01 UTC (98d ago)**.
 |-------|------:|
 | `age-verification` | 186 / 186 (100.0%) |
 | `android` | 327 / 327 (100.0%) |
-| `avatar-30` | 858 / 858 (100.0%) |
+| `avatar-30` | 858 / 857 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 72 / 72 (100.0%) |
-| `bug-reports` | 10,341 / 10,341 (100.0%) |
+| `bug-reports` | 10,341 / 10,342 (99.99%) |
 | `creator-companion` | 284 / 284 (100.0%) |
 | `creator-economy` | 79 / 79 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
