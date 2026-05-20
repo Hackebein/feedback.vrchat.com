@@ -1,11 +1,10 @@
 {
   "_id": "6a008d0a57e2781d6d0b3daf",
   "aiCategories": [
-    "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "sdk.world-building"
+    "loc.in-world",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-05-19T18:47:33.771330Z",
+  "aiTaggedAt": "2026-05-20T13:07:56.903242Z",
   "author": {
     "_id": "5b75f0d44d4a8d6deed70bd3",
     "alias": "Similar Puma",
@@ -35,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 4,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a048f4ef50c0736862da921",
@@ -221,6 +220,118 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a0dae3ff668d4d2dd46dd8b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": "dexvoid"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-20T12:51:11.685Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5b75f0d44d4a8d6deed70bd3",
+          "alias": "Similar Puma",
+          "aliasID": "65c29c64ed6eefce4c87e3c7",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8e3c28ad98e2c42e02adfca6c6c44c9b.png",
+          "created": "2018-08-16T21:47:00.126Z",
+          "name": "Octuplex",
+          "serviceAccount": false,
+          "urlName": "octuplex"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a0c821c9cfd509f04060de1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a008d0a57e2781d6d0b3daf",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5b75f0d44d4a8d6deed70bd3|full_name} Thanks, this is looking like an issue that can be solved by reuploading the avatar.\n\nDuring the raycast beta, the property Behavior on Miss was renamed from Positioning on Miss as seen in your earlier screenshot. It looks like your repro avatar was last uploaded in April, likely using a beta release of 3.10.3, so it doesn't contain a Behavior on Miss setting. Can you please try reuploading this avatar using the live version of 3.10.3 and seeing if this resolves the issue for you?\n\nIt's also worth mentioning that you'll need to setup disabling the object when it misses again, since Disable on Miss no longer exists as of the end of the raycast beta. You can do this by entering a parameter name and then using the Hit parameter to toggle your object on and off. Our docs have more info: https://creators.vrchat.com/avatars/avatar-components/raycast/#raycast-parameters",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a0db15597ce8cd99757e08f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b75f0d44d4a8d6deed70bd3",
+        "alias": "Similar Puma",
+        "aliasID": "65c29c64ed6eefce4c87e3c7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8e3c28ad98e2c42e02adfca6c6c44c9b.png",
+        "created": "2018-08-16T21:47:00.126Z",
+        "name": "Octuplex",
+        "serviceAccount": false,
+        "urlName": "octuplex"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-20T13:04:21.203Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": "dexvoid"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a0c821c9cfd509f04060de1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a008d0a57e2781d6d0b3daf",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name}\n\nI just realized I linked the wrong avatar, or rather that I uploaded the test avi to a different ID than I gave you, which explains why it wasn't working despite the update\n\nNo need to worry about the \"disable on miss\" since that was just something I enabled for convenience's sake, it's not necessary for the prefab to function\n\nEverything seems to work on the updated avi, my bad for not noticing the ID issue",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -241,7 +352,7 @@
     "https://canny-assets.io/images/5403394e4dbfe21aba15ace429a7ef22.png",
     "https://canny-assets.io/images/7c826e4f3356bab382d240f015f39b38.png"
   ],
-  "lastUpdated": 1779216308326,
+  "lastUpdated": 1779282473818,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -257,7 +368,7 @@
   "subCategoryID": null,
   "title": "VRCRaycast doesn't reset to end or disable in-game",
   "trendingScore": 2942.1387521218244,
-  "updatedAt": "2026-05-19T18:47:33.670829Z",
+  "updatedAt": "2026-05-20T13:07:56.812640Z",
   "updatedBy": "5b75f0d44d4a8d6deed70bd3",
   "urlName": "vrcraycast-doesnt-reset-to-end-or-disable-in-game",
   "viewerIsAuthor": false,
