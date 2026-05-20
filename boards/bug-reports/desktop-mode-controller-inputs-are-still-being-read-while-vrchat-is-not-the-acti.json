@@ -1,0 +1,95 @@
+{
+  "__v": 0,
+  "_id": "629185bdd43fc31e7d20ba4c",
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-18T21:43:34.039158Z",
+  "author": {
+    "_id": "62917d21caf11c1f072491d9",
+    "alias": "Absolute Rabbit",
+    "aliasID": "65f2e18276937e524860388e",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-05-28T01:38:41.560Z",
+    "name": "Ruby_Swanson",
+    "serviceAccount": false,
+    "urlName": "cookie-bokoblin"
+  },
+  "authorID": "62917d21caf11c1f072491d9",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-28T02:15:25.586Z",
+  "deletedAt": null,
+  "details": "VRChat Version:\nRelease - 25 May 2022 - Build 1201\nDescription of the bug:\nController Inputs are still being read while VRChat is not the active window when the controller has nothing mapped through Steam (I use a PS3 controller but I assume it's a similar case for each controller)\nSteps to reproduce (how did you encounter the bug?):\nSteam Big Picture mode, go into the game's page (In this case VRChat), then Manage Game, then controller configuration, remove all of the controls so that it's all blank. After the controls are removed go into VRChat Desktop mode, make a different window active then try to use the controller.\nAny extra files? (output logs, screenshots): 1\nIf this is an intentional function then could there be a option somewhere to disable controllers entirely? (Either through launch options or in game)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f6e4c3e90df1360f58",
+  "imageURLs": [
+    "https://canny.io/images/dd4ac6bb046737c5b077afcf95ee2081.png"
+  ],
+  "lastUpdated": 1779140156627,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-28T02:15:25.586Z",
+  "subCategoryID": null,
+  "title": "Desktop Mode Controller Inputs are still being read while VRChat is not the active window",
+  "trendingScore": 2735.403386901204,
+  "updatedAt": "2026-05-18T21:36:21.404734Z",
+  "urlName": "desktop-mode-controller-inputs-are-still-being-read-while-vrchat-is-not-the-acti",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fb75a5959b6fc72ce0fdad9",
+      "alias": "Venetian red Lark",
+      "aliasID": "65c2756eed6eefce4c9639cf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6868435ffca9bbafe94debcd967141f8.png",
+      "companies": [],
+      "name": "StephenVR",
+      "urlName": "stephenvr",
+      "voteID": "6291ad62caf11c1f0734ab03"
+    },
+    {
+      "_id": "62917d21caf11c1f072491d9",
+      "alias": "Absolute Rabbit",
+      "aliasID": "65f2e18276937e524860388e",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Ruby_Swanson",
+      "urlName": "cookie-bokoblin",
+      "voteID": "629185bdd43fc31e7d20ba8c"
+    }
+  ]
+}

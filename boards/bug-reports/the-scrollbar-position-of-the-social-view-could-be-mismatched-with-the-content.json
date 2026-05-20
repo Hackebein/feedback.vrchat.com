@@ -1,0 +1,98 @@
+{
+  "_id": "69496a8e67bfa995b3a5fd4f",
+  "aiCategories": [
+    "loc.main-menu",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-05-17T02:40:13.002735Z",
+  "author": {
+    "_id": "5a983204a1528d415c5ced46",
+    "alias": "Chief Finch",
+    "aliasID": "65ba04aeed6eefce4c43afb3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+    "created": "2018-03-01T17:01:56.340Z",
+    "name": "naqtn",
+    "serviceAccount": false,
+    "urlName": "naqtn"
+  },
+  "authorID": "5a983204a1528d415c5ced46",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-22T15:58:06.437Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "# Repro steps\n\n1. Open MM > Social\n\n2. Choose a tab that has many entries. The scrollbar will appear and be positioned at the top. (1st image)\n\n3. Click a user or world to show the details\n\n4. In the detail view, scroll down to the bottom\n\n5. Go back by clicking the left arrow (or the Social tab at the bottom)\n\n6. The shown contents will be the same as step 2 (that is, the top-most part). But the scrollbar will appear at the bottom. (2nd image)\n\nExpected: The step 6 position must be equal to step 2",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69496a8e67bfa995b3a5fdcf",
+  "imageURLs": [
+    "https://canny-assets.io/images/7d08cac9e838acdf2fe92bac0b2ee980.png",
+    "https://canny-assets.io/images/2ddcf9b96ff2a9b85e2a6758dff9532b.png"
+  ],
+  "lastUpdated": 1778985248680,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69496a8e67bfa995b3a5fd4f/944317834.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-22T15:58:06.437Z",
+  "subCategoryID": null,
+  "title": "The scrollbar position of the Social view could be mismatched with the content",
+  "trendingScore": 2921.7700186114716,
+  "updatedAt": "2026-05-17T02:36:27.581782Z",
+  "updatedBy": null,
+  "urlName": "the-scrollbar-position-of-the-social-view-could-be-mismatched-with-the-content",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": "dagger1675",
+      "voteID": "69498d4ef85d59c66d979a0a"
+    },
+    {
+      "_id": "5a983204a1528d415c5ced46",
+      "alias": "Chief Finch",
+      "aliasID": "65ba04aeed6eefce4c43afb3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+      "companies": [],
+      "name": "naqtn",
+      "urlName": "naqtn",
+      "voteID": "69496a8ef85d59c66d785666"
+    }
+  ]
+}

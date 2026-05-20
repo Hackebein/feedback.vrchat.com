@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "62939a7dff265b0b6cdebbfb",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-16T19:53:21.882851Z",
+  "author": {
+    "_id": "62631f154aa573528f523a41",
+    "alias": "Charcoal Stingray",
+    "aliasID": "65c26da3ed6eefce4c4d081a",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-04-22T21:33:09.785Z",
+    "name": "BigSoulja",
+    "serviceAccount": false,
+    "urlName": "bigsoulja"
+  },
+  "authorID": "62631f154aa573528f523a41",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-29T16:08:29.800Z",
+  "deletedAt": null,
+  "details": "When scaling an avatar via its root using AV3 (e.g a float/radial wheel controller that adjusts the root transform of the entire avatar), the shoulders do not scale correctly.\nThis affects some situations e.g Dreadriths clone system when using elbow/shoulder tracking.\nExpected behavior is the entire IK scaling 1:1 as it always has in the past. It is only thhe shoulders that do this, and disabling shoulder tracking makes everything perfect.\nVideo:\nhttps://youtu.be/Qx3PktsNM4A\nThank you for your time :)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8fbe4c3e90df1361508",
+  "imageURLs": [],
+  "lastUpdated": 1779233521917,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-29T16:08:29.800Z",
+  "subCategoryID": null,
+  "title": "Avatar shoulders do not scale correctly when scaling avatar root via AV3.",
+  "trendingScore": 2735.217799688827,
+  "updatedAt": "2026-05-19T23:33:49.452084Z",
+  "urlName": "avatar-shoulders-do-not-scale-correctly-when-scaling-avatar-root-via-av3",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62631f154aa573528f523a41",
+      "alias": "Charcoal Stingray",
+      "aliasID": "65c26da3ed6eefce4c4d081a",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "BigSoulja",
+      "urlName": "bigsoulja",
+      "voteID": "62939a7dff265b0b6cdebc19"
+    }
+  ]
+}

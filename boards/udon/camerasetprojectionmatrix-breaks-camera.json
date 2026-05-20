@@ -1,0 +1,111 @@
+{
+  "__v": 0,
+  "_id": "5df830f9f8cf707121d8186b",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:47:37.988001Z",
+  "author": {
+    "_id": "59cb4676d4edc012b9dca22f",
+    "alias": "Managing Meerkat",
+    "aliasID": "65c2b491ed6eefce4cde88bf",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b9972d77c9e0e23db69f06909d69e552.png",
+    "created": "2017-09-27T06:34:30.223Z",
+    "name": "error.mdl",
+    "serviceAccount": false,
+    "urlName": "errormdl"
+  },
+  "authorID": "59cb4676d4edc012b9dca22f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-17T01:35:53.152Z",
+  "deletedAt": null,
+  "details": "Attemping to use the Camera.SetProjectionMatrix node causes the camera to stop rendering. Unity gives the warning \"OnRenderImage() possibly didn't write anything to the destination texture!\"",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d98e4c3e90df158a144",
+  "imageURLs": [],
+  "lastUpdated": 1779223362573,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5df830f9f8cf707121d8186b/19617543.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-17T01:35:53.152Z",
+  "subCategoryID": null,
+  "title": "Camera.SetProjectionMatrix Breaks Camera",
+  "trendingScore": 2923.9352821246694,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "camerasetprojectionmatrix-breaks-camera",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5adf4699bd81030d2fa70c4c",
+      "alias": "Super Frog",
+      "aliasID": "65c27b10ed6eefce4c7d79a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/28f00fa0da91790b2a07b6a310fedc98.png",
+      "companies": [],
+      "name": "Waai!",
+      "urlName": "waai",
+      "voteID": "6967951af85d59c66dc2aee9"
+    },
+    {
+      "_id": "5a9fb18f6c994d2a9d44012a",
+      "alias": "Ultraviolet Puffin",
+      "aliasID": "65c29cb5ed6eefce4c94215b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ec92a3b3f8ead5155fbfd801d50b2f59.jpg",
+      "companies": [],
+      "name": "1001",
+      "urlName": "1001",
+      "voteID": "5df84def6663d9618268e969"
+    },
+    {
+      "_id": "59cb4676d4edc012b9dca22f",
+      "alias": "Managing Meerkat",
+      "aliasID": "65c2b491ed6eefce4cde88bf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b9972d77c9e0e23db69f06909d69e552.png",
+      "companies": [],
+      "name": "error.mdl",
+      "urlName": "errormdl",
+      "voteID": "5df830f9f8cf707121d81873"
+    }
+  ]
+}

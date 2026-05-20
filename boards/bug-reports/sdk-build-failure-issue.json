@@ -1,0 +1,86 @@
+{
+  "_id": "6908cf8934cc031d809fe3df",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T01:17:23.296073Z",
+  "author": {
+    "_id": "61aac8a9de50114e6485a254",
+    "alias": "Ginger Crab",
+    "aliasID": "65c2b40fed6eefce4cccc7a1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/08673e910e7e1b0f283ee58d1bc9321b.png",
+    "created": "2021-12-04T01:47:21.658Z",
+    "name": "Atomiklan",
+    "serviceAccount": false,
+    "urlName": "atomiklan"
+  },
+  "authorID": "61aac8a9de50114e6485a254",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-11-03T15:51:37.344Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Occasionally, seemingly after Unity has been open awhile, the SDK will think you are building for a different platform like Android, despite having things properly set to Windows. The only way I have found to fix this so far is saving, and closing then reopening Unity. Switching builds does not fix the issue. Also sadly, I have not figured out yet how to reproduce the issue. It just seems to happen after awhile sometimes.\n\nIf you look at screenshot closely, you can just make out under the error that the platform was set to Windows (and only Windows), yet the SDK seemingly thinks its building for Android based on the file size limits.\n\nSDK 3.9.0",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6908cf8934cc031d809fe422",
+  "imageURLs": [
+    "https://canny-assets.io/images/dd0a70cdcb4d69a63650d3ed95b88bea.png"
+  ],
+  "lastUpdated": 1778979519743,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-11-03T15:51:37.344Z",
+  "subCategoryID": null,
+  "title": "SDK build failure issue",
+  "trendingScore": 2914.358982826228,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": null,
+  "urlName": "sdk-build-failure-issue",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61aac8a9de50114e6485a254",
+      "alias": "Ginger Crab",
+      "aliasID": "65c2b40fed6eefce4cccc7a1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/08673e910e7e1b0f283ee58d1bc9321b.png",
+      "companies": [],
+      "name": "Atomiklan",
+      "urlName": "atomiklan",
+      "voteID": "6908cf894f8511f3802b4bd9"
+    }
+  ]
+}

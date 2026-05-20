@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "60040f6b1619bd5ffe2d9ebc",
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-05-18T08:01:11.725524Z",
+  "author": {
+    "_id": "5ee93c573a0f6b18ad69dce1",
+    "alias": "Satisfactory Lion",
+    "aliasID": "65f990d2a63714bcb37f540a",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/67eae96c064ce51de3940ce9c1dcc225.png",
+    "created": "2020-06-16T21:40:39.176Z",
+    "name": "Gocko",
+    "serviceAccount": false,
+    "urlName": "spencer-floridia"
+  },
+  "authorID": "5ee93c573a0f6b18ad69dce1",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-17T10:20:27.492Z",
+  "deletedAt": null,
+  "details": "While on vrc with obs streamlabs streaming with openvr after 10 minutes performance gose way down and will crash unless you set rendering in steamVR to 10% after 10-20 minutes vrchat will start to lag at 10% rendering after that in about 3-6 minutes vrchat will crash your pc and you will need to hard rest.\nNotes.\n1.gpu Usage is at 10% when vrc is off. On start of vrc it jumps to 60% then when it crashes it hits 100% (this is on a RTX2080 super).\n2.this only happens when stremlabs is open. You can open stremlabs after vrc to get more time before it crashes.\n3.sometimes if you have stremlabs open before vrc it will crashes you whole computer in 3 minutes.\n4.drivers were updated to try to fix the problem but it didn't work also tried clearing cache and validating file and reinstalling vrc but none worked.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb801e4c3e90df1322abc",
+  "imageURLs": [],
+  "lastUpdated": 1779090038890,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-17T10:20:27.492Z",
+  "subCategoryID": null,
+  "title": "Vrchat crashes after streaming vrc for more than 40 minutes",
+  "trendingScore": 2664.183272050765,
+  "updatedAt": "2026-05-18T07:41:23.457967Z",
+  "urlName": "vrchat-crashes-after-streaming-vrc-for-more-than-40-minutes",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ee93c573a0f6b18ad69dce1",
+      "alias": "Satisfactory Lion",
+      "aliasID": "65f990d2a63714bcb37f540a",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/67eae96c064ce51de3940ce9c1dcc225.png",
+      "companies": [],
+      "name": "Gocko",
+      "urlName": "spencer-floridia",
+      "voteID": "60040f6b1619bd5ffe2d9ec3"
+    }
+  ]
+}

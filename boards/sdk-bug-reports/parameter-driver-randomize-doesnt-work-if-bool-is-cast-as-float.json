@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "682662a099b5e6260748752f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T21:55:44.500922Z",
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9e00a23b549d35ec3b542d76ab7acc70.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": "lackofbindings"
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 333,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-15T21:54:40.768Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If you have a parameter that is synced as a bool, but in the animator as a float (for use in a blend tree), normally it is cast between types and everything works fine. However if you use the randomize option on the parameter driver for say between 0 and 1, then the value of the bool (because it is a float on the animator side) can be and fractional value between 0 and 1. Compounding this, the casting for bools is not rounded, so any value that is not 0.0 is considered True, so it will almost always become true.\n\nThis makes it almost impossible to randomize a bool if it is also used in a blend tree.\n\nI think this could be fixed if we had an optional checkbox on the randomize mode to only use whole numbers, this should work for bools and ints that are floats.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "682662a199b5e626074875a6",
+  "imageURLs": [],
+  "lastUpdated": 1779054470355,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/682662a099b5e6260748752f/1399965539.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-15T21:54:40.768Z",
+  "subCategoryID": null,
+  "title": "Parameter driver randomize doesnt work if bool is cast as float",
+  "trendingScore": 2889.823571936678,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "parameter-driver-randomize-doesnt-work-if-bool-is-cast-as-float",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9e00a23b549d35ec3b542d76ab7acc70.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": "lackofbindings",
+      "voteID": "682662a1cd82760dac8ba8a1"
+    }
+  ]
+}

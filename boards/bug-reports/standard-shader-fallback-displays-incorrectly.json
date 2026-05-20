@@ -1,0 +1,89 @@
+{
+  "_id": "6974199f928cf23d242e46b5",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T07:18:31.581097Z",
+  "author": {
+    "_id": "5f2cba5631807b34c94a38e1",
+    "alias": "Yellowwood Ostrich",
+    "aliasID": "65c279a6ed6eefce4c459017",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/991e2af9b841bf39b8ca9ea96320673b.png",
+    "created": "2020-08-07T02:20:06.853Z",
+    "name": "Wunder Wulfe",
+    "serviceAccount": false,
+    "urlName": "wunder-wulfe-1"
+  },
+  "authorID": "5f2cba5631807b34c94a38e1",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-01-24T01:00:15.778Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Certain properties do not seem to be applied nor set properly when using the Standard shader.\n\nAccording to the shader fallback information found at https://creators.vrchat.com/avatars/shader-fallback-system/ , Standard shader should be directly supported, and so should the specific modes (Fade, Transparent, Cutout) and features (Emission). However, this does not appear to be the case in the current build of VRChat.\n\nAttached are two images, one of my avatar with Fallback Shaders enabled, and another without. I will also attach the exact shader configurations which I use on the avatar.\n\nI would appreciate if my avatar appeared the same to users regardless of whether or not they enabled my shaders, which is the main reason behind me choosing to use Standard shaders over other options. It should fall directly back onto the same shader without having to do any workaround options such as making a custom standard shader with baked in tags to fall back to the appropriate equivalents, especially without forcing them to use toon lighting modes\n\nAnother potential avenue would be for VRChat to provide their own official shader variants for Standard Shader which are essentially identical but having separate fade / transparent / etc modes as individual shaders. This would be a similar approach that is taken with Mobile Compatible shaders and should facilitate the process of simply importing the shader directly if it matches one provided by VRChat.\n\nInitially, this issue was noticed when other people would take photos with my avatar in them, so it is not limited to the Open Beta build which I use.\n\nThere are other similar posts to this topic below that share similar but not exactly identical frustrations:\n\nhttps://feedback.vrchat.com/bug-reports/p/standard-shader-doesnt-fallback-properly\n\nhttps://feedback.vrchat.com/bug-reports/p/not-all-unity-standard-shader-paramaters-properly-fall-back-when-shaders-are-blo\n\nhttps://feedback.vrchat.com/feature-requests/p/keep-cutout-value-on-fallback-standard-shader\n\nhttps://feedback.vrchat.com/bug-reports/p/standard-cutout-does-not-appear-to-ever-be-a-chosen-fallback-shader",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6974199f928cf23d242e46f5",
+  "imageURLs": [
+    "https://canny-assets.io/images/f49989b1181850162d3467b6cacb99b1.png",
+    "https://canny-assets.io/images/b0a360e160de5b9e20edd2021dde9da0.png",
+    "https://canny-assets.io/images/8badb2702f80e688ba8dd10866061658.png",
+    "https://canny-assets.io/images/7bfa3ba3fb1968851ef7881d34e4be5b.png"
+  ],
+  "lastUpdated": 1779001823319,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6974199f928cf23d242e46b5/783815679.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-01-24T01:00:15.778Z",
+  "subCategoryID": null,
+  "title": "Standard Shader (Fallback) Displays Incorrectly",
+  "trendingScore": 2925.9848400765586,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "updatedBy": "5f2cba5631807b34c94a38e1",
+  "urlName": "standard-shader-fallback-displays-incorrectly",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2cba5631807b34c94a38e1",
+      "alias": "Yellowwood Ostrich",
+      "aliasID": "65c279a6ed6eefce4c459017",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/991e2af9b841bf39b8ca9ea96320673b.png",
+      "companies": [],
+      "name": "Wunder Wulfe",
+      "urlName": "wunder-wulfe-1",
+      "voteID": "6974199f6cefe3c23842691c"
+    }
+  ]
+}

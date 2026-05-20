@@ -1,0 +1,120 @@
+{
+  "__v": 0,
+  "_id": "656a3aae7ee286a5b8c63bb9",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T10:40:45.437441Z",
+  "author": {
+    "_id": "6281589f32f8ee46ecfb5bea",
+    "alias": "Added Jellyfish",
+    "aliasID": "65c36f5eed6eefce4c8ec9c6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4ccbab1bf952db7a32132d6ec2f3e6c9.png",
+    "created": "2022-05-15T19:46:39.724Z",
+    "name": "atomicthumbs",
+    "serviceAccount": false,
+    "urlName": "atomicthumbs"
+  },
+  "authorID": "6281589f32f8ee46ecfb5bea",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-12-01T19:57:34.597Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Researchers from ViRVIG (a European visualization, virtual reality, and graphics interaction joint research group, in this case from the Technical University of Catalonia and University of Cyprus) have produced a deep learning-based IK system trained on motion capture data, which is designed to produce high-quality skeletal output from sparse (i.e. 6-point) motion data. It runs on PyTorch.\n\nThere is already a Unity implementation, and it's MIT-licensed. The software is standalone and communicates with Unity over TCP/IP. Anyone could use OSC or SteamVR tracker emulation to implement this, but the ideal implementation would be directly inside VRchat, as an option for those who have enough compute power to spare.\n\nSite: https://upc-virvig.github.io/SparsePoser\n\nGithub with MIT-licensed Unity demo project: https://github.com/UPC-ViRVIG/SparsePoser\n\nPreprint on arxiv (also published in ACM Transactions on Graphics): https://arxiv.org/pdf/2311.02191.pdf",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9c1e4c3e90df13874cf",
+  "imageURLs": [
+    "https://canny.io/images/a4370a233896fa0197f3e54d0fe1df85.gif"
+  ],
+  "lastUpdated": 1779014193773,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/656a3aae7ee286a5b8c63bb9/1116600066.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-12-01T19:57:34.597Z",
+  "subCategoryID": null,
+  "title": "SparsePoser support for high quality IK using inference from 6-point tracking",
+  "trendingScore": 2814.9514287674197,
+  "updatedAt": "2026-05-17T10:38:52.550572Z",
+  "updatedBy": "6281589f32f8ee46ecfb5bea",
+  "urlName": "sparseposer-support-for-high-quality-ik-using-inference-from-6-point-tracking",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c03473992eef65b2bb3cc2c",
+      "alias": "Outstanding Kingfisher",
+      "aliasID": "65c27129ed6eefce4ce48dac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/230b695b3f1227c6e53121c1f0c0bec1.png",
+      "companies": [],
+      "name": "Groxxy",
+      "urlName": "insanegrox",
+      "voteID": "656cfd573d279c6cf4e77251"
+    },
+    {
+      "_id": "5f317a3b0520df56567ab62a",
+      "alias": "Practical Firefly",
+      "aliasID": "65f2e18276937e5248602e60",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4ef87b6df69f7213c975abb940730efe.png",
+      "companies": [],
+      "name": "Ruka イオ",
+      "urlName": "ruka-4",
+      "voteID": "656acf243d279c6cf4e57d01"
+    },
+    {
+      "_id": "5f04df68b164a24498dbe71a",
+      "alias": "Elated Giraffe",
+      "aliasID": "65f15f92a6e3ea79dd3b61c1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9e78894dad35081f0581ce51937b0b10.png",
+      "companies": [],
+      "name": "emarl",
+      "urlName": "emarl-fish",
+      "voteID": "656a45b73d279c6cf4eb5800"
+    },
+    {
+      "_id": "6281589f32f8ee46ecfb5bea",
+      "alias": "Added Jellyfish",
+      "aliasID": "65c36f5eed6eefce4c8ec9c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4ccbab1bf952db7a32132d6ec2f3e6c9.png",
+      "companies": [],
+      "name": "atomicthumbs",
+      "urlName": "atomicthumbs",
+      "voteID": "656a3aae3d279c6cf495a98d"
+    }
+  ]
+}

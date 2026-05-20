@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5fe9242ff917db1778f38467",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-16T21:24:38.301207Z",
+  "author": {
+    "_id": "5c41e9eddab7cc57d931de0f",
+    "alias": "Beige Deer",
+    "aliasID": "65ca11f0ed6eefce4c5cad19",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/ba465ebbfb9bc423aa6539201421069b.png",
+    "created": "2019-01-18T14:59:57.029Z",
+    "name": "Yimiki",
+    "serviceAccount": false,
+    "urlName": "aelita-sophie"
+  },
+  "authorID": "5c41e9eddab7cc57d931de0f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-12-28T00:17:51.586Z",
+  "deletedAt": null,
+  "details": "I just now tried to use Webm/VP8/Vorbis instead of mp4/h.264/aac as the compression results seem to yield better visual quality. Since the documentation of VRChat SDK3 and the Unity Video Player documentation from unity them selves, says it is supported. However once serving the webm file it with start off with very loud static noise. After 10 seconds or so this stops, but then there is no audio at all.\nSDK: VRCSDK3-WORLD-2020.12.09.04.55_Public\nUDON: 2020.04.30.18.46\nVersion/Build: 1032\nWorld: https://vrchat.com/home/world/wrld_7944a9fe-de9a-4699-a332-7f84b4c56bb8",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7fae4c3e90df1321e70",
+  "imageURLs": [],
+  "lastUpdated": 1779247128762,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-12-28T00:17:51.586Z",
+  "subCategoryID": null,
+  "title": "Udon Video Player static noice VP8/Vorbis",
+  "trendingScore": 2661.2663476104544,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "udon-video-player-static-noice-vp8vorbis",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c41e9eddab7cc57d931de0f",
+      "alias": "Beige Deer",
+      "aliasID": "65ca11f0ed6eefce4c5cad19",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ba465ebbfb9bc423aa6539201421069b.png",
+      "companies": [],
+      "name": "Yimiki",
+      "urlName": "aelita-sophie",
+      "voteID": "5fe9242ff917db1778f3846e"
+    }
+  ]
+}

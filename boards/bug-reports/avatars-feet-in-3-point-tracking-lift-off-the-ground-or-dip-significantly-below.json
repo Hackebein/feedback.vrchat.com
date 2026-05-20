@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "62f8438a56c33744b80e0cb1",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-18T22:32:06.614614Z",
+  "author": {
+    "_id": "606bcfbc0595506cb2e444f3",
+    "alias": "Thundering Octopus",
+    "aliasID": "65c9b2d4ed6eefce4c579551",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ed3737e41d003fc78188c53e07f85218.png",
+    "created": "2021-04-06T03:04:28.724Z",
+    "name": "ににん（ninin）［JP］",
+    "serviceAccount": false,
+    "urlName": "nininjp"
+  },
+  "authorID": "606bcfbc0595506cb2e444f3",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-08-14T00:36:26.970Z",
+  "deletedAt": null,
+  "details": "When I reduced the scale of the Leg bone, the foot step and ground animation in the 3-point tracking behaved as if there was a transparent ground slightly above the foot step, instead of the world ground.\nTo avoid this, I lowered the Y-axis coordinates of the avatar's Root bone parent to ground the avatar, but this caused the avatar and View Point to dip below the ground when it sat.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb91ee4c3e90df1368cdf",
+  "imageURLs": [],
+  "lastUpdated": 1779143280404,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-08-14T00:36:26.970Z",
+  "subCategoryID": null,
+  "title": "Avatar's feet in 3-point tracking lift off the ground or dip significantly below the ground when Sit is performed.",
+  "trendingScore": 2817.770987409061,
+  "updatedAt": "2026-05-18T22:30:07.890442Z",
+  "urlName": "avatars-feet-in-3-point-tracking-lift-off-the-ground-or-dip-significantly-below",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "3f6409",
+      "voteID": "6593d7f5b7f7f4d227860bcd"
+    },
+    {
+      "_id": "606bcfbc0595506cb2e444f3",
+      "alias": "Thundering Octopus",
+      "aliasID": "65c9b2d4ed6eefce4c579551",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ed3737e41d003fc78188c53e07f85218.png",
+      "companies": [],
+      "name": "ににん（ninin）［JP］",
+      "urlName": "nininjp",
+      "voteID": "62f8438b56c33744b80e0ce2"
+    }
+  ]
+}

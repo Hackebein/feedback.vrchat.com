@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "64102f4e4acac4451ab143b3",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:38:56.081339Z",
+  "author": {
+    "_id": "5f2d6f73f6abbf61555c4e3b",
+    "alias": "Pale Roadrunner",
+    "aliasID": "65c389caed6eefce4cb8c040",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d69bb5d63c5b3e7e695b6b2629de0ce0.png",
+    "created": "2020-08-07T15:12:51.500Z",
+    "name": "red-panda",
+    "serviceAccount": false,
+    "urlName": "red-panda-2"
+  },
+  "authorID": "5f2d6f73f6abbf61555c4e3b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-03-14T08:24:46.034Z",
+  "deletedAt": null,
+  "details": "A recent update broke some of my older (1+ years) worlds relying on `OnDeserialization()` to sync variables for late joiners.  \n\nThe variables get set once when the world is created/first person joins and never update again.  \n\nA made up example script that enables a random colored cube on creation:  \n\n```\n\nusing UdonSharp;\n\nusing UnityEngine;\n\nusing VRC.SDKBase;\n\nusing VRC.Udon;\n\n[UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]\n\npublic class RandomColorCube : UdonSharpBehaviour\n\n{\n\n    [UdonSynced]\n\n    private string Color;\n\n    \n\n    [SerializeField]\n\n    public string[] Colors;\n\n    \n\n    private GameObject[] cubes;\n\n    \n\n    void Start()\n\n    {\n\n        Debug.Log(\"RandomColorCube: Start()\");\n\n        \n\n        Initialize();\n\n        \n\n        if (!Networking.IsOwner(gameObject))\n\n        {\n\n            return;\n\n        }\n\n        \n\n        Color = Colors[Random.Range(0, Colors.Length - 1)];\n\n        \n\n        SetCubeActive();\n\n        \n\n        // this will fix it\n\n        // RequestSerialization();\n\n    }\n\n    \n\n    private bool initialized = false;\n\n    public void Initialize()\n\n    {\n\n        if (initialized)\n\n        {\n\n            return;\n\n        }\n\n        Debug.Log(\"ColorCube: Initialize()\");\n\n        var cubeCount = gameObject.transform.childCount;\n\n        cubes = new GameObject[cubeCount];\n\n        for (var i = 0; i < cubeCount; i++)\n\n        {\n\n            cubes[i] = gameObject.transform.GetChild(i).gameObject;\n\n        }\n\n        initialized = true;\n\n    }\n\n    private void SetCubeActive()\n\n    {\n\n        foreach (var cube in cubes)\n\n        {\n\n            var newState = cube.name == Color;\n\n            if (newState)\n\n            {\n\n                Debug.Log(\"RandomColorCube: color set to \" + Color);\n\n            }\n\n            cube.SetActive(newState);\n\n        }\n\n    }\n\n    public void OnDeserialization()\n\n    {\n\n        if (Networking.IsOwner(gameObject))\n\n        {\n\n            Debug.Log(\"RandomColorCube: OnDeserialization() owner\");\n\n            return;\n\n        }\n\n        Debug.Log(\"RandomColorCube: OnDeserialization()\");\n\n        SetCubeActive();\n\n    }\n\n}\n\n```\n\n  \n\nThe cube gets initialized on start and sets a random color. But any late joiner no longer get the Color variable synced unless `RequestSerialization()` is also called in `Start()`.  \n\nThis used to work before.  \n\n  \n\nThe documentation states that `OnDeserialization()` is called for every object once on join.  \n\nIt might need to clarify that it only does that when `RequestSerialization()` has been called at least once.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb96fe4c3e90df1378d1e",
+  "imageURLs": [],
+  "lastUpdated": 1779039010398,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/64102f4e4acac4451ab143b3/2099574241.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-03-14T08:24:46.034Z",
+  "subCategoryID": null,
+  "title": "[1287] OnDeserialization no longer being called on manual synced objects unless RequestSerialization has been called at least once",
+  "trendingScore": 2776.457509500335,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "urlName": "1287-ondeserialization-no-longer-being-called-on-manual-synced-objects-unless-re",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d6f73f6abbf61555c4e3b",
+      "alias": "Pale Roadrunner",
+      "aliasID": "65c389caed6eefce4cb8c040",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d69bb5d63c5b3e7e695b6b2629de0ce0.png",
+      "companies": [],
+      "name": "red-panda",
+      "urlName": "red-panda-2",
+      "voteID": "64102f4e4acac4451ab14429"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "5f323b2a9dcbb575795f3156",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.tracking",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-18T01:16:32.425739Z",
+  "author": {
+    "_id": "5f32338ce73fd62511549767",
+    "alias": "Brave Possum",
+    "aliasID": "65db2eaf0129d7ae443d9df6",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/ef1947d03e1a7c561c2bc78421152070.png",
+    "created": "2020-08-11T05:58:36.233Z",
+    "name": "LesserGatsby",
+    "serviceAccount": false,
+    "urlName": "lessergatsby"
+  },
+  "authorID": "5f32338ce73fd62511549767",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-08-11T06:31:06.130Z",
+  "deletedAt": null,
+  "details": "When using a Parent Constraint or a Position Constraint, and setting the source to one of the eye bones while eye tracking is active, the object with the constraint is not moved to the correct position.\nSpecifically, it appears the object is moved to the base of the head bone (though I cant confirm that for sure).\nThe rotation is correct, it is specifically the position portion of the constraint which doesnt translate properly.\nObjects that are children of an eye bone, or mesh which has been weight painted to the eye bone appears in the correct orientation.  This bug specifically affects constraints. \nAlso, the constraints work as expected in the editor, correctly replicating the bone's position and rotation while testing the eye directions.\nIf you want more information, or an example set up, let me know and I can send over some test files.\nTo be an arimchair debugger, Id guess this is some sort of issue with execution order, or an inconsistency of bone position between Update and LateUpdate loops.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e2e4c3e90df131ccaf",
+  "imageURLs": [],
+  "lastUpdated": 1779066365813,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-08-11T06:31:06.130Z",
+  "subCategoryID": null,
+  "title": "Constraint targeting eye bone results in bad location.",
+  "trendingScore": 2934.5165294593253,
+  "updatedAt": "2026-05-18T01:07:40.796366Z",
+  "urlName": "constraint-targeting-eye-bone-results-in-bad-location",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f32338ce73fd62511549767",
+      "alias": "Brave Possum",
+      "aliasID": "65db2eaf0129d7ae443d9df6",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ef1947d03e1a7c561c2bc78421152070.png",
+      "companies": [],
+      "name": "LesserGatsby",
+      "urlName": "lessergatsby",
+      "voteID": "5f323b2b9dcbb575795f3164"
+    }
+  ]
+}

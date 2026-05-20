@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "607e32c86a309433037f1542",
+  "aiCategories": [
+    "loc.login",
+    "moderation.bans"
+  ],
+  "aiTaggedAt": "2026-05-18T09:31:29.304381Z",
+  "author": {
+    "_id": "60455ed78550931fb95d4316",
+    "alias": "Amber Swordtail",
+    "aliasID": "65c2c466ed6eefce4ce4a2ea",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/f9e315c865332a230d5ecc0bc49e6fc9.png",
+    "created": "2021-03-07T23:16:39.395Z",
+    "name": "StarlitPath",
+    "serviceAccount": false,
+    "urlName": "theakreutzer"
+  },
+  "authorID": "60455ed78550931fb95d4316",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-04-20T01:47:52.077Z",
+  "deletedAt": null,
+  "details": "VRChat Version: VRChat 2021.1.5p3\nDescription of the bug: In the output log, it appears as though the attempt to check for moderations(bans in particular) against me turned up an error, yet allowed me to proceed into the game without issue.\nSteps to reproduce (how did you encounter the bug?): I had twice logged into my merged Steam account which for some reason is a new account in-game, and then after multiple failed attempts at logging in, logged into my proper account, where the bug took place.\nAny extra files? (output logs, screenshots): Attached is a screenshot of the part of the output log in question.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb891e4c3e90df134b6f7",
+  "imageURLs": [
+    "https://canny.io/images/3aed85acacb2b4777a68dd635b684735.png"
+  ],
+  "lastUpdated": 1779096256165,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-04-20T01:47:52.077Z",
+  "subCategoryID": null,
+  "title": "Bad response data when fetching moderations, allows user in anyway",
+  "trendingScore": 2677.4181341299645,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "bad-response-data-when-fetching-moderations-allows-user-in-anyway",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60455ed78550931fb95d4316",
+      "alias": "Amber Swordtail",
+      "aliasID": "65c2c466ed6eefce4ce4a2ea",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f9e315c865332a230d5ecc0bc49e6fc9.png",
+      "companies": [],
+      "name": "StarlitPath",
+      "urlName": "theakreutzer",
+      "voteID": "607e32c86a309433037f1549"
+    }
+  ]
+}

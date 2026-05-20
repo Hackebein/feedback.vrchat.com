@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "5f2e71258fc2c972dd4a7a2d",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:50:33.506965Z",
+  "author": {
+    "_id": "5f2d96a063aa6f7311d3f162",
+    "alias": "Sure Chicken",
+    "aliasID": "65cac66aed6eefce4c07bce6",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/76b521509035178605d55db7d765da59.png",
+    "created": "2020-08-07T18:00:00.801Z",
+    "name": "vololya",
+    "serviceAccount": false,
+    "urlName": "vololya"
+  },
+  "authorID": "5f2d96a063aa6f7311d3f162",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5f305d6fcf3fcb79bd488d34",
+      "author": {
+        "_id": "5ac4fd763f8d523278a414f7",
+        "alias": "Dutch white Wildfowl",
+        "aliasID": "65ba0717ed6eefce4c8231fc",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/8a45b1f242714ffb806601b9ebc4c2d9.png",
+        "created": "2018-04-04T16:29:42.665Z",
+        "name": "Tayou",
+        "serviceAccount": false,
+        "urlName": "supralp"
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2020-08-09T20:32:47.881Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5f2e71258fc2c972dd4a7a2d",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "cloth works fine on my avatar. I suggest you just redo the vertex weight on the cloth component. and check if all values are correct.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-08-08T09:32:21.991Z",
+  "deletedAt": null,
+  "details": "Cloth component on skirt, for example, looks like Saturn. Same avatar from 2.0 looks how it's supposed to be, but 3.0 completely broke cloth component. That also looks good in mirror, but not in game.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e0e4c3e90df131c674",
+  "imageURLs": [
+    "https://canny.io/images/7a2560b9e188abc34633e76acdf16c9a.png"
+  ],
+  "lastUpdated": 1779032542196,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-08-08T09:32:21.991Z",
+  "subCategoryID": null,
+  "title": "Cloth was broke",
+  "trendingScore": 2727.2941171693124,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "cloth-was-broke",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d96a063aa6f7311d3f162",
+      "alias": "Sure Chicken",
+      "aliasID": "65cac66aed6eefce4c07bce6",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/76b521509035178605d55db7d765da59.png",
+      "companies": [],
+      "name": "vololya",
+      "urlName": "vololya",
+      "voteID": "5f2e71268fc2c972dd4a7a35"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "__v": 0,
+  "_id": "647a3bd0b14e1120799f47ba",
+  "aiCategories": [
+    "loc.creator-companion",
+    "sdk.vpm"
+  ],
+  "aiTaggedAt": "2026-05-19T19:21:13.006951Z",
+  "author": {
+    "_id": "5fa08ddb2644fb4c5a3dfe75",
+    "alias": "Toffee Coyote",
+    "aliasID": "65c2824ced6eefce4c9ed424",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/117329828d6b6e2d7dbf8a4ad5485be2.png",
+    "created": "2020-11-02T22:53:15.373Z",
+    "name": "SenkyDragon",
+    "serviceAccount": false,
+    "urlName": "senkydragon"
+  },
+  "authorID": "5fa08ddb2644fb4c5a3dfe75",
+  "board": {
+    "_id": "617b2e52d78bc972ff325a03",
+    "name": "Creator Companion",
+    "urlName": "creator-companion"
+  },
+  "boardID": "617b2e52d78bc972ff325a03",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [
+    {
+      "_id": "64959e63bec709090da58e1d",
+      "author": {
+        "_id": "63691297469f06772579fe6f",
+        "alias": "Sage Meadowlark",
+        "aliasID": "65c28116ed6eefce4c6d7d2d",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0958f7577d869b58b8a4407e6b9fddab.png",
+        "created": "2022-11-07T14:13:43.431Z",
+        "name": "Fax",
+        "serviceAccount": false,
+        "urlName": "fax-31"
+      },
+      "boardID": "617b2e52d78bc972ff325a03",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2023-06-23T13:30:11.587Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "64959e63bec709090da58e1d",
+      "mergedPostDetails": "When VCC is maximized, on packages that have a large number of versions, then all versions cannot be shown.\n\nAs shown in the provided pictures, VRCFury lists it's package versions up under the top bar of the UI.\n\nSeems like VRC Base doesn't suffer from this.",
+      "mergedPostTitle": "Can't see all package versions in fullscreen",
+      "pinned": false,
+      "postID": "647a3bd0b14e1120799f47ba",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-06-02T18:58:24.351Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The header of the manage packages page can cut off the version list, which annoyingly is often the newest version available since it's at the top.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97fe4c3e90df137c527",
+  "imageURLs": [
+    "https://canny.io/images/503d4552aa6b117cb243c35e5e17da1b.png"
+  ],
+  "lastUpdated": 1779217913746,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 1,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/647a3bd0b14e1120799f47ba/1080313962.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-06-02T18:58:24.351Z",
+  "subCategoryID": null,
+  "title": "Manage Packages header cuts off version list",
+  "trendingScore": 2789.8205150578183,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "updatedBy": null,
+  "urlName": "manage-packages-header-cuts-off-version-list",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60c87a5d16d979790d8309cf",
+      "alias": "Tawny Raven",
+      "aliasID": "65c2821bed6eefce4c970ba0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5352978364972e730009b48b80591670.png",
+      "companies": [],
+      "name": "TummyTime",
+      "urlName": "tummytime",
+      "voteID": "64959e63bec709090da58e38"
+    },
+    {
+      "_id": "5fa08ddb2644fb4c5a3dfe75",
+      "alias": "Toffee Coyote",
+      "aliasID": "65c2824ced6eefce4c9ed424",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/117329828d6b6e2d7dbf8a4ad5485be2.png",
+      "companies": [],
+      "name": "SenkyDragon",
+      "urlName": "senkydragon",
+      "voteID": "647a3bd0b14e1120799f47e4"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "653c17dde440181c5c5e7c9b",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T18:51:21.435461Z",
+  "author": {
+    "_id": "5f2e050298c07f756db80965",
+    "alias": "Complex Halibut",
+    "aliasID": "65c2c0eaed6eefce4c7a7ef7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c0b6c1520ecef2e3ca753e21c9c7d064.png",
+    "created": "2020-08-08T01:50:58.459Z",
+    "name": "speedbuiz",
+    "serviceAccount": false,
+    "urlName": "speeddragon"
+  },
+  "authorID": "5f2e050298c07f756db80965",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-10-27T20:04:45.449Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I'm attempting to use a VRC Animator Layer Control component to turn off (Weight 0) a layer that utilizes their own VRC Animator Layer Controls.\n\nThe disable/enable Node on Layer 4 toggles Layer 2 on/off. Layer 2 is programmed to flip Layer 3 on and off. Layer 2 will be disabled (Weight 0), but their transitions somehow still fire and the nodes with Animator Layer Controls still turn off/on Layer 3.\n\nI used this system in Xperiment- the public row avatar- and it's unknown if issues will unfold if I'm to reupload it or not. As far as I know this is only happening on fresh uploads.\n\nOnly sometimes does the VRC Animator Layer Control fail, and resetting the avatar corrects the mistake until it occurs again. It's inconsistent and has odd behavior that I can't make heads or tails out of. If I had to guess, its a resulting bug of the 2019 to 2022 Unity transition. Prooobably easily overlooked, I don't think anybody's actively using 2 sets of Animator Layer Controls, soooo :P \n\nAddendum: Layer 2 is Weight 0 by default. I could swear it was only when I turned Layer 2 on, then off, was Layer 2 still firing its Animator Layer Control actions- I mean not initially, but only when it was flicked On, and then back to Off again.\n\n...I've my workarounds for now but I think the script is genuinely busted. Maybe when the SDK upgrades to 2022 Unity it'll get fixed?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9b3e4c3e90df1384ebf",
+  "imageURLs": [
+    "https://canny.io/images/1f3a0fd1d9a8308d17e73ff081678a08.png"
+  ],
+  "lastUpdated": 1779216315797,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-10-27T20:04:45.449Z",
+  "subCategoryID": null,
+  "title": "VRC Animator Layer Control is Inconsistent in 2023.4.1",
+  "trendingScore": 2808.955524109297,
+  "updatedAt": "2026-05-19T18:47:33.670829Z",
+  "updatedBy": null,
+  "urlName": "vrc-animator-layer-control-is-inconsistent-in-202341",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2e050298c07f756db80965",
+      "alias": "Complex Halibut",
+      "aliasID": "65c2c0eaed6eefce4c7a7ef7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c0b6c1520ecef2e3ca753e21c9c7d064.png",
+      "companies": [],
+      "name": "speedbuiz",
+      "urlName": "speeddragon",
+      "voteID": "653c17dd53cf95102345e37b"
+    }
+  ]
+}

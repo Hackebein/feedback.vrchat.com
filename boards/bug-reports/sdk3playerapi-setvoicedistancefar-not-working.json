@@ -1,0 +1,95 @@
+{
+  "__v": 0,
+  "_id": "608d248ef1c80441b1561215",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "audio.voice",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T09:33:53.791447Z",
+  "author": {
+    "_id": "603b9122919fa061a75d2ab4",
+    "alias": "Indigo Mastodon",
+    "aliasID": "65d004120129d7ae4484e271",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/309760bc6f455efaec0b3fedb5c865dd.png",
+    "created": "2021-02-28T12:48:34.935Z",
+    "name": "k's［ケーズ］",
+    "serviceAccount": false,
+    "urlName": "ks-69"
+  },
+  "authorID": "603b9122919fa061a75d2ab4",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-05-01T09:51:10.899Z",
+  "deletedAt": null,
+  "details": "I try to set SetVoiceDistanceNear to 5,SetVoiceDistanceFar to 10,SetVoiceVolumetricRadius to 0.\nbut these setting not working. The reachable distance of the voice remains 25m(it is default).\nhttps://docs.vrchat.com/docs/player-audio\nsdk version:VRCSDK3-WORLD-2021.03.22.18.27_Public",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb893e4c3e90df134bdf1",
+  "imageURLs": [
+    "https://canny.io/images/cddf37cadfd0d15be4f78c04dd0acde1.png"
+  ],
+  "lastUpdated": 1779096257691,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-05-01T09:51:10.899Z",
+  "subCategoryID": null,
+  "title": "[SDK3]PlayerAPI SetVoiceDistanceFar not working",
+  "trendingScore": 2683.453852614572,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "sdk3playerapi-setvoicedistancefar-not-working",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "606156bf9644b2219a95a7d7",
+      "alias": "Brief Gopher",
+      "aliasID": "65f7e428a63714bcb376aa88",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9654d825698375b22b4e88b79565a60a.png",
+      "companies": [],
+      "name": "Rusk1221",
+      "urlName": "rusk1221",
+      "voteID": "608d2cf7dcc45430aa2aa427"
+    },
+    {
+      "_id": "603b9122919fa061a75d2ab4",
+      "alias": "Indigo Mastodon",
+      "aliasID": "65d004120129d7ae4484e271",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/309760bc6f455efaec0b3fedb5c865dd.png",
+      "companies": [],
+      "name": "k's［ケーズ］",
+      "urlName": "ks-69",
+      "voteID": "608d248ef1c80441b156121c"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "_id": "692c838a3081d9c7ea0d3df8",
+  "aiCategories": [
+    "loc.website",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-05-18T05:57:14.730711Z",
+  "author": {
+    "_id": "5d0e6a55448fcf1d6b2639eb",
+    "alias": "Increased Rook",
+    "aliasID": "692c827d4927a96e58b2e6eb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a45082d76dae1bcbd786367f0e2c5ef6.png",
+    "created": "2019-06-22T17:50:13.049Z",
+    "name": "karl-police",
+    "serviceAccount": false,
+    "urlName": "karl-police"
+  },
+  "authorID": "5d0e6a55448fcf1d6b2639eb",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-11-30T17:48:58.024Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "## Description\n\nI think at least, I don't have many resources to like go and re-produce this issue. But basically. When you accept someone that is offline, they'll appear Online at the right until you refresh, it seems like. Which is a small strange little issue.\n\n## Re-production Steps\n\n- Get a friend request\n\n- They should be offline\n\n- Accept it on the website\n\n- Observer the side bar\n\n## Expected Result\n\nThat if they're offline they shouldn't show up as online, right after accepting.\n\n## Actual Result\n\nIt looks like they appear as Online right after you accept, but only on the sidebar and when you refresh then it is fixed.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "692c838a3081d9c7ea0d3e37",
+  "imageURLs": [],
+  "lastUpdated": 1779082493683,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/692c838a3081d9c7ea0d3df8/1163460544.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-11-30T17:48:58.024Z",
+  "subCategoryID": null,
+  "title": "When accepting someone as a friend, they straight up appear Online even though they're not?",
+  "trendingScore": 2918.2277670730864,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": null,
+  "urlName": "when-accepting-someone-as-a-friend-they-straight-up-appear-online-even-though-th",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5d0e6a55448fcf1d6b2639eb",
+      "alias": "Increased Rook",
+      "aliasID": "692c827d4927a96e58b2e6eb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a45082d76dae1bcbd786367f0e2c5ef6.png",
+      "companies": [],
+      "name": "karl-police",
+      "urlName": "karl-police",
+      "voteID": "692c838a4927a96e58ed76cd"
+    }
+  ]
+}

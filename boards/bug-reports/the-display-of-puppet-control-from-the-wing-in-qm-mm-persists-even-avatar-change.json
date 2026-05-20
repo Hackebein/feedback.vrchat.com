@@ -1,0 +1,158 @@
+{
+  "_id": "69a581163e26fea265ad2da7",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.main-menu",
+    "avatars.expressions",
+    "avatars.dynamics",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-18T15:28:00.015165Z",
+  "author": {
+    "_id": "6163d2754d39c94e1e8f96dc",
+    "alias": "Main Giraffe",
+    "aliasID": "65c26de3ed6eefce4c583dee",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/861bc7c02221018ec0ce9c77c604174a.png",
+    "created": "2021-10-11T05:58:13.495Z",
+    "name": "nekochanfood",
+    "serviceAccount": false,
+    "urlName": "nekochanfood"
+  },
+  "authorID": "6163d2754d39c94e1e8f96dc",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69a5ab08069192558471e51c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "paige-pinson"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-03-02T15:21:44.219Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69a581163e26fea265ad2da7",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "69a5ab08069192558471e50e",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-02T12:22:46.054Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "As the title says. The same thing happens when reloading the scene (join somewhere or rejoin), but there's a diffrerence of the icon of the control, which seems just a white square due to being disposed of (I assume)\n\nHow to reproduce:\n\n1. Wear an avatar that has puppet control\n\n2. Open wing (QM or MM, both is good)\n\n3. Select \"Expression\"\n\n4. Click the control\n\n5. keeps the display of control\n\n6. Change the avatar\n\n7. Check the wing\n\n8. You'll see the control from the previous avatar is still displaying",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/7f5c1f3d11cb116a10c79404cb7a022b.mp4",
+    "https://canny-assets.io/files/45a884f362bb2ce46a687884d22e6d01.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-03-02 21-15-22",
+      "url": "https://canny-assets.io/files/7f5c1f3d11cb116a10c79404cb7a022b.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-03-02 20-48-58_1",
+      "url": "https://canny-assets.io/files/45a884f362bb2ce46a687884d22e6d01.mp4"
+    }
+  ],
+  "ideaID": "69a581163e26fea265ad2dca",
+  "imageURLs": [],
+  "lastUpdated": 1779117293541,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69a581163e26fea265ad2da7/809435658.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2026-03-02T15:21:44.176Z",
+  "subCategoryID": null,
+  "title": "the display of puppet control from the wing in QM/MM persists even avatar changed",
+  "trendingScore": 2931.750309568542,
+  "updatedAt": "2026-05-18T15:15:37.490037Z",
+  "updatedBy": null,
+  "urlName": "the-display-of-puppet-control-from-the-wing-in-qm-mm-persists-even-avatar-change",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": "dagger1675",
+      "voteID": "69a5af6d804d20e9703cb950"
+    },
+    {
+      "_id": "6163d2754d39c94e1e8f96dc",
+      "alias": "Main Giraffe",
+      "aliasID": "65c26de3ed6eefce4c583dee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/861bc7c02221018ec0ce9c77c604174a.png",
+      "companies": [],
+      "name": "nekochanfood",
+      "urlName": "nekochanfood",
+      "voteID": "69a58116804d20e9702b116c"
+    }
+  ]
+}

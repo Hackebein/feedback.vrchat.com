@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "5b3881004e81107f2f1e84e9",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "worlds.video",
+    "sdk.vrcsdk",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-18T17:17:05.326786Z",
+  "author": {
+    "_id": "5b3880244e81107f2f1e84d6",
+    "alias": "Alright Prawn",
+    "aliasID": "65c2c366ed6eefce4cc70504",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/6abe2d761f4e356cce0d31e9216948c3.png",
+    "created": "2018-07-01T07:17:56.646Z",
+    "name": "CbSquare",
+    "serviceAccount": false,
+    "urlName": "cbsquare"
+  },
+  "authorID": "5b3880244e81107f2f1e84d6",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-07-01T07:21:36.879Z",
+  "deletedAt": null,
+  "details": "Unlike the old VRC_SyncVideoPlayer, VRC_SyncVideoStream requires VRC_VideoSpeaker to handle the audio output and it does not support any Unity audio effects such as Reverb, High Pass Filter etc. Adding these effects back could really help developing worlds with better audio experience (e.g. live stages).",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d57e4c3e90df1578158",
+  "imageURLs": [],
+  "lastUpdated": 1779124033837,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-07-01T07:21:36.879Z",
+  "subCategoryID": null,
+  "title": "Allowing Audio effects for VRC_VideoSpeaker",
+  "trendingScore": 2531.165529604502,
+  "updatedAt": "2026-05-18T17:08:14.138713Z",
+  "urlName": "allowing-audio-effects-for-vrcvideospeaker",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b3880244e81107f2f1e84d6",
+      "alias": "Alright Prawn",
+      "aliasID": "65c2c366ed6eefce4cc70504",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6abe2d761f4e356cce0d31e9216948c3.png",
+      "companies": [],
+      "name": "CbSquare",
+      "urlName": "cbsquare",
+      "voteID": "5b38810052f19ff980ea8627"
+    }
+  ]
+}

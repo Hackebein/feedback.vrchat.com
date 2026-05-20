@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "66d5d467789897506dccadb9",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T16:03:38.862297Z",
+  "author": {
+    "_id": "66d5cf9f8ff5b418c19c4b11",
+    "alias": "Mango Penguin",
+    "aliasID": "66d5cfa07d32abb6ca3f8945",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eab1f0518b0bf7f31d07568a96437c6b.png",
+    "created": "2024-09-02T14:45:51.751Z",
+    "name": "kalka_lka",
+    "serviceAccount": false,
+    "urlName": "kalka-lka"
+  },
+  "authorID": "66d5cf9f8ff5b418c19c4b11",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-09-02T15:06:15.771Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I have turned off full body tracking walking animations in the settings, but when an uploaded Shinra or RadDoll moves or jumps during full body tracking, the motion is replayed, causing the avatar to sway unnaturally or look strange from the waist up.\n\nWe tested several sample avatars and found that Velle and Lzebul show very little of the above phenomenon, while Alfis and Shinra's bodies do not collapse when they jump, but the animations during movement are played back.\n\nI would like to have this problem solved as soon as possible.\n\nTranslated with DeepL.com (free version)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba0de4c3e90df1396875",
+  "imageURLs": [],
+  "lastUpdated": 1779032732350,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66d5d467789897506dccadb9/857431035.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-09-02T15:06:15.771Z",
+  "subCategoryID": null,
+  "title": "Moving or jumping during full body tracking causes the avatar's body to fall over.",
+  "trendingScore": 2853.3544828816184,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "moving-or-jumping-during-full-body-tracking-causes-the-avatars-body-to-fall-over",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66d5cf9f8ff5b418c19c4b11",
+      "alias": "Mango Penguin",
+      "aliasID": "66d5cfa07d32abb6ca3f8945",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eab1f0518b0bf7f31d07568a96437c6b.png",
+      "companies": [],
+      "name": "kalka_lka",
+      "urlName": "kalka-lka",
+      "voteID": "66d5d4677d32abb6ca43a755"
+    }
+  ]
+}

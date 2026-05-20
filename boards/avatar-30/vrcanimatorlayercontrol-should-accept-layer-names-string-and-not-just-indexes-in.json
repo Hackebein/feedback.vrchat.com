@@ -1,0 +1,123 @@
+{
+  "__v": 0,
+  "_id": "617abc592d520b05621b7632",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:56:23.319819Z",
+  "author": {
+    "_id": "5cb356e014314c03a61797c7",
+    "alias": "Flamingo pink Duck",
+    "aliasID": "65c28068ed6eefce4c52fcb5",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ae534a24ec61c5d7a6b4a39f9f99a1ef.png",
+    "created": "2019-04-14T15:50:56.166Z",
+    "name": "TheHelpfulHelper",
+    "serviceAccount": false,
+    "urlName": "theezicorder"
+  },
+  "authorID": "5cb356e014314c03a61797c7",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8783d561e5922d89ac4",
+    "created": "2023-09-22T15:53:28.541Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 412,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "650db8783d561e5922d89ac4",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-10-28T15:06:01.720Z",
+  "deletedAt": null,
+  "details": "Currently the AnimatorLayerControl State Behaviour only allows indexes for layers. This makes reodering layers incredibly tedious, since you have to now change all the indexes of all your layer controllers. Especially in regards with prefabs and automated animator integration scripts, this makes developing abstract avatar systems much more difficult.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8c1e4c3e90df1356c6e",
+  "imageURLs": [],
+  "lastUpdated": 1779032664230,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-10-28T15:06:01.720Z",
+  "subCategoryID": null,
+  "title": "VRCAnimatorLayerControl should accept layer names (string) and not just indexes (int)",
+  "trendingScore": 2792.378609548611,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "vrcanimatorlayercontrol-should-accept-layer-names-string-and-not-just-indexes-in",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "58f0f87cae407f11b533b0b2",
+      "alias": "Orchid bloom Horse",
+      "aliasID": "65c270b7ed6eefce4cd260cb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7f7a88e25266a0bc83c2b0851b9da7b1.png",
+      "companies": [],
+      "name": "Misaki Ki",
+      "urlName": "misaki",
+      "voteID": "64a9827778b4720966899831"
+    },
+    {
+      "_id": "5f84827881e0832ac8133b0e",
+      "alias": "Rising Possum",
+      "aliasID": "65c69ab3ed6eefce4c995c6c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/79206eda371dd4b20161eb310415c44f.png",
+      "companies": [],
+      "name": "Torpor",
+      "urlName": "torpor",
+      "voteID": "618b55eae9247e723ecc61f4"
+    },
+    {
+      "_id": "5f35a34bed3a441c236ab4f1",
+      "alias": "Near Gecko",
+      "aliasID": "65c3572eed6eefce4c4393d5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b6c3233a4cd6647ee7bfa9d0a6c7ad00.png",
+      "companies": [],
+      "name": "rayen_",
+      "urlName": "rayen-4",
+      "voteID": "618404cce871fa5fc06cb6b6"
+    },
+    {
+      "_id": "5cb356e014314c03a61797c7",
+      "alias": "Flamingo pink Duck",
+      "aliasID": "65c28068ed6eefce4c52fcb5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ae534a24ec61c5d7a6b4a39f9f99a1ef.png",
+      "companies": [],
+      "name": "TheHelpfulHelper",
+      "urlName": "theezicorder",
+      "voteID": "617abc592d520b05621b7639"
+    }
+  ]
+}

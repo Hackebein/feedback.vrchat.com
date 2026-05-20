@@ -1,0 +1,106 @@
+{
+  "__v": 0,
+  "_id": "62e85d8cc1067444ba5d3367",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.impostors"
+  ],
+  "aiTaggedAt": "2026-05-16T22:22:36.951807Z",
+  "author": {
+    "_id": "5ba7e0881a53843243b76790",
+    "alias": "Sunglow Shark",
+    "aliasID": "65c2a2c2ed6eefce4c7bc15b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d692ecc897940fc86f39b1c7bdaadeee.png",
+    "created": "2018-09-23T18:50:48.627Z",
+    "name": "Entorix",
+    "serviceAccount": false,
+    "urlName": "erik-wold-1"
+  },
+  "authorID": "5ba7e0881a53843243b76790",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-08-01T23:11:08.532Z",
+  "deletedAt": null,
+  "details": "I've been thinking about distance based culling of avatars, and I was wondering if doing what BDO (Black Desert Online) does with its actors when they're far away would be a good choice. In BDO, if players/NPCs/etc (Actors) are a certain distance from you, they are replaced by shadow-like humanoid figures. I really like this approach and think perhaps it could be useful instead of the default diamonds. I'm aware that skinned meshes are more expensive than regular meshes, and so the grey diamonds are obviously more performant, but I do think this would help a great deal with immersion. Also, perhaps a couple of choices for what kind of shape your \"shadow\" should be, like for example, for anything non-humanoid, perhaps you would become a sort of black blob (think like a slime from a JRPG). I'm just spit-balling here, but I'd like to hear other people's thoughts on this!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb914e4c3e90df1366cfe",
+  "imageURLs": [
+    "https://canny.io/images/d6b542f7d6e1400c3b79c47feca85ca9.png"
+  ],
+  "lastUpdated": 1779262136124,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-08-01T23:11:08.532Z",
+  "subCategoryID": null,
+  "title": "Distance Based Culling as \"Shadows\" instead of Grey Diamonds",
+  "trendingScore": 2817.9379930257937,
+  "updatedAt": "2026-05-20T07:29:36.094720Z",
+  "urlName": "distance-based-culling-as-shadows-instead-of-grey-diamonds",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c03473992eef65b2bb3cc2c",
+      "alias": "Outstanding Kingfisher",
+      "aliasID": "65c27129ed6eefce4ce48dac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/230b695b3f1227c6e53121c1f0c0bec1.png",
+      "companies": [],
+      "name": "Groxxy",
+      "urlName": "insanegrox",
+      "voteID": "65956282b7f7f4d2273737d7"
+    },
+    {
+      "_id": "610f1aaae1293d02c54f2f9b",
+      "alias": "Cooperative Sawfish",
+      "aliasID": "65c2a2afed6eefce4c790054",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/96708b88c4f104ef50d74012ef2b2f22.png",
+      "companies": [],
+      "name": "e3velution0",
+      "urlName": "e3velution0",
+      "voteID": "62e90eba86b55e44bd412a37"
+    },
+    {
+      "_id": "5ba7e0881a53843243b76790",
+      "alias": "Sunglow Shark",
+      "aliasID": "65c2a2c2ed6eefce4c7bc15b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d692ecc897940fc86f39b1c7bdaadeee.png",
+      "companies": [],
+      "name": "Entorix",
+      "urlName": "erik-wold-1",
+      "voteID": "62e85d8cc1067444ba5d3398"
+    }
+  ]
+}

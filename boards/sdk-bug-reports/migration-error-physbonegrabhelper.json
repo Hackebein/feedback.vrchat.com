@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "657fbba7bf437bf5a6783683",
+  "aiCategories": [
+    "user-support"
+  ],
+  "aiTaggedAt": "2026-05-17T15:15:55.541950Z",
+  "author": {
+    "_id": "60a53aad80656d4a5d4a1ef1",
+    "alias": "Early Weasel",
+    "aliasID": "65c2bfe8ed6eefce4c5d0308",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e0e901ad6fee604a68441c8936e3bd86.png",
+    "created": "2021-05-19T16:19:57.972Z",
+    "name": "Cazra",
+    "serviceAccount": false,
+    "urlName": "cazra"
+  },
+  "authorID": "60a53aad80656d4a5d4a1ef1",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-12-18T03:25:27.447Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I just tried to migrate my avatars mega-project from Unity 2019 to Unity 2022. When it finished migrating, I'm getting errors that appear to be related to PhysBones:\n\nPackages\\vrchat.blackstartx.gesture-manager\\Scripts\\Editor\\Modules\\Vrc3\\AvatarDynamics\\AvatarDynamicReset.cs(44,30): error CS0246: The type or namespace name 'PhysBoneGrabHelper' could not be found (are you missing a using directive or an assembly reference?)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9c7e4c3e90df1388732",
+  "imageURLs": [],
+  "lastUpdated": 1779026978906,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-12-18T03:25:27.447Z",
+  "subCategoryID": null,
+  "title": "Migration error: PhysBoneGrabHelper",
+  "trendingScore": 2816.284958569449,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": null,
+  "urlName": "migration-error-physbonegrabhelper",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60a53aad80656d4a5d4a1ef1",
+      "alias": "Early Weasel",
+      "aliasID": "65c2bfe8ed6eefce4c5d0308",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e0e901ad6fee604a68441c8936e3bd86.png",
+      "companies": [],
+      "name": "Cazra",
+      "urlName": "cazra",
+      "voteID": "657fbba73d279c6cf476f7f9"
+    }
+  ]
+}

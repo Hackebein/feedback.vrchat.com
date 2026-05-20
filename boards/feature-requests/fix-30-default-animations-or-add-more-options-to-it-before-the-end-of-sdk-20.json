@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "620ea84b353d6f4714efe1d6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T19:49:07.810067Z",
+  "author": {
+    "_id": "5f3debf587d66d22e91f2d79",
+    "alias": "Just Kingfisher",
+    "aliasID": "65d7eaeb0129d7ae44f82981",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/5b3ad9e9f678fcffd0f86b2f5234ca6b.png",
+    "created": "2020-08-20T03:20:21.986Z",
+    "name": "Seryk",
+    "serviceAccount": false,
+    "urlName": "seryk"
+  },
+  "authorID": "5f3debf587d66d22e91f2d79",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-02-17T19:55:55.989Z",
+  "deletedAt": null,
+  "details": "Hello, before the day comes when sdk 2.0 is broken and avatars made from it don’t work anymore, please dev team fix some of the 3.0 issues. Two problems are making the transition from 2.0 to 3.0 a major headache for me. This was all done from scratch in a project using the latest sdk 3.0 available and the correct Unity version, both 2.0 and 3.0 projects have the exact same avatar with the exact same rigging done in blender, along with the same modifications such as Atlasing in the Cats Plug-in. Due to the only 1 request per post rule, I’ll be posting 1 at a time.\nThe default 3.0 standing/crouching animation, the legs stand way to close to each other and torso less responsible to head movements than 2.0, making the avatar seem very rigid. A friend sent me a custom animation controller that I replaced the ‘Base’ Playable Layer with and it looks so much better crouching with that than the default 3.0 one, but standing up still seem abit off. What I’m trying to do to fix this is take the sdk 2.0 animation controller and port it to the 3.0 project, I still have to see the results of that mixing because I can’t get in game to test until later today. However, some friends that know way more about avatars than me already tested something like that and it didn’t worked for them. This is not something happening only to me or my avatar, if you want to test it yourself just grab any public avatar 3.0 and compare the standing/crouching animation, they all have the exact same issue but most people seem to not care enough to put time to try to find a solution. I believe the easiest solution would be to make avaible different animations for standing/crouching, like we did for 2.0 with ‘female’ or ‘male’, now we with 3.0 we only have the ‘male’ animations, which is the worst of the 2 in my opinion.\nI’m posting comparing screenshots, you can even tell on the avatar previewer at the menu that one looks stiffed (sdk 3.0 one) and the other looks like a more relaxed pose (sdk 2.0 one).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d6e4c3e90df135a5c2",
+  "imageURLs": [
+    "https://canny.io/images/8f749beb9e087da69587bd7d5d45d78b.png",
+    "https://canny.io/images/7e8ec7936df01741158b1ed411f1894b.png",
+    "https://canny.io/images/cf82897d967b5e04202560023d8294f2.png",
+    "https://canny.io/images/fa70a90beb9d0e331924436aa134c15f.png"
+  ],
+  "lastUpdated": 1779218148498,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-02-17T19:55:55.989Z",
+  "subCategoryID": null,
+  "title": "Fix 3.0 default animations or add more options to it before the end of sdk 2.0",
+  "trendingScore": 2720.8117915051303,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "fix-30-default-animations-or-add-more-options-to-it-before-the-end-of-sdk-20",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3debf587d66d22e91f2d79",
+      "alias": "Just Kingfisher",
+      "aliasID": "65d7eaeb0129d7ae44f82981",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5b3ad9e9f678fcffd0f86b2f5234ca6b.png",
+      "companies": [],
+      "name": "Seryk",
+      "urlName": "seryk",
+      "voteID": "620ea84c353d6f4714efe1f4"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "__v": 0,
+  "_id": "5b3d27eda1ca703355058e38",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T17:20:20.541234Z",
+  "author": {
+    "_id": "5ae802a43ca0e56248e5cf8b",
+    "alias": "Willow Alligator",
+    "aliasID": "65c28a90ed6eefce4cdca6b1",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3261bbd9c890e80d1a82d275d52a6a70.png",
+    "created": "2018-05-01T06:01:08.732Z",
+    "name": "CyanLaser",
+    "serviceAccount": false,
+    "urlName": "cyanlaser"
+  },
+  "authorID": "5ae802a43ca0e56248e5cf8b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-07-04T20:02:53.445Z",
+  "deletedAt": null,
+  "details": "Everyone can get a synced variable but only master can update it. If a non master client tries to update a synced variable, it only changes locally.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d58e4c3e90df157868c",
+  "imageURLs": [],
+  "lastUpdated": 1779210577617,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-07-04T20:02:53.445Z",
+  "subCategoryID": null,
+  "title": "Setting synced variables is Master only",
+  "trendingScore": 2532.322772649689,
+  "updatedAt": "2026-05-19T17:10:22.873328Z",
+  "urlName": "setting-synced-variables-is-master-only",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a7ac88bf5a5c52c08064fb9",
+      "alias": "Prairie sand Hedgehog",
+      "aliasID": "65ba02f2ed6eefce4c1872a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b2a514509aeb0aa28d6466fcc4134aa4.png",
+      "companies": [],
+      "name": "PhaxeNor",
+      "urlName": "christian-wiig",
+      "voteID": "5b42cc8d52f19ff980ed020e"
+    },
+    {
+      "_id": "5ae802a43ca0e56248e5cf8b",
+      "alias": "Willow Alligator",
+      "aliasID": "65c28a90ed6eefce4cdca6b1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3261bbd9c890e80d1a82d275d52a6a70.png",
+      "companies": [],
+      "name": "CyanLaser",
+      "urlName": "cyanlaser",
+      "voteID": "5b3d27ed52f19ff980ec0646"
+    }
+  ]
+}

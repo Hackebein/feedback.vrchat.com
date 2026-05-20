@@ -1,0 +1,87 @@
+{
+  "_id": "68c3161dc5b4086a31ee0dea",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-05-17T01:12:52.728877Z",
+  "author": {
+    "_id": "66e329a2dfac1fa4d847ed3f",
+    "alias": "Merlot Cuckoo",
+    "aliasID": "66e329a27d32abb6ca0ca5a6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d6426cdb8c09cf0481bf5fc12cd47911.png",
+    "created": "2024-09-12T17:49:22.021Z",
+    "name": "Falconi Rabbit",
+    "serviceAccount": false,
+    "urlName": "falconi-rabbit"
+  },
+  "authorID": "66e329a2dfac1fa4d847ed3f",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-09-11T18:34:05.972Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "-VR Mode Only-\n\nEnable Stream Camera\n\nOpen Invite/Request dialog\n\nSelect 'Take Photo' from Dialog\n\nIn-game camera display does not change and appears to still be the Stream Camera. However, stream camera output changes to the perspective of the VR Headset 'First-Person' mode.\n\nThis can be tested using an external recording suite (OBS) that will use the Stream Camera output.\n\nVideo Example: https://drive.google.com/file/d/1YkkBPOZwjvOjdWO9yG4wJPzZFvpu2GVL/view?usp=sharing\n\nUntil the Stream Camera is closed or an actual picture is taken, VRChat continues to wait for a picture and the Stream Camera output remains 'split' and this behavior can only be observed through an external application that is using the Stream Camera output.\n\nStream Camera returns to its expected behavior once the Camera itself has been closed or a picture is taken from the camera.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68c3161ec5b4086a31ee0e9e",
+  "imageURLs": [
+    "https://canny-assets.io/images/315629b3d750688fcb38baf3137f8fd1.jpeg",
+    "https://canny-assets.io/images/4557f31cb78b9d9be5e9463ba78025c2.jpeg"
+  ],
+  "lastUpdated": 1778979397157,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68c3161dc5b4086a31ee0dea/1349641224.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-09-11T18:34:05.972Z",
+  "subCategoryID": null,
+  "title": "Invite/Request 'Take Photo' option with Stream Camera enabled behaves differently between In-Game UI and Streamed camera output",
+  "trendingScore": 2906.80367306267,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": null,
+  "urlName": "invite-request-take-photo-option-with-stream-camera-enabled-behaves-differently",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66e329a2dfac1fa4d847ed3f",
+      "alias": "Merlot Cuckoo",
+      "aliasID": "66e329a27d32abb6ca0ca5a6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d6426cdb8c09cf0481bf5fc12cd47911.png",
+      "companies": [],
+      "name": "Falconi Rabbit",
+      "urlName": "falconi-rabbit",
+      "voteID": "68c3161ece2ca2b5202dd78d"
+    }
+  ]
+}

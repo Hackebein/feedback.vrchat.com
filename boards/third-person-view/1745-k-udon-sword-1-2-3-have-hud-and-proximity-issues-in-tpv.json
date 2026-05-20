@@ -1,0 +1,101 @@
+{
+  "_id": "68fff61190d645014dfedc07",
+  "aiCategories": [
+    "loc.hud",
+    "loc.in-world",
+    "client.third-person",
+    "sdk.udon",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-19T17:17:18.952706Z",
+  "author": {
+    "_id": "600bb08cb76d6f78b108fb38",
+    "alias": "Zircon Yak",
+    "aliasID": "65c26de3ed6eefce4c583db2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+    "created": "2021-01-23T05:13:48.067Z",
+    "name": "DAG-XR",
+    "serviceAccount": false,
+    "urlName": "dagger1675"
+  },
+  "authorID": "600bb08cb76d6f78b108fb38",
+  "board": {
+    "_id": "68fc4bd13ad69367cdbc2d69",
+    "name": "Third-Person View",
+    "urlName": "third-person-view"
+  },
+  "boardID": "68fc4bd13ad69367cdbc2d69",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-10-27T22:45:37.344Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Worlds:\n\nUdon Sword 3 - wrld_232a7b05-3300-49cb-a2ac-a5fd196550fb\n\nUdon Sword 2 - wrld_3c5ac438-ad0f-450a-a323-57a14569d63a\n\nUdon Sword 1 - wrld_5ee932de-bb76-4381-8143-c38a0a79b573\n\nHUD issue:\n\nWhen there is a HUD bound to your character (when joining the player roster), entering TPV makes the HUD unstable. This also occurs in all Udon Sword worlds.\n\nUX issue:\n\nSee: https://feedback.vrchat.com/third-person-view/p/1745-k-scroll-wheel-conflicts-with-tpv-camera-when-pickup-is-held\n\nWhen holding the staff (or any item, in any world, for that matter), the scroll wheel will bring the item closer or further away, instead of move the TPV camera. I believe there should be an advanced option or toggle for this. F5 can still be pressed just fine, but the scroll wheel conflicts when an item is held.\n\nProximity issues:\n\n-In Udon Sword 3, there is another instance where some proximity-based dialogue won't trigger unless in FPV, or really close up in TPV.\n\n-[Not shown in video] In all Udon Sword games, desktop players must be a mage/healer. In Udon Sword 1, targeting other players with a healing or cure spell will instead target yourself in TPV.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/3a26e3ce7466bba6fe37d4d77c979275.mp4",
+    "https://canny-assets.io/files/35b849d298bc8a1c9ef65ef18e11028a.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2025-10-27 18-41-58",
+      "url": "https://canny-assets.io/files/3a26e3ce7466bba6fe37d4d77c979275.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "2025-10-27 18-41-12",
+      "url": "https://canny-assets.io/files/35b849d298bc8a1c9ef65ef18e11028a.mp4"
+    }
+  ],
+  "ideaID": "68fff61190d645014dfedc9f",
+  "imageURLs": [],
+  "lastUpdated": 1779210569025,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-10-27T22:45:37.344Z",
+  "subCategoryID": null,
+  "title": "[1745 K] Udon Sword (1/2/3) have HUD and proximity issues in TPV.",
+  "trendingScore": 2913.4000542523195,
+  "updatedAt": "2026-05-19T17:10:22.873328Z",
+  "updatedBy": "600bb08cb76d6f78b108fb38",
+  "urlName": "1745-k-udon-sword-1-2-3-have-hud-and-proximity-issues-in-tpv",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": "dagger1675",
+      "voteID": "68fff6111f833c417c23fa44"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "61f083e458e24479ac601be0",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.vrcsdk",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-17T00:59:22.130638Z",
+  "author": {
+    "_id": "5f1f87ce9a6bf932f411cad6",
+    "alias": "Neon green Cattle",
+    "aliasID": "65d588270129d7ae44797aeb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/625c060179441f5286a056b5629a6502.png",
+    "created": "2020-07-28T02:05:02.525Z",
+    "name": "Loki H",
+    "serviceAccount": false,
+    "urlName": "loki-hellheim"
+  },
+  "authorID": "5f1f87ce9a6bf932f411cad6",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-01-25T23:12:36.206Z",
+  "deletedAt": null,
+  "details": "Despite the Video Player Component being whitelisted on the world components it does not work properly on SDK3. ( Tested on version 2021.11.08.14.28)\nhttps://docs.vrchat.com/docs/whitelisted-world-components\nIt works on SDK2, works on runtime playmode, it does not work on live builds.\nSeems like it gets stuck on the first frame using Render texture, and does not feed the video using material override not even the first frame.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d5e4c3e90df1359e5c",
+  "imageURLs": [],
+  "lastUpdated": 1778979210668,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-01-25T23:12:36.206Z",
+  "subCategoryID": null,
+  "title": "Video Player component not working on SDK3",
+  "trendingScore": 2717.5455880965656,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "video-player-component-not-working-on-sdk3",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f1f87ce9a6bf932f411cad6",
+      "alias": "Neon green Cattle",
+      "aliasID": "65d588270129d7ae44797aeb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/625c060179441f5286a056b5629a6502.png",
+      "companies": [],
+      "name": "Loki H",
+      "urlName": "loki-hellheim",
+      "voteID": "61f083e458e24479ac601be8"
+    }
+  ]
+}

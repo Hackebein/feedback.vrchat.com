@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "5e9d613abac49e54180db0ec",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.clientsim",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-19T11:33:57.881560Z",
+  "author": {
+    "_id": "5e9d613a5db55e5adeae58d2",
+    "alias": "Dawn pink Gayal",
+    "aliasID": "65c47d53ed6eefce4c91c6ca",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/aff83c681144cdea07d98bb02e1fb5c7.png",
+    "created": "2020-04-20T08:45:46.702Z",
+    "name": "Dog Dave",
+    "serviceAccount": false,
+    "urlName": "dog-dave"
+  },
+  "authorID": "5e9d613a5db55e5adeae58d2",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-20T08:45:46.827Z",
+  "deletedAt": null,
+  "details": "Previously in VRChat, we could use the rshift+backquote+1 to 3 options. Since you guys have gutted the debug menu from the game by default, we now have to rely on adding it as a launch option. The problem with this is that there is no way to call   --enable-debug-gui from CLI when launching into a test world, for example, as VRC_Triggers do not seem to work while testing in Unity. \nPlease allow us to enable the debug ui via launch parameters for VRChat. And if this is already doable - how?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da9e4c3e90df158eb7b",
+  "imageURLs": [],
+  "lastUpdated": 1779189199421,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-20T08:45:46.827Z",
+  "subCategoryID": null,
+  "title": "Enable debug options via commandline",
+  "trendingScore": 2625.31673655308,
+  "updatedAt": "2026-05-19T11:14:51.592751Z",
+  "urlName": "enable-debug-options-via-commandline",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e9d613a5db55e5adeae58d2",
+      "alias": "Dawn pink Gayal",
+      "aliasID": "65c47d53ed6eefce4c91c6ca",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/aff83c681144cdea07d98bb02e1fb5c7.png",
+      "companies": [],
+      "name": "Dog Dave",
+      "urlName": "dog-dave",
+      "voteID": "5e9d613abac49e54180db0f4"
+    }
+  ]
+}

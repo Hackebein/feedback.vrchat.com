@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "684e18244d37a2325025ec88",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-18T05:49:12.391727Z",
+  "author": {
+    "_id": "63180cda10858444c1b3cc5b",
+    "alias": "Fiscal Marsupial",
+    "aliasID": "65c2b40bed6eefce4ccc5135",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/25187ffa84340ceeb04635d8fee6e36d.png",
+    "created": "2022-09-07T03:15:38.469Z",
+    "name": "TapGhoul",
+    "serviceAccount": false,
+    "urlName": "tapghoul"
+  },
+  "authorID": "63180cda10858444c1b3cc5b",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 333,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-06-15T00:47:32.312Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Create a new world. Have some data in it so it takes a moment.\n\n2. Prepare to upload. Choose a name etc, and pick an icon.\n\n3. Hit build & publish, and accept the dialog\n\n4. While it is building, delete or move the image\n\nAfter telling you the error, the SDK will not recover, and requires a unity restart to fix it.\n\nThis occurs on SDK 3.8.1",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "684e18244d37a2325025ecb7",
+  "imageURLs": [],
+  "lastUpdated": 1779082395401,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/684e18244d37a2325025ec88/2138336079.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-06-15T00:47:32.312Z",
+  "subCategoryID": null,
+  "title": "Deleting the thumbnail during world upload with a new world causes the SDK to lock up",
+  "trendingScore": 2894.126434820276,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": null,
+  "urlName": "deleting-the-thumbnail-during-world-upload-with-a-new-world-causes-the-sdk-to-lo",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63180cda10858444c1b3cc5b",
+      "alias": "Fiscal Marsupial",
+      "aliasID": "65c2b40bed6eefce4ccc5135",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/25187ffa84340ceeb04635d8fee6e36d.png",
+      "companies": [],
+      "name": "TapGhoul",
+      "urlName": "tapghoul",
+      "voteID": "684e18241f4840cacfdf9a92"
+    }
+  ]
+}

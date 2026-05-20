@@ -1,0 +1,80 @@
+{
+  "__v": 0,
+  "_id": "5a5252a7b1d98804adeedacd",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-18T20:51:46.547256Z",
+  "author": {
+    "_id": "5a5252a7b1d98804adeedaca",
+    "alias": "Kelp Chinchilla",
+    "aliasID": "65ba01e3ed6eefce4cfd9484",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/8d8cbeb81ff4e3ec8027a45a138e9859.jpg",
+    "created": "2018-01-07T17:02:31.545Z",
+    "name": "the gnjb",
+    "serviceAccount": false,
+    "urlName": "the-gnjb"
+  },
+  "authorID": "5a5252a7b1d98804adeedaca",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-01-07T17:02:31.832Z",
+  "deletedAt": null,
+  "details": "Whenever I try to Build & Publish any avatar, I get the following error in my console whenever I try to Build & Publish said character\n\nArgumentException: GUILayout: Mismatched LayoutGroup.Repaint\nUnityEngine.GUILayoutUtility.BeginLayoutGroup (UnityEngine.GUIStyle style, UnityEngine.GUILayoutOption[] options, System.Type layoutType) (at C:/buildslave/unity/build/Runtime/IMGUI/Managed/GUILayoutUtility.cs:301)\nUnityEditor.EditorGUILayout.BeginHorizontal (UnityEngine.GUIContent content, UnityEngine.GUIStyle style, UnityEngine.GUILayoutOption[] options) (at C:/buildslave/unity/build/Editor/Mono/EditorGUI.cs:7247)\nUnityEditor.EditorGUILayout.BeginHorizontal (UnityEngine.GUILayoutOption[] options) (at C:/buildslave/unity/build/Editor/Mono/EditorGUI.cs:7227)\nVRC_SdkControlPanel.OnGUIAvatar (VRCSDK2.VRC_AvatarDescriptor avatar) (at Assets/VRCSDK/Dependencies/VRChat/Editor/VRC_SdkControlPanel.cs:959)\nVRC_SdkControlPanel.ShowBuildControls () (at Assets/VRCSDK/Dependencies/VRChat/Editor/VRC_SdkControlPanel.cs:246)\nVRC_SdkControlPanel.OnGUI () (at Assets/VRCSDK/Dependencies/VRChat/Editor/VRC_SdkControlPanel.cs:146)\nSystem.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222)\n\nIt doesn't open the window for building/publishing but instead gives me this.\nI've had this for the past 4 days, with the old SDK and with the new SDK\nI've tried several things such as re-installing Unity and cleaning the cache.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d48e4c3e90df1573b8f",
+  "imageURLs": [],
+  "lastUpdated": 1779136872861,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-01-07T17:02:31.833Z",
+  "subCategoryID": null,
+  "title": "No Build & Publish",
+  "trendingScore": 2506.2231601683247,
+  "updatedAt": "2026-05-18T20:41:21.461535Z",
+  "urlName": "no-build-publish",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a5252a7b1d98804adeedaca",
+      "alias": "Kelp Chinchilla",
+      "aliasID": "65ba01e3ed6eefce4cfd9484",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/8d8cbeb81ff4e3ec8027a45a138e9859.jpg",
+      "companies": [],
+      "name": "the gnjb",
+      "urlName": "the-gnjb",
+      "voteID": "5a5252a795e08263ccf7766e"
+    }
+  ]
+}

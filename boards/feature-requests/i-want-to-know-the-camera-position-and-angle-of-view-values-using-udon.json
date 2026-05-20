@@ -1,0 +1,150 @@
+{
+  "__v": 0,
+  "_id": "66c7ff456aee74b5947cffa8",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T12:42:05.175651Z",
+  "author": {
+    "_id": "5bb045ec4006de107a182d55",
+    "alias": "Purple Zebra",
+    "aliasID": "660f40b4e5d26962aa66e1d3",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/1a015f025bc5ce075605027d6ed36639.png",
+    "created": "2018-09-30T03:41:32.169Z",
+    "name": "レカ_REKAREYA",
+    "serviceAccount": false,
+    "urlName": "s-c-3"
+  },
+  "authorID": "5bb045ec4006de107a182d55",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "67ea0d295c182a5bce59694e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f8d933c2055fa67c59e2e72",
+        "alias": "Lava Armadillo",
+        "aliasID": "65c6b45bed6eefce4cbf4645",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0d977c01f8aaaf9269599d3329d38151.png",
+        "created": "2020-10-19T13:23:08.842Z",
+        "name": "uoppoH",
+        "serviceAccount": false,
+        "urlName": "techa-j-1"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-03-31T03:34:01.251Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/b7d288b6b6ce8f4e21580de298e02946.mp4"
+      ],
+      "files": [
+        {
+          "mimeType": "video/mp4",
+          "name": "2025-03-20 22-56-40_CUT_02_LQ",
+          "url": "https://canny-assets.io/files/b7d288b6b6ce8f4e21580de298e02946.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "66c7ff456aee74b5947cffa8",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This would also be good for Udon scripts that use the player position for audio effects since audio can now be captured from the camera.\n\nI have an Udon script that delays sound played by distance to the player, and it would sound wrong if the audio listener were to be on the camera. The attached video also has an Udon script for playing the sound of projectiles going past the player's position.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-08-23T03:17:25.949Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If I could get camera information using UDON, I would be able to make more gimmicks, but wouldn't it be possible to use UDON to get the location information of each user's or local VRC's camera, as well as the angle of view locally?\n\nI also think that even if a camera is inserted into an area that you don't want people to see (for example, inside a wall), you can deal with it if you can obtain information such as its location.\n\nPlease consider it if you like.\n\nI hope you read it to the end.\n\nI used Google Convert.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba06e4c3e90df1395ba9",
+  "imageURLs": [],
+  "lastUpdated": 1779021130811,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66c7ff456aee74b5947cffa8/1093441835.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-08-23T03:17:25.949Z",
+  "subCategoryID": null,
+  "title": "I want to know the camera position and angle of view values ​​using UDON.",
+  "trendingScore": 2882.591687318122,
+  "updatedAt": "2026-05-17T12:32:20.735315Z",
+  "updatedBy": null,
+  "urlName": "i-want-to-know-the-camera-position-and-angle-of-view-values-using-udon",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f8d933c2055fa67c59e2e72",
+      "alias": "Lava Armadillo",
+      "aliasID": "65c6b45bed6eefce4cbf4645",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0d977c01f8aaaf9269599d3329d38151.png",
+      "companies": [],
+      "name": "uoppoH",
+      "urlName": "techa-j-1",
+      "voteID": "67ea0adc5388f556dbc4c1e2"
+    },
+    {
+      "_id": "5bb045ec4006de107a182d55",
+      "alias": "Purple Zebra",
+      "aliasID": "660f40b4e5d26962aa66e1d3",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/1a015f025bc5ce075605027d6ed36639.png",
+      "companies": [],
+      "name": "レカ_REKAREYA",
+      "urlName": "s-c-3",
+      "voteID": "66c7ff463e088c8d6b20da4d"
+    }
+  ]
+}

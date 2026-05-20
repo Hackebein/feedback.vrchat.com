@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "63a839d5e3479444f49a1ac6",
+  "aiCategories": [
+    "loc.main-menu",
+    "client.inventory"
+  ],
+  "aiTaggedAt": "2026-05-19T05:47:48.730140Z",
+  "author": {
+    "_id": "63a824d8e9cba7450a79c879",
+    "alias": "Spotless Otter",
+    "aliasID": "65c432c0ed6eefce4ca67ed4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/47d8b2932d03842da2037928ca42bbf8.png",
+    "created": "2022-12-25T10:24:24.724Z",
+    "name": "notnullnotvoid",
+    "serviceAccount": false,
+    "urlName": "notnullnotvoid"
+  },
+  "authorID": "63a824d8e9cba7450a79c879",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-12-25T11:53:57.454Z",
+  "deletedAt": null,
+  "details": "Video demonstrating the bug: https://www.youtube.com/watch?v=Ep5FDaizcDg\n\nWhen I click \"Yes\" on the dialogue, nothing seems to happen, but a message appears telling me a world was removed from a *different* favorites list.\n\nHowever, when I log in again, an unavailable world *does* appear to have been removed from the other favorites list, as shown here: https://www.youtube.com/watch?v=2HotWwfY_F4\n\nAdditionally, you'll notice at the end of the first video some glitchy behavior when scrolling through the other favorites. Here is a video more clearly demonstrating this, on a different favorites list: https://www.youtube.com/watch?v=iaJerXyrI_g\n\nNotice when at the bottom of the list, there seems to be a different number of items than there should be (number displayed is 72 which is divisible by 4, but the actual amount of entries is clearly not divisible by 4 since there are 3 left over at the end).\n\nI recorded on desktop because it was easier but the glitchy scrolling happens the same way in VR mode as well. It doesn't happen on all my favorites lists, only the two in the videos.\n\nI'm including the glitchy scrolling in this same bug report because I believe it's probably related. I think so for 2 reasons:\n\n1. At 0:10 in the third video, you can see an unavailable world is appearing and disappearing as I scroll.\n\n2. If I'm able to remove all unavailable worlds from a list with glitchy scrolling (I didn't think to get video of me doing this, sorry), the scrolling behavior returns to normal and is no longer glitchy.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb95fe4c3e90df1375aab",
+  "imageURLs": [],
+  "lastUpdated": 1779168730821,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-12-25T11:53:57.454Z",
+  "subCategoryID": null,
+  "title": "Removing an unavailable world from favorites is very buggy",
+  "trendingScore": 2765.1925478725243,
+  "updatedAt": "2026-05-19T05:33:34.555709Z",
+  "urlName": "removing-an-unavailable-world-from-favorites-is-very-buggy",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63a824d8e9cba7450a79c879",
+      "alias": "Spotless Otter",
+      "aliasID": "65c432c0ed6eefce4ca67ed4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/47d8b2932d03842da2037928ca42bbf8.png",
+      "companies": [],
+      "name": "notnullnotvoid",
+      "urlName": "notnullnotvoid",
+      "voteID": "63a839d5e3479444f49a1af0"
+    }
+  ]
+}

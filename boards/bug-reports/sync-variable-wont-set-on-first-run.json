@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "5ec584ac9c884e7b73f2c0d6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T01:10:31.181875Z",
+  "author": {
+    "_id": "5eb6e3e0ddaa0f5d14a97d43",
+    "alias": "Remarkable Wallaby",
+    "aliasID": "65c7d23fed6eefce4c93fd58",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2020-05-09T17:09:52.539Z",
+    "name": "PileOfMeeps",
+    "serviceAccount": false,
+    "urlName": "joshie-sparks"
+  },
+  "authorID": "5eb6e3e0ddaa0f5d14a97d43",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-20T19:27:40.362Z",
+  "deletedAt": null,
+  "details": "/// <summary>\n  /// The player who did the poking.\n  /// </summary>\n  VRCPlayerApi playerWhoPoked;\n  /// <summary>\n  /// The message to display when poked\n  /// </summary>\n  string previousPokeMessage = \"Try To Poke Me!\";\n  /// <summary>\n  /// The message to display when poked\n  /// </summary>\n  [UdonSynced] string pokeMessage = \"Try To Poke Me!\";\n  /// <summary>\n  /// Update the text when it changes\n  /// </summary>\n  void Update() {\n    if (parentHUDIsActive()) {\n      /// when the poked message is updated by the owner, change it for everyone.\n      if (previousPokeMessage != pokeMessage) {\n        debug($\"previousPokeMessage {previousPokeMessage} is not longer equal to {pokeMessage}. Updating text.\");\n        updateDisplayedText();\n      }\n      /// when the owner is changed to the player who poked, they can set themselves as the new poke message.\n      if (playerWhoPoked != null && Networking.IsOwner(playerWhoPoked, gameObject) && playerWhoPoked == Networking.LocalPlayer) {\n        debug($\"Ownership of {name} given to {playerWhoPoked.displayName}. They can now try to update the poked text\");\n        setPlayerWhoPokedMessage(playerWhoPoked);\n        playerWhoPoked = null;\n      } else if (playerWhoPoked != null) {\n        debug($\"We have a player who poked {playerWhoPoked.displayName} set for {Networking.LocalPlayer.displayName} but it seems the owner of the object is still {Networking.GetOwner(gameObject).displayName}\");\n      }\n    }\n  }\n  ///// VRC FUNCTIONS\n  /// <summary>\n  /// On poke, display the player who poked this player in text\n  /// </summary>\n  public override void Interact() {\n    if (Networking.LocalPlayer != null && parentHUDIsActive()) {\n      VRCPlayerApi equipedPlayer = parentHUD.getEquippedPlayer();\n      if (equipedPlayer != null) {\n        debug($\"{equipedPlayer.displayName} with poke hud has been poked by {Networking.LocalPlayer.displayName}!\");\n        if (Networking.IsOwner(Networking.LocalPlayer, gameObject)) {\n          setPlayerWhoPokedMessage(Networking.LocalPlayer);\n        } else {\n          debug($\"Ownership not posessed by to {Networking.LocalPlayer.displayName}, cannot update poked message yet. Getting ownership for poker.\");\n          playerWhoPoked = Networking.LocalPlayer;\n          Networking.SetOwner(Networking.LocalPlayer, gameObject);\n        }\n      } else {\n        debugError($\"Hud {parentHUD.gameObject.name} is active but has no equiped player!\");\n      }\n    }\n  }\n===================\nI have this code. The debugger confirms that the player who owns the object is the local player before setting the sync'd variable pokeMessage. \nHowever, pokeMessage never propogates until the second time I interact for some reason.\nIs there something blocking the sync from occuring? Does checking the sync variable in update halt it's ability to sync between clients?\nSince the player changing the variable is the owner, it should propagate, but it doesn't the first time. Please help. I have a test world as well for debugging. \nLOGS:\n===== first click:\nMEEPLOG:: Ownership of Poke Collider given to MeepTest. They can now try to update the poked text\n2020.05.20 14:03:20 Log        -  MEEPLOG:: MeepTest is trying to changing the sync'd HUD text. MeepTest is the current owner\n2020.05.20 14:03:20 Log        -  [NetworkManager] OnOwnershipTransfered Poke Collider (UnityEngine.GameObject) from 2 to 2\n2020.05.20 14:03:31 Log        -  MEEPLOG:: updating height to 0.9602525 for MeepTest from 1.162971\n===== second click:\n2020.05.20 14:06:36 Log        -  MEEPLOG:: PileOfMeeps with poke hud has been poked by MeepTest!\n2020.05.20 14:06:36 Log        -  MEEPLOG:: MeepTest is trying to changing the sync'd HUD text. MeepTest is the current owner\n2020.05.20 14:06:36 Log        -  MEEPLOG:: previousPokeMessage Try To Poke Me! is not longer equal to MeepTest poked PileOfMeeps. Updating text.\n2020.05.20 14:06:36 Log        -  MEEPLOG:: hud text set to MeepTest poked PileOfMeeps",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dade4c3e90df158fe1c",
+  "imageURLs": [],
+  "lastUpdated": 1779066353853,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5ec584ac9c884e7b73f2c0d6/1184912371.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-20T19:27:40.362Z",
+  "subCategoryID": null,
+  "title": "Sync Variable won't set on first run",
+  "trendingScore": 2629.666130642862,
+  "updatedAt": "2026-05-18T01:07:40.796366Z",
+  "urlName": "sync-variable-wont-set-on-first-run",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5eb6e3e0ddaa0f5d14a97d43",
+      "alias": "Remarkable Wallaby",
+      "aliasID": "65c7d23fed6eefce4c93fd58",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "PileOfMeeps",
+      "urlName": "joshie-sparks",
+      "voteID": "5ec584ac9c884e7b73f2c0de"
+    }
+  ]
+}

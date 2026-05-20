@@ -1,0 +1,97 @@
+{
+  "__v": 0,
+  "_id": "6264266fd97641529ea7d41f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T07:10:37.108260Z",
+  "author": {
+    "_id": "61a660f87e8ee0790c6cb0fc",
+    "alias": "Nectar Canid",
+    "aliasID": "65c38521ed6eefce4ce6f60a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ee6159038a5a92c34946db4ecc15cab5.png",
+    "created": "2021-11-30T17:35:52.074Z",
+    "name": "․Rei․",
+    "serviceAccount": false,
+    "urlName": "rei-74"
+  },
+  "authorID": "61a660f87e8ee0790c6cb0fc",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-04-23T16:16:47.479Z",
+  "deletedAt": null,
+  "details": "After reimporting / reloading the SDK and restarting it will be less errors, but one will always persist: \nError: Could not load signature of VRC.Dynamics.MathUtil:DistancePointToPlane due to: Could not load file or assembly 'Unity.Mathematics...'\n(the 2nd picture)\n\nAlso converting my Avatar to PhysBones made it \"very poor\". Really ? Aren't those PhysBones meant to be more performant ? (EDIT: the converter transformed the 24 DynBones components to 41 PhyBones components.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8ebe4c3e90df135e956",
+  "imageURLs": [
+    "https://canny.io/images/286abf654688d472e507dfa07630aa2a.png",
+    "https://canny.io/images/de0f2774c54bd422f6a0828f4a4c4dca.png"
+  ],
+  "lastUpdated": 1779001726438,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-04-23T16:16:47.479Z",
+  "subCategoryID": null,
+  "title": "new SDK throwing tons of errors",
+  "trendingScore": 2732.842901057347,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "new-sdk-throwing-tons-of-errors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "622888a7e197a15e0c6be5bb",
+      "alias": "Serious Magpie",
+      "aliasID": "65c2a1fced6eefce4c5e914f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/04f72d73cb92fb58fa41fb17cd3ad219.png",
+      "companies": [],
+      "name": "Bender_Dios",
+      "urlName": "bender-15",
+      "voteID": "62837c05232b1e0b76358909"
+    },
+    {
+      "_id": "61a660f87e8ee0790c6cb0fc",
+      "alias": "Nectar Canid",
+      "aliasID": "65c38521ed6eefce4ce6f60a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ee6159038a5a92c34946db4ecc15cab5.png",
+      "companies": [],
+      "name": "․Rei․",
+      "urlName": "rei-74",
+      "voteID": "6264266fd97641529ea7d44b"
+    }
+  ]
+}

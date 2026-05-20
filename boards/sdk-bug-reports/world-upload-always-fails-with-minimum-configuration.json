@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "65ba34e0cacbff60eae82324",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T15:16:19.494590Z",
+  "author": {
+    "_id": "5c9136aaa62f9742f6758194",
+    "alias": "Periwinkle Bovid",
+    "aliasID": "65c2edb4ed6eefce4cc0fa87",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/41f757745769bd561e824f4d140990e5.png",
+    "created": "2019-03-19T18:36:26.654Z",
+    "name": "えー",
+    "serviceAccount": false,
+    "urlName": "a1678991"
+  },
+  "authorID": "5c9136aaa62f9742f6758194",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-01-31T11:54:08.471Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In my environment, I consistently encounter exceptions within the VRCSDK when attempting to upload worlds.\n\nUnity 2022.3.6f1\n\nVRC SDK Base, World: 3.5.0\n\nI did not experience this issue with the following previous versions:\n\nUnity 2019.4.31f1\n\nVRC SDK Base, World: 3.4.2\n\nReproduction Steps:\n\n1. Create a new scene and a new GameObject.\n\n2. Add the VRC Scene Descriptor to the created GameObject.\n\n3. Capture a thumbnail from the Build tab in the VRC SDK Control Panel.\n\n4. Check the Online Publishing and click \"Build and Upload\" button.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9cbe4c3e90df1389d73",
+  "imageURLs": [
+    "https://canny.io/images/d9d10ee4085d08a7b819561d497100e0.png",
+    "https://canny.io/images/e2282b5bf6548ade33b592bd512dce27.jpg"
+  ],
+  "lastUpdated": 1779026989130,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-01-31T11:54:08.471Z",
+  "subCategoryID": null,
+  "title": "World upload always fails with minimum configuration",
+  "trendingScore": 2822.6211374938866,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": "5c9136aaa62f9742f6758194",
+  "urlName": "world-upload-always-fails-with-minimum-configuration",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c9136aaa62f9742f6758194",
+      "alias": "Periwinkle Bovid",
+      "aliasID": "65c2edb4ed6eefce4cc0fa87",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/41f757745769bd561e824f4d140990e5.png",
+      "companies": [],
+      "name": "えー",
+      "urlName": "a1678991",
+      "voteID": "65ba34e0ed6eefce4cf85655"
+    }
+  ]
+}

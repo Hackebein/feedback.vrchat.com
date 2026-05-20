@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "5d5f9a3943fdab25fe661ff7",
+  "aiCategories": [
+    "social.friends",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-17T23:27:47.383817Z",
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": "bd-35"
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-08-23T07:48:09.442Z",
+  "deletedAt": null,
+  "details": "Observed an issue where a friend request was not received on the other end. Full logs sent via other channels (don't want to disclose instance IDs publicly, and I'm not sure which parts of the log are relevant). The friend request was sent to usr_dde81551-fcda-4e88-84f1-2cc95b37aca8 from me (usr_42456991-8f37-4782-8f65-a6ff65a38995). Logs show errors like the following:\n\n\n2019.08.22 23:44:46 Log        -  Send notification:<Notification from username:bd__, sender user id:usr_42456991-8f37-4782-8f65-a6ff65a38995 to usr_dde81551-fcda-4e88-84f1-2cc95b37aca8 of type: friendRequest, id: , created at: 8/23/2019 6:44:45 AM UTC, details: {{}}, type:friendRequest, m seen:False, message: \"\">\n\n\n2019.08.22 23:44:46 Error      -  HTTP Error: 400 fbb5a9e1-81d9-4faa-b64d-73cbd7847d56 api/1/user/usr_dde81551-fcda-4e88-84f1-2cc95b37aca8/friendRequest Bad Request\n\n\n2019.08.22 23:44:46 Error      -  HTTP Error: 400 fbb5a9e1-81d9-4faa-b64d-73cbd7847d56 api/1/user/usr_dde81551-fcda-4e88-84f1-2cc95b37aca8/friendRequest Bad Request\n\n\n2019.08.22 23:44:46 Error      -  HTTP Error: 400 fbb5a9e1-81d9-4faa-b64d-73cbd7847d56 api/1/user/usr_dde81551-fcda-4e88-84f1-2cc95b37aca8/friendRequest Bad Request\n\n\n2019.08.22 23:44:47 Error      -  HTTP Error: 400 fbb5a9e1-81d9-4faa-b64d-73cbd7847d56 api/1/user/usr_dde81551-fcda-4e88-84f1-2cc95b37aca8/friendRequest Bad Request\n\n\n2019.08.22 23:44:47 Error      -  HTTP Error: 400 fbb5a9e1-81d9-4faa-b64d-73cbd7847d56 api/1/user/usr_dde81551-fcda-4e88-84f1-2cc95b37aca8/friendRequest Bad Request\n\n\n2019.08.22 23:44:47 Error      -  HTTP Error: 400 fbb5a9e1-81d9-4faa-b64d-73cbd7847d56 api/1/user/usr_dde81551-fcda-4e88-84f1-2cc95b37aca8/friendRequest Bad Request\n\n\n2019.08.22 23:44:47 Error      -  HTTP Client Error: Max retries reached for <Transmtn.Post POST api/1/user/usr_dde81551-fcda-4e88-84f1-2cc95b37aca8/friendRequest>",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d8ee4c3e90df158759d",
+  "imageURLs": [],
+  "lastUpdated": 1779060304719,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-08-23T07:48:09.442Z",
+  "subCategoryID": null,
+  "title": "[842] Friend request not received",
+  "trendingScore": 2658.8338200803782,
+  "updatedAt": "2026-05-17T23:27:35.879050Z",
+  "urlName": "842-friend-request-not-received",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e66c7cf0ec70928e59f6920",
+      "alias": "Green Hornet",
+      "aliasID": "65ccdcaced6eefce4c762578",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/1114c63c7632669131b1fbe123c1f8c7.png",
+      "companies": [],
+      "name": "Grade-A-Beef",
+      "urlName": "robert-newman-2",
+      "voteID": "5fcde7996b9eeb39043690c1"
+    },
+    {
+      "_id": "5bf457be2303f801f81b0bce",
+      "alias": "Bastille Bovid",
+      "aliasID": "65c2a212ed6eefce4c61d056",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/d2a14a40bd70d1526fe42ca1c9d278a6.png",
+      "companies": [],
+      "name": "Zyoh",
+      "urlName": "zoe-19",
+      "voteID": "5d767f12a1785c21db44369e"
+    },
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": "bd-35",
+      "voteID": "5d5f9a3943fdab25fe662000"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "__v": 0,
+  "_id": "67aaff6c6e8129d2e9f44e4f",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-16T22:05:50.429754Z",
+  "author": {
+    "_id": "67aafcc4092525d7dbac3382",
+    "alias": "Alloy Lynx",
+    "aliasID": "67aafcc4afacf378f14c7a18",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1598cd6889f889027b2f7e26232e6788.png",
+    "created": "2025-02-11T07:31:16.327Z",
+    "name": "FallenSenpie",
+    "serviceAccount": false,
+    "urlName": "fallensenpie"
+  },
+  "authorID": "67aafcc4092525d7dbac3382",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "67ad0ed9d12d0de9ba1c8d01",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df7cd83e007e467295c4e1",
+        "alias": "Orchid bloom Marlin",
+        "aliasID": "65c26defed6eefce4c5a3685",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e0e9a23bc510d6aa62c0d515b73bc1e3.png",
+        "created": "2022-07-26T05:34:16.920Z",
+        "name": "Docteh",
+        "serviceAccount": false,
+        "urlName": "docteh"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-02-12T21:12:57.873Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67aaff6c6e8129d2e9f44e4f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Hi, I took a look at the log, looks like for whatever reason yt-dlp isn't able to do its magic. Not sure what to suggest as 99% of vrc worlds rely on youtube. \n\nSilly suggestion: you could try the regular build of yt-dlp https://github.com/yt-dlp/yt-dlp and try downloading something and see if you get a proper error. \n\nOr maybe check back in a few days?\n\n2025.02.10 23:11:10 Log        -  [Video Playback] Attempting to resolve URL 'https://www.youtube.com/watch?v=RSY9scz_HSE'\n\n2025.02.10 23:11:10 Log        -  NativeProcess.Start: started process id [29092]: C:/Users/jkhie/AppData/LocalLow/VRChat/VRChat\\Tools/yt-dlp.exe (...)\n\n2025.02.10 23:11:10 Log        -  NativeProcess.HasExited: process exited with code 1, took 118 ms. Command line: C:/Users/jkhie/AppData/LocalLow/VRChat/VRChat\\Tools/yt-dlp.exe (...)",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-02-11T07:42:36.691Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/fad8d472ae1debb5119af610cee1660a.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-02-10_23-10-43",
+      "url": "https://canny-assets.io/files/fad8d472ae1debb5119af610cee1660a.txt"
+    }
+  ],
+  "ideaID": "680bba46e4c3e90df13a1116",
+  "imageURLs": [],
+  "lastUpdated": 1779247214202,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67aaff6c6e8129d2e9f44e4f/1824632937.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-02-11T07:42:36.691Z",
+  "subCategoryID": null,
+  "title": "My video player wont work in vrchat. Ive tried to reinstall windows, Reinstall vrchat, turned off vsync, and turned on trusted url.",
+  "trendingScore": 2876.453326989588,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "updatedBy": null,
+  "urlName": "my-video-player-wont-work-in-vrchat-ive-tried-to-reinstall-windows-reinstall-vrc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67aafcc4092525d7dbac3382",
+      "alias": "Alloy Lynx",
+      "aliasID": "67aafcc4afacf378f14c7a18",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1598cd6889f889027b2f7e26232e6788.png",
+      "companies": [],
+      "name": "FallenSenpie",
+      "urlName": "fallensenpie",
+      "voteID": "67aaff6cafacf378f1df52e4"
+    }
+  ]
+}

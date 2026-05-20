@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "64522388fdcd4b1e2c5841d0",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T07:49:31.924099Z",
+  "author": {
+    "_id": "614de6bab1382e4d89857763",
+    "alias": "Nectar Carp",
+    "aliasID": "65c26da3ed6eefce4c4d084e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6cf418d9248470489f40fbcccc246755.png",
+    "created": "2021-09-24T14:54:50.474Z",
+    "name": "Puppet~",
+    "serviceAccount": false,
+    "urlName": "k0haku"
+  },
+  "authorID": "614de6bab1382e4d89857763",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-05-03T09:04:08.081Z",
+  "deletedAt": null,
+  "details": "What I wanted/expected to do:\n\n```\n\ndict[(int)state] = (int)state;\n\n```\n\nThe variable `state` is an Enum I saved, for example `MyEnum.WHATEVER`.\n\nThe result is the following error:\n\n```\n\nCannot retrieve heap variable of type 'Int32' as type 'DataToken'\n\n```\n\nMore cases where I confirmed that it doesn't work:\n\n```\n\ndict[(int)state] = \"whatever\";\n\ndict[\"whatever\"] = (int)state;\n\ndict.TryGetValue((int)state), out DataToken value)\n\n```\n\nWorkaround:\n\nInitializing the int as a DataToken instance seems to work:\n\n```\n\nnew DataToken((int)fromState)\n\n```\n\nAlso, giving the enums directly seems to work too (not just as a variable):\n\n```\n\ndict[(int)MyEnum.WHATEVER] = \"whatever\";\n\n```\n\nIt would be really cool if I could just use an enum, either as key or value, without needing to cast or do anything special.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97be4c3e90df137b2c7",
+  "imageURLs": [],
+  "lastUpdated": 1779175630719,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-05-03T09:04:08.081Z",
+  "subCategoryID": null,
+  "title": "DataDictionary doesn't like casted Enums that are implicitly handed over to it",
+  "trendingScore": 2783.6042717630667,
+  "updatedAt": "2026-05-19T07:29:08.486735Z",
+  "updatedBy": null,
+  "urlName": "datadictionary-doesnt-like-casted-enums-that-are-implicitly-handed-over-to-it",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "614de6bab1382e4d89857763",
+      "alias": "Nectar Carp",
+      "aliasID": "65c26da3ed6eefce4c4d084e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6cf418d9248470489f40fbcccc246755.png",
+      "companies": [],
+      "name": "Puppet~",
+      "urlName": "k0haku",
+      "voteID": "64522388fdcd4b1e2c58420f"
+    }
+  ]
+}

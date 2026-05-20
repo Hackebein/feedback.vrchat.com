@@ -1,0 +1,101 @@
+{
+  "__v": 0,
+  "_id": "66bbd10c513d8372df2a7fd5",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T16:03:25.858719Z",
+  "author": {
+    "_id": "65fccfa93fbfcddb2a506bf7",
+    "alias": "Different Swordfish",
+    "aliasID": "65fccfa9a63714bcb3c3255d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ea1f59ddf1bc1364399d647f79051b81.png",
+    "created": "2024-03-22T00:24:09.206Z",
+    "name": "ּּio",
+    "serviceAccount": false,
+    "urlName": "ff0600"
+  },
+  "authorID": "65fccfa93fbfcddb2a506bf7",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-08-13T21:33:00.037Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Good morning! This is an issue I've encountered with every so often and it seems to spark only when changed between models at a fast pace. Though it is far and few inbetween, it can be frustrating to keep alternating between existing models and back into the build test model in hopes of it loading up properly next swap.\n\none of two things occur: either the avatar will swap into a default bot, or will fall back to the uploaded avatar rather than staying on the test one. an example video I'd taken quickly will be attached, capturing the ladder.\n\nThis error seems very miniscule, but I'd figure I'd mention it were a thing, as an avatar creator who uses the build and test frequently via Unity!\n\nThank you for taking the time to read this, have a lovely day!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny.io/files/aa13560ceedc0bdbf59b58c1c857bd25.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "testing avatar swap back for fax",
+      "url": "https://canny.io/files/aa13560ceedc0bdbf59b58c1c857bd25.mp4"
+    }
+  ],
+  "ideaID": "680bba00e4c3e90df139430a",
+  "imageURLs": [],
+  "lastUpdated": 1779032731289,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66bbd10c513d8372df2a7fd5/980795420.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-08-13T21:33:00.037Z",
+  "subCategoryID": null,
+  "title": "Swapping between \"build and test\" models from existing uploads cause occasional loading errors",
+  "trendingScore": 2850.535706877154,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "swapping-between-build-and-test-models-from-existing-uploads-cause-occasional-lo",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "65fccfa93fbfcddb2a506bf7",
+      "alias": "Different Swordfish",
+      "aliasID": "65fccfa9a63714bcb3c3255d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ea1f59ddf1bc1364399d647f79051b81.png",
+      "companies": [],
+      "name": "ּּio",
+      "urlName": "ff0600",
+      "voteID": "66bbd10c3e088c8d6b78a13c"
+    }
+  ]
+}

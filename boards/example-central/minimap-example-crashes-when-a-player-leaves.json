@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "67b4d94c304b55843a9c9f54",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T20:31:02.723995Z",
+  "author": {
+    "_id": "61156bdffb15af250e67c5b6",
+    "alias": "Exclusive Reptile",
+    "aliasID": "660bdabae5d26962aab83551",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/cb909478b44e91c8c0c7a41549480785.png",
+    "created": "2021-08-12T18:43:43.258Z",
+    "name": "L.E.G.O.S.",
+    "serviceAccount": false,
+    "urlName": "legos-1"
+  },
+  "authorID": "61156bdffb15af250e67c5b6",
+  "board": {
+    "_id": "66ede8e631e33a29e8669bfa",
+    "name": "Example Central",
+    "urlName": "example-central"
+  },
+  "boardID": "66ede8e631e33a29e8669bfa",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-02-18T19:02:36.714Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The Minimap example in Example Central crashes whenever a player leaves the world.\n\nI managed to find the cause and a solution for it. Most likely the fix just needs to be built to Example Central.\n\nIn the \"MiniMap\" graph in the OnPlayerLeft event, it's meant to find the player that left and set their slot in the _players array to null. However, the current graph seems to mistakenly set a null array to null. The _players array is never changed, and attempting to access a null object causes the crash.\n\nThe graph script functions as intended if this node is replaced with a reference to the _players array instead.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba47e4c3e90df13a181c",
+  "imageURLs": [
+    "https://canny-assets.io/images/839dfc9cb25607f61a7503c80b6b3715.png",
+    "https://canny-assets.io/images/a6464264fb2a16f1bf7e891ded34be9d.png"
+  ],
+  "lastUpdated": 1779049475626,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67b4d94c304b55843a9c9f54/2017634321.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-02-18T19:02:36.714Z",
+  "subCategoryID": null,
+  "title": "Minimap Example crashes when a player leaves",
+  "trendingScore": 2899.863374658572,
+  "updatedAt": "2026-05-17T20:25:24.988814Z",
+  "updatedBy": null,
+  "urlName": "minimap-example-crashes-when-a-player-leaves",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f25e05544df0a7147c57b5f",
+      "alias": "Dahlia Wildfowl",
+      "aliasID": "65c270b7ed6eefce4cd260b9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8b3a24a85939bb09d575509cb8ff041d.png",
+      "companies": [],
+      "name": "Nullmatic",
+      "urlName": "alexander-schullo",
+      "voteID": "68896e81076be5baa6a9e0ff"
+    },
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "3f6409",
+      "voteID": "683ea962b25ebd72198bb429"
+    },
+    {
+      "_id": "61156bdffb15af250e67c5b6",
+      "alias": "Exclusive Reptile",
+      "aliasID": "660bdabae5d26962aab83551",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cb909478b44e91c8c0c7a41549480785.png",
+      "companies": [],
+      "name": "L.E.G.O.S.",
+      "urlName": "legos-1",
+      "voteID": "67b4d94cb324a96209f5f5df"
+    }
+  ]
+}

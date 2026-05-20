@@ -1,0 +1,192 @@
+{
+  "__v": 0,
+  "_id": "6166df54f3421e7678062fe3",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:01:21.225773Z",
+  "author": {
+    "_id": "5f4c34d0995917085be1218d",
+    "alias": "Zinc white Dragon",
+    "aliasID": "65c2b40bed6eefce4ccc50d5",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/833c66b891dbc04385009d159c139d66.png",
+    "created": "2020-08-30T23:22:56.091Z",
+    "name": "CyanLaser",
+    "serviceAccount": false,
+    "urlName": "cyanlaser-1"
+  },
+  "authorID": "5f4c34d0995917085be1218d",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-10-13T13:29:56.001Z",
+  "deletedAt": null,
+  "details": "When disabling an UdonBehaviour in Start, it will still run the Update event once, even though the behaviour is disabled. This is different than MonoBehaviour's execution. Having the Update method run here could cause issues with unexpected execution and thus requires a check for if the behaviour is enabled, which is unnecessary for all other executions of the event.\nPlease prevent Update events from being executed if the behaviour is disabled or the GameObject is inactive.\nSample Graph:\napplication/vnd.unity.graphview.elements AL1V3W7TMBh9lcrXcWXHf0ml3awbUgUCtNHeoKly7C8lkDpTfgpVtyfjgkfiFXCXtlPbAAVtU27yOc4Xn/Odc/Lz+48VWui8ATT4uEJpk+dv9dwX6HIBrp5e17qsUYCazPq1KCVchTFgpkyMOREEx5ZQHMac8oTpmOrYb74tqqzOCocGK/QNDTDlsk8CtFzfStUX9wFyhYXx6KLyX70JUJoXXzcVAhqS1EiFtRUR5jQyOJLMYs0sk4IaoUKNbtoOk/XBH3rcB3uHn1wNx7Zww2I+L9zI1VCm2kA1Wi8+ALsCA9kCyv50WkE9BaeTHOx0er2sapifF0UO2m3LSeHRbzk46XwdHDwyEB0ygPx+tE/DIcAValxWL98ln8HUk3ZeK5S5qtbOwOgCDYjvWdVl5mabxwitSfn311rM/Q0HQW9emaLMsyToTaCsPKQz3ifrK+gNm7xuSjhz0NSlzoPe+ybJM/Malh+KL+DOEqW0MELSmHEgUXz3SucVoPvDcbVaG99aXcOOaKZIKgXRmDNFMU9SijW3AlsVpalkhtpYdhEtwg3VIfuL1GJlqBKE4zCkCnO9niI1DDMirCJCWnhiqc1+K7Udap0SYwkTOATl5UXSBMcCEix1oogSykSWdqBmTG1Qd+rrOcR1SMR43ePSzTIHF5A0M4/3TTHb4mybdzrqpDEcQX5EHB7htdTEgkmLmQwt5kZKL50owoKzNIllFCZG35EXYaXFe/2wyzMyLJzROxra5f1ir9pxdAqiY454vBUF6QydKPUmIwSwDBNvMR55i5FQ49TE3rMk4QRSz1PwTAG1SZoW6tMGTZslg97ahefwSS+yoil7WdW7bO036P1nOr70a9162qSGF9SH4o+6OWXCXSEq2VY5gh4p55SMehZ7vciv6eb+Fw==",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8bee4c3e90df1355f77",
+  "imageURLs": [
+    "https://canny.io/images/aba3b57ed3155502c55ad2586045d229.png",
+    "https://canny.io/images/affbca64296d1787f6777eb9d16baaef.png"
+  ],
+  "lastUpdated": 1778979216893,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 11,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6166df54f3421e7678062fe3/1578054411.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 11,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-10-13T13:29:56.001Z",
+  "subCategoryID": null,
+  "title": "[2021.09.03.09.25] Disabling UdonBehaviour in Start still runs Update once",
+  "trendingScore": 2863.731976246693,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "202109030925-disabling-udonbehaviour-in-start-still-runs-update-once",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c79c3e3bfa68539a3c62feb4eda8b2cb.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": "kitkat-29",
+      "voteID": "673bfecbc66e81bbd46c718d"
+    },
+    {
+      "_id": "5f2cb35431807b34c94a2618",
+      "alias": "Mysterious Eagle",
+      "aliasID": "65c290c9ed6eefce4cd4009e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9d6653c011d0e9287519e69ba0bcf40a.png",
+      "companies": [],
+      "name": "ureishi",
+      "urlName": "ureishi-1",
+      "voteID": "62d36a7c29bfc544ac6430e7"
+    },
+    {
+      "_id": "5f8a26770aaa28611fedd6b6",
+      "alias": "Average Loon",
+      "aliasID": "65c28318ed6eefce4cbdb922",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+      "companies": [],
+      "name": "Faxmashine",
+      "urlName": "faxmachine",
+      "voteID": "61e183913a48364448bcb3fc"
+    },
+    {
+      "_id": "5f363d5bfabaeb1c5ff1aa28",
+      "alias": "Positive Piranha",
+      "aliasID": "65c28348ed6eefce4cc53ebc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bdafc857aef21b77f71cf50ecc00afc4.png",
+      "companies": [],
+      "name": "Yuiko",
+      "urlName": "yuiko-1",
+      "voteID": "61d58d089325e318cb3d7841"
+    },
+    {
+      "_id": "5c0a091291476d739ce70fb6",
+      "alias": "Remarkable Wildfowl",
+      "aliasID": "65c28a98ed6eefce4cdddffe",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5d46bb169a50914a277f9145ef243fc0.png",
+      "companies": [],
+      "name": "IgbarVonSquid",
+      "urlName": "igbarvonsquid-king",
+      "voteID": "61673a34990e826f558e42f3"
+    },
+    {
+      "_id": "5f3287055bc2dc276e0f1630",
+      "alias": "Lemon Silverfish",
+      "aliasID": "65c289dced6eefce4cc219ab",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/38c081222540fbe548c41493c9650ae2.png",
+      "companies": [],
+      "name": "Reimajo",
+      "urlName": "reimajo",
+      "voteID": "61671896a1bca06a154b6f3b"
+    },
+    {
+      "_id": "5f37e3b30bb151162c875f17",
+      "alias": "Outside Carp",
+      "aliasID": "65c2eea2ed6eefce4cd9cb02",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/516fccb556a2c4e94f31dfcacf1ff095.png",
+      "companies": [],
+      "name": "KidKwazine",
+      "urlName": "kidkwazine",
+      "voteID": "6166fca50f60027fdb91ab86"
+    },
+    {
+      "_id": "5f36b82c9ec59c0d1272ffe2",
+      "alias": "Skilled Halibut",
+      "aliasID": "65c28a12ed6eefce4cca58b4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bf2ec88117eb8a85f72f00f24798bd9e.png",
+      "companies": [],
+      "name": "Nestorboy",
+      "urlName": "nestorboy",
+      "voteID": "6166ec0ef9c44d726e348269"
+    },
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d03ff26f975679707203bd269ce42822.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": "tonylewis",
+      "voteID": "6166e4314bc7bc6119eb482d"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "vrcprefabs",
+      "voteID": "6166df689b86356a20cd337a"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "__v": 0,
+  "_id": "62742ac076b1ca529e69a26a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T07:10:58.722492Z",
+  "author": {
+    "_id": "5f39aef822f45e1255f01589",
+    "alias": "Delightful Krill",
+    "aliasID": "65cac661ed6eefce4c0699ff",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6950e962f702a0816f417600ded2d033.png",
+    "created": "2020-08-16T22:11:04.231Z",
+    "name": "InvernessMoon",
+    "serviceAccount": false,
+    "urlName": "invernessmoon"
+  },
+  "authorID": "5f39aef822f45e1255f01589",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-05T19:51:28.132Z",
+  "deletedAt": null,
+  "details": "SDK Version: 2022.05.04.17.47\nCurves for physbone properties are not labeled so there is no indication that the property is overriding a prefab. This also means that the user cannot right-click the property label to either revert the change or apply it to the underlying prefab.\nThe current workaround for this is to set the Inspector tab to debug mode which is extremely inconvenient.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f1e4c3e90df135f610",
+  "imageURLs": [
+    "https://canny.io/images/03ec6720d2c05a788995f365005ce0df.png",
+    "https://canny.io/images/499558576cff0abe1d206aedd7837c0d.png",
+    "https://canny.io/images/dd370e55d1a1dfda0f1def98e0afaa17.png"
+  ],
+  "lastUpdated": 1779001728209,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-05T19:51:28.132Z",
+  "subCategoryID": null,
+  "title": "Cannot revert or apply changes to Physbone curves to the base prefab",
+  "trendingScore": 2731.8113485115787,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "cannot-revert-or-apply-changes-to-physbone-curves-to-the-base-prefab",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f39aef822f45e1255f01589",
+      "alias": "Delightful Krill",
+      "aliasID": "65cac661ed6eefce4c0699ff",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6950e962f702a0816f417600ded2d033.png",
+      "companies": [],
+      "name": "InvernessMoon",
+      "urlName": "invernessmoon",
+      "voteID": "62742ac076b1ca529e69a288"
+    }
+  ]
+}

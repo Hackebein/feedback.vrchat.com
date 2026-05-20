@@ -1,0 +1,191 @@
+{
+  "__v": 0,
+  "_id": "610abb255303a829608f88de",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:29:50.329943Z",
+  "author": {
+    "_id": "5bbfe7082f9bdf3d5024c14d",
+    "alias": "Incarnadine Meerkat",
+    "aliasID": "65c27264ed6eefce4c18097a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/40b5e700aeb8c2cf9d9191e490ca5b80.png",
+    "created": "2018-10-12T00:12:56.548Z",
+    "name": "Joker is punk",
+    "serviceAccount": false,
+    "urlName": "corporaljoker"
+  },
+  "authorID": "5bbfe7082f9bdf3d5024c14d",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-08-04T16:07:01.713Z",
+  "deletedAt": null,
+  "details": "For example, the TeleportTo node and the GetPickupInHand nodes both allow VRCPlayerApi inputs, but this is very misleading since the only allowable input for those nodes is the local player.\nPlease at least document which methods and properties are allowed for non-local players. Right now there are many of these and there's no way to know which are allowed.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8ace4c3e90df1352c1e",
+  "imageURLs": [
+    "https://canny.io/images/d32da724c3b84b5ace8981f9a55ce0ca.png"
+  ],
+  "lastUpdated": 1779247176409,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 15,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/610abb255303a829608f88de/1206202335.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 15,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-08-04T16:07:01.714Z",
+  "subCategoryID": null,
+  "title": "Remove PlayerApi node inputs where only the local player is allowed",
+  "trendingScore": 2728.8118308918188,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "remove-playerapi-node-inputs-where-only-the-local-player-is-allowed",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61c1667c83f98269df15daca",
+      "alias": "Favourable Cod",
+      "aliasID": "6607e6ebe5d26962aa8c21af",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Telmex",
+      "urlName": "telmex-1",
+      "voteID": "625b3b7e8c847c530c7df8be"
+    },
+    {
+      "_id": "5af5ba7f6c3fb30c33346267",
+      "alias": "Loyal Condor",
+      "aliasID": "65c2824fed6eefce4c9f4f97",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/bee7297b9eda4f54e336df4ae9efacb2.png",
+      "companies": [],
+      "name": "AlphaSatanOmega",
+      "urlName": "alphasatanomega",
+      "voteID": "62548dbc533a5168565e28c2"
+    },
+    {
+      "_id": "5dc5ffef0892247f76089a24",
+      "alias": "Civic Raccoon",
+      "aliasID": "65c26da3ed6eefce4c4d08b9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
+      "companies": [],
+      "name": "LefTonbo",
+      "urlName": "bc52e1",
+      "voteID": "620481b792f3803732b12b63"
+    },
+    {
+      "_id": "5f3b5fbe89f133509b0f5610",
+      "alias": "Granite Gopher",
+      "aliasID": "65c9a4daed6eefce4c3cb0af",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/c63ac7ee886c09931830c05c9d511afb.png",
+      "companies": [],
+      "name": "UOZUMI_",
+      "urlName": "uozumi",
+      "voteID": "61fb4de1e15e5020d084f3b5"
+    },
+    {
+      "_id": "5f2d7b4a63aa6f7311d3541b",
+      "alias": "Gigantic Turtle",
+      "aliasID": "65c2a1fced6eefce4c5e8cdf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d7078c9fc9c1e52a8f688800b57e96a9.png",
+      "companies": [],
+      "name": "オノッチ｜沙影",
+      "urlName": "5f1556",
+      "voteID": "61fb32175e5d131a52218f65"
+    },
+    {
+      "_id": "5fe076169a58a3291edc604b",
+      "alias": "Bright Crocodile",
+      "aliasID": "65c321b0ed6eefce4c45bc94",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e8d69959bf9919998613d2a933ac0b6b.png",
+      "companies": [],
+      "name": "しそ（SHISO）",
+      "urlName": "shiso-1",
+      "voteID": "61fb1b8639cf8a77b387e8e3"
+    },
+    {
+      "_id": "5e8487f1fd13be66cecc227b",
+      "alias": "Parental Pelican",
+      "aliasID": "65c27264ed6eefce4c1809f0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a9214313f7ec7543de56b5c762235d5e.png",
+      "companies": [],
+      "name": "みみー／Mimy",
+      "urlName": "88c75b",
+      "voteID": "61fabd37107c0e065c900242"
+    },
+    {
+      "_id": "5a983204a1528d415c5ced46",
+      "alias": "Chief Finch",
+      "aliasID": "65ba04aeed6eefce4c43afb3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+      "companies": [],
+      "name": "naqtn",
+      "urlName": "naqtn",
+      "voteID": "61faa8d803b26658e8851c67"
+    },
+    {
+      "_id": "5f8a26770aaa28611fedd6b6",
+      "alias": "Average Loon",
+      "aliasID": "65c28318ed6eefce4cbdb922",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+      "companies": [],
+      "name": "Faxmashine",
+      "urlName": "faxmachine",
+      "voteID": "611577a1fb15af250e68114e"
+    },
+    {
+      "_id": "5e89d0822aedbc56a3155d12",
+      "alias": "Aegean Llama",
+      "aliasID": "65c2756eed6eefce4c9617c7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/616c7b720248db1509813a8626fa40da.png",
+      "companies": [],
+      "name": "Whaddageek",
+      "urlName": "whaddageek",
+      "voteID": "61134093237751758398ffe5"
+    }
+  ]
+}

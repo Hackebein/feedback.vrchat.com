@@ -1,0 +1,117 @@
+{
+  "_id": "6a0cfd405f307f09c7686fbe",
+  "aiCategories": [
+    "loc.in-world",
+    "client.osc"
+  ],
+  "aiTaggedAt": "2026-05-20T01:09:21.457891Z",
+  "author": {
+    "_id": "626318ba2899fa528570bd1a",
+    "alias": "Lucky Lark",
+    "aliasID": "65c26da3ed6eefce4c4d072c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8e43881ef32dcdbc755874dc2cafa646.png",
+    "created": "2022-04-22T21:06:02.264Z",
+    "name": "Liyla",
+    "serviceAccount": false,
+    "urlName": "liyla"
+  },
+  "authorID": "626318ba2899fa528570bd1a",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-20T00:16:00.659Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When ProtonVPN is installed and connected on Windows, VRChat fails to start its OSC server with the error \"Could not Start OSC: The requested address is not valid in this context\" even when VRChat is fully excluded from the VPN via split tunneling.\n\nThe ProtonVPN virtual network adapter remains active as a Windows network interface even for excluded apps, and this appears to interfere with VRChat's UDP socket binding. Disabling the adapter via netsh before launching VRChat resolves the issue immediately.\n\nSteps to reproduce:\n\nInstall ProtonVPN on Windows and connect to a server\n\nAdd VRChat to split tunneling exclusions\n\nLaunch VRChat with OSC enabled\n\nOSC fails — error visible in output_log and VRCX event log\n\nRun: netsh interface set interface \"ProtonVPN\" disabled\n\nRelaunch VRChat — OSC works correctly\n\nWindows version: 10.0.26200.8328\n\nI know this might be a thing that can only be fixed VPN side, but I wanted to bring it up if relevant",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/2c8656016903d7a784c74b082b64d5b6.txt",
+    "https://canny-assets.io/files/5f95a1480088d01d659c6c9e8f92d982.txt",
+    "https://canny-assets.io/files/94ece79de9f992fe2bad5a151fba8437.txt",
+    "https://canny-assets.io/files/8f5110aa17ec71496514a55fc2b7688e.txt",
+    "https://canny-assets.io/files/bd9f774387285f90856c60db3dcb9f1c.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-19_19-14-33",
+      "url": "https://canny-assets.io/files/5f95a1480088d01d659c6c9e8f92d982.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-19_13-19-38",
+      "url": "https://canny-assets.io/files/2c8656016903d7a784c74b082b64d5b6.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-18_20-16-11",
+      "url": "https://canny-assets.io/files/8f5110aa17ec71496514a55fc2b7688e.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-18_20-12-46",
+      "url": "https://canny-assets.io/files/94ece79de9f992fe2bad5a151fba8437.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-18_20-17-49",
+      "url": "https://canny-assets.io/files/bd9f774387285f90856c60db3dcb9f1c.txt"
+    }
+  ],
+  "ideaID": "6a0cfd405f307f09c7686fc2",
+  "imageURLs": [],
+  "lastUpdated": 1779239259028,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-20T00:16:00.659Z",
+  "subCategoryID": null,
+  "title": "OSC server fails to bind when ProtonVPN virtual adapter is present, even with VRChat excluded from split tunneling",
+  "trendingScore": 2942.5518796491456,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "updatedBy": null,
+  "urlName": "osc-server-fails-to-bind-when-protonvpn-virtual-adapter-is-present-even-with-vrc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "626318ba2899fa528570bd1a",
+      "alias": "Lucky Lark",
+      "aliasID": "65c26da3ed6eefce4c4d072c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8e43881ef32dcdbc755874dc2cafa646.png",
+      "companies": [],
+      "name": "Liyla",
+      "urlName": "liyla",
+      "voteID": "6a0cfd425a52cb2df0350243"
+    }
+  ]
+}

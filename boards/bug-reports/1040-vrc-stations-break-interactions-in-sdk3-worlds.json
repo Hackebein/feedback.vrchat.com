@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "600ff8b33c1200060f5ea506",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T08:03:42.474337Z",
+  "author": {
+    "_id": "5f2dc3d9b923f7086bb0a2b5",
+    "alias": "Apricot cream Otter",
+    "aliasID": "65c321e1ed6eefce4c4a4490",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/eeb994858879b05dcb916a1a1c7f2a3b.png",
+    "created": "2020-08-07T21:12:57.132Z",
+    "name": "Kaugumme",
+    "serviceAccount": false,
+    "urlName": "kaugumme-1"
+  },
+  "authorID": "5f2dc3d9b923f7086bb0a2b5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-26T11:10:43.902Z",
+  "deletedAt": null,
+  "details": "The latest Update breaks Interactions for PCVR/Quest users when inside a VRC_Station when in a SDK3 World.\n\nThis is similar to the \"VRC_Station currently break in SDK3-Worlds\" Bug (https://feedback.vrchat.com/bug-reports/p/1030-avatar-stations-non-functional) \n\nHow to reproduce?\n- Add a station twice the size of your avatar in front of you\n- go to a a vr player and let him try to interact with an object, gui (with the pointer thingies) \n- he won't be able to interact.\n\nThis bug/exploit currently works for PCVR users (tested with Vive Index, Oculus Quest in VD mode and Quest 1&2). Desktop players don't seem to be affected.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb802e4c3e90df13230e3",
+  "imageURLs": [],
+  "lastUpdated": 1779090040930,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-26T11:10:43.902Z",
+  "subCategoryID": null,
+  "title": "[1040] VRC Stations break Interactions in SDK3 Worlds.",
+  "trendingScore": 2666.7465907988435,
+  "updatedAt": "2026-05-18T07:41:23.457967Z",
+  "urlName": "1040-vrc-stations-break-interactions-in-sdk3-worlds",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f342e529b3d1f25a827a957",
+      "alias": "Puce Kite",
+      "aliasID": "65c321b0ed6eefce4c45bc62",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e5189d4398f8ab6a5b00caf0581fcba4.png",
+      "companies": [],
+      "name": "Ricoh.",
+      "urlName": "mii-4",
+      "voteID": "601cc816bbb357463ab29acf"
+    },
+    {
+      "_id": "5f0aaa52a413e235c149fe85",
+      "alias": "Structural Stork",
+      "aliasID": "65c4efe9ed6eefce4c4224f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/027ef26f82ebb55cc78194b14c4811ef.png",
+      "companies": [],
+      "name": "~N0N0~",
+      "urlName": "sean-long-3",
+      "voteID": "601120004f8e93171b1963f7"
+    },
+    {
+      "_id": "5f2dc3d9b923f7086bb0a2b5",
+      "alias": "Apricot cream Otter",
+      "aliasID": "65c321e1ed6eefce4c4a4490",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/eeb994858879b05dcb916a1a1c7f2a3b.png",
+      "companies": [],
+      "name": "Kaugumme",
+      "urlName": "kaugumme-1",
+      "voteID": "600ff8b43c1200060f5ea511"
+    }
+  ]
+}

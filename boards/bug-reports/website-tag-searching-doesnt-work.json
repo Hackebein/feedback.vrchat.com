@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "68a36dfd13f3fb8a6c159585",
+  "aiCategories": [
+    "loc.website",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-17T01:11:07.318823Z",
+  "author": {
+    "_id": "618ece8f22b63e309408b761",
+    "alias": "Developing Mouse",
+    "aliasID": "65c28ff3ed6eefce4cb36043",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/fa9295055b6d3d32fec09a632872424d.png",
+    "created": "2021-11-12T20:29:03.861Z",
+    "name": "Freneticǃ",
+    "serviceAccount": false,
+    "urlName": "alone-bunt-livestreams"
+  },
+  "authorID": "618ece8f22b63e309408b761",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-08-18T18:16:29.079Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. use the website and not the in game client\n\n2. get any world\n\n3. click on any custom tag on the world\n\n4. wrong redirect\n\nafaik it should display worlds with the same tag but currently just decides to go blank instead\n\nfix: currently when selecting a tag it search as: https://vrchat.com/home/search/game but it should search as: https://vrchat.com/home/search/worlds/game because search/TagName doesnt exist but search/worlds/TagName does exist",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/2b7965b59c33228481dee76122863445.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2025-08-18 11-13-07",
+      "url": "https://canny-assets.io/files/2b7965b59c33228481dee76122863445.mp4"
+    }
+  ],
+  "ideaID": "68a36dfd13f3fb8a6c1595fc",
+  "imageURLs": [],
+  "lastUpdated": 1778979389820,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68a36dfd13f3fb8a6c159585/394220820.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-08-18T18:16:29.079Z",
+  "subCategoryID": null,
+  "title": "Website tag searching doesnt work",
+  "trendingScore": 2903.3733541225247,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": null,
+  "urlName": "website-tag-searching-doesnt-work",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "618ece8f22b63e309408b761",
+      "alias": "Developing Mouse",
+      "aliasID": "65c28ff3ed6eefce4cb36043",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fa9295055b6d3d32fec09a632872424d.png",
+      "companies": [],
+      "name": "Freneticǃ",
+      "urlName": "alone-bunt-livestreams",
+      "voteID": "68a36dfdd2f94455f0c4885f"
+    }
+  ]
+}

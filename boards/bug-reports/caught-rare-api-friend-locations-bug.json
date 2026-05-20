@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "6617839aa6b8275917b070e1",
+  "aiCategories": [
+    "loc.quick-menu",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-05-16T18:56:11.885683Z",
+  "author": {
+    "_id": "60283c7c4c9a9639a694c668",
+    "alias": "Maximum Otter",
+    "aliasID": "65c2824ced6eefce4c9ed3d3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ae99b19525f2aa4af3344a3a6d616f53.png",
+    "created": "2021-02-13T20:54:20.099Z",
+    "name": "BluWizard",
+    "serviceAccount": false,
+    "urlName": "bluwizard"
+  },
+  "authorID": "60283c7c4c9a9639a694c668",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-04-11T06:30:50.822Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Launch VRChat Build 1441 (Open Beta)\n\n2. Open Quick Menu -> Social after changing Avatar.\n\n3. In rare cases, this will happen (see screenshot attached). It shows people in Private Worlds but with the twist that it shows the previous API data from an earlier VRChat session.\n\nSwitching to a different tab in Social and then back to Friend Locations seemed to have fixed itself.\n\nSince the API activity is logged, it should have been detected. Here's a Pastebin: https://pastebin.com/DyALJUEv",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9dbe4c3e90df138d268",
+  "imageURLs": [
+    "https://canny.io/images/6a93916543c92b12675e264c6c0baea0.jpg"
+  ],
+  "lastUpdated": 1779223446547,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6617839aa6b8275917b070e1/482864815.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-04-11T06:30:50.822Z",
+  "subCategoryID": null,
+  "title": "Caught rare API Friend Locations Bug",
+  "trendingScore": 2832.731921906089,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "updatedBy": null,
+  "urlName": "caught-rare-api-friend-locations-bug",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60283c7c4c9a9639a694c668",
+      "alias": "Maximum Otter",
+      "aliasID": "65c2824ced6eefce4c9ed3d3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ae99b19525f2aa4af3344a3a6d616f53.png",
+      "companies": [],
+      "name": "BluWizard",
+      "urlName": "bluwizard",
+      "voteID": "6617839be5d26962aa89ef4d"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5e0866e6040f3e72e115d01d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:51:49.431975Z",
+  "author": {
+    "_id": "5e0863948f7dcf7ba318fc33",
+    "alias": "Bronze Meadowlark",
+    "aliasID": "65d23a990129d7ae44f64684",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/95751f69f87b64bf2fccfdbe49765912.png",
+    "created": "2019-12-29T08:28:04.349Z",
+    "name": "Gamecube762",
+    "serviceAccount": false,
+    "urlName": "kyle-268"
+  },
+  "authorID": "5e0863948f7dcf7ba318fc33",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-29T08:42:14.538Z",
+  "deletedAt": null,
+  "details": "Gonna put this first: I don't know if this error was Udon or Unity, so I'm reporting it to both.\n\"selector_thread_wakeup_drain_pipes: recv () failed, error (10054)\"\nThis error message began spamming Unity's Editor.log file inflating it's size to 645.4GB on my C drive.\nThis issue happened after leaving Unity 2018.4.14f1 open with SDK3 and Udon for a few days. I had a node graph open and the editor was not in play mode.\nI've had left other versions of Unity and VRCSDKs open for more than a few days before with no issues.\nHere is a snippet of the Editor.log when the spam started: https://pastebin.com/ZshshNY4\nUnity: 2018.4.14f1\nSDK: UDONSDK-2019.12.22.12.32_Public\nUdon: VRCSDK3-2019.12.21.16.01",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9ce4c3e90df158ad5f",
+  "imageURLs": [],
+  "lastUpdated": 1779223401924,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-29T08:42:14.538Z",
+  "subCategoryID": null,
+  "title": "selector_thread_wakeup_drain_pipes: recv () failed, error (10054)",
+  "trendingScore": 2609.173528421466,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "selectorthreadwakeupdrainpipes-recv-failed-error-10054",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e0863948f7dcf7ba318fc33",
+      "alias": "Bronze Meadowlark",
+      "aliasID": "65d23a990129d7ae44f64684",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/95751f69f87b64bf2fccfdbe49765912.png",
+      "companies": [],
+      "name": "Gamecube762",
+      "urlName": "kyle-268",
+      "voteID": "5e0866e6040f3e72e115d025"
+    }
+  ]
+}

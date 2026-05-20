@@ -1,0 +1,121 @@
+{
+  "__v": 0,
+  "_id": "5f353a0e50595479c7b3aaba",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:51:29.933837Z",
+  "author": {
+    "_id": "5a95256f54d514123c1f089d",
+    "alias": "Fuchsia Marmoset",
+    "aliasID": "65ba0454ed6eefce4c3ac7f6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/642f70667ed7ed29bd558fb38f8d11a9.png",
+    "created": "2018-02-27T09:31:27.716Z",
+    "name": "Demirramon",
+    "serviceAccount": false,
+    "urlName": "joan-marc"
+  },
+  "authorID": "5a95256f54d514123c1f089d",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-08-13T13:03:10.960Z",
+  "deletedAt": null,
+  "details": "I noticed this bug because a layer in my action animator sets the current emote to zero when the velocity in any axis goes over 0.1 or under -0.1, to reproduce the \"stop emote when you move\" behaviour in avatars 2.0. This works pretty well for me, but for other users I'm standing still with no IK and slightly moving my feet until the dance is done. I tested this with a friend and I got to this conclusion: playspace movement and joystick movement both change the velocity for remote users, but not locally.\nIt should either change the velocity for both local and remote or for none, this difference will create inconsistencies. What if there was a playspace velocity parameter, for example? I don't mind how this is solved but there must be consistency.\nTL;DR: velocity changes when you move in your playspace for others but not for yourself.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e2e4c3e90df131cce3",
+  "imageURLs": [],
+  "lastUpdated": 1779032546983,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-08-13T13:03:10.960Z",
+  "subCategoryID": null,
+  "title": "[BUG] Playspace movement changes velocity for remote viewers",
+  "trendingScore": 2652.7346546865624,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-playspace-movement-changes-velocity-for-remote-viewers",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f9f1ebfa308d05f19397b80",
+      "alias": "Reliable Warbler",
+      "aliasID": "65c28115ed6eefce4c6d4a60",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
+      "companies": [],
+      "name": "JessicaOnMain",
+      "urlName": "jessicaonmain",
+      "voteID": "5fa0c0491f28df1b1ff4d4c9"
+    },
+    {
+      "_id": "5b4eb6697a870c3a5c2b0ca5",
+      "alias": "Driftwood Pelican",
+      "aliasID": "65c27aabed6eefce4c6e029a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/50a6daf69f2fc82a842ff75b2a92dfd8.png",
+      "companies": [],
+      "name": "Adeon Writer",
+      "urlName": "adeon-writer",
+      "voteID": "5f70f5560085f376eeb80578"
+    },
+    {
+      "_id": "5c1c91b29e1e93518aafae00",
+      "alias": "Exceptional Llama",
+      "aliasID": "65d02ef40129d7ae4482efb6",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/c8882c1d763e7ce83c9c346faa3032ed.png",
+      "companies": [],
+      "name": "Spooky1",
+      "urlName": "great-man",
+      "voteID": "5f354fa6f016e37c02c5fc73"
+    },
+    {
+      "_id": "5a95256f54d514123c1f089d",
+      "alias": "Fuchsia Marmoset",
+      "aliasID": "65ba0454ed6eefce4c3ac7f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/642f70667ed7ed29bd558fb38f8d11a9.png",
+      "companies": [],
+      "name": "Demirramon",
+      "urlName": "joan-marc",
+      "voteID": "5f353a0f50595479c7b3aac2"
+    }
+  ]
+}

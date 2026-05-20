@@ -1,0 +1,154 @@
+{
+  "__v": 0,
+  "_id": "67f953aa23596da703da1bc3",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T22:10:41.572433Z",
+  "author": {
+    "_id": "5cdea371135e175781d9a260",
+    "alias": "Azure Swordfish",
+    "aliasID": "65c47b6fed6eefce4c6157dc",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8b4cf3242f08d5c01709e341a5b91fb4.png",
+    "created": "2019-05-17T12:05:05.547Z",
+    "name": "Pikapetey",
+    "serviceAccount": false,
+    "urlName": "pikapetey-animations"
+  },
+  "authorID": "5cdea371135e175781d9a260",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "67f95aa68112118764b43163",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5cdea371135e175781d9a260",
+        "alias": "Azure Swordfish",
+        "aliasID": "65c47b6fed6eefce4c6157dc",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8b4cf3242f08d5c01709e341a5b91fb4.png",
+        "created": "2019-05-17T12:05:05.547Z",
+        "name": "Pikapetey",
+        "serviceAccount": false,
+        "urlName": "pikapetey-animations"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-04-11T18:08:38.920Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67f953aa23596da703da1bc3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "was on build 3.7.6 updating this to the build 3.8.0 seemed to fix it.  will test with players later tonight",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-04-11T17:38:50.067Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "There is a instantiation particle handler that spawns particles for effects locally.  It works on local build testing but fails and kicks players to the Error World when it's triggered. \n\nOn the Output logs look for:\n\n\"B5_DiveBombAndExplode:\"\n\nThis is the call the NPC makes when starting to preform the action.  (it takes some time durring flight to call the script to intantiate the pre-fab that holds the particle)\n\nError Logs output:\n\n-  [UdonBehaviour] Could not load the program; the UdonBehaviour on 'CFXR-VRChat_GroundExplosion(Clone)' will not run.\n\n-  [Behaviour] <color=red>Resetting game flow because \"Signature Verification failed after Instantiate\": [GoToErrorWorld]</color>\n\nAttachted are:\n\n-Screen Cap of the simple Udon script in question\n\n-Outputlog of the video \"ErrorWorldLiveBuild\"\n\n-LocalBuildLive shows testing the world locally and you can see the explosion doesn't cause any problems. \n\nWorld can be found here: https://vrchat.com/home/world/wrld_c5bb614d-130e-40e1-9180-dd4037a2c6df\n\nThis was not a problem untill my latest build.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/0c5187d0bc5469c2797a956f63d73375.txt",
+    "https://canny-assets.io/files/4fe2a18f2edb4df46f8a9e11b4ae818b.mp4",
+    "https://canny-assets.io/files/65a5eb6826e6f5972a7d923aa65c026d.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-10_23-55-10",
+      "url": "https://canny-assets.io/files/0c5187d0bc5469c2797a956f63d73375.txt"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "LocalBuildLive",
+      "url": "https://canny-assets.io/files/4fe2a18f2edb4df46f8a9e11b4ae818b.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "ErrorWorldLiveBuild",
+      "url": "https://canny-assets.io/files/65a5eb6826e6f5972a7d923aa65c026d.mp4"
+    }
+  ],
+  "ideaID": "680bba5fe4c3e90df13a55d9",
+  "imageURLs": [
+    "https://canny-assets.io/images/fe84da63493d27d87ce3c3e310fa8404.png"
+  ],
+  "lastUpdated": 1779255084766,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67f953aa23596da703da1bc3/771199010.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-04-11T17:38:50.067Z",
+  "subCategoryID": null,
+  "title": "Instantiated Local Prefab causing Players to be kicked to Error World.",
+  "trendingScore": 2884.941047566638,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "instantiated-local-prefab-causing-players-to-be-kicked-to-error-world",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5cdea371135e175781d9a260",
+      "alias": "Azure Swordfish",
+      "aliasID": "65c47b6fed6eefce4c6157dc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8b4cf3242f08d5c01709e341a5b91fb4.png",
+      "companies": [],
+      "name": "Pikapetey",
+      "urlName": "pikapetey-animations",
+      "voteID": "67f953aaa85da39191ff20d1"
+    }
+  ]
+}

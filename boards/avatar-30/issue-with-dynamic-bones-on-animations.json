@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "5f1510cf8cdf107432380c45",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamic-bones"
+  ],
+  "aiTaggedAt": "2026-05-17T15:49:04.791956Z",
+  "author": {
+    "_id": "5f150b53bbf7da74159ba934",
+    "alias": "Gold Peacock",
+    "aliasID": "65e5530fa6e3ea79dd83291f",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/ea1ab3eb203d590ef6541e9e63454239.png",
+    "created": "2020-07-20T03:11:15.466Z",
+    "name": "OniKenji",
+    "serviceAccount": false,
+    "urlName": "onikenji"
+  },
+  "authorID": "5f150b53bbf7da74159ba934",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-07-20T03:34:39.774Z",
+  "deletedAt": null,
+  "details": "It would seem that if an animation contains anything that, in my case, messes with the gravity of dynamic bones that bone is constantly in a broken state even if the animation is not playing. Pic one is showing how the avatar loads in there is no animation clip being played for the ears. Pic two shows the same avatar with a animation clip added to FX layer but connected to absolutely nothing. The only change it makes is actually removing all gravity from the bones. Still it should be doing nothing it's not even being run by anything",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7e81e4c3e90df15c8306",
+  "imageURLs": [
+    "https://canny.io/images/28dfbfdc8ad5b55b8f683b254e3a95ac.png",
+    "https://canny.io/images/317d669387335c894cc761a9978118f6.png"
+  ],
+  "lastUpdated": 1779032534242,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-07-20T03:34:39.774Z",
+  "subCategoryID": null,
+  "title": "Issue with Dynamic Bones on animations",
+  "trendingScore": 2638.285871706023,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "issue-with-dynamic-bones-on-animations",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f150b53bbf7da74159ba934",
+      "alias": "Gold Peacock",
+      "aliasID": "65e5530fa6e3ea79dd83291f",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ea1ab3eb203d590ef6541e9e63454239.png",
+      "companies": [],
+      "name": "OniKenji",
+      "urlName": "onikenji",
+      "voteID": "5f1510cf8cdf107432380c4d"
+    }
+  ]
+}

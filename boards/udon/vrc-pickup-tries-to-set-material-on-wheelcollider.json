@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "60557e58e3c42a495db21537",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-16T21:26:34.561515Z",
+  "author": {
+    "_id": "5f4d0c8c4efb1c1bee087245",
+    "alias": "Tawny Aardvark",
+    "aliasID": "65c2892ded6eefce4ca818ef",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c03c152b315f5f0d0ed8998a48811438.png",
+    "created": "2020-08-31T14:43:24.515Z",
+    "name": "Guribo",
+    "serviceAccount": false,
+    "urlName": "guribo-1"
+  },
+  "authorID": "5f4d0c8c4efb1c1bee087245",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-03-20T04:47:20.173Z",
+  "deletedAt": null,
+  "details": "When a wheel collider component is part of a pickup the pickup tries to set the outline material on it and fails with an error messages.\nIt should probably not try to do that.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb812e4c3e90df1325c3b",
+  "imageURLs": [
+    "https://canny.io/images/c0f028f21a296bbee809be37de39a923.png",
+    "https://canny.io/images/5049a2363ba8920bf3c13ec53aacb2d2.png"
+  ],
+  "lastUpdated": 1779247134937,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-03-20T04:47:20.173Z",
+  "subCategoryID": null,
+  "title": "VRC Pickup tries to set Material on Wheelcollider",
+  "trendingScore": 2673.0073670730867,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "vrc-pickup-tries-to-set-material-on-wheelcollider",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f4d0c8c4efb1c1bee087245",
+      "alias": "Tawny Aardvark",
+      "aliasID": "65c2892ded6eefce4ca818ef",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c03c152b315f5f0d0ed8998a48811438.png",
+      "companies": [],
+      "name": "Guribo",
+      "urlName": "guribo-1",
+      "voteID": "60557e58e3c42a495db2153e"
+    }
+  ]
+}

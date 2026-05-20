@@ -1,0 +1,145 @@
+{
+  "__v": 0,
+  "_id": "5f9d806022acd80ab0b180b6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:33:39.935921Z",
+  "author": {
+    "_id": "5f9d7c4078d056215466ea6f",
+    "alias": "Tan Otter",
+    "aliasID": "65d588220129d7ae4478f7e0",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/b1cd5f040aa93cf888e80e1cf9651d11.png",
+    "created": "2020-10-31T15:01:20.907Z",
+    "name": "hitlabStudios",
+    "serviceAccount": false,
+    "urlName": "hitlabstudios"
+  },
+  "authorID": "5f9d7c4078d056215466ea6f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [
+    {
+      "_id": "60024ef020e78b36665a4680",
+      "author": {
+        "_id": "5de9405aea7cc52772fcc359",
+        "alias": "Robust Crow",
+        "aliasID": "65c27d11ed6eefce4cc8dee3",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/3832aa8915d09f633a5ab11ddec4d91f.jpg",
+        "created": "2019-12-05T17:37:30.047Z",
+        "name": "Momo the Monster",
+        "serviceAccount": false,
+        "urlName": "momo-the-monster-1"
+      },
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-01-16T02:26:56.773Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "60024ef020e78b36665a4680",
+      "mergedPostDetails": "the Udon players (Unity & AVPro) dont loop Youtube videos & videos from a direct linkt. MarvinVR´s Videoplayer Prefab also wont work with looping a video.",
+      "mergedPostTitle": "Udon Videoplayer Loop not working",
+      "pinned": false,
+      "postID": "5f9d806022acd80ab0b180b6",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-10-31T15:18:56.369Z",
+  "deletedAt": null,
+  "details": "Version: VRCSDK3\nDescription of the bug:\n \nOn the UdonSyncPlayer (Unity) prefab VRC Unity Video Player script: I set Loop field = True, I disable the Udon Behavior but when I going into Play Mode the Native Unity Video Player that is invoked at run-time on the UdonSyncPlayer (Unity) Prefab does not have its Loop field set to True. I remains False and this stops my video from properly looping smoothly with a short pause at every loop.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7eee4c3e90df131f857",
+  "imageURLs": [
+    "https://canny.io/images/642ff4c46b209073e2cb6759440a0651.jpg"
+  ],
+  "lastUpdated": 1779239318952,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 1,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5f9d806022acd80ab0b180b6/1424219451.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-10-31T15:18:56.369Z",
+  "subCategoryID": null,
+  "title": "UdonSyncPlayer (Unity) Loop Bug",
+  "trendingScore": 2919.5710307671957,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "udonsyncplayer-unity-loop-bug",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "ravenworks",
+      "voteID": "693f4e8f4927a96e5861e2c6"
+    },
+    {
+      "_id": "5f9d7c4078d056215466ea6f",
+      "alias": "Tan Otter",
+      "aliasID": "65d588220129d7ae4478f7e0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/b1cd5f040aa93cf888e80e1cf9651d11.png",
+      "companies": [],
+      "name": "hitlabStudios",
+      "urlName": "hitlabstudios",
+      "voteID": "5f9d806022acd80ab0b180bd"
+    },
+    {
+      "_id": "5f9bfbdf5647860f8efbe786",
+      "alias": "Valid Landfowl",
+      "aliasID": "65c2c30ced6eefce4cbc7376",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/bec90c949444df968ab19064a324b462.png",
+      "companies": [],
+      "name": "Nupol",
+      "urlName": "nupol",
+      "voteID": "60024ef020e78b36665a4682"
+    }
+  ]
+}

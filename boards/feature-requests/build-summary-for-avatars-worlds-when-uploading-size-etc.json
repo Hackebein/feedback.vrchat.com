@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "5c0fc5f492a8c76afd4d9fed",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-18T18:56:27.254182Z",
+  "author": {
+    "_id": "5a4e25abae715b48f1d1f30a",
+    "alias": "Amused Angelfish",
+    "aliasID": "65ba01d8ed6eefce4cfc7a39",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/f19073c4ed50294c85e806c34ddb6f5c.jpg",
+    "created": "2018-01-04T13:01:31.555Z",
+    "name": "Eremite",
+    "serviceAccount": false,
+    "urlName": "alan-c"
+  },
+  "authorID": "5a4e25abae715b48f1d1f30a",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-12-11T14:13:08.408Z",
+  "deletedAt": null,
+  "details": "Currently, if you want to know the size of a build and what is taking up space in a map for example, you need to go to the Console tab of Unity, click the dropdown to go to the Editor Log, then Ctrl+F from the end upwards to find the `customscene.vrcw` entry and look through the build stats there. \n\nIt would be really nice if there was a way to see this information in the build control panel, or in a separate panel that could be opened up.  (EG: VRC Build Stats Panel) \n\nHopefully it should be relatively easy since the information to display is already in the editor log.\n\nOf particular interest (as a world builder) is the total size of the package, what type of resources compose the most space, then the breakdown of space usage by asset below the summary.  (If you view the editor log after a build, you should see what I mean.) \n\nWould also be useful for avatars.  Currently people tack on like, 4K textures for an eye or something and inflate the filesize by several MB for something that can't really be seen well, etc. :) \n\nI've thought of this before, but seeing this post made me finally make a Canny for it: https://vrchat.canny.io/feature-requests/p/new-map-category-10mb-or-less",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d6ce4c3e90df157e4c1",
+  "imageURLs": [],
+  "lastUpdated": 1779130042213,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-12-11T14:13:08.408Z",
+  "subCategoryID": null,
+  "title": "Build Summary for Avatars & Worlds when Uploading (Size, Etc)",
+  "trendingScore": 2725.12801817295,
+  "updatedAt": "2026-05-18T18:48:18.764654Z",
+  "urlName": "build-summary-for-avatars-worlds-when-uploading-size-etc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c03473992eef65b2bb3cc2c",
+      "alias": "Outstanding Kingfisher",
+      "aliasID": "65c27129ed6eefce4ce48dac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/230b695b3f1227c6e53121c1f0c0bec1.png",
+      "companies": [],
+      "name": "Groxxy",
+      "urlName": "insanegrox",
+      "voteID": "623ce2f1e37ca5527f669777"
+    },
+    {
+      "_id": "5a4e25abae715b48f1d1f30a",
+      "alias": "Amused Angelfish",
+      "aliasID": "65ba01d8ed6eefce4cfc7a39",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f19073c4ed50294c85e806c34ddb6f5c.jpg",
+      "companies": [],
+      "name": "Eremite",
+      "urlName": "alan-c",
+      "voteID": "5c0fc5f46db2b5471c2a5994"
+    }
+  ]
+}

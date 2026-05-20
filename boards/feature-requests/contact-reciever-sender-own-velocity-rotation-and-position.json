@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "63df5379eaadfb60391139fb",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T05:28:04.253788Z",
+  "author": {
+    "_id": "5f2cba5631807b34c94a38e1",
+    "alias": "Yellowwood Ostrich",
+    "aliasID": "65c279a6ed6eefce4c459017",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/991e2af9b841bf39b8ca9ea96320673b.png",
+    "created": "2020-08-07T02:20:06.853Z",
+    "name": "Wunder Wulfe",
+    "serviceAccount": false,
+    "urlName": "wunder-wulfe-1"
+  },
+  "authorID": "5f2cba5631807b34c94a38e1",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-02-05T06:58:01.103Z",
+  "deletedAt": null,
+  "details": "Very useful as parameter options, detecting the velocity of itself, and the position/velocity of any contact interacting with the object. There could be multiple options to change how the receiver should react to velocity information to best suit the needs of the avatar. It should always report the highest value (+ or -) for the parameter.\n\nVelocity mode ideas:\n\n**Multi-Axis**\n\n    This would separate the velocity into axis relative to the receiver, allowing you to split X, Y, and Z movement, suitable for devices like touch screen devices, menus, swords, punch/attack strength...\n\n**Directional**\n\n    Velocity will be a value indicating either movement toward or away from the mid point of the contact. This is useful for more basic things like detecting being slapped or a fist-bump.\n\nThe receivers own velocity will probably need to be always positive for *Directional* mode.\n\nAs for position detection, this would be useful for objects such as on-avatar DJ equipment, physical sliders, touch screens, menus, etc. It could also detect the contact's own position / velocity relative to the avatar root or a chosen gameobject, very useful perhaps for pose detection",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb968e4c3e90df13773d3",
+  "imageURLs": [],
+  "lastUpdated": 1778995514964,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-02-05T06:58:01.104Z",
+  "subCategoryID": null,
+  "title": "[Contact Reciever] Sender + Own Velocity, Rotation, and Position",
+  "trendingScore": 2894.550973705357,
+  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "urlName": "contact-reciever-sender-own-velocity-rotation-and-position",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fa4b92655e1fa303d5388fe",
+      "alias": "Yolk yellow Panda",
+      "aliasID": "65c282c6ed6eefce4cb14813",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/73f9dae283d22e3f56e94934b45af4eb.png",
+      "companies": [],
+      "name": "Seedsy",
+      "urlName": "seedsy",
+      "voteID": "685868ac16069571f68a459b"
+    },
+    {
+      "_id": "5f2cba5631807b34c94a38e1",
+      "alias": "Yellowwood Ostrich",
+      "aliasID": "65c279a6ed6eefce4c459017",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/991e2af9b841bf39b8ca9ea96320673b.png",
+      "companies": [],
+      "name": "Wunder Wulfe",
+      "urlName": "wunder-wulfe-1",
+      "voteID": "63df5379eaadfb6039113a21"
+    }
+  ]
+}

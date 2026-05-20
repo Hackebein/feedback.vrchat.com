@@ -1,0 +1,100 @@
+{
+  "__v": 0,
+  "_id": "644215cd8c78c209320fc34c",
+  "aiCategories": [
+    "loc.in-world",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-19T07:46:13.338998Z",
+  "author": {
+    "_id": "5a253ad671e0cf47be355bfb",
+    "alias": "Papaya Possum",
+    "aliasID": "65ba01aded6eefce4cf81a26",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ad1e75fb28c37d58ee1662a8a4ffe3d7.png",
+    "created": "2017-12-04T12:08:54.083Z",
+    "name": "phrap",
+    "serviceAccount": false,
+    "urlName": "kyle-dixon"
+  },
+  "authorID": "5a253ad671e0cf47be355bfb",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-04-21T04:49:17.869Z",
+  "deletedAt": null,
+  "details": "While using RDNA3 (7900 XTX in my case) on Windows 10:\n\n- Open VRChat via SteamVR\n\n- Focus another program like your browser, etc.\n\n- Observe frametimes while swapping focus between that program and VRChat\n\nThis seems potentially related to https://forum.unity.com/threads/game-performance-degrading-when-window-does-not-have-focus.643279/\n\nExample frametimes of two scenarios while focused and unfocused are attached. One being a synthetic \"light\" load in an avatar museum map and the other being a real \"heavy\" load in the Great Pug.\n\nIn extreme cases, it can really mess with CPU frametimes as the GPU begins producing a consistent late-start scenario for the SteamVR compositor.\n\nSince Easy Anti-Cheat is active, it is impossible to adjust priorities of the game or adjust affinities via task manager or process lasso to see if this would fix the issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb979e4c3e90df137abfd",
+  "imageURLs": [
+    "https://canny.io/images/a083bff9c5f3c29d5c9747bf9c79df77.png",
+    "https://canny.io/images/7bbe08cf82eea7bded17acccc58ef7fc.png",
+    "https://canny.io/images/c25c454c7df239b54517958cc214352d.png",
+    "https://canny.io/images/7ab84573c38e470be78c42de7d498ed4.png"
+  ],
+  "lastUpdated": 1779175627925,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/644215cd8c78c209320fc34c/1952670283.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-04-21T04:49:17.869Z",
+  "subCategoryID": null,
+  "title": "RDNA3 frametime issues when VRChat is in the background on Windows",
+  "trendingScore": 2782.7257864753624,
+  "updatedAt": "2026-05-19T07:29:08.486735Z",
+  "updatedBy": null,
+  "urlName": "rdna3-frametime-issues-when-vrchat-is-in-the-background-on-windows",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "3f6409",
+      "voteID": "644b5bb58e1127094d17fa15"
+    },
+    {
+      "_id": "5a253ad671e0cf47be355bfb",
+      "alias": "Papaya Possum",
+      "aliasID": "65ba01aded6eefce4cf81a26",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ad1e75fb28c37d58ee1662a8a4ffe3d7.png",
+      "companies": [],
+      "name": "phrap",
+      "urlName": "kyle-dixon",
+      "voteID": "644215ce8c78c209320fc383"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "5fa6b4de9fe07a283b79d13a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T20:00:10.382027Z",
+  "author": {
+    "_id": "5fa6aee41bcf4129c5e2d7ab",
+    "alias": "Blush Kangaroo",
+    "aliasID": "65cb1fe7ed6eefce4c9fc168",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/0d394f9ace0434cb6e52d26d668d19ae.png",
+    "created": "2020-11-07T14:27:48.669Z",
+    "name": "Voyage Voyage",
+    "serviceAccount": false,
+    "urlName": "voyage-voyage"
+  },
+  "authorID": "5fa6aee41bcf4129c5e2d7ab",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-07T14:53:18.693Z",
+  "deletedAt": null,
+  "details": "Greetings,\nVRChat Version: Latest (Build 1010)\nDescription of the bug:\nI'm trying to update one of my world ( wrld_15d2f36e-4902-4dab-b433-eaec2c172a41 ), however I'm trying to upload it, the upload seems to be successful from Unity (I even have the Content Successfully Uploaded! window from the VRCSDK), but the world isn't actually updated and the following error appears in the logs : \nMongoError˸ E11000 duplicate key error collection˸ vrchat․World index˸ _id_ dup key˸ ｛ ˸ ＂wrld_15d2f36e-4902-4dab-b433-eaec2c172a41＂ ｝\nMy guess is that the upload system is trying to \"create\" a new world instead of \"update\"-ing it.\nMy first upload was done with a wrong version of Unity ( 2018.4.28f1 instead of 2018.4.20f1).\nDowngrading to the correct version led to this current issue.\nI tried to follow the steps written in https://help.vrchat.com/kb/article/10-my-upload-failed/ to no avail.\nDetaching and recopying the world ID inside the Pipeline Manager did not change anything.\nIs there a way to resolve this issue ? Else, I'll just wait 1 week, delete the old world and upload a new one.\nSteps to reproduce (how did you encounter the bug?):\n1. Launch Unity 2018.4.20f1\n2. Launch the VRCSDK Control Panel\n3. Connect with my account\n4. Ensure the currently edited world has the same ID\n5. Hit publish\n6. Fill up the form\n7. Upload\n8. See the VRCSDK Community Labs \"Content Successfully Uploaded!\" window\n9. Check the Console logs and see the MongoDB error reported by BestHTTP.HTTPUpdateDelegator:Update()\nAny extra files? (output logs, screenshots):\nThe world in question : https://vrchat.com/home/world/wrld_15d2f36e-4902-4dab-b433-eaec2c172a41",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7eee4c3e90df131f922",
+  "imageURLs": [],
+  "lastUpdated": 1779218237264,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-11-07T14:53:18.693Z",
+  "subCategoryID": null,
+  "title": "Duplicate key error on world update",
+  "trendingScore": 2654.067483728179,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "duplicate-key-error-on-world-update",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fa6aee41bcf4129c5e2d7ab",
+      "alias": "Blush Kangaroo",
+      "aliasID": "65cb1fe7ed6eefce4c9fc168",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0d394f9ace0434cb6e52d26d668d19ae.png",
+      "companies": [],
+      "name": "Voyage Voyage",
+      "urlName": "voyage-voyage",
+      "voteID": "5fa6b4de9fe07a283b79d141"
+    }
+  ]
+}

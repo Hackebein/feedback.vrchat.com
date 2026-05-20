@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "687af2dbd97331a21b541b11",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:08:21.165546Z",
+  "author": {
+    "_id": "5bb3ea0ada8b6d259d417ab5",
+    "alias": "Corporate Wallaby",
+    "aliasID": "65c2ae1fed6eefce4c0b8d43",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1472979389ca4d5d611add06ed6ade5e.png",
+    "created": "2018-10-02T21:58:34.502Z",
+    "name": "＝＝Cat＝＝",
+    "serviceAccount": false,
+    "urlName": "cat-16"
+  },
+  "authorID": "5bb3ea0ada8b6d259d417ab5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-07-19T01:20:27.403Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When using the graph, if you reuse nodes, there's a small chance that eventually this will cause the graph to break and execute erroneous code, regardless if the code has been recompiled or not. I've noticed when it does break, the code seems mix up memory addresses and calls variables/code from other udon project files, maybe even some not in use in the project currently.\n\nI've included an example picture. The red line was how I had it originally and that was the bad version that broke. Splitting it into two get_game_object/get_name calls fixed it. The code was working fine both ways, until randomly it wasn't. \n\nWhen the issue would arise, it would happen after a certain completely unrelated custom even in another object was triggered during play mode, then the project was suddenly calling logs from a onJump event in a testing udon graph that was not assigned to any current objects in the scene. In other cases, I've also had cases where it calls variables, sometimes of the wrong type even, from completely unrelated graphs in place of itself, and other bizarre behavior. \n\nThis seems like a pretty bad bug and possibly a security issue even. Can this please be looked into? It makes development with the graph much more tedious because never reusing node is a pain and the graph gets laggy much faster, thus leading to extra graph children objects and bloats the project making the graph less viable for those of us that prefer it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "687af2dbd97331a21b541b4c",
+  "imageURLs": [
+    "https://canny-assets.io/images/3ce19bc54350aa7241e026639a592c09.png"
+  ],
+  "lastUpdated": 1778979347856,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/687af2dbd97331a21b541b11/1244438030.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-07-19T01:20:27.403Z",
+  "subCategoryID": null,
+  "title": "Udon Graph reusing nodes breaking/memory address issues",
+  "trendingScore": 2898.9868434082387,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": null,
+  "urlName": "udon-graph-reusing-nodes-breaking-memory-address-issues",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5bb3ea0ada8b6d259d417ab5",
+      "alias": "Corporate Wallaby",
+      "aliasID": "65c2ae1fed6eefce4c0b8d43",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1472979389ca4d5d611add06ed6ade5e.png",
+      "companies": [],
+      "name": "＝＝Cat＝＝",
+      "urlName": "cat-16",
+      "voteID": "687af2dbc1f0e1f0163b0e29"
+    }
+  ]
+}

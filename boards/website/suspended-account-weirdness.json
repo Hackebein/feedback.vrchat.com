@@ -1,0 +1,97 @@
+{
+  "__v": 0,
+  "_id": "6286b3e4ea96f30b774738fd",
+  "aiCategories": [
+    "loc.website",
+    "web.feedback",
+    "account.auth",
+    "moderation.bans"
+  ],
+  "aiTaggedAt": "2026-05-17T07:14:35.120019Z",
+  "author": {
+    "_id": "5b0e261a56dd3e28e01af94c",
+    "alias": "Traditional Rooster",
+    "aliasID": "65c2a244ed6eefce4c6911b0",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/40b6badceba4c927ed7027167cc59d29.png",
+    "created": "2018-05-30T04:18:34.301Z",
+    "name": "ForeverAndaDay",
+    "serviceAccount": false,
+    "urlName": "camazingme"
+  },
+  "authorID": "5b0e261a56dd3e28e01af94c",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-19T21:17:24.662Z",
+  "deletedAt": null,
+  "details": "There are two strange bugs that can occur on (temporarily)  suspended accounts. \n1) The VRChat website can sometimes show a blank black/greyish screen (see screenshot) when  attempting to visit vrchat.com/home instead of the usual sign-in screen. From the looks of it, it is possible that the website is attempting to log in the user before the login screen is shown, as the 403 message can be found (with the json suspended message) in the browser's JavaScript console. For the average user, this can make it difficult to review the ban reason or the number of days until the suspension expires from outside the client. \n2) The canny is *still* fully accessible and functional provided you were logged in before the suspension and you visit feedback.vrchat.com directly rather than vrchat.canny.io (from my experience, this always sends you to the oauth page, which cannot be used by suspended accounts). This was marked as \"complete\" in an earlier post but is still an issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f4e4c3e90df1360839",
+  "imageURLs": [
+    "https://canny.io/images/69721577fae989b3c60babaa164a1fbf.png"
+  ],
+  "lastUpdated": 1779001778105,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-19T21:17:24.662Z",
+  "subCategoryID": null,
+  "title": "Suspended account weirdness",
+  "trendingScore": 2744.1247280822545,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "suspended-account-weirdness",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6049a7ae70a38e528a7234f9",
+      "alias": "Marvellous Flamingo",
+      "aliasID": "65c2b8daed6eefce4c6e2ad7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b494cdca8bede0a08e7cfd4dcabedbb6.png",
+      "companies": [],
+      "name": "ozlo_fox",
+      "urlName": "ozlofox",
+      "voteID": "62ec329766337c63e2e2230e"
+    },
+    {
+      "_id": "5b0e261a56dd3e28e01af94c",
+      "alias": "Traditional Rooster",
+      "aliasID": "65c2a244ed6eefce4c6911b0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/40b6badceba4c927ed7027167cc59d29.png",
+      "companies": [],
+      "name": "ForeverAndaDay",
+      "urlName": "camazingme",
+      "voteID": "6286b3e4ea96f30b77473926"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "__v": 0,
+  "_id": "5f355253487138652257b8f8",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T15:51:31.236551Z",
+  "author": {
+    "_id": "5f2e0a4e8464150716ffd322",
+    "alias": "Aegean blue Kangaroo",
+    "aliasID": "65c26da3ed6eefce4c4d0953",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+    "created": "2020-08-08T02:13:34.907Z",
+    "name": "ZenithVal",
+    "serviceAccount": false,
+    "urlName": "zenithval-1"
+  },
+  "authorID": "5f2e0a4e8464150716ffd322",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-08-13T14:46:43.730Z",
+  "deletedAt": null,
+  "details": "If you happen to use a VRC Animator tracking control and switch something to tracking it like the attached image it seems to break FBT calibration.\nThe avatar appears to be already partially calibrated in while default T-pose; the whole lower half of the model is parented to the hip tracker, the head is locked on the HMD like normal, and the arms stay straight but still slightly move.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e2e4c3e90df131cceb",
+  "imageURLs": [
+    "https://canny.io/images/4eadac8d392650d9533ace8e87c1a202.png"
+  ],
+  "lastUpdated": 1779032547222,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-08-13T14:46:43.730Z",
+  "subCategoryID": null,
+  "title": "[BUG] Animator Tracking Control on a default state breaks FBT",
+  "trendingScore": 2652.72927417461,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-animator-tracking-control-on-a-default-state-breaks-fbt",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f9f1ebfa308d05f19397b80",
+      "alias": "Reliable Warbler",
+      "aliasID": "65c28115ed6eefce4c6d4a60",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
+      "companies": [],
+      "name": "JessicaOnMain",
+      "urlName": "jessicaonmain",
+      "voteID": "5fa0c0d79df1e446fe805742"
+    },
+    {
+      "_id": "5a95256f54d514123c1f089d",
+      "alias": "Fuchsia Marmoset",
+      "aliasID": "65ba0454ed6eefce4c3ac7f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/642f70667ed7ed29bd558fb38f8d11a9.png",
+      "companies": [],
+      "name": "Demirramon",
+      "urlName": "joan-marc",
+      "voteID": "5f38255a03604668b23a16a2"
+    },
+    {
+      "_id": "5f2e0a4e8464150716ffd322",
+      "alias": "Aegean blue Kangaroo",
+      "aliasID": "65c26da3ed6eefce4c4d0953",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+      "companies": [],
+      "name": "ZenithVal",
+      "urlName": "zenithval-1",
+      "voteID": "5f355253487138652257b900"
+    }
+  ]
+}

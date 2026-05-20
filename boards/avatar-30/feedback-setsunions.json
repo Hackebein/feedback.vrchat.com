@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "60e86fa4a859d7529c04a644",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T15:55:43.722476Z",
+  "author": {
+    "_id": "5f84827881e0832ac8133b0e",
+    "alias": "Rising Possum",
+    "aliasID": "65c69ab3ed6eefce4c995c6c",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/79206eda371dd4b20161eb310415c44f.png",
+    "created": "2020-10-12T16:21:12.572Z",
+    "name": "Torpor",
+    "serviceAccount": false,
+    "urlName": "torpor"
+  },
+  "authorID": "5f84827881e0832ac8133b0e",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8783d561e5922d89ac4",
+    "created": "2023-09-22T15:53:28.541Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 412,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "650db8783d561e5922d89ac4",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-07-09T15:47:48.929Z",
+  "deletedAt": null,
+  "details": "I've discussed this on discord in the past but never made an official request, so here it goes.\n\nI'd like to have the concept of object unions in the avatars SDK. The avatar creator would be able to create (and register in an array in the descriptor) a \"union\": a set of gameobjects from the avatar's hierarchy. VRChat would then guarantee that at most only one object from each set is enabled at a time. If more than one is enabled during loading all but the first enabled objects would be automatically disabled. If an object in the set is toggled active and another object in the set was already enabled, it would be automatically disabled.\n\nWhen calculating avatar performance, the SDK would examine every object in each set but only add the polygons, bones, material, etc. from the heaviest object in the set, rather than the sum of all of them, to the weight of each independent criterion. This would result in a much more accurate representation of the performance cost of avatars with mutually exclusive props or clothing and keep creators from using tricks that can, under certain circumstances, result in higher real performance costs, difficult to maintain projects or unexpected results (such as broken shadows).\n\nAn expansion of this system would also allow VRChat client users to be given the ability to more intelligently restrict avatar features for performance gains by adding a toggle to explicitly tag a union as \"clothing\" - a set of alternative versions of the same item (or items with the same purpose). Then instead of a simple on/off toggle for avatars in the safety tab, the user could have a performance slider: \"Best, Good, Medium,\" etc. If VRChat deemed that a certain object belonging to a \"clothing\" set exceeds the performance limiter set by the viewer, the avatar would (locally) fall back on the highest alternative from the clothing set that respects the performance setting, and would only hide the avatar if all alternatives were too heavy to respect the performance setting.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8a8e4c3e90df13518e7",
+  "imageURLs": [],
+  "lastUpdated": 1779032660603,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-07-09T15:47:48.929Z",
+  "subCategoryID": null,
+  "title": "[FEEDBACK] Sets/Unions",
+  "trendingScore": 2688.930033746367,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "feedback-setsunions",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f84827881e0832ac8133b0e",
+      "alias": "Rising Possum",
+      "aliasID": "65c69ab3ed6eefce4c995c6c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/79206eda371dd4b20161eb310415c44f.png",
+      "companies": [],
+      "name": "Torpor",
+      "urlName": "torpor",
+      "voteID": "60e86fa5a859d7529c04a64b"
+    }
+  ]
+}

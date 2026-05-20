@@ -1,0 +1,100 @@
+{
+  "__v": 0,
+  "_id": "603191872489f457e4da9f8a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T15:54:31.516936Z",
+  "author": {
+    "_id": "5c880a3cf3ce1e53f626e464",
+    "alias": "Onyx Goldfish",
+    "aliasID": "65c2824fed6eefce4c9f4f7c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ee545bb6cd780e31f22caf4dc8718370.png",
+    "created": "2019-03-12T19:36:28.705Z",
+    "name": "Ekas",
+    "serviceAccount": false,
+    "urlName": "edvinas-kulionis"
+  },
+  "authorID": "5c880a3cf3ce1e53f626e464",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-02-20T22:47:35.640Z",
+  "deletedAt": null,
+  "details": "SDK3 version 2021.01.28\nI had some Int type parameters for toggling items on my avatar. I decided to change them into Bool to reduce memory usage, but it broke (almost) every animation layer in my FX animation controller that was using those parameters. I made sure to change the parameter types in the animation controller accordingly, as well as check that animation transitions and action menu buttons were set up correctly. In the debug menu, it showed that the parameters are switching between true and false correctly, but the states of animation layers were not changing. \nI tried a few things:\n-renaming the parameter\n-deleting the parameter and adding it again\n-adding a new parameter with a different name\n-reuploading the avatar with a new blueprint ID (hoping that it will reset any type of data attached to the avatar)\nI finally managed to fix the issue by deleting the animation layers that weren't working and recreating them from scratch. Despite them being set up the exact same way as before, they started working.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb805e4c3e90df1323dcf",
+  "imageURLs": [],
+  "lastUpdated": 1779032653630,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-02-20T22:47:35.640Z",
+  "subCategoryID": null,
+  "title": "[BUG] Changing the parameter type breaks animation layers",
+  "trendingScore": 2673.9546734249802,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-changing-the-parameter-type-breaks-animation-layers",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60648ee8a69b37331e610c33",
+      "alias": "High Crane",
+      "aliasID": "65c36ff3ed6eefce4ca48795",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/271f34b74325805bb6e5a8b5526c8f94.png",
+      "companies": [],
+      "name": "Camdyn3j",
+      "urlName": "camdyn3j",
+      "voteID": "60648f29771f0264fdd07a52"
+    },
+    {
+      "_id": "5c880a3cf3ce1e53f626e464",
+      "alias": "Onyx Goldfish",
+      "aliasID": "65c2824fed6eefce4c9f4f7c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ee545bb6cd780e31f22caf4dc8718370.png",
+      "companies": [],
+      "name": "Ekas",
+      "urlName": "edvinas-kulionis",
+      "voteID": "603191872489f457e4da9f91"
+    }
+  ]
+}

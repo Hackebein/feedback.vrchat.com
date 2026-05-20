@@ -1,0 +1,92 @@
+{
+  "_id": "694a2f140fd6501acfa5354b",
+  "aiCategories": [
+    "loc.website",
+    "social.friends",
+    "web.api"
+  ],
+  "aiTaggedAt": "2026-05-18T13:54:07.237312Z",
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9e00a23b549d35ec3b542d76ab7acc70.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": "lackofbindings"
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-23T05:56:36.578Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Clicking the \"Unfriend\" button on a user's profile on the website does not change state back to \"Add Friend\" after pressing. The user does seem to get unfriended, but the button state does not update, even after a page refresh.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "694a2f140fd6501acfa535fe",
+  "imageURLs": [],
+  "lastUpdated": 1779111075000,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/694a2f140fd6501acfa5354b/1437447616.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-23T05:56:36.578Z",
+  "subCategoryID": null,
+  "title": "Unfriend button does not change state after being pressed",
+  "trendingScore": 2921.4428109561886,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "unfriend-button-does-not-change-state-after-being-pressed",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9e00a23b549d35ec3b542d76ab7acc70.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": "lackofbindings",
+      "voteID": "694a2f14f85d59c66d8ba460"
+    }
+  ]
+}

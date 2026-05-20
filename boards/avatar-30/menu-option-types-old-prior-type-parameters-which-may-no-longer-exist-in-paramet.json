@@ -1,0 +1,95 @@
+{
+  "__v": 0,
+  "_id": "684dce053490bf1bf723b0fb",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-17T16:05:56.157810Z",
+  "author": {
+    "_id": "59b5aad1090dc0367f77ce61",
+    "alias": "Quasar blue Hedgehog",
+    "aliasID": "65ba016fed6eefce4cf177f9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/350e270b3d6a6c0fdb090587074f92b0.png",
+    "created": "2017-09-10T21:12:49.778Z",
+    "name": "LigerXT5",
+    "serviceAccount": false,
+    "urlName": "james-skinner"
+  },
+  "authorID": "59b5aad1090dc0367f77ce61",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-06-14T19:31:17.545Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This odd error was found while using VRCFury on an asset I was \"expanding\" on. In short. The asset had 8 duplicates, each with their own ID, in turn the parameters are the same, with the exception of the last bit being their respective IDs.\n\nEx: PiShock/Equipped/10\n\nIf you create a Menu Option as a, say Radial, gave it a parameter that either Currently Exists but later removed, or, never existed.\n\nThen change that Menu Option to a Toggle and set a different parameter, which does exist.\n\nThe old parameter resides in the Menu's file (when viewed in Notepad, my case of image being Notepad++).\n\nThough I cannot say this would effect VRChat's Avatar SDK on a Vanilla level, it is hard to trace back when third party tools, like VRCFury, report that /7 is in use on the /10's menu file, yet in Unity it's not visually seen.\n\nSwitching the Toggle to Radial or 4 axis, will show the incorrect parameter, which you can just simply delete, set back to Toggle, and all is fine.\n\nThough there can be multiple solutions, something to help show the old parameter still resides in the Menu Option, or maybe when the Type is changed, remove the old? I'm not entirely sure the best method to resolve the odd lingering parameters in the Menu files.\n\nThe only way I was able to find this, was opening the Menu file in Notepad, and Ctrl+F the /7. When I reported this in VRCFury's discord, I was informed this same issue came up for another user back on June 6th, when said user duplicated a clothing asset, changed menu types, and resulted in errors for parameters that \"shouldn't exist\" in their duplicated asset's menu files.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "684dce053490bf1bf723b155",
+  "imageURLs": [
+    "https://canny-assets.io/images/d538034198d33820316c7a1d28cbed1b.png",
+    "https://canny-assets.io/images/4173720056977b41015d75ecd43239b6.png"
+  ],
+  "lastUpdated": 1779032777248,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/684dce053490bf1bf723b0fb/1494697791.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-06-14T19:31:17.545Z",
+  "subCategoryID": null,
+  "title": "Menu Option Types old Prior Type Parameters which may no longer exist in Parameter File, resulting in Conflict Errors",
+  "trendingScore": 2894.095061267035,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "menu-option-types-old-prior-type-parameters-which-may-no-longer-exist-in-paramet",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "59b5aad1090dc0367f77ce61",
+      "alias": "Quasar blue Hedgehog",
+      "aliasID": "65ba016fed6eefce4cf177f9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/350e270b3d6a6c0fdb090587074f92b0.png",
+      "companies": [],
+      "name": "LigerXT5",
+      "urlName": "james-skinner",
+      "voteID": "684dce051f4840cacfd2cb27"
+    }
+  ]
+}

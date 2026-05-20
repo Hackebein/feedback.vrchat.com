@@ -1,0 +1,111 @@
+{
+  "__v": 0,
+  "_id": "5ec0a7502f188626db349d75",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-16T20:29:05.762390Z",
+  "author": {
+    "_id": "5c663504b1f7e423a9aef09b",
+    "alias": "Relevant Ox",
+    "aliasID": "65c4741bed6eefce4cbc06f0",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2019-02-15T03:41:56.351Z",
+    "name": "Hiina Kuukan",
+    "serviceAccount": false,
+    "urlName": "hiina-kuukan"
+  },
+  "authorID": "5c663504b1f7e423a9aef09b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-17T02:54:08.850Z",
+  "deletedAt": null,
+  "details": "(speculative) reproduction:\n1. Create udon behaviour that on Update(), calls `Networking.LocalPlayer.GetBonePosition(HumanBodyBones.LeftHand)`\n2. Assign udon behaviour to gameObject that's active in scene by default\n3. In game, observe that the UdonBehaviour sometimes crashes with an exception in the console, and other times works.\nI think there's an initialization race condition with the VRCPlayerAPI, where the GetBonePosition call can throw an exception if executed too early in the scene.\nA real example that helped a user was adding this line (in UdonSharp) to a script: https://github.com/hiinaspace/utheremin/blob/3022801f9c3b844ebc69a57879d9b495fd0f0036/Assets/UTheremin/HandFollower.cs#L46 , i.e. waiting 3 seconds after Start() was called before attempting to call GetBonePosition.\nUnfortunately I couldn't reproduce locally, but the workaround does seem to work for the user that reported the issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dace4c3e90df158f995",
+  "imageURLs": [],
+  "lastUpdated": 1779239268935,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-17T02:54:08.850Z",
+  "subCategoryID": null,
+  "title": "VRCPlayerApi.GetBonePosition sometimes throws exception if called early in scene",
+  "trendingScore": 2630.8540999369425,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "vrcplayerapigetboneposition-sometimes-throws-exception-if-called-early-in-scene",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5cdf100ec21b660c4bbbe0eb",
+      "alias": "Forthcoming Perch",
+      "aliasID": "65c53771ed6eefce4cdf115f",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/475a952cf06640b7057555d4af713213.png",
+      "companies": [],
+      "name": "kafeijao",
+      "urlName": "kafeijao",
+      "voteID": "5ed0b86818cf8d653fa69d2c"
+    },
+    {
+      "_id": "5b0c6b275853c02d9764fb82",
+      "alias": "Ube Pinniped",
+      "aliasID": "65c2b40fed6eefce4ccccb70",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6d7fd9a2818f95ae16fbb4be009f1dd8.png",
+      "companies": [],
+      "name": "LastRar",
+      "urlName": "thelast-rar",
+      "voteID": "5ecbfa79e6b7a05ae0eade64"
+    },
+    {
+      "_id": "5c663504b1f7e423a9aef09b",
+      "alias": "Relevant Ox",
+      "aliasID": "65c4741bed6eefce4cbc06f0",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Hiina Kuukan",
+      "urlName": "hiina-kuukan",
+      "voteID": "5ec0a7502f188626db349d7d"
+    }
+  ]
+}

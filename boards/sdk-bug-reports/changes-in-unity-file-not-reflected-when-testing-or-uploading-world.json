@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "5cf70ae6f865d2274d1a732b",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T19:55:27.345399Z",
+  "author": {
+    "_id": "5cf70982f300a805224bed07",
+    "alias": "Pink Chimpanzee",
+    "aliasID": "65c7be66ed6eefce4c4c7d07",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/8413aed36d3d6d1da8ef3fa2e0f9e93e.png",
+    "created": "2019-06-05T00:14:58.286Z",
+    "name": "ShaggyMummy",
+    "serviceAccount": false,
+    "urlName": "joshua-sanderson"
+  },
+  "authorID": "5cf70982f300a805224bed07",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-06-05T00:20:54.647Z",
+  "deletedAt": null,
+  "details": "https://youtu.be/57JWgjSd9XM\n\nAny changes i make in the Unity scene, are not present when i test build the world (same thing for uploading)\n\nIve tried deleing the SDK and replacing it, deleting just the VRCWorld prefab from the scene, then replacing it. I even tried creating a brand new scene, tested that, and it loaded me into the previous world. Seems something about my unity project is bugged? Or possibly it keeps loading “Last Build” rather than creating a proper New Build\n\nAs of now im unable to make changes to my latest map, which im very excited to work on.\nIve tried updating the World twice so far, each time nothing has changed.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d86e4c3e90df1584f91",
+  "imageURLs": [],
+  "lastUpdated": 1779218194526,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-06-05T00:20:54.647Z",
+  "subCategoryID": null,
+  "title": "Changes in unity file, not reflected when testing or uploading World",
+  "trendingScore": 2579.996222797658,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "changes-in-unity-file-not-reflected-when-testing-or-uploading-world",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5cf70982f300a805224bed07",
+      "alias": "Pink Chimpanzee",
+      "aliasID": "65c7be66ed6eefce4c4c7d07",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/8413aed36d3d6d1da8ef3fa2e0f9e93e.png",
+      "companies": [],
+      "name": "ShaggyMummy",
+      "urlName": "joshua-sanderson",
+      "voteID": "5cf70ae6f865d2274d1a7334"
+    }
+  ]
+}

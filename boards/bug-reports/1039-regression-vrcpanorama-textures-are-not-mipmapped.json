@@ -1,0 +1,117 @@
+{
+  "__v": 0,
+  "_id": "6007aa1f9f683a5a8eaf39a6",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-18T08:02:10.713867Z",
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": "bd-35"
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-20T03:57:19.530Z",
+  "deletedAt": null,
+  "details": "In 1039, textures loaded by VRC_Panorama no longer have mip maps (confirmed using nsight). This results in very jaggy rendering from a distance due to aliasing effects.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb801e4c3e90df1322af2",
+  "imageURLs": [
+    "https://canny.io/images/0d7020cf657f5e97c1104a4af868fdaa.png",
+    "https://canny.io/images/94b4c429bfe7638f0f3bcff8f53e2eaf.png"
+  ],
+  "lastUpdated": 1779090039589,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-20T03:57:19.530Z",
+  "subCategoryID": null,
+  "title": "[1039 regression] VRC_Panorama textures are not mipmapped",
+  "trendingScore": 2665.72959864559,
+  "updatedAt": "2026-05-18T07:41:23.457967Z",
+  "urlName": "1039-regression-vrcpanorama-textures-are-not-mipmapped",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fb743a0c8260f7b8c751a63",
+      "alias": "Worldwide Chickadee",
+      "aliasID": "65c2ce66ed6eefce4c19dfe9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c97b0f6b7e79676a7a97d6f82214c84a.png",
+      "companies": [],
+      "name": "dmx512",
+      "urlName": "dmx512",
+      "voteID": "600f710bc204b774146c5860"
+    },
+    {
+      "_id": "5d227cbc537f5312aa428c8f",
+      "alias": "Dutch white Chipmunk",
+      "aliasID": "65c2a213ed6eefce4c61edde",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5c9966d2007eef78c96fdd78806619b9.png",
+      "companies": [],
+      "name": "Maran Rose",
+      "urlName": "maran-rose",
+      "voteID": "6007e16caee7c56b1b046d25"
+    },
+    {
+      "_id": "5c4bd9bca31c1d6ef9355351",
+      "alias": "Jonquil Stingray",
+      "aliasID": "65c36fe8ed6eefce4ca2c227",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e39d4fc9066835a4b2808a4ea534cf9a.png",
+      "companies": [],
+      "name": "-Mino-",
+      "urlName": "yanderainy",
+      "voteID": "6007b98a8ef17279fbce9571"
+    },
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": "bd-35",
+      "voteID": "6007aa1f9f683a5a8eaf39ad"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "60203c671b69e46e615e3ebf",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:25:32.073238Z",
+  "author": {
+    "_id": "5f1f87ce9a6bf932f411cad6",
+    "alias": "Neon green Cattle",
+    "aliasID": "65d588270129d7ae44797aeb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/625c060179441f5286a056b5629a6502.png",
+    "created": "2020-07-28T02:05:02.525Z",
+    "name": "Loki H",
+    "serviceAccount": false,
+    "urlName": "loki-hellheim"
+  },
+  "authorID": "5f1f87ce9a6bf932f411cad6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-02-07T19:15:51.348Z",
+  "deletedAt": null,
+  "details": "Udon SDK worlds will prevent many functions of Unity UI components as buttons or toggles to perform actions as:\n-Material.copyPropertiesFromMaterial\n-PostProcessingVolume.Profile\n*this two methods where tested, but the likelyhood of other affected methods is high*\nIf any of this actions is perform in a UI component, other totally normal actions as gameobject.active will not play.\nThis functions work perfectly on play mode, not on live.\nSDK version 2021.01.28.19.07",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb803e4c3e90df1323787",
+  "imageURLs": [
+    "https://canny.io/images/9b3248a22ab56ae3fcb3a94976c32f31.png"
+  ],
+  "lastUpdated": 1779247131662,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-02-07T19:15:51.348Z",
+  "subCategoryID": null,
+  "title": "Udon+ Unity UI components",
+  "trendingScore": 2667.2363868821144,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "udon-unity-ui-components",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f1f87ce9a6bf932f411cad6",
+      "alias": "Neon green Cattle",
+      "aliasID": "65d588270129d7ae44797aeb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/625c060179441f5286a056b5629a6502.png",
+      "companies": [],
+      "name": "Loki H",
+      "urlName": "loki-hellheim",
+      "voteID": "60203c671b69e46e615e3ec6"
+    }
+  ]
+}

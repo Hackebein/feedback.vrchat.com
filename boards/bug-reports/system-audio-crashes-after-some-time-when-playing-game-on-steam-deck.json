@@ -1,0 +1,92 @@
+{
+  "_id": "69ceafd3d653b761fe539d0a",
+  "aiCategories": [
+    "loc.in-world",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-05-17T08:55:15.762725Z",
+  "author": {
+    "_id": "69ce8b0fbcda4ee632e1ee35",
+    "alias": "Wise Wolverine",
+    "aliasID": "69ce8b0fbcda4ee632e21d5b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4b76f852c95908381117fb1ced7655a2.png",
+    "created": "2026-04-02T15:28:15.168Z",
+    "name": "QuietOwl",
+    "serviceAccount": false,
+    "urlName": "quietowl"
+  },
+  "authorID": "69ce8b0fbcda4ee632e1ee35",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-02T18:05:07.071Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This issue started due to either a VRChat update or a Steam Deck system update in the last 1-2 months. After playing VRChat for some time, some part of the system audio appears to crash. In particular, after the crash, there is no sound output and the microphone ceases to work, and also the Steam deck system menus no longer play sound, even after leaving the game. However, curiously, the VRChat startup sound during login still plays when restarting the game. This happens in one of two ways:\n\n1. I can load into world with the audio working properly, but after ~10-15 minutes, the game freezes for ~15 seconds, after which the audio no longer works.\n\n2. The system audio breaks during the game loading process, so I never hear in-game audio except for the startup sound.\n\nRestarting the device seems to reset the issue. Restarting the game does not work, however; if the audio had broken on a previous play session, then it stays broken unless I restart the device. This affects all Proton versions I have tried. I have attached a log of a crash in the middle of a game; it happened a few minutes before I closed VRChat.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/9957f74fd7d5794c03ad05c911dbf2e3.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-04-02_13-24-29",
+      "url": "https://canny-assets.io/files/9957f74fd7d5794c03ad05c911dbf2e3.txt"
+    }
+  ],
+  "ideaID": "69ceafd3d653b761fe539d54",
+  "imageURLs": [],
+  "lastUpdated": 1779007861275,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69ceafd3d653b761fe539d0a/603035922.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-02T18:05:07.071Z",
+  "subCategoryID": null,
+  "title": "System audio crashes after some time when playing game on Steam Deck",
+  "trendingScore": 2935.8007984346937,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": null,
+  "urlName": "system-audio-crashes-after-some-time-when-playing-game-on-steam-deck",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69ce8b0fbcda4ee632e1ee35",
+      "alias": "Wise Wolverine",
+      "aliasID": "69ce8b0fbcda4ee632e21d5b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4b76f852c95908381117fb1ced7655a2.png",
+      "companies": [],
+      "name": "QuietOwl",
+      "urlName": "quietowl",
+      "voteID": "69ceafd3bcda4ee632c00a68"
+    }
+  ]
+}

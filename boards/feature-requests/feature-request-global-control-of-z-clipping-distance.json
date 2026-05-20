@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "62e25ae91d4ea13c122fdff5",
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-16T22:17:17.355755Z",
+  "author": {
+    "_id": "607ce823c790be2ccf97d4a1",
+    "alias": "Rosewood Lynx",
+    "aliasID": "65c28318ed6eefce4cbdb900",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/9751a17b710a879acd032285ba62f20a.png",
+    "created": "2021-04-19T02:17:07.065Z",
+    "name": "Aqo",
+    "serviceAccount": false,
+    "urlName": "aqo"
+  },
+  "authorID": "607ce823c790be2ccf97d4a1",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-07-28T09:46:17.347Z",
+  "deletedAt": null,
+  "details": "Right now, it is a world setting which z-clipping-range exists in the world. As a result, in some worlds, if you move too close to someone, they just clip and cut off.\nIdeally, users should have an option to override this z-clipping-range, because world creators sometimes just don't set it and keep the default (which is bad) and don't realize it's an issue.\nThe override would allow you to get close to anyone without having their body cut-off as you move too close.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb90fe4c3e90df13653d0",
+  "imageURLs": [],
+  "lastUpdated": 1779262040927,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-07-28T09:46:17.347Z",
+  "subCategoryID": null,
+  "title": "Feature Request: Global Control of Z-Clipping Distance",
+  "trendingScore": 2744.1697448541813,
+  "updatedAt": "2026-05-20T07:29:36.094720Z",
+  "urlName": "feature-request-global-control-of-z-clipping-distance",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5dcef9175354284738aef9c2",
+      "alias": "Evident Hedgehog",
+      "aliasID": "65c38521ed6eefce4ce6f61c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a65bf71657a58231b1f94d307ebc1a7a.png",
+      "companies": [],
+      "name": "Mizuke",
+      "urlName": "mizuke",
+      "voteID": "62e2b5a9cc534f44b054b060"
+    },
+    {
+      "_id": "607ce823c790be2ccf97d4a1",
+      "alias": "Rosewood Lynx",
+      "aliasID": "65c28318ed6eefce4cbdb900",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9751a17b710a879acd032285ba62f20a.png",
+      "companies": [],
+      "name": "Aqo",
+      "urlName": "aqo",
+      "voteID": "62e25ae91d4ea13c122fe01b"
+    }
+  ]
+}

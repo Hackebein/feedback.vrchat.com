@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "61abe279d286bb739eece1e7",
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-19T19:42:19.379396Z",
+  "author": {
+    "_id": "5bb671964fe53149c4a6496c",
+    "alias": "Zinc grey Lemur",
+    "aliasID": "65c7141ded6eefce4c4f10ca",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/57c5804adcfd69a16eb3d930f9737078.png",
+    "created": "2018-10-04T20:01:26.570Z",
+    "name": "Caffeinated_weeb",
+    "serviceAccount": false,
+    "urlName": "caffeine-1"
+  },
+  "authorID": "5bb671964fe53149c4a6496c",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-12-04T21:49:45.757Z",
+  "deletedAt": null,
+  "details": "I often find myself respawning or moving my camera because I lose track of it or have it drift far away. This is mainly because of OVR Advanced Setting's space-drag feature, but moving around in my room causes it too. I'll be very surprised if this isn't a universal bother for most users.\nI suggest a camera alignment which follows the players avatar or playspace movement. In order for it to follow the player naturally as they sit, it should probably use the players head bone position as a reference point.\nIt would be hard to impliment in a button of binary states, but I'd also like a toggle for the camera to rotate together with the head bone (like a HUD element)\nIn short:\nProblem: Having to constantly re-adjust ones camera due to moving around.\nSolution: Have the camera be part of the movement.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cde4c3e90df1358b64",
+  "imageURLs": [],
+  "lastUpdated": 1779218056069,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-12-04T21:49:45.757Z",
+  "subCategoryID": null,
+  "title": "Camera playspace alignment mode",
+  "trendingScore": 2710.524356512941,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "camera-playspace-alignment-mode",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c631ba788979a3d7b09b2b0",
+      "alias": "Western Macaw",
+      "aliasID": "65c352cbed6eefce4ca71396",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ac2f5325b3a310bf152c7c792e16f4ff.png",
+      "companies": [],
+      "name": "Getu",
+      "urlName": "getu-s",
+      "voteID": "61ac294c731a77405e6510b0"
+    },
+    {
+      "_id": "5bb671964fe53149c4a6496c",
+      "alias": "Zinc grey Lemur",
+      "aliasID": "65c7141ded6eefce4c4f10ca",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/57c5804adcfd69a16eb3d930f9737078.png",
+      "companies": [],
+      "name": "Caffeinated_weeb",
+      "urlName": "caffeine-1",
+      "voteID": "61abe279d286bb739eece1ee"
+    }
+  ]
+}

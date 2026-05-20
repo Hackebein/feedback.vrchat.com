@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "611d34e2ef0b2a251f5cbd80",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-18T09:53:56.143208Z",
+  "author": {
+    "_id": "611d2d1bce3fbf517c77c101",
+    "alias": "Sapphire Pelican",
+    "aliasID": "65ca8e9ced6eefce4c31f326",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-08-18T15:54:03.573Z",
+    "name": "Vulpinus",
+    "serviceAccount": false,
+    "urlName": "vulpinus"
+  },
+  "authorID": "611d2d1bce3fbf517c77c101",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-08-18T16:27:14.836Z",
+  "deletedAt": null,
+  "details": "Version:Build 1123\nI have encountered a new problem,where my fps is significantly decreased with certain avatars,notably those that use any kind of physics/dynamic bones.There were no previous issue like this with said avatars.\nAvatars with no physics don't have an effect on fps.\nI tried lowering the graphics in the safety-performance menu,increasing priority in task manager,I tried limiting or completely disabling dynamic bones,and even reinstalling the game,but none of them solved my problem.\nSteps to reproduce:Using any avatar with dynamic bones",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b1e4c3e90df1353a42",
+  "imageURLs": [],
+  "lastUpdated": 1779096391882,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-08-18T16:27:14.836Z",
+  "subCategoryID": null,
+  "title": "FPS decrease with certain avatars on PC",
+  "trendingScore": 2694.648231272822,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "fps-decrease-with-certain-avatars-on-pc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "611d2d1bce3fbf517c77c101",
+      "alias": "Sapphire Pelican",
+      "aliasID": "65ca8e9ced6eefce4c31f326",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Vulpinus",
+      "urlName": "vulpinus",
+      "voteID": "611d34e2ef0b2a251f5cbd87"
+    }
+  ]
+}

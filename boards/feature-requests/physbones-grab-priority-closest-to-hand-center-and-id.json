@@ -1,0 +1,125 @@
+{
+  "_id": "69efd3d05abfd07afaed3c76",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T21:30:13.582492Z",
+  "author": {
+    "_id": "658a176dcd6b7bee34c00ac5",
+    "alias": "Mere Kangaroo",
+    "aliasID": "65c3cc6fed6eefce4c2e49df",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6bd734acc147133cd3aa265f30ad6e1d.png",
+    "created": "2023-12-25T23:59:41.281Z",
+    "name": "Nexal",
+    "serviceAccount": false,
+    "urlName": "nexal-3"
+  },
+  "authorID": "658a176dcd6b7bee34c00ac5",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-27T21:23:28.460Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently physbone grab detection only goes based off of 'Closest to hand', meaning, if multiple physbones are in one location, only the one closest to the hand will be able to be grabbed, Having multiple options for grabbing would be nice, for examples:\n\nClosest to hand: Same as before, Closest to the hand gets priority.\n\nCenter Priority: Having the Physbone closest to the center of the Purple Physbone Grab sphere, be grabbed\n\nID Priority: Similar to audio sources having a priority to override each other based off of number, Physbones could also have a grab priority, which would override lesser-important physbones for more important ones. \n\n(Ex: Alot of Hair physbones, and you want to grab some glasses, a hat, or something else off of your head, but you cant because your grabbing your hair.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/e1a192150f1d63a2fbd16149e98ca6a9.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "VRC - Physbones grabbing priority",
+      "url": "https://canny-assets.io/files/e1a192150f1d63a2fbd16149e98ca6a9.mp4"
+    }
+  ],
+  "ideaID": "69efd3d05abfd07afaed3c8d",
+  "imageURLs": [],
+  "lastUpdated": 1779053124595,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69efd3d05abfd07afaed3c76/725005633.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-27T21:23:28.460Z",
+  "subCategoryID": null,
+  "title": "Physbones: Grab Priority (Closest To Hand, Center, and ID.)",
+  "trendingScore": 2940.496572073979,
+  "updatedAt": "2026-05-17T21:26:41.208788Z",
+  "updatedBy": "658a176dcd6b7bee34c00ac5",
+  "urlName": "physbones-grab-priority-closest-to-hand-center-and-id",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f473419bf8e6372ab82ab00",
+      "alias": "Precise Gopher",
+      "aliasID": "65c3e659ed6eefce4cb8acb9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1b2c0c3c21d46a2270ac0b69c7aae811.png",
+      "companies": [],
+      "name": "aini_bellwood",
+      "urlName": "ainibellwood",
+      "voteID": "69f48c1d4a48bed189edb9cd"
+    },
+    {
+      "_id": "688bf529076be5baa6db9176",
+      "alias": "Raspberry rose Shrew",
+      "aliasID": "688bf52a076be5baa6dbc208",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d614d546d323e928fa13217d30d10648.png",
+      "companies": [],
+      "name": "EmikoTheSkittle",
+      "urlName": "emikothefox2024",
+      "voteID": "69f2af774a48bed189ddbd4b"
+    },
+    {
+      "_id": "5f8e2351e191da6d1f2b7f4f",
+      "alias": "Illuminated Coyote",
+      "aliasID": "685e424b16069571f65e3507",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8e52f820162c98e0db27613d5f736093.png",
+      "companies": [],
+      "name": "Vector Lotus",
+      "urlName": "vector-lotus",
+      "voteID": "69efe14c4a48bed189c53f61"
+    },
+    {
+      "_id": "658a176dcd6b7bee34c00ac5",
+      "alias": "Mere Kangaroo",
+      "aliasID": "65c3cc6fed6eefce4c2e49df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6bd734acc147133cd3aa265f30ad6e1d.png",
+      "companies": [],
+      "name": "Nexal",
+      "urlName": "nexal-3",
+      "voteID": "69efd3d14a48bed189c4959a"
+    }
+  ]
+}

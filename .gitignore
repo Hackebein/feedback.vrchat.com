@@ -10,3 +10,6 @@ deploy/terraform/*.tfvars
 deploy/terraform/.terraform.tfstate.lock.info
 
 deploy/terraform/.ssh/
+
+# board_store atomic writes
+boards/**/*.json.tmp

@@ -1,0 +1,123 @@
+{
+  "__v": 0,
+  "_id": "619381081d2d4b0a38a84a4b",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T01:01:44.942938Z",
+  "author": {
+    "_id": "5aab30ea0b6da707273dbb98",
+    "alias": "Dew Barracuda",
+    "aliasID": "65ba05a1ed6eefce4c5bd1c1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/18510a7a53ae57ea3fe726097d2cd765.png",
+    "created": "2018-03-16T02:50:18.758Z",
+    "name": "Fionna",
+    "serviceAccount": false,
+    "urlName": "fionna"
+  },
+  "authorID": "5aab30ea0b6da707273dbb98",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-11-16T09:59:36.538Z",
+  "deletedAt": null,
+  "details": "https://vrchat.com/home/world/wrld_7a1de966-17b0-4ab5-a529-c3782af536d6\nIn this world, the plank pickups start kinematic, with trigger box colliders.  All have object sync but the last row.\n(The first row, using different logic, demonstrates the \"expected\" behavior.  Pickup a plank, let it go, it drops and shatters once it collides with the floor.)\nOnDrop it waits one frame and then sets both kinematic and Colllider isTrigger false.\nUsing Collider.Set isTrigger does not work on objects with Object Sync on them.  This does work in Editor with CyanEmu, however.  The plank without object sync behaves as expected in game.  The middle two rows fall through the floor.\nThis method is not exposed in Object Sync, in the same way that SetKinematic is.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cae4c3e90df1357eef",
+  "imageURLs": [],
+  "lastUpdated": 1778979250147,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-11-16T09:59:36.538Z",
+  "subCategoryID": null,
+  "title": "Object Sync objects cannot change Trigger to false",
+  "trendingScore": 2708.3869927699247,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "object-sync-objects-cannot-change-trigger-to-false",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d03ff26f975679707203bd269ce42822.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": "tonylewis",
+      "voteID": "6193ac653b01a37035de4e35"
+    },
+    {
+      "_id": "5f4c34d0995917085be1218d",
+      "alias": "Zinc white Dragon",
+      "aliasID": "65c2b40bed6eefce4ccc50d5",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/833c66b891dbc04385009d159c139d66.png",
+      "companies": [],
+      "name": "CyanLaser",
+      "urlName": "cyanlaser-1",
+      "voteID": "619381f988ac27203b7edd35"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "vrcprefabs",
+      "voteID": "6193811dadb6010ee51fda9d"
+    },
+    {
+      "_id": "5aab30ea0b6da707273dbb98",
+      "alias": "Dew Barracuda",
+      "aliasID": "65ba05a1ed6eefce4c5bd1c1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/18510a7a53ae57ea3fe726097d2cd765.png",
+      "companies": [],
+      "name": "Fionna",
+      "urlName": "fionna",
+      "voteID": "619381081d2d4b0a38a84a52"
+    }
+  ]
+}

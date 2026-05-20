@@ -1,0 +1,93 @@
+{
+  "_id": "69e32474eaa1450c42ba177d",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.unity-sdk",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-17T08:56:45.838481Z",
+  "author": {
+    "_id": "5ffc08b98510b5672f0c4d56",
+    "alias": "Huge Jaguar",
+    "aliasID": "65c39ff0ed6eefce4cd130b3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d042d9a90473ec9c84e62c66ee795e81.png",
+    "created": "2021-01-11T08:13:45.960Z",
+    "name": "PeachBight",
+    "serviceAccount": false,
+    "urlName": "peachbight"
+  },
+  "authorID": "5ffc08b98510b5672f0c4d56",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-18T06:28:04.326Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Current Behavior:\n\nCanvases set to Screen Space overlay do not show the UI cursor on their own when holding tab, but can receive ray casting if an object behind enables the UI cursor (e.g. another UI in world space, or the UI's collider stuck in world space). This is reproducible in the Example Central example for Screen Canvases.\n\nExpected Behavior:\n\nCanvases set to Screen Space overlay can be interacted with when holding Tab.\n\nSteps To Reproduce:\n\n1. Go to the Screen Canvas Example world https://vrchat.com/home/world/wrld_1448021c-b126-4cb9-ac92-1ab660884b02, upload the example from Example Central, or test the example in the client sim\n\n2. Turn around 180 degrees (faces away from the disconnected UI collider)\n\n3. Hold tab to click on the Teleport Button in the top left corner\n\n4. Observe that the UI cursor does not appear and the Teleport button is not clickable\n\nTurning back 180 degrees to face the disconnected UI collider then clicking the Teleport button does function as expected.\n\nNote: The within the editor using client sim, it can be seen that the trigger collider attached to the screen canvas remains in world space, and enables the UI cursor as such. This behavior is observable in the client as well.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/00bdefd7d7ba07367daea7bdfcaa94d3.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "Video Project_2",
+      "url": "https://canny-assets.io/files/00bdefd7d7ba07367daea7bdfcaa94d3.mp4"
+    }
+  ],
+  "ideaID": "69e32474eaa1450c42ba17ae",
+  "imageURLs": [],
+  "lastUpdated": 1779007865445,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69e32474eaa1450c42ba177d/950491835.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-18T06:28:04.326Z",
+  "subCategoryID": null,
+  "title": "Screen Canvases do not enable the UI Cursor due to the collider staying in world space",
+  "trendingScore": 2938.017361539026,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": null,
+  "urlName": "screen-canvases-do-not-enable-the-ui-cursor-due-to-the-collider-staying-in-world",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ffc08b98510b5672f0c4d56",
+      "alias": "Huge Jaguar",
+      "aliasID": "65c39ff0ed6eefce4cd130b3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d042d9a90473ec9c84e62c66ee795e81.png",
+      "companies": [],
+      "name": "PeachBight",
+      "urlName": "peachbight",
+      "voteID": "69e3247565c4cf9dd9d7c89f"
+    }
+  ]
+}

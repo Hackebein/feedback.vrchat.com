@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "644c31686324820951a4aad9",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T05:37:19.667966Z",
+  "author": {
+    "_id": "623931f30030ab6b97783653",
+    "alias": "Venetian yellow Partridge",
+    "aliasID": "65cac66aed6eefce4c07bd13",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a1875613306a019ce140352415f1572a.png",
+    "created": "2022-03-22T02:18:27.537Z",
+    "name": "termnalGradienc",
+    "serviceAccount": false,
+    "urlName": "termnalgradienc"
+  },
+  "authorID": "623931f30030ab6b97783653",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-04-28T20:49:44.171Z",
+  "deletedAt": null,
+  "details": "Right now there are hacks that people can use to make a \"world space\" on their avatar, so they can \"drop\" props and walk away from them. I've also seen some fairly clever uses of those in conjunction with Physbones to let people handle those props once they're in place.\n\nThe problem is that doesn't synchronize at all. If someone's looking the wrong way or just in another part of the world when it's dropped, you suddenly have an entire room playing with something they see on the other side of the room.\n\nThe work around for that is intense - using FinalIK, dozens of contacts and parameters, logic chains that most avatar creators can't follow. It's an impressive work-around, but also performance heavy and needlessly complex just to try and make something that everyone can enjoy with an avatar.\n\nI've had some success modifying an overlong physbone chain, but getting just the end to be immobile is too finicky to work for long. Having a variant of that that actually can lock in place in relation to the world - for everyone, looking or not - when it's dropped would be a huge boon to avatar creators.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97be4c3e90df137b245",
+  "imageURLs": [],
+  "lastUpdated": 1778995662655,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-04-28T20:49:44.171Z",
+  "subCategoryID": null,
+  "title": "Synced Avatar World Props",
+  "trendingScore": 2782.959986226526,
+  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "urlName": "synced-avatar-world-props",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "623931f30030ab6b97783653",
+      "alias": "Venetian yellow Partridge",
+      "aliasID": "65cac66aed6eefce4c07bd13",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a1875613306a019ce140352415f1572a.png",
+      "companies": [],
+      "name": "termnalGradienc",
+      "urlName": "termnalgradienc",
+      "voteID": "644c31686324820951a4ab0f"
+    }
+  ]
+}

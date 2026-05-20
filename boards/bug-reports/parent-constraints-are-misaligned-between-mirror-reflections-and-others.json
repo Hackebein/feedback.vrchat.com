@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "64f21dda804b820977f973b5",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-19T18:37:06.797883Z",
+  "author": {
+    "_id": "62df3a3af153de7f74e2daf8",
+    "alias": "Satisfied Jay",
+    "aliasID": "65c2a326ed6eefce4c8a4520",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1fba0a8d159acbb4dead5890dd83ba88.png",
+    "created": "2022-07-26T00:50:02.342Z",
+    "name": "Reina_Sakiria",
+    "serviceAccount": false,
+    "urlName": "reinasasiki"
+  },
+  "authorID": "62df3a3af153de7f74e2daf8",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-09-01T17:22:34.714Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After changing the avatar to one that contains objects with parental constraints, perform avatar scaling.\n\nIn very rare cases, this bug may not be reproduced.\n\nIn this picture, the first one is the \"Local Camera\" and the second one is the \"Remote camera\", This particle is,\n\n\"Local Mirror Reflection\" , \"Local Camera\" is away from the wrist,\n\n\"Self\", \"Remote\", and \"Remote camera\" are at the same position as the wrist.\n\nThese are translations from Japanese, which may not be very correct, so I will leave the original text.\n\nペアレントコンストレイントが、ミラーリフレクションとその他で位置がずれる。\n\n\"Parent Constraint\"を使ったオブジェクトが入っているアバターに変えた後、アバタースケーリングを実行すると発生し、まれにこのバグは再現しないことがあります。\n\nこの写真は一枚目が\"Local Camera\" 二枚目が\"Remote camera\"になっていて、このパーティクルは、\n\n\"Local Mirror Reflection\",\" Local Camera\" は手首から離れていて、\n\n\"Self\",\"Remote\",\"Remote camera\"は手首と同じ位置にいます。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb99de4c3e90df13816a1",
+  "imageURLs": [
+    "https://canny.io/images/5d9369a5416622a42f6ff764efafa034.png",
+    "https://canny.io/images/9b19bc1172c6cc4d0ff7122c6875bf9d.jpg"
+  ],
+  "lastUpdated": 1779215085427,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/64f21dda804b820977f973b5/1315527737.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-09-01T17:22:34.714Z",
+  "subCategoryID": null,
+  "title": "Parent Constraints are misaligned between Mirror Reflections and others.",
+  "trendingScore": 2803.665627168526,
+  "updatedAt": "2026-05-19T18:25:27.723488Z",
+  "updatedBy": null,
+  "urlName": "parent-constraints-are-misaligned-between-mirror-reflections-and-others",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3640fb06dcf51467239ddc",
+      "alias": "Wild strawberry Ocelot",
+      "aliasID": "65c26df1ed6eefce4c5aac29",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/910662f11acffa11b6841107c5aab0f0.png",
+      "companies": [],
+      "name": "S a c r e d",
+      "urlName": "s-a-c-r-e-d",
+      "voteID": "6510b5a4665c25096505ae67"
+    },
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "3f6409",
+      "voteID": "64f259bc71bb8309f4a3991d"
+    },
+    {
+      "_id": "62df3a3af153de7f74e2daf8",
+      "alias": "Satisfied Jay",
+      "aliasID": "65c2a326ed6eefce4c8a4520",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1fba0a8d159acbb4dead5890dd83ba88.png",
+      "companies": [],
+      "name": "Reina_Sakiria",
+      "urlName": "reinasasiki",
+      "voteID": "64f21dda804b820977f973fa"
+    }
+  ]
+}

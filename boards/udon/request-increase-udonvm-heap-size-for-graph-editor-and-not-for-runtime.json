@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "65e2425168f60199ac2ff2c3",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:41:09.944092Z",
+  "author": {
+    "_id": "60423fce0aef231fbff7f4f0",
+    "alias": "Satisfied Squid",
+    "aliasID": "65cd7431ed6eefce4ca8f5bb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/fa0d7abb79b7f1056ffd82f5a5da1417.png",
+    "created": "2021-03-05T14:27:26.397Z",
+    "name": "bucket",
+    "serviceAccount": false,
+    "urlName": "bucket-1"
+  },
+  "authorID": "60423fce0aef231fbff7f4f0",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-03-01T21:02:09.195Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I've ran into an issue where my heap size is above 512 but I am unable to undo/make the compiled graph smaller because the graph editor will no longer load the graph nodes. Is there a possibility to add an increased heap size for just in Editor, with a Warning/Error in the SDK before upload that the heap size is too big, or something. I made a huge script and now I cannot undo my changes inside the script to lower its memory usage.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9d1e4c3e90df138b2da",
+  "imageURLs": [],
+  "lastUpdated": 1779039025408,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-03-01T21:02:09.195Z",
+  "subCategoryID": null,
+  "title": "Request: Increase UdonVM heap size for graph editor and not for runtime.",
+  "trendingScore": 2826.96121806267,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "request-increase-udonvm-heap-size-for-graph-editor-and-not-for-runtime",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60423fce0aef231fbff7f4f0",
+      "alias": "Satisfied Squid",
+      "aliasID": "65cd7431ed6eefce4ca8f5bb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fa0d7abb79b7f1056ffd82f5a5da1417.png",
+      "companies": [],
+      "name": "bucket",
+      "urlName": "bucket-1",
+      "voteID": "65e24251a6e3ea79dd39bb0c"
+    }
+  ]
+}

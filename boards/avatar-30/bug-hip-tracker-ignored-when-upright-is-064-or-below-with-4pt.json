@@ -1,0 +1,101 @@
+{
+  "__v": 0,
+  "_id": "61818f10d6ba250bb89cc4f1",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T15:56:22.646857Z",
+  "author": {
+    "_id": "6051ba310127dc2014bf1392",
+    "alias": "Net Dove",
+    "aliasID": "65cac66fed6eefce4c083d26",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/05ead944a5eee539e1dd57a8eda5dc1a.png",
+    "created": "2021-03-17T08:13:37.116Z",
+    "name": "1TheBlueWii1",
+    "serviceAccount": false,
+    "urlName": "1thebluewii1"
+  },
+  "authorID": "6051ba310127dc2014bf1392",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-11-02T19:18:40.237Z",
+  "deletedAt": null,
+  "details": "As of recent, I have been playing VRC with 4-point tracking (4PT) thanks to owoTrack. But I discovered an annoying issue when crouching at a certain distance.\nWith AV3 avatars, when I crouch to a point where the 'Upright' variable is 0.64 or below, hip tracking becomes ignored. Once I move back up to 0.65 or above, the hip tracking comes back.\nHowever, with AV2 avatars (tested a handful), I can crouch real low and not lose hip tracking. \nYou would think this could change if I adjust the conditions in the Locomotion animation controller... but that does nothing. It doesn't matter if the Locomotion Layer is Standing, Crouching, or Prone animation. No animation cell in the Locomotion animation controller has a behaviour to disable hip tracking.\nThis seems to be hard coded into AV3.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8c2e4c3e90df13572a0",
+  "imageURLs": [],
+  "lastUpdated": 1779032664315,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-11-02T19:18:40.237Z",
+  "subCategoryID": null,
+  "title": "[BUG] Hip tracker ignored when Upright is 0.64 or below with 4PT.",
+  "trendingScore": 2705.953032181668,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-hip-tracker-ignored-when-upright-is-064-or-below-with-4pt",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a33f59b7f2ea83fad4a5ecd",
+      "alias": "Managerial Hornet",
+      "aliasID": "65ba01b9ed6eefce4cf95885",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c42ba2180b6e8f867d767868364be73.png",
+      "companies": [],
+      "name": "ArtGhostt",
+      "urlName": "ghostt",
+      "voteID": "61823d427b4cf13d976c454a"
+    },
+    {
+      "_id": "6051ba310127dc2014bf1392",
+      "alias": "Net Dove",
+      "aliasID": "65cac66fed6eefce4c083d26",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/05ead944a5eee539e1dd57a8eda5dc1a.png",
+      "companies": [],
+      "name": "1TheBlueWii1",
+      "urlName": "1thebluewii1",
+      "voteID": "61818f10d6ba250bb89cc4f8"
+    }
+  ]
+}

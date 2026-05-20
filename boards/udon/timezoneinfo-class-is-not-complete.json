@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "61d1bfffe9464f3a4cc52622",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:02:06.067870Z",
+  "author": {
+    "_id": "5c87baa8e6d1a57be67871ec",
+    "alias": "Thoughtful Hoverfly",
+    "aliasID": "65c27b10ed6eefce4c7d796b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
+    "created": "2019-03-12T13:56:56.814Z",
+    "name": "MrDummy_NL",
+    "serviceAccount": false,
+    "urlName": "gerjan-keizer-1"
+  },
+  "authorID": "5c87baa8e6d1a57be67871ec",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-01-02T15:08:47.482Z",
+  "deletedAt": null,
+  "details": "When i want make World Clock, some functions can used to adjust time.\nExample:\nDateTime utc = DateTime.UtcNow;\nDateTime now = utc.ToLocalTime();\nTimeZoneInfo zone = TimeZoneInfo.FindSystemTimeZoneById(timeZoneString);\nDateTime zoneTime = TimeZoneInfo.ConvertTime(utc, zone);\n\nClass is written here: https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo?view=net-6.0\n\nProblem: you need know the correct timezone names for convert time. For that, there is help from it:\nhttps://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.getsystemtimezones?view=net-6.0\n\nYes, that is with: ReadOnlyCollection<TimeZoneInfo> timeZones = TimeZoneInfo.GetSystemTimeZones();\n\nBut i got message it's not added to Udon. Huh?\n\nWhy have you added other functions but NOT GetSystemTimeZones()? That makes the function TimeZoneInfo partially useless because you don't know exact names. I am forced to load text file with zone names (as TextAsset) as help.\n\nPlease make it fully complete class, not half way. There is no security risk, it's just read-only information.\nThis will save troubles for making World Clock scripts, especially around New Year (and other special date events).\nI managed get it work with external text file, but this is just not great. Lost hours to figure out and it was just missing function, not fully complete class.\n\nThank you.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d3e4c3e90df13597f2",
+  "imageURLs": [],
+  "lastUpdated": 1778979251260,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-01-02T15:08:47.482Z",
+  "subCategoryID": null,
+  "title": "TimeZoneInfo class is not complete!",
+  "trendingScore": 2714.211876546466,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "timezoneinfo-class-is-not-complete",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c87baa8e6d1a57be67871ec",
+      "alias": "Thoughtful Hoverfly",
+      "aliasID": "65c27b10ed6eefce4c7d796b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
+      "companies": [],
+      "name": "MrDummy_NL",
+      "urlName": "gerjan-keizer-1",
+      "voteID": "61d1bfffe9464f3a4cc52629"
+    }
+  ]
+}

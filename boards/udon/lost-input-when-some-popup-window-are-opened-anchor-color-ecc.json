@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5e2ed600255fe52685d79960",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T20:52:58.344549Z",
+  "author": {
+    "_id": "5c53d26f39b4d05e7cad2451",
+    "alias": "Peach puff Tortoise",
+    "aliasID": "65d3ffbc0129d7ae44283a8a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/14891f480545afd90f86fb55593ca5df.png",
+    "created": "2019-02-01T05:00:31.018Z",
+    "name": "BlackStartx",
+    "serviceAccount": false,
+    "urlName": "xthelwhite"
+  },
+  "authorID": "5c53d26f39b4d05e7cad2451",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-01-27T12:22:24.051Z",
+  "deletedAt": null,
+  "details": "In Unity there are some window that if opened you will lost temporarily some input controls.\nFor now I found that opening ColorPicker window or AnchorPreset window will cause this issue.\nHere's a video showing the problem: https://www.youtube.com/watch?v=o5TYErdg2PE\nI've tested the problem on a project without Udon imported and it works correctly with no input loss.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9fe4c3e90df158b9a7",
+  "imageURLs": [],
+  "lastUpdated": 1779223404456,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-01-27T12:22:24.051Z",
+  "subCategoryID": null,
+  "title": "Lost input when some popup window are opened. (Anchor - Color - ecc.)",
+  "trendingScore": 2613.3382266547665,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "lost-input-when-some-popup-window-are-opened-anchor-color-ecc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c53d26f39b4d05e7cad2451",
+      "alias": "Peach puff Tortoise",
+      "aliasID": "65d3ffbc0129d7ae44283a8a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/14891f480545afd90f86fb55593ca5df.png",
+      "companies": [],
+      "name": "BlackStartx",
+      "urlName": "xthelwhite",
+      "voteID": "5e2ed600255fe52685d79968"
+    }
+  ]
+}

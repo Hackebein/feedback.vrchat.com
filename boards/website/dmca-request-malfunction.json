@@ -1,0 +1,91 @@
+{
+  "_id": "698abfeda197771401ee3155",
+  "aiCategories": [
+    "loc.website",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-05-18T13:55:05.955520Z",
+  "author": {
+    "_id": "68dc714f4f674f1b1ee7879f",
+    "alias": "Coming Dinosaur",
+    "aliasID": "68dc71504f674f1b1ee7ab13",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/20bb8fe490ef352ad435b399ac3176d3.png",
+    "created": "2025-10-01T00:09:51.856Z",
+    "name": "Avatar DMCA",
+    "serviceAccount": false,
+    "urlName": "avatar-dmca"
+  },
+  "authorID": "68dc714f4f674f1b1ee7879f",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-02-10T05:19:41.041Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is an issue concerning the VRChat official website:\n\nhttps://vrchat.com/home/profile?dmcaClaimForm=true\n\nWhen requesting a DMCA removal and submitting over 100 content IDs in a single request, content IDs beyond the 101st item may occasionally fail to process.\n\n(The first 100 items are processed normally.)\n\nThis is the second occurrence of this issue, and it has been reproducible.\n\nSince DMCA submissions are made under penalty of perjury, I cannot personally verify this bug.\n\nEven if the issue occurs, resubmitting resolves it, so the severity is not high.\n\nIf the cause cannot be identified, limiting the number of items submitted at once to 100 might be advisable.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "698abfeda197771401ee3173",
+  "imageURLs": [],
+  "lastUpdated": 1779111077562,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/698abfeda197771401ee3155/1646785371.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-02-10T05:19:41.041Z",
+  "subCategoryID": null,
+  "title": "DMCA Request Malfunction",
+  "trendingScore": 2928.4391476873393,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "dmca-request-malfunction",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68dc714f4f674f1b1ee7879f",
+      "alias": "Coming Dinosaur",
+      "aliasID": "68dc71504f674f1b1ee7ab13",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/20bb8fe490ef352ad435b399ac3176d3.png",
+      "companies": [],
+      "name": "Avatar DMCA",
+      "urlName": "avatar-dmca",
+      "voteID": "698abfed4e32484d2909d959"
+    }
+  ]
+}

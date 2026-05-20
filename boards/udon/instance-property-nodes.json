@@ -1,0 +1,143 @@
+{
+  "__v": 0,
+  "_id": "5dfd7ac79d66445bbb008699",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:50:04.612122Z",
+  "author": {
+    "_id": "5b93e4741e75674a7ea03e2f",
+    "alias": "Peacock blue Gibbon",
+    "aliasID": "65c2a213ed6eefce4c61ed45",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8336f0427b80304d01f2fa8d2fd52ef3.png",
+    "created": "2018-09-08T15:02:12.081Z",
+    "name": "Toawa",
+    "serviceAccount": false,
+    "urlName": "pappjm"
+  },
+  "authorID": "5b93e4741e75674a7ea03e2f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-21T01:52:07.893Z",
+  "deletedAt": null,
+  "details": "It is wasteful and time consuming to have to insert separate nodes to break out multiple properties for a value.  It would be helpful if there was a node which took one instance and broke out all property values for that instance (for example, DateTime can be broken out into 10+ different properties. If you wanted to make a date/time display, you'd have to have 3-6 property read nodes, which could be more simply represented as a single node which provides all properties.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9be4c3e90df158a722",
+  "imageURLs": [],
+  "lastUpdated": 1779223368180,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-21T01:52:07.893Z",
+  "subCategoryID": null,
+  "title": "Instance Property Nodes",
+  "trendingScore": 2623.6734469605917,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "instance-property-nodes",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5bdd7adfa1e5c74195271aa3",
+      "alias": "Functional Loon",
+      "aliasID": "65c65be0ed6eefce4c0383e9",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/177d3fe4a758609cae4a4197e0d64b58.png",
+      "companies": [],
+      "name": "JB",
+      "urlName": "jb-vrchat",
+      "voteID": "5e94992f019d2f253b87c1f5"
+    },
+    {
+      "_id": "5c2f08f4643985325470071b",
+      "alias": "Apricot cream Mandrill",
+      "aliasID": "65c7c831ed6eefce4ce56a83",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/57495a06ccc061ba88015d9f73570ce4.png",
+      "companies": [],
+      "name": "Avis X",
+      "urlName": "sophiea-baburugamu",
+      "voteID": "5e580761f386cd70cf1a2ca5"
+    },
+    {
+      "_id": "5e0932837236cd7b88e70efa",
+      "alias": "Quintessential Raven",
+      "aliasID": "65c67d8ded6eefce4c879c4b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a4516822c465692e135927a9b0c807bc.jpg",
+      "companies": [],
+      "name": "Dustin Podell",
+      "urlName": "dustin-podell",
+      "voteID": "5e09351e13291b78a1039174"
+    },
+    {
+      "_id": "5a9fb18f6c994d2a9d44012a",
+      "alias": "Ultraviolet Puffin",
+      "aliasID": "65c29cb5ed6eefce4c94215b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ec92a3b3f8ead5155fbfd801d50b2f59.jpg",
+      "companies": [],
+      "name": "1001",
+      "urlName": "1001",
+      "voteID": "5dfd8df744150e4cbb2d33a0"
+    },
+    {
+      "_id": "5b8ed3e2b79dde0d3144e284",
+      "alias": "Quixotic Capybara",
+      "aliasID": "65c2a219ed6eefce4c62e383",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fad2c7da1d574f214b35ff1cf897ef3c.png",
+      "companies": [],
+      "name": "BlueAmulet",
+      "urlName": "bluelament",
+      "voteID": "5dfd7c515c3719634dbac623"
+    },
+    {
+      "_id": "5b93e4741e75674a7ea03e2f",
+      "alias": "Peacock blue Gibbon",
+      "aliasID": "65c2a213ed6eefce4c61ed45",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8336f0427b80304d01f2fa8d2fd52ef3.png",
+      "companies": [],
+      "name": "Toawa",
+      "urlName": "pappjm",
+      "voteID": "5dfd7ac79d66445bbb0086a1"
+    }
+  ]
+}

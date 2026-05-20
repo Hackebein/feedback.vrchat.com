@@ -1,0 +1,109 @@
+{
+  "__v": 0,
+  "_id": "67af3b5f5dc67537454426bb",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.hud",
+    "client.camera",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-05-16T22:06:01.705178Z",
+  "author": {
+    "_id": "62df25a04a256544aca22fe2",
+    "alias": "Nickel Stork",
+    "aliasID": "65f0fdb7a6e3ea79ddf095be",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b4b55b571e3c1b68b69cc0de0599461f.png",
+    "created": "2022-07-25T23:22:08.308Z",
+    "name": "C̴ooper",
+    "serviceAccount": false,
+    "urlName": "garythegoatfan"
+  },
+  "authorID": "62df25a04a256544aca22fe2",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-02-14T12:47:27.245Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Repro Steps:\n\n1. Open menu.\n\n2. Click on Camera tab.\n\n3. Open Photo Camera.\n\n4. Click on Camera Mode.\n\n5. Click on Emoji.\n\n6. Flip Camera Vertically\n\n7.  Weird UI bug happens\n\nExpected: The UI to follow rotation of camera.\n\nActual: The UI for Emoji Type is horizontal not following rotation of camera.\n\nI have tested this. Here are the output logs and screen shots provided:",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/1cc12088a1783dcd4c29e4d72d1605d9.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-02-14_23-36-46",
+      "url": "https://canny-assets.io/files/1cc12088a1783dcd4c29e4d72d1605d9.txt"
+    }
+  ],
+  "ideaID": "680bba47e4c3e90df13a1755",
+  "imageURLs": [
+    "https://canny-assets.io/images/c829b1db995d3e9edcf75e7b88ed8a0b.png",
+    "https://canny-assets.io/images/c99f520311150f6125aa25379454f739.png"
+  ],
+  "lastUpdated": 1779247214757,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67af3b5f5dc67537454426bb/257734172.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-02-14T12:47:27.245Z",
+  "subCategoryID": null,
+  "title": "When you flip the camera with the emoji menu open it breaks that menu",
+  "trendingScore": 2877.437902430875,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "updatedBy": null,
+  "urlName": "when-you-flip-the-camera-with-the-emoji-menu-open-it-breaks-that-menu",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67b239f5b55c491eeeb860b5",
+      "alias": "Empty Dingo",
+      "aliasID": "67b239f5b324a962093af5c4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a8871ee1b64312f8e30b0121dee61dd0.png",
+      "companies": [],
+      "name": "༒ m̷øøn̷ ༒",
+      "urlName": "moon-1849",
+      "voteID": "67b23a44b324a9620948e038"
+    },
+    {
+      "_id": "62df25a04a256544aca22fe2",
+      "alias": "Nickel Stork",
+      "aliasID": "65f0fdb7a6e3ea79ddf095be",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b4b55b571e3c1b68b69cc0de0599461f.png",
+      "companies": [],
+      "name": "C̴ooper",
+      "urlName": "garythegoatfan",
+      "voteID": "67af3b5fb324a962097ece29"
+    }
+  ]
+}

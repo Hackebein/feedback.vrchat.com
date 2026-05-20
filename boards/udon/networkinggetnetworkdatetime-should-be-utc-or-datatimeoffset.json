@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "601e2d181f9df1039dcb90a6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:25:20.188552Z",
+  "author": {
+    "_id": "5dc5ffef0892247f76089a24",
+    "alias": "Civic Raccoon",
+    "aliasID": "65c26da3ed6eefce4c4d08b9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
+    "created": "2019-11-08T23:53:19.146Z",
+    "name": "LefTonbo",
+    "serviceAccount": false,
+    "urlName": "bc52e1"
+  },
+  "authorID": "5dc5ffef0892247f76089a24",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-02-06T05:46:00.274Z",
+  "deletedAt": null,
+  "details": "Currently, Networking.GetNetworkDateTime returns DataTime that may contains server time, but its parameter of Kind is 'Local'. So the value of Networking.GetNetworkDateTime looks like it's not time of now for other country.\nI think Networking.GetNetworkDateTime sould be returned UTC time with 'Kind = UTC' or make additionaly method 'Networking.GetNetworkDateTimeOffset' that returns DateTimeOffset, which can hold time difference.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb803e4c3e90df132374c",
+  "imageURLs": [],
+  "lastUpdated": 1779247131552,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-02-06T05:46:00.274Z",
+  "subCategoryID": null,
+  "title": "Networking.GetNetworkDateTime should be UTC or DataTimeOffset",
+  "trendingScore": 2858.2287128191138,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "networkinggetnetworkdatetime-should-be-utc-or-datatimeoffset",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ba749f34dca6b351d658330",
+      "alias": "Flame Swan",
+      "aliasID": "65c2913aed6eefce4ce43005",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/28be024219e5d5a76a743e59faa1a194.png",
+      "companies": [],
+      "name": "100の人",
+      "urlName": "100-3",
+      "voteID": "6327a5255ee5a744b521ef0c"
+    },
+    {
+      "_id": "5fb1e732b872384136ebe97c",
+      "alias": "Beneficial Nightingale",
+      "aliasID": "65c2b461ed6eefce4cd80608",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5944aedb99b228dc81353f803a282ceb.png",
+      "companies": [],
+      "name": "狐崎めずもな_mezumona",
+      "urlName": "kosaki-mezumona",
+      "voteID": "601e32d862e695193c1dd1ab"
+    },
+    {
+      "_id": "5dc5ffef0892247f76089a24",
+      "alias": "Civic Raccoon",
+      "aliasID": "65c26da3ed6eefce4c4d08b9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
+      "companies": [],
+      "name": "LefTonbo",
+      "urlName": "bc52e1",
+      "voteID": "601e2d181f9df1039dcb90ad"
+    }
+  ]
+}

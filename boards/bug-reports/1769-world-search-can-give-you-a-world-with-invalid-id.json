@@ -1,0 +1,151 @@
+{
+  "_id": "69569a3aec67465b65ff9993",
+  "aiCategories": [
+    "loc.main-menu",
+    "loc.website",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-17T07:16:45.882332Z",
+  "author": {
+    "_id": "60c87a5d16d979790d8309cf",
+    "alias": "Tawny Raven",
+    "aliasID": "65c2821bed6eefce4c970ba0",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5352978364972e730009b48b80591670.png",
+    "created": "2021-06-15T10:01:01.067Z",
+    "name": "TummyTime",
+    "serviceAccount": false,
+    "urlName": "tummytime"
+  },
+  "authorID": "60c87a5d16d979790d8309cf",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6957af980ccfc5a662f875d9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": "wubthecaptain"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-01-02T11:44:24.547Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69569a3aec67465b65ff9993",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "> If you try to view the world on the website you don't get told that the ID is invalid. It jusst tries to load forever.\n\nFor the record, this is the behavior for all non-existent worlds and worlds which get deleted by moderation action.\n\nThat's also the case here, with Rei's Game World.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-01-01T16:00:58.527Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In search. There is a chance you can get served Rei's Game World. This is a world that seems to be missing. This results in a tile that can't load an image and can't be clicked. \n\nIt also shows up if you search for \"game\" etc. So it's not only with an exact search for the world. Seems like it's \n\n2026.01.01 16:51:29 Error      -  Error fetching specific world details: \"World wrld_b6af11e1-ca93-4532-a6cb-c85a0d8e1cac not found\"\n\n2026.01.01 16:51:29 Error      -  [API] [1081, 404, Post, -1 https://api.vrchat.cloud/api/1/instances] Abandoning request, because - World ID does not existâ€¤\n\n2026.01.01 16:51:29 Error      -  Failed creating world instance : World ID does not existâ€¤\n\nIf you try to view the world on the website you don't get told that the ID is invalid. It jusst tries to load forever. https://vrchat.com/home/world/wrld_b6af11e1-ca93-4532-a6cb-c85a0d8e1cac",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/6c80849d610666f6bfa6fb0ba64a194d.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-01-01_16-22-50",
+      "url": "https://canny-assets.io/files/6c80849d610666f6bfa6fb0ba64a194d.txt"
+    }
+  ],
+  "ideaID": "69569a3aec67465b65ff9a53",
+  "imageURLs": [
+    "https://canny-assets.io/images/a511138fec5bcea47b714317a17bb332.png"
+  ],
+  "lastUpdated": 1779001785910,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69569a3aec67465b65ff9993/1862398413.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-01-01T16:00:58.527Z",
+  "subCategoryID": null,
+  "title": "[1769] World search can give you a world with invalid ID",
+  "trendingScore": 2923.2345748767907,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "updatedBy": null,
+  "urlName": "1769-world-search-can-give-you-a-world-with-invalid-id",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "wubthecaptain",
+      "voteID": "6957af37f85d59c66d81f351"
+    },
+    {
+      "_id": "60c87a5d16d979790d8309cf",
+      "alias": "Tawny Raven",
+      "aliasID": "65c2821bed6eefce4c970ba0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5352978364972e730009b48b80591670.png",
+      "companies": [],
+      "name": "TummyTime",
+      "urlName": "tummytime",
+      "voteID": "69569a3af85d59c66d480d84"
+    }
+  ]
+}

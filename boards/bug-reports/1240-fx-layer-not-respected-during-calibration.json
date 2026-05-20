@@ -1,0 +1,120 @@
+{
+  "__v": 0,
+  "_id": "6328d1412fe8f464da764a79",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-18T23:34:07.011238Z",
+  "author": {
+    "_id": "5f2eaed841e042066f65cb45",
+    "alias": "Gainsboro Blackbird",
+    "aliasID": "65c2a2a0ed6eefce4c76962d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9876d04301108bf3789c7f59b4c60041.png",
+    "created": "2020-08-08T13:55:36.280Z",
+    "name": "Shiro K",
+    "serviceAccount": false,
+    "urlName": "shiro-k"
+  },
+  "authorID": "5f2eaed841e042066f65cb45",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-09-19T20:29:53.244Z",
+  "deletedAt": null,
+  "details": "Since yesterday (18. Sept.) the FX layer seems not to be respected anymore during calibration. I use avatar encryption and in the FX layer, all required keys will be set.\nThis first images shows the normal state. FX layer 1.0 / TPOSE layer 0.0. All my BitKeys are set correctly. I appear right in the mirror and my hands looks good:\nThis second image shows the state during calibration. FX layer 1.0 / TPOSE layer 1.0. All my BitKey are set correctly. I appear right in the mirror, but my own instance will not be decrypted anymore (visible mesh spikes in the image).\nI haven't uploadad my avatar. The behavior changed yesterday.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb939e4c3e90df136ea4e",
+  "imageURLs": [
+    "https://canny.io/images/fb9014d99ded8e417908153d80d2da22.png",
+    "https://canny.io/images/81870632d6eb426e5d5d8408078c8163.png"
+  ],
+  "lastUpdated": 1779147016139,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6328d1412fe8f464da764a79/917865844.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-09-19T20:29:53.244Z",
+  "subCategoryID": null,
+  "title": "[1240] FX layer not respected during calibration",
+  "trendingScore": 2752.4654385449703,
+  "updatedAt": "2026-05-18T23:32:24.192376Z",
+  "updatedBy": null,
+  "urlName": "1240-fx-layer-not-respected-during-calibration",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6142bc91c830f70736b61114",
+      "alias": "Secondary Swordtail",
+      "aliasID": "65c27264ed6eefce4c18098a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/191433fda8e993da6a48d8f50360fef2.png",
+      "companies": [],
+      "name": "Sayamame",
+      "urlName": "sayamame",
+      "voteID": "632d6d2bf727b344b8515dbb"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "fizzy-canny",
+      "voteID": "632a83cab5886f5be9aa230c"
+    },
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "2c610d",
+      "voteID": "63291da8a71374726a5ecdd3"
+    },
+    {
+      "_id": "5f2eaed841e042066f65cb45",
+      "alias": "Gainsboro Blackbird",
+      "aliasID": "65c2a2a0ed6eefce4c76962d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9876d04301108bf3789c7f59b4c60041.png",
+      "companies": [],
+      "name": "Shiro K",
+      "urlName": "shiro-k",
+      "voteID": "6328d1412fe8f464da764aa3"
+    }
+  ]
+}

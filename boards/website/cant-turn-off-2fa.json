@@ -1,0 +1,102 @@
+{
+  "_id": "69a2b00aecb621128432be22",
+  "aiCategories": [
+    "loc.website",
+    "account.2fa"
+  ],
+  "aiTaggedAt": "2026-05-18T13:55:24.759494Z",
+  "author": {
+    "_id": "69a2ae43804d20e970b31351",
+    "alias": "Marvellous Cuckoo",
+    "aliasID": "69a2ae43804d20e970b3263f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/106e0eded91f9952515bebef84b77353.png",
+    "created": "2026-02-28T08:58:43.647Z",
+    "name": "Aureyn",
+    "serviceAccount": false,
+    "urlName": "aureyn"
+  },
+  "authorID": "69a2ae43804d20e970b31351",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-02-28T09:06:18.280Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is my first time using the 2FA feature. After downloading the app, I deleted it because I found it inconvenient. At that time, I didn’t pay attention to the recovery code at all, so I didn’t save it.\n\nNow I am required to enter 2FA verification to log in both on the website and in the game. I’m stuck in an endless loop: to disable 2FA, I need verification, but I no longer have the 2FA app. I could fix this with the recovery code, but I don’t have that either.\n\nFor players who have neither the 2FA app nor the recovery code, there seems to be no other way to turn off 2FA. I just set up 2FA and then deleted the data immediately because I didn’t want to use it anymore. This has trapped me in this loop and I cannot disable 2FA.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69a2b00aecb621128432beff",
+  "imageURLs": [],
+  "lastUpdated": 1779111078266,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69a2b00aecb621128432be22/1864797819.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-02-28T09:06:18.280Z",
+  "subCategoryID": null,
+  "title": "Can't turn off 2FA",
+  "trendingScore": 2931.900728736984,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "cant-turn-off-2fa",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69ac104295d05cb7402edce1",
+      "alias": "Pansy Crayfish",
+      "aliasID": "69ac104395d05cb7402ef7d7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2336c1fa861ebc9afe93b96586d1e856.png",
+      "companies": [],
+      "name": "xiaotian2333",
+      "urlName": "xiaotian2333",
+      "voteID": "69ac10d895d05cb7404b5e61"
+    },
+    {
+      "_id": "69a2ae43804d20e970b31351",
+      "alias": "Marvellous Cuckoo",
+      "aliasID": "69a2ae43804d20e970b3263f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/106e0eded91f9952515bebef84b77353.png",
+      "companies": [],
+      "name": "Aureyn",
+      "urlName": "aureyn",
+      "voteID": "69a2b00a804d20e970090e0e"
+    }
+  ]
+}

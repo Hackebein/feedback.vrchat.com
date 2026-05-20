@@ -1,0 +1,120 @@
+{
+  "__v": 0,
+  "_id": "62e9f110edbce7671b40c6f8",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-18T21:47:49.064236Z",
+  "author": {
+    "_id": "60d9b64b4f6653148924e366",
+    "alias": "Philosophical Puma",
+    "aliasID": "65c3580ced6eefce4c687be8",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ab9dcee8dfa08c92044546399e6fbeb5.png",
+    "created": "2021-06-28T11:45:15.465Z",
+    "name": "rapt らぷと",
+    "serviceAccount": false,
+    "urlName": "rapt"
+  },
+  "authorID": "60d9b64b4f6653148924e366",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-08-03T03:52:48.284Z",
+  "deletedAt": null,
+  "details": "Confirm on Quest.\nExpected behavior:\nAttachment 1; A pick up highlight only fills the mirror itself.\nActual behavior:\nAttachment 2; A blue pickup highlight of a personal mirror fills up an entire screen on a situation below.\nReproduction procedure:\n1. Turn on a personal mirror\n2. Set a mirror \"Masking\" to mask the environment (Condition 1)\n3. Set a mirror size 6 steps or more down (Condition 2)\n4. Point to the personal mirror to show a pickup highlight\n5. You can see your screen is filled up with blue (attachment 2).\nAll of these conditions must be met in order to reproduce this problem.\nAttachment 1 lacks the mirror mask condition and it behaves as intended.\nIf you set a mirror size 5 steps down, you can see a blue ring surrounding your screen (attachment 3).\nBest regards",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb919e4c3e90df13672ca",
+  "imageURLs": [
+    "https://canny.io/images/bda6a63a97dd47843401628b1db6034f.jpg",
+    "https://canny.io/images/3ec5f0fe32ef5ef1014a1096ee76d997.jpg",
+    "https://canny.io/images/baeafac6b2fb404dac1f62af2cd36d62.jpg"
+  ],
+  "lastUpdated": 1779140180719,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny.io/images/og/58c62e995865713647a7115d/posts/62e9f110edbce7671b40c6f8/893430694.jpg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-08-03T03:52:48.284Z",
+  "subCategoryID": null,
+  "title": "[1216] A pickup highlight of a personal mirror fills up an entire screen on a specific setting",
+  "trendingScore": 2745.5381300910667,
+  "updatedAt": "2026-05-18T21:36:21.404734Z",
+  "urlName": "1216-a-pickup-highlight-of-a-personal-mirror-fills-up-an-entire-screen-on-a-spec",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "2c610d",
+      "voteID": "62eba7e4a221ee44bb2a0e57"
+    },
+    {
+      "_id": "60d89694b8ebb61ad4c63662",
+      "alias": "Dew Bovid",
+      "aliasID": "65c2a2d3ed6eefce4c7e37ae",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b98dacc87ea65bc53d5958988fc91420.png",
+      "companies": [],
+      "name": "Cig_Vanilla／バニラ",
+      "urlName": "cigvanilla",
+      "voteID": "62ea523b863f6244c40cb535"
+    },
+    {
+      "_id": "609c9e29fb46f007a137545b",
+      "alias": "Salty Raccoon",
+      "aliasID": "65c5973fed6eefce4cd00ce3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bad50d1579551d8ffc30c39695b519cf.png",
+      "companies": [],
+      "name": "D-Dacky［JP］",
+      "urlName": "d-dackyjp",
+      "voteID": "62e9f615c911ff674324c09b"
+    },
+    {
+      "_id": "60d9b64b4f6653148924e366",
+      "alias": "Philosophical Puma",
+      "aliasID": "65c3580ced6eefce4c687be8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ab9dcee8dfa08c92044546399e6fbeb5.png",
+      "companies": [],
+      "name": "rapt らぷと",
+      "urlName": "rapt",
+      "voteID": "62e9f110edbce7671b40c72e"
+    }
+  ]
+}

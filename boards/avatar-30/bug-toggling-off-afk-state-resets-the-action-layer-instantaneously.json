@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5f53808f327fb76e823d2e6b",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:52:45.297013Z",
+  "author": {
+    "_id": "5ab0a516b38415700129d940",
+    "alias": "Extra Vole",
+    "aliasID": "65ba05e2ed6eefce4c626bf6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/cef9c7c0f5c2dff87b7bbd6185ddc124.png",
+    "created": "2018-03-20T06:07:18.691Z",
+    "name": "RaythalosM",
+    "serviceAccount": false,
+    "urlName": "6fd382"
+  },
+  "authorID": "5ab0a516b38415700129d940",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-09-05T12:11:59.619Z",
+  "deletedAt": null,
+  "details": "Despite setting the transition speed and/or blend time going from the AFK state into the exit AFK state, longer than the transition entering AFK, the transition on the Action layer will always be instant. Other layers (FX, Gesture) that uses the AFK parameter would still have its animations blend slowly.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e6e4c3e90df131ded6",
+  "imageURLs": [],
+  "lastUpdated": 1779032637149,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-09-05T12:11:59.619Z",
+  "subCategoryID": null,
+  "title": "[BUG?] Toggling off AFK state resets the Action layer instantaneously",
+  "trendingScore": 2645.0514799219623,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-toggling-off-afk-state-resets-the-action-layer-instantaneously",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ab0a516b38415700129d940",
+      "alias": "Extra Vole",
+      "aliasID": "65ba05e2ed6eefce4c626bf6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cef9c7c0f5c2dff87b7bbd6185ddc124.png",
+      "companies": [],
+      "name": "RaythalosM",
+      "urlName": "6fd382",
+      "voteID": "5f53808f327fb76e823d2e72"
+    }
+  ]
+}

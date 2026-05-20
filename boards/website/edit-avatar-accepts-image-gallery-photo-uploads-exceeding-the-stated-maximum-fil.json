@@ -1,0 +1,147 @@
+{
+  "_id": "6a07724d286557b2558761ed",
+  "aiCategories": [
+    "loc.website",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-18T07:41:51.732049Z",
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "wubthecaptain"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a07728c402350310b3a3980",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": "wubthecaptain"
+      },
+      "authorID": null,
+      "boardID": "5d142650329e7856f7f7b664",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-15T19:22:52.617Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/9138a5fac6fb4d0da271e38edecbad98.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a07724d286557b2558761ed",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The suggested 1MB max file size restriction is silly, because avatar thumbnails have more lax requirements: \"Each file must be less than 10MB and larger than 64x64 pixels. Images larger than 2048x2048 will be resized automatically.\"\n\nMaybe the text is meant to say \"Maximum file size: 10MB\" instead of 1MB?",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-15T19:21:49.732Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Edit Avatar says: \"Recommended resolution: 1920x1080px. Maximum file size: 1MB.\" As far as I know, only a maximum resolution of 2048x2048 may be enforced.\n\n1. Have an uploaded avatar on your account.\n\n2. Go to VRChat Home website to the avatar page.\n\n3. Click the pencil icon next to the avatar name for \"Edit Avatar\".\n\n4. Navigate to \"Gallery\".\n\n5. Upload a gallery photo > 1 MB in file size.\n\nExpected behavior: The photo exceeding max file size (> 1 MB) upload is rejected before the upload starts (valid file sizes should receive a HTTP 100 Continue), or the uploaded photo is rejected retroactively after upload for exceeding file size, or the maximum file size stated should be \"10MB\" instead of \"1MB\".\n\nActual behavior: Uploading the photo exceeding the stated maximum file size (> 1 MB) succeeds.\n\nA video is attached. Please ignore the HTTP 403 Forbidden response for the uploaded gallery photos in the video, it's a separate issue that also affects gallery photos < 1 MB (for example, a 1080x860 photo of 487 KB) - tracked separately in support ticket #693577.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/d9898eca05a511e8caf1b20b6683affb.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-05-15 19-15-24",
+      "url": "https://canny-assets.io/files/d9898eca05a511e8caf1b20b6683affb.mp4"
+    }
+  ],
+  "ideaID": "6a07724d286557b2558761ef",
+  "imageURLs": [],
+  "lastUpdated": 1779089943710,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a07724d286557b2558761ed/2013658016.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-15T19:21:49.733Z",
+  "subCategoryID": null,
+  "title": "Edit Avatar accepts Image Gallery photo uploads exceeding the stated maximum file size (> 1 MB)",
+  "trendingScore": 2941.9512653989796,
+  "updatedAt": "2026-05-18T07:41:23.457967Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "edit-avatar-accepts-image-gallery-photo-uploads-exceeding-the-stated-maximum-fil",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "wubthecaptain",
+      "voteID": "6a07724e5a52cb2df0e480bb"
+    }
+  ]
+}

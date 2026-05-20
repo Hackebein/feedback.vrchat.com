@@ -1,0 +1,111 @@
+{
+  "__v": 0,
+  "_id": "63faa5a0d8bc94451ee13b00",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:38:36.367860Z",
+  "author": {
+    "_id": "63180cda10858444c1b3cc5b",
+    "alias": "Fiscal Marsupial",
+    "aliasID": "65c2b40bed6eefce4ccc5135",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/25187ffa84340ceeb04635d8fee6e36d.png",
+    "created": "2022-09-07T03:15:38.469Z",
+    "name": "TapGhoul",
+    "serviceAccount": false,
+    "urlName": "tapghoul"
+  },
+  "authorID": "63180cda10858444c1b3cc5b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-02-26T00:19:44.371Z",
+  "deletedAt": null,
+  "details": "In MidiPlayer, if the final note is being played and it lasts more than 1 frame, the MIDI processing/event emitting loop is broken out of and never fires the OnBlockEnd (i.e. MidiNoteOff), delaying it until the entire audio file ends (i.e. time seeks to the start, which seems to be how you're detecting the end of playback) - and not at all if the audioSource is set not to loop.\n\nPlease ensure MIDI processing in  playback does not terminate until *all* blocks have finished playing, otherwise MIDI playback will be inconsistent.\n\nEasy reproduction case:\n\n- Get a MIDI file + audio file\n\n- Set up udon with the following code in Start() (to avoid needing to craft a MIDI file by hand):\n\n```\n\nplayer.MidiData.tracks = new MidiData.MidiTrack[1];\n\nplayer.MidiData.tracks[0] = new MidiData.MidiTrack();\n\nplayer.MidiData.tracks[0].blocks = new MidiData.MidiBlock[1];\n\nplayer.MidiData.tracks[0].blocks[0] = new MidiData.MidiBlock();\n\nvar block = new MidiData.MidiBlock();\n\nblock.startTimeMs = 1000;\n\nblock.endTimeMs = 1500;\n\nblock.channel = 1;\n\nblock.note = 82;\n\nblock.velocity = 127;\n\nplayer.MidiData.tracks[0].blocks[0] = block;\n\nplayer.Play();\n\n```\n\n(Alternatively, create a MIDI file with a single note near the start)\n\nYou will notice that the MidiNoteOff never fires when endTimeMs is hit, because flag is false in `MidiEnumerator` at this point.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb96ae4c3e90df137808c",
+  "imageURLs": [],
+  "lastUpdated": 1779039008930,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-02-26T00:19:44.372Z",
+  "subCategoryID": null,
+  "title": "MIDI player sustains final note until end of song, or forever if audioSource not set to loop",
+  "trendingScore": 2775.104129527182,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "urlName": "midi-player-sustains-final-note-until-end-of-song-or-forever-if-audiosource-not",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "red-168",
+      "voteID": "640274c7d4f9670970a03730"
+    },
+    {
+      "_id": "5ae14b192f26cf1a6d66ba79",
+      "alias": "Different Halibut",
+      "aliasID": "65ba09e7ed6eefce4cccd990",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a19a26c38e6d94787252321ede68de1f.png",
+      "companies": [],
+      "name": "rollthered",
+      "urlName": "jason-quesnel",
+      "voteID": "63faa6ea52a33045149aada1"
+    },
+    {
+      "_id": "63180cda10858444c1b3cc5b",
+      "alias": "Fiscal Marsupial",
+      "aliasID": "65c2b40bed6eefce4ccc5135",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/25187ffa84340ceeb04635d8fee6e36d.png",
+      "companies": [],
+      "name": "TapGhoul",
+      "urlName": "tapghoul",
+      "voteID": "63faa5a0d8bc94451ee13b28"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "68150ea8bbc9e4e92508be7c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-16T22:12:37.750446Z",
+  "author": {
+    "_id": "62def363a3f99544ac93df1e",
+    "alias": "Safe Stingray",
+    "aliasID": "681339ec8ccc1d8b3baa2fd1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b16b8327209d688259a2dca2dcbbeca8.png",
+    "created": "2022-07-25T19:47:47.632Z",
+    "name": "✧ Ali ✧",
+    "serviceAccount": false,
+    "urlName": "ali-4409"
+  },
+  "authorID": "62def363a3f99544ac93df1e",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-02T18:27:52.438Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRChat Game Version: Latest version\n\nUnity 2022.3.22f1\n\nMy unity wasn't spitting out this kind of error a few days ago but it started after the recent physbones update and now these warnings and errors pop up and now it's happening in all my unity projects. It's happening even on my laptop unity projects that I haven't touched for awhile now. It's only affecting my physbones and colliders and when I remove them the error is gone and returns when I add them back.\n\nIt happens when I move my model around in play mode then ctrl z to it's original position. I'm not even able to edit my physbone settings in play mode when I used to be able to. It shows up in older SDK versions too. I have tried fresh projects, different avatars, different unity projects, basic physbone/collider setups, different SDK versions, clearing unity cache folders and none of that seemed to fix it.\n\nI am up to date with my VRChat SDK in Creator Companion on both devices. I have tried asking around a bit and no one seems to know what to do and I would try to ignore it but it's conflicting with my model making progress too much. I am at a loss on how to fix these issues that I didn't have before the recent update.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68150ea8bbc9e4e92508bed9",
+  "imageURLs": [
+    "https://canny-assets.io/images/4effb9567099ed486312b83934065b63.png"
+  ],
+  "lastUpdated": 1779255091027,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68150ea8bbc9e4e92508be7c/1851961118.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-02T18:27:52.438Z",
+  "subCategoryID": null,
+  "title": "Physbones and Collider warnings/errors",
+  "trendingScore": 2887.945912567465,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "physbones-and-collider-warnings-errors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62def363a3f99544ac93df1e",
+      "alias": "Safe Stingray",
+      "aliasID": "681339ec8ccc1d8b3baa2fd1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b16b8327209d688259a2dca2dcbbeca8.png",
+      "companies": [],
+      "name": "✧ Ali ✧",
+      "urlName": "ali-4409",
+      "voteID": "68150ea88ccc1d8b3b9bab2f"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "5eb82e0a8a21cd76f3d9a65f",
+  "aiCategories": [
+    "sdk.udon",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-16T20:28:52.223155Z",
+  "author": {
+    "_id": "5eb82e09a61e5620ad381b85",
+    "alias": "Purple Rabbit",
+    "aliasID": "65cfb4240129d7ae44794028",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2020-05-10T16:38:33.973Z",
+    "name": "Dinky",
+    "serviceAccount": false,
+    "urlName": "dinky-1"
+  },
+  "authorID": "5eb82e09a61e5620ad381b85",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-10T16:38:34.124Z",
+  "deletedAt": null,
+  "details": "On player teleport (including respawn), the players' grips on pickup objects are broken until a new world is joined. They will jitter a lot and phase through walls/surfaces very easily. This can easily be replicated in any world with pickups (SDK2 or 3+udon) by respawning (with or without pickup in hand, doesnt matter) then grabbing any pickup and pushing it against a surface. If I had to guess the realm of possibility its something to do with the grip/hinge portion of the hands not syncing right with the rest of the body on teleport, causing everything to go whack.\nI have noticed this issue ever since the update to Udon a while back. This has occurred in all versions of SDK2 and SDK3+Udon since then.\n\nThe debug log also throws the message \"kinematic rigidbodies only support continuous speculative collision detection\" when other players hold pickups, this may be related to the recent changes surrounding Network IK.\n\nI have replicated the issue with a fresh project in the current supported version of unity with a fresh and current SDK3+Udon. The only objects I added to the scene was VRCWorld, a floor, a wall, and a cube with a collider,rigidbody, vrc pickup component set to default values, and an udon behavior set to sync position. Here is a short video showing the issue.\n\nhttps://youtu.be/vK5SqFBlV2Y",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dace4c3e90df158f812",
+  "imageURLs": [],
+  "lastUpdated": 1779239268131,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-10T16:38:34.124Z",
+  "subCategoryID": null,
+  "title": "Pickups break on teleport",
+  "trendingScore": 2665.8602990476193,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "pickups-break-on-teleport",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6019cff0a44f0f03659ddfad",
+      "alias": "Peach puff Pinniped",
+      "aliasID": "65cbd9e4ed6eefce4c7f70a5",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6c17e4e80542e550fe22da5cda83c86a.png",
+      "companies": [],
+      "name": "doodledrop",
+      "urlName": "flapdoodleog",
+      "voteID": "6019eef4bbb357463a93f034"
+    },
+    {
+      "_id": "5ea7811b606e142075eeced2",
+      "alias": "Rosewood Lobster",
+      "aliasID": "65c2a1fced6eefce4c5e95a5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/24311fe09785c81ca189fedf5c831544.png",
+      "companies": [],
+      "name": "llealloo",
+      "urlName": "llealloo",
+      "voteID": "5eb9b9c8dc4c4f20e00def09"
+    },
+    {
+      "_id": "5eb4b856c8a4c94caf9f065a",
+      "alias": "Salmon Canid",
+      "aliasID": "65d94df20129d7ae44e7e075",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/bcb11ab8d646614b2c093dd4b2420a27.png",
+      "companies": [],
+      "name": "Ten Bit",
+      "urlName": "ten-bit",
+      "voteID": "5eb968a1a87e1804faed08d6"
+    },
+    {
+      "_id": "5cb356fd14314c03a61797e4",
+      "alias": "Jacinth Wildebeest",
+      "aliasID": "65c28a4bed6eefce4cd29330",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+      "companies": [],
+      "name": "Helpful Helper",
+      "urlName": "helpful-helper",
+      "voteID": "5eb94f42a87e1804faec2774"
+    },
+    {
+      "_id": "5eb82e09a61e5620ad381b85",
+      "alias": "Purple Rabbit",
+      "aliasID": "65cfb4240129d7ae44794028",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Dinky",
+      "urlName": "dinky-1",
+      "voteID": "5eb82e0a8a21cd76f3d9a667"
+    }
+  ]
+}

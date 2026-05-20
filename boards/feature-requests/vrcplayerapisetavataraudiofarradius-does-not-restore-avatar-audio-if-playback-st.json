@@ -1,0 +1,192 @@
+{
+  "_id": "69b415245fdeee688c2616cb",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:32:55.774098Z",
+  "author": {
+    "_id": "67688e59df2606b92281bc7a",
+    "alias": "Thin Spoonbill",
+    "aliasID": "67688e5aa367fa6392dd752d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3374d30bff7574143c865f5b5f2945e9.png",
+    "created": "2024-12-22T22:10:33.561Z",
+    "name": "こごろ - kogoro",
+    "serviceAccount": false,
+    "urlName": "kogoro-1"
+  },
+  "authorID": "67688e59df2606b92281bc7a",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69b81ca6265d3a64214a5ea1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67688e59df2606b92281bc7a",
+        "alias": "Thin Spoonbill",
+        "aliasID": "67688e5aa367fa6392dd752d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3374d30bff7574143c865f5b5f2945e9.png",
+        "created": "2024-12-22T22:10:33.561Z",
+        "name": "こごろ - kogoro",
+        "serviceAccount": false,
+        "urlName": "kogoro-1"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-03-16T15:07:18.442Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69b415245fdeee688c2616cb",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I had mistakenly submitted it as a Feature Request, so I resubmitted it under Bug Reports.\n\nhttps://feedback.vrchat.com/bug-reports/p/vrcplayerapisetavataraudiofarradius-does-not-restore-avatar-audio-if-playback-st",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-13T13:46:12.142Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRCPlayerApi.SetAvatarAudioFarRadius(0f) can effectively mute another player's avatar audio, but restoring it to 40f does not always make the avatar audio audible again.\n\nThe issue appears to depend on when the avatar audio starts playing.\n\nCase that fails\n\nPlayer A mutes Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(0f).\n\nWhile muted, Player B starts playing avatar audio.\n\nPlayer A restores Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(40f).\n\nExpected result\n\nPlayer B's avatar audio becomes audible again to Player A after the far radius is restored.\n\nActual result\n\nPlayer B's avatar audio remains inaudible to Player A even after restoring the far radius.\n\nCase that works\n\nPlayer B starts playing avatar audio first.\n\nPlayer A mutes Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(0f).\n\nPlayer A restores Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(40f).\n\nIn this case, Player B's avatar audio becomes audible again as expected.\n\nThis suggests the problem is not just muting/unmuting in general, but specifically that avatar audio which begins playback while muted does not properly recover when the far radius is restored.\n\nAccording to the Player Audio documentation, SetAvatarAudioFarRadius controls the maximum hearing distance for avatar audio, with a default of 40 meters and 0 effectively muting it. Based on that documented behavior, restoring the value should make the audio audible again.\n\nThis issue breaks world systems that depend on temporarily muting and later restoring avatar audio, such as soundproof rooms, privacy spaces, sleep worlds, and other controlled-audio environments.\n\nThe UdonSharp source code used for verification is attached for reference.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/9bf60fcb054d4d610b956ee296a77436.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "SoundproofTest",
+      "url": "https://canny-assets.io/files/9bf60fcb054d4d610b956ee296a77436.txt"
+    }
+  ],
+  "ideaID": "69b415245fdeee688c261742",
+  "imageURLs": [],
+  "lastUpdated": 1779038882597,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69b415245fdeee688c2616cb/1619500389.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-13T13:46:12.142Z",
+  "subCategoryID": null,
+  "title": "VRCPlayerApi.SetAvatarAudioFarRadius does not restore avatar audio if playback starts while muted",
+  "trendingScore": 2934.2519680170076,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "vrcplayerapisetavataraudiofarradius-does-not-restore-avatar-audio-if-playback-st",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69a9805c804d20e9701ad4c0",
+      "alias": "Profitable Goose",
+      "aliasID": "69a9805d804d20e9701b0b6d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cdf11b8ddd8ec599ae9c4038cc1771e6.png",
+      "companies": [],
+      "name": "Fe_falsename",
+      "urlName": "fe-falsename",
+      "voteID": "69b5fb1bed082c9981e3f8ea"
+    },
+    {
+      "_id": "69acfe4695d05cb7409ad97e",
+      "alias": "Frequent Marten",
+      "aliasID": "69acfe4795d05cb7409af5e6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f0a80b0929ef521276a1434d9a430ceb.png",
+      "companies": [],
+      "name": "通行人B",
+      "urlName": "b-8085",
+      "voteID": "69b5a68ced082c9981fc19d0"
+    },
+    {
+      "_id": "69aa3a70804d20e97007f89b",
+      "alias": "Encouraging Iguana",
+      "aliasID": "69aa3a71804d20e970082404",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/63bc7a21a00666c641b443871a923b2b.png",
+      "companies": [],
+      "name": "NoktanLumi",
+      "urlName": "noktanlumi",
+      "voteID": "69b5520ced082c998108ebf5"
+    },
+    {
+      "_id": "69b4637fed082c9981ec2f49",
+      "alias": "Open Jellyfish",
+      "aliasID": "69b46380ed082c9981ec4734",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5ad283ba26716bb3f0f4512ccde577d1.png",
+      "companies": [],
+      "name": "Kuro_Neko_0204",
+      "urlName": "kuro-neko-0204",
+      "voteID": "69b4638eed082c9981ef5b37"
+    },
+    {
+      "_id": "68ce2aaea8ab97d7d9cd0adb",
+      "alias": "Vermilion Viper",
+      "aliasID": "68ce2aafa8ab97d7d9cd298d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1957e4728f68ad1e6c6ce9e6d9818ddc.png",
+      "companies": [],
+      "name": "薄明／Hakumei",
+      "urlName": "hakumei-5",
+      "voteID": "69b418b3ed082c998199f15a"
+    },
+    {
+      "_id": "67688e59df2606b92281bc7a",
+      "alias": "Thin Spoonbill",
+      "aliasID": "67688e5aa367fa6392dd752d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3374d30bff7574143c865f5b5f2945e9.png",
+      "companies": [],
+      "name": "こごろ - kogoro",
+      "urlName": "kogoro-1",
+      "voteID": "69b41524ed082c9981d75bf4"
+    }
+  ]
+}

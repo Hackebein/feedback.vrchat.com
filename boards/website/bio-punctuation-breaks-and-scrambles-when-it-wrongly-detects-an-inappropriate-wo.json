@@ -1,0 +1,117 @@
+{
+  "__v": 0,
+  "_id": "647c26660ec21309204e2a99",
+  "aiCategories": [
+    "loc.website",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-05-17T18:35:07.814956Z",
+  "author": {
+    "_id": "63882dc1f272550ad4b6b553",
+    "alias": "Nautical blue Horse",
+    "aliasID": "65c26de3ed6eefce4c583e46",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/695b6d04a8df3baaf7dc5fffa66b6b56.png",
+    "created": "2022-12-01T04:29:53.950Z",
+    "name": "ʙɪɢ․",
+    "serviceAccount": false,
+    "urlName": "sdruuba"
+  },
+  "authorID": "63882dc1f272550ad4b6b553",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-06-04T05:51:34.904Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I edited my bio on the website today to contain the phrase \"alaskan king mattress\" and it somehow caused it to scramble all the spaces and punctuation as well as remove any line breaks, turning it into an illegible mess.\n\nIt continued to do this every time I tried to enter any bio regardless of special characters as long as I include that specific phrase somewhere in it.\n\nI've narrowed it down to the exact string: \"skan k\"\n\nIt for some reason turns into \"skun k\" once everything gets scrambled.\n\nEdit: It took me a little too long to realize that it's probably a weird side effect of the censoring system trying to turn \"skank\" into \"skunk.\" So I guess this is actually two issues: That it shouldn't scramble the entire bio when it tries to censor the word, and it shouldn't be recognizing that word from the phrase \"alaskan king\" in the first place.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97fe4c3e90df137c551",
+  "imageURLs": [
+    "https://canny.io/images/5a5fb60fd8fad1a1b341da843d7dd520.png",
+    "https://canny.io/images/6418c46dde156027051772b0f53e0ddb.png"
+  ],
+  "lastUpdated": 1779042640608,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/647c26660ec21309204e2a99/1391039970.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-06-04T05:51:34.904Z",
+  "subCategoryID": null,
+  "title": "Bio punctuation breaks and scrambles when it wrongly detects an inappropriate word",
+  "trendingScore": 2878.1805530307543,
+  "updatedAt": "2026-05-17T18:33:00.531996Z",
+  "updatedBy": "63882dc1f272550ad4b6b553",
+  "urlName": "bio-punctuation-breaks-and-scrambles-when-it-wrongly-detects-an-inappropriate-wo",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2faa83ed04fc68329d5a53",
+      "alias": "Integral Flyingfish",
+      "aliasID": "65c39fcaed6eefce4cc9a2b5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/233809ab3924eacdca0d61aad3da2406.png",
+      "companies": [],
+      "name": "tanitta",
+      "urlName": "tanitta",
+      "voteID": "67c1558eb324a962098884dc"
+    },
+    {
+      "_id": "652a8bf89f591f7dc880eb68",
+      "alias": "International Crayfish",
+      "aliasID": "65d5169b0129d7ae443a3469",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/bfcfa1807955a140f994fbf21842a21e.png",
+      "companies": [],
+      "name": "caasilder",
+      "urlName": "caasilder",
+      "voteID": "652a8d5e3f9ba15e5f90c550"
+    },
+    {
+      "_id": "63882dc1f272550ad4b6b553",
+      "alias": "Nautical blue Horse",
+      "aliasID": "65c26de3ed6eefce4c583e46",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/695b6d04a8df3baaf7dc5fffa66b6b56.png",
+      "companies": [],
+      "name": "ʙɪɢ․",
+      "urlName": "sdruuba",
+      "voteID": "647c26670ec21309204e2ac9"
+    }
+  ]
+}

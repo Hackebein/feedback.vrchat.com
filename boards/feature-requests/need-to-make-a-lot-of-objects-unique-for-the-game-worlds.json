@@ -1,0 +1,107 @@
+{
+  "__v": 0,
+  "_id": "5c0996eed6a91413a6ba7690",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T18:55:59.636813Z",
+  "author": {
+    "_id": "5c037e2d85e6af69b6276494",
+    "alias": "Quicksilver grey Python",
+    "aliasID": "65f6a12ba63714bcb3b5ec4c",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/e6a14019a7256600eeea6e1b91271ad6.png",
+    "created": "2018-12-02T06:39:41.780Z",
+    "name": "Masterious iM",
+    "serviceAccount": false,
+    "urlName": "masterious-im"
+  },
+  "authorID": "5c037e2d85e6af69b6276494",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-12-06T21:38:54.971Z",
+  "deletedAt": null,
+  "details": "Greetings! Is it possible makes objects unique from each other for the game worlds? We can use layers, but there are only 10 available slots for custom using at this time and they are few for game logic I'm trying to make. Eg \"Doodle God\" game needs a lot of different objects those will interact with each other in different ways(I don't want to make it with buttons only, it is planned to use pickupable objects).\n\nIt can be great if let onEnterTrigger(onExitTrigger/Collider) to use tags.\n\nOr alternatively could be easy if add custom layers(mixed) into VRC_Special Layer script and one checkbox into VRC_Trigger script then layer combinations will be able.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d6be4c3e90df157df0d",
+  "imageURLs": [
+    "https://canny.io/images/f9be2f65277f444e5ea8f9231148e6ae.png",
+    "https://canny.io/images/35117cb8efc3c9c686cd53f4e94f33f9.png",
+    "https://canny.io/images/9e25b0292a398580c786fee8038bfd7f.png"
+  ],
+  "lastUpdated": 1779130040062,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-12-06T21:38:54.973Z",
+  "subCategoryID": null,
+  "title": "Need to make a lot of objects unique for the game worlds.",
+  "trendingScore": 2554.880322074066,
+  "updatedAt": "2026-05-18T18:48:18.764654Z",
+  "urlName": "need-to-make-a-lot-of-objects-unique-for-the-game-worlds",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5acbfbfdc848e744874fa61a",
+      "alias": "Quartz Mouse",
+      "aliasID": "65ba07ceed6eefce4c94f3e5",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f0edbbb36921d4e005cc9cebf6f29502.png",
+      "companies": [],
+      "name": "KittyCraft",
+      "urlName": "kittycraft",
+      "voteID": "5c12841c6db2b5471c2c1af8"
+    },
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "2c610d",
+      "voteID": "5c0abc666db2b5471c282961"
+    },
+    {
+      "_id": "5c037e2d85e6af69b6276494",
+      "alias": "Quicksilver grey Python",
+      "aliasID": "65f6a12ba63714bcb3b5ec4c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e6a14019a7256600eeea6e1b91271ad6.png",
+      "companies": [],
+      "name": "Masterious iM",
+      "urlName": "masterious-im",
+      "voteID": "5c0996ef6db2b5471c278b3d"
+    }
+  ]
+}

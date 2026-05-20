@@ -1,0 +1,123 @@
+{
+  "__v": 0,
+  "_id": "5fb3bd90592bb651b12abf13",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T15:53:43.614632Z",
+  "author": {
+    "_id": "5f2dd5d822470972dc58a25b",
+    "alias": "Late Tortoise",
+    "aliasID": "65cac66bed6eefce4c07dad8",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/499675e3df1733abdd5479d9f82f75f8.png",
+    "created": "2020-08-07T22:29:44.654Z",
+    "name": "Himikoǃ",
+    "serviceAccount": false,
+    "urlName": "himiko"
+  },
+  "authorID": "5f2dd5d822470972dc58a25b",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-17T12:09:52.933Z",
+  "deletedAt": null,
+  "details": "I haven't been in VRchat for a while, but when I recently came back to check it out my previously perfectly fine avatar now spreads legs after standing for a few seconds. It seems that feet IK is disabled for a while until it reactivates, however it when it does it doesn't look how it should. This happens to all 3.0 avatars to some degree. I am using a custom IK pose which makes the legs come a little closer together and that seems to exaggerate the issue. Using a default pose reduces the problem, but it's still there.\n\nIK behavior seems to be strange in general compared to how it was a few months back, other avatars seem to even put their legs forward instead of sideways. Running in 3.0 avatars causes legs to twitch at times like they are searching for ground.\n\nThis is probably also related to https://feedback.vrchat.com/avatar-30/p/bug1008foot-ik-does-takes-a-few-seconds-to-reactivate-after-locomotion",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7efe4c3e90df131ff19",
+  "imageURLs": [
+    "https://canny.io/images/06ff7f72ad9bae3a23f20de14e04231e.gif"
+  ],
+  "lastUpdated": 1779032649076,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-11-17T12:09:52.933Z",
+  "subCategoryID": null,
+  "title": "[BUG] Legs spreading due to late IK reactivation",
+  "trendingScore": 2657.421925360264,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-legs-spreading-due-to-late-ik-reactivation",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ab0a516b38415700129d940",
+      "alias": "Extra Vole",
+      "aliasID": "65ba05e2ed6eefce4c626bf6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cef9c7c0f5c2dff87b7bbd6185ddc124.png",
+      "companies": [],
+      "name": "RaythalosM",
+      "urlName": "6fd382",
+      "voteID": "5fc48367eaf126718217e906"
+    },
+    {
+      "_id": "5f9f1ebfa308d05f19397b80",
+      "alias": "Reliable Warbler",
+      "aliasID": "65c28115ed6eefce4c6d4a60",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
+      "companies": [],
+      "name": "JessicaOnMain",
+      "urlName": "jessicaonmain",
+      "voteID": "5fbdc36d0762374d0393aa00"
+    },
+    {
+      "_id": "5f317eed9dcbb575795c3c32",
+      "alias": "Silver Wildfowl",
+      "aliasID": "65e2621da6e3ea79ddec7d5c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f6fd3075d61793186f1cd503e0c21cd.png",
+      "companies": [],
+      "name": "eru",
+      "urlName": "eru-2",
+      "voteID": "5fbd55189cbe3936e699a6c4"
+    },
+    {
+      "_id": "5f2dd5d822470972dc58a25b",
+      "alias": "Late Tortoise",
+      "aliasID": "65cac66bed6eefce4c07dad8",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/499675e3df1733abdd5479d9f82f75f8.png",
+      "companies": [],
+      "name": "Himikoǃ",
+      "urlName": "himiko",
+      "voteID": "5fb3bd90592bb651b12abf1a"
+    }
+  ]
+}

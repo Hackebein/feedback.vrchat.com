@@ -1,0 +1,149 @@
+{
+  "_id": "69c64f691760774495369eb6",
+  "aiCategories": [
+    "loc.in-world",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-17T08:54:30.294749Z",
+  "author": {
+    "_id": "69c649eebcda4ee6327749f4",
+    "alias": "Reliable Prawn",
+    "aliasID": "69c649eebcda4ee632776a91",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/127fd06faf99a24a3a6e82e296feb514.png",
+    "created": "2026-03-27T09:12:14.253Z",
+    "name": "vaniglia",
+    "serviceAccount": false,
+    "urlName": "vaniglia-1"
+  },
+  "authorID": "69c649eebcda4ee6327749f4",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69cd4e44d811658f7db5a4f6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": "tau-26"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-04-01T16:56:36.796Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69c64f691760774495369eb6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "69cd4e44d811658f7db5a4e0",
+      "statusChangeNewStatus": "closed",
+      "value": "This is not something we can directly fix and can be caused by a variety of systems, including anti-cheat.\n\nAt the rate visible in those logs it should also not cause any real performance impact.\n\nThanks for bringing it up however.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-27T09:35:37.096Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRChat has some split locks (atomic memory acces across cpu cache line boundaries)(https://www.sobyte.net/post/2022-05/split-locks/), which degrade performance.\n\nI noticed since I am playing on linux and the kernel reports these events to the system log (but it is probably not a problem isolated to linux as it is a cpu feature).\n\nI tested with a different proton version and options and the problem persisted, I also tested with proton on a different game and it did not report split locks, so I think it is specific to VRChat (might also be EAC or something idk).\n\nA friend of mine also reported it happening on their machine.\n\nI attached journald logs from when I executed vrchat for about a minute.\n\nThere are some split locks when starting the game, but the ones that continue to appear are all at the same address.\n\nOn a normal run of VRChat I would have my logs filled with split locks from VRChat.exe processes with increasing PIDs.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/7e0c8db699347f0088a7af722c4d03e0.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "journalctl",
+      "url": "https://canny-assets.io/files/7e0c8db699347f0088a7af722c4d03e0.txt"
+    }
+  ],
+  "ideaID": "69c64f691760774495369f47",
+  "imageURLs": [],
+  "lastUpdated": 1779007859485,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69c64f691760774495369eb6/1383870022.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "closed",
+  "statusChanged": "2026-04-01T16:56:36.713Z",
+  "subCategoryID": null,
+  "title": "Split Locks degrade system performance",
+  "trendingScore": 2935.3180002252175,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": null,
+  "urlName": "split-locks-degrade-system-performance",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64f8e8d313b550392ac6b63b",
+      "alias": "Daily Bear",
+      "aliasID": "65c29c85ed6eefce4c8cc730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/279d5344e6e3af3276b9dde2fa6b08a7.png",
+      "companies": [],
+      "name": "hdorriker",
+      "urlName": "hdorriker",
+      "voteID": "69c6d67fbcda4ee63262153c"
+    },
+    {
+      "_id": "69c649eebcda4ee6327749f4",
+      "alias": "Reliable Prawn",
+      "aliasID": "69c649eebcda4ee632776a91",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/127fd06faf99a24a3a6e82e296feb514.png",
+      "companies": [],
+      "name": "vaniglia",
+      "urlName": "vaniglia-1",
+      "voteID": "69c64f69bcda4ee632d81b70"
+    }
+  ]
+}

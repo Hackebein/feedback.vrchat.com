@@ -1,0 +1,138 @@
+{
+  "_id": "68ecc9475b5b717e8dc11eaf",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.in-world",
+    "sdk.vrcsdk",
+    "sdk.world-building",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-05-19T03:44:21.295521Z",
+  "author": {
+    "_id": "60dd2a998871d03e7f3806ae",
+    "alias": "Thoughtful Cobra",
+    "aliasID": "65c28339ed6eefce4cc2dd8f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+    "created": "2021-07-01T02:38:17.778Z",
+    "name": "~Pausbe",
+    "serviceAccount": false,
+    "urlName": "crazyiseasy"
+  },
+  "authorID": "60dd2a998871d03e7f3806ae",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "68fa55c44d179146f9790d15",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-10-23T16:20:20.318Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "68ecc9475b5b717e8dc11eaf",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "68fa55c44d179146f9790d0a",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-10-13T09:41:27.464Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Input Fields selection highlight doesn't appear in-client, despite it appearing in the Unity editor. The selection highlight works in-client, but just not visible.\n\nMy setup with a properly setup canvas: \n\n- \"Input Field - TextMeshPro (VRC)\" with Read Only set to True\n\n- VRCInputFieldKeyboardOverride component set to Override \n\nTo note: It previously worked in my project, then stopped out of nowhere. Tried to recreate the input field with a working one in the scene, then the one that was working stopped working.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/4e59183359666fb75d3d3fb73b4282e9.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2025-10-13 04-57-13",
+      "url": "https://canny-assets.io/files/4e59183359666fb75d3d3fb73b4282e9.mp4"
+    }
+  ],
+  "ideaID": "68ecc9475b5b717e8dc11eff",
+  "imageURLs": [],
+  "lastUpdated": 1779160785712,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68ecc9475b5b717e8dc11eaf/261861892.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2025-10-23T16:20:20.256Z",
+  "subCategoryID": null,
+  "title": "Input Field text selection doesn't appear in-client",
+  "trendingScore": 2911.3222601418697,
+  "updatedAt": "2026-05-19T03:20:30.198674Z",
+  "updatedBy": null,
+  "urlName": "input-field-text-selection-doesnt-appear-in-client",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": "crazyiseasy",
+      "voteID": "68ecc9473410c31abd5cea66"
+    }
+  ]
+}

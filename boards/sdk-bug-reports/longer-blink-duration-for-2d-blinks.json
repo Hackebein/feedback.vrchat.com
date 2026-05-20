@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "6831267c1698143b49c06fc9",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-05-17T21:55:57.380977Z",
+  "author": {
+    "_id": "603b04282fa90e5c53608eb6",
+    "alias": "Variable Turtle",
+    "aliasID": "65c27d10ed6eefce4cc8cf32",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+    "created": "2021-02-28T02:47:04.064Z",
+    "name": "RavenWorks",
+    "serviceAccount": false,
+    "urlName": "ravenworks"
+  },
+  "authorID": "603b04282fa90e5c53608eb6",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 148,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-24T01:53:00.035Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When doing a blink for a 2D face, the technique is to bring a second mesh up in front of the normal mesh, with a blendshape.   However, this means that the blink is only visible for the portion of the blendshape where the second mesh is actually in front, which (if you don't want the closed eyes to be obviously \"hovering\" in midair) is only going to be at the very very end of the tween.   So the current blink, which quickly tweens from 0-1 and back again, is almost invisibly fast when only the final 0.01 or so of that tween makes the eyes visible.\n\nBasically, it would be nice to have an option on the avatar descriptor, that would make the blink tween sit at 1 for a while (i.e., rounding the 0-1 value).   Or maybe, a custom curve for how it travels from 0 to 1 and back...  (that way, people could define things like double-blinks, etc)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6831267c1698143b49c07002",
+  "imageURLs": [],
+  "lastUpdated": 1779054471041,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6831267c1698143b49c06fc9/1904327333.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-24T01:53:00.035Z",
+  "subCategoryID": null,
+  "title": "Longer blink duration (for 2D blinks)",
+  "trendingScore": 2890.990071936678,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "longer-blink-duration-for-2d-blinks",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "ravenworks",
+      "voteID": "6831267cb25ebd7219001eca"
+    }
+  ]
+}

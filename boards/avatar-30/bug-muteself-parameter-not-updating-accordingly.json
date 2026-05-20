@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "61c3b48a540a6b18573a61dd",
+  "aiCategories": [
+    "loc.main-menu",
+    "loc.in-world",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-05-17T15:56:37.417019Z",
+  "author": {
+    "_id": "61c3ae0dd2fcb12949a6838f",
+    "alias": "Giant Trout",
+    "aliasID": "65cac664ed6eefce4c06f0cf",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-12-22T23:00:29.729Z",
+    "name": "starcheese",
+    "serviceAccount": false,
+    "urlName": "starcheese"
+  },
+  "authorID": "61c3ae0dd2fcb12949a6838f",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-12-22T23:28:10.831Z",
+  "deletedAt": null,
+  "details": "Description: Toggling the mute button on the esc UI successfully mutes the microphone in-game, but the MuteSelf parameter remains False.  \nRepro Steps: Open the avatar debug console to check MuteSelf status.  Toggle mute from main menu gui.\nExpected:  MuteSelf should change according to mute status.\nActual:  MuteSelf always will return False.\nAttempted on multiple windows10 machines with multiple 3.0 avatars.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cee4c3e90df1359235",
+  "imageURLs": [
+    "https://canny.io/images/9df7274ac62fec1f62171a8d31c7bffe.jpg"
+  ],
+  "lastUpdated": 1779032665944,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-12-22T23:28:10.831Z",
+  "subCategoryID": null,
+  "title": "[BUG] MuteSelf parameter not updating accordingly",
+  "trendingScore": 2747.3797630588624,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-muteself-parameter-not-updating-accordingly",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61c2e9790a5e293630980e3d",
+      "alias": "Distinguished Bee",
+      "aliasID": "660c41a7e5d26962aa26fd07",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/056e9f0655ae80214eb7b28813b608d8.png",
+      "companies": [],
+      "name": "Kromas Ndorai",
+      "urlName": "jasmine-770",
+      "voteID": "630a3cb017dcb444b5f50926"
+    },
+    {
+      "_id": "61c3ae0dd2fcb12949a6838f",
+      "alias": "Giant Trout",
+      "aliasID": "65cac664ed6eefce4c06f0cf",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "starcheese",
+      "urlName": "starcheese",
+      "voteID": "61c3b48a540a6b18573a61e4"
+    }
+  ]
+}

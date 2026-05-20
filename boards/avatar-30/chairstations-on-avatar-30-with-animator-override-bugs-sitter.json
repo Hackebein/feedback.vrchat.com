@@ -1,0 +1,111 @@
+{
+  "__v": 0,
+  "_id": "5fb1b8f36cc9b6511c47859a",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:53:41.498973Z",
+  "author": {
+    "_id": "5f2d093a3e5e4b3102c1ed9d",
+    "alias": "Enchanting Wolverine",
+    "aliasID": "65cb1b91ed6eefce4c343eb7",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3deef5955c8000d6d1698e971cd98ce7.png",
+    "created": "2020-08-07T07:56:42.363Z",
+    "name": "Mississauga",
+    "serviceAccount": false,
+    "urlName": "mississauga"
+  },
+  "authorID": "5f2d093a3e5e4b3102c1ed9d",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-15T23:25:39.678Z",
+  "deletedAt": null,
+  "details": "I have a station on my Avatar 3.0 with an animator override that scales their size to 0.25 along with a VRC Animator Tracking Control component, \"Animations\" all enabled to fix a pose. When someone with Avatar 3.0 sits and gets off the station, their visemes/blendshape are frozen to its last position and their scale is not reset. Often, but not always, people are stuck with a large scaling. This is an awfully specific/niche bug but I was advised to report this issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7efe4c3e90df131fefd",
+  "imageURLs": [],
+  "lastUpdated": 1779032648986,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5fb1b8f36cc9b6511c47859a/1175467926.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-11-15T23:25:39.678Z",
+  "subCategoryID": null,
+  "title": "Chair/Stations on Avatar 3.0 with Animator Override bugs Sitter",
+  "trendingScore": 2922.196474097222,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "chairstations-on-avatar-30-with-animator-override-bugs-sitter",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d586c7f57433511432c5a",
+      "alias": "Binding Cricket",
+      "aliasID": "65c28339ed6eefce4cc2dcf3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bcc8d2a0d1fbd1e2d9f8149098a69a48.png",
+      "companies": [],
+      "name": "Avislime",
+      "urlName": "avislime",
+      "voteID": "6957892bf85d59c66d23b891"
+    },
+    {
+      "_id": "5f2cc216a2990547bfbf4c0d",
+      "alias": "Mandarin Krill",
+      "aliasID": "65c6b333ed6eefce4c9baee6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a01c279e0e50aa6ead81b3a53b719456.png",
+      "companies": [],
+      "name": "Quartz Xtal",
+      "urlName": "drcd",
+      "voteID": "601b173857484463f16c7abb"
+    },
+    {
+      "_id": "5f2d093a3e5e4b3102c1ed9d",
+      "alias": "Enchanting Wolverine",
+      "aliasID": "65cb1b91ed6eefce4c343eb7",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3deef5955c8000d6d1698e971cd98ce7.png",
+      "companies": [],
+      "name": "Mississauga",
+      "urlName": "mississauga",
+      "voteID": "5fb1b8f36cc9b6511c4785a1"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "676e751e746327494db3398b",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-16T21:33:15.156156Z",
+  "author": {
+    "_id": "66388fae4bead17faa9b3a57",
+    "alias": "Real Lemur",
+    "aliasID": "6752b981a367fa6392c2a1e4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6c552d0e5af8614f9744017757bb2569.png",
+    "created": "2024-05-06T08:07:10.543Z",
+    "name": "Kaoet",
+    "serviceAccount": false,
+    "urlName": "kaoet"
+  },
+  "authorID": "66388fae4bead17faa9b3a57",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-12-27T09:36:30.002Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When two players competing the ownership of a single synced GameObject using Networking.SetOwner(Networking.LocalPlayer, gameObject), both players will soon end up seeing themselves as the current owner.\n\nI made a bug reproducing world https://vrchat.com/home/world/wrld_5a62e086-b214-46a3-9ecf-1c912d2d934b. And the source code is at https://gist.github.com/kaoet/570ec7bbde8021450f688ba13cd76391\n\n1. You need two players to enter this world.\n\n2. Both players click the \"Start Competing Owner\" button.\n\n3. In the first few seconds, they will see the current owner text flaps between themselves and the other player, which is expected.\n\n4. But later, both of them will see \"Current Owner: me\", even if they stop the competing loop.\n\n5. In the Debug Menu 6 (shift+~+6), you can clearly see the \"GameManager\" object has different number in the \"Owner\" column.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba3ae4c3e90df139ebf3",
+  "imageURLs": [
+    "https://canny-assets.io/images/c943ec9f8305a8dabb7b60258e289937.png"
+  ],
+  "lastUpdated": 1779247124193,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/676e751e746327494db3398b/1945905678.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-12-27T09:36:30.003Z",
+  "subCategoryID": null,
+  "title": "Object Ownership become inconsistent when frequently changed",
+  "trendingScore": 2869.893196902782,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "updatedBy": null,
+  "urlName": "object-ownership-become-inconsistent-when-frequently-changed",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66388fae4bead17faa9b3a57",
+      "alias": "Real Lemur",
+      "aliasID": "6752b981a367fa6392c2a1e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c552d0e5af8614f9744017757bb2569.png",
+      "companies": [],
+      "name": "Kaoet",
+      "urlName": "kaoet",
+      "voteID": "676e751ea367fa63923d9efa"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "6632399ea65c88562bb1bf77",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T16:02:28.198659Z",
+  "author": {
+    "_id": "63c9760ef519ef0b8ce99165",
+    "alias": "Quince Pike",
+    "aliasID": "65c2bff3ed6eefce4c5e37e4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d2cdab699f57ab313c324546e11a6853.png",
+    "created": "2023-01-19T16:55:42.346Z",
+    "name": "Dor․",
+    "serviceAccount": false,
+    "urlName": "dor-53"
+  },
+  "authorID": "63c9760ef519ef0b8ce99165",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8783d561e5922d89ac4",
+    "created": "2023-09-22T15:53:28.541Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 412,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "650db8783d561e5922d89ac4",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-05-01T12:46:22.349Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "An increasing number of systems and avatars are adding a Time parameter, primarily to measure frametime (relevant canny https://feedback.vrchat.com/avatar-30/p/framerate-frametime-global-parameter) but also for other features (copying time to a parameter, then subtracting it from the current time to get the time since the copy, which can be used to trigger delayed actions, especially in blendtrees).\n\n* A native \"avatar time\" (time since the avatar loaded) would be appreciated to enable these systems to perform these actions without each one of them adding their own implementation of the parameter.\n\n* A parameter indicating how long an avatar has been worn overall would also be cool to have (stored server side, does not reset when the avatar is reset), it could be used to allow \"trials\" for avatars, enabling avatar features for a limited time (though this might be better served as a feature in the client).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9e1e4c3e90df138e4db",
+  "imageURLs": [],
+  "lastUpdated": 1779032728318,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6632399ea65c88562bb1bf77/1316189720.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-05-01T12:46:22.349Z",
+  "subCategoryID": null,
+  "title": "Time avatar parameter (not clock)",
+  "trendingScore": 2882.8060624322093,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "time-avatar-parameter-not-clock",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d586c7f57433511432c5a",
+      "alias": "Binding Cricket",
+      "aliasID": "65c28339ed6eefce4cc2dcf3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bcc8d2a0d1fbd1e2d9f8149098a69a48.png",
+      "companies": [],
+      "name": "Avislime",
+      "urlName": "avislime",
+      "voteID": "67ec05525388f556dbe00c4c"
+    },
+    {
+      "_id": "63c9760ef519ef0b8ce99165",
+      "alias": "Quince Pike",
+      "aliasID": "65c2bff3ed6eefce4c5e37e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d2cdab699f57ab313c324546e11a6853.png",
+      "companies": [],
+      "name": "Dor․",
+      "urlName": "dor-53",
+      "voteID": "6632399ed36452c179087508"
+    }
+  ]
+}

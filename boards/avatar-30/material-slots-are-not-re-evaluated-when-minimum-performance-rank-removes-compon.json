@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "66e0e6d34d66a31a4108ff0a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T16:03:47.192806Z",
+  "author": {
+    "_id": "65ceac9bec24e3339fb2aada",
+    "alias": "Dew Canidae",
+    "aliasID": "65ceac9b0129d7ae446858ba",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d6940cce8dd2aa4dc162a02ad12b587b.png",
+    "created": "2024-02-16T00:30:19.008Z",
+    "name": "anmeire",
+    "serviceAccount": false,
+    "urlName": "anmeire"
+  },
+  "authorID": "65ceac9bec24e3339fb2aada",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-09-11T00:39:47.348Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "As noted in documentation, some components (such as Particle Systems and Line Renderers) are automatically removed when an avatar exceeds the Minimum Display Performance Rank.\n\nThis allows the avatar to behave identically to its would-be performance ranking without these components present. **However, the avatar still counts material slots taken up by these no-longer present components.**\n\nThe issue is especially important on Quest, as just two of these components are enough to replace any would-be 'Excellent' performance avatars with the user's fallback, despite the avatar only using *one* material slot after these components are removed.\n\nA fix would be appreciated, as this unintended behaviour likely has a net negative effect on performance. The client refusing to display these avatars due to miscounted statistics encourages users to manually show the avatar, rather than letting their minimum performance settings take effect.\n\n*(Related considerations, as these components commonly have counting issues:)*\n\n- https://feedback.vrchat.com/sdk-bug-reports/p/particle-systems-with-no-renderers-that-has-trails-take-up-two-material-slots-in\n\n- https://feedback.vrchat.com/feature-requests/p/particle-systems-with-out-a-renderer-or-material-shouldnt-b-counted-as-having-a\n\n- https://feedback.vrchat.com/feature-requests/p/stats-system-separate-particle-material-slots-from-normal-material-slots",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba0fe4c3e90df1396f09",
+  "imageURLs": [],
+  "lastUpdated": 1779032732637,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66e0e6d34d66a31a4108ff0a/1246629252.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-09-11T00:39:47.348Z",
+  "subCategoryID": null,
+  "title": "Material slots are not re-evaluated when Minimum Performance Rank removes components",
+  "trendingScore": 2854.5542374864463,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": "65ceac9bec24e3339fb2aada",
+  "urlName": "material-slots-are-not-re-evaluated-when-minimum-performance-rank-removes-compon",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "65ceac9bec24e3339fb2aada",
+      "alias": "Dew Canidae",
+      "aliasID": "65ceac9b0129d7ae446858ba",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d6940cce8dd2aa4dc162a02ad12b587b.png",
+      "companies": [],
+      "name": "anmeire",
+      "urlName": "anmeire",
+      "voteID": "66e0e6d37d32abb6ca354cb7"
+    }
+  ]
+}

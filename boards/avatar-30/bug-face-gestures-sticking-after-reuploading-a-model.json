@@ -1,0 +1,143 @@
+{
+  "__v": 0,
+  "_id": "5fa930f9b3d88e43b95fe9e2",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-05-17T15:53:41.648600Z",
+  "author": {
+    "_id": "5f5d1650c8994e5eb57fbdb6",
+    "alias": "Reluctant Catshark",
+    "aliasID": "65cb1b91ed6eefce4c343ea8",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/dbf67207c0c9ed6cfca6212ae947bded.png",
+    "created": "2020-09-12T18:41:20.751Z",
+    "name": "Juuz0us",
+    "serviceAccount": false,
+    "urlName": "juuz0us"
+  },
+  "authorID": "5f5d1650c8994e5eb57fbdb6",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "6019a70bd241387c222f77b0",
+      "author": {
+        "_id": "5f2a4df969e04460cfc5e29d",
+        "alias": "Ancient Deer",
+        "aliasID": "65c27b15ed6eefce4c7e566e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/37512accad48c1ba2830411ce684acfe.png",
+        "created": "2020-08-05T06:13:13.415Z",
+        "name": "xantoz・ザントス",
+        "serviceAccount": false,
+        "urlName": "anton-kindestam"
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-02-02T19:24:59.622Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/ada5ba48ddebe18f8d617a5351ef5049.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5fa930f9b3d88e43b95fe9e2",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This is because the new example layers default to Write Defaults Off. You should make your avatar Write Defaults Off compliant. You will need to reset shape keys in some way after using then. \nOne expedient way of doing so is to simply create an extra layer above LeftHand/RightHand where you have an animation with the default values for all shape keys used for expressions (don't add any shape keys used for visemes though, that will cause breakage. if your avatar uses viseme shape keys in any of the gestures, you will need to solve it otherwise)\nSee picture for an example of this.\nDon't forget to uncheck Write Defaults on this new animator state node as well (unity defaults to it being on)",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-09T12:07:21.107Z",
+  "deletedAt": null,
+  "details": "After doing an update to a model nothing about the fx layer was changed but after reuploading the avatar, the face gestures for expressions now stick and continue to stack on top of each other until the avatar is reset",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7efe4c3e90df131feaa",
+  "imageURLs": [],
+  "lastUpdated": 1779032649044,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-11-09T12:07:21.107Z",
+  "subCategoryID": null,
+  "title": "[BUG] Face gestures sticking after reuploading a model",
+  "trendingScore": 2655.0521808803123,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-face-gestures-sticking-after-reuploading-a-model",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e9f7748c1896a15729cc0b1",
+      "alias": "Bronze Puma",
+      "aliasID": "65e0d15aa6e3ea79dd7a6cf2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6e53d0399b343a3be4d4a8eab3b77384.png",
+      "companies": [],
+      "name": "theorythatcher",
+      "urlName": "theorythatcher",
+      "voteID": "5faffec00241416661e46967"
+    },
+    {
+      "_id": "5f5d1650c8994e5eb57fbdb6",
+      "alias": "Reluctant Catshark",
+      "aliasID": "65cb1b91ed6eefce4c343ea8",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/dbf67207c0c9ed6cfca6212ae947bded.png",
+      "companies": [],
+      "name": "Juuz0us",
+      "urlName": "juuz0us",
+      "voteID": "5fa930f9b3d88e43b95fe9e9"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "_id": "69d97acd420092eaf416a31a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-18T13:51:13.376852Z",
+  "author": {
+    "_id": "62df20329dbd2f44ab573493",
+    "alias": "Lava Squid",
+    "aliasID": "67eadde65388f556db11870a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/152aec0b24fefa5afd07ad3603b5fadd.png",
+    "created": "2022-07-25T22:58:58.439Z",
+    "name": "Splinks",
+    "serviceAccount": false,
+    "urlName": "splinks"
+  },
+  "authorID": "62df20329dbd2f44ab573493",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 148,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-10T22:33:49.355Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In the \"Avatar Descriptor script\" the eyelids only consist of the up and down directions. Since it's already tired to the looking direction code can we please have custom morphs and bones setups for the left and right positions as well?\n\nThis would allow for more lightweight 2d style of eye tracking. At the moment to replicate this effect I'm having to make Contact Senders for each eye that interact with 8 Contact Receivers that trigger bools commands to change the morphs of each direction.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69d97acd420092eaf416a330",
+  "imageURLs": [
+    "https://canny-assets.io/images/a5ce323ead613e07425e4b1e86b3b74d.png"
+  ],
+  "lastUpdated": 1779111033494,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 7,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69d97acd420092eaf416a31a/1905013232.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 7,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-10T22:33:49.355Z",
+  "subCategoryID": null,
+  "title": "Eyelid Morphs for the rest of the directions",
+  "trendingScore": 2938.4910014194134,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": "62df20329dbd2f44ab573493",
+  "urlName": "eyelid-morphs-for-the-rest-of-the-directions",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f30421bda52487c3a337b91",
+      "alias": "Thorough Sparrow",
+      "aliasID": "65c36d1ded6eefce4c3fd90c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d2162f5e975ac32f8b76056be2c1429c.png",
+      "companies": [],
+      "name": "Desmoulins",
+      "urlName": "desmoulins-2",
+      "voteID": "69e0724bda2ea486f4e29c5f"
+    },
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "ravenworks",
+      "voteID": "69d99e1635a0fd8564f32ba7"
+    },
+    {
+      "_id": "5bc666fa95864a5a85bab7bf",
+      "alias": "Accessible Rooster",
+      "aliasID": "65cdd290ed6eefce4c0e6fb0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ba76a61f7e522e5a297af0762c023587.png",
+      "companies": [],
+      "name": "Rose Bursyoji",
+      "urlName": "kyle-eliot",
+      "voteID": "69d9884635a0fd85641d7ac2"
+    },
+    {
+      "_id": "60ae8aab043d6e47775449db",
+      "alias": "Old lace Haddock",
+      "aliasID": "65cc7eaced6eefce4c63b7ca",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c22eafec1d0f9d395dc2cfd950d4d40a.png",
+      "companies": [],
+      "name": "Toastador",
+      "urlName": "toastador",
+      "voteID": "69d97ec235a0fd8564981282"
+    },
+    {
+      "_id": "59b9b46ce46c3651b53cf85e",
+      "alias": "Sepia Chinchilla",
+      "aliasID": "65ba016fed6eefce4cf1831f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b47398974767e5746c89fde23b3f165d.png",
+      "companies": [],
+      "name": "Jared ",
+      "urlName": "rytmik-king",
+      "voteID": "69d97bf435a0fd8564222307"
+    },
+    {
+      "_id": "5b78b51f4c57643590fd8232",
+      "alias": "Ready Coral",
+      "aliasID": "65c28318ed6eefce4cbdb7a9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4647574ca2cb505da7f43e2e7159ea37.png",
+      "companies": [],
+      "name": "LoneEevee",
+      "urlName": "lone-eevee",
+      "voteID": "69d97bb735a0fd856417dac1"
+    },
+    {
+      "_id": "62df20329dbd2f44ab573493",
+      "alias": "Lava Squid",
+      "aliasID": "67eadde65388f556db11870a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/152aec0b24fefa5afd07ad3603b5fadd.png",
+      "companies": [],
+      "name": "Splinks",
+      "urlName": "splinks",
+      "voteID": "69d97acd35a0fd8564f18e3b"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "__v": 0,
+  "_id": "64c98225c852442bd62058de",
+  "aiCategories": [
+    "loc.login",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-05-19T18:32:49.684402Z",
+  "author": {
+    "_id": "5a983204a1528d415c5ced46",
+    "alias": "Chief Finch",
+    "aliasID": "65ba04aeed6eefce4c43afb3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+    "created": "2018-03-01T17:01:56.340Z",
+    "name": "naqtn",
+    "serviceAccount": false,
+    "urlName": "naqtn"
+  },
+  "authorID": "5a983204a1528d415c5ced46",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-08-01T22:07:33.737Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The `Open Help Documentation` button on `Email One-Time Code` dialog in the login sequence does not work. No action happens when you press the button.\n\nSo I guess it is intended to open a web page with a browser and other buttons to open the browser work properly (for instance `MM > Settings > Avatars > Avatar Optimizations`).\n\n# Repro steps:\n\n1. Start the app (I use the Steam version)\n\n2. Select the login method, and enter username and password correctly\n\n3. The app sometimes goes to the `Email One-Time Code` view. (I am not sure how to force this behavior)\n\n4. Press the `Cancel` button, then the app goes to another `Email One-Time Code` view\n\n5. Press the `Open Help Documentation` button",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb98fe4c3e90df137f0d9",
+  "imageURLs": [
+    "https://canny.io/images/978e4f5beec925df812e3ffffc7a387c.png"
+  ],
+  "lastUpdated": 1779215074560,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-08-01T22:07:33.737Z",
+  "subCategoryID": null,
+  "title": "Open Help Documentation button does not work",
+  "trendingScore": 2796.539135733801,
+  "updatedAt": "2026-05-19T18:25:27.723488Z",
+  "updatedBy": null,
+  "urlName": "open-help-documentation-button-does-not-work",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a983204a1528d415c5ced46",
+      "alias": "Chief Finch",
+      "aliasID": "65ba04aeed6eefce4c43afb3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+      "companies": [],
+      "name": "naqtn",
+      "urlName": "naqtn",
+      "voteID": "64c98226c852442bd6205913"
+    }
+  ]
+}

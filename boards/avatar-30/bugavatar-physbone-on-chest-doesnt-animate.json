@@ -1,0 +1,100 @@
+{
+  "__v": 0,
+  "_id": "640fe372f05ce2451e0f4b9d",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:59:06.841843Z",
+  "author": {
+    "_id": "5fcffbd1eac7313746724ea1",
+    "alias": "Coherent Bird",
+    "aliasID": "65c50d1fed6eefce4ccb7426",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/fec8db9492ab75d572564f1f1e7337ab.png",
+    "created": "2020-12-08T22:18:57.484Z",
+    "name": "Gσԃԃҽʂʂ Cԋασʂ",
+    "serviceAccount": false,
+    "urlName": "it-ballard"
+  },
+  "authorID": "5fcffbd1eac7313746724ea1",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-03-14T03:01:06.155Z",
+  "deletedAt": null,
+  "details": "So this has been an off and on bug so I figure I should bring this  to the team's attention: If you attach an Avatar Physbone to your chest (for breast bones that are 1 out), then it gets locked in place, making your upper body freeze up and swing wildly when walking. It's extremely distracting, and even worse in VR. If there's no Phys, or it was a Dynamic being emulated as a phys, then the chest animates fine. Here's a clip of it happening: https://www.youtube.com/watch?v=FWY4o139YaE\n\nAs you can see, the box I'm hold in the first and last model  my hand *roughly* stays near it (this is normal behavior). But when I switch to my 3 models with a chest Physbone, it flails wildly.\n\nEdit: Oops. I posted in the wrong section, as I saw it in the bug reports as \"tracked\" already. Just got done with 18h session on Unity so I'm pretty fried x,x",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb96fe4c3e90df1378d24",
+  "imageURLs": [],
+  "lastUpdated": 1779032714202,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-03-14T03:01:06.155Z",
+  "subCategoryID": null,
+  "title": "[Bug]Avatar Physbone on Chest doesn't Animate",
+  "trendingScore": 2777.04935311938,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bugavatar-physbone-on-chest-doesnt-animate",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "red-168",
+      "voteID": "6414f5e8b3fe1d76d66089b2"
+    },
+    {
+      "_id": "5fcffbd1eac7313746724ea1",
+      "alias": "Coherent Bird",
+      "aliasID": "65c50d1fed6eefce4ccb7426",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fec8db9492ab75d572564f1f1e7337ab.png",
+      "companies": [],
+      "name": "Gσԃԃҽʂʂ Cԋασʂ",
+      "urlName": "it-ballard",
+      "voteID": "640fe372f05ce2451e0f4bd1"
+    }
+  ]
+}

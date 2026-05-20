@@ -1,0 +1,113 @@
+{
+  "_id": "699eda4abc1e96a5ab9c7793",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-18T13:52:25.657771Z",
+  "author": {
+    "_id": "68d5afd8a8ab97d7d94015bd",
+    "alias": "Famous Cricket",
+    "aliasID": "68d5afd9a8ab97d7d9404757",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/238f1cea9ccc1d808c6194a4425a59b8.png",
+    "created": "2025-09-25T21:10:48.841Z",
+    "name": "Nelsoniwe",
+    "serviceAccount": false,
+    "urlName": "nelsoniwe"
+  },
+  "authorID": "68d5afd8a8ab97d7d94015bd",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-02-25T11:17:30.080Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently, when a player drops a VRC_Pickup object that has a solid collider and it accidentally lands inside the player's collider (their own or someone else's), the pickup collider becomes “transparent” to that player until it is picked up and dropped again outside the player collider.\n\nInstead of disabling the collider indefinitely, implement a check to re-enable it when it is safe to do so.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "699eda4abc1e96a5ab9c77b3",
+  "imageURLs": [],
+  "lastUpdated": 1779111071610,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/699eda4abc1e96a5ab9c7793/2005878558.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-02-25T11:17:30.080Z",
+  "subCategoryID": null,
+  "title": "Re-enable Collisions After Player Exits Dropped Item's Collider",
+  "trendingScore": 2931.3122672934874,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "re-enable-collisions-after-player-exits-dropped-items-collider",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68d5afdca8ab97d7d9411c77",
+      "alias": "Evergreen Gecko",
+      "aliasID": "68d5afdda8ab97d7d941385e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1c08b20e84313cd93291df28d9933aff.png",
+      "companies": [],
+      "name": "_PIKA",
+      "urlName": "pika-222",
+      "voteID": "699ee956804d20e9704578aa"
+    },
+    {
+      "_id": "62df2bfc5ab68c44b7e58ab8",
+      "alias": "Technical Chipmunk",
+      "aliasID": "65cfcfe00129d7ae44cddb26",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/addefb27a0388872d99c3882450860c1.png",
+      "companies": [],
+      "name": "BunnyLeos",
+      "urlName": "funnyleos",
+      "voteID": "699eda7d804d20e9705ce59e"
+    },
+    {
+      "_id": "68d5afd8a8ab97d7d94015bd",
+      "alias": "Famous Cricket",
+      "aliasID": "68d5afd9a8ab97d7d9404757",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/238f1cea9ccc1d808c6194a4425a59b8.png",
+      "companies": [],
+      "name": "Nelsoniwe",
+      "urlName": "nelsoniwe",
+      "voteID": "699eda4a804d20e9704fabbc"
+    }
+  ]
+}

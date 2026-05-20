@@ -1,0 +1,102 @@
+{
+  "__v": 0,
+  "_id": "66db3d5e14403abf197524c1",
+  "aiCategories": [],
+  "aiTaggedAt": "2026-05-17T21:57:02.936425Z",
+  "author": {
+    "_id": "62e1e57a8ec14e44acda4664",
+    "alias": "Waterspout Herring",
+    "aliasID": "65c2c411ed6eefce4cdaeb14",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3d7e37dd338ba532a9935ab6ad8e2d9b.png",
+    "created": "2022-07-28T01:25:14.933Z",
+    "name": "Sotalo",
+    "serviceAccount": false,
+    "urlName": "sotalo"
+  },
+  "authorID": "62e1e57a8ec14e44acda4664",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-09-06T17:35:26.775Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "UE4/UE5 Blueprints have the option to select and switch between multiple variables based on boolean true/false and integer values. Rather than duplicating many, many, many nodes to change the variable based on others in sequence, a list of variables can all be supplied to one node and properly selected.\n\nA good example: a microphone which increases a player's gain, near, far, and radius with 3 different loudness settings, then reverts back to default, will require 3-4 branch nodes and 16 nodes called to change settings. But with the select feature, no branches are needed, 4 variables can each be supplied to a select function on 4 nodes: just 4 nodes and 4 selectors. As the selection becomes more complicated, or more variables are needed, the selectors may become a little bigger, and the math for selection may be bigger, but the code for all that only needs to be made once, and the need for duplicating nodes many, many times goes away.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba0de4c3e90df1396900",
+  "imageURLs": [
+    "https://canny.io/images/8cee01290962d66624f3bfccc7864351.png"
+  ],
+  "lastUpdated": 1779054506821,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66db3d5e14403abf197524c1/1038492403.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-09-06T17:35:26.775Z",
+  "subCategoryID": null,
+  "title": "Variable Selector in Udon Graph",
+  "trendingScore": 2854.5786221057538,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "variable-selector-in-udon-graph",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6441682f1c9c481ef383bb95",
+      "alias": "Recent Toad",
+      "aliasID": "65c62ba6ed6eefce4cc61f30",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bce0103736b7bbccaf53029e64b798f4.png",
+      "companies": [],
+      "name": "zimbolt",
+      "urlName": "zimboltor",
+      "voteID": "66e0964e7d32abb6cada03e2"
+    },
+    {
+      "_id": "62e1e57a8ec14e44acda4664",
+      "alias": "Waterspout Herring",
+      "aliasID": "65c2c411ed6eefce4cdaeb14",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3d7e37dd338ba532a9935ab6ad8e2d9b.png",
+      "companies": [],
+      "name": "Sotalo",
+      "urlName": "sotalo",
+      "voteID": "66db3d5e7d32abb6ca77399b"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "62c300c083f83b0b9922d37b",
+  "aiCategories": [
+    "loc.loading-screen",
+    "loc.in-world",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-18T21:45:06.141726Z",
+  "author": {
+    "_id": "5f3debf587d66d22e91f2d79",
+    "alias": "Just Kingfisher",
+    "aliasID": "65d7eaeb0129d7ae44f82981",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/5b3ad9e9f678fcffd0f86b2f5234ca6b.png",
+    "created": "2020-08-20T03:20:21.986Z",
+    "name": "Seryk",
+    "serviceAccount": false,
+    "urlName": "seryk"
+  },
+  "authorID": "5f3debf587d66d22e91f2d79",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-07-04T15:01:20.048Z",
+  "deletedAt": null,
+  "details": "It’s been happening a lot lately, the world loads like normal but when it goes to the 'Initializing World' screen it stays there for around 2 minutes and then 'Your connection has timed out' and it tries again, on the second try it mostly succeeds. However, sometimes the process starts over again for 2 minutes after the first try, making it an exercise of patience to get on a world.\nThis issue happens about 40% of the time of world hopping and seems to happen on some worlds more than others, not mattering the world size – the Great Pug for example, always initialize straight in, making an easy issue to replicate if you are experiencing it.\nOn a side note, there’s also the issue of getting connection time out while already inside the world and booting you back to the initializing world screen, however such case is much more rare to happen, in 4 days of playing it only happened twice on the same world. I know for a fact that during all this time my connection has been stable and there were no lost packets during my gameplay, as I was testing it via the ping cmd.\nMy current specs: gtx 1070 (laptop version), i7-7700HQ 2.80ghz, 16gb ram, windows 10 home, Direct X 12, Oculus Rift CV1.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8ffe4c3e90df13627be",
+  "imageURLs": [],
+  "lastUpdated": 1779140166537,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-07-04T15:01:20.048Z",
+  "subCategoryID": null,
+  "title": "Long 'Initializing World' followed by 'Connection time out'",
+  "trendingScore": 2740.3539939580073,
+  "updatedAt": "2026-05-18T21:36:21.404734Z",
+  "urlName": "long-initializing-world-followed-by-connection-time-out",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3debf587d66d22e91f2d79",
+      "alias": "Just Kingfisher",
+      "aliasID": "65d7eaeb0129d7ae44f82981",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5b3ad9e9f678fcffd0f86b2f5234ca6b.png",
+      "companies": [],
+      "name": "Seryk",
+      "urlName": "seryk",
+      "voteID": "62c300c083f83b0b9922d3af"
+    }
+  ]
+}

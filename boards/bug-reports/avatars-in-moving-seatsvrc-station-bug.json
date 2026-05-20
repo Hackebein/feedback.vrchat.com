@@ -1,0 +1,100 @@
+{
+  "_id": "693fd89f0d0fd604b13b3996",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T02:39:24.460119Z",
+  "author": {
+    "_id": "693fcaf34927a96e5842e314",
+    "alias": "Operational Haddock",
+    "aliasID": "693fcaf34927a96e5842fe3c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/275fe55cddd7b4b375188838d86ccf3b.png",
+    "created": "2025-12-15T08:46:43.519Z",
+    "name": "Siosio1250",
+    "serviceAccount": false,
+    "urlName": "siosio1250"
+  },
+  "authorID": "693fcaf34927a96e5842e314",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-15T09:45:03.760Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When flying an aircraft in the world of piloting, the avatar feels as if it is being \"left behind\" by the aircraft's movements. It feels as if excessive inertia is at work. As I repeatedly accelerate and decelerate, my avatar's position keeps drifting further and further off. This never caused any issues before, but suddenly started happening a few days ago. The first photo shows normal conditions, the second shows acceleration, and the third shows deceleration. Normally, whether accelerating or decelerating, the posture should not change significantly from the first photo. Also, after disembarking the aircraft, the avatar's legs and hips were unnaturally altered and will not return to normal until the avatar is changed or reset.\n\nI suspect that the cause is that the immobilize for Vehicle feature within player mobility in VRC station is not functioning correctly.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "693fd89f0d0fd604b13b39cd",
+  "imageURLs": [
+    "https://canny-assets.io/images/fd2b5f96326854ae558345f51f97fedb.png",
+    "https://canny-assets.io/images/2dc3d6278117d63afa2505868ad2bbae.png",
+    "https://canny-assets.io/images/452380c8f11c33a07792a60755a8cf18.png"
+  ],
+  "lastUpdated": 1778985246103,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/693fd89f0d0fd604b13b3996/175533003.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-15T09:45:03.760Z",
+  "subCategoryID": null,
+  "title": "avatars in moving seats(VRC Station bug？)",
+  "trendingScore": 2920.8092379570494,
+  "updatedAt": "2026-05-17T02:36:27.581782Z",
+  "updatedBy": "693fcaf34927a96e5842e314",
+  "urlName": "avatars-in-moving-seatsvrc-station-bug",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6941ee9d4927a96e58fae0a7",
+      "alias": "Melodic Manatee",
+      "aliasID": "6941ee9e4927a96e58faf6fc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7cc2a8fa1b511765993208173985b099.png",
+      "companies": [],
+      "name": "si_no",
+      "urlName": "si-no-171",
+      "voteID": "6941eea04927a96e58fb8dbb"
+    },
+    {
+      "_id": "693fcaf34927a96e5842e314",
+      "alias": "Operational Haddock",
+      "aliasID": "693fcaf34927a96e5842fe3c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/275fe55cddd7b4b375188838d86ccf3b.png",
+      "companies": [],
+      "name": "Siosio1250",
+      "urlName": "siosio1250",
+      "voteID": "693fd89f4927a96e581a39d9"
+    }
+  ]
+}

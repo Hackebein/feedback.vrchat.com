@@ -1,0 +1,86 @@
+{
+  "_id": "697b69e425409d64901268ee",
+  "aiCategories": [
+    "loc.mobile-app",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-05-17T07:19:10.514749Z",
+  "author": {
+    "_id": "61c1f170d585bf0b4b32bd64",
+    "alias": "Sweet Reindeer",
+    "aliasID": "65cabcfbed6eefce4cf48ad4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/afa306e7c3a926e8185d4daf50547eae.png",
+    "created": "2021-12-21T15:23:28.484Z",
+    "name": "Equinn",
+    "serviceAccount": false,
+    "urlName": "equinn"
+  },
+  "authorID": "61c1f170d585bf0b4b32bd64",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-01-29T14:08:36.673Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Hardware: Quest 3\n\nOS version: v83.1025 Build 5156385.14650.520\n\nVRC client version: 2026.1.1-1784-2da3f5e58c-Release (ver. code: 992970)\n\nTool used to measure performance: OVR Metrics\n\nIssue description:\n\nIn any world on the standalone (Quest) version of VRC, I see a periodic (the period seems to be around 5 seconds and very consistent) CPU usage spike that seems to start as soon as the VRC client starts up and keeps repeating for the duration of VRC running. This happens regardless of the world, local avatar, etc (in every case I was the only person in the world so I don't know how remote avatars might influence this). \n\nDepending on the prevailing load situation these CPU usage spikes can cause a corresponding dip in framerate. This also means that this behaviour is very easy to miss because it doesn't always cause the framerate to drop, thus going unnoticed.\n\nThe spikes are quite considerable , roughly doubling (although this can vary a bit) the CPU usage briefly (I've seen CPU level go up from 2 to 4 for each spike in some worlds).\n\nGPU usage does not increase during these spikes.\n\nI could not reproduce the same behaviour in other Quest standalone games (such as bigscreen or rec room), suggesting this is specific to the VRC client (and hence I'm submitting this report).\n\nSteps to reproduce the issue:\n\n1.  Install OVR Metrics tool on the headset\n\n2. Enable persistent overlay in OVR Metrics\n\n3. Start up VRC on the headset in standalone mode, go to the VRC default home world (or any other world, but if the world already has a very high CPU load for whatever reason, you wont really see this effect of course)\n\n4. Observe CPU usage (\"CPU U\" on the OVR Metrics overlay) over a period of time, it should be roughly doubling (this varies a bit) briefly, every 5 seconds.\n\nI've attached a screengrap showing the \"sawtooth\" shape of the FPS graph, caused by the periodic CPU usage spikes. The extend of the FPS drops depends heavily on the specific load conditions of course.\n\nI realize this might not seem like a big problem in terms of performance, but on a platform like Quest as the load increases, these spikes might lead to stuttering, as an already stressed CPU tries to cope.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "697b69e425409d649012693b",
+  "imageURLs": [
+    "https://canny-assets.io/images/d84d98119b09fdb113aa7711d4cd50f2.png"
+  ],
+  "lastUpdated": 1779001825075,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/697b69e425409d64901268ee/1411724575.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-01-29T14:08:36.673Z",
+  "subCategoryID": null,
+  "title": "Consistent, severe, and highly periodic CPU usage spiking in standalone (Quest) viewer",
+  "trendingScore": 2926.777334978179,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "updatedBy": "61c1f170d585bf0b4b32bd64",
+  "urlName": "consistent-severe-and-highly-periodic-cpu-usage-spiking-in-standalone-quest-view",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61c1f170d585bf0b4b32bd64",
+      "alias": "Sweet Reindeer",
+      "aliasID": "65cabcfbed6eefce4cf48ad4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/afa306e7c3a926e8185d4daf50547eae.png",
+      "companies": [],
+      "name": "Equinn",
+      "urlName": "equinn",
+      "voteID": "697b69e46cefe3c2381003d0"
+    }
+  ]
+}

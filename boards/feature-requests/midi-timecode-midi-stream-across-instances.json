@@ -1,0 +1,139 @@
+{
+  "__v": 0,
+  "_id": "60771181b4d0a10cea23e764",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-19T15:34:34.360352Z",
+  "author": {
+    "_id": "5a015331a6fd0876a51d5148",
+    "alias": "Yellow green Hedgehog",
+    "aliasID": "65ba0195ed6eefce4cf5a163",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/516fcbfec0573fd09b972501798bf89f.png",
+    "created": "2017-11-07T06:31:13.751Z",
+    "name": "Laser",
+    "serviceAccount": false,
+    "urlName": "pjlaser"
+  },
+  "authorID": "5a015331a6fd0876a51d5148",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-04-14T16:00:01.580Z",
+  "deletedAt": null,
+  "details": "Since midi is supported in worlds: please add support for midi timecode and synchronization of world timelines to midi timecode. \nIn the event industry we use timecode as a clock for synchronization of all pre determined assets of a show.\nHaving a timecode stream be linked to a unity timeline in a world means nobody would miss out on pre-determined moments in a worlds show and gives the flexibility of an performer to jump between pre-created world events to create some unique experience not possible let in vrc (let alone scale this up).\nThis is also great for late joiners or people that crashed to join in on an event without missing out on what is happening.\nPerformance and data overhead addressing: in the show industry we can use frame smoothing filters that interpolates the gaps in timecode either when there is a drop of timecode or the update rate is lower due to dropping of packets. I have attached a screenshot of such a frame smoothener\nI'd be happy to adress any concerns with a proven system like this but please consider it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb891e4c3e90df134b3bc",
+  "imageURLs": [
+    "https://canny.io/images/7caf7ec1b1eeb14b935eab6f6f33e68b.png"
+  ],
+  "lastUpdated": 1779203780232,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-04-14T16:00:01.580Z",
+  "subCategoryID": null,
+  "title": "Midi Timecode + midi stream across instances",
+  "trendingScore": 2873.8945117939816,
+  "updatedAt": "2026-05-19T15:17:18.925120Z",
+  "urlName": "midi-timecode-midi-stream-across-instances",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6799bfe7f8e397b0872abe33",
+      "alias": "Heather Gibbon",
+      "aliasID": "6799bfe7546b2d4224533c36",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8629b557cf517001b4f02a40646b60cc.png",
+      "companies": [],
+      "name": "TheYellingBird",
+      "urlName": "theyellingbird",
+      "voteID": "6799c7c8546b2d42248e30fc"
+    },
+    {
+      "_id": "60bd667b4701af68ae6ae1b0",
+      "alias": "Raffia Bovid",
+      "aliasID": "65c35deded6eefce4c3273f7",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Oculusfluffy",
+      "urlName": "oculusfluffy",
+      "voteID": "626ab192293ef35292a6077c"
+    },
+    {
+      "_id": "5f77b41aa2a8ba19985983fb",
+      "alias": "Steady Catshark",
+      "aliasID": "65c4e532ed6eefce4c8ac935",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b7ecbcbfaf08cb35ef66d0a3f2482b03.png",
+      "companies": [],
+      "name": "Jay․Jay․",
+      "urlName": "jayjay-15",
+      "voteID": "61f0cf19d16e0c28d64e5eb7"
+    },
+    {
+      "_id": "5f6ec6cc3b74375328a446f1",
+      "alias": "Accessible Gerbil",
+      "aliasID": "65edd256a6e3ea79dd97f6d9",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5cf4000a1b4b8a2b617b1bdaa1e815ae.png",
+      "companies": [],
+      "name": "Delta Wolf",
+      "urlName": "delta-wolf",
+      "voteID": "607795fb4f59d67bd32c6154"
+    },
+    {
+      "_id": "5e8c2e14af4a860606a60ca3",
+      "alias": "Mighty Possum",
+      "aliasID": "65c28a12ed6eefce4cca5859",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dc3f8e98bc59d0fc78760ad806cacd99.png",
+      "companies": [],
+      "name": "Towneh",
+      "urlName": "towneh",
+      "voteID": "60772fbf713ae0193801bc03"
+    },
+    {
+      "_id": "5a015331a6fd0876a51d5148",
+      "alias": "Yellow green Hedgehog",
+      "aliasID": "65ba0195ed6eefce4cf5a163",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/516fcbfec0573fd09b972501798bf89f.png",
+      "companies": [],
+      "name": "Laser",
+      "urlName": "pjlaser",
+      "voteID": "60771185b4d0a10cea23e779"
+    }
+  ]
+}

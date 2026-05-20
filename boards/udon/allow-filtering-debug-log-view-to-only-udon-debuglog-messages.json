@@ -1,0 +1,113 @@
+{
+  "_id": "694161a2ea8d70f5e8281559",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T05:54:16.651665Z",
+  "author": {
+    "_id": "603b04282fa90e5c53608eb6",
+    "alias": "Variable Turtle",
+    "aliasID": "65c27d10ed6eefce4cc8cf32",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+    "created": "2021-02-28T02:47:04.064Z",
+    "name": "RavenWorks",
+    "serviceAccount": false,
+    "urlName": "ravenworks"
+  },
+  "authorID": "603b04282fa90e5c53608eb6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-16T13:41:54.502Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently, when trying to debug Udon in a world, you have to scroll through hundreds and hundreds of lines of internal VRChat debug log things, about checking the user's avatar, inventory, etc, etc.....   I understand why those *could* be important to see, but in any situation where a user is only trying to see their own Udon script's debug.log lines, they make it almost impossible to find the log lines that you're actually looking for.\n\nA way to filter the log to just lines containing a particular string would suffice (we could manually stick that string in our debug.log lines), but a way to filter it to just messages that came from an Udon script calling Debug.Log would probably be the most convenient.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "694161a2ea8d70f5e82815cc",
+  "imageURLs": [],
+  "lastUpdated": 1779082478786,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/694161a2ea8d70f5e8281559/1334711936.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-16T13:41:54.502Z",
+  "subCategoryID": null,
+  "title": "Allow filtering debug log view to only Udon debug.log messages",
+  "trendingScore": 2921.7631278231256,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": null,
+  "urlName": "allow-filtering-debug-log-view-to-only-udon-debuglog-messages",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": "crazyiseasy",
+      "voteID": "694df038f85d59c66d2fe349"
+    },
+    {
+      "_id": "67ad43caa208a6b8e7799a0e",
+      "alias": "Rear Canid",
+      "aliasID": "67ad43cab324a962094a6d49",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a0ff9d985737b9395e073997ccc15432.png",
+      "companies": [],
+      "name": "rennelogue",
+      "urlName": "sillyvrcat",
+      "voteID": "694375a54927a96e5834ffc2"
+    },
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "ravenworks",
+      "voteID": "694161a24927a96e58b1af60"
+    }
+  ]
+}

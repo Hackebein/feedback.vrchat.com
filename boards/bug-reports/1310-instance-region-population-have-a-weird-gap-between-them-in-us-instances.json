@@ -1,0 +1,131 @@
+{
+  "__v": 0,
+  "_id": "6494970723874809639be04b",
+  "aiCategories": [
+    "loc.main-menu",
+    "social.instances"
+  ],
+  "aiTaggedAt": "2026-05-19T07:59:36.691202Z",
+  "author": {
+    "_id": "5fca5df4d58780532024a52b",
+    "alias": "Toffee Tortoise",
+    "aliasID": "65c26da3ed6eefce4c4d0863",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
+    "created": "2020-12-04T16:04:04.984Z",
+    "name": "DrBlackRat",
+    "serviceAccount": false,
+    "urlName": "drblackrat"
+  },
+  "authorID": "5fca5df4d58780532024a52b",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-06-22T18:46:31.502Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "# Issue:\n\nWhen looking at a world in the Main Menu, you can see the Instance Region and Population.\n\nDue to the fact that the US East / West Region need a character to declare them as East / West after the flag, the number for the Population needs to be moved around depending on if it's a US East / West or EU / JP instance.\n\nThis does not work correctly in the Main Menu however, there the Instance Population always has the distance to fit a character after the flag. The Quick Menu Here Tab & User Profile do not have that issue though, they adjust accordingly.\n\n# Expected Behavior:  \n\nThe Instance Population number should be moved closer / further away from the Instance Region flag in the Main Menu depending on if it's a US East / West or EU / JP instance. Just like it's done in the Quick Menu\n\n# Attachments:  \n\nHere are pictures showcasing the issue:",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb985e4c3e90df137d1ab",
+  "imageURLs": [
+    "https://canny.io/images/6b94c4b9bcef9088032836b67c8abd07.png",
+    "https://canny.io/images/42881ec5e4e9094b605013838087472e.png"
+  ],
+  "lastUpdated": 1779175713316,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-06-22T18:46:31.503Z",
+  "subCategoryID": null,
+  "title": "[1310] Instance Region & Population have a weird gap between them in US Instances",
+  "trendingScore": 2792.0826713636093,
+  "updatedAt": "2026-05-19T07:29:08.486735Z",
+  "updatedBy": null,
+  "urlName": "1310-instance-region-population-have-a-weird-gap-between-them-in-us-instances",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "fizzy-canny",
+      "voteID": "6494daf5b4f23509d51d3017"
+    },
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d03ff26f975679707203bd269ce42822.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": "tonylewis",
+      "voteID": "6494cc3fb2fbc30958d22cac"
+    },
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": "dagger1675",
+      "voteID": "64949c3041568809af8a63c4"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "vrcprefabs",
+      "voteID": "6494970d4eb97fd876d8e56b"
+    },
+    {
+      "_id": "5fca5df4d58780532024a52b",
+      "alias": "Toffee Tortoise",
+      "aliasID": "65c26da3ed6eefce4c4d0863",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
+      "companies": [],
+      "name": "DrBlackRat",
+      "urlName": "drblackrat",
+      "voteID": "6494970723874809639be08f"
+    }
+  ]
+}

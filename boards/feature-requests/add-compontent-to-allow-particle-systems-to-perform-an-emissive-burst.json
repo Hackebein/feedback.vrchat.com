@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "607696bf713ae01938f809af",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-19T15:34:19.444993Z",
+  "author": {
+    "_id": "5c4bd9bca31c1d6ef9355351",
+    "alias": "Jonquil Stingray",
+    "aliasID": "65c36fe8ed6eefce4ca2c227",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e39d4fc9066835a4b2808a4ea534cf9a.png",
+    "created": "2019-01-26T03:53:32.280Z",
+    "name": "-Mino-",
+    "serviceAccount": false,
+    "urlName": "yanderainy"
+  },
+  "authorID": "5c4bd9bca31c1d6ef9355351",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-04-14T07:16:15.140Z",
+  "deletedAt": null,
+  "details": "This title probably sounds confusing, but to explain: When using Particle Systems, if you wanna create a burst of particles, you can do so through the editor to play on the system being turned on. However, to create another burst of particles, you must turn the system off and on again, which causes any particles already in that system to instantly disappear. In Unity 2018, you can work around this with a Broken Sub-Emitter, and even the version of Unity 2019 I've tested has it working as well inside of play mode. but this is obviously outside of documentation, and deserves a more proper implementation as VRChat continues to update Unity Versions.\nExamples of how this is useful, Avatars can have guns that shoot slow moving lasers, and can fire additional lazers without causing previously fired ones to disappear.\nAn avatar can have a pillow that can cause a burst of feathers to pop up as if you hit somebody with the pillow, while not turning off existing feathers to do so.\nWorth mentioning, another alternative could be to allow a player to spawn in a particle system directly through animations that self destruct with a stop-action, but it's easier to go overboard this way. Through the pillow example, the feather particles probably will stick around for a few seconds, meaning that spamming the 'pillow hit' animation could create a lot of particle systems at once. However, the ability to simply animate the emissive burst itself means that you could have multiple feathers on one system, and also set the particle limit to prevent creating new feathers if older ones haven't yet despawned.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb891e4c3e90df134b3ac",
+  "imageURLs": [],
+  "lastUpdated": 1779203779604,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-04-14T07:16:15.140Z",
+  "subCategoryID": null,
+  "title": "Add compontent to allow Particle systems to perform an Emissive Burst",
+  "trendingScore": 2862.6788131564153,
+  "updatedAt": "2026-05-19T15:17:18.925120Z",
+  "urlName": "add-compontent-to-allow-particle-systems-to-perform-an-emissive-burst",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f35425244022e441ca264b2",
+      "alias": "Emerald Mackerel",
+      "aliasID": "65c3ab2ded6eefce4cd27e08",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2cd9f36838f8ccf0023129a212b2fd89.png",
+      "companies": [],
+      "name": "souki2512",
+      "urlName": "souki2512",
+      "voteID": "673246b2c66e81bbd4e2d51b"
+    },
+    {
+      "_id": "6072b6d545db2d23f1f2856c",
+      "alias": "Graceful Gazelle",
+      "aliasID": "65cb1f37ed6eefce4c8e8f3f",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "M̶E̶E̶P̶E̶S̶",
+      "urlName": "xxbluewasp907xx",
+      "voteID": "6076d573407f162833b69a74"
+    },
+    {
+      "_id": "5c4bd9bca31c1d6ef9355351",
+      "alias": "Jonquil Stingray",
+      "aliasID": "65c36fe8ed6eefce4ca2c227",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e39d4fc9066835a4b2808a4ea534cf9a.png",
+      "companies": [],
+      "name": "-Mino-",
+      "urlName": "yanderainy",
+      "voteID": "607696c0713ae01938f809c3"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "6063daaba0787448979aea30",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:26:51.240302Z",
+  "author": {
+    "_id": "604c33fbbe941f7ca5b0515c",
+    "alias": "Organic Wolverine",
+    "aliasID": "65cb4821ed6eefce4c9cee9e",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/cdd1321c8dca1c75fe8bf4826e7911e7.png",
+    "created": "2021-03-13T03:39:39.429Z",
+    "name": "gladeare",
+    "serviceAccount": false,
+    "urlName": "gladeare"
+  },
+  "authorID": "604c33fbbe941f7ca5b0515c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-03-31T02:12:59.140Z",
+  "deletedAt": null,
+  "details": "It would be great if MIDI Note On messages with a velocity of 0 never made it to the On MIDI Note On node, and were rerouted to MIDI Note Off instead. \nThe MIDI spec states \"A receiver must be capable of recognizing either method of turning off a note, and should treat them identically.\", which can be implemented using nodes, but is a hassle that can cause bugs due to combined flow paths(img 1, ignore the iNumber and iVelocity, they are integers I needed for my program), and is not considered by anyone. I have not seen a single map following this specification yet, proving to me that simplifying the process by automatically rerouting to Midi Note Off would be useful.\nThe MIDI spec mentioned can be found at https://www.midi.org/specifications/midi1-specifications/m1-v4-2-1-midi-1-0-detailed-specification-96-1-4 on page 10 with the title \"NOTE-OFF\". A screenshot of the relevant part is attached(img 2).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb821e4c3e90df1326339",
+  "imageURLs": [
+    "https://canny.io/images/0aebcd20cd513530aeb8442c37b1aace.png",
+    "https://canny.io/images/0fed2b8a611e0480150efebf7cdf5458.png"
+  ],
+  "lastUpdated": 1779247166731,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-03-31T02:12:59.140Z",
+  "subCategoryID": null,
+  "title": "Reroute MIDI Note On with velocity 0 to Note Off by default",
+  "trendingScore": 2674.563483118887,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "reroute-midi-note-on-with-velocity-0-to-note-off-by-default",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "604c33fbbe941f7ca5b0515c",
+      "alias": "Organic Wolverine",
+      "aliasID": "65cb4821ed6eefce4c9cee9e",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/cdd1321c8dca1c75fe8bf4826e7911e7.png",
+      "companies": [],
+      "name": "gladeare",
+      "urlName": "gladeare",
+      "voteID": "6063daaba0787448979aea37"
+    }
+  ]
+}

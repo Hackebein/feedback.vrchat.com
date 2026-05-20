@@ -1,0 +1,94 @@
+{
+  "__v": 0,
+  "_id": "6839ef1bfafd39c27c649102",
+  "aiCategories": [
+    "loc.website",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-05-17T22:26:45.068548Z",
+  "author": {
+    "_id": "600bb08cb76d6f78b108fb38",
+    "alias": "Zircon Yak",
+    "aliasID": "65c26de3ed6eefce4c583db2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+    "created": "2021-01-23T05:13:48.067Z",
+    "name": "DAG-XR",
+    "serviceAccount": false,
+    "urlName": "dagger1675"
+  },
+  "authorID": "600bb08cb76d6f78b108fb38",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-30T17:47:07.704Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "\"Haha, I blocked myself.\"\n\nDevice: Samsung S24 Ultra\n\nBrowsers: Chrome, and Adblock Browser\n\nSteps to repro:\n\n1. Block a user via the website, OR view the profile of a user that you already have blocked\n\n2. Go back to your own profile page\n\n3. You can see that you have a blocked icon against yourself\n\nRefreshing the page will remove the blocked icon. Repeating the steps above will trigger the bug.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6839ef1cfafd39c27c649164",
+  "imageURLs": [
+    "https://canny-assets.io/images/bf965ab599bed5c459f852184f211adf.jpeg"
+  ],
+  "lastUpdated": 1779056622521,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6839ef1bfafd39c27c649102/2044729882.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-30T17:47:07.704Z",
+  "subCategoryID": null,
+  "title": "Blocked icon displays on your own profile",
+  "trendingScore": 2891.941870474211,
+  "updatedAt": "2026-05-17T22:25:22.540712Z",
+  "updatedBy": "600bb08cb76d6f78b108fb38",
+  "urlName": "blocked-icon-displays-on-your-own-profile",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": "dagger1675",
+      "voteID": "6839ef1bb25ebd721984cc9b"
+    }
+  ]
+}

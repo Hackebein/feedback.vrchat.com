@@ -1,0 +1,112 @@
+{
+  "__v": 0,
+  "_id": "6410328fed2dd845357dde17",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:38:59.323389Z",
+  "author": {
+    "_id": "5f2d6f73f6abbf61555c4e3b",
+    "alias": "Pale Roadrunner",
+    "aliasID": "65c389caed6eefce4cb8c040",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d69bb5d63c5b3e7e695b6b2629de0ce0.png",
+    "created": "2020-08-07T15:12:51.500Z",
+    "name": "red-panda",
+    "serviceAccount": false,
+    "urlName": "red-panda-2"
+  },
+  "authorID": "5f2d6f73f6abbf61555c4e3b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-03-14T08:38:39.497Z",
+  "deletedAt": null,
+  "details": "Objects spawned from a VRC Object Pool no longer call `OnDeserialization()` for late joiners.  \n\nObjects get spawned by the pool and placed in the world by the user, after that, `RequestSerialization()` is called. (So it is not related to this [issue](https://feedback.vrchat.com/vrchat-udon-closed-alpha-bugs/p/1287-ondeserialization-no-longer-being-called-on-manual-synced-objects-unless-re))  \n\nIt properly runs and syncs with people already in the world.  \n\nLate joiners now will run `Start()` (which, a year ago object pool objects did not run `Start()` or `OnEnable()`, that got fixed now) but never `OnDeserialization()`.  \n\n  \n\nA current workaround is: the `Start()` is called very late and has the variables synced already, so any placement logic can go in there, but that requires updating old worlds.  \n\nThe documentation says, any networked object is calling `OnDeserialization()` for late joiners, which it doesn't in this case.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb96fe4c3e90df1378d20",
+  "imageURLs": [],
+  "lastUpdated": 1779039010558,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6410328fed2dd845357dde17/965520384.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-03-14T08:38:39.497Z",
+  "subCategoryID": null,
+  "title": "[1287] OnDeserialization no longer called for late joiners for manual synced objects spawned from VRC Object Pool",
+  "trendingScore": 2908.333858060516,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "urlName": "1287-ondeserialization-no-longer-called-for-late-joiners-for-manual-synced-objec",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e8487f1fd13be66cecc227b",
+      "alias": "Parental Pelican",
+      "aliasID": "65c27264ed6eefce4c1809f0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a9214313f7ec7543de56b5c762235d5e.png",
+      "companies": [],
+      "name": "みみー／Mimy",
+      "urlName": "88c75b",
+      "voteID": "68d79abd4f674f1b1e9e52ae"
+    },
+    {
+      "_id": "5f296274667e9234c9e5a439",
+      "alias": "Serious Gull",
+      "aliasID": "65c2a213ed6eefce4c61e29c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c37adc238e472b004a06fdb4a662a72.png",
+      "companies": [],
+      "name": "ville672",
+      "urlName": "ville672-1",
+      "voteID": "645d1c1311b7d609becaf7f8"
+    },
+    {
+      "_id": "5f2d6f73f6abbf61555c4e3b",
+      "alias": "Pale Roadrunner",
+      "aliasID": "65c389caed6eefce4cb8c040",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d69bb5d63c5b3e7e695b6b2629de0ce0.png",
+      "companies": [],
+      "name": "red-panda",
+      "urlName": "red-panda-2",
+      "voteID": "6410328fed2dd845357dde49"
+    }
+  ]
+}

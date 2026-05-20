@@ -1,0 +1,142 @@
+{
+  "_id": "69b821bd187b1ade59f13900",
+  "aiCategories": [
+    "loc.hud",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-05-17T08:54:02.309219Z",
+  "author": {
+    "_id": "69b81d5bed082c99818ce7b3",
+    "alias": "Profound Crow",
+    "aliasID": "69b81d5ced082c99818d0a25",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a371bcbfee118243c27b47560ae0b6d4.png",
+    "created": "2026-03-16T15:10:19.989Z",
+    "name": "Miniontoby",
+    "serviceAccount": false,
+    "urlName": "miniontoby"
+  },
+  "authorID": "69b81d5bed082c99818ce7b3",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69b883afbd60facaaf545ca0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69b81d5bed082c99818ce7b3",
+        "alias": "Profound Crow",
+        "aliasID": "69b81d5ced082c99818d0a25",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a371bcbfee118243c27b47560ae0b6d4.png",
+        "created": "2026-03-16T15:10:19.989Z",
+        "name": "Miniontoby",
+        "serviceAccount": false,
+        "urlName": "miniontoby"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-03-16T22:26:55.693Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/ae62b8ed1ee58060ae90f4ac9304c9a8.png",
+        "https://canny-assets.io/images/1873f577b4f9bb70382dc1a2c5cbc7b8.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69b821bd187b1ade59f13900",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Even with the UI mask/layer on, then it also goes on top of world stuff and over avatars",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-16T15:29:01.794Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The Drone Camera preview's z-index (CSS terms) is higher than the face mirror, but the face mirrors z-index is higher than the drone controller decorative UI.\n\nSo you have the drone controller decorative UI, then the face mirror, and then the camera preview (see image)\n\nReproduction steps:\n\n1. Open VRChat with VRC+ subscription\n\n2. Start dancing emote (also works by bending to the right)\n\n3. Enable face mirror if not enabled yet\n\n4. Open the VRChat Drone\n\n5. See the problem\n\nAttached video follows these steps and shows the issue\n\nBug has only been tested on PC (Windows). It might exist on other platforms as well",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/e5de60ffb49efba8eb9a6f038e0afe69.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-03-16 16-37-00.remuxed",
+      "url": "https://canny-assets.io/files/e5de60ffb49efba8eb9a6f038e0afe69.mp4"
+    }
+  ],
+  "ideaID": "69b821bd187b1ade59f1391f",
+  "imageURLs": [
+    "https://canny-assets.io/images/96f8f3a5a501ff1018cad5009b076305.png"
+  ],
+  "lastUpdated": 1779007857936,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69b821bd187b1ade59f13900/484670720.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-16T15:29:01.794Z",
+  "subCategoryID": null,
+  "title": "Z-Index of Drone Camera Preview is higher than face mirror.",
+  "trendingScore": 2933.356741499343,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": "69b81d5bed082c99818ce7b3",
+  "urlName": "z-index-of-drone-camera-preview-is-higher-than-face-mirror",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69b81d5bed082c99818ce7b3",
+      "alias": "Profound Crow",
+      "aliasID": "69b81d5ced082c99818d0a25",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a371bcbfee118243c27b47560ae0b6d4.png",
+      "companies": [],
+      "name": "Miniontoby",
+      "urlName": "miniontoby",
+      "voteID": "69b821bded082c9981d0d8b6"
+    }
+  ]
+}

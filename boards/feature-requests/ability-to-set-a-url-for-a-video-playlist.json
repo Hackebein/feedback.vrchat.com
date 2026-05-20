@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "5ba03411ecd86722a42ec33b",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-18T17:25:42.466055Z",
+  "author": {
+    "_id": "5a4b034d1ab4366d42644996",
+    "alias": "Aegean Pelican",
+    "aliasID": "65c2a245ed6eefce4c6938c0",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3c5acd8373c1a323c0e3236054bea824.png",
+    "created": "2018-01-02T03:58:05.987Z",
+    "name": "hakanai",
+    "serviceAccount": false,
+    "urlName": "trejkaz-loves"
+  },
+  "authorID": "5a4b034d1ab4366d42644996",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-09-17T23:09:05.044Z",
+  "deletedAt": null,
+  "details": "VRC_SyncVideoPlayer forces me to choose the videos in the playlist up-front, so even if I want to make a redirector, I have to hard-code hundreds of placeholder URLs into the component in order to cater for a playlist as long as you want.\n\nIt would be much simpler if we could input a URL to a single file (JSON or whatever) which then contains the list of URLs to use.\n\n(Support for YouTube playlist URLs would be nice too, but I already gave up on YouTube for my videos so I'd want to be able to self-host it.)",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d5fe4c3e90df157a6b0",
+  "imageURLs": [],
+  "lastUpdated": 1779124088309,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-09-17T23:09:05.044Z",
+  "subCategoryID": null,
+  "title": "Ability to set a URL for a video playlist",
+  "trendingScore": 2543.624965394421,
+  "updatedAt": "2026-05-18T17:08:14.138713Z",
+  "urlName": "ability-to-set-a-url-for-a-video-playlist",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b9bf8dcf250536b70d1eb0f",
+      "alias": "Beneficial Barnacle",
+      "aliasID": "65d2eac70129d7ae44403169",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e29568fbfad6652be3dc9d7ec5e3af9c.png",
+      "companies": [],
+      "name": "Frostyfaucet",
+      "urlName": "frosty-faucet",
+      "voteID": "5baea9ee39579015e3bae12e"
+    },
+    {
+      "_id": "5a4b034d1ab4366d42644996",
+      "alias": "Aegean Pelican",
+      "aliasID": "65c2a245ed6eefce4c6938c0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3c5acd8373c1a323c0e3236054bea824.png",
+      "companies": [],
+      "name": "hakanai",
+      "urlName": "trejkaz-loves",
+      "voteID": "5ba0341139579015e3aeba03"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "6144f7bea3e1bb4d97d11f7c",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:01:03.454336Z",
+  "author": {
+    "_id": "5f8a26770aaa28611fedd6b6",
+    "alias": "Average Loon",
+    "aliasID": "65c28318ed6eefce4cbdb922",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+    "created": "2020-10-16T23:02:15.960Z",
+    "name": "Faxmashine",
+    "serviceAccount": false,
+    "urlName": "faxmachine"
+  },
+  "authorID": "5f8a26770aaa28611fedd6b6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-09-17T20:17:02.915Z",
+  "deletedAt": null,
+  "details": "When a player's fallback avatar is shown, their player position may be incorrect for other players.\nFor example: Our game world has game objects which automatically follow each player (via `GetPosition()`). If a player uses a large avatar, and their fallback avatar is small, their will apear to float high in the air. This would not normally be possible, and can break our game.\nI'm not sure whether this issue has existed before version 2021.3.4, but it has made the bug very apparent.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b4e4c3e90df1354638",
+  "imageURLs": [],
+  "lastUpdated": 1778979215865,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-09-17T20:17:02.915Z",
+  "subCategoryID": null,
+  "title": "Player position wrong with fallback avatars",
+  "trendingScore": 2698.95674332722,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "player-position-wrong-with-fallback-avatars",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f8a26770aaa28611fedd6b6",
+      "alias": "Average Loon",
+      "aliasID": "65c28318ed6eefce4cbdb922",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+      "companies": [],
+      "name": "Faxmashine",
+      "urlName": "faxmachine",
+      "voteID": "6144f7bea3e1bb4d97d11f83"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "__v": 0,
+  "_id": "68019ef0d9c58a954c3e3afe",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T16:05:27.616690Z",
+  "author": {
+    "_id": "64355a02cd08838f5c2c2049",
+    "alias": "Numerous Egret",
+    "aliasID": "68019e838ccc1d8b3b1ce36f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c8fe5c494e2b3e0d726f97e4ed9afa41.png",
+    "created": "2023-04-11T13:00:50.129Z",
+    "name": "Devoury",
+    "serviceAccount": false,
+    "urlName": "devoury"
+  },
+  "authorID": "64355a02cd08838f5c2c2049",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "680a5c6bb136c0d8332d2b56",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5e877e5e60de627e6ba7946a",
+        "alias": "Beige Prawn",
+        "aliasID": "65c5754bed6eefce4c8097c4",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/ca08ffbc1ab4f7efa44ec8917b2bced9.png",
+        "created": "2020-04-03T18:20:14.715Z",
+        "name": "Kiro",
+        "serviceAccount": false,
+        "urlName": "chase-grozdina"
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-04-24T15:44:43.323Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "68019ef0d9c58a954c3e3afe",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Hello Devoury,\n\n  I've taken a look at a few of the avatars in your account which appear to exhibit this issue.  The problem is that the avatars appear to have multiple VRCPhysBone components enabled at the same time, all which have isAnimated enabled and affecting the same bones.  This is not a supported setup.\n\nPhysbones components prior to the update ran all at the same time, so although the above setup wasn't correct, the results appeared fine.  Now that Physbones run in order, the components affecting the same bones are affecting each other.  One component moves the bones, the next component affecting the same bones sees this as animation, etc.\n\nThis unfortunately is something you will need to fix on your avatars.  Ideally you should never have two physbone components affecting the same bones.  If you do, then those components will need to have isAnimated disabled.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-04-18T00:38:08.984Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Hello, i want to report a bug that started happening since one of the updates regarding Physbones and animation.\n\nIt has completely corrupted all my avatar variations of the same body - different outfit booth base avatars. Basically, chest and thighs have a mind of their own at this point and it changes depending on the slider. Though, i have to say i didn't have these issues previously only started around a month ago if i remember correctly.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/f767c8452b866195916b649ef9670f42.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "18.04.2025_03.21.33_REC",
+      "url": "https://canny-assets.io/files/f767c8452b866195916b649ef9670f42.mp4"
+    }
+  ],
+  "ideaID": "680bba66e4c3e90df13a5ccf",
+  "imageURLs": [
+    "https://canny-assets.io/images/e1aed6a409ad4258e78f7cc213985667.png"
+  ],
+  "lastUpdated": 1779032775074,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68019ef0d9c58a954c3e3afe/798165683.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-04-18T00:38:08.984Z",
+  "subCategoryID": null,
+  "title": "Physbone update has corrupted all my avatar versions",
+  "trendingScore": 2885.839789354006,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "physbone-update-has-corrupted-all-my-avatar-versions",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64355a02cd08838f5c2c2049",
+      "alias": "Numerous Egret",
+      "aliasID": "68019e838ccc1d8b3b1ce36f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c8fe5c494e2b3e0d726f97e4ed9afa41.png",
+      "companies": [],
+      "name": "Devoury",
+      "urlName": "devoury",
+      "voteID": "68019ef18ccc1d8b3b2f73ae"
+    }
+  ]
+}

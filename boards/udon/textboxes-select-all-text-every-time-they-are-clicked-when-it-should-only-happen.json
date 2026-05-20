@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "5df9e0d4a78c0e3f5469293e",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:48:55.407232Z",
+  "author": {
+    "_id": "5df9dd7811438a33344ad948",
+    "alias": "Prairie sand Parakeet",
+    "aliasID": "65c6232ded6eefce4c82163d",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/42cb856a8a4754d7ce432edee0aabdae.png",
+    "created": "2019-12-18T08:04:08.442Z",
+    "name": "Takayama",
+    "serviceAccount": false,
+    "urlName": "takayama"
+  },
+  "authorID": "5df9dd7811438a33344ad948",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-18T08:18:28.110Z",
+  "deletedAt": null,
+  "details": "SDK: VRCSDK3-2019.12.14.17.08\nUDON: UDONSDK-2019.12.17.12.55_Public\n\nUnity editor textboxes are supposed to select all text when they are clicked for the first time, then behave like normal textboxes on any subsequent clicks, but the Udon textboxes select all text every single time you click them. \nThis makes it kind of difficult to edit existing values within the textboxes.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9be4c3e90df158a6c5",
+  "imageURLs": [],
+  "lastUpdated": 1779223365487,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-18T08:18:28.110Z",
+  "subCategoryID": null,
+  "title": "Textboxes select all text every time they are clicked when it should only happen the first time",
+  "trendingScore": 2608.3296889135495,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "textboxes-select-all-text-every-time-they-are-clicked-when-it-should-only-happen",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d725908cb1652c95b08a294422da5ff5.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": "bryan-bortz",
+      "voteID": "5dfab45c6959334ca0c6704a"
+    },
+    {
+      "_id": "595459a74f08c21baf12e507",
+      "alias": "Wandering Mongoose",
+      "aliasID": "65c38fa6ed6eefce4cc9c51f",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "EvolvedAnt",
+      "urlName": "evolvedant",
+      "voteID": "5dfa622c3576014c75c358e7"
+    },
+    {
+      "_id": "5df9dd7811438a33344ad948",
+      "alias": "Prairie sand Parakeet",
+      "aliasID": "65c6232ded6eefce4c82163d",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/42cb856a8a4754d7ce432edee0aabdae.png",
+      "companies": [],
+      "name": "Takayama",
+      "urlName": "takayama",
+      "voteID": "5df9e0d4a78c0e3f54692946"
+    }
+  ]
+}

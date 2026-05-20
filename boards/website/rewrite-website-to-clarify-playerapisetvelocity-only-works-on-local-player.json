@@ -1,0 +1,136 @@
+{
+  "__v": 0,
+  "_id": "6812ed3289979c8c15e130eb",
+  "aiCategories": [
+    "loc.website",
+    "web.creators-portal",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T22:26:37.796373Z",
+  "author": {
+    "_id": "67a0ed8d6e7354cc8f8c7acd",
+    "alias": "Cautious Minnow",
+    "aliasID": "67a0ed8eafacf378f12ca236",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/65692f6f5a16da7ea35061b27872080e.png",
+    "created": "2025-02-03T16:23:41.681Z",
+    "name": "Uzer Tekton",
+    "serviceAccount": false,
+    "urlName": "uzer-tekton"
+  },
+  "authorID": "67a0ed8d6e7354cc8f8c7acd",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c36bc22b1844b7e1425c",
+    "created": "2022-08-25T18:46:03.389Z",
+    "name": "General Feedback",
+    "parentID": null,
+    "postCount": 109,
+    "urlName": "general-feedback"
+  },
+  "categoryID": "6307c36bc22b1844b7e1425c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-01T03:40:34.044Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The description on the website \"if called on local player...\" suggests that it could be called on remote players. However testing in-game shows that it cannot apply velocity to remote player (nothing will happen).\n\nThe website should be reworded to make it clear, that:\n\n1. As a matter of principle (of network ownership), the player movement/position cannot be controlled by anyone other than themselves.\n\n2. Set Velocity can only be called by the local player, similar to TeleportTo.\n\n(This was pointed out by L.E.G.O.S. and then subsequent experiments confirmed that it doesn't work for remote players.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/de17db643e0f327a965e77d4240b30e9.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "20250501-043640",
+      "url": "https://canny-assets.io/files/de17db643e0f327a965e77d4240b30e9.mp4"
+    }
+  ],
+  "ideaID": "6812ed3289979c8c15e131a8",
+  "imageURLs": [
+    "https://canny-assets.io/images/d6a53e6f64adf36d853f90d4f9ea835f.png"
+  ],
+  "lastUpdated": 1779056621426,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6812ed3289979c8c15e130eb/1772158056.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-01T03:40:34.044Z",
+  "subCategoryID": null,
+  "title": "Rewrite website to clarify PlayerAPI.SetVelocity only works on local player",
+  "trendingScore": 2888.8026559394107,
+  "updatedAt": "2026-05-17T22:25:22.540712Z",
+  "updatedBy": null,
+  "urlName": "rewrite-website-to-clarify-playerapisetvelocity-only-works-on-local-player",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c79c3e3bfa68539a3c62feb4eda8b2cb.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": "kitkat-29",
+      "voteID": "681903a58ccc1d8b3bff4563"
+    },
+    {
+      "_id": "5cdea371135e175781d9a260",
+      "alias": "Azure Swordfish",
+      "aliasID": "65c47b6fed6eefce4c6157dc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8b4cf3242f08d5c01709e341a5b91fb4.png",
+      "companies": [],
+      "name": "Pikapetey",
+      "urlName": "pikapetey-animations",
+      "voteID": "6812ed918ccc1d8b3bc06d87"
+    },
+    {
+      "_id": "61156bdffb15af250e67c5b6",
+      "alias": "Exclusive Reptile",
+      "aliasID": "660bdabae5d26962aab83551",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cb909478b44e91c8c0c7a41549480785.png",
+      "companies": [],
+      "name": "L.E.G.O.S.",
+      "urlName": "legos-1",
+      "voteID": "6812ed8e8ccc1d8b3bc00593"
+    },
+    {
+      "_id": "67a0ed8d6e7354cc8f8c7acd",
+      "alias": "Cautious Minnow",
+      "aliasID": "67a0ed8eafacf378f12ca236",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/65692f6f5a16da7ea35061b27872080e.png",
+      "companies": [],
+      "name": "Uzer Tekton",
+      "urlName": "uzer-tekton",
+      "voteID": "6812ed328ccc1d8b3bb2791f"
+    }
+  ]
+}

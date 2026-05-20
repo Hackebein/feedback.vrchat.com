@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "67a92356e57b388b195e9917",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T21:54:29.129700Z",
+  "author": {
+    "_id": "64655a0f805f86090dfb1fb6",
+    "alias": "Obsidian Bass",
+    "aliasID": "65cf73850129d7ae44d20877",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b3f0623a53a9d83b7d525cf9ffe28c7e.png",
+    "created": "2023-05-17T22:49:51.376Z",
+    "name": "StudentOfRubber",
+    "serviceAccount": false,
+    "urlName": "studentofrubber"
+  },
+  "authorID": "64655a0f805f86090dfb1fb6",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 333,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-02-09T21:51:18.639Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "A pickup object with two scripts that each have an OnPickupUseDown override, using base. or otherwise, will only trigger the first script in Play mode. \n\nPickups work properly in build.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba44e4c3e90df13a0bbb",
+  "imageURLs": [],
+  "lastUpdated": 1779054464509,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67a92356e57b388b195e9917/1008543484.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-02-09T21:51:18.639Z",
+  "subCategoryID": null,
+  "title": "OnPickupUseDown only triggers on first script attached in Play Mode",
+  "trendingScore": 2876.8724502737787,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "onpickupusedown-only-triggers-on-first-script-attached-in-play-mode",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64655a0f805f86090dfb1fb6",
+      "alias": "Obsidian Bass",
+      "aliasID": "65cf73850129d7ae44d20877",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b3f0623a53a9d83b7d525cf9ffe28c7e.png",
+      "companies": [],
+      "name": "StudentOfRubber",
+      "urlName": "studentofrubber",
+      "voteID": "67a92356afacf378f143c5b1"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "__v": 0,
+  "_id": "65b5e5b243b760ef3c11fbfd",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T16:00:48.034618Z",
+  "author": {
+    "_id": "5ba8c68b85295d3611feaa6e",
+    "alias": "Successive Crane",
+    "aliasID": "65c37836ed6eefce4cdacb46",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4db83806b99873b4a4f9b78db50b737b.png",
+    "created": "2018-09-24T11:12:11.623Z",
+    "name": "初雪白子_WBmfmf",
+    "serviceAccount": false,
+    "urlName": "whitebeastmofmof"
+  },
+  "authorID": "5ba8c68b85295d3611feaa6e",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-01-28T05:27:14.796Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The avatar's height is displayed differently for me and for others.\n\nThe target avatar occurred in Lunalitt and Rusk.\n\nIn the case of Lunalitt, by setting AvatarHeight to 3.45m from the menu, it appears to others as 1.15m.\n\nIn the case of Rusk, by setting AvatarHeight to 3.15m from the menu, it will appear to others as 1.05m.\n\nThe user rank is Trusted or Friend, and Rusk's avatar rank is Medium with DL capacity of 8.22MB, TextureMemory of 24.20MB, and Polygons of 27637, so we think that the possibility of a fallback is low.\n\nI have used various base models, but this has only occurred with two base models.\n\nLunalit Rusk\n\nI have attached images of confirmed defects and normal conditions.\n\nDo I need to check anything else?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9cbe4c3e90df1389a3e",
+  "imageURLs": [
+    "https://canny.io/images/a47031d972b149525125435e50d14901.png",
+    "https://canny.io/images/b293d3c4f306add5c4d0f644d17cf658.png",
+    "https://canny.io/images/c67b51b98c544119ea5cffede8e69eae.png",
+    "https://canny.io/images/a9b4475b072f88d9eb3e4a8c510491b1.png",
+    "https://canny.io/images/a3e3f77f2e99df32290ce1bb1b9d586a.png"
+  ],
+  "lastUpdated": 1779032721453,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/65b5e5b243b760ef3c11fbfd/352693315.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-01-28T05:27:14.796Z",
+  "subCategoryID": null,
+  "title": "Problems related to AvatarHeight",
+  "trendingScore": 2822.154183657908,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "problems-related-to-avatarheight",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ba8c68b85295d3611feaa6e",
+      "alias": "Successive Crane",
+      "aliasID": "65c37836ed6eefce4cdacb46",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4db83806b99873b4a4f9b78db50b737b.png",
+      "companies": [],
+      "name": "初雪白子_WBmfmf",
+      "urlName": "whitebeastmofmof",
+      "voteID": "65b5e5b2b4cd1b7d39b27264"
+    }
+  ]
+}

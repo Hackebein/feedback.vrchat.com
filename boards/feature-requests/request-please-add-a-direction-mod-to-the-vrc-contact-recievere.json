@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "637ca5e8a74bab79c4b609ae",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-17T03:12:58.037907Z",
+  "author": {
+    "_id": "5f35425244022e441ca264b2",
+    "alias": "Emerald Mackerel",
+    "aliasID": "65c3ab2ded6eefce4cd27e08",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2cd9f36838f8ccf0023129a212b2fd89.png",
+    "created": "2020-08-13T13:38:26.567Z",
+    "name": "souki2512",
+    "serviceAccount": false,
+    "urlName": "souki2512"
+  },
+  "authorID": "5f35425244022e441ca264b2",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-11-22T10:35:20.946Z",
+  "deletedAt": null,
+  "details": "I would like to add a new Direction mode to the VRC Contact Reciever's ReciverType so that I can get the normalized direction to the nearest center target with 3 parameters of type Float.\nThe parameters should be output as {parameter}_X, {parameter}_Y, {parameter}_Z like in PB, so that we can add this functionality without changing the existing input fields.\nA similar thing could be done with multiple Proximity mode Recievers, but by implementing this mode, a similar gimmick can be easily created with a lower load.\nTranslated with www.DeepL.com/Translator (free version)\nVRC Contact RecieverのReciverTypeに新しくDirectionモードを追加し、一番中心に近いターゲットへの正規化されたディレクションをFloat型のパラメーター３つで取得できるようにして欲しいです。\nパラメーターはPBのように{parameter}_X, {parameter}_Y, {parameter}_Zの名前で出力するようにすれば、これまでの入力欄のままこの機能を追加できます。\n複数のProximityモードのRecieverでも似たようなことはできましたが、このモードを実装することで簡単により低い負荷で同様のギミックを作成できます。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb953e4c3e90df1372ec9",
+  "imageURLs": [],
+  "lastUpdated": 1778987431818,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-11-22T10:35:20.946Z",
+  "subCategoryID": null,
+  "title": "[Request] Please add a Direction mod to the VRC Contact Recievere",
+  "trendingScore": 2905.582412304894,
+  "updatedAt": "2026-05-17T03:12:43.579453Z",
+  "urlName": "request-please-add-a-direction-mod-to-the-vrc-contact-recievere",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d586c7f57433511432c5a",
+      "alias": "Binding Cricket",
+      "aliasID": "65c28339ed6eefce4cc2dcf3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bcc8d2a0d1fbd1e2d9f8149098a69a48.png",
+      "companies": [],
+      "name": "Avislime",
+      "urlName": "avislime",
+      "voteID": "68be3672ce2ca2b520828ae6"
+    },
+    {
+      "_id": "5f35425244022e441ca264b2",
+      "alias": "Emerald Mackerel",
+      "aliasID": "65c3ab2ded6eefce4cd27e08",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2cd9f36838f8ccf0023129a212b2fd89.png",
+      "companies": [],
+      "name": "souki2512",
+      "urlName": "souki2512",
+      "voteID": "637ca5e9a74bab79c4b609cf"
+    }
+  ]
+}

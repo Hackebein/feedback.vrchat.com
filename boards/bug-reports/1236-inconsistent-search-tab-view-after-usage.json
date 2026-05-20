@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "63194e193b4c7d44c147fd5d",
+  "aiCategories": [
+    "loc.main-menu",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-18T22:36:12.135008Z",
+  "author": {
+    "_id": "5f67899159b0841fe0d3891b",
+    "alias": "Amaranth Llama",
+    "aliasID": "65c26da3ed6eefce4c4d09df",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/55a25c31cfb315657dec3023ed4baa0c.png",
+    "created": "2020-09-20T16:55:45.186Z",
+    "name": "Patroll",
+    "serviceAccount": false,
+    "urlName": "patroll"
+  },
+  "authorID": "5f67899159b0841fe0d3891b",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-09-08T02:06:17.674Z",
+  "deletedAt": null,
+  "details": "When first entering the Search tab its UI presents as follows:\n\n[Screenshot #1]\nTitle: Search\nContent: <Suggested queries>\n\nbut after using the \"User Search\" or \"Search Worlds\" buttons from Social and Worlds tabs the Search tab UI gets \"stuck\" to the following combinations upon reentering Search tab from the tabs:\n\n[Screenshot #2]\nTitle: Search Worlds\nView: <Suggested queries>\nOR\n[Screenshot #3]\nTitle: Search Users\nView: <empty>\n\ndepending on whether you visited it from Worlds or Social tabs search button the last time.\n\nThis is confusing and should probably just reset back to \"Search\" not \"Search Worlds / Users\" plus show the suggested queries, after reentering the Search tab or using its top left arrow (which right now takes you back from Search tab to Worlds or Users tab even if you entered it directly from the tabs).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb92ce4c3e90df136b7f5",
+  "imageURLs": [
+    "https://canny.io/images/2843f26faaa9552a6eb5710e3da9d7a7.png",
+    "https://canny.io/images/8066d9173cb72246dcfe03c4ca71dae3.png",
+    "https://canny.io/images/31f5d5316b9e3a674af1f81fdd6ac5d3.png"
+  ],
+  "lastUpdated": 1779143300387,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/63194e193b4c7d44c147fd5d/805720913.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-09-08T02:06:17.674Z",
+  "subCategoryID": null,
+  "title": "[1236] Inconsistent Search tab view after usage",
+  "trendingScore": 2750.939821572047,
+  "updatedAt": "2026-05-18T22:30:07.890442Z",
+  "updatedBy": null,
+  "urlName": "1236-inconsistent-search-tab-view-after-usage",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6142bc91c830f70736b61114",
+      "alias": "Secondary Swordtail",
+      "aliasID": "65c27264ed6eefce4c18098a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/191433fda8e993da6a48d8f50360fef2.png",
+      "companies": [],
+      "name": "Sayamame",
+      "urlName": "sayamame",
+      "voteID": "631d90a806e7ed44afc366da"
+    },
+    {
+      "_id": "5f8870764027ce1b387d2da6",
+      "alias": "Polite Goldfish",
+      "aliasID": "65c26ed9ed6eefce4c854f4a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f56b7d08efb52ab2bdec5942f6ced756.png",
+      "companies": [],
+      "name": "ShingenPizza",
+      "urlName": "shingenpizza",
+      "voteID": "631b94aa63074644acb38ab5"
+    },
+    {
+      "_id": "5c872970a4264c0cacf21aaa",
+      "alias": "Attractive Newt",
+      "aliasID": "65c28ff3ed6eefce4cb36752",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/27cc69f694cb656f75c0a081300a658d.png",
+      "companies": [],
+      "name": "14anthony7095",
+      "urlName": "14anthony7095",
+      "voteID": "63195626bdfee544b97c38bb"
+    },
+    {
+      "_id": "5fca5df4d58780532024a52b",
+      "alias": "Toffee Tortoise",
+      "aliasID": "65c26da3ed6eefce4c4d0863",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
+      "companies": [],
+      "name": "DrBlackRat",
+      "urlName": "drblackrat",
+      "voteID": "631950e693b14f449fa75953"
+    },
+    {
+      "_id": "5f67899159b0841fe0d3891b",
+      "alias": "Amaranth Llama",
+      "aliasID": "65c26da3ed6eefce4c4d09df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/55a25c31cfb315657dec3023ed4baa0c.png",
+      "companies": [],
+      "name": "Patroll",
+      "urlName": "patroll",
+      "voteID": "63194e193b4c7d44c147fd7f"
+    }
+  ]
+}

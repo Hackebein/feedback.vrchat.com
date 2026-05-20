@@ -1,0 +1,114 @@
+{
+  "__v": 0,
+  "_id": "6057bd95e93e7c49c4b9fc97",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:26:37.529339Z",
+  "author": {
+    "_id": "604c33fbbe941f7ca5b0515c",
+    "alias": "Organic Wolverine",
+    "aliasID": "65cb4821ed6eefce4c9cee9e",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/cdd1321c8dca1c75fe8bf4826e7911e7.png",
+    "created": "2021-03-13T03:39:39.429Z",
+    "name": "gladeare",
+    "serviceAccount": false,
+    "urlName": "gladeare"
+  },
+  "authorID": "604c33fbbe941f7ca5b0515c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-03-21T21:41:41.916Z",
+  "deletedAt": null,
+  "details": "VERSION:\nVRCSDK3-WORLD-2021.03.09.13.57_Public\n-----\nDESCRIPTION OF THE BUG (X):\nWhenever a branched flow path is joined again, should the branch's bool have been \"false\", variables will be unaccessible and return NULL. Most functions, e.g. mathematical functions such as divisions, will also return NULL, even when both inputs are valid.\n-----\nDESCRIPTION OF THE BUG (Y):\nWhenever a 2nd branch of a node references a variable that is referenced by another flow path, it will return NULL.\n-----\nSTEPS TO REPRODUCE (how did you encounter the bug?): \nX: branch a flow path, join them back together, then return any variable. You should now have returned NULL when the lower branch path is taken. (returning a new const variable without any conversion will not cause this to happen).\nY: branch a flow path, and, in the lower path, reference (and work with) any variable node that is also referenced by the upper flow path. \n-----\nIMAGES:\nThe Images below describe the refined code that causes these errors:\nX (image with red letters):\nWhen the boolean on the first branch (a) is true, everything works as intended. When it is false, the error occurs. \nThe test outputs below, when a is false, demonstrate the following behaviour: b still prints the correct message (new const string, unchanged), c and d return NULL. iVelocity is a variable. Inserting int velocity or int number (e) from MidiNoteOn will also return NULL.\nY (Image without red letters):\nAgain, the branch bool being set to false and the lower path being taken, we see that the float (here 12.5) returns NULL after the toString. This does not occur if the upper debug.log is not connected to the toString node.\n-----\nRELATED POSTS AND BUG REPORTS:\nAfter searching Canny and the forums, I could find the following related reports that can be related to the bugs:\n1 - https://feedback.vrchat.com/vrchat-udon-closed-alpha-bugs/p/reset-to-default-value-error (since not much information is posted here, this may be caused by the bug (X or Y) I described, especially since it appears \"fairly random\" to the author, just as it did to me at first.)\n2 - https://ask.vrchat.com/t/why-your-time-get-time-node-is-probably-broken-and-how-to-avoid-it/2738 (While Time get Time is mentioned here, after testing, I can say that it does work, but that the error is caused by the bug I describe. You can see the author experiencing the bug Y on the lower Debug.Log node, having two Debug nodes accessing the same getTime node.)\n3 - https://feedback.vrchat.com/vrchat-udon-closed-alpha-bugs/p/erroneous-variable-behavior-with-chained-for-loops (similar issues appear on other \"branching\" nodes, every time the non-first pin is used)\n4 - https://feedback.vrchat.com/vrchat-udon-closed-alpha-bugs/p/subgraph-variables-cannot-be-referenced (Similar results to the bug (X or Y) in the old subgraph system. Maybe branches still use a system similar to the subgraph system, suggesting a fix by also implementing the SubProgram solution mentioned by Momo the Monster here?)\n5 - https://ask.vrchat.com/t/jetdogs-tips-and-tricks/189/5 the statement \"if you decide to use branches(if statements) you wont be able to link the next set of events.\" MAY have been incentivized by the error. Can not really be sure as not much information is given on why this statement is made.\n-----\nI am posting both bugs as one, as they are strikingly similar in nature and appear to be caused by the same problem. One fix here could potentially erase multiple bugs and solve multiple Canny posts, as shown above.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb812e4c3e90df1325c89",
+  "imageURLs": [
+    "https://canny.io/images/db986d280c1c1ed22a0a6ec860d6c838.png",
+    "https://canny.io/images/cf8e72524687f01a524a998e4eb053b3.png"
+  ],
+  "lastUpdated": 1779247135110,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6057bd95e93e7c49c4b9fc97/1378034617.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-03-21T21:41:41.916Z",
+  "subCategoryID": null,
+  "title": "Branches decompose variables to NULL in certain scenarios",
+  "trendingScore": 2729.353563690476,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "branches-decompose-variables-to-null-in-certain-scenarios",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6142bc91c830f70736b61114",
+      "alias": "Secondary Swordtail",
+      "aliasID": "65c27264ed6eefce4c18098a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/191433fda8e993da6a48d8f50360fef2.png",
+      "companies": [],
+      "name": "Sayamame",
+      "urlName": "sayamame",
+      "voteID": "6263e1cbadd97b529cfc3a4a"
+    },
+    {
+      "_id": "5f8870764027ce1b387d2da6",
+      "alias": "Polite Goldfish",
+      "aliasID": "65c26ed9ed6eefce4c854f4a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f56b7d08efb52ab2bdec5942f6ced756.png",
+      "companies": [],
+      "name": "ShingenPizza",
+      "urlName": "shingenpizza",
+      "voteID": "605be2e353d80f0bbf7fca74"
+    },
+    {
+      "_id": "604c33fbbe941f7ca5b0515c",
+      "alias": "Organic Wolverine",
+      "aliasID": "65cb4821ed6eefce4c9cee9e",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/cdd1321c8dca1c75fe8bf4826e7911e7.png",
+      "companies": [],
+      "name": "gladeare",
+      "urlName": "gladeare",
+      "voteID": "6057bd96e93e7c49c4b9fc9e"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "__v": 0,
+  "_id": "60e65a2a2f82054907b1f7a6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.world-building",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-19T20:03:16.817346Z",
+  "author": {
+    "_id": "5f2f8163654cd4491453eef6",
+    "alias": "Rapid Magpie",
+    "aliasID": "65c28775ed6eefce4c64dfd4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/fdbe6a0970980a1ace79278b6ff01885.png",
+    "created": "2020-08-09T04:53:55.463Z",
+    "name": "~Zoid~",
+    "serviceAccount": false,
+    "urlName": "zoidberg656"
+  },
+  "authorID": "5f2f8163654cd4491453eef6",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "60e667ba8791b173f91fd93f",
+      "author": {
+        "_id": "5f2f8163654cd4491453eef6",
+        "alias": "Rapid Magpie",
+        "aliasID": "65c28775ed6eefce4c64dfd4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/fdbe6a0970980a1ace79278b6ff01885.png",
+        "created": "2020-08-09T04:53:55.463Z",
+        "name": "~Zoid~",
+        "serviceAccount": false,
+        "urlName": "zoidberg656"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-07-08T02:49:30.623Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/42b258253c9f86df84c1f036eeb8763e.png",
+        "https://canny.io/images/271a5f57e4a2ec2261845c76ad06d56d.jpg"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "60e65a2a2f82054907b1f7a6",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "FIX: Player Settings choose Edit->Project Settings->Player and set Vertex Compression to None.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-07-08T01:51:38.439Z",
+  "deletedAt": null,
+  "details": "For some unknown reason, there is a part of my map that looks perfectly fine in Blender and Unity, but after uploading to VRChat the textures start to smear at only this specific angle, in only this direction.\nIt happens in a few other places, but this is the most visually disgusting.\n(1st picture)\nHere is before, showing the model settings of the .fbx in Unity.\n(2nd picture)\nAnd here you can see the smearing. The angle of the sidewalk showing when it starts and ends.\nONLY AFTER UPLOADING TO VRCHAT!\nForum post: https://ask.vrchat.com/t/texture-uv-smear-after-vrchat-upload/6451?u=zoidberg656",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8a8e4c3e90df13518e9",
+  "imageURLs": [
+    "https://canny.io/images/af29c27dee34423719e453e6aa834fb9.png",
+    "https://canny.io/images/bf5cb47b315a01cb608ebcced428553d.jpg"
+  ],
+  "lastUpdated": 1779218242651,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-07-08T01:51:38.439Z",
+  "subCategoryID": null,
+  "title": "Texture UV Smear After VRChat Upload",
+  "trendingScore": 2688.704222687339,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "texture-uv-smear-after-vrchat-upload",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2f8163654cd4491453eef6",
+      "alias": "Rapid Magpie",
+      "aliasID": "65c28775ed6eefce4c64dfd4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fdbe6a0970980a1ace79278b6ff01885.png",
+      "companies": [],
+      "name": "~Zoid~",
+      "urlName": "zoidberg656",
+      "voteID": "60e65a2a2f82054907b1f7ad"
+    }
+  ]
+}

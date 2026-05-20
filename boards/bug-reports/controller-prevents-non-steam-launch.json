@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "609c652d8ec3332de3ff8d52",
+  "aiCategories": [
+    "loc.loading-screen",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-18T09:36:58.235583Z",
+  "author": {
+    "_id": "5ea7c16e9dbed020ac5e8055",
+    "alias": "Hazel Parrotfish",
+    "aliasID": "65d22f540129d7ae440c06b1",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/9902e6ec632b76130889b4290c9d5ca9.png",
+    "created": "2020-04-28T05:38:54.578Z",
+    "name": "zxcoldx",
+    "serviceAccount": false,
+    "urlName": "jacob-king-7"
+  },
+  "authorID": "5ea7c16e9dbed020ac5e8055",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-05-12T23:30:53.084Z",
+  "deletedAt": null,
+  "details": "First things first, not a major bug, not even really a problem but still something to document so here.\nok long story short is the subject and here are the details, while trying to test my map in a live format i use launch parameters directly on the exe through a shortcut for example:\n\"C:\\Program Files (x86)\\Steam\\steamapps\\common\\VRChat\\VRChat.exe\" --enable-debug-gui --profile=0 --no-vr\nand no launch, yet if i launch from steam all is ok, just no parameters, and yes i know how to do parameters for steam launch i just want more options.\nanyways this keep going till i noticed my usb xbox 360 controller plugged in.\nunplugged it and it works fine. to clarify i was in task manager too so when it was not working both the crash handler and vrchat appeared and stacked up for how many times i tried to launch it with the controller plugged in but no window ever appeared.\nthat is it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb89ae4c3e90df134e839",
+  "imageURLs": [],
+  "lastUpdated": 1779096260330,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-05-12T23:30:53.084Z",
+  "subCategoryID": null,
+  "title": "controller prevents non steam launch",
+  "trendingScore": 2680.6902588149846,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "controller-prevents-non-steam-launch",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ea7c16e9dbed020ac5e8055",
+      "alias": "Hazel Parrotfish",
+      "aliasID": "65d22f540129d7ae440c06b1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9902e6ec632b76130889b4290c9d5ca9.png",
+      "companies": [],
+      "name": "zxcoldx",
+      "urlName": "jacob-king-7",
+      "voteID": "609c652d8ec3332de3ff8d59"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "__v": 0,
+  "_id": "5ec6b6bdf5c3d603a79b065c",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-05-16T20:29:07.876466Z",
+  "author": {
+    "_id": "5ec6b6bd2bbe241c1d90efac",
+    "alias": "Assistant Pheasant",
+    "aliasID": "65cfb38f0129d7ae44669cab",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/ee59136b1ce04711a1100a5ce6519da6.png",
+    "created": "2020-05-21T17:13:33.308Z",
+    "name": "~ Jordan ~",
+    "serviceAccount": false,
+    "urlName": "jordan-351"
+  },
+  "authorID": "5ec6b6bd2bbe241c1d90efac",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "61535d402bad662de0c73d30",
+      "author": {
+        "_id": "5f4d0c8c4efb1c1bee087245",
+        "alias": "Tawny Aardvark",
+        "aliasID": "65c2892ded6eefce4ca818ef",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c03c152b315f5f0d0ed8998a48811438.png",
+        "created": "2020-08-31T14:43:24.515Z",
+        "name": "Guribo",
+        "serviceAccount": false,
+        "urlName": "guribo-1"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-09-28T18:21:52.127Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/479d6c3b72ac60c630542c8f2667498f.gif"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5ec6b6bdf5c3d603a79b065c",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I have observed the same behaviour when teleporting the player in every FixedUpdate() in combination with forward movement input. Depending on the running speed I had set in the VrcPlayerApi the avatar could outrun the camera and would snap back around once a second.\nIn U# (FixedUpdate()):\n`localPlayer.TeleportTo(playerPosition, playerRotation, VRC_SceneDescriptor.SpawnOrientation.AlignPlayerWithSpawnPoint, true);`",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-21T17:13:33.526Z",
+  "deletedAt": null,
+  "details": "There seems to be issues with code that deals with moving the players position from one location to another, following very simple code in the images provided. I have a trigger object that you can click on that sends you to another location through an empty with the code in the bottom half. However here is the issue: It moves the players camera, not the avatar. There is rare occasions where it works as intended however for a large portion of attempts it leaves you with an \"out of body experience\". A link to the world available: https://vrchat.com/i/boy-chaniwonk-f96a1 --- Update: After uploading to server and attempting in VR, it seems to work as intended more consistently thus could be a desktop only issue",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dade4c3e90df158fe48",
+  "imageURLs": [
+    "https://canny.io/images/c9830ca3b320c354702c005ff5d22a24.png",
+    "https://canny.io/images/3f8f875b360f14417de3eb9a2dc0fc67.png"
+  ],
+  "lastUpdated": 1779239269499,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 7,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 7,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-21T17:13:33.526Z",
+  "subCategoryID": null,
+  "title": "Teleportation Issues",
+  "trendingScore": 2700.403723038171,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "teleportation-issues",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f4d0c8c4efb1c1bee087245",
+      "alias": "Tawny Aardvark",
+      "aliasID": "65c2892ded6eefce4ca818ef",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c03c152b315f5f0d0ed8998a48811438.png",
+      "companies": [],
+      "name": "Guribo",
+      "urlName": "guribo-1",
+      "voteID": "61535d43ebf15c2efbb84197"
+    },
+    {
+      "_id": "612280b6cc500433512278d7",
+      "alias": "Prepared Mole",
+      "aliasID": "65c2b89bed6eefce4c6521ef",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "RaphaelArctic",
+      "urlName": "sirraphael",
+      "voteID": "615125137df3ec4e96847911"
+    },
+    {
+      "_id": "60718ce945db2d23f1ed9770",
+      "alias": "Isolated Boa",
+      "aliasID": "65c2b490ed6eefce4cde5485",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9eaa5c00ce65d36015753be52077f707.png",
+      "companies": [],
+      "name": "VoHeLi",
+      "urlName": "voheli",
+      "voteID": "60eef9d9031b842a5e2494e6"
+    },
+    {
+      "_id": "5c167e4587c3a95c91003293",
+      "alias": "Informal Parrot",
+      "aliasID": "65c2b490ed6eefce4cde545c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f5d6eee8247778132ef9cae4b7aecb5d.png",
+      "companies": [],
+      "name": "Reco",
+      "urlName": "reco",
+      "voteID": "5edae8a720d8db6a97a5fe1a"
+    },
+    {
+      "_id": "5b0c6b275853c02d9764fb82",
+      "alias": "Ube Pinniped",
+      "aliasID": "65c2b40fed6eefce4ccccb70",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6d7fd9a2818f95ae16fbb4be009f1dd8.png",
+      "companies": [],
+      "name": "LastRar",
+      "urlName": "thelast-rar",
+      "voteID": "5ecbfa5bea450a7c1125ddb3"
+    },
+    {
+      "_id": "5c30ff6fffac067f55dd016f",
+      "alias": "Juicy Wildcat",
+      "aliasID": "65c65bdfed6eefce4c036254",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/4dcd820f127364ce4fc49573fa20d00e.png",
+      "companies": [],
+      "name": "Ville672 -",
+      "urlName": "ville672",
+      "voteID": "5ec6dd23d18c116dac674ef7"
+    },
+    {
+      "_id": "5ec6b6bd2bbe241c1d90efac",
+      "alias": "Assistant Pheasant",
+      "aliasID": "65cfb38f0129d7ae44669cab",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ee59136b1ce04711a1100a5ce6519da6.png",
+      "companies": [],
+      "name": "~ Jordan ~",
+      "urlName": "jordan-351",
+      "voteID": "5ec6b6bdf5c3d603a79b0666"
+    }
+  ]
+}

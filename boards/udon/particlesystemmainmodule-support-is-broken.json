@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "5e10ef5249fedf22cfa493ea",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:52:13.004530Z",
+  "author": {
+    "_id": "58c6da4c23f8d63e1401d385",
+    "alias": "Neat Salmon",
+    "aliasID": "65ba012bed6eefce4ce9f763",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/f7c2242a0deda548f7c718a095513027.png",
+    "created": "2017-03-13T17:43:40.825Z",
+    "name": "hackspanner",
+    "serviceAccount": false,
+    "urlName": "david-tin-nyo"
+  },
+  "authorID": "58c6da4c23f8d63e1401d385",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-01-04T20:02:26.782Z",
+  "deletedAt": null,
+  "details": "The attached image results in the error: External module 'UnityEngineParticleSystemMainModule' is not supported.\nThere also seems to be some symbol/naming issues between Particle and ParticleSystem and their arrays. The search shows Particle but lists ParticleSystem methods. There doesn't seem to be a single instance Particle, but Particle[]  finds a ParticleParticle[] class. There's also no ParticleSystem[] array.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9de4c3e90df158b325",
+  "imageURLs": [
+    "https://canny.io/images/2642fb2fc2e476537ac4132f8b2afe4c.png"
+  ],
+  "lastUpdated": 1779223402919,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-01-04T20:02:26.782Z",
+  "subCategoryID": null,
+  "title": "ParticleSystem/MainModule support is broken",
+  "trendingScore": 2610.0981518283775,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "particlesystemmainmodule-support-is-broken",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "58c6da4c23f8d63e1401d385",
+      "alias": "Neat Salmon",
+      "aliasID": "65ba012bed6eefce4ce9f763",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f7c2242a0deda548f7c718a095513027.png",
+      "companies": [],
+      "name": "hackspanner",
+      "urlName": "david-tin-nyo",
+      "voteID": "5e10ef5249fedf22cfa493f2"
+    }
+  ]
+}

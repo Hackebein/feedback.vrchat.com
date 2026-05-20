@@ -1,0 +1,141 @@
+{
+  "_id": "69bcc3a1e7d3886be986bfab",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-05-19T03:30:04.303564Z",
+  "author": {
+    "_id": "6239a8ce8636e1084c6455ee",
+    "alias": "Neat Dingo",
+    "aliasID": "65c26ed9ed6eefce4c855014",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bd9b5632caa145521edc30353cbd2f3c.png",
+    "created": "2022-03-22T10:45:34.539Z",
+    "name": "buzer ~",
+    "serviceAccount": false,
+    "urlName": "buzer-2022"
+  },
+  "authorID": "6239a8ce8636e1084c6455ee",
+  "board": {
+    "_id": "66219a23aca51fa0303952e3",
+    "name": "Persistence",
+    "urlName": "persistence"
+  },
+  "boardID": "66219a23aca51fa0303952e3",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69c159493294999276fec1b9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "paige-pinson"
+      },
+      "authorID": null,
+      "boardID": "66219a23aca51fa0303952e3",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-03-23T15:16:25.700Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69bcc3a1e7d3886be986bfab",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "69c159493294999276fec19f",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-20T03:48:49.285Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I was playing the Suika game and streaming some music over VRCDN.\n\nThen suddenly my Internet connection became very unstable.\n\nMy stream stopped, and while I was trying to figure out what was wrong with it, I got the \"connection to VRChat timed out\" message.\n\nAfter a couple retries a managed to get back into the world, but the game was not functioning - all players and their games were frozen, their avatars weren't loading, and as I noticed later, the persistence data hadn't loaded either (I had only 1 Melbux instead of 425 billion).\n\nAfter half a minute I got another \"connection timeout\" message and rejoined the world again. This time it was working, but very sluggish, and my persistence data didn't restore - it was gone at this point.\n\nHere's a recording of all of this happening:\n\nhttps://youtu.be/rL3wOgvS0rQ\n\nAlso attaching the log file and two screenshots: the first shows that I had 425B Melbux before the disconnection, and second shows me having only 1 after rejoining.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/4a58605018d4911942f89b9c7c90f76c.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-03-19_23-20-52",
+      "url": "https://canny-assets.io/files/4a58605018d4911942f89b9c7c90f76c.txt"
+    }
+  ],
+  "ideaID": "69bcc3a1e7d3886be986c01f",
+  "imageURLs": [
+    "https://canny-assets.io/images/22218e067bbad99f7924439d3acca658.png",
+    "https://canny-assets.io/images/377e596523ec024ecaabe1d3473eb5bf.png"
+  ],
+  "lastUpdated": 1779160727950,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69bcc3a1e7d3886be986bfab/1419399346.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2026-03-23T15:16:25.585Z",
+  "subCategoryID": null,
+  "title": "Connection issues can wipe your persistence data",
+  "trendingScore": 2933.8587049798325,
+  "updatedAt": "2026-05-19T03:20:30.198674Z",
+  "updatedBy": null,
+  "urlName": "connection-issues-can-wipe-your-persistence-data",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6239a8ce8636e1084c6455ee",
+      "alias": "Neat Dingo",
+      "aliasID": "65c26ed9ed6eefce4c855014",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bd9b5632caa145521edc30353cbd2f3c.png",
+      "companies": [],
+      "name": "buzer ~",
+      "urlName": "buzer-2022",
+      "voteID": "69bcc3a141af358c4e65ad0e"
+    }
+  ]
+}

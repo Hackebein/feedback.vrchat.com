@@ -1,0 +1,147 @@
+{
+  "__v": 0,
+  "_id": "637d07a79e6c8b2ec7993849",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T15:58:41.644617Z",
+  "author": {
+    "_id": "5e44a1bd0c91c2477a8b8acb",
+    "alias": "Calm Jaguar",
+    "aliasID": "65c2b4d5ed6eefce4ce77dc6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8fce87ec7f3e2915be7f7f223c491b72.png",
+    "created": "2020-02-13T01:09:17.899Z",
+    "name": "Franada",
+    "serviceAccount": false,
+    "urlName": "franada"
+  },
+  "authorID": "5e44a1bd0c91c2477a8b8acb",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-11-22T17:32:23.019Z",
+  "deletedAt": null,
+  "details": "If the tracking type is change by turning on/off tracker and it happen that pose space is enable. A 6 PT user won't be able to set it to default.\nThe user default high will be offset from the floor.\nCurrently pose space cannot be use by 6 PT user.\nUsually opening the quick menu will force reload the avatar but only if the tracking change from 3+/4-.\nWhen opening the quick menu:\n3-4 = reload\n3-6 = reload\n4-6 = no reload\n6-4 = no reload\n6-3 = reload\nIn a scenario the avatar is not reload, the pose space cannot be set to default in 6 PT",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb953e4c3e90df1372ecb",
+  "imageURLs": [
+    "https://canny.io/images/72357291cb938f07a5129d05fe078bd1.png",
+    "https://canny.io/images/d11114dccd008661af8f9f066fc16610.png"
+  ],
+  "lastUpdated": 1779032712128,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-11-22T17:32:23.020Z",
+  "subCategoryID": null,
+  "title": "[BUG] 6 PT user can't disable pose space",
+  "trendingScore": 2770.729296784902,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-6-pt-user-cant-disable-pose-space",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c872970a4264c0cacf21aaa",
+      "alias": "Attractive Newt",
+      "aliasID": "65c28ff3ed6eefce4cb36752",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/27cc69f694cb656f75c0a081300a658d.png",
+      "companies": [],
+      "name": "14anthony7095",
+      "urlName": "14anthony7095",
+      "voteID": "63e195129beb8251ffece982"
+    },
+    {
+      "_id": "61c23bc15d6697202e87de94",
+      "alias": "Electric violet Vole",
+      "aliasID": "65c4ac29ed6eefce4c4103c0",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "MysticStrike",
+      "urlName": "mysticstrike",
+      "voteID": "63baafba85610b71b1e15995"
+    },
+    {
+      "_id": "60e75a969bf11f73e537eb80",
+      "alias": "Deep Blackbird",
+      "aliasID": "65c52c2ced6eefce4c2a8e4d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c48fae1df4db0aac88a829e1e11d14f5.png",
+      "companies": [],
+      "name": "WillyB1337",
+      "urlName": "willyb1337",
+      "voteID": "638017f3758af5770a9b7fe4"
+    },
+    {
+      "_id": "60a8141d50930814e63528ef",
+      "alias": "Deliberate Squid",
+      "aliasID": "65c5312bed6eefce4cd9b8ba",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dfdefd91d92ea227f71b275c6235ae25.png",
+      "companies": [],
+      "name": "Jokaah",
+      "urlName": "jokaah",
+      "voteID": "637e34263a6d690af6826ccc"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "vrcprefabs",
+      "voteID": "637d080f45962231cc09743b"
+    },
+    {
+      "_id": "5e44a1bd0c91c2477a8b8acb",
+      "alias": "Calm Jaguar",
+      "aliasID": "65c2b4d5ed6eefce4ce77dc6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8fce87ec7f3e2915be7f7f223c491b72.png",
+      "companies": [],
+      "name": "Franada",
+      "urlName": "franada",
+      "voteID": "637d07a79e6c8b2ec7993878"
+    }
+  ]
+}

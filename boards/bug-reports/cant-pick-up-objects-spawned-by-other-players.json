@@ -1,0 +1,230 @@
+{
+  "__v": 0,
+  "_id": "5e936d05df0b9d5219de55f6",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T23:36:19.445677Z",
+  "author": {
+    "_id": "5e0d8dbe592c4a421adc4952",
+    "alias": "Iron grey Shrew",
+    "aliasID": "65c35740ed6eefce4c46a6e3",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3d1e939114ff87f6ca52781ce9ba241f.jpg",
+    "created": "2020-01-02T06:29:18.977Z",
+    "name": "しいたけ(vrctaki)",
+    "serviceAccount": false,
+    "urlName": "98cbbd"
+  },
+  "authorID": "5e0d8dbe592c4a421adc4952",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5e93af18019d2f253b842bd8",
+      "author": {
+        "_id": "5a983204a1528d415c5ced46",
+        "alias": "Chief Finch",
+        "aliasID": "65ba04aeed6eefce4c43afb3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+        "created": "2018-03-01T17:01:56.340Z",
+        "name": "naqtn",
+        "serviceAccount": false,
+        "urlName": "naqtn"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2020-04-13T00:15:20.748Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/768d0b21c2b790f866931b7ddb066f07.png",
+        "https://canny.io/images/75e184a043a6b5f49ca9fe10c86c2ec7.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 2,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5e936d05df0b9d5219de55f6",
+      "private": false,
+      "reactions": {
+        "like": 5
+      },
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I double checked. This issue is in short: Non-owner can't pickup a objects if they are children of spawned object.\nWith 8th debug GUI, syncing information display remains spawned position in failed case (red one). In successful case (blue one), it moves along the object. So I guess Photon related component is always attached to spawned root object, then, VRC_Pickup can't communicate with it, so becoming owner is fail, as a result non-owner can't pickup.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-12T19:33:25.911Z",
+  "deletedAt": null,
+  "details": "In some cases, a spawned global object could not be picked up by others.\nIf the spawn object (1) Root is a global object that can be picked up, there is no problem, but if the\n(2) If the object under Root is a pickup object, other players cannot have the spawned object.\nThe following are the validation worlds.\nThe blue box will spawn an object (1) that others can hold without problems, but\nThe red box spawns an object (2) that others cannot have.\nSample World: wrld_e1dd47c5-6892-40ae-aef3-7185bdaf65f6\nhttps://vrchat.com/home/launch?worldId=wrld_e1dd47c5-6892-40ae-aef3-7185bdaf65f6&instanceId=0\n* Reproduction steps\n1. person A spawns an object with a red box\n2. person B picks up the spawned object (it cannot be picked up)\nAttached is a screenshot of the object's structure for your reference.\nAbout: SDK(VRCSDK2-2020.04.09.10.48), Unity(2018.4.20f1), Client(w_2020.1.1p2.1)\n----\nin Origin Language(Japanese)\nスポーンしたグローバルオブジェクトを他人がPickupできないケースがありました。\nスポーンオブジェクトの、(1)RootがPickup可能なグローバルオブジェクトである場合は問題ありませんが、\n(2)Root配下のオブジェクトがPickupオブジェクトな場合にはスポーンした配下のオブジェクトを他人が持てません。\n以下は検証用のワールドです。\n青いBoxからは問題なく他者が持てるオブジェクト(1)をスポーンしますが、\n赤いBoxは他者が持てないオブジェクト(2)をスポーンします。\nSample World: wrld_e1dd47c5-6892-40ae-aef3-7185bdaf65f6\nhttps://vrchat.com/home/launch?worldId=wrld_e1dd47c5-6892-40ae-aef3-7185bdaf65f6&instanceId=0\n* 再現方法\n1. 人Aが赤いBoxでオブジェクトをスポーン\n2. 人Bがスポーンされたオブジェクトをピックアップする(ピックアップできない)\n参考にオブジェクトの構造のスクリーンショットを添付します。\nバージョン情報: SDK(VRCSDK2-2020.04.09.10.48), Unity(2018.4.20f1), Client(w_2020.1.1p2.1)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da8e4c3e90df158e56b",
+  "imageURLs": [
+    "https://canny.io/images/2cd91efeb78b0fc0eb345f45b40d33dd.png"
+  ],
+  "lastUpdated": 1779060453711,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 19,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5e936d05df0b9d5219de55f6/53180685.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 19,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-12T19:33:25.911Z",
+  "subCategoryID": null,
+  "title": "Can't pick up objects spawned by other players",
+  "trendingScore": 2682.6802661838624,
+  "updatedAt": "2026-05-17T23:27:35.879050Z",
+  "urlName": "cant-pick-up-objects-spawned-by-other-players",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60b527d71ce9352da6b09d14",
+      "alias": "Merlot Owl",
+      "aliasID": "65e15039a6e3ea79dd3ba2ef",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "PotchariTori",
+      "urlName": "potcharitori",
+      "voteID": "60b5282027f96d0ec43fa22c"
+    },
+    {
+      "_id": "5bdd7adfa1e5c74195271aa3",
+      "alias": "Functional Loon",
+      "aliasID": "65c65be0ed6eefce4c0383e9",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/177d3fe4a758609cae4a4197e0d64b58.png",
+      "companies": [],
+      "name": "JB",
+      "urlName": "jb-vrchat",
+      "voteID": "5ea70ab649b8d80745c6947f"
+    },
+    {
+      "_id": "5a5a6b9729ed876b4c73f62e",
+      "alias": "Zinc grey Shark",
+      "aliasID": "65ba0202ed6eefce4c008349",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/921bb0ae296b35df451bfb6f0c3d4aab.jpg",
+      "companies": [],
+      "name": "Mikaela - ZoroArts",
+      "urlName": "mikaela-zoroarts",
+      "voteID": "5e9f42dc3cc341409061bba6"
+    },
+    {
+      "_id": "5b5936c57bdf767d97203e58",
+      "alias": "Mechanical Wildfowl",
+      "aliasID": "65c2a219ed6eefce4c62e39d",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/4375e4d0705996a3cb2916d41c510145.png",
+      "companies": [],
+      "name": "AkiraMiura",
+      "urlName": "akira-6",
+      "voteID": "5e955cab22c96c06c8f42fc2"
+    },
+    {
+      "_id": "5c540514d859d512a8d1d2f9",
+      "alias": "Tangerine Stingray",
+      "aliasID": "65c2a2c2ed6eefce4c7bc4c0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/2f866a48b27ad4796b7cabbbfd28f66e.jpg",
+      "companies": [],
+      "name": "狐小百合",
+      "urlName": "9a48f6",
+      "voteID": "5e94e9d9aa85897f62bd56d8"
+    },
+    {
+      "_id": "5aa9533aa739da06e6018df6",
+      "alias": "Encouraging Caribou",
+      "aliasID": "65ba0587ed6eefce4c5933e7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/187a7d3633245a735ed604fc8b1a4840.png",
+      "companies": [],
+      "name": "blueasis",
+      "urlName": "blueasis",
+      "voteID": "5e94e0c89124e106b0cf9a79"
+    },
+    {
+      "_id": "5ad6e736ddaee22deef88bb9",
+      "alias": "Present Emu",
+      "aliasID": "65d054810129d7ae4413c8c2",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ba68ad67b3ee94b14b00d8d1d24b36bf.png",
+      "companies": [],
+      "name": "Jord_",
+      "urlName": "jordendoesstuff",
+      "voteID": "5e949dff264b5f3d74ecc34b"
+    },
+    {
+      "_id": "5bc7a9d0d651c8301543a7f2",
+      "alias": "Ink Antelope",
+      "aliasID": "65c28a47ed6eefce4cd1cf77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/510b3dff00d2ae92b543a05142054f6a.png",
+      "companies": [],
+      "name": "Varneon",
+      "urlName": "varneon",
+      "voteID": "5e94876d019d2f253b873b9a"
+    },
+    {
+      "_id": "5c7f0906071f626c8afc7395",
+      "alias": "Yearning Badger",
+      "aliasID": "65c622eaed6eefce4c786b92",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/1f92ffa64c600449564c63f0f8bc8fb7.jpg",
+      "companies": [],
+      "name": "TheGalaxyWolf",
+      "urlName": "thegalaxywolf",
+      "voteID": "5e948496c5d62b7dbd78d206"
+    },
+    {
+      "_id": "5ba749f34dca6b351d658330",
+      "alias": "Flame Swan",
+      "aliasID": "65c2913aed6eefce4ce43005",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/28be024219e5d5a76a743e59faa1a194.png",
+      "companies": [],
+      "name": "100の人",
+      "urlName": "100-3",
+      "voteID": "5e944f1a4170106b57f91afa"
+    }
+  ]
+}

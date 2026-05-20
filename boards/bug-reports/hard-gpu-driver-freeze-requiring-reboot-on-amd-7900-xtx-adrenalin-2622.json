@@ -1,0 +1,138 @@
+{
+  "_id": "69c16110cec301c170121f4c",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-17T08:54:23.645691Z",
+  "author": {
+    "_id": "61e475177914be4483d25b80",
+    "alias": "Plastic Parrot",
+    "aliasID": "69c1602cbcda4ee632f74aaf",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/10cc34b6d2eb31dd7e4edea68827d6a6.png",
+    "created": "2022-01-16T19:42:15.931Z",
+    "name": "ov3rburdened",
+    "serviceAccount": false,
+    "urlName": "ov3rburdened"
+  },
+  "authorID": "61e475177914be4483d25b80",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69c16222581d24d914faf72b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "61e475177914be4483d25b80",
+        "alias": "Plastic Parrot",
+        "aliasID": "69c1602cbcda4ee632f74aaf",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/10cc34b6d2eb31dd7e4edea68827d6a6.png",
+        "created": "2022-01-16T19:42:15.931Z",
+        "name": "ov3rburdened",
+        "serviceAccount": false,
+        "urlName": "ov3rburdened"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-03-23T15:54:10.442Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69c16110cec301c170121f4c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I reviewed multiple output logs. They do not contain a single fatal exception immediately preceding the freeze. Instead, sessions either stop abruptly or show unrelated null-reference/resource errors. This appears consistent with a lower-level GPU driver hang rather than a clean in-engine crash. Recurrent log details include Using PostPresentHandoff/AMD workaround: False, repeated desktop-mode OpenVR init failures, occasional UI/resource missing messages, and some null-reference exceptions in UI/audio shutdown paths.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-23T15:49:36.709Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "**Summary:**\n\nVRChat causes a non-recoverable GPU driver hang on AMD RX 7900 XTX requiring a full system reboot. This occurs in desktop mode and is isolated to VRChat (other GPU-intensive applications remain stable.)\n\n**System Specifications:**\n\n* CPU: Ryzen 9 9950X\n\n* GPU: AMD Radeon RX 7900 XTX (XFX MERC)\n\n* RAM: 96GB DDR5 (2×48GB)\n\n* Storage: Samsung 980 Pro 2TB NVMe\n\n* Motherboard: MSI MPG X870 Gaming Carbon WiFi\n\n* PSU: 1000W\n\n* OS: Windows 11\n\n**Displays:**\n\n* 4K @ 60Hz (primary)\n\n* 1440p @ 144Hz FreeSync (secondary)\n\n**Driver Version:**\n\n* AMD Adrenalin 26.2.2\n\n**Issue Behavior:**\n\n* Screen freezes or turns black\n\n* Audio continues (game + Discord)\n\n* Microphone may still transmit\n\n* Win + Ctrl + Shift + B does not recover the driver\n\n* Requires hard reboot\n\n**Frequency:**\n\n* Intermittent\n\n* Can occur within minutes OR after 1–3+ hours of gameplay\n\n**Steps to Reproduce:**\n\n1. Launch VRChat in desktop mode\n\n2. Join any world\n\n3. Play normally\n\n4. After some time, GPU driver freezes and system becomes unrecoverable\n\n**Troubleshooting Performed:**\n\n* Cleared VRChat cache\n\n* Cleared DirectX shader cache\n\n* Verified stability in other games (FFXIV, Cyberpunk 2077)\n\n* No overclocking or undervolting (stock GPU/CPU settings)\n\n* Normal temps and power draw\n\n* Ran SMART checks on SSD (no issues)\n\n* Ran DISM and SFC (no integrity violations)\n\n**Additional Notes:**\n\n* Issue occurs only in VRChat\n\n* System is otherwise stable under heavy GPU load\n\n* Behavior suggests a hard driver hang rather than recoverable timeout (TDR)\n\n* Possible relation to shader compilation, avatar loading, or VRAM usage over time",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/16f3af622ec04c55d29e389866f53caa.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-03-23_00-28-36",
+      "url": "https://canny-assets.io/files/16f3af622ec04c55d29e389866f53caa.txt"
+    }
+  ],
+  "ideaID": "69c16111cec301c170122025",
+  "imageURLs": [],
+  "lastUpdated": 1779007859005,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69c16110cec301c170121f4c/370496664.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-23T15:49:36.709Z",
+  "subCategoryID": null,
+  "title": "Hard GPU driver freeze requiring reboot on AMD 7900 XTX (Adrenalin 26.2.2)",
+  "trendingScore": 2934.3587834851237,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": null,
+  "urlName": "hard-gpu-driver-freeze-requiring-reboot-on-amd-7900-xtx-adrenalin-2622",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61e475177914be4483d25b80",
+      "alias": "Plastic Parrot",
+      "aliasID": "69c1602cbcda4ee632f74aaf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/10cc34b6d2eb31dd7e4edea68827d6a6.png",
+      "companies": [],
+      "name": "ov3rburdened",
+      "urlName": "ov3rburdened",
+      "voteID": "69c16110bcda4ee6323afd31"
+    }
+  ]
+}

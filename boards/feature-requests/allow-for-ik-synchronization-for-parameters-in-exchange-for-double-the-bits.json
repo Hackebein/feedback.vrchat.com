@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "62b1739a12f00c0b9bf315e9",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-16T19:55:07.786174Z",
+  "author": {
+    "_id": "6219735270781570a496d5f9",
+    "alias": "Whispering Vole",
+    "aliasID": "65c2ce62ed6eefce4c196670",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c4aeb30521b67ceae99f82efa5784ad1.png",
+    "created": "2022-02-26T00:24:50.145Z",
+    "name": "Fox P McCloud",
+    "serviceAccount": false,
+    "urlName": "fox-p-mccloud"
+  },
+  "authorID": "6219735270781570a496d5f9",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-06-21T07:30:34.358Z",
+  "deletedAt": null,
+  "details": "At the moment, allowing VRChat users to sync at higher rates would be particularly useful for a number of features within VRChat and allow for smoother operation.\nYou can presently already do this by utilizing the \"pie menu trick\", but this is a bit hacky and a bit of a \"spacebar heater\" aspect of handling things.\nIf VRChat users were allowed to manually select their parameters to sync at IK network-sync levels, this would increase overall network load, of course. A temporary way to address this issue would be to make an IK-network synced parameter take up double the bits, while still remaining its original bit value. This isn't a perfect solution, by any means, but it it would at least allow network resources to be kept fairly low until an alternate and more robust solution is implemented into the VRChat SDK.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8fee4c3e90df13621ab",
+  "imageURLs": [],
+  "lastUpdated": 1779233527954,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-06-21T07:30:34.358Z",
+  "subCategoryID": null,
+  "title": "Allow for IK Synchronization for Parameters in Exchange for Double the Bits",
+  "trendingScore": 2738.4521326658446,
+  "updatedAt": "2026-05-19T23:33:49.452084Z",
+  "urlName": "allow-for-ik-synchronization-for-parameters-in-exchange-for-double-the-bits",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6219735270781570a496d5f9",
+      "alias": "Whispering Vole",
+      "aliasID": "65c2ce62ed6eefce4c196670",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c4aeb30521b67ceae99f82efa5784ad1.png",
+      "companies": [],
+      "name": "Fox P McCloud",
+      "urlName": "fox-p-mccloud",
+      "voteID": "62b1739a12f00c0b9bf31618"
+    }
+  ]
+}

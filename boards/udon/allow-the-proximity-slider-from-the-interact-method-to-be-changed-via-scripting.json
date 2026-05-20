@@ -1,0 +1,95 @@
+{
+  "__v": 0,
+  "_id": "66cc6ed7a9d482ee69ca19e4",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T21:57:01.415973Z",
+  "author": {
+    "_id": "6437440ffef4e13b6f952e6a",
+    "alias": "Topaz Mole",
+    "aliasID": "668852395423128e4366415a",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2023-04-12T23:51:43.182Z",
+    "name": "yoGert_",
+    "serviceAccount": false,
+    "urlName": "yogert"
+  },
+  "authorID": "6437440ffef4e13b6f952e6a",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-08-26T12:02:31.401Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am creating a Custom Editor for a script I am working on. When you add the Interact method to your script, the Proximity slider is created. I would like to change this slider value through my script.\n\nThere is no documentation on how to do this, but I have tried getting the VRCInteractable component and setting the proximity property through that, but an error tells me that this not exposed to Udon.\n\nIf there is a way to do this, can you please inform me how to do it. If not, can this feature be added pls?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba0ce4c3e90df1396213",
+  "imageURLs": [
+    "https://canny.io/images/fdc743e410c5d518509fa4c4cd089b0d.png",
+    "https://canny.io/images/de3fce2eb241f61e37f97088c004ab78.png"
+  ],
+  "lastUpdated": 1779054505580,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-08-26T12:02:31.401Z",
+  "subCategoryID": null,
+  "title": "Allow the Proximity slider from the Interact method to be changed via scripting",
+  "trendingScore": 2852.336254743391,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": "6437440ffef4e13b6f952e6a",
+  "urlName": "allow-the-proximity-slider-from-the-interact-method-to-be-changed-via-scripting",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6437440ffef4e13b6f952e6a",
+      "alias": "Topaz Mole",
+      "aliasID": "668852395423128e4366415a",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "yoGert_",
+      "urlName": "yogert",
+      "voteID": "66cc6ed71f860fbed3a1710c"
+    }
+  ]
+}

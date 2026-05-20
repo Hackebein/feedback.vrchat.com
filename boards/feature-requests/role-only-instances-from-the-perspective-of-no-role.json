@@ -1,0 +1,86 @@
+{
+  "__v": 0,
+  "_id": "64723ff89ce420092527d5ea",
+  "aiCategories": [
+    "loc.in-world",
+    "groups.instances"
+  ],
+  "aiTaggedAt": "2026-05-17T05:39:38.342254Z",
+  "author": {
+    "_id": "62fc4803c5b7bf44a530ee80",
+    "alias": "Blonde Alligator",
+    "aliasID": "65c3e659ed6eefce4cb8aa23",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/86dbfed4fa1d7ed76a883a60c52d2670.png",
+    "created": "2022-08-17T01:44:35.152Z",
+    "name": "蓄電池⁄electeclair",
+    "serviceAccount": false,
+    "urlName": "electeclair"
+  },
+  "authorID": "62fc4803c5b7bf44a530ee80",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-05-27T17:38:00.012Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When a user who is a group subscriber and has not had a role added tries to join a role-only group instance, an error message is displayed as shown in the attached image and the user is unable to join. This is not a problem in terms of functionality, but we would like the error message to make the cause of the problem easier to understand.\n\nTherefore, we would like you to do one of the following\n\n1. Make the error messages more detailed.\n\nI would like the error message to be more concise.\n\nFor example, \"You cannot join this group instance because you have not been added to the role for joining.\n\n2. Replace all group instances that cannot be joined with In a private world.\n\nI would like group members to be able to easily confirm that they cannot join by either hiding role-only group instances or displaying \"In a private world\" for group members who do not have a role added.\n\n3. Remove the \"join\" button and place a message in its place.\n\nI would like the \"join\" button to be removed only for members who do not have a role added to the role-only group instance, and a message to be displayed saying \"You cannot join this group instance because you do not have a role added to join it.\n\n== 以下DeepL翻訳をする前の原文 ==\n\nグループ加入者でロールを付加されていないユーザーが、ロール専用グループインスタンスにjoinしようとすると添付画像のようにエラーが表示されてjoin出来ないようになっています。機能としては問題ないのですが、エラーメッセージで原因をもっと分かりやすくして欲しいです。\n\nつきましては、下記のいずれかの対応をして欲しいです。\n\n1.エラーメッセージの内容を詳しくする\n\nエラーメッセージの内容をもっと簡潔に記載して欲しいです。\n\n例：「あなたはこのグループインスタンスにjoinするためのロールを付加されていないためjoinできない」\n\n2.join出来ないグループインスタンスは全てIn a private worldに置き換える\n\nロールが付加されていないグループメンバーはロール限定グループインスタンスを非表示にするかIn a private worldと表示してjoin出来ないことを簡単に確認できるようにして欲しいです。\n\n3.joinボタンを削除して代わりのメッセージを配置する\n\nロール限定グループインスタンスでロールが付加されていないメンバーのみjoinボタンを削除して「あなたはこのグループインスタンスにjoinするためのロールを付加されていないためjoinできない」と表示して欲しいです。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97de4c3e90df137bf1b",
+  "imageURLs": [
+    "https://canny.io/images/1912fe56632908a8e16b84046bccadef.png"
+  ],
+  "lastUpdated": 1778995678938,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-05-27T17:38:00.012Z",
+  "subCategoryID": null,
+  "title": "Role-only instances from the perspective of no role",
+  "trendingScore": 2787.083821978014,
+  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "updatedBy": null,
+  "urlName": "role-only-instances-from-the-perspective-of-no-role",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62fc4803c5b7bf44a530ee80",
+      "alias": "Blonde Alligator",
+      "aliasID": "65c3e659ed6eefce4cb8aa23",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/86dbfed4fa1d7ed76a883a60c52d2670.png",
+      "companies": [],
+      "name": "蓄電池⁄electeclair",
+      "urlName": "electeclair",
+      "voteID": "64723ff89ce420092527d62d"
+    }
+  ]
+}

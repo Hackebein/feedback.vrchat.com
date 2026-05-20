@@ -1,0 +1,130 @@
+{
+  "__v": 0,
+  "_id": "642f6b14718e4a09c6d39f48",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-19T07:40:31.096254Z",
+  "author": {
+    "_id": "60cab5630e940039b6b7ed14",
+    "alias": "Navy Impala",
+    "aliasID": "65c2b99ded6eefce4c87b5e6",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-06-17T02:37:23.885Z",
+    "name": "alareis",
+    "serviceAccount": false,
+    "urlName": "alareis"
+  },
+  "authorID": "60cab5630e940039b6b7ed14",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-04-07T01:00:04.955Z",
+  "deletedAt": null,
+  "details": "Offender: wrld_f0d1ad30-bf56-444c-ba62-b2582e49767f\n\nReplication: use clamped non-linear L1 solver (https://grahamhazel.com/blog/2017/12/22/converting-sh-radiance-to-irradiance/), navigate out and to the right, almost all the way down the corridor, until you see sudden change in pixel colours. I suspect values close to negative epsilon for W component.\n\nSample: avtr_1e0dc4a6-dadf-4001-b4f2-30d63c257372, avtr_6bfae6c2-3842-4d57-b216-74f8404c3cfa, avtr_7e61d1a4-9b1e-46c0-b8d0-4a04369d42fc etc.\n\nWhy it happens: SHAx.w is non-positive, while SHAx.xyz reports uniform directions. This results in flipped, but also irrelevant value, since irradiance can't be negative. Moreover, SHAx.xyz can only be non-zero when SHAx.w is non-zero (when there's no light, there's no dominating direction, checks out).\n\nCurrent solution is to abs() the SHAx.w triplet, but that results in running extra operations in the shader (avtr_29f036dc-1fe6-459c-85e0-09b9a57c392a, leftmost ball). Instead, implement a sanity check that runs at bake-time or at load-time and clips values to [0, ∞).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb973e4c3e90df1379f07",
+  "imageURLs": [
+    "https://canny.io/images/d07e2ab140e41210850aaa49f37a51e9.png"
+  ],
+  "lastUpdated": 1779175623363,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/642f6b14718e4a09c6d39f48/1189086655.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-04-07T01:00:04.955Z",
+  "subCategoryID": null,
+  "title": "Sanity-check L1 coefficients",
+  "trendingScore": 2838.0618002110023,
+  "updatedAt": "2026-05-19T07:29:08.486735Z",
+  "updatedBy": null,
+  "urlName": "sanity-check-l1-coefficients",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "648117224cc6d90905e5cf9e",
+      "alias": "Neat Unicorn",
+      "aliasID": "66487075b9e8e8fe66da4e8b",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "D4xter Kasai",
+      "urlName": "d4xter-kasai",
+      "voteID": "6648ca85b9e8e8fe66d7707c"
+    },
+    {
+      "_id": "66393488ec7160347b70490e",
+      "alias": "Clean Hare",
+      "aliasID": "66393488d36452c1797f6841",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/17a6f37faaddf37c079edda15fdbd71f.png",
+      "companies": [],
+      "name": "Kero00",
+      "urlName": "kero00",
+      "voteID": "66489c22b9e8e8fe666fd7cb"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "fizzy-canny",
+      "voteID": "64303453230c3b09d18aa882"
+    },
+    {
+      "_id": "5b4cfe34e2f8bb53f6847f7b",
+      "alias": "Thick Cricket",
+      "aliasID": "65c28071ed6eefce4c54530f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/391d51f2d06fd16255411b19a771ab12.png",
+      "companies": [],
+      "name": "Haxy",
+      "urlName": "haxy",
+      "voteID": "6430087da9ef3a0a1baef568"
+    },
+    {
+      "_id": "60cab5630e940039b6b7ed14",
+      "alias": "Navy Impala",
+      "aliasID": "65c2b99ded6eefce4c87b5e6",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "alareis",
+      "urlName": "alareis",
+      "voteID": "642f6b15718e4a09c6d3a014"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "632e1ba9d926595e55424856",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:58:20.833695Z",
+  "author": {
+    "_id": "631a2053a6c75444bf9a4f30",
+    "alias": "Worthwhile Swan",
+    "aliasID": "65cac663ed6eefce4c06d3c6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/03185b342885e72f1687473a1f426244.png",
+    "created": "2022-09-08T17:03:15.263Z",
+    "name": "Mr․ Imagination",
+    "serviceAccount": false,
+    "urlName": "mr-imagination"
+  },
+  "authorID": "631a2053a6c75444bf9a4f30",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-09-23T20:48:41.373Z",
+  "deletedAt": null,
+  "details": "When a bone chain of a model that is animated and has a Physbone script present it will act as if being grabbed/posed regardless if those settings are checked on or off if the Bone chain is scaled simultaneously. It will also somewhat ignore the animation while this occurs. This issue isn't present with the Dynamic Bone script but is for Physbone.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb93fe4c3e90df136f047",
+  "imageURLs": [],
+  "lastUpdated": 1779032709928,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-09-23T20:48:41.373Z",
+  "subCategoryID": null,
+  "title": "[BUG] Scaling Animated Physbone Causes Unexpected behavior",
+  "trendingScore": 2751.9598823037413,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-scaling-animated-physbone-causes-unexpected-behavior",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "631a2053a6c75444bf9a4f30",
+      "alias": "Worthwhile Swan",
+      "aliasID": "65cac663ed6eefce4c06d3c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/03185b342885e72f1687473a1f426244.png",
+      "companies": [],
+      "name": "Mr․ Imagination",
+      "urlName": "mr-imagination",
+      "voteID": "632e1ba9d926595e5542489a"
+    }
+  ]
+}

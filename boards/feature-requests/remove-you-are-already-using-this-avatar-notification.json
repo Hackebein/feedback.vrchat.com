@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "66df6ecc299ce29760143d2f",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T12:44:27.628173Z",
+  "author": {
+    "_id": "5f31e1379dcbb575795df78a",
+    "alias": "Inquisitive Pinniped",
+    "aliasID": "65c26da3ed6eefce4c4d076c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ffccf8619b7165aa7dc10715da0da035.png",
+    "created": "2020-08-11T00:07:19.781Z",
+    "name": "Jar",
+    "serviceAccount": false,
+    "urlName": "jar-3"
+  },
+  "authorID": "5f31e1379dcbb575795df78a",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-09-09T21:55:24.082Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I don't think this notification is worth having...\n\n-Although rare, some game worlds change your avatar and this notification can pop up over and over again\n\n-Clicking an avatar pedestal for an avatar you're already wearing seems really rare and unlikely to be confusing\n\n-You can't \"use\" an avatar you're already wearing via any menus since the buttons are greyed out\n\nTechnically world authors could try to micromanager keeping track of which avatar the player is using by watching OnAvatarChanged. But I feel like this callback isn't the best way to do that, since there's delay between SetAvatarUse and OnAvatarChanged, while the avatar is being loaded (diamond loading avatar displayed). And there is no direct way for world authors to know whether a player is wearing a specific avatar.\n\nI think there is little harm in removing this popup and I would benefit from its removal for some niche game ideas. If it isn't too much trouble.\n\nA decent alternative would be some way to know which avatar ID the player is using, either through VRCPlayerApi or OnAvatarChanged, so that SetAvatarUse could be ignored when the avatar ID matches the one that's currently used.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba0fe4c3e90df1396ed6",
+  "imageURLs": [
+    "https://canny.io/images/ae320c5ec786ad64d78c86ccc250c044.png"
+  ],
+  "lastUpdated": 1779021137332,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66df6ecc299ce29760143d2f/551793248.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-09-09T21:55:24.082Z",
+  "subCategoryID": null,
+  "title": "Remove \"You are already using this avatar\" notification",
+  "trendingScore": 2854.3950720193498,
+  "updatedAt": "2026-05-17T12:32:20.735315Z",
+  "updatedBy": null,
+  "urlName": "remove-you-are-already-using-this-avatar-notification",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f31e1379dcbb575795df78a",
+      "alias": "Inquisitive Pinniped",
+      "aliasID": "65c26da3ed6eefce4c4d076c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ffccf8619b7165aa7dc10715da0da035.png",
+      "companies": [],
+      "name": "Jar",
+      "urlName": "jar-3",
+      "voteID": "66df6ecc7d32abb6ca210c32"
+    }
+  ]
+}

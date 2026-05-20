@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "66ae273eaa84da5811c5d8bf",
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T19:03:20.653149Z",
+  "author": {
+    "_id": "62ee26ec5a477544b9099aed",
+    "alias": "Casual Antelope",
+    "aliasID": "66ae1c07f66f1f693a0c78c3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/dc29bc47df971c9e6783b8fdeb23ed48.png",
+    "created": "2022-08-06T08:31:40.177Z",
+    "name": "Eevi bow",
+    "serviceAccount": false,
+    "urlName": "gh0stsync"
+  },
+  "authorID": "62ee26ec5a477544b9099aed",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-08-03T12:49:02.857Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I have encountered an oddly specific issue when binding the Index Trackpad as a Toggle Button set to gesture_toggle (for either click or touch, in my testing this didn't make a difference).\n\nWhen doing this, using the newly created binding in game and then, on the opposite hand of the gesture_toggle being bound, rapidly opening and then closing the udon menu will cause the binding you just used on the opposite hand to be triggered.\n\nI have tried replicating the same behavior with other toggle functions, however it seems as if this issue only occurs when using the index trackpad as a gesture toggle. I have ensured that I am editing the latest VRChat default bindings in SteamVR, and not using any pre-existing binding configurations. \n\nSteps for recreating the issue: \n\n1: Edit the default bindings for VRChat and add a binding to the index trackpad (see image attachment). The binding can be on only one hand, or both.\n\n2: In game, use the new binding once\n\n3: on the opposite hand of the binding that was just interacted with, quickly open and close udon menu\n\n4: the gesture toggle binding will be triggered.\n\nAdditionally, I have disabled all 3rd Party SteamVR integrations (such as OVR Advanced settings, XSOverlay etc) to exclude the possibility of any interference. I am on the SteamVR Stable branch (Build ID 15141130), and have verified the integrity of all files of both VRChat and SteamVR.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9f8e4c3e90df1393060",
+  "imageURLs": [
+    "https://canny.io/images/518a19f40ab4ac9c75ac50e816bced94.png"
+  ],
+  "lastUpdated": 1779226761984,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-08-03T12:49:02.857Z",
+  "subCategoryID": null,
+  "title": "[1486] SteamVR Index trackpad binded as gesture_toggle causes issues with udon menu",
+  "trendingScore": 2849.0551564489133,
+  "updatedAt": "2026-05-19T21:40:19.607119Z",
+  "updatedBy": null,
+  "urlName": "1486-steamvr-index-trackpad-binded-as-gesture-toggle-causes-issues-with-udon-men",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62ee26ec5a477544b9099aed",
+      "alias": "Casual Antelope",
+      "aliasID": "66ae1c07f66f1f693a0c78c3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dc29bc47df971c9e6783b8fdeb23ed48.png",
+      "companies": [],
+      "name": "Eevi bow",
+      "urlName": "gh0stsync",
+      "voteID": "66ae273ff66f1f693ad0ed9c"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "5f0dfdaf02411d74cd988c09",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T15:48:19.481018Z",
+  "author": {
+    "_id": "5a5e6eb3853e6528c51afec8",
+    "alias": "Valid Ostrich",
+    "aliasID": "65c332a3ed6eefce4c002e5c",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/b67e5def6199bb706deddfc5ed837650.png",
+    "created": "2018-01-16T21:29:23.730Z",
+    "name": "Steviation",
+    "serviceAccount": false,
+    "urlName": "trey-nevitt"
+  },
+  "authorID": "5a5e6eb3853e6528c51afec8",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-07-14T18:47:11.525Z",
+  "deletedAt": null,
+  "details": "When testing avatars from within the Unity Editor, playing the scene causes long loading/compile times that seem to scale with project size, regardless of the scene's individual size. Within an empty project, compiling takes about 5 seconds, but in larger projects (like the one I'm developing in), compile time can easily exceed a full minute.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7db6e4c3e90df15929c3",
+  "imageURLs": [],
+  "lastUpdated": 1779032529963,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-07-14T18:47:11.525Z",
+  "subCategoryID": null,
+  "title": "[BUG] Long load/compile times within Unity Editor",
+  "trendingScore": 2652.729229309959,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-long-loadcompile-times-within-unity-editor",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f9f1ebfa308d05f19397b80",
+      "alias": "Reliable Warbler",
+      "aliasID": "65c28115ed6eefce4c6d4a60",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
+      "companies": [],
+      "name": "JessicaOnMain",
+      "urlName": "jessicaonmain",
+      "voteID": "5fa0c0cd587d144943730537"
+    },
+    {
+      "_id": "58f0f87cae407f11b533b0b2",
+      "alias": "Orchid bloom Horse",
+      "aliasID": "65c270b7ed6eefce4cd260cb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7f7a88e25266a0bc83c2b0851b9da7b1.png",
+      "companies": [],
+      "name": "Misaki Ki",
+      "urlName": "misaki",
+      "voteID": "5f149d2c73f92f73fe04d9e2"
+    },
+    {
+      "_id": "5a5e6eb3853e6528c51afec8",
+      "alias": "Valid Ostrich",
+      "aliasID": "65c332a3ed6eefce4c002e5c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/b67e5def6199bb706deddfc5ed837650.png",
+      "companies": [],
+      "name": "Steviation",
+      "urlName": "trey-nevitt",
+      "voteID": "5f0dfdaf02411d74cd988c11"
+    }
+  ]
+}

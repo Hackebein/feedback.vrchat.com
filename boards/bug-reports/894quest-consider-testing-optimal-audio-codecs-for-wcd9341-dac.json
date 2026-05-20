@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "5e20c072f245406a1457b314",
+  "aiCategories": [],
+  "aiTaggedAt": "2026-05-17T23:31:49.104467Z",
+  "author": {
+    "_id": "5a60e3832478a072c83fa7ce",
+    "alias": "Pink Reindeer",
+    "aliasID": "65ba0213ed6eefce4c025aef",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/87b8dde596737c70bce64a542ea07379.jpg",
+    "created": "2018-01-18T18:12:19.205Z",
+    "name": "Lhun",
+    "serviceAccount": false,
+    "urlName": "lhun"
+  },
+  "authorID": "5a60e3832478a072c83fa7ce",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-01-16T19:58:42.530Z",
+  "deletedAt": null,
+  "details": "On the Snapdragon 835 hardware, The Qualcomm Aqstic audio codec has an integrated DAC (Digital-to-Analog) converter that supports up to 192-kHz/24-bit playback. This comes with a caveat, however, in that the kernel driver for the OS needs to recognize the format it's being presented with to naively decode it \"for free\", bypassing one of the cpu cores and doing it on it's high end native audio decoder.\nI'll preface this with: I'm not certain how much of an impact this will have if any, but it's worth a look for sounds that are baked into the vrchat client itself, as well as the ENCODING of audio from PLAYER audio sources. If the incoming audio source format codec could be optimized to utilize this DAC, you may save some ram/cpu and gain some overhead back.\nThere may also be a limit to how many simultaneous streams you can decode in this way, but I was unable to find strict details.\nThe attached pictures are where I would start to look to change the default android audio import settings for things like the UI sounds and load screen music. If the changes in resource usage between builds are significant I would also post a recommendation to world creators since that is also something inside their control. (currently, this could be overwritten on upload with an \"auto fix\"). My reccomendation is to use \"streaming\" and either mp3 or adpcm for long, looping music (like the load screen) and \"Decompress on load\" and PCM/ADPCM for things like the \"woosh\" menu sound and the \"selection pop\" when an item is clicked, while also overriding the sample rate for those sound effects to 41k or 48k. You'll want to see if adpcm/mp3 offers less/more cpu and ram usage when the import format is changed. The quest can do 192k 24/bit sample rate and if your source files are, for example, mp3 or whatever at a level similar to that, that's likely what it'll end up compiling to on the quest since the capability is there. By default, mp3 files on quest are the default format in some cases and remain \"un-transcoded\" by unity when bundled into the combined binary.\nThere are similar recommendations for PC of course, but they're more loose due to massively differing hardware capabilities.\nHere's a bit of info on the chip itself. \nhttps://www.qualcomm.com/news/onq/2017/01/24/snapdragon-835-powering-immersive-vr-and-ar-experiences-youve-been-waiting\nAnd here's a patchwork link for the kernel mode driver for the audio chip series I found, though I'm not sure how much of it is fully utilized in the build of the OS for quest. One can hope it's used extensively, but I just don't know. To find out, you would have to run a featureset dump from ADB, probably. \nhttps://patchwork.kernel.org/patch/11027449/",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9ee4c3e90df158b8d0",
+  "imageURLs": [
+    "https://canny.io/images/27bb5c6d081ea80716803afa7b3fd4be.png",
+    "https://canny.io/images/30cd46515f066ec230ce5c40136c9578.png",
+    "https://canny.io/images/87a8c14bf0d61c03cce3cb0f9226b2e1.png"
+  ],
+  "lastUpdated": 1779060401147,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-01-16T19:58:42.530Z",
+  "subCategoryID": null,
+  "title": "[894]Quest: Consider testing optimal audio codecs for WCD9341 dac",
+  "trendingScore": 2611.8120669375044,
+  "updatedAt": "2026-05-17T23:27:35.879050Z",
+  "urlName": "894quest-consider-testing-optimal-audio-codecs-for-wcd9341-dac",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a60e3832478a072c83fa7ce",
+      "alias": "Pink Reindeer",
+      "aliasID": "65ba0213ed6eefce4c025aef",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/87b8dde596737c70bce64a542ea07379.jpg",
+      "companies": [],
+      "name": "Lhun",
+      "urlName": "lhun",
+      "voteID": "5e20c072f245406a1457b31c"
+    }
+  ]
+}

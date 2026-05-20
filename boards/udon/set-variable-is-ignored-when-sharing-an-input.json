@@ -1,0 +1,133 @@
+{
+  "__v": 0,
+  "_id": "605c2eb89644b2219a6fbd4a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:26:46.335018Z",
+  "author": {
+    "_id": "5b7c3929d5fc6b20af6b960a",
+    "alias": "Frozen Emu",
+    "aliasID": "65c29c85ed6eefce4c8ccad4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/02280587074a5f85ba0e7046d47d8008.png",
+    "created": "2018-08-21T16:09:13.064Z",
+    "name": "Lyuma",
+    "serviceAccount": false,
+    "urlName": "lyuma"
+  },
+  "authorID": "5b7c3929d5fc6b20af6b960a",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "605c2f3d939eb9183478cf14",
+      "author": {
+        "_id": "5b7c3929d5fc6b20af6b960a",
+        "alias": "Frozen Emu",
+        "aliasID": "65c29c85ed6eefce4c8ccad4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/02280587074a5f85ba0e7046d47d8008.png",
+        "created": "2018-08-21T16:09:13.064Z",
+        "name": "Lyuma",
+        "serviceAccount": false,
+        "urlName": "lyuma"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-03-25T06:35:41.598Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "605c2eb89644b2219a6fbd4a",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Note the log message displaying Null is actually caused by:\nhttps://feedback.vrchat.com/vrchat-udon-closed-alpha-bugs/p/branches-decompose-variables-to-null-in-certain-scenarios \nI believe the bug with set variable going missing to be a different problem, but it could be related, not sure.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-03-25T06:33:28.403Z",
+  "deletedAt": null,
+  "details": "Verified on both SDK versions:\nlatest VRCSDK3-WORLD-2021.03.22.18.27_Public\nand VRCSDK3-WORLD-2021.01.19.07.28_Public\n\nWhile trying to workaround the while loop bug, I discovered that \"Set Variable\" nodes are completely ignored when their input is shared with another Set Variable node elsewhere in the graph.\nIn the following program, I do some math to produce a \"true\" value which I assign to a variable. I check if the variable is true, then I set the variable to false, then I set the variable to an expression which should evaluate to true. However, the variable is simply set to false and the subsequent \"set variable\" is ignored.\nUdonFlat doesn't do a good job of illustrating the issue in this case, because it sees that the variable is set to a constant and optimizes it out, but the flat program is visible in the following scerenshot.\nI added a second screenshot with a more complicated (false==true) expression to force it to generate the variable assignment in the UdonFlat program.\nHere is the graph asset:\nhttps://gist.githubusercontent.com/lyuma/7da98ef4c77e80a44b3d4d1a8adca9ee/raw/2e667350cccf9b144a67d6594b1d8cb9ffd4f4ba/IfStatementWrong.asset",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb812e4c3e90df1325d1a",
+  "imageURLs": [
+    "https://canny.io/images/5c3aaad996410a010991f3db7dcf4957.png",
+    "https://canny.io/images/293d3be69a091979f7b81b5a107f097f.png"
+  ],
+  "lastUpdated": 1779247166147,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-03-25T06:33:28.403Z",
+  "subCategoryID": null,
+  "title": "Set Variable is ignored when sharing an input",
+  "trendingScore": 2673.732182304568,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "set-variable-is-ignored-when-sharing-an-input",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b7c3929d5fc6b20af6b960a",
+      "alias": "Frozen Emu",
+      "aliasID": "65c29c85ed6eefce4c8ccad4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/02280587074a5f85ba0e7046d47d8008.png",
+      "companies": [],
+      "name": "Lyuma",
+      "urlName": "lyuma",
+      "voteID": "605c2eb89644b2219a6fbd51"
+    }
+  ]
+}

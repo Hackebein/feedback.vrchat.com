@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "67046f2ce94d39fd74a919a7",
+  "aiCategories": [
+    "sdk.udon",
+    "client.controls",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-17T22:14:20.181520Z",
+  "author": {
+    "_id": "603b04282fa90e5c53608eb6",
+    "alias": "Variable Turtle",
+    "aliasID": "65c27d10ed6eefce4cc8cf32",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+    "created": "2021-02-28T02:47:04.064Z",
+    "name": "RavenWorks",
+    "serviceAccount": false,
+    "urlName": "ravenworks"
+  },
+  "authorID": "603b04282fa90e5c53608eb6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-10-07T23:30:52.939Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently, if you want a pickup to respond to things like the joystick or jump button, it will happen *alongside* those inputs' normal functions.   This can somewhat be mitigated by changing a player's movement speed to zero, but that will block movement for both hands rather than just the hand holding the pickup;  if we could have something like JavaScript's \"stopPropagation\", we could more accurately replace only certain inputs while a pickup is in use.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba1ae4c3e90df1399432",
+  "imageURLs": [],
+  "lastUpdated": 1779056046960,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67046f2ce94d39fd74a919a7/217786523.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-10-07T23:30:52.939Z",
+  "subCategoryID": null,
+  "title": "Allow pickups to consume inputs",
+  "trendingScore": 2858.4045443085365,
+  "updatedAt": "2026-05-17T22:14:20.122322Z",
+  "updatedBy": null,
+  "urlName": "allow-pickups-to-consume-inputs",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "ravenworks",
+      "voteID": "67046f2d8c4554f38c8ef2ad"
+    }
+  ]
+}

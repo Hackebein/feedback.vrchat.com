@@ -1,0 +1,92 @@
+{
+  "_id": "6963b4cd7d9dc94e76b646cd",
+  "aiCategories": [
+    "loc.website",
+    "sdk.world-building",
+    "web.creators-portal"
+  ],
+  "aiTaggedAt": "2026-05-18T13:54:18.304893Z",
+  "author": {
+    "_id": "5edf57f29191f07e20372c40",
+    "alias": "Persistent Wolf",
+    "aliasID": "65de339436dd86f1c4c69af9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7a99fe90b386eb27e8547457809e7c45.png",
+    "created": "2020-06-09T09:35:46.062Z",
+    "name": "Malactus",
+    "serviceAccount": false,
+    "urlName": "mal-16"
+  },
+  "authorID": "5edf57f29191f07e20372c40",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c36bc22b1844b7e1425c",
+    "created": "2022-08-25T18:46:03.389Z",
+    "name": "General Feedback",
+    "parentID": null,
+    "postCount": 109,
+    "urlName": "general-feedback"
+  },
+  "categoryID": "6307c36bc22b1844b7e1425c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-01-11T14:33:49.298Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In https://creators.vrchat.com/avatars/#local-avatar-testing it says that Build & Test  puts the avatar into\n\n    Windows: %LocalAppdata%Low\\VRChat\\VRChat\\Avatars\n\n    Linux: $HOME/.local/share/VRChat/VRChat/Avatars/\n\nHowever this is not taking to account users who install UnityHub via Flatpak. In this case the default directory would be \n\n    $HOME/.var/app/com.unity.UnityHub/data/VRChat/VRChat/Avatars/\n\nIt is not also mentioning that If using linux also these directories should be linked to where ever vrchat is actively running, and should show basic linking commands (specifically to  vrc running over proton on steam) for those not that versed in linux for brevity, especially if folks have just migrated from windows to linux.\n\nThis may be the reason for so many reports of \"Build & Test\" not working Linux.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6963b4cd7d9dc94e76b647db",
+  "imageURLs": [],
+  "lastUpdated": 1779111075429,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6963b4cd7d9dc94e76b646cd/437324704.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-01-11T14:33:49.298Z",
+  "subCategoryID": null,
+  "title": "Update VRChat Creation Documentation Regarding local avatars and Linux",
+  "trendingScore": 2924.2084073979872,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "update-vrchat-creation-documentation-regarding-local-avatars-and-linux",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5edf57f29191f07e20372c40",
+      "alias": "Persistent Wolf",
+      "aliasID": "65de339436dd86f1c4c69af9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7a99fe90b386eb27e8547457809e7c45.png",
+      "companies": [],
+      "name": "Malactus",
+      "urlName": "mal-16",
+      "voteID": "6963b4cdf85d59c66d8a62d2"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "_id": "69d43652cfbc56bdf259daf5",
+  "aiCategories": [
+    "loc.in-world",
+    "groups.nameplates",
+    "social.nameplates"
+  ],
+  "aiTaggedAt": "2026-05-17T08:55:39.576968Z",
+  "author": {
+    "_id": "65e632c79a26df2552e1fb9c",
+    "alias": "Vocal Stork",
+    "aliasID": "65e632c7a6e3ea79dd67fe39",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1acc60375855a88b8a697922e0baf6ce.png",
+    "created": "2024-03-04T20:44:55.545Z",
+    "name": "Norelock",
+    "serviceAccount": false,
+    "urlName": "norelock"
+  },
+  "authorID": "65e632c79a26df2552e1fb9c",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-06T22:40:18.120Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When changing the nameplate opacity in VRChat, only part of the nameplate is affected. The background fades, but the group banner, pronouns, and extra text remain fully visible instead of following the same opacity level.\n\nSteps to reproduce:\n\n1. Open VRChat settings\n\n2. Go to nameplate or UI opacity settings\n\n3. Lower the opacity\n\n4. Look at a user with a group banner and pronouns\n\nAll nameplate elements including username, group banner, pronouns, and extra tags should fade consistently with the opacity setting.\n\nOnly at the moment the main background fades, while group banners, pronouns, and some text stay fully visible, but now for some friends of mine and me it causes visual inconsistency and clutter, especially in crowded worlds where many users have banners and pronouns enabled, so yeah",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69d43652cfbc56bdf259db0c",
+  "imageURLs": [
+    "https://canny-assets.io/images/685d61f37e2cb5679ec158db720f19b8.jpeg"
+  ],
+  "lastUpdated": 1779007862479,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69d43652cfbc56bdf259daf5/725196187.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-06T22:40:18.120Z",
+  "subCategoryID": null,
+  "title": "[BUG] Group Banner & Text Not Respecting Opacity Setting",
+  "trendingScore": 2936.39952681019,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": null,
+  "urlName": "bug-group-banner-text-not-respecting-opacity-setting",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "65e632c79a26df2552e1fb9c",
+      "alias": "Vocal Stork",
+      "aliasID": "65e632c7a6e3ea79dd67fe39",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1acc60375855a88b8a697922e0baf6ce.png",
+      "companies": [],
+      "name": "Norelock",
+      "urlName": "norelock",
+      "voteID": "69d43652a4b6d376ad69f614"
+    }
+  ]
+}

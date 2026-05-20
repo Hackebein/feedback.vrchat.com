@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "5f0f93e2218d7047478e1457",
+  "aiCategories": [
+    "loc.action-menu",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-05-17T15:48:29.920999Z",
+  "author": {
+    "_id": "5dca5756f86ab7279db548de",
+    "alias": "Maroon Whippet",
+    "aliasID": "65cac2feed6eefce4ca1f714",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/79735de7835c7d583c5802e2f09d8141.png",
+    "created": "2019-11-12T06:55:18.854Z",
+    "name": "さうす South-ws",
+    "serviceAccount": false,
+    "urlName": "168774465-3"
+  },
+  "authorID": "5dca5756f86ab7279db548de",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-07-15T23:40:18.134Z",
+  "deletedAt": null,
+  "details": "The behavior when holding the gesture of the hand on the opposite side from displaying the Action Menu is different between left and right.\nThe suggestion is not to change the Gesture of the Action Menu hand when holding the other hand of the Action Menu.\nRight now, when I swipe the Gesture Toggle menu to change it from ON to OFF, the behavior is different between left and right.\n-Left ActionMenu:Gesture is turned off and pinned by the FaceExpression of the right hand you hold.\n-Right ActionMenu:Gesture is turned off and pinned by the FaceExpression at the \"Gesture\" position of the right hand, instead of holding the left hand.\nI think this still retains the old behavior of Hand Gesture where the right hand side prevails, but in principle the right and left menu operations should behave the same.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7db6e4c3e90df1592a65",
+  "imageURLs": [],
+  "lastUpdated": 1779032530967,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny.io/images/og/58c62e995865713647a7115d/posts/5f0f93e2218d7047478e1457/1854834006.jpg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-07-15T23:40:18.134Z",
+  "subCategoryID": null,
+  "title": "[BUG]Gesture Toggle button behavior is different between Left and Right Action Menu",
+  "trendingScore": 2637.6911930626698,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "buggesture-toggle-button-behavior-is-different-between-left-and-right-action-men",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5dca5756f86ab7279db548de",
+      "alias": "Maroon Whippet",
+      "aliasID": "65cac2feed6eefce4ca1f714",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/79735de7835c7d583c5802e2f09d8141.png",
+      "companies": [],
+      "name": "さうす South-ws",
+      "urlName": "168774465-3",
+      "voteID": "5f0f93e2218d7047478e145f"
+    }
+  ]
+}

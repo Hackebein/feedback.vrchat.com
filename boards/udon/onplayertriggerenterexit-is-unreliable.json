@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "650d1548f7ad1f8fb1f065d1",
+  "aiCategories": [
+    "sdk.udon",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-17T17:40:27.169769Z",
+  "author": {
+    "_id": "64f8e8d313b550392ac6b63b",
+    "alias": "Daily Bear",
+    "aliasID": "65c29c85ed6eefce4c8cc730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/279d5344e6e3af3276b9dde2fa6b08a7.png",
+    "created": "2023-09-06T21:02:11.010Z",
+    "name": "hdorriker",
+    "serviceAccount": false,
+    "urlName": "hdorriker"
+  },
+  "authorID": "64f8e8d313b550392ac6b63b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-09-22T04:17:12.771Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If you can just call SendNetworkEvent() after receiving OnPlayerTriggerEnter() to make it non-local, then why is this method not exclusively local? I cannot overstate how serious this issue is, especially for world optimization. The current implementation where IsLocal is checked AFTER the event is raised creates a potentially huge amount of network traffic for something that is almost never needed to be synced. When this method is used for optimizations (turning parts of a world on and off in ways that Unity's built-in tools cannot), a missed event for this is catastrophic. It would be far better to have a late event, or even multiple copies of it received because that can actually be handled programmatically, but when this event misses, it's probably among the worst failure modes it can have short of crashing the game or lagging out, if you think about it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9a6e4c3e90df1382931",
+  "imageURLs": [],
+  "lastUpdated": 1779039020132,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny.io/images/og/58c62e995865713647a7115d/posts/650d1548f7ad1f8fb1f065d1/1604619445.jpg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-09-22T04:17:12.771Z",
+  "subCategoryID": null,
+  "title": "OnPlayerTriggerEnter()/Exit() is unreliable",
+  "trendingScore": 2803.861521611777,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": "64f8e8d313b550392ac6b63b",
+  "urlName": "onplayertriggerenterexit-is-unreliable",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64f8e8d313b550392ac6b63b",
+      "alias": "Daily Bear",
+      "aliasID": "65c29c85ed6eefce4c8cc730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/279d5344e6e3af3276b9dde2fa6b08a7.png",
+      "companies": [],
+      "name": "hdorriker",
+      "urlName": "hdorriker",
+      "voteID": "650d1548f7ad1f8fb1f065f9"
+    }
+  ]
+}

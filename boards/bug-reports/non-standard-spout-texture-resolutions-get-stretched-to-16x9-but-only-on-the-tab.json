@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "6833335efdb1e27b48ae5f25",
+  "aiCategories": [
+    "client.camera",
+    "loc.hud",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-16T22:14:44.524153Z",
+  "author": {
+    "_id": "6225d72ddb1e50166fea0bf3",
+    "alias": "Beige Parakeet",
+    "aliasID": "65c515a7ed6eefce4c1b1123",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/22ff3cde6fb355036ba5c05981d7393c.png",
+    "created": "2022-03-07T09:58:05.838Z",
+    "name": "Mawntee",
+    "serviceAccount": false,
+    "urlName": "mawntee"
+  },
+  "authorID": "6225d72ddb1e50166fea0bf3",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-25T15:12:30.244Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I record my Spout stuff on a square render texture (2560x2560) to help with horizontal/vertical cropping in post. On the little tablet guy for the drone this texture gets squashed, but upon entering FPV mode it crops the top/bottom and displays as you would expect with no distortion.\n\nHowever when you enter FPV mode in VR it just makes the tablet bigger and slaps that in front of your face, and with that you end up having the same stretched texture making it very difficult to set up your shot composition.\n\nAs for possible fixes I feel like it would make sense to match texture to screen width (since this is how the FOV is calculated) and either black bar top/bottom if it's ultrawide, or crop the top/bottom if the texture is taller than 16x9, but having an option in the config or something for \"fill screen\" or \"fit to screen\" would be most ideal.\n\nalso while I'm here, why does the static/world drop FPV option scale up and down as your move your head back and fourth? If I select the static option, I would expect it to actually be static. This little quirk is genuinely really annoying and makes the drone experience in VR absolute cheeks lol",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6833335efdb1e27b48ae5f60",
+  "imageURLs": [
+    "https://canny-assets.io/images/90be374a79077819cb443c0c41ad4d5d.png",
+    "https://canny-assets.io/images/3c23dffbe9a963d0369f75b9e12480ba.png"
+  ],
+  "lastUpdated": 1779255128676,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6833335efdb1e27b48ae5f25/365666881.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-25T15:12:30.244Z",
+  "subCategoryID": null,
+  "title": "Non-standard Spout texture resolutions get stretched to 16x9, but only on the tablets and in VR FPV mode",
+  "trendingScore": 2891.2122449418034,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "non-standard-spout-texture-resolutions-get-stretched-to-16x9-but-only-on-the-tab",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6225d72ddb1e50166fea0bf3",
+      "alias": "Beige Parakeet",
+      "aliasID": "65c515a7ed6eefce4c1b1123",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/22ff3cde6fb355036ba5c05981d7393c.png",
+      "companies": [],
+      "name": "Mawntee",
+      "urlName": "mawntee",
+      "voteID": "6833335eb25ebd72199d4f87"
+    }
+  ]
+}

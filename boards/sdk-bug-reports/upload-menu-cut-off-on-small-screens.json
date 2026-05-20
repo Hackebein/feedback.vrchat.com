@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "5d6411506b0ff7525776424a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T19:56:26.617885Z",
+  "author": {
+    "_id": "5ad89dc980e39f0da0baf0ad",
+    "alias": "Dramatic Badger",
+    "aliasID": "65ba08eaed6eefce4cb255ae",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2018-04-19T13:46:49.924Z",
+    "name": "Teh Bucket",
+    "serviceAccount": false,
+    "urlName": "teh-bucket"
+  },
+  "authorID": "5ad89dc980e39f0da0baf0ad",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-08-26T17:05:20.310Z",
+  "deletedAt": null,
+  "details": "In the default layout, a user with a small screen cannot see or click the upload button. The UI gets cropped in the unity's game tab While changing to the \"Tall\" layout is a workaround, the issue is confusing for new users. Note: to reproduce the bug on a 1080p screen, you must scale down the window Before you press \"build and publish\".\n\nChanging \"UI Scale Mode\" to \"Scale wtih Screen Size\" on the UI Canvas will fix this issue for everyone.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d90e4c3e90df1587aef",
+  "imageURLs": [
+    "https://canny.io/images/4d308ea99656a3ea338ba9b6c29559ef.png"
+  ],
+  "lastUpdated": 1779218196937,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-08-26T17:05:20.310Z",
+  "subCategoryID": null,
+  "title": "Upload menu cut off on small screens",
+  "trendingScore": 2591.3662958528485,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "upload-menu-cut-off-on-small-screens",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ad89dc980e39f0da0baf0ad",
+      "alias": "Dramatic Badger",
+      "aliasID": "65ba08eaed6eefce4cb255ae",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Teh Bucket",
+      "urlName": "teh-bucket",
+      "voteID": "5d6411506b0ff75257764253"
+    }
+  ]
+}

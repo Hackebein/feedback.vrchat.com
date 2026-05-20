@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "62ebf219ac91a944bb449483",
+  "aiCategories": [
+    "loc.in-world",
+    "social.instances"
+  ],
+  "aiTaggedAt": "2026-05-18T22:30:07.984811Z",
+  "author": {
+    "_id": "5f32b8fc576e155237fb608d",
+    "alias": "Nougat Frog",
+    "aliasID": "65c62ba6ed6eefce4cc62b99",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/eda8cf75298139fac473c553c9687dc1.png",
+    "created": "2020-08-11T15:27:56.932Z",
+    "name": "Wo1fie",
+    "serviceAccount": false,
+    "urlName": "wo1fie"
+  },
+  "authorID": "5f32b8fc576e155237fb608d",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-08-04T16:21:45.463Z",
+  "deletedAt": null,
+  "details": "I experienced this last night where I could not rejoin the instance that I created, and many others could not either.  I made 100% sure that it was unlocked friends+ as I was hosting an event instance.  We could only fix this by making a new unlocked friends+ instance, but we lost many people in the transition.  I've been hosting for over 2 years now and this is a new issue.  I discussed it with other hosts and they confirmed they have experienced it too with \"No clear cause or fix\".\nJoining the instance directly or through a friend causes you to be in a load loop where every time you finish \"Initializing World\" you are given the option to load again instead of joining the world.  Joining the instance through the \"Invite Me\" link causes you to load the world you were already in.  Being invited to the instance by a friend also has you load the world you're currently in.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb919e4c3e90df136736c",
+  "imageURLs": [],
+  "lastUpdated": 1779143271101,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-08-04T16:21:45.464Z",
+  "subCategoryID": null,
+  "title": "Can't join unlocked instance",
+  "trendingScore": 2744.79054384888,
+  "updatedAt": "2026-05-18T22:30:07.890442Z",
+  "urlName": "cant-join-unlocked-instance",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f32b8fc576e155237fb608d",
+      "alias": "Nougat Frog",
+      "aliasID": "65c62ba6ed6eefce4cc62b99",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/eda8cf75298139fac473c553c9687dc1.png",
+      "companies": [],
+      "name": "Wo1fie",
+      "urlName": "wo1fie",
+      "voteID": "62ebf219ac91a944bb4494a9"
+    }
+  ]
+}

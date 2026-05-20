@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "601bc29720ff3963bf678b4c",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.quick-menu",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-05-19T15:22:29.164954Z",
+  "author": {
+    "_id": "5a95256f54d514123c1f089d",
+    "alias": "Fuchsia Marmoset",
+    "aliasID": "65ba0454ed6eefce4c3ac7f6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/642f70667ed7ed29bd558fb38f8d11a9.png",
+    "created": "2018-02-27T09:31:27.716Z",
+    "name": "Demirramon",
+    "serviceAccount": false,
+    "urlName": "joan-marc"
+  },
+  "authorID": "5a95256f54d514123c1f089d",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-02-04T09:47:03.476Z",
+  "deletedAt": null,
+  "details": "The current camera works but has big issues:\n- The buttons are too difficult to click on and don't even work at certain angles.\n- The hitbox for the camera goes over the buttons. \nThis could be fixed by making the hitbox only cover the screen part of the camera and making the buttons bigger (taking as much space from the camera margins as possible for example).\nAnother possible fix could be making the camera only have the screen and control the settings through the quick menu. That would also allow for more options to be added in such menu without worrying about physical space in the camera object.\nAlso, why not make the lenses grabbable? It would make it so easier to readjust the position once detached from the screen.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb803e4c3e90df132370b",
+  "imageURLs": [],
+  "lastUpdated": 1779203719512,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-02-04T09:47:03.477Z",
+  "subCategoryID": null,
+  "title": "Camera improvement suggestions",
+  "trendingScore": 2666.7513870978883,
+  "updatedAt": "2026-05-19T15:17:18.925120Z",
+  "urlName": "camera-improvement-suggestions",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a95256f54d514123c1f089d",
+      "alias": "Fuchsia Marmoset",
+      "aliasID": "65ba0454ed6eefce4c3ac7f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/642f70667ed7ed29bd558fb38f8d11a9.png",
+      "companies": [],
+      "name": "Demirramon",
+      "urlName": "joan-marc",
+      "voteID": "601bc29720ff3963bf678b53"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "61c4b2322615b54cfb40016d",
+  "aiCategories": [
+    "sdk.udon",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-17T01:02:02.235741Z",
+  "author": {
+    "_id": "5f31e1eb4b9b1262d3a22a19",
+    "alias": "Cyan Puffin",
+    "aliasID": "65cb2e98ed6eefce4c4577eb",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/e9cc1e6762b6162e2c83bebbaf646307.png",
+    "created": "2020-08-11T00:10:19.784Z",
+    "name": "Katfish",
+    "serviceAccount": false,
+    "urlName": "katfish"
+  },
+  "authorID": "5f31e1eb4b9b1262d3a22a19",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-12-23T17:30:26.529Z",
+  "deletedAt": null,
+  "details": "-- Steps to reproduce --\n  1. Create toggle\n  2. When toggle is changed, have the change sync (via variable), and set UIToggle isOn with Udon\n  3. Join world with 1 other person\n  4. One player clicks toggle\nAfter about 4 seconds, the client that didn't click the toggle hard crashes",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cee4c3e90df135929b",
+  "imageURLs": [],
+  "lastUpdated": 1778979251047,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-12-23T17:30:26.529Z",
+  "subCategoryID": null,
+  "title": "Set UIToggle isOn through Udon results in client crash",
+  "trendingScore": 2712.7973577857188,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "set-uitoggle-ison-through-udon-results-in-client-crash",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f31e1eb4b9b1262d3a22a19",
+      "alias": "Cyan Puffin",
+      "aliasID": "65cb2e98ed6eefce4c4577eb",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e9cc1e6762b6162e2c83bebbaf646307.png",
+      "companies": [],
+      "name": "Katfish",
+      "urlName": "katfish",
+      "voteID": "61c4b2322615b54cfb400174"
+    }
+  ]
+}

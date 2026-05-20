@@ -1,0 +1,93 @@
+{
+  "_id": "69be487e24be48effeb05836",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "platforms.cross-platform",
+    "avatars.upload-performance",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-18T13:50:21.130774Z",
+  "author": {
+    "_id": "69be44eebcda4ee632f18d64",
+    "alias": "Cadmium red Locust",
+    "aliasID": "69be44eebcda4ee632f19f33",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f2f39bf7ec4b48b270871fddb98e82e1.png",
+    "created": "2026-03-21T07:12:46.535Z",
+    "name": "LGND_BBX",
+    "serviceAccount": false,
+    "urlName": "lgnd-bbx"
+  },
+  "authorID": "69be44eebcda4ee632f18d64",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 148,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-21T07:27:58.670Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is a less \"official\" kind of report, and I sincerely apologize if I come across as rude or anything of the sort. But the removal of various avatar uploading features for quest is completely unwarranted. For example: Alpha Blended particles. I have personally used and uploaded Alpha Blended particles to VRChat for quest on numerous avatars with absolutely zero issue, they worked perfectly fine. If I'm correct, they were removed for performance reasons.. this makes absolutely no sense to me or any of my other avatar creator friends. The performance issue regarding the quest build has absolutely nothing to do with particles and everything to do with avatars bypassing security measures through 3rd party SDKs. The avatars from illegal uploading should not be used as an excuse to punish those who use the official SDK. And even if It is 100% certain that particles are the reason for performance reduction. You guys seem to have already fixed that! There is a particle count limit on the quest side. I tested this myself, the maximum an avatar can spawn at one time is around 100K particles from a single system. This test was me trying to crash myself and willing participants with over a dozen particle systems all spawning the integer limit's number of particles. It instantly crashed PC users, but quest users stopped noticing increasing lag at a mere 150,000 particles being on at once.. thus proving the existence of the hard limit for particle count on the quest platform.\n\nAnd so the question I have is, if there is already hard limits for that, why is Alpha Blended still incompatible? If it was truly removed because of performance, and that has been fixed by now, why not add it back? \n\nAs for the other shaders in VRChat/Mobile, What I would like to request is VRChat/Mobile/Toon Standard (Outline) become quest compatible, specifically the outline feature. It is 100% possible to do this, I have seen numerous quest exclusive games that run on unity use shader based outlines. Additionally, I have seen some VRChat avatars on quest that were uploaded through an illegal SDK use that specific feature from the popular Poiyomi Shader. If I'm not mistaken, the entire concept of /Toon Standard and /Toon Standard (Outline), was almost entirely inspired from Poiyomi Shaders. So why is this not a feature even though its in the VRChat/Mobile shader pack?\n\nRespectfully, if performance complaints are truly the only reason as to why these features are not in the game, then that is not the game's fault/problem, it is the development team that is at fault. Instead of coddling the complaints of players that are too young to even play the game, maybe let them crash a few times to teach them to use YOUR features and hide an avatar or two. Its not the game's fault for an 8 year old entering a 40 person lobby, only to then MANUALLY show EVERYONE's avatar, and then REFUSE to hide them when they start lagging. The reason I point out the word \"manually\" is your game's DEFAULT safety settings literally prevent certain thresholds of avatar limits from being shown automatically. In order to change those thresholds you have to specifically go into your settings and mess with them manually. At that point is it really a performance issue if they literally ask for it? Take this for example: lets say hypothetically a massive game were to be fully released on mobile. Specifically meant for high end mobile devices, I then download it onto my cheap phone and crank the settings as high as they can go. That is an example of what the \"performance\" issue in VRChat is, its people refusing to optimize with features you give them. Instead of lowering the limits for quest every time some new crashing method gets figured out, maybe inform the people of the features specifically made to protect yourself from avatars? Lowering limits for uploading to the quest platform (which if I'm not mistaken is the larger side of the game's player base) is just making it worse. As much as many others would deny this, VRChat would be absolutely nothing without its creativity, its literally the entire game. Removing/Lowering creativity because people refuse to optimize is just bad business. There are always going to be crashers, there are always going to be laggers, there are always going to be people that ruin it for everyone else. That's just how gaming works. Punishing everyone else just because of a few bad actors is a good way of getting everyone to walk away from the game.\n\nAll in All either remove the incompatible shaders from the /Mobile selection, or make everything in /Mobile compatible with quest. Its getting genuinely annoying when I make a cool looking avatar with cool looking effects only to be slapped in the face with it being incompatible with quest even though I am using /Mobile shaders.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69be487e24be48effeb058d0",
+  "imageURLs": [],
+  "lastUpdated": 1779111031915,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69be487e24be48effeb05836/239449961.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-21T07:27:58.670Z",
+  "subCategoryID": null,
+  "title": "Make VRChat/Mobile Mobile Compatible!",
+  "trendingScore": 2934.0233039563536,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "make-vrchat-mobile-mobile-compatible",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69be44eebcda4ee632f18d64",
+      "alias": "Cadmium red Locust",
+      "aliasID": "69be44eebcda4ee632f19f33",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f2f39bf7ec4b48b270871fddb98e82e1.png",
+      "companies": [],
+      "name": "LGND_BBX",
+      "urlName": "lgnd-bbx",
+      "voteID": "69be487ebcda4ee632991f17"
+    }
+  ]
+}

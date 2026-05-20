@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "5ff5dfc0d213fe09d89ad931",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-18T08:00:00.145697Z",
+  "author": {
+    "_id": "5ff371dbc2b6ec2c753c2993",
+    "alias": "Grand Flamingo",
+    "aliasID": "65c6a639ed6eefce4c27c2c4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/15e4d748e23ac7c4b5491f81d38deb38.png",
+    "created": "2021-01-04T19:51:55.720Z",
+    "name": "crowley_scarecrow",
+    "serviceAccount": false,
+    "urlName": "crowleyscarecrow"
+  },
+  "authorID": "5ff371dbc2b6ec2c753c2993",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-06T16:05:20.225Z",
+  "deletedAt": null,
+  "details": "When player sight is perpendicular to thin wall, and when player approaching it, point light was culled(it's not illuminate).\nThis issue is not reproducible in Unity Editor or Desktop mode, and this issue is not active in photo camera.\nI using Occlusion culling. When Occlusion culling was removed, this issue is not active.\nBuild 1032\n Demo:https://www.vrchat.com/i/clarp-laffysuper-emperor-9c529",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7ffe4c3e90df132249e",
+  "imageURLs": [
+    "https://canny.io/images/9864a28a33763e8f9d924b4e2da86608.jpg"
+  ],
+  "lastUpdated": 1779090037612,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-06T16:05:20.225Z",
+  "subCategoryID": null,
+  "title": "Occlusion culling was disable a light",
+  "trendingScore": 2662.646057623682,
+  "updatedAt": "2026-05-18T07:41:23.457967Z",
+  "urlName": "occlusion-culling-was-disable-a-light",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ff371dbc2b6ec2c753c2993",
+      "alias": "Grand Flamingo",
+      "aliasID": "65c6a639ed6eefce4c27c2c4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/15e4d748e23ac7c4b5491f81d38deb38.png",
+      "companies": [],
+      "name": "crowley_scarecrow",
+      "urlName": "crowleyscarecrow",
+      "voteID": "5ff5dfc0d213fe09d89ad938"
+    }
+  ]
+}

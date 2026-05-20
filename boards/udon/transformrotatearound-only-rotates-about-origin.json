@@ -1,0 +1,133 @@
+{
+  "__v": 0,
+  "_id": "6191fac1a75c236c61efd462",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:01:47.167086Z",
+  "author": {
+    "_id": "6191f7757d5b2a26ec38e098",
+    "alias": "Probable Starfish",
+    "aliasID": "6661726fb9e8e8fe6688a50e",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-11-15T06:00:21.739Z",
+    "name": "nFinity8",
+    "serviceAccount": false,
+    "urlName": "nfinity8"
+  },
+  "authorID": "6191f7757d5b2a26ec38e098",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "6194a2c0b71c61342a5ab4e5",
+      "author": {
+        "_id": "6191f7757d5b2a26ec38e098",
+        "alias": "Probable Starfish",
+        "aliasID": "6661726fb9e8e8fe6688a50e",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2021-11-15T06:00:21.739Z",
+        "name": "nFinity8",
+        "serviceAccount": false,
+        "urlName": "nfinity8"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-11-17T06:35:44.786Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6191fac1a75c236c61efd462",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "After implementing a workaround, and then reverting the workaround, it works now? I think there was just some out-of-date compiled version of the code cached or something?",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-11-15T06:14:25.767Z",
+  "deletedAt": null,
+  "details": "Changing the 'point' parameter does not affect the result. The 'maze' GameObject starts of at (0,0,0). After calling maze.transform.rotateAround(point=(0, 1.5, 0), axis=(0, 0, 1), angle=180)), I'd expect it to land at (0, 3, 0), but it goes to (0, 0, 0) instead.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cae4c3e90df1357eed",
+  "imageURLs": [
+    "https://canny.io/images/67af46b1173bd5da85766907d2198226.png"
+  ],
+  "lastUpdated": 1778979250139,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-11-15T06:14:25.767Z",
+  "subCategoryID": null,
+  "title": "Transform.RotateAround only rotates about origin",
+  "trendingScore": 2707.301721562174,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "transformrotatearound-only-rotates-about-origin",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6191f7757d5b2a26ec38e098",
+      "alias": "Probable Starfish",
+      "aliasID": "6661726fb9e8e8fe6688a50e",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "nFinity8",
+      "urlName": "nfinity8",
+      "voteID": "6191fac1a75c236c61efd469"
+    }
+  ]
+}

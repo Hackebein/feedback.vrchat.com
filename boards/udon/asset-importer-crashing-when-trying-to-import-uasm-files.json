@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "5e56ccd5c1391b331aa620f2",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:53:53.670621Z",
+  "author": {
+    "_id": "5cb356fd14314c03a61797e4",
+    "alias": "Jacinth Wildebeest",
+    "aliasID": "65c28a4bed6eefce4cd29330",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+    "created": "2019-04-14T15:51:25.268Z",
+    "name": "Helpful Helper",
+    "serviceAccount": false,
+    "urlName": "helpful-helper"
+  },
+  "authorID": "5cb356fd14314c03a61797e4",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-02-26T19:53:57.975Z",
+  "deletedAt": null,
+  "details": "VRCSDK3-2020.02.23.13.54\nUDONSDK-2020.02.23.14.05\nUnity Version: 2018.4.14f1\nEverytime I try to import a .uasm file (implicitly or explicitly) it fails and results in this (error) log.\nHowever when editing the assembly in the inspector it will go through the import logic without any problems.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da1e4c3e90df158c5c2",
+  "imageURLs": [
+    "https://canny.io/images/de8fe3df76be6dfcf0ba43d62bf037a5.png"
+  ],
+  "lastUpdated": 1779223407049,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5e56ccd5c1391b331aa620f2/1813258450.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-02-26T19:53:57.975Z",
+  "subCategoryID": null,
+  "title": "Asset Importer crashing when trying to import .uasm files",
+  "trendingScore": 2617.6687391390587,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "asset-importer-crashing-when-trying-to-import-uasm-files",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5cb356fd14314c03a61797e4",
+      "alias": "Jacinth Wildebeest",
+      "aliasID": "65c28a4bed6eefce4cd29330",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+      "companies": [],
+      "name": "Helpful Helper",
+      "urlName": "helpful-helper",
+      "voteID": "5e56ccd6c1391b331aa620fa"
+    }
+  ]
+}

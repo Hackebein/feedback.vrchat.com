@@ -1,0 +1,85 @@
+{
+  "__v": 0,
+  "_id": "629d34434b53a70b88a5520e",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-16T19:54:11.261072Z",
+  "author": {
+    "_id": "62251d2547335c0452d4a96b",
+    "alias": "Umber brown Haddock",
+    "aliasID": "65c9a266ed6eefce4c0870ac",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8128d6c4fad04167d2d792a4c15c34da.png",
+    "created": "2022-03-06T20:44:21.928Z",
+    "name": "Blizzball",
+    "serviceAccount": false,
+    "urlName": "blizzball"
+  },
+  "authorID": "62251d2547335c0452d4a96b",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-06-05T22:54:59.340Z",
+  "deletedAt": null,
+  "details": "Rather than having a PhysBone rotate around the head of the bone, I would like the head of the bone to lag behind as the avatar moves, then oscillate for a bit before coming to rest when the avatar stops.  \n\nIn this case, I want the entire tail to maintain its original rotation, but not its original position.  I guess essentially what I'm asking for is a type of PhysBone or setting within the PhysBone that affects the position of the bone rather than its rotation.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8fce4c3e90df1361b53",
+  "imageURLs": [
+    "https://canny.io/images/9ab3120dedc313f34cf59fd81ffa3920.png",
+    "https://canny.io/images/feda9846edca18c10b2092c5bc337563.png"
+  ],
+  "lastUpdated": 1779233524653,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-06-05T22:54:59.340Z",
+  "subCategoryID": null,
+  "title": "Oscillating PhysBone Option",
+  "trendingScore": 2736.2581262893564,
+  "updatedAt": "2026-05-19T23:33:49.452084Z",
+  "urlName": "oscillating-physbone-option",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62251d2547335c0452d4a96b",
+      "alias": "Umber brown Haddock",
+      "aliasID": "65c9a266ed6eefce4c0870ac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8128d6c4fad04167d2d792a4c15c34da.png",
+      "companies": [],
+      "name": "Blizzball",
+      "urlName": "blizzball",
+      "voteID": "629d34434b53a70b88a5524a"
+    }
+  ]
+}

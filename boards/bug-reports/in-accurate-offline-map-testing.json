@@ -1,0 +1,98 @@
+{
+  "__v": 0,
+  "_id": "666125e27dd7ec4a2538df97",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-16T18:59:04.474109Z",
+  "author": {
+    "_id": "61f58914d9c92d1b0f96f27d",
+    "alias": "Misty Marten",
+    "aliasID": "65f58bbfa63714bcb37f0085",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6df0bd69598eb26d6678f0ac7fae77f2.png",
+    "created": "2022-01-29T18:36:04.313Z",
+    "name": "Ph4seShift",
+    "serviceAccount": false,
+    "urlName": "ph4seshift"
+  },
+  "authorID": "61f58914d9c92d1b0f96f27d",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-06-06T02:58:42.419Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1) Add a videoplayer component to a game object similar to screenshot. \n\n2) Run Build & And Test New Build in VRChat SDK.  \n\n3) Observe video is playing as expected.  \n\n4) Next build and upload.  \n\n5) Get on VRChat and load in map. \n\n6) Observe video is not playing and logs show the component was removed with no explanation. \n\n2024.06.05 19:43:01 Warning    -  Component stripping report:\n\nRemoving VideoPlayer comp from Video Player\n\nThis isn't the first time offline testing hasn't properly simulated the live client. It would really help reduce time waste for map developers.\n\nVRChatBuild: 1458   SDK: 3.5.1    Unity: 2022.3.22f1",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9e6e4c3e90df138fe65",
+  "imageURLs": [
+    "https://canny.io/images/755491dd482104430af58abfbf86bc04.png"
+  ],
+  "lastUpdated": 1779226709511,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/666125e27dd7ec4a2538df97/1020392990.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-06-06T02:58:42.419Z",
+  "subCategoryID": null,
+  "title": "In-Accurate offline map testing",
+  "trendingScore": 2841.267987752192,
+  "updatedAt": "2026-05-19T21:40:19.607119Z",
+  "updatedBy": null,
+  "urlName": "in-accurate-offline-map-testing",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6219f63f55639e536dc83162",
+      "alias": "Imaginative Sloth",
+      "aliasID": "65c26df1ed6eefce4c5aac1a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
+      "companies": [],
+      "name": "syncpulse",
+      "urlName": "syncpulse",
+      "voteID": "6664d5f74f7654726967ba25"
+    },
+    {
+      "_id": "61f58914d9c92d1b0f96f27d",
+      "alias": "Misty Marten",
+      "aliasID": "65f58bbfa63714bcb37f0085",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6df0bd69598eb26d6678f0ac7fae77f2.png",
+      "companies": [],
+      "name": "Ph4seShift",
+      "urlName": "ph4seshift",
+      "voteID": "666125e2b9e8e8fe667fdb88"
+    }
+  ]
+}

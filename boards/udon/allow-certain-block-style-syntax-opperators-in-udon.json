@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "660398e3b567381818112447",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:41:10.767760Z",
+  "author": {
+    "_id": "62e11bf89950e9465554fd58",
+    "alias": "Flamingo pink Tyrannosaurus",
+    "aliasID": "66039452a63714bcb39a9322",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/176128bdc7c756149477048487673955.png",
+    "created": "2022-07-27T11:05:28.317Z",
+    "name": "WildWolf31373",
+    "serviceAccount": false,
+    "urlName": "wildwolf31373"
+  },
+  "authorID": "62e11bf89950e9465554fd58",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-03-27T03:56:19.621Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "So after messing around with Udon for a day or two, I feel there are certain syntaxes that are missing that would be handy to have in the library that allows for a better time coding U# for parsing from binary array to certain structures. These come in the form of floating points mainly but could be extended to cover a wider range of methods including strings.\n\nWhat I'm mainly talking about is the `fixed` statement that exists in C# that allows you to essentially get a start pointer to the field supplied. An example would be:\n\n```\n\nvar data = { 0x00, 0x00, 0x20, 0x43 };\n\nfixed (byte* ptr = data)\n\n{\n\n    return *(float*)(ptr + offset);\n\n}\n\n```\n\nThis would parse the byte array supplied as a float in the same way that c++ does with its `reinterpret_cast` as there is no good way to go from byte[] to float currently that I find in the documentation.\n\nIf this is something that seems a bit iffy, another thing that could be is allow for some way to use `BitConverter` and its methods to get from byte[] to their respective types, as it's nice when you want to heavy compress data instead of sending it as a JSON object.\n\nThis is mainly me trying to optimize code to some very complex degrees as I come from a effort of reverse engineering other games that are written in c++ where we inject a C# runtime into them to write plugins. This is some of the ways we have done the casting between C# and c++ when it comes to `string` as C# uses the c++ equivalent of `wchar` where we mainly need to send in `char` to its methods.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9d9e4c3e90df138c58f",
+  "imageURLs": [],
+  "lastUpdated": 1779039025963,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/660398e3b567381818112447/1454410653.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-03-27T03:56:19.621Z",
+  "subCategoryID": null,
+  "title": "Allow certain block style syntax opperators in Udon",
+  "trendingScore": 2830.573735332015,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "allow-certain-block-style-syntax-opperators-in-udon",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62e11bf89950e9465554fd58",
+      "alias": "Flamingo pink Tyrannosaurus",
+      "aliasID": "66039452a63714bcb39a9322",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/176128bdc7c756149477048487673955.png",
+      "companies": [],
+      "name": "WildWolf31373",
+      "urlName": "wildwolf31373",
+      "voteID": "660398e3a63714bcb3515654"
+    }
+  ]
+}

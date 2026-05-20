@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "5f56b23f766cfa6eb2ed0994",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:33:01.024450Z",
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": "bd-35"
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-09-07T22:20:47.383Z",
+  "deletedAt": null,
+  "details": "Mesh.SetUVs takes a List of Vector2, Vector3, or Vector4. This is the only way to set a UV channel to carry 3- or 4-element vectors (the Mesh.uv/Mesh.uv2/etc properties can be used for 2-dimensional UV channels).\nBecause Udon does not currently support creating and manipulating Lists, this function, while exposed, cannot actually be used. Please either add support for List<Vector2/3/4> or add some way to invoke Mesh.SetUVs with arrays of Vector2/3/4.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e6e4c3e90df131df32",
+  "imageURLs": [],
+  "lastUpdated": 1779239316549,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-09-07T22:20:47.383Z",
+  "subCategoryID": null,
+  "title": "Make Mesh.SetUVs usable",
+  "trendingScore": 2775.857311590609,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "make-meshsetuvs-usable",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6010b37283e56405c64a79b3",
+      "alias": "Public Gorilla",
+      "aliasID": "65c28070ed6eefce4c542d32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/00417884fd9960e606b2bb523a6c44c9.png",
+      "companies": [],
+      "name": "mahu",
+      "urlName": "mahu-3",
+      "voteID": "64110ae6c26543452abd0774"
+    },
+    {
+      "_id": "5a9fe9983955314156acc4f7",
+      "alias": "Enthusiastic Mole",
+      "aliasID": "65c27aabed6eefce4c6e02cb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e51a004c9a0dcb771981b5d873f49548.png",
+      "companies": [],
+      "name": "kawashirov",
+      "urlName": "sergey-kawashirov",
+      "voteID": "5f59879dad76f629f14fadec"
+    },
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": "bd-35",
+      "voteID": "5f56b23f766cfa6eb2ed099b"
+    }
+  ]
+}

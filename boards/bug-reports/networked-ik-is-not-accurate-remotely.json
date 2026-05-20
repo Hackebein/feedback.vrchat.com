@@ -1,0 +1,98 @@
+{
+  "__v": 0,
+  "_id": "5ee807cea1365e10ae42039b",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-05-18T01:12:50.032091Z",
+  "author": {
+    "_id": "58c6d2ebff44e44ada7178fc",
+    "alias": "Net Clownfish",
+    "aliasID": "65cc24d2ed6eefce4c181d93",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/bdd9aa25f5a5a1517aeae7b76d532d25.png",
+    "created": "2017-03-13T17:12:11.454Z",
+    "name": "Romthirty",
+    "serviceAccount": false,
+    "urlName": "richard-cabrera"
+  },
+  "authorID": "58c6d2ebff44e44ada7178fc",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-06-15T23:44:14.360Z",
+  "deletedAt": null,
+  "details": "2 users with the same avatar don't show the same IK information, specifically with raising arms. Oculus users I tested with have shoulder bones rotating in an odd way while Vive user I tested with looks normal. \nThere's a lot to this one so I can go in more detail if needed, but the way I found the bug was I was in a mirror with a user both in same avatar, he saw his shoulder broken but mine was fine, I saw the opposite. I went back in with a Vive user and he saw both of ours fine while I still saw mine broken and his fine. By \"broken\" I mean the mesh was clipping where it shouldn't be. Being that the IK is copied and networked over, I would assume the bones should align and rotate the same way to one another but they aren't.\n\nIn the First picture, I'm on camera right with an Oculus and friend is Camera left in Vive. This is my POV - my shoulders clipping and tearing, his arent. He see's us both the same as his. (2nd picture is his POV).\nTested again with the public default avatars with same results. (picture 3 is Oculus POV and picture 4 is Vive POV)\n\nAdditional information: Vive user was not in fully body tracking but did have index controllers.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7db1e4c3e90df15910b3",
+  "imageURLs": [
+    "https://canny.io/images/50bd1c739df2d643d46340aa69e63415.png",
+    "https://canny.io/images/227e28d8fd52d47f51c636f76f7da9fa.png",
+    "https://canny.io/images/29ffdb34f1e81f67d9f57ecf9a367f2b.png",
+    "https://canny.io/images/b02facdaf3d35622b9add67ca9c257e3.png"
+  ],
+  "lastUpdated": 1779066357746,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-06-15T23:44:14.360Z",
+  "subCategoryID": null,
+  "title": "Networked IK is not accurate remotely.",
+  "trendingScore": 2635.8398729315777,
+  "updatedAt": "2026-05-18T01:07:40.796366Z",
+  "urlName": "networked-ik-is-not-accurate-remotely",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5d63c55b7d14ba451975e137",
+      "alias": "Lotus pink Panda",
+      "aliasID": "65c2a212ed6eefce4c61b9fe",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/1ab657f74dfd2c96a18e308aa689e9ec.png",
+      "companies": [],
+      "name": "BorkBork~",
+      "urlName": "bork-bork",
+      "voteID": "5f040ae444d0551f97d58cf3"
+    },
+    {
+      "_id": "58c6d2ebff44e44ada7178fc",
+      "alias": "Net Clownfish",
+      "aliasID": "65cc24d2ed6eefce4c181d93",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/bdd9aa25f5a5a1517aeae7b76d532d25.png",
+      "companies": [],
+      "name": "Romthirty",
+      "urlName": "richard-cabrera",
+      "voteID": "5ee807cea1365e10ae4203a3"
+    }
+  ]
+}

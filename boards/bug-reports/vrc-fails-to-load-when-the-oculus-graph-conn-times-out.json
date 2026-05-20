@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "60a014ddbbe3f719274a8768",
+  "aiCategories": [
+    "loc.login",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-05-18T09:37:11.838105Z",
+  "author": {
+    "_id": "5f2dc3d9b923f7086bb0a2b5",
+    "alias": "Apricot cream Otter",
+    "aliasID": "65c321e1ed6eefce4c4a4490",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/eeb994858879b05dcb916a1a1c7f2a3b.png",
+    "created": "2020-08-07T21:12:57.132Z",
+    "name": "Kaugumme",
+    "serviceAccount": false,
+    "urlName": "kaugumme-1"
+  },
+  "authorID": "5f2dc3d9b923f7086bb0a2b5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-05-15T18:37:17.664Z",
+  "deletedAt": null,
+  "details": "2021.05.15 20:27:54 Log        -  VRCApplication: UserPresenceLost at 5.503619\n2021.05.15 20:27:55 Log        -  HTTPFormUseage:UrlEncoded\n2021.05.15 20:28:15 Log        -  [Behaviour] Error: Request GetAppScopedToken errored: TransientError domain: CURLcode code: 28 detail: 28: Failed to connect to graph.oculus.com port 443: Timed out (1971012)\n2021.05.15 20:28:15 Log        -  [OVRManager] OnApplicationQuit\n2021.05.15 20:28:15 Log        -  NativeProcess.Start: started process id [3688]: C:/Program Files/Oculus/Software/Software/vrchat-vrchat/VRChat_Data/../install.exe \n2021.05.15 20:28:15 Log        -  VRCApplication: OnApplicationQuit at 26.08713\n\n\nbeen like this for 4 years, both pcvr and quest version (cant confirm since there doesnt seem to be output logs on the quest)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb89be4c3e90df134eb24",
+  "imageURLs": [],
+  "lastUpdated": 1779096260562,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-05-15T18:37:17.664Z",
+  "subCategoryID": null,
+  "title": "vrc fails to load when the oculus graph conn times out",
+  "trendingScore": 2681.0897042027163,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "vrc-fails-to-load-when-the-oculus-graph-conn-times-out",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2dc3d9b923f7086bb0a2b5",
+      "alias": "Apricot cream Otter",
+      "aliasID": "65c321e1ed6eefce4c4a4490",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/eeb994858879b05dcb916a1a1c7f2a3b.png",
+      "companies": [],
+      "name": "Kaugumme",
+      "urlName": "kaugumme-1",
+      "voteID": "60a014ddbbe3f719274a876f"
+    }
+  ]
+}

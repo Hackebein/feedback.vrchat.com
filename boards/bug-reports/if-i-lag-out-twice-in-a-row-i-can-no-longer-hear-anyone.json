@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "61cc35c1ac137a28f411499f",
+  "aiCategories": [
+    "loc.in-world",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-05-18T15:25:23.198410Z",
+  "author": {
+    "_id": "61cc323a6b455b59705dfddd",
+    "alias": "Lava Basilisk",
+    "aliasID": "65cc1f17ed6eefce4c908ce8",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-12-29T10:02:34.336Z",
+    "name": "Xeo Snow",
+    "serviceAccount": false,
+    "urlName": "xeo-snow"
+  },
+  "authorID": "61cc323a6b455b59705dfddd",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-12-29T10:17:37.797Z",
+  "deletedAt": null,
+  "details": "I have spotty WiFi, and often will just lag out of worlds. If I join a world, lag out once, everything will work like it's supposed to, but if I lag out again without changing worlds, I won't be able to hear anyone until I restart the game\nRepro Steps: Hard because it's based on lag, but join a world and you'll have to lag out (I assume just cutting off the wifi works), when you lag out and it lets you rejoin, do it again, the next time you get into the world everyone should be muted and rejoining it won't fix it. Only restarting\nExpected: Should be able to hear people when rejoin\nActual: Can't hear anyone when you rejoin but they hear you.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d3e4c3e90df13597b8",
+  "imageURLs": [],
+  "lastUpdated": 1779117281293,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-12-29T10:17:37.797Z",
+  "subCategoryID": null,
+  "title": "If I lag out twice in a row, I can no longer hear anyone.",
+  "trendingScore": 2716.3674802251876,
+  "updatedAt": "2026-05-18T15:15:37.490037Z",
+  "urlName": "if-i-lag-out-twice-in-a-row-i-can-no-longer-hear-anyone",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60d6d35e5382f65ed90b1e26",
+      "alias": "Kelly green Squirrel",
+      "aliasID": "65c2a244ed6eefce4c6910c1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f0482da78e4ea68a1191176d6b66f29f.png",
+      "companies": [],
+      "name": "CottonCandyPup",
+      "urlName": "jager2316",
+      "voteID": "61eb6f0ce87f830b56546bea"
+    },
+    {
+      "_id": "61cc323a6b455b59705dfddd",
+      "alias": "Lava Basilisk",
+      "aliasID": "65cc1f17ed6eefce4c908ce8",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Xeo Snow",
+      "urlName": "xeo-snow",
+      "voteID": "61cc35c1ac137a28f41149a7"
+    }
+  ]
+}

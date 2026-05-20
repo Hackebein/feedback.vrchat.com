@@ -1,0 +1,135 @@
+{
+  "__v": 0,
+  "_id": "5e3f5f5a33e4664094fe5ac4",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:53:27.962084Z",
+  "author": {
+    "_id": "5cb356fd14314c03a61797e4",
+    "alias": "Jacinth Wildebeest",
+    "aliasID": "65c28a4bed6eefce4cd29330",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+    "created": "2019-04-14T15:51:25.268Z",
+    "name": "Helpful Helper",
+    "serviceAccount": false,
+    "urlName": "helpful-helper"
+  },
+  "authorID": "5cb356fd14314c03a61797e4",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-02-09T01:24:42.943Z",
+  "deletedAt": null,
+  "details": "Even though assigning literals (specifically floating point numbers) isn't officially supported as of right now, there is a problem with initialising floating point numbers, due to Float.Parse being \"Culture Sensitive\" and thereby countries that use , (comma) instead of . (period) as decimal-indicator will currently not be able to serialize UASM with decimal literals correctly.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da0e4c3e90df158bf79",
+  "imageURLs": [
+    "https://canny.io/images/d8d0a9db3b1282a69187ba61284acad4.png"
+  ],
+  "lastUpdated": 1779223405942,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5e3f5f5a33e4664094fe5ac4/1372724591.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-02-09T01:24:42.943Z",
+  "subCategoryID": null,
+  "title": "Udon Assembly: Misbehaving Floating Point Initialisation",
+  "trendingScore": 2617.1734031061837,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "udon-assembly-misbehaving-floating-point-initialisation",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b0c6b275853c02d9764fb82",
+      "alias": "Ube Pinniped",
+      "aliasID": "65c2b40fed6eefce4ccccb70",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6d7fd9a2818f95ae16fbb4be009f1dd8.png",
+      "companies": [],
+      "name": "LastRar",
+      "urlName": "thelast-rar",
+      "voteID": "5e4e4c437b7040475649acc9"
+    },
+    {
+      "_id": "5a0229327957ee6bee820454",
+      "alias": "Beneficial Octopus",
+      "aliasID": "65ba0192ed6eefce4cf54c7b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf8d5ee68602db5710fafa467ef2d397.png",
+      "companies": [],
+      "name": "shotariya",
+      "urlName": "jan-1",
+      "voteID": "5e4b1cf04f0e5b7c3ba23517"
+    },
+    {
+      "_id": "5b07745b55c49e65e1c522d7",
+      "alias": "Still Goat",
+      "aliasID": "65c29c3ced6eefce4c822f54",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9383debb6758a064248994e1720842c2.png",
+      "companies": [],
+      "name": "Merlin",
+      "urlName": "merlin",
+      "voteID": "5e4b182fdb3e621d8096bdf0"
+    },
+    {
+      "_id": "5a4aaf7f758fa46d131cd36b",
+      "alias": "Increased Tuna",
+      "aliasID": "65c2a2c2ed6eefce4c7bc4ac",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/46fec521507d6ac601567eee8c1b6dda.png",
+      "companies": [],
+      "name": "GotoFinal",
+      "urlName": "bartlomiej-mazur",
+      "voteID": "5e418505d0e4d1508d2231d3"
+    },
+    {
+      "_id": "5cb356fd14314c03a61797e4",
+      "alias": "Jacinth Wildebeest",
+      "aliasID": "65c28a4bed6eefce4cd29330",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+      "companies": [],
+      "name": "Helpful Helper",
+      "urlName": "helpful-helper",
+      "voteID": "5e3f5f5a33e4664094fe5acc"
+    }
+  ]
+}

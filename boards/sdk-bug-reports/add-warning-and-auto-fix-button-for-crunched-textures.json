@@ -1,0 +1,105 @@
+{
+  "__v": 0,
+  "_id": "6712bf6f60acf467c17dcd2c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T21:53:43.360875Z",
+  "author": {
+    "_id": "620f973f5abcc7434a5ba50e",
+    "alias": "Residential Gorilla",
+    "aliasID": "65c26da3ed6eefce4c4d082f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/13cf244a8f16eba284b8b072f18603ff.png",
+    "created": "2022-02-18T12:55:27.543Z",
+    "name": "Wındmıll",
+    "serviceAccount": false,
+    "urlName": "windmillart"
+  },
+  "authorID": "620f973f5abcc7434a5ba50e",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 148,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-10-18T20:05:03.263Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Since there is no benefit to using crunch compression and it only lowers the texture quality and causes lag when loading in the avatars due to uncrunching, I think there should be a warning for that inside the SDK and maybe an auto fix button to remove crunching entirely. Similar to switching box mipmaps to kaiser.\n\nI know you've already spoken against crunching in one of the developer updates in the past, but having this information should be more on display rather than just a mention in a blog.\n\nDeveloper update in question:\n\nhttps://ask.vrchat.com/t/developer-update-14-march-2024/23401",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba20e4c3e90df139a0b6",
+  "imageURLs": [
+    "https://canny-assets.io/images/f5ec36f14c55ddb375fbb0cfbe4d1b13.png"
+  ],
+  "lastUpdated": 1779054452532,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6712bf6f60acf467c17dcd2c/1246981583.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-10-18T20:05:03.263Z",
+  "subCategoryID": null,
+  "title": "Add warning (and auto fix button) for crunched textures",
+  "trendingScore": 2940.78529989418,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "add-warning-and-auto-fix-button-for-crunched-textures",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f5dde0732bb294408ac21f7",
+      "alias": "Likely Sheep",
+      "aliasID": "65c2a2b5ed6eefce4c79e47b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d501a1f45d2d8ec5113265468c9171b1.png",
+      "companies": [],
+      "name": "Black_Light_ST",
+      "urlName": "blacklightst",
+      "voteID": "6a031545cf565b8f74058629"
+    },
+    {
+      "_id": "620f973f5abcc7434a5ba50e",
+      "alias": "Residential Gorilla",
+      "aliasID": "65c26da3ed6eefce4c4d082f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/13cf244a8f16eba284b8b072f18603ff.png",
+      "companies": [],
+      "name": "Wındmıll",
+      "urlName": "windmillart",
+      "voteID": "6712bf6f0f7e723d6e447883"
+    }
+  ]
+}

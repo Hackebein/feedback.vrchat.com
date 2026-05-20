@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "5f4f2375ffa4cb08239b0436",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.unity-sdk",
+    "avatars.accessories",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-19T19:59:23.579169Z",
+  "author": {
+    "_id": "5f4f2261fb22fe37864a5d3a",
+    "alias": "Swift Puma",
+    "aliasID": "65c45e0ced6eefce4cc38823",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/a63318912283fff7e639c4acfe30bc94.png",
+    "created": "2020-09-02T04:41:05.004Z",
+    "name": "blu3arrow",
+    "serviceAccount": false,
+    "urlName": "blu3arrow"
+  },
+  "authorID": "5f4f2261fb22fe37864a5d3a",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-09-02T04:45:41.612Z",
+  "deletedAt": null,
+  "details": "One of my avatars has a toggle-able gun which defaults off and is activated via the expression menu.  When I uploaded it I didn't disable the game object in Unity, so when I spawned in it was attached to the T-pose until calibrated and then the animators kicked in and disabled it.  However it was only disabled locally, so everyone else could still see it, even after hopping to a different world.  Yes this was my fault for not setting my game object properly which has been fixed on the model but the sync issue should be looked into.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e4e4c3e90df131d962",
+  "imageURLs": [],
+  "lastUpdated": 1779218233563,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-09-02T04:45:41.612Z",
+  "subCategoryID": null,
+  "title": "FBT - T-pose interferes with disabling games objects with the animator",
+  "trendingScore": 2644.5786344333724,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "fbt-t-pose-interferes-with-disabling-games-objects-with-the-animator",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f4f2261fb22fe37864a5d3a",
+      "alias": "Swift Puma",
+      "aliasID": "65c45e0ced6eefce4cc38823",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a63318912283fff7e639c4acfe30bc94.png",
+      "companies": [],
+      "name": "blu3arrow",
+      "urlName": "blu3arrow",
+      "voteID": "5f4f2377ffa4cb08239b044c"
+    }
+  ]
+}

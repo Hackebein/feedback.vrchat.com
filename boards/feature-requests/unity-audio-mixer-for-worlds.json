@@ -1,0 +1,120 @@
+{
+  "_id": "693a3ef3fcabd573721bd923",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "audio"
+  ],
+  "aiTaggedAt": "2026-05-17T16:35:05.132920Z",
+  "author": {
+    "_id": "5f31e1379dcbb575795df78a",
+    "alias": "Inquisitive Pinniped",
+    "aliasID": "65c26da3ed6eefce4c4d076c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ffccf8619b7165aa7dc10715da0da035.png",
+    "created": "2020-08-11T00:07:19.781Z",
+    "name": "Jar",
+    "serviceAccount": false,
+    "urlName": "jar-3"
+  },
+  "authorID": "5f31e1379dcbb575795df78a",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-11T03:48:03.101Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After the recent Steam Audio overhaul, I think it would be a good time to allow the unity audio mixer to work for worlds. Currently this only works in the editor, but not in VRChat (any audio mixer appears to just get completely overridden), and it can't be accessed with Udon. It would be really nice if worlds could use Unity's Audio Mixer, at least for a few channels. The effects available there are very interesting as well, for example the pitch shifter and distortion, and could be used for cool stuff for game worlds and more.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "693a3ef3fcabd573721bd96f",
+  "imageURLs": [
+    "https://canny-assets.io/images/92c63f20e73bac5355ebade76870ac1f.png"
+  ],
+  "lastUpdated": 1779035291425,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/693a3ef3fcabd573721bd923/503695715.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-11T03:48:03.101Z",
+  "subCategoryID": null,
+  "title": "Unity Audio Mixer for Worlds",
+  "trendingScore": 2940.3781825429874,
+  "updatedAt": "2026-05-17T16:30:16.054690Z",
+  "updatedBy": null,
+  "urlName": "unity-audio-mixer-for-worlds",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62e20dd91d4ea13c12fbbe72",
+      "alias": "Wild Landfowl",
+      "aliasID": "660c2b7fe5d26962aaa8060e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/436f57d5d3c2d8eacdb9b02382b68ff3.png",
+      "companies": [],
+      "name": "Ogaki_Doe",
+      "urlName": "ogakidoe",
+      "voteID": "69ff5374cf565b8f74ee790b"
+    },
+    {
+      "_id": "69374aa34927a96e58089596",
+      "alias": "Formidable Octopus",
+      "aliasID": "69374aa44927a96e5808ca75",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3672d63f1b6f83e5fb66c4ff3a41bd8f.png",
+      "companies": [],
+      "name": "Escortti",
+      "urlName": "escortti",
+      "voteID": "697f3f8b4e32484d29d2c7e6"
+    },
+    {
+      "_id": "68cd17d9004e872823cbce97",
+      "alias": "Big Porpoise",
+      "aliasID": "68cd17da004e872823cbeb47",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7c9193c5b33820f5eefb7cf7862e93cd.png",
+      "companies": [],
+      "name": "pilq",
+      "urlName": "pilq",
+      "voteID": "693da9524927a96e58d5e42f"
+    },
+    {
+      "_id": "5f31e1379dcbb575795df78a",
+      "alias": "Inquisitive Pinniped",
+      "aliasID": "65c26da3ed6eefce4c4d076c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ffccf8619b7165aa7dc10715da0da035.png",
+      "companies": [],
+      "name": "Jar",
+      "urlName": "jar-3",
+      "voteID": "693a3ef34927a96e588d97bc"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "6816a3a201db3f3b1754c290",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-05-17T22:16:03.031809Z",
+  "author": {
+    "_id": "603b04282fa90e5c53608eb6",
+    "alias": "Variable Turtle",
+    "aliasID": "65c27d10ed6eefce4cc8cf32",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+    "created": "2021-02-28T02:47:04.064Z",
+    "name": "RavenWorks",
+    "serviceAccount": false,
+    "urlName": "ravenworks"
+  },
+  "authorID": "603b04282fa90e5c53608eb6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-03T23:15:46.282Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If I want to make something in Udon that attaches to a bone on a player's avatar, and I want to let the player choose that bone themselves, and they want to choose their tail, there's no way to do so -- GetBonePosition and GetBoneRotation only accept HumanBodyBones, and that seems to be the only way to access *any* bones in an avatar from Udon.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6816a3a201db3f3b1754c305",
+  "imageURLs": [],
+  "lastUpdated": 1779056058142,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6816a3a201db3f3b1754c290/1022229015.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-03T23:15:46.282Z",
+  "subCategoryID": null,
+  "title": "Get positions of bones that don't have HumanBodyBone mapping",
+  "trendingScore": 2888.117330916506,
+  "updatedAt": "2026-05-17T22:14:20.122322Z",
+  "updatedBy": null,
+  "urlName": "get-positions-of-bones-that-dont-have-humanbodybone-mapping",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "ravenworks",
+      "voteID": "6816a3a28ccc1d8b3bdc3e00"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "_id": "69b8148e18947e6280d7cbb1",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-05-18T15:28:30.466107Z",
+  "author": {
+    "_id": "67688e59df2606b92281bc7a",
+    "alias": "Thin Spoonbill",
+    "aliasID": "67688e5aa367fa6392dd752d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3374d30bff7574143c865f5b5f2945e9.png",
+    "created": "2024-12-22T22:10:33.561Z",
+    "name": "こごろ - kogoro",
+    "serviceAccount": false,
+    "urlName": "kogoro-1"
+  },
+  "authorID": "67688e59df2606b92281bc7a",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69b99fc5a316c23ede8669a4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": "tau-26"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-03-17T18:39:01.971Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69b8148e18947e6280d7cbb1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "69b99fc5a316c23ede866996",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-16T14:32:46.512Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRCPlayerApi.SetAvatarAudioFarRadius(0f) can effectively mute another player's avatar audio, but restoring it to 40f does not always make the avatar audio audible again.\n\nThe issue appears to depend on when the avatar audio starts playing.\n\nCase that fails\n\nPlayer A mutes Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(0f).\n\nWhile muted, Player B starts playing avatar audio.\n\nPlayer A restores Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(40f).\n\nExpected result\n\nPlayer B's avatar audio becomes audible again to Player A after the far radius is restored.\n\nActual result\n\nPlayer B's avatar audio remains inaudible to Player A even after restoring the far radius.\n\nCase that works\n\nPlayer B starts playing avatar audio first.\n\nPlayer A mutes Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(0f).\n\nPlayer A restores Player B's avatar audio with VRCPlayerApi.SetAvatarAudioFarRadius(40f).\n\nIn this case, Player B's avatar audio becomes audible again as expected.\n\nThis suggests the problem is not just muting/unmuting in general, but specifically that avatar audio which begins playback while muted does not properly recover when the far radius is restored.\n\nAccording to the Player Audio documentation, SetAvatarAudioFarRadius controls the maximum hearing distance for avatar audio, with a default of 40 meters and 0 effectively muting it. Based on that documented behavior, restoring the value should make the audio audible again.\n\nThis issue breaks world systems that depend on temporarily muting and later restoring avatar audio, such as soundproof rooms, privacy spaces, sleep worlds, and other controlled-audio environments.\n\nThe UdonSharp source code used for verification is attached for reference.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/22a7d5b4e8f4bb7cb2026b5b3a9348ce.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "SoundproofTest",
+      "url": "https://canny-assets.io/files/22a7d5b4e8f4bb7cb2026b5b3a9348ce.txt"
+    }
+  ],
+  "ideaID": "69b8148e18947e6280d7cbd1",
+  "imageURLs": [],
+  "lastUpdated": 1779117294102,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69b8148e18947e6280d7cbb1/1619500389.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2026-03-17T18:39:01.908Z",
+  "subCategoryID": null,
+  "title": "VRCPlayerApi.SetAvatarAudioFarRadius does not restore avatar audio if playback starts while muted",
+  "trendingScore": 2933.7577024536895,
+  "updatedAt": "2026-05-18T15:15:37.490037Z",
+  "updatedBy": null,
+  "urlName": "vrcplayerapisetavataraudiofarradius-does-not-restore-avatar-audio-if-playback-st",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69b4637fed082c9981ec2f49",
+      "alias": "Open Jellyfish",
+      "aliasID": "69b46380ed082c9981ec4734",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5ad283ba26716bb3f0f4512ccde577d1.png",
+      "companies": [],
+      "name": "Kuro_Neko_0204",
+      "urlName": "kuro-neko-0204",
+      "voteID": "69b81c2ded082c998134c9a2"
+    },
+    {
+      "_id": "67688e59df2606b92281bc7a",
+      "alias": "Thin Spoonbill",
+      "aliasID": "67688e5aa367fa6392dd752d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3374d30bff7574143c865f5b5f2945e9.png",
+      "companies": [],
+      "name": "こごろ - kogoro",
+      "urlName": "kogoro-1",
+      "voteID": "69b8148eed082c9981e6f1f4"
+    }
+  ]
+}

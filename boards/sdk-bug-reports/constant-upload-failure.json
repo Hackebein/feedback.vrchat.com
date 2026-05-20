@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "5c14fada9034f86e5b58d29a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T17:15:19.303066Z",
+  "author": {
+    "_id": "5c14fadaa36e932127e36f32",
+    "alias": "Zesty Ant",
+    "aliasID": "65cc520ded6eefce4c6d1318",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2018-12-15T13:00:10.234Z",
+    "name": "Space-Candy",
+    "serviceAccount": false,
+    "urlName": "twakiez"
+  },
+  "authorID": "5c14fadaa36e932127e36f32",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-12-15T13:00:10.797Z",
+  "deletedAt": null,
+  "details": "Description:\n------------\nTrying to build and publish the 'Example-Avatar' scene fails every time (all other custom avatar uploads fail as well). Unable to get text dump of errors seen in image since the upload cancel button also hangs indefinitely.\n\nSteps:\n-----------\n-Create unity project\n-Import SDK\n-Copy drag example avatar scene\n-Log in\n-Build and publish\n-'unclick the pause button' (clearly alreaddy broken here since it auto paused\n-assign name\n-consent\n-upload\n\nVersions:\n------------\nUnity 2017.4.15f1\n\nVRCSDK-2018.12.04.10.25_Public.unitypackage\n\nErrors seen on login:\n-------\n\n[0, null, Get, 2] Request Finished with Error!\nhttps://api.vrchat.cloud/api/1/config?organization=vrchat\n\nBeginWrite failure\nnull\nUnityEngine.Debug:LogErrorFormat(String, Object[])\nVRC.Core.APIResponseHandler:HandleReponse(Int32, HTTPRequest, HTTPResponse, ApiContainer, Int32, Boolean)\nVRC.Core.<SendRequestInternal>c__AnonStoreyC:<>m__13(HTTPRequest, HTTPResponse)\nVRC.Core.BestHTTP.HTTPRequest:CallCallback()\nVRC.Core.BestHTTP.ConnectionBase:HandleCallback()\nVRC.Core.BestHTTP.HTTPManager:OnUpdate()\nVRC.Core.BestHTTP.HTTPUpdateDelegator:Update()\n\nEx [HTTPRequest]: CallCallback - Message: Object reference not set to an instance of an object  StackTrace:   at VRC.Core.APIResponseHandler.HandleReponse (Int32 requestId, VRC.Core.BestHTTP.HTTPRequest req, VRC.Core.BestHTTP.HTTPResponse resp, VRC.Core.ApiContainer responseContainer, Int32 retryCount, Boolean useCache) [0x00000] in <filename unknown>:0 \n  at VRC.Core.API+<SendRequestInternal>c__AnonStorey9+<SendRequestInternal>c__AnonStoreyC.<>m__13 (VRC.Core.BestHTTP.HTTPRequest req, VRC.Core.BestHTTP.HTTPResponse resp) [0x00000] in <filename unknown>:0 \n  at VRC.Core.BestHTTP.HTTPRequest.CallCallback () [0x00000] in <filename unknown>:0 \nUnityEngine.Debug:LogError(Object)\nVRC.Core.BestHTTP.Logger.DefaultLogger:Exception(String, String, Exception)\nVRC.Core.BestHTTP.HTTPRequest:CallCallback()\nVRC.Core.BestHTTP.ConnectionBase:HandleCallback()\nVRC.Core.BestHTTP.HTTPManager:OnUpdate()\nVRC.Core.BestHTTP.HTTPUpdateDelegator:Update()",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d6de4c3e90df157eaa2",
+  "imageURLs": [
+    "https://canny.io/images/d261c209450f3862dc77975b540a4bda.png"
+  ],
+  "lastUpdated": 1779210492158,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-12-15T13:00:10.798Z",
+  "subCategoryID": null,
+  "title": "Constant Upload Failure",
+  "trendingScore": 2555.0562603750045,
+  "updatedAt": "2026-05-19T17:10:22.873328Z",
+  "urlName": "constant-upload-failure",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c14fadaa36e932127e36f32",
+      "alias": "Zesty Ant",
+      "aliasID": "65cc520ded6eefce4c6d1318",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Space-Candy",
+      "urlName": "twakiez",
+      "voteID": "5c14fada6db2b5471c2d8adc"
+    }
+  ]
+}

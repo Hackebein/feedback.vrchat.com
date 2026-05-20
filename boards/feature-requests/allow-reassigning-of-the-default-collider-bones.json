@@ -1,0 +1,162 @@
+{
+  "__v": 0,
+  "_id": "63ed35d7c01f06451105ac12",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T05:29:14.839624Z",
+  "author": {
+    "_id": "5f2e0a4e8464150716ffd322",
+    "alias": "Aegean blue Kangaroo",
+    "aliasID": "65c26da3ed6eefce4c4d0953",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+    "created": "2020-08-08T02:13:34.907Z",
+    "name": "ZenithVal",
+    "serviceAccount": false,
+    "urlName": "zenithval-1"
+  },
+  "authorID": "5f2e0a4e8464150716ffd322",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-02-15T19:43:19.175Z",
+  "deletedAt": null,
+  "details": "Currently, if you open the avatar descriptor in debug mode you can swap around the colliders assigned to the fingers and hands to other bones, allowing you to have collision with others in game. EG: Avatars that have gimmicks like multiple arms could spread their colliders out among their extra hands.\n\nThe problem is that the SDK automatically reverts manually assigned bones to the default humanoid bones. This is incredibly unfortunate. We don't always need all 6 colliders on each of our hands, I'd love to be able to spread them out elsewhere.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb969e4c3e90df1377a36",
+  "imageURLs": [
+    "https://canny.io/images/b76603fbdb5c074cfc4cb89e31c640fa.png"
+  ],
+  "lastUpdated": 1778995520563,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 8,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 8,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-02-15T19:43:19.176Z",
+  "subCategoryID": null,
+  "title": "Allow reassigning of the default collider bones",
+  "trendingScore": 2817.8986764798283,
+  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "urlName": "allow-reassigning-of-the-default-collider-bones",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f9f50fdb585505f6b73dd0f",
+      "alias": "Verdigris Landfowl",
+      "aliasID": "65c2b490ed6eefce4cde5423",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/666d603c3aa20b78d0d4c775171cc1a5.png",
+      "companies": [],
+      "name": "sentinel373",
+      "urlName": "sentinel373",
+      "voteID": "6595059fb7f7f4d227eddd22"
+    },
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "3f6409",
+      "voteID": "6402aa4de4688d36f8484ea0"
+    },
+    {
+      "_id": "5c03473992eef65b2bb3cc2c",
+      "alias": "Outstanding Kingfisher",
+      "aliasID": "65c27129ed6eefce4ce48dac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/230b695b3f1227c6e53121c1f0c0bec1.png",
+      "companies": [],
+      "name": "Groxxy",
+      "urlName": "insanegrox",
+      "voteID": "63f9f2b763d1f645124c684b"
+    },
+    {
+      "_id": "5a33f59b7f2ea83fad4a5ecd",
+      "alias": "Managerial Hornet",
+      "aliasID": "65ba01b9ed6eefce4cf95885",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c42ba2180b6e8f867d767868364be73.png",
+      "companies": [],
+      "name": "ArtGhostt",
+      "urlName": "ghostt",
+      "voteID": "63f65bf85f50f70f8b1603d2"
+    },
+    {
+      "_id": "598147bc29cccc4b2344127b",
+      "alias": "Blizzard blue Cat",
+      "aliasID": "65c2719aed6eefce4cf64ebd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2a19844a4a6023ea625559f14d93fa69.png",
+      "companies": [],
+      "name": "sakuraimikoto33",
+      "urlName": "b05ac7",
+      "voteID": "63ee691c9d8b3e45068cce80"
+    },
+    {
+      "_id": "5eb419345123ee6ed154263f",
+      "alias": "Yellow sunshine Canidae",
+      "aliasID": "65c28339ed6eefce4cc2dc9d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e9759ab5eb81b26b906c79fe94547d11.png",
+      "companies": [],
+      "name": "Table",
+      "urlName": "will-cook",
+      "voteID": "63ee1dbc3011374511f4e25a"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "fizzy-canny",
+      "voteID": "63ed6046a35021451f912b24"
+    },
+    {
+      "_id": "5f2e0a4e8464150716ffd322",
+      "alias": "Aegean blue Kangaroo",
+      "aliasID": "65c26da3ed6eefce4c4d0953",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+      "companies": [],
+      "name": "ZenithVal",
+      "urlName": "zenithval-1",
+      "voteID": "63ed35d7c01f06451105ac64"
+    }
+  ]
+}

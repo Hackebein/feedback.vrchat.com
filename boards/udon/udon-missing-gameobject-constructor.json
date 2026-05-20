@@ -1,0 +1,100 @@
+{
+  "__v": 0,
+  "_id": "5ed1a6be573d3760408c8b0a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:29:18.170595Z",
+  "author": {
+    "_id": "59af5f24723da239ff2c5257",
+    "alias": "Nautical blue Harrier",
+    "aliasID": "65c29cb5ed6eefce4c942105",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/61afbbdb3462baef282039850bbc15f2.png",
+    "created": "2017-09-06T02:36:20.613Z",
+    "name": "snail",
+    "serviceAccount": false,
+    "urlName": "snail"
+  },
+  "authorID": "59af5f24723da239ff2c5257",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-30T00:20:14.601Z",
+  "deletedAt": null,
+  "details": "new GameObject() missing in udon.\nUSharp error:\nSystem.Exception: Method is not exposed to Udon: Void .ctor(String), Udon signature: UnityEngineGameObject.__ctor__SystemString__UnityEngineGameObject",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7daee4c3e90df15903fb",
+  "imageURLs": [],
+  "lastUpdated": 1779239270503,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5ed1a6be573d3760408c8b0a/1441794006.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-30T00:20:14.601Z",
+  "subCategoryID": null,
+  "title": "Udon missing GameObject constructor.",
+  "trendingScore": 2901.5737128769842,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "udon-missing-gameobject-constructor",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ed285ab198acb75ff2a20f7",
+      "alias": "Extended Cat",
+      "aliasID": "65c36fe9ed6eefce4ca2eb78",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/524ec82f036d5ba9357b6f227bf46082.png",
+      "companies": [],
+      "name": "stereofoxmuviz",
+      "urlName": "stereo-muviz",
+      "voteID": "689937e52eba8cb5edeb75e5"
+    },
+    {
+      "_id": "59af5f24723da239ff2c5257",
+      "alias": "Nautical blue Harrier",
+      "aliasID": "65c29cb5ed6eefce4c942105",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/61afbbdb3462baef282039850bbc15f2.png",
+      "companies": [],
+      "name": "snail",
+      "urlName": "snail",
+      "voteID": "5ed1a6be573d3760408c8b12"
+    }
+  ]
+}

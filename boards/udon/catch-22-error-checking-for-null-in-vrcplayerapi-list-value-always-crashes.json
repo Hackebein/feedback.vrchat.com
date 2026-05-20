@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "5eb2b7d8864574606a2459c3",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:28:41.112703Z",
+  "author": {
+    "_id": "5eb2b7d81c191b60645d11ad",
+    "alias": "Beige Dragon",
+    "aliasID": "65c4744bed6eefce4cc00fd0",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/0fac918210ddc6d12c50b74d1f17b9a4.png",
+    "created": "2020-05-06T13:12:56.310Z",
+    "name": "Clearly",
+    "serviceAccount": false,
+    "urlName": "ryan-kruse"
+  },
+  "authorID": "5eb2b7d81c191b60645d11ad",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5eb3f5b9bd9c241556933b85",
+      "author": {
+        "_id": "5eb2b7d81c191b60645d11ad",
+        "alias": "Beige Dragon",
+        "aliasID": "65c4744bed6eefce4cc00fd0",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0fac918210ddc6d12c50b74d1f17b9a4.png",
+        "created": "2020-05-06T13:12:56.310Z",
+        "name": "Clearly",
+        "serviceAccount": false,
+        "urlName": "ryan-kruse"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2020-05-07T11:49:13.039Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5eb2b7d8864574606a2459c3",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Nevermind, I switched to UdonSharp and was able to avoid this issue.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-06T13:12:56.402Z",
+  "deletedAt": null,
+  "details": "I have a VRCplayerAPI[] of length 1. The value of index 0 may either be Null or a VRCPlayerAPI object. How can one determine whether the value at index 0 is Null or not without crashing? Below is the code I've written, this is a Catch-22 error as there appears to be no solution.\nLeft Screenshot: The branch crashes when the value is Null, but correctly works when the value is a VRCPlayerAPI object. \nRight Screenshot: The branch crashes when the value is VRCPlayerAPI object, but correctly works when the value is Null.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dabe4c3e90df158f756",
+  "imageURLs": [
+    "https://canny.io/images/f7552117e8f5c2908793e38bff70f1c7.png"
+  ],
+  "lastUpdated": 1779239267447,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-06T13:12:56.402Z",
+  "subCategoryID": null,
+  "title": "Catch-22 Error. Checking for Null in VRCplayerAPI[] list value always crashes.",
+  "trendingScore": 2627.6289547500046,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "catch-22-error-checking-for-null-in-vrcplayerapi-list-value-always-crashes",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5eb2b7d81c191b60645d11ad",
+      "alias": "Beige Dragon",
+      "aliasID": "65c4744bed6eefce4cc00fd0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/0fac918210ddc6d12c50b74d1f17b9a4.png",
+      "companies": [],
+      "name": "Clearly",
+      "urlName": "ryan-kruse",
+      "voteID": "5eb2b7d8864574606a2459cb"
+    }
+  ]
+}

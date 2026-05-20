@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5ec16a272f188626db3615c0",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:29:04.243577Z",
+  "author": {
+    "_id": "5c30ff6fffac067f55dd016f",
+    "alias": "Juicy Wildcat",
+    "aliasID": "65c65bdfed6eefce4c036254",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/4dcd820f127364ce4fc49573fa20d00e.png",
+    "created": "2019-01-05T19:03:11.243Z",
+    "name": "Ville672 -",
+    "serviceAccount": false,
+    "urlName": "ville672"
+  },
+  "authorID": "5c30ff6fffac067f55dd016f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-17T16:45:27.591Z",
+  "deletedAt": null,
+  "details": "I've made foot colliders for the player and for some reason they still collide with the player even if I disabled collisions between the player and the colliders in the collision matrix. They are separate objects that move to the bone positions of the player using a script. Here is a little video: https://youtu.be/fORcLXJkQt4\nI'm not 100% sure this is a bug or something else.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dade4c3e90df158fd35",
+  "imageURLs": [],
+  "lastUpdated": 1779239269055,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-17T16:45:27.591Z",
+  "subCategoryID": null,
+  "title": "Layer collision matrix problem",
+  "trendingScore": 2629.221466640712,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "layer-collision-matrix-problem",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c30ff6fffac067f55dd016f",
+      "alias": "Juicy Wildcat",
+      "aliasID": "65c65bdfed6eefce4c036254",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/4dcd820f127364ce4fc49573fa20d00e.png",
+      "companies": [],
+      "name": "Ville672 -",
+      "urlName": "ville672",
+      "voteID": "5ec16a272f188626db3615c8"
+    }
+  ]
+}

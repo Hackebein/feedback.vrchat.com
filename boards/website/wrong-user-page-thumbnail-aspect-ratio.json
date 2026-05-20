@@ -1,0 +1,147 @@
+{
+  "__v": 0,
+  "_id": "645d07bad624f909566fd734",
+  "aiCategories": [
+    "loc.website",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-19T03:46:52.362316Z",
+  "author": {
+    "_id": "6053305d54487c5064d34d74",
+    "alias": "Ivory Hamster",
+    "aliasID": "65c3a0bbed6eefce4cf5388d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e32d6c9e33a552395010bb8b5f877586.png",
+    "created": "2021-03-18T10:50:05.632Z",
+    "name": "PROTOCO",
+    "serviceAccount": false,
+    "urlName": "protoco"
+  },
+  "authorID": "6053305d54487c5064d34d74",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "646d7f59832bfa269b48b13a",
+      "author": {
+        "_id": "58c6cbcffd04b1785f747b6c",
+        "alias": "Huge Cat",
+        "aliasID": "65ba012ced6eefce4cea0f7d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d725908cb1652c95b08a294422da5ff5.png",
+        "created": "2017-03-13T16:41:51.683Z",
+        "name": "owlboy",
+        "serviceAccount": false,
+        "urlName": "bryan-bortz"
+      },
+      "authorID": null,
+      "boardID": "5d142650329e7856f7f7b664",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2023-05-24T03:07:05.844Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/1696c7d95d98191fb9fecc7fd89cfbe1.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "645d07bad624f909566fd734",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-05-11T15:20:26.352Z",
+  "deletedAt": null,
+  "details": "(DeepL)When the aspect ratio of the browser window is changed, the aspect ratio of the user's thumbnail displayed on the user page is changed.\n\nThis bug occurs even if the window is not extremely vertical.\n\nPlease add some style like\"object-fit: contain\" to the img tag.\n\n(Microsoft Edge version 113.0.1774.35)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97ce4c3e90df137b8e0",
+  "imageURLs": [
+    "https://canny.io/images/122469f6aea997ca877f92275f58508d.png",
+    "https://canny.io/images/5e7a1aa4b707917ba976a4cc56f50555.png"
+  ],
+  "lastUpdated": 1779160822730,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-05-11T15:20:26.352Z",
+  "subCategoryID": null,
+  "title": "Wrong user page thumbnail Aspect Ratio",
+  "trendingScore": 2786.1652371407336,
+  "updatedAt": "2026-05-19T03:20:30.198674Z",
+  "urlName": "wrong-user-page-thumbnail-aspect-ratio",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d725908cb1652c95b08a294422da5ff5.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": "bryan-bortz",
+      "voteID": "646d7f5c05d1b9093093baf9"
+    },
+    {
+      "_id": "6053305d54487c5064d34d74",
+      "alias": "Ivory Hamster",
+      "aliasID": "65c3a0bbed6eefce4cf5388d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e32d6c9e33a552395010bb8b5f877586.png",
+      "companies": [],
+      "name": "PROTOCO",
+      "urlName": "protoco",
+      "voteID": "645d07bad624f909566fd75d"
+    }
+  ]
+}

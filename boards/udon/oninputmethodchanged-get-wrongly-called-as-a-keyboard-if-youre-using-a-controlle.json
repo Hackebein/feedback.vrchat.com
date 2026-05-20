@@ -1,0 +1,182 @@
+{
+  "__v": 0,
+  "_id": "661910cb33a1073dbc6999af",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T18:33:00.606644Z",
+  "author": {
+    "_id": "5f8bcd4b6dbb722ec2152a06",
+    "alias": "Limited Owl",
+    "aliasID": "65c2b464ed6eefce4cd86b18",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/473ac99c2a47b8456c1524536eb079d4.png",
+    "created": "2020-10-18T05:06:19.129Z",
+    "name": "ballfun",
+    "serviceAccount": false,
+    "urlName": "ballfun"
+  },
+  "authorID": "5f8bcd4b6dbb722ec2152a06",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-04-12T10:45:31.727Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Replication\n\n1. Have something listening to OnInputMethodChanged \n\n2. use vrchat with a controller\n\n3. pull up the gesture wheel with RB and select something with the joystick\n\n4. OnInputMethodChanged will be called as f you used a keyboard\n\nBuild: 1442\n\nSDK 3.5.2",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9dbe4c3e90df138d280",
+  "imageURLs": [
+    "https://canny.io/images/55da46abdd2abb98ad5484fcb96359b1.png"
+  ],
+  "lastUpdated": 1779042633497,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 9,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/661910cb33a1073dbc6999af/965289791.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 9,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-04-12T10:45:31.727Z",
+  "subCategoryID": null,
+  "title": "OnInputMethodChanged get wrongly called as a keyboard if you're using a controller and pull up the gesture wheel",
+  "trendingScore": 2834.7743207924327,
+  "updatedAt": "2026-05-17T18:33:00.531996Z",
+  "updatedBy": null,
+  "urlName": "oninputmethodchanged-get-wrongly-called-as-a-keyboard-if-youre-using-a-controlle",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63882dc1f272550ad4b6b553",
+      "alias": "Nautical blue Horse",
+      "aliasID": "65c26de3ed6eefce4c583e46",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/695b6d04a8df3baaf7dc5fffa66b6b56.png",
+      "companies": [],
+      "name": "ʙɪɢ․",
+      "urlName": "sdruuba",
+      "voteID": "66255a07d36452c1792747ad"
+    },
+    {
+      "_id": "5fc07f1638dc63605fb9833c",
+      "alias": "Quicksilver Bovid",
+      "aliasID": "65c2b4d5ed6eefce4ce77dea",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/861550c9a3d18b9ae5a72d4c51910d8d.png",
+      "companies": [],
+      "name": "LiveDimensions",
+      "urlName": "livedimensions",
+      "voteID": "66198cbce5d26962aa53f999"
+    },
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d03ff26f975679707203bd269ce42822.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": "tonylewis",
+      "voteID": "6619771be5d26962aaf6d7c4"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "vrcprefabs",
+      "voteID": "66197678e5d26962aad7f48e"
+    },
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c79c3e3bfa68539a3c62feb4eda8b2cb.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": "kitkat-29",
+      "voteID": "66197666e5d26962aad4938e"
+    },
+    {
+      "_id": "60ea8eb862606a15e3a566af",
+      "alias": "Fuchsia Scallop",
+      "aliasID": "65c62e46ed6eefce4c1cefa5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f64660bb61c91e78e5285f12e5a1f8f9.png",
+      "companies": [],
+      "name": "Ren_Ookami",
+      "urlName": "renookami",
+      "voteID": "661950a8e5d26962aaf1403d"
+    },
+    {
+      "_id": "601d7360a44f0f0365c55ad4",
+      "alias": "Yolk yellow Carp",
+      "aliasID": "65c45496ed6eefce4ce345e3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/19d04f3d3a2f7466a540b1fc429982bf.png",
+      "companies": [],
+      "name": "Zerithax",
+      "urlName": "zerithax",
+      "voteID": "66194f36e5d26962aa8e7196"
+    },
+    {
+      "_id": "61b77dd6a5a0495d0e2c3040",
+      "alias": "Statistical Turtle",
+      "aliasID": "65c2fdd8ed6eefce4c8617f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5a2fad677db4154946945f9fcbcd3fad.png",
+      "companies": [],
+      "name": "ThizThizzyDizzy",
+      "urlName": "thizthizzydizzy",
+      "voteID": "66191ed7e5d26962aa748111"
+    },
+    {
+      "_id": "5f8bcd4b6dbb722ec2152a06",
+      "alias": "Limited Owl",
+      "aliasID": "65c2b464ed6eefce4cd86b18",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/473ac99c2a47b8456c1524536eb079d4.png",
+      "companies": [],
+      "name": "ballfun",
+      "urlName": "ballfun",
+      "voteID": "661910cbe5d26962aae5fc94"
+    }
+  ]
+}

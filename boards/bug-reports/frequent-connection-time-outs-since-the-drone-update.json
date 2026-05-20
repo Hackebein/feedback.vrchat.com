@@ -1,0 +1,157 @@
+{
+  "__v": 0,
+  "_id": "6818657c01db3f3b17e9eb9c",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-16T22:12:46.021028Z",
+  "author": {
+    "_id": "6239a8ce8636e1084c6455ee",
+    "alias": "Neat Dingo",
+    "aliasID": "65c26ed9ed6eefce4c855014",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bd9b5632caa145521edc30353cbd2f3c.png",
+    "created": "2022-03-22T10:45:34.539Z",
+    "name": "buzer ~",
+    "serviceAccount": false,
+    "urlName": "buzer-2022"
+  },
+  "authorID": "6239a8ce8636e1084c6455ee",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "6818fb41e04b2d9c684d5aa1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6239a8ce8636e1084c6455ee",
+        "alias": "Neat Dingo",
+        "aliasID": "65c26ed9ed6eefce4c855014",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/bd9b5632caa145521edc30353cbd2f3c.png",
+        "created": "2022-03-22T10:45:34.539Z",
+        "name": "buzer ~",
+        "serviceAccount": false,
+        "urlName": "buzer-2022"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-05-05T17:54:09.815Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6818657c01db3f3b17e9eb9c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Relevant reports from Asian players:\n\nhttps://feedback.vrchat.com/bug-reports/p/frequent-timeouts\n\nhttps://feedback.vrchat.com/bug-reports/p/game-softlocks-when-joining-instances\n\nI'm from Russia, but I live in the Asian part (Far East), close to Japan. Could be an Asia-related issue?",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-05T07:15:08.295Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Almost every time I join a world I get the error message: \"Your connection to VRChat timed out. Verify Connection and try again\". I press OK, the game tries again, and usually gets in on the second attempt. But sometimes it can take up to 4 attempts.\n\nOccasionally I get this error while already in a world as well - in this case my friends will see me frozen for about 10 seconds, but I can still see them moving and hear them talking - until the error message pops up. \n\nThis started happening immediately since the drone update went live. I was using the beta earlier and had no issues there.\n\nExample log files:\n\noutput_log_2025-05-03_14-42-34.txt - timed-out while in Club Vudu, and then timed-out a couple times while in Deadlock Alley\n\noutput_log_2025-05-05_14-46-35.txt - club hopping, no time-outs while in worlds, but at least one time-out on every world change",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/ba1379ed3991d979d2b0ac0943135c94.txt",
+    "https://canny-assets.io/files/e9b1c0dbac950401907af2b4c3a452d7.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-05-05_14-46-35",
+      "url": "https://canny-assets.io/files/ba1379ed3991d979d2b0ac0943135c94.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-05-03_14-42-34",
+      "url": "https://canny-assets.io/files/e9b1c0dbac950401907af2b4c3a452d7.txt"
+    }
+  ],
+  "ideaID": "6818657d01db3f3b17e9ed5b",
+  "imageURLs": [],
+  "lastUpdated": 1779255091989,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6818657c01db3f3b17e9eb9c/1545898768.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-05T07:15:08.295Z",
+  "subCategoryID": null,
+  "title": "Frequent connection time-outs since the drone update",
+  "trendingScore": 2888.80733512329,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "frequent-connection-time-outs-since-the-drone-update",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "681ac7e16a1afca07c54c013",
+      "alias": "Subjective Hare",
+      "aliasID": "681ac7e2cd82760daccbfaf4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5f6d95f0593bfd71a7d4d985fa4186a0.png",
+      "companies": [],
+      "name": "NékoHeartnet",
+      "urlName": "nekoheartnet",
+      "voteID": "681aca35cd82760dac1e8b3e"
+    },
+    {
+      "_id": "6239a8ce8636e1084c6455ee",
+      "alias": "Neat Dingo",
+      "aliasID": "65c26ed9ed6eefce4c855014",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bd9b5632caa145521edc30353cbd2f3c.png",
+      "companies": [],
+      "name": "buzer ~",
+      "urlName": "buzer-2022",
+      "voteID": "6818657d8ccc1d8b3b03093d"
+    }
+  ]
+}

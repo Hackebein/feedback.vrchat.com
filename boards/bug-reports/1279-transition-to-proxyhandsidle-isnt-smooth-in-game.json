@@ -1,0 +1,84 @@
+{
+  "__v": 0,
+  "_id": "63e30ce5d612b1504ad65d88",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-19T05:53:08.141428Z",
+  "author": {
+    "_id": "5f2cc063e4f1cf30acd9593d",
+    "alias": "Stiff Coyote",
+    "aliasID": "65cef7150129d7ae44a52814",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/1f638e6c776cda21a1569efb80d2aa6e.png",
+    "created": "2020-08-07T02:45:55.960Z",
+    "name": "Zelevas",
+    "serviceAccount": false,
+    "urlName": "vanguard-2"
+  },
+  "authorID": "5f2cc063e4f1cf30acd9593d",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-02-08T02:45:57.120Z",
+  "deletedAt": null,
+  "details": "Using the provided vrc_AvatarV3HandsLayer controller and the default proxy animations, transitioning from any state back to idle causes your hands in-game to snap back, rather than transition smoothly. This affects both VR and Desktop.\n\nThis is a non-issue inside the Unity Editor, but is present in-game once the avatar has been uploaded.\n\nDuplicating the proxy animations results in the same issues and the only solution around the problem is to either make or use a different idle hand animation.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb968e4c3e90df1377430",
+  "imageURLs": [
+    "https://canny.io/images/1ac815aa8a35b145cd62f4a24f652597.jpg"
+  ],
+  "lastUpdated": 1779168802505,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-02-08T02:45:57.121Z",
+  "subCategoryID": null,
+  "title": "[1279] Transition to proxy_hands_idle isn't smooth in-game",
+  "trendingScore": 2771.566753645507,
+  "updatedAt": "2026-05-19T05:33:34.555709Z",
+  "urlName": "1279-transition-to-proxyhandsidle-isnt-smooth-in-game",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2cc063e4f1cf30acd9593d",
+      "alias": "Stiff Coyote",
+      "aliasID": "65cef7150129d7ae44a52814",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/1f638e6c776cda21a1569efb80d2aa6e.png",
+      "companies": [],
+      "name": "Zelevas",
+      "urlName": "vanguard-2",
+      "voteID": "63e30ce5d612b1504ad65dae"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "_id": "69e58c1e02d5f54b7e0c1ce4",
+  "aiCategories": [
+    "moderation.safety-system",
+    "loc.main-menu",
+    "loc.website",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-18T15:29:52.125638Z",
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "wubthecaptain"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69e62ec0eaa1450c4254b005",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "paige-pinson"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-04-20T13:48:48.371Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69e58c1e02d5f54b7e0c1ce4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "69e62ec0eaa1450c4254aff7",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-20T02:14:54.575Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When you report content, the \"View Reports\" UI may display a different, older picture (version 1 of a photo). See the attached bug repro video.\n\nI used [Vket2025S Vket Formula ․3879 - Glory](https://vrchat.com/home/world/wrld_e26fa18e-c895-41c3-86f2-2361c80c7977/info) (`wrld_e26fa18e-c895-41c3-86f2-2361c80c7977`) by VirtualMarket1 as an example in the attached (scuffed) video. I know of several more worlds and avatars where this bug is experienced, if needed.\n\nSteps to reproduce:\n\n1. Find (or recreate) content affected by this bug (e.g. `wrld_e26fa18e-c895-41c3-86f2-2361c80c7977`).\n\n2. Submit a moderation report in any category for this content. (N.B.: Please don't abuse this in the live VRChat application in production.)\n\n3. View Reports, then find your report. Observe the photo shown in the report UI.\n\n4. (Once done, remove your moderation report from Open Reports if necessary.)\n\nExpected behavior: Show the current photo or the photo from the time of report in \"Open Reports\" and \"Closed Reports\".\n\nActual behavior: An ancient photo (version 1) initially uploaded by the uploader is shown, which is not normally seen live.\n\nThe latest photo is displayed correctly on the world page in-app and on the website (in both the info and launch pages for worlds, when applicable).\n\nRelated: https://feedback.vrchat.com/bug-reports/p/could-not-download-world-photo-thumbnail-from-reports-user-interface-but-its-ava",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/80c0e2fa9e425dc8b880839a89dfe981.mp4",
+    "https://canny-assets.io/files/64f77249321aaf4adb8e195101fb93d0.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "Bug",
+      "url": "https://canny-assets.io/files/80c0e2fa9e425dc8b880839a89dfe981.mp4"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-04-20_01-01-39",
+      "url": "https://canny-assets.io/files/64f77249321aaf4adb8e195101fb93d0.txt"
+    }
+  ],
+  "ideaID": "69e58c1e02d5f54b7e0c1cfb",
+  "imageURLs": [
+    "https://canny-assets.io/images/bbc1d3a9cad88c24d49763a319d99dd4.png",
+    "https://canny-assets.io/images/76b4960b10765c5886aa0a37272d95ab.png",
+    "https://canny-assets.io/images/91639e6415b2d7bc0e42ac1de4bbcaf7.png",
+    "https://canny-assets.io/images/b2a28d4d71300e67ee2a75698be0e0f7.png"
+  ],
+  "lastUpdated": 1779117296145,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69e58c1e02d5f54b7e0c1ce4/2136116099.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2026-04-20T13:48:48.333Z",
+  "subCategoryID": null,
+  "title": "\"View Reports\" UI shows the first uploaded version of a photo of content, instead of the latest uploaded photo or the photo version at time of the report",
+  "trendingScore": 2938.277960114588,
+  "updatedAt": "2026-05-18T15:15:37.490037Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "view-reports-ui-shows-the-first-uploaded-version-of-a-photo-of-content-instead-o",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "wubthecaptain",
+      "voteID": "69e58c1f65c4cf9dd913a17c"
+    }
+  ]
+}
