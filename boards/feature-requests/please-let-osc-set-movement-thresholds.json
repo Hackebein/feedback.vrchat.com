@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "639ad3a611e99536c9d468b0",
+  "aiCategories": [
+    "loc.in-world",
+    "client.osc"
+  ],
+  "aiTaggedAt": "2026-05-17T03:19:22.710537Z",
+  "author": {
+    "_id": "620053b43cfd5133561af1d1",
+    "alias": "Lavender Shrimp",
+    "aliasID": "65c52c2ced6eefce4c2a8d65",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7f4f65226d4bb6ec9f4bc2f313d15fbc.png",
+    "created": "2022-02-06T23:03:16.784Z",
+    "name": "mocha____",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "620053b43cfd5133561af1d1",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-12-15T07:58:30.957Z",
+  "deletedAt": null,
+  "details": "When using OSC for inputs (as in the documentation \"OSC as Input Controller\"), values of -0.1 to 0.1 are treated the same as 0.0 when sent to the /input/s for Horizontal, Vertical, LookHorizontal, and LookVertical - this appears to be a threshold used as an internal deadzone for all inputs, presumably meant for joysticks. Please let us either toggle or set this threshold. To me it's fine if it's just for OSC specific use and not exposed in the UI (like sending a value to /input/threshold that only affects OSC inputs), I just want to be able to do more nuanced inputs through OSC.\n\nMy particular usecase is using OSC input to control the camera in flying mode, since there's no OSC control for the camera (I did vote and comment on that feature request as well, lol). It works currently (if I toggle flying mode and then start my OSC inputs), but the camera is much more jerky and doesn't have any fine control since your current minimum movement speed is 0.1.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb95ee4c3e90df1375482",
+  "imageURLs": [],
+  "lastUpdated": 1778987477555,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-12-15T07:58:30.957Z",
+  "subCategoryID": null,
+  "title": "Please let OSC set movement thresholds",
+  "trendingScore": 2777.73274775609,
+  "updatedAt": "2026-05-17T03:12:43.579453Z",
+  "urlName": "please-let-osc-set-movement-thresholds",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "600608e6ff9d19420cbf69bd",
+      "alias": "Jambalaya Parrotfish",
+      "aliasID": "66a59235318f0a32528760c7",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9282f03e5ee5ddec47ff19ad929b228f.png",
+      "companies": [],
+      "name": "uber5001",
+      "urlName": "<redacted>",
+      "voteID": "6422599d2d145a51b1715820"
+    },
+    {
+      "_id": "620053b43cfd5133561af1d1",
+      "alias": "Lavender Shrimp",
+      "aliasID": "65c52c2ced6eefce4c2a8d65",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7f4f65226d4bb6ec9f4bc2f313d15fbc.png",
+      "companies": [],
+      "name": "mocha____",
+      "urlName": "<redacted>",
+      "voteID": "639ad3a711e99536c9d468d6"
+    }
+  ]
+}

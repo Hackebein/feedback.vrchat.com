@@ -1,0 +1,126 @@
+{
+  "__v": 0,
+  "_id": "6754955a9278647fc0d8e1fb",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T16:04:12.543692Z",
+  "author": {
+    "_id": "62def74b116f8244ab83190a",
+    "alias": "Strange Sturgeon",
+    "aliasID": "65c4617aed6eefce4c2153ed",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/931cc647e2f96edde8060cff5626d44f.png",
+    "created": "2022-07-25T20:04:27.487Z",
+    "name": "Tau of the sun",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62def74b116f8244ab83190a",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-12-07T18:35:06.397Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When in Avatar position of head/shoulders are not represented correctly for the user, Everyone else sees the avatar properly directly in world and in their own mirror. This actually happening to several users after the constraints update.  Other people are experiencing this to varying degrees.  \n\nI have done everything from reloading under the SDK again , changing viewpoint and trying to change settings in constraint values to no effect.  as you can see, the picture on the left shows how everyone see me, the one on the right what I see in the mirror. I have included the Avatar ID in text file. \n\nHope you all can help",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/bc171e0a078e2447be53a8a825761f58.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "Taufile",
+      "url": "https://canny-assets.io/files/bc171e0a078e2447be53a8a825761f58.txt"
+    }
+  ],
+  "ideaID": "680bba31e4c3e90df139d9a6",
+  "imageURLs": [
+    "https://canny-assets.io/images/a7cb67dfc612867556467369e26e4abf.png",
+    "https://canny-assets.io/images/62e5443dc5fc3be136afa4923582dcdd.jpeg"
+  ],
+  "lastUpdated": 1779032765310,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6754955a9278647fc0d8e1fb/909642517.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-12-07T18:35:06.397Z",
+  "subCategoryID": null,
+  "title": "WEIRD,  Mirror(s) reflections shows head and body positions differently to the avatar owner than what everyone else sees.",
+  "trendingScore": 2867.824029530446,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "weird-mirrors-reflections-shows-head-and-body-positions-differently-to-the-avata",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6063ce35857c655f14828c01",
+      "alias": "Purple Giraffe",
+      "aliasID": "65cabcfced6eefce4cf4a7b0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3855923749c84f3189137781cffcac65.png",
+      "companies": [],
+      "name": "Nammi",
+      "urlName": "<redacted>",
+      "voteID": "6755c5fba367fa63925d2202"
+    },
+    {
+      "_id": "6251e0efbd42d33382835984",
+      "alias": "Digital Parrotfish",
+      "aliasID": "65c297a5ed6eefce4cdb0026",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/810d93d333341b6bf1ea5e8c0627c70c.png",
+      "companies": [],
+      "name": "Kaycie Shchi",
+      "urlName": "<redacted>",
+      "voteID": "6754de76a367fa639237a3dd"
+    },
+    {
+      "_id": "62def74b116f8244ab83190a",
+      "alias": "Strange Sturgeon",
+      "aliasID": "65c4617aed6eefce4c2153ed",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/931cc647e2f96edde8060cff5626d44f.png",
+      "companies": [],
+      "name": "Tau of the sun",
+      "urlName": "<redacted>",
+      "voteID": "6754955aa367fa63923ef5c6"
+    }
+  ]
+}

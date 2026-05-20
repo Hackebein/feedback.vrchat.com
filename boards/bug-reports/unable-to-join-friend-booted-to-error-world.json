@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "6315039947414b44a72d4bf2",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
+    "worlds.travel",
+    "social.instances",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-05-18T22:35:15.608869Z",
+  "author": {
+    "_id": "62f82742e7f60944a04953d8",
+    "alias": "Legal Lynx",
+    "aliasID": "65c49f9aed6eefce4c9d7b63",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-08-13T22:35:46.959Z",
+    "name": "Mogusha",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62f82742e7f60944a04953d8",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-09-04T19:59:21.791Z",
+  "deletedAt": null,
+  "details": "I was trying to join one of my friends, the first time I was trying to join them I got into the instance, but before I got in I had clicked the \"join\" button a few times and got the \"unable to join this instance\" error a few times beforeI was able to join their instance. Shortly after joining (within a second or two) the entire screen went black including the UI.\nI restarted my client since I couldn't see anything. After restarting the client I tried joining them again but got the error similar to \"unable to join this instance\" after a few attempts I went and joined another friend.\nA little later I tried to join them again, and I was able to load into the world, but the world didn't load correctly, I got another error and was booted to the \"Error World\"\nHere are the relevant error logs:\n2022.09.04 21:30:39 Log        -  Loading asset bundle: F14 world main 2 terrain test\n2022.09.04 21:30:40 Warning    -  The referenced script (Unknown) on this Behaviour is missing!\n2022.09.04 21:30:40 Warning    -  The referenced script (Unknown) on this Behaviour is missing!\n2022.09.04 21:30:40 Warning    -  The referenced script (Unknown) on this Behaviour is missing!\n2022.09.04 21:30:40 Warning    -  The referenced script on this Behaviour (Game Object 'WFX_Nuke') is missing!\n2022.09.04 21:30:40 Warning    -  The referenced script on this Behaviour (Game Object 'WFX_Nuke') is missing!\n2022.09.04 21:30:40 Warning    -  The referenced script on this Behaviour (Game Object 'WFX_Nuke') is missing!\n2022.09.04 21:30:44 Log        -  [UdonBehaviour] Could not load the program; the UdonBehaviour on 'Mirror' will not run.\n2022.09.04 21:30:44 Log        -  [UdonBehaviour] Could not load the program; the UdonBehaviour on 'Mirror transparent' will not run.\n2022.09.04 21:30:44 Log        -  Loaded asset bundle: F14 world main 2 terrain test\n2022.09.04 21:30:44 Log        -  [UdonBehaviour] Could not load the program; the UdonBehaviour on 'Mirror' will not run.\n2022.09.04 21:30:45 Log        -  [Behaviour] Room instantiate took 6.689453s\n2022.09.04 21:30:45 Log        -  [Behaviour] Instantiating VRC_OBJECTS\n2022.09.04 21:30:45 Warning    -  The referenced script on this Behaviour (Game Object '<null>') is missing!\nUnityEngine.Object:Instantiate(Object, Vector3, Quaternion)\nÏÎÌÎÏÌÏÌÏÏÏÌÍÏÎÌÏÎÍÍÎÍÍ:ÌÎÎÎÍÍÎÏÏÏÏÎÌÌÍÎÎÏÍÌÏÍÏ(Object, Vector3, Quaternion, Boolean, Boolean, Boolean)\nÏÎÌÎÏÌÏÌÏÏÏÌÍÏÎÌÏÎÍÍÎÍÍ:ÌÎÎÎÍÍÎÏÏÏÏÎÌÌÍÎÎÏÍÌÏÍÏ(Object, Boolean, Boolean, Boolean)\nÎÌÌÌÎÌÎÌÍÏÎÏÏÍÌÎÏÎÏÎÏÏÌ:ÎÎÎÌÏÍÍÏÍÍÏÎÌÏÏÎÏÌÏÎÏÏÍ()\nÎÎÌÍÍÌÏÏÏÏÍÏÏÏÏÏÍÌÌÎÎÍÏ:MoveNext()\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)\n2022.09.04 21:30:45 Warning    -  The referenced script on this Behaviour (Game Object 'USpeak') is missing!\nUnityEngine.Object:Instantiate(Object, Vector3, Quaternion)\nÏÎÌÎÏÌÏÌÏÏÏÌÍÏÎÌÏÎÍÍÎÍÍ:ÌÎÎÎÍÍÎÏÏÏÏÎÌÌÍÎÎÏÍÌÏÍÏ(Object, Vector3, Quaternion, Boolean, Boolean, Boolean)\nÏÎÌÎÏÌÏÌÏÏÏÌÍÏÎÌÏÎÍÍÎÍÍ:ÌÎÎÎÍÍÎÏÏÏÏÎÌÌÍÎÎÏÍÌÏÍÏ(Object, Boolean, Boolean, Boolean)\nÎÌÌÌÎÌÎÌÍÏÎÏÏÍÌÎÏÎÏÎÏÏÌ:ÎÎÎÌÏÍÍÏÍÍÏÎÌÏÏÎÏÌÏÎÏÏÍ()\nÎÎÌÍÍÌÏÏÏÏÍÏÏÏÏÏÍÌÌÎÎÍÏ:MoveNext()\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)\n2022.09.04 21:30:45 Warning    -  The referenced script on this Behaviour (Game Object 'USpeak') is missing!\nUnityEngine.Object:Instantiate(Object, Vector3, Quaternion)\nÏÎÌÎÏÌÏÌÏÏÏÌÍÏÎÌÏÎÍÍÎÍÍ:ÌÎÎÎÍÍÎÏÏÏÏÎÌÌÍÎÎÏÍÌÏÍÏ(Object, Vector3, Quaternion, Boolean, Boolean, Boolean)\nÏÎÌÎÏÌÏÌÏÏÏÌÍÏÎÌÏÎÍÍÎÍÍ:ÌÎÎÎÍÍÎÏÏÏÏÎÌÌÍÎÎÏÍÌÏÍÏ(Object, Boolean, Boolean, Boolean)\nÎÌÌÌÎÌÎÌÍÏÎÏÏÍÌÎÏÎÏÎÏÏÌ:ÎÎÎÌÏÍÍÏÍÍÏÎÌÏÏÎÏÌÏÎÏÏÍ()\nÎÎÌÍÍÌÏÏÏÏÍÏÏÏÏÏÍÌÌÎÎÍÏ:MoveNext()\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)\n2022.09.04 21:30:45 Log        -  [Behaviour] Hard max is 0\n2022.09.04 21:30:45 Log        -  [Behaviour] Spent 0.001464844s initializing VRC Objects\n2022.09.04 21:30:45 Log        -  [Behaviour] Processing scene objects\n2022.09.04 21:30:45 Log        -  [Always] Loading scene's render settings.\n2022.09.04 21:30:45 Log        -  [Always] Creating Scene Dynamic Bone Controller.\n2022.09.04 21:30:46 Log        -  [Behaviour] Spent 0.1811523s processing scene objects.\n2022.09.04 21:30:46 Log        -  [Behaviour] Fixing materials\n2022.09.04 21:30:46 Log        -  [Behaviour] Spent 0s fixing materials.\n2022.09.04 21:30:46 Log        -  [Behaviour] Clamp audio sources\n2022.09.04 21:30:46 Log        -  [Behaviour] Finalizing scene\n2022.09.04 21:30:46 Log        -  [Behaviour] Spent 0.01855469s finalizing scene.\n2022.09.04 21:30:46 Log        -  [Behaviour] Switching to network region usw\n2022.09.04 21:30:46 Log        -  [Behaviour] Connecting to realtime network\n2022.09.04 21:30:48 Log        -  [Behaviour] OnCustomAuthenticationResponse\n2022.09.04 21:30:48 Log        -  [Behaviour] OnConnected\n2022.09.04 21:30:49 Log        -  [Behaviour] OnConnectedToMaster\n2022.09.04 21:30:49 Log        -  [Behaviour] Connected to master in usw\n2022.09.04 21:30:49 Log        -  [EOSManager] [Info][LogEOSAntiCheat] [AntiCheatClient] [BeginSession-003] Mode: 1\n2022.09.04 21:30:49 Log        -  [EOSManager] AntiCheat Session Begin: Success\n2022.09.04 21:30:49 Log        -  [Behaviour] Entering world\n2022.09.04 21:30:49 Error      -  [API] [742, 500, Get, 2] Request Finished with Error!\nNo Exception\n{{\"error\":{{\"message\":\"presence˸ no such index\",\"status_code\":500}}}}\n2022.09.04 21:30:50 Error      -  [API] [742, 200, Get, 0] Abandoning request, because - presence˸ no such index\n2022.09.04 21:30:50 Log        -  [Behaviour] Resetting game flow because \"Failed to authenticate\": [GoToErrorWorld, SkipLogin]\n2022.09.04 21:30:50 Log        -  [Behaviour] waiting for UI Manager\n2022.09.04 21:30:50 Log        -  [Behaviour] showing disconnect reason\n2022.09.04 21:30:58 Log        -  [EOSManager] [Info][LogEOS] Updating Product SDK Config, Time: 7982.611328\n2022.09.04 21:30:58 Log        -  [EOSManager] [Info][LogEOS] SDK Config Product Update Request Completed - No Change\n2022.09.04 21:30:58 Log        -  [EOSManager] [Info][LogEOS] ScheduleNextSDKConfigDataUpdate - Time: 7982.789062, Update Interval: 352.851349\n2022.09.04 21:31:11 Log        -  [Behaviour] showing alert\n2022.09.04 21:31:11 Log        -  [Behaviour] checking for account info update\n2022.09.04 21:31:11 Log        -  [Behaviour] checking terms of service\n2022.09.04 21:31:11 Log        -  [Behaviour] TOS current version: 8, accepted: 8\n2022.09.04 21:31:11 Log        -  [Behaviour] set connect error state\n2022.09.04 21:31:11 Log        -  [Behaviour] checking for youtube-dl updates\n2022.09.04 21:31:11 Log        -  [Behaviour] setup crash logging\n2022.09.04 21:31:11 Log        -  [Behaviour] show first time settings\n2022.09.04 21:31:11 Log        -  [Behaviour] wait for auth token\n2022.09.04 21:31:11 Log        -  [Behaviour] launching in normal manner\n2022.09.04 21:31:11 Log        -  [Behaviour] Going to Error World",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb927e4c3e90df136ad18",
+  "imageURLs": [
+    "https://canny.io/images/ecb283f6fdfc454d9f7c12dc0f5214bb.png"
+  ],
+  "lastUpdated": 1779143295726,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-09-04T19:59:21.791Z",
+  "subCategoryID": null,
+  "title": "Unable to join friend booted to error world",
+  "trendingScore": 2749.2407032842307,
+  "updatedAt": "2026-05-18T22:30:07.890442Z",
+  "urlName": "unable-to-join-friend-booted-to-error-world",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62f82742e7f60944a04953d8",
+      "alias": "Legal Lynx",
+      "aliasID": "65c49f9aed6eefce4c9d7b63",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Mogusha",
+      "urlName": "<redacted>",
+      "voteID": "6315039a47414b44a72d4c11"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "__v": 0,
+  "_id": "650f25e352fc97093bf77876",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:40:17.588945Z",
+  "author": {
+    "_id": "59cb4676d4edc012b9dca22f",
+    "alias": "Managing Meerkat",
+    "aliasID": "65c2b491ed6eefce4cde88bf",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b9972d77c9e0e23db69f06909d69e552.png",
+    "created": "2017-09-27T06:34:30.223Z",
+    "name": "error.mdl",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "59cb4676d4edc012b9dca22f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-09-23T17:52:35.165Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Since build 1344, teleporting the local player using their own rotation produces unexpected results:\n\n```\n\nNetworking.LocalPlayer.TeleportTo(somePosition, Networking.LocalPlayer.GetRotation(), VRC_SceneDescriptor.SpawnOrientation.AlignPlayerWithSpawnPoint, true); \n\n```\n\nInstead of keeping their exact orientation (as one would expect), the player can be rotated significantly depending on where the player is looking and when the teleport method was executed. \n\nWhen executing the teleport from Update(), the teleport can rotate a VR player but not a desktop player. If the player's head is mostly horizontal the teleport will not rotate the player. If the player looks down or up, they will be rotated randomly to the left or right. The farther their line of sight is from horizontal, the more they get rotated with looking straight down seemingly causing a 180 degree rotation. \n\nIf the GetRotation and TeleportTo methods get executed during LateUpdate, the player always rotates by a large amount regardless of where the player is looking and whether they are in VR or not.\n\nAdditionally, if the player is in a generic avatar, they will not get rotated and the teleport works as expected.\n\nExample worlds that teleport the player to their own location and rotation every frame:\n\nOn Update():\n\nhttps://vrchat.com/home/world/wrld_328502e5-774e-4aec-8f3d-0bfee35582fd\n\n(NOTE: you will have to kill VRC after entering this world, it is impossible to exit)\n\nOn LateUpdate():\n\nhttps://vrchat.com/home/world/wrld_fb57ec5b-be90-4e76-896e-482f5d981de2",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9a6e4c3e90df1382951",
+  "imageURLs": [
+    "https://canny.io/images/1541ec48967c0f4fed4b2dce708e32a7.png"
+  ],
+  "lastUpdated": 1779039020089,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/650f25e352fc97093bf77876/700911189.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-09-23T17:52:35.165Z",
+  "subCategoryID": null,
+  "title": "[1344] Udon TeleportTo rotation not equivalent to LocalPlayer.GetRotation",
+  "trendingScore": 2819.1380833594785,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": "59cb4676d4edc012b9dca22f",
+  "urlName": "1344-udon-teleportto-rotation-not-equivalent-to-localplayergetrotation",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "59ba10c6e46c3651b53cf885",
+      "alias": "Heliotrope purple Jellyfish",
+      "aliasID": "65ba016fed6eefce4cf18b1b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a82c4adfbe5c75dfffecfc8eb99f7217.png",
+      "companies": [],
+      "name": "Rainwolf plush",
+      "urlName": "<redacted>",
+      "voteID": "65a075b6b7f7f4d227a943e7"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "6525c8803f9ba15e5f29c18d"
+    },
+    {
+      "_id": "64ac2106758b3656abaf8596",
+      "alias": "Mature Porcupine",
+      "aliasID": "65c2a1fbed6eefce4c5e71ca",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a504d16c6365fb033fcb580a48d0c5df.png",
+      "companies": [],
+      "name": "BirdTho",
+      "urlName": "<redacted>",
+      "voteID": "651ddf2642d3b0436f10eacf"
+    },
+    {
+      "_id": "5f36b82c9ec59c0d1272ffe2",
+      "alias": "Skilled Halibut",
+      "aliasID": "65c28a12ed6eefce4cca58b4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bf2ec88117eb8a85f72f00f24798bd9e.png",
+      "companies": [],
+      "name": "Nestorboy",
+      "urlName": "<redacted>",
+      "voteID": "651328cad7d0c21ef1df70ad"
+    },
+    {
+      "_id": "5f063062c0daba6902ed0ab6",
+      "alias": "Iced lavender Dingo",
+      "aliasID": "65cdea0eed6eefce4c169145",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/68f3b59e786b0e563e3c1775b85e973d.png",
+      "companies": [],
+      "name": "Fyzer",
+      "urlName": "<redacted>",
+      "voteID": "650fd5d934cf0509c0a6ca6b"
+    },
+    {
+      "_id": "59cb4676d4edc012b9dca22f",
+      "alias": "Managing Meerkat",
+      "aliasID": "65c2b491ed6eefce4cde88bf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b9972d77c9e0e23db69f06909d69e552.png",
+      "companies": [],
+      "name": "error.mdl",
+      "urlName": "<redacted>",
+      "voteID": "650f25e352fc97093bf7789f"
+    }
+  ]
+}

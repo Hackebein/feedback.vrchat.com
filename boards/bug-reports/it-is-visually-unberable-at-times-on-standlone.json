@@ -1,0 +1,209 @@
+{
+  "_id": "6a09d9fcdee87f640ca95c89",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.main-menu",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-05-20T05:32:09.753897Z",
+  "author": {
+    "_id": "6a09d6f15a52cb2df01ed189",
+    "alias": "Bittersweet Egret",
+    "aliasID": "6a09d6f15a52cb2df01ed18d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bac8c55819f864c2b92a0abb07c74fc8.png",
+    "created": "2026-05-17T14:55:45.152Z",
+    "name": "【Gilded~Wyrmie】",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6a09d6f15a52cb2df01ed189",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 2,
+  "comments": [
+    {
+      "_id": "6a0cf750f4d4757d78457b6c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df7cd83e007e467295c4e1",
+        "alias": "Orchid bloom Marlin",
+        "aliasID": "65c26defed6eefce4c5a3685",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e0e9a23bc510d6aa62c0d515b73bc1e3.png",
+        "created": "2022-07-26T05:34:16.920Z",
+        "name": "Docteh",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-19T23:50:40.564Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a09d9fcdee87f640ca95c89",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Huh, fish, fish, drinking nights\n\nI didn't immediately watch the videos because the world wasn't mentioned.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a0d41e73d38e98c9794dfa0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df7cd83e007e467295c4e1",
+        "alias": "Orchid bloom Marlin",
+        "aliasID": "65c26defed6eefce4c5a3685",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e0e9a23bc510d6aa62c0d515b73bc1e3.png",
+        "created": "2022-07-26T05:34:16.920Z",
+        "name": "Docteh",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-20T05:08:55.856Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/57cd2e1cac242a3a102c83c31b392128.mp4",
+        "https://canny-assets.io/files/eac34abbf1c235f0d923eb43b3a4a94b.mp4"
+      ],
+      "files": [
+        {
+          "mimeType": "video/mp4",
+          "name": "com.vrchat.oculus.quest-20260519-165606-0",
+          "url": "https://canny-assets.io/files/57cd2e1cac242a3a102c83c31b392128.mp4"
+        },
+        {
+          "mimeType": "video/mp4",
+          "name": "com.vrchat.oculus.quest-20260519-165541-0",
+          "url": "https://canny-assets.io/files/eac34abbf1c235f0d923eb43b3a4a94b.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a0cf750f4d4757d78457b6c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a09d9fcdee87f640ca95c89",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Drinking nights on quest 3s, the z clashing didn't seem as bad when i was there, but i'll rewatch all the videos later.\n\ni don't believe vrchat can directly solve this issue, hmm, ai is telling me that unity and the quest use single precision floats. but in my observations the pc vrchat has more precision than on quest, so when polygons are close enough they are getting rendered with slightly different positioning based on the exact angle of the camera.\n\ni had to adjust one of my worlds twice, when i switched the unity editor from pc to quest the precision in the editor changed, so i knew to adjust some things. i then uploaded the world and tested on my headset and had to move things a wee bit more.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-17T15:08:44.263Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "No matter what world you go to on standalone, you are greeted with horrible flickery visuals everywhere. The severity differs with the distance from the world origin but it has been like this for a very long time now. This sor of issue is dangerous for anyone who plays standalone with epilepsy or photosensitivity as well as just headache inducing for players without. The textures just completely freak out and clip all the time and it makes the game unbearable at times, especially with it affecting the menus also.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/e0b6bad6c3ca15d4aa27ce7dd7f39e79.mp4",
+    "https://canny-assets.io/files/08d62b05bf13931cab0de37ea9542078.mp4",
+    "https://canny-assets.io/files/2df380f26ae11c5dfdba3007fe2b795f.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "ScreenRecording_2026.05.17-16.07.14",
+      "url": "https://canny-assets.io/files/e0b6bad6c3ca15d4aa27ce7dd7f39e79.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "ScreenRecording_2026.05.17-16.07.23",
+      "url": "https://canny-assets.io/files/08d62b05bf13931cab0de37ea9542078.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "ScreenRecording_2026.05.17-16.08.26",
+      "url": "https://canny-assets.io/files/2df380f26ae11c5dfdba3007fe2b795f.mp4"
+    }
+  ],
+  "ideaID": "6a09d9fcdee87f640ca95c8d",
+  "imageURLs": [],
+  "lastUpdated": 1779255037372,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-17T15:08:44.263Z",
+  "subCategoryID": null,
+  "title": "It is visually unberable at times on standlone.",
+  "trendingScore": 2942.2118714811554,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "it-is-visually-unberable-at-times-on-standlone",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a09d6f15a52cb2df01ed189",
+      "alias": "Bittersweet Egret",
+      "aliasID": "6a09d6f15a52cb2df01ed18d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bac8c55819f864c2b92a0abb07c74fc8.png",
+      "companies": [],
+      "name": "【Gilded~Wyrmie】",
+      "urlName": "<redacted>",
+      "voteID": "6a09d9fc5a52cb2df01ef47d"
+    }
+  ]
+}

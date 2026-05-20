@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "5fc5d5722e96f10497098c98",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:24:27.401091Z",
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-12-01T05:32:34.632Z",
+  "deletedAt": null,
+  "details": "TextMeshPro generates submeshes on the actual text mesh. In some cases it seems that it can generate multiple submeshes with the same name, causing network serialization warnings. This should be handled more gracefully (in general, there's no need to sync these objects, so they should just be ignored).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7f6e4c3e90df1320ce7",
+  "imageURLs": [
+    "https://canny.io/images/f4fa4d1e9c395261f1c7c48ab535ae01.png"
+  ],
+  "lastUpdated": 1779247127196,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-12-01T05:32:34.632Z",
+  "subCategoryID": null,
+  "title": "TextMeshPro submeshes cause network serialization warnings",
+  "trendingScore": 2657.440426725864,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "textmeshpro-submeshes-cause-network-serialization-warnings",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": "<redacted>",
+      "voteID": "5fc5d5722e96f10497098c9f"
+    }
+  ]
+}

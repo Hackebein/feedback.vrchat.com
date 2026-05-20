@@ -1,0 +1,98 @@
+{
+  "__v": 0,
+  "_id": "680f3ebd0a84daac92341295",
+  "aiCategories": [
+    "off-topic"
+  ],
+  "aiTaggedAt": "2026-05-16T22:11:59.057765Z",
+  "author": {
+    "_id": "68090f3fb104338439539be0",
+    "alias": "Daffodil Whitefish",
+    "aliasID": "68090f3f8ccc1d8b3b037957",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/da97a9adcf99180445ba166aa8b31d0f.png",
+    "created": "2025-04-23T16:03:11.245Z",
+    "name": "notiyda",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "68090f3fb104338439539be0",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-04-28T08:39:25.432Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Game was open for many hours then randomly spiked up to around 9gb of ram usage then was stuck on a frozen screen\n\nI've provided both Logs from my playtime of me being online when it just randomly went unresponsive\n\nApplication: VRCX.exe\n\nCoreCLR Version: 9.0.425.16305\n\n.NET Version: 9.0.4\n\nDescription: The process was terminated due to an unhandled exception.\n\nException Info: exception code e0000008, exception address 00007FFB89F1933A\n\nFaulting application name: VRCX.exe, version: 0.0.0.0, time stamp: 0x67d30000\n\nFaulting module name: KERNELBASE.dll, version: 10.0.26100.3775, time stamp: 0x6e2fc3bb\n\nException code: 0xe0000008\n\nFault offset: 0x00000000000c933a\n\nFaulting process id: 0x2E80\n\nFaulting application start time: 0x1DBB46B7F4BF445\n\nFaulting application path: C:\\Program Files\\VRCX\\VRCX.exe\n\nFaulting module path: C:\\WINDOWS\\System32\\KERNELBASE.dll\n\nReport Id: ded10c21-bc81-4521-9576-e95c653b24d8\n\nFaulting package full name: \n\nFaulting package-relative application ID: \n\nThe Desktop Window Manager process has exited. (Process exit code: 0xc00001ad, Restart count: 1, Primary display device ID: NVIDIA GeForce RTX 3060 Ti)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/220734af1fae08b4c79d6d8204e68f63.txt",
+    "https://canny-assets.io/files/76f35823f6078c32be219c8bbea551f2.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-26_17-50-14",
+      "url": "https://canny-assets.io/files/220734af1fae08b4c79d6d8204e68f63.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-27_17-07-25",
+      "url": "https://canny-assets.io/files/76f35823f6078c32be219c8bbea551f2.txt"
+    }
+  ],
+  "ideaID": "680f3ebd0a84daac9234131c",
+  "imageURLs": [],
+  "lastUpdated": 1779255088759,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/680f3ebd0a84daac92341295/1963570057.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-04-28T08:39:25.432Z",
+  "subCategoryID": null,
+  "title": "Random Game Crash",
+  "trendingScore": 2887.3161060446473,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "random-game-crash",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68090f3fb104338439539be0",
+      "alias": "Daffodil Whitefish",
+      "aliasID": "68090f3f8ccc1d8b3b037957",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/da97a9adcf99180445ba166aa8b31d0f.png",
+      "companies": [],
+      "name": "notiyda",
+      "urlName": "<redacted>",
+      "voteID": "680f3ebd8ccc1d8b3b631ef8"
+    }
+  ]
+}

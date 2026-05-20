@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "5f52e037119d38323287ac60",
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-18T07:43:35.935934Z",
+  "author": {
+    "_id": "5c87baa8e6d1a57be67871ec",
+    "alias": "Thoughtful Hoverfly",
+    "aliasID": "65c27b10ed6eefce4c7d796b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
+    "created": "2019-03-12T13:56:56.814Z",
+    "name": "MrDummy_NL",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c87baa8e6d1a57be67871ec",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-09-05T00:47:51.719Z",
+  "deletedAt": null,
+  "details": "Because since yesterday, i noticed my right hand controller is kinda strange.\nI thought first it's due old bindings, but when i use Default binding mode, the issue is still same. \nI noticed also if i want manually edit right controller, it stay stuck in Position mode.\n\nNormally, left and right is Touch mode when only touched touchpads. This will use hand signs. When press down, you will jump or rotate L/R.\n\nBut here Touch suddenly changed in .... Position. And then it's back to Touch mode.... but again later Postion. So it seems switch randomly. That is pretty annoying! (Click is already Position)\n\nAlso if i change bindings in Custom, so right have 2x Touch, it goes fast in Postion mode, and will not reset it easy. So there is strange with Right controller.\n\nLeft controller has no problems. It worked just perfect. I can also remove Position function on left touchpad, no problems. Why is Right touchpad having many issues compared to Left touchpad. I just don't understand it.\n\nI am using WMR controllers, but i don't know it affect Vive users too. Also i have checked in Default binding mode and in Custom binding, with new binding setup (so i don't use old bindings), both modes have same strange problem in Right touchpad. It's very randomly go in Position instead in supposed Touch function.\n\nI was trying to get out Position mode, but i cannot find a way to fix it. It's just very random. It goes suddenly in Position and then in Touch. I cannot fix it because it's random jumping between Touch and Position.\n\nDue strange effect in Right Controller and compared with Left Controller, which is working fine, i want make report it as bug. \nI want also add to report i have not seen this strange effect in older builds. I noticed it also since you fixed double-thumb problem, i got now Right touchpad problem on WMR.\n\nI hope i get more reports about gesture problem in touchpad, because it's still new problem and never experienced this in old builds (also old binding before you change the system where old bindings are useless because Jump function is changed in VRChat)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e6e4c3e90df131deb0",
+  "imageURLs": [],
+  "lastUpdated": 1779089945816,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-09-05T00:47:51.720Z",
+  "subCategoryID": null,
+  "title": "Right controller touchpad bug (in build 984)",
+  "trendingScore": 2645.957277801398,
+  "updatedAt": "2026-05-18T07:41:23.457967Z",
+  "urlName": "right-controller-touchpad-bug-in-build-984",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f5dde0732bb294408ac21f7",
+      "alias": "Likely Sheep",
+      "aliasID": "65c2a2b5ed6eefce4c79e47b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d501a1f45d2d8ec5113265468c9171b1.png",
+      "companies": [],
+      "name": "Black_Light_ST",
+      "urlName": "<redacted>",
+      "voteID": "5f5de179c7339664df1a0b84"
+    },
+    {
+      "_id": "5c87baa8e6d1a57be67871ec",
+      "alias": "Thoughtful Hoverfly",
+      "aliasID": "65c27b10ed6eefce4c7d796b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
+      "companies": [],
+      "name": "MrDummy_NL",
+      "urlName": "<redacted>",
+      "voteID": "5f52e037119d38323287ac67"
+    }
+  ]
+}

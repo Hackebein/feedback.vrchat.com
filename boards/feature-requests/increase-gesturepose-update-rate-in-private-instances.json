@@ -1,0 +1,113 @@
+{
+  "__v": 0,
+  "_id": "5c184444ed5ee141ca2fbff2",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-05-18T18:57:45.687849Z",
+  "author": {
+    "_id": "5c1844433da10a3ddac48f3b",
+    "alias": "Single Butterfly",
+    "aliasID": "65c28775ed6eefce4c64e1cb",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/ddd1abe2c7cc4981aebbd8588dbcd059.png",
+    "created": "2018-12-18T00:50:11.931Z",
+    "name": "Ｆｅｌｌ",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c1844433da10a3ddac48f3b",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-12-18T00:50:12.173Z",
+  "deletedAt": null,
+  "details": "I noticed that the update rate for the pose of an avatar, so the position of the hands and head is only updated at a very low rate. I estimated it to be around 10 Hz, interpolating linearly.\n\nFor normal use that is certainly enough, but we all now that hand movement conveys a lot of meaning and a big part of it is lost because of the 10 Hz update rate.\n\nI understand that performance is always a concern, but when I hang out in a private instance with my girlfriend, it would be great if tiny movements and gestures would come across better, it can carry a lot of emotion. It would also improve writing with pens. \n\nSo I propose that the update rate should be increased to 20 Hz or even 30 Hz in private worlds, or in worlds with only few users.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d6de4c3e90df157eb11",
+  "imageURLs": [],
+  "lastUpdated": 1779130047575,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-12-18T00:50:12.174Z",
+  "subCategoryID": null,
+  "title": "Increase gesture/pose update rate in private instances",
+  "trendingScore": 2814.8840722718255,
+  "updatedAt": "2026-05-18T18:48:18.764654Z",
+  "urlName": "increase-gesturepose-update-rate-in-private-instances",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "626648d887035052a296c1c6",
+      "alias": "Jasper Sheep",
+      "aliasID": "65c297faed6eefce4ce7631e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/25400bcf515f8e7881d037742d81d21f.png",
+      "companies": [],
+      "name": "Clank_",
+      "urlName": "<redacted>",
+      "voteID": "6579339e3d279c6cf465a571"
+    },
+    {
+      "_id": "5ae070b79050d4168a19e9ae",
+      "alias": "External Cattle",
+      "aliasID": "65c497a2ed6eefce4c8f0312",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/7d118c1a83754614190558f7b5edcb4b.png",
+      "companies": [],
+      "name": "Voiceless Pal",
+      "urlName": "<redacted>",
+      "voteID": "5c1a22e56db2b5471c305938"
+    },
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "<redacted>",
+      "voteID": "5c184eed6db2b5471c2f27a6"
+    },
+    {
+      "_id": "5c1844433da10a3ddac48f3b",
+      "alias": "Single Butterfly",
+      "aliasID": "65c28775ed6eefce4c64e1cb",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ddd1abe2c7cc4981aebbd8588dbcd059.png",
+      "companies": [],
+      "name": "Ｆｅｌｌ",
+      "urlName": "<redacted>",
+      "voteID": "5c1844446db2b5471c2f16df"
+    }
+  ]
+}

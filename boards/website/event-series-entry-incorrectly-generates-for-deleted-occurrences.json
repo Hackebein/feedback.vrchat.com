@@ -1,0 +1,153 @@
+{
+  "_id": "69f674da631cfa220f8eb43c",
+  "aiCategories": [
+    "loc.website",
+    "groups.calendar"
+  ],
+  "aiTaggedAt": "2026-05-19T05:34:04.093850Z",
+  "author": {
+    "_id": "5ca74f3fb98a820b3ffec9cf",
+    "alias": "Dynamic Starfish",
+    "aliasID": "65c26da3ed6eefce4c4d07d4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6c79d42362a5eb00738655b60eddf986.png",
+    "created": "2016-04-09T02:19:38.000Z",
+    "name": "Salbug",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ca74f3fb98a820b3ffec9cf",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69f8ed821b48a304c028273b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d142650329e7856f7f7b664",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-04T19:03:30.652Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69f674da631cfa220f8eb43c",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "69f8ed821b48a304c028272d",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-02T22:04:10.406Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After creating a recurring event series, if you delete any individual occurrences from the series, the series still creates an event series entry on the originally scheduled days that no longer have an occurrence when the time that the event would've started approaches. The calendar entry representing the event series should only be generated on days that still have an occurrence. Otherwise, this may lead to some confusion on days when a cancelled event occurrence may still appear as live because of the event series entry.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69f674da631cfa220f8eb452",
+  "imageURLs": [
+    "https://canny-assets.io/images/c805e81996dc6c6faa31a5e424d5bfde.png",
+    "https://canny-assets.io/images/6ba4c2c9ef910ecacef9645c014cdadd.png"
+  ],
+  "lastUpdated": 1779168612731,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69f674da631cfa220f8eb43c/2093661470.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2026-05-04T19:03:30.616Z",
+  "subCategoryID": null,
+  "title": "Event Series Entry Incorrectly Generates for Deleted Occurrences",
+  "trendingScore": 2940.674537700782,
+  "updatedAt": "2026-05-19T05:33:34.555709Z",
+  "updatedBy": null,
+  "urlName": "event-series-entry-incorrectly-generates-for-deleted-occurrences",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63882dc1f272550ad4b6b553",
+      "alias": "Nautical blue Horse",
+      "aliasID": "65c26de3ed6eefce4c583e46",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/695b6d04a8df3baaf7dc5fffa66b6b56.png",
+      "companies": [],
+      "name": "ʙɪɢ․",
+      "urlName": "<redacted>",
+      "voteID": "69fa4c8e4a48bed18943f165"
+    },
+    {
+      "_id": "5ca74f3fb98a820b3ffec9cf",
+      "alias": "Dynamic Starfish",
+      "aliasID": "65c26da3ed6eefce4c4d07d4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c79d42362a5eb00738655b60eddf986.png",
+      "companies": [],
+      "name": "Salbug",
+      "urlName": "<redacted>",
+      "voteID": "69f674da4a48bed1892ba4f2"
+    }
+  ]
+}

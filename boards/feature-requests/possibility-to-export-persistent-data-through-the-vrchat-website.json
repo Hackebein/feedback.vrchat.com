@@ -1,0 +1,130 @@
+{
+  "_id": "69beeb800eec931902bae525",
+  "aiCategories": [
+    "loc.website",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-05-17T17:33:41.602830Z",
+  "author": {
+    "_id": "612ea6a7f4aca00a10286465",
+    "alias": "Jasper Viper",
+    "aliasID": "65c28ab5ed6eefce4ce1ffa1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/85ad36a75a0c89ecc613c3a104bd536b.png",
+    "created": "2021-08-31T22:01:11.603Z",
+    "name": "MyroP",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "612ea6a7f4aca00a10286465",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-21T19:03:28.069Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Picture this : You're playing a game, but suddenly :\n\n- A bug clears some part of the persistent data\n\n- A malicious user wipes the persistent data because the world creator forgot to mark the `ClearPersistentData()` event as not network-callable.\n\n- Another issue outside the control of the world creator or the user wipes the data.\n\nFor these kinds of cases, world creators sometimes implement an \"export persistent data\" feature that writes all the data into an input field, but this becomes tricky if the data needs to be encrypted to prevent cheating.\n\nIt would be great if it were possible to import or export the persistent data though the VRChat website :\n\n- That data would be encrypted on the server side and tied to the user.\n\n- No need for the world creator to implement an \"export persistent data\" feature that requires players to copy and paste data into a text file, which isn’t very secure.\n\n- Can be toggled on or off by the world author, in case the world includes something like a \"death counter\", where reloading older data could reset such a penalty.\n\nThe screenshot below shows an example of what I was thinking.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69beeb800eec931902bae55e",
+  "imageURLs": [
+    "https://canny-assets.io/images/4613857ee1de854a69a8fd56b19a5e47.png"
+  ],
+  "lastUpdated": 1779038887347,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69beeb800eec931902bae525/1656342951.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-21T19:03:28.069Z",
+  "subCategoryID": null,
+  "title": "Possibility to export persistent data through the VRChat website",
+  "trendingScore": 2935.3754990632374,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": "612ea6a7f4aca00a10286465",
+  "urlName": "possibility-to-export-persistent-data-through-the-vrchat-website",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64d1017086469509a6df8895",
+      "alias": "Legal Llama",
+      "aliasID": "69c05f1ebcda4ee63273386d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8e719091b18076264567bdfbe181acf8.png",
+      "companies": [],
+      "name": "onelettrshort",
+      "urlName": "<redacted>",
+      "voteID": "69c05f78bcda4ee6328444e5"
+    },
+    {
+      "_id": "68d45885a8ab97d7d9b034c8",
+      "alias": "Fuchsia Sailfish",
+      "aliasID": "68d45886a8ab97d7d9b06092",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb4e433db659501ca3d8cddac2f4cb8f.png",
+      "companies": [],
+      "name": "Tuck2846",
+      "urlName": "<redacted>",
+      "voteID": "69bf2efbbcda4ee632189f1e"
+    },
+    {
+      "_id": "628a843a2ffd390b70fe0459",
+      "alias": "Nutmeg Dove",
+      "aliasID": "65c28348ed6eefce4cc53e69",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/099aa2f88030192daa15245da9ef7e1c.png",
+      "companies": [],
+      "name": "krajsyboys",
+      "urlName": "<redacted>",
+      "voteID": "69bf1052bcda4ee632ce9ae9"
+    },
+    {
+      "_id": "59ba10c6e46c3651b53cf885",
+      "alias": "Heliotrope purple Jellyfish",
+      "aliasID": "65ba016fed6eefce4cf18b1b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a82c4adfbe5c75dfffecfc8eb99f7217.png",
+      "companies": [],
+      "name": "Rainwolf plush",
+      "urlName": "<redacted>",
+      "voteID": "69beec79bcda4ee6324f3a80"
+    },
+    {
+      "_id": "612ea6a7f4aca00a10286465",
+      "alias": "Jasper Viper",
+      "aliasID": "65c28ab5ed6eefce4ce1ffa1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/85ad36a75a0c89ecc613c3a104bd536b.png",
+      "companies": [],
+      "name": "MyroP",
+      "urlName": "<redacted>",
+      "voteID": "69beeb80bcda4ee632216c6d"
+    }
+  ]
+}

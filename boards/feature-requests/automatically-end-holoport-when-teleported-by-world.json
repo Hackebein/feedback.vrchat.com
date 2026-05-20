@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "63c432aeb5b82b56b894d314",
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-17T03:22:13.627511Z",
+  "author": {
+    "_id": "603b04282fa90e5c53608eb6",
+    "alias": "Variable Turtle",
+    "aliasID": "65c27d10ed6eefce4cc8cf32",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+    "created": "2021-02-28T02:47:04.064Z",
+    "name": "RavenWorks",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "603b04282fa90e5c53608eb6",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-01-15T17:06:54.882Z",
+  "deletedAt": null,
+  "details": "Many worlds feature doors which automatically teleport any user who steps up to them.  In continuous movement mode, this works fine;  however, in holoport mode, as soon as the user is teleported, their ongoing holoport will almost immediately cause them to walk BACKWARDS, back INTO the door on the other side, which will teleport them back into the place that they just came from.  At this point, they'll have to walk away from the door, then re-approach it again, possibly by side-stepping in order to avoid triggering the same bug again.\n\nThis happens in countless worlds across VRC; it seems like a simple fix would be to automatically end any ongoing holoport movement (acting as though the user released the joystick) as soon as a user is teleported by a script. They can then let go of their joystick and press it again to continue moving, which will work fine because they'll be headed in the correct direction at that point.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb962e4c3e90df13766fb",
+  "imageURLs": [],
+  "lastUpdated": 1778987557821,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-01-15T17:06:54.882Z",
+  "subCategoryID": null,
+  "title": "Automatically end holoport when teleported by world",
+  "trendingScore": 2768.2235951823786,
+  "updatedAt": "2026-05-17T03:12:43.579453Z",
+  "urlName": "automatically-end-holoport-when-teleported-by-world",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "<redacted>",
+      "voteID": "63c432afb5b82b56b894d35f"
+    }
+  ]
+}

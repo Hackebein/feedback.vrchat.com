@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "627f774449907d1e5cfdd83f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-16T19:51:47.533867Z",
+  "author": {
+    "_id": "618d98024c30e850486fa80e",
+    "alias": "Sheer Cougar",
+    "aliasID": "65c66d58ed6eefce4c69b9d2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1461e30f89b5c1befeb12e38ef8ec493.png",
+    "created": "2021-11-11T22:24:02.680Z",
+    "name": "Crimson_foxVRC",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "618d98024c30e850486fa80e",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-14T09:32:52.979Z",
+  "deletedAt": null,
+  "details": "The Avatar Performance Ranking System is, at a fundamental level, designed in an extremely flawed manner. Designing around specific thresholds does not exactly cater well to how most avatars are constructed from a modeling standpoint.\nInstead of using fixed thresholds to determine avatar performance, objects should be graded on a relative \"points system\" to roughly determine how demanding an avatar will be on the GPU and CPU. It'll better highlight the bottlenecks in how an avatar is constructed, and the existing metrics can be used as reference material for what avatar creators should aim for. \nThis will not only allow for the ease of creation of higher-fidelity avatars, but also better encourage people to properly optimize their avatars. *Especially when it comes to parenting bone groups in Blender.*",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f2e4c3e90df135fd68",
+  "imageURLs": [],
+  "lastUpdated": 1779233515871,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-14T09:32:52.979Z",
+  "subCategoryID": null,
+  "title": "Design Improvements to Avatar Performance Ranking System",
+  "trendingScore": 2733.0356951798985,
+  "updatedAt": "2026-05-19T23:33:49.452084Z",
+  "urlName": "design-improvements-to-avatar-performance-ranking-system",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "618d98024c30e850486fa80e",
+      "alias": "Sheer Cougar",
+      "aliasID": "65c66d58ed6eefce4c69b9d2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1461e30f89b5c1befeb12e38ef8ec493.png",
+      "companies": [],
+      "name": "Crimson_foxVRC",
+      "urlName": "<redacted>",
+      "voteID": "627f774549907d1e5cfdd85f"
+    }
+  ]
+}

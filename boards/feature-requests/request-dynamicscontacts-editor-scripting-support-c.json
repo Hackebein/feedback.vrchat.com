@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "62b8d5e6216f7a0ba8c174d5",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-16T19:55:20.840287Z",
+  "author": {
+    "_id": "5f3c4fbfcca2966ac9d55449",
+    "alias": "Blush Gazelle",
+    "aliasID": "65c3aae6ed6eefce4cc5fe61",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c0ab1de41e120a1365811928ed802492.png",
+    "created": "2020-08-18T22:01:35.735Z",
+    "name": "blinkinglights",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f3c4fbfcca2966ac9d55449",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-06-26T21:55:50.862Z",
+  "deletedAt": null,
+  "details": "I’m trying to make a Unity Editor Script that automatically adds some frequently-used Contact components for me. I eventually figured out how to add the Contact Sender and Contact Receiver, but now I’d really like to use my script to set their initial values…as their default settings don’t do anything.\nUnfortunately, while older SDK components are provided in human-readable form, the new stuff is .dlls that I can’t open (for clues/hints).\nIf documentation does already exist for how to change Contact component values via editor script, could SEO be improved so it becomes possible to find? D: \nIf adjusting Contact component values via script is not yet possible, please could we be allowed to. All the workarounds I can think of for my use case are extremely stupid, compared to just having some syntax for creating the Contact stuff already set up properly.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8fee4c3e90df13622f2",
+  "imageURLs": [],
+  "lastUpdated": 1779233528961,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-06-26T21:55:50.863Z",
+  "subCategoryID": null,
+  "title": "[Request] Dynamics/Contacts Editor Scripting Support - C#",
+  "trendingScore": 2739.252259090282,
+  "updatedAt": "2026-05-19T23:33:49.452084Z",
+  "urlName": "request-dynamicscontacts-editor-scripting-support-c",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3c4fbfcca2966ac9d55449",
+      "alias": "Blush Gazelle",
+      "aliasID": "65c3aae6ed6eefce4cc5fe61",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c0ab1de41e120a1365811928ed802492.png",
+      "companies": [],
+      "name": "blinkinglights",
+      "urlName": "<redacted>",
+      "voteID": "62b8d5e6216f7a0ba8c174f4"
+    }
+  ]
+}

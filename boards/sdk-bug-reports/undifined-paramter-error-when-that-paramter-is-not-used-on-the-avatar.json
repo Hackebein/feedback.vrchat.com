@@ -1,0 +1,137 @@
+{
+  "__v": 0,
+  "_id": "675f53c8d67657926287bcc5",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T03:34:09.029721Z",
+  "author": {
+    "_id": "675f52eb83d0048192d3e6ca",
+    "alias": "Brief Ostrich",
+    "aliasID": "675f52eba367fa6392057a85",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c7e4f5868d07e230fa86e6c2fd6be909.png",
+    "created": "2024-12-15T22:06:35.073Z",
+    "name": "IMissHim",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "675f52eb83d0048192d3e6ca",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 334,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "67814d8863bf13f54c4f9bd4",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-01-10T16:40:40.691Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "675f53c8d67657926287bcc5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "67814d8863bf13f54c4f9bce",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-12-15T22:10:16.395Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "SDK bug where It says a parameter is in use when its not. It requires you to open the Menu .asset file in a text editor or some sort and remove it to fix it. This happens after changing a parameter name in the menus.\n\nSee attached video to understand it better",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/ed7cdc6abcdd21ef9c57b745d4ea9816.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2024-12-15 17-05-59",
+      "url": "https://canny-assets.io/files/ed7cdc6abcdd21ef9c57b745d4ea9816.mp4"
+    }
+  ],
+  "ideaID": "680bba38e4c3e90df139e588",
+  "imageURLs": [],
+  "lastUpdated": 1779160733603,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/675f53c8d67657926287bcc5/829292813.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2025-01-10T16:40:40.613Z",
+  "subCategoryID": null,
+  "title": "Undifined Paramter error when that paramter is not used on the avatar",
+  "trendingScore": 2868.253690243556,
+  "updatedAt": "2026-05-19T03:20:30.198674Z",
+  "updatedBy": "675f52eb83d0048192d3e6ca",
+  "urlName": "undifined-paramter-error-when-that-paramter-is-not-used-on-the-avatar",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "675f52eb83d0048192d3e6ca",
+      "alias": "Brief Ostrich",
+      "aliasID": "675f52eba367fa6392057a85",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c7e4f5868d07e230fa86e6c2fd6be909.png",
+      "companies": [],
+      "name": "IMissHim",
+      "urlName": "<redacted>",
+      "voteID": "675f53c8a367fa63922d3062"
+    }
+  ]
+}

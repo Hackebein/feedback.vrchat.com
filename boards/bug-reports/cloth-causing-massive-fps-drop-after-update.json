@@ -1,0 +1,106 @@
+{
+  "__v": 0,
+  "_id": "638c4f7d8d45f158962a0131",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-19T05:43:24.855210Z",
+  "author": {
+    "_id": "62a4d7f55c04260bad01609c",
+    "alias": "Huge Ant",
+    "aliasID": "65ca8e40ed6eefce4c258ab6",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/5fb75ea6647c291b2d861425ac5122f5.png",
+    "created": "2022-06-11T17:59:17.295Z",
+    "name": "Chinami",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62a4d7f55c04260bad01609c",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-12-04T07:42:53.100Z",
+  "deletedAt": null,
+  "details": "I logged into VRC on 12/2 running build 1263 and noticed I was getting 10fps in VR. Messing around a bit, I found out that cloth components now cause a ton more fps drop than before. I have a lot of cloth on all of my models so I don't expect amazing fps, but I would always aim for 50fps. After the update, I am stuck at 10fps even in desktop mode (whereas I would get over 50fps before with the same model).\n\nNo real steps to reproduce this but I do have plenty of models with this issue now.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb958e4c3e90df13747be",
+  "imageURLs": [
+    "https://canny.io/images/2145fc654dccd8c056da6aa9c12358bf.png"
+  ],
+  "lastUpdated": 1779168713449,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-12-04T07:42:53.100Z",
+  "subCategoryID": null,
+  "title": "Cloth causing massive fps drop after update",
+  "trendingScore": 2763.7338105087433,
+  "updatedAt": "2026-05-19T05:33:34.555709Z",
+  "urlName": "cloth-causing-massive-fps-drop-after-update",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6299e36c3d75510b75a73e6e",
+      "alias": "Functional Muskox",
+      "aliasID": "65c3f1f7ed6eefce4c4122c3",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/48a134f5061aea11889213a8a194828b.png",
+      "companies": [],
+      "name": "うじうじ",
+      "urlName": "<redacted>",
+      "voteID": "639c8d102513d56a77dded87"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "63918df5a208705c94e35947"
+    },
+    {
+      "_id": "62a4d7f55c04260bad01609c",
+      "alias": "Huge Ant",
+      "aliasID": "65ca8e40ed6eefce4c258ab6",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5fb75ea6647c291b2d861425ac5122f5.png",
+      "companies": [],
+      "name": "Chinami",
+      "urlName": "<redacted>",
+      "voteID": "638c4f7d8d45f158962a0157"
+    }
+  ]
+}

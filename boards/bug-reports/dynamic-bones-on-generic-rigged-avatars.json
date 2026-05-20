@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "607e0fbcbfc42054246254d7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.in-world",
+    "avatars.dynamic-bones"
+  ],
+  "aiTaggedAt": "2026-05-18T09:31:22.227102Z",
+  "author": {
+    "_id": "60329075ba9b3b1a4eb315c4",
+    "alias": "Constant Guppy",
+    "aliasID": "65c47c9aed6eefce4c7cc90b",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3bf2623cc927d200674f77039591288a.png",
+    "created": "2021-02-21T16:55:17.366Z",
+    "name": "X3417",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60329075ba9b3b1a4eb315c4",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-04-19T23:18:20.487Z",
+  "deletedAt": null,
+  "details": "Unity 2018.4.20f1; Latest SDK2 as of now.  I have an avatar that is non-humanoid in nature (low poly shark), and has 12 bones.  Set the rig to generic since I don't have enough bones to set it to humanoid even if I wanted.  I added Dynamic Bones (v1.2.1) on all the bones of the shark armature and that worked fine in play mode.  But, when I published it and used it in VRChat, the Dyn Bones were not working at all.  Avatar was frozen solid, unlike how it was reacting to movement in unity while I was testing it in play mode.  Also note that I am not limiting Dyn Bones in any way, other avatars with their own Dyn Bones work perfectly fine in various worlds.\nI'm not exactly sure if the problem was caused by the rig being generic but I personally could not find another possible explanation so I wanted to make a post.  Also possibly related/not related, but I got cloth physics to work just fine funny enough.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb891e4c3e90df134b45c",
+  "imageURLs": [],
+  "lastUpdated": 1779096256097,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-04-19T23:18:20.487Z",
+  "subCategoryID": null,
+  "title": "Dynamic Bones on Generic Rigged Avatars",
+  "trendingScore": 2677.403300260917,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "dynamic-bones-on-generic-rigged-avatars",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60329075ba9b3b1a4eb315c4",
+      "alias": "Constant Guppy",
+      "aliasID": "65c47c9aed6eefce4c7cc90b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3bf2623cc927d200674f77039591288a.png",
+      "companies": [],
+      "name": "X3417",
+      "urlName": "<redacted>",
+      "voteID": "607e0fbcbfc42054246254de"
+    }
+  ]
+}

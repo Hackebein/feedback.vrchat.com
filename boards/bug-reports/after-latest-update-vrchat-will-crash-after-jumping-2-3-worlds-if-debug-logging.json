@@ -1,0 +1,94 @@
+{
+  "__v": 0,
+  "_id": "67ba8f2d74b1be9e4852ab4d",
+  "aiCategories": [
+    "loc.loading-screen",
+    "worlds.travel",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-16T22:06:29.870945Z",
+  "author": {
+    "_id": "67ba8b409f519f660102d708",
+    "alias": "Fairy tale Basilisk",
+    "aliasID": "67ba8b40b324a96209001282",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6df1b51022a37f29078a94d224e9fb15.png",
+    "created": "2025-02-23T02:43:12.236Z",
+    "name": "DarkstoneBlues",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "67ba8b409f519f660102d708",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-02-23T02:59:57.675Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After hours of troubleshooting frequent crashes, I figured that, if I have Logging DISABLED in Settings > Debug, my game will crash during world loading after doing just 2-3 world hops after the start of my VRC session. \n\nThe crash is silent. It drops me to SteamVR without errors, warnings, and there are no entries in Event Viewer.\n\nTroubleshooting attempts: Cleared all Cache in-game, Verified files on Steam.\n\nI can replicate this crash consistently in less than 5 minutes, and, while logs are indeed shown as \"OFF\" in the toggle, the game still generates what seems to be an incomplete log file, that I've attached on this report.\n\nAgain, that happens when Logging is OFF and the game experiences the crash described above. \n\nHowever, if I have Logging ON, the crashes cease to occur completely. I am totally unable to replicate the issue when Logging is ON, no matter if I follow the exact steps that would otherwise work at crashing the game when Logging is OFF.\n\nIs something broken with Logging? Should I perform a full reinstall of the game?\n\nThanks.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/8dd3ad4b638c8b4047105e45cc6f2362.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-02-23_02-57-45---GENERATED-WITH-LOGGING-DISABLED",
+      "url": "https://canny-assets.io/files/8dd3ad4b638c8b4047105e45cc6f2362.txt"
+    }
+  ],
+  "ideaID": "680bba4ce4c3e90df13a1e2f",
+  "imageURLs": [],
+  "lastUpdated": 1779255038200,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67ba8f2d74b1be9e4852ab4d/773108840.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-02-23T02:59:57.675Z",
+  "subCategoryID": null,
+  "title": "After latest update, VRChat will crash after jumping 2-3 worlds if Debug > Logging is DISABLED",
+  "trendingScore": 2908.9296922519843,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "after-latest-update-vrchat-will-crash-after-jumping-2-3-worlds-if-debug-logging",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67ba8b409f519f660102d708",
+      "alias": "Fairy tale Basilisk",
+      "aliasID": "67ba8b40b324a96209001282",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6df1b51022a37f29078a94d224e9fb15.png",
+      "companies": [],
+      "name": "DarkstoneBlues",
+      "urlName": "<redacted>",
+      "voteID": "67ba8f2db324a9620996c97b"
+    }
+  ]
+}

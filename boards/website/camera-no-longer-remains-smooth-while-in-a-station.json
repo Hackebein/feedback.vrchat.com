@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "633fd693eb85f844bff8c5cd",
+  "aiCategories": [
+    "client.camera",
+    "worlds.persistence",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-17T12:37:15.577367Z",
+  "author": {
+    "_id": "623cf46719e9e1527e6d0314",
+    "alias": "Ivory Basilisk",
+    "aliasID": "65c36d1ded6eefce4c3fd996",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/521c32d47f87aaee37112cac4ff4fb61.png",
+    "created": "2022-03-24T22:44:55.244Z",
+    "name": "Bedmonster",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "623cf46719e9e1527e6d0314",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-07T07:34:43.397Z",
+  "deletedAt": null,
+  "details": "Previously you could leave a camera floating with you in standard mode and be in a station, however after the recent updates, the camera now jitters excessively or when smoothed severaly lags behind based off of speed while the player is in a station.\nThis leaves severaly jarring effects when streaming without smoothing or recording video, and can be triggered by world behavior that moves the player with stations. Vehicles, moving platforms etc.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb942e4c3e90df1370263",
+  "imageURLs": [],
+  "lastUpdated": 1779021087306,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-07T07:34:43.397Z",
+  "subCategoryID": null,
+  "title": "Camera no longer remains smooth while in a station.",
+  "trendingScore": 2753.881115841274,
+  "updatedAt": "2026-05-17T12:32:20.735315Z",
+  "urlName": "camera-no-longer-remains-smooth-while-in-a-station",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "623cf46719e9e1527e6d0314",
+      "alias": "Ivory Basilisk",
+      "aliasID": "65c36d1ded6eefce4c3fd996",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/521c32d47f87aaee37112cac4ff4fb61.png",
+      "companies": [],
+      "name": "Bedmonster",
+      "urlName": "<redacted>",
+      "voteID": "633fd693eb85f844bff8c603"
+    }
+  ]
+}

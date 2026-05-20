@@ -1,0 +1,133 @@
+{
+  "__v": 0,
+  "_id": "5eb8a70035be1c7f1567e3b1",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:28:52.393101Z",
+  "author": {
+    "_id": "5eb8a6fff1473476bdf2054f",
+    "alias": "Meaningful Lobster",
+    "aliasID": "66a6e259318f0a3252fdfd73",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/295096421dfef5e90014877fd8e613df.png",
+    "created": "2020-05-11T01:14:39.868Z",
+    "name": "IAmVen",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5eb8a6fff1473476bdf2054f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5fb3136b14013d46c988a119",
+      "author": {
+        "_id": "5de9405aea7cc52772fcc359",
+        "alias": "Robust Crow",
+        "aliasID": "65c27d11ed6eefce4cc8dee3",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/3832aa8915d09f633a5ab11ddec4d91f.jpg",
+        "created": "2019-12-05T17:37:30.047Z",
+        "name": "Momo the Monster",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2020-11-17T00:03:55.668Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5eb8a70035be1c7f1567e3b1",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "5fb3136b14013d46c988a117",
+      "statusChangeNewStatus": "closed",
+      "value": "You likely have a recursive loop - your flow must only go in one direction, it can't loop back on itself.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-11T01:14:40.019Z",
+  "deletedAt": null,
+  "details": "I made a large graph in UDON and everything was working fine. I tried to add an arrow path leading from a different block to this one \"set Variable\" block and it decides it can't do that and doesn't connect to the block like that block did with two others already. So I think \"alright, I'll keep graphing and hope it resolves itself.\" An hour of graphing later and I'm basically all done except for the one connecting block that refuses to connect to anything else. At that point I make another set Variable block and connect it to its required blocks again effectively replacing the block that was acting up. This time, no matter what I try, the first side I connect an arrow to is the only side that I can connect things to. I have tried to reimport the file, refresh, compile, exit Unity. Nothing has made any progress towards fixing it.\n\nEDIT: the side that doesn't work (depending on which side was used first) can connect to any disconnected nodes, but that node now has the same problem and cannot connect to the other already-connected nodes.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dace4c3e90df158f820",
+  "imageURLs": [
+    "https://canny.io/images/1f57acc70caa710e297785a462748c9a.png"
+  ],
+  "lastUpdated": 1779239268195,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "closed",
+  "statusChanged": "2020-11-17T00:03:55.627Z",
+  "subCategoryID": null,
+  "title": "Only one side of a node in the middle of my large udon graph can connect to arrows at a time.",
+  "trendingScore": 2628.2719832321472,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "only-one-side-of-a-node-in-the-middle-of-my-large-udon-graph-can-connect-to-arro",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5eb8a6fff1473476bdf2054f",
+      "alias": "Meaningful Lobster",
+      "aliasID": "66a6e259318f0a3252fdfd73",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/295096421dfef5e90014877fd8e613df.png",
+      "companies": [],
+      "name": "IAmVen",
+      "urlName": "<redacted>",
+      "voteID": "5eb8a70035be1c7f1567e3b9"
+    }
+  ]
+}

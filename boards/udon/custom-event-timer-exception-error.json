@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "5e9a9ac5512429192a268faf",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:27:58.328703Z",
+  "author": {
+    "_id": "5e923ba6782eb96b28c6cb8c",
+    "alias": "Energetic Canid",
+    "aliasID": "65c3567bed6eefce4c27d339",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/63413229950ed9f98100b2aadb179a2e.png",
+    "created": "2020-04-11T21:50:30.360Z",
+    "name": "Hitori Ou",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e923ba6782eb96b28c6cb8c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-18T06:14:29.157Z",
+  "deletedAt": null,
+  "details": "I intended this for checking that synched values have changed compared to a local one for a set duration. But even when simplified this much it gives the same error (used \"send custom event\" to call it).\n-------------------\n[<color=yellow>UdonBehaviour</color>] An exception occurred during Udon execution, this UdonBehaviour will be halted.\nVRC.Udon.VM.UdonVMException: The VM encountered an error!\nException Message:\n  The VM encountered an error!\nProgram execution time exceeded max VM time of 10 seconds. You may want to check for infinite loops/recursion.\nProgram Counter was at 260\n----------------------\nProgram Counter was at: 260\n----------------------\nStack Dump:\n  0: 0x00000005\n----------------------\nHeap Dump:\n  0x00000000: 1,66\n  0x00000001: 1\n  0x00000002: True\n  0x00000003: 1,66\n  0x00000004: 0\n  0x00000005: True\n  0x00000006: Slider (Light Global) (VRC.Udon.UdonBehaviour)\n  0x00000007: All\n  0x00000008: Set\n  0x00000009: Slider (Light Global) (UnityEngine.UI.Slider)\n  0x0000000A: Slider (Light Global) (VRC.Udon.UdonBehaviour)\n  0x0000000B: Set\n  0x0000000C: Slider (Light Global) (UnityEngine.UI.Slider)\n  0x0000000D: Slider (Light) (UnityEngine.UI.Slider)\n  0x0000000E: 0,9327098\n  0x0000000F: 2,66\n  0x00000010: UnityEngineTime.__get_fixedTime__SystemSingle\n  0x00000011: SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\n  0x00000012: SystemSingle.__op_LessThan__SystemSingle_SystemSingle__SystemBoolean\n  0x00000013: VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\n  0x00000014: UnityEngineUISlider.__get_value__SystemSingle\n  0x00000015: VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\n----------------------\nInner Exception:\n ---> VRC.Udon.VM.UdonVMException: The VM encountered an error!\nProgram execution time exceeded max VM time of 10 seconds. You may want to check for infinite loops/recursion.\nProgram Counter was at 260\n  at VRC.Udon.VM.UdonVM.CheckExecutionTimeLimit (System.Boolean debuggerAttached) [0x0001e] in C:\\VRChatGit\\VRChat-Udon\\UdonVM\\Udon\\VM\\Source\\UdonVM.cs:366 \n  at VRC.Udon.VM.UdonVM.Interpret () [0x00131] in C:\\VRChatGit\\VRChat-Udon\\UdonVM\\Udon\\VM\\Source\\UdonVM.cs:223 \n   --- End of inner exception stack trace ---\n  at VRC.Udon.VM.UdonVM.Interpret () [0x003f4] in C:\\VRChatGit\\VRChat-Udon\\UdonVM\\Udon\\VM\\Source\\UdonVM.cs:346 \n  at VRC.Udon.UdonBehaviour.RunProgram (System.UInt32 entryPoint) [0x0006a] in C:\\Programming\\VrChat\\Vrchat Udon\\Assets\\Udon\\UdonBehaviour.cs:1867 \nUnityEngine.Debug:LogError(Object, Object)\nVRC.Core.Logger:LogError(String, Int32, Object)\nVRC.Udon.UdonBehaviour:RunProgram(UInt32) (at Assets/Udon/UdonBehaviour.cs:1877)\nVRC.Udon.UdonBehaviour:RunProgram(String) (at Assets/Udon/UdonBehaviour.cs:1841)\nVRC.Udon.UdonBehaviour:SendCustomEvent(String) (at Assets/Udon/UdonBehaviour.cs:1980)\nUnityEngine.EventSystems.EventSystem:Update() (at C:/buildslave/unity/build/Extensions/guisystem/UnityEngine.UI/EventSystem/EventSystem.cs:377)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da9e4c3e90df158eabe",
+  "imageURLs": [
+    "https://canny.io/images/f2d1732d3aa8295906bd089b920f1b48.png"
+  ],
+  "lastUpdated": 1779239263898,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-18T06:14:29.157Z",
+  "subCategoryID": null,
+  "title": "Custom Event timer exception error",
+  "trendingScore": 2625.01601295685,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "custom-event-timer-exception-error",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e923ba6782eb96b28c6cb8c",
+      "alias": "Energetic Canid",
+      "aliasID": "65c3567bed6eefce4c27d339",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/63413229950ed9f98100b2aadb179a2e.png",
+      "companies": [],
+      "name": "Hitori Ou",
+      "urlName": "<redacted>",
+      "voteID": "5e9a9ac5512429192a268fb7"
+    }
+  ]
+}

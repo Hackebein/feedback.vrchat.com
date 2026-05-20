@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "6662b9f65ebeed47f4c5e258",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.world-building",
+    "sdk.udon",
+    "sdk.clientsim"
+  ],
+  "aiTaggedAt": "2026-05-17T11:39:48.456469Z",
+  "author": {
+    "_id": "6662b7f75ebeed47f4c385a4",
+    "alias": "Charcoal Puffin",
+    "aliasID": "6662b7f74f76547269e58099",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2024-06-07T07:34:15.322Z",
+    "name": "ElDuvalinXD",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6662b7f75ebeed47f4c385a4",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-06-07T07:42:46.230Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Estuve desarrollando una mecánica de cucarachas andantes para mi mapa, quiero que no sean animadas & tengan un algoritmo aleatorio así que hice una NavMesh con el nuevo sistema de Navegación (PackageManager/AI Navigation).\n\nSiempre he sabido usar esto de las NavMesh & lo que para mi eran unos pasos simples se esta volviendo un fastidio. \n\nMi Agente FUNCIONA EN EL SIMULADOR, pero no sirve en la plataforma.\n\nTiene un pequeño script que Aleatoriza el movimiento, El script esta bien hecho porque la función se refleja correctamente en el simulador. \n\n¿Hay algún problema de compatibilidad actualmente con VRCHAT & LOS NavMesh?\n\n& Si hay algún problema, favor de decirme cuando será solucionado, ya que estoy ansioso de sacar esa actualización del mapa. :>!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9ebe4c3e90df1390422",
+  "imageURLs": [
+    "https://canny.io/images/233fbd2e711b8822cdceda0b25cf3721.png"
+  ],
+  "lastUpdated": 1779017556209,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6662b9f65ebeed47f4c5e258/1387588158.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-06-07T07:42:46.230Z",
+  "subCategoryID": null,
+  "title": "NavMesh ERROR DE COMPATIBILIDAD - Unity 2022.3.22f1",
+  "trendingScore": 2840.881914208503,
+  "updatedAt": "2026-05-17T11:33:28.956535Z",
+  "updatedBy": null,
+  "urlName": "navmesh-error-de-compatibilidad-unity-2022322f1",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6662b7f75ebeed47f4c385a4",
+      "alias": "Charcoal Puffin",
+      "aliasID": "6662b7f74f76547269e58099",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "ElDuvalinXD",
+      "urlName": "<redacted>",
+      "voteID": "6662b9f64f765472692791a8"
+    }
+  ]
+}

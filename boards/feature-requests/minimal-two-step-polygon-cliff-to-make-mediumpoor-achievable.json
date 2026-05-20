@@ -1,0 +1,95 @@
+{
+  "_id": "69dc350f08b63c723282385c",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T17:36:11.326659Z",
+  "author": {
+    "_id": "69dc311f35a0fd856487fa17",
+    "alias": "Persimmon Coral",
+    "aliasID": "69dc311f35a0fd8564880319",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5c05de2d7689c959c284a1f33f502f29.png",
+    "created": "2026-04-12T23:56:15.389Z",
+    "name": "patazero",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "69dc311f35a0fd856487fa17",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-13T00:13:03.690Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Building on the recently introduced Avatar Performance Gating system, I’d like to propose…\n\nI personally want to realistically aim for Medium or Poor ranks myself. However, the current \"one-polygon cliff\" — where exceeding 70,001 triangles instantly drops an avatar to Very Poor — makes it very discouraging. Adding even a small accessory or piece of clothing often results in \"it's Very Poor anyway... whatever,\" killing any motivation to optimize. In my community (especially within Japanese user groups), Very Poor avatars with ~200,000 polygons have basically become the default.\n\nThe current 70k limit does not feel realistic for many users, and as a result, avatars tend to concentrate in Very Poor, making the system less effective as a practical constraint.\n\nMany other Canny proposals suggest much larger increases (120k–300k+ for Medium/Poor), but my proposal keeps the change minimal and focused.\n\nProposed Changes (Core):\n\n* Triangles\n\n    * Excellent / Good / Medium: ≤ 70,000 (unchanged)\n\n    * Poor: ≤ 100,000 (with a meaningful wall at 99,999)\n\n    * Very Poor: > 100,000\n\n* All other metrics (Texture Memory, PhysBones, etc.): Remain unchanged (this is where we keep things tight)\n\nKey Intentions:\n\n* Making Medium more achievable: By keeping the Medium zone at 70k, creators who properly optimize textures and PhysBones can realistically reach Medium.\n\n* Making user effort feel rewarding: I’m not asking for an easy way to rank up. The two-step cliff is designed to give a sense of achievement — “just a little more effort and I can hit Poor safely” — instead of immediate discouragement.\n\n* Why only polygons?: Textures are relatively easy to downsize with tools, but polygons directly affect visual quality and are much harder to reduce without ruining the look. I want to ease only the most painful bottleneck while keeping everything else strict to control overall load.\n\nExpected Outcome & Design Rationale: This is not just a relaxation of limits, but a re-scaling toward a more realistic convergence point that users will actually aim for. Right now, Very Poor avatars with ~200k polygons are common. If avatars converge around 100k, we could see a significant reduction in total polygons (potentially 8 million+ fewer in an 80-person instance compared to current Very Poor averages).\n\nOf course, there is a risk that people will push right up to the 100k Poor limit, which could result in slightly higher total load than an ideal all-Medium scenario. However, this proposal is designed to work in conjunction with the Avatar Performance Gating system, not as a replacement. The two-step cliff guides creator behavior, while gating enforces performance in shared spaces.\n\nAdditionally, when gating is applied in Public and Group Public instances and Very Poor avatars fall back by default, creators have a direct and visible incentive to optimize. To ensure their avatar appears as intended to others, aiming for Poor or better becomes a practical necessity rather than just an abstract guideline.\n\nBecause avatars that exceed the threshold lose their intended appearance in public instances due to automatic fallback, creators gain a clear incentive to stay within the 100k range. This creates a practical convergence point rather than an aspirational one.\n\nThe choice of 100k is intentional not only as a minimal increase from 70k, but also as a clear and cognitively recognizable threshold. Round-number boundaries like this tend to function as strong behavioral targets, making it easier for creators to understand and aim for a concrete optimization goal.\n\nImplementation Suggestion: For Public and Group Public instances, I suggest making “Poor or better” the default behavior (with Very Poor avatars automatically falling back to Impostor/simple display) unless the instance master chooses otherwise. This would be a natural extension of the recent Gating feature.\n\nI fully understand Tupper’s repeated concerns about total polygon budget and the tragedy of the commons. However, I believe this minimal change — combined with Gating and keeping other metrics strict — can make the system more effective than the current “Very Poor is default” situation, while rewarding actual optimization effort.\n\nI’d love to hear the team’s thoughts.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69dc350f08b63c7232823888",
+  "imageURLs": [],
+  "lastUpdated": 1779038903470,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69dc350f08b63c723282385c/264343939.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-13T00:13:03.690Z",
+  "subCategoryID": null,
+  "title": "Minimal Two-Step Polygon Cliff to Make Medium~Poor Achievable",
+  "trendingScore": 2939.731077936764,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "minimal-two-step-polygon-cliff-to-make-mediumpoor-achievable",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "674163b31461829c27244c08",
+      "alias": "Nutty Swift",
+      "aliasID": "674163b3c66e81bbd493955b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0546b8f3c18c830133ddc549f8127974.png",
+      "companies": [],
+      "name": "LunnaBug",
+      "urlName": "<redacted>",
+      "voteID": "69f888d44a48bed189345a93"
+    },
+    {
+      "_id": "69dc311f35a0fd856487fa17",
+      "alias": "Persimmon Coral",
+      "aliasID": "69dc311f35a0fd8564880319",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5c05de2d7689c959c284a1f33f502f29.png",
+      "companies": [],
+      "name": "patazero",
+      "urlName": "<redacted>",
+      "voteID": "69dc351035a0fd8564fb8a64"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "__v": 0,
+  "_id": "67f4e5f864be60e21732c252",
+  "aiCategories": [
+    "loc.in-world",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-16T22:10:08.965599Z",
+  "author": {
+    "_id": "651a39aa20359f0994239885",
+    "alias": "Nectar Marten",
+    "aliasID": "65c2746fed6eefce4c6d484b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/061dcf091574518c85814f9c35187fa5.png",
+    "created": "2023-10-02T03:31:54.915Z",
+    "name": "Anten",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "651a39aa20359f0994239885",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-04-08T09:01:44.429Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "System info:\n\nOS: windows 10 22H2\n\nCPU: i5 9400\n\nRAM: 16G\n\nGPU1: Intel UHD 630\n\nGPU2: Nvidia P106-90\n\n----\n\nHow the issue occur:\n\n1. Last week: Run VRChat from Steam page, load in some world with realtime lights, frame rate start to lower than 3, also at the same time, CPU usage increase to a high rate, after rejoin the instance (or move to other world), it returns normal.\n\n2. This week: Run VRChat from Steam page, it occur a issue that really very low frame rate. try to join in the VRChat normal home with a low load avatar, still lower than 3 fps, with 100% CPU usage and less than 1% GPU1 usage.\n\n3. Try to start the game with GPU1, load a local test world without EAC, it runs normal and frame rate increased, more than 50Hz. \n\n4. Try to start the game with GPU0, from Steam page as normal game play, it runs normal and frame rate also increased.\n\n5. It starts from the new OpenBeta not long ago, should be 1607 or so. I guess it is a issue between P106-90 graphic driver and Easy Anti-Cheat. But as EAC's normal behavior as I know, if the GPU driver is un-trusted, it should results the game bootup failur.\n\n--------------\n\nAnd the workaround as I know:\n\n1. Use DDU to clean graphics driver and re-install.\n\n2. Use iGPU instead.\n\nClient version:\n\n1607 (l-test), 1609 (Open Beta and Stable)\n\nUpdate 2025.04.12: Issue also occur in my main gaming machine, R7 5800x, RTX 3080ti, 32G RAM, VD (VR Mode).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/35980e09f616c1231bbbef1e1192a8af.txt",
+    "https://canny-assets.io/files/d1687410fa71e7236ed215572a8f2510.txt",
+    "https://canny-assets.io/files/31c63e69ae89c349fe93b35354e657d7.txt",
+    "https://canny-assets.io/files/eb68fe69ab96255029da2960c564ca96.txt",
+    "https://canny-assets.io/files/3b14a0204954ccfb34c1e58bdf99eeb5.txt",
+    "https://canny-assets.io/files/873c94df2de90f1a4f4321442e3974c6.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "DxDiag",
+      "url": "https://canny-assets.io/files/35980e09f616c1231bbbef1e1192a8af.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-08_10-16-53",
+      "url": "https://canny-assets.io/files/d1687410fa71e7236ed215572a8f2510.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-08_10-22-55",
+      "url": "https://canny-assets.io/files/31c63e69ae89c349fe93b35354e657d7.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-08_10-34-13",
+      "url": "https://canny-assets.io/files/eb68fe69ab96255029da2960c564ca96.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-08_10-41-09",
+      "url": "https://canny-assets.io/files/3b14a0204954ccfb34c1e58bdf99eeb5.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-04-08_10-25-59",
+      "url": "https://canny-assets.io/files/873c94df2de90f1a4f4321442e3974c6.txt"
+    }
+  ],
+  "ideaID": "680bba5de4c3e90df13a5209",
+  "imageURLs": [],
+  "lastUpdated": 1779255083183,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67f4e5f864be60e21732c252/1252274321.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-04-08T09:01:44.429Z",
+  "subCategoryID": null,
+  "title": "Perfomance issue with nvidia driver 546.01 and EAC",
+  "trendingScore": 2884.4611771607188,
+  "updatedAt": "2026-05-20T05:32:09.642365Z",
+  "updatedBy": null,
+  "urlName": "perfomance-issue-with-nvidia-driver-54601-and-eac",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "651a39aa20359f0994239885",
+      "alias": "Nectar Marten",
+      "aliasID": "65c2746fed6eefce4c6d484b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/061dcf091574518c85814f9c35187fa5.png",
+      "companies": [],
+      "name": "Anten",
+      "urlName": "<redacted>",
+      "voteID": "67f4e5f8c74421e5456c400c"
+    }
+  ]
+}

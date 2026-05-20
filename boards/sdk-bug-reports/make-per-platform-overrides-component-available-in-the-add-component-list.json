@@ -1,0 +1,94 @@
+{
+  "__v": 0,
+  "_id": "68b7cbe41a45f32c630ca950",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-18T05:50:41.254463Z",
+  "author": {
+    "_id": "5deb0e4d299b3347978ea6a2",
+    "alias": "Quicksilver Limpet",
+    "aliasID": "65c2a326ed6eefce4c8a44f4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ed3e2840cbade2567e46bf9a874b430f.png",
+    "created": "2019-12-07T02:28:29.930Z",
+    "name": "kurotu",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5deb0e4d299b3347978ea6a2",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 148,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-09-03T05:02:28.105Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "According to the docs, there are only two ways to configure VRC Per Platform Overrides component:\n\n- Build tab in the SDK control panel.\n\n- Helper method, PerPlatformOverrides.SetPlatformOverrides()\n\nRef: https://creators.vrchat.com/avatars/per-platform-avatar-overrides/\n\nHowever the option button in the build tab is difficult to find without docs even if users know about overrides. And helper methods require external tools.\n\nI think it's not useful for typical users because they will look \"Add Component\" button then search the component. (attached screenshot)\n\nOnce the component is available in the list, we can use overrides as well as other VRC components because the component has enough inspector UI to configure. It's a regular way in Unity, so easy to learn how to use.\n\n# SDK\n\nVRCSDK 3.8.2\n\n# Japanese summary\n\nVRC Per Platform Overrides コンポーネントを\"Add Component\"のリストに追加してほしいという要望。\n\n現状では限られた操作でしか追加できず、またそのUIも見つけにくいので使いやすいとは言えない状態である。Add Componentの一覧にあれば他のコンポーネントと同じ手順で使用できる。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68b7cbe41a45f32c630ca99c",
+  "imageURLs": [
+    "https://canny-assets.io/images/4405ea15d28f1db494f7936e9a9c2842.png"
+  ],
+  "lastUpdated": 1779082399672,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68b7cbe41a45f32c630ca950/1659497302.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-09-03T05:02:28.105Z",
+  "subCategoryID": null,
+  "title": "Make Per Platform Overrides component available in the \"Add Component\" list",
+  "trendingScore": 2905.5802969432916,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": null,
+  "urlName": "make-per-platform-overrides-component-available-in-the-add-component-list",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5deb0e4d299b3347978ea6a2",
+      "alias": "Quicksilver Limpet",
+      "aliasID": "65c2a326ed6eefce4c8a44f4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ed3e2840cbade2567e46bf9a874b430f.png",
+      "companies": [],
+      "name": "kurotu",
+      "urlName": "<redacted>",
+      "voteID": "68b7cbe4ce2ca2b5201c9162"
+    }
+  ]
+}

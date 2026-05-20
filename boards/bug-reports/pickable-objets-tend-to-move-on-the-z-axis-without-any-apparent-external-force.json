@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "61758be1b0d8315cd5389ce4",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-18T11:36:21.193209Z",
+  "author": {
+    "_id": "612ea6a7f4aca00a10286465",
+    "alias": "Jasper Viper",
+    "aliasID": "65c28ab5ed6eefce4ce1ffa1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/85ad36a75a0c89ecc613c3a104bd536b.png",
+    "created": "2021-08-31T22:01:11.603Z",
+    "name": "MyroP",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "612ea6a7f4aca00a10286465",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-10-24T16:37:53.421Z",
+  "deletedAt": null,
+  "details": "VRChat version : Build 1134\nEdit : I noticed that in my world this bug is related to Unity, not VRChat, the parent GameObject had a scale bigger than one, by setting it to one the issue dissapeared.\n\nThis is something I started noticing two days ago in many world, including mine.\nPickable objects tend to move on the z-axis without external force, see this short video showing two examples : https://www.youtube.com/watch?v=GZnbgpx9Jjg (first clip was taken in MERoom)\nThat bug is actually very hard to reproduce, sometimes it happens, sometimes it doesn't, but basically I just took the pickable object and dropped it, then it started moving from alone, but it doesn't always happen.\nIn my world (second example in the video above) I have a similar issue, the door tends to slide on the z-axis.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8c1e4c3e90df1356c1a",
+  "imageURLs": [],
+  "lastUpdated": 1779103708310,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-10-24T16:37:53.421Z",
+  "subCategoryID": null,
+  "title": "Pickable objets tend to move on the z-axis without any apparent external force",
+  "trendingScore": 2704.6375239930703,
+  "updatedAt": "2026-05-18T11:30:57.664443Z",
+  "urlName": "pickable-objets-tend-to-move-on-the-z-axis-without-any-apparent-external-force",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60c0e22718009c104862d5bc",
+      "alias": "Chemical Deer",
+      "aliasID": "65c28349ed6eefce4cc54fb4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c30a68ae2238456105ebdc8cedea5b4a.png",
+      "companies": [],
+      "name": "Fairplex",
+      "urlName": "<redacted>",
+      "voteID": "6175db61bd3bc06ebb63e67e"
+    },
+    {
+      "_id": "612ea6a7f4aca00a10286465",
+      "alias": "Jasper Viper",
+      "aliasID": "65c28ab5ed6eefce4ce1ffa1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/85ad36a75a0c89ecc613c3a104bd536b.png",
+      "companies": [],
+      "name": "MyroP",
+      "urlName": "<redacted>",
+      "voteID": "61758be1b0d8315cd5389ceb"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "__v": 0,
+  "_id": "5db77bb278d88b5303b24d2b",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-17T23:30:02.405445Z",
+  "author": {
+    "_id": "5b75f0d44d4a8d6deed70bd3",
+    "alias": "Similar Puma",
+    "aliasID": "65c29c64ed6eefce4c87e3c7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8e3c28ad98e2c42e02adfca6c6c44c9b.png",
+    "created": "2018-08-16T21:47:00.126Z",
+    "name": "Octuplex",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b75f0d44d4a8d6deed70bd3",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-10-28T23:37:22.048Z",
+  "deletedAt": null,
+  "details": "I've been messing around with launching enemy actors with physics particles, but have run into a number of snags. For starters, unity won't launch an AI if they still have their navmesh agent component enabled, as I demonstrate in the gif below\nhttps://gyazo.com/6656ba7e015232e9a544ae2e4c1c78bd\n\nDespite disabling the navmesh on particle collision, vrchat still acts as though the navmesh is enabled when the enemy is shot.\nhttps://gyazo.com/11b2fe6ed535ec071490fae63a04dcd6\n\nTo further complicate things, I brought an AI into the scene with the navmesh disabled by default, the AI target far away and up in the air a little, and turned off the AI and controllers on particle collision. worked as expected in unity, but in vrchat it somehow did this\nhttps://gyazo.com/0ce427b78b777a777d4c3cee95adc9f6\n\nI have no idea how this is happening. Nothing special is happening when I shoot the enemy according to the log. (ignore the exceptions, they'd take too long to explain)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d94e4c3e90df1588e9e",
+  "imageURLs": [
+    "https://canny.io/images/ba25f8e5da691e7768c2ef60bb0ff1ed.png"
+  ],
+  "lastUpdated": 1779060312282,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 9,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5db77bb278d88b5303b24d2b/1475405383.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 9,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-10-28T23:37:22.048Z",
+  "subCategoryID": null,
+  "title": "Unexpected behavior with navmesh agent",
+  "trendingScore": 2765.21215823082,
+  "updatedAt": "2026-05-17T23:27:35.879050Z",
+  "urlName": "unexpected-behavior-with-navmesh-agent",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "63aecdb92e2cb00ab530d7bd"
+    },
+    {
+      "_id": "5aab30ea0b6da707273dbb98",
+      "alias": "Dew Barracuda",
+      "aliasID": "65ba05a1ed6eefce4c5bd1c1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/18510a7a53ae57ea3fe726097d2cd765.png",
+      "companies": [],
+      "name": "Fionna",
+      "urlName": "<redacted>",
+      "voteID": "5dc86dd109d1285cad0962a3"
+    },
+    {
+      "_id": "58c748d715a91259ebe994a0",
+      "alias": "Lemon glacier Moth",
+      "aliasID": "65c2824eed6eefce4c9f2031",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a37478d3d56f80d62169126714f56411.png",
+      "companies": [],
+      "name": "poplopo",
+      "urlName": "<redacted>",
+      "voteID": "5dc0dcfe4877df30bdca2bcf"
+    },
+    {
+      "_id": "5d40e4532c400956de62ed6c",
+      "alias": "Navy Bobolink",
+      "aliasID": "65c2a212ed6eefce4c61cf99",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/400bea22991806f50a53d90fe5ed02d4.png",
+      "companies": [],
+      "name": "Hutch Hopkins",
+      "urlName": "<redacted>",
+      "voteID": "5dc0528602c1f12659986857"
+    },
+    {
+      "_id": "5d63c55b7d14ba451975e137",
+      "alias": "Lotus pink Panda",
+      "aliasID": "65c2a212ed6eefce4c61b9fe",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/1ab657f74dfd2c96a18e308aa689e9ec.png",
+      "companies": [],
+      "name": "BorkBork~",
+      "urlName": "<redacted>",
+      "voteID": "5db849357f97117dbf8e23da"
+    },
+    {
+      "_id": "5ae802a43ca0e56248e5cf8b",
+      "alias": "Willow Alligator",
+      "aliasID": "65c28a90ed6eefce4cdca6b1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3261bbd9c890e80d1a82d275d52a6a70.png",
+      "companies": [],
+      "name": "CyanLaser",
+      "urlName": "<redacted>",
+      "voteID": "5db78f8f35da474cbeb5dc35"
+    },
+    {
+      "_id": "5c0a091291476d739ce70fb6",
+      "alias": "Remarkable Wildfowl",
+      "aliasID": "65c28a98ed6eefce4cdddffe",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5d46bb169a50914a277f9145ef243fc0.png",
+      "companies": [],
+      "name": "IgbarVonSquid",
+      "urlName": "<redacted>",
+      "voteID": "5db786646074714c9284ea7e"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "<redacted>",
+      "voteID": "5db77cd31d28ad5305045e34"
+    },
+    {
+      "_id": "5b75f0d44d4a8d6deed70bd3",
+      "alias": "Similar Puma",
+      "aliasID": "65c29c64ed6eefce4c87e3c7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8e3c28ad98e2c42e02adfca6c6c44c9b.png",
+      "companies": [],
+      "name": "Octuplex",
+      "urlName": "<redacted>",
+      "voteID": "5db77bb278d88b5303b24d33"
+    }
+  ]
+}

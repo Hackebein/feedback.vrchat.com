@@ -1,0 +1,118 @@
+{
+  "__v": 0,
+  "_id": "63e39df770b7a42c4ee9b3a0",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:13:28.063497Z",
+  "author": {
+    "_id": "5deb0e4d299b3347978ea6a2",
+    "alias": "Quicksilver Limpet",
+    "aliasID": "65c2a326ed6eefce4c8a44f4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ed3e2840cbade2567e46bf9a874b430f.png",
+    "created": "2019-12-07T02:28:29.930Z",
+    "name": "kurotu",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5deb0e4d299b3347978ea6a2",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-02-08T13:04:55.979Z",
+  "deletedAt": null,
+  "details": "VRChat SDK Version: 3.1.10\n\nDescription of the bug:\n\nPhysBones performance stats are incorrect after switching build target.\n\n\"Phys Bone Transform Count\" and \"Phys Bone Collision Check Count\" become 0.\n\nSteps to reproduce (how did you encounter the bug?):\n\n1. Set up PhysBones with PhysBoneColliders.\n\n2. Make sure PhysBone's transform count and collision check count are NOT 0 in SDK control panel.\n\n3. Switch build target to Android.\n\n4. PhysBone's transform count and collision check count become 0.\n\nAny extra files? (output logs, screenshots):\n\nAttached a screenshot.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb968e4c3e90df137743e",
+  "imageURLs": [
+    "https://canny.io/images/25d93e6b97a25519b9fec6b894588f0b.png"
+  ],
+  "lastUpdated": 1779026892288,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/63e39df770b7a42c4ee9b3a0/482684988.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-02-08T13:04:55.979Z",
+  "subCategoryID": null,
+  "title": "PhysBones performance stats are incorrect after switching target platform",
+  "trendingScore": 2776.464591165555,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "urlName": "physbones-performance-stats-are-incorrect-after-switching-target-platform",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "<redacted>",
+      "voteID": "6416785a7f0dd30c7fac877e"
+    },
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "<redacted>",
+      "voteID": "63e7688eab9d8f451bfbff62"
+    },
+    {
+      "_id": "5c872970a4264c0cacf21aaa",
+      "alias": "Attractive Newt",
+      "aliasID": "65c28ff3ed6eefce4cb36752",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/27cc69f694cb656f75c0a081300a658d.png",
+      "companies": [],
+      "name": "14anthony7095",
+      "urlName": "<redacted>",
+      "voteID": "63e5d78e36670130681f59c0"
+    },
+    {
+      "_id": "5deb0e4d299b3347978ea6a2",
+      "alias": "Quicksilver Limpet",
+      "aliasID": "65c2a326ed6eefce4c8a44f4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ed3e2840cbade2567e46bf9a874b430f.png",
+      "companies": [],
+      "name": "kurotu",
+      "urlName": "<redacted>",
+      "voteID": "63e39df870b7a42c4ee9b3e5"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "627c0033a31abb52a1c3fb00",
+  "aiCategories": [
+    "loc.action-menu",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-16T19:51:29.190257Z",
+  "author": {
+    "_id": "5f2eaed841e042066f65cb45",
+    "alias": "Gainsboro Blackbird",
+    "aliasID": "65c2a2a0ed6eefce4c76962d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9876d04301108bf3789c7f59b4c60041.png",
+    "created": "2020-08-08T13:55:36.280Z",
+    "name": "Shiro K",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2eaed841e042066f65cb45",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-11T18:28:03.687Z",
+  "deletedAt": null,
+  "details": "For example, you want change between 4 outfits: Today, you add an int parameter and set a value from 0-3 in your action menu. But when your avatar gets a little bit more complex, you will reach that point, where 128bit of synced parameters are not enough. For the upper scenario, 2bits would be enough. But that int uses 8bit - 6bits are waste. I would like to have an option, to set more than one parameter in an action menu entry at the same time. For the upper example I want set two Outfit0 and Outfit1 bool parameter instead of an a single int parameter:\nOutfit0 = 0 / Outfit1 = 0 -> 1st Outfit\nOutfit0 = 1 / Outfit1 = 0 -> 2nd Outfit\nOutfit0 = 0 / Outfit1 = 1 -> 3rd Outfit\nOutfit0 = 1 / Outfit1 = 1 -> 4th Outfit",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f2e4c3e90df135fc17",
+  "imageURLs": [],
+  "lastUpdated": 1779233514888,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-11T18:28:03.687Z",
+  "subCategoryID": null,
+  "title": "Set multiple parameter at same time in action menu",
+  "trendingScore": 2733.065724446559,
+  "updatedAt": "2026-05-19T23:33:49.452084Z",
+  "urlName": "set-multiple-parameter-at-same-time-in-action-menu",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3477471c7a477bc948affb",
+      "alias": "Khaki Piranha",
+      "aliasID": "65c29afded6eefce4c55ea73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e5296f1af3f5ef8b92c99ddeb638a00c.png",
+      "companies": [],
+      "name": "Sharrnah",
+      "urlName": "<redacted>",
+      "voteID": "627c0080248edd529b5740d5"
+    },
+    {
+      "_id": "5f2eaed841e042066f65cb45",
+      "alias": "Gainsboro Blackbird",
+      "aliasID": "65c2a2a0ed6eefce4c76962d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9876d04301108bf3789c7f59b4c60041.png",
+      "companies": [],
+      "name": "Shiro K",
+      "urlName": "<redacted>",
+      "voteID": "627c0033a31abb52a1c3fb27"
+    }
+  ]
+}

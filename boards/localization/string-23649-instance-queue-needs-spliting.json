@@ -1,0 +1,142 @@
+{
+  "__v": 0,
+  "_id": "6711c2473ad21ff8db6233ac",
+  "aiCategories": [
+    "loc.in-world",
+    "groups.instances"
+  ],
+  "aiTaggedAt": "2026-05-18T19:49:15.216812Z",
+  "author": {
+    "_id": "623bdf64fe2fbc3e0445374e",
+    "alias": "Thorough Cricket",
+    "aliasID": "65c26da3ed6eefce4c4d09db",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6c9887366cb623cc7b638ce53386ce82.png",
+    "created": "2022-03-24T03:03:00.422Z",
+    "name": "PhonixL",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "623bdf64fe2fbc3e0445374e",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "postCount": 150,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "67127789a9453ee31360521e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "65143dfbc129a609b921bbbd",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2024-10-18T14:58:17.826Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6711c2473ad21ff8db6233ac",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "67127789a9453ee313605218",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-10-18T02:04:55.835Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The string 23649 `Instance Queue` is used at two often inconpatible locations:\n\n1. (Picture 1) in World > select a world > New Instance > Group > select a group > select a group type > (select role(s) >) under the `Instance Queue is Full` checkbox\n\n2. (Picture 2) Above the QM when join a full instance with queuing enabled. It's the text beside the queuing icon. Sorry that I can't find a full instance to demonstrate, so I have to use a screenshot from our group member.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba20e4c3e90df139a08f",
+  "imageURLs": [
+    "https://canny-assets.io/images/7fea251d76e9193eb9707545a07f9d25.png",
+    "https://canny-assets.io/images/35a415549c69390e3d56d59a30741a9d.png"
+  ],
+  "lastUpdated": 1779133207840,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6711c2473ad21ff8db6233ac/510530715.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2024-10-18T14:58:17.724Z",
+  "subCategoryID": null,
+  "title": "String 23649 \"Instance Queue\" Needs Spliting",
+  "trendingScore": 2859.8483985057915,
+  "updatedAt": "2026-05-18T19:40:17.299262Z",
+  "updatedBy": null,
+  "urlName": "string-23649-instance-queue-needs-spliting",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "623bdf64fe2fbc3e0445374e",
+      "alias": "Thorough Cricket",
+      "aliasID": "65c26da3ed6eefce4c4d09db",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c9887366cb623cc7b638ce53386ce82.png",
+      "companies": [],
+      "name": "PhonixL",
+      "urlName": "<redacted>",
+      "voteID": "6711c2480f7e723d6e3dc907"
+    }
+  ]
+}

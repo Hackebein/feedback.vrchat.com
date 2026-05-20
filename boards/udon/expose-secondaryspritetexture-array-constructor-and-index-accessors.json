@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "65c93608df3c92e3ccda2698",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:41:00.134170Z",
+  "author": {
+    "_id": "5f2dc5e7d99b4d10db4a527d",
+    "alias": "Ube Gayal",
+    "aliasID": "65c290c9ed6eefce4cd4008e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3bdfe05c20ccfecf85d444c2a7ce852.png",
+    "created": "2020-08-07T21:21:43.365Z",
+    "name": "Genesis",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2dc5e7d99b4d10db4a527d",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-02-11T21:03:04.659Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is required to use the already exposed Sprite.GetSecondaryTextures(SecondarySpriteTexture[]) which is the only way to retrieve additional sprite textures.\n\nAPI reference: https://docs.unity3d.com/ScriptReference/Sprite.GetSecondaryTextures.html",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9cee4c3e90df138a64a",
+  "imageURLs": [],
+  "lastUpdated": 1779039024145,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-02-11T21:03:04.659Z",
+  "subCategoryID": null,
+  "title": "Expose SecondarySpriteTexture[] array constructor and index accessors",
+  "trendingScore": 2824.2470240299317,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": "5f2dc5e7d99b4d10db4a527d",
+  "urlName": "expose-secondaryspritetexture-array-constructor-and-index-accessors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2dc5e7d99b4d10db4a527d",
+      "alias": "Ube Gayal",
+      "aliasID": "65c290c9ed6eefce4cd4008e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3bdfe05c20ccfecf85d444c2a7ce852.png",
+      "companies": [],
+      "name": "Genesis",
+      "urlName": "<redacted>",
+      "voteID": "65c93608ed6eefce4c435996"
+    }
+  ]
+}

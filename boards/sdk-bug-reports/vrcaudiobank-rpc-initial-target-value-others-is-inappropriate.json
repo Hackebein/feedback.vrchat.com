@@ -1,0 +1,127 @@
+{
+  "__v": 0,
+  "_id": "5ad2812e9d0ead21cbad3ca2",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-18T20:51:54.192984Z",
+  "author": {
+    "_id": "5a983204a1528d415c5ced46",
+    "alias": "Chief Finch",
+    "aliasID": "65ba04aeed6eefce4c43afb3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+    "created": "2018-03-01T17:01:56.340Z",
+    "name": "naqtn",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a983204a1528d415c5ced46",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-04-14T22:31:10.335Z",
+  "deletedAt": null,
+  "details": "If you add SendRPC action to VRC_AudioBank from \"Events from Scene\" menu item (for example Play), you'll see its target value is \"Others\" in advanced mode.\nThen, other players hear the sound but a player triggering the action doesn't. I think this is inappropriate behavior as initial setting and \"All\" is \nuseful.\n\nEnvironment: VRCSDK-2018.02.28.21.21\nWorkaround: After adding SendRPC, check advanced mode on, and change target value to All (or other value you want)",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d4fe4c3e90df1575b6a",
+  "imageURLs": [
+    "https://canny.io/images/850ce6c7699324c4d95ee58486bbfbd7.png"
+  ],
+  "lastUpdated": 1779136873894,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5ad2812e9d0ead21cbad3ca2/1958411245.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-04-14T22:31:10.336Z",
+  "subCategoryID": null,
+  "title": "VRC_AudioBank RPC initial \"target\" value \"Others\" is inappropriate",
+  "trendingScore": 2596.0830196721236,
+  "updatedAt": "2026-05-18T20:41:21.461535Z",
+  "urlName": "vrcaudiobank-rpc-initial-target-value-others-is-inappropriate",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5d69c98a55afec1f28c05c1e",
+      "alias": "Thick Hoverfly",
+      "aliasID": "65c8008eed6eefce4cbaee11",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/43804e6733121d5255ee9063744e825d.png",
+      "companies": [],
+      "name": "CY Lin",
+      "urlName": "<redacted>",
+      "voteID": "5d95fe222344d50f4a78bc3d"
+    },
+    {
+      "_id": "5c1c9d4dafb7a54c657617a6",
+      "alias": "Static Canidae",
+      "aliasID": "65c35345ed6eefce4cb6502c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/549b30d565db688b59b571643a705f51.png",
+      "companies": [],
+      "name": "momoma",
+      "urlName": "<redacted>",
+      "voteID": "5d09687308c988221c572ae5"
+    },
+    {
+      "_id": "5ce8b2a5ba84e7793f9742bd",
+      "alias": "International orange Owl",
+      "aliasID": "65cba449ed6eefce4cfee1db",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "lospair",
+      "urlName": "<redacted>",
+      "voteID": "5ce8be49727180792a2b5c7f"
+    },
+    {
+      "_id": "5a0220ed7add6132ccf19b36",
+      "alias": "Tricky Guppy",
+      "aliasID": "65c356afed6eefce4c2f6db1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5269b49c97934bbbdb3db084da772964.png",
+      "companies": [],
+      "name": "HardLight670",
+      "urlName": "<redacted>",
+      "voteID": "5adfc0f63a3ff6d86b87a0f2"
+    },
+    {
+      "_id": "5a983204a1528d415c5ced46",
+      "alias": "Chief Finch",
+      "aliasID": "65ba04aeed6eefce4c43afb3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+      "companies": [],
+      "name": "naqtn",
+      "urlName": "<redacted>",
+      "voteID": "5ad2812e9dc2cc47b1524fa9"
+    }
+  ]
+}

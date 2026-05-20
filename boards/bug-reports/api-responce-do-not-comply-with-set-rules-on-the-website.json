@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "66a00c235911b784d000e41f",
+  "aiCategories": [
+    "loc.website",
+    "web.api"
+  ],
+  "aiTaggedAt": "2026-05-16T19:02:21.778259Z",
+  "author": {
+    "_id": "66a00966621335af179c2621",
+    "alias": "Honeydew Fish",
+    "aliasID": "66a00967318f0a3252fe435d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f7bd7721d5029684e5fcae44a9685d8a.png",
+    "created": "2024-07-23T19:49:58.972Z",
+    "name": "Reogan",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "66a00966621335af179c2621",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-07-23T20:01:39.188Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Hi I was trying to update my VRC profile Pic in the Web site an doing so I saw the limit of the said sise was 2048x2048 so I made my picture 2047x2047 to be strictly below the limit (and so it is accepted by the JS on the site), however the api is returning a 400 bad request error with the folowing message : \n\n{\n\n\t\"error\": {\n\n\t\t\"message\": \"\\\"Invalid image dimensions.\\\"\",\n\n\t\t\"status_code\": 400\n\n\t}\n\n}\n\nI have alreaddy sent a tiket (#411499) in the general support and got for answer to post it here.\n\ndo not hesitate if you need more details on the matter.\n\nlink immages are :\n\n- the firefox requester proof\n\n- the actual immage tried to be uploaded.\n\napi call tested the 19.07.2024 and 23.07.2024\n\nBR,\n\nReogan",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9f0e4c3e90df1391dcf",
+  "imageURLs": [
+    "https://canny.io/images/da58e2f6ebe65300a5b231e32f230b33.png",
+    "https://canny.io/images/a813def95e52b07d9adc208c152b52c2.png"
+  ],
+  "lastUpdated": 1779226756601,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66a00c235911b784d000e41f/1396426034.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-07-23T20:01:39.188Z",
+  "subCategoryID": null,
+  "title": "API responce, do not comply with set rules on the website",
+  "trendingScore": 2847.5266446392243,
+  "updatedAt": "2026-05-19T21:40:19.607119Z",
+  "updatedBy": null,
+  "urlName": "api-responce-do-not-comply-with-set-rules-on-the-website",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66a00966621335af179c2621",
+      "alias": "Honeydew Fish",
+      "aliasID": "66a00967318f0a3252fe435d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f7bd7721d5029684e5fcae44a9685d8a.png",
+      "companies": [],
+      "name": "Reogan",
+      "urlName": "<redacted>",
+      "voteID": "66a00c23318f0a325292b046"
+    }
+  ]
+}

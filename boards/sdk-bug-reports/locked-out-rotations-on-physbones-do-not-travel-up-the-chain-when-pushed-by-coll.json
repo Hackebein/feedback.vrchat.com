@@ -1,0 +1,160 @@
+{
+  "_id": "69d187ab9e8f30824e52ea22",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-18T13:51:00.958136Z",
+  "author": {
+    "_id": "63c9760ef519ef0b8ce99165",
+    "alias": "Quince Pike",
+    "aliasID": "65c2bff3ed6eefce4c5e37e4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d2cdab699f57ab313c324546e11a6853.png",
+    "created": "2023-01-19T16:55:42.346Z",
+    "name": "Dor․",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "63c9760ef519ef0b8ce99165",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 334,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-04T21:50:35.184Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When physbone rotations are limited, the effects of physics settings such as gravity, as well as pulling on the physbone, will cause the \"locked out\" rotation to travel up the chain, for example:\n\nMaking a vertical line of 3 bones and limiting the rotation to 10 degrees, then grabbing the bone at the bottom and moving it beyond 10 degrees will cause the parent to then rotate to follow it (since they're linked together)\n\nHowever this same behavior does not extend to collisions, pushing the bone described above with a collider will only cause it to move and lock out at 10 degrees, and won't travel up the chain to push the parent, I see this as a bug as the behavior differs depending on interaction method.\n\nPlease allow the forces induced by colliders to travel up the chain (note that some physbones may have depended on the old behavior, so a physbone version bump i.e. 1.2 might be necessary).\n\nThis currently makes setups like the ones in the attached images only function for grabbing, not collision (hinge rotation on root bone affects the glasses, collision radius set to 0.015 but reduced to 0 on the root bone via curve, dummy bone set to to overlap the glasses frame with collision, to provide a wider point of contact than what would be possible otherwise, hinge rotation set to 0 on the dummy bones, immediately locking out their rotation, which should cause any force induced on them to travel up the chain).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69d187ab9e8f30824e52ea39",
+  "imageURLs": [
+    "https://canny-assets.io/images/85e40031b2334521314d0e148f80f1cf.png",
+    "https://canny-assets.io/images/509b309f9d3f4dfe8539036893122592.png"
+  ],
+  "lastUpdated": 1779111033115,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 7,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69d187ab9e8f30824e52ea22/167817672.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 7,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-04T21:50:35.184Z",
+  "subCategoryID": null,
+  "title": "\"Locked out\" rotations on physbones do not travel up the chain when pushed by colliders",
+  "trendingScore": 2941.5913045672996,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": "63c9760ef519ef0b8ce99165",
+  "urlName": "locked-out-rotations-on-physbones-do-not-travel-up-the-chain-when-pushed-by-coll",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "629fc21f2b0c690b785dab7f",
+      "alias": "Beautiful Chickadee",
+      "aliasID": "65c289f2ed6eefce4cc569eb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf24ca21e012963f82e9a1dffb1af6c1.png",
+      "companies": [],
+      "name": "Buddy_DE",
+      "urlName": "<redacted>",
+      "voteID": "6a00f178cf565b8f74f65032"
+    },
+    {
+      "_id": "5f4e8f759a2c6f2cd4576758",
+      "alias": "Domestic Orangutan",
+      "aliasID": "65c6d48bed6eefce4cccef6e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7737ad812f1b95331cb07f3cfa0c2995.png",
+      "companies": [],
+      "name": "GHOST_OP",
+      "urlName": "<redacted>",
+      "voteID": "69fc4a5b4a48bed1895a743c"
+    },
+    {
+      "_id": "62d433fe2d07f744b77040e7",
+      "alias": "Frequent Cat",
+      "aliasID": "66085e95e5d26962aa3f7f8c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/25cb555c93ae6f5ecde7539505820bdb.png",
+      "companies": [],
+      "name": "друг⠀",
+      "urlName": "<redacted>",
+      "voteID": "69fc34c64a48bed18959e5da"
+    },
+    {
+      "_id": "60299c81bbf7d71130d40327",
+      "alias": "Theoretical Mockingbird",
+      "aliasID": "65f2e18276937e5248603b4e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2ed8f815ec7887ae84bcd22dc5797968.png",
+      "companies": [],
+      "name": "Krisandra",
+      "urlName": "<redacted>",
+      "voteID": "69fc2c1f4a48bed18959bd2e"
+    },
+    {
+      "_id": "69d2c93da4b6d376adf94808",
+      "alias": "Parental Chameleon",
+      "aliasID": "69d2c93da4b6d376adf95594",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/936990bfe70d7787615302b859cb4f65.png",
+      "companies": [],
+      "name": "Βambi",
+      "urlName": "<redacted>",
+      "voteID": "69d2c940a4b6d376adf9a95c"
+    },
+    {
+      "_id": "5f2f88f3112190752161bcf0",
+      "alias": "Creative Swordfish",
+      "aliasID": "65c4ac29ed6eefce4c4104ec",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/baf66258e10d0953d160e426d95350dd.png",
+      "companies": [],
+      "name": "flexuh",
+      "urlName": "<redacted>",
+      "voteID": "69d197b8a4b6d376adcf26f5"
+    },
+    {
+      "_id": "63c9760ef519ef0b8ce99165",
+      "alias": "Quince Pike",
+      "aliasID": "65c2bff3ed6eefce4c5e37e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d2cdab699f57ab313c324546e11a6853.png",
+      "companies": [],
+      "name": "Dor․",
+      "urlName": "<redacted>",
+      "voteID": "69d187aba4b6d376ad3f8e6a"
+    }
+  ]
+}

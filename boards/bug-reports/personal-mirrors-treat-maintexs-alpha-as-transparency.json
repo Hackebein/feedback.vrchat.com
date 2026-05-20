@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "64e56a8aa727ac092bcfaf85",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-19T18:35:43.305019Z",
+  "author": {
+    "_id": "60cab5630e940039b6b7ed14",
+    "alias": "Navy Impala",
+    "aliasID": "65c2b99ded6eefce4c87b5e6",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-06-17T02:37:23.885Z",
+    "name": "alareis",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60cab5630e940039b6b7ed14",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-08-23T02:10:18.403Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This just in: channel packing exists.\n\nYou already have the source shader that renders the surface the right way. Use that render result. Don't derive transparency on a whim.\n\nIn various cases _MainTex can contain different implementations of colour storage. Thus alpha can contain something that isn't opacity. Wild, I know.\n\nEven the standard unity's PBR shader gives you an option to pack metalness mask into _MainTex.a. Clearly it isn't opacity, but it is treated as one.\n\nSample images provided with and without the word \"test\" scribbled on the stomach area.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb99ae4c3e90df13809e7",
+  "imageURLs": [
+    "https://canny.io/images/c12e6e7d5b9b678939e2809f4183fda0.png",
+    "https://canny.io/images/57f3c83d0b6c58c4100a90683d677118.png"
+  ],
+  "lastUpdated": 1779215082565,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/64e56a8aa727ac092bcfaf85/799626628.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-08-23T02:10:18.403Z",
+  "subCategoryID": null,
+  "title": "Personal mirrors treat _MainTex's alpha as transparency",
+  "trendingScore": 2838.0617468492214,
+  "updatedAt": "2026-05-19T18:25:27.723488Z",
+  "updatedBy": null,
+  "urlName": "personal-mirrors-treat-maintexs-alpha-as-transparency",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "648117224cc6d90905e5cf9e",
+      "alias": "Neat Unicorn",
+      "aliasID": "66487075b9e8e8fe66da4e8b",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "D4xter Kasai",
+      "urlName": "<redacted>",
+      "voteID": "6648ca58b9e8e8fe66cfe985"
+    },
+    {
+      "_id": "66393488ec7160347b70490e",
+      "alias": "Clean Hare",
+      "aliasID": "66393488d36452c1797f6841",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/17a6f37faaddf37c079edda15fdbd71f.png",
+      "companies": [],
+      "name": "Kero00",
+      "urlName": "<redacted>",
+      "voteID": "66489c0fb9e8e8fe666c5cfa"
+    },
+    {
+      "_id": "60cab5630e940039b6b7ed14",
+      "alias": "Navy Impala",
+      "aliasID": "65c2b99ded6eefce4c87b5e6",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "alareis",
+      "urlName": "<redacted>",
+      "voteID": "64e56a8aa727ac092bcfafb5"
+    }
+  ]
+}

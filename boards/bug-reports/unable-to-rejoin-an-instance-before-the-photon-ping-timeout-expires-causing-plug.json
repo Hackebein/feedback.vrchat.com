@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "5ebf31860789b319517f0056",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-18T01:09:59.301282Z",
+  "author": {
+    "_id": "5b8cc39b2734df12abfb8347",
+    "alias": "Atomic tangerine Walrus",
+    "aliasID": "65c2a465ed6eefce4cb86564",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/218be2204dc01f8e2865df04ebc55d27.png",
+    "created": "2018-09-03T05:16:11.072Z",
+    "name": "Fusl",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b8cc39b2734df12abfb8347",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-16T00:19:18.176Z",
+  "deletedAt": null,
+  "details": "When VRChat crashes or gets killed through task manager, trying to immediately load into the same instance again (for example, through Steam's VRChat launch options) before waiting for the client to time out on the server side causes a Photon 32752 (PluginReportedError) error. On older versions, VRChat displayed a correct message, something like \"duplicate client detected\" and gracefully disconnected the user from the room.\n2020.05.16 00:00:51 Log        -  [VRCFlowManagerVRC] Spent 0.0001373291s entering world.\n2020.05.16 00:00:51 Log        -  [VRCFlowManagerVRC] Waiting for Photon to enter room\n2020.05.16 00:00:53 Log        -  [NetworkManager] OnConnected\n2020.05.16 00:00:53 Log        -  [NetworkManager] OnJoinRoomFailed\n2020.05.16 00:00:53 Error      -  [VRCFlowNetworkManager] OnPhotonJoinRoomFailed. error code = 32752 msg = 32752\n2020.05.16 00:00:53 Log        -  [VRCFlowManagerVRC] Resetting game flow because \"OnPhotonJoinRoomFailed for unknown reasons\": [SkipLogin, TryAlternateInstance]\n2020.05.16 00:00:53 Log        -  [RoomManager] Clearing Room Metadata",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dace4c3e90df158f8ae",
+  "imageURLs": [],
+  "lastUpdated": 1779066352670,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-16T00:19:18.176Z",
+  "subCategoryID": null,
+  "title": "Unable to rejoin an instance before the photon ping timeout expires, causing PluginReportedError",
+  "trendingScore": 2628.980776510917,
+  "updatedAt": "2026-05-18T01:07:40.796366Z",
+  "urlName": "unable-to-rejoin-an-instance-before-the-photon-ping-timeout-expires-causing-plug",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b8cc39b2734df12abfb8347",
+      "alias": "Atomic tangerine Walrus",
+      "aliasID": "65c2a465ed6eefce4cb86564",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/218be2204dc01f8e2865df04ebc55d27.png",
+      "companies": [],
+      "name": "Fusl",
+      "urlName": "<redacted>",
+      "voteID": "5ebf31860789b319517f005e"
+    }
+  ]
+}

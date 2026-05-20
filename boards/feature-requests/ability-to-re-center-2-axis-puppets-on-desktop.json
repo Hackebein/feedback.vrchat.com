@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "630f7fcdc76b3d44b85d224a",
+  "aiCategories": [
+    "loc.action-menu",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-16T23:27:48.310483Z",
+  "author": {
+    "_id": "5cb0e62414ddd360bbe1ac29",
+    "alias": "Elaborate Swordtail",
+    "aliasID": "65c26ed9ed6eefce4c854ff1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/790edd7ee9459d947f4c0bc1ff2a8907.png",
+    "created": "2019-04-12T19:25:24.024Z",
+    "name": "Jasper Raine",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5cb0e62414ddd360bbe1ac29",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-08-31T15:35:41.739Z",
+  "deletedAt": null,
+  "details": "As it currently stands, using a 2 axis puppet in the radial menu to control things on avatars and even to control features such as the face-cam is frustrating. In VR, you use a controller with a joystick that re-centers itself so this is not an issue. However, I've also noticed in VR that radial menu stuff has snapping points, such as radial sliders snapping at every quarter of a rotation for example, and in this case 2 axis puppet controls snap back to the center. This may just be a function of the vr controllers, but on desktop, people do not have this feature.\nWhen you use a 2 axis puppet in desktop, moving it back to the center does not snap it back to the exact center to turn off all the animations. Rather, you have to try to pin-point the center area to get the animations as close as you can to being turned off. If it's even so much as slightly off center, you can visually see it on the puppet, with the arrows lighting up in the radial menu just slightly more than the others.\nIn the case of things like moving the face-cam or other hud features, this is visibly noticeable as your face-cam will continuously drift, even if you get it as close as you can to the center, until you exit the 2 axis puppet.\nThe only way to ever truly reset 2 axis puppets back to the center is to reset the entire avatar, which is a pain if you're using other features on the avatar.\nDesktop users absolutely need a way to re-center 2 axis puppets, whether that's a simple snap function when you're close to the center, or a button on the keyboard.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb927e4c3e90df136ab3f",
+  "imageURLs": [],
+  "lastUpdated": 1779268885729,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-08-31T15:35:41.739Z",
+  "subCategoryID": null,
+  "title": "Ability to re-center 2 axis puppets on Desktop.",
+  "trendingScore": 2748.6431170995415,
+  "updatedAt": "2026-05-20T09:21:31.184643Z",
+  "urlName": "ability-to-re-center-2-axis-puppets-on-desktop",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5cb0e62414ddd360bbe1ac29",
+      "alias": "Elaborate Swordtail",
+      "aliasID": "65c26ed9ed6eefce4c854ff1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/790edd7ee9459d947f4c0bc1ff2a8907.png",
+      "companies": [],
+      "name": "Jasper Raine",
+      "urlName": "<redacted>",
+      "voteID": "630f7fcdc76b3d44b85d227c"
+    }
+  ]
+}

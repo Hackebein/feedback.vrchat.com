@@ -1,0 +1,147 @@
+{
+  "_id": "69231c1ea6878061be8b08e6",
+  "aiCategories": [
+    "loc.in-world",
+    "audio.steam-audio"
+  ],
+  "aiTaggedAt": "2026-05-19T03:25:19.699555Z",
+  "author": {
+    "_id": "60c87a5d16d979790d8309cf",
+    "alias": "Tawny Raven",
+    "aliasID": "65c2821bed6eefce4c970ba0",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5352978364972e730009b48b80591670.png",
+    "created": "2021-06-15T10:01:01.067Z",
+    "name": "TummyTime",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60c87a5d16d979790d8309cf",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1271,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6924b7511f495949c4a75783",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-11-24T19:51:45.035Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69231c1ea6878061be8b08e6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6924b7511f495949c4a7577d",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-11-23T14:37:18.963Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "It's possible to make VRChats audio output peak, making you deaf until re-join the world. This is done by having two people launching themself upwards in high speed when one of them has a collar on and it's being held by the other person. In the clip I added we are using OVR Advanced Settings. My friend has gravity turned down so he can launch himself quickly upwards with space-grab. I move upwards by reversing my gravity. I tried if I could do this solo with another account just holding the collar leash on desktop. But seems in my testing both people need to move for some reason.\n\nIt is a bit of a maneuver to do this.\n\n1. Join this world ID:  wrld_0f1f6d76-5696-4659-9e39-5bef827336e4\n\n2. Get the collars that are by spawn.\n\n3. Put the collar on one of the persons.\n\n3. Make the person holding the collar launch upwards. And as soon as the person with the collar on sees that. They should start accelerating up as well.\n\n4. Continue moving upward together. After a short time, the audio will suddenly peak—your speakers may “pop,” and your audio will remain maxed out until you rejoin the instance.\n\nYou're now deaf until you rejoin the instance due to your speakers just being maxed out. You can also hear this in the clip I added. And see in the waveform in the sequencer image.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/fda6fb7ac2435c04d32155b4c60902b1.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "SteamAudioPeak",
+      "url": "https://canny-assets.io/files/fda6fb7ac2435c04d32155b4c60902b1.mp4"
+    }
+  ],
+  "ideaID": "69231c1fa6878061be8b0952",
+  "imageURLs": [
+    "https://canny-assets.io/images/a27f61bcec8d2b3b1ebb0b97b4ad080d.png"
+  ],
+  "lastUpdated": 1779160723196,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69231c1ea6878061be8b08e6/568995355.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2025-11-24T19:51:44.995Z",
+  "subCategoryID": null,
+  "title": "[1765] Steam Audio getting stuck peaking",
+  "trendingScore": 2917.2087540878024,
+  "updatedAt": "2026-05-19T03:20:30.198674Z",
+  "updatedBy": "60c87a5d16d979790d8309cf",
+  "urlName": "1765-steam-audio-getting-stuck-peaking",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60c87a5d16d979790d8309cf",
+      "alias": "Tawny Raven",
+      "aliasID": "65c2821bed6eefce4c970ba0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5352978364972e730009b48b80591670.png",
+      "companies": [],
+      "name": "TummyTime",
+      "urlName": "<redacted>",
+      "voteID": "69231c1f4927a96e58ae26bd"
+    }
+  ]
+}

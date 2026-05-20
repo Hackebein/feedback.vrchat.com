@@ -1,0 +1,106 @@
+{
+  "__v": 0,
+  "_id": "5e8cc55abb49713238afa5d1",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T23:35:28.625828Z",
+  "author": {
+    "_id": "5e8cc492c62d0a326592e88d",
+    "alias": "Profitable Jellyfish",
+    "aliasID": "65d14eb20129d7ae44c16b90",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/300ffb5cf8257cf16cd89ce943323ad6.png",
+    "created": "2020-04-07T18:21:06.303Z",
+    "name": "Firepower",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e8cc492c62d0a326592e88d",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-07T18:24:26.030Z",
+  "deletedAt": null,
+  "details": "My avatar has glasses and I've noticed since the last update that the glass shader I was using appears to be broken. Depending on what angle my avatar looks in a mirror the shader will either work properly or disappear entirely. You'll notice in my screenshots if I lean backwards the shader disappears, but if I lean forward it works normally.\nI've tried two different glass shaders on my avatar and the problem was identical regardless of what shader I was using, which makes me think it's a problem with the way VRchat is rendering them and not a problem with my avatar.\n\nFor reference I've tried MKglass free and Rollthered Fake HDR refraced glass shader.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da6e4c3e90df158df0c",
+  "imageURLs": [
+    "https://canny.io/images/a7623c5bde136eddec66dc149157efb0.png",
+    "https://canny.io/images/3c6f5978b2f3fd51f34a31e690314065.png"
+  ],
+  "lastUpdated": 1779060451259,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-07T18:24:26.030Z",
+  "subCategoryID": null,
+  "title": "Transparent/Reflective shaders appear to be broken?",
+  "trendingScore": 2929.113169396495,
+  "updatedAt": "2026-05-17T23:27:35.879050Z",
+  "urlName": "transparentreflective-shaders-appear-to-be-broken",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "699759f9a321fcd2a3b7aeda",
+      "alias": "Prior Chicken",
+      "aliasID": "699759faa321fcd2a3b7ccc1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/056fa6ed9c4a35dcb16e8586b0c2f3c2.png",
+      "companies": [],
+      "name": "-LilyTheFox-",
+      "urlName": "<redacted>",
+      "voteID": "69975ddca321fcd2a3e26843"
+    },
+    {
+      "_id": "6135574c16e1a579f681bc2d",
+      "alias": "Responsible Coyote",
+      "aliasID": "660e6c51e5d26962aacdd64c",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "_Az",
+      "urlName": "<redacted>",
+      "voteID": "61355cd2993471263060223f"
+    },
+    {
+      "_id": "5e8cc492c62d0a326592e88d",
+      "alias": "Profitable Jellyfish",
+      "aliasID": "65d14eb20129d7ae44c16b90",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/300ffb5cf8257cf16cd89ce943323ad6.png",
+      "companies": [],
+      "name": "Firepower",
+      "urlName": "<redacted>",
+      "voteID": "5e8cc55abb49713238afa5d9"
+    }
+  ]
+}

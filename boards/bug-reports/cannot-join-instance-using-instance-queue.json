@@ -1,0 +1,90 @@
+{
+  "_id": "68e2736bde10ab8c35d07ce9",
+  "aiCategories": [
+    "loc.in-world",
+    "groups.instances"
+  ],
+  "aiTaggedAt": "2026-05-17T01:14:45.447419Z",
+  "author": {
+    "_id": "62527baf8c368f529a82aebd",
+    "alias": "Tangerine yellow Swift",
+    "aliasID": "65c27bd8ed6eefce4c9b54ea",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2f46b2b3b6e6a453422ea8a23a1f45ae.png",
+    "created": "2022-04-10T06:39:43.297Z",
+    "name": "cubee_cb",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62527baf8c368f529a82aebd",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-10-05T13:32:27.957Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "- Find an instance with Instance Queuing enabled.\n\n- Enter the queue.\n\n- After the Join notification appears, attempt to join the instance.\n\n- The action will be prevented with an \"Instance is full\" error despite the queue and instance capacity saying otherwise.\n\nI was only able to join this instance after moving worlds, once the instance showed 13/16 users. Is the client holding on to the 403 state or something?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68e2736cde10ab8c35d07d37",
+  "imageURLs": [
+    "https://canny-assets.io/images/61b43a5eef3d83e291d6608849b7e4f0.png",
+    "https://canny-assets.io/images/60a27724a08603c3e03d989ff22ce883.png",
+    "https://canny-assets.io/images/2ee869b8656f2d5ca9ee37f41bac1e41.png",
+    "https://canny-assets.io/images/2f4f1cd5fe3787e3468ff468437e20a5.png",
+    "https://canny-assets.io/images/bd6ebed7cc977b8d128c1d9da7350259.png"
+  ],
+  "lastUpdated": 1778979439730,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68e2736bde10ab8c35d07ce9/609557049.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-10-05T13:32:27.957Z",
+  "subCategoryID": null,
+  "title": "Cannot join instance using instance queue.",
+  "trendingScore": 2910.20232045933,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": "62527baf8c368f529a82aebd",
+  "urlName": "cannot-join-instance-using-instance-queue",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62527baf8c368f529a82aebd",
+      "alias": "Tangerine yellow Swift",
+      "aliasID": "65c27bd8ed6eefce4c9b54ea",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2f46b2b3b6e6a453422ea8a23a1f45ae.png",
+      "companies": [],
+      "name": "cubee_cb",
+      "urlName": "<redacted>",
+      "voteID": "68e2736c4f674f1b1eaaf5f7"
+    }
+  ]
+}

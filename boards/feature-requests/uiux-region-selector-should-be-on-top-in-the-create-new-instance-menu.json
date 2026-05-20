@@ -1,0 +1,106 @@
+{
+  "__v": 0,
+  "_id": "635158606cf0c9450f6d8d5e",
+  "aiCategories": [
+    "loc.in-world",
+    "social.instances"
+  ],
+  "aiTaggedAt": "2026-05-17T02:43:43.395944Z",
+  "author": {
+    "_id": "62f3cfbf7224a866e6cb264e",
+    "alias": "Surprising Mammal",
+    "aliasID": "65c9d461ed6eefce4c353814",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-08-10T15:33:19.533Z",
+    "name": "Roadcrosser",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62f3cfbf7224a866e6cb264e",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-20T14:17:04.462Z",
+  "deletedAt": null,
+  "details": "As shown in the attached screenshot, the Radio buttons for selecting a region are located on the bottom of the menu.\nThis is bad UX as the Instance type selector directly above immediately advances to the next page when selected.\nAs most people will read the menu from top to bottom, this will lead them to select the Instance Type first before they decide which region they want (assuming they want to change it). As the Instance Type selectors immediately create the instance and display the Join button, the user would have to go back to change the region before creating another instance with their desired region.\nBy moving the region selector above the instance type selector, the New Instance menu will be more intuitive, especially to newer players.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb949e4c3e90df137100d",
+  "imageURLs": [
+    "https://canny.io/images/339d314a633591b8bec813a16a403c44.png"
+  ],
+  "lastUpdated": 1778985342695,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-20T14:17:04.463Z",
+  "subCategoryID": null,
+  "title": "[UI/UX] Region selector should be on top in the [Create New Instance] menu",
+  "trendingScore": 2756.579618876105,
+  "updatedAt": "2026-05-17T02:36:27.581782Z",
+  "urlName": "uiux-region-selector-should-be-on-top-in-the-create-new-instance-menu",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "<redacted>",
+      "voteID": "6354adb157ae134513b3abaa"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "63518ce4101b6b4509247f5b"
+    },
+    {
+      "_id": "62f3cfbf7224a866e6cb264e",
+      "alias": "Surprising Mammal",
+      "aliasID": "65c9d461ed6eefce4c353814",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Roadcrosser",
+      "urlName": "<redacted>",
+      "voteID": "635158606cf0c9450f6d8d8a"
+    }
+  ]
+}

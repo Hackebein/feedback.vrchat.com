@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "5ed41cab05715045332b9d2a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-05-19T19:58:57.032449Z",
+  "author": {
+    "_id": "5ed41cab194756454b2b7db0",
+    "alias": "Gold Guppy",
+    "aliasID": "65c82bd2ed6eefce4cc8e7a0",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/084be1e249d3b0df0ea36c84501419f6.jpg",
+    "created": "2020-05-31T21:07:55.422Z",
+    "name": "Kjasi",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ed41cab194756454b2b7db0",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-31T21:07:55.700Z",
+  "deletedAt": null,
+  "details": "Version: VRCSDK2-2020.05.12.10.37\nDescription of the bug: When creating an avatar, if the model is in a prefab, the Valve Index controllers can't access finger tracking. While it can still track when gestures are enabled (only matching gestures I make with my hands) the individual fingers are ignored, and the model doesn't respond at all when gestures are off.\nSteps to reproduce: Drag an avatar model (FBX file) into your scene. Create a prefab of the model by dragging the scene element into your project files. Continue making a VRChat avatar, by adding the VRChat elements to the scene, not the prefab. (The animation controller might have to be in the prefab, but I'm not sure. Moving the VRC elements into the prefab didn't seem to make a difference, and kinda defeats the purpose of making it a prefab.) Publish the model, load into VRChat with Valve Index controllers, load the model, and finally, be sad that the fingers are not tracking, except in gesture mode, and even then, only for existing gestures.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7daee4c3e90df1590448",
+  "imageURLs": [],
+  "lastUpdated": 1779218202395,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5ed41cab05715045332b9d2a/972390497.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-31T21:07:55.700Z",
+  "subCategoryID": null,
+  "title": "[SDK] Avatars in Prefabs don't have Valve Index finger tracking",
+  "trendingScore": 2631.2475052104874,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "sdk-avatars-in-prefabs-dont-have-valve-index-finger-tracking",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ed41cab194756454b2b7db0",
+      "alias": "Gold Guppy",
+      "aliasID": "65c82bd2ed6eefce4cc8e7a0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/084be1e249d3b0df0ea36c84501419f6.jpg",
+      "companies": [],
+      "name": "Kjasi",
+      "urlName": "<redacted>",
+      "voteID": "5ed41cab05715045332b9d32"
+    }
+  ]
+}

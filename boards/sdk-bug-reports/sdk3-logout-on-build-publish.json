@@ -1,0 +1,161 @@
+{
+  "__v": 0,
+  "_id": "60e3103f541e4833cd5f1f0d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T20:03:12.988106Z",
+  "author": {
+    "_id": "60e30eb44fdc5a1222505b4d",
+    "alias": "Wonderful Gopher",
+    "aliasID": "65c4f011ed6eefce4c4846a7",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-07-05T13:52:52.748Z",
+    "name": "ＳＵＤＯ",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60e30eb44fdc5a1222505b4d",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "60e34f6377530d1211979997",
+      "author": {
+        "_id": "5a3ad8ac4a8da67427803715",
+        "alias": "Proposed Gibbon",
+        "aliasID": "65c27aa0ed6eefce4c6c34a0",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/a780d77c380ab00ed8e4b7e97e271fad.png",
+        "created": "2017-12-20T21:39:56.045Z",
+        "name": "Ruuubick - Designer",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-07-05T18:28:51.036Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 1,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "60e30eb44fdc5a1222505b4d",
+          "alias": "Wonderful Gopher",
+          "aliasID": "65c4f011ed6eefce4c4846a7",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2021-07-05T13:52:52.748Z",
+          "name": "ＳＵＤＯ",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "60e3103f541e4833cd5f1f0d",
+      "private": false,
+      "reactions": {
+        "like": 5
+      },
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{60e30eb44fdc5a1222505b4d|full_name} I have to manually log you out to fix this issue, but this should solve your issue once you restart Unity",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-07-05T13:59:27.003Z",
+  "deletedAt": null,
+  "details": "Starting with a blank SDK in unity, and signing in, everything works as expected.\nI am able to browse my uploaded content and such. \nBut when I attempt to upload content (specifically an avatar), I am logged out during the Build & Publish process.\nThis presents some errors in the console, as well as the game view screen.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8a8e4c3e90df135193d",
+  "imageURLs": [
+    "https://canny.io/images/2701cce14426fe9357d4aec7c3a0ef4a.png"
+  ],
+  "lastUpdated": 1779218242570,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-07-05T13:59:27.003Z",
+  "subCategoryID": null,
+  "title": "SDK3 - Logout on Build & Publish",
+  "trendingScore": 2707.6911914869406,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "sdk3-logout-on-build-publish",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f7de78e62370d3edddd0251",
+      "alias": "Navy Bee",
+      "aliasID": "662900b3d36452c17957160e",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/205184073aafecff08777b1cf70b30f6.png",
+      "companies": [],
+      "name": "QuietWhisper",
+      "urlName": "<redacted>",
+      "voteID": "619bf870c5fcc6506d6c13d3"
+    },
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": "<redacted>",
+      "voteID": "60fae4d47fecaa414c40b229"
+    },
+    {
+      "_id": "60e30eb44fdc5a1222505b4d",
+      "alias": "Wonderful Gopher",
+      "aliasID": "65c4f011ed6eefce4c4846a7",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "ＳＵＤＯ",
+      "urlName": "<redacted>",
+      "voteID": "60e3103f541e4833cd5f1f14"
+    }
+  ]
+}

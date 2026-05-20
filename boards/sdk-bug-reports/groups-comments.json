@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "6039d1c61d79695b525ebc93",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:01:36.309867Z",
+  "author": {
+    "_id": "6033cb11ed8b85581eefcc5d",
+    "alias": "Amaranth Iguana",
+    "aliasID": "65f380e376937e524849f4bd",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/cf0b4da1163d408559f5644e2a3c149a.png",
+    "created": "2021-02-22T15:17:37.252Z",
+    "name": "IzakG",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6033cb11ed8b85581eefcc5d",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-02-27T04:59:50.907Z",
+  "deletedAt": null,
+  "details": "Issue #1: Group Cloning;\nWhen using Udon and Hotkeys such as Ctrl C, V and Z, you will find that all groups may get cloned. This is discovered by moving groups. If you delete these groups, there is a chance that the group you deleted was not a clone, leaving you with a full Udon Graph until you save or use Ctrl Z, all the items within the clones will disappear and your graph is now destroyed, unless you Ctrl Z all the way back to before the group cloning occured.\nIssue #2: Comments;\nMade a comment card in the Udon Graph, it disappeared without a trace.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb80ce4c3e90df13243ae",
+  "imageURLs": [],
+  "lastUpdated": 1779218239451,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-02-27T04:59:50.907Z",
+  "subCategoryID": null,
+  "title": "Groups & Comments",
+  "trendingScore": 2670.0086083652495,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "groups-comments",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6033cb11ed8b85581eefcc5d",
+      "alias": "Amaranth Iguana",
+      "aliasID": "65f380e376937e524849f4bd",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/cf0b4da1163d408559f5644e2a3c149a.png",
+      "companies": [],
+      "name": "IzakG",
+      "urlName": "<redacted>",
+      "voteID": "6039d1c61d79695b525ebc9a"
+    }
+  ]
+}

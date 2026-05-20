@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "624f1ec019d14a52a3bd3440",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T19:54:53.159853Z",
+  "author": {
+    "_id": "5f2e5a608c253106b02be61a",
+    "alias": "Aegean Marten",
+    "aliasID": "65c321b0ed6eefce4c45bc49",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7a76252c1d6b617d03d1713afc015b98.png",
+    "created": "2020-08-08T07:55:12.473Z",
+    "name": "Iris_VRC",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2e5a608c253106b02be61a",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-04-07T17:26:24.391Z",
+  "deletedAt": null,
+  "details": "Make remote player's position movable with Udon\nThe ability to make the remote player's position movable using Udon would allow gimmicks such as moving vehicles to be ridden while standing.\nIt is also necessary to be able to control rotation, but this can be applied to gimmicks such as walking on walls.\nUdon can also be used to alleviate float problems in Unity.\nSpecifically, it temporarily disables the player's positional synchronization, allowing Udon to override the position.\nA similar thing can be done with chairs, but with many limitations, causing problems with IK and Animator.\n(以下日本語)\nリモートプレイヤーの位置をUdonで移動可能にする\nリモートプレイヤーの位置をUdonを用いて移動可能にする機能があれば、移動する車両などのギミックで立ったまま乗ることもできるようになります。\nまた、回転も制御できる必要もありますが壁を歩くことができるギミックなどに応用できます。\nUnityのfloat問題をUdonで緩和するときにも役立ちます。\n具体的にはプレイヤーの位置同期を一時的に無効にし、位置をUdonで上書きできるようにします。\n同様のことは椅子を使用することでも実行できますが多くの制約があり、IKやAnimatorに問題を起こします。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8e7e4c3e90df135d6b2",
+  "imageURLs": [],
+  "lastUpdated": 1779218193370,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-04-07T17:26:24.391Z",
+  "subCategoryID": null,
+  "title": "[1181] [Feature Request] Make remote player's position movable with Udon",
+  "trendingScore": 2727.796957422789,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "1181-feature-request-make-remote-players-position-movable-with-udon",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2e5a608c253106b02be61a",
+      "alias": "Aegean Marten",
+      "aliasID": "65c321b0ed6eefce4c45bc49",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7a76252c1d6b617d03d1713afc015b98.png",
+      "companies": [],
+      "name": "Iris_VRC",
+      "urlName": "<redacted>",
+      "voteID": "624f1ec019d14a52a3bd345d"
+    }
+  ]
+}

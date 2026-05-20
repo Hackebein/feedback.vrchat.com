@@ -1,0 +1,113 @@
+{
+  "__v": 0,
+  "_id": "616616872c0de966b4f8e33c",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T01:01:19.472634Z",
+  "author": {
+    "_id": "6163a48dd7418933abcd6341",
+    "alias": "Coral Hummingbird",
+    "aliasID": "65c3a0eded6eefce4cfe0857",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-10-11T02:42:21.404Z",
+    "name": "Joe++",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6163a48dd7418933abcd6341",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-10-12T23:13:11.778Z",
+  "deletedAt": null,
+  "details": "I have a Udon script that's made to give the player a custom movement system. It uses SetVelocity every FixedUpdated. The problem is Udon changes that velocity before the physics apply it, often setting the velocity to 0 for seemingly no reason. I don't get the point of setting velocity if udon/vrchat is just going to change it again. Immobilize seems to fix this problem, but it locks the players IK which is no good in a lot of situations. I would like the ability to disable the default player movement system without using Immobilize and locking the player's tracking.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8bee4c3e90df1355f95",
+  "imageURLs": [],
+  "lastUpdated": 1778979216791,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/616616872c0de966b4f8e33c/1601445276.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-10-12T23:13:11.778Z",
+  "subCategoryID": null,
+  "title": "The Player SetVelocity seems to get over written the same frame it gets written.",
+  "trendingScore": 2794.0805150357455,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "the-player-setvelocity-seems-to-get-over-written-the-same-frame-it-gets-written",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2109f017f9570669c64148",
+      "alias": "Contemporary Basilisk",
+      "aliasID": "65c2d749ed6eefce4c18b9f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f67a82550338b2fa3dba76113182194e.png",
+      "companies": [],
+      "name": "ｺﾛｲﾄﾞ",
+      "urlName": "<redacted>",
+      "voteID": "64b9267b1d121a09ac6f3249"
+    },
+    {
+      "_id": "60ee9e81572cc51ad4e847e6",
+      "alias": "Vervain Falcon",
+      "aliasID": "65c291bded6eefce4cf7d1c9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/40d5dd2074e4890f5cd77ee30956f43c.png",
+      "companies": [],
+      "name": "BobyStar",
+      "urlName": "<redacted>",
+      "voteID": "648b80325fac94444fad452f"
+    },
+    {
+      "_id": "6163a48dd7418933abcd6341",
+      "alias": "Coral Hummingbird",
+      "aliasID": "65c3a0eded6eefce4cfe0857",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Joe++",
+      "urlName": "<redacted>",
+      "voteID": "616616872c0de966b4f8e343"
+    }
+  ]
+}

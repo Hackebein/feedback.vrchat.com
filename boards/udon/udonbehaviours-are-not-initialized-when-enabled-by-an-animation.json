@@ -1,0 +1,191 @@
+{
+  "__v": 0,
+  "_id": "603d94430f918359da37cde1",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:25:46.233101Z",
+  "author": {
+    "_id": "5c71ea27a884dd22f1960ec2",
+    "alias": "Electric violet Swallow",
+    "aliasID": "65c2b464ed6eefce4cd86b08",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/29c8ca796305b94c6131b938c889a396.png",
+    "created": "2019-02-24T00:49:43.416Z",
+    "name": "orels1",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c71ea27a884dd22f1960ec2",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-03-02T01:26:27.008Z",
+  "deletedAt": null,
+  "details": "I got a Camera System that enables some objects with Udon Behaviours if the user is in VR. They are enabled in scene hierarchy by default, but the default animation state will disable them shortly after the world load.\n\nAt some point not so long ago - it stopped working correctly. First because VR detection became unreliable if you do it in Start, and now because the behaviours that used to initialize just fine - stopped initializing completely.\nHere's a repro world id: https://vrchat.com/home/world/wrld_f7b04260-106f-4fe7-9d36-b9e6446d6305\nI included the info in the world, but to reiterate what happens in the world: \n- All the behaviours are enabled by default\n- The default animation state on 2 layers of the animator disables all the objects with the behaviours\n- The behaviour on the root object sets an animator trigger after a 5s delay\n- The animator transitions to a new state on both layers\n- Those states enable all the objects back\nIn editor - those objects are initialized from the moment you hit play, as they are enabled by default.\nIn game - the object never fire their init events.\nIf everything works as expected - you should see 5 red spheres in the world, and 5 \"Initialized: {object name}\" logs\n\nAttached the hierarchy and the Editor vs Client logs",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb80ce4c3e90df132444c",
+  "imageURLs": [
+    "https://canny.io/images/5ea8f94c4adec75b924af94699bb9156.png",
+    "https://canny.io/images/1a9aabe25fd52dba14e68a9431541c61.png"
+  ],
+  "lastUpdated": 1779247132773,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 12,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/603d94430f918359da37cde1/501712873.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 12,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-03-02T01:26:27.009Z",
+  "subCategoryID": null,
+  "title": "UdonBehaviours are not initialized when enabled by an Animation",
+  "trendingScore": 2681.6697251171,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "udonbehaviours-are-not-initialized-when-enabled-by-an-animation",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f8a26770aaa28611fedd6b6",
+      "alias": "Average Loon",
+      "aliasID": "65c28318ed6eefce4cbdb922",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+      "companies": [],
+      "name": "Faxmashine",
+      "urlName": "<redacted>",
+      "voteID": "60abd47b49445f6121589ff9"
+    },
+    {
+      "_id": "5b839f257121de564d5fdeb6",
+      "alias": "Similar Cobra",
+      "aliasID": "65c3900ded6eefce4cdced36",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b77dd239fd73fadae67603edac185fd8.png",
+      "companies": [],
+      "name": "Shavarkoon",
+      "urlName": "<redacted>",
+      "voteID": "6045ccbc95c51c5bbfff875a"
+    },
+    {
+      "_id": "60081117aee7c56b1b0676c3",
+      "alias": "Labour Krill",
+      "aliasID": "660afab2e5d26962aaa00c77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/033255ca2e41ae810468a1a3c06ccc51.png",
+      "companies": [],
+      "name": "Trance_Mode［JP］",
+      "urlName": "<redacted>",
+      "voteID": "6045cbac1733fc2d0a7caa84"
+    },
+    {
+      "_id": "5f2e110eea76667d023f79d5",
+      "alias": "Xenon Salamander",
+      "aliasID": "65c2a247ed6eefce4c69876d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e46a60d7b29cff312133857b9731a990.png",
+      "companies": [],
+      "name": "EvolvedAnt",
+      "urlName": "<redacted>",
+      "voteID": "60443069cc01c21febf4b25d"
+    },
+    {
+      "_id": "5e8c2e14af4a860606a60ca3",
+      "alias": "Mighty Possum",
+      "aliasID": "65c28a12ed6eefce4cca5859",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dc3f8e98bc59d0fc78760ad806cacd99.png",
+      "companies": [],
+      "name": "Towneh",
+      "urlName": "<redacted>",
+      "voteID": "603e084c90a10150d9afe075"
+    },
+    {
+      "_id": "5f55f91ce356476822b42fda",
+      "alias": "Coral Galliform",
+      "aliasID": "65c38fa6ed6eefce4cc9c54c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0775abca842ec45b6932986e71cf8662.png",
+      "companies": [],
+      "name": "Vianvolaeus",
+      "urlName": "<redacted>",
+      "voteID": "603dc48ffe778f69f8e7c6e4"
+    },
+    {
+      "_id": "5dc5ffef0892247f76089a24",
+      "alias": "Civic Raccoon",
+      "aliasID": "65c26da3ed6eefce4c4d08b9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
+      "companies": [],
+      "name": "LefTonbo",
+      "urlName": "<redacted>",
+      "voteID": "603d9c1290a10150d9ac63ad"
+    },
+    {
+      "_id": "5f2eb7e50fcb481d60aee80a",
+      "alias": "Alloy Wombat",
+      "aliasID": "65c28396ed6eefce4cd16151",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e0490710a3613ca27bb6f2d49bbfef6.png",
+      "companies": [],
+      "name": "Fooma",
+      "urlName": "<redacted>",
+      "voteID": "603d974f695aa769f9f313e5"
+    },
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d03ff26f975679707203bd269ce42822.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": "<redacted>",
+      "voteID": "603d971669c6dd59e0476c6b"
+    },
+    {
+      "_id": "5f2cc09ac00297464bd2dd84",
+      "alias": "Willow Coral",
+      "aliasID": "65c2b239ed6eefce4c91fed5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3e438e2278fe653ff3bcc5c5fc0f7f26.png",
+      "companies": [],
+      "name": "Μerlin",
+      "urlName": "<redacted>",
+      "voteID": "603d9595b707365113c718bc"
+    }
+  ]
+}

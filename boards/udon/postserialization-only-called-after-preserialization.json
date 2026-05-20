@@ -1,0 +1,134 @@
+{
+  "__v": 0,
+  "_id": "5fa31297bf4aa9363f29a056",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:33:51.349926Z",
+  "author": {
+    "_id": "59b05781f76da93741a4617e",
+    "alias": "Wineberry Herring",
+    "aliasID": "65c2b8e3ed6eefce4c6f7a97",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e9ccb11e0323465cc163f50c45e013bd.png",
+    "created": "2017-09-06T20:16:01.823Z",
+    "name": "jetdog8808",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "59b05781f76da93741a4617e",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5fa336df2522e622134a2552",
+      "author": {
+        "_id": "5a7ac88bf5a5c52c08064fb9",
+        "alias": "Prairie sand Hedgehog",
+        "aliasID": "65ba02f2ed6eefce4c1872a3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b2a514509aeb0aa28d6466fcc4134aa4.png",
+        "created": "2018-02-07T09:36:11.764Z",
+        "name": "PhaxeNor",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2020-11-04T23:18:55.968Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/f3e7b986033ae1dad0d6b16b433a3ef8.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5fa31297bf4aa9363f29a056",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Talked on discord, but posting here too\nPostSerialization is only supposed to run after PreSerialization.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-04T20:44:07.229Z",
+  "deletedAt": null,
+  "details": "with how the event is named I would assume the event would also be called after deserialization. currently it is not. used this world for testing. https://vrchat.com/home/world/wrld_0b7430d5-0f11-4bdc-abd7-9f7ea1249688 . bottom 3 boxes are in order from top to bottom as preserialization, deserialization, postserialization.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7eee4c3e90df131f8cc",
+  "imageURLs": [
+    "https://canny.io/images/dd17ef1935dfe754e91753fec648a138.png"
+  ],
+  "lastUpdated": 1779239319687,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-11-04T20:44:07.229Z",
+  "subCategoryID": null,
+  "title": "postserialization only called after preserialization.",
+  "trendingScore": 2653.6737147260296,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "postserialization-only-called-after-preserialization",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "59b05781f76da93741a4617e",
+      "alias": "Wineberry Herring",
+      "aliasID": "65c2b8e3ed6eefce4c6f7a97",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e9ccb11e0323465cc163f50c45e013bd.png",
+      "companies": [],
+      "name": "jetdog8808",
+      "urlName": "<redacted>",
+      "voteID": "5fa31297bf4aa9363f29a05d"
+    }
+  ]
+}

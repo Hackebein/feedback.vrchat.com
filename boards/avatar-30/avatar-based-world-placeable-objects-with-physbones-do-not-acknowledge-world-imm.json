@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "6778816e74654552dc40a3cc",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T16:04:25.544743Z",
+  "author": {
+    "_id": "62df313344bc5a44ae8fc955",
+    "alias": "Driftwood Owl",
+    "aliasID": "663d07e6d36452c179cdbb07",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3f6bb3079df4680b40c958ea6530b0e9.png",
+    "created": "2022-07-26T00:11:31.241Z",
+    "name": "Geeknificent",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62df313344bc5a44ae8fc955",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-01-04T00:31:42.474Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Use VRLabs World transform prefab and follow thier instructions to create your own world placeable object root. \n\nAdd a physbone chain to it like tentacles/ribbions/springs. \n\nSet the physbone world immobile to 1\n\nUpload and then lock the world placeable object in position once in the avatar, then start running aroound.\n\nThe tentacles/ribbions/springs will expirence world inertia even if world immobile is set to 1 or even if the object is locked in place.\n\nWorld immobile does not seem to work period on world placeable objects anymore.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba3be4c3e90df139f231",
+  "imageURLs": [],
+  "lastUpdated": 1779032767403,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6778816e74654552dc40a3cc/950304653.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-01-04T00:31:42.474Z",
+  "subCategoryID": null,
+  "title": "Avatar Based World placeable objects with physbones do not acknowledge world immobile setting",
+  "trendingScore": 2870.9820071731197,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "avatar-based-world-placeable-objects-with-physbones-do-not-acknowledge-world-imm",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df313344bc5a44ae8fc955",
+      "alias": "Driftwood Owl",
+      "aliasID": "663d07e6d36452c179cdbb07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3f6bb3079df4680b40c958ea6530b0e9.png",
+      "companies": [],
+      "name": "Geeknificent",
+      "urlName": "<redacted>",
+      "voteID": "6778816ea367fa6392b90005"
+    }
+  ]
+}

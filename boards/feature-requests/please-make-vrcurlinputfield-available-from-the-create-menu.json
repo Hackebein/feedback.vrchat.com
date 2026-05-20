@@ -1,0 +1,108 @@
+{
+  "_id": "68f46d6b3afa9aee215b2247",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T15:09:14.164102Z",
+  "author": {
+    "_id": "5ae51ece906bfd12e600d6f6",
+    "alias": "Quaint Turtle",
+    "aliasID": "65c28068ed6eefce4c52fc2a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/93ea8277fd68e3097e6d92bc9b52089e.png",
+    "created": "2018-04-29T01:24:30.124Z",
+    "name": "chiugame",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ae51ece906bfd12e600d6f6",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-10-19T04:47:39.930Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Thank you for your continued efforts in the development and operation of VRChat.\n\nVRCUrlInputField is currently the only way to generate a VRCUrl at runtime through user input.\n\nWhile VRCUrl values can be embedded at compile time, there is no other method to dynamically create them during runtime.\n\nAt present, it is not possible to add a VRCUrlInputField directly from the Unity “Create” menu (e.g., GameObject > UI).\n\nTo use it, one must manually attach the component and set up all necessary references by hand.\n\nAlthough it is possible to create and reuse a prefab afterward, this setup process must be repeated each time a new project is created, which can be quite tedious.\n\nIf VRCUrlInputField could be added directly from the Create menu like other UI components, it would greatly streamline the workflow and make project setup more efficient.\n\nI would greatly appreciate your consideration of this request. Thank you very much.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68f46d6c3afa9aee215b2385",
+  "imageURLs": [
+    "https://canny-assets.io/images/a00acc4b5b9a4d41dc8342cb01eb7665.png"
+  ],
+  "lastUpdated": 1779026851756,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68f46d6b3afa9aee215b2247/1010933236.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-10-19T04:47:39.930Z",
+  "subCategoryID": null,
+  "title": "Please make VRCUrlInputField available from the Create menu.",
+  "trendingScore": 2913.0499066845373,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": null,
+  "urlName": "please-make-vrcurlinputfield-available-from-the-create-menu",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2cb35431807b34c94a2618",
+      "alias": "Mysterious Eagle",
+      "aliasID": "65c290c9ed6eefce4cd4009e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9d6653c011d0e9287519e69ba0bcf40a.png",
+      "companies": [],
+      "name": "ureishi",
+      "urlName": "<redacted>",
+      "voteID": "68f987f01f833c417ccbeef0"
+    },
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "<redacted>",
+      "voteID": "68f5f2691f833c417c78b1d6"
+    },
+    {
+      "_id": "5ae51ece906bfd12e600d6f6",
+      "alias": "Quaint Turtle",
+      "aliasID": "65c28068ed6eefce4c52fc2a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/93ea8277fd68e3097e6d92bc9b52089e.png",
+      "companies": [],
+      "name": "chiugame",
+      "urlName": "<redacted>",
+      "voteID": "68f46d6c93e7781657d64178"
+    }
+  ]
+}

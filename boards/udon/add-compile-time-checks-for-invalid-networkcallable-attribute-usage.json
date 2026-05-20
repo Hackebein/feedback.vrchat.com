@@ -1,0 +1,91 @@
+{
+  "_id": "69407cfeb69845a8e78a8069",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T05:54:20.154197Z",
+  "author": {
+    "_id": "67ad43caa208a6b8e7799a0e",
+    "alias": "Rear Canid",
+    "aliasID": "67ad43cab324a962094a6d49",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a0ff9d985737b9395e073997ccc15432.png",
+    "created": "2025-02-13T00:58:50.024Z",
+    "name": "rennelogue",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "67ad43caa208a6b8e7799a0e",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-15T21:26:22.099Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently, the compiler only validates NetworkCallable usage on virtual base methods. Applying the attribute to abstract base methods or to overrides of virtual or abstract methods does not produce a compile-time error. Instead, a runtime error occurs when attempting to invoke the method:\n\nUnable to send local event '_EventName' as an RPC. Events starting with an underscore may not be run remotely.\n\nRemoving the leading underscore suppresses the error, but the method still does not execute over the network.\n\nStronger compile-time validation would ensure invalid usage is detected before runtime.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69407cfeb69845a8e78a809d",
+  "imageURLs": [],
+  "lastUpdated": 1779082478839,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69407cfeb69845a8e78a8069/1944326043.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-15T21:26:22.099Z",
+  "subCategoryID": null,
+  "title": "Add compile-time checks for invalid NetworkCallable attribute usage",
+  "trendingScore": 2920.3921917614134,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": null,
+  "urlName": "add-compile-time-checks-for-invalid-networkcallable-attribute-usage",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67ad43caa208a6b8e7799a0e",
+      "alias": "Rear Canid",
+      "aliasID": "67ad43cab324a962094a6d49",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a0ff9d985737b9395e073997ccc15432.png",
+      "companies": [],
+      "name": "rennelogue",
+      "urlName": "<redacted>",
+      "voteID": "69407cfe4927a96e5867c712"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "__v": 0,
+  "_id": "649e2538aeba89dc2937afc6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T15:14:08.831785Z",
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9e00a23b549d35ec3b542d76ab7acc70.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-06-30T00:43:36.488Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRChat Build: 1313\n\nSDK Version 3.2.1\n\nThe IK pose is described as having an influence of which way limbs bend with the auto IK. It has no effect even when given extreme input data.\n\nI have an avatar with backwards knees (required for a double-jointed knee effect using physbones, the extra joint is not part of the humanoid armature).\n\nThe IKpose sounds like its supposed to be able to counteract this, but it has no effect in game, even when given an animation with the knees VERY bent.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb987e4c3e90df137de01",
+  "imageURLs": [
+    "https://canny.io/images/71fbf94ae25d780ae2851792228bc35b.png"
+  ],
+  "lastUpdated": 1779026895636,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-06-30T00:43:36.488Z",
+  "subCategoryID": null,
+  "title": "IKpose has no effect",
+  "trendingScore": 2791.8403306503023,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": null,
+  "urlName": "ikpose-has-no-effect",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9e00a23b549d35ec3b542d76ab7acc70.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": "<redacted>",
+      "voteID": "649e2538aeba89dc2937b00f"
+    }
+  ]
+}

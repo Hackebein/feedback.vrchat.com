@@ -1,0 +1,93 @@
+{
+  "_id": "68db207a06982dc43d3b8e3c",
+  "aiCategories": [
+    "loc.website",
+    "web.feedback"
+  ],
+  "aiTaggedAt": "2026-05-18T05:56:36.194463Z",
+  "author": {
+    "_id": "5f6dae4087d989489b562e09",
+    "alias": "Abstract Canidae",
+    "aliasID": "65c2b0e2ed6eefce4c65c4e0",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e58bf0721950534f7a4761cd9a509edb.png",
+    "created": "2020-09-25T08:45:52.719Z",
+    "name": "virus_of_doom",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f6dae4087d989489b562e09",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-09-30T00:12:42.610Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Occasionally I will be unable to load the feedback.vrchat.com website with the following error: `ERR_SSL_VERSION_OR_CIPHER_MISMATCH`\n\nI haven't been able to identify any consistencies with when or why it occurs, but the issue will typically resolve itself after a few minutes. This has happened multiple times over the span of multiple months, potentially longer. I don't recall if this has happened on other VRChat domains, but it has happened across multiple devices on my local network. Notably, I do have a Pi-Hole running with the default lists, but I don't believe DNS resolution would cause this. \n\nQuick addendum: I actually had this happen again while writing this bug report lol",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68db207a06982dc43d3b8ea2",
+  "imageURLs": [
+    "https://canny-assets.io/images/274cd60248551d37c58e00a9ed4dfae2.png"
+  ],
+  "lastUpdated": 1779082491414,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68db207a06982dc43d3b8e3c/725608511.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-09-30T00:12:42.610Z",
+  "subCategoryID": null,
+  "title": "feedback.vrchat.com sometimes fails to load with SSL / cipher mismatch",
+  "trendingScore": 2909.408693918325,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": "5f6dae4087d989489b562e09",
+  "urlName": "feedbackvrchatcom-sometimes-fails-to-load-with-ssl-cipher-mismatch",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f6dae4087d989489b562e09",
+      "alias": "Abstract Canidae",
+      "aliasID": "65c2b0e2ed6eefce4c65c4e0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e58bf0721950534f7a4761cd9a509edb.png",
+      "companies": [],
+      "name": "virus_of_doom",
+      "urlName": "<redacted>",
+      "voteID": "68db207a4f674f1b1ef99fbc"
+    }
+  ]
+}

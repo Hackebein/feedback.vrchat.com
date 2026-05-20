@@ -1,0 +1,86 @@
+{
+  "_id": "69092f998919aed62fc2062f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T01:17:24.583552Z",
+  "author": {
+    "_id": "6864e8e116069571f6b9655f",
+    "alias": "Oxblood Squirrel",
+    "aliasID": "6864e8e216069571f6b99114",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a0618015b4d0e1aa1043f9c481245022.png",
+    "created": "2025-07-02T08:08:01.243Z",
+    "name": "IrbisTheSnep",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6864e8e116069571f6b9655f",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-11-03T22:41:29.458Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Head still disappears in some cases despite being overwritten to not to with head-chop component. \n\nTo reproduce: \n\n1. In unity add component head-chop and select Head bone with scale of 1. (technically disable head hiding mechanic like in attachment)\n\n2. In VR move your eye position a bit away from head (by going into wall where model can't move or use MMD world and get near dancing model by ovr or by real movemnt)\n\n3. Observe that head diappears in some cases as usual instead of keeping head unscaled.\n\nVideo presenting bug: https://www.youtube.com/watch?v=FOOgIn9_TR4",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69092f998919aed62fc2068b",
+  "imageURLs": [
+    "https://canny-assets.io/images/d2d6e3de10d8154ea9e4046d1fe0ef84.png"
+  ],
+  "lastUpdated": 1778979521952,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69092f998919aed62fc2062f/1161854855.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-11-03T22:41:29.458Z",
+  "subCategoryID": null,
+  "title": "default head hiding mechanic activates despite being overwritten with head-chop component",
+  "trendingScore": 2914.3996444102227,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": "6864e8e116069571f6b9655f",
+  "urlName": "default-head-hiding-mechanic-activates-despite-being-overwritten-with-head-chop",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6864e8e116069571f6b9655f",
+      "alias": "Oxblood Squirrel",
+      "aliasID": "6864e8e216069571f6b99114",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a0618015b4d0e1aa1043f9c481245022.png",
+      "companies": [],
+      "name": "IrbisTheSnep",
+      "urlName": "<redacted>",
+      "voteID": "69092f994f8511f380e4bdff"
+    }
+  ]
+}

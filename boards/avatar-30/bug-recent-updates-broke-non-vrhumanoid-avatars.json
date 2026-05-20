@@ -1,0 +1,191 @@
+{
+  "__v": 0,
+  "_id": "609929b3c2ae481196e732c6",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "avatars.fbt",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-05-17T15:55:23.576612Z",
+  "author": {
+    "_id": "5b3668865f18c30bbfcd569f",
+    "alias": "Very Parakeet",
+    "aliasID": "65c28837ed6eefce4c82d307",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b46a5bb3eacc6cd725ced32f656c471f.png",
+    "created": "2018-06-29T17:12:38.792Z",
+    "name": "Kareeda",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b3668865f18c30bbfcd569f",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-05-10T12:40:19.247Z",
+  "deletedAt": null,
+  "details": "This week suddenly hundreds of my models stopped working. The custom locomotions and everything still work. However using GestureLeft and GestureRight Parameters don't seem to work anymore. This happens regardless of if in VR/Gesture/FullBody. When it Full Body I see the balls for my trackers at all time as if the model never fully intilized and I can't finish Calibration. Perhaps this is what's preventing it from accepting Gestures. When in Debug mode the Gestures don't ever change their Int/Float values no matter if using Shift+F1-8 etc. \nWe use these Avatars for RP and desktop only players. All other Parameters I created work. Please note these are models with their own rigs and not humanoid.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb89ae4c3e90df134e3bf",
+  "imageURLs": [
+    "https://canny.io/images/d732235d0c783993af763303678235d6.png"
+  ],
+  "lastUpdated": 1779032657996,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 22,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 22,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-05-10T12:40:19.247Z",
+  "subCategoryID": null,
+  "title": "[BUG] Recent Updates Broke Non-VR/Humanoid Avatars",
+  "trendingScore": 2722.200256218587,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-recent-updates-broke-non-vrhumanoid-avatars",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "6221de1a398b1472242385db"
+    },
+    {
+      "_id": "5f9f1ebfa308d05f19397b80",
+      "alias": "Reliable Warbler",
+      "aliasID": "65c28115ed6eefce4c6d4a60",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
+      "companies": [],
+      "name": "JessicaOnMain",
+      "urlName": "<redacted>",
+      "voteID": "612a8ed3cd035602e01b3086"
+    },
+    {
+      "_id": "5f2d109ce078064277f0778e",
+      "alias": "Careful Penguin",
+      "aliasID": "65c2a247ed6eefce4c6987b7",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/b70151b2d572a7822e763ef03d994e58.png",
+      "companies": [],
+      "name": "MagnaLuna",
+      "urlName": "<redacted>",
+      "voteID": "60dc518d32f8201cbe4fbbe7"
+    },
+    {
+      "_id": "5baf2b2de038c00e28fd16b5",
+      "alias": "Dramatic Alpaca",
+      "aliasID": "65c26da3ed6eefce4c4d06ec",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0e056094eccbd9a7ddf55975e2afeb93.png",
+      "companies": [],
+      "name": "Kilerbomb",
+      "urlName": "<redacted>",
+      "voteID": "60adbb98b0e3c967f4ce1997"
+    },
+    {
+      "_id": "5d227cbc537f5312aa428c8f",
+      "alias": "Dutch white Chipmunk",
+      "aliasID": "65c2a213ed6eefce4c61edde",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5c9966d2007eef78c96fdd78806619b9.png",
+      "companies": [],
+      "name": "Maran Rose",
+      "urlName": "<redacted>",
+      "voteID": "609cef82fb46f007a139fb83"
+    },
+    {
+      "_id": "609a3eb97ec48b723f387bc1",
+      "alias": "Surprising Coyote",
+      "aliasID": "664a8264b9e8e8fe6668a693",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "마법사 라온",
+      "urlName": "<redacted>",
+      "voteID": "609a3ed4a3ed6c70dcdce348"
+    },
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d03ff26f975679707203bd269ce42822.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": "<redacted>",
+      "voteID": "609a07eb4aced1747ab372eb"
+    },
+    {
+      "_id": "5f4fff6d31ff5c15381f2501",
+      "alias": "Celestial blue Dolphin",
+      "aliasID": "65c27aa0ed6eefce4c6c3055",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6339ca41fe31c02b8aa6eac72c414da8.png",
+      "companies": [],
+      "name": "~EmberVR~",
+      "urlName": "<redacted>",
+      "voteID": "6099aa4e314b053e0a368176"
+    },
+    {
+      "_id": "60995425041212366c11e57b",
+      "alias": "Educational Sloth",
+      "aliasID": "65ce3725ed6eefce4cf8825f",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Spark_TheCat",
+      "urlName": "<redacted>",
+      "voteID": "60995466041212366c11eb3e"
+    },
+    {
+      "_id": "5f990215853cba095a1bd56e",
+      "alias": "Jade green Cat",
+      "aliasID": "65ca11b5ed6eefce4c55dfea",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/056116c95567e4e001c672d4d059df26.png",
+      "companies": [],
+      "name": "Conflee",
+      "urlName": "<redacted>",
+      "voteID": "60994e61556ac91bc64a4f4f"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "__v": 0,
+  "_id": "5fd90b100170fa6be297576e",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "avatars.dynamics",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-18T07:57:36.787573Z",
+  "author": {
+    "_id": "5f2eff3cfbd1a1558bf32fc6",
+    "alias": "Jonquil Cheetah",
+    "aliasID": "65c3567bed6eefce4c27d349",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/895c096e52bd2781b6b10ce89ad0dc9e.png",
+    "created": "2020-08-08T19:38:36.177Z",
+    "name": "Aurora⠀Borealis",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2eff3cfbd1a1558bf32fc6",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-12-15T19:14:24.440Z",
+  "deletedAt": null,
+  "details": "Some 3.0 Avatars broke on the Nameplate Update and cant be used anymore what makes them useless or unusable.\nError i get in the logs when trying to get in one of the Avatars:\n2020.12.13 16:19:30 Exception  -  NullReferenceException: Object reference not set to an instance of an object.\nNameplatePositioner.ǄǅǅǅǅǄǄǄǄǄǄǅǅǄǅǅǄǄǄǄǄǅǅǅǄǅǄǄǄǄǅǅǅǅǄǄǄǄǅǅǅǄǅǅǅǄǄ () (at <00000000000000000000000000000000>:0)\nOVR.OpenVR.IVRCompositor+_CompositorBringToFront.Invoke () (at <00000000000000000000000000000000>:0)\nVRCPlayer.ǅǅǄǅǅǄǅǅǅǄǄǄǄǅǄǅǅǅǄǅǄǅǄǅǄǅǅǄǅǅǄǅǄǄǄǄǄǄǅǅǅǄǄǄǅǄǅ (UnityEngine.GameObject ǅǅǄǅǄǅǄǄǄǅǅǅǅǅǅǅǅǄǄǄǄǅǅǅǄǄǄǄǄǅǄǄǅǅǄǅǄǅǅǄǅǄǅǄǅǅǄ, VRC.SDKBase.VRC_AvatarDescriptor ǅǄǄǄǄǄǄǅǅǄǅǅǅǄǅǄǅǅǅǅǄǅǄǄǅǅǄǄǅǄǄǅǄǅǅǅǅǅǄǄǅǅǄǄǄǅǄ, System.Boolean ǄǅǄǄǅǅǅǅǅǄǅǄǅǄǄǅǄǄǅǄǅǅǄǅǄǅǅǄǄǅǄǄǄǅǄǄǅǅǅǄǅǄǄǄǄǅǄ) (at <00000000000000000000000000000000>:0)\nVRC.SDKBase.VRCPlayerApi+SetAnimatorBoolDelegate.Invoke (VRC.SDKBase.VRCPlayerApi player, System.String name, System.Boolean value) (at <00000000000000000000000000000000>:0)\nVRCAvatarManager.ǄǄǅǅǅǅǅǄǅǄǅǅǅǄǄǄǅǅǄǄǄǄǄǅǄǄǅǄǅǄǄǄǄǄǄǄǅǄǅǄǄǄǅǅǄǄǅ (UnityEngine.GameObject ǅǅǅǅǄǄǄǅǅǄǄǄǄǄǄǄǄǄǄǄǅǄǅǄǄǅǅǅǅǅǅǅǄǅǄǄǄǅǅǄǄǅǅǄǅǅǅ, System.String ǅǅǄǅǄǅǄǄǄǅǄǅǄǄǄǅǅǅǄǅǄǄǅǄǄǅǄǅǄǄǄǅǅǅǅǄǄǅǄǅǄǄǅǅǄǅǅ, System.Single ǅǄǄǅǄǅǄǄǄǄǅǅǄǄǅǅǄǅǅǄǅǄǄǅǄǄǄǅǄǄǄǅǅǅǅǄǄǅǄǅǄǅǄǅǄǅǄ) (at <00000000000000000000000000000000>:0)\nVRCAvatarManager+ǅǄǅǄǄǅǅǄǄǄǄǄǅǄǅǅǄǅǄǄǄǄǄǅǅǄǄǅǅǄǅǄǅǄǅǄǄǄǅǄǄǄǄǅǅǄǄ.MoveNext () (at <00000000000000000000000000000000>:0)\nUnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <00000000000000000000000000000000>:0)\nAlso the Animations are completly broken and dont load.\nAlso the Avatar is stuck at 0%  / 0MB\nAlso the avatar doesnt show up in the mirror but can be seen when looking down\nPlease fix this issue because the Update made my Avatar i worked hard on unusable",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7f9e4c3e90df132183c",
+  "imageURLs": [
+    "https://canny.io/images/537cf61c0a8167d65610673f4ec8d643.png"
+  ],
+  "lastUpdated": 1779090034879,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-12-15T19:14:24.441Z",
+  "subCategoryID": null,
+  "title": "Avatars 3.0 Broken After Nameplate Update",
+  "trendingScore": 2660.0714007421566,
+  "updatedAt": "2026-05-18T07:41:23.457967Z",
+  "urlName": "avatars-30-broken-after-nameplate-update",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f342e529b3d1f25a827a957",
+      "alias": "Puce Kite",
+      "aliasID": "65c321b0ed6eefce4c45bc62",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e5189d4398f8ab6a5b00caf0581fcba4.png",
+      "companies": [],
+      "name": "Ricoh.",
+      "urlName": "<redacted>",
+      "voteID": "5fdc90836f7bed5170fce459"
+    },
+    {
+      "_id": "5f2eff3cfbd1a1558bf32fc6",
+      "alias": "Jonquil Cheetah",
+      "aliasID": "65c3567bed6eefce4c27d349",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/895c096e52bd2781b6b10ce89ad0dc9e.png",
+      "companies": [],
+      "name": "Aurora⠀Borealis",
+      "urlName": "<redacted>",
+      "voteID": "5fd90b100170fa6be2975775"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "_id": "69be65ca8555c6d9dfbbf0dc",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.expressions",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T17:33:41.527081Z",
+  "author": {
+    "_id": "651d1fb48896d5c2716e843b",
+    "alias": "Quixotic Moose",
+    "aliasID": "65ce914d0129d7ae4477cf35",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d5a3871c3b0d1e6d28220833af7d3cba.png",
+    "created": "2023-10-04T08:17:56.982Z",
+    "name": "Ðismay",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "651d1fb48896d5c2716e843b",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-21T09:32:58.474Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is an idea for the VRC Animator Play Audio feature that I’d like to propose. It may not be a strictly necessary feature, but for complex system customization, this might be essential.\n\nThis feature would allow the [Animator State] to end when the duration of the currently playing audio clip finishes. By using a calculated speed multiplier float from the Animator Play Audio State Behavior.\n\nNormally, I will manually do this by calculate the [Speed] value by taking 1 divided by the duration of the audio clip. This gives the proper speed for that state. For example, if the audio clip is 2.5 seconds long, then 1 / 2.5 equals 0.4. If you set the [Speed] to 0.4 while using a 1-second keyframe animation, this animation state will end exactly at the same time the audio finishes playing. (2.5 seconds : 0.4 animation speed)\n\nThe idea is to make VRC Animator Play Audio calculate a user-defined speed multiplier float (like Physbone prefix). Then user can use this calculated float in the [Multiplier] field to make any animation state speed end at the same time with the current playing audio.\n\nPlease refer to the attached image for better understanding.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69be65ca8555c6d9dfbbf10b",
+  "imageURLs": [
+    "https://canny-assets.io/images/2e7acf82ece522c6b2d361ff866e10cb.png"
+  ],
+  "lastUpdated": 1779038886981,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 7,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69be65ca8555c6d9dfbbf0dc/1196420289.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 7,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-21T09:32:58.474Z",
+  "subCategoryID": null,
+  "title": "[Animator Play Audio] Ends the current animation state at the same time as the currently playing audio clip.",
+  "trendingScore": 2937.780970949747,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "animator-play-audio-ends-the-current-animation-state-at-the-same-time-as-the-cur",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "649f0b25b002f7e798042978",
+      "alias": "Permanent Lungfish",
+      "aliasID": "664f77d8b9e8e8fe664235b1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/769400ff269a04b96f0fcf1fe0f3a884.png",
+      "companies": [],
+      "name": "insomnyawolf",
+      "urlName": "<redacted>",
+      "voteID": "69e5405c65c4cf9dd9129983"
+    },
+    {
+      "_id": "5a995d0bbf71f62789f7311d",
+      "alias": "Zircon blue Chameleon",
+      "aliasID": "65c2d3d2ed6eefce4cafc83d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c70b7d92af598db0ef814ab09309a86e.png",
+      "companies": [],
+      "name": "Sophie123p",
+      "urlName": "<redacted>",
+      "voteID": "69d13b1d6c6843887ace86e8"
+    },
+    {
+      "_id": "5adf894ed198de6f75b8d7d3",
+      "alias": "Net Basilisk",
+      "aliasID": "65d06e8d0129d7ae44dfb287",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a2f1d9284966b9886e4572766cbd9622.png",
+      "companies": [],
+      "name": "Based Bass",
+      "urlName": "<redacted>",
+      "voteID": "69c66906bcda4ee632441224"
+    },
+    {
+      "_id": "62df6e5f8d2002467311cb42",
+      "alias": "Amazing Pinniped",
+      "aliasID": "69c63a4cbcda4ee632a1fcde",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3025f235023b5f2cc1bae5f857c339c1.png",
+      "companies": [],
+      "name": "零樱Sakura",
+      "urlName": "<redacted>",
+      "voteID": "69c63a9abcda4ee632b4144b"
+    },
+    {
+      "_id": "64682a8c5fe18709835c9535",
+      "alias": "Forthcoming Pike",
+      "aliasID": "670c513c0f7e723d6e8c665d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fc4d3a08c4336f099398616ecff75696.png",
+      "companies": [],
+      "name": "Haru Rose",
+      "urlName": "<redacted>",
+      "voteID": "69c3b2f6bcda4ee632457601"
+    },
+    {
+      "_id": "682510e97489152ad32e3914",
+      "alias": "Honey Manatee",
+      "aliasID": "682510e9cd82760dac71a99b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/780f185391b5f6e96fdb5fbc36eb7856.png",
+      "companies": [],
+      "name": "VRDeivid",
+      "urlName": "<redacted>",
+      "voteID": "69bf1a97bcda4ee6329db156"
+    },
+    {
+      "_id": "651d1fb48896d5c2716e843b",
+      "alias": "Quixotic Moose",
+      "aliasID": "65ce914d0129d7ae4477cf35",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d5a3871c3b0d1e6d28220833af7d3cba.png",
+      "companies": [],
+      "name": "Ðismay",
+      "urlName": "<redacted>",
+      "voteID": "69be65cabcda4ee632c3d640"
+    }
+  ]
+}

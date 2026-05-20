@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5dfd7b1910ebbc6bff50f045",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:50:01.904316Z",
+  "author": {
+    "_id": "5b93e4741e75674a7ea03e2f",
+    "alias": "Peacock blue Gibbon",
+    "aliasID": "65c2a213ed6eefce4c61ed45",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8336f0427b80304d01f2fa8d2fd52ef3.png",
+    "created": "2018-09-08T15:02:12.081Z",
+    "name": "Toawa",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b93e4741e75674a7ea03e2f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-21T01:53:29.475Z",
+  "deletedAt": null,
+  "details": "Numeric types should be automatically coerced between nodes; for example there shouldn't have to be a Convert.ToFloat to change an int to a float, they should just connect.  If there are over/underflow concerns, maybe indicate that with line color, but I think in practice that probably won't be a concern.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9be4c3e90df158a730",
+  "imageURLs": [],
+  "lastUpdated": 1779223368168,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-21T01:53:29.475Z",
+  "subCategoryID": null,
+  "title": "Numeric Type Coercieon",
+  "trendingScore": 2607.9901205502692,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "numeric-type-coercieon",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b93e4741e75674a7ea03e2f",
+      "alias": "Peacock blue Gibbon",
+      "aliasID": "65c2a213ed6eefce4c61ed45",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8336f0427b80304d01f2fa8d2fd52ef3.png",
+      "companies": [],
+      "name": "Toawa",
+      "urlName": "<redacted>",
+      "voteID": "5dfd7b1910ebbc6bff50f04d"
+    }
+  ]
+}

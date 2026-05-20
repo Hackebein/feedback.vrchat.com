@@ -1,0 +1,112 @@
+{
+  "__v": 0,
+  "_id": "5ebf5e6f295dc165447af850",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:29:01.880707Z",
+  "author": {
+    "_id": "5eb6e3e0ddaa0f5d14a97d43",
+    "alias": "Remarkable Wallaby",
+    "aliasID": "65c7d23fed6eefce4c93fd58",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2020-05-09T17:09:52.539Z",
+    "name": "PileOfMeeps",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5eb6e3e0ddaa0f5d14a97d43",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-16T03:30:55.839Z",
+  "deletedAt": null,
+  "details": "https://i.gyazo.com/7f1b832d8974550795a310093aa08d47.gif\nWhen you attach a new udon behavior to a prefab in prefab edit mode (not scene mode) the button won't create a new asset. This makes it hard to mass edit prefabs.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dace4c3e90df158f8bb",
+  "imageURLs": [
+    "https://canny.io/images/9b13aceb8d8306db10f65b9b81953fb3.png"
+  ],
+  "lastUpdated": 1779239268810,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-16T03:30:55.839Z",
+  "subCategoryID": null,
+  "title": "Can't create udon behaviors in prefab edit mode.",
+  "trendingScore": 2664.641674923942,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "cant-create-udon-behaviors-in-prefab-edit-mode",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f296274667e9234c9e5a439",
+      "alias": "Serious Gull",
+      "aliasID": "65c2a213ed6eefce4c61e29c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c37adc238e472b004a06fdb4a662a72.png",
+      "companies": [],
+      "name": "ville672",
+      "urlName": "<redacted>",
+      "voteID": "600eaff4502a222c4c54848d"
+    },
+    {
+      "_id": "5b5936c57bdf767d97203e58",
+      "alias": "Mechanical Wildfowl",
+      "aliasID": "65c2a219ed6eefce4c62e39d",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/4375e4d0705996a3cb2916d41c510145.png",
+      "companies": [],
+      "name": "AkiraMiura",
+      "urlName": "<redacted>",
+      "voteID": "5ec2f728c434a220ba46a09c"
+    },
+    {
+      "_id": "5eb6e3e0ddaa0f5d14a97d43",
+      "alias": "Remarkable Wallaby",
+      "aliasID": "65c7d23fed6eefce4c93fd58",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "PileOfMeeps",
+      "urlName": "<redacted>",
+      "voteID": "5ebf5e70295dc165447af858"
+    }
+  ]
+}

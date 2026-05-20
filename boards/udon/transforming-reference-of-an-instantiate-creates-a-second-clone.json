@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "5e88a610d87cbd0b05f2aff5",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:55:38.770580Z",
+  "author": {
+    "_id": "5e851acd36397117cbdb2d53",
+    "alias": "Curved Sheep",
+    "aliasID": "65c63179ed6eefce4c8e2176",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2020-04-01T22:50:53.503Z",
+    "name": "Fanvaron",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e851acd36397117cbdb2d53",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-04T15:21:52.149Z",
+  "deletedAt": null,
+  "details": "Version: VRCSDK3+UDON-2020.04.03.13.19\nin the 04.01 Version the compiler gave an error when using the clone reference of the Instantiate node.\nThe error is now gone, instead the object gets clones once, remains in the spawned position. If the Reference is used another Clone gets created which then executes all commands on that reference, basically leaving an orphaned copy at the initial position.\nMy Setup is a cube as a Button which has the Behaviour, and an Orb as the Object in the public reference (same problem when using objects in the scene or prefabs)\n ```\nAM1U207bMBh+lcrXceXEdg6VuBkwhCbGNKA3A0W28xtlS+0pB6Br+2Rc7JH2CnNbeloYylgnTc2FD7X9f4f/+/H4fYLuRNEAGnyaIN0UxXsxchN0fAemTs/NmW0qOLL3BnmoyTO3wyKhiJIhpgHPMCOcYkGzEIPkvtYhU4SG7s9fbZXXuTVoMEEPaIApDfvEQ2M3ZIz1ycxDxmZwdXpUubdvPKQLe/80QzLUUSiEjwmLEszCMMAi5tK9FhPqMx3EINDN8obhvPzFHTNvB8JQlLmQBaRXJq/Hx+Y2N3Dits7lZ1D1Gg9NfBEHQHHmQ4RZEkdYEsox0URo7Sud8GfxrOGE8+EuHOQObL5dcL+WPUHNvL5lVcOlFhOUm6oWRsHpERrML6/qMje3T9sIzaH++bGLcVXDqH+xWPR6o0rZssil1xtCWTlsB06X+c/rHTZF3ZRwYKCpS1F4vQ+NLHL1DsaX9guYAxlFgise+gllQOJkauB+w+2K+b8r8421BQiz3zovy+Z/LOutKKrX1oVmLed/PDxdHKlzUUM/Tbdm6fPt8JvldZd06sh2l7D4haZHiZ/4KvYl1lK7q8BX7lLIsOZMackj13p0SlArHISSjBIcAmeYSRljoTTBEIJOGPMdn6QVDvsh9gTqdG3uFTVdUDxDTcDIipsgjtsJsv/U+Ift3ylEW3RuWe6yFKbSthw5t1aO5RVbO74cOqy2pGm6RDK0jv+NQTu4oqUCDzYG5e0YjxXVEQsCLJOEO2kzB0uLCMeuC3jIssQnckraGY/25L9X5cEWYf0nxrze9uKhLeHMZk0BG+lJV+mNk286uUYP1+5td+Aajd0oWIy+LddmLyq9CRcn9a2Tul5Jv6P12hBrhbuI0VY44MFKYeoHLYW75ForgvYVLjeznw==\n```",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da5e4c3e90df158d8fc",
+  "imageURLs": [
+    "https://canny.io/images/7558ac12384ddd885d1dc2ff30f7f330.jpg"
+  ],
+  "lastUpdated": 1779223411017,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-04T15:21:52.149Z",
+  "subCategoryID": null,
+  "title": "Transforming Reference of an Instantiate creates a second Clone",
+  "trendingScore": 2623.0703167762945,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "transforming-reference-of-an-instantiate-creates-a-second-clone",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e851acd36397117cbdb2d53",
+      "alias": "Curved Sheep",
+      "aliasID": "65c63179ed6eefce4c8e2176",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Fanvaron",
+      "urlName": "<redacted>",
+      "voteID": "5e88a610d87cbd0b05f2affd"
+    }
+  ]
+}

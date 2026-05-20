@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "60785d954f59d67bd3360e4e",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-18T09:30:24.918053Z",
+  "author": {
+    "_id": "60785c18ba4ce0134a69cb24",
+    "alias": "Glacier Beetle",
+    "aliasID": "65c31609ed6eefce4c14cfff",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/24face48d898cbfbf92ed92affd8d763.png",
+    "created": "2021-04-15T15:30:32.124Z",
+    "name": "Lilithe Lotor",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60785c18ba4ce0134a69cb24",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-04-15T15:36:53.922Z",
+  "deletedAt": null,
+  "details": "Even on different computers, all with a fresh new copy of Windows 10 I can't get video players to work consistently.\nIt seems to be something on a Unity level with the video player itself, and not something I can actually fix with UdonSharp.\nIs there any way we could set more sane defaults in the video player? Make it more friendly to world creators?\nI would prefer for videos to keep re-trying to load, but backing off by an increasing amount of time each retry.\nFailing that, I think more friendly error messages from the video back end would be helpful for world creators.\n(I have had some success with USharpVideo, but nothing I do seems to fix the video player errors that crop up after re-joining a level.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb891e4c3e90df134b3e6",
+  "imageURLs": [],
+  "lastUpdated": 1779096255321,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-04-15T15:36:53.922Z",
+  "subCategoryID": null,
+  "title": "Video Playback Never Works for Me",
+  "trendingScore": 2677.4396935318055,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "video-playback-never-works-for-me",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b6b4e8cb1b04a6db0be465d",
+      "alias": "Lapis lazuli Peacock",
+      "aliasID": "65c287f9ed6eefce4c79635f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5db3e0e82285828ee68cb0bf2e3fda5f.png",
+      "companies": [],
+      "name": "Kizzy",
+      "urlName": "<redacted>",
+      "voteID": "607e04705faa776af575df76"
+    },
+    {
+      "_id": "60785c18ba4ce0134a69cb24",
+      "alias": "Glacier Beetle",
+      "aliasID": "65c31609ed6eefce4c14cfff",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/24face48d898cbfbf92ed92affd8d763.png",
+      "companies": [],
+      "name": "Lilithe Lotor",
+      "urlName": "<redacted>",
+      "voteID": "60785d964f59d67bd3360e55"
+    }
+  ]
+}

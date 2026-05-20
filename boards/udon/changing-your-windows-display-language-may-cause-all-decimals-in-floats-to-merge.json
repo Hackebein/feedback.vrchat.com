@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "61ac217a756876674d6f2144",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:02:02.476569Z",
+  "author": {
+    "_id": "5f246cafe56f5315fbe79a72",
+    "alias": "Quiet Wallaby",
+    "aliasID": "65c26de3ed6eefce4c583d5b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/531c28a6a0ac9d443e38766eb58e870b.png",
+    "created": "2020-07-31T19:10:39.675Z",
+    "name": "xCirrex",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f246cafe56f5315fbe79a72",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-12-05T02:18:35.000Z",
+  "deletedAt": null,
+  "details": "Swapped my system display language (in my case over to English from Swedish). This caused all commas in floats to disappear. As an example, a float of 2.4 became 24.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cde4c3e90df1358ba0",
+  "imageURLs": [],
+  "lastUpdated": 1778979251004,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-12-05T02:18:35.000Z",
+  "subCategoryID": null,
+  "title": "Changing your windows display language may cause all decimals in floats to merge into a float without the comma.",
+  "trendingScore": 2710.1354669904144,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "changing-your-windows-display-language-may-cause-all-decimals-in-floats-to-merge",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f246cafe56f5315fbe79a72",
+      "alias": "Quiet Wallaby",
+      "aliasID": "65c26de3ed6eefce4c583d5b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/531c28a6a0ac9d443e38766eb58e870b.png",
+      "companies": [],
+      "name": "xCirrex",
+      "urlName": "<redacted>",
+      "voteID": "61ac217b756876674d6f214b"
+    }
+  ]
+}

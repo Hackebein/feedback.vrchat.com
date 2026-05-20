@@ -1,0 +1,96 @@
+{
+  "__v": 0,
+  "_id": "61c74b537bd6f80f173932a9",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T00:59:15.475864Z",
+  "author": {
+    "_id": "5f61e24d763a9b7077455ad5",
+    "alias": "Systematic Dolphin",
+    "aliasID": "65d375280129d7ae44398e20",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/809fd23b46c77c96ba845e0670ac9092.png",
+    "created": "2020-09-16T10:00:45.597Z",
+    "name": "Markcreator",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f61e24d763a9b7077455ad5",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-12-25T16:48:19.868Z",
+  "deletedAt": null,
+  "details": "VRChat Version:\nVRCSDK3-AVATAR-2021.11.24.16.20\nDescription of the bug:\nOpening an avatar without an Animator component causes the SDK Builder menu to not render as expected and throw a MissingComponentException.\nIt is probably preferable to catch this edge case and have the Builder UI recommend a fix.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d3e4c3e90df1359793",
+  "imageURLs": [
+    "https://canny.io/images/c44e929ce744576ef7071b19523027c2.png"
+  ],
+  "lastUpdated": 1778979209592,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-12-25T16:48:19.868Z",
+  "subCategoryID": null,
+  "title": "Avatar without Animator causes Builder menu to break",
+  "trendingScore": 2716.133181044347,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "avatar-without-animator-causes-builder-menu-to-break",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61d137772626441bfae98c78",
+      "alias": "Orange Chickadee",
+      "aliasID": "65e68412a6e3ea79ddda71fd",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/d1a7d90566ad42c311df64f8307e9408.png",
+      "companies": [],
+      "name": "FantasyGensokyo",
+      "urlName": "<redacted>",
+      "voteID": "61d138147adccd0f1fa51f48"
+    },
+    {
+      "_id": "5f61e24d763a9b7077455ad5",
+      "alias": "Systematic Dolphin",
+      "aliasID": "65d375280129d7ae44398e20",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/809fd23b46c77c96ba845e0670ac9092.png",
+      "companies": [],
+      "name": "Markcreator",
+      "urlName": "<redacted>",
+      "voteID": "61c74b537bd6f80f173932b0"
+    }
+  ]
+}

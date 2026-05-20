@@ -1,0 +1,151 @@
+{
+  "__v": 0,
+  "_id": "613d0acfb0edc503f76abc6e",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T00:33:23.894571Z",
+  "author": {
+    "_id": "5a9fe9983955314156acc4f7",
+    "alias": "Enthusiastic Mole",
+    "aliasID": "65c27aabed6eefce4c6e02cb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e51a004c9a0dcb771981b5d873f49548.png",
+    "created": "2018-03-07T13:31:04.903Z",
+    "name": "kawashirov",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a9fe9983955314156acc4f7",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "613d16fe9026f96e426afb40",
+      "author": {
+        "_id": "5a9fe9983955314156acc4f7",
+        "alias": "Enthusiastic Mole",
+        "aliasID": "65c27aabed6eefce4c6e02cb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e51a004c9a0dcb771981b5d873f49548.png",
+        "created": "2018-03-07T13:31:04.903Z",
+        "name": "kawashirov",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-09-11T20:52:14.617Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/3b75fa14077169347ae5a4161cf03329.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "613d0acfb0edc503f76abc6e",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I figured out source of a problem. There is should be try/catch for ReflectionTypeLoadException. It is not always possible to load every type and it is not always necessary, but still possible to get (almost) all the types from ReflectionTypeLoadException.Types.\nSee:\nhttps://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly.gettypes?view=net-5.0\nhttps://docs.microsoft.com/en-us/dotnet/api/system.reflection.reflectiontypeloadexception.types?view=net-5.0#System_Reflection_ReflectionTypeLoadException_Types",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-09-11T20:00:15.398Z",
+  "deletedAt": null,
+  "details": "Using VRCSDK3-AVATAR-2021.08.11.15.16, this error spams ton times per second:\nCaught ReflectionTypeLoadException in UpdateDelegator Job: Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.\n  at (wrapper managed-to-native) System.Reflection.Assembly.GetTypes(System.Reflection.Assembly,bool)\n  at System.Reflection.Assembly.GetTypes () [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 \n  at VRC.Tools.HasType (System.String typeStr) [0x0000f] in <45a261abf1cf498796bb1d4ad1cf974a>:0 \n  at VRC.Tools.get_isClient () [0x0000c] in <45a261abf1cf498796bb1d4ad1cf974a>:0 \n  at VRC.Core.API+<>c__DisplayClass35_0.<SendRequestInternal>g__FinishSendingRequest|0 () [0x003fb] in <45a261abf1cf498796bb1d4ad1cf974a>:0 \n  at VRC.Core.API.SendRequestInternal (System.String endpoint, BestHTTP.HTTPMethods method, VRC.Core.ApiContainer responseContainer, System.Collections.Generic.Dictionary`2[TKey,TValue] requestParams, System.Boolean authenticationRequired, System.Boolean disableCache, System.Single cacheLifetime, System.Int32 retryCount, VRC.Core.API+CredentialsBundle credentials, BestHTTP.Forms.HTTPFormBase formData) [0x000df] in <45a261abf1cf498796bb1d4ad1cf974a>:0 \n  at VRC.Core.API+<>c__DisplayClass34_0.<SendRequest>b__0 () [0x00000] in <45a261abf1cf498796bb1d4ad1cf974a>:0 \n  at VRC.Core.UpdateDelegator.Update () [0x0003a] in <45a261abf1cf498796bb1d4ad1cf974a>:0 \nUnityEngine.Debug:LogErrorFormat (string,object[])\nVRC.Core.UpdateDelegator:Update ()\nVRC.Core.UpdateDelegator:EditorUpdate ()\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n\nThis is very annoing and distractive. And the SDK is just not working any network-related actions just stuck. For example I just can not log in.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b3e4c3e90df1354099",
+  "imageURLs": [
+    "https://canny.io/images/11f1f3a9c59df29687c724afe604ff4d.png",
+    "https://canny.io/images/3373d51bb693486877d699f30d0938fe.png"
+  ],
+  "lastUpdated": 1779275476981,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-09-11T20:00:15.398Z",
+  "subCategoryID": null,
+  "title": "Error spam: Caught ReflectionTypeLoadException in UpdateDelegator Job: Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.",
+  "trendingScore": 2757.772437169312,
+  "updatedAt": "2026-05-20T11:11:18.557506Z",
+  "urlName": "error-spam-caught-reflectiontypeloadexception-in-updatedelegator-job-exception-o",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b41e22ad33b93607ca90e7e",
+      "alias": "Flax Heron",
+      "aliasID": "65c2a219ed6eefce4c62e372",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/96638d6f275a959a112dac4c8b22ae85.png",
+      "companies": [],
+      "name": "Ostinyo",
+      "urlName": "<redacted>",
+      "voteID": "636a25626d511351b653c9be"
+    },
+    {
+      "_id": "5ce3fb59dde4c63f12a2bf52",
+      "alias": "Strange Bear",
+      "aliasID": "65c712b1ed6eefce4c32d2bb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/57a6cdbd85e6c1c1120df2e5662885ea.png",
+      "companies": [],
+      "name": "Chouny",
+      "urlName": "<redacted>",
+      "voteID": "613d16a6b6bccd08c1b16c22"
+    },
+    {
+      "_id": "5a9fe9983955314156acc4f7",
+      "alias": "Enthusiastic Mole",
+      "aliasID": "65c27aabed6eefce4c6e02cb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e51a004c9a0dcb771981b5d873f49548.png",
+      "companies": [],
+      "name": "kawashirov",
+      "urlName": "<redacted>",
+      "voteID": "613d0acfb0edc503f76abc75"
+    }
+  ]
+}

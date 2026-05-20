@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "62db85f1f25b136464bf2dea",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-16T19:56:21.732083Z",
+  "author": {
+    "_id": "6035ec519adad6780b906c51",
+    "alias": "Daffodil yellow Reptile",
+    "aliasID": "65c28a4bed6eefce4cd292eb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5cf08f5afbe86d9c799fce2793111245.png",
+    "created": "2021-02-24T06:04:01.493Z",
+    "name": "kitlith",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6035ec519adad6780b906c51",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-07-23T05:24:01.007Z",
+  "deletedAt": null,
+  "details": "The idea is to create a new component that controls the state of some other objects, and prevents the state from being overridden by animations. For the sake of discussion, let's call it the \"Select Object Set\" Component.\nThe Select Object Set component would consist of an animate-able index value to select the active set, and an array of object sets. Each object set would consist of another array of GameObject references (or something else, but this seems like the most generic way of doing it).\nAt runtime, only a single Object Set would be active, selected by the index on the Select Object Set Component, and can be changed by an animation.\nWhen scanning the avatar to determine performance rank, you should be able to take the maximum performance rank impact of all of the object sets within a Select Object Set component, rather than their sum (assuming there don't happen to be any bypasses >_>). In the end, the scanning process should only be a little bit more complicated than the currently, and should still assume the worst case scenario, but the worst case scenario should be *better* because there is a runtime guarantee that only one of these object sets is present at once.\nThe biggest question to me about whether this proposal would work comes down to the bit i mentioned above, preventing animations from enabling the objects managed by this component. I think one way you could handle this is by looping over all AnimationClips on load, and attempting to remove AnimationCurves that target the enabled property on affected GameObjects via AnimationClip.SetCurve. I'm not sure if there's another good way to accomplish this, but this should at least be *a* way to do it.\nAn interesting implementation detail is how you'd handle two object sets (in separate components) that both target the same object? I don't anticipate this being a common practice, since separate Select Object Set components should be orthogonal to each-other, but perhaps there is some behavior that might be useful to clever creators.\nWe should probably also prevent the Select Object Set component from being disabled by animations (lol), this can apparently be done by inheriting from Component instead of Behaviour.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb900e4c3e90df1362df6",
+  "imageURLs": [],
+  "lastUpdated": 1779233533039,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-07-23T05:24:01.007Z",
+  "subCategoryID": null,
+  "title": "Explicit state enumeration for Performance Rank Calculations",
+  "trendingScore": 2743.4166714568146,
+  "updatedAt": "2026-05-19T23:33:49.452084Z",
+  "urlName": "explicit-state-enumeration-for-performance-rank-calculations",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60cace9c3fa71e655b3afa8a",
+      "alias": "Outstanding Wildcat",
+      "aliasID": "678eecf949f71d913e6db492",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "qdot",
+      "urlName": "<redacted>",
+      "voteID": "62db875cf25b136464bfe17b"
+    },
+    {
+      "_id": "6035ec519adad6780b906c51",
+      "alias": "Daffodil yellow Reptile",
+      "aliasID": "65c28a4bed6eefce4cd292eb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5cf08f5afbe86d9c799fce2793111245.png",
+      "companies": [],
+      "name": "kitlith",
+      "urlName": "<redacted>",
+      "voteID": "62db85f1f25b136464bf2e0a"
+    }
+  ]
+}

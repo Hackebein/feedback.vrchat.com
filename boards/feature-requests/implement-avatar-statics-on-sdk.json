@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "5bf0c524c7ad052c348e6f5f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-18T18:54:18.887165Z",
+  "author": {
+    "_id": "5b363c7c0bf7a0300effe994",
+    "alias": "Quartz Walrus",
+    "aliasID": "65c29b3ced6eefce4c5ece57",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/562764777e65a7bb8f48bc1d28ba9f22.jpg",
+    "created": "2018-06-29T14:04:44.481Z",
+    "name": "inexoravel",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b363c7c0bf7a0300effe994",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-11-18T01:49:24.310Z",
+  "deletedAt": null,
+  "details": "With the new guidelines for uploading world public avatars, we have a gigantic number of worlds of avatars being disapproved in the test. The problem is, we creators do not have all this data at hand, a great example is the dynamicBoneAffects, we have only an idea of ​​what may be wrong with our avatars. Open one by one in the unity to know for example if the number of materials is above the allowed demands a lot of time.\n\nAsking the moderators to send a table with all the information about the avatars for us seems to be very costly for them and for us and sometimes time, because sometimes we go wrong and we do not correct everything that should and we would always ask for a table with statistics regularly does not seem like a good idea.\n\nSo I ask for an implementation of the statistics in the SDK, my suggestion is to put an advanced option in Manage Upload Cotent or simply a menu with Download Avatar Statics in .csv.\n\nAlso: implement the quantity limits of: material, dynamicBoneAffects, etc. at the time of upload as the polygons also seems a good idea.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d6ae4c3e90df157d83f",
+  "imageURLs": [],
+  "lastUpdated": 1779130033010,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-11-18T01:49:24.310Z",
+  "subCategoryID": null,
+  "title": "Implement avatar statics on SDK.",
+  "trendingScore": 2551.9150637847633,
+  "updatedAt": "2026-05-18T18:48:18.764654Z",
+  "urlName": "implement-avatar-statics-on-sdk",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5bab4096e98ddc66e3477da5",
+      "alias": "Bisque Kite",
+      "aliasID": "65c577aeed6eefce4cc5c02b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/4b5c989fab0ee6dde0290c7246d53736.jpg",
+      "companies": [],
+      "name": "Little Mouse",
+      "urlName": "<redacted>",
+      "voteID": "5bf1c4b46db2b5471c1d1107"
+    },
+    {
+      "_id": "5b363c7c0bf7a0300effe994",
+      "alias": "Quartz Walrus",
+      "aliasID": "65c29b3ced6eefce4c5ece57",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/562764777e65a7bb8f48bc1d28ba9f22.jpg",
+      "companies": [],
+      "name": "inexoravel",
+      "urlName": "<redacted>",
+      "voteID": "5bf0c5246db2b5471c1cc351"
+    }
+  ]
+}

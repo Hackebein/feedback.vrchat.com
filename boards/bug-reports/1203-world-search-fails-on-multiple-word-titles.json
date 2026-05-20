@@ -1,0 +1,96 @@
+{
+  "__v": 0,
+  "_id": "629474bdc3b9f80b7889b086",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-18T21:43:56.182863Z",
+  "author": {
+    "_id": "5d458c2bce0d0218577b8c24",
+    "alias": "Relaxed Anteater",
+    "aliasID": "65c281e7ed6eefce4c8eb136",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1505826ff0e7dc8ba7f002f8ffd76cce.png",
+    "created": "2019-08-03T13:29:15.993Z",
+    "name": "Skairu",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5d458c2bce0d0218577b8c24",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-30T07:39:41.686Z",
+  "deletedAt": null,
+  "details": "Searching for a world by its title will not work if it consists of multiple words. Attached is a demonstration of searching for the world \"The Deep Dusk\" and its results yielding worlds that only contain single words from the title.\nExpected behaviour is maybe results that are prioritised on how many of the words in the title match.\nThis is a duplicate of this issue, that has been marked as completed (although the issue persists): https://feedback.vrchat.com/bug-reports/p/searching-for-maps-by-title-doesnt-actually-work\nAlso a potential duplicate of this feature request: https://feedback.vrchat.com/feature-requests/p/and-condition-for-world-search",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8fbe4c3e90df136150e",
+  "imageURLs": [
+    "https://canny.io/images/38348e38c28514d58e342cefc79fc417.png",
+    "https://canny.io/images/186a15c56521acb7e5c7acc5ebf159e4.png"
+  ],
+  "lastUpdated": 1779140158713,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-30T07:39:41.686Z",
+  "subCategoryID": null,
+  "title": "[1203] World search fails on multiple-word titles",
+  "trendingScore": 2735.7163360386758,
+  "updatedAt": "2026-05-18T21:36:21.404734Z",
+  "urlName": "1203-world-search-fails-on-multiple-word-titles",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ba47c461a7723782e67558a",
+      "alias": "Favourite Possum",
+      "aliasID": "65c36f1bed6eefce4c8570dd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2e512a5a63c082d0cfce023750d62733.png",
+      "companies": [],
+      "name": "Lolcrab",
+      "urlName": "<redacted>",
+      "voteID": "629479a1db11af0b61b8dd6d"
+    },
+    {
+      "_id": "5d458c2bce0d0218577b8c24",
+      "alias": "Relaxed Anteater",
+      "aliasID": "65c281e7ed6eefce4c8eb136",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1505826ff0e7dc8ba7f002f8ffd76cce.png",
+      "companies": [],
+      "name": "Skairu",
+      "urlName": "<redacted>",
+      "voteID": "629474bdc3b9f80b7889b0a4"
+    }
+  ]
+}

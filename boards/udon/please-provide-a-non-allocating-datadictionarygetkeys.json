@@ -1,0 +1,102 @@
+{
+  "_id": "69ed42a53c72bb8ba052f886",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T13:53:48.803974Z",
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-25T22:39:33.512Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The DataDictionary.GetKeys function allocates a new DataList to contain the list of keys; as this is the only way to iterate a DataDictionary, this forces allocation pressure to occur every time a DataDictionary is iterated. Please provide a way to avoid this allocation - perhaps have an overload where you can pass in a DataList?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69ed42a53c72bb8ba052f89c",
+  "imageURLs": [],
+  "lastUpdated": 1779111074351,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69ed42a53c72bb8ba052f886/700849747.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-25T22:39:33.512Z",
+  "subCategoryID": null,
+  "title": "Please provide a non-allocating DataDictionary.GetKeys",
+  "trendingScore": 2939.7438900305874,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "please-provide-a-non-allocating-datadictionarygetkeys",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2cb35431807b34c94a2618",
+      "alias": "Mysterious Eagle",
+      "aliasID": "65c290c9ed6eefce4cd4009e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9d6653c011d0e9287519e69ba0bcf40a.png",
+      "companies": [],
+      "name": "ureishi",
+      "urlName": "<redacted>",
+      "voteID": "69f2748a4a48bed189db6ca3"
+    },
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": "<redacted>",
+      "voteID": "69ed42a64a48bed189b7139a"
+    }
+  ]
+}

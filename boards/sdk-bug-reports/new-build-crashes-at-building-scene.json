@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "5ac83947c9dba010c9c3cdd4",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-18T20:51:55.133802Z",
+  "author": {
+    "_id": "5ac83805c9dba010c9c3cdbb",
+    "alias": "Liable Yak",
+    "aliasID": "65ba0782ed6eefce4c8d582b",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3fba220ecd849f6007bbdc042e65904b.jpg",
+    "created": "2018-04-07T03:16:21.999Z",
+    "name": "Kroama Amaork",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ac83805c9dba010c9c3cdbb",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-04-07T03:21:43.053Z",
+  "deletedAt": null,
+  "details": "After trying 20 times in different ways, every time i try to \"New Build\" my world, either as a Test or Publish, the build crashes to desktop half-way thorugh the \"Building scene\" step. \nOn my crash, i have zero errors nor any crash report. I have tried reimporting the SDK, deleting every gameobject minus the Scene itself, floor, and the Main Camera. I have tried this without the Camera as well. It crashes the same.\nOn another separate project, i am able to run a Test Build so it is not my Unity. \n\nThis is the only error i get on re-entering my project. \nAssets/VRCSDK/Dependencies/VRChat/Editor/VRC_SdkControlPanel.cs(11,17): warning CS0414: The private field `VRC_SdkControlPanel.forceNewFileCreation' is assigned but its value is never used",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d4fe4c3e90df1575b25",
+  "imageURLs": [
+    "https://canny.io/images/a39de6faf57cf326c02d0b99cd89d99f.png"
+  ],
+  "lastUpdated": 1779136873914,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5ac83947c9dba010c9c3cdd4/2121132189.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-04-07T03:21:43.053Z",
+  "subCategoryID": null,
+  "title": "New Build crashes at Building Scene",
+  "trendingScore": 2724.2200666848544,
+  "updatedAt": "2026-05-18T20:41:21.461535Z",
+  "urlName": "new-build-crashes-at-building-scene",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ac83805c9dba010c9c3cdbb",
+      "alias": "Liable Yak",
+      "aliasID": "65ba0782ed6eefce4c8d582b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3fba220ecd849f6007bbdc042e65904b.jpg",
+      "companies": [],
+      "name": "Kroama Amaork",
+      "urlName": "<redacted>",
+      "voteID": "5ac839479dc2cc47b148b784"
+    }
+  ]
+}

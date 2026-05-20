@@ -1,0 +1,142 @@
+{
+  "__v": 0,
+  "_id": "625db800e6be23529dbfe7fd",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T05:40:32.685264Z",
+  "author": {
+    "_id": "5ae036cde69bb76ba5072775",
+    "alias": "Fair Weasel",
+    "aliasID": "65ba09bded6eefce4cc86976",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/6a911b4c51497456ab6fa0772418d97d.png",
+    "created": "2018-04-25T08:05:33.825Z",
+    "name": "lexidoll",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ae036cde69bb76ba5072775",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "6261d750280aee529654012d",
+      "author": {
+        "_id": "60671c2bd6e3a737fd98aae2",
+        "alias": "Cyan Scallop",
+        "aliasID": "65c52c2bed6eefce4c2a89bd",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/782c2d448d28c76db46f056537b27ce0.png",
+        "created": "2021-04-02T13:29:15.822Z",
+        "name": "KittyMixikins",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2022-04-21T22:14:40.314Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/54f9246be8f0bd78fc452b5d7748135e.png",
+        "https://canny.io/images/8b9d901014deb78346b8db68071fc650.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "625db800e6be23529dbfe7fd",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I am having this very same issue with the avatars SDK that was just updated today for the avatar dynamics update (VRCSDK3-AVATAR-2022.04.21.03.29_Public). This is the exact one as downloaded from the website, and reimporting does not fix the issue. The upload screen does not reflect that this is an avatar update, but instead provides a nonfunctional \"new avatar creation\" screen. Creating a new scene with a new \"Main Camera\" also does not fix the issue.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-04-18T19:12:00.209Z",
+  "deletedAt": null,
+  "details": "An issue I've had in two separate unity projects that are up to date using the latest SDK from vrchat.net \nThis particular version was downloaded from the git via package manager. \nA single null reference to the portrait camera breaks the upload screen when attempting to upload and publish, the upload button simply does not work and seems to load into a default state, with the max player count set to 64 and no labs button.\nThis null ref only shows up when building and publishing once play mode begins and is related to the portrait camera used for the upload picture.\nPerhaps the sdk should have a is valid check on this? as I believe this single null ref is all that's preventing the upload screen from loading correctly. at least in my particular case.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8e8e4c3e90df135dd25",
+  "imageURLs": [
+    "https://canny.io/images/48f1f7a302d9fb4a5a4d6153c6c97421.png",
+    "https://canny.io/images/3f065bb2f5e9dfdbffac85e978da6024.png",
+    "https://canny.io/images/6181f8376d6f8b4a4f8f205d7214290a.gif"
+  ],
+  "lastUpdated": 1778995683320,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-04-18T19:12:00.209Z",
+  "subCategoryID": null,
+  "title": "SDK3 Null reference preventing upload",
+  "trendingScore": 2729.9551330200043,
+  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "urlName": "sdk3-null-reference-preventing-upload",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60671c2bd6e3a737fd98aae2",
+      "alias": "Cyan Scallop",
+      "aliasID": "65c52c2bed6eefce4c2a89bd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/782c2d448d28c76db46f056537b27ce0.png",
+      "companies": [],
+      "name": "KittyMixikins",
+      "urlName": "<redacted>",
+      "voteID": "6261d0b9af7ef55286a30bfb"
+    },
+    {
+      "_id": "5ae036cde69bb76ba5072775",
+      "alias": "Fair Weasel",
+      "aliasID": "65ba09bded6eefce4cc86976",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6a911b4c51497456ab6fa0772418d97d.png",
+      "companies": [],
+      "name": "lexidoll",
+      "urlName": "<redacted>",
+      "voteID": "625db800e6be23529dbfe822"
+    }
+  ]
+}

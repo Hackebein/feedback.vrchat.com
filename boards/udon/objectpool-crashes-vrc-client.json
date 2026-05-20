@@ -1,0 +1,180 @@
+{
+  "__v": 0,
+  "_id": "61d0ec0dc3c7330bff3fa059",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:02:02.855087Z",
+  "author": {
+    "_id": "5a6991954f81e70dc14c3187",
+    "alias": "Gainsboro Dolphin",
+    "aliasID": "65cbd9f0ed6eefce4c813da7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/670a2e26794714523b862c07b3dff6fd.png",
+    "created": "2018-01-25T08:13:09.080Z",
+    "name": "Hoshou Neko",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a6991954f81e70dc14c3187",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-01-02T00:04:29.872Z",
+  "deletedAt": null,
+  "details": "VRCObjectPool TryToSpawn command crashes client if pool is empty\nSteps to recreate:\n1. Player A spawns all available objects from pool.\n2 Player B tries to take ownership and spawn from empty pool.\nNo crashes observed if player B was an owner of the pool before it was empty.\nSDK: VRCSDK3-WORLD-2021.11.24.16.19_Public\nUnity: 2019.4.31f1\nTest world: https://vrchat.com/home/world/wrld_d051d186-92bf-485d-9c6b-560092d82c37\nAttached unity screenshot  with udon and inspectors.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d3e4c3e90df1359802",
+  "imageURLs": [
+    "https://canny.io/images/f0a9cd945f5b0718e85a9eea10db7914.png"
+  ],
+  "lastUpdated": 1778979251230,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 9,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/61d0ec0dc3c7330bff3fa059/1787660025.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 9,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-01-02T00:04:29.872Z",
+  "subCategoryID": null,
+  "title": "ObjectPool crashes VRC client",
+  "trendingScore": 2868.3320809474208,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "objectpool-crashes-vrc-client",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "609ff82985a19d3fe5ceb345",
+      "alias": "Middle Swordfish",
+      "aliasID": "65c28115ed6eefce4c6d4a88",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/351d879f376fac681d86ddda109d8417.png",
+      "companies": [],
+      "name": "ゆずき ［yuzuki］",
+      "urlName": "<redacted>",
+      "voteID": "6766728aa367fa6392249efc"
+    },
+    {
+      "_id": "63ac0a1606aa8344f491aad3",
+      "alias": "Amaranth Silverfish",
+      "aliasID": "660d47bee5d26962aa154b5a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/07259bfa03ab220712f782c4386e6ce5.png",
+      "companies": [],
+      "name": "ǝʞıWsʞɹǝԀ",
+      "urlName": "<redacted>",
+      "voteID": "63ac0b21e133cb7297e86b3d"
+    },
+    {
+      "_id": "5f28ffd99dcd76368e594a75",
+      "alias": "Warm Reindeer",
+      "aliasID": "65c29031ed6eefce4cbd3012",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1da95499d422b11afe523a6b37897478.png",
+      "companies": [],
+      "name": "Junii23",
+      "urlName": "<redacted>",
+      "voteID": "6388347a87ad145403791f36"
+    },
+    {
+      "_id": "60df54474fdc5a1222427f07",
+      "alias": "Papaya Tiger",
+      "aliasID": "65e1f8d5a6e3ea79dd9cda7e",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/04cdb7d92dd5647ad6b2a7920e0edcc3.png",
+      "companies": [],
+      "name": "labthe3rd",
+      "urlName": "<redacted>",
+      "voteID": "631fa4078f7fb6449fd61c2e"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "629009390f4db00b82c727d6"
+    },
+    {
+      "_id": "628f0656df91460b6a64ac04",
+      "alias": "Yacht club Tyrannosaurus",
+      "aliasID": "65c2fdd8ed6eefce4c8617d5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cdeb6c15924c5adcda1ad03f5c862d80.png",
+      "companies": [],
+      "name": "llaser_",
+      "urlName": "<redacted>",
+      "voteID": "628f07ab84d9650b5f919801"
+    },
+    {
+      "_id": "62610ccacdb1095747d36e40",
+      "alias": "Wineberry Hamster",
+      "aliasID": "65c35345ed6eefce4cb65050",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3a3eb98dd68b329cf90425eb4b284c52.png",
+      "companies": [],
+      "name": "arumogina",
+      "urlName": "<redacted>",
+      "voteID": "627cf883a6073b5290b310c0"
+    },
+    {
+      "_id": "61d2eafa8e0fb60b2d77a127",
+      "alias": "Plum Jellyfish",
+      "aliasID": "66058e9dd90e505763bb12e3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d4a3a319ed53f22d75940a8a445771d0.png",
+      "companies": [],
+      "name": "rage147",
+      "urlName": "<redacted>",
+      "voteID": "61f69fff5e81830b61e9df4d"
+    },
+    {
+      "_id": "5a6991954f81e70dc14c3187",
+      "alias": "Gainsboro Dolphin",
+      "aliasID": "65cbd9f0ed6eefce4c813da7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/670a2e26794714523b862c07b3dff6fd.png",
+      "companies": [],
+      "name": "Hoshou Neko",
+      "urlName": "<redacted>",
+      "voteID": "61d0ec0dc3c7330bff3fa060"
+    }
+  ]
+}

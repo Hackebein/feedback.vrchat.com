@@ -1,0 +1,116 @@
+{
+  "__v": 0,
+  "_id": "5fb5cf8c5f9ad37787640981",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-05-19T20:00:17.011283Z",
+  "author": {
+    "_id": "5f587af2b6b32f3d7d4ed6df",
+    "alias": "Surviving Crayfish",
+    "aliasID": "65c712b1ed6eefce4c32d302",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/7c0a53efac93c92f277151ec549f6381.png",
+    "created": "2020-09-09T06:49:22.100Z",
+    "name": "SubsonicJackal",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f587af2b6b32f3d7d4ed6df",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-19T01:51:08.405Z",
+  "deletedAt": null,
+  "details": "The default Action Layer controller has a 0.5 second transition duration on the \"Sit\" > \"Prepare Sitting\" state that shouldn't be there, this causes buggy and delayed behavior with seated emotes. Setting the value to 0 like the \"WaitForActionOrAFK\" > \"Prepare Standing\" state fixes the issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7efe4c3e90df131ff44",
+  "imageURLs": [
+    "https://canny.io/images/c99139bea3e0db0ae2f998184a2e7895.png"
+  ],
+  "lastUpdated": 1779218237518,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-11-19T01:51:08.405Z",
+  "subCategoryID": null,
+  "title": "Avatar SDK3 Action Layer Controller sitting emotes has a transition duration that shouldn't be there causing delay.",
+  "trendingScore": 2697.575585949074,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "avatar-sdk3-action-layer-controller-sitting-emotes-has-a-transition-duration-tha",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9e00a23b549d35ec3b542d76ab7acc70.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": "<redacted>",
+      "voteID": "613e9e52fc9056358864f9ec"
+    },
+    {
+      "_id": "5f342e529b3d1f25a827a957",
+      "alias": "Puce Kite",
+      "aliasID": "65c321b0ed6eefce4c45bc62",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e5189d4398f8ab6a5b00caf0581fcba4.png",
+      "companies": [],
+      "name": "Ricoh.",
+      "urlName": "<redacted>",
+      "voteID": "5fccf30f6b9eeb3904304504"
+    },
+    {
+      "_id": "5e968d2a2a6bba7b22c131c9",
+      "alias": "Excellent Rabbit",
+      "aliasID": "65c2c0f9ed6eefce4c7c4b0e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0407a092b24ebe90a7d70c2af2f7c42d.png",
+      "companies": [],
+      "name": "Ryuban",
+      "urlName": "<redacted>",
+      "voteID": "5fb8c384428c1e16b16a491b"
+    },
+    {
+      "_id": "5f587af2b6b32f3d7d4ed6df",
+      "alias": "Surviving Crayfish",
+      "aliasID": "65c712b1ed6eefce4c32d302",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/7c0a53efac93c92f277151ec549f6381.png",
+      "companies": [],
+      "name": "SubsonicJackal",
+      "urlName": "<redacted>",
+      "voteID": "5fb5cf8c5f9ad3778764098b"
+    }
+  ]
+}

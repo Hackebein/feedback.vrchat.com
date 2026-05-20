@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "6349d01dc29ce5708847c469",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-17T02:42:53.966156Z",
+  "author": {
+    "_id": "5ba7e0881a53843243b76790",
+    "alias": "Sunglow Shark",
+    "aliasID": "65c2a2c2ed6eefce4c7bc15b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d692ecc897940fc86f39b1c7bdaadeee.png",
+    "created": "2018-09-23T18:50:48.627Z",
+    "name": "Entorix",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ba7e0881a53843243b76790",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-14T21:09:49.655Z",
+  "deletedAt": null,
+  "details": "The ability to somehow attach gameobjects in unity directly to the viewpoint camera. \n\nAs it is right now, in order to get stuff to stick to your view, you have to attach them to the head bone, but the head bone doesn't always line up with your view, in cases where the IK cannot reach the desired position, or during instances where the head bone is being animated (emotes, etc). \n\nI think it would be useful to be able to attach things directly to the view to assist in things like custom HUD creation, and alternate Cameras.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb944e4c3e90df1370a02",
+  "imageURLs": [],
+  "lastUpdated": 1778985335807,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-14T21:09:49.655Z",
+  "subCategoryID": null,
+  "title": "[Feature Request] Attach Objects to Viewpoint Camera",
+  "trendingScore": 2754.961979361446,
+  "updatedAt": "2026-05-17T02:36:27.581782Z",
+  "urlName": "feature-request-attach-objects-to-viewpoint-camera",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ba7e0881a53843243b76790",
+      "alias": "Sunglow Shark",
+      "aliasID": "65c2a2c2ed6eefce4c7bc15b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d692ecc897940fc86f39b1c7bdaadeee.png",
+      "companies": [],
+      "name": "Entorix",
+      "urlName": "<redacted>",
+      "voteID": "6349d01dc29ce5708847c488"
+    }
+  ]
+}

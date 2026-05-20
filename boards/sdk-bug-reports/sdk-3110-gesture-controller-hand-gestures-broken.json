@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "63aa6036361ae17c25917975",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T15:13:12.698416Z",
+  "author": {
+    "_id": "629e8350be10af2ee8f3ae2a",
+    "alias": "Azure Bison",
+    "aliasID": "65e0d15aa6e3ea79dd7a7b84",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2e4626b4ad31d9e18e8ca8d8f76def66.png",
+    "created": "2022-06-06T22:44:32.553Z",
+    "name": "Angstǃ",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "629e8350be10af2ee8f3ae2a",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-12-27T03:02:14.738Z",
+  "deletedAt": null,
+  "details": "If I use the default gesture controller my hand gestures work.\n\nIf I use the example gesture controller from the sdk my hand gestures work.\n\nIf I duplicate, rename, move the example gesture controller my hand gestures work.\n\nIf I duplicate the proxy hand gestures, or use any other hand gesture animations my hand gestures DO NOT work...\n\nHello! I've been trying to troubleshoot an issue I am having when I updated my sdk. I started a new project using the creator companion and imported the avatar package. \n\nIf I use anything other than the default gesture animations it looks like my hands are blended between two positions. a halfway between the two poses.\n\nI'm pretty sure my FX and Locomotion controllers are set up correctly, but even removing them and using defaults does not help.\n\nAnything anyone can do to help I would appreciate it. I have been testing a ton of different things and finally figured out that anything other than default gesture animations is broken.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb95fe4c3e90df1375ac3",
+  "imageURLs": [],
+  "lastUpdated": 1779026891785,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-12-27T03:02:14.738Z",
+  "subCategoryID": null,
+  "title": "SDK 3.1.10, Gesture Controller Hand Gestures Broken",
+  "trendingScore": 2765.4255129370085,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "urlName": "sdk-3110-gesture-controller-hand-gestures-broken",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "629e8350be10af2ee8f3ae2a",
+      "alias": "Azure Bison",
+      "aliasID": "65e0d15aa6e3ea79dd7a7b84",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2e4626b4ad31d9e18e8ca8d8f76def66.png",
+      "companies": [],
+      "name": "Angstǃ",
+      "urlName": "<redacted>",
+      "voteID": "63aa6036361ae17c2591799b"
+    }
+  ]
+}

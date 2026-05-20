@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "5ff1d6772e0af475e5712a92",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:53:59.187040Z",
+  "author": {
+    "_id": "5fb0ee3526275e609e132b92",
+    "alias": "Indirect Goose",
+    "aliasID": "65c281a2ed6eefce4c82e350",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3873b16ee6b23f9cb6402405182a5874.png",
+    "created": "2020-11-15T09:00:37.821Z",
+    "name": "rusty_phoenix",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5fb0ee3526275e609e132b92",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-03T14:36:39.724Z",
+  "deletedAt": null,
+  "details": "Here is a video to show what is happening:\nhttps://www.youtube.com/watch?v=MPHVFJiweg0\nIf I use the \"VRC Animator Temporary Pose Space\" for the first time the avatar loads in, it shoots the avatar 3.0 into the sky instead of to the view ball. Subsequent usages seems to be unaffected except for the avatar not being visible to some other users in unknown circumstances, requiring a avatar reset. in the video I'm using the vrc_AvatarV3SittingLayer provided by VRCSDK. I edited proxy_sit to have a Y offset of -4. using Payable layers > special > Sitting , but I have similar issues with the base layer too",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7ffe4c3e90df1322472",
+  "imageURLs": [],
+  "lastUpdated": 1779032650776,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-03T14:36:39.724Z",
+  "subCategoryID": null,
+  "title": "[Bug] VRC Animator Temporary Pose",
+  "trendingScore": 2798.8217586743763,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-vrc-animator-temporary-pose",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "<redacted>",
+      "voteID": "64e4749b5ba2df0979614787"
+    },
+    {
+      "_id": "60153452d7c2eb30de06b9ef",
+      "alias": "Blue Heron",
+      "aliasID": "65c3900ded6eefce4cdced87",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6e4ca98e3879c67f0c08d8ad27306402.png",
+      "companies": [],
+      "name": "BluRynn",
+      "urlName": "<redacted>",
+      "voteID": "64ca141f26e46c2938b5b587"
+    },
+    {
+      "_id": "5fb0ee3526275e609e132b92",
+      "alias": "Indirect Goose",
+      "aliasID": "65c281a2ed6eefce4c82e350",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3873b16ee6b23f9cb6402405182a5874.png",
+      "companies": [],
+      "name": "rusty_phoenix",
+      "urlName": "<redacted>",
+      "voteID": "5ff1d6772e0af475e5712a99"
+    }
+  ]
+}

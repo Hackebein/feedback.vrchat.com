@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "5d52f6570a838c7939214601",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-19T19:56:18.846445Z",
+  "author": {
+    "_id": "5a60e3832478a072c83fa7ce",
+    "alias": "Pink Reindeer",
+    "aliasID": "65ba0213ed6eefce4c025aef",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/87b8dde596737c70bce64a542ea07379.jpg",
+    "created": "2018-01-18T18:12:19.205Z",
+    "name": "Lhun",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a60e3832478a072c83fa7ce",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-08-13T17:41:43.600Z",
+  "deletedAt": null,
+  "details": "It appears that in cross platform worlds (perhaps only in worlds where the user is using a different project pointing at the same files?) the ID of a VRC_Pickup object can get scrambled and potentially other things. \n\nI've observed this several times but it seems to happen in popular cross platform worlds reliably, such as The Black Cat, and Avatar Testing. You can reproduce this bug by picking up the dog or the heart boy above the dark room in a new instance of avatar testing, while standing next to a quest user to tell you what they see, The microphone for a quest user is often a beer bottle for a pc user.\n\nI have a suspicion on what might be causing this: The GUID is potentially registering differently between versions in the .meta file of the project.\n\nWith notepad++ you can edit the .meta guid tag, (guid: 8c9c1e4a88e724a60a9ac0b0bb6a52c3) for example. \nNormally, for unity projects, you do not need to change Unity GUID. This however is necessary when you are working with several projects and the files in these projects are being overlapped, which is extremely relevant for VRChat cross platform, I suspect.\nFor some reason, the same file in different projects can have different GUIDs. In this situation, these are considered different files for Unity. When these same files (along with related files) with different GUIDs occur in the same (or new) project, there may be problems. In this case, you need to bring the same files to a single GUID. This is of course relevant when you are dealing with quest worlds\nI'm not 100% sure and I need to test this extensively, but this is a documented problem that can happen with modularity. \n\nPerhaps the generated vrc_pickup object ids end up pointing at different guids or generating different ones based on the cross project or even just re-imported assets on a platform change, or there's an indexing order issue. \n\nThis script, for example, was designed to regenerate guids for all the files in your project.\nThis perhaps could be extended to synchronize guids before version upload for people using separate projects?\n  \nhttps://gist.github.com/ZimM-LostPolygon/7e2f8a3e5a1be183ac19\n\nAlternately (and in addition), you can speed up the platform switch process using the unity cache server:\nhttps://github.com/Unity-Technologies/unity-cache-server\n\nwhich may be a recommended process for cross platform builders so that you do not need a separate project file.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d8ee4c3e90df15872e1",
+  "imageURLs": [],
+  "lastUpdated": 1779218196516,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5d52f6570a838c7939214601/604498292.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-08-13T17:41:43.600Z",
+  "subCategoryID": null,
+  "title": "Pickup id scrambles on Cross Platform, Quest",
+  "trendingScore": 2628.7024964186508,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "pickup-id-scrambles-on-cross-platform-quest",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a60e3832478a072c83fa7ce",
+      "alias": "Pink Reindeer",
+      "aliasID": "65ba0213ed6eefce4c025aef",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/87b8dde596737c70bce64a542ea07379.jpg",
+      "companies": [],
+      "name": "Lhun",
+      "urlName": "<redacted>",
+      "voteID": "5d52f6570a838c793921460a"
+    }
+  ]
+}

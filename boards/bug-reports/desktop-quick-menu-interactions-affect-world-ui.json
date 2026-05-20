@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "631e77554516b944abb43f14",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.in-world",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-18T22:41:11.769914Z",
+  "author": {
+    "_id": "5f8a26770aaa28611fedd6b6",
+    "alias": "Average Loon",
+    "aliasID": "65c28318ed6eefce4cbdb922",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+    "created": "2020-10-16T23:02:15.960Z",
+    "name": "Faxmashine",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f8a26770aaa28611fedd6b6",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-09-12T00:03:33.929Z",
+  "deletedAt": null,
+  "details": "Using the quick menu in desktop mode should not cause interactions with a world's UI elements.\n# Description\n1. Start VRChat in desktop mode\n2. Hover over a world UI element (i. e. a post processing toggle)\n3. Open your quick menu\n4. Navigate the quick menu by clicking on elements\n# Expected behaviour\nThe user can interact with the quick menu without affecting the world UI.\n# Actual behaviour\nEach click of the left mouse button affects both the quick menu and the world UI.\n# Notes\nA user may accidently hover over a world's UI, i. e. a post-processing toggle. Normally this shows a blue cursor, which is hidden when opening the quick menu. The user may affect that UI element without realizing.\n\nThis behaviour seems like a but to me. But if it's intended, then the blue cursor should probably be shown even if the quick menu is open.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb936e4c3e90df136dd77",
+  "imageURLs": [],
+  "lastUpdated": 1779143404760,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-09-12T00:03:33.930Z",
+  "subCategoryID": null,
+  "title": "Desktop quick menu interactions affect world UI",
+  "trendingScore": 2750.264929533404,
+  "updatedAt": "2026-05-18T22:30:07.890442Z",
+  "urlName": "desktop-quick-menu-interactions-affect-world-ui",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f8a26770aaa28611fedd6b6",
+      "alias": "Average Loon",
+      "aliasID": "65c28318ed6eefce4cbdb922",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+      "companies": [],
+      "name": "Faxmashine",
+      "urlName": "<redacted>",
+      "voteID": "631e77564516b944abb43f34"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "613b7d40ed33355c9d6c8a39",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-17T01:00:59.121749Z",
+  "author": {
+    "_id": "5e89d0822aedbc56a3155d12",
+    "alias": "Aegean Llama",
+    "aliasID": "65c2756eed6eefce4c9617c7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/616c7b720248db1509813a8626fa40da.png",
+    "created": "2020-04-05T12:35:14.620Z",
+    "name": "Whaddageek",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e89d0822aedbc56a3155d12",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-09-10T15:44:00.229Z",
+  "deletedAt": null,
+  "details": "There's a bit of an edge cast with the AVPro Player, where if you're calling GetTime or Dutaion (eg to show the current time/duration/etc of a video) it will get Null back from a Twitch Stream and bomb out the video player.\nIt'd be much more useful if it just returned 0 in the case of a livestream rather than having to work around it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b3e4c3e90df1354058",
+  "imageURLs": [],
+  "lastUpdated": 1778979215613,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-09-10T15:44:00.229Z",
+  "subCategoryID": null,
+  "title": "Make GetTime and Duration return something other than null for Twitch Streams",
+  "trendingScore": 2697.9296555436554,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "make-gettime-and-duration-return-something-other-than-null-for-twitch-streams",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e89d0822aedbc56a3155d12",
+      "alias": "Aegean Llama",
+      "aliasID": "65c2756eed6eefce4c9617c7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/616c7b720248db1509813a8626fa40da.png",
+      "companies": [],
+      "name": "Whaddageek",
+      "urlName": "<redacted>",
+      "voteID": "613b7d40ed33355c9d6c8a40"
+    }
+  ]
+}

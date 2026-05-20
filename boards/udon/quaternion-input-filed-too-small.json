@@ -1,0 +1,143 @@
+{
+  "__v": 0,
+  "_id": "5b674b8ed52f4b6b95d6c12d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T17:22:02.518871Z",
+  "author": {
+    "_id": "59b05781f76da93741a4617e",
+    "alias": "Wineberry Herring",
+    "aliasID": "65c2b8e3ed6eefce4c6f7a97",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e9ccb11e0323465cc163f50c45e013bd.png",
+    "created": "2017-09-06T20:16:01.823Z",
+    "name": "jetdog8808",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "59b05781f76da93741a4617e",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5b9c427f4f08ba081fc5bc44",
+      "author": {
+        "_id": "58c6c9d4ff44e44ada7178cd",
+        "alias": "Lively Alpaca",
+        "aliasID": "65ba012ced6eefce4cea0f7f",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/6b592b47f4abe2fd6a9c7dde1c9a52af.png",
+        "created": "2017-03-13T16:33:24.982Z",
+        "name": "CubedParadox",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2018-09-14T23:21:35.137Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5b674b8ed52f4b6b95d6c12d",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "5b9c427f4f08ba081fc5bc42",
+      "statusChangeNewStatus": "complete",
+      "value": "fixed in next version",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-08-05T19:10:06.581Z",
+  "deletedAt": null,
+  "details": "you cant see anything on the quaternion node. should be expanded to make visible. the vector3's input field is an excellent size.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d5be4c3e90df157936d",
+  "imageURLs": [
+    "https://canny.io/images/7b8a0ea502e06a1d338bac96ee11d6cf.png"
+  ],
+  "lastUpdated": 1779210580449,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "complete",
+  "statusChanged": "2018-09-14T23:21:35.077Z",
+  "subCategoryID": null,
+  "title": "Quaternion input filed too small.",
+  "trendingScore": 2541.3124657163853,
+  "updatedAt": "2026-05-19T17:10:22.873328Z",
+  "urlName": "quaternion-input-filed-too-small",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "58c748d715a91259ebe994a0",
+      "alias": "Lemon glacier Moth",
+      "aliasID": "65c2824eed6eefce4c9f2031",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a37478d3d56f80d62169126714f56411.png",
+      "companies": [],
+      "name": "poplopo",
+      "urlName": "<redacted>",
+      "voteID": "5b9c7be939579015e3ad860d"
+    },
+    {
+      "_id": "59b05781f76da93741a4617e",
+      "alias": "Wineberry Herring",
+      "aliasID": "65c2b8e3ed6eefce4c6f7a97",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e9ccb11e0323465cc163f50c45e013bd.png",
+      "companies": [],
+      "name": "jetdog8808",
+      "urlName": "<redacted>",
+      "voteID": "5b674b8e39579015e3964b2c"
+    }
+  ]
+}

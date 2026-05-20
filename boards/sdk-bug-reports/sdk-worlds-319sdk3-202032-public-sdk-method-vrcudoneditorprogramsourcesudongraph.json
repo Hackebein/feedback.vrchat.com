@@ -1,0 +1,163 @@
+{
+  "__v": 0,
+  "_id": "635173cffab28a44fe4c8177",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T15:12:53.741108Z",
+  "author": {
+    "_id": "5bc7a9d0d651c8301543a7f2",
+    "alias": "Ink Antelope",
+    "aliasID": "65c28a47ed6eefce4cd1cf77",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/510b3dff00d2ae92b543a05142054f6a.png",
+    "created": "2018-10-17T21:29:52.827Z",
+    "name": "Varneon",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5bc7a9d0d651c8301543a7f2",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-20T16:14:07.165Z",
+  "deletedAt": null,
+  "details": "In previous versions of SDK-Worlds and SDK3 the VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI.GraphView (Editor window for editing Udon Graphs) had a public method for opening an UdonGraphProgramAsset in the GraphView:\n```\npublic void InitializeGraph(UdonGraphProgramAsset graph, UdonBehaviour udonBehaviour = null)\n```\nSDK-Worlds 3.1.9 and SDK3 2020.3.2 don't have this method anymore, but they do have a new method which was added in the update and essentially serves the same purpose:\n```\npublic void LoadGraphFromAsset(UdonGraphProgramAsset graph, UdonBehaviour udonBehaviour = null)\n```\nThe removal of the existing public method took place without a notice and editor extension developers who were relying on this method's existence didn't have a sufficient time window to roll out updates for this.\nIn case of method renamings / replacements I would expect to see the deprecated method to be marked with [Obsolete] attribute and for the change to be documented in order to help avoid compiler errors on the world creators' end when updating the SDK.\nExample issue caused by the change: https://github.com/Varneon/UdonExplorer/issues/3\nExample patch for fixing the issue above: https://github.com/Varneon/UdonExplorer/releases/tag/0.3.3",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb949e4c3e90df1370ff4",
+  "imageURLs": [
+    "https://canny.io/images/00fdae3a896f7c794adbf3d49b321747.png",
+    "https://canny.io/images/71a939e25d77f779cd2d690b4acbb96f.png"
+  ],
+  "lastUpdated": 1779026890605,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 8,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 8,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-20T16:14:07.165Z",
+  "subCategoryID": null,
+  "title": "[SDK-Worlds 3.1.9/SDK3 2020.3.2] Public SDK method, VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI.GraphView.InitializeGraph() was removed without a notice",
+  "trendingScore": 2757.8176353495587,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "urlName": "sdk-worlds-319sdk3-202032-public-sdk-method-vrcudoneditorprogramsourcesudongraph",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6202781212ed9918e0743893",
+      "alias": "Beige Lungfish",
+      "aliasID": "65c38bf4ed6eefce4c1c1a26",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6041f5aa1ef51d87ff1a57c3326d7826.png",
+      "companies": [],
+      "name": "ᴅɪɢɪᴛᴀʟ",
+      "urlName": "<redacted>",
+      "voteID": "635d466a086546450f97c3fe"
+    },
+    {
+      "_id": "5f3bc7b8ac324c51f6ce88df",
+      "alias": "Rolling Silverfish",
+      "aliasID": "65c2a240ed6eefce4c6874af",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c7056a65db1a7fdaccd8dc0f6446e02.png",
+      "companies": [],
+      "name": "Twisty10000",
+      "urlName": "<redacted>",
+      "voteID": "635d45ae1b1d1e478bfd67a1"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "6357ad474a38a4109016816b"
+    },
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "6351b92aa91f3a1cc3d4b25c"
+    },
+    {
+      "_id": "5eff476248ee5765bbf3f17a",
+      "alias": "Celadon Mouse",
+      "aliasID": "65c29d4ced6eefce4caa8109",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b5e908d145a5f778e95ed333869aac17.png",
+      "companies": [],
+      "name": "miner28_3",
+      "urlName": "<redacted>",
+      "voteID": "635176ff42e15445021edaf9"
+    },
+    {
+      "_id": "5f36b82c9ec59c0d1272ffe2",
+      "alias": "Skilled Halibut",
+      "aliasID": "65c28a12ed6eefce4cca58b4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bf2ec88117eb8a85f72f00f24798bd9e.png",
+      "companies": [],
+      "name": "Nestorboy",
+      "urlName": "<redacted>",
+      "voteID": "6351760242e15445021e353b"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "<redacted>",
+      "voteID": "6351746d7226254a9349e6f1"
+    },
+    {
+      "_id": "5bc7a9d0d651c8301543a7f2",
+      "alias": "Ink Antelope",
+      "aliasID": "65c28a47ed6eefce4cd1cf77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/510b3dff00d2ae92b543a05142054f6a.png",
+      "companies": [],
+      "name": "Varneon",
+      "urlName": "<redacted>",
+      "voteID": "635173cffab28a44fe4c8196"
+    }
+  ]
+}

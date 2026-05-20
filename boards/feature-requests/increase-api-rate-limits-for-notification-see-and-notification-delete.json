@@ -1,0 +1,116 @@
+{
+  "_id": "698041ea3895ab1aa49238bb",
+  "aiCategories": [
+    "loc.website",
+    "web.api"
+  ],
+  "aiTaggedAt": "2026-05-17T16:42:12.361654Z",
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-02-02T06:19:22.784Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Being able to notify the VRChat API to have seen & delete only ~50-60 notifications per hour before hitting HTTP 429 Too Many Requests is too low, for those of us who have hundreds of notifications that need to be cleared.\n\nPlease increase the limits for each of the end points:\n\n- POST `https://api.vrchat.cloud/api/1/notifications/{notificationId}/see`\n\n- DELETE `https://api.vrchat.cloud/api/1/notifications/{notificationId}`\n\nwhere the examplified `{notificationId}` is an unique notification `not_` ID, e.g. `not_67676767-6767-6767-6767-676767676767`.\n\nImplementing this should ensure more reliable notification processing (see/delete), instead of those notifications reappearing on client restart.\n\nRelated:\n\n- https://feedback.vrchat.com/bug-reports/p/clearing-100-500-other-notifications-with-clear-all-button-triggers-several-http\n\n- https://feedback.vrchat.com/feature-requests/p/increase-respond-able-notification-limit-from-40-to-more",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/5bad1e796f3e2658fdf922734fecc696.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-02-02_05-32-37_sanitized",
+      "url": "https://canny-assets.io/files/5bad1e796f3e2658fdf922734fecc696.txt"
+    }
+  ],
+  "ideaID": "698041eb3895ab1aa4923957",
+  "imageURLs": [
+    "https://canny-assets.io/images/b5cf5d62da7dec579bb69d433d9db30b.png"
+  ],
+  "lastUpdated": 1779035408690,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/698041ea3895ab1aa49238bb/280407571.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-02-02T06:19:22.784Z",
+  "subCategoryID": null,
+  "title": "Increase API rate limits for \"notification see\" and \"notification delete\"",
+  "trendingScore": 2932.5823408104498,
+  "updatedAt": "2026-05-17T16:30:16.054690Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "increase-api-rate-limits-for-notification-see-and-notification-delete",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "643a163c4841a3092345f4a3",
+      "alias": "Tangerine Warbler",
+      "aliasID": "65c28339ed6eefce4cc2dd86",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ffe5a2afbe775a85d2f3cfd6d68783f3.png",
+      "companies": [],
+      "name": "DnutCfe-Obscura",
+      "urlName": "<redacted>",
+      "voteID": "69b74f83ed082c998184e386"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "69807c714e32484d29d09a3c"
+    },
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "<redacted>",
+      "voteID": "698041ea4e32484d293b0cba"
+    }
+  ]
+}

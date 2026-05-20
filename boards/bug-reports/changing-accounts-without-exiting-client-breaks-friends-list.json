@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "5d9cee093a5da75dd3951e1a",
+  "aiCategories": [
+    "loc.login",
+    "loc.in-world",
+    "social.friends",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-05-17T23:29:40.714732Z",
+  "author": {
+    "_id": "5c021a0933bef17eff390286",
+    "alias": "Olive Leopard",
+    "aliasID": "65d566a20129d7ae44a1b612",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/e826bafd30283966046de23cfaa68f13.png",
+    "created": "2018-12-01T05:20:09.444Z",
+    "name": "exmello",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c021a0933bef17eff390286",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-10-08T20:14:01.415Z",
+  "deletedAt": null,
+  "details": "If I select logout from the in game menu on one account and then log into another account without first quitting the game, the friends list breaks.  On the second account I have a much shorter friends list, but I will see thumbnails and details from friends on the first account.  Also, sometimes avatars won't load on this second account until I close the game and log back in again.  Strangely enough, this is only an issue in one direction.  The only difference I can think of is that with the first account, I log in by username, and the second I log in by email.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d93e4c3e90df1588c1e",
+  "imageURLs": [],
+  "lastUpdated": 1779060310751,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-10-08T20:14:01.415Z",
+  "subCategoryID": null,
+  "title": "Changing accounts without exiting client breaks friends list",
+  "trendingScore": 2597.527871756453,
+  "updatedAt": "2026-05-17T23:27:35.879050Z",
+  "urlName": "changing-accounts-without-exiting-client-breaks-friends-list",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c021a0933bef17eff390286",
+      "alias": "Olive Leopard",
+      "aliasID": "65d566a20129d7ae44a1b612",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e826bafd30283966046de23cfaa68f13.png",
+      "companies": [],
+      "name": "exmello",
+      "urlName": "<redacted>",
+      "voteID": "5d9cee093a5da75dd3951e23"
+    }
+  ]
+}

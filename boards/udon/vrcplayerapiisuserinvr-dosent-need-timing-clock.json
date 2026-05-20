@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5ef607012cd6743f7438c6bb",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:31:58.630964Z",
+  "author": {
+    "_id": "5dc6e9a15c130559cf20460d",
+    "alias": "International orange Landfowl",
+    "aliasID": "65c2f3fced6eefce4c76c22e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/43a626c4623046d893e95ad4ef2f35e6.png",
+    "created": "2019-11-09T16:30:25.545Z",
+    "name": "FORNO",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5dc6e9a15c130559cf20460d",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-06-26T14:32:33.690Z",
+  "deletedAt": null,
+  "details": "VRCPlayerApi.IsUserInVR node require timing clock now.\nHowever, the node has no side effects. I believe that it should be omitted the timing clock from it.\nOr, do you have an opinion about it?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7db2e4c3e90df159174b",
+  "imageURLs": [],
+  "lastUpdated": 1779239311807,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-06-26T14:32:33.690Z",
+  "subCategoryID": null,
+  "title": "VRCPlayerApi.IsUserInVR dosen't need timing clock",
+  "trendingScore": 2634.922567988265,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "vrcplayerapiisuserinvr-dosent-need-timing-clock",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5dc6e9a15c130559cf20460d",
+      "alias": "International orange Landfowl",
+      "aliasID": "65c2f3fced6eefce4c76c22e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/43a626c4623046d893e95ad4ef2f35e6.png",
+      "companies": [],
+      "name": "FORNO",
+      "urlName": "<redacted>",
+      "voteID": "5ef607012cd6743f7438c6c3"
+    }
+  ]
+}

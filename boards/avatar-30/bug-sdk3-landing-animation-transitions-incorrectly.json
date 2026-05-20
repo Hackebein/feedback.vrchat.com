@@ -1,0 +1,123 @@
+{
+  "__v": 0,
+  "_id": "600c4a624355144e17eff7d8",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "avatars.dynamics",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T15:54:16.409683Z",
+  "author": {
+    "_id": "5c13b728836efc38dc8c83da",
+    "alias": "Ruling Lark",
+    "aliasID": "65c399daed6eefce4cb04a9d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c29995a6dc1c871983ad60504c608da6.png",
+    "created": "2018-12-14T13:59:04.287Z",
+    "name": "Miamikicchi",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c13b728836efc38dc8c83da",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-23T16:10:10.506Z",
+  "deletedAt": null,
+  "details": "When the avatar lands, it plays the landing animation, but this animation should be canceled if the player walks. It is not canceled however, and the player will slide on the ground for a second while they press their movement keys, as the landing animation plays.\n\nThe really troublesome part is that this landing animation easily causes out-of-body experiences (I guess because it doesn't track the head IK?) which are very disruptive for immersion and in general because they occur all the time (practically any time you jump). This is in addition to looking silly because you basically A-pose for a second every time you land, no matter the height of the fall.\n\nThis happens whether or not you assign anything to the custom layers.\n\nThis happens with any 3.0 avatar I upload and with any avatar by another person that I can confirm to be 3.0, I tried four different ones all by different people.\n\nThis bug has been around for months now, since shortly after the introduction of 3.0.\n\nThis happens both in desktop mode and VR mode.\nSDK Version: VRCSDK3-AVATAR-2021.01.19.18.17_Public",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb801e4c3e90df1322b3a",
+  "imageURLs": [],
+  "lastUpdated": 1779032652250,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-23T16:10:10.506Z",
+  "subCategoryID": null,
+  "title": "[BUG] SDK3 landing animation transitions incorrectly",
+  "trendingScore": 2828.5835163988095,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-sdk3-landing-animation-transitions-incorrectly",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fd07dea2802eb0bb45e0300",
+      "alias": "Persimmon orange Goose",
+      "aliasID": "65c42f91ed6eefce4c5a2c67",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/686b99b09ea2e599f22f0d2739492ae5.png",
+      "companies": [],
+      "name": "Wernyv",
+      "urlName": "<redacted>",
+      "voteID": "65f7a08ea63714bcb3b6ca6a"
+    },
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "6221de63ffb0ee6cbf6824b0"
+    },
+    {
+      "_id": "5c03473992eef65b2bb3cc2c",
+      "alias": "Outstanding Kingfisher",
+      "aliasID": "65c27129ed6eefce4ce48dac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/230b695b3f1227c6e53121c1f0c0bec1.png",
+      "companies": [],
+      "name": "Groxxy",
+      "urlName": "<redacted>",
+      "voteID": "61b5e69bed50aa7836b50e58"
+    },
+    {
+      "_id": "5c13b728836efc38dc8c83da",
+      "alias": "Ruling Lark",
+      "aliasID": "65c399daed6eefce4cb04a9d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c29995a6dc1c871983ad60504c608da6.png",
+      "companies": [],
+      "name": "Miamikicchi",
+      "urlName": "<redacted>",
+      "voteID": "600c4a624355144e17eff7e6"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "__v": 0,
+  "_id": "65ce0d84632d2be46d96c965",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T10:47:29.832389Z",
+  "author": {
+    "_id": "65bd10d77df56e6937d54111",
+    "alias": "Kobi Raven",
+    "aliasID": "65c282efed6eefce4cb76e9c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5459addf17c7f4ac3709c3af641f2e07.png",
+    "created": "2024-02-02T15:57:11.533Z",
+    "name": "Cautіon",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "65bd10d77df56e6937d54111",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-02-15T13:11:32.479Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "It would be great to have the option for an unsigned 4-Bit fixed-point decimal to save on memory space for use cases that don't need precision\n\nFor some common situations a signed 8-bit fixed-point decimal is not neccesary and wastes space in the memory bandwidth.\n\nFor example it's very common for a \"float\" to be used in a radial puppet to select clothing pieces, accessories, materials, etc. (radial puppets are quicker, cleaner, and more compact when you have many outfit options in the same menu).\n\nBut rarely do these outfit pieces go beyond 5 or 6 per radial puppet, meaning the \"float\" doesn't need to be signed as the negative numbers are never used and the bit count used for decimal points doesnt need to be so high. \n\nAnd so an unsigned 4-bit fixed-point decimal would be much more effiecient, using the first bit for the integer indicator and the last three bits for the decimals making the resolution 0.125. Limiting this 0 - 1 would give us 9 options per \"4-bit float\"",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9cee4c3e90df138a6fb",
+  "imageURLs": [
+    "https://canny.io/images/7eba0d67e4b1d925e8bf2b9dc88c9ce4.png"
+  ],
+  "lastUpdated": 1779014307389,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/65ce0d84632d2be46d96c965/1486637180.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-02-15T13:11:32.479Z",
+  "subCategoryID": null,
+  "title": "[AV3.0 SDK] Add the option for a 4-bit float (unsigned 4-Bit fixed-point decimal)",
+  "trendingScore": 2880.6430279166666,
+  "updatedAt": "2026-05-17T10:38:52.550572Z",
+  "updatedBy": "65bd10d77df56e6937d54111",
+  "urlName": "av30-sdk-add-the-option-for-a-4-bit-float-unsigned-4-bit-fixed-point-decimal",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "65aaaf02eb6f7428be4aaeda",
+      "alias": "Practical Hedgehog",
+      "aliasID": "65cfcaae0129d7ae44332aa1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ab576980cf0817c42eb2ba2326e2c5ec.png",
+      "companies": [],
+      "name": "dorpomi",
+      "urlName": "<redacted>",
+      "voteID": "67d80f278bda4d8ce926910b"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "65cefab90129d7ae44ecaa69"
+    },
+    {
+      "_id": "62e071f67ad24c46bc44bd54",
+      "alias": "Jade Parrotfish",
+      "aliasID": "65ce107eed6eefce4c80bc83",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9a748223e8c41154ba4d8c821389915e.png",
+      "companies": [],
+      "name": "Celicea",
+      "urlName": "<redacted>",
+      "voteID": "65ce108ced6eefce4c82bacc"
+    },
+    {
+      "_id": "65bd10d77df56e6937d54111",
+      "alias": "Kobi Raven",
+      "aliasID": "65c282efed6eefce4cb76e9c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5459addf17c7f4ac3709c3af641f2e07.png",
+      "companies": [],
+      "name": "Cautіon",
+      "urlName": "<redacted>",
+      "voteID": "65ce0d84ed6eefce4c106908"
+    }
+  ]
+}

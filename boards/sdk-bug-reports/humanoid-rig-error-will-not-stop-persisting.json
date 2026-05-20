@@ -1,0 +1,152 @@
+{
+  "__v": 0,
+  "_id": "611d986b82a19e0da3fc6c17",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T00:33:16.220074Z",
+  "author": {
+    "_id": "60329075ba9b3b1a4eb315c4",
+    "alias": "Constant Guppy",
+    "aliasID": "65c47c9aed6eefce4c7cc90b",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3bf2623cc927d200674f77039591288a.png",
+    "created": "2021-02-21T16:55:17.366Z",
+    "name": "X3417",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60329075ba9b3b1a4eb315c4",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "612c181453222f489dca63ea",
+      "author": {
+        "_id": "60329075ba9b3b1a4eb315c4",
+        "alias": "Constant Guppy",
+        "aliasID": "65c47c9aed6eefce4c7cc90b",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/3bf2623cc927d200674f77039591288a.png",
+        "created": "2021-02-21T16:55:17.366Z",
+        "name": "X3417",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-08-29T23:28:20.467Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/b38f5efaa8acdc8e92bc20e8e96065bf.jpg"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "611d986b82a19e0da3fc6c17",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "FIX:  This is as a result of somehow ending up with 2 animator components on the root.  One \"Animator (Removed)\", and the other just a normal animator.  You have to delete the avatar completely and redrag the FBX in and DON'T tamper with the animator that is already on there.  Not sure what I was unconsciously doing but it ended up causing 2 animators to happen.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-08-18T23:31:55.469Z",
+  "deletedAt": null,
+  "details": "The avatar I have been sent to upload (I am uploading it to my account not theirs) keeps giving me this error no matter the troubleshooting steps I have taken. \nUnity2019.4.29f1 with VRCSDK3-AVATAR-2021.08.11.15.16_Public\nMy project has ONLY the specified SDK and the avatar's fbx with its texture atlas.\nAlso the avatar is still packed in a single prefab or however that works its all blue so yeah\nSo far I have done the following:\n-Restarted the project\n-Verified the rig was humanoid\n-Set the rig to none and back to humanoid\n-Set the rig to generic and back to humanoid\n-Switched the project to windows build and see if it fixed, and then check it again when its back (it didn't)\n-Check the configuration of the avatar for empty or incorrect slots (there was in fact a missing chest entry and the jaw was taken by a random hair but that didn't fix it.  It really should tell you that the chest bone isn't assigned to the left of the configure button as an error but whatever)\n-Ask 4 help in the trusty #avatars-3-help\n-Saved, closed and reopened the unity project (again)\n-Check the console for a hint at literally anything, found nothing.  Yes I have comments, warnings, and errors enabled.  Yes I have tried looking for anything persisting after clear but nothing in the normal mode and then in play mode from building and publishing.  The only thing that shows up is 2 comments about Fetching Local Config which I'm 99% is normal.\n-Restarted my Laptop\nI am at a loss at what else to try but to make a canny about it. The avatar has been uploaded before in a previous state but it doesn't have some added clothing it has now.  Maybe somehow those added clothes are causing problems now??  Again I have no clue and I don't know if its the model or the SDK.  I'll also include a SS of my packages too in case.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b1e4c3e90df13539b8",
+  "imageURLs": [
+    "https://canny.io/images/a8f215f3a7ee422400d5a79e4c7c18bc.jpg",
+    "https://canny.io/images/f01259fd5c9387341c18b6ce9fe22820.jpg"
+  ],
+  "lastUpdated": 1779275475924,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/611d986b82a19e0da3fc6c17/176630705.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-08-18T23:31:55.469Z",
+  "subCategoryID": null,
+  "title": "Humanoid rig error will not stop persisting",
+  "trendingScore": 2841.6934549603175,
+  "updatedAt": "2026-05-20T11:11:18.557506Z",
+  "urlName": "humanoid-rig-error-will-not-stop-persisting",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "619a3d9b019eaa416ed8b600",
+      "alias": "Compact Narwhal",
+      "aliasID": "65c72462ed6eefce4c95a583",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6996d558bbb703e96a3ef1ca2d2dd5a6.png",
+      "companies": [],
+      "name": "Marketable N",
+      "urlName": "<redacted>",
+      "voteID": "66709cc9d5dd336a208eab67"
+    },
+    {
+      "_id": "5f2dc3d9b923f7086bb0a2b5",
+      "alias": "Apricot cream Otter",
+      "aliasID": "65c321e1ed6eefce4c4a4490",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/eeb994858879b05dcb916a1a1c7f2a3b.png",
+      "companies": [],
+      "name": "Kaugumme",
+      "urlName": "<redacted>",
+      "voteID": "611d9f47c72f6e2b865bdd15"
+    },
+    {
+      "_id": "60329075ba9b3b1a4eb315c4",
+      "alias": "Constant Guppy",
+      "aliasID": "65c47c9aed6eefce4c7cc90b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3bf2623cc927d200674f77039591288a.png",
+      "companies": [],
+      "name": "X3417",
+      "urlName": "<redacted>",
+      "voteID": "611d986b82a19e0da3fc6c1e"
+    }
+  ]
+}

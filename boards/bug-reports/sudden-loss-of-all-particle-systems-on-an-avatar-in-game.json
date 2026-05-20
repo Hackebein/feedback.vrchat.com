@@ -1,0 +1,99 @@
+{
+  "__v": 0,
+  "_id": "6552a3aa6c11b8987be09881",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-19T18:54:11.033043Z",
+  "author": {
+    "_id": "5f2f527d654cd4491453cd11",
+    "alias": "Xeric grey Shark",
+    "aliasID": "65c2c011ed6eefce4c61ea29",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/cf76d8b6e69eb26fd01b3ac315d90626.png",
+    "created": "2020-08-09T01:33:49.989Z",
+    "name": "BeardieChan",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2f527d654cd4491453cd11",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-11-13T22:31:06.693Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Noticed recently broke 2 of my avatars I was working on and couldn't figure out why all my particles stopped working. Then found this behavior - In unity on the latest SDK using from the \"Builder\" window the button to \"select\" \"Mesh Particle Total Max Poly Count\" that will highlight anything in the avatar as expected. When I click away every single one of my particle systems \"play on awake\" gets toggled off for some unknown reason. Avatars SDK 3.4.1",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9b7e4c3e90df1385c0a",
+  "imageURLs": [
+    "https://canny.io/images/b5fde3b58a6dfab453fe65b459af5b3a.png"
+  ],
+  "lastUpdated": 1779216394137,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-11-13T22:31:06.693Z",
+  "subCategoryID": null,
+  "title": "Sudden loss of all particle systems on an avatar in game",
+  "trendingScore": 2813.642516130951,
+  "updatedAt": "2026-05-19T18:47:33.670829Z",
+  "updatedBy": null,
+  "urlName": "sudden-loss-of-all-particle-systems-on-an-avatar-in-game",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "656cac7b314c728c0dcd1e00",
+      "alias": "Soft Mackerel",
+      "aliasID": "65c2bf53ed6eefce4c44da77",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "二浅大大qian",
+      "urlName": "<redacted>",
+      "voteID": "656cb59c3d279c6cf4d60f70"
+    },
+    {
+      "_id": "5f2f527d654cd4491453cd11",
+      "alias": "Xeric grey Shark",
+      "aliasID": "65c2c011ed6eefce4c61ea29",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf76d8b6e69eb26fd01b3ac315d90626.png",
+      "companies": [],
+      "name": "BeardieChan",
+      "urlName": "<redacted>",
+      "voteID": "6552a3aacebec43716deb18b"
+    }
+  ]
+}

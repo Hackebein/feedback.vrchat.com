@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "62e0d610af6e2b46733936e6",
+  "aiCategories": [
+    "sdk.udon",
+    "loc.unity-sdk",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-17T12:34:14.735365Z",
+  "author": {
+    "_id": "5f2e5a608c253106b02be61a",
+    "alias": "Aegean Marten",
+    "aliasID": "65c321b0ed6eefce4c45bc49",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7a76252c1d6b617d03d1713afc015b98.png",
+    "created": "2020-08-08T07:55:12.473Z",
+    "name": "Iris_VRC",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2e5a608c253106b02be61a",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-07-27T06:07:12.225Z",
+  "deletedAt": null,
+  "details": "--EN\nVRChat.exe crashes on integer division.\nThe code is intentional, but it can also occur if the value of a variable is zeroed for some reason.\nOnly UdonScript crashes on UnityEditor.\n\n--JP\nVRChat.exeが整数除算でクラッシュします。UdonSharpを用いた簡単な再現コードを提示します。\n\nこのコードでは意図的に引き起こされていますが変数の値が何らかの理由でゼロになった場合にも発生します。\nUnityEditor上ではUdonScriptのみがクラッシュします。\n\n----- U# Script\n```\nusing UdonSharp;\npublic class Test_Zero : UdonSharpBehaviour\n{\n    int C = 0;\n    void Start()\n    {\n        int x = 100 % C;\n    }\n}\n```",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb90ae4c3e90df1364c7d",
+  "imageURLs": [],
+  "lastUpdated": 1779021047106,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-07-27T06:07:12.225Z",
+  "subCategoryID": null,
+  "title": "VRChat.exe crashes on integer division",
+  "trendingScore": 2743.586719052253,
+  "updatedAt": "2026-05-17T12:32:20.735315Z",
+  "urlName": "vrchatexe-crashes-on-integer-division",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2e5a608c253106b02be61a",
+      "alias": "Aegean Marten",
+      "aliasID": "65c321b0ed6eefce4c45bc49",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7a76252c1d6b617d03d1713afc015b98.png",
+      "companies": [],
+      "name": "Iris_VRC",
+      "urlName": "<redacted>",
+      "voteID": "62e0d610af6e2b4673393708"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "__v": 0,
+  "_id": "619793ad2d5f9161864a86ab",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-05-18T11:40:46.498846Z",
+  "author": {
+    "_id": "5f2cb35431807b34c94a2618",
+    "alias": "Mysterious Eagle",
+    "aliasID": "65c290c9ed6eefce4cd4009e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9d6653c011d0e9287519e69ba0bcf40a.png",
+    "created": "2020-08-07T01:50:12.453Z",
+    "name": "ureishi",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2cb35431807b34c94a2618",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-11-19T12:08:13.638Z",
+  "deletedAt": null,
+  "details": "The previous version of youtube-dl did not return any results by default when trying to resolve URLs for age-restricted videos.\nHowever, the newly replaced yt-dlp resolves URLs of age-restricted videos by default, and age-restricted videos can be viewed in VRChat.\nIs this the expected behavior? Please check once.\nIf it is not the expected behavior, we should make yt-dlp a build that can use the option `--age-limit 17`.\n\n[Age-restricted youtube videos for testing](https://youtu.be/AvlOPTzbD40)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cae4c3e90df1357f4f",
+  "imageURLs": [
+    "https://canny.io/images/1b4a64af519e4120ac3e76e7fe59a4e2.png"
+  ],
+  "lastUpdated": 1779103752175,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny.io/images/og/58c62e995865713647a7115d/posts/619793ad2d5f9161864a86ab/1718148222.jpg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-11-19T12:08:13.638Z",
+  "subCategoryID": null,
+  "title": "Consider applying age limits for yt-dlp",
+  "trendingScore": 2728.3473617694126,
+  "updatedAt": "2026-05-18T11:30:57.664443Z",
+  "urlName": "consider-applying-age-limits-for-yt-dlp",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "625476ee2d5b127034a69a9e",
+      "alias": "Civic Seahorse",
+      "aliasID": "6632bbcdd36452c1796bd798",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Darkna423",
+      "urlName": "<redacted>",
+      "voteID": "6254774ac66e262e3d30b7c6"
+    },
+    {
+      "_id": "5b1cefe5599e166e9690bd6a",
+      "alias": "Zircon blue Cougar",
+      "aliasID": "65c290c9ed6eefce4cd40082",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/25e66ffc768bc56db63f56637f66de73.png",
+      "companies": [],
+      "name": "ikuko",
+      "urlName": "<redacted>",
+      "voteID": "6253ecd841172b528ca08a04"
+    },
+    {
+      "_id": "5f2cb35431807b34c94a2618",
+      "alias": "Mysterious Eagle",
+      "aliasID": "65c290c9ed6eefce4cd4009e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9d6653c011d0e9287519e69ba0bcf40a.png",
+      "companies": [],
+      "name": "ureishi",
+      "urlName": "<redacted>",
+      "voteID": "619793ad2d5f9161864a86b2"
+    }
+  ]
+}

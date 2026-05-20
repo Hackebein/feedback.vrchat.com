@@ -1,0 +1,173 @@
+{
+  "__v": 0,
+  "_id": "5e8d028a51b2c33b3faea4ae",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-05-19T19:58:07.431977Z",
+  "author": {
+    "_id": "5e0d8dbe592c4a421adc4952",
+    "alias": "Iron grey Shrew",
+    "aliasID": "65c35740ed6eefce4c46a6e3",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3d1e939114ff87f6ca52781ce9ba241f.jpg",
+    "created": "2020-01-02T06:29:18.977Z",
+    "name": "しいたけ(vrctaki)",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e0d8dbe592c4a421adc4952",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5e9d81a23ec07d3bdfcf7c3a",
+      "author": {
+        "_id": "5af595dd56feb85f40086183",
+        "alias": "Orange Koala",
+        "aliasID": "65c71420ed6eefce4c4f456e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b5f041baa4b54601588433c08d4cd81a.png",
+        "created": "2018-05-11T13:08:45.916Z",
+        "name": "kingBigfootia",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2020-04-20T11:04:02.506Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 1,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5e8d028a51b2c33b3faea4ae",
+      "private": false,
+      "reactions": {
+        "like": 4
+      },
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I'm also experiencing this on an avatar that kicks players out of the station by disabling it. 50% of the time it works fine but the other 50% it sends them flying.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-07T22:45:30.744Z",
+  "deletedAt": null,
+  "details": "Versions: SDK(VRCSDK2-2020.04.01.10.20), Unity(2018.4.20f1), Client(w_2020.1.1p1)\nSampleWorld: TheSwingDebug(wrld_1c1508b7-a338-4f03-a0df-4686d94e5924)\nI had created and installed a swing in my world. The swing was a bit special, and the swing was ejected when the launch button was pressed.\nThere was a problem with this blanko, and I was [Destroying] it when it reached [Object Behaviour At Respawn Heihgt] in [VRCWorld], but when the object reached [Respawn Height], it didn't Destroy it, and it just dropped endlessly.\nSo we created an object dedicated to destroying the trapeze on contact.\nAs a result, the trapeze was destroyed, but it now behaves in an unexpected way (see the video at *1)\nAs for the linked video, it is working normally on the first check, but it is not working normally on the second check.\n*1 Confirmation video\nhttps://twitter.com/vrctaki/status/1247651653668356097\n-----\nin Japanese.\n私のワールドにブランコを作成し設置していました。そのブランコは少し特殊で発射ボタンを押すとブランコが射出されるものでした。\nこのブランコには問題があり、[VRCWorld] の [Object Behaviour At Respawn Heihgt] に到達した時の処理を [Destroy] していましたがオブジェクトが [Respawn Height] に到達しても Destroy されず、延々と落下していました。\nそのため接触するとブランコを Destroy する専用のオブジェクトを作りました。\n結果的にブランコは Destroy されましたが、思わぬ挙動をするようになりました(*1 リンク先の動画参照)\nリンク先の動画について、1回目の確認では正常に動作していますが、2回目の動作は正常とは言い難い動作をしています。\n*1 確認用動画\nhttps://twitter.com/vrctaki/status/1247651653668356097",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da6e4c3e90df158df1c",
+  "imageURLs": [
+    "https://canny.io/images/6d0c28c68bd213e9019af7f03a3a8d69.png"
+  ],
+  "lastUpdated": 1779218200663,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5e8d028a51b2c33b3faea4ae/1600958778.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-07T22:45:30.744Z",
+  "subCategoryID": null,
+  "title": "VRCSTation, which is used for the swing, causes abnormal flight when the swing is Destroyed.",
+  "trendingScore": 2630.11410908112,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "vrcstation-which-is-used-for-the-swing-causes-abnormal-flight-when-the-swing-is",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b7e91cbdd7bc8572034ff2d",
+      "alias": "Saffron Impala",
+      "aliasID": "65c2a2d3ed6eefce4c7e37c8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b4a7bbe6fc37697b127ece467e5638ba.png",
+      "companies": [],
+      "name": "OOMIYA",
+      "urlName": "<redacted>",
+      "voteID": "5ecfeec1729b3b66342fe726"
+    },
+    {
+      "_id": "5c1c9d4dafb7a54c657617a6",
+      "alias": "Static Canidae",
+      "aliasID": "65c35345ed6eefce4cb6502c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/549b30d565db688b59b571643a705f51.png",
+      "companies": [],
+      "name": "momoma",
+      "urlName": "<redacted>",
+      "voteID": "5e9f8ca0cbb0571886f4c988"
+    },
+    {
+      "_id": "5af595dd56feb85f40086183",
+      "alias": "Orange Koala",
+      "aliasID": "65c71420ed6eefce4c4f456e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b5f041baa4b54601588433c08d4cd81a.png",
+      "companies": [],
+      "name": "kingBigfootia",
+      "urlName": "<redacted>",
+      "voteID": "5e9d80da512429192a2d38d4"
+    },
+    {
+      "_id": "5b0c6b275853c02d9764fb82",
+      "alias": "Ube Pinniped",
+      "aliasID": "65c2b40fed6eefce4ccccb70",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6d7fd9a2818f95ae16fbb4be009f1dd8.png",
+      "companies": [],
+      "name": "LastRar",
+      "urlName": "<redacted>",
+      "voteID": "5e956ffd853e471e1fe2e86e"
+    },
+    {
+      "_id": "5e0d8dbe592c4a421adc4952",
+      "alias": "Iron grey Shrew",
+      "aliasID": "65c35740ed6eefce4c46a6e3",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3d1e939114ff87f6ca52781ce9ba241f.jpg",
+      "companies": [],
+      "name": "しいたけ(vrctaki)",
+      "urlName": "<redacted>",
+      "voteID": "5e8d028a51b2c33b3faea4b6"
+    }
+  ]
+}

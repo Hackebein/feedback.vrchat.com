@@ -1,0 +1,95 @@
+{
+  "__v": 0,
+  "_id": "62f6ba5d496d8259acc9a1d5",
+  "aiCategories": [
+    "loc.quick-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-18T22:31:40.712310Z",
+  "author": {
+    "_id": "5ffc08b98510b5672f0c4d56",
+    "alias": "Huge Jaguar",
+    "aliasID": "65c39ff0ed6eefce4cd130b3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d042d9a90473ec9c84e62c66ee795e81.png",
+    "created": "2021-01-11T08:13:45.960Z",
+    "name": "PeachBight",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ffc08b98510b5672f0c4d56",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-08-12T20:38:53.038Z",
+  "deletedAt": null,
+  "details": "When the user opens a collapsed section in the Settings tab of the Quick Menu, the Quick Menu automatically scrolls to the bottom, regardless of where the user has previously scrolled to. The first section (UI Elements) does not exhibit this behavior even if the Quick Menu has been slightly scrolled.\nReproduced in both VR and Desktop on build 1221\nSteps to Reproduce\n1. Open the quick menu\n2. Go to the Settings tab\n3. Click the chevron on the Avatar Interactions section to collapse the section\n4. Click on the chevron again to expand the section\nInstead of expanding the section in place, the section expands but the Quick Menu scrolls all the way to the bottom.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb91ee4c3e90df1368b97",
+  "imageURLs": [
+    "https://canny.io/images/bb4577dee873d69d7a664c782e3e7dbc.jpg"
+  ],
+  "lastUpdated": 1779143278829,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-08-12T20:38:53.039Z",
+  "subCategoryID": null,
+  "title": "Closing sections on the settings tab scrolls the quick menu to the bottom",
+  "trendingScore": 2746.553086959776,
+  "updatedAt": "2026-05-18T22:30:07.890442Z",
+  "urlName": "closing-sections-on-the-settings-tab-scrolls-the-quick-menu-to-the-bottom",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ba47c461a7723782e67558a",
+      "alias": "Favourite Possum",
+      "aliasID": "65c36f1bed6eefce4c8570dd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2e512a5a63c082d0cfce023750d62733.png",
+      "companies": [],
+      "name": "Lolcrab",
+      "urlName": "<redacted>",
+      "voteID": "62fb32952595a644b495d687"
+    },
+    {
+      "_id": "5ffc08b98510b5672f0c4d56",
+      "alias": "Huge Jaguar",
+      "aliasID": "65c39ff0ed6eefce4cd130b3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d042d9a90473ec9c84e62c66ee795e81.png",
+      "companies": [],
+      "name": "PeachBight",
+      "urlName": "<redacted>",
+      "voteID": "62f6ba5d496d8259acc9a1f4"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "6127ef1ebf351e6d2756fa73",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T00:33:20.683076Z",
+  "author": {
+    "_id": "5f2dc5e7d99b4d10db4a527d",
+    "alias": "Ube Gayal",
+    "aliasID": "65c290c9ed6eefce4cd4008e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3bdfe05c20ccfecf85d444c2a7ce852.png",
+    "created": "2020-08-07T21:21:43.365Z",
+    "name": "Genesis",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2dc5e7d99b4d10db4a527d",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-08-26T19:44:30.470Z",
+  "deletedAt": null,
+  "details": "When an UdonBehaviour contains a public variable of type VRC.Udon.Common.UdonInputEventArgs, the object state works fine in the Unity editor, but in the VRC client the object state is reset and throws the log error below.  A minimal example written with UdonSharp is provided to reproduce the issue.\n--------\n2021.08.26 20:34:48 Exception  -  Exception has been thrown by the target of an invocation.\n  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00000] in <00000000000000000000000000000000>:0 \n  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializableFormatter`1+<>c__DisplayClass2_0[T].<.cctor>b__0 (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) [0x00000] in <00000000000000000000000000000000>:0 \n  at System.Func`3[T1,T2,TResult].Invoke (T1 arg1, T2 arg2) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializableFormatter`1[T].DeserializeImplementation (T& value, VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.BaseFormatter`1[T].Deserialize (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.ComplexTypeSerializer`1[T].ReadValue (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.ListFormatter`1[T].DeserializeImplementation (System.Collections.Generic.List`1[T]& value, VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.BaseFormatter`1[T].Deserialize (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.ComplexTypeSerializer`1[T].ReadValue (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializableFormatter`1[T].ReadSerializationInfo (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializableFormatter`1[T].DeserializeImplementation (T& value, VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.BaseFormatter`1[T].Deserialize (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.ComplexTypeSerializer`1[T].ReadValue (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializationUtility.DeserializeValue[T] (VRC.Udon.Serialization.OdinSerializer.IDataReader reader, System.Collections.Generic.List`1[T] referencedUnityObjects) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializationUtility.DeserializeValue[T] (System.IO.Stream stream, VRC.Udon.Serialization.OdinSerializer.DataFormat format, System.Collections.Generic.List`1[T] referencedUnityObjects, VRC.Udon.Serialization.OdinSerializer.DeserializationContext context) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializationUtility.DeserializeValue[T] (System.Byte[] bytes, VRC.Udon.Serialization.OdinSerializer.DataFormat format, System.Collections.Generic.List`1[T] referencedUnityObjects, VRC.Udon.Serialization.OdinSerializer.DeserializationContext context) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.UdonBehaviour.DeserializePublicVariables () [0x00000] in <00000000000000000000000000000000>:0 \n2021.08.26 20:34:48 Exception  -  Exception has been thrown by the target of an invocation.\n  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00000] in <00000000000000000000000000000000>:0 \n  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializableFormatter`1+<>c__DisplayClass2_0[T].<.cctor>b__0 (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) [0x00000] in <00000000000000000000000000000000>:0 \n  at System.Func`3[T1,T2,TResult].Invoke (T1 arg1, T2 arg2) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializableFormatter`1[T].DeserializeImplementation (T& value, VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.BaseFormatter`1[T].Deserialize (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.ComplexTypeSerializer`1[T].ReadValue (VRC.Udon.Serialization.OdinSerializer.IDataReader reader) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializationUtility.DeserializeValue[T] (VRC.Udon.Serialization.OdinSerializer.IDataReader reader, System.Collections.Generic.List`1[T] referencedUnityObjects) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializationUtility.DeserializeValue[T] (System.IO.Stream stream, VRC.Udon.Serialization.OdinSerializer.DataFormat format, System.Collections.Generic.List`1[T] referencedUnityObjects, VRC.Udon.Serialization.OdinSerializer.DeserializationContext context) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.Serialization.OdinSerializer.SerializationUtility.DeserializeValue[T] (System.Byte[] bytes, VRC.Udon.Serialization.OdinSerializer.DataFormat format, System.Collections.Generic.List`1[T] referencedUnityObjects, VRC.Udon.Serialization.OdinSerializer.DeserializationContext context) [0x00000] in <00000000000000000000000000000000>:0 \n  at VRC.Udon.UdonBehaviour.DeserializePublicVariables () [0x00000] in <00000000000000000000000000000000>:0 \n---------\nUdonSharp minimal example:\nusing UdonSharp;\nusing UnityEngine;\nusing VRC.SDKBase;\nusing VRC.Udon;\n#if !COMPILER_UDONSHARP && UNITY_EDITOR\nusing UnityEditor;\nusing UdonSharpEditor;\nusing System;\nusing System.Linq;\n#endif\npublic class Test : UdonSharpBehaviour {\n\tpublic VRC.Udon.Common.UdonInputEventArgs _udonInputEventArgs; // Breaks serialization, causing _value to always be true - works in Unity editor's play mode, but broken in VRC client.\n\tpublic bool _value = true;\n\tvoid Start() => LogState();\n\tvoid LogState() => Debug.Log($\"Start() :: gameObject: {this.gameObject.name}, _value: {this._value}\");\n}\n#if !COMPILER_UDONSHARP && UNITY_EDITOR\n[CustomEditor(typeof(Test), true)]\npublic class TestEditor : Editor {\n\tprivate Test proxy;\n\tprivate bool isProxyBehaviour = false;\n\tpublic void Awake() {\n\t\tproxy = (Test)target;\n\t\tisProxyBehaviour = (target is UdonSharpBehaviour b) && UdonSharpEditorUtility.IsProxyBehaviour(b);\n\t\t// Convert Script To Behaviour Automatically\n\t\tif(!EditorApplication.isPlaying && (target is UdonSharpBehaviour behaviour) && !UdonSharpEditorUtility.IsProxyBehaviour(behaviour)) {\n\t\t\tUdonSharpEditorUtility.ConvertToUdonBehaviours(Array.ConvertAll(targets, e => e as UdonSharpBehaviour).Where(e => e != null && !UdonSharpEditorUtility.IsProxyBehaviour(e)).ToArray());\n\t\t\treturn;\n\t\t}\n\t\tif(!isProxyBehaviour) return;\n\t}\n\tpublic override void OnInspectorGUI() {\n\t\tif(!isProxyBehaviour || UdonSharpGUI.DrawDefaultUdonSharpBehaviourHeader(target)) return;\n\t\tproxy._value = EditorGUILayout.Toggle(\"Value\", proxy._value);\n\t}\n}\n#endif",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b1e4c3e90df13539f2",
+  "imageURLs": [],
+  "lastUpdated": 1779275476437,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-08-26T19:44:30.470Z",
+  "subCategoryID": null,
+  "title": "UdonInputEventArgs breaks object serialization",
+  "trendingScore": 2695.8106579518894,
+  "updatedAt": "2026-05-20T11:11:18.557506Z",
+  "urlName": "udoninputeventargs-breaks-object-serialization",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2dc5e7d99b4d10db4a527d",
+      "alias": "Ube Gayal",
+      "aliasID": "65c290c9ed6eefce4cd4008e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3bdfe05c20ccfecf85d444c2a7ce852.png",
+      "companies": [],
+      "name": "Genesis",
+      "urlName": "<redacted>",
+      "voteID": "6127ef1ebf351e6d2756fa7a"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "__v": 0,
+  "_id": "5d86627033d9dc424434002d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T19:56:46.814606Z",
+  "author": {
+    "_id": "5b9ddf46ef10ea5b018242cc",
+    "alias": "Keen Magpie",
+    "aliasID": "65c321beed6eefce4c470352",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/ff156cdd5794f28199bbde6e179d5c37.png",
+    "created": "2018-09-16T04:42:46.613Z",
+    "name": "Neitri",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b9ddf46ef10ea5b018242cc",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-09-21T17:48:32.614Z",
+  "deletedAt": null,
+  "details": "SDK should add \"VRCGlobalRoot\" tag upon Unity editor start. Here is how http://answers.unity.com/answers/929868/view.html Just tested that method and it still works in 2017.4.28f1\n\nSome people have hard time figuring out you have to unpause to proceed with upload when this error appears.\n\nPeople consider this \"normal\" bug, search VRCGlobalRoot in VRChat discord.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d91e4c3e90df15881f4",
+  "imageURLs": [
+    "https://canny.io/images/7cef5e5377c0b332df869c3637c51cdf.png",
+    "https://canny.io/images/e61349027056a37700377b28dd47f2ca.png"
+  ],
+  "lastUpdated": 1779218197762,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5d86627033d9dc424434002d/1632985261.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-09-21T17:48:32.614Z",
+  "subCategoryID": null,
+  "title": "Tag: VRCGlobalRoot is not defined",
+  "trendingScore": 2595.977561626037,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "tag-vrcglobalroot-is-not-defined",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5d69c98a55afec1f28c05c1e",
+      "alias": "Thick Hoverfly",
+      "aliasID": "65c8008eed6eefce4cbaee11",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/43804e6733121d5255ee9063744e825d.png",
+      "companies": [],
+      "name": "CY Lin",
+      "urlName": "<redacted>",
+      "voteID": "5d8a8582873d8111dedd9adf"
+    },
+    {
+      "_id": "5c3ebabdd719d47074a854d4",
+      "alias": "Elaborate Unicorn",
+      "aliasID": "65c2a21aed6eefce4c630825",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/11db59d1be92ff8b32736a1399ec24dc.png",
+      "companies": [],
+      "name": "pypy",
+      "urlName": "<redacted>",
+      "voteID": "5d88ee5b84d15079401c1f69"
+    },
+    {
+      "_id": "5b9ddf46ef10ea5b018242cc",
+      "alias": "Keen Magpie",
+      "aliasID": "65c321beed6eefce4c470352",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ff156cdd5794f28199bbde6e179d5c37.png",
+      "companies": [],
+      "name": "Neitri",
+      "urlName": "<redacted>",
+      "voteID": "5d86627033d9dc4244340036"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "__v": 0,
+  "_id": "5f8a3aca17015c5af5d8a646",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-19T19:59:52.756638Z",
+  "author": {
+    "_id": "5f8a2164055a624c84671d77",
+    "alias": "Emerald Penguin",
+    "aliasID": "65d274760129d7ae44bbdce8",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/65af296192b0f29c003f25318f3d781c.png",
+    "created": "2020-10-16T22:40:36.426Z",
+    "name": "Extrymas",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f8a2164055a624c84671d77",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-10-17T00:28:58.748Z",
+  "deletedAt": null,
+  "details": "I have 2 avatars in one project in 2 different scenes and have \"Expressions Menu\" and \"Expression Parameters\" setup on both of them. In \"Expressions Menu\" of the first avatar, if I select the second avatar in \"Active Avatar\", close the menu and open it again, \"Active Avatar\" gets reset to the first one again. And vice versa.\nCould there be \"none\" option or a way to disable a menu for when we don't want to use it",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7ebe4c3e90df131ec57",
+  "imageURLs": [
+    "https://canny.io/images/7e8ae6a8a8cabce313c6a54fea3607e4.png"
+  ],
+  "lastUpdated": 1779218236340,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-10-17T00:28:58.748Z",
+  "subCategoryID": null,
+  "title": "[SDK] [VRCSDK3-AVATAR-2020.09.25.00.08] \"Active Avatar\" in \"Expressions Menu\" doesn't let you switch active avatar. Resets",
+  "trendingScore": 2650.981736411711,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "sdk-vrcsdk3-avatar-202009250008-active-avatar-in-expressions-menu-doesnt-let-you",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f8a2164055a624c84671d77",
+      "alias": "Emerald Penguin",
+      "aliasID": "65d274760129d7ae44bbdce8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/65af296192b0f29c003f25318f3d781c.png",
+      "companies": [],
+      "name": "Extrymas",
+      "urlName": "<redacted>",
+      "voteID": "5f8a3aca17015c5af5d8a64d"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "__v": 0,
+  "_id": "5c9b32cd4244b2041b5c30b3",
+  "aiCategories": [
+    "loc.in-world",
+    "audio"
+  ],
+  "aiTaggedAt": "2026-05-17T22:27:38.220636Z",
+  "author": {
+    "_id": "5aab30ea0b6da707273dbb98",
+    "alias": "Dew Barracuda",
+    "aliasID": "65ba05a1ed6eefce4c5bd1c1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/18510a7a53ae57ea3fe726097d2cd765.png",
+    "created": "2018-03-16T02:50:18.758Z",
+    "name": "Fionna",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5aab30ea0b6da707273dbb98",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-03-27T08:22:37.979Z",
+  "deletedAt": null,
+  "details": "An audio source with looping audio that is enabled/play on awake at start will have a falloff curve that does not match the Unity settings.  In the example scene, ONSP is present but disabled.  Both spheres have identical audio sources with short custom falloff in the Unity audio source curve.  The rainbow source is enabled at start, and has a very long range until toggled off and on.\n\nWorld id: wrld_88be5c93-d1c5-4966-80f3-bd169ee75979",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d7ae4c3e90df1582290",
+  "imageURLs": [
+    "https://canny.io/images/e2a0930e38d9fb7507f7f2cfece6c583.png",
+    "https://canny.io/images/3e9ca51e9c4b4637fa14aef00a2c2c7f.png"
+  ],
+  "lastUpdated": 1779056626763,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 16,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 16,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-03-27T08:22:37.979Z",
+  "subCategoryID": null,
+  "title": "Audio enabled at start does not use proper spatialization until disabled and re-enabled",
+  "trendingScore": 2689.752560993717,
+  "updatedAt": "2026-05-17T22:25:22.540712Z",
+  "urlName": "audio-enabled-at-start-does-not-use-proper-spatialization-until-disabled-and-re-",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d03ff26f975679707203bd269ce42822.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": "<redacted>",
+      "voteID": "60f66c6c42353319c4db319c"
+    },
+    {
+      "_id": "59f999485593a546a5eb45b1",
+      "alias": "Pewter Sawfish",
+      "aliasID": "65ba0194ed6eefce4cf57a69",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/0db021977158ce3b032de7bb96779819.png",
+      "companies": [],
+      "name": "Келт Ривера",
+      "urlName": "<redacted>",
+      "voteID": "5d336530b13e7001d53e6179"
+    },
+    {
+      "_id": "5b8f33ea6d8cbb0cbea80416",
+      "alias": "Chartreuse Alpaca",
+      "aliasID": "65c29cb5ed6eefce4c94216c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/500b64e5c3c1b5bac6d20563da1246a1.png",
+      "companies": [],
+      "name": "Kaj",
+      "urlName": "<redacted>",
+      "voteID": "5ca7f0b2f20960617ac1a492"
+    },
+    {
+      "_id": "5c3e1d592069274164a6355c",
+      "alias": "Razzmatazz Raven",
+      "aliasID": "65c2a298ed6eefce4c7550bc",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/61799ddaa4d2c065b2123433402a46a8.png",
+      "companies": [],
+      "name": "Chibisan",
+      "urlName": "<redacted>",
+      "voteID": "5ca4ebc0b58cbc5d204b1cad"
+    },
+    {
+      "_id": "5c1ff1a2b8b4ae10c49239b5",
+      "alias": "Final Roadrunner",
+      "aliasID": "65c27af3ed6eefce4c78ca24",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3483a18162556dbb6747cf6ebd22491b.jpg",
+      "companies": [],
+      "name": "Drake Hunter",
+      "urlName": "<redacted>",
+      "voteID": "5ca40834d6c2c351ddc93da9"
+    },
+    {
+      "_id": "58c6b3cc227a56787575ebb4",
+      "alias": "Grand Mollusk",
+      "aliasID": "65ba012ced6eefce4cea0ee0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5d83bc788dc63425110e77cabb5979d1.png",
+      "companies": [],
+      "name": "Hagbard Celine",
+      "urlName": "<redacted>",
+      "voteID": "5ca3c7e9ff850e12015ecf02"
+    },
+    {
+      "_id": "5bde8894a1e5c74195274475",
+      "alias": "Significant Magpie",
+      "aliasID": "660cbc92e5d26962aaf79a05",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/d90b35e6f4377ea70e8d3b2b9a1aab6d.jpg",
+      "companies": [],
+      "name": "wolf mun",
+      "urlName": "<redacted>",
+      "voteID": "5ca173745a255d6841f37031"
+    },
+    {
+      "_id": "5a4e8a6fa3192e49202daec7",
+      "alias": "Damask Dormouse",
+      "aliasID": "65ba01d7ed6eefce4cfc68b7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f8f569000762dcb5341321bc9a54f4da.png",
+      "companies": [],
+      "name": "ayaldev",
+      "urlName": "<redacted>",
+      "voteID": "5c9d02f15539e7078d7dfae3"
+    },
+    {
+      "_id": "5c96c04b5f368b2b23a7261d",
+      "alias": "Golden Loon",
+      "aliasID": "65cd4a3fed6eefce4cd00c6f",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/89cd138cb0a8f87dac4703bae2698c79.png",
+      "companies": [],
+      "name": "Saffron",
+      "urlName": "<redacted>",
+      "voteID": "5c9beb865539e7078d7cda5d"
+    },
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d725908cb1652c95b08a294422da5ff5.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": "<redacted>",
+      "voteID": "5c9b99525539e7078d7c4a3a"
+    }
+  ]
+}

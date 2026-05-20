@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "65a4210037bf8b9d70594bd5",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:40:54.894851Z",
+  "author": {
+    "_id": "630637b49a798b44a48f0592",
+    "alias": "Toffee Beetle",
+    "aliasID": "65c2b48bed6eefce4cdd8bf4",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-08-24T14:37:40.819Z",
+    "name": "Carter1215",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "630637b49a798b44a48f0592",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-01-14T17:59:28.372Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Hello,\n\nI seem to have run into the issue where referring to an Instantiate node more than once causes a Udon Assembly error. As it seems to create multiple instances of the same __clone_0 in the assembly code.\n\nThe easiest reproducible is to have a Start event -> branch -> both true and false -> instantiate.\n\nI've attached a screenshot of the type of use case that led to my error.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9c9e4c3e90df13893fb",
+  "imageURLs": [
+    "https://canny.io/images/ee1d349ea332c3ee172619db45dc18bb.png"
+  ],
+  "lastUpdated": 1779039023567,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-01-14T17:59:28.372Z",
+  "subCategoryID": null,
+  "title": "Instantiate creates multiple __clone__0 , resulting in Udon Assembly error",
+  "trendingScore": 2820.2288094085693,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "instantiate-creates-multiple-clone0-resulting-in-udon-assembly-error",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "630637b49a798b44a48f0592",
+      "alias": "Toffee Beetle",
+      "aliasID": "65c2b48bed6eefce4cdd8bf4",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Carter1215",
+      "urlName": "<redacted>",
+      "voteID": "65a42100b7f7f4d2273498af"
+    }
+  ]
+}

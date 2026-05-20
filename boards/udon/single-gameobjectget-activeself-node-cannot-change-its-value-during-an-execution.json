@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "5ffd0e568510b5672f18cef7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:24:47.889953Z",
+  "author": {
+    "_id": "5bbfe7082f9bdf3d5024c14d",
+    "alias": "Incarnadine Meerkat",
+    "aliasID": "65c27264ed6eefce4c18097a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/40b5e700aeb8c2cf9d9191e490ca5b80.png",
+    "created": "2018-10-12T00:12:56.548Z",
+    "name": "Joker is punk",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5bbfe7082f9bdf3d5024c14d",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-12T02:49:58.841Z",
+  "deletedAt": null,
+  "details": "[VRCSDK3-WORLD-2020.12.09.04.44_Public]\n1. Use a GameObject.get activeSelf node and a Boolean.UnaryNegation node with GameObject.SetActive to toggle the active state of some gameobject\n2. In the same execution flow, after the SetActive node, reference the active state of that GameObject **using the bool output of the same get activeSelf node**\nexpected: the referenced truth value is whatever was just set by the SetActive node\nactual: the referenced truth value is unchanged from its value at the beginning of the execution flow\nSee attached images.\nIn the first, the last value to be set ends up being the opposite truth value of the truth value just set by the GameObject.SetActive node one step earlier in the execution flow.\nIn the second image, the exact same value is referenced, but using a duplicate node, and the truth value matches the value set by the SetActive node as expected.\nNote, this might be limited to references to properties of external GameObjects; when a simple boolean variable is substituted in for the active state of the GameObject, the graph executes as expected (see images three and four)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb800e4c3e90df13224f2",
+  "imageURLs": [
+    "https://canny.io/images/3b66da108b8d9f233249970857390375.png",
+    "https://canny.io/images/f9b6926c0382f10972b32fdc15a3cd85.png",
+    "https://canny.io/images/2bce7947c0b0d88e5fc4f2461e676974.png",
+    "https://canny.io/images/69cffe3317cfcb2fb4966996881d2004.png"
+  ],
+  "lastUpdated": 1779247129949,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-12T02:49:58.841Z",
+  "subCategoryID": null,
+  "title": "Single GameObject.get activeSelf node cannot change its value during an execution flow",
+  "trendingScore": 2663.4242961124382,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "single-gameobjectget-activeself-node-cannot-change-its-value-during-an-execution",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5bbfe7082f9bdf3d5024c14d",
+      "alias": "Incarnadine Meerkat",
+      "aliasID": "65c27264ed6eefce4c18097a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/40b5e700aeb8c2cf9d9191e490ca5b80.png",
+      "companies": [],
+      "name": "Joker is punk",
+      "urlName": "<redacted>",
+      "voteID": "5ffd0e568510b5672f18cefe"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "6184fdec166dbf17b5bfd1f6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T19:36:55.263124Z",
+  "author": {
+    "_id": "616aca9f2dc338205a6413dd",
+    "alias": "Magenta Galliform",
+    "aliasID": "65d23a7e0129d7ae44f4223a",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-10-16T12:50:39.794Z",
+    "name": "H4x0r_000",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "616aca9f2dc338205a6413dd",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-11-05T09:48:28.890Z",
+  "deletedAt": null,
+  "details": "I would love to see custom scripts being usable in vrc. UDON is a nice way to code but its stillway to limited and most importantly way to slow. I made a test where i coded a udon script that simply rotated a cube on update. With udon i took me 0.057 micro seconds per frame per cube, but with a custom script just 0.0008 micro seconds. This may seem to not that bad and indeed it isnt but remember that this is just a single cube rotation. Imagine a huge and complex script to as example implement a specialgame mechanic. This smal times sum up to a bad performance wich is realy bad. In terms of sequrity im sure there is a way to make a library/dependency whitelist to as example lock the funktion to read/write on hard drive.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8c2e4c3e90df1357253",
+  "imageURLs": [],
+  "lastUpdated": 1779218016363,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-11-05T09:48:28.890Z",
+  "subCategoryID": null,
+  "title": "Custom scripts in VRC",
+  "trendingScore": 2705.894385450236,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "custom-scripts-in-vrc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "616aca9f2dc338205a6413dd",
+      "alias": "Magenta Galliform",
+      "aliasID": "65d23a7e0129d7ae44f4223a",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "H4x0r_000",
+      "urlName": "<redacted>",
+      "voteID": "6184fdec166dbf17b5bfd200"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "605f3d3eb493c31833ed4102",
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-18T09:28:00.864941Z",
+  "author": {
+    "_id": "5f300554240100699ef12c42",
+    "alias": "Entire Swallow",
+    "aliasID": "66090dcae5d26962aa21cea9",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/949a268e7a8b6a773e32b55b1c96a946.png",
+    "created": "2020-08-09T14:16:52.928Z",
+    "name": "flug1000",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f300554240100699ef12c42",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-03-27T14:12:14.232Z",
+  "deletedAt": null,
+  "details": "VRChat Build 1067\nI recently noticed that VRChat will crash if you start with RivaTuner Statistics Server running in the background. RivaTuner Statistics Server is a Software to monitor your usage of PC hardware like graphics card usage, cpu, temps and so on. It's not that dramatic if this wont be fixed but I still want to point it out, maybe it's easy to fix.\nTo reproduce just open RivaTuner Statistics Server and watch VRChat crash if you tap into it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb813e4c3e90df1325f05",
+  "imageURLs": [],
+  "lastUpdated": 1779096253584,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-03-27T14:12:14.232Z",
+  "subCategoryID": null,
+  "title": "RivaTuner Statistics Server causes VRChat to crash",
+  "trendingScore": 2674.480167307807,
+  "updatedAt": "2026-05-18T09:26:35.239106Z",
+  "urlName": "rivatuner-statistics-server-causes-vrchat-to-crash",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d109ce078064277f0778e",
+      "alias": "Careful Penguin",
+      "aliasID": "65c2a247ed6eefce4c6987b7",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/b70151b2d572a7822e763ef03d994e58.png",
+      "companies": [],
+      "name": "MagnaLuna",
+      "urlName": "<redacted>",
+      "voteID": "605f8c65583e42079099511d"
+    },
+    {
+      "_id": "5f300554240100699ef12c42",
+      "alias": "Entire Swallow",
+      "aliasID": "66090dcae5d26962aa21cea9",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/949a268e7a8b6a773e32b55b1c96a946.png",
+      "companies": [],
+      "name": "flug1000",
+      "urlName": "<redacted>",
+      "voteID": "605f3d3eb493c31833ed4109"
+    }
+  ]
+}

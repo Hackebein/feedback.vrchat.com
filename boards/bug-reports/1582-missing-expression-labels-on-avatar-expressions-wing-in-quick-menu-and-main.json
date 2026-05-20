@@ -1,0 +1,101 @@
+{
+  "__v": 0,
+  "_id": "67b0bcb161d7d15b4badcb9f",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.main-menu",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-05-16T22:06:04.265914Z",
+  "author": {
+    "_id": "644daf9a2b50e0a6f54d7e40",
+    "alias": "Coral Koala",
+    "aliasID": "65c3903bed6eefce4ce54425",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b496544bd77a3775ac49ab75d64a0405.png",
+    "created": "2023-04-30T00:00:26.272Z",
+    "name": "Vinyarion",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "644daf9a2b50e0a6f54d7e40",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-02-15T16:11:29.772Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Leave the VRChat Client running for an unknown long time (on the scale of 24-48+ hours)\n\n2. Select an avatar with expressions\n\n3. Open Quick Menu or Main Menu Expressions Wing\n\n4. Observe missing labels for expressions (both leaf and container nodes)\n\nExpression labels are notably *present* in the Radial Menu.\n\nThe absence of labels persists between world and avatar changes.\n\nAs this bug occurs after many hours, and as I only updated to build 1583 today, but no such bug was mentioned in the patch notes for build 1583, I am still submitting this report.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba47e4c3e90df13a17a3",
+  "imageURLs": [
+    "https://canny-assets.io/images/61605bc423d4ed25fede7ebdcd00121a.png",
+    "https://canny-assets.io/images/9b9de0e27933d24d1f6cab477bf0340d.png",
+    "https://canny-assets.io/images/46b7cad7efd9a80ee5b3de5b412f6590.png"
+  ],
+  "lastUpdated": 1779247215334,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67b0bcb161d7d15b4badcb9f/1316796094.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-02-15T16:11:29.772Z",
+  "subCategoryID": null,
+  "title": "[1582] Missing expression labels on avatar Expressions Wing in Quick Menu and Main Menu",
+  "trendingScore": 2880.0441814047003,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "updatedBy": null,
+  "urlName": "1582-missing-expression-labels-on-avatar-expressions-wing-in-quick-menu-and-main",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fb75a5959b6fc72ce0fdad9",
+      "alias": "Venetian red Lark",
+      "aliasID": "65c2756eed6eefce4c9639cf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6868435ffca9bbafe94debcd967141f8.png",
+      "companies": [],
+      "name": "StephenVR",
+      "urlName": "<redacted>",
+      "voteID": "67d20bd1b324a9620957a3a1"
+    },
+    {
+      "_id": "644daf9a2b50e0a6f54d7e40",
+      "alias": "Coral Koala",
+      "aliasID": "65c3903bed6eefce4ce54425",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b496544bd77a3775ac49ab75d64a0405.png",
+      "companies": [],
+      "name": "Vinyarion",
+      "urlName": "<redacted>",
+      "voteID": "67b0bcb1b324a962097937ec"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "_id": "6947b7118b1c684a2e0c163c",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-17T02:40:13.735206Z",
+  "author": {
+    "_id": "653dcbaeffcdebbc2d61f97f",
+    "alias": "Wealthy Trout",
+    "aliasID": "65c2c024ed6eefce4c6424a3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7179c52a40ca878a29d307f0442a8252.png",
+    "created": "2023-10-29T03:04:14.856Z",
+    "name": "松紡雫（まちゅむしじゅく）",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "653dcbaeffcdebbc2d61f97f",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-21T09:00:01.468Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Environment\n\n　-OS: Windows 10\n\n　-VR Device: Meta Quest 2 (PCVR)\n\n　-Platform: VRChat (PC)\n\n　-Event: Vket Winter 2025\n\n　-Location: Company Booth Worlds (e.g. Shinjuku Monorail area)\n\nDescription\n\n　During Vket Winter 2025, I experienced a VR freeze followed by a forced application exit while visiting company booth worlds.\n\n　This issue appears to be related to newly introduced moving-platform gimmicks (e.g. monorail and escalator systems) that allow players to remain standing, walk, and jump without using a Sit interaction.\n\n　Notably, this behavior does not occur in most user-created worlds, and I was able to reproduce the issue intentionally after the event in order to collect logs.\n\nObserved Behavior\n\n　-The player avatar moves together with the vehicle/platform without Sit constraints\n\n　-The player can walk and jump freely while the platform is moving\n\n　-After some time, the screen freezes and VRChat exits\n\n　-No GPU crash, VRAM error, or OS-level error is observed\n\nLog Information (Key Points)\n\n　-Repeated warnings:\n\n　　Player transform is not aligned with the XZ plane. Correcting!\n\n　-Followed by multiple NullReferenceException errors during shutdown\n\n　-Errors appear mainly during OnDestroy() and cleanup phases\n\n　-No DXGI_ERROR, Device Removed, or Out of Memory messages found\n\nReproduction Steps\n\n　1. Launch VRChat on Windows 10 using Quest 2 (PCVR)\n\n　2. Enter a Vket Winter 2025 company booth world\n\n　3. Use the new monorail or escalator gimmick\n\n　　　-Remain standing (no Sit)\n\n　　　-Walk and/or jump while the platform is moving\n\n　4. After some time, the player transform becomes unstable and VRChat exits\n\nAnalysis / Hypothesis\n\nThis issue seems to occur when:\n\n　-The world continuously modifies the player’s transform to synchronize with a moving platform\n\n　-At the same time, player input (movement / jump) and VRChat’s own player correction logic are applied\n\n　-Under performance constraints, frame timing becomes inconsistent\n\n　-This results in transform misalignment (XZ plane correction spam), eventually leading to an unrecoverable state\n\nThe problem appears to be world-side transform synchronization, rather than a hardware or OS failure.\n\nAdditional Notes\n\n　-I intentionally reproduced the issue after completing the event to verify whether it was caused by my PC or VR device\n\n　-The issue does not commonly occur in non-event or user-created worlds\n\n　-This suggests an edge case involving new moving-platform mechanics under VR conditions",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/ffc3ec973fbff9b3f824d0eeaf4b5db1.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-12-21",
+      "url": "https://canny-assets.io/files/ffc3ec973fbff9b3f824d0eeaf4b5db1.txt"
+    }
+  ],
+  "ideaID": "6947b7118b1c684a2e0c170e",
+  "imageURLs": [],
+  "lastUpdated": 1778985248725,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6947b7118b1c684a2e0c163c/1554733420.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-21T09:00:01.468Z",
+  "subCategoryID": null,
+  "title": "VR Freeze / Forced Exit when using new moving-platform gimmicks (Vket Winter 2025 – Company Booth Worlds)",
+  "trendingScore": 2921.1752926600575,
+  "updatedAt": "2026-05-17T02:36:27.581782Z",
+  "updatedBy": null,
+  "urlName": "vr-freeze-forced-exit-when-using-new-moving-platform-gimmicks-vket-winter-2025-c",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "653dcbaeffcdebbc2d61f97f",
+      "alias": "Wealthy Trout",
+      "aliasID": "65c2c024ed6eefce4c6424a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7179c52a40ca878a29d307f0442a8252.png",
+      "companies": [],
+      "name": "松紡雫（まちゅむしじゅく）",
+      "urlName": "<redacted>",
+      "voteID": "6947b711f85d59c66d005a2d"
+    }
+  ]
+}

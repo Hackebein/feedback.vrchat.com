@@ -1,0 +1,102 @@
+{
+  "__v": 0,
+  "_id": "5a593774b762306375220b79",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-18T11:43:13.817326Z",
+  "author": {
+    "_id": "59fada2328fdd30c9a640d61",
+    "alias": "Typical Swordfish",
+    "aliasID": "65ba0193ed6eefce4cf562e6",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/35efbcc4e3f8793f008d9c45fa8dbdcd.png",
+    "created": "2017-11-02T08:41:07.750Z",
+    "name": "Hello Kitty",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "59fada2328fdd30c9a640d61",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-01-12T22:32:20.554Z",
+  "deletedAt": null,
+  "details": "The current existing pickup system does not scale. In complex worlds with hundreds or even thousands of objects the current system, which relies on rigidbody physics, does not perform well. When profiled Physics in these cases are eating so much frame time that the FPS will drop to 30 on Desktop. Even if the objects are just using box colliders.\n\nI suggest providing a more efficient pickup solution for these large world cases. For example, my suggestion is to create non-rigidbody pickups that raycast down when dropped and provide a fake gravity animation by lerping the position. This would allow objects to be interactable without the poorly scaling performance caused by hundreds of rigidbodies jiggling up against eachother everyframe.\n\nHere is an example of the profile indicating that physics is the issue: https://imgur.com/NeIKEU1",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d49e4c3e90df1574187",
+  "imageURLs": [],
+  "lastUpdated": 1779103757107,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-01-12T22:32:20.554Z",
+  "subCategoryID": null,
+  "title": "Efficient Pickups",
+  "trendingScore": 2707.6943733597886,
+  "updatedAt": "2026-05-18T11:30:57.664443Z",
+  "urlName": "efficient-pickups",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "<redacted>",
+      "voteID": "619bfff5735ec864c04664a3"
+    },
+    {
+      "_id": "5aab30ea0b6da707273dbb98",
+      "alias": "Dew Barracuda",
+      "aliasID": "65ba05a1ed6eefce4c5bd1c1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/18510a7a53ae57ea3fe726097d2cd765.png",
+      "companies": [],
+      "name": "Fionna",
+      "urlName": "<redacted>",
+      "voteID": "5ad25c079dc2cc47b1524b38"
+    },
+    {
+      "_id": "59fada2328fdd30c9a640d61",
+      "alias": "Typical Swordfish",
+      "aliasID": "65ba0193ed6eefce4cf562e6",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/35efbcc4e3f8793f008d9c45fa8dbdcd.png",
+      "companies": [],
+      "name": "Hello Kitty",
+      "urlName": "<redacted>",
+      "voteID": "5a59377495e08263ccf8ef28"
+    }
+  ]
+}

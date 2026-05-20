@@ -1,0 +1,200 @@
+{
+  "_id": "69ecf623657caea03809f157",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "avatars.upload-performance",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-17T08:57:17.263077Z",
+  "author": {
+    "_id": "69ecef774a48bed189b5b016",
+    "alias": "Flying Orangutan",
+    "aliasID": "69ecef784a48bed189b5b01a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/26f9fc4577237dadfdfc6cf2b3823e18.png",
+    "created": "2026-04-25T16:44:39.729Z",
+    "name": "OkliaoliO",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "69ecef774a48bed189b5b016",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "69ef807505ade7dab33e5ee4",
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-04-27T15:27:49.245Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "69ef807505ade7dab33e5ee4",
+      "mergedPostDetails": "100% Reproduction\n\n \n\n1. Launch VRChat (make sure you have switched to the problematic avatar before opening).\n\n2. Open the menu.\n\n3. Open the Avatar option.\n\n4. Select a normal Avatar.\n\n5. Switch to the problematic Avatar.\n\n6. Trigger a random event.\n\n7. The issue is reproduced.\n\nVideo1(1820)&Video2(1830) In https://drive.google.com/drive/folders/1_gCr5jWQOZoB2kxKqVsdAml0XFvSdUgY?usp=drive_link\n\n————————————————————————————————————\n\nProbable Reproduction\n\n \n\n1. Launch VRC. (Ensure that you have switched to the problematic avatar.)\n\n2. Open the menu.\n\n3. Join a random world.\n\n4. Ensure not to change the Avatar midway.\n\n5. This issue may trigger randomly.\n\nVideo3 In https://drive.google.com/drive/folders/1_gCr5jWQOZoB2kxKqVsdAml0XFvSdUgY?usp=drive_link————————————————————————————————————\n\n0% Reproduction\n\n \n\n1. Launch VRC, ensure the currently selected avatar is not the problematic one.\n\n2. Open the menu.\n\n3. Join a random world.\n\n4. No matter how many attempts are made, the issue will never occur.\n\n————————————————————————————————————\n\nPlease be sure to check the Discord link below for more details.\n\nhttps://discord.com/channels/189511567539306508/1496819857885233233\n\nThe attachment is the performance chart.",
+      "mergedPostTitle": "CRITICAL ISSUE: Problematic Avatar causes black screen freeze when switching worlds.",
+      "pinned": false,
+      "postID": "69ecf623657caea03809f157",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
+    },
+    {
+      "_id": "69ef80cbe117f65669260090",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-04-27T15:29:15.128Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69ecf623657caea03809f157",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "69ef80cbe117f6566926007a",
+      "statusChangeNewStatus": "closed",
+      "value": "Hello!  For situations like this I would direct you to create a support ticket with this information.  Also, please include the affected avatar ID as well as videos of the problem, not links.  Thank you!\n\nhttps://help.vrchat.com/hc/en-us/requests/new",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-25T17:13:07.006Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "100% Reproduction\n\n1.Launch VRChat (make sure you have switched to the problematic avatar before opening).\n\n2.Open the menu.\n\n3.Open the Avatar option.\n\n4.Select a normal Avatar.\n\n5.Switch to the problematic Avatar.\n\n6.Trigger a random event.\n\n7.The issue is reproduced.\n\nVideo1(1820)&Video2(1830) In \n\nhttps://drive.google.com/drive/folders/1_gCr5jWQOZoB2kxKqVsdAml0XFvSdUgY?usp=drive_link\n\n————————————————————————————————————\n\nProbable Reproduction\n\n1.Launch VRC. (Ensure that you have switched to the problematic avatar.)\n\n2.Open the menu.\n\n3.Join a random world.\n\n4.Ensure not to change the Avatar midway.\n\n5.This issue may trigger randomly.\n\nVideo3 In https://drive.google.com/drive/folders/1_gCr5jWQOZoB2kxKqVsdAml0XFvSdUgY?usp=drive_link\n\n————————————————————————————————————\n\n0% Reproduction\n\n1.Launch VRC, ensure the currently selected avatar is not the problematic one.\n\n2.Open the menu.\n\n3.Join a random world.\n\n4.No matter how many attempts are made, the issue will never occur.\n\n————————————————————————————————————\n\nPlease be sure to check the Discord link below for more details.\n\nhttps://discord.com/channels/189511567539306508/1496819857885233233\n\nThe attachment is the performance chart.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/596fa088aba602b5c61c8ec25d32c8ef.csv",
+    "https://canny-assets.io/files/ee43968d016e7ca66dfa63f7c590c824.csv",
+    "https://canny-assets.io/files/a9aedc4be6b2eb9528090664ca40cd35.csv",
+    "https://canny-assets.io/files/00b61b5b590f6793be63b02c279b3ed1.csv"
+  ],
+  "files": [
+    {
+      "mimeType": "text/csv",
+      "name": "pmcap-VRChat.exe-260422-222730-stats",
+      "url": "https://canny-assets.io/files/ee43968d016e7ca66dfa63f7c590c824.csv"
+    },
+    {
+      "mimeType": "text/csv",
+      "name": "pmcap-VRChat.exe-260422-223315-stats",
+      "url": "https://canny-assets.io/files/00b61b5b590f6793be63b02c279b3ed1.csv"
+    },
+    {
+      "mimeType": "text/csv",
+      "name": "pmcap-VRChat.exe-260422-222730",
+      "url": "https://canny-assets.io/files/596fa088aba602b5c61c8ec25d32c8ef.csv"
+    },
+    {
+      "mimeType": "text/csv",
+      "name": "pmcap-VRChat.exe-260422-223315",
+      "url": "https://canny-assets.io/files/a9aedc4be6b2eb9528090664ca40cd35.csv"
+    }
+  ],
+  "ideaID": "69ecf623657caea03809f192",
+  "imageURLs": [],
+  "lastUpdated": 1779007866894,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 1,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69ecf623657caea03809f157/1193027509.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "closed",
+  "statusChanged": "2026-04-27T15:29:15.071Z",
+  "subCategoryID": null,
+  "title": "CRITICAL ISSUE: Problematic Avatar causes black screen freeze when switching worlds.",
+  "trendingScore": 2939.4870669528564,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": null,
+  "urlName": "critical-issue-problematic-avatar-causes-black-screen-freeze-when-switching-worl-1",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69ecf77f4a48bed189b5e6b0",
+      "alias": "Appropriate Locust",
+      "aliasID": "69ecf77f4a48bed189b5e6b3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/efbbfe96a82a948e65b06628200d8f7e.png",
+      "companies": [],
+      "name": "芝士焗红薯",
+      "urlName": "<redacted>",
+      "voteID": "69ecf7e54a48bed189b5e7eb"
+    },
+    {
+      "_id": "69ecef774a48bed189b5b016",
+      "alias": "Flying Orangutan",
+      "aliasID": "69ecef784a48bed189b5b01a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/26f9fc4577237dadfdfc6cf2b3823e18.png",
+      "companies": [],
+      "name": "OkliaoliO",
+      "urlName": "<redacted>",
+      "voteID": "69ecf6234a48bed189b5dc1c"
+    }
+  ]
+}

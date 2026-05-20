@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "65f36784e9bcc97682f47d20",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T15:16:30.578344Z",
+  "author": {
+    "_id": "623e143cecc6ff71594f83e3",
+    "alias": "Opera mauve Mammal",
+    "aliasID": "65c2bdc3ed6eefce4c107fdc",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/07fd33ce70e5f99e8224407eb63ab647.png",
+    "created": "2022-03-25T19:13:00.048Z",
+    "name": "Pandamien",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "623e143cecc6ff71594f83e3",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-03-14T21:09:24.202Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Hi, I was working on an avatar earlier and entered the name and preview picture while working on it. \n\nAt some point I moved the picture I was using as preview into another folder in my computer.\n\nOnce I was finished working , I tried to go upload the avatar, but the builder page was stuck on loading forever. I tried reloading the SDK multiple times, but it was always stuck on loading.\n\nUnity threw a FileNotFoundException but I noticed it only 10 minutes later.\n\nCan you please make it so the builder page doesn't stay stuck forever if the picture chosen is missing?\n\nThank you",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9d2e4c3e90df138b916",
+  "imageURLs": [
+    "https://canny.io/images/1eac3f0054ec61f78b716d182e3aa56a.png",
+    "https://canny.io/images/1172cf33a3f32e568238fabb0f94fab0.png"
+  ],
+  "lastUpdated": 1779026992966,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-03-14T21:09:24.202Z",
+  "subCategoryID": null,
+  "title": "SDK builder stuck on loading due to missing preview picture",
+  "trendingScore": 2828.8190802096606,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": null,
+  "urlName": "sdk-builder-stuck-on-loading-due-to-missing-preview-picture",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "623e143cecc6ff71594f83e3",
+      "alias": "Opera mauve Mammal",
+      "aliasID": "65c2bdc3ed6eefce4c107fdc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/07fd33ce70e5f99e8224407eb63ab647.png",
+      "companies": [],
+      "name": "Pandamien",
+      "urlName": "<redacted>",
+      "voteID": "65f3678476937e52484053a2"
+    }
+  ]
+}

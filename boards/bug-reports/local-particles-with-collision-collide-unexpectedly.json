@@ -1,0 +1,101 @@
+{
+  "__v": 0,
+  "_id": "5c1b3ad9d31e091da97d0af4",
+  "aiCategories": [],
+  "aiTaggedAt": "2026-05-17T19:47:38.521798Z",
+  "author": {
+    "_id": "5c1b3ad90ea22513b1e05639",
+    "alias": "Diverse Coyote",
+    "aliasID": "65d82b300129d7ae44a5a45d",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/7928e74354d9af224f7f8985029b4017.png",
+    "created": "2018-12-20T06:46:49.731Z",
+    "name": "Occala",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c1b3ad90ea22513b1e05639",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-12-20T06:46:49.796Z",
+  "deletedAt": null,
+  "details": "When creating a local particle system under the armature (on the wrist for example,) set to local space and with collision; the system will collide with an invisible object on the default layer. (They aren't colliding with player or playerlocal layers; specifically default.)\n\nIn this image, green dots collide and form red dots at points of collision. The green dots impact the plane/default layer and splay outwards from there. The green dots are all relatively the same depth wise after impact.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d6de4c3e90df157eb3e",
+  "imageURLs": [
+    "https://canny.io/images/c9b5e6a1810fc4162cbab7adeaa85db3.png"
+  ],
+  "lastUpdated": 1779046466388,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-12-20T06:46:49.797Z",
+  "subCategoryID": null,
+  "title": "Local particles with collision, collide unexpectedly.",
+  "trendingScore": 2556.4639031088427,
+  "updatedAt": "2026-05-17T19:34:37.146292Z",
+  "urlName": "local-particles-with-collision-collide-unexpectedly",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5adfc24f1943397552bd31ba",
+      "alias": "Aegean Gayal",
+      "aliasID": "65c3b1cbed6eefce4c02c98a",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/d8a975a2a4bff6e1e75e1c17b523854d.png",
+      "companies": [],
+      "name": "Lycee Hale",
+      "urlName": "<redacted>",
+      "voteID": "5c1c87366db2b5471c31b2bc"
+    },
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": "<redacted>",
+      "voteID": "5c1b3c9c6db2b5471c31005f"
+    },
+    {
+      "_id": "5c1b3ad90ea22513b1e05639",
+      "alias": "Diverse Coyote",
+      "aliasID": "65d82b300129d7ae44a5a45d",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/7928e74354d9af224f7f8985029b4017.png",
+      "companies": [],
+      "name": "Occala",
+      "urlName": "<redacted>",
+      "voteID": "5c1b3ad96db2b5471c31003b"
+    }
+  ]
+}

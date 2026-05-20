@@ -1,0 +1,133 @@
+{
+  "__v": 0,
+  "_id": "6387d1940a783b7bca1651f5",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:37:59.612779Z",
+  "author": {
+    "_id": "60fef34711b84c1088929207",
+    "alias": "Better Meerkat",
+    "aliasID": "65c2c2b9ed6eefce4cb24765",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1cfc605248be72add4c584e777797d89.png",
+    "created": "2021-07-26T17:39:19.829Z",
+    "name": "Traveller002",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60fef34711b84c1088929207",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-11-30T21:56:36.693Z",
+  "deletedAt": null,
+  "details": "this will help making better syncd worlds.\n\nnon-owners send data to owner, then the owner broadcasts to eveyone else.\n\nfor example..\n\n[UdonP2P] int playerId;\n\n[UdonP2P] int eventId;\n\n[UdonP2P] int data123;\n\n// Non-Owner\n\nvoid send_to_owner() {\n\n\tplayerId = GetGlobalRoomPlayerID();// emmm...\n\n\teventId = 123123;\n\n\tdata123 = 50000000;\n\n\tPostP2PDataToOwner();\n\n}\n\n// Owner\n\npublic override void OnP2PDataDeserialization() {\n\n\tif (playerId==1) {\n\n\t}\n\n}",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb954e4c3e90df13734cd",
+  "imageURLs": [],
+  "lastUpdated": 1779039002213,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-11-30T21:56:36.694Z",
+  "subCategoryID": null,
+  "title": "add network APIs to sync data from non-owners to owner",
+  "trendingScore": 2791.788372626276,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "urlName": "add-network-apis-to-sync-data-from-non-owners-to-owner",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "648459207db09a090ff14551",
+      "alias": "Safflower Sparrow",
+      "aliasID": "65f4fd10a63714bcb3a40a00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0e9e703f80245aea82de8d2877b7e812.png",
+      "companies": [],
+      "name": "MenacingExiled",
+      "urlName": "<redacted>",
+      "voteID": "64a31721f921d10964f10f7c"
+    },
+    {
+      "_id": "62125844c7b25c74f1a4c51e",
+      "alias": "Emerald Sailfish",
+      "aliasID": "65c3a92eed6eefce4c77e9d6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/55634954b081f21c4628c1eca719927d.png",
+      "companies": [],
+      "name": "naname",
+      "urlName": "<redacted>",
+      "voteID": "648ed0054a7f69097a7c9e22"
+    },
+    {
+      "_id": "5ba749f34dca6b351d658330",
+      "alias": "Flame Swan",
+      "aliasID": "65c2913aed6eefce4ce43005",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/28be024219e5d5a76a743e59faa1a194.png",
+      "companies": [],
+      "name": "100の人",
+      "urlName": "<redacted>",
+      "voteID": "641812040eb2770c8904adfa"
+    },
+    {
+      "_id": "5f28ffd99dcd76368e594a75",
+      "alias": "Warm Reindeer",
+      "aliasID": "65c29031ed6eefce4cbd3012",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1da95499d422b11afe523a6b37897478.png",
+      "companies": [],
+      "name": "Junii23",
+      "urlName": "<redacted>",
+      "voteID": "63d0c84b39e12545042d2233"
+    },
+    {
+      "_id": "60fef34711b84c1088929207",
+      "alias": "Better Meerkat",
+      "aliasID": "65c2c2b9ed6eefce4cb24765",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1cfc605248be72add4c584e777797d89.png",
+      "companies": [],
+      "name": "Traveller002",
+      "urlName": "<redacted>",
+      "voteID": "6387d1940a783b7bca16521b"
+    }
+  ]
+}

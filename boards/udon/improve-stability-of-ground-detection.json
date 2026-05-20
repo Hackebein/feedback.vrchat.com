@@ -1,0 +1,133 @@
+{
+  "__v": 0,
+  "_id": "5e8f7a072379365d28e775fe",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:56:18.209099Z",
+  "author": {
+    "_id": "5adf4699bd81030d2fa70c4c",
+    "alias": "Super Frog",
+    "aliasID": "65c27b10ed6eefce4c7d79a3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/28f00fa0da91790b2a07b6a310fedc98.png",
+    "created": "2018-04-24T15:00:41.326Z",
+    "name": "Waai!",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5adf4699bd81030d2fa70c4c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-09T19:39:51.260Z",
+  "deletedAt": null,
+  "details": "Recent improvements have been made to the character controller that have greatly increased its accuracy at detecting the ground (i.e. you can no longer climb walls).\nBeing able to read the player grounded flag with Udon has revealed that ground detection is still not quite perfect. Standing on a ledge or a sufficiently steep enough slope is enough to make the grounded flag change every frame or so. Standing on a ledge at certain positions, the player can also lose ground detection entirely and start accumulating falling velocity without actually falling.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da6e4c3e90df158df85",
+  "imageURLs": [],
+  "lastUpdated": 1779223413062,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny.io/images/og/58c62e995865713647a7115d/posts/5e8f7a072379365d28e775fe/993383835.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-09T19:39:51.260Z",
+  "subCategoryID": null,
+  "title": "Improve stability of ground detection",
+  "trendingScore": 2643.141879960771,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "improve-stability-of-ground-detection",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d49807f5743351142df81",
+      "alias": "Carmine Ptarmigan",
+      "aliasID": "65c3a052ed6eefce4ce28ea6",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ab3b68d5e33ba0bc4cb30f013e1bcf87.png",
+      "companies": [],
+      "name": "bladewild",
+      "urlName": "<redacted>",
+      "voteID": "5f4846b0ef3ab27ceecf1913"
+    },
+    {
+      "_id": "5e4f72680553a6792ebe6265",
+      "alias": "Civic Trout",
+      "aliasID": "65c71420ed6eefce4c4f45cd",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/57315cf8f7eb515e59841bc39d977e8f.png",
+      "companies": [],
+      "name": "Graftax",
+      "urlName": "<redacted>",
+      "voteID": "5e90d686782eb96b28c46d52"
+    },
+    {
+      "_id": "5b07745b55c49e65e1c522d7",
+      "alias": "Still Goat",
+      "aliasID": "65c29c3ced6eefce4c822f54",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9383debb6758a064248994e1720842c2.png",
+      "companies": [],
+      "name": "Merlin",
+      "urlName": "<redacted>",
+      "voteID": "5e8f7bc023160a27f4e09194"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "<redacted>",
+      "voteID": "5e8f7a1a88df975d2ea97bf1"
+    },
+    {
+      "_id": "5adf4699bd81030d2fa70c4c",
+      "alias": "Super Frog",
+      "aliasID": "65c27b10ed6eefce4c7d79a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/28f00fa0da91790b2a07b6a310fedc98.png",
+      "companies": [],
+      "name": "Waai!",
+      "urlName": "<redacted>",
+      "voteID": "5e8f7a072379365d28e77606"
+    }
+  ]
+}

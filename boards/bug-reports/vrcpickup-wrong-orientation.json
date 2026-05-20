@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "64db67cef882a8169851421c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T18:34:48.599534Z",
+  "author": {
+    "_id": "60c0e22718009c104862d5bc",
+    "alias": "Chemical Deer",
+    "aliasID": "65c28349ed6eefce4cc54fb4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c30a68ae2238456105ebdc8cedea5b4a.png",
+    "created": "2021-06-09T15:45:43.306Z",
+    "name": "Fairplex",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60c0e22718009c104862d5bc",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-08-15T11:55:58.878Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When using orientation on either grip or gun, the pickup rotation is not respecting the Exact Gun/Exact Grip orientation and incorrectly apply a rotation of -90 degrees on the axes x and z\n\nExpected behavior:\n\nWhen setting an Exact Gun or Exact Grip transform on the VRCPickup while using orientation on Gun/Grip, it should keep the rotation defined by the Exact Gun/Exact Grip.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb992e4c3e90df137fd73",
+  "imageURLs": [
+    "https://canny.io/images/89bac80de0e4cc6f1ef4cbc3418c9bd3.png",
+    "https://canny.io/images/38d1a1e6188647b61f042a90b7456bad.png",
+    "https://canny.io/images/2e4fad6d8861cec12ece5c6ab43edec6.png"
+  ],
+  "lastUpdated": 1779215080266,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-08-15T11:55:58.878Z",
+  "subCategoryID": null,
+  "title": "VRCPickup - Wrong orientation",
+  "trendingScore": 2798.478462879138,
+  "updatedAt": "2026-05-19T18:25:27.723488Z",
+  "updatedBy": null,
+  "urlName": "vrcpickup-wrong-orientation",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60c0e22718009c104862d5bc",
+      "alias": "Chemical Deer",
+      "aliasID": "65c28349ed6eefce4cc54fb4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c30a68ae2238456105ebdc8cedea5b4a.png",
+      "companies": [],
+      "name": "Fairplex",
+      "urlName": "<redacted>",
+      "voteID": "64db67cef882a81698514266"
+    }
+  ]
+}

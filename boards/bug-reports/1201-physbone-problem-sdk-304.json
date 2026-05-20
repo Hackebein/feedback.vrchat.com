@@ -1,0 +1,108 @@
+{
+  "__v": 0,
+  "_id": "628f515f5f52ed0b6c827195",
+  "aiCategories": [
+    "loc.creator-companion",
+    "loc.in-world",
+    "avatars.upload-performance",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-18T21:42:54.589152Z",
+  "author": {
+    "_id": "60c87a5d16d979790d8309cf",
+    "alias": "Tawny Raven",
+    "aliasID": "65c2821bed6eefce4c970ba0",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5352978364972e730009b48b80591670.png",
+    "created": "2021-06-15T10:01:01.067Z",
+    "name": "TummyTime",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60c87a5d16d979790d8309cf",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-26T10:07:27.987Z",
+  "deletedAt": null,
+  "details": "Avatar uploaded on SDK 3.0.4 breaks when going into build 1201. \nMy avatar was uploaded with SDK 3.0.4 from the CreatorCompanion with phys bones on it's left arm. It's now broken in live with the problem that my hand no longer moves with the avatar.\nI have one that I think I've uploaded with an older SDK aswell. But don't know how to confirm that.\nBut I can confirm that the problem is fixed if you update to SDK 3.0.5 and reupload the avatar.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f6e4c3e90df1360e6d",
+  "imageURLs": [
+    "https://canny.io/images/14c27a040f02257c219fa14787f7b200.png"
+  ],
+  "lastUpdated": 1779140148469,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-26T10:07:27.988Z",
+  "subCategoryID": null,
+  "title": "[1201] physbone problem SDK 3.0.4",
+  "trendingScore": 2735.4484286390843,
+  "updatedAt": "2026-05-18T21:36:21.404734Z",
+  "urlName": "1201-physbone-problem-sdk-304",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62238ce4213aae67e9773fad",
+      "alias": "Alert Otter",
+      "aliasID": "65c35922ed6eefce4c8d7a1e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6fb32c52bb3d1af8dbd35ad3bc516616.png",
+      "companies": [],
+      "name": "mikeee324",
+      "urlName": "<redacted>",
+      "voteID": "628f5ad4d8e7cb0b778ca48f"
+    },
+    {
+      "_id": "624d7247fb14875d5febd276",
+      "alias": "Salmon Flamingo",
+      "aliasID": "65c52c2ced6eefce4c2a8d7e",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "NYYLE",
+      "urlName": "<redacted>",
+      "voteID": "628f59920a24520b77f3b7a1"
+    },
+    {
+      "_id": "60c87a5d16d979790d8309cf",
+      "alias": "Tawny Raven",
+      "aliasID": "65c2821bed6eefce4c970ba0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5352978364972e730009b48b80591670.png",
+      "companies": [],
+      "name": "TummyTime",
+      "urlName": "<redacted>",
+      "voteID": "628f51605f52ed0b6c8271da"
+    }
+  ]
+}

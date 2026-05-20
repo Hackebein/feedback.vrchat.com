@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "5e90cc023dac9d6b22ad0db4",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:56:25.733973Z",
+  "author": {
+    "_id": "5e4f72680553a6792ebe6265",
+    "alias": "Civic Trout",
+    "aliasID": "65c71420ed6eefce4c4f45cd",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/57315cf8f7eb515e59841bc39d977e8f.png",
+    "created": "2020-02-21T06:02:16.056Z",
+    "name": "Graftax",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e4f72680553a6792ebe6265",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "5e92ca26019d2f253b827b45",
+      "author": {
+        "_id": "5e4f72680553a6792ebe6265",
+        "alias": "Civic Trout",
+        "aliasID": "65c71420ed6eefce4c4f45cd",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/57315cf8f7eb515e59841bc39d977e8f.png",
+        "created": "2020-02-21T06:02:16.056Z",
+        "name": "Graftax",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2020-04-12T07:58:30.821Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5e90cc023dac9d6b22ad0db4",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I have found that this can occur with a completely different set of nodes, it does not appear to be specific to the program I've provided.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-10T19:41:54.347Z",
+  "deletedAt": null,
+  "details": "Whenever Udon attempts to compile the provided program, it results in an error in the console. This affects some of the graphs I've been working on, here is the minimum repro I could find.\n\nCopied Graph:\nAN2W3W7TMBiGb6XycVzZsR07lXbAOg4qEEz76QmqKv983gJpMuVnUHW7Mg64JG4Bt+vG1k5dQEUClBzEcZy8ed73+5LvX78t0LXOW0CDDwvk2zx/p2dhgIZlUTfT03ndwGxUNCxGEWozF2Z8AtQ7LbFOqcGcGIaVshJLIkgKHqyORbj4qqyzJisLNFigL2hACed9EqE5GoQ1qk9uI1SUDs5HR3V4NkKTCPm8/LweT+5mx0tp9UpbW2TN/L35CLYZ3wleoCxo1IWF0REaLG9YN1VWXKyn0Z34/kp91JvVtqzyzES9MVR1EHYQ9Cy3qDds86at4KCAtql0HvWOW5Nn9g3Mz8pPUBwYKbWwIqEp40BUehOj28lt1JGXTq3zibPYaJliDsrgVBvADAwHprkk4HfzYjH/t3nRX+FlhdUUEoFpShzmwmmcJhKwBiOU1sprxl/IVxr/d7wOqyDk8ick7ax3jIYUeYm51QprldpQk4GDIYQaL5+BxGN1D0mo7SI0UlgWQ7gXkQJzFmusBITkgqDCpsqB9TdkAyXyJE4oix0WXCZhFfFYMyZwwoEmynJmBEX7AL5N5VF++tNpeTV9C3V9dqmL6eNoPTleDw7LMgddPADt8urPAGVE7UodJ9JbGTMsReDDHY2xYdThmDubMilp2APQqFPot8jvh2n0h6x45dwK1YtWPC3/Lsh2G8HUdrvs8tFaGdGlW//dRoxPhueuLIblbFYWgS1UXluoR8uTr6+haE7AQnYNVbDpFJrjqryo9Gysq0ybHO5NOV09ZT24U3Q/NS6DUQ9/A12Kf9suSfiuRhRWhL1j9Wy0oz21mt90Y08mroyartzTtnmgTRWhCQ2ZBEoA89iEdBKisbaxU6n3BijsLg6RbBXHBr9On5ZNxpPwBj8A\n\nException Call Stack:\nFailed to refresh program 'Error 1' due to exception 'System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.\n  at System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item (TKey key) [0x0001e] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at VRC.Udon.Compiler.Compilers.UdonGraphCompiler.CompileNode (VRC.Udon.Graph.UdonNodeData node, VRC.Udon.Compiler.Compilers.UdonGraphCompiler+CompilerState state, System.String returnName, System.Int32 otherIndex) [0x014d5] in <ce7bc89dc03f47edb44c3bec35eb22e9>:0 \n  at VRC.Udon.Compiler.Compilers.UdonGraphCompiler.CompileNode (VRC.Udon.Graph.UdonNodeData node, VRC.Udon.Compiler.Compilers.UdonGraphCompiler+CompilerState state, System.String returnName, System.Int32 otherIndex) [0x002fe] in <ce7bc89dc03f47edb44c3bec35eb22e9>:0 \n  at VRC.Udon.Compiler.Compilers.UdonGraphCompiler.CompileNode (VRC.Udon.Graph.UdonNodeData node, VRC.Udon.Compiler.Compilers.UdonGraphCompiler+CompilerState state, System.String returnName, System.Int32 otherIndex) [0x015a3] in <ce7bc89dc03f47edb44c3bec35eb22e9>:0 \n  at VRC.Udon.Compiler.Compilers.UdonGraphCompiler.<GraphCompiler>g__CompileEventNodesForGraph|5_0 (VRC.Udon.Graph.UdonGraphData udonGraphData, VRC.Udon.Compiler.Compilers.UdonGraphCompiler+CompilerState compilerState, System.Collections.Generic.Dictionary`2[TKey,TValue] dictionary, VRC.Udon.Compiler.Compilers.UdonGraphCompiler+<>c__DisplayClass5_0& ) [0x00068] in <ce7bc89dc03f47edb44c3bec35eb22e9>:0 \n  at VRC.Udon.Compiler.Compilers.UdonGraphCompiler.GraphCompiler (VRC.Udon.Graph.UdonGraphData data, VRC.Udon.Graph.Interfaces.INodeRegistry nodeRegistry, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`3[System.String,System.String,System.Int32]]& linkedSymbols, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`2[System.Object,System.Type]]& heapDefaultValues) [0x00144] in <ce7bc89dc03f47edb44c3bec35eb22e9>:0 \n  at VRC.Udon.Compiler.Compilers.UdonGraphCompiler.Compile (VRC.Udon.Graph.UdonGraphData graph, VRC.Udon.Graph.Interfaces.INodeRegistry nodeRegistry, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`3[System.String,System.String,System.Int32]]& linkedSymbols, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`2[System.Object,System.Type]]& heapDefaultValues) [0x00000] in <ce7bc89dc03f47edb44c3bec35eb22e9>:0 \n  at VRC.Udon.Compiler.UdonGraphCompilerDispatcher.CompileGraph (VRC.Udon.Graph.Interfaces.IUdonCompilableGraph graph, VRC.Udon.Graph.Interfaces.INodeRegistry nodeRegistry, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`3[System.String,System.String,System.Int32]]& linkedSymbols, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`2[System.Object,System.Type]]& heapDefaultValues) [0x00016] in <ce7bc89dc03f47edb44c3bec35eb22e9>:0 \n  at VRC.Udon.EditorBindings.UdonEditorInterface.CompileGraph (VRC.Udon.Graph.Interfaces.IUdonCompilableGraph graph, VRC.Udon.Graph.Interfaces.INodeRegistry nodeRegistry, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`3[System.String,System.String,System.Int32]]& linkedSymbols, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`2[System.Object,System.Type]]& heapDefaultValues) [0x00000] in <a9f3771b6816485fb41379ce9c1cba74>:0 \n  at VRC.Udon.Editor.UdonEditorManager.CompileGraph (VRC.Udon.Graph.Interfaces.IUdonCompilableGraph graph, VRC.Udon.Graph.Interfaces.INodeRegistry nodeRegistry, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`3[System.String,System.String,System.Int32]]& linkedSymbols, System.Collections.Generic.Dictionary`2[System.String,System.ValueTuple`2[System.Object,System.Type]]& heapDefaultValues) [0x00001] in D:\\Projects\\Unity\\VRChat\\Graftax's Lab (SDK3)\\Assets\\Udon\\Editor\\UdonEditorManager.cs:331 \n  at VRC.Udon.Editor.ProgramSources.UdonGraphProgramAsset.CompileGraph () [0x00001] in D:\\Projects\\Unity\\VRChat\\Graftax's Lab (SDK3)\\Assets\\Udon\\Editor\\ProgramSources\\UdonGraph\\UdonGraphProgramAsset.cs:76 \n  at VRC.Udon.Editor.ProgramSources.UdonGraphProgramAsset.RefreshProgramImpl () [0x00011] in D:\\Projects\\Unity\\VRChat\\Graftax's Lab (SDK3)\\Assets\\Udon\\Editor\\ProgramSources\\UdonGraph\\UdonGraphProgramAsset.cs:48 \n  at VRC.Udon.Editor.ProgramSources.UdonProgramAsset.RefreshProgram () [0x0000d] in D:\\Projects\\Unity\\VRChat\\Graftax's Lab (SDK3)\\Assets\\Udon\\Editor\\ProgramSources\\UdonProgram\\UdonProgramAsset.cs:104 \n  at VRC.Udon.Editor.UdonEditorManager.RefreshQueuedProgramSources () [0x00029] in D:\\Projects\\Unity\\VRChat\\Graftax's Lab (SDK3)\\Assets\\Udon\\Editor\\UdonEditorManager.cs:129 '.\nUnityEngine.Debug:LogError(Object)\nVRC.Udon.Editor.UdonEditorManager:RefreshQueuedProgramSources() (at Assets/Udon/Editor/UdonEditorManager.cs:133)\nVRC.Udon.Editor.UdonEditorManager:UdonEditorManagerUpdate() (at Assets/Udon/Editor/UdonEditorManager.cs:115)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da8e4c3e90df158e491",
+  "imageURLs": [
+    "https://canny.io/images/d8759024edf683263613d978223362b7.png"
+  ],
+  "lastUpdated": 1779223413346,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-10T19:41:54.347Z",
+  "subCategoryID": null,
+  "title": "Failed To Refresh Program Due To KeyNotFoundException",
+  "trendingScore": 2623.953256933371,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "failed-to-refresh-program-due-to-keynotfoundexception",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e4f72680553a6792ebe6265",
+      "alias": "Civic Trout",
+      "aliasID": "65c71420ed6eefce4c4f45cd",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/57315cf8f7eb515e59841bc39d977e8f.png",
+      "companies": [],
+      "name": "Graftax",
+      "urlName": "<redacted>",
+      "voteID": "5e90cc023dac9d6b22ad0dbc"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "__v": 0,
+  "_id": "643420478bbfff32ddf55f3c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:39:06.956056Z",
+  "author": {
+    "_id": "62e8811eb3ad3944c2db39fa",
+    "alias": "Impressive Dove",
+    "aliasID": "65d7eaab0129d7ae44f1c39b",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/d6a116720f954269f739feedba1ea6df.png",
+    "created": "2022-08-02T01:42:54.777Z",
+    "name": "AmasterAmaster",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62e8811eb3ad3944c2db39fa",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-04-10T14:42:15.795Z",
+  "deletedAt": null,
+  "details": "(I think it is both a bug report and a feature request, but it is more of a bug report due to it not working as expected)\n\nIssue:\n\n - I cant seem to change the variable's values in realtime in unity playmode while also using the plugin called Odin Inspector. Within the inspector window (using the plugin) there seems to be an issue when variable values get attempted to change upon click, dragging, or setting, then nearly instantly reset to the value that the variables were in before entering playmode.\n\nGoals:\n\n - The idea was to use Odin Inspector to make the scripts look nicer for my team so they dont have to think so hard when changing the values in a script.\n\n - Also, to be able to quickly iterate and test using playmode using a cleaner look for the scripts.\n\nI have tried:\n\n - Changed the inspector to debug, then back to normal, This breaks drawing the custom inspector and it works, but defeats the purpose of having odin...\n\n - Going through the preferences (there is \"update editor\" and checkboxes for each script type). (I suspect that it has to do with odin/udon drawing constantly and preventing the value to update?)\n\n - I contacted Odin Support (via Discord) and they say it has to do with either the assemblies vrc is using, or it is competing for drawing on the same inspector, hence the variables are not serialized (or sending and updating the values).\n\nOther notes:\n\n - I have noticed that when messing with multiple inspectors in unity, having one with and without odin's custom inspector, the one without odin works as expected.\n\n - Also for some reason the script in question tends to sometimes get \"multi-object editing not supported\" (but unsure why vrc's sdk is throwing that when I have only that gameobject selected. Maybe a hidden proxy is triggering it?)\n\nSo my questions are:\n\n - Why is playmode making it not work, but setting the values outside of playmode make it work only for the new set values (repeating the issue again when playmode is turned on once more)?\n\n - Is VRChat going to support (natively or not) custom editors/plugins that can help integrate things like Odin Inspector?\n\n - What can be done that could allow for plugins like this to work if it does not get supported?\n\nIncluded is an image of what I am trying to do (testing a light attactched to a GameObject)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb973e4c3e90df1379f6d",
+  "imageURLs": [
+    "https://canny.io/images/5ed37ab1aaa7505a767630fe5c0eecde.png"
+  ],
+  "lastUpdated": 1779039011576,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/643420478bbfff32ddf55f3c/1228278310.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-04-10T14:42:15.795Z",
+  "subCategoryID": null,
+  "title": "Using Odin Inspector with VRC SDK (Worlds) within Unity, prevents script changes during PlayMode",
+  "trendingScore": 2932.44740838459,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "urlName": "using-odin-inspector-with-vrc-sdk-worlds-within-unity-prevents-script-changes-du",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62e0a01e862db044a54664bb",
+      "alias": "Misty rose Koala",
+      "aliasID": "6643b812b9e8e8fe66b576f4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/067dd3d22204ac11034497983958b7a1.png",
+      "companies": [],
+      "name": "KitsuneLunae",
+      "urlName": "<redacted>",
+      "voteID": "69b62300ed082c998191cd51"
+    },
+    {
+      "_id": "61e9597079f4bc19a38fb877",
+      "alias": "Weekly Newt",
+      "aliasID": "6633cd1fd36452c179f92df5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1cb419bdbf838e43ba4b8b123e603c9a.png",
+      "companies": [],
+      "name": "DTC_Destiny",
+      "urlName": "<redacted>",
+      "voteID": "68a3f685d2f94455f07256e9"
+    },
+    {
+      "_id": "62e8811eb3ad3944c2db39fa",
+      "alias": "Impressive Dove",
+      "aliasID": "65d7eaab0129d7ae44f1c39b",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/d6a116720f954269f739feedba1ea6df.png",
+      "companies": [],
+      "name": "AmasterAmaster",
+      "urlName": "<redacted>",
+      "voteID": "643420488bbfff32ddf55f84"
+    }
+  ]
+}

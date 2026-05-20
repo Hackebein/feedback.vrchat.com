@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "653ec628437edc6b72c6f22c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T16:00:07.408484Z",
+  "author": {
+    "_id": "5d80a555d3c7d110d0e92782",
+    "alias": "Aquamarine Chameleon",
+    "aliasID": "65c2f3f9ed6eefce4c766859",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/7bd4487cfce8522ca97694d268a4c28a.png",
+    "created": "2019-09-17T09:20:21.230Z",
+    "name": "Nekoputer",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5d80a555d3c7d110d0e92782",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8783d561e5922d89ac4",
+    "created": "2023-09-22T15:53:28.541Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 412,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "650db8783d561e5922d89ac4",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-10-29T20:52:56.817Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Hi There,\n\nI'd like to have standard unity collider events exposed to further allow avatar creativity. I'm currently being very limited as to what I can do with what's available. I've made myself a shield that I'd like to trigger an animation every time someone or something collides with it.\n\nAs an example, when a player fires a weapon, it will impact the shield and trigger an animation, such as a ripple effect using the contact point as a point of reference.\n\nSince custom scripts are forbidden on avatars, it's basically near impossible to achieve this. Contact receiver/sender only supports touch-related actions (IE: hands, feet, fingers, etc)or if an object has the contact with the same custom name. However, this will not work as far as I know when it comes to particle collision detection and anything else.\n\nOne simple thing that could be done, is to create a component for the SDK that simply fires a trigger parameter in the animator controller if a collider detects something via one of it's events. Then, a player in unity can access this parameter as a read-only type and use it to perform various interactions. The contact point could also be exposed via readonly parameters.\n\nI hope this can be implemented to allow for more creativity on avatars.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9b5e4c3e90df13854bc",
+  "imageURLs": [],
+  "lastUpdated": 1779032719025,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-10-29T20:52:56.817Z",
+  "subCategoryID": null,
+  "title": "Expose Collider Events for avatar creativity",
+  "trendingScore": 2809.246019061347,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "expose-collider-events-for-avatar-creativity",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5d80a555d3c7d110d0e92782",
+      "alias": "Aquamarine Chameleon",
+      "aliasID": "65c2f3f9ed6eefce4c766859",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/7bd4487cfce8522ca97694d268a4c28a.png",
+      "companies": [],
+      "name": "Nekoputer",
+      "urlName": "<redacted>",
+      "voteID": "653ec62953cf9510232df13a"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "__v": 0,
+  "_id": "6191e3da1d2d4b0a38991d16",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-17T15:56:24.786800Z",
+  "author": {
+    "_id": "5f2dae868950d37cd07f7bca",
+    "alias": "Pink Moth",
+    "aliasID": "65c38fa6ed6eefce4cc9c5b6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bbff42a6c8148f30bd9282f269b05d3d.png",
+    "created": "2020-08-07T19:41:58.033Z",
+    "name": "PapiOphidian",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2dae868950d37cd07f7bca",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-11-15T04:36:42.579Z",
+  "deletedAt": null,
+  "details": "This is a collection of perceived bugs from ever since the interval version of FinalIK got updated/Avatar 3 released. I know I am very late to be posting this stuff, but I have been very annoyed noticing these differences all this time considering I am a very old player from when VRC used Unity 5.6. The issues I am outlining affect SDK2 and SDK3 Humanoid avatars unless specified otherwise.\n- Control being passed back to the VRIK component is considerably delayed (~3-5 seconds) after stopping locomoting even when all layers of every PlayableLayer have stopped transitioning. This is very noticeable by looking at the LowerBody (especially the feet) when in TrackingType < 6 and coming to a full stop when locomoting.\n- (SDK3) Auto-footstepping is only enabled when Upright > 0.7 (Even if the active state is the standing state).\n- Jumping seems to lock the LowerBody to the idle pose instead of control being retained by the VRIK component even if no Animator Tracking Control components are affecting any LowerBody field. (this was tested on Desktop. The effect is subtle, but noticeable and causes LowerBody IK such as auto-footstepping to be disabled for ~3-5 seconds)\n- (This should be done with default PlayableLayers for a noticeable effect) Switching to an SDK2 avatar from an SDK3 avatar partially retains the Locomotion Animator layer. This is easily observable by being in a TrackingType of 6 (FBT) and jumping while sitting down. The expected behavior is that the legs should continue to retain tracking to the feet trackers. What actually happens is they're forced into the idle pose while \"tracking control is set to animation\". I surround that in quotes because that concept theoretically should not exist to SDK2 avatars and does not exist if the user loads into a scene in an SDK2 avatar. Transitioning scenes while in an SDK2 avatar fixes this issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8cae4c3e90df1357ecd",
+  "imageURLs": [],
+  "lastUpdated": 1779032664827,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-11-15T04:36:42.579Z",
+  "subCategoryID": null,
+  "title": "IK Descrepancies and bugs",
+  "trendingScore": 2722.2003717870916,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "ik-descrepancies-and-bugs",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "6221de6023e501723f610788"
+    },
+    {
+      "_id": "5ba4debc5a6a0d242d5d68bd",
+      "alias": "Rose Crow",
+      "aliasID": "65f8f1c2a63714bcb368edd1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/0998e7c5c2a630152c1dd25c4feeb55f.png",
+      "companies": [],
+      "name": "SerenityBun",
+      "urlName": "<redacted>",
+      "voteID": "6197f47d0761b33cda15d280"
+    },
+    {
+      "_id": "611462e451b8136edf6a14df",
+      "alias": "Rose Lynx",
+      "aliasID": "65cac66fed6eefce4c083d11",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Dit05",
+      "urlName": "<redacted>",
+      "voteID": "619412fad0cb1758af121746"
+    },
+    {
+      "_id": "5f2dae868950d37cd07f7bca",
+      "alias": "Pink Moth",
+      "aliasID": "65c38fa6ed6eefce4cc9c5b6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bbff42a6c8148f30bd9282f269b05d3d.png",
+      "companies": [],
+      "name": "PapiOphidian",
+      "urlName": "<redacted>",
+      "voteID": "6191e3da1d2d4b0a38991d1d"
+    }
+  ]
+}

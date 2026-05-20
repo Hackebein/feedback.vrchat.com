@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "63277cfd0cc53e44c0d13c5a",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-05-17T15:58:13.930562Z",
+  "author": {
+    "_id": "62631f154aa573528f523a41",
+    "alias": "Charcoal Stingray",
+    "aliasID": "65c26da3ed6eefce4c4d081a",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-04-22T21:33:09.785Z",
+    "name": "BigSoulja",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62631f154aa573528f523a41",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8783d561e5922d89ac4",
+    "created": "2023-09-22T15:53:28.541Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 412,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "650db8783d561e5922d89ac4",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-09-18T20:18:05.163Z",
+  "deletedAt": null,
+  "details": "Could we get an additional toggle in the quick actions page (in av3 expressions) to locally reload our avatar? Also having a new state behaviour component that allows the avatar to reload would be really nice.\nI have some features on my avatar that require an avatar reload to work correctly. There isnt a dedicated toggle for this at the moment so I have to resort to toggling e.g OSC or FBT/Locomotion anims to do this. Being able to 'auto' reload based on controller states would be even more perfect for this. There could be a hard cap set for how many times an avatar can reload per second to avoid people exploiting it (creating self laggers on public cloneable avatars or something). Though that would be very unlikely to happen since its a local only reload anyway. Thank you :)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb939e4c3e90df136ea01",
+  "imageURLs": [],
+  "lastUpdated": 1779032708809,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-09-18T20:18:05.163Z",
+  "subCategoryID": null,
+  "title": "Reload avatar state behaviour/toggle",
+  "trendingScore": 2751.24256056515,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "reload-avatar-state-behaviourtoggle",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62631f154aa573528f523a41",
+      "alias": "Charcoal Stingray",
+      "aliasID": "65c26da3ed6eefce4c4d081a",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "BigSoulja",
+      "urlName": "<redacted>",
+      "voteID": "63277cfd0cc53e44c0d13c82"
+    }
+  ]
+}

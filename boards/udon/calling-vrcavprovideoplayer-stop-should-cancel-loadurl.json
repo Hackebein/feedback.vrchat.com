@@ -1,0 +1,111 @@
+{
+  "__v": 0,
+  "_id": "6092eb5924132741d712e755",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:27:38.753589Z",
+  "author": {
+    "_id": "608711f1b4207d406b26f7e3",
+    "alias": "Aquamarine Parrotfish",
+    "aliasID": "65c6a631ed6eefce4c26e398",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e0328253dd45e27fe20574f9bb65838e.png",
+    "created": "2021-04-26T19:18:09.134Z",
+    "name": "__라요",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "608711f1b4207d406b26f7e3",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-05-05T19:00:41.892Z",
+  "deletedAt": null,
+  "details": "When Stop() is called on a VRCAVProVideoPlayer instance after LoadURL() but before OnVideoReady, it doesn't prevent the OnVideoReady callback & the video popping up the screen.\n\nSo currently its:\nLoad('A') -> Stop() -> wait 5 secs -> Load('B') -> ('A' pops up on screen) OnVideoReady('A') called -> ('B' pops up on screen) OnVideoReady('B') called -> END\n\nBut I think something like:\nLoad('A') -> Stop() -> wait 5 secs -> Load('B') -> ('B' pops up on screen) OnVideoReady('B') called -> END\n\nWill make us have more control(?) over the player & no more more unwanted videos popping up.\nThank you.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb896e4c3e90df134ce75",
+  "imageURLs": [],
+  "lastUpdated": 1779247169080,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-05-05T19:00:41.892Z",
+  "subCategoryID": null,
+  "title": "Calling VRCAVProVideoPlayer Stop() should cancel LoadURL()",
+  "trendingScore": 2681.3527303334686,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "calling-vrcavprovideoplayer-stop-should-cancel-loadurl",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e2a8dc53e2b27118528ce8e",
+      "alias": "Prior Porcupine",
+      "aliasID": "65c2a213ed6eefce4c61e798",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/504318818ff4ff750a1c7255c032bb65.png",
+      "companies": [],
+      "name": "IkaWaAyuMu",
+      "urlName": "<redacted>",
+      "voteID": "60a4ba397b109b2d176e4f40"
+    },
+    {
+      "_id": "5c1c8e54f866947e9eaec268",
+      "alias": "Stable Antelope",
+      "aliasID": "65c281e1ed6eefce4c8dcf2f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2b8c332fa78bd0b0fca54efa6eb50fb4.png",
+      "companies": [],
+      "name": "Temporal",
+      "urlName": "<redacted>",
+      "voteID": "60990d9152cfb909b6f75948"
+    },
+    {
+      "_id": "608711f1b4207d406b26f7e3",
+      "alias": "Aquamarine Parrotfish",
+      "aliasID": "65c6a631ed6eefce4c26e398",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e0328253dd45e27fe20574f9bb65838e.png",
+      "companies": [],
+      "name": "__라요",
+      "urlName": "<redacted>",
+      "voteID": "6092eb5924132741d712e75c"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "__v": 0,
+  "_id": "680799926f3684d790287f1e",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T21:55:17.516714Z",
+  "author": {
+    "_id": "68079290265c015d223143d8",
+    "alias": "Dusk blue Finch",
+    "aliasID": "680792918ccc1d8b3b07a07d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e0e1ec5b3933db7708534cfc13d2104d.png",
+    "created": "2025-04-22T12:58:56.525Z",
+    "name": "_Obbieo_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "68079290265c015d223143d8",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 333,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-04-22T13:28:50.789Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In 2019 version SDK does not load any of your avatars when you look in the content manager, and your avatar information does not appear, acting like your avatar has an id/blueprint not set when it has one\n\nThis happens every time you open a project that is the 2019 version and looking at the SDK window to upload it, it shows no information for your avatar, nor showing any of your previous avatars uploaded to your account in the content manager tab. When you try to attempt to upload it, it will upload as normal but when it finishes it will end the process saying \"Error saving Blueprint.\"\n\nThis is only happening with the 2019 version",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba67e4c3e90df13a6207",
+  "imageURLs": [
+    "https://canny-assets.io/images/0c9e32bb0061b3c898ff89ca15a5692a.png",
+    "https://canny-assets.io/images/ed5403ef34c83d7c00caf730fd4c62f1.png",
+    "https://canny-assets.io/images/32e611ea365a4721a1e415a955680ab8.png"
+  ],
+  "lastUpdated": 1779054468849,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/680799926f3684d790287f1e/906449413.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-04-22T13:28:50.789Z",
+  "subCategoryID": null,
+  "title": "SDK Not allowing upload/update to avatars",
+  "trendingScore": 2892.0774225495747,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": "68079290265c015d223143d8",
+  "urlName": "sdk-not-allowing-upload-update-to-avatars",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a766b8a0868b44b53569ce4",
+      "alias": "Legitimate Mollusk",
+      "aliasID": "65c26defed6eefce4c5a3358",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/64a1e0db8a82c0f458d4c66db961199d.png",
+      "companies": [],
+      "name": "GenesisAria",
+      "urlName": "<redacted>",
+      "voteID": "683b389fb25ebd72191654ee"
+    },
+    {
+      "_id": "5b4cfe34e2f8bb53f6847f7b",
+      "alias": "Thick Cricket",
+      "aliasID": "65c28071ed6eefce4c54530f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/391d51f2d06fd16255411b19a771ab12.png",
+      "companies": [],
+      "name": "Haxy",
+      "urlName": "<redacted>",
+      "voteID": "683b1440b25ebd72194fdf6e"
+    },
+    {
+      "_id": "68079290265c015d223143d8",
+      "alias": "Dusk blue Finch",
+      "aliasID": "680792918ccc1d8b3b07a07d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e0e1ec5b3933db7708534cfc13d2104d.png",
+      "companies": [],
+      "name": "_Obbieo_",
+      "urlName": "<redacted>",
+      "voteID": "680799928ccc1d8b3bae2336"
+    }
+  ]
+}

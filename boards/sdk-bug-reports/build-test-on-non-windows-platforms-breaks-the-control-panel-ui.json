@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "68386b0857cb85c17226abe9",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T21:56:01.130117Z",
+  "author": {
+    "_id": "5f61964e7517a865468cca76",
+    "alias": "Turquoise Sparrow",
+    "aliasID": "661232f7e5d26962aa83c00f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/395b0c142b656dbb19976f7b7e6b3794.png",
+    "created": "2020-09-16T04:36:30.236Z",
+    "name": "chemicalcrux",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f61964e7517a865468cca76",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 333,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-05-29T14:11:20.302Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I can build and publish a world correctly on my Macbook.\n\nHowever, if I run the \"Build & Test\" operation:\n\n- An error is logged because the SDK can't start VRChat (this is expected)\n\n- The UI gets stuck in its grayed-out state.\n\nI am copying the built world over to my PC to test it, so Build & Test *is* useful on this platform. It's just a nuisance to have to close and reopen the Control Panel window every time.\n\nThe SDK should gracefully handle a failure to start VRChat.\n\nMy Worlds SDK version is 3.8.1",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68386b0857cb85c17226ac3f",
+  "imageURLs": [],
+  "lastUpdated": 1779054471417,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68386b0857cb85c17226abe9/1513365829.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-05-29T14:11:20.302Z",
+  "subCategoryID": null,
+  "title": "Build & Test on non-Windows platforms breaks the Control Panel UI",
+  "trendingScore": 2891.7776055081063,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "build-test-on-non-windows-platforms-breaks-the-control-panel-ui",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f61964e7517a865468cca76",
+      "alias": "Turquoise Sparrow",
+      "aliasID": "661232f7e5d26962aa83c00f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/395b0c142b656dbb19976f7b7e6b3794.png",
+      "companies": [],
+      "name": "chemicalcrux",
+      "urlName": "<redacted>",
+      "voteID": "68386b08b25ebd72197f5170"
+    }
+  ]
+}

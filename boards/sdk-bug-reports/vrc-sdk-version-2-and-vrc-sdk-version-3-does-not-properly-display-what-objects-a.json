@@ -1,0 +1,84 @@
+{
+  "__v": 0,
+  "_id": "5ed0bf6f18cf8d653fa6fd95",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T19:58:51.727948Z",
+  "author": {
+    "_id": "5bff78ea2fad480c71a6e534",
+    "alias": "Large Alligator",
+    "aliasID": "65c2a219ed6eefce4c62eb8d",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2018-11-29T05:28:10.714Z",
+    "name": "aytimothy",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5bff78ea2fad480c71a6e534",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-29T07:53:19.440Z",
+  "deletedAt": null,
+  "details": "When there are components from VRCSDK2 and VRCSDK3 in the same scene, the builder tells you there are conflicting objects.\n\"The scene contains components from the VRChat SDK version 2 and version 3. Version two components will have to be replaced with their version 3 counterparts to build with SDK3 and UDON.\"\nHowever, the \"Select\" button does not display all the objects that are problematic.\nIt shows it in Unity's multi-object selection UI, but there is no way to work out which objects are conflicting.\n\nNote for devs: Rather than select the component, maybe select the GameObject(s) that the components are in.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7daee4c3e90df15903f1",
+  "imageURLs": [
+    "https://canny.io/images/b0c69b2f14539dadc5aa391fc27761b3.png"
+  ],
+  "lastUpdated": 1779218202236,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5ed0bf6f18cf8d653fa6fd95/38330438.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-29T07:53:19.440Z",
+  "subCategoryID": null,
+  "title": "VRC SDK Version 2 and VRC SDK Version 3 does not properly display what objects are conflicting",
+  "trendingScore": 2630.8829611066512,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "vrc-sdk-version-2-and-vrc-sdk-version-3-does-not-properly-display-what-objects-a",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5bff78ea2fad480c71a6e534",
+      "alias": "Large Alligator",
+      "aliasID": "65c2a219ed6eefce4c62eb8d",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "aytimothy",
+      "urlName": "<redacted>",
+      "voteID": "5ed0bf6f18cf8d653fa6fd9d"
+    }
+  ]
+}

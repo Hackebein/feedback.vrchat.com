@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "5e01081de40590030d1d9683",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:51:07.766164Z",
+  "author": {
+    "_id": "5e01069b5ec8df5c9a8d146a",
+    "alias": "Rose Giraffe",
+    "aliasID": "65dde1770129d7ae445abe4f",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/c252e8eb3ff7a4ffef8b1525c5b69471.png",
+    "created": "2019-12-23T18:25:31.279Z",
+    "name": "Glynn Taylor (Spoonie)",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e01069b5ec8df5c9a8d146a",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-23T18:31:57.492Z",
+  "deletedAt": null,
+  "details": "E.g. I have a lever and I want to draw a line to show the max/min angle.\nCurrently I am using reflection to get the inspector variables from the udon behaviour and caching + drawing that with gizmos, but it would be good to have an in built solution to it. An ability to show warnings, or handles to change values might also be useful.\nThis would also help other understand if the script is setup correctly.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9ce4c3e90df158acfd",
+  "imageURLs": [],
+  "lastUpdated": 1779223400249,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-23T18:31:57.492Z",
+  "subCategoryID": null,
+  "title": "Editor events for drawing gizmos",
+  "trendingScore": 2633.426337914192,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "editor-events-for-drawing-gizmos",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a7ac88bf5a5c52c08064fb9",
+      "alias": "Prairie sand Hedgehog",
+      "aliasID": "65ba02f2ed6eefce4c1872a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b2a514509aeb0aa28d6466fcc4134aa4.png",
+      "companies": [],
+      "name": "PhaxeNor",
+      "urlName": "<redacted>",
+      "voteID": "5eee9d96f878a34948d99126"
+    },
+    {
+      "_id": "5bdd7adfa1e5c74195271aa3",
+      "alias": "Functional Loon",
+      "aliasID": "65c65be0ed6eefce4c0383e9",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/177d3fe4a758609cae4a4197e0d64b58.png",
+      "companies": [],
+      "name": "JB",
+      "urlName": "<redacted>",
+      "voteID": "5e949821aa85897f62bc15d5"
+    },
+    {
+      "_id": "5e376d777f6a046800bf88a6",
+      "alias": "Emerald Trout",
+      "aliasID": "65c36feeed6eefce4ca3bffb",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/63edb88083f9cec09d63b4dafacbbe9a.jpg",
+      "companies": [],
+      "name": "シマエ",
+      "urlName": "<redacted>",
+      "voteID": "5e53437437c468171871f5df"
+    },
+    {
+      "_id": "5b8f33ea6d8cbb0cbea80416",
+      "alias": "Chartreuse Alpaca",
+      "aliasID": "65c29cb5ed6eefce4c94216c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/500b64e5c3c1b5bac6d20563da1246a1.png",
+      "companies": [],
+      "name": "Kaj",
+      "urlName": "<redacted>",
+      "voteID": "5e28e781d3817b4a200c15f9"
+    },
+    {
+      "_id": "5e01069b5ec8df5c9a8d146a",
+      "alias": "Rose Giraffe",
+      "aliasID": "65dde1770129d7ae445abe4f",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/c252e8eb3ff7a4ffef8b1525c5b69471.png",
+      "companies": [],
+      "name": "Glynn Taylor (Spoonie)",
+      "urlName": "<redacted>",
+      "voteID": "5e01081de40590030d1d968b"
+    }
+  ]
+}

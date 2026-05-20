@@ -1,0 +1,102 @@
+{
+  "__v": 0,
+  "_id": "64c9a49e41ae032bd13cf3f1",
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-17T17:39:56.395409Z",
+  "author": {
+    "_id": "628f2f3400b1f30b61bed845",
+    "alias": "Precise Gull",
+    "aliasID": "65c3a0bbed6eefce4cf53875",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/77281dce181c0d827edf98ab9c0c199f.png",
+    "created": "2022-05-26T07:41:40.232Z",
+    "name": "RockingHorse_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "628f2f3400b1f30b61bed845",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-08-02T00:34:38.309Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I was talking to a friend that is a dev here about the bloom slider in the launchpad. whenever a user sets it to 0 percent, the next world they load into resets the bloom slider even though it still shows up as 0 percent on the slider.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb98fe4c3e90df137f0ff",
+  "imageURLs": [],
+  "lastUpdated": 1779039017486,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-08-02T00:34:38.309Z",
+  "subCategoryID": null,
+  "title": "Bloom slider does not sync properly",
+  "trendingScore": 2797.9773145294243,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "bloom-slider-does-not-sync-properly",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6219f63f55639e536dc83162",
+      "alias": "Imaginative Sloth",
+      "aliasID": "65c26df1ed6eefce4c5aac1a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
+      "companies": [],
+      "name": "syncpulse",
+      "urlName": "<redacted>",
+      "voteID": "64daa268c7dd48094deb7e4f"
+    },
+    {
+      "_id": "628f2f3400b1f30b61bed845",
+      "alias": "Precise Gull",
+      "aliasID": "65c3a0bbed6eefce4cf53875",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/77281dce181c0d827edf98ab9c0c199f.png",
+      "companies": [],
+      "name": "RockingHorse_",
+      "urlName": "<redacted>",
+      "voteID": "64c9a49e41ae032bd13cf427"
+    }
+  ]
+}

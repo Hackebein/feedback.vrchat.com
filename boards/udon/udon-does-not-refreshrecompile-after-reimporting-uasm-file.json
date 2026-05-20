@@ -1,0 +1,110 @@
+{
+  "__v": 0,
+  "_id": "5e3035e3baf41a60d635932c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:53:00.320942Z",
+  "author": {
+    "_id": "5e0020f058cb00477077c1a6",
+    "alias": "Absinthe green Falcon",
+    "aliasID": "65c2823fed6eefce4c9cb3db",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c2126f8f1a986520dc0515a82d81c11e.png",
+    "created": "2019-12-23T02:05:36.967Z",
+    "name": "Foorack",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e0020f058cb00477077c1a6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-01-28T13:23:47.320Z",
+  "deletedAt": null,
+  "details": "Unity keeps executing the old assembly even though it doesn't even exist anymore. Only solution I've found so far to force-refresh an assembly program is to reassign the problem in the UdonBehaviour-Component of a GameObject.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9fe4c3e90df158b9ab",
+  "imageURLs": [],
+  "lastUpdated": 1779223404744,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-01-28T13:23:47.320Z",
+  "subCategoryID": null,
+  "title": "Udon does not refresh/recompile after Reimporting Uasm file",
+  "trendingScore": 2622.49736717469,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "udon-does-not-refreshrecompile-after-reimporting-uasm-file",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e89c11d2aedbc56a31549f7",
+      "alias": "Manual Kingfisher",
+      "aliasID": "65e6f9eea6e3ea79dd82b4ea",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/51ab8cb9fcc862ec579e6822db1e62ac.png",
+      "companies": [],
+      "name": "Dan Sufho",
+      "urlName": "<redacted>",
+      "voteID": "5e89c11d61631f7fbea33353"
+    },
+    {
+      "_id": "5cd34939c8182828a4bb3e91",
+      "alias": "Convenient Orangutan",
+      "aliasID": "65c2a20bed6eefce4c60be27",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fb34f84cdbc62591007e46c8dde70a4e.png",
+      "companies": [],
+      "name": "peptron1",
+      "urlName": "<redacted>",
+      "voteID": "5e3dbcb70bf5a621f6f888d9"
+    },
+    {
+      "_id": "5e0020f058cb00477077c1a6",
+      "alias": "Absinthe green Falcon",
+      "aliasID": "65c2823fed6eefce4c9cb3db",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c2126f8f1a986520dc0515a82d81c11e.png",
+      "companies": [],
+      "name": "Foorack",
+      "urlName": "<redacted>",
+      "voteID": "5e3035e3baf41a60d6359334"
+    }
+  ]
+}

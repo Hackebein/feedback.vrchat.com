@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "62e58a1b8b4d4544cbb2a83a",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-16T22:21:08.150194Z",
+  "author": {
+    "_id": "62def099a721d644ba069aea",
+    "alias": "Obvious Caribou",
+    "aliasID": "65c2c483ed6eefce4ce82932",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/597d48fe8c508abe7ef7cb2ef7fe02de.png",
+    "created": "2022-07-25T19:35:53.055Z",
+    "name": "Austen_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62def099a721d644ba069aea",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-07-30T19:44:27.644Z",
+  "deletedAt": null,
+  "details": "One of the biggest issues with FBT that I can think of is when you lean forward over, say a table, and when your head crosses the threshold of the table's edge, you will teleport in to the air as if you wanted to stand on the table. This is very immersion breaking and honestly a bit of a weirdly messy spot in the handling of player location. In testing with friends, it seems that this is because the player's vertical \"position\" is determined by the head instead of the feet or hips. It'd be an extremely good quality gain if player location was determined by feet or hips instead, so that leaning over objects became possible.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb913e4c3e90df1366682",
+  "imageURLs": [],
+  "lastUpdated": 1779262129398,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-07-30T19:44:27.644Z",
+  "subCategoryID": null,
+  "title": "Adjust player location to be bound to the feet, not the head",
+  "trendingScore": 2744.0963675922667,
+  "updatedAt": "2026-05-20T07:29:36.094720Z",
+  "urlName": "adjust-player-location-to-be-bound-to-the-feet-not-the-head",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62def099a721d644ba069aea",
+      "alias": "Obvious Caribou",
+      "aliasID": "65c2c483ed6eefce4ce82932",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/597d48fe8c508abe7ef7cb2ef7fe02de.png",
+      "companies": [],
+      "name": "Austen_",
+      "urlName": "<redacted>",
+      "voteID": "62e58a1b8b4d4544cbb2a859"
+    }
+  ]
+}

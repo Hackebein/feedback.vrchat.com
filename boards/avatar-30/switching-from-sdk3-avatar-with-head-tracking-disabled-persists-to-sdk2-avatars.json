@@ -1,0 +1,101 @@
+{
+  "__v": 0,
+  "_id": "62805cf76ba8041edc40df03",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.quick-menu",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-05-17T15:57:24.949012Z",
+  "author": {
+    "_id": "5d101e50428ccc1668e70d7c",
+    "alias": "Popular Starfish",
+    "aliasID": "65c26da3ed6eefce4c4d0750",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9228d3ea426004e8b04634a31a04c361.png",
+    "created": "2019-06-24T00:50:24.245Z",
+    "name": "NotAKidoS",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5d101e50428ccc1668e70d7c",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-15T01:52:55.480Z",
+  "deletedAt": null,
+  "details": "Switching from an SDK3 avatar with head tracking disabled to an SDK2 avatar(s) will continue to not track the head. \nOnly fix is to switch back to an SDK3 avatar, which resets tracking control on load.\n\nhttps://cdn.discordapp.com/attachments/449386885299830794/975210134739513464/VRChat_YxoFbsrF8G.mp4?size=4096\n\nnakos",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f3e4c3e90df13601d1",
+  "imageURLs": [],
+  "lastUpdated": 1779032669567,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-15T01:52:55.480Z",
+  "subCategoryID": null,
+  "title": "Switching from SDK3 avatar with Head Tracking disabled persists to SDK2 avatars",
+  "trendingScore": 2734.7041578123967,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "switching-from-sdk3-avatar-with-head-tracking-disabled-persists-to-sdk2-avatars",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62931a5795016b0b83072861",
+      "alias": "Selective Swift",
+      "aliasID": "65c4cc1aed6eefce4c7b9c8a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3e889dd266c99b71bf18e9bb87847aeb.png",
+      "companies": [],
+      "name": "Dalken Starbyne",
+      "urlName": "<redacted>",
+      "voteID": "62931c481de7200b79e8d1ff"
+    },
+    {
+      "_id": "5d101e50428ccc1668e70d7c",
+      "alias": "Popular Starfish",
+      "aliasID": "65c26da3ed6eefce4c4d0750",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9228d3ea426004e8b04634a31a04c361.png",
+      "companies": [],
+      "name": "NotAKidoS",
+      "urlName": "<redacted>",
+      "voteID": "62805cf76ba8041edc40df22"
+    }
+  ]
+}

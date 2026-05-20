@@ -1,0 +1,118 @@
+{
+  "_id": "69a732690ccdb4c1f3d494d4",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.website",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-17T08:53:10.232401Z",
+  "author": {
+    "_id": "600bb08cb76d6f78b108fb38",
+    "alias": "Zircon Yak",
+    "aliasID": "65c26de3ed6eefce4c583db2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+    "created": "2021-01-23T05:13:48.067Z",
+    "name": "DAG-XR",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "600bb08cb76d6f78b108fb38",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-03T19:11:37.734Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The attached video and images were captured within five minutes of each other.\n\nIssue: The user count of the world menu, and world page are not consistent. This could be an issue with the API.\n\nRepro steps: \n\n1. Launch the VRChat client\n\n2. Open the Quick Menu\n\n3. Select the World tab\n\n4. Monitor a popular world's user count\n\n5. Switch between world menu tabs (Popular, Active, Hot, et. al.)\n\n6. Also click on the world's page, and view how many are in Public and Private individually\n\n7. Notice that it fluctuates to an incorrect number.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/ca91ae5fde3c984c15910fc1be272264.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-03-03 13-59-48",
+      "url": "https://canny-assets.io/files/ca91ae5fde3c984c15910fc1be272264.mp4"
+    }
+  ],
+  "ideaID": "69a732690ccdb4c1f3d4953a",
+  "imageURLs": [
+    "https://canny-assets.io/images/27b9bb0da7058ec0901944aed7d10dfe.png",
+    "https://canny-assets.io/images/ea36463a4e12cebead236d0606258e09.png"
+  ],
+  "lastUpdated": 1779007855307,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69a732690ccdb4c1f3d494d4/32392565.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-03T19:11:37.734Z",
+  "subCategoryID": null,
+  "title": "[1801] [API?] User count for World menu are inconsistent",
+  "trendingScore": 2932.4397192627316,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": null,
+  "urlName": "1801-api-user-count-for-world-menu-are-inconsistent",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66b233a72f5b55a89c628a61",
+      "alias": "Spontaneous Manatee",
+      "aliasID": "66b233a7f66f1f693aed4c8e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/20cefe52c911ef320d1b9b96459f44f5.png",
+      "companies": [],
+      "name": "KutayX7",
+      "urlName": "<redacted>",
+      "voteID": "69ad962895d05cb7406ab278"
+    },
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": "<redacted>",
+      "voteID": "69a74a91804d20e9707ef3da"
+    },
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": "<redacted>",
+      "voteID": "69a73269804d20e9706d7c88"
+    }
+  ]
+}

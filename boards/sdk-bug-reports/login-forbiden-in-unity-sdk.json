@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "6296a15fbfc8750b6e8d9080",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T07:11:17.021692Z",
+  "author": {
+    "_id": "629698919fe1a50b74c7ecf0",
+    "alias": "Official Goose",
+    "aliasID": "65dc1daf0129d7ae4409ad94",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-05-31T22:37:05.512Z",
+    "name": "unluckyduck23",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "629698919fe1a50b74c7ecf0",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-31T23:14:39.024Z",
+  "deletedAt": null,
+  "details": "[Always] Error logging in: Forbidden\nUnityEngine.Debug:Log (object,UnityEngine.Object)\nVRC.Core.Logger:Log (string,VRC.Core.DebugLevel,UnityEngine.Object)\nVRCSdkControlPanel/<>c:<AttemptLogin>b__83_1 (VRC.Core.ApiModelContainer`1<VRC.Core.APIUser>) (at Assets/VRCSDK/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelAccount.cs:506)\nVRC.Core.APIUser/<>c__DisplayClass300_0:<Login>b__1 (VRC.Core.ApiContainer)\nVRC.Core.APIResponseHandler:RetryRequest (int,BestHTTP.HTTPRequest,BestHTTP.HTTPResponse,VRC.Core.ApiContainer,int,bool,string)\nVRC.Core.APIResponseHandler:HandleResponse (int,BestHTTP.HTTPRequest,BestHTTP.HTTPResponse,VRC.Core.ApiContainer,int,bool)\nVRC.Core.API/<>c__DisplayClass36_3:<SendRequestInternal>b__4 (BestHTTP.HTTPRequest,BestHTTP.HTTPResponse)\nBestHTTP.HTTPRequest:CallCallback ()\nBestHTTP.ConnectionBase:HandleCallback ()\nBestHTTP.HTTPManager:OnUpdate ()\nBestHTTP.HTTPUpdateDelegator:Update ()\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8fbe4c3e90df1361556",
+  "imageURLs": [],
+  "lastUpdated": 1779001730088,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-31T23:14:39.024Z",
+  "subCategoryID": null,
+  "title": "login forbiden in unity sdk",
+  "trendingScore": 2735.5457911297995,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "login-forbiden-in-unity-sdk",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "629698919fe1a50b74c7ecf0",
+      "alias": "Official Goose",
+      "aliasID": "65dc1daf0129d7ae4409ad94",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "unluckyduck23",
+      "urlName": "<redacted>",
+      "voteID": "6296a15fbfc8750b6e8d909f"
+    }
+  ]
+}

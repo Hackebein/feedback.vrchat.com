@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "5c999f69c746670963dbf63a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-19T01:09:04.327245Z",
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-03-26T03:41:29.578Z",
+  "deletedAt": null,
+  "details": "A lot of avatars have excessive meshes due to either the fear of touching blender, or the desire to be able to continue using poorly-optimized editing tools (such as VRoid Studio). One way to combat this would be to add automatic mesh merging logic to the upload process. Specifically, this should, at time of upload, and without modifying the original avatar object in the editor:\n\n1. Identify and exclude any meshes with enable states controlled directly by animators, or where the parent object is not the root or a bone\n2. Convert normal meshes into a skinned mesh renderer with all vertices fully weighted to their parent bone\n3. Merge all skinned meshes into a single combined mesh\n4. Fix animation references to shape keys (this may require name mangling some shape keys to avoid collisions)\n5. Upload the resulting avatar\n\nThis will need to take into account some more advanced animation techniques; in particular, merging into the face mesh can be dangerous, as sometimes animating the face mesh enable state is used as a workaround to disable lipsync and/or eye tracking.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d79e4c3e90df1581e61",
+  "imageURLs": [],
+  "lastUpdated": 1779152767434,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-03-26T03:41:29.578Z",
+  "subCategoryID": null,
+  "title": "Add pre-upload avatar mesh merger to the VRCSDK",
+  "trendingScore": 2675.7998730125664,
+  "updatedAt": "2026-05-19T01:08:08.350725Z",
+  "urlName": "add-pre-upload-avatar-mesh-merger-to-the-vrcsdk",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a78cb159e2ef066b2b1f390",
+      "alias": "Umber brown Galliform",
+      "aliasID": "65c279a6ed6eefce4c458fe2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/66fa8a3a5eaab18c96ed8f4e46419403.png",
+      "companies": [],
+      "name": "Mage_Enderman",
+      "urlName": "<redacted>",
+      "voteID": "6075a9335fc1b06f2bdaee9e"
+    },
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": "<redacted>",
+      "voteID": "5c999f690cab3220d4971d72"
+    }
+  ]
+}

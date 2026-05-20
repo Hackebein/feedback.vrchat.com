@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "669147accafd10082df2e032",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-18T12:53:31.796752Z",
+  "author": {
+    "_id": "66914496505dc30553d711e9",
+    "alias": "Decent Lizard",
+    "aliasID": "669144966b10505b94096410",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2024-07-12T14:58:30.167Z",
+    "name": "C0de Eve",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "66914496505dc30553d711e9",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 453,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-07-12T15:11:40.109Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Just writing some feedback of what my artist mentioned, because he can't post from Russia:\n\nI'm very glad that on unity test iteration constraints seems to work same as unity ones, and even has option to be negative, or greater than module of two - it will bring even more options to solve a lot of volume and support bone options. \n\nI consider this as a killer feature (unfortunately there's no constrains beta option of VRC available for me for some reason in steam) \n\nThere is a bitter thing i also found out - I made a quick but deep test of new constrains and found out they share all the same unity bugs as before\n\n( i am not a professional programmer but i consider it as some kind of grimbal lock issues, because we discussed it with professional animators long time ago)\n\nI want to bring up an opinion based on my experience - it is not how constrains should work. They should work more likely like in blender, without making barrel rolls and unpredictable 180 degree turns when some angles of freedom are locked. \n\nLocking few axis is key feature of twist bones that allow avatar to have more natural smooth deforms, and keep silhouette on extreme poses (like dancing or virtual aerobics showcase) and most cases of constraints use, that people actually use daily - is supporting a rig of avatar In my simple 3d artist words - they should work as i expect them. \n\nNot exposing euler angles -alike code imperfection. So i strongly advice to at least plan to rework them to more natural behaviour.\n\nThere is also a feature that i really want to be implemented for exactly same rig deformation supporting purposes\n\n- Please make each rotation constraint to return 3 non network synchronised parameters of their rotation, so artists can use them for utilising correction shapekeys. To support things like muscle deform or for example rounding of butt when legs are extremely bent or spread. Vrchat already calculates this angles on every machine locally, so it would be nice to have ability to read them in animators.\n\nThis might be a little hard to read, but I hope you can make use of his feedback regardless. Tupper said they'll pass this on but I might as well also post it here, just in case.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9efe4c3e90df1391775",
+  "imageURLs": [],
+  "lastUpdated": 1779107916900,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/669147accafd10082df2e032/787093955.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-07-12T15:11:40.109Z",
+  "subCategoryID": null,
+  "title": "[3.6.2-constraints]",
+  "trendingScore": 2845.926447806387,
+  "updatedAt": "2026-05-18T12:39:34.831600Z",
+  "updatedBy": null,
+  "urlName": "362-constraints",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66914496505dc30553d711e9",
+      "alias": "Decent Lizard",
+      "aliasID": "669144966b10505b94096410",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "C0de Eve",
+      "urlName": "<redacted>",
+      "voteID": "669147ac6b10505b94ce12d4"
+    }
+  ]
+}

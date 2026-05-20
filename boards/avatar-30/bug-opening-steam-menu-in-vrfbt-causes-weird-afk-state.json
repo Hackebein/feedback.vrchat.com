@@ -1,0 +1,121 @@
+{
+  "__v": 0,
+  "_id": "6098383eb90f8d5f66a30de3",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:55:20.935838Z",
+  "author": {
+    "_id": "5fb74d723473b36c24d385eb",
+    "alias": "Literary Toucan",
+    "aliasID": "65c4aae9ed6eefce4c19a9ef",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/a496c0fb1c218b78809c230fd1101af5.png",
+    "created": "2020-11-20T05:00:34.583Z",
+    "name": "Neр",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5fb74d723473b36c24d385eb",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-05-09T19:30:06.028Z",
+  "deletedAt": null,
+  "details": "So. If you open the steam menu using your controllers menu button (when in 3point VR or 6 point FBT) \nThe AFK Parameter \"Flickers\".. It goes to True as expected but instantly switches back to false for a moment before settling back on True, \n(you can see this yourself on ANY AV3 avatar by simply using debug menu and watching the afk state as you open and close menu)\nThis causes issues with some peoples AFK anims if they have a instant/ interrupting  transition out.\nOnly happens in VR and with opening steam menu. \nTaking off HMD or using the \"end\" key on keyboard work just fine.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb899e4c3e90df134e20b",
+  "imageURLs": [],
+  "lastUpdated": 1779032657793,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-05-09T19:30:06.028Z",
+  "subCategoryID": null,
+  "title": "[BUG] Opening Steam Menu in VR/FBT Causes weird AFK state",
+  "trendingScore": 2732.1647820916005,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-opening-steam-menu-in-vrfbt-causes-weird-afk-state",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fca78692f80c0287b38326e",
+      "alias": "Rubber Capybara",
+      "aliasID": "65d0706d0129d7ae4402bdf0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/22155af9c76337804b5d93db24243b22.png",
+      "companies": [],
+      "name": "Puddi",
+      "urlName": "<redacted>",
+      "voteID": "627dd34cd9e8400b88e2f70f"
+    },
+    {
+      "_id": "5c4bd9bca31c1d6ef9355351",
+      "alias": "Jonquil Stingray",
+      "aliasID": "65c36fe8ed6eefce4ca2c227",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e39d4fc9066835a4b2808a4ea534cf9a.png",
+      "companies": [],
+      "name": "-Mino-",
+      "urlName": "<redacted>",
+      "voteID": "60b17dfd86e983105d74024d"
+    },
+    {
+      "_id": "59cb4676d4edc012b9dca22f",
+      "alias": "Managing Meerkat",
+      "aliasID": "65c2b491ed6eefce4cde88bf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b9972d77c9e0e23db69f06909d69e552.png",
+      "companies": [],
+      "name": "error.mdl",
+      "urlName": "<redacted>",
+      "voteID": "6098a03a2cacc36507900a9d"
+    },
+    {
+      "_id": "5fb74d723473b36c24d385eb",
+      "alias": "Literary Toucan",
+      "aliasID": "65c4aae9ed6eefce4c19a9ef",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a496c0fb1c218b78809c230fd1101af5.png",
+      "companies": [],
+      "name": "Neр",
+      "urlName": "<redacted>",
+      "voteID": "6098383eb90f8d5f66a30dea"
+    }
+  ]
+}

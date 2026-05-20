@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "5fffa867d3601c76f1aa1daf",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:24:52.860532Z",
+  "author": {
+    "_id": "5ffd1c9e07bbca2adc92ddc4",
+    "alias": "Saffron Roadrunner",
+    "aliasID": "65cf6a840129d7ae44611b1c",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/4ae7c0d4315a6e12ea321b9cdca2ad4c.png",
+    "created": "2021-01-12T03:50:54.270Z",
+    "name": "FerventFerret",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ffd1c9e07bbca2adc92ddc4",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-01-14T02:11:51.923Z",
+  "deletedAt": null,
+  "details": "I seem to have hit some sort of issue when attempting to change the mobility of a VRC_Station from Mobile to Immobile after a player other than the first to join a world enters the station. I've created a cube with the components in the attached screenshot and the Udon graph(I originally hit this issue when writing something in U#) in it as well. When the world is built and run locally from the editor with two or more players, if the seat is used by the second player to join (not master?), the script works as expected locally. However, on the first player to join, they teleport to the position of the seat (despite not using it) and become fixed in place there, as if seated. Despite this, the player doesn't seem to technically be using the station as there are no OnStationEntered events are being fired. If the first player to join the world is the one to use the seat, this issue does not happen.\nI also went ahead and tested this with another player instead of running locally and interestingly, the second person to join seems to become stuck much like the first player in the case I described above when run locally. \nPlayed around with some settings around ownership but doesn't seem to change anything.\nAlso hit problem with the following U# snippet:\npublic class DesyncTest : UdonSharpBehaviour\n{\n    [SerializeField]\n    private VRCStation station;\n    public override void Interact()\n    {\n        Networking.SetOwner(Networking.LocalPlayer, gameObject);\n        station.UseStation(Networking.LocalPlayer);\n    }\n    public override void OnStationEntered(VRCPlayerApi player)\n    {\n        station.PlayerMobility = VRCStation.Mobility.ImmobilizeForVehicle;\n    }\n}\nEditor Repro Steps:\n1. Create Cube in world with Attributes and program seen in screenshot. Set the station variable in the Udon Graph to be the VRC_Station component of the cube.\n2. Build and run world locally with 2 clients. \n3. Join with first client, then with second client.\n4. On second client use the station.\nI've also uploaded a world with an object for this at https://vrchat.com/home/world/wrld_40e63567-a4ee-471e-8177-60df562a2b40",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb800e4c3e90df132250c",
+  "imageURLs": [
+    "https://canny.io/images/adff32a6c1b97dad1b5da282d3cc93fa.png"
+  ],
+  "lastUpdated": 1779247129560,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-01-14T02:11:51.923Z",
+  "subCategoryID": null,
+  "title": "Changing VRC_Station mobility via Udon after second player to join world enters station causes first player to become stuck",
+  "trendingScore": 2663.706229256453,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "changing-vrcstation-mobility-via-udon-after-second-player-to-join-world-enters-s",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ffd1c9e07bbca2adc92ddc4",
+      "alias": "Saffron Roadrunner",
+      "aliasID": "65cf6a840129d7ae44611b1c",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/4ae7c0d4315a6e12ea321b9cdca2ad4c.png",
+      "companies": [],
+      "name": "FerventFerret",
+      "urlName": "<redacted>",
+      "voteID": "5fffa868d3601c76f1aa1db6"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "__v": 0,
+  "_id": "62e4ca0ac9b4cc44b83806a7",
+  "aiCategories": [
+    "open-beta",
+    "worlds.travel",
+    "loc.loading-screen"
+  ],
+  "aiTaggedAt": "2026-05-16T22:20:04.830133Z",
+  "author": {
+    "_id": "62e4c314d2049244a16e21cd",
+    "alias": "Fuchsia Puffin",
+    "aliasID": "65c28a58ed6eefce4cd486c3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b7a84aa32d7ac19fce15d77b4c22b917.png",
+    "created": "2022-07-30T05:35:16.819Z",
+    "name": "Veru_Smol",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62e4c314d2049244a16e21cd",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-07-30T06:04:58.865Z",
+  "deletedAt": null,
+  "details": "tl;dr at the bottom\nMy default home world was set to the VRChat default home (wrld_ecefd6f8-726e-4321-bdb1-730636df484e). \nWhile in loading screens, I would stutter very bad and never load in. \nI tried the following steps to resolve the issue.\nReinstalling VRChat\nDeleting all files (including in LocalLow, etc)\nBooting to a separate fresh Windows installation which had never had VRC run on it.\nUltimately the issue was that I had the default VRChat world as my home world, thus being stuck in a loop of the game trying to check the platform of the world. \nThe solution!:\nLog in on live, change your default home to anything *except* the vrchat default home, then log back in on open beta.  \nJust to try and reproduce this, I went back and changed my default home to the vrchat home, then logged in back on Open Beta, and it worked just fine. \ntl;dr: first time loading into open beta, if your home world is set to VRC Default home, you'll get stuck in a loading screen (look at logs). Change home world on live to any other world, then load back into open beta, now you can reset your home world safely and the game will continue to work. \nThe log below is what loops until I closed the game.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb912e4c3e90df1366042",
+  "imageURLs": [
+    "https://canny.io/images/db91b399064d60fae0ab901539fe935c.png"
+  ],
+  "lastUpdated": 1779262125134,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-07-30T06:04:58.865Z",
+  "subCategoryID": null,
+  "title": "[SOLVED]Error loading default home (stuttering heavily, never loads)",
+  "trendingScore": 2744.0150700038075,
+  "updatedAt": "2026-05-20T07:29:36.094720Z",
+  "urlName": "solvederror-loading-default-home-stuttering-heavily-never-loads",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62e4c314d2049244a16e21cd",
+      "alias": "Fuchsia Puffin",
+      "aliasID": "65c28a58ed6eefce4cd486c3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b7a84aa32d7ac19fce15d77b4c22b917.png",
+      "companies": [],
+      "name": "Veru_Smol",
+      "urlName": "<redacted>",
+      "voteID": "62e4ca0ac9b4cc44b83806c5"
+    }
+  ]
+}

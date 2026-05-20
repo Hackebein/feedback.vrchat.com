@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5df76aac47821e4d14baab95",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:47:14.938409Z",
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-16T11:29:48.100Z",
+  "deletedAt": null,
+  "details": "The following exception is thrown when using the inspector to set an element on a public variable of type Transform[]:\n\nMissingMethodException: Constructor on type 'System.Runtime.CompilerServices.StrongBox`1[[UnityEngine.Transform[], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]' not found.\nSystem.RuntimeType.CreateInstanceImpl (System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Object[] args, System.Globalization.CultureInfo culture, System.Object[] activationAttributes, System.Threading.StackCrawlMark& stackMark) (at <e1319b7195c343e79b385cd3aa43f5dc>:0)\nSystem.Activator.CreateInstance (System.Type type, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Object[] args, System.Globalization.CultureInfo culture, System.Object[] activationAttributes) (at <e1319b7195c343e79b385cd3aa43f5dc>:0)\nSystem.Activator.CreateInstance (System.Type type, System.Object[] args) (at <e1319b7195c343e79b385cd3aa43f5dc>:0)\nVRC.Udon.Common.UdonHeap.SetHeapVariable (System.UInt32 address, System.Object value, System.Type type) (at C:/VRChatGit/UdonVM/Udon/Common/Source/Heap/UdonHeap.cs:250)\nVRC.Udon.UdonBehaviour.RefreshProgram () (at Assets/Udon/UdonBehaviour.cs:153)\nVRC.Udon.UdonBehaviour.RunEditorUpdate (System.Boolean& dirty) (at Assets/Udon/UdonBehaviour.cs:77)\nVRC.Udon.Editor.UdonBehaviourEditor.OnInspectorGUI () (at Assets/Udon/Editor/UdonBehaviourEditor.cs:87)\nUnityEditor.InspectorWindow.DoOnInspectorGUI (System.Boolean rebuildOptimizedGUIBlock, UnityEditor.Editor editor, System.Boolean wasVisible, UnityEngine.Rect& contentRect) (at C:/buildslave/unity/build/Editor/Mono/Inspector/InspectorWindow.cs:1647)\nUnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d97e4c3e90df158a114",
+  "imageURLs": [],
+  "lastUpdated": 1779223361423,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-16T11:29:48.100Z",
+  "subCategoryID": null,
+  "title": "Exception thrown when setting element on a public Transform[] variable",
+  "trendingScore": 2607.3330085653156,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "exception-thrown-when-setting-element-on-a-public-transform-variable",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": "<redacted>",
+      "voteID": "5df76aac47821e4d14baab9d"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "__v": 0,
+  "_id": "60b2a826a8bc280ec535c856",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:28:36.848344Z",
+  "author": {
+    "_id": "5a983204a1528d415c5ced46",
+    "alias": "Chief Finch",
+    "aliasID": "65ba04aeed6eefce4c43afb3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+    "created": "2018-03-01T17:01:56.340Z",
+    "name": "naqtn",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a983204a1528d415c5ced46",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-05-29T20:46:30.989Z",
+  "deletedAt": null,
+  "details": "For instance on a Branch node where the condition parameter is false, a temporary value is used as uninitialized on false-path if the value also appears on true-path.\nSee attached first image. A temporary value \"message_0\" is the result of Int.ToString. It is assigned only on true-path of the Branch node. So this node program prints unexpected \"Null\" instead of \"1\" to the console.\nSame thing happens on a For node if the start parameter equals the end parameter (2nd image). Also on a While node (3rd image).\nThis is potentially root cause of followings:\n- https://vrchat.canny.io/vrchat-udon-closed-alpha-bugs/p/connecting-the-same-playerapi-node-to-multiple-nodes-under-different-branch-node\n- https://vrchat.canny.io/vrchat-udon-closed-alpha-bugs/p/branches-decompose-variables-to-null-in-certain-scenarios\n(Thx ureishi. https://twitter.com/aivrc/status/1398156377889984512 )\n\nThe program of the Branch node case:\n```\napplication/vnd.unity.graphview.elements ANWUyW7bMBCGX8XgWRSGO2kglywFghZtgSTuoQgMUqRctQpVaElruH6yHvpIfYXSS4LETgMfcmghQMAMJXL+7x/O75+/FujW1kNA448LVA51/dbepACd3YbYTy962/YoQ0PlU847XzgCCpdOlJiD5dgIw7FSRHHOQYEm6eOvTVf1VRPReIG+ozEmHHJBCNFcGso01Rmap7SUOdFGEE4kECGpWGYoNj5cnZ92qZrrDJV1820bIe0lGFcqzIVNr5IbbHxpcBE8c+CFEZag680Ok5Wg9R7L7JGo49bG4tO9noP2fEKPzrUWBAgjmgnDlNwKUrlgRBAFVGvQ8rEehHYUuRKsc05h56TBPHiCrWIeGypJSUFoVkI63QVQqhQSa89CKpIybBKxdBpzNBS0CNTvCV+gIVb9/J37HIp+svF3garY9QlAOD9FY0jVdX1bxdl2GV3Muz7c5MdNUwcbs9FNVzRtXblsNAltl/Qf8RxWTzY6Gep+aMNRDEPf2jobvR9cXRWvw/yy+RLikVPKikJIYhgPoM2PV7buAlru+nHSpIqmm4PPY8/ovTXcWceVZ7jUFjBnRWo1ojUGaXxqQgO0FE9ZI9beUMqY1lKlP9bWGJFrAoJIJhSnKfu8NS9Ic63qZVmSfY4PCObT6WVzsS5luiW7ie7RMhMALHNY8IJgrlJrpYzHnjJlPNXSGfkEWr66rgmh4CCoYpyvySqernYiyxgIKTnsNv1BPv5P9GGf/tWqvLM4q2I4DW6YJQveNLOztm3aOws2xd9FkyYZcWfHQfd7z46/NLpMWWk4FxpAabI7Uw/yPkl8eUMOpfbBtvFB6z7H7bDxucdN5DI1MOVp9DMlNpN7Ox8YkURSAob/S9iul38A\n```",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8a0e4c3e90df134fd30",
+  "imageURLs": [
+    "https://canny.io/images/9ba659b6898d0f48974b5b601979e884.png",
+    "https://canny.io/images/f998d0060841b88d1819e9a668c9653b.png",
+    "https://canny.io/images/707a4feff79a522745a905dbaf2a4972.png"
+  ],
+  "lastUpdated": 1779247171664,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 11,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/60b2a826a8bc280ec535c856/420047294.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 11,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-05-29T20:46:30.989Z",
+  "subCategoryID": null,
+  "title": "Temporary value is not initialized if it is also appears in unreached path",
+  "trendingScore": 2735.919350920456,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "temporary-value-is-not-initialized-if-it-is-also-appears-in-unreached-path",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60d9b64b4f6653148924e366",
+      "alias": "Philosophical Puma",
+      "aliasID": "65c3580ced6eefce4c687be8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ab9dcee8dfa08c92044546399e6fbeb5.png",
+      "companies": [],
+      "name": "rapt らぷと",
+      "urlName": "<redacted>",
+      "voteID": "6297538992494f0b6a9d93fd"
+    },
+    {
+      "_id": "61a9e5bde992bb132bb64abc",
+      "alias": "Legal Woodpecker",
+      "aliasID": "65c296cded6eefce4cbae38d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eeae38112e064f84870c39343e089a7f.png",
+      "companies": [],
+      "name": "kobi32768",
+      "urlName": "<redacted>",
+      "voteID": "6295c13b48921e690b459a11"
+    },
+    {
+      "_id": "5e4ca2145f9b3726b3b389e7",
+      "alias": "Wild strawberry Canidae",
+      "aliasID": "65c26ed9ed6eefce4c854f57",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/759db336105189dc7ca779c13443ce0f.png",
+      "companies": [],
+      "name": "anatawa12",
+      "urlName": "<redacted>",
+      "voteID": "62934605586a810b84228164"
+    },
+    {
+      "_id": "6222df95bf87711214911a05",
+      "alias": "Olive Chameleon",
+      "aliasID": "65d4c5cf0129d7ae44ca63b3",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5c3c56fe1dc0ac8450ecdee6014008b2.png",
+      "companies": [],
+      "name": "tonby（とんびー）",
+      "urlName": "<redacted>",
+      "voteID": "6288c74170ffe70b77635af2"
+    },
+    {
+      "_id": "6142bc91c830f70736b61114",
+      "alias": "Secondary Swordtail",
+      "aliasID": "65c27264ed6eefce4c18098a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/191433fda8e993da6a48d8f50360fef2.png",
+      "companies": [],
+      "name": "Sayamame",
+      "urlName": "<redacted>",
+      "voteID": "621283c6564c374b3221f307"
+    },
+    {
+      "_id": "5f8a26770aaa28611fedd6b6",
+      "alias": "Average Loon",
+      "aliasID": "65c28318ed6eefce4cbdb922",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+      "companies": [],
+      "name": "Faxmashine",
+      "urlName": "<redacted>",
+      "voteID": "618e4ee9968d4507a86fce99"
+    },
+    {
+      "_id": "60485dd815c188421dfb0c32",
+      "alias": "Kelp Crayfish",
+      "aliasID": "65f05eaea6e3ea79dd33605c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1f22b4cb96651c4bd5667ab233f9b266.png",
+      "companies": [],
+      "name": "Rastvas",
+      "urlName": "<redacted>",
+      "voteID": "6183667394b9522327d9143f"
+    },
+    {
+      "_id": "5baf0cc9a2f30d7f3ea3f357",
+      "alias": "Juniper Planarian",
+      "aliasID": "65db08e90129d7ae44295324",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/0a2755448093f8f2ae0fdb00857d5b53.png",
+      "companies": [],
+      "name": "Hotate_Neko",
+      "urlName": "<redacted>",
+      "voteID": "61835cfdf33ed63d814455b8"
+    },
+    {
+      "_id": "5ae51ece906bfd12e600d6f6",
+      "alias": "Quaint Turtle",
+      "aliasID": "65c28068ed6eefce4c52fc2a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/93ea8277fd68e3097e6d92bc9b52089e.png",
+      "companies": [],
+      "name": "chiugame",
+      "urlName": "<redacted>",
+      "voteID": "60b33c360ed3842dac9d69c9"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "<redacted>",
+      "voteID": "60b2ac2e4243790eea7d6041"
+    }
+  ]
+}

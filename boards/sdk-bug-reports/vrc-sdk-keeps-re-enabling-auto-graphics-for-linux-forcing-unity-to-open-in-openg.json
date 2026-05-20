@@ -1,0 +1,96 @@
+{
+  "_id": "6a03c1e754ddecad2ae494d1",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T17:37:39.382587Z",
+  "author": {
+    "_id": "6a03c185cf565b8f740ae9b7",
+    "alias": "Jasmine green Puffin",
+    "aliasID": "6a03c185cf565b8f740ae9bb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/06d33b098bcedb26a360f1b38234807a.png",
+    "created": "2026-05-13T00:10:45.635Z",
+    "name": "SpaceLilFox",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6a03c185cf565b8f740ae9b7",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 333,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-13T00:12:23.545Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After testing, different of standard unity editor behavior where turning off auto graphics API for linux lets you reorder the graphics APIS and make unity try to first load with vulkan, VRC SDK on editor unload re-enables Auto Graphics API for linux, meaning that on the next project startup it will launch on OpenGLCore which is a broke renderer, and much slower, and since it is a different renderer this also triggers the assets to be rebuilt making the startup time infuriately long.\n\nThis behavior is different of standard unity editor behavior that maintains the selected option across many restarts of the editor, this behavior only happens when VRC SDK is installed on the project.\n\nTested with an empty VRC Avatar project to confirm it is in fact VRC SDK causing this behavior.\n\nAttached are 2 images, showing how OpenGL is rendering in a completely broken manner, while vulkan renders normally.\n\nHardware & Software Specs:\n\nOperating System: CachyOS Linux \n\nKDE Plasma Version: 6.6.4\n\nKDE Frameworks Version: 6.25.0\n\nQt Version: 6.11.0\n\nKernel Version: 7.0.3-1-cachyos (64-bit)\n\nGraphics Platform: Wayland\n\nProcessors: 12 × AMD Ryzen 5 4600G with Radeon Graphics\n\nMemory: 32 GiB of RAM (27.3 GiB usable)\n\nGraphics Processor 1: AMD Radeon RX 7700 XT\n\nGraphics Processor 2: AMD Radeon Graphics\n\nManufacturer: Micro-Star International Co., Ltd.\n\nProduct Name: MS-7C96\n\nSystem Version: 1.0\n\n \n\nUnity 2022.3.22f1\n\nAvailable Graphics APIS:\n\n- Vulkan\n\n- OpenGLCore\n\nTested on an empty project created with Unity Hub (shows correct behavior)\n\nAnd on a VRChat Avatar project created with ALCOM (shows wrong behavior [keeps resetting to OpenGL on editor exit])\n\nCreated from: https://help.vrchat.com/hc/en-us/requests/692576",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a03c1e754ddecad2ae494d3",
+  "imageURLs": [
+    "https://canny-assets.io/images/c4a15376b40f11969ff84c10573c1405.png",
+    "https://canny-assets.io/images/8ad6fe7e94c7f727b643c611de411570.png",
+    "https://canny-assets.io/images/5a5341f5431e7fad0ad856a1757ef0ba.png"
+  ],
+  "lastUpdated": 1779038994143,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a03c1e754ddecad2ae494d1/1005245161.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-13T00:12:23.545Z",
+  "subCategoryID": null,
+  "title": "VRC SDK keeps re-enabling Auto Graphics for Linux, forcing unity to open in opengl instead of vulkan (overriding previous settings)",
+  "trendingScore": 2941.5515198483845,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "vrc-sdk-keeps-re-enabling-auto-graphics-for-linux-forcing-unity-to-open-in-openg",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a03c185cf565b8f740ae9b7",
+      "alias": "Jasmine green Puffin",
+      "aliasID": "6a03c185cf565b8f740ae9bb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/06d33b098bcedb26a360f1b38234807a.png",
+      "companies": [],
+      "name": "SpaceLilFox",
+      "urlName": "<redacted>",
+      "voteID": "6a03c1e8cf565b8f740aeb8a"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "_id": "6902712e6bb682cb17c72160",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.mobile-app",
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T05:53:23.501176Z",
+  "author": {
+    "_id": "5fca5df4d58780532024a52b",
+    "alias": "Toffee Tortoise",
+    "aliasID": "65c26da3ed6eefce4c4d0863",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
+    "created": "2020-12-04T16:04:04.984Z",
+    "name": "DrBlackRat",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5fca5df4d58780532024a52b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-10-29T19:55:26.659Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "# Issue:\n\n`VRCCameraSettings.ScreenCamera` is supposed to be the way to get the currently used camera for the player. This is especially useful when using it to try to attach things like a HUD etc to the player.\n\nHowever, when using `Focus View` on mobile the scene camera is no longer correct and reports it's position and rotation as the world origin.\n\n**Reproduction Steps:**\n\n1. Go to my [Modern UIs Demo World](https://vrchat.com/home/world/wrld_9da99c69-cbc1-49bf-8a9c-05f0fc7a329a).\n\n2. Go to the wall in front of you and click on any of the notification buttons to enter `Focus View`.\n\n3. Press the Send Notification Button to send a notification.\n\nIf you then exit `Focus View` you will see the notification, but once you enter it it will be gone again.\n\nNote: If you go to the back of the wall and use the buttons there you can actually see it flying back to 0 0 0.\n\n# Expected Behaviour:\n\n`VRCCameraSettings.ScreenCamera` should **always** represent the camera currently used by the user, even while in `Focus View`.\n\n# Attachments:\n\nHere is a video showcasing the issue:",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/4e33eee87199b59afc3cbfe4a6ae8b38.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "ScreenRecording_10-28-2025 00-35-55_1",
+      "url": "https://canny-assets.io/files/4e33eee87199b59afc3cbfe4a6ae8b38.mp4"
+    }
+  ],
+  "ideaID": "6902712e6bb682cb17c7220d",
+  "imageURLs": [],
+  "lastUpdated": 1779082406436,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6902712e6bb682cb17c72160/380227331.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-10-29T19:55:26.659Z",
+  "subCategoryID": null,
+  "title": "VRCCameraSettings.ScreenCamera Postion / Rotation returns world origin if focusing on a UI on mobile",
+  "trendingScore": 2914.6058969608034,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": "5fca5df4d58780532024a52b",
+  "urlName": "vrccamerasettingsscreencamera-postion-rotation-returns-world-origin-if-focusing",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "628a843a2ffd390b70fe0459",
+      "alias": "Nutmeg Dove",
+      "aliasID": "65c28348ed6eefce4cc53e69",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/099aa2f88030192daa15245da9ef7e1c.png",
+      "companies": [],
+      "name": "krajsyboys",
+      "urlName": "<redacted>",
+      "voteID": "690341971f833c417c35d532"
+    },
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c79c3e3bfa68539a3c62feb4eda8b2cb.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": "<redacted>",
+      "voteID": "690287961f833c417c71103f"
+    },
+    {
+      "_id": "60ee9e81572cc51ad4e847e6",
+      "alias": "Vervain Falcon",
+      "aliasID": "65c291bded6eefce4cf7d1c9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/40d5dd2074e4890f5cd77ee30956f43c.png",
+      "companies": [],
+      "name": "BobyStar",
+      "urlName": "<redacted>",
+      "voteID": "690278191f833c417c6ce0ee"
+    },
+    {
+      "_id": "5fca5df4d58780532024a52b",
+      "alias": "Toffee Tortoise",
+      "aliasID": "65c26da3ed6eefce4c4d0863",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
+      "companies": [],
+      "name": "DrBlackRat",
+      "urlName": "<redacted>",
+      "voteID": "6902712e1f833c417c35383f"
+    }
+  ]
+}

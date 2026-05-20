@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "67c7676de74bd387ff88c500",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-17T21:54:42.609190Z",
+  "author": {
+    "_id": "628f8e455f3da20b6f94cfd0",
+    "alias": "Eucalyptus Badger",
+    "aliasID": "65c2a219ed6eefce4c62c43f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/44052b3e7e02fd3871f3bb20af642724.png",
+    "created": "2022-05-26T14:27:17.598Z",
+    "name": "WalooW",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "628f8e455f3da20b6f94cfd0",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 148,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-03-04T20:49:49.249Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Self explanatory.\n\nI know we already have the \"_VRChatMirrorMode\" global parameter, but this doesn't allow to cull stencil operations, so some shaders that make use of the stencil buffer may break next to a mirror.\n\nSo in those edge cases it would be nice to be able to cull the shader or a specific pass entirely from being rendered in mirrors.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba4ee4c3e90df13a2479",
+  "imageURLs": [],
+  "lastUpdated": 1779054465894,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67c7676de74bd387ff88c500/1970971687.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-03-04T20:49:49.249Z",
+  "subCategoryID": null,
+  "title": "Add \"HideInMirror\" shader tag",
+  "trendingScore": 2879.5314236140916,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "add-hideinmirror-shader-tag",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "628f8e455f3da20b6f94cfd0",
+      "alias": "Eucalyptus Badger",
+      "aliasID": "65c2a219ed6eefce4c62c43f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/44052b3e7e02fd3871f3bb20af642724.png",
+      "companies": [],
+      "name": "WalooW",
+      "urlName": "<redacted>",
+      "voteID": "67c7676db324a96209daff64"
+    }
+  ]
+}

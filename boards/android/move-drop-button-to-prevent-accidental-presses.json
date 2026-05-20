@@ -1,0 +1,117 @@
+{
+  "__v": 0,
+  "_id": "64e47b69ca4cda097316df0a",
+  "aiCategories": [
+    "loc.mobile-app",
+    "loc.in-world",
+    "client.inventory"
+  ],
+  "aiTaggedAt": "2026-05-17T15:21:20.016628Z",
+  "author": {
+    "_id": "5b41e22ad33b93607ca90e7e",
+    "alias": "Flax Heron",
+    "aliasID": "65c2a219ed6eefce4c62e372",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/96638d6f275a959a112dac4c8b22ae85.png",
+    "created": "2018-07-08T10:06:34.552Z",
+    "name": "Ostinyo",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b41e22ad33b93607ca90e7e",
+  "board": {
+    "_id": "6466ab9cd0071b0936f27dcd",
+    "name": "Android",
+    "urlName": "android"
+  },
+  "boardID": "6466ab9cd0071b0936f27dcd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "649b32639bee9b60e9b5b8c2",
+    "created": "2023-06-27T19:02:59.282Z",
+    "name": "Feedback",
+    "parentID": null,
+    "postCount": 103,
+    "urlName": "feedback"
+  },
+  "categoryID": "649b32639bee9b60e9b5b8c2",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-08-22T09:10:01.733Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The placement of the pickup \"Drop\" button makes it so that it's often accidentally pressed, either when moving around the world or when trying to press the \"Use\" button. Dropping items isn't a common action, so I think there should be less emphasis placed on it.\n\nSee the attached mockup for new placement. This layout would also make it more seamless to remove the \"Use\" button when a pickup has no available OnPickupUseDown/OnPickupUseUp action.\n\nA minimal improvement would be to switch the ordering of the Use/Drop buttons such that the drop button is further from the center of the screen.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb99ae4c3e90df1380a07",
+  "imageURLs": [
+    "https://canny.io/images/5f92122ff63fa71fe724a0a933df2d67.png",
+    "https://canny.io/images/80ff99f04e62b162577a193343eb5271.png"
+  ],
+  "lastUpdated": 1779027009416,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-08-22T09:10:01.733Z",
+  "subCategoryID": null,
+  "title": "Move \"Drop\" button to prevent accidental presses",
+  "trendingScore": 2800.303635222254,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": null,
+  "urlName": "move-drop-button-to-prevent-accidental-presses",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "64e8aaf472e1b33f3ca74496"
+    },
+    {
+      "_id": "5f296274667e9234c9e5a439",
+      "alias": "Serious Gull",
+      "aliasID": "65c2a213ed6eefce4c61e29c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c37adc238e472b004a06fdb4a662a72.png",
+      "companies": [],
+      "name": "ville672",
+      "urlName": "<redacted>",
+      "voteID": "64e513505266f209845ada84"
+    },
+    {
+      "_id": "5b41e22ad33b93607ca90e7e",
+      "alias": "Flax Heron",
+      "aliasID": "65c2a219ed6eefce4c62e372",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/96638d6f275a959a112dac4c8b22ae85.png",
+      "companies": [],
+      "name": "Ostinyo",
+      "urlName": "<redacted>",
+      "voteID": "64e47b69ca4cda097316df5b"
+    }
+  ]
+}

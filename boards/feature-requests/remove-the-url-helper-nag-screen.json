@@ -1,0 +1,92 @@
+{
+  "__v": 0,
+  "_id": "5f52c57bf151a57265037e53",
+  "aiCategories": [
+    "loc.login",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-19T13:34:37.354196Z",
+  "author": {
+    "_id": "5f2cc45f3e5e4b3102c0f271",
+    "alias": "Variable Chipmunk",
+    "aliasID": "65c2a2bced6eefce4c7af3f0",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/a7aceb22c1259292014a2eb07da1fe15.png",
+    "created": "2020-08-07T03:02:55.272Z",
+    "name": "W i l k",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2cc45f3e5e4b3102c0f271",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-09-04T22:53:47.765Z",
+  "deletedAt": null,
+  "details": "Hi, it would be cool if you could add an option to remove the nag screen for the VRChat protocol installer. It will always appear after closing VRChat and prompt to register the URL handler for VRChat.\nThere is currently no way to stop the window from appearing - sometimes it prevents VRChat from being detected as closed, although the (btw. not digitally signed) install.exe should be spawned in a separate process?!\nI mean, not even the \"donotaskmeagain\" user preference of the executable is being honored, as the presence of the reg key AND the user preference are needed to shut the installer up - which raises the question as to why there even is a property called like that.\nI would suggest to let people decide whether they want that feature and optionally remember that decision instead of annoying them each time they close their application.\nAt least I don't want to install any custom URL handlers, as they may open the gates to hell (security wise) and I would like to see VRChat honor that decision permanently other than forgetting about it each time.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e5e4c3e90df131de95",
+  "imageURLs": [],
+  "lastUpdated": 1779196953936,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-09-04T22:53:47.765Z",
+  "subCategoryID": null,
+  "title": "Remove the URL-helper nag screen",
+  "trendingScore": 2645.641865436899,
+  "updatedAt": "2026-05-19T13:23:18.321764Z",
+  "urlName": "remove-the-url-helper-nag-screen",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a95256f54d514123c1f089d",
+      "alias": "Fuchsia Marmoset",
+      "aliasID": "65ba0454ed6eefce4c3ac7f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/642f70667ed7ed29bd558fb38f8d11a9.png",
+      "companies": [],
+      "name": "Demirramon",
+      "urlName": "<redacted>",
+      "voteID": "5f58ba4d83aaed2cde10dbdd"
+    },
+    {
+      "_id": "5f2cc45f3e5e4b3102c0f271",
+      "alias": "Variable Chipmunk",
+      "aliasID": "65c2a2bced6eefce4c7af3f0",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a7aceb22c1259292014a2eb07da1fe15.png",
+      "companies": [],
+      "name": "W i l k",
+      "urlName": "<redacted>",
+      "voteID": "5f52c57cf151a57265037e5a"
+    }
+  ]
+}

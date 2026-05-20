@@ -1,0 +1,100 @@
+{
+  "__v": 0,
+  "_id": "6291229b52b0321ee7415ded",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T07:12:13.247102Z",
+  "author": {
+    "_id": "5dfcea52e323335b89c1c4a3",
+    "alias": "Prime Whitefish",
+    "aliasID": "65c66c5ded6eefce4c4b051d",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/08f2a6bf3d962e218c644a631ab45c18.png",
+    "created": "2019-12-20T15:35:46.494Z",
+    "name": "darkspacer591",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5dfcea52e323335b89c1c4a3",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-27T19:12:27.746Z",
+  "deletedAt": null,
+  "details": "Currently, it appears that manual syncing has been broken.  In at least my world (https://vrchat.com/home/launch?worldId=wrld_54123524-3329-4091-bdb1-1c43e86451d9), I am being spammed with this in the console:\n2022.05.27 08:52:56 Error      -  [Network Transport] Received serialization data for id 109, but we have no serializers for that object.\n2022.05.27 08:52:57 Error      -  [Network Transport] Received serialization data for id 102, but we have no serializers for that object.\n2022.05.27 08:52:57 Error      -  [Network Transport] Received serialization data for id 109, but we have no serializers for that object.\n2022.05.27 08:52:57 Error      -  [Network Transport] Received serialization data for id 101, but we have no serializers for that object.\n2022.05.27 08:52:57 Error      -  [Network Transport] Received serialization data for id 110, but we have no serializers for that object.\n2022.05.27 08:52:57 Error      -  [Network Transport] Received serialization data for id 109, but we have no serializers for that object.\n...etc\nAnd the objects which deal with manual syncing are not behaving properly on clients who are not the owner, and initially try to sync their position to (0,0,0)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f6e4c3e90df1360f0e",
+  "imageURLs": [],
+  "lastUpdated": 1779001733845,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-27T19:12:27.746Z",
+  "subCategoryID": null,
+  "title": "Serialization is broken for manual syncing",
+  "trendingScore": 2735.3843875472116,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "serialization-is-broken-for-manual-syncing",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60718ce945db2d23f1ed9770",
+      "alias": "Isolated Boa",
+      "aliasID": "65c2b490ed6eefce4cde5485",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9eaa5c00ce65d36015753be52077f707.png",
+      "companies": [],
+      "name": "VoHeLi",
+      "urlName": "<redacted>",
+      "voteID": "6291e7af3b4f26603a2dd31e"
+    },
+    {
+      "_id": "5dfcea52e323335b89c1c4a3",
+      "alias": "Prime Whitefish",
+      "aliasID": "65c66c5ded6eefce4c4b051d",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/08f2a6bf3d962e218c644a631ab45c18.png",
+      "companies": [],
+      "name": "darkspacer591",
+      "urlName": "<redacted>",
+      "voteID": "6291229b52b0321ee7415e12"
+    }
+  ]
+}

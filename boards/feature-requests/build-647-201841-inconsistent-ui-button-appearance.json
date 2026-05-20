@@ -1,0 +1,119 @@
+{
+  "__v": 0,
+  "_id": "5bdb70b38f7cf93b9c9dbd11",
+  "aiCategories": [
+    "loc.main-menu",
+    "loc.quick-menu",
+    "loc.login",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-18T18:52:30.984099Z",
+  "author": {
+    "_id": "5b2c4eb538839d3a41d1ff26",
+    "alias": "Temporary Armadillo",
+    "aliasID": "65c332a3ed6eefce4c002f6c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/64d966dd2659fedca87157c2091ca03d.png",
+    "created": "2018-06-22T01:19:49.498Z",
+    "name": "bote",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b2c4eb538839d3a41d1ff26",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-11-01T21:31:31.540Z",
+  "deletedAt": null,
+  "details": "In the current beta, 2018.4.1 Build 647, new UI adjustments were introduced.  This includes changes to the buttons for most of the client.  While the new changes are, in general, a significant improvement, there are a few changes that are questionable. \n\nIn the attached image, I've provided some examples from the current beta and I'll be refering to the image as my examples.  My primary criticism is in the left set of images(Group 2, WORLDS, Expand, and Continue). The text is inconsistent, with some buttons having text looking like it's ready to burst out of its button containment(Expand), which adds visual disfunction and makes it look cluttered. \n\nThe next issue with it is that there seems to be a second inner border on the inside of the button, and the text sometimes fits into and sometimes does not. The largest offenders are Group 2, Expand, and Continue.  Continue is touching this inner border, while Group 2 and Expand are actually breaking out of it. I understand that this probably isn't really a \"border\" exactly, but due to its matching shape with the outer border and when used as such on other buttons(see the right image with the login options), I can't help but see it as such.  Judging by how it reacts while being hovered over, I'm assuming it's meant to help draw more attention to what you're selecting; despite that, I don't think it's a well-suited fit for these smaller buttons, as they don't scale done very well at all and make the UI changes seem more clustered than they really need to be. \n\nAnother issue, albeit much more minor and likely less easy to work with, is the inconsistent shape/form of the buttons, particularly of the radius on the rounded edges. They don't look as if they're just scaled, but that the actual radius of the corners are actually different. In my image, comparing WORLDS button and the Expand button seem to illustrate this.\n\nI appreciate the hard work going into modernizing the UI and general user experience overall, and I'd hate to see it get wasted on clutter and inconsistencies.\n\nEdit: Some monitors might not even be able to see the inner border until highlighted, try looking at it on your phone or something with more color range/depth or a more uniform display setup.\n\nEdit x2: Just caught the \"Go to default Home\" screenshot and added it. ",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d67e4c3e90df157cbf0",
+  "imageURLs": [
+    "https://canny.io/images/4ec4c9dfb48f462b44bf6c06a0c9c951.png",
+    "https://canny.io/images/47a978876652ac2c0e32e92064b279b0.png"
+  ],
+  "lastUpdated": 1779129994435,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5bdb70b38f7cf93b9c9dbd11/56162651.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-11-01T21:31:31.540Z",
+  "subCategoryID": null,
+  "title": "[Build 647 | 2018.4.1] Inconsistent UI Button Appearance",
+  "trendingScore": 2550.1007871181287,
+  "updatedAt": "2026-05-18T18:48:18.764654Z",
+  "urlName": "build-647-201841-inconsistent-ui-button-appearance",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a5e479b9be7070f1b557469",
+      "alias": "Lucky Tortoise",
+      "aliasID": "65c28a98ed6eefce4cdde073",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/8bc01af50332e95d7e7bc7028f2c2524.png",
+      "companies": [],
+      "name": "Slaynash",
+      "urlName": "<redacted>",
+      "voteID": "5be2f92b39579015e3d66498"
+    },
+    {
+      "_id": "5b88197490d6ce50ad1808ff",
+      "alias": "Controlled Swordtail",
+      "aliasID": "65c9c25fed6eefce4c8a00d1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f30be475039aad024e6f35972995fc25.jpg",
+      "companies": [],
+      "name": "LuminousFlame",
+      "urlName": "<redacted>",
+      "voteID": "5be0f32439579015e3d54242"
+    },
+    {
+      "_id": "5ba5d139dabace1d8df9df6f",
+      "alias": "Distant Llama",
+      "aliasID": "65c2a218ed6eefce4c62a7f0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fb6556b274cb2595bbc06cecb8b5d117.png",
+      "companies": [],
+      "name": "Jamie Vatarga",
+      "urlName": "<redacted>",
+      "voteID": "5bdc696939579015e3d3a21f"
+    },
+    {
+      "_id": "5b2c4eb538839d3a41d1ff26",
+      "alias": "Temporary Armadillo",
+      "aliasID": "65c332a3ed6eefce4c002f6c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/64d966dd2659fedca87157c2091ca03d.png",
+      "companies": [],
+      "name": "bote",
+      "urlName": "<redacted>",
+      "voteID": "5bdb70b339579015e3d29998"
+    }
+  ]
+}

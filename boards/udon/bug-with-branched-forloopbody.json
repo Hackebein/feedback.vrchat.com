@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "5e923ba6e9696b5962d904b7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:27:39.981559Z",
+  "author": {
+    "_id": "5e923ba6782eb96b28c6cb8c",
+    "alias": "Energetic Canid",
+    "aliasID": "65c3567bed6eefce4c27d339",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/63413229950ed9f98100b2aadb179a2e.png",
+    "created": "2020-04-11T21:50:30.360Z",
+    "name": "Hitori Ou",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e923ba6782eb96b28c6cb8c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-11T21:50:30.539Z",
+  "deletedAt": null,
+  "details": "I edited the image for simplicity. Take notice to the red lines. when the same \"Object[]get\" is called by 2 branches one of the branches defaults to \"this\" value and breaks the intended behaviour by toggeling off the trigger object. But when you use one \"Object[]get\" call for each branch it works fine.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da8e4c3e90df158e52b",
+  "imageURLs": [
+    "https://canny.io/images/9c2da9eaa0170182f89ec5f030bfd20b.png"
+  ],
+  "lastUpdated": 1779239262671,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-11T21:50:30.539Z",
+  "subCategoryID": null,
+  "title": "Bug with branched for_loop_Body",
+  "trendingScore": 2624.108872298781,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "bug-with-branched-forloopbody",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e923ba6782eb96b28c6cb8c",
+      "alias": "Energetic Canid",
+      "aliasID": "65c3567bed6eefce4c27d339",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/63413229950ed9f98100b2aadb179a2e.png",
+      "companies": [],
+      "name": "Hitori Ou",
+      "urlName": "<redacted>",
+      "voteID": "5e923ba6e9696b5962d904bf"
+    }
+  ]
+}

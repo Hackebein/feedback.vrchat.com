@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "5fca4ccad587805320234f65",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T13:45:16.690862Z",
+  "author": {
+    "_id": "5fca1ddbd58780532020e1a4",
+    "alias": "Ruling Swordfish",
+    "aliasID": "65c28a9bed6eefce4cde7fad",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/ac8d001f8cc3a82c57f5988989e8c198.png",
+    "created": "2020-12-04T11:30:35.149Z",
+    "name": "instinkt",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5fca1ddbd58780532020e1a4",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-12-04T14:50:50.473Z",
+  "deletedAt": null,
+  "details": "I would say avatar value limiting options are a next step but also people can delete all world colliders and expand static objects into infinity right now. The server side world should be locked entirely by default but given exceptions instead. These exceptions can and should also be “locked” themselves, like a door being open or closed, the door itself is a point where the client interacts with the world serverside, but they would only be interacting with a toggle and not allowed anything else, they would be locked out of further access. Objects are another insecure client-server interaction that gets exploited. Somehow the “holder” mechanic is being exploited to tell all world objects that a certain victim is the holder of all of them while at the same time retaining  the colliders so it hits them when it arrives. Global colliders should definetly not be allowed to be changed. If this must be done with a vrchat unity world editing client to force unknowing and ignorant world creators into creating safe worlds then it should be. Server-client interactions should be CREATED by world creators and pre defined intelligently to prevent intentional lagging. NOT allowed by default. Pre outlined client-server interactions need to be locked themselves and unmodifiable by the client or else they will be capable of using it as a window into the entire system. The amount of pre defined changable things in an instance should not change etc. I wont repeat it a million times but its a basic level of security that your game needs. Crashers and clients attract radicals and extremists that target certain vulnerable groups in vrchat. Please fix this. It is ruining communities. I got vr for vrchat, im probably returning it because this game is too underdeveloped.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7f7e4c3e90df13211c9",
+  "imageURLs": [],
+  "lastUpdated": 1779196988096,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-12-04T14:50:50.473Z",
+  "subCategoryID": null,
+  "title": "Patch the outlined security issue",
+  "trendingScore": 2751.5535013988097,
+  "updatedAt": "2026-05-19T13:23:18.321764Z",
+  "urlName": "patch-the-outlined-security-issue",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "6330c125f5c49c44b28889d4"
+    },
+    {
+      "_id": "5fca1ddbd58780532020e1a4",
+      "alias": "Ruling Swordfish",
+      "aliasID": "65c28a9bed6eefce4cde7fad",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ac8d001f8cc3a82c57f5988989e8c198.png",
+      "companies": [],
+      "name": "instinkt",
+      "urlName": "<redacted>",
+      "voteID": "5fca4ccad587805320234f6e"
+    }
+  ]
+}

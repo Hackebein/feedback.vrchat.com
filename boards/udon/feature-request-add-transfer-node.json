@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "64a5f831d51b7e0925bf48ec",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:39:40.931825Z",
+  "author": {
+    "_id": "62277e4c93a0041726ca77aa",
+    "alias": "Fashionable Yak",
+    "aliasID": "65cd699aed6eefce4cb03770",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/a484b0ef611b24b4653450af8709de66.png",
+    "created": "2022-03-08T16:03:24.782Z",
+    "name": "Selrac",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62277e4c93a0041726ca77aa",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-07-05T23:09:37.991Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently the Udon looks like it is build around control flow, it would be greatly improved if there were data flow nodes in the system.\n\nA common data flow node is an \"Analog Transfer\" that has two inputs of an analog type (int, float, double, etc) and a Bool input. The bool input determines which value of the two values is passed forward. This makes a lot of data transforms easier to build and read.\n\nIn the background its normally implemented as calculating both paths and then doing a conditional mov.\n\nThis is also normally available for digital values to switch between two possible digital inputs to a system.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb987e4c3e90df137de6d",
+  "imageURLs": [],
+  "lastUpdated": 1779039015589,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-07-05T23:09:37.991Z",
+  "subCategoryID": null,
+  "title": "[Feature Request] Add Transfer Node",
+  "trendingScore": 2792.6881505783776,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "feature-request-add-transfer-node",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62277e4c93a0041726ca77aa",
+      "alias": "Fashionable Yak",
+      "aliasID": "65cd699aed6eefce4cb03770",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a484b0ef611b24b4653450af8709de66.png",
+      "companies": [],
+      "name": "Selrac",
+      "urlName": "<redacted>",
+      "voteID": "64a5f832d51b7e0925bf491a"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "__v": 0,
+  "_id": "5b32a3ec1899874ab42f4138",
+  "aiCategories": [
+    "sdk.udon",
+    "loc.unity-sdk"
+  ],
+  "aiTaggedAt": "2026-05-18T20:52:07.124021Z",
+  "author": {
+    "_id": "5a7ef34e0238de350e4dc63e",
+    "alias": "Imperial red Raccoon",
+    "aliasID": "65ba030aed6eefce4c1abc2d",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2018-02-10T13:27:42.263Z",
+    "name": "Beanow",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a7ef34e0238de350e4dc63e",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-06-26T20:37:00.492Z",
+  "deletedAt": null,
+  "details": "Currently buffered triggers and object sync are the only primitives we have for tackling syncing issues ourselves.\n\nThis results in unholy amounts of boilerplate involving animations, controllers and blank objects filled with triggers (typically onEnable) to track simple values like an integer reliably and efficiently. You can forget about strings.\n\nThe data that flows through these graphs need syncing options, as well as a simple and deterministic thread safety model once you're able to receive values from the network. Such as an event loop.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d57e4c3e90df1577fa5",
+  "imageURLs": [],
+  "lastUpdated": 1779136874892,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-06-26T20:37:00.493Z",
+  "subCategoryID": null,
+  "title": "Fine grained Data Syncing",
+  "trendingScore": 2602.2817603462872,
+  "updatedAt": "2026-05-18T20:41:21.461535Z",
+  "urlName": "fine-grained-data-syncing",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d725908cb1652c95b08a294422da5ff5.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": "<redacted>",
+      "voteID": "5dcf3295c2bed74dadd62767"
+    },
+    {
+      "_id": "5bb5cb9ebacab056db9ffd69",
+      "alias": "Temporary Quail",
+      "aliasID": "65c399daed6eefce4cb04a69",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a3bb4e4f20b468c4c2bc6c8ed5b191d9.jpg",
+      "companies": [],
+      "name": "Toxic Cookie",
+      "urlName": "<redacted>",
+      "voteID": "5d6f6b05e19081646565af8c"
+    },
+    {
+      "_id": "5b3b2ada0355782f6556dbd7",
+      "alias": "Realistic Flamingo",
+      "aliasID": "65cabcfbed6eefce4cf48807",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/d01b4968793b17b2c1385f64e394f86c.png",
+      "companies": [],
+      "name": "ధ evl_you666۞ ෆ",
+      "urlName": "<redacted>",
+      "voteID": "5b776bd339579015e39b91c3"
+    },
+    {
+      "_id": "5b69cba647654555418e782e",
+      "alias": "Amaranth Lynx",
+      "aliasID": "65fc4679a63714bcb3b3f826",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/fcf14b9c609043b5796a34d67db9245d.png",
+      "companies": [],
+      "name": "gayestErika",
+      "urlName": "<redacted>",
+      "voteID": "5b69cba639579015e39709e8"
+    },
+    {
+      "_id": "5a7ef34e0238de350e4dc63e",
+      "alias": "Imperial red Raccoon",
+      "aliasID": "65ba030aed6eefce4c1abc2d",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Beanow",
+      "urlName": "<redacted>",
+      "voteID": "5b32a3ec44b619abae251cbc"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "5f03e893257d9666af70b82b",
+  "aiCategories": [
+    "loc.login",
+    "client.controls",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-05-19T13:25:13.797234Z",
+  "author": {
+    "_id": "5ac003f79de65141853aac03",
+    "alias": "Iced lavender Caribou",
+    "aliasID": "65ba06c7ed6eefce4c79ca95",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/2997e36f7fc4c09e8e4ac81e96169de2.png",
+    "created": "2018-03-31T21:56:07.558Z",
+    "name": "Ghoster",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ac003f79de65141853aac03",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-07-07T03:14:27.560Z",
+  "deletedAt": null,
+  "details": "As you can use steam or windows to configure the shortcut/exe to run on desktop mode only (with -novr iirc), would it be possible to get a launch option to login on startup by pointing to a text file that has the users name and password stored inside. This would allow people with a bot account( for big parties or events, for recording or streaming accounts, or finally testing accounts), to login in a quicker fashion than going to each vrc window and loging out just to sign in to a different account.\n(An alternative to pointing at a textfile is to have a -login:####### -psw:###### lanch option)\n(Also part of this is that it would be a client override so that it won't try to log you into that account next time you launch a normal version of vrc)\nExample:user Patrick streams a talkshow and runs a party event in which he has his alt account, BotMan stream and will normally be the master of the instance. When running the vrchat program it logs into the Patrick account normally but he can have a shortcut on his desktop that lauches in desktop mode with the BotMan account login.   If the Patrick account crashes or something happens that closes his game, he can run the normal program and get in vr under the Patrick account without being forced to logout of the BotMan account to log back in under Patrick while in vr.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7db3e4c3e90df1591a22",
+  "imageURLs": [],
+  "lastUpdated": 1779196866288,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-07-07T03:14:27.560Z",
+  "subCategoryID": null,
+  "title": "login via launch options.",
+  "trendingScore": 2784.371132435516,
+  "updatedAt": "2026-05-19T13:23:18.321764Z",
+  "urlName": "login-via-launch-options",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "645f9ccc59811d090c70dcdb"
+    },
+    {
+      "_id": "5ac003f79de65141853aac03",
+      "alias": "Iced lavender Caribou",
+      "aliasID": "65ba06c7ed6eefce4c79ca95",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/2997e36f7fc4c09e8e4ac81e96169de2.png",
+      "companies": [],
+      "name": "Ghoster",
+      "urlName": "<redacted>",
+      "voteID": "5f03e895257d9666af70b838"
+    }
+  ]
+}

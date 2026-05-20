@@ -1,0 +1,153 @@
+{
+  "__v": 0,
+  "_id": "6887b1a5c18ac0debdf7bd83",
+  "aiCategories": [
+    "sdk.udon",
+    "loc.in-world"
+  ],
+  "aiTaggedAt": "2026-05-18T05:49:49.688945Z",
+  "author": {
+    "_id": "6887b069076be5baa65564ac",
+    "alias": "Electric violet Bass",
+    "aliasID": "6887b069076be5baa6558881",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c4a36a4daa8a0ca26746290e61f1844f.png",
+    "created": "2025-07-28T17:16:25.266Z",
+    "name": "LumenNox",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6887b069076be5baa65564ac",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 333,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "68907e99bab0bce205f1e341",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63691297469f06772579fe6f",
+        "alias": "Sage Meadowlark",
+        "aliasID": "65c28116ed6eefce4c6d7d2d",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0958f7577d869b58b8a4407e6b9fddab.png",
+        "created": "2022-11-07T14:13:43.431Z",
+        "name": "Fax",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-08-04T09:34:17.124Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6887b069076be5baa65564ac",
+          "alias": "Electric violet Bass",
+          "aliasID": "6887b069076be5baa6558881",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c4a36a4daa8a0ca26746290e61f1844f.png",
+          "created": "2025-07-28T17:16:25.266Z",
+          "name": "LumenNox",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6887b1a5c18ac0debdf7bd83",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "68907e99bab0bce205f1e31e",
+      "statusChangeNewStatus": "needs more information",
+      "value": "Hi @{6887b069076be5baa65564ac|full_name}! Thank you for posting.\n\nWe're unable to provide support for individual graph scripts on this feedback board. Are you able to narrow down the issue or provide reproduction steps that allow us to recreate the bug on our end?",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-07-28T17:21:41.854Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Had a Udon Graph script that worked just fine a few months ago. \n\nWas for a button to swtich a object on and off and that synchronised for other playres as well.  As well as 2 additional targets to flip the on and off signe on the button.\n\nWorked all fine.\n\nNow, it is still working fine for the first player that enters the world. But for the second one it bugges out. The buttons and objects flicker on and off constantly. If the second player activates the button, it messes it also up for the first one. \n\nHad no issues before. \n\nAsk some more knowlagable ppl then me and they seam to be fine with my udonscript as well. \n\nSo i presume its a bug. Hope someone could check it out. \n\nThx a lot ^^",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6887b1a6c18ac0debdf7bef9",
+  "imageURLs": [
+    "https://canny-assets.io/images/289ad3073293f56ccbdda6a6b829244b.jpeg"
+  ],
+  "lastUpdated": 1779082397638,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6887b1a5c18ac0debdf7bd83/575602520.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "needs more information",
+  "statusChanged": "2025-08-04T09:34:16.986Z",
+  "subCategoryID": null,
+  "title": "Udon Script mallfunction since vrcUpdate",
+  "trendingScore": 2900.367919125831,
+  "updatedAt": "2026-05-18T05:34:54.239298Z",
+  "updatedBy": null,
+  "urlName": "udon-script-mallfunction-since-vrcupdate",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6887b069076be5baa65564ac",
+      "alias": "Electric violet Bass",
+      "aliasID": "6887b069076be5baa6558881",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c4a36a4daa8a0ca26746290e61f1844f.png",
+      "companies": [],
+      "name": "LumenNox",
+      "urlName": "<redacted>",
+      "voteID": "6887b1a6076be5baa6a6c1e5"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "644877c0b68cd30949211f54",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-17T05:36:50.377054Z",
+  "author": {
+    "_id": "5f98c86df4451a4eed062c76",
+    "alias": "Charcoal Bee",
+    "aliasID": "65c3e659ed6eefce4cb8adb6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d6a4d595f01420d660bbd10d208023f1.png",
+    "created": "2020-10-28T01:25:01.811Z",
+    "name": "ほいっぷあいす",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f98c86df4451a4eed062c76",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-04-26T01:00:48.200Z",
+  "deletedAt": null,
+  "details": "Since the 2023/4/20 vrchat update, the instance initialization timeout is very short (probably 60-120 seconds)\n\nSome large worlds will time out and force redirection to the error world.\n\nThe following message was recorded in the output log:\n\nError      -  [API] [362, 403, Get, -1] Abandoning request, because - Travel to instance has taken too long․\n\nFeature Request:\n\nAdd an optional timeout option that users can arbitrarily specify.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97ae4c3e90df137acad",
+  "imageURLs": [],
+  "lastUpdated": 1778995650349,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-04-26T01:00:48.200Z",
+  "subCategoryID": null,
+  "title": "Add an option to specify a timeout",
+  "trendingScore": 2783.120096505023,
+  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "urlName": "add-an-option-to-specify-a-timeout",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6050972e03276b03f63ca0b8",
+      "alias": "Iced lavender Crow",
+      "aliasID": "65c28083ed6eefce4c570d77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a3e012df48a774adc74704443e3852b0.png",
+      "companies": [],
+      "name": "Tran Fox",
+      "urlName": "<redacted>",
+      "voteID": "644c4c85c42d5b0925fe1dcf"
+    },
+    {
+      "_id": "5f98c86df4451a4eed062c76",
+      "alias": "Charcoal Bee",
+      "aliasID": "65c3e659ed6eefce4cb8adb6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d6a4d595f01420d660bbd10d208023f1.png",
+      "companies": [],
+      "name": "ほいっぷあいす",
+      "urlName": "<redacted>",
+      "voteID": "644877c0b68cd30949211f83"
+    }
+  ]
+}

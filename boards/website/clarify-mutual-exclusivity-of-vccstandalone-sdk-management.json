@@ -1,0 +1,112 @@
+{
+  "__v": 0,
+  "_id": "63575c9c6f0568451bd7cc4b",
+  "aiCategories": [
+    "loc.website",
+    "sdk.vpm",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T18:33:35.021274Z",
+  "author": {
+    "_id": "605d4e07a844bd5b7b28bcbf",
+    "alias": "Ochre Chinchilla",
+    "aliasID": "65c2bff3ed6eefce4c5e37f7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5f619585c615c6a78ac78a6551752a96.png",
+    "created": "2021-03-26T02:59:19.967Z",
+    "name": "Raz",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "605d4e07a844bd5b7b28bcbf",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c36bc22b1844b7e1425c",
+    "created": "2022-08-25T18:46:03.389Z",
+    "name": "General Feedback",
+    "parentID": null,
+    "postCount": 109,
+    "urlName": "general-feedback"
+  },
+  "categoryID": "6307c36bc22b1844b7e1425c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-25T03:48:44.083Z",
+  "deletedAt": null,
+  "details": "Currently, the page at https://vrchat.com/home/download has download buttons for both the VCC and the standalone SDKs. While it's implied that the VCC manages the SDK completely, and that using the VCC and using the standalone SDK are mutually exclusive, there's no specific indication that this is the case. I just helped a user (new to creation) that installed the SDK both through the VCC and standalone, leaving their project in an inconsistent state. \nClearer indication of the requirement to choose one or the other, or some copy indicating \"if you use the VCC, you don't need the standalone download\", would help prevent these situations from occurring.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb94ae4c3e90df13715da",
+  "imageURLs": [],
+  "lastUpdated": 1779042636080,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-25T03:48:44.083Z",
+  "subCategoryID": null,
+  "title": "Clarify Mutual Exclusivity of VCC/Standalone SDK Management",
+  "trendingScore": 2757.315285772199,
+  "updatedAt": "2026-05-17T18:33:00.531996Z",
+  "urlName": "clarify-mutual-exclusivity-of-vccstandalone-sdk-management",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "605aa1c5ed4c41334d7b8299",
+      "alias": "Silky Boa",
+      "aliasID": "65c28083ed6eefce4c570d07",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
+      "companies": [],
+      "name": "Ｍａｇｍａａ火",
+      "urlName": "<redacted>",
+      "voteID": "635d05c9c2b2345853c3a7e9"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": "<redacted>",
+      "voteID": "63575cb0bff3844522c95fb9"
+    },
+    {
+      "_id": "605d4e07a844bd5b7b28bcbf",
+      "alias": "Ochre Chinchilla",
+      "aliasID": "65c2bff3ed6eefce4c5e37f7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5f619585c615c6a78ac78a6551752a96.png",
+      "companies": [],
+      "name": "Raz",
+      "urlName": "<redacted>",
+      "voteID": "63575c9c6f0568451bd7cc6c"
+    }
+  ]
+}

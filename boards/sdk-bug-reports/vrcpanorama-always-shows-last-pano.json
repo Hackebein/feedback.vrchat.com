@@ -1,0 +1,84 @@
+{
+  "__v": 0,
+  "_id": "605b10023aabb213acb9c92e",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T20:02:03.254872Z",
+  "author": {
+    "_id": "5f45e0264a831375d31bff35",
+    "alias": "Blush Hoverfly",
+    "aliasID": "65c4979aed6eefce4c8dfbcf",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/e2a75b2a80ac77b7021c41516b176803.png",
+    "created": "2020-08-26T04:08:06.670Z",
+    "name": "u0",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f45e0264a831375d31bff35",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-03-24T10:10:10.058Z",
+  "deletedAt": null,
+  "details": "VRChat Version:\n2021.1.5:1067-f3b80ae335\nDescription of the bug:\nVRC_Panorama component always shows the last panorama.\nBoth NextPano and PrevPano do not work, only the value of VRC_DataStorage is changed.\nSteps to reproduce (how did you encounter the bug?):\n-- Create project\n-- Import VRCSDK2 (VRCSDK2-2021.03.22.18.27_Public.unitypackage)\n-- Create scene\n-- Create GameObject and add VRC_Panorama component\n-- Set pano in VRC_Panorama\n-- Play Scene\nAny extra files? (output logs, screenshots):\nSee screenshot",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb812e4c3e90df1325d05",
+  "imageURLs": [
+    "https://canny.io/images/10cfa556b55e97c370d5adcef7195c81.png"
+  ],
+  "lastUpdated": 1779218240391,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/605b10023aabb213acb9c92e/1095099591.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-03-24T10:10:10.058Z",
+  "subCategoryID": null,
+  "title": "VRC_Panorama always shows last pano",
+  "trendingScore": 2673.6108225839994,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "vrcpanorama-always-shows-last-pano",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f45e0264a831375d31bff35",
+      "alias": "Blush Hoverfly",
+      "aliasID": "65c4979aed6eefce4c8dfbcf",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e2a75b2a80ac77b7021c41516b176803.png",
+      "companies": [],
+      "name": "u0",
+      "urlName": "<redacted>",
+      "voteID": "605b10023aabb213acb9c935"
+    }
+  ]
+}

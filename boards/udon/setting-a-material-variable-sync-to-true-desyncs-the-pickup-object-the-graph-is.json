@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "60204dfc20ff3963bf898bf4",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:25:31.438508Z",
+  "author": {
+    "_id": "601f91f2f76d3163c50f8419",
+    "alias": "Purple Trout",
+    "aliasID": "65c3f9dced6eefce4c64948c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/94128897a39b9193020c9471d1852744.png",
+    "created": "2021-02-07T07:08:34.012Z",
+    "name": "Laughless",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "601f91f2f76d3163c50f8419",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-02-07T20:30:52.627Z",
+  "deletedAt": null,
+  "details": "If you have a pickup object, with its udon behavior script component set to sync position, and have a udon graph program source, with a material variable set to synced (any of the available options), clients can not see each other holding or using the object. The object can still be \"stolen\" from other players by grabbing it from the locally perceived position.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb803e4c3e90df132378b",
+  "imageURLs": [
+    "https://canny.io/images/b8e1bb840ed82edd3180820d680d5ecd.png"
+  ],
+  "lastUpdated": 1779247131659,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-02-07T20:30:52.627Z",
+  "subCategoryID": null,
+  "title": "Setting a material variable sync to true desyncs the pickup object the graph is on.",
+  "trendingScore": 2667.24382946644,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "setting-a-material-variable-sync-to-true-desyncs-the-pickup-object-the-graph-is",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "601f91f2f76d3163c50f8419",
+      "alias": "Purple Trout",
+      "aliasID": "65c3f9dced6eefce4c64948c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/94128897a39b9193020c9471d1852744.png",
+      "companies": [],
+      "name": "Laughless",
+      "urlName": "<redacted>",
+      "voteID": "60204dfc20ff3963bf898bfb"
+    }
+  ]
+}

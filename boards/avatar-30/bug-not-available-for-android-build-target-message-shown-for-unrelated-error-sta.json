@@ -1,0 +1,101 @@
+{
+  "__v": 0,
+  "_id": "6160bc84198ffa76f37ffe29",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T15:56:12.032227Z",
+  "author": {
+    "_id": "6160bafd79e91f08722037a4",
+    "alias": "Onyx Turtle",
+    "aliasID": "65c3853ded6eefce4cebd2e6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d00af9d3923b0da7d93a89d7be705b37.png",
+    "created": "2021-10-08T21:41:17.574Z",
+    "name": "ticky_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6160bafd79e91f08722037a4",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-10-08T21:47:48.977Z",
+  "deletedAt": null,
+  "details": "In the VRChat avatar SDK, if there are any errors in *any* listed avatar (not just the one selected in the SDK GUI), the \"Offline Testing\" option is disabled with the error message \"Not available for Android build target\", but this error occurs even if the build target is StandaloneWindows64, as it's also looking to see if there are any errors (see call to _builder.NoGuiErrorsOrIssues in VRCSdkControlPanelAvatarBuilder3A.cs, line 482 as of version 2021.09.30.16.19)\nThe \"Online Publishing\" option is also disabled in this state, but gives no obvious explanation for why.\nThis stumped me for a good week, and it'd be really helpful if that error was more specific and less generic and misleading. Thanks!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b6e4c3e90df1354d1f",
+  "imageURLs": [],
+  "lastUpdated": 1779032663585,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-10-08T21:47:48.977Z",
+  "subCategoryID": null,
+  "title": "[BUG] \"Not available for Android build target\" message shown for unrelated error states",
+  "trendingScore": 2770.203593475529,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "bug-not-available-for-android-build-target-message-shown-for-unrelated-error-sta",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b0b28d62727aa2df10b8a91",
+      "alias": "Still Thrush",
+      "aliasID": "65c6ee92ed6eefce4c3a3225",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f3ef8fe5238586cac21f6850f0558e7.png",
+      "companies": [],
+      "name": "「Nara」",
+      "urlName": "<redacted>",
+      "voteID": "63dcddfd2dc5a2031590752c"
+    },
+    {
+      "_id": "6160bafd79e91f08722037a4",
+      "alias": "Onyx Turtle",
+      "aliasID": "65c3853ded6eefce4cebd2e6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d00af9d3923b0da7d93a89d7be705b37.png",
+      "companies": [],
+      "name": "ticky_",
+      "urlName": "<redacted>",
+      "voteID": "6160bc85198ffa76f37ffe30"
+    }
+  ]
+}

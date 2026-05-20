@@ -1,0 +1,116 @@
+{
+  "__v": 0,
+  "_id": "66c1c4e0c0d120d0626034c2",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-05-17T16:03:32.373183Z",
+  "author": {
+    "_id": "628787219699a00b6e748764",
+    "alias": "Puce Stork",
+    "aliasID": "65c2c035ed6eefce4c65cdc0",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/001946418a481488fe2caa05de653e88.png",
+    "created": "2022-05-20T12:18:41.511Z",
+    "name": "Laser Raptor",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "628787219699a00b6e748764",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-08-18T09:54:40.094Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If the VRC Aim Constraint is solved in local space and the world up type is set to 'Object Rotation Up', the up vector doesn't work as expected.\n\nIt appears as if the up vector object is solved in reference to world instead of it's parent.\n\nIn the attached video the constrained object shouldn't rotate when the root object or the source's parent object rotates when solved in local space.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba04e4c3e90df139544c",
+  "imageURLs": [
+    "https://canny.io/images/8dee329d70f45ff8f3e6da7171edef01.gif"
+  ],
+  "lastUpdated": 1779032731807,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66c1c4e0c0d120d0626034c2/353515652.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-08-18T09:54:40.094Z",
+  "subCategoryID": null,
+  "title": "VRC Aim Constraint incorrectly solves up vector in local space",
+  "trendingScore": 2905.113986468254,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "vrc-aim-constraint-incorrectly-solves-up-vector-in-local-space",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6427bab26b8a2a8b6f9c4898",
+      "alias": "Yarrow Toucan",
+      "aliasID": "6893b85d2eba8cb5ede2349f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a2d7b7c72ff83a687ece06cc5c5eb646.png",
+      "companies": [],
+      "name": "Jackal026",
+      "urlName": "<redacted>",
+      "voteID": "68b9e3cbce2ca2b5201cd02f"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82d5ce7c878f0e46166e7e57d00cdb67.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": "<redacted>",
+      "voteID": "66c590353e088c8d6b4682b2"
+    },
+    {
+      "_id": "628787219699a00b6e748764",
+      "alias": "Puce Stork",
+      "aliasID": "65c2c035ed6eefce4c65cdc0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/001946418a481488fe2caa05de653e88.png",
+      "companies": [],
+      "name": "Laser Raptor",
+      "urlName": "<redacted>",
+      "voteID": "66c1c4e03e088c8d6b7de61a"
+    }
+  ]
+}

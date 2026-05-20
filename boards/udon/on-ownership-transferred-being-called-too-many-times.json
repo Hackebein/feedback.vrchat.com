@@ -1,0 +1,157 @@
+{
+  "__v": 0,
+  "_id": "5fa30ab7ad4e5e3bbea2a43e",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:33:46.236329Z",
+  "author": {
+    "_id": "59b05781f76da93741a4617e",
+    "alias": "Wineberry Herring",
+    "aliasID": "65c2b8e3ed6eefce4c6f7a97",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e9ccb11e0323465cc163f50c45e013bd.png",
+    "created": "2017-09-06T20:16:01.823Z",
+    "name": "jetdog8808",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "59b05781f76da93741a4617e",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "60024e7fff9d19420caa490d",
+      "author": {
+        "_id": "5de9405aea7cc52772fcc359",
+        "alias": "Robust Crow",
+        "aliasID": "65c27d11ed6eefce4cc8dee3",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/3832aa8915d09f633a5ab11ddec4d91f.jpg",
+        "created": "2019-12-05T17:37:30.047Z",
+        "name": "Momo the Monster",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2021-01-16T02:25:03.937Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/6491112fd42b1c7848c30ee280b40cd9.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "likeCount": 0,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5fa30ab7ad4e5e3bbea2a43e",
+      "private": false,
+      "reactions": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "60024e7fff9d19420caa490b",
+      "statusChangeNewStatus": "complete",
+      "value": "I believe we fixed this a few releases ago with some Ownership Transfer methods we patched. HMU if you're still seeing this and I'll reopen.",
+      "viewerReactions": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-04T20:10:31.901Z",
+  "deletedAt": null,
+  "details": "When first user joins instance event doesn't get called as expected.\nWhen second user joins master calls the event 6 times and new user does not.\nWhen third user joins first two players call the event 9 times.\nI am assuming this is not appropriate behavior. used this world for testing. https://vrchat.com/home/world/wrld_0b7430d5-0f11-4bdc-abd7-9f7ea1249688 . the text box second from the top is the OnOwnershipTransferred event information.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7eee4c3e90df131f8be",
+  "imageURLs": [
+    "https://canny.io/images/d857c82edf573b35bf9615a4bcff578b.png"
+  ],
+  "lastUpdated": 1779239319519,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "complete",
+  "statusChanged": "2021-01-16T02:25:03.916Z",
+  "subCategoryID": null,
+  "title": "On ownership transferred being called too many times.",
+  "trendingScore": 2654.4126445917955,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "on-ownership-transferred-being-called-too-many-times",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f99d1b5d55ca73f330991f4",
+      "alias": "Emerald Cat",
+      "aliasID": "65e04ab6a6e3ea79ddba28ca",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6d8d1d65f42ff03e0d2de68a3441986e.png",
+      "companies": [],
+      "name": "Xytabich",
+      "urlName": "<redacted>",
+      "voteID": "5fa4ab461ff76c04a6f67155"
+    },
+    {
+      "_id": "5a7ac88bf5a5c52c08064fb9",
+      "alias": "Prairie sand Hedgehog",
+      "aliasID": "65ba02f2ed6eefce4c1872a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b2a514509aeb0aa28d6466fcc4134aa4.png",
+      "companies": [],
+      "name": "PhaxeNor",
+      "urlName": "<redacted>",
+      "voteID": "5fa31ed108069a1a99949467"
+    },
+    {
+      "_id": "59b05781f76da93741a4617e",
+      "alias": "Wineberry Herring",
+      "aliasID": "65c2b8e3ed6eefce4c6f7a97",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e9ccb11e0323465cc163f50c45e013bd.png",
+      "companies": [],
+      "name": "jetdog8808",
+      "urlName": "<redacted>",
+      "voteID": "5fa30ab7ad4e5e3bbea2a445"
+    }
+  ]
+}

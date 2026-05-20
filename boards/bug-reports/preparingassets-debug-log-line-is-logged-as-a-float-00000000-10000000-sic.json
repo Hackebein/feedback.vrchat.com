@@ -1,0 +1,92 @@
+{
+  "_id": "69cf9ec8ea15f72a14ab0a4d",
+  "aiCategories": [
+    "loc.in-world",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-17T08:55:29.264448Z",
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-04-03T11:04:40.390Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "PreparingAssets is incorrectly logged as a value between 0.0000000% and 1.0000000% (0.00-1.00%), never as the full expected range 0-100%.\n\n1. Enable full output logs in VRChat settings.\n\n2. Join an instance and wait in a download screen of a large VRChat world (e.g. `wrld_529dbcdc-a5af-48bb-bc6c-edb42d7ab3ec`, Sailing ＆ Boating 2․0 by Shiro K, 715.05 MB). The total time spent downloading must take longer than 10 seconds (PreparingAssets).\n\n3. Check the output logs for PreparingAssets log lines. (`2026.04.02 21:23:18 Debug      -  [Behaviour] Preparation has taken 50 seconds, progress is 0.9206573%, loader state is PreparingAssets`)\n\nExpected behavior: The download progress is reported as a float value 0.0000000-1.0000000 (no percent sign) in the output logs, or alternatively as 0.00-100.00%.\n\nActual behavior: The download progress is reported as a float value 0.0000000-1.0000000**%** in the output logs, with the percent sign affixed. This may be confusing for the reader. It's reported as 0.00-100.00% in-app.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/2f3efea68bac935fbcea9b930902f6b4.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-04-02_20-55-56_snippets",
+      "url": "https://canny-assets.io/files/2f3efea68bac935fbcea9b930902f6b4.txt"
+    }
+  ],
+  "ideaID": "69cf9ec8ea15f72a14ab0a65",
+  "imageURLs": [],
+  "lastUpdated": 1779007861887,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69cf9ec8ea15f72a14ab0a4d/1232803185.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-04-03T11:04:40.390Z",
+  "subCategoryID": null,
+  "title": "PreparingAssets debug log line is logged as a float 0.0000000-1.0000000% (sic)",
+  "trendingScore": 2935.901944531751,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "preparingassets-debug-log-line-is-logged-as-a-float-00000000-10000000-sic",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "<redacted>",
+      "voteID": "69cf9ec86c6843887ae3093d"
+    }
+  ]
+}

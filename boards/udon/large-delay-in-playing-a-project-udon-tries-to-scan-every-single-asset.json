@@ -1,0 +1,145 @@
+{
+  "__v": 0,
+  "_id": "5e9f8cae14dbca405da6503b",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:28:07.127641Z",
+  "author": {
+    "_id": "5e5961740ab4231b6f14d29c",
+    "alias": "Yellow sunshine Basilisk",
+    "aliasID": "65c27aa0ed6eefce4c6c34ea",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/27dc91d78f009cd94d634b3211b84046.png",
+    "created": "2020-02-28T18:52:36.885Z",
+    "name": "Kosyne",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5e5961740ab4231b6f14d29c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-04-22T00:15:42.619Z",
+  "deletedAt": null,
+  "details": "When starting a project with Udon imported, it tries to scan every single asset I have imported, and if there are errors, it makes startup INCREDIBLY slow.\nRemoving Udon, or the asset pack I'm using, fixes the issue.\nAttached is an example of one of the errors that happen when trying to start a project. The first line of this error mimics an error I see when importing the asset normally, the rest is Udon.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7da9e4c3e90df158ebb9",
+  "imageURLs": [
+    "https://canny.io/images/aafbf3802ada8ae28bd40a3483df2186.png"
+  ],
+  "lastUpdated": 1779239264822,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-04-22T00:15:42.619Z",
+  "subCategoryID": null,
+  "title": "Large delay in playing a project, udon tries to scan every single asset?",
+  "trendingScore": 2699.2473232043653,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "large-delay-in-playing-a-project-udon-tries-to-scan-every-single-asset",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5949cda350337b4a624dfe0b",
+      "alias": "Jute Pigeon",
+      "aliasID": "65c2a218ed6eefce4c62a740",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3fb4e5c6d55c1f4e5cd775c10823d87.png",
+      "companies": [],
+      "name": "synqark",
+      "urlName": "<redacted>",
+      "voteID": "614e0bcd3bfced52457446f9"
+    },
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d725908cb1652c95b08a294422da5ff5.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": "<redacted>",
+      "voteID": "5ee2cb0833efff3dff907e66"
+    },
+    {
+      "_id": "5a532066f58b5b6a26c70d22",
+      "alias": "Wise Basilisk",
+      "aliasID": "65ba01e4ed6eefce4cfda985",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/7d0d90c40d55be54ceb5e7844e1d9227.png",
+      "companies": [],
+      "name": "tsuna vr",
+      "urlName": "<redacted>",
+      "voteID": "5ed127a3b20a130633e9504b"
+    },
+    {
+      "_id": "5e6dfcfbfe011c7d434c8bf9",
+      "alias": "Ivory Owl",
+      "aliasID": "65cf24270129d7ae446b0863",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/082ebefda18527fe28568bf5213bb8e5.png",
+      "companies": [],
+      "name": "Loli 13",
+      "urlName": "<redacted>",
+      "voteID": "5ebaa1956d27ab342a33a984"
+    },
+    {
+      "_id": "5cb0e62414ddd360bbe1ac29",
+      "alias": "Elaborate Swordtail",
+      "aliasID": "65c26ed9ed6eefce4c854ff1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/790edd7ee9459d947f4c0bc1ff2a8907.png",
+      "companies": [],
+      "name": "Jasper Raine",
+      "urlName": "<redacted>",
+      "voteID": "5eb5988f231aaf6d0650fbe1"
+    },
+    {
+      "_id": "5e5961740ab4231b6f14d29c",
+      "alias": "Yellow sunshine Basilisk",
+      "aliasID": "65c27aa0ed6eefce4c6c34ea",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/27dc91d78f009cd94d634b3211b84046.png",
+      "companies": [],
+      "name": "Kosyne",
+      "urlName": "<redacted>",
+      "voteID": "5e9f8cae14dbca405da65043"
+    }
+  ]
+}

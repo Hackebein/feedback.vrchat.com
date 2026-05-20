@@ -1,0 +1,85 @@
+{
+  "__v": 0,
+  "_id": "62754ac73849647b30d0301a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T07:10:58.406518Z",
+  "author": {
+    "_id": "6217a47b7e987177107d1d66",
+    "alias": "Maroon Grasshopper",
+    "aliasID": "65d6e6e90129d7ae44aca972",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2022-02-24T15:30:03.232Z",
+    "name": "wumato",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6217a47b7e987177107d1d66",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-06T16:20:23.861Z",
+  "deletedAt": null,
+  "details": "VRChat SDK Version: \nVRCSDK3-AVATAR-2022.05.04.17.47_Public\nUnity Version 2019.4.31f1\nWhen uploading a new avatar version the VRChat SDK Control Panel always shows one version too old in Builder tab, e.g. when after having uploaded version 4, it displays version number 3. \nHow to reproduce: \n- Write down version number and avatar name currently displayed (see screeenshot attached) \n- reupload the avatar but update the name of the avatar in the corresponding window\n- check the avatar name after upload in builder tab of VRChat control panel (screenshot)\n- Do another reupload of the avatar and update the name again\n- The updated name will show in Builder tab only after a second upload.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f2e4c3e90df135fbb1",
+  "imageURLs": [
+    "https://canny.io/images/1e26d497e11f3b17829e2ba4c7b09395.png"
+  ],
+  "lastUpdated": 1779001728175,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-06T16:20:23.861Z",
+  "subCategoryID": null,
+  "title": "VRChat SDK Builder always shows one version too old in Unity window",
+  "trendingScore": 2731.9332660711025,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "vrchat-sdk-builder-always-shows-one-version-too-old-in-unity-window",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6217a47b7e987177107d1d66",
+      "alias": "Maroon Grasshopper",
+      "aliasID": "65d6e6e90129d7ae44aca972",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "wumato",
+      "urlName": "<redacted>",
+      "voteID": "62754ac73849647b30d03038"
+    }
+  ]
+}

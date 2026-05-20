@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "5f856c19dd48954a597ae155",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-17T15:53:10.593344Z",
+  "author": {
+    "_id": "5f298c22f04f58509d830663",
+    "alias": "Salty Moose",
+    "aliasID": "65c452bfed6eefce4cb35858",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/f66760819d1b3bbdc4aa5537e6521800.png",
+    "created": "2020-08-04T16:26:10.858Z",
+    "name": "alease",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f298c22f04f58509d830663",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-10-13T08:58:01.422Z",
+  "deletedAt": null,
+  "details": "So I've set up where my default state has one of its clothing set enabled. But sometimes when loading into a world people don't see the default state but the empty state (base of the model essentially the avatar without clothes on as this is essential as some of the clothing has different geometry that requires more or less skin available) This avatar has 4 clothing sets on it (interchangeable) all are set correctly and go through correctly however on client side, sometimes the default state will not load the model in correctly. I am fairly sure this is a bug with avatar 3.0 not working as intended.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7ebe4c3e90df131ec2a",
+  "imageURLs": [],
+  "lastUpdated": 1779032644160,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-10-13T08:58:01.422Z",
+  "subCategoryID": null,
+  "title": "Default state not working as intended",
+  "trendingScore": 2650.4608083024186,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "urlName": "default-state-not-working-as-intended",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f298c22f04f58509d830663",
+      "alias": "Salty Moose",
+      "aliasID": "65c452bfed6eefce4cb35858",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f66760819d1b3bbdc4aa5537e6521800.png",
+      "companies": [],
+      "name": "alease",
+      "urlName": "<redacted>",
+      "voteID": "5f856c19dd48954a597ae15f"
+    }
+  ]
+}

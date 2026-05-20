@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "5fafb3b7ae53d76e492c9632",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T20:00:14.739545Z",
+  "author": {
+    "_id": "5f2cba5631807b34c94a38e1",
+    "alias": "Yellowwood Ostrich",
+    "aliasID": "65c279a6ed6eefce4c459017",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/991e2af9b841bf39b8ca9ea96320673b.png",
+    "created": "2020-08-07T02:20:06.853Z",
+    "name": "Wunder Wulfe",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2cba5631807b34c94a38e1",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-11-14T10:38:47.654Z",
+  "deletedAt": null,
+  "details": "Right now the error/warning is something about a failed System.IO.Move statement which confuses users and it also leaves a garbage prefab asset in the project files that may accumulate after each failed compilation. It would be best to completely remove that asset and perhaps enclose that statement under a file check or try block so that if it fails, a meaningful error should be displayed. example: \"Compile errors detected. Avatar building failed. Delete or repair above files to continue.\"\n\nShould be a pretty simple fix. Maybe it might also occur if the file is unabled to be moved because of read/write restrictions, so make sure to check for that as well.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7efe4c3e90df131fee0",
+  "imageURLs": [],
+  "lastUpdated": 1779218237373,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-11-14T10:38:47.654Z",
+  "subCategoryID": null,
+  "title": "Simple and more detailed warning for compile errors",
+  "trendingScore": 2655.042233955527,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "simple-and-more-detailed-warning-for-compile-errors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2cba5631807b34c94a38e1",
+      "alias": "Yellowwood Ostrich",
+      "aliasID": "65c279a6ed6eefce4c459017",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/991e2af9b841bf39b8ca9ea96320673b.png",
+      "companies": [],
+      "name": "Wunder Wulfe",
+      "urlName": "<redacted>",
+      "voteID": "5fafb3b7ae53d76e492c9639"
+    }
+  ]
+}

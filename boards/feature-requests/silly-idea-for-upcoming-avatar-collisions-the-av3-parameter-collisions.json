@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "6161914954478c11ef270df5",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-19T19:31:55.917921Z",
+  "author": {
+    "_id": "61618202189c4541da139aff",
+    "alias": "Developing Guppy",
+    "aliasID": "65ce0f48ed6eefce4c520d20",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-10-09T11:50:26.763Z",
+    "name": "JennaJurassic",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "61618202189c4541da139aff",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-10-09T12:55:37.606Z",
+  "deletedAt": null,
+  "details": "I have a silly idea for the upcoming \"Avatar Events\" that effect the Avatar 3.0 parameters that would be kinda fun, but most likely would either cause lag or be more hassle than its worth. But I'm asking anyways because \"wynaut\" =P\nBased on what we've seen the collision event function similar to the current \"Avatar Parameter Driver\" (set, add, subtract, and I think something else? eh, I forget). And these fire when the event-collider is overlapped by a hit-collider. \n(event-collider is the one on your avatar that fires when overlapped, hit-collider is the one that is on heads/hands by default and just function for collision)\nSo here is the silly idea. Would it be possible to add an option onto the hit-collider section similar to the event-collider?\nSo say you have, \nA: Default hit-collider that functions as per normal (event-collider does it's thing when hit by a hit-collider)\nB: An option on the hit-collider to set a variable on the avatar (event-collider overlaps hit-collider. hit-collider has a variable name and value, event-collider reads that and sets parameters accordingly)\nI'm bad at explaining, but this is something written in code-ish logic on how it could possibly work: (this is from the event-collider)\n\tEvent-collider overlaps hit-collider;\n\t{\n\t\ttest if special case (Boolean to switch types);\n\t\t{\n\t\t\tif special case, test to see if string matches any animation-parameter names;\n\t\t\t\t{\n\t\t\t\tif name match is found, find value/function set on the hit-collider and run it on self;\n\t\t\t\tif no name match, run [default collision];\n\t\t\t\t}\n\t\t\tif not special case run [default collision];\n\t\t}\n\t               \n\tDefualt collision                  // this part is basically just how I think it functions now\n \t{\n\t\tswitch (set/add/sub/toggle/random/ whatever is in there, i don't remember)\t\n\t}\nWhy am I asking for this weird concept though? Well it's too make it so avatars from different creators can have more in-depth interactions. \nFor example:\n\tA pseudo-whitelist: doesn't need to be built in the same scene as the avatar/account as the other avatars. so you can say make a high-five parameter that only your friends know, then you can all use that parameter and only high-five with each other. (and doesn't trigger when hit by something like a head hit-collider or non-high-five hit-collider)\n\tVariable scales for the same parameter: say you have a weight-scale as a prop. you could have multiple other avatars have a hit-collider with a \"Weight\" parameter that could be red by your avatar prop. (and since the uploader sets the parameter themselves so its up to them. godzilla could be a featherweight while a knuckles could be a metric ton)\n\t\n\texpandability: since it's basically \"check if hit-collider has string\" it means that if a common variable/system is agreed upon, avatar creators don't need to go out of their way to get everything setup. They just need to know the variable-name everyone uses for that parameter to trigger it on avatars with it enabled. such as earlier mentioned high-five/weight parameters, or a health/damage parameter, or something silly like certain objects that make you see stars if hit by them. (you can still headpat the person, but hitting them with that \"SeeStars Parameter\" frying pan/falling anvil will cause them to have stars spinning around their head).\nAnd that has been my little \"would be nice\" thing for the upcoming avatar collisions. Again, unlikely to happen because they are already far into development. But no harm in throwing a random idea out there =P",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b7e4c3e90df1355389",
+  "imageURLs": [],
+  "lastUpdated": 1779218000262,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-10-09T12:55:37.606Z",
+  "subCategoryID": null,
+  "title": "Silly Idea for upcoming Avatar-collisions (the AV3 parameter collisions)",
+  "trendingScore": 2920.983317857143,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "silly-idea-for-upcoming-avatar-collisions-the-av3-parameter-collisions",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d586c7f57433511432c5a",
+      "alias": "Binding Cricket",
+      "aliasID": "65c28339ed6eefce4cc2dcf3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bcc8d2a0d1fbd1e2d9f8149098a69a48.png",
+      "companies": [],
+      "name": "Avislime",
+      "urlName": "<redacted>",
+      "voteID": "694c5716f85d59c66d3d7075"
+    }
+  ]
+}

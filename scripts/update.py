@@ -22,15 +22,17 @@ from pathlib import Path
 
 try:
     import categorize
+    import board_store
 except ImportError:  # when run as script
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import categorize  # type: ignore
+    import board_store  # type: ignore
 
 # --------------------------------------------------------------------------
 # Config
 # --------------------------------------------------------------------------
 ROOT                 = Path(__file__).resolve().parent.parent
-BOARD_FILES          = ROOT / "boards"
+BOARD_DIR            = board_store.BOARD_DIR
 README_FILE          = ROOT / "README.md"
 README_TEMPLATE_NAME = "README.md.j2"
 MAX_WORKERS          = 4
@@ -40,7 +42,7 @@ API_URL              = f"https://{CANNY_HOST}/api/posts/get"
 SITE_URL             = f"https://{CANNY_HOST}"
 USER_AGENT           = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
 
-BOARD_FILES.mkdir(parents=True, exist_ok=True)
+BOARD_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def _minimax_workers():
@@ -425,31 +427,6 @@ def fetch_post_page(board_slug, url_slug, retries=3):
 # ---------------------------------------------------------------------------
 # Storage helpers
 # ---------------------------------------------------------------------------
-def load_existing(board_file):
-    existing = {}
-    if not board_file.exists():
-        return existing
-    with open(board_file) as f:
-        for line in f:
-            line = line.strip()
-            if not line.startswith("{"):
-                continue
-            try:
-                p = json.loads(line)
-            except Exception:
-                continue
-            pid = p.get("_id")
-            if pid:
-                existing[pid] = p
-    return existing
-
-
-def write_board(board_file, posts_by_id):
-    with open(board_file, "w") as f:
-        for p in sorted(posts_by_id.values(), key=lambda x: x.get("created") or ""):
-            f.write(json.dumps(p, ensure_ascii=False) + "\n")
-
-
 def iso_now():
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
@@ -493,34 +470,33 @@ def load_all_stored(boards):
     stored = {}
     deduped = 0
     selected = set(boards)
-    for f in sorted(BOARD_FILES.glob("*.jsonl")):
-        if f.name.startswith("_") or f.stem not in selected:
+    for stem in board_store.board_slugs():
+        if stem not in selected:
             continue
-        stem = f.stem
-        with open(f) as fp:
-            for line in fp:
-                if not line.strip().startswith("{"):
-                    continue
-                try:
-                    p = json.loads(line)
-                except Exception:
-                    continue
-                pid = p.get("_id")
-                if not pid:
-                    continue
-                entry = {"board_slug": stem, "post": p}
-                if pid not in stored:
-                    stored[pid] = entry
-                    continue
+        for p in board_store.iter_board_posts(stem):
+            pid = p.get("_id")
+            if not pid:
+                continue
+            entry = {"board_slug": stem, "post": p, "url_slug": p.get("urlName") or ""}
+            if pid not in stored:
+                stored[pid] = entry
+                continue
 
-                deduped += 1
-                existing = stored[pid]
-                existing_actual = (existing["post"].get("board") or {}).get("urlName")
-                new_actual = (p.get("board") or {}).get("urlName")
-                new_correct = new_actual == stem
-                existing_correct = existing_actual == existing["board_slug"]
-                if new_correct and not existing_correct:
-                    stored[pid] = entry
+            deduped += 1
+            existing = stored[pid]
+            existing_actual = (existing["post"].get("board") or {}).get("urlName")
+            new_actual = (p.get("board") or {}).get("urlName")
+            new_correct = new_actual == stem
+            existing_correct = existing_actual == existing["board_slug"]
+            if new_correct and not existing_correct:
+                old_url = existing.get("url_slug") or existing["post"].get("urlName") or ""
+                if old_url:
+                    board_store.delete_post(existing["board_slug"], old_url)
+                stored[pid] = entry
+            elif not new_correct and existing_correct:
+                wrong_url = entry.get("url_slug") or p.get("urlName") or ""
+                if wrong_url:
+                    board_store.delete_post(stem, wrong_url)
     return stored, deduped
 
 
@@ -618,28 +594,27 @@ def fetch_all_pages(scan_targets):
 
 
 def apply_results(stored, results, now, tree, system_prompt, api_key):
-    """Merge fetch results back into per-board write buckets.
+    """Merge fetch results back into per-post JSON files.
 
-    Returns (boards_to_write, stats) where:
-      - boards_to_write: {board_slug: {pid: post_dict}}
-      - stats: {"added", "deleted", "refreshed", "moved"}
+    Returns stats: {"added", "deleted", "refreshed", "moved"}.
     """
-    boards_to_write = {}
-    for pid, info in stored.items():
-        boards_to_write.setdefault(info["board_slug"], {})[pid] = info["post"]
-
     added = deleted = refreshed = moved = 0
     eff_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or (api_key or "").strip()
     tag_jobs: list[tuple[dict, str]] = []
+    pending_writes: list[tuple[str, dict]] = []
+
     for pid, (post, comments, not_found, transient) in results.items():
-        original = stored.get(pid, {}).get("board_slug")
+        info = stored.get(pid, {})
+        original = info.get("board_slug")
+        original_url = info.get("url_slug") or (info.get("post") or {}).get("urlName") or ""
+
         if transient:
             continue
         if not_found:
-            if original and pid in boards_to_write.get(original, {}):
-                del boards_to_write[original][pid]
-                deleted += 1
-                print(f"[UPDATE] {original}/{pid} -> 404, removed")
+            if original and original_url:
+                if board_store.delete_post(original, original_url):
+                    deleted += 1
+                    print(f"[UPDATE] {original}/{original_url} -> 404, removed")
             continue
         if not post:
             continue
@@ -650,8 +625,11 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         actual_board = (post.get("board") or {}).get("urlName") or original
         if not actual_board:
             continue
+        url_slug = post.get("urlName") or ""
+        if not url_slug:
+            continue
 
-        prev_post = stored.get(pid, {}).get("post")
+        prev_post = info.get("post")
         if not categorize.needs_ai_retag(prev_post, post):
             categorize.carry_over_ai_tags(post, prev_post)
         elif not eff_key:
@@ -661,16 +639,18 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         else:
             tag_jobs.append((post, actual_board))
 
-        if original and original != actual_board:
-            boards_to_write.get(original, {}).pop(pid, None)
+        if original and original_url and original != actual_board:
+            board_store.delete_post(original, original_url)
             moved += 1
-            print(f"[UPDATE] {original}/{post.get('urlName','?')} -> moved to {actual_board}")
+            print(f"[UPDATE] {original}/{url_slug} -> moved to {actual_board}")
+        elif original and original_url and original_url != url_slug:
+            board_store.delete_post(original, original_url)
 
         if pid in stored:
             refreshed += 1
         else:
             added += 1
-        boards_to_write.setdefault(actual_board, {})[pid] = post
+        pending_writes.append((actual_board, post))
 
     if tag_jobs:
         workers = _minimax_workers()
@@ -691,7 +671,10 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
                     pid = post.get("_id", "?")
                     print(f"[ERROR] AI categorize crashed for {pid}: {e}")
 
-    return boards_to_write, {
+    for board_slug, post in pending_writes:
+        board_store.write_post(board_slug, post)
+
+    return {
         "added": added,
         "deleted": deleted,
         "refreshed": refreshed,
@@ -771,15 +754,13 @@ def generate_readme(
     """
     import jinja2
 
-    if not BOARD_FILES.exists():
+    if not BOARD_DIR.exists():
         return
 
     slug_to_urlname = slug_to_urlname or {}
     board_totals = get_board_totals(slug_to_urlname)
 
-    jsonl_slugs = sorted(
-        f.stem for f in BOARD_FILES.iterdir() if f.suffix == ".jsonl"
-    )
+    jsonl_slugs = board_store.board_slugs()
 
     needs_meta_fetch = (
         newest_scrape_horizon is None or inferred_totals is None
@@ -810,19 +791,8 @@ def generate_readme(
     boards = []
     total_collected = 0
 
-    for f in sorted(BOARD_FILES.iterdir()):
-        if f.suffix != ".jsonl":
-            continue
-        api_count = 0
-        with open(f) as fp:
-            for line in fp:
-                try:
-                    post = json.loads(line)
-                    if post.get("_id"):
-                        api_count += 1
-                except Exception:
-                    pass
-        slug = f.stem
+    for slug in board_store.board_slugs():
+        api_count = sum(1 for p in board_store.iter_board_posts(slug) if p.get("_id"))
         url_name = slug_to_urlname.get(slug, slug) if slug_to_urlname else slug
 
         total = board_totals.get(url_name) if url_name in board_totals else None
@@ -868,22 +838,17 @@ def generate_readme(
     }
 
     freshness = None
-    for f in BOARD_FILES.iterdir():
-        if f.suffix != ".jsonl" or f.name.startswith("_"):
-            continue
-        with open(f) as fp:
-            for line in fp:
-                if not line.strip().startswith("{"):
-                    continue
-                try:
-                    p = json.loads(line)
-                    ua = p.get("updatedAt")
-                    if ua:
-                        dt = datetime.fromisoformat(ua.replace("Z", "+00:00"))
-                        if freshness is None or dt < freshness:
-                            freshness = dt
-                except Exception:
-                    pass
+    for slug in board_store.board_slugs():
+        for p in board_store.iter_board_posts(slug):
+            ua = p.get("updatedAt")
+            if not ua:
+                continue
+            try:
+                dt = datetime.fromisoformat(ua.replace("Z", "+00:00"))
+                if freshness is None or dt < freshness:
+                    freshness = dt
+            except Exception:
+                pass
     now = datetime.now(timezone.utc)
     if freshness:
         delta = now - freshness
@@ -948,11 +913,11 @@ def get_boards():
     """
     Get list of board slugs to process.
 
-    Prefers existing .jsonl files; falls back to the homepage parser.
+    Prefers existing board directories; falls back to the homepage parser.
     """
-    files = sorted(f.stem for f in BOARD_FILES.glob("*.jsonl") if not f.name.startswith("_"))
-    if files:
-        return files
+    slugs = board_store.board_slugs()
+    if slugs:
+        return slugs
     return [b["urlName"] for b in fetch_boards() if b.get("urlName")]
 
 
@@ -1014,13 +979,10 @@ def main():
             )
     system_prompt = categorize.build_system_prompt(tree)
     api_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or None
-    boards_to_write, totals = apply_results(
+    totals = apply_results(
         stored, results, now, tree, system_prompt, api_key,
     )
     totals["deduped"] = deduped
-
-    for slug, posts in sorted(boards_to_write.items()):
-        write_board(BOARD_FILES / f"{slug}.jsonl", posts)
 
     elapsed = time.time() - t0
     print(f"\n[UPDATE] Done in {elapsed:.1f}s - "

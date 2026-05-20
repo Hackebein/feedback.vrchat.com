@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "66d1719a8189be2af24ed83b",
+  "aiCategories": [
+    "loc.action-menu",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-05-16T19:34:14.361118Z",
+  "author": {
+    "_id": "5f2e0a4e8464150716ffd322",
+    "alias": "Aegean blue Kangaroo",
+    "aliasID": "65c26da3ed6eefce4c4d0953",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+    "created": "2020-08-08T02:13:34.907Z",
+    "name": "ZenithVal",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2e0a4e8464150716ffd322",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-08-30T07:15:38.858Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "IIRC before Input 2.0, the touchpad gesture wheel was frozen when the action menu was opened (so you don't do faces while scrolling the menu) This functionality can be unbound from the action menu action set but upon removing Gesture wheel from the trackpad, Gesture wheel Cancel and Cancel open cease to function so we can't do Open hand or fist while the action menu is open anymore.\n\nEdit: It is possible to fix this WITHOUT unbinding the gesture wheel from the trackpads. Bind `Gesture Wheel - Disable Move` And `Disable Rotate` to **TOUCH** on the trackpads so any touch will result in the gesture wheel going inactive. See attached image. (Due to [mislabeled localization](https://feedback.vrchat.com/open-beta/p/1501-mislabeled-steamvr-binding-localization) it appears as rotate when it's actually move)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba0ce4c3e90df139628c",
+  "imageURLs": [
+    "https://canny.io/images/34c1c11c7765c98774507b561f9b002d.png"
+  ],
+  "lastUpdated": 1779226817447,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66d1719a8189be2af24ed83b/2121040894.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-08-30T07:15:38.858Z",
+  "subCategoryID": null,
+  "title": "[1501] Vive Controllers: Unwanted Gesture behavior in Action menu",
+  "trendingScore": 2852.879223621532,
+  "updatedAt": "2026-05-19T21:40:19.607119Z",
+  "updatedBy": null,
+  "urlName": "1501-vive-controllers-unwanted-gesture-behavior-in-action-menu",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2e0a4e8464150716ffd322",
+      "alias": "Aegean blue Kangaroo",
+      "aliasID": "65c26da3ed6eefce4c4d0953",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+      "companies": [],
+      "name": "ZenithVal",
+      "urlName": "<redacted>",
+      "voteID": "66d1719b7d32abb6ca948036"
+    }
+  ]
+}

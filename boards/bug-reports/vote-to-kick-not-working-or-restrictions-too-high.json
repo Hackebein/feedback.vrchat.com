@@ -1,0 +1,84 @@
+{
+  "__v": 0,
+  "_id": "63dc335909785e4506ed83f8",
+  "aiCategories": [
+    "loc.in-world",
+    "moderation.bans"
+  ],
+  "aiTaggedAt": "2026-05-19T05:52:04.012170Z",
+  "author": {
+    "_id": "5d0e466fcfd3db791c8b093e",
+    "alias": "Glorious Echidna",
+    "aliasID": "65c2c0bced6eefce4c74d220",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e66b597321f8b9a5738acab80e54511a.png",
+    "created": "2019-06-22T15:17:03.616Z",
+    "name": "DanDudeVR",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5d0e466fcfd3db791c8b093e",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-02-02T22:04:09.797Z",
+  "deletedAt": null,
+  "details": "VRChat Version: 1275\n\nDescription of the bug:\n\nvote to kick isn't working or restrictions too high in an instance with average amount of users in it.  Error message kicks me out of the menu to perform additional actions.  Have to re-open the menu click on the user.\n\nSteps to reproduce (how did you encounter the bug?): \n\n1. I open menu, click on user.\n\n2. then I click on user and vote-to-kick.\n\n3. closes menu and comes back with an error \"Conditions to start vote to kick not met\".  You can see in the photo that there is quite a number of people there. \n\nAny extra files? (output logs, screenshots): see photo",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb967e4c3e90df1376dea",
+  "imageURLs": [
+    "https://canny.io/images/3c6f3a1ca5cfb410dd4ec1eab04854a9.png"
+  ],
+  "lastUpdated": 1779168736881,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-02-02T22:04:09.797Z",
+  "subCategoryID": null,
+  "title": "vote to kick not working or restrictions too high",
+  "trendingScore": 2770.824512653444,
+  "updatedAt": "2026-05-19T05:33:34.555709Z",
+  "urlName": "vote-to-kick-not-working-or-restrictions-too-high",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5d0e466fcfd3db791c8b093e",
+      "alias": "Glorious Echidna",
+      "aliasID": "65c2c0bced6eefce4c74d220",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e66b597321f8b9a5738acab80e54511a.png",
+      "companies": [],
+      "name": "DanDudeVR",
+      "urlName": "<redacted>",
+      "voteID": "63dc335909785e4506ed842c"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "__v": 0,
+  "_id": "5f3222e93621ce4fdf7afc81",
+  "aiCategories": [
+    "loc.hud",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-05-18T01:16:34.762335Z",
+  "author": {
+    "_id": "5ce7385151d68a4bfcdab079",
+    "alias": "Silver Vole",
+    "aliasID": "65e0d15ba6e3ea79dd7ab0e9",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/0ee77f4aea0f0b3ece7833caaedc474b.png",
+    "created": "2019-05-24T00:18:25.608Z",
+    "name": "glomee",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ce7385151d68a4bfcdab079",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-08-11T04:47:37.110Z",
+  "deletedAt": null,
+  "details": "Version: 970\nDescription of the bug: Not showing people's avatars through safety settings causes the performance stats to bug out.\nSteps to reproduce: Set the safety settings to custom and turn off avatar loading for every rank and load into a world where you haven't loaded someone's avatar yet.\nClick on anyone and the performance stats should be \"None\" plus the icon is just a white square.\nPictures attached for reference",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb7e2e4c3e90df131ccaa",
+  "imageURLs": [
+    "https://canny.io/images/8bc2bbcee34f173a8375d78efe4cc375.png",
+    "https://canny.io/images/3a176c2d66857c6bfcde6d42da45fe0f.png"
+  ],
+  "lastUpdated": 1779066365819,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-08-11T04:47:37.110Z",
+  "subCategoryID": null,
+  "title": "Performance stats bug out due to safety settings.",
+  "trendingScore": 2642.9476301123846,
+  "updatedAt": "2026-05-18T01:07:40.796366Z",
+  "urlName": "performance-stats-bug-out-due-to-safety-settings",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d19d0a2990547bfc05f3a",
+      "alias": "Cadmium red Eagle",
+      "aliasID": "65c2a212ed6eefce4c61cb5a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6160e0478c18b912ab746ea431c3310c.png",
+      "companies": [],
+      "name": "AirGamer",
+      "urlName": "<redacted>",
+      "voteID": "5f3423147fdec8616ef0b2c5"
+    },
+    {
+      "_id": "5f2d710dc1c881463f153789",
+      "alias": "Remarkable Grasshopper",
+      "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/33bbdc9f314a19ff5728a5285087ef6e.png",
+      "companies": [],
+      "name": "Fusl",
+      "urlName": "<redacted>",
+      "voteID": "5f330cb0cfc28f6550531dac"
+    },
+    {
+      "_id": "5f2cd56ac1c881463f11df92",
+      "alias": "Rolling Bass",
+      "aliasID": "69fd67004a48bed189640e0a",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6ad581133fa61d382d92c7d7e8f6a4ed.png",
+      "companies": [],
+      "name": "The Snow Mexican",
+      "urlName": "<redacted>",
+      "voteID": "5f32e1458e156062dfa3d304"
+    },
+    {
+      "_id": "5f2cd588c00297464bd31771",
+      "alias": "Citrine Partridge",
+      "aliasID": "65c2f3fded6eefce4c76e4d4",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/f0cbb51da208e8fc02db83ae3965d2e0.png",
+      "companies": [],
+      "name": "IE",
+      "urlName": "<redacted>",
+      "voteID": "5f32e0d258eb54278543b300"
+    },
+    {
+      "_id": "5ce7385151d68a4bfcdab079",
+      "alias": "Silver Vole",
+      "aliasID": "65e0d15ba6e3ea79dd7ab0e9",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/0ee77f4aea0f0b3ece7833caaedc474b.png",
+      "companies": [],
+      "name": "glomee",
+      "urlName": "<redacted>",
+      "voteID": "5f3222e93621ce4fdf7afc89"
+    }
+  ]
+}

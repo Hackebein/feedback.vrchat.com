@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bulk index boards/*.jsonl into OpenSearch using a zero-downtime alias swap:
+Bulk index boards/<slug>/*.json into OpenSearch using a zero-downtime alias swap:
 
   PUT backing index `{alias}-{UTC YYYYmmDDHHMM}` -> bulk load -> POST _aliases
   atomic swap -> optional DELETE for stale `{alias}-YYYYMMDDHHMM` indices.
@@ -140,22 +140,20 @@ def transform_post(line: dict[str, Any]) -> dict[str, Any] | None:
     return safe
 
 
-def iter_jsonl_documents(boards_root: Path) -> Iterator[tuple[str, dict[str, Any]]]:
-    for path in sorted(boards_root.glob("*.jsonl")):
-        with path.open(encoding="utf-8", errors="replace") as f:
-            lineno = 0
-            for line in f:
-                lineno += 1
-                raw = line.strip()
-                if not raw or not raw.startswith("{"):
-                    continue
-                try:
-                    obj = json.loads(raw)
-                except json.JSONDecodeError as e:
-                    raise SystemExit(f"{path}:{lineno}: invalid JSON: {e}") from e
-                doc = transform_post(obj)
-                if doc:
-                    yield doc["post_id"], doc
+def iter_board_documents(boards_root: Path) -> Iterator[tuple[str, dict[str, Any]]]:
+    for board_dir in sorted(boards_root.iterdir()):
+        if not board_dir.is_dir() or board_dir.name.startswith("_"):
+            continue
+        for path in sorted(board_dir.glob("*.json")):
+            if path.name.endswith(".json.tmp"):
+                continue
+            try:
+                obj = json.loads(path.read_text(encoding="utf-8", errors="replace"))
+            except json.JSONDecodeError as e:
+                raise SystemExit(f"{path}: invalid JSON: {e}") from e
+            doc = transform_post(obj)
+            if doc:
+                yield doc["post_id"], doc
 
 
 def gen_bulk(new_index: str, pairs: Iterable[tuple[str, dict[str, Any]]]) -> Iterator[dict[str, Any]]:
@@ -330,7 +328,7 @@ def main() -> int:
 
     if args.dry_run:
         print(f"would PUT index={new_idx} from {map_path}")
-        count = sum(1 for _ in iter_jsonl_documents(boards_root))
+        count = sum(1 for _ in iter_board_documents(boards_root))
         print(f"would bulk-index {count} documents")
         print(f'would POST _aliases: point "{alias}" -> {new_idx}')
         if args.no_delete_old:
@@ -347,7 +345,7 @@ def main() -> int:
     client.indices.create(index=new_idx, body=body)
 
     def docs() -> Iterable[tuple[str, dict[str, Any]]]:
-        yield from iter_jsonl_documents(boards_root)
+        yield from iter_board_documents(boards_root)
 
     n_ok, _ = bulk(
         client,

@@ -1,0 +1,89 @@
+{
+  "__v": 0,
+  "_id": "614eb69ed1788e1cc0d74fe7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:01:07.375352Z",
+  "author": {
+    "_id": "5f92af41057b2b1e7d7bd276",
+    "alias": "Aegean blue Scallop",
+    "aliasID": "65c35668ed6eefce4c2533aa",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/68a4585a30fc899a1269c3468f2d77e6.png",
+    "created": "2020-10-23T10:24:01.509Z",
+    "name": "UdonEats",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f92af41057b2b1e7d7bd276",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-09-25T05:41:50.085Z",
+  "deletedAt": null,
+  "details": "Please improve `VRCUnityVideoPlayer`.\n- Enabled / Disabled of `VRC Unity Video Player` is not reflected in` Unity Video Player` added at runtime.\n- Even if `VRC Unity Video Player` is Destroyed, the` Unity Video Player` added at runtime will not be Destroyed and the video will not stop.\n- Please allow Udon to change the Render Texture of the Video Player.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8b4e4c3e90df13546c3",
+  "imageURLs": [],
+  "lastUpdated": 1778979216180,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-09-25T05:41:50.085Z",
+  "subCategoryID": null,
+  "title": "Improve VRCUnityVideoPlayer (add Enabled / Disabled / Destroy events)",
+  "trendingScore": 2700.0127736909767,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "improve-vrcunityvideoplayer-add-enabled-disabled-destroy-events",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f92af41057b2b1e7d7bd276",
+      "alias": "Aegean blue Scallop",
+      "aliasID": "65c35668ed6eefce4c2533aa",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/68a4585a30fc899a1269c3468f2d77e6.png",
+      "companies": [],
+      "name": "UdonEats",
+      "urlName": "<redacted>",
+      "voteID": "614eb69ed1788e1cc0d74fee"
+    }
+  ]
+}

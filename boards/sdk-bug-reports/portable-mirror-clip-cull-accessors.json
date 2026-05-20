@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "68081eb9965a54afc657f4a3",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T21:55:28.381762Z",
+  "author": {
+    "_id": "5c1cfd24e2b306156fd03cff",
+    "alias": "Harlequin Camel",
+    "aliasID": "65c7c787ed6eefce4cd98032",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/50e71a12d748cfdeee35db226b31fde2.png",
+    "created": "2018-12-21T14:48:04.040Z",
+    "name": "ImLeXz",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c1cfd24e2b306156fd03cff",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 148,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-04-22T22:56:57.354Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "With the new 3.8.1-beta.1 SDK, a bunch of accessors have been added to allow for far-clip and culling distances to be applied at runtime to the main camera, and hand-held camera. \n\nI feel like it would also be a good idea to add these same accessors to the portable mirror to allow for some nice optimisations, and privacy related functionality. \n\nAlso I believe the portable mirror doesn't fully respect the far clipping plane set by the main camera currently so being able to set it via udon would be good.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba67e4c3e90df13a6217",
+  "imageURLs": [],
+  "lastUpdated": 1779054468936,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68081eb9965a54afc657f4a3/1317854774.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-04-22T22:56:57.354Z",
+  "subCategoryID": null,
+  "title": "Portable Mirror Clip / Cull Accessors",
+  "trendingScore": 2887.0685685078934,
+  "updatedAt": "2026-05-17T21:48:28.568428Z",
+  "updatedBy": null,
+  "urlName": "portable-mirror-clip-cull-accessors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f496a2da657d93390b0fc40",
+      "alias": "Iced lavender Kangaroo",
+      "aliasID": "65c2a213ed6eefce4c61edaa",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cb60e0b97e30785d10e0710d4b085a6a.png",
+      "companies": [],
+      "name": "Natsumi-sama",
+      "urlName": "<redacted>",
+      "voteID": "680b16838ccc1d8b3bbe14f4"
+    },
+    {
+      "_id": "5c1cfd24e2b306156fd03cff",
+      "alias": "Harlequin Camel",
+      "aliasID": "65c7c787ed6eefce4cd98032",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/50e71a12d748cfdeee35db226b31fde2.png",
+      "companies": [],
+      "name": "ImLeXz",
+      "urlName": "<redacted>",
+      "voteID": "68081eb98ccc1d8b3ba3d9c1"
+    }
+  ]
+}

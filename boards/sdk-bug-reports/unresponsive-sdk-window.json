@@ -1,0 +1,84 @@
+{
+  "__v": 0,
+  "_id": "62843b4523c47b0b691b89ff",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T07:11:04.951199Z",
+  "author": {
+    "_id": "62103604e1d4d935763aa617",
+    "alias": "Operational Albatross",
+    "aliasID": "65c6f278ed6eefce4c83a15a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e4a693a83e4a7e1f303cab223fe33157.png",
+    "created": "2022-02-19T00:12:52.908Z",
+    "name": "PolýphrōnAether",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62103604e1d4d935763aa617",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-18T00:18:13.890Z",
+  "deletedAt": null,
+  "details": "Greetings, I am unsure if this issue has been reported since I haven't seen many large scale worlds in VR Chat yet, but when making a world with example LODs (Multiple) of them, or prefabs that have LODs already made, there is this annoying issue in the SDK window that freezes unity because of so many share network paths. as you can see in the screenshot i have quiet a few. for some it won't be an issue but when your testing large scale props and messing with LODs it creates this \"sibling objects share the same path\" warning and when unity finally loads the SDK window, the whole thing becomes unresponsive and i have to wait several to 20 minutes for unity to come alive again",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f3e4c3e90df136025e",
+  "imageURLs": [
+    "https://canny.io/images/7f47ec9dcd0d1c1d02d288aaaa7a7336.png"
+  ],
+  "lastUpdated": 1779001729017,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-18T00:18:13.890Z",
+  "subCategoryID": null,
+  "title": "Unresponsive SDK Window",
+  "trendingScore": 2733.552098787703,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "unresponsive-sdk-window",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62103604e1d4d935763aa617",
+      "alias": "Operational Albatross",
+      "aliasID": "65c6f278ed6eefce4c83a15a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e4a693a83e4a7e1f303cab223fe33157.png",
+      "companies": [],
+      "name": "PolýphrōnAether",
+      "urlName": "<redacted>",
+      "voteID": "62843b4523c47b0b691b8a25"
+    }
+  ]
+}

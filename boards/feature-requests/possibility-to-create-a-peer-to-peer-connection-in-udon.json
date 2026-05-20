@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "618505150421474de9f258d3",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T19:36:56.037444Z",
+  "author": {
+    "_id": "616aca9f2dc338205a6413dd",
+    "alias": "Magenta Galliform",
+    "aliasID": "65d23a7e0129d7ae44f4223a",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2021-10-16T12:50:39.794Z",
+    "name": "H4x0r_000",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "616aca9f2dc338205a6413dd",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-11-05T10:19:01.651Z",
+  "deletedAt": null,
+  "details": "Let me explain this with a example: Imagine you and some friends playing a sync havy world in vrchat. Now lets assume we play lassetag. Most lasertag worlds (including my example) calculate the hit localy. To be honest this is not a good way to do so, but lets add another handycap. Lets say your ping is very high and lets say its around 100ms. For sync havy and especialy timing dependent games/worlds this is realy bad. A possible cause for that could be the data being send through a vrchat server (i know about the regions but sometimes you are not from the same region and for me its also bad on the same region). What if the dev would have the possibility to create a direct connection between the players to make the transfer faster.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8c2e4c3e90df13572ea",
+  "imageURLs": [],
+  "lastUpdated": 1779218016408,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-11-05T10:19:01.651Z",
+  "subCategoryID": null,
+  "title": "Possibility to create a peer-to-peer connection in UDON",
+  "trendingScore": 2705.8974158206065,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "possibility-to-create-a-peer-to-peer-connection-in-udon",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "616aca9f2dc338205a6413dd",
+      "alias": "Magenta Galliform",
+      "aliasID": "65d23a7e0129d7ae44f4223a",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "H4x0r_000",
+      "urlName": "<redacted>",
+      "voteID": "618505150421474de9f258da"
+    }
+  ]
+}

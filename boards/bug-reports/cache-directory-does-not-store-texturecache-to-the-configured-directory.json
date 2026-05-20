@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "6623dc94826e3c85e9d4208a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-16T18:56:36.568980Z",
+  "author": {
+    "_id": "608bb58ed6b3fa1a4b34528b",
+    "alias": "Rose Grasshopper",
+    "aliasID": "65f213de76937e52486fa647",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9721d63d180ff59890135b8659a1e972.png",
+    "created": "2021-04-30T07:45:18.166Z",
+    "name": "VasilisVR",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "608bb58ed6b3fa1a4b34528b",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-04-20T15:17:40.041Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "``Cache-WindowsPlayer`` successfully starts using the new cache directory when instructed.\n\n``TextureCache-WindowsPlayer`` however, does not respect this config value and stays onto the user's OS drive.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9dde4c3e90df138d8ee",
+  "imageURLs": [
+    "https://canny.io/images/c0be0fc628b588e6abd901a77f4d0758.png",
+    "https://canny.io/images/96fef102657caeabded53fe88841b63a.png"
+  ],
+  "lastUpdated": 1779223448397,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny.io/images/og/58c62e995865713647a7115d/posts/6623dc94826e3c85e9d4208a/1697936616.jpg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-04-20T15:17:40.041Z",
+  "subCategoryID": null,
+  "title": "cache_directory does not store TextureCache to the configured directory",
+  "trendingScore": 2834.0699000509308,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "updatedBy": null,
+  "urlName": "cache-directory-does-not-store-texturecache-to-the-configured-directory",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "608bb58ed6b3fa1a4b34528b",
+      "alias": "Rose Grasshopper",
+      "aliasID": "65f213de76937e52486fa647",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9721d63d180ff59890135b8659a1e972.png",
+      "companies": [],
+      "name": "VasilisVR",
+      "urlName": "<redacted>",
+      "voteID": "6623dc94d36452c179791ff0"
+    }
+  ]
+}

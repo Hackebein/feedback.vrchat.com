@@ -1,0 +1,88 @@
+{
+  "__v": 0,
+  "_id": "64752fcb76968509231045ce",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T15:14:03.645781Z",
+  "author": {
+    "_id": "5fa08ddb2644fb4c5a3dfe75",
+    "alias": "Toffee Coyote",
+    "aliasID": "65c2824ced6eefce4c9ed424",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/117329828d6b6e2d7dbf8a4ad5485be2.png",
+    "created": "2020-11-02T22:53:15.373Z",
+    "name": "SenkyDragon",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5fa08ddb2644fb4c5a3dfe75",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-05-29T23:05:47.223Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "GetComponentsInChildren does not guarantee a specific return order, so RemoveAvatarEditorOnly may attempt to destroy a child object after destroying its parent, resulting in a `MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.`",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb97de4c3e90df137bf41",
+  "imageURLs": [
+    "https://canny.io/images/535028695510a1af073ef2814b9a8725.png",
+    "https://canny.io/images/d4db8b8ed566febcd12284cbb663f1e2.png"
+  ],
+  "lastUpdated": 1779026895135,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-05-29T23:05:47.223Z",
+  "subCategoryID": null,
+  "title": "RemoveAvatarEditorOnly can fail if nested EditorOnly objects exist",
+  "trendingScore": 2787.402054718589,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": null,
+  "urlName": "removeavatareditoronly-can-fail-if-nested-editoronly-objects-exist",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fa08ddb2644fb4c5a3dfe75",
+      "alias": "Toffee Coyote",
+      "aliasID": "65c2824ced6eefce4c9ed424",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/117329828d6b6e2d7dbf8a4ad5485be2.png",
+      "companies": [],
+      "name": "SenkyDragon",
+      "urlName": "<redacted>",
+      "voteID": "64752fcb7696850923104611"
+    }
+  ]
+}

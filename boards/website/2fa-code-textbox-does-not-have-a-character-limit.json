@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "678ebc03246c48286bf9d1cf",
+  "aiCategories": [
+    "loc.website",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-05-17T22:26:18.631031Z",
+  "author": {
+    "_id": "6170461b2ae5867c9bb22a14",
+    "alias": "Flamingo pink Cuckoo",
+    "aliasID": "65c28d72ed6eefce4c4dbddb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/02a0ab095f28d8defb89cbf65b8e0d50.png",
+    "created": "2021-10-20T16:38:51.005Z",
+    "name": "৹lux",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6170461b2ae5867c9bb22a14",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-01-20T21:11:31.167Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Users who use TOTP apps which copy the TOTP code into the clipboard typically also paste the TOTP code into the website. If pasting a TOTP code, the TOTP code textbox does not truncate paste 6 characters.\n\nSteps to replicate:\n\n1. Copy a TOTP code such as 012345\n\n2. Go to the VRChat website in an icognito / private tab.\n\n3. Login to a VRChat account with 2FA enabled.\n\n4. Paste using Ctrl + V several times and observe that the last textbox overflows text. If you try deleting a character you'll notice that several characters appear until you can actually enter text.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba42e4c3e90df139fe9a",
+  "imageURLs": [],
+  "lastUpdated": 1779056619039,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/678ebc03246c48286bf9d1cf/93047582.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-01-20T21:11:31.167Z",
+  "subCategoryID": null,
+  "title": "2FA code textbox does not have a character limit",
+  "trendingScore": 2873.7962017912987,
+  "updatedAt": "2026-05-17T22:25:22.540712Z",
+  "updatedBy": null,
+  "urlName": "2fa-code-textbox-does-not-have-a-character-limit",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60651324fbe2815d2b9ff6cb",
+      "alias": "Russet Pinniped",
+      "aliasID": "65c26defed6eefce4c5a3303",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cfe87e803ffdc0c2c804e8af3438a6d9.png",
+      "companies": [],
+      "name": "°sky",
+      "urlName": "<redacted>",
+      "voteID": "678ebc2349f71d913eebe6e0"
+    },
+    {
+      "_id": "6170461b2ae5867c9bb22a14",
+      "alias": "Flamingo pink Cuckoo",
+      "aliasID": "65c28d72ed6eefce4c4dbddb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/02a0ab095f28d8defb89cbf65b8e0d50.png",
+      "companies": [],
+      "name": "৹lux",
+      "urlName": "<redacted>",
+      "voteID": "678ebc0349f71d913ee4d6c4"
+    }
+  ]
+}

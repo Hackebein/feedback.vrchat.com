@@ -1,0 +1,106 @@
+{
+  "_id": "690c6fa400cd256b54abe5e5",
+  "aiCategories": [
+    "loc.loading-screen",
+    "platforms"
+  ],
+  "aiTaggedAt": "2026-05-17T01:17:34.623746Z",
+  "author": {
+    "_id": "61af28116b1f36339f75bc78",
+    "alias": "Whole Swordfish",
+    "aliasID": "65c289eded6eefce4cc4b5fe",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6c4ccad58c61999ee09b0f5144ed3f4c.png",
+    "created": "2021-12-07T09:23:29.961Z",
+    "name": "Nicalay2",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "61af28116b1f36339f75bc78",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-11-06T09:51:32.488Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When the game launch on Windows On ARM (both VR and Desktop mode), the game tends to get stuck Not Responding on this white window.\n\nThe game also sometimes hang on other screens (like a black screen or even the \"loading\" environment).\n\nYou have to launch the game multiple times and pray for the game to launch lol.\n\nI have attached multiple logs of that happening.\n\nSpecs : Microsoft Surface Pro 11th Edition ; Snapdragon X Elite X1E80100 ; 16GB RAM",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/a0801dcbd27c1898eaa517c79f656dbd.txt",
+    "https://canny-assets.io/files/12b47604e1645bb564d23701adf377ee.txt",
+    "https://canny-assets.io/files/767055683ceb51f5a643a2b945bb103c.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-11-06_10-44-36",
+      "url": "https://canny-assets.io/files/a0801dcbd27c1898eaa517c79f656dbd.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-11-06_10-47-01",
+      "url": "https://canny-assets.io/files/12b47604e1645bb564d23701adf377ee.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-11-06_10-49-01",
+      "url": "https://canny-assets.io/files/767055683ceb51f5a643a2b945bb103c.txt"
+    }
+  ],
+  "ideaID": "690c6fa400cd256b54abe647",
+  "imageURLs": [
+    "https://canny-assets.io/images/bd602e8b0a869788175b420dd301614f.png"
+  ],
+  "lastUpdated": 1778979528953,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/690c6fa400cd256b54abe5e5/70491944.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-11-06T09:51:32.488Z",
+  "subCategoryID": null,
+  "title": "[Windows On ARM] Game tends to get stuck while launching",
+  "trendingScore": 2914.7518319375044,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": null,
+  "urlName": "windows-on-arm-game-tends-to-get-stuck-while-launching",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61af28116b1f36339f75bc78",
+      "alias": "Whole Swordfish",
+      "aliasID": "65c289eded6eefce4cc4b5fe",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c4ccad58c61999ee09b0f5144ed3f4c.png",
+      "companies": [],
+      "name": "Nicalay2",
+      "urlName": "<redacted>",
+      "voteID": "690c6fa44f8511f3804a42a9"
+    }
+  ]
+}

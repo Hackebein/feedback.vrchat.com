@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "6435c4bdde0bc179c445a87e",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-19T07:41:56.674819Z",
+  "author": {
+    "_id": "61159f1bd6c0026f470c4521",
+    "alias": "Ube Crayfish",
+    "aliasID": "65c323efed6eefce4c7eabfb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bc379989ae96a2ab4fa396998e01442a.png",
+    "created": "2021-08-12T22:22:19.548Z",
+    "name": "metroidmen",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "61159f1bd6c0026f470c4521",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-04-11T20:36:13.890Z",
+  "deletedAt": null,
+  "details": "All avatars are affected, even default VRChat ones. \n\nThings tested:\n\n-\tBoth PC version and Quest standalone version exhibit this issue\n\n-\tDifferent room play spaces\n\n-\tReset guardian and factory reset devices\n\n-\tTried 2 separate headset both PC and standalone, a Quest Pro and a Quest 2\n\n-\tTried with FBT and in half body\n\n-\tTried with legacy and 2.0 IK. \n\n-\tTried avatar measurement with arms and with height.\n\n-\tConfirmed using SteamVR and Oculus Dash that the controller is lined up, and hands in game line up with my controllers, exactly as expected.\n\n-\tTried VRChat beta and live version.\n\n- happens to my girlfriend as well with her PC, with her account, and her headset. \n\nAll of these cases exhibit this issue. It looks awful and more often than not it gets worse and looks like my arm is being held out or behind me. I haven’t found a single workaround for this situation. With my troubleshooting the issue is narrowed down to have to be a VRChat issue itself\n\nIto reproduce:\n\n1. Switch into any avatar \n\n2. Stand still at attention with your hands to your sides while looking into the mirror.\n\n3. Your right arm sticks out. Some avatars more noticeable than others. \n\nAttached photos demonstrate the issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb973e4c3e90df1379f91",
+  "imageURLs": [
+    "https://canny.io/images/c32c384628555c60006096efa75795c6.jpg",
+    "https://canny.io/images/d6613e63f05ee7cc93af1a32a89a9a68.jpg"
+  ],
+  "lastUpdated": 1779175624240,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-04-11T20:36:13.890Z",
+  "subCategoryID": null,
+  "title": "Right Arm sticking out on all avatars, in and out of FBT, on Quest & PC, with multiple users, headsets, and devices.",
+  "trendingScore": 2780.5300750806923,
+  "updatedAt": "2026-05-19T07:29:08.486735Z",
+  "updatedBy": null,
+  "urlName": "right-arm-sticking-out-on-all-avatars-in-and-out-of-fbt-on-quest-pc-with-multipl",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61159f1bd6c0026f470c4521",
+      "alias": "Ube Crayfish",
+      "aliasID": "65c323efed6eefce4c7eabfb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bc379989ae96a2ab4fa396998e01442a.png",
+      "companies": [],
+      "name": "metroidmen",
+      "urlName": "<redacted>",
+      "voteID": "6435c4bede0bc179c445a8c0"
+    }
+  ]
+}

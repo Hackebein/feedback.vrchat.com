@@ -1,0 +1,95 @@
+{
+  "__v": 0,
+  "_id": "622259a78fa3eb752c046a4e",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-18T21:38:31.341656Z",
+  "author": {
+    "_id": "612ea6a7f4aca00a10286465",
+    "alias": "Jasper Viper",
+    "aliasID": "65c28ab5ed6eefce4ce1ffa1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/85ad36a75a0c89ecc613c3a104bd536b.png",
+    "created": "2021-08-31T22:01:11.603Z",
+    "name": "MyroP",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "612ea6a7f4aca00a10286465",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-03-04T18:25:43.522Z",
+  "deletedAt": null,
+  "details": "This a a bug I wasn't able to reproduce on the regular version, so I guess it's related to the beta, but I might be wrong...\nBasically when I exit a station my avatar sometimes break like this (feets above my head, head/camera on the ground level), I exit the station via script (StationChair.ExitStation(Networking.LocalPlayer); in U#). I am playing in VR.\n\nIt doesn't always happen, maybe 20% of the time.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8dde4c3e90df135b6ef",
+  "imageURLs": [
+    "https://canny.io/images/9b0f03dc4503de12d4c758afc1571417.png"
+  ],
+  "lastUpdated": 1779140046315,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-03-04T18:25:43.522Z",
+  "subCategoryID": null,
+  "title": "Exiting a station with \"Disable station exit\" sometimes break my avatar",
+  "trendingScore": 2730.578657519861,
+  "updatedAt": "2026-05-18T21:36:21.404734Z",
+  "urlName": "exiting-a-station-with-disable-station-exit-sometimes-break-my-avatar",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d8365b923f7086baf9410",
+      "alias": "Viridian Carp",
+      "aliasID": "65c2b286ed6eefce4c9bf5ca",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b9ba6b3ebecd8ed938da03a0c7157482.png",
+      "companies": [],
+      "name": "Kattsune Mao",
+      "urlName": "<redacted>",
+      "voteID": "626f2eefaa155652a05e0d09"
+    },
+    {
+      "_id": "612ea6a7f4aca00a10286465",
+      "alias": "Jasper Viper",
+      "aliasID": "65c28ab5ed6eefce4ce1ffa1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/85ad36a75a0c89ecc613c3a104bd536b.png",
+      "companies": [],
+      "name": "MyroP",
+      "urlName": "<redacted>",
+      "voteID": "622259a78fa3eb752c046a87"
+    }
+  ]
+}

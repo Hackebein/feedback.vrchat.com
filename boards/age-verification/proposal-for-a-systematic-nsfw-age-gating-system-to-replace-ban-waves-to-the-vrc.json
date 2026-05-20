@@ -1,0 +1,111 @@
+{
+  "_id": "694310e9df29376b4d171a58",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars",
+    "account.age-verification",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-05-17T01:03:50.827075Z",
+  "author": {
+    "_id": "618b8366199f8f5717c2c61d",
+    "alias": "Empirical Limpet",
+    "aliasID": "69430d8f4927a96e58daf376",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/987cbffd326f24b17f23b3cd9d2c8038.png",
+    "created": "2021-11-10T08:31:34.418Z",
+    "name": "Dragon_Legacy",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "618b8366199f8f5717c2c61d",
+  "board": {
+    "_id": "674e1d3bd1a531fd71481978",
+    "name": "Age Verification Feedback",
+    "urlName": "age-verification"
+  },
+  "boardID": "674e1d3bd1a531fd71481978",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-17T20:22:01.583Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am writing to provide constructive feedback regarding the recent moderation actions concerning \"NSFW geometry/textures\" on avatars.\n\nCurrently, the NSFW tag exists but fails to adequately protect creators. Users are frequently banned for public uploads even when the distinction between allowed content and bannable offenses is ambiguous in the UI.\n\nI believe the following system-level changes would solve this issue more effectively than reactive ban waves:\n\n1. Explicit Definition & Enforcement of the NSFW Tag The NSFW tag currently appears to be for private use only, yet creators are punished for public uploads. The system should be binary:\n\nThe NSFW option must be strictly limited to private avatars, OR\n\nIf allowed on public avatars, it must trigger automatic viewing restrictions (age-gating).\n\n2. Prevention of Public NSFW Uploads It should not be technically possible to upload an avatar as \"Public\" with NSFW characteristics without safeguards.\n\nIf an avatar is public, the NSFW toggle should either be disabled, or;\n\nChecking the NSFW toggle should automatically enforce age verification and force a \"fallback\" avatar for non-verified users.\n\n3. Pre-Upload Detection System Instead of banning users retroactively, please consider implementing a detection step during the upload process (scanning mesh geometry or specific texture patterns).\n\nIf potential NSFW content is detected, the uploader should receive a warning: \"NSFW content detected. Please set to Private or apply restrictions.\"\n\nThis protects minors from seeing content and protects creators from accidental bans due to third-party assets.\n\nMoving from reactive moderation to a proactive system (Age-Gate + Upload Detection) would reduce the moderation workload, prevent false bans, and rebuild trust with the creator community.\n\nThank you for considering this feedback.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "694310e9df29376b4d171b18",
+  "imageURLs": [
+    "https://canny-assets.io/images/e19574db8ed08337ecdf1d6b1755ebb9.png",
+    "https://canny-assets.io/images/7f975d4d7043bf492068aac5cdd119e9.png"
+  ],
+  "lastUpdated": 1778979256613,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/694310e9df29376b4d171a58/717521133.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-17T20:22:01.583Z",
+  "subCategoryID": null,
+  "title": "Proposal for a Systematic NSFW Age-Gating System to replace Ban Waves  To the VRChat Team,",
+  "trendingScore": 2925.2621532525263,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": null,
+  "urlName": "proposal-for-a-systematic-nsfw-age-gating-system-to-replace-ban-waves-to-the-vrc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6972fe616cefe3c2389179b4",
+      "alias": "Sable Ladybug",
+      "aliasID": "6972fe616cefe3c2389185d5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/530072ae0f24b6e4ee441af4e0c9aa14.png",
+      "companies": [],
+      "name": "BlueberryGyaru",
+      "urlName": "<redacted>",
+      "voteID": "697302ff6cefe3c23887241c"
+    },
+    {
+      "_id": "61dad581be82a042024dd450",
+      "alias": "Front Otter",
+      "aliasID": "65c36ff1ed6eefce4ca41e7b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8ab31f235cee27abaadf8f71fc2d0c8d.png",
+      "companies": [],
+      "name": "Inexorável",
+      "urlName": "<redacted>",
+      "voteID": "695bdb29f85d59c66dfa66f5"
+    },
+    {
+      "_id": "618b8366199f8f5717c2c61d",
+      "alias": "Empirical Limpet",
+      "aliasID": "69430d8f4927a96e58daf376",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/987cbffd326f24b17f23b3cd9d2c8038.png",
+      "companies": [],
+      "name": "Dragon_Legacy",
+      "urlName": "<redacted>",
+      "voteID": "694310e94927a96e58d9b270"
+    }
+  ]
+}

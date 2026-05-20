@@ -1,0 +1,98 @@
+{
+  "_id": "68d64a4387147ba68e2b1e25",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-05-17T01:14:11.559833Z",
+  "author": {
+    "_id": "62527baf8c368f529a82aebd",
+    "alias": "Tangerine yellow Swift",
+    "aliasID": "65c27bd8ed6eefce4c9b54ea",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2f46b2b3b6e6a453422ea8a23a1f45ae.png",
+    "created": "2022-04-10T06:39:43.297Z",
+    "name": "cubee_cb",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62527baf8c368f529a82aebd",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-09-26T08:09:39.407Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "EDIT:\n\nI have learnt that the \"level skipping\" feature I theorised near the bottom of this post is indeed the intended functionality, and that changing the value of the parameter tells SubMenus with a different value to close themselves.\n\nIt's considered as something like the following:\n\n- \"set this parameter to X when the user opens this SubMenu\"\n\n- \"if this parameter is NOT set to X, close this SubMenu\"\n\n- \"reset this parameter to 0 when the user presses Back in this SubMenu (i.e. excluding in nested SubMenus of this SubMenu)\"\n\nRather than what I understood from the docs:\n\n- \"set this parameter to X when the user opens this SubMenu\"\n\n- \"reset this parameter to 0 when the user presses Back in this SubMenu\"\n\nI've created a pull request to update the docs to clarify this behaviour:\n\nhttps://creators.vrchat.com/avatars/expression-menu-and-controls/#types-of-controls\n\n--- old post:\n\nCreate an avatar with nested SubMenus all setting the same parameter.\n\ni.e.:\n\nRoot Menu\n\n> A (SubMenu, param = 1)\n\n>> B (SubMenu, param = 1)\n\n>>> C (SubMenu, param = 1)\n\n>>>> etc\n\n>>> D (SubMenu, param = 2)\n\n>>>> etc\n\nPressing Back on SubMenu B and C returns to Root Menu instead of A and B respectively.\n\nSetting the parameter to a different value (like SubMenu D) causes the button to lead to the Root Menu instead of its own submenu.\n\nAvatar:\n\nhttps://vrchat.com/home/avatar/avtr_8c4bef0c-3f57-48ef-b2ca-18291d4413f3\n\nFor this avatar I wanted to show images on-screen based on which menus are selected, as a sort of \"file browser\", but once I added the parameters the menus no longer flow as expected. The `friendly_ui.sh` menus still work as expected as they don't have parameters set.\n\nI'm almost certain this is a bug, but it's possible it could be an intended (but undocumented?) level skipping feature?\n\nIn the attached images, you can see the `/mnt/Tera/` directory SubMenu; clicking `Myself.ini` takes the user back to the Root Menu instead of the intended SubMenu.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "68d64a4387147ba68e2b1e96",
+  "imageURLs": [
+    "https://canny-assets.io/images/af6549a150a459ca5a14ae0c71d3836b.png",
+    "https://canny-assets.io/images/76e149cae36b486737a26a1b96fa585d.png"
+  ],
+  "lastUpdated": 1778979437494,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68d64a4387147ba68e2b1e25/1009617446.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-09-26T08:09:39.407Z",
+  "subCategoryID": null,
+  "title": "Radial SubMenus with parameters behave strangely",
+  "trendingScore": 2909.3422899585275,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": "62527baf8c368f529a82aebd",
+  "urlName": "radial-submenus-with-parameters-behave-strangely",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64320355debe2a09d344abff",
+      "alias": "Contemporary Cod",
+      "aliasID": "65c2edb4ed6eefce4cc0e724",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fb92b2b0af7f5811f2573798d55ac73c.png",
+      "companies": [],
+      "name": "peepymou",
+      "urlName": "<redacted>",
+      "voteID": "68d7aabb4f674f1b1e987a55"
+    },
+    {
+      "_id": "62527baf8c368f529a82aebd",
+      "alias": "Tangerine yellow Swift",
+      "aliasID": "65c27bd8ed6eefce4c9b54ea",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2f46b2b3b6e6a453422ea8a23a1f45ae.png",
+      "companies": [],
+      "name": "cubee_cb",
+      "urlName": "<redacted>",
+      "voteID": "68d64a43a8ab97d7d9832197"
+    }
+  ]
+}

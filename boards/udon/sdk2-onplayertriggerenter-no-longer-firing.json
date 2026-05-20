@@ -1,0 +1,113 @@
+{
+  "_id": "69a1f88b0e0de0f7e59a1598",
+  "aiCategories": [
+    "sdk.vrcsdk",
+    "loc.unity-sdk"
+  ],
+  "aiTaggedAt": "2026-05-18T13:52:36.176850Z",
+  "author": {
+    "_id": "5f5813542c652c5ced56b82c",
+    "alias": "Coral reef Silverfish",
+    "aliasID": "65c2c32aed6eefce4cc0164e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c722dbbaa3e728f27cb2f4f252b8d564.png",
+    "created": "2020-09-08T23:27:16.664Z",
+    "name": "nichevo",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f5813542c652c5ced56b82c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-02-27T20:03:23.527Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I'm aware SDK2 is no longer supported, but I wanted to bring this up as it breaks so many great worlds and seems like it may be a straightforward fix.\n\nIn SDK2 worlds, OnPlayerTriggerEnter is no longer working for players when entering a trigger collider. This breaks core functionality in many worlds.\n\nA good example is this classic, \"Fever Dream\": https://vrchat.com/home/world/wrld_4137b868-771b-4dd1-ac76-a138d56dbd41/\n\nSteps to reproduce: Enter the first room and turn the corner. The next area no longer turns on when entering the trigger collider.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69a1f88b0e0de0f7e59a15f8",
+  "imageURLs": [],
+  "lastUpdated": 1779111071627,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69a1f88b0e0de0f7e59a1598/168043904.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-02-27T20:03:23.527Z",
+  "subCategoryID": null,
+  "title": "SDK2: OnPlayerTriggerEnter no longer firing",
+  "trendingScore": 2933.8776996506845,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": "5f5813542c652c5ced56b82c",
+  "urlName": "sdk2-onplayertriggerenter-no-longer-firing",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69374aa34927a96e58089596",
+      "alias": "Formidable Octopus",
+      "aliasID": "69374aa44927a96e5808ca75",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3672d63f1b6f83e5fb66c4ff3a41bd8f.png",
+      "companies": [],
+      "name": "Escortti",
+      "urlName": "<redacted>",
+      "voteID": "69c28e89bcda4ee63218e5a3"
+    },
+    {
+      "_id": "5e78c094bfe2d94779a242ae",
+      "alias": "Aquamarine Dormouse",
+      "aliasID": "65e5654fa6e3ea79dd301172",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/07a5daefc8599ed6a034f779ed35c9d1.png",
+      "companies": [],
+      "name": "Ma",
+      "urlName": "<redacted>",
+      "voteID": "69a2108a804d20e9700d3374"
+    },
+    {
+      "_id": "5f5813542c652c5ced56b82c",
+      "alias": "Coral reef Silverfish",
+      "aliasID": "65c2c32aed6eefce4cc0164e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c722dbbaa3e728f27cb2f4f252b8d564.png",
+      "companies": [],
+      "name": "nichevo",
+      "urlName": "<redacted>",
+      "voteID": "69a1f88b804d20e970d783a1"
+    }
+  ]
+}

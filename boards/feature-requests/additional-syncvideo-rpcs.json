@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "5be83c8f8daf8602cfd33b24",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-18T18:53:27.211727Z",
+  "author": {
+    "_id": "5bd5f088b2cc2563f1ff8001",
+    "alias": "Cautious Rooster",
+    "aliasID": "65d586670129d7ae44434b90",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/c2277e8544d04d77f1db32398cedea42.png",
+    "created": "2018-10-28T17:23:20.646Z",
+    "name": "Giraffe",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5bd5f088b2cc2563f1ff8001",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-11-11T14:28:31.089Z",
+  "deletedAt": null,
+  "details": "Hi there!\n\nI would like to request additional RPCs for the SyncVideo components.\n\n- Delete(X) in order to delete a single item from the playlist. At the moment there is only a clear RPC that deletes the entire playlist\n- OthersBuffered support on Player, so the host is for example able to desync the video for everyone else on purpose. since everyone is synced within the host, there should be a way to substract the latency from the sync time, so it gets more in sync at all (something like the video starts ~300ms later on the host side / sooner on non master side)\n- Option to prevent the playlist from repeating itself after its finished",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d68e4c3e90df157d238",
+  "imageURLs": [],
+  "lastUpdated": 1779129998115,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-11-11T14:28:31.090Z",
+  "subCategoryID": null,
+  "title": "Additional SyncVideo RPCs",
+  "trendingScore": 2551.2755934251454,
+  "updatedAt": "2026-05-18T18:48:18.764654Z",
+  "urlName": "additional-syncvideo-rpcs",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b0790d54e1a39683c52b0c1",
+      "alias": "Developed Goose",
+      "aliasID": "65c2a244ed6eefce4c691a2f",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/eb706078569fe40ddd67a8413df2bcf8.png",
+      "companies": [],
+      "name": "Bill_From_Maintenance",
+      "urlName": "<redacted>",
+      "voteID": "5bf0fec76db2b5471c1cc6ca"
+    },
+    {
+      "_id": "5ae4bb429030c150f3da9a9f",
+      "alias": "Operational Squid",
+      "aliasID": "65ba0a3bed6eefce4cd58b24",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/d936483c4474d0966cd4c1f42f929d38.png",
+      "companies": [],
+      "name": "gatosyocora",
+      "urlName": "<redacted>",
+      "voteID": "5bea2d746db2b5471c194175"
+    },
+    {
+      "_id": "5bd5f088b2cc2563f1ff8001",
+      "alias": "Cautious Rooster",
+      "aliasID": "65d586670129d7ae44434b90",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/c2277e8544d04d77f1db32398cedea42.png",
+      "companies": [],
+      "name": "Giraffe",
+      "urlName": "<redacted>",
+      "voteID": "5be83c8f6db2b5471c186884"
+    }
+  ]
+}

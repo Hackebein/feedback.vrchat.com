@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "5f274137c3a98363c12af57a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:32:36.844809Z",
+  "author": {
+    "_id": "5b07745b55c49e65e1c522d7",
+    "alias": "Still Goat",
+    "aliasID": "65c29c3ced6eefce4c822f54",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/9383debb6758a064248994e1720842c2.png",
+    "created": "2018-05-25T02:26:35.755Z",
+    "name": "Merlin",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5b07745b55c49e65e1c522d7",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-08-02T22:41:59.861Z",
+  "deletedAt": null,
+  "details": "Please add a public string or byte array field to UdonBehaviour that is wrapped in an #if UNITY_EDITOR check that we can use to store per-behaviour data that does not get included in the build. Right now I need this for describing data formats stored in the behaviour to avoid corruption of data. I also need this for tracking modified properties on the behaviour. There are probably more valid use cases for this and at the moment I'll need to create an exported field on each UdonBehaviour which will bloat build sizes as the amount of metadata grows and will slow deserialization performance which will slow world loading and behaviour instantiation for no reason.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b8f57e4c3e90df19b58b1",
+  "imageURLs": [],
+  "lastUpdated": 1779239314650,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-08-02T22:41:59.861Z",
+  "subCategoryID": null,
+  "title": "Add an editor only user data field to UdonBehaviour",
+  "trendingScore": 2641.7375344761103,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "add-an-editor-only-user-data-field-to-udonbehaviour",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5af5ba7f6c3fb30c33346267",
+      "alias": "Loyal Condor",
+      "aliasID": "65c2824fed6eefce4c9f4f97",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/bee7297b9eda4f54e336df4ae9efacb2.png",
+      "companies": [],
+      "name": "AlphaSatanOmega",
+      "urlName": "<redacted>",
+      "voteID": "5f333a173bb16b634572939b"
+    },
+    {
+      "_id": "5adf9074f4f7d975b2df5bf3",
+      "alias": "Gunmetal Mink",
+      "aliasID": "65c52c2ced6eefce4c2a8b48",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fa25ea51b0ffdee81fc3f508e3f239b7.png",
+      "companies": [],
+      "name": "Dukmos",
+      "urlName": "<redacted>",
+      "voteID": "5f285286a3428d79433eeed8"
+    },
+    {
+      "_id": "5b0c6b275853c02d9764fb82",
+      "alias": "Ube Pinniped",
+      "aliasID": "65c2b40fed6eefce4ccccb70",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/6d7fd9a2818f95ae16fbb4be009f1dd8.png",
+      "companies": [],
+      "name": "LastRar",
+      "urlName": "<redacted>",
+      "voteID": "5f2757a9215ca95f1d1db8b7"
+    },
+    {
+      "_id": "5cb356fd14314c03a61797e4",
+      "alias": "Jacinth Wildebeest",
+      "aliasID": "65c28a4bed6eefce4cd29330",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+      "companies": [],
+      "name": "Helpful Helper",
+      "urlName": "<redacted>",
+      "voteID": "5f2742363ae1142a89814985"
+    },
+    {
+      "_id": "5b07745b55c49e65e1c522d7",
+      "alias": "Still Goat",
+      "aliasID": "65c29c3ced6eefce4c822f54",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/9383debb6758a064248994e1720842c2.png",
+      "companies": [],
+      "name": "Merlin",
+      "urlName": "<redacted>",
+      "voteID": "5f274137c3a98363c12af582"
+    }
+  ]
+}

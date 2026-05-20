@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "626131a7f9d6b65879aee0d9",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-17T05:40:33.086072Z",
+  "author": {
+    "_id": "619578ac8dce960dd4b007d9",
+    "alias": "Original Badger",
+    "aliasID": "65c3567bed6eefce4c27d378",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/02c83357335ad1e2a407c3c9244a0211.png",
+    "created": "2021-11-17T21:48:28.203Z",
+    "name": "Shywolf42",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "619578ac8dce960dd4b007d9",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-04-21T10:27:51.587Z",
+  "deletedAt": null,
+  "details": "VRCSDK3-AVATAR-2021.11.24.16.20_Public (old) and\nVRCSDK3-AVATAR-2022.02.16.19.13_Public (current)\nPC build\nObscure error prevented even showing the avatar builder tab\nNullReferenceException: Object reference not set to an instance of an object\nVRC.SDK3.Editor.VRCSdkControlPanelAvatarBuilder3A.ValidateFeatures.ProcessStateMachine (at Assets/VRCSDK/SDK3A/Editor/VRCSdkControlPanelAvatarBuilder3A.cs:44)\nEventually I figured out it was caused by an completely empty layer inside an animationcontroller. That layer didn't even had the default Entry / All States / Exit nodes (no idea how that happened in the first place)\nMaybe add some more NULL checks in the SDK and give the user a meaningful error, so they at least know where to look.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8e9e4c3e90df135e2ea",
+  "imageURLs": [],
+  "lastUpdated": 1778995683490,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-04-21T10:27:51.587Z",
+  "subCategoryID": null,
+  "title": "Empty Avatar Anim Layer breaks SDK Building Tab",
+  "trendingScore": 2729.7554349467637,
+  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "urlName": "empty-avatar-anim-layer-breaks-sdk-building-tab",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "619578ac8dce960dd4b007d9",
+      "alias": "Original Badger",
+      "aliasID": "65c3567bed6eefce4c27d378",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/02c83357335ad1e2a407c3c9244a0211.png",
+      "companies": [],
+      "name": "Shywolf42",
+      "urlName": "<redacted>",
+      "voteID": "626131a7f9d6b65879aee101"
+    }
+  ]
+}

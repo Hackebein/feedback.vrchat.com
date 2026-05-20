@@ -1,0 +1,99 @@
+{
+  "__v": 0,
+  "_id": "655a2808c42180388a7d7035",
+  "aiCategories": [
+    "loc.creator-companion",
+    "sdk.vpm",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T19:21:41.488773Z",
+  "author": {
+    "_id": "5c87baa8e6d1a57be67871ec",
+    "alias": "Thoughtful Hoverfly",
+    "aliasID": "65c27b10ed6eefce4c7d796b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
+    "created": "2019-03-12T13:56:56.814Z",
+    "name": "MrDummy_NL",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c87baa8e6d1a57be67871ec",
+  "board": {
+    "_id": "617b2e52d78bc972ff325a03",
+    "name": "Creator Companion",
+    "urlName": "creator-companion"
+  },
+  "boardID": "617b2e52d78bc972ff325a03",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-11-19T15:21:44.848Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Sometimes when i want start to migrate old projects to VCC (or new version from 2018 builds)\n\nVCC can detect well by removing legacy packages and install new ones. But sometimes we made mistakes or sometimes we have still errors in console.\n\nNot all creators are experienced much in Unity. Especially new creators.\n\nMy idea is add Repair Project button. Because once it's migrated, it will not check again.\n\nWith Repair button, we can do some things:\n\n- VCC can read log file for errors\n\n- VCC can re-check again Assets / Packages folder to see if there are no duplicates or leftovers behind - probably added by accident from creator installing standard old packages.\n\nThis repair process might take bit longer by comparing double files from known packages (Udonsharp map for example).\n\nCan help a lot to solve most problems by removing double files that was not supposed there.\n\nOnly if it's still not fixed because it's not in known database of known packages, VCC can make new project for you and copy only Assets map over (it's most important map) and rebuild it again. Especially if Unity crash a lot when start project - this can happens if user made wrong things or project settings are changed too much after install some packages from Assetsstore.\n\nExample: CyanEmu, the old tool, was still there. Repair function should fix it because you can't delete it in Unity due infinite loop. (see photo) Even re-install SDK didn't let VCC remove it.\n\nJust nice help for less experienced users! That is all!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9b8e4c3e90df13861d5",
+  "imageURLs": [
+    "https://canny.io/images/53051fb9dbda68343961cfd09003cf76.png",
+    "https://canny.io/images/ad50a2c592009dfc06040f6ee46c6efd.png"
+  ],
+  "lastUpdated": 1779217914784,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-11-19T15:21:44.848Z",
+  "subCategoryID": null,
+  "title": "[Feature] Add Repair Button Project",
+  "trendingScore": 2814.446344672464,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "updatedBy": "5c87baa8e6d1a57be67871ec",
+  "urlName": "feature-add-repair-button-project",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": "<redacted>",
+      "voteID": "65741da23d279c6cf46bbaa3"
+    },
+    {
+      "_id": "5c87baa8e6d1a57be67871ec",
+      "alias": "Thoughtful Hoverfly",
+      "aliasID": "65c27b10ed6eefce4c7d796b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
+      "companies": [],
+      "name": "MrDummy_NL",
+      "urlName": "<redacted>",
+      "voteID": "655a2809cebec43716aa33cb"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "__v": 0,
+  "_id": "66bb9423336711ce78a898f4",
+  "aiCategories": [
+    "loc.mobile-app",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-18T19:44:13.157146Z",
+  "author": {
+    "_id": "64165d0cdbd2d80c96dd9c03",
+    "alias": "Indigo Carp",
+    "aliasID": "65c4c2dced6eefce4c2e1a2b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bfb66ae45253879bac7e42252181dbdd.png",
+    "created": "2023-03-19T00:53:32.018Z",
+    "name": "Trudolph",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "64165d0cdbd2d80c96dd9c03",
+  "board": {
+    "_id": "6657990efd693fc2ebdcd62c",
+    "name": "iOS",
+    "urlName": "ios-mobile-beta"
+  },
+  "boardID": "6657990efd693fc2ebdcd62c",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "665799d6fd693fc2ebdda125",
+    "created": "2024-05-29T21:10:46.612Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 157,
+    "urlName": "bug-report"
+  },
+  "categoryID": "665799d6fd693fc2ebdda125",
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "66be20db31370b0263216951",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "6657990efd693fc2ebdcd62c",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2024-08-15T15:38:03.120Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "66bb9423336711ce78a898f4",
+      "private": false,
+      "reactions": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "66be20db31370b026321694b",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-08-13T17:13:07.805Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "What device are you using?\n\nIPhone 14\n\nWhat iOS version is installed?\n\n17.5.1\n\nWhat VRChat Build Number is installed? (You can find this in Testflight)\n\n2024.2.3 (333)\n\nVRC Build 1472\n\nDescription of the Issue:\n\nGoing to the launcher using the \"Leave\" button after being disconnected and attempting to join another instance causes you to be disconnected again\n\nSteps I Took:\n\nTabbed out of VRC Beta app and into the TestFlight app till I was disconnected from VRC because \"Your connection to VRChat was interrupted. Verify connection and try again.\" while the Disconnected message was up, I held down the bottom right \"X\" button to access the \"Leave\" button which I used to get back to the launcher, from the launcher, I made a new instance of the VRC Home and was disconnected while joining\n\nWhat do you expect to happen?\n\nAfter leaving the instance when using the Leave button when disconnected and attempting the join another instance my connection would already have been reset and I wouldn't be disconnected again\n\nWhat happens instead?\n\nYou get disconnected again",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny.io/files/7779adeeef92005bba653148d6610493.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "Connection not resetting after leaving to Launcher",
+      "url": "https://canny.io/files/7779adeeef92005bba653148d6610493.mp4"
+    }
+  ],
+  "ideaID": "680bba00e4c3e90df13942a7",
+  "imageURLs": [],
+  "lastUpdated": 1779133108114,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny.io/images/og/58c62e995865713647a7115d/posts/66bb9423336711ce78a898f4/713137401.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2024-08-15T15:38:03.080Z",
+  "subCategoryID": null,
+  "title": "Connection not resetting after being disconnected then leaving to Launcher",
+  "trendingScore": 2850.5099260496077,
+  "updatedAt": "2026-05-18T19:40:17.299262Z",
+  "updatedBy": null,
+  "urlName": "connection-not-resetting-after-being-disconnected-then-leaving-to-launcher",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64165d0cdbd2d80c96dd9c03",
+      "alias": "Indigo Carp",
+      "aliasID": "65c4c2dced6eefce4c2e1a2b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bfb66ae45253879bac7e42252181dbdd.png",
+      "companies": [],
+      "name": "Trudolph",
+      "urlName": "<redacted>",
+      "voteID": "66bb94233e088c8d6b0e5f63"
+    }
+  ]
+}

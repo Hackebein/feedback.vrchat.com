@@ -1,0 +1,84 @@
+{
+  "__v": 0,
+  "_id": "62207c9d4b98a30c1b1ca19f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T00:59:51.956911Z",
+  "author": {
+    "_id": "5c9b9450ab2cb452a108ea67",
+    "alias": "Purring Parakeet",
+    "aliasID": "65c29560ed6eefce4c820614",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8d47543e0b0dd8e32f2bc0c4a883d6c1.png",
+    "created": "2019-03-27T15:18:40.133Z",
+    "name": "YTJVDCM",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c9b9450ab2cb452a108ea67",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-03-03T08:30:21.318Z",
+  "deletedAt": null,
+  "details": "I'm trying to upload the world with the VRC SDK3 World, but when I pushed the Build & Publish button, that says \"Last built VRChat scene could not be found. Please Test/Compile Full Scene (slow)\".\nConsole didn't display any error or warning when after I clicked publish button, so I don't know why that say the error.\nReprofucibility procedure:\n1. Create new Unity project on Unity 2019.4.31f1\n2. Import VRCSDK3-WORLD-2022.02.16.19.13_Public.unitypackage\n3. Add VRCWorld prefab on the scene\n4. Open VRCSDK Control Panel and login as world publish allowed user\n5. Open \"Builder\" tab and click \"Setup Layers for VRChat\" and \"Set Collision Matrix\"\n6. Click \"Build & Publish for Windows\" button\n7. Error\nI tried versions of VRC SDK are VRCSDK3-WORLD-2021.11.24.16.19_Public and VRCSDK3-WORLD-2022.02.16.19.13_Public.\nBoth failed to upload with the same error.\nBuild & Test button is correctly working and I can see the world that I made on VRChat.\nAnd an avatar can upload.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d9e4c3e90df135b23f",
+  "imageURLs": [
+    "https://canny.io/images/9df5927827958ab9097ba44f5abfc1ea.png"
+  ],
+  "lastUpdated": 1778979211979,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-03-03T08:30:21.318Z",
+  "subCategoryID": null,
+  "title": "[SDK 2022.02.16.19.13] Can't upload the world.",
+  "trendingScore": 2722.743777806387,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "urlName": "sdk-202202161913-cant-upload-the-world",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c9b9450ab2cb452a108ea67",
+      "alias": "Purring Parakeet",
+      "aliasID": "65c29560ed6eefce4c820614",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8d47543e0b0dd8e32f2bc0c4a883d6c1.png",
+      "companies": [],
+      "name": "YTJVDCM",
+      "urlName": "<redacted>",
+      "voteID": "62207c9d4b98a30c1b1ca1c4"
+    }
+  ]
+}

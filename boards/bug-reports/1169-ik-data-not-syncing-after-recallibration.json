@@ -1,0 +1,82 @@
+{
+  "__v": 0,
+  "_id": "6219b99b22ec2d797c79ea68",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-18T21:38:21.657018Z",
+  "author": {
+    "_id": "609a5156d6ab9739b52ac99b",
+    "alias": "Casual Ostrich",
+    "aliasID": "65f03240a6e3ea79ddcd4d01",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/22d2ac26251d5e3334e87f10b688211b.png",
+    "created": "2021-05-11T09:41:42.422Z",
+    "name": "klukule",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "609a5156d6ab9739b52ac99b",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-02-26T05:24:43.785Z",
+  "deletedAt": null,
+  "details": "IK and room-scale movement in general does break after respawning in given instance or recalibrating while in full-body.\nSeems to be similar to tracked issue in open beta branch (https://feedback.vrchat.com/open-beta/p/1167-networked-ik-has-massive-degradation-issues-for-some-people) except this happens to me even on stable branch (and also on open beta).\nSame as with above mentioned issue, everything looks ok locally - room-scale movement, hand, feet etc... IK - but for other people I don't move at all.\nTested with multiple SDK2 and SDK3 based avatars (both with and without stations), with and without full-body, \neverything is working fine until first (re)calibration - rejoining instance seems to help though. Did clean reinstall, switched to open-beta and back etc... still not working properly.\nAll other events sync properly (udon, items etc...) even some positional syncs happen for example when recalibrating I get teleported to proper place, but then IK never works.\nLogs do not contain anything that could be of use even with verbose logging enabled.\nEnvironment Info from logs for context: \n    VRChat Build: 2022.1.1-1169-5543b61fe0-Release\n    Store: Steam\n    Platform: standalonewindows\n    Device Model: System Product Name (System manufacturer)\n    Processor Type: AMD Ryzen Threadripper 3990X 64-Core Processor \n    System Memory Size: 130941MB\n    Operating System: Windows 10  (10.0.19043) 64bit\n    Graphics Device Name: NVIDIA GeForce RTX 2080 Ti\n    Graphics Device Version: Direct3D 11.0 [level 11.1]\n    Graphics Memory Size: 11049MB\n    Supports Audio: True\n    XR Device: Index\n    API Status: Available: (\"pong\")\n    CloudFront Status: Available: (pong)\n    Connected controller: (OpenVR Controller(Knuckles Right) - Right)\n    Connected controller: (OpenVR Controller(Knuckles Left) - Left)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8d7e4c3e90df135ac19",
+  "imageURLs": [],
+  "lastUpdated": 1779140044790,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-02-26T05:24:43.785Z",
+  "subCategoryID": null,
+  "title": "[1169] IK data not syncing after recallibration",
+  "trendingScore": 2722.011076912703,
+  "updatedAt": "2026-05-18T21:36:21.404734Z",
+  "urlName": "1169-ik-data-not-syncing-after-recallibration",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "609a5156d6ab9739b52ac99b",
+      "alias": "Casual Ostrich",
+      "aliasID": "65f03240a6e3ea79ddcd4d01",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/22d2ac26251d5e3334e87f10b688211b.png",
+      "companies": [],
+      "name": "klukule",
+      "urlName": "<redacted>",
+      "voteID": "6219b99c22ec2d797c79eac5"
+    }
+  ]
+}

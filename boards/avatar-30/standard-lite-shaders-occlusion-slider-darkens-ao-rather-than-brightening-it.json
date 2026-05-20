@@ -1,0 +1,138 @@
+{
+  "__v": 0,
+  "_id": "66a206849624cd94f12e5883",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-17T16:03:23.559609Z",
+  "author": {
+    "_id": "611af66c7270e9731d0f2dab",
+    "alias": "Mighty Cobra",
+    "aliasID": "65c28a47ed6eefce4cd1cfa8",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6017a1f329e51943ef155c1811884c31.png",
+    "created": "2021-08-16T23:36:12.257Z",
+    "name": "Hiyu",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "611af66c7270e9731d0f2dab",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2024-07-25T08:02:12.386Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In Unity's Standard shader, the _OcclusionStrength parameter multiplies the \"influence\" of the Occlusion texture on ambient light. Standard Lite's occlusion slider currently multiplies the texture itself, meaning that AO has 100% influence when the slider is 0, rather than 0% like in regular Standard.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9f5e4c3e90df13923bb",
+  "imageURLs": [
+    "https://canny.io/images/9d14671772bf3932485f4ba79bda3dbe.gif"
+  ],
+  "lastUpdated": 1779032731171,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 5,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66a206849624cd94f12e5883/593794376.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 5,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2024-07-25T08:02:12.386Z",
+  "subCategoryID": null,
+  "title": "Standard Lite shader's Occlusion slider darkens AO rather than brightening it",
+  "trendingScore": 2895.2706487566275,
+  "updatedAt": "2026-05-17T15:47:38.307074Z",
+  "updatedBy": null,
+  "urlName": "standard-lite-shaders-occlusion-slider-darkens-ao-rather-than-brightening-it",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b49f3609668c109029111f1",
+      "alias": "Blizzard blue Landfowl",
+      "aliasID": "65c2b073ed6eefce4c567423",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7b34336969ce2401da6ed830baa5a4bc.png",
+      "companies": [],
+      "name": "Deskclaw",
+      "urlName": "<redacted>",
+      "voteID": "685f0ce816069571f6d97923"
+    },
+    {
+      "_id": "61b573f0c461684bc2879e26",
+      "alias": "Scientific Rook",
+      "aliasID": "65e0d15ba6e3ea79dd7aa941",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/57924b172bb11d7eae7633f1156f7e39.png",
+      "companies": [],
+      "name": "zero8034",
+      "urlName": "<redacted>",
+      "voteID": "677818b9a367fa6392bde471"
+    },
+    {
+      "_id": "5c03473992eef65b2bb3cc2c",
+      "alias": "Outstanding Kingfisher",
+      "aliasID": "65c27129ed6eefce4ce48dac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/230b695b3f1227c6e53121c1f0c0bec1.png",
+      "companies": [],
+      "name": "Groxxy",
+      "urlName": "<redacted>",
+      "voteID": "66b6603df66f1f693a6be048"
+    },
+    {
+      "_id": "5f61e24d763a9b7077455ad5",
+      "alias": "Systematic Dolphin",
+      "aliasID": "65d375280129d7ae44398e20",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/809fd23b46c77c96ba845e0670ac9092.png",
+      "companies": [],
+      "name": "Markcreator",
+      "urlName": "<redacted>",
+      "voteID": "66a206c7318f0a32522d2c3d"
+    },
+    {
+      "_id": "611af66c7270e9731d0f2dab",
+      "alias": "Mighty Cobra",
+      "aliasID": "65c28a47ed6eefce4cd1cfa8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6017a1f329e51943ef155c1811884c31.png",
+      "companies": [],
+      "name": "Hiyu",
+      "urlName": "<redacted>",
+      "voteID": "66a20684318f0a32521ec1bd"
+    }
+  ]
+}

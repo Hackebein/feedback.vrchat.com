@@ -1,0 +1,98 @@
+{
+  "__v": 0,
+  "_id": "5b3d28f622bcc9318696e6fc",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T17:20:23.810964Z",
+  "author": {
+    "_id": "5ae802a43ca0e56248e5cf8b",
+    "alias": "Willow Alligator",
+    "aliasID": "65c28a90ed6eefce4cdca6b1",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/3261bbd9c890e80d1a82d275d52a6a70.png",
+    "created": "2018-05-01T06:01:08.732Z",
+    "name": "CyanLaser",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ae802a43ca0e56248e5cf8b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-07-04T20:07:18.825Z",
+  "deletedAt": null,
+  "details": "If you have a graph with a synced variable, the variable information is sent to new clients before the graph and data storage is properly setup.\nThe only way for the variable to sync properly in the beginning is to add the Data storage manually and add the synced variables.\n\n\n\n\n[Exception:7/4/2018 11:57:34 AM] NullReferenceException: Object reference not set to an instance of an object\nVRC_DataStorageInternal.Resize (Int32 NHFHGFNHFNI)\nVRC_DataStorageInternal.DBCMADCKBED (.VRC_DataStorageInternal OFHIBFBKJOJ, .IPCLCCIBLFJ NFKHOHACFPN)\nVRC_DataStorageInternal.OnPhotonSerializeView (.IPCLCCIBLFJ NFKHOHACFPN, KFMEHNAOFOB NDGOKAKIEMI)\nSystem.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture)\nRethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.\nSystem.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture)\nSystem.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters)\nPhotonView.MOGBEHDAEHF (UnityEngine.Component JFCJEGLDHOA, .IPCLCCIBLFJ NFKHOHACFPN, KFMEHNAOFOB NDGOKAKIEMI)\nPhotonView.LNAGKGAKAPL (UnityEngine.Component JFCJEGLDHOA, .IPCLCCIBLFJ NFKHOHACFPN, KFMEHNAOFOB NDGOKAKIEMI)\nPhotonView.DeserializeView (.IPCLCCIBLFJ NFKHOHACFPN, KFMEHNAOFOB NDGOKAKIEMI)\nDNOFMECMDDO.IMMDCAIOIIG (System.Object[] EIKHAJMGCNN, .PHHEGILGLEA FLMPLEJDNDB, Int32 CPLJHFLHDCN, Int16 PGBLJNDANKJ)\nDNOFMECMDDO.OnEvent (ExitGames.Client.Photon.EventData CACPGEIJHIA)\nExitGames.Client.Photon.PeerBase.DeserializeMessageAndCallback (System.Byte[] inBuff)\nExitGames.Client.Photon.EnetPeer.DispatchIncomingCommands ()\nExitGames.Client.Photon.PhotonPeer.DispatchIncomingCommands ()\nPhotonHandler.Update ()\n",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d58e4c3e90df157868e",
+  "imageURLs": [],
+  "lastUpdated": 1779210577662,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-07-04T20:07:18.826Z",
+  "subCategoryID": null,
+  "title": "Photon sends synced variables before data storage is setup",
+  "trendingScore": 2532.3230005834234,
+  "updatedAt": "2026-05-19T17:10:22.873328Z",
+  "urlName": "photon-sends-synced-variables-before-data-storage-is-setup",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a7ac88bf5a5c52c08064fb9",
+      "alias": "Prairie sand Hedgehog",
+      "aliasID": "65ba02f2ed6eefce4c1872a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b2a514509aeb0aa28d6466fcc4134aa4.png",
+      "companies": [],
+      "name": "PhaxeNor",
+      "urlName": "<redacted>",
+      "voteID": "5b42cc8d52f19ff980ed020d"
+    },
+    {
+      "_id": "5ae802a43ca0e56248e5cf8b",
+      "alias": "Willow Alligator",
+      "aliasID": "65c28a90ed6eefce4cdca6b1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3261bbd9c890e80d1a82d275d52a6a70.png",
+      "companies": [],
+      "name": "CyanLaser",
+      "urlName": "<redacted>",
+      "voteID": "5b3d28f652f19ff980ec06bc"
+    }
+  ]
+}

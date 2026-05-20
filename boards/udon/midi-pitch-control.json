@@ -1,0 +1,99 @@
+{
+  "__v": 0,
+  "_id": "606fbe7ce47120541800ac4d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T21:27:04.255276Z",
+  "author": {
+    "_id": "604c33fbbe941f7ca5b0515c",
+    "alias": "Organic Wolverine",
+    "aliasID": "65cb4821ed6eefce4c9cee9e",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/cdd1321c8dca1c75fe8bf4826e7911e7.png",
+    "created": "2021-03-13T03:39:39.429Z",
+    "name": "gladeare",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "604c33fbbe941f7ca5b0515c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 810,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2021-04-09T02:39:56.382Z",
+  "deletedAt": null,
+  "details": "We already have access to MIDI notes and control changes, but not pitch bend (status message 224+channel) yet. It would be great to have this as well.\nHowever, I would suggest either using single byte precision (0-127) by default, as the full range of 163834 pitch values will only make an \"on pitch change\" method fire hundreds of thousands of times per second.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb88de4c3e90df134a85f",
+  "imageURLs": [],
+  "lastUpdated": 1779247167326,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2021-04-09T02:39:56.382Z",
+  "subCategoryID": null,
+  "title": "MIDI pitch control",
+  "trendingScore": 2875.7013992609127,
+  "updatedAt": "2026-05-20T03:20:16.647879Z",
+  "urlName": "midi-pitch-control",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6799bfe7f8e397b0872abe33",
+      "alias": "Heather Gibbon",
+      "aliasID": "6799bfe7546b2d4224533c36",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8629b557cf517001b4f02a40646b60cc.png",
+      "companies": [],
+      "name": "TheYellingBird",
+      "urlName": "<redacted>",
+      "voteID": "67aa748eafacf378f15e8add"
+    },
+    {
+      "_id": "604c33fbbe941f7ca5b0515c",
+      "alias": "Organic Wolverine",
+      "aliasID": "65cb4821ed6eefce4c9cee9e",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/cdd1321c8dca1c75fe8bf4826e7911e7.png",
+      "companies": [],
+      "name": "gladeare",
+      "urlName": "<redacted>",
+      "voteID": "606fbe7ce47120541800ac54"
+    }
+  ]
+}

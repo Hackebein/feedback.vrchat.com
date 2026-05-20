@@ -1,0 +1,91 @@
+{
+  "__v": 0,
+  "_id": "64b817255dc96c091b65b353",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T17:39:53.230460Z",
+  "author": {
+    "_id": "614de6bab1382e4d89857763",
+    "alias": "Nectar Carp",
+    "aliasID": "65c26da3ed6eefce4c4d084e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6cf418d9248470489f40fbcccc246755.png",
+    "created": "2021-09-24T14:54:50.474Z",
+    "name": "Puppet~",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "614de6bab1382e4d89857763",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 965,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-07-19T17:02:29.958Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "As the title says. I was changing a bit of my code and tried out using Canvas.enabled. To my surprise, the virtual keyboard doesn't appear when clicking on the input field on that canvas anymore.\n\nI had to switch to GameObject.SetActive again to solve this issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb989e4c3e90df137e5d5",
+  "imageURLs": [],
+  "lastUpdated": 1779039016756,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-07-19T17:02:29.958Z",
+  "subCategoryID": null,
+  "title": "Canvas.enabled causes Virtual Keyboard to not appear",
+  "trendingScore": 2794.651728548781,
+  "updatedAt": "2026-05-17T17:30:26.183781Z",
+  "updatedBy": null,
+  "urlName": "canvasenabled-causes-virtual-keyboard-to-not-appear",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "614de6bab1382e4d89857763",
+      "alias": "Nectar Carp",
+      "aliasID": "65c26da3ed6eefce4c4d084e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6cf418d9248470489f40fbcccc246755.png",
+      "companies": [],
+      "name": "Puppet~",
+      "urlName": "<redacted>",
+      "voteID": "64b817265dc96c091b65b37f"
+    }
+  ]
+}

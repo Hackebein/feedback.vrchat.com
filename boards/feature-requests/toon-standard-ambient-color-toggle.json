@@ -1,0 +1,142 @@
+{
+  "_id": "694cfdb33c5b7bf94d116acd",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-17T16:37:16.788278Z",
+  "author": {
+    "_id": "622893dc14e3795af3d9ed30",
+    "alias": "Aquamarine Gayal",
+    "aliasID": "65c2ce8bed6eefce4c1e378a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e8a5cdbfd8bb667db29c25aab69957a5.png",
+    "created": "2022-03-09T11:47:40.949Z",
+    "name": "TheCreationKing",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "622893dc14e3795af3d9ed30",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-25T09:02:43.063Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I'm trying to move my older avatars to use VRChat shaders now that toon standard is out, but the shadow colors are too influenced by world lighting.\n\nMy shadows on my avatar using poiyomi are near pitch black, for a more jarring character.\n\nI had finished replicating the settings as close as I could, I even make custom shadow ramps to get better shading control. but the shadows on toon standard are always affected by the world's ambient color. \n\nUnfortunately there isn't a way in toon standard to change how much the shadow is tinted by ambient color, resulting in the same shadow ramp being much brighter and washed out in any map that doesn't have pitch black set for the ambient color. This also makes it harder to adjust your avatar in unity when you don't know this, as the default unity scene has ambient color set to the skybox color. Which is not the same lighting experience as most maps in VRChat.\n\nAttached, a picture of shading on a piece of clothing with a single tone light ramp going to black on toon standard and poiyomi under the same lighting conditions.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "694cfdb33c5b7bf94d116ba5",
+  "imageURLs": [
+    "https://canny-assets.io/images/424e347cbc8b4753c5359678cfc04258.png",
+    "https://canny-assets.io/images/c5affc594d527d87869bbd31a5de7c91.png"
+  ],
+  "lastUpdated": 1779035299097,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/694cfdb33c5b7bf94d116acd/167473296.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-25T09:02:43.063Z",
+  "subCategoryID": null,
+  "title": "Toon Standard - 'Ambient color' toggle",
+  "trendingScore": 2923.2536451001124,
+  "updatedAt": "2026-05-17T16:30:16.054690Z",
+  "updatedBy": null,
+  "urlName": "toon-standard-ambient-color-toggle",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f5eec74c160f3643296c32b",
+      "alias": "Fairy tale Falcon",
+      "aliasID": "65c27af3ed6eefce4c78ca5d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/baa5dadb863d1c67ae4699b2e3a4e7fe.png",
+      "companies": [],
+      "name": "Cattuccino",
+      "urlName": "<redacted>",
+      "voteID": "695301e6f85d59c66d52071f"
+    },
+    {
+      "_id": "60ddc5e45db01551ccc9b252",
+      "alias": "Familiar Mole",
+      "aliasID": "6608ceefe5d26962aac278ec",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/06d05f0bcafdb974aed230854914709e.png",
+      "companies": [],
+      "name": "snakescythe",
+      "urlName": "<redacted>",
+      "voteID": "6952a5c0f85d59c66d80598e"
+    },
+    {
+      "_id": "5f2d586c7f57433511432c5a",
+      "alias": "Binding Cricket",
+      "aliasID": "65c28339ed6eefce4cc2dcf3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bcc8d2a0d1fbd1e2d9f8149098a69a48.png",
+      "companies": [],
+      "name": "Avislime",
+      "urlName": "<redacted>",
+      "voteID": "694f07d9f85d59c66dc231d5"
+    },
+    {
+      "_id": "641042524acac4451abfb265",
+      "alias": "Pink Landfowl",
+      "aliasID": "66056bfaa63714bcb349b1ef",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cb2dcf18f0ca4d7aee7b55a203146c14.png",
+      "companies": [],
+      "name": "Freddykiller100",
+      "urlName": "<redacted>",
+      "voteID": "694d10e8f85d59c66da9c995"
+    },
+    {
+      "_id": "66b59376a7c34428de181436",
+      "alias": "Vivacious Deer",
+      "aliasID": "66b59376f66f1f693aed11d8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8daa3c68261d84ed24bd7e8044aadb55.png",
+      "companies": [],
+      "name": "Insect Thirteen",
+      "urlName": "<redacted>",
+      "voteID": "694d03f3f85d59c66d262a50"
+    },
+    {
+      "_id": "622893dc14e3795af3d9ed30",
+      "alias": "Aquamarine Gayal",
+      "aliasID": "65c2ce8bed6eefce4c1e378a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e8a5cdbfd8bb667db29c25aab69957a5.png",
+      "companies": [],
+      "name": "TheCreationKing",
+      "urlName": "<redacted>",
+      "voteID": "694cfdb3f85d59c66dedae6e"
+    }
+  ]
+}

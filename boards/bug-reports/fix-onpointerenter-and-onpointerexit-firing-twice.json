@@ -1,0 +1,177 @@
+{
+  "__v": 0,
+  "_id": "6855f1176a822ff13b300501",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-17T01:06:28.057257Z",
+  "author": {
+    "_id": "63041449ca78f944b0f786b6",
+    "alias": "Semantic Harrier",
+    "aliasID": "65c2b491ed6eefce4cde88ac",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/aa80e160252678ce124f958cf5847c33.png",
+    "created": "2022-08-22T23:42:01.626Z",
+    "name": "zSkull162",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "63041449ca78f944b0f786b6",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "685aaa2417445a59bb24027c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-06-24T13:37:40.883Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6855f1176a822ff13b300501",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "685aaa2417445a59bb240270",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-06-20T23:39:03.358Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Using an EventTrigger component on a UI element, and telling it to SendCustomEvent (string) to an UdonBehaviour will cause the event to fire twice.\n\nI tested this by having an Event Trigger on one button sent _OnPointerEnter to an UdonSharpBehaviour named \"HoverTest,\" and a second button send _OnPointerExit to the same UdonSharpBehaviour.\n\nBoth of those methods had Debug.Logs in them, and when testing in unity with Clientsim, I only saw the messages once, as expected. However, testing in-VRChat, the logs showed up doubled for every event that was sent. I added some code to toggle a cube initially, and I thought these events just didn't work in VRChat, but it was actually getting enabled and disabled in the same frame, due to the duplicated events.\n\nThis is a very annoying bug(?), as it means any Udon you make related to these events will have to account for the event being sent twice. This makes it really annoying to create toggles or incrementing counters based on hovering a UI element.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/8824d7427a243287da0151c34dd0dd44.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "wtf_why_vrchat",
+      "url": "https://canny-assets.io/files/8824d7427a243287da0151c34dd0dd44.mp4"
+    }
+  ],
+  "ideaID": "6855f1176a822ff13b300545",
+  "imageURLs": [
+    "https://canny-assets.io/images/06959a4bf1d191150be1895e76f40a5b.png",
+    "https://canny-assets.io/images/4a526cc1cd3b5a1f083f1a552a82a1e1.png",
+    "https://canny-assets.io/images/19dcdd290e567f944802533792550916.png"
+  ],
+  "lastUpdated": 1778979335227,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6855f1176a822ff13b300501/1304837738.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2025-06-24T13:37:40.775Z",
+  "subCategoryID": null,
+  "title": "Fix OnPointerEnter and OnPointerExit firing twice",
+  "trendingScore": 2896.044627888216,
+  "updatedAt": "2026-05-17T00:58:54.125799Z",
+  "updatedBy": null,
+  "urlName": "fix-onpointerenter-and-onpointerexit-firing-twice",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "651ba2be0465ec09811bc965",
+      "alias": "Straightforward Reptile",
+      "aliasID": "65cd17b5ed6eefce4c4b7bcf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/67395072326186f7d0bf0205576eab85.png",
+      "companies": [],
+      "name": "-lolmaxz-",
+      "urlName": "<redacted>",
+      "voteID": "685b4d8916069571f68f14df"
+    },
+    {
+      "_id": "5dbc830874589a45d149fc09",
+      "alias": "Mauve Tyrannosaurus",
+      "aliasID": "65c26dfded6eefce4c5cbbde",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cc9f46677dc7895b3c3e23413128bdc7.png",
+      "companies": [],
+      "name": "Blue Cat",
+      "urlName": "<redacted>",
+      "voteID": "685630e216069571f628ea52"
+    },
+    {
+      "_id": "61e213c82471d52f31248f99",
+      "alias": "Peach puff Moose",
+      "aliasID": "66d0b0967d32abb6cad5b8d8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/334e0517a1e1a6c9c77c68fc6dddc43c.png",
+      "companies": [],
+      "name": "deblob123456789",
+      "urlName": "<redacted>",
+      "voteID": "6855f87b16069571f6485f5f"
+    },
+    {
+      "_id": "63041449ca78f944b0f786b6",
+      "alias": "Semantic Harrier",
+      "aliasID": "65c2b491ed6eefce4cde88ac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/aa80e160252678ce124f958cf5847c33.png",
+      "companies": [],
+      "name": "zSkull162",
+      "urlName": "<redacted>",
+      "voteID": "6855f11716069571f62a7c23"
+    }
+  ]
+}

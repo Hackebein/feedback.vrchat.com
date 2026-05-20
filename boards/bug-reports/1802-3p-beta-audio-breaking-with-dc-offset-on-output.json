@@ -1,0 +1,88 @@
+{
+  "_id": "69c89abde973eddc175598ce",
+  "aiCategories": [
+    "loc.in-world",
+    "audio.voice",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-05-17T08:54:40.663001Z",
+  "author": {
+    "_id": "5c704db9ec7a9a4d36d196d2",
+    "alias": "Excess Mockingbird",
+    "aliasID": "65c294b8ed6eefce4c68643f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ebdd132ebdec12b90435aa3f0f1dd735.png",
+    "created": "2019-02-22T19:30:01.518Z",
+    "name": "Plaster",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5c704db9ec7a9a4d36d196d2",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-03-29T03:21:33.978Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Gotta mention, this is the first time this has happened and I have absolutely no idea how to even replicate it, but I'd still like to report it in case this does happen to others too.\n\nThis happened in a club world, everything seemed to be fine, until suddenly the audio cut out. \n\nI thought my headset started acting up, but system sounds still came through, and checking my audio meters, sure enough, VRC was maxing out the meters (adjusting it made the typical DC offset-ish sound, hard to explain tbh).\n\nI did try setting the in-game master volume to zero, that didn't help and the output was still maxed out. Rejoining the world also didn't help, I also noticed that during loading the output was still maxed out for some reason. I would've thought that would stop or at least pause it but nope.\n\nOnly a full restart of the game has fixed it. \n\nI can't 100% call this a bug report as this just randomly happened for the first time ever, in a somewhat public club world setting with no avatar blocking at all, so there's a chance it could've been a malicious avatar but I'm gonna guess that's unlikely to permanently break the audio output...\n\nAlso the 3p-beta is slightly behind open-beta so maybe it is fixed there now too? I really don't know...\n\nWhat I did find is strange log entries when the audio breaking happened, around line 150174. Maybe that could be related to the audio breaking?\n\nI forgot I had the launch command in so the log file is massive, to the point where neither Gist nor Pastebin would take it. \n\nhttps://github.com/Plastermaster/vrc_logs/blob/main/output_log_2026-03-28_23-42-49.txt\n\nName: output_log_2026-03-28_23-42-49.txt\n\nSize: 18052832 bytes : 17 MiB\n\nSHA256: 56c7baca2d4dffa049f824343dd8e12fcfcd373936844bef8948d2cf4010e359",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "69c89abee973eddc17559920",
+  "imageURLs": [
+    "https://canny-assets.io/images/b3cfb4377b6fa08b62e48427072cb516.png",
+    "https://canny-assets.io/images/9634fa2ec2a7bbd1c5ecd0ca38f12007.png"
+  ],
+  "lastUpdated": 1779007859714,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69c89abde973eddc175598ce/235139807.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-03-29T03:21:33.978Z",
+  "subCategoryID": null,
+  "title": "[1802] (3p-beta) Audio breaking (with DC offset on output)",
+  "trendingScore": 2935.141715333669,
+  "updatedAt": "2026-05-17T08:53:10.180736Z",
+  "updatedBy": "5c704db9ec7a9a4d36d196d2",
+  "urlName": "1802-3p-beta-audio-breaking-with-dc-offset-on-output",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c704db9ec7a9a4d36d196d2",
+      "alias": "Excess Mockingbird",
+      "aliasID": "65c294b8ed6eefce4c68643f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ebdd132ebdec12b90435aa3f0f1dd735.png",
+      "companies": [],
+      "name": "Plaster",
+      "urlName": "<redacted>",
+      "voteID": "69c89abebcda4ee632c1df49"
+    }
+  ]
+}

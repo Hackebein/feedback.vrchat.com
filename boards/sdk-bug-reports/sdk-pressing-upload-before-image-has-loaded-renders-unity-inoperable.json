@@ -1,0 +1,81 @@
+{
+  "__v": 0,
+  "_id": "5aed736bc49eda47bdebad03",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T17:13:57.903534Z",
+  "author": {
+    "_id": "5a0220ed7add6132ccf19b36",
+    "alias": "Tricky Guppy",
+    "aliasID": "65c356afed6eefce4c2f6db1",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/5269b49c97934bbbdb3db084da772964.png",
+    "created": "2017-11-07T21:09:01.861Z",
+    "name": "HardLight670",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a0220ed7add6132ccf19b36",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2018-05-05T09:03:39.024Z",
+  "deletedAt": null,
+  "details": "When updating a world or avatar, pressing the upload button before the current preview image has been downloaded will generate an exception. This will softlock the loading bar as well as the entirety of Unity itself.",
+  "error": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d53e4c3e90df1576d50",
+  "imageURLs": [],
+  "lastUpdated": 1779210489080,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5aed736bc49eda47bdebad03/1319461303.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2018-05-05T09:03:39.025Z",
+  "subCategoryID": null,
+  "title": "[SDK] Pressing Upload Before Image Has Loaded Renders Unity Inoperable",
+  "trendingScore": 2523.0327950625046,
+  "updatedAt": "2026-05-19T17:10:22.873328Z",
+  "urlName": "sdk-pressing-upload-before-image-has-loaded-renders-unity-inoperable",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5a0220ed7add6132ccf19b36",
+      "alias": "Tricky Guppy",
+      "aliasID": "65c356afed6eefce4c2f6db1",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5269b49c97934bbbdb3db084da772964.png",
+      "companies": [],
+      "name": "HardLight670",
+      "urlName": "<redacted>",
+      "voteID": "5aed736b71b7fe31ac36ec32"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "5dec9e76b1994340b13e99a6",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-19T19:57:10.870007Z",
+  "author": {
+    "_id": "5ca58f33f168ce2d27362477",
+    "alias": "Diverse Manatee",
+    "aliasID": "65c45e09ed6eefce4cc33ef3",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/c164bbabe8f0bf114b6965cec8344e25.png",
+    "created": "2019-04-04T04:59:31.546Z",
+    "name": "kden",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ca58f33f168ce2d27362477",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2019-12-08T06:55:50.801Z",
+  "deletedAt": null,
+  "details": "■Version:\n+ VRCSDK-2019.12.06.19.26_Public\n+ Unity 20198.4.13f\n\n■Description of the bug:\nCannot add Actions in VRC_Trigger when VRC_AudioBank attached in same object.\n\n■Steps to reproduce (how did you encounter the bug?):\n1. add some object in empty scene\n2. Attach VRC_Trigger and VRC_AudioBank to that object\n3. Add OnInteract option to VRC_Trigger\n4. If click \"+\" button under the list, Raise \"SecurityException: Unknown type: System.Object\"\n\n■Any extra files? (output logs, screenshots):\n\nerror log paste below:\nSecurityException: Unknown type: System.Object\n  at VRCSDK2.VRC_Serialization+NetworkSurrogateSelector.GetSurrogate (System.Type type, System.Runtime.Serialization.StreamingContext context, System.Runtime.Serialization.ISurrogateSelector& selector) [0x00022] in <cb6e57278ceb44adb717845689e0dd87>:0 \n  at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize (System.Type objectType, System.Runtime.Serialization.ISurrogateSelector surrogateSelector, System.Runtime.Serialization.StreamingContext context, System.Runtime.Serialization.Formatters.Binary.SerObjectInfoInit serObjectInfoInit, System.Runtime.Serialization.IFormatterConverter converter, System.Runtime.Serialization.SerializationBinder binder) [0x00032] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.Serialize (System.Type objectType, System.Runtime.Serialization.ISurrogateSelector surrogateSelector, System.Runtime.Serialization.StreamingContext context, System.Runtime.Serialization.Formatters.Binary.SerObjectInfoInit serObjectInfoInit, System.Runtime.Serialization.IFormatterConverter converter, System.Runtime.Serialization.SerializationBinder binder) [0x00006] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.WriteArray (System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo objectInfo, System.Runtime.Serialization.Formatters.Binary.NameInfo memberNameInfo, System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo memberObjectInfo) [0x0004d] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write (System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo objectInfo, System.Runtime.Serialization.Formatters.Binary.NameInfo memberNameInfo, System.Runtime.Serialization.Formatters.Binary.NameInfo typeNameInfo) [0x00056] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize (System.Object graph, System.Runtime.Remoting.Messaging.Header[] inHeaders, System.Runtime.Serialization.Formatters.Binary.__BinaryWriter serWriter, System.Boolean fCheck) [0x001d3] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize (System.IO.Stream serializationStream, System.Object graph, System.Runtime.Remoting.Messaging.Header[] headers, System.Boolean fCheck) [0x0006e] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize (System.IO.Stream serializationStream, System.Object graph, System.Runtime.Remoting.Messaging.Header[] headers) [0x00000] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize (System.IO.Stream serializationStream, System.Object graph) [0x00000] in <e1319b7195c343e79b385cd3aa43f5dc>:0 \n  at VRCSDK2.VRC_Serialization.ParameterEncoder (System.Object[] parameters) [0x00034] in <cb6e57278ceb44adb717845689e0dd87>:0 \n  at VRCSDK2.VRC_AudioBank.ProvideEvents () [0x00040] in <cb6e57278ceb44adb717845689e0dd87>:0 \n  at VRCSDK2.VRC_TriggerEditor+<>c__DisplayClass27_0.<RenderTriggerEventsEditor>b__2 (UnityEngine.Rect buttonRect, UnityEditorInternal.ReorderableList list) [0x00143] in G:\\Project\\Unity\\VRCW2018-orbitalbase\\Assets\\VRCSDK\\Dependencies\\VRChat\\Editor\\Components\\VRC_TriggerEditor.cs:565 \n  at UnityEditorInternal.ReorderableList+Defaults.DrawFooter (UnityEngine.Rect rect, UnityEditorInternal.ReorderableList list) [0x0012e] in C:\\buildslave\\unity\\build\\Editor\\Mono\\GUI\\ReorderableList.cs:115 \n  at UnityEditorInternal.ReorderableList.DoListFooter (UnityEngine.Rect footerRect) [0x0003a] in C:\\buildslave\\unity\\build\\Editor\\Mono\\GUI\\ReorderableList.cs:643 \n  at UnityEditorInternal.ReorderableList.DoLayoutList () [0x00085] in C:\\buildslave\\unity\\build\\Editor\\Mono\\GUI\\ReorderableList.cs:397 \n  at VRCSDK2.VRC_TriggerEditor.RenderTriggerEventsEditor (UnityEditor.SerializedProperty triggerProperty, System.Int32 idx) [0x000b7] in G:\\Project\\Unity\\VRCW2018-orbitalbase\\Assets\\VRCSDK\\Dependencies\\VRChat\\Editor\\Components\\VRC_TriggerEditor.cs:602 \n  at VRCSDK2.VRC_TriggerEditor.RenderTriggers () [0x0014f] in G:\\Project\\Unity\\VRCW2018-orbitalbase\\Assets\\VRCSDK\\Dependencies\\VRChat\\Editor\\Components\\VRC_TriggerEditor.cs:223 \n  at VRCSDK2.VRC_TriggerEditor.OnInspectorGUI () [0x002d5] in G:\\Project\\Unity\\VRCW2018-orbitalbase\\Assets\\VRCSDK\\Dependencies\\VRChat\\Editor\\Components\\VRC_TriggerEditor.cs:157 \n  at UnityEditor.InspectorWindow.DoOnInspectorGUI (System.Boolean rebuildOptimizedGUIBlock, UnityEditor.Editor editor, System.Boolean wasVisible, UnityEngine.Rect& contentRect) [0x0010b] in C:\\buildslave\\unity\\build\\Editor\\Mono\\Inspector\\InspectorWindow.cs:1647 \nUnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)\nUnityEngine.DebugLogHandler:LogException(Exception, Object)\nUnityEngine.Logger:LogException(Exception, Object)\nUnityEngine.Debug:LogException(Exception)\nUnityEditor.InspectorWindow:DoOnInspectorGUI(Boolean, Editor, Boolean, Rect&) (at C:\\buildslave\\unity\\build\\Editor\\Mono\\Inspector\\InspectorWindow.cs:1654)\nUnityEditor.InspectorWindow:DrawEditor(Editor[], Int32, Boolean, Boolean&, Rect&) (at C:\\buildslave\\unity\\build\\Editor\\Mono\\Inspector\\InspectorWindow.cs:1495)\nUnityEditor.InspectorWindow:DrawEditors(Editor[]) (at C:\\buildslave\\unity\\build\\Editor\\Mono\\Inspector\\InspectorWindow.cs:1330)\nUnityEditor.InspectorWindow:OnGUI() (at C:\\buildslave\\unity\\build\\Editor\\Mono\\Inspector\\InspectorWindow.cs:655)\nSystem.Reflection.MonoMethod:InternalInvoke(Object, Object[], Exception&)\nSystem.Reflection.MonoMethod:Invoke(Object, BindingFlags, Binder, Object[], CultureInfo)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nUnityEditor.HostView:Invoke(String, Object) (at C:\\buildslave\\unity\\build\\Editor\\Mono\\HostView.cs:342)\nUnityEditor.HostView:Invoke(String) (at C:\\buildslave\\unity\\build\\Editor\\Mono\\HostView.cs:336)\nUnityEditor.HostView:InvokeOnGUI(Rect, Rect) (at C:\\buildslave\\unity\\build\\Editor\\Mono\\HostView.cs:302)\nUnityEditor.DockArea:DrawView(Rect, Rect, Boolean, Boolean, Boolean) (at C:\\buildslave\\unity\\build\\Editor\\Mono\\GUI\\DockArea.cs:361)\nUnityEditor.DockArea:OldOnGUI() (at C:\\buildslave\\unity\\build\\Editor\\Mono\\GUI\\DockArea.cs:320)\nUnityEngine.Experimental.UIElements.IMGUIContainer:DoOnGUI(Event, Matrix4x4, Rect, Boolean) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\IMGUIContainer.cs:244)\nUnityEngine.Experimental.UIElements.IMGUIContainer:HandleIMGUIEvent(Event, Matrix4x4, Rect) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\IMGUIContainer.cs:438)\nUnityEngine.Experimental.UIElements.IMGUIContainer:HandleIMGUIEvent(Event) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\IMGUIContainer.cs:421)\nUnityEngine.Experimental.UIElements.IMGUIContainer:HandleEvent(EventBase) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\IMGUIContainer.cs:401)\nUnityEngine.Experimental.UIElements.EventDispatcher:ProcessEvent(EventBase, IPanel) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\EventDispatcher.cs:511)\nUnityEngine.Experimental.UIElements.EventDispatcher:Dispatch(EventBase, IPanel, DispatchMode) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\EventDispatcher.cs:307)\nUnityEngine.Experimental.UIElements.BaseVisualElementPanel:SendEvent(EventBase, DispatchMode) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\Panel.cs:176)\nUnityEngine.Experimental.UIElements.UIElementsUtility:DoDispatch(BaseVisualElementPanel) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\UIElementsUtility.cs:245)\nUnityEngine.Experimental.UIElements.UIElementsUtility:ProcessEvent(Int32, IntPtr) (at C:\\buildslave\\unity\\build\\Modules\\UIElements\\UIElementsUtility.cs:68)\nUnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr) (at C:\\buildslave\\unity\\build\\Modules\\IMGUI\\GUIUtility.cs:179)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d96e4c3e90df1589af6",
+  "imageURLs": [],
+  "lastUpdated": 1779218198702,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5dec9e76b1994340b13e99a6/83007760.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2019-12-08T06:55:50.801Z",
+  "subCategoryID": null,
+  "title": "VRC_Trigger SecurityException with VRC_AudioBank",
+  "trendingScore": 2611.919983255733,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "vrctrigger-securityexception-with-vrcaudiobank",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e2810899d61280f8db1ce03",
+      "alias": "Near Lemming",
+      "aliasID": "6606cffbd90e505763236635",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/5f6669d2342c4586ed81d6ba54cc076a.jpg",
+      "companies": [],
+      "name": "こうよう",
+      "urlName": "<redacted>",
+      "voteID": "5e28108a3a21aa1a19ffd20d"
+    },
+    {
+      "_id": "5ca58f33f168ce2d27362477",
+      "alias": "Diverse Manatee",
+      "aliasID": "65c45e09ed6eefce4cc33ef3",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/c164bbabe8f0bf114b6965cec8344e25.png",
+      "companies": [],
+      "name": "kden",
+      "urlName": "<redacted>",
+      "voteID": "5dec9e76b1994340b13e99ae"
+    }
+  ]
+}

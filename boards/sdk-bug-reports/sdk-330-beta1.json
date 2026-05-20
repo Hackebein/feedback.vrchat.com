@@ -1,0 +1,142 @@
+{
+  "__v": 0,
+  "_id": "64f635111442320978c2a4fb",
+  "aiCategories": [
+    "sdk.vrcsdk",
+    "loc.unity-sdk"
+  ],
+  "aiTaggedAt": "2026-05-17T15:14:26.773706Z",
+  "author": {
+    "_id": "62df3a55f6fa434679f836fa",
+    "alias": "Patient Marlin",
+    "aliasID": "65c279afed6eefce4c4712f2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c79c3e3bfa68539a3c62feb4eda8b2cb.png",
+    "created": "2022-07-26T00:50:29.183Z",
+    "name": "｜KitKat｜",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "62df3a55f6fa434679f836fa",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-09-04T19:50:41.670Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If an editor that implements IVRCSDKBuildRequestedCallback crashes in the OnBuildRequested method it triggers the build aborted popup.\n\nHowever, when the popup is dismissed by pressing OK the build still proceeds.\n\nMinimum code needed to reproduce the issue: https://pastebin.com/RcDfbsvp",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb99ee4c3e90df1381c5c",
+  "imageURLs": [
+    "https://canny.io/images/299d468f32497d7750fa4c148c9bb886.png",
+    "https://canny.io/images/22312df626b1aa9df4ddacee85fe7e5c.png"
+  ],
+  "lastUpdated": 1779026896597,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-09-04T19:50:41.670Z",
+  "subCategoryID": null,
+  "title": "[SDK 3.3.0-beta.1]",
+  "trendingScore": 2802.6600395945566,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": null,
+  "urlName": "sdk-330-beta1",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "635d305fbaba6f5b64ec33e6",
+      "alias": "Pure Stingray",
+      "aliasID": "65c36fe4ed6eefce4ca2258a",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ab64864882d8c097000ee3a3c754c024.png",
+      "companies": [],
+      "name": "__BT__",
+      "urlName": "<redacted>",
+      "voteID": "64f7681eb139663da29b2d37"
+    },
+    {
+      "_id": "5eeacfe40ffd5674cdf895d1",
+      "alias": "Driftwood Mammal",
+      "aliasID": "65c28190ed6eefce4c8020fa",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ad615942837faff8bdddfcb7f46c7744.png",
+      "companies": [],
+      "name": "Zhakami Zhako",
+      "urlName": "<redacted>",
+      "voteID": "64f6747424aeaa09508a34c0"
+    },
+    {
+      "_id": "62def8ed6d6050449f8807e6",
+      "alias": "Alloy Moth",
+      "aliasID": "66ba474d3e088c8d6b712b98",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/829fc4545d1d5ffb4d4220e6ff251204.png",
+      "companies": [],
+      "name": "KirsiSnowFox",
+      "urlName": "<redacted>",
+      "voteID": "64f640cdda33bf09810199c3"
+    },
+    {
+      "_id": "5a40c0b4a5dec273c489729a",
+      "alias": "Architectural Ox",
+      "aliasID": "65ba01c7ed6eefce4cfabca4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/45ee61ba71c6515bed294ae8b937f242.png",
+      "companies": [],
+      "name": "Isida",
+      "urlName": "<redacted>",
+      "voteID": "64f63c51ca59fb09b087a168"
+    },
+    {
+      "_id": "600fb02b74c07f10d183cfda",
+      "alias": "Celadon Emu",
+      "aliasID": "65c2c460ed6eefce4ce3f0a7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9f5546a56d0d6f91ab76fa0ad17d45a3.png",
+      "companies": [],
+      "name": "Duin",
+      "urlName": "<redacted>",
+      "voteID": "64f6355f24aeaa09506d549e"
+    },
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c79c3e3bfa68539a3c62feb4eda8b2cb.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": "<redacted>",
+      "voteID": "64f635111442320978c2a548"
+    }
+  ]
+}

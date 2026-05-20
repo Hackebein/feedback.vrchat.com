@@ -1,0 +1,86 @@
+{
+  "__v": 0,
+  "_id": "5ebc087754b8941da657e117",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars",
+    "platforms.cross-platform",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-19T19:58:38.402249Z",
+  "author": {
+    "_id": "5ebc087654b8941da657e112",
+    "alias": "Cadmium red Whippet",
+    "aliasID": "65c3853ded6eefce4cebd2a4",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/e50d0a14d9484190f37950b683fdcc50.jpg",
+    "created": "2020-05-13T14:47:18.914Z",
+    "name": "Michael Stone",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ebc087654b8941da657e112",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-13T14:47:19.050Z",
+  "deletedAt": null,
+  "details": "Whitelisted component: RotationConstraint\nis being removed when I build for android but not when I build for PC. It is in the list of Whitelisted components with no indication that it shouldn't work.\nUnity Version: 2018.4.20f\nSDK Version: 2020.05.12.10.37_Public\nSteps to recreate: Add a RotationConstraint to any avatar bone in Unity whilst building for Android\nResult: RotationConstraint is removed by the client\nExpectation: It is NOT removed so I can constrain the bone",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dace4c3e90df158f852",
+  "imageURLs": [
+    "https://canny.io/images/0e96585f8f9efaa2861997266f60bf19.png"
+  ],
+  "lastUpdated": 1779218201696,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5ebc087754b8941da657e117/2109604558.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-13T14:47:19.050Z",
+  "subCategoryID": null,
+  "title": "RotationConstraint Removed by Client on Android",
+  "trendingScore": 2628.6383175947467,
+  "updatedAt": "2026-05-19T19:18:56.732690Z",
+  "urlName": "rotationconstraint-removed-by-client-on-android",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ebc087654b8941da657e112",
+      "alias": "Cadmium red Whippet",
+      "aliasID": "65c3853ded6eefce4cebd2a4",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/e50d0a14d9484190f37950b683fdcc50.jpg",
+      "companies": [],
+      "name": "Michael Stone",
+      "urlName": "<redacted>",
+      "voteID": "5ebc087754b8941da657e11f"
+    }
+  ]
+}

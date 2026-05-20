@@ -1,0 +1,103 @@
+{
+  "__v": 0,
+  "_id": "67b516b0851309bfe009efe9",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-05-18T13:42:59.923969Z",
+  "author": {
+    "_id": "67b42fac11175d147111b7b8",
+    "alias": "Fit Armadillo",
+    "aliasID": "67b42facb324a96209809129",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/92db7c04f7561feeb1cdac2474dc0874.png",
+    "created": "2025-02-18T06:58:52.420Z",
+    "name": "Nepherti",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "67b42fac11175d147111b7b8",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 453,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-02-18T23:24:32.885Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When swapping Pins, the cam takes on the properties set on the Pin. However, when utilizing the Dolly between Pins, the Paths attempt to recreate the cam settings, breaking the Path. \n\nWould it be possible to create an alternative mode to Paths that links a singular Path behavior to a Pin similarly to a standalone Pin's behavior? \n\nThe intention would be that swapping Pins would allow for the same 3 real-time camera Paths (i.e. the \"Multi\" Streaming setting) just attached to each individual Pin without breaking the Path.\n\nUse Case #1 \n\nA streamed event or podcast that has one rotating Path around the MC on Pin 1, a slow in-and-out Path activated on Pin 2, and a basic static cam for Pin 3. \n\nUse Case #2\n\nA game show that has 3 preset Paths set up that show players on different parts of a map that can be swapped between via Pins. \n\nTo go even further, if Import Paths were implemented, a production team could theoretically preset all their Paths in advance for moment-to-moment swapping across each Pin.\n\nHopefully this makes sense and will be considered for the more real-time event-oriented creators.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bba47e4c3e90df13a181e",
+  "imageURLs": [],
+  "lastUpdated": 1779111015901,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67b516b0851309bfe009efe9/1420626516.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-02-18T23:24:32.885Z",
+  "subCategoryID": null,
+  "title": "[Dolly] [1583] Standalone Path linked to a single Pin",
+  "trendingScore": 2880.0719141565314,
+  "updatedAt": "2026-05-18T13:31:19.739125Z",
+  "updatedBy": null,
+  "urlName": "dolly-1583-standalone-path-linked-to-a-single-pin",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fb75a5959b6fc72ce0fdad9",
+      "alias": "Venetian red Lark",
+      "aliasID": "65c2756eed6eefce4c9639cf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6868435ffca9bbafe94debcd967141f8.png",
+      "companies": [],
+      "name": "StephenVR",
+      "urlName": "<redacted>",
+      "voteID": "67d204c9b324a962091085de"
+    },
+    {
+      "_id": "67b42fac11175d147111b7b8",
+      "alias": "Fit Armadillo",
+      "aliasID": "67b42facb324a96209809129",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/92db7c04f7561feeb1cdac2474dc0874.png",
+      "companies": [],
+      "name": "Nepherti",
+      "urlName": "<redacted>",
+      "voteID": "67b516b1b324a962093c940e"
+    }
+  ]
+}

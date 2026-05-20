@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "6348e38392499b5348cb7e23",
+  "aiCategories": [
+    "loc.loading-screen",
+    "client"
+  ],
+  "aiTaggedAt": "2026-05-18T23:38:33.318209Z",
+  "author": {
+    "_id": "6269acca32d4d06910514543",
+    "alias": "Pale Ox",
+    "aliasID": "65c4cef0ed6eefce4cf14f24",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/2c0c647e720c13e150da6c03b64e2004.png",
+    "created": "2022-04-27T20:51:22.215Z",
+    "name": "EMBEЯ",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6269acca32d4d06910514543",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-14T04:20:19.651Z",
+  "deletedAt": null,
+  "details": "I'll preface by saying I play on Quest, so I have no idea if this issue occurs on the PC side.\nI'm one of the unlucky few who has DNS/IPv6 issues with VRChat (my ISP doesn't allow us to adjust our router settings, there's nothing I can do), and my invites & Social page won't update in real time unless I briefly disconnect from WiFi and allow the game to reload itself. I've found this to be a more successful fix than simply closing out and restarting every time. That is a problem in itself, and HAS been a problem pretty much since launch, but it was manageable until this new UI update. The game just won't reconnect at all when the connection gets interrupted. It'll give me the \"reconnecting\" prompt, but nothing will come of it. I've tried this in both the main game and in the beta (before AND after I updated it), and still nothing. Please fix this.\nRepro steps: Turn your WiFi off and back on again while VRC is open.\nExpected: You get a \"Reconnecting...\" prompt, and reload into your home world.\nActual: You get a \"Reconnecting...\" prompt, and get stuck in limbo, unable to move or open your menu. All you can do at this point is close out of the game.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb944e4c3e90df13709c9",
+  "imageURLs": [],
+  "lastUpdated": 1779147072412,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-14T04:20:19.651Z",
+  "subCategoryID": null,
+  "title": "Game no longer automatically reloads when connection is interrupted.",
+  "trendingScore": 2755.313822213546,
+  "updatedAt": "2026-05-18T23:32:24.192376Z",
+  "urlName": "game-no-longer-automatically-reloads-when-connection-is-interrupted",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6347aa6eca92f179980d9c41",
+      "alias": "Fuchsia Ostrich",
+      "aliasID": "65ecba63a6e3ea79dda957ca",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/82587d6b56f365a3033bfd46e22e726c.png",
+      "companies": [],
+      "name": "Protonyx",
+      "urlName": "<redacted>",
+      "voteID": "634a1f069a858148036efd67"
+    },
+    {
+      "_id": "6269acca32d4d06910514543",
+      "alias": "Pale Ox",
+      "aliasID": "65c4cef0ed6eefce4cf14f24",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/2c0c647e720c13e150da6c03b64e2004.png",
+      "companies": [],
+      "name": "EMBEЯ",
+      "urlName": "<redacted>",
+      "voteID": "6348e38392499b5348cb7e51"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "__v": 0,
+  "_id": "65822f2d82b91fa7d4fbb1c3",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-17T15:15:59.295568Z",
+  "author": {
+    "_id": "6047b7b81733fc2d0a96e495",
+    "alias": "Manual Catshark",
+    "aliasID": "65c2eebeed6eefce4cdcd8fb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/708dcbea36bcfeb07ce1b4470cc11fa2.png",
+    "created": "2021-03-09T18:00:24.475Z",
+    "name": "Lumin_",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6047b7b81733fc2d0a96e495",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-12-20T00:02:53.193Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When using the new SDK option to capture a world thumbnail from the scene camera, changing the FOV of the 'TempCamera' asset that is generated is not reflected in the captured thumbnail. The same is true of changing the scene camera FOV.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb9c7e4c3e90df1388754",
+  "imageURLs": [
+    "https://canny.io/images/280d388c9cc64f95667ed2df9298ded6.png"
+  ],
+  "lastUpdated": 1779026981350,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-12-20T00:02:53.193Z",
+  "subCategoryID": null,
+  "title": "Capture Thumbnail Camera does not respond to FOV Change",
+  "trendingScore": 2816.5505764927293,
+  "updatedAt": "2026-05-17T14:11:34.881079Z",
+  "updatedBy": "6047b7b81733fc2d0a96e495",
+  "urlName": "capture-thumbnail-camera-does-not-respond-to-fov-change",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6047b7b81733fc2d0a96e495",
+      "alias": "Manual Catshark",
+      "aliasID": "65c2eebeed6eefce4cdcd8fb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/708dcbea36bcfeb07ce1b4470cc11fa2.png",
+      "companies": [],
+      "name": "Lumin_",
+      "urlName": "<redacted>",
+      "voteID": "65822f2d3d279c6cf4e6df7d"
+    }
+  ]
+}

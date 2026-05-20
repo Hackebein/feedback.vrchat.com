@@ -1,0 +1,90 @@
+{
+  "__v": 0,
+  "_id": "5ecca46569a521372efc420c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-16T20:29:09.972516Z",
+  "author": {
+    "_id": "5ecca464976f3c3765c6cafb",
+    "alias": "Exuberant Mackerel",
+    "aliasID": "65ea5ed3a6e3ea79dd50dc94",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/acfab6ddd691a1b23b0ea4408490f1b8.jpg",
+    "created": "2020-05-26T05:08:52.957Z",
+    "name": "Sally Slade",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ecca464976f3c3765c6cafb",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-05-26T05:08:53.087Z",
+  "deletedAt": null,
+  "details": "Version: VRCSDK3-UDON-2020.05.12.10.33_Public\nDescription of the bug:\nI'm unable to use the Material[] Variable. It seems to only yield a \"null\" output. I notice also the \"size\" parameter is missing, as compared to the functioning Float[] Variable, for example. Making the Material[] variable public, and explicitly setting the size and populating the list DID work, however.\nSteps to reproduce (how did you encounter the bug?):\nTo reproduce, create a Material[] variable node, and plug it into to anything expecting an array of materials.\nAny extra files? (output logs, screenshots): I've attached a screenshot, here is the corresponding Udon copy/paste:\nAO1X227bRhT8FWOfucLeuWvAD0mdFkaRpqgTvRSGsJezAVuaLHhJKij+sjz0k/oLXVoXxxajsKlbOG4gQhBX1Go4M2fO4Z/v/1ihN7bsAR3/vEKxL8sf7GU6Qc/eQNUtzqoOGus7lKG+CGlZciYU5AwLoj0WXBusA+E4OsGcijRIKtLFv9Vt0RV1hY5X6Hd0jIUmM5KhZfrItJ6RqwxVdYBXZ6dt+uOLDMWyfrs5Qxa88YQB1gY0FkFTrAUN2EYZnLAgZYzoYr3DfMB+vcdVdgv/d9At5rYprCthh54QEFEahxkf0MegsQ1cYnA6uOA8VWBH0Cuht+ip2kOP0G38d5GtUF8V3fKF+wV8N19zvUJF1Xa28nB2io6HDduuKarXm6/R+bLt4HJ2fr2YHV22vm7KwmVHc2jahOxEzMjwyo6+6cuub+Ckgr5rbJkd/di7svDfw/Jl/StUJy7PrfRSUcMFEG3ecS2lV5ZiYmKS0XPALpqACbc+EBuAR4Ku7tL5ariFZ9XrooKfoArQQDNbLNpE8qVNFils2S4WH1z0fLP6pGnscrFY38+8TipstZik8r4W/EYLpsSeFlMUfkfSvtRzwyy1OHhqsDDKYZNrjY33kRrLVW5ZuvD+pUUDs5/zs7uSrCv0RfW87ls4rd9WO2qpZAqoU5jklKci5QobwjXmhnjIk8AumBFqJdtRy/Uetf9ZkU5R5nCRGvWF1yiEmFMCLuUmFcMbx9ZqgiGCzbXMuQX+MUOcd7a5yWtOAtUxCuy5TFZwJGLnosfOOseZY4y5fCyv1Y5MlbNPWCH4qJVUCkvCY7KCoEmroIakD5ATMALY5+a1EDY5AAOTiQevGTbaCpyQG+G9SJH1CSvIkYz4P3hhS+VHM3nH8aT9R8JC7zjWdKTesg+OBxOi/6JMqQ2uef1HyJ7WdQm2ul9o36bmDI8M18EJ5ZbR05hynrJlM4KkgZazsaIYnVEmJdvBGUXx/dqYkmrXM0o6iIiC5F7hwKPFwlKV5pkcsAFvgySO5+Ae0piy8cs1zffrFnJvThlvNROIPtxqxBf/aBC9VWmRYkqSHUUgDGudTr2zKhKjGIHw91rNjt5JW49U0jDKbYc68rXLDF3mASb5y6Z//A1mzOfbZ+GbeXvK0/XBaeqrzwefL3fMPjxbPVK3X1z9BQ==\nThank you!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7dade4c3e90df158feb3",
+  "imageURLs": [
+    "https://canny.io/images/5a86de9c1c7e2d178bedc827744e6846.png"
+  ],
+  "lastUpdated": 1779239270127,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-05-26T05:08:53.087Z",
+  "subCategoryID": null,
+  "title": "Material[] variable node missing \"size\" parameter, creates null",
+  "trendingScore": 2630.43807629349,
+  "updatedAt": "2026-05-20T01:09:21.351827Z",
+  "urlName": "material-variable-node-missing-size-parameter-creates-null",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5ecca464976f3c3765c6cafb",
+      "alias": "Exuberant Mackerel",
+      "aliasID": "65ea5ed3a6e3ea79dd50dc94",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/acfab6ddd691a1b23b0ea4408490f1b8.jpg",
+      "companies": [],
+      "name": "Sally Slade",
+      "urlName": "<redacted>",
+      "voteID": "5ecca46569a521372efc4214"
+    }
+  ]
+}

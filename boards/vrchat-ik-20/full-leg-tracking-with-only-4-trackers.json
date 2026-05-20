@@ -1,0 +1,161 @@
+{
+  "__v": 0,
+  "_id": "629fded15b28f821ad23d323",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-05-17T07:14:05.823514Z",
+  "author": {
+    "_id": "5a33f59b7f2ea83fad4a5ecd",
+    "alias": "Managerial Hornet",
+    "aliasID": "65ba01b9ed6eefce4cf95885",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6c42ba2180b6e8f867d767868364be73.png",
+    "created": "2017-12-15T16:17:31.916Z",
+    "name": "ArtGhostt",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5a33f59b7f2ea83fad4a5ecd",
+  "board": {
+    "_id": "621946996d11764c11ffcf01",
+    "name": "VRChat IK 2.0",
+    "urlName": "vrchat-ik-20"
+  },
+  "boardID": "621946996d11764c11ffcf01",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-06-07T23:27:13.556Z",
+  "deletedAt": null,
+  "details": "This is a new configuration that I thought could be a good midpoint between a 3-tracker setup and a 5-tracker setup (while potentially giving very similar results to 5 trackers).\n\nInstead of having 5 trackers (feet, lower legs, and hip), it could be possible to achieve a similar result by removing the hip tracker (feet and upper legs) and moving the lower-leg trackers to the thighs. Since bones don't change their size, this would calculate the position of the hip based on the location of both thigh trackers.\nThis is currently not possible as one of the thigh trackers is always assigned to the hip.\n\nBenefits:\n- One less tracker is needed;\n- Lower legs are also fully tracked (since it is a bone being connected by 2 fully tracked bones, therefore IK would only need to connect them);\n- Less occlusion (as the thighs are less occluded overall by bending the hip and by the arms).\n\nDrawbacks:\n- Hip's X-axis rotation information is missing (ideally it would be calculated based on the proximity of its simulated location and the headset's).\n\nBelow is a mockup of what the tracker's positions would visually look like.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8fce4c3e90df1361b7d",
+  "imageURLs": [
+    "https://canny.io/images/6e1eadbd734f7b0d41c4c231c274197b.png"
+  ],
+  "lastUpdated": 1779001775113,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 8,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 8,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-06-07T23:27:13.556Z",
+  "subCategoryID": null,
+  "title": "Full leg-tracking with only 4 trackers",
+  "trendingScore": 2741.1893337667784,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "urlName": "full-leg-tracking-with-only-4-trackers",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62d07ff970b9890ba9d9f133",
+      "alias": "Anonymous Haddock",
+      "aliasID": "66170801e5d26962aa304fa6",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "opperautist",
+      "urlName": "<redacted>",
+      "voteID": "62d07ffdc00b4e0bacd4608c"
+    },
+    {
+      "_id": "5c03473992eef65b2bb3cc2c",
+      "alias": "Outstanding Kingfisher",
+      "aliasID": "65c27129ed6eefce4ce48dac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/230b695b3f1227c6e53121c1f0c0bec1.png",
+      "companies": [],
+      "name": "Groxxy",
+      "urlName": "<redacted>",
+      "voteID": "62aa3cbcc4ef840bab307841"
+    },
+    {
+      "_id": "5fb743a0c8260f7b8c751a63",
+      "alias": "Worldwide Chickadee",
+      "aliasID": "65c2ce66ed6eefce4c19dfe9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c97b0f6b7e79676a7a97d6f82214c84a.png",
+      "companies": [],
+      "name": "dmx512",
+      "urlName": "<redacted>",
+      "voteID": "62a7ec080969ce0bb0eab002"
+    },
+    {
+      "_id": "607e3425f8830c53e7ed3eb2",
+      "alias": "Revolutionary Ladybug",
+      "aliasID": "65c290d6ed6eefce4cd5e816",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Jackboog21",
+      "urlName": "<redacted>",
+      "voteID": "62a34496696a240b975dcd23"
+    },
+    {
+      "_id": "5f8a26770aaa28611fedd6b6",
+      "alias": "Average Loon",
+      "aliasID": "65c28318ed6eefce4cbdb922",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
+      "companies": [],
+      "name": "Faxmashine",
+      "urlName": "<redacted>",
+      "voteID": "629fe46fde0b4d0b7263f3d8"
+    },
+    {
+      "_id": "5f2da10f8fc2c972dd48f692",
+      "alias": "Probable Basilisk",
+      "aliasID": "65c2a20bed6eefce4c60be08",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/24c495494b052a150e258e72b6ebac26.png",
+      "companies": [],
+      "name": "NamBo",
+      "urlName": "<redacted>",
+      "voteID": "629fe2805db7ea0b61a9fad3"
+    },
+    {
+      "_id": "629fe162e824560b5c81e813",
+      "alias": "Scientific Salamander",
+      "aliasID": "66ab1c4f318f0a325257f8b4",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "MrLagsAlot",
+      "urlName": "<redacted>",
+      "voteID": "629fe16d8766350b729073d5"
+    },
+    {
+      "_id": "5a33f59b7f2ea83fad4a5ecd",
+      "alias": "Managerial Hornet",
+      "aliasID": "65ba01b9ed6eefce4cf95885",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c42ba2180b6e8f867d767868364be73.png",
+      "companies": [],
+      "name": "ArtGhostt",
+      "urlName": "<redacted>",
+      "voteID": "629fded15b28f821ad23d341"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "697a484c3318defe75ef7f16",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.world-building"
+  ],
+  "aiTaggedAt": "2026-05-17T07:19:03.562040Z",
+  "author": {
+    "_id": "697a31e36cefe3c238920ba2",
+    "alias": "Mammoth Turtle",
+    "aliasID": "697a31e46cefe3c2389275df",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/21ee423adb2115c8a1214f5cd1836a3d.png",
+    "created": "2026-01-28T15:57:23.408Z",
+    "name": "ItzuCrafty",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "697a31e36cefe3c238920ba2",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-01-28T17:33:00.629Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Repro Steps:\n\n1. Open Blender.\n\n2. Create a cube.\n\n3. Give the cube a material with a high Emission value (e.g., 1000).\n\n4. Export the cube to an FBX file.\n\n5. Import the FBX file into a Unity VRChat world project.\n\n6. Upload the world to VRChat.\n\n7. Join the world using the standard VRChat client.\n\n8. Open any VRChat UI (Main Menu, Radial Menu, etc.), while looking at the cube.\n\nExpected: The cube should always render behind the VRChat Menu.\n\nActual: The cube is partly visible in front of the VRChat Menu.\n\nI have already done this, the world is available under the following link:\n\nhttps://vrchat.com/home/launch?worldId=wrld_fae43d7d-cdb4-4499-be65-9a0958188e6c\n\n- This issue does not occur when creating and assigning a material within unity directly.\n\n- I have seen this issue occur on menus, such as the Debug Menu, Radial Menu, Main Menu (large and small) and the Face Mirror.\n\n- I have tested the issue with multiple users and PCs and also on Android, however the issue seems to only be happening on PC.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "697a484c3318defe75ef7f63",
+  "imageURLs": [
+    "https://canny-assets.io/images/6613d49e7aad56fc44bd6b0bce3ebf86.png",
+    "https://canny-assets.io/images/65adc0cd0862bc5cfb1e57dcc3c791ea.png",
+    "https://canny-assets.io/images/c1a3b0ea1d7f875f7f0494e0d577fb0d.png"
+  ],
+  "lastUpdated": 1779001824702,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/697a484c3318defe75ef7f16/1440299649.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-01-28T17:33:00.629Z",
+  "subCategoryID": null,
+  "title": "Imported FBX Objects with Emissive Materials Render in Front of VRChat UI",
+  "trendingScore": 2926.6547555089332,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "updatedBy": null,
+  "urlName": "imported-fbx-objects-with-emissive-materials-render-in-front-of-vrchat-ui",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "697a31e36cefe3c238920ba2",
+      "alias": "Mammoth Turtle",
+      "aliasID": "697a31e46cefe3c2389275df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/21ee423adb2115c8a1214f5cd1836a3d.png",
+      "companies": [],
+      "name": "ItzuCrafty",
+      "urlName": "<redacted>",
+      "voteID": "697a484c6cefe3c2384866d5"
+    }
+  ]
+}

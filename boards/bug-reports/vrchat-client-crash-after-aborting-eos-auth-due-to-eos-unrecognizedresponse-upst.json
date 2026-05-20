@@ -1,0 +1,145 @@
+{
+  "_id": "694c9b28359c67e026744647",
+  "aiCategories": [
+    "loc.login",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-05-17T07:15:47.348878Z",
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "694cd697348b2c010bc82857",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2025-12-25T06:15:51.187Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/824b51a499a53225cd1ace7a23813734.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2025-12-25_06-08-04",
+          "url": "https://canny-assets.io/files/824b51a499a53225cd1ace7a23813734.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "694c9b28359c67e026744647",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "2025.12.25 06:08:05 - 06:13:55 (UTC), second outage, slightly different output logs. Same results, VRChat client crashed instead of going into offline testing mode.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-25T02:02:16.641Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Be affected by Steam's weekly Thursday maintenance / Epic Online Services outage, but due to current circumstances, no response from Steam about invalid auth ticket for the VRChat client to display: https://status.vrchat.com/incidents/blsl5gj2bdqv\n\n2. Try to login to VRChat, and fail in a login loop.\n\n**Expected behavior:** Be sent to the error world in offline testing mode, after login loop.\n\n**Actual behavior:** After waiting in the login loop, the client crashed.\n\n```\n\n2025.12.25 01:53:06 Warning    -  [EOSManager] [Warning][LogEOS] Error response received from backend. Response is not JSON. ServiceName=[EOSAuth], OperationName=[TokenGrant], Url=[<Redacted>], HttpStatus=[503], CorrId=[EOS-hDM5zZjb1Eilk-Y2FW_oGQ-xpQk30xZAUSL5w3HwTkISA]\n\n2025.12.25 01:53:06 Warning    -  [EOSManager] [Warning][LogEOSAnalytics] Unable to get the client auth token. Last result: EOS_UnrecognizedResponse.\n\n2025.12.25 01:53:06 Warning    -  [EOSManager] [Warning][LogEOS] SDK Config Product Update Request Failed, Result Code: EOS_UnrecognizedResponse, Retrying after 58.433483 seconds\n\n2025.12.25 01:53:06 Error      -  [EOSManager] EOS Login Failed. ResultCode: 12\n\n2025.12.25 01:53:06 Error      -  [EOSManager] Aborting EOS auth\n\n2025.12.25 01:53:06 Debug      -  [EOSManager] EOS LoginUser took '462.97'.\n\n2025.12.25 01:53:06 Warning    -  [Behaviour] Failed to join instance 'wrld_ee094638-9514-47b4-a5ac-83b810d7ff38:81029~private(usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c)~region(eu)' due to 'You are in offline testing mode, and cannot travel to online worlds.\n\nIf you are trying to use VRChat normally, please ensure you start VRChat by starting launch.exe. You may need to update your shortcut.'\n\n```\n\nThe pop-up for offline testing mode never appeared, instead VRChat just immediately crashed.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/aeac3b3886cb7011bbd9ab68e9aa08c0.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2025-12-25_01-45-06",
+      "url": "https://canny-assets.io/files/aeac3b3886cb7011bbd9ab68e9aa08c0.txt"
+    }
+  ],
+  "ideaID": "694c9b29359c67e0267446e7",
+  "imageURLs": [],
+  "lastUpdated": 1779001782979,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/694c9b28359c67e026744647/1377283833.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2025-12-25T02:02:16.641Z",
+  "subCategoryID": null,
+  "title": "VRChat Client crash after aborting EOS auth due to EOS_UnrecognizedResponse / upstream Steam auth issues",
+  "trendingScore": 2921.7052780676304,
+  "updatedAt": "2026-05-17T07:10:37.048693Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "vrchat-client-crash-after-aborting-eos-auth-due-to-eos-unrecognizedresponse-upst",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "<redacted>",
+      "voteID": "694c9b28f85d59c66d390082"
+    }
+  ]
+}

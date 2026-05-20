@@ -1,0 +1,112 @@
+{
+  "__v": 0,
+  "_id": "5e0d2958e58e11214c642292",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-19T20:52:05.389551Z",
+  "author": {
+    "_id": "5cb356fd14314c03a61797e4",
+    "alias": "Jacinth Wildebeest",
+    "aliasID": "65c28a4bed6eefce4cd29330",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+    "created": "2019-04-14T15:51:25.268Z",
+    "name": "Helpful Helper",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5cb356fd14314c03a61797e4",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 966,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2020-01-01T23:20:56.763Z",
+  "deletedAt": null,
+  "details": "In the picture below Udon misinterprets VRC_SceneDescriptor.SpawnOrientation as VRCSDKBaseVRC and SceneDescriptorSpawnOrientation and treats them as two seperate parameters. ¯\\_(ツ)_/¯",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680b7d9de4c3e90df158b308",
+  "imageURLs": [
+    "https://canny.io/images/9ea9b93d1dbd753f5f09949edb38ddea.png"
+  ],
+  "lastUpdated": 1779223402423,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2020-01-01T23:20:56.763Z",
+  "subCategoryID": null,
+  "title": "Udon confuses seperator characters with VRC component name",
+  "trendingScore": 2610.7893656083656,
+  "updatedAt": "2026-05-19T20:44:12.314029Z",
+  "urlName": "udon-confuses-seperator-characters-with-vrc-component-name",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e0020f058cb00477077c1a6",
+      "alias": "Absinthe green Falcon",
+      "aliasID": "65c2823fed6eefce4c9cb3db",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c2126f8f1a986520dc0515a82d81c11e.png",
+      "companies": [],
+      "name": "Foorack",
+      "urlName": "<redacted>",
+      "voteID": "5e13a3059a093866f4de17d8"
+    },
+    {
+      "_id": "5a4aaf7f758fa46d131cd36b",
+      "alias": "Increased Tuna",
+      "aliasID": "65c2a2c2ed6eefce4c7bc4ac",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/46fec521507d6ac601567eee8c1b6dda.png",
+      "companies": [],
+      "name": "GotoFinal",
+      "urlName": "<redacted>",
+      "voteID": "5e1385304ddd3d34c9eb1f1e"
+    },
+    {
+      "_id": "5cb356fd14314c03a61797e4",
+      "alias": "Jacinth Wildebeest",
+      "aliasID": "65c28a4bed6eefce4cd29330",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/a25685b3d82a19ec4cefb16aa8151b67.png",
+      "companies": [],
+      "name": "Helpful Helper",
+      "urlName": "<redacted>",
+      "voteID": "5e0d2958e58e11214c64229a"
+    }
+  ]
+}
