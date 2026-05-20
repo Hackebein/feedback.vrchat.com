@@ -5,7 +5,7 @@
     "loc.in-world",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-05-17T05:28:48.513113Z",
+  "aiTaggedAt": "2026-05-20T19:46:40.888833Z",
   "author": {
     "_id": "5f4fff6d31ff5c15381f2501",
     "alias": "Celestial blue Dolphin",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "__v": 0,
@@ -293,6 +293,50 @@
       "value": "Currently layer count is MASSIVELY inflated in some editor tools (I have 10 layers but it reports 40), so this should probably not count those 20-30 layers that the VRC standard locomotion controller and other standard base parts add (somehow). Setting the threshold too low risks diluting the utility of the ranking system as a meaningful filter by casting too broad of a net (we’ve seen this before, and ratings *still* show in game as worse than they actually are at build). This warrants research and should absolutely be set completely differently for different platforms obviously.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a0d4916633e1bf6ab8b13c4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f2e0a4e8464150716ffd322",
+        "alias": "Aegean blue Kangaroo",
+        "aliasID": "65c26da3ed6eefce4c4d0953",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+        "created": "2020-08-08T02:13:34.907Z",
+        "name": "ZenithVal",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-20T05:39:34.451Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "63e6aa4c26c22c4502c7cc37",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Bumping this in 2026. With server side processing I really wish this was a feature.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -308,23 +352,23 @@
   "imageURLs": [
     "https://canny.io/images/0f7b0f63969663f45e27691a40d6b056.png"
   ],
-  "lastUpdated": 1778995518630,
+  "lastUpdated": 1779306181482,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 121,
+  "maxScore": 123,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/63e6aa4c26c22c4502c7cc37/982112256.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 121,
+  "score": 123,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2023-02-10T20:34:20.592Z",
   "subCategoryID": null,
   "title": "Add Total Animator Layers to Avatar Performance Stats",
-  "trendingScore": 2900.5711707927944,
-  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "trendingScore": 2942.5837490318268,
+  "updatedAt": "2026-05-20T19:46:40.792733Z",
   "urlName": "add-total-animator-layers-to-avatar-performance-stats",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -335,6 +379,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "625dcc2c64347a52961ae67c",
+      "alias": "Kryptonite green Salamander",
+      "aliasID": "6a0d48ae5a52cb2df0368b06",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/48f7cf5c27058252ae75ea1c7bf0a400.png",
+      "companies": [],
+      "name": "Mourning Star",
+      "urlName": "<redacted>",
+      "voteID": "6a0d48b15a52cb2df0368b0d"
+    },
+    {
+      "_id": "5f2e0a4e8464150716ffd322",
+      "alias": "Aegean blue Kangaroo",
+      "aliasID": "65c26da3ed6eefce4c4d0953",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+      "companies": [],
+      "name": "ZenithVal",
+      "urlName": "<redacted>",
+      "voteID": "6a0d48665a52cb2df0368a05"
+    },
     {
       "_id": "60f11dfa18c99e29577d531d",
       "alias": "Profound Roadrunner",
@@ -373,7 +439,7 @@
       "alias": "Papaya whip Echidna",
       "aliasID": "65c65be0ed6eefce4c038fc6",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/cefe8f2e0e32165fb86d7017ad1a566a.png",
+      "avatarURL": "https://canny-assets.io/images/785dee08f34044402cf2b778b1c198d8.png",
       "companies": [],
       "name": "Ericbazinga",
       "urlName": "<redacted>",
@@ -422,28 +488,6 @@
       "name": "Brightquill",
       "urlName": "<redacted>",
       "voteID": "6834ed51b25ebd7219db4417"
-    },
-    {
-      "_id": "5f2cb7597f57433511404476",
-      "alias": "Content Tyrannosaurus",
-      "aliasID": "65de64da36dd86f1c4568c7d",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/1cfcb5c0f34f9b2ab19746826a4ea75f.png",
-      "companies": [],
-      "name": "DemonicTyrant",
-      "urlName": "<redacted>",
-      "voteID": "6833838eb25ebd7219246f3e"
-    },
-    {
-      "_id": "62cbec9fb806110baae1748f",
-      "alias": "Sensitive Egret",
-      "aliasID": "65c3a07fed6eefce4cea7ee5",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/3caae807ed92c98357324845b69fd188.png",
-      "companies": [],
-      "name": "蒟蒻砂漠",
-      "urlName": "<redacted>",
-      "voteID": "68310e6eb25ebd721940eb2c"
     }
   ]
 }
