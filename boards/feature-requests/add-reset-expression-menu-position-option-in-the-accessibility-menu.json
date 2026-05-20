@@ -3,9 +3,9 @@
   "_id": "642f1c34f7076c26b7ecec00",
   "aiCategories": [
     "loc.main-menu",
-    "client.settings"
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-05-17T05:34:47.459131Z",
+  "aiTaggedAt": "2026-05-20T19:46:40.888100Z",
   "author": {
     "_id": "5fcbc96c570ea31a45ec3b87",
     "alias": "Fawn Giraffe",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "__v": 0,
@@ -70,6 +70,50 @@
       "value": "I was able to adjust the menu position with my right controller once Virtual Desktop worked again but it would still be good to have a way to reset the position in the accessibility settings menu.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a0de5d5025a4f1a03a7c573",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5a983204a1528d415c5ced46",
+        "alias": "Chief Finch",
+        "aliasID": "65ba04aeed6eefce4c43afb3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+        "created": "2018-03-01T17:01:56.340Z",
+        "name": "naqtn",
+        "serviceAccount": false,
+        "urlName": "naqtn"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-20T16:48:21.323Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "642f1c34f7076c26b7ecec00",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I made a workaround registry file to reset: https://gist.github.com/naqtn/521349dd485789df12f7e190d75fae01",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -85,22 +129,22 @@
   "imageURLs": [
     "https://canny.io/images/e72cc6de5bf750819a58e41798ed7e2a.png"
   ],
-  "lastUpdated": 1778995575115,
+  "lastUpdated": 1779306181087,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notFound": false,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2023-04-06T19:23:32.273Z",
   "subCategoryID": null,
   "title": "Add \"Reset expression menu position\" option in the Accessibility menu",
-  "trendingScore": 2780.331952188635,
-  "updatedAt": "2026-05-17T05:28:04.209364Z",
+  "trendingScore": 2941.956412986111,
+  "updatedAt": "2026-05-20T19:46:40.792733Z",
   "urlName": "add-reset-expression-menu-position-option-in-the-accessibility-menu",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -111,6 +155,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5a983204a1528d415c5ced46",
+      "alias": "Chief Finch",
+      "aliasID": "65ba04aeed6eefce4c43afb3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+      "companies": [],
+      "name": "naqtn",
+      "urlName": "naqtn",
+      "voteID": "6a0de4065a52cb2df03adb44"
+    },
     {
       "_id": "5e5eaad1d85884539b238412",
       "alias": "Active Anglerfish",
