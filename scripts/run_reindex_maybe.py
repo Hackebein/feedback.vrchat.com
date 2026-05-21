@@ -31,16 +31,44 @@ def git(args: list[str]) -> str:
     return p.stdout.strip()
 
 
-def main() -> int:
+def sync_to_remote() -> tuple[str, str]:
+    """Fetch and align the working tree with origin. Returns (previous_head, new_head)."""
+    remote_ref = f"{REMOTE}/{BRANCH}"
     git(["fetch", REMOTE, f"+refs/heads/{BRANCH}:refs/remotes/{REMOTE}/{BRANCH}", "--depth", "4096", "--prune", "--no-tags", "--quiet"])
     cur = git(["rev-parse", "HEAD"]).splitlines()[0]
-    subprocess.run(["git", "-C", str(REPO_ROOT), "merge", "--ff-only", f"{REMOTE}/{BRANCH}"], check=True)
+    merge = subprocess.run(
+        ["git", "-C", str(REPO_ROOT), "merge", "--ff-only", remote_ref],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        check=False,
+    )
+    if merge.returncode != 0:
+        sys.stdout.write(merge.stdout)
+        print(
+            f"[warn] ff-only merge failed; resetting hard to {remote_ref}",
+            flush=True,
+            file=sys.stderr,
+        )
+        git(["reset", "--hard", remote_ref])
     new = git(["rev-parse", "HEAD"]).splitlines()[0]
+    return cur, new
+
+
+def main() -> int:
+    cur, new = sync_to_remote()
     force = os.environ.get("FORCE_REINDEX") == "1"
     if cur == new and not force:
         print(f"No advance on {REMOTE}/{BRANCH}; skipping ingest.", flush=True)
         return 0
-    apply_runtime_stack(REPO_ROOT)
+    try:
+        apply_runtime_stack(REPO_ROOT)
+    except subprocess.CalledProcessError as e:
+        print(
+            f"[warn] apply_runtime_stack failed (exit {e.returncode}); proceeding with ingest",
+            flush=True,
+            file=sys.stderr,
+        )
     print(f"Ingest via opensearch_bulk.py (@{new[:12]})", flush=True)
     return subprocess.call([sys.executable, str(REPO_ROOT / "scripts/opensearch_bulk.py"), *sys.argv[1:]])
 
