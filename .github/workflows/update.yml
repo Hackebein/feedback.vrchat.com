@@ -9,6 +9,10 @@ on:
         description: "How many oldest posts to refresh on top of new+updated"
         required: false
         default: "500"
+      refresh-newest:
+        description: "How many activity-based posts to refresh on top of new+updated"
+        required: false
+        default: "500"
 
 permissions:
   contents: write
@@ -38,7 +42,7 @@ jobs:
       - name: Run update
         env:
           MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
-        run: python3 scripts/update.py --refresh-oldest ${{ github.event.inputs.refresh-oldest || '500' }}
+        run: python3 scripts/update.py --refresh-oldest ${{ github.event.inputs.refresh-oldest || '500' }} --refresh-newest ${{ github.event.inputs.refresh-newest || '500' }}
 
       - name: Commit and push changes
         run: |
