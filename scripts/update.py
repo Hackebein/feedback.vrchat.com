@@ -6,6 +6,7 @@ Usage:
     python3 update.py                     # update all boards
     python3 update.py bug-reports         # update a single board
     python3 update.py --refresh-oldest 10 # limit oldest-refresh to 10 posts
+    python3 update.py --refresh-newest 10 # limit newest-activity refresh to 10 posts
 """
 
 import argparse
@@ -431,6 +432,30 @@ def iso_now():
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
+def _parse_activity_dt(v):
+    if not isinstance(v, str) or not v.strip():
+        return None
+    try:
+        return datetime.fromisoformat(v.strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def _post_last_activity_dt(post):
+    candidates = []
+    for key in ("created", "statusChanged"):
+        dt = _parse_activity_dt(post.get(key))
+        if dt is not None:
+            candidates.append(dt)
+    for c in (post.get("comments") or []):
+        if not isinstance(c, dict) or c.get("deleted") is True or c.get("spam") is True:
+            continue
+        dt = _parse_activity_dt(c.get("created"))
+        if dt is not None:
+            candidates.append(dt)
+    return max(candidates) if candidates else None
+
+
 # ---------------------------------------------------------------------------
 # Per-board update
 # ---------------------------------------------------------------------------
@@ -500,18 +525,20 @@ def load_all_stored(boards):
     return stored, deduped
 
 
-def build_scan_targets(stored, fresh_by_board, refresh_oldest):
+def build_scan_targets(stored, fresh_by_board, refresh_oldest, refresh_newest):
     """Build the global scan list.
 
     Always includes every NEW pid found in any board's newest sweep, then any
     EXISTING pid in the newest sweep whose newest-sweep fields diverge from the
     stored copy (commentCount, status, title, score, details, categoryID,
-    boardID, authorID, voteSettings), then fills the rest of the list with the
-    globally oldest-updatedAt stored posts up to `refresh_oldest`. If
-    `refresh_oldest` is None all stored posts are included.
+    boardID, authorID, voteSettings), then tops up with the globally
+    newest-lastActivityAt stored posts up to `refresh_newest`, then fills the
+    rest of the list with the globally oldest-updatedAt stored posts up to
+    `refresh_oldest`. If `refresh_oldest` is None all stored posts are included
+    in the oldest pass. Pass `refresh_newest=0` to skip the newest-activity pass.
 
-    Returns (scan_targets, new_count, updated_count, oldest_count) where
-    scan_targets is a list of (search_board_slug, pid, url_slug).
+    Returns (scan_targets, new_count, updated_count, newest_count, oldest_count)
+    where scan_targets is a list of (search_board_slug, pid, url_slug).
     """
     scan_targets = []
     seen = set()
@@ -558,6 +585,28 @@ def build_scan_targets(stored, fresh_by_board, refresh_oldest):
             seen.add(pid)
             updated_count += 1
 
+    newest_sorted = sorted(
+        stored.items(),
+        key=lambda kv: (
+            (dt := _post_last_activity_dt(kv[1]["post"])) is None,
+            dt or datetime.min.replace(tzinfo=timezone.utc),
+        ),
+        reverse=True,
+    )
+    if refresh_newest is not None and refresh_newest >= 0:
+        newest_sorted = newest_sorted[:refresh_newest]
+
+    newest_count = 0
+    for pid, info in newest_sorted:
+        if pid in seen:
+            continue
+        slug = info["post"].get("urlName") or ""
+        if not slug:
+            continue
+        scan_targets.append((info["board_slug"], pid, slug))
+        seen.add(pid)
+        newest_count += 1
+
     oldest_sorted = sorted(
         stored.items(),
         key=lambda kv: (
@@ -579,7 +628,7 @@ def build_scan_targets(stored, fresh_by_board, refresh_oldest):
         seen.add(pid)
         oldest_count += 1
 
-    return scan_targets, new_count, updated_count, oldest_count
+    return scan_targets, new_count, updated_count, newest_count, oldest_count
 
 
 def fetch_all_pages(scan_targets):
@@ -937,6 +986,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--refresh-oldest", type=int, default=None,
                         help="Top up the scan with the N globally-oldest-updatedAt posts after new+updated (default: all)")
+    parser.add_argument("--refresh-newest", type=int, default=500,
+                        help="Top up the scan with the N globally-newest-lastActivityAt posts after new+updated (default: 500). Pass 0 to disable.")
     parser.add_argument("boards", nargs="*", default=None, help="Board slugs (default: all)")
     args = parser.parse_args()
 
@@ -968,11 +1019,11 @@ def main():
     if deduped:
         print(f"[UPDATE] {deduped} cross-board duplicate(s) consolidated")
 
-    scan_targets, new_count, updated_count, oldest_count = build_scan_targets(
-        stored, fresh_by_board, args.refresh_oldest,
+    scan_targets, new_count, updated_count, newest_count, oldest_count = build_scan_targets(
+        stored, fresh_by_board, args.refresh_oldest, args.refresh_newest,
     )
     print(f"[UPDATE] scanning {len(scan_targets)} posts "
-          f"(new={new_count}, updated={updated_count}, oldest={oldest_count})...")
+          f"(new={new_count}, updated={updated_count}, newest={newest_count}, oldest={oldest_count})...")
 
     results = fetch_all_pages(scan_targets)
 
