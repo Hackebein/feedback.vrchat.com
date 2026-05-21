@@ -1,0 +1,100 @@
+{
+  "_id": "6a0f0d2ddca563bc37fa33dc",
+  "aiCategories": [
+    "loc.loading-screen",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-05-21T14:15:03.337101Z",
+  "author": {
+    "_id": "6722e794691e04e140901be7",
+    "alias": "Marigold Dragon",
+    "aliasID": "6722e794c66e81bbd43c13cf",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/37d94ccfb0d66fbcdd35cb50e4374329.png",
+    "created": "2024-10-31T02:12:36.188Z",
+    "name": "Riria Nee-chan",
+    "serviceAccount": false,
+    "urlName": "riria-nee-chan"
+  },
+  "authorID": "6722e794691e04e140901be7",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1275,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-21T13:48:29.748Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am submitting this report not as a critical 'failure' report, but as a technical analysis of the engine's current behavior regarding sequential loading and exception handling. I am impressed by the improved stability despite these minor exceptions.\n\n1. Overview\n\nFollowing the recent updates, VRChat’s loading mechanism has transitioned from parallel processing to sequential loading. I have conducted stress tests to evaluate system responsiveness and stability during world transitions and avatar loading under this new architecture.\n\n2. Key Observations\n\nSequential Loading Stability: Unlike previous versions, no deadlocks or client crashes were observed during world or avatar loading. The engine demonstrates robust management of the loading queue.\n\nException Handling for High-Complexity Avatars: When loading avatars with complex reference structures (e.g., extensive PhysBones), a significant number of NullReferenceException and Cyclic dependency warnings are triggered. However, the engine successfully manages these by suppressing fatal errors, employing 'warning/skip' logic to continue the process and ensure successful entry into the world without session crashes.\n\nCache Optimization Efficiency: On high-performance systems (utilizing CPU architectures with large L3 caches, such as the 7950X3D), cached assets allow for near-instantaneous processing upon re-entry, resulting in highly efficient loading times despite the sequential processing model.\n\n3. Technical Assessment\n\nThe observed error logs appear to be side effects of the engine’s defensive routines, prioritizing data integrity and strict loading order verification.\n\nThe current shift toward 'pragmatic stability'—prioritizing session integrity over immediate parallel speed—is highly effective.\n\nWhile functional stability is maintained, the high frequency of NullReferenceException logs suggests potential for further refinement. Future optimizations targeting an Dependency Graph-based loading scheduler could significantly minimize these logs by resolving execution order conflicts before they trigger exceptions.\n\n4. Conclusion\n\nThis update has substantially enhanced the platform's reliability and stability. While the current log output is verbose, it confirms that the engine's new defensive architecture is functioning as intended. Continuous optimization of the loading logic to reduce these redundant exceptions will further elevate the technical maturity of the VRChat engine.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/c4148e726c8cc61f89b32332efa9cd45.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-21_22-09-48",
+      "url": "https://canny-assets.io/files/c4148e726c8cc61f89b32332efa9cd45.txt"
+    }
+  ],
+  "ideaID": "6a0f0d2ddca563bc37fa33e0",
+  "imageURLs": [],
+  "lastUpdated": 1779372644692,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-21T13:48:29.748Z",
+  "subCategoryID": null,
+  "title": "[1851/Feedback/Optimization] Analysis of Loading Logic and Exception Handling after Recent Updates",
+  "trendingScore": 2942.7753403741785,
+  "updatedAt": "2026-05-21T14:15:03.234407Z",
+  "updatedBy": null,
+  "urlName": "1851-feedback-optimization-analysis-of-loading-logic-and-exception-handling-afte",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6722e794691e04e140901be7",
+      "alias": "Marigold Dragon",
+      "aliasID": "6722e794c66e81bbd43c13cf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/37d94ccfb0d66fbcdd35cb50e4374329.png",
+      "companies": [],
+      "name": "Riria Nee-chan",
+      "urlName": "riria-nee-chan",
+      "voteID": "6a0f0d2f5a52cb2df043eb54"
+    }
+  ]
+}
