@@ -3,9 +3,9 @@
 VRChat Canny Feedback Archiver
 
 Usage:
-    python3 update.py                        # all boards
-    python3 update.py bug-reports            # single board
-    python3 update.py --limit 10 bug-reports # limit to 10 posts per board
+    python3 update.py                     # update all boards
+    python3 update.py bug-reports         # update a single board
+    python3 update.py --refresh-oldest 10 # limit oldest-refresh to 10 posts
 """
 
 import argparse
@@ -500,14 +500,15 @@ def load_all_stored(boards):
     return stored, deduped
 
 
-def build_scan_targets(stored, fresh_by_board, limit):
+def build_scan_targets(stored, fresh_by_board, refresh_oldest):
     """Build the global scan list.
 
     Always includes every NEW pid found in any board's newest sweep, then any
-    EXISTING pid in the newest sweep whose visible fields (commentCount,
-    status, title) diverge from the stored copy, then fills the rest of the
-    list with the globally oldest-updatedAt stored posts up to `limit`. If
-    `limit` is None all stored posts are included.
+    EXISTING pid in the newest sweep whose newest-sweep fields diverge from the
+    stored copy (commentCount, status, title, score, details, categoryID,
+    boardID, authorID, voteSettings), then fills the rest of the list with the
+    globally oldest-updatedAt stored posts up to `refresh_oldest`. If
+    `refresh_oldest` is None all stored posts are included.
 
     Returns (scan_targets, new_count, updated_count, oldest_count) where
     scan_targets is a list of (search_board_slug, pid, url_slug).
@@ -537,7 +538,17 @@ def build_scan_targets(stored, fresh_by_board, limit):
             stored_post = stored[pid]["post"]
             if all(
                 p.get(k) == stored_post.get(k)
-                for k in ("commentCount", "status", "title")
+                for k in (
+                    "commentCount",
+                    "status",
+                    "title",
+                    "score",
+                    "details",
+                    "categoryID",
+                    "boardID",
+                    "authorID",
+                    "voteSettings",
+                )
             ):
                 continue
             slug = p.get("urlName") or stored_post.get("urlName") or ""
@@ -554,8 +565,8 @@ def build_scan_targets(stored, fresh_by_board, limit):
             kv[1]["post"].get("updatedAt") or "",
         ),
     )
-    if limit is not None and limit >= 0:
-        oldest_sorted = oldest_sorted[:limit]
+    if refresh_oldest is not None and refresh_oldest >= 0:
+        oldest_sorted = oldest_sorted[:refresh_oldest]
 
     oldest_count = 0
     for pid, info in oldest_sorted:
@@ -924,8 +935,8 @@ def get_boards():
 def main():
     parser = argparse.ArgumentParser(description="VRChat Canny Feedback Archiver")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--limit", type=int, default=None,
-                        help="Refresh only the N globally-oldest-updatedAt posts (default: all)")
+    parser.add_argument("--refresh-oldest", type=int, default=None,
+                        help="Top up the scan with the N globally-oldest-updatedAt posts after new+updated (default: all)")
     parser.add_argument("boards", nargs="*", default=None, help="Board slugs (default: all)")
     args = parser.parse_args()
 
@@ -958,7 +969,7 @@ def main():
         print(f"[UPDATE] {deduped} cross-board duplicate(s) consolidated")
 
     scan_targets, new_count, updated_count, oldest_count = build_scan_targets(
-        stored, fresh_by_board, args.limit,
+        stored, fresh_by_board, args.refresh_oldest,
     )
     print(f"[UPDATE] scanning {len(scan_targets)} posts "
           f"(new={new_count}, updated={updated_count}, oldest={oldest_count})...")

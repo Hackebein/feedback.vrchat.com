@@ -386,7 +386,9 @@
       "postDeleted": false,
       "postID": "691cd960decf72e45c157157",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -430,7 +432,9 @@
       "postDeleted": false,
       "postID": "691cd960decf72e45c157157",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -475,7 +479,7 @@
       "postID": "691cd960decf72e45c157157",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -763,23 +767,23 @@
   "files": [],
   "ideaID": "691cd960decf72e45c1571f0",
   "imageURLs": [],
-  "lastUpdated": 1779053056686,
+  "lastUpdated": 1779360556580,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 149,
+  "maxScore": 152,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/691cd960decf72e45c157157/1272958751.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 149,
+  "score": 152,
   "sourceFeatureExtractionItem": null,
   "status": "in progress",
   "statusChanged": "2025-11-19T13:01:17.919Z",
   "subCategoryID": null,
   "title": "Automatic Avatar Optimization in SDK",
-  "trendingScore": 2942.055544318055,
-  "updatedAt": "2026-05-17T21:26:41.208788Z",
+  "trendingScore": 2943.27353472595,
+  "updatedAt": "2026-05-21T10:49:26.037775Z",
   "updatedBy": "63691297469f06772579fe6f",
   "urlName": "automatic-avatar-optimization-in-sdk",
   "viewerIsAuthor": false,
@@ -791,6 +795,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64cd505242b27e0961e4fd35",
+      "alias": "Kryptonite green Unicorn",
+      "aliasID": "69feb568cf565b8f74ba4eab",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/46aa08b5c75297246712af0ec81c9df8.png",
+      "companies": [],
+      "name": "OnirismCorp",
+      "urlName": "<redacted>",
+      "voteID": "6a0dfb605a52cb2df03bd30b"
+    },
+    {
+      "_id": "675562614ecf35c60bf60a00",
+      "alias": "Vervain Hedgehog",
+      "aliasID": "67556261a367fa6392948f08",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3e04a7a0328c953cda9893ea9fe33fde.png",
+      "companies": [],
+      "name": "Largos·",
+      "urlName": "<redacted>",
+      "voteID": "6a0bfd7e5a52cb2df02c1f65"
+    },
+    {
+      "_id": "5f2e0a4e8464150716ffd322",
+      "alias": "Aegean blue Kangaroo",
+      "aliasID": "65c26da3ed6eefce4c4d0953",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/136933d7e6819e9dd6fd40cacf201a65.png",
+      "companies": [],
+      "name": "ZenithVal",
+      "urlName": "<redacted>",
+      "voteID": "6a0be27f5a52cb2df02bc08a"
+    },
     {
       "_id": "5ae5b5bb8836533537898ce4",
       "alias": "Slight Pheasant",
@@ -867,39 +904,6 @@
       "name": "TheNils23",
       "urlName": "<redacted>",
       "voteID": "69eccb6e4a48bed189b50bc7"
-    },
-    {
-      "_id": "69ea516f65c4cf9dd93bf470",
-      "alias": "Spare Swordtail",
-      "aliasID": "69ea516f65c4cf9dd93bf474",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6c259773416ab19dd4f166cbfe8cc72c.png",
-      "companies": [],
-      "name": "PixelTheCollie",
-      "urlName": "<redacted>",
-      "voteID": "69ea536465c4cf9dd93c07d2"
-    },
-    {
-      "_id": "62e0f5fc26e6cc44b0805010",
-      "alias": "Perfect Capybara",
-      "aliasID": "65ceb77a0129d7ae4487d0d0",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/eb01e1f02516dcef2b08c805d56d096e.png",
-      "companies": [],
-      "name": "Kroung",
-      "urlName": "<redacted>",
-      "voteID": "69e84c1565c4cf9dd92b004f"
-    },
-    {
-      "_id": "6043345e0aef231fbf0045ee",
-      "alias": "Curly Canid",
-      "aliasID": "65d76ec80129d7ae44e0b8e4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c62f74c26492d3754d1495ae070ea127.png",
-      "companies": [],
-      "name": "Aquaman56",
-      "urlName": "<redacted>",
-      "voteID": "69e6997865c4cf9dd91be71a"
     }
   ]
 }
