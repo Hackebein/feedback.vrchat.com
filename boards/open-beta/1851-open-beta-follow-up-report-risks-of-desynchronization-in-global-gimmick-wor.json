@@ -1,0 +1,101 @@
+{
+  "_id": "6a10008e5b77904ee378a40b",
+  "aiCategories": [
+    "open-beta",
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-05-22T09:06:02.659772Z",
+  "author": {
+    "_id": "6722e794691e04e140901be7",
+    "alias": "Marigold Dragon",
+    "aliasID": "6722e794c66e81bbd43c13cf",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/37d94ccfb0d66fbcdd35cb50e4374329.png",
+    "created": "2024-10-31T02:12:36.188Z",
+    "name": "Riria Nee-chan",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6722e794691e04e140901be7",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1276,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-22T07:06:54.767Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Context & Positive Data\n\nTo evaluate the serialization and exception-handling logic introduced in the recent Open Beta build, I conducted a live stress test in a 19-player public instance (Japan Region) of 'Terrors Of Nowhere (ToN)'—a world known for its heavily-loaded global Udon scripts and numerous synchronized dynamic objects.\n\nThe initial results were highly encouraging. The main runtime thread deadlocks (stalls) and system crashes that frequently plagued previous parallel builds did not occur. The game loop remained entirely stable until the round concluded and the final save code was successfully generated. Furthermore, hardware runtime performance (framerate) was maintained at a level comparable to previous builds, showing no noticeable performance degradation from the serialization overhead.\n\n2. Technical Issue & Log Analysis\n\nHowever, a rigorous analysis of the client output_log revealed a significant underlying side effect at the engine level. During gameplay, when dynamic objects (such as Emerald Coil and maxwell) were awakened from a dormant state, the Udon engine (specifically the Odin Serializer) repeatedly flooded the log with the following exception errors:\n\n-\n\nError - [Behaviour] Emerald Coil has no serialization hashes, but is attempting to recover from hibernation.\n\nError - [Behaviour] Unsafe to use serialization recovery data for Emerald Coil.\n\n-\n\nIt is important to note that these errors are not custom diagnostic strings written by the world creator. Rather, they are core system warnings thrown by the VRChat Udon engine itself when it fails to match synchronization hash values while processing the sequential serialization queue.\n\nIn this Open Beta build, a fatal client freeze was avoided because the engine was designed to drop the unsafe packet and force-transition to the next queue sequence (Skip & Catch) instead of stalling the main thread. Additionally, because the world itself is exceptionally well-engineered with defensive coding to detect dropped packets and re-synchronize (Reset/Sync) via global packets in subsequent frames, the game remained playable with only minor visual/gimmick synchronization errors (desync).\n\n3. Expected Risks of Serialized Standardization\n\nWhile this engine-level packet drop mechanism serves as a reliable workaround for crashes, standardizing this serialization method poses severe risks for the broader ecosystem:\n\nLogical Deadlocks in Standard/Legacy Worlds: In the vast majority of standard or abandoned legacy worlds—where exception handling is not as meticulously designed as in 'ToN'—this serialization recovery failure will likely cause world scripts to break entirely upon packet loss. This will result in severe desynchronization (e.g., triggers failing to fire, doors not opening on certain clients), ultimately breaking the logical flow of the instance.\n\nTimeline Fragmentation in Cross-Build Environments: While an Open Beta (serialized) client skips corrupted packets to patch its timeline, Live Build (parallel) clients continue to broadcast data at full speed. This accumulated timeline drift will inevitably isolate Beta users, causing the 'ghost instance/individual isolation' phenomenon where a user becomes completely desynced from the rest of the players.\n\n4. Conclusion & Recommendation\n\nMitigating crashes and deadlocks through the current serialization implementation is a commendable temporary workaround. While standardizing serialization might temporarily reduce cross-build fragmentation, it will inherently degrade overall data stability and real-time responsiveness in worlds with extensive global gimmicks.\n\nTherefore, the development team should not treat the current serialized approach as the final architecture. To prevent users from having to rely on manual workarounds—such as manually restricting avatar performance ranks or rolling back to the Live Build to avoid desync—we strongly urge the team to transition toward a \"controlled parallel optimization architecture.\" This approach should maintain the robust exception-handling margins (Try-Catch limiters) established in this build while intelligently splitting threads for high-performance concurrency.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/8e143b7c2579ca221a600d82192e01a4.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-22_14-25-47",
+      "url": "https://canny-assets.io/files/8e143b7c2579ca221a600d82192e01a4.txt"
+    }
+  ],
+  "ideaID": "6a10008e5b77904ee378a40f",
+  "imageURLs": [],
+  "lastUpdated": 1779440492295,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-22T07:06:54.767Z",
+  "subCategoryID": null,
+  "title": "[1851/Open Beta Follow-up Report] Risks of Desynchronization in Global Gimmick Worlds Due to Serialization Recovery Failures",
+  "trendingScore": 2942.878357996533,
+  "updatedAt": "2026-05-22T09:06:02.561036Z",
+  "updatedBy": null,
+  "urlName": "1851-open-beta-follow-up-report-risks-of-desynchronization-in-global-gimmick-wor",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6722e794691e04e140901be7",
+      "alias": "Marigold Dragon",
+      "aliasID": "6722e794c66e81bbd43c13cf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/37d94ccfb0d66fbcdd35cb50e4374329.png",
+      "companies": [],
+      "name": "Riria Nee-chan",
+      "urlName": "<redacted>",
+      "voteID": "6a1000905a52cb2df04c208a"
+    }
+  ]
+}
