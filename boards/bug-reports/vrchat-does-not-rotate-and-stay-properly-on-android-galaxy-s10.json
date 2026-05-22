@@ -1,0 +1,93 @@
+{
+  "_id": "6a0fc00f24eacac17cea2240",
+  "aiCategories": [
+    "loc.mobile-app",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-05-22T03:07:15.223996Z",
+  "author": {
+    "_id": "6a0fbb0c5a52cb2df04ae9e4",
+    "alias": "Inkwell Grouse",
+    "aliasID": "6a0fbb0c5a52cb2df04ae9e9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/46b3a0868d85c957253692dee4beb8fc.png",
+    "created": "2026-05-22T02:10:20.372Z",
+    "name": "UserTemmie",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6a0fbb0c5a52cb2df04ae9e4",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-22T02:31:43.852Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Open VRChat on Android (Samsung Galaxy S10, as far as I know).\n\n2. Join a world.\n\n3. Turn your smartphone sideways.\n\n4. The bug should be the game constantly turning the screen vertical and horizontally, non-stop, preventing a proper play.\n\nAbout the bug:\n\nIt's been a year that I am having a problem with the Android version of VRChat, regarding screen rotation. The issue is the game starts to rotate non-stop between vertical and horizontal when I rotate my phone to horizontal mode.\n\nThere are two exceptions that I noticed on how to stop this issue temporarily: (1) When I open the game menu and click to expand it, this forces the game to be in horizontal mode, and so I can rotate my phone safely and the issue does not happen. However, this fix is only temporary and the issue tends to come back very fast, very likely because of something I do in the game. Additionally, when doing this, the text becomes weird, although it comes back to normal after some little time, or because of doing something; (2) if I lock the screen orientation to horizontal by disabling auto rotate when, by whatever reason, I get the game to horizontal mode properly without the visual issue with text mentioned in exception 1. This fix is also only temporary as the game seems to decide by itself when the fix will no longer work.\n\nAs mentioned in the beginning of this post, I am having this issue for about a year now. I used to play VRChat almost everyday on my phone, but since this issue appeared, I dropped the Android version and started to play on my PC. Now, a year later, I come back and this issue still persists.\n\nFor some technical information, I use a Samsung Galaxy S10, CPU: Exynos 9820, GPU: Mali-G76, 8GB RAM. If there is any more information I can provide about my phone that could be useful please let me know.\n\nWhen searching about this issue, I found a couple of users having this same issue in June 2025, one of them also having a Galaxy S10, as I do. I'll put the link here: https://feedback.vrchat.com/android/p/1650-vrchat-can-forget-how-to-rotate-properly.\n\nThis ends my report about it. There should be a video file here included showing the bug. Not only this, but the link above to another post about it also might help.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/f5d6ce6bb904f8d180b1e79e0b9669e9.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "Vertical video of screen rotation issue (-8)",
+      "url": "https://canny-assets.io/files/f5d6ce6bb904f8d180b1e79e0b9669e9.mp4"
+    }
+  ],
+  "ideaID": "6a0fc00f24eacac17cea2244",
+  "imageURLs": [],
+  "lastUpdated": 1779418920213,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a0fc00f24eacac17cea2240/1573260940.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-22T02:31:43.852Z",
+  "subCategoryID": null,
+  "title": "VRChat does not rotate (and stay) properly on Android Galaxy S10",
+  "trendingScore": 2942.8510582007325,
+  "updatedAt": "2026-05-22T03:07:15.125693Z",
+  "updatedBy": null,
+  "urlName": "vrchat-does-not-rotate-and-stay-properly-on-android-galaxy-s10",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a0fbb0c5a52cb2df04ae9e4",
+      "alias": "Inkwell Grouse",
+      "aliasID": "6a0fbb0c5a52cb2df04ae9e9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/46b3a0868d85c957253692dee4beb8fc.png",
+      "companies": [],
+      "name": "UserTemmie",
+      "urlName": "<redacted>",
+      "voteID": "6a0fc0115a52cb2df04af937"
+    }
+  ]
+}
