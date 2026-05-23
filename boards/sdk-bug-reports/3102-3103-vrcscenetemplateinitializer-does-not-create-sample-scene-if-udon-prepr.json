@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-05-23T17:25:03.926920Z",
+  "aiTaggedAt": "2026-05-23T18:22:29.288537Z",
   "author": {
     "_id": "5e4ca2145f9b3726b3b389e7",
     "alias": "Wild strawberry Canidae",
@@ -34,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a11b53224eacac17c553d15",
@@ -211,6 +211,62 @@
       "value": "As mentioned above, although the original report used an ALCOM-generated template, this issue is reproducible with custom VCC templates, so the issue itself is not specific to ALCOM.\n\nAlso, I have already implemented a workaround/fix on the ALCOM side for the next release.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a11e54ced6e17afaecf1201",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5c735156f6188d313aeca661",
+        "alias": "Alternative Beetle",
+        "aliasID": "65c2a2d3ed6eefce4c7e37da",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6baac8e0d25a2c9cc2a2584890d8f953.png",
+        "created": "2019-02-25T02:22:14.072Z",
+        "name": "venn02_ヴェン",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-23T17:35:08.579Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5e4ca2145f9b3726b3b389e7",
+          "alias": "Wild strawberry Canidae",
+          "aliasID": "65c26ed9ed6eefce4c854f57",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/759db336105189dc7ca779c13443ce0f.png",
+          "created": "2020-02-19T02:48:52.222Z",
+          "name": "anatawa12",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a11d8db1e75e00bbdb4c4b2",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a118a6724eacac17c4cc8c5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5e4ca2145f9b3726b3b389e7|full_name}\n\nIf that's the case, I think all we need to do is output the VCC logs, and ALCOM can handle the fix from their end.\n\nWe mustn't forget that ALCOM is, after all, an unofficial tool.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -226,7 +282,7 @@
   "files": [],
   "ideaID": "6a118a6724eacac17c4cc8c7",
   "imageURLs": [],
-  "lastUpdated": 1779556849944,
+  "lastUpdated": 1779560243466,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 9,
@@ -242,7 +298,7 @@
   "subCategoryID": null,
   "title": "[3.10.2,3.10.3] VRCSceneTemplateInitializer does not create sample scene if UDON preprocessor symbol is defined at first launch since VRCSDK 3.10.2.",
   "trendingScore": 2944.6699551026904,
-  "updatedAt": "2026-05-23T17:25:03.826717Z",
+  "updatedAt": "2026-05-23T18:22:29.186352Z",
   "updatedBy": null,
   "urlName": "3102-3103-vrcscenetemplateinitializer-does-not-create-sample-scene-if-udon-prepr",
   "viewerIsAuthor": false,
