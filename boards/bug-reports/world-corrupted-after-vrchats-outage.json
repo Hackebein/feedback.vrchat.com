@@ -2,11 +2,11 @@
   "_id": "6a1378631e75e00bbd02368d",
   "aiCategories": [
     "loc.in-world",
-    "loc.mobile-app",
     "worlds",
-    "sdk.vrcsdk"
+    "sdk.vrcsdk",
+    "sdk.world-building"
   ],
-  "aiTaggedAt": "2026-05-24T22:21:24.916405Z",
+  "aiTaggedAt": "2026-05-24T23:25:53.772429Z",
   "author": {
     "_id": "66f5c3925bf17057c6ce7e38",
     "alias": "Wheat Crow",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Talox has told me to create a canny about an issue i encountered after the VRChat's outage on 23/05.\n\nThe quest/mobile version no longer functioned, despite not having updated the world in 1/2 months with no issues, it somehow broke after the VRChat's outage, after which any quest/mobile user whom attempted to join the world could no longer load in and would get send back to their home world directly, reuploading solved this issue. \n\nNot sure if anyone else is affected besides me. \n\n[AssetBundleDownloadManager] [105] Asset bundle request failed: result=4 code=200 error=Data Processing Error, see Download Handler error dhError=CRC Mismatch. Provided 925acaf1, calculated 82169d87 from data. Will not load AssetBundle 'https://api.vrchat.cloud/api/1/file/file_a6203950-e428-4489-b25b-bc2d9512c478/178/variant/security?v=1779585976'\n\n2026.05.24 21:37:23 Error      -  Error Downloading or Instantiating Custom Scene - Cuddle ＆ Sleep - 12 - Error loading asset bundle from **: Data Processing Error, see Download Handler error",
+  "details": "Talox has told me to create a canny about an issue i encountered after the VRChat's outage on 23/05.\n\nThe quest/mobile version no longer functioned, despite not having updated the world in 1/2 months with no issues, it somehow broke after the VRChat's outage, after which any quest/mobile user whom attempted to join the world could no longer load in and would get send back to their home world directly, reuploading solved this issue. \n\nNot sure if anyone else is affected besides me. \n\n[AssetBundleDownloadManager] [105] Asset bundle request failed: result=4 code=200 error=Data Processing Error, see Download Handler error dhError=CRC Mismatch. Provided 925acaf1, calculated 82169d87 from data. Will not load AssetBundle 'https://api.vrchat.cloud/api/1/file/file_a6203950-e428-4489-b25b-bc2d9512c478/178/variant/security?v=xxxxxxxxxx'\n\n2026.05.24 21:37:23 Error      -  Error Downloading or Instantiating Custom Scene - Cuddle ＆ Sleep - 12 - Error loading asset bundle from **: Data Processing Error, see Download Handler error",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -44,7 +44,7 @@
   "files": [],
   "ideaID": "6a1378631e75e00bbd023715",
   "imageURLs": [],
-  "lastUpdated": 1779661037143,
+  "lastUpdated": 1779664800959,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -60,8 +60,8 @@
   "subCategoryID": null,
   "title": "World corrupted after VRChat's Outage",
   "trendingScore": 2943.2541595102566,
-  "updatedAt": "2026-05-24T22:21:24.826373Z",
-  "updatedBy": null,
+  "updatedAt": "2026-05-24T23:25:53.686682Z",
+  "updatedBy": "66f5c3925bf17057c6ce7e38",
   "urlName": "world-corrupted-after-vrchats-outage",
   "viewerIsAuthor": false,
   "viewerVote": 0,
