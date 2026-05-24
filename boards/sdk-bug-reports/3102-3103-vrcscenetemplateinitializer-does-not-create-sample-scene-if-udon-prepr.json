@@ -2,10 +2,9 @@
   "_id": "6a118a6724eacac17c4cc8c5",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "sdk.udon"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-05-24T18:23:04.145129Z",
+  "aiTaggedAt": "2026-05-24T19:33:16.017928Z",
   "author": {
     "_id": "5e4ca2145f9b3726b3b389e7",
     "alias": "Wild strawberry Canidae",
@@ -35,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a11b53224eacac17c553d15",
@@ -382,6 +381,64 @@
       "value": "@{6a11b78d5a52cb2df08803fe|full_name} \n\nAs mentioned in the Canny text, this issue can be reproduced in VCC environment using the custom template feature.\n\nALCOM is only the thing that led the author to discover this fact.\n\nThe fact that a bug exists in the SDK and the fact that ALCOM encountered this by behaving differently from VCC are separate issues, so I think they should be addressed individually.\n\nThat said, regardless of whether or not this bug should be reported, it’s ultimately up to the VRChat team to decide how much priority to give to fixing it, I think.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a1344e2ec6a4698b0d98442",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a11b78d5a52cb2df08803fe",
+        "alias": "Improved Salamander",
+        "aliasID": "6a11b78d5a52cb2df0880402",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5f2d0618042f4887976c8a822935b7e0.png",
+        "created": "2026-05-23T14:19:57.335Z",
+        "name": "天白ゆうか",
+        "serviceAccount": false,
+        "urlName": "dc03aa"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-24T18:35:14.939Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6142bc91c830f70736b61114",
+          "alias": "Secondary Swordtail",
+          "aliasID": "65c27264ed6eefce4c18098a",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/191433fda8e993da6a48d8f50360fef2.png",
+          "created": "2021-09-16T03:40:01.951Z",
+          "name": "Sayamame",
+          "serviceAccount": false,
+          "urlName": "sayamame"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a11b855d96c647ddd80103e",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a118a6724eacac17c4cc8c5",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6142bc91c830f70736b61114|full_name}\n\nIf the issue is reproducible in VCC, the correct approach is to write here that this bug occurred when performing this action in VCC, without mentioning Alcom at all.\n\nThe way the person who wrote this problem describes it as:\n\nA bug caused by using Alcom to perform an action in VCC that wouldn't normally occur.\n\nIf that's unclear, let me give you an example using a game.\n\nThe wording here is like intentionally causing behavior that wouldn't normally occur in a game by using a mod, and then claiming it's a bug.\n\nIn this case, a simple statement like, \"When I performed this action in vanilla, this bug occurred,\" would suffice.\n\nIn other words, as I wrote at the beginning of this sentence, you just need to write, \"A malfunction occurred in VCC due to a specific procedure.\"\n\nThat's all you need to write.\n\nThis place is for reporting officially supported software, and is absolutely NOT a place to report bugs using third-party software.\n\nPlease don't misunderstand this and write here.\n\nIf you also use VRChat, you should understand this. You wouldn't want to waste the official effort on a problem that the official team shouldn't be dealing with.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -397,7 +454,7 @@
   "files": [],
   "ideaID": "6a118a6724eacac17c4cc8c7",
   "imageURLs": [],
-  "lastUpdated": 1779646693285,
+  "lastUpdated": 1779650903721,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 21,
@@ -413,7 +470,7 @@
   "subCategoryID": null,
   "title": "[3.10.2,3.10.3] VRCSceneTemplateInitializer does not create sample scene if UDON preprocessor symbol is defined at first launch since VRCSDK 3.10.2.",
   "trendingScore": 2945.523113949134,
-  "updatedAt": "2026-05-24T18:23:04.044354Z",
+  "updatedAt": "2026-05-24T19:33:15.916826Z",
   "updatedBy": null,
   "urlName": "3102-3103-vrcscenetemplateinitializer-does-not-create-sample-scene-if-udon-prepr",
   "viewerIsAuthor": false,
