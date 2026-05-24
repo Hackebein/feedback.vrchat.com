@@ -202,7 +202,9 @@
       "postDeleted": false,
       "postID": "6a118a6724eacac17c4cc8c5",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -282,23 +284,23 @@
   "files": [],
   "ideaID": "6a118a6724eacac17c4cc8c7",
   "imageURLs": [],
-  "lastUpdated": 1779591696197,
+  "lastUpdated": 1779599842632,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 11,
+  "maxScore": 12,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a118a6724eacac17c4cc8c5/26449961.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 11,
+  "score": 12,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-23T11:07:19.565Z",
   "subCategoryID": null,
   "title": "[3.10.2,3.10.3] VRCSceneTemplateInitializer does not create sample scene if UDON preprocessor symbol is defined at first launch since VRCSDK 3.10.2.",
-  "trendingScore": 2944.8632534390154,
-  "updatedAt": "2026-05-24T03:06:03.961343Z",
+  "trendingScore": 2944.949269909188,
+  "updatedAt": "2026-05-24T05:22:01.426670Z",
   "updatedBy": null,
   "urlName": "3102-3103-vrcscenetemplateinitializer-does-not-create-sample-scene-if-udon-prepr",
   "viewerIsAuthor": false,
@@ -310,6 +312,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f431cf997695c1de7f917a8",
+      "alias": "Kumquat Gayal",
+      "aliasID": "65c47d32ed6eefce4c8dd817",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/76996b5ede7e23350cfdb1ee81a98a38.png",
+      "companies": [],
+      "name": "めかにゃんこ",
+      "urlName": "6cde57",
+      "voteID": "6a127a0c5a52cb2df08b0e1d"
+    },
     {
       "_id": "62dfcb05b1e50b465a9fd812",
       "alias": "Detailed Squirrel",
@@ -408,17 +421,6 @@
       "name": "suzuki_i",
       "urlName": "03b325",
       "voteID": "6a119c7d5a52cb2df0878eac"
-    },
-    {
-      "_id": "659ebc527a8784161f3d9d25",
-      "alias": "Pink Salamander",
-      "aliasID": "65c3f6f5ed6eefce4cfc945c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/f392692b30f7880c8ea66ca1d9a81b04.png",
-      "companies": [],
-      "name": "ootr",
-      "urlName": "ootr",
-      "voteID": "6a1199a75a52cb2df08783a1"
     }
   ]
 }
