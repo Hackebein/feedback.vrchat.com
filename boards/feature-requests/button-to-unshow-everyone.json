@@ -169,7 +169,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "PowerShell solution (co-authored by Microsoft Copilot):\n\n```\n\n$path = \"$env:USERPROFILE\\AppData\\LocalLow\\VRChat\\VRChat\\LocalPlayerModerations\"\n\n$patternA = '^[0-9a-z]{10}-show-hide-user\\.vrcset$'\n\n$patternB = '^usr_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-show-hide-user\\.vrcset$'\n\n$files = Get-ChildItem -Path $path -File | Where-Object {\n\n    $_.Name -match $patternA -or $_.Name -match $patternB\n\n}\n\nforeach ($file in $files) {\n\n    $content = Get-Content $file.FullName\n\n    $newContent = $content | Where-Object { $_ -notmatch ' 005$' }\n\n    Set-Content -Path $file.FullName -Value $newContent\n\n}\n\n```",
+      "value": "PowerShell solution (co-authored by Microsoft Copilot):\n\n```\n\n$path = \"$env:USERPROFILE\\AppData\\LocalLow\\VRChat\\VRChat\\LocalPlayerModerations\"\n\n$patternA = '^[0-9a-z]{10}-show-hide-user\\.vrcset$'\n\n$patternB = '^usr_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-show-hide-user\\.vrcset$'\n\n$files = Get-ChildItem -Path $path -File | Where-Object {\n\n    $_.Name -match $patternA -or $_.Name -match $patternB\n\n}\n\nforeach ($file in $files) {\n\n    $content = Get-Content $file.FullName\n\n    $newContent = $content | Where-Object { $_ -notmatch ' 005$' }\n\n    Set-Content -Path $file.FullName -Value $newContent\n\n}\n\n```\n\nClose any running instances of the VRChat client, run the PowerShell script, and start the VRChat client again. \"Show avatar\" moderations will be reset to the default state (= Safety Shield) targeting every VRChat user shown, and these changes will be applied to every VRChat account used to login from the current Windows user profile.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -187,7 +187,7 @@
   "files": [],
   "ideaID": "6a133b4424eacac17c9bb802",
   "imageURLs": [],
-  "lastUpdated": 1779650903301,
+  "lastUpdated": 1779653908344,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -203,7 +203,7 @@
   "subCategoryID": null,
   "title": "Button to \"unshow\" everyone",
   "trendingScore": 2943.228288023815,
-  "updatedAt": "2026-05-24T19:33:15.916826Z",
+  "updatedAt": "2026-05-24T20:23:23.170017Z",
   "updatedBy": "6a133a5c5a52cb2df08d0b26",
   "urlName": "button-to-unshow-everyone",
   "viewerIsAuthor": false,
