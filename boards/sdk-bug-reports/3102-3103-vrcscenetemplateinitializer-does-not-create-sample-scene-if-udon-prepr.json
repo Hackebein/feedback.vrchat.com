@@ -372,7 +372,9 @@
       "postDeleted": false,
       "postID": "6a118a6724eacac17c4cc8c5",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -454,23 +456,23 @@
   "files": [],
   "ideaID": "6a118a6724eacac17c4cc8c7",
   "imageURLs": [],
-  "lastUpdated": 1779678155977,
+  "lastUpdated": 1779686923782,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 22,
+  "maxScore": 25,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a118a6724eacac17c4cc8c5/26449961.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 22,
+  "score": 25,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-23T11:07:19.565Z",
   "subCategoryID": null,
   "title": "[3.10.2,3.10.3] VRCSceneTemplateInitializer does not create sample scene if UDON preprocessor symbol is defined at first launch since VRCSDK 3.10.2.",
-  "trendingScore": 2945.574506436176,
-  "updatedAt": "2026-05-25T03:06:47.625645Z",
+  "trendingScore": 2945.7170066327617,
+  "updatedAt": "2026-05-25T05:33:10.619477Z",
   "updatedBy": null,
   "urlName": "3102-3103-vrcscenetemplateinitializer-does-not-create-sample-scene-if-udon-prepr",
   "viewerIsAuthor": false,
@@ -482,6 +484,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "612a2d3b89319d25e7ab0400",
+      "alias": "Civilian Bandicoot",
+      "aliasID": "65c53548ed6eefce4c89f71f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1b0e2f7ede94d3a6589f1eca82f5a097.png",
+      "companies": [],
+      "name": "千種（ちくさ）ナオ",
+      "urlName": "<redacted>",
+      "voteID": "6a13dd235a52cb2df08fa5ea"
+    },
+    {
+      "_id": "62c147429371790b9f74cc76",
+      "alias": "Gleaming Koala",
+      "aliasID": "65cfcafc0129d7ae443c41f8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/525e5e12b74de4d4dbbd437aa6bab6d2.png",
+      "companies": [],
+      "name": "かずぎつね",
+      "urlName": "<redacted>",
+      "voteID": "6a13d7205a52cb2df08f8647"
+    },
+    {
+      "_id": "6086e40cf54fe42106f55863",
+      "alias": "Yellow green Firefly",
+      "aliasID": "65c288dbed6eefce4c9b51ee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a59d9d18250f6669f0cc52dc582475d7.png",
+      "companies": [],
+      "name": "frou01",
+      "urlName": "<redacted>",
+      "voteID": "6a13c62f5a52cb2df08f47e6"
+    },
     {
       "_id": "5ce0d396df8b6a3fc2affff8",
       "alias": "Peaceful Blackbird",
@@ -558,39 +593,6 @@
       "name": "三阪あむ",
       "urlName": "<redacted>",
       "voteID": "6a12f0ed5a52cb2df08c1e34"
-    },
-    {
-      "_id": "5ef58fc134b6304ec43508f9",
-      "alias": "Improved Nightingale",
-      "aliasID": "65c282efed6eefce4cb76eb4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8d1c02115ddd91020d7a5dcf5253cd16.png",
-      "companies": [],
-      "name": "Smabro56",
-      "urlName": "<redacted>",
-      "voteID": "6a12b0765a52cb2df08b6da8"
-    },
-    {
-      "_id": "61b17aea8ed311220e933649",
-      "alias": "Kelp Barnacle",
-      "aliasID": "65c2824fed6eefce4c9f4f69",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/9f479d34a15f319f3f7fce1d5ee51bd1.png",
-      "companies": [],
-      "name": "西明寺弥生",
-      "urlName": "<redacted>",
-      "voteID": "6a129ec85a52cb2df08b4ac8"
-    },
-    {
-      "_id": "642f71744411000a38370639",
-      "alias": "Loyal Cuckoo",
-      "aliasID": "65c282efed6eefce4cb76f11",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7bd2163e726a31e8b9837ec8537bc16b.png",
-      "companies": [],
-      "name": "ヴァル",
-      "urlName": "<redacted>",
-      "voteID": "6a1296795a52cb2df08b33da"
     }
   ]
 }
