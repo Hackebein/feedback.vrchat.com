@@ -1,19 +1,19 @@
 {
   "_id": "6a11b050602ec4f4a950e508",
   "aiCategories": [
-    "loc.in-world",
-    "loc.main-menu",
-    "loc.website",
     "account.age-verification",
-    "groups",
-    "groups.instances",
-    "worlds.content-gating",
+    "loc.website",
+    "loc.in-world",
     "avatars",
     "avatars.upload-performance",
-    "social.nameplates",
+    "groups",
+    "groups.instances",
+    "groups.nameplates",
+    "worlds.travel",
+    "worlds.content-gating",
     "monetization.shop"
   ],
-  "aiTaggedAt": "2026-05-25T01:43:31.079473Z",
+  "aiTaggedAt": "2026-05-25T03:06:47.732882Z",
   "author": {
     "_id": "697007546cefe3c2382fa8ff",
     "alias": "Plastic Herring",
@@ -36,7 +36,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 12,
+  "commentCount": 13,
   "comments": [
     {
       "_id": "6a1250631e75e00bbdce43de",
@@ -662,13 +662,71 @@
       "postDeleted": false,
       "postID": "6a11b050602ec4f4a950e508",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "@{5e59bc346312bf2d549f33ab|full_name} From what i can find, the 2026 code exposure is the only \"breach\" of any kind regarding Persona. Up till that point there has seemingly been no proof or talk about Persona doing shady business. If you know of other incidents regarding Persona being shady, plz send articles.\n\nAlso the code exposure this year seems to have been OpenAI and/or the US gov contracting Persona to built that system for OpenAI services to screen all their users (behind the scenes - indeed shady). Thogh this is just another service Persona can provide if contracted. It doesn't prove Persona collects or sells user data from their other services wthout permission.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a13b53954c501fa1fd2e7f5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5e59bc346312bf2d549f33ab",
+        "alias": "Beryl Wallaby",
+        "aliasID": "65c2aceaed6eefce4ce242b4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a8c9037196f69f69492acd2833f31d27.png",
+        "created": "2020-02-29T01:19:48.358Z",
+        "name": "peq42",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-25T02:34:33.894Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65bd10d77df56e6937d54111",
+          "alias": "Kobi Raven",
+          "aliasID": "65c282efed6eefce4cb76e9c",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/5459addf17c7f4ac3709c3af641f2e07.png",
+          "created": "2024-02-02T15:57:11.533Z",
+          "name": "Cautіon",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a1250631e75e00bbdce43de",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a11b050602ec4f4a950e508",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65bd10d77df56e6937d54111|full_name}there has been several cases showing their connections to palantir, ICE, etc",
       "viewerReactions": null,
       "voteID": null
     }
@@ -686,23 +744,23 @@
   "files": [],
   "ideaID": "6a11b050602ec4f4a950e50a",
   "imageURLs": [],
-  "lastUpdated": 1779673172381,
+  "lastUpdated": 1779678154055,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 17,
+  "maxScore": 18,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a11b050602ec4f4a950e508/394006474.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 17,
+  "score": 18,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-23T13:49:04.552Z",
   "subCategoryID": null,
   "title": "Age verification, Adult spaces, Ban waves & NSFW content",
-  "trendingScore": 2945.352830729724,
-  "updatedAt": "2026-05-25T01:43:30.971400Z",
+  "trendingScore": 2945.4135223978506,
+  "updatedAt": "2026-05-25T03:06:47.625645Z",
   "updatedBy": null,
   "urlName": "age-verification-adult-spaces-ban-waves-nsfw-content",
   "viewerIsAuthor": false,
@@ -714,6 +772,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "688bf529076be5baa6db9176",
+      "alias": "Raspberry rose Shrew",
+      "aliasID": "688bf52a076be5baa6dbc208",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d614d546d323e928fa13217d30d10648.png",
+      "companies": [],
+      "name": "EmikoTheSkittle",
+      "urlName": "<redacted>",
+      "voteID": "6a13a8835a52cb2df08edd09"
+    },
     {
       "_id": "60a489eb1cda3a22d0cbba76",
       "alias": "Minimum Flamingo",
@@ -812,17 +881,6 @@
       "name": "RF_GAMER",
       "urlName": "<redacted>",
       "voteID": "6a131f0d5a52cb2df08cb48d"
-    },
-    {
-      "_id": "6a1226c15a52cb2df089ce01",
-      "alias": "Gossamer Gecko",
-      "aliasID": "6a1226c25a52cb2df089ce05",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7e605c32a9a3a4f08b2f4507cf2fbb91.png",
-      "companies": [],
-      "name": "SnakeTooth1337",
-      "urlName": "<redacted>",
-      "voteID": "6a1226c65a52cb2df089ce19"
     }
   ]
 }
