@@ -120,7 +120,9 @@
       "postDeleted": false,
       "postID": "68ec980ef798010937d93646",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -143,23 +145,23 @@
   "files": [],
   "ideaID": "68ec980ef798010937d936bb",
   "imageURLs": [],
-  "lastUpdated": 1779664804736,
+  "lastUpdated": 1779668674036,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 11,
+  "maxScore": 12,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68ec980ef798010937d93646/1697767119.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 11,
+  "score": 12,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2025-10-13T06:11:26.358Z",
   "subCategoryID": null,
   "title": "GPU instancing for Toon Standard",
-  "trendingScore": 2923.636063825343,
-  "updatedAt": "2026-05-24T23:25:53.686682Z",
+  "trendingScore": 2942.5732633525267,
+  "updatedAt": "2026-05-25T00:29:09.441038Z",
   "updatedBy": null,
   "urlName": "gpu-instancing-for-toon-standard",
   "viewerIsAuthor": false,
@@ -171,6 +173,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "667660bc733c9df5fbc6043b",
+      "alias": "Ochre Turtle",
+      "aliasID": "667660bcd5dd336a20040be1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6116bbe5d947dec43c0f98427a29efc6.png",
+      "companies": [],
+      "name": "SilvyPaws",
+      "urlName": "silvypaws",
+      "voteID": "6a1395555a52cb2df08eaa99"
+    },
     {
       "_id": "622893dc14e3795af3d9ed30",
       "alias": "Aquamarine Gayal",
@@ -269,17 +282,6 @@
       "name": "Kaycie Shchi",
       "urlName": "kstr",
       "voteID": "68ed4b1dd5830af7f17c2255"
-    },
-    {
-      "_id": "66b59376a7c34428de181436",
-      "alias": "Vivacious Deer",
-      "aliasID": "66b59376f66f1f693aed11d8",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8daa3c68261d84ed24bd7e8044aadb55.png",
-      "companies": [],
-      "name": "Insect Thirteen",
-      "urlName": "insect-thirteen",
-      "voteID": "68ec98603410c31abdfc3920"
     }
   ]
 }

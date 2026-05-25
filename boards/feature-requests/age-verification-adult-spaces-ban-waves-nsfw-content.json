@@ -1,17 +1,20 @@
 {
   "_id": "6a11b050602ec4f4a950e508",
   "aiCategories": [
+    "loc.in-world",
+    "loc.website",
+    "loc.main-menu",
+    "loc.hud",
     "account.age-verification",
     "groups",
-    "groups.creation",
-    "groups.roles",
+    "groups.instances",
     "avatars",
-    "avatars.upload-performance",
+    "worlds.travel",
     "monetization.shop",
-    "loc.in-world",
-    "social.friends"
+    "social.friends",
+    "social.nameplates"
   ],
-  "aiTaggedAt": "2026-05-24T20:23:23.266250Z",
+  "aiTaggedAt": "2026-05-25T00:29:09.540155Z",
   "author": {
     "_id": "697007546cefe3c2382fa8ff",
     "alias": "Plastic Herring",
@@ -34,7 +37,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "comments": [
     {
       "_id": "6a1250631e75e00bbdce43de",
@@ -70,7 +73,9 @@
       "postDeleted": false,
       "postID": "6a11b050602ec4f4a950e508",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -126,7 +131,9 @@
       "postDeleted": false,
       "postID": "6a11b050602ec4f4a950e508",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -326,7 +333,9 @@
       "postDeleted": false,
       "postID": "6a11b050602ec4f4a950e508",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -426,7 +435,9 @@
       "postDeleted": false,
       "postID": "6a11b050602ec4f4a950e508",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -538,13 +549,71 @@
       "postDeleted": false,
       "postID": "6a11b050602ec4f4a950e508",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "@{68098a4626271974ef4d2775|full_name} anyone knows damn well why you shouldn't trust Persona. https://www.theverge.com/tech/878369/discord-persona-age-verification\n\nThere have been several articles like this, and others exposing their shady stuff. Not to mention, its extremely easily for kids to get past it. They have and still do.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a138dfb602ec4f4a9ac2b3d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "697007546cefe3c2382fa8ff",
+        "alias": "Plastic Herring",
+        "aliasID": "697007546cefe3c2382fd782",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/84dfc0e5f67f7e59869268ec5fba2a4a.png",
+        "created": "2026-01-20T22:53:08.128Z",
+        "name": "Mira Ocha",
+        "serviceAccount": false,
+        "urlName": "mira-ocha"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-24T23:47:07.476Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5e59bc346312bf2d549f33ab",
+          "alias": "Beryl Wallaby",
+          "aliasID": "65c2aceaed6eefce4ce242b4",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/a8c9037196f69f69492acd2833f31d27.png",
+          "created": "2020-02-29T01:19:48.358Z",
+          "name": "peq42",
+          "serviceAccount": false,
+          "urlName": "peq42"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a1250631e75e00bbdce43de",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a11b050602ec4f4a950e508",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5e59bc346312bf2d549f33ab|full_name} The service VRChat uses doesnt collect any data, no images are send and its all done local. also peter thiel owns more then just parts of persona, he own parts of meta & paypal aswel just to give an example.\n\nAlso more kids are getting past those pretend to be bouncers at clubs by just straight up lying about their age then get past persona.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -562,7 +631,7 @@
   "files": [],
   "ideaID": "6a11b050602ec4f4a950e50a",
   "imageURLs": [],
-  "lastUpdated": 1779664800993,
+  "lastUpdated": 1779668670447,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 17,
@@ -578,7 +647,7 @@
   "subCategoryID": null,
   "title": "Age verification, Adult spaces, Ban waves & NSFW content",
   "trendingScore": 2945.352830729724,
-  "updatedAt": "2026-05-24T23:25:53.686682Z",
+  "updatedAt": "2026-05-25T00:29:09.441038Z",
   "updatedBy": null,
   "urlName": "age-verification-adult-spaces-ban-waves-nsfw-content",
   "viewerIsAuthor": false,
