@@ -1,0 +1,103 @@
+{
+  "_id": "6a13eda3602ec4f4a9c091bc",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-05-25T07:31:36.218891Z",
+  "author": {
+    "_id": "5ca74f3fb98a820b3ffec9cf",
+    "alias": "Dynamic Starfish",
+    "aliasID": "65c26da3ed6eefce4c4d07d4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6c79d42362a5eb00738655b60eddf986.png",
+    "created": "2016-04-09T02:19:38.000Z",
+    "name": "Salbug",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5ca74f3fb98a820b3ffec9cf",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1279,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-25T06:35:15.591Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Lately, I've been noticing a delay between when a Warp Effect plays and when the remote user disappears. Usually the two events are synchronized within about half a second, but I've been seeing occasions where a remote user's warp effect plays, and then they disappear about 1–1.5 seconds later. I'm currently unsure if there's a difference between warp effects that play when travelling versus when the VRChat client is closed, but I did notice the issue with one user when their client unexpectedly closed.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a13eda3602ec4f4a9c091c0",
+  "imageURLs": [],
+  "lastUpdated": 1779693988233,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a13eda3602ec4f4a9c091bc/150841374.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-25T06:35:15.591Z",
+  "subCategoryID": null,
+  "title": "Noticable Delay Between Warp Effect Firing and Remote User Disappearing",
+  "trendingScore": 2943.7098132869837,
+  "updatedAt": "2026-05-25T07:31:36.120614Z",
+  "updatedBy": null,
+  "urlName": "noticable-delay-between-warp-effect-firing-and-remote-user-disappearing",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df0cc446e66844a852fd59",
+      "alias": "Structural Sparrow",
+      "aliasID": "65c26ed9ed6eefce4c854f1b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d8206706dbcd3900a03bf129a8e5bf33.png",
+      "companies": [],
+      "name": "＠QJusticeSummon",
+      "urlName": "<redacted>",
+      "voteID": "6a13f1995a52cb2df0901e74"
+    },
+    {
+      "_id": "5ca74f3fb98a820b3ffec9cf",
+      "alias": "Dynamic Starfish",
+      "aliasID": "65c26da3ed6eefce4c4d07d4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c79d42362a5eb00738655b60eddf986.png",
+      "companies": [],
+      "name": "Salbug",
+      "urlName": "<redacted>",
+      "voteID": "6a13eda55a52cb2df090072d"
+    }
+  ]
+}
