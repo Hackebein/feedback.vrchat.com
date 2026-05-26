@@ -5,7 +5,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-05-23T18:22:29.289355Z",
+  "aiTaggedAt": "2026-05-26T12:57:09.621244Z",
   "author": {
     "_id": "5dc5ffef0892247f76089a24",
     "alias": "Civic Raccoon",
@@ -34,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "__v": 0,
@@ -270,13 +270,59 @@
       "postDeleted": false,
       "postID": "60090e4c6a46514dbb3709fe",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "5 years later, no progress...",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a15685bf53a212d2ec7fe16",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66b9dca5fe7857e24220e200",
+        "alias": "Thirsty Flamingo",
+        "aliasID": "66b9dca53e088c8d6b24ea09",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f57feebaa10ba352d3a7b716759206c3.png",
+        "created": "2024-08-12T09:57:57.088Z",
+        "name": "God-Of-Pickles",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-26T09:31:07.559Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "60090e4c6a46514dbb3709fe",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "this NEEDS to be bumped",
       "viewerReactions": null,
       "voteID": null
     }
@@ -292,23 +338,23 @@
   "files": [],
   "ideaID": "680bb801e4c3e90df1322b0c",
   "imageURLs": [],
-  "lastUpdated": 1779786252577,
+  "lastUpdated": 1779799962932,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 34,
+  "maxScore": 35,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/60090e4c6a46514dbb3709fe/33549408.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 34,
+  "score": 35,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2021-05-11T00:55:11.536Z",
   "subCategoryID": null,
   "title": "Expose 'ParticlePhysicsExtensions' that helps particle collision detection",
-  "trendingScore": 2941.882252954696,
-  "updatedAt": "2026-05-26T09:09:05.146567Z",
+  "trendingScore": 2943.115360864115,
+  "updatedAt": "2026-05-26T12:57:09.521440Z",
   "urlName": "expose-particlephysicsextensions-that-helps-particle-collision-detection",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -319,6 +365,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "66b9dca5fe7857e24220e200",
+      "alias": "Thirsty Flamingo",
+      "aliasID": "66b9dca53e088c8d6b24ea09",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f57feebaa10ba352d3a7b716759206c3.png",
+      "companies": [],
+      "name": "God-Of-Pickles",
+      "urlName": "<redacted>",
+      "voteID": "6a15684a5a52cb2df0983bca"
+    },
     {
       "_id": "628f5cc453f1be0b5e3a2bc8",
       "alias": "Crimson Manatee",
@@ -417,17 +474,6 @@
       "name": "StephenVR",
       "urlName": "<redacted>",
       "voteID": "66d9dbe67d32abb6ca3cf08f"
-    },
-    {
-      "_id": "633582a9a8071744c3f4f652",
-      "alias": "Collective Crayfish",
-      "aliasID": "65cdc9b8ed6eefce4c05e4a8",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/681ea10707023875682b9338cce31693.png",
-      "companies": [],
-      "name": "SpaceCowboy121",
-      "urlName": "<redacted>",
-      "voteID": "6655c588b9e8e8fe66dfde9a"
     }
   ]
 }
