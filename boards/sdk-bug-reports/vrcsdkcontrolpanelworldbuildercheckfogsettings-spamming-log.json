@@ -1,0 +1,92 @@
+{
+  "_id": "6a14ee09a7bd685498742123",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-05-26T01:40:12.760308Z",
+  "author": {
+    "_id": "6086e40cf54fe42106f55863",
+    "alias": "Yellow green Firefly",
+    "aliasID": "65c288dbed6eefce4c9b51ee",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a59d9d18250f6669f0cc52dc582475d7.png",
+    "created": "2021-04-26T16:02:20.131Z",
+    "name": "frou01",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6086e40cf54fe42106f55863",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 339,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-26T00:49:13.436Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. edit scene\n\n2. wait a second\n\n3. SDK spam the log: \"Force-enabling Fog\"\n\nThis is output from the EnvConfig.GetFogSettings() method, which retrieves settings. This spam should be eliminated because it overwhelms logs that are necessary for debugging, etc.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a14ee09a7bd685498742125",
+  "imageURLs": [],
+  "lastUpdated": 1779759324032,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a14ee09a7bd685498742123/221335619.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-26T00:49:13.436Z",
+  "subCategoryID": null,
+  "title": "VRCSdkControlPanelWorldBuilder.CheckFogSettings spamming Log",
+  "trendingScore": 2943.4123173277167,
+  "updatedAt": "2026-05-26T01:40:12.659141Z",
+  "updatedBy": null,
+  "urlName": "vrcsdkcontrolpanelworldbuildercheckfogsettings-spamming-log",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6086e40cf54fe42106f55863",
+      "alias": "Yellow green Firefly",
+      "aliasID": "65c288dbed6eefce4c9b51ee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a59d9d18250f6669f0cc52dc582475d7.png",
+      "companies": [],
+      "name": "frou01",
+      "urlName": "<redacted>",
+      "voteID": "6a14ee0a5a52cb2df095f884"
+    }
+  ]
+}
