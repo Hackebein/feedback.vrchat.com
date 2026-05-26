@@ -2,10 +2,10 @@
   "_id": "6a13d3e7b94d2b86707854be",
   "aiCategories": [
     "loc.in-world",
-    "loc.quick-menu",
-    "moderation.safety-system"
+    "moderation.safety-system",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-05-25T22:26:58.987596Z",
+  "aiTaggedAt": "2026-05-26T17:09:12.045656Z",
   "author": {
     "_id": "68d847814f674f1b1e339ea7",
     "alias": "Heliotrope Crow",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a13fd915b77904ee3458e93",
@@ -295,7 +295,7 @@
       "postID": "6a13d3e7b94d2b86707854be",
       "private": false,
       "reactions": {
-        "like": 5
+        "like": 6
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -341,7 +341,7 @@
       "postID": "6a13d3e7b94d2b86707854be",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -349,6 +349,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Defenetly a user base and new safety setting needed. Voted Up.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a15ca49602ec4f4a95204ec",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a15c8fe5a52cb2df09b9f6f",
+        "alias": "Apparent Toad",
+        "aliasID": "6a15c8fe5a52cb2df09b9f79",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2026-05-26T16:23:26.575Z",
+        "name": "Ryan_666",
+        "serviceAccount": false,
+        "urlName": "ryan-666-1"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-26T16:28:57.410Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a13d3e7b94d2b86707854be",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "To hide all the items the worse part is u have to manually do it one by one and the hitbox can be so tiny even sometimes. It is almost impossible to turn off for me while having difficultys looking at it. \n\nSadly since most part of effects isn't part of avatars or world but vrc+ things itself, you can't hide it the same way you can with other stuffs (speaking of safety bubble) \n\nAnd since vrc has removed mods in the past there's no current way to solve it ourself due to it's just part of the game. \n\nHope they're going to make it safe soon.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -366,23 +410,23 @@
   "files": [],
   "ideaID": "6a13d3e7b94d2b86707854c0",
   "imageURLs": [],
-  "lastUpdated": 1779808519245,
+  "lastUpdated": 1779815064103,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 85,
+  "maxScore": 87,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a13d3e7b94d2b86707854be/2008646621.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 85,
+  "score": 87,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-25T04:45:27.392Z",
   "subCategoryID": null,
   "title": "Safety settings options to disable: join/leave animations, fancy portals, and items",
-  "trendingScore": 2947.1331248941333,
-  "updatedAt": "2026-05-26T15:20:22.206223Z",
+  "trendingScore": 2947.159297981441,
+  "updatedAt": "2026-05-26T17:09:11.945322Z",
   "updatedBy": null,
   "urlName": "safety-settings-options-to-disable-join-leave-animations-fancy-portals-and-items",
   "viewerIsAuthor": false,
@@ -394,6 +438,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a15c8fe5a52cb2df09b9f6f",
+      "alias": "Apparent Toad",
+      "aliasID": "6a15c8fe5a52cb2df09b9f79",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Ryan_666",
+      "urlName": "ryan-666-1",
+      "voteID": "6a15c9015a52cb2df09b9f7c"
+    },
+    {
+      "_id": "5f7141b68bc9aa79ba49bdd4",
+      "alias": "Informal Antelope",
+      "aliasID": "661a5ecfe5d26962aa503a6b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bb077019347b0e428656968ada9449b1.png",
+      "companies": [],
+      "name": "Intuos",
+      "urlName": "intuos",
+      "voteID": "6a15c0905a52cb2df09afc7d"
+    },
     {
       "_id": "65aaaf02eb6f7428be4aaeda",
       "alias": "Practical Hedgehog",
@@ -481,28 +547,6 @@
       "name": "tom2609",
       "urlName": "tom2609",
       "voteID": "6a1549025a52cb2df0978422"
-    },
-    {
-      "_id": "6a1514175a52cb2df096a7d2",
-      "alias": "Persimmon Herring",
-      "aliasID": "6a1514185a52cb2df096a7d6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/33202e3fd0d6a785a435d57f6c9495ab.png",
-      "companies": [],
-      "name": "mrmancoco",
-      "urlName": "mrmancoco",
-      "voteID": "6a15141d5a52cb2df096a7e9"
-    },
-    {
-      "_id": "6a14fd275a52cb2df096314e",
-      "alias": "Necessary Crawdad",
-      "aliasID": "6a14fd285a52cb2df0963152",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/574d09db233aa29964e776357d1e99f0.png",
-      "companies": [],
-      "name": "RaijuLyn",
-      "urlName": "raijulyn",
-      "voteID": "6a1501d45a52cb2df0964a7a"
     }
   ]
 }
