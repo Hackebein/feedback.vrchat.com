@@ -2,10 +2,9 @@
   "_id": "6a1449f91e75e00bbd2f6800",
   "aiCategories": [
     "loc.in-world",
-    "sdk.udon",
     "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-05-26T15:20:22.317814Z",
+  "aiTaggedAt": "2026-05-27T11:13:23.160228Z",
   "author": {
     "_id": "62cbec9fb806110baae1748f",
     "alias": "Sensitive Egret",
@@ -28,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a15b34a6a9e4790a8ae68b8",
@@ -74,6 +73,62 @@
       "value": "Can you provide a world ID?",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a16b5a2ac07dd05af31b6d5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6086e40cf54fe42106f55863",
+        "alias": "Yellow green Firefly",
+        "aliasID": "65c288dbed6eefce4c9b51ee",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a59d9d18250f6669f0cc52dc582475d7.png",
+        "created": "2021-04-26T16:02:20.131Z",
+        "name": "frou01",
+        "serviceAccount": false,
+        "urlName": "frou01"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-27T09:13:06.017Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": "paige-pinson"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a15b34a6a9e4790a8ae68b8",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1449f91e75e00bbd2f6800",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} This behavior can be easily reproduced in this world because you enter the Station while standing.\n\nhttps://vrchat.com/home/world/wrld_f466709e-f226-478f-a598-b8a4ba52aa70/info\n\nWhen you're on the train, in VR mode, the normal rotation controls are replaced with station rotation controls.\n\nThis behavior seems not to occur if you crouch before entering the Station.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -97,23 +152,23 @@
   ],
   "ideaID": "6a1449f91e75e00bbd2f6803",
   "imageURLs": [],
-  "lastUpdated": 1779872613341,
+  "lastUpdated": 1779880123697,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 32,
+  "maxScore": 33,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a1449f91e75e00bbd2f6800/40556887.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 32,
+  "score": 33,
   "sourceFeatureExtractionItem": null,
   "status": "needs more information",
   "statusChanged": "2026-05-26T14:50:50.295Z",
   "subCategoryID": null,
   "title": "When VRCStation rotates, the torso of seated players does not follow the rotation",
-  "trendingScore": 2946.216144111244,
-  "updatedAt": "2026-05-27T09:08:25.182735Z",
+  "trendingScore": 2946.2521931882625,
+  "updatedAt": "2026-05-27T11:13:23.053840Z",
   "updatedBy": null,
   "urlName": "when-vrcstation-rotates-the-torso-of-seated-players-does-not-follow-the-rotation",
   "viewerIsAuthor": false,
@@ -125,6 +180,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "613c69574a2aeb032b1dca2a",
+      "alias": "Total Amphibian",
+      "aliasID": "65cac670ed6eefce4c086b4d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2c8b20ca168a0010e60d1df8f97f5357.png",
+      "companies": [],
+      "name": "梟さん（Owl）",
+      "urlName": "owl-19",
+      "voteID": "6a16b40f5a52cb2df0a17da9"
+    },
     {
       "_id": "66cdb274b161089707e1eedb",
       "alias": "Satisfactory Bovid",
@@ -223,17 +289,6 @@
       "name": "万華鏡にゃん",
       "urlName": "01a18f-2",
       "voteID": "6a1516405a52cb2df096ac5b"
-    },
-    {
-      "_id": "6257c74b4653373738ddf2e6",
-      "alias": "Flax Krill",
-      "aliasID": "65c28a67ed6eefce4cd6a872",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c756ae7dada708d6532aaf5c7c1260b1.png",
-      "companies": [],
-      "name": "nHaruka",
-      "urlName": "nharuka",
-      "voteID": "6a1516075a52cb2df096abda"
     }
   ]
 }
