@@ -1,10 +1,7 @@
 {
   "_id": "6a12500d1e75e00bbdcdcba0",
-  "aiCategories": [
-    "loc.in-world",
-    "social.instances"
-  ],
-  "aiTaggedAt": "2026-05-27T15:07:29.605769Z",
+  "aiCategories": [],
+  "aiTaggedAt": "2026-05-27T20:45:18.045568Z",
   "author": {
     "_id": "5e59bc346312bf2d549f33ab",
     "alias": "Beryl Wallaby",
@@ -27,7 +24,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a12ada524eacac17c7f47f6",
@@ -410,6 +407,62 @@
       "value": "@{5e59bc346312bf2d549f33ab|full_name} Those outages had nothing to do with VRChat and were caused by AWS",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a175633a522cd7fb1583afe",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": "wubthecaptain"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-27T20:38:11.631Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "651ee4c59bd9ae5010c127e1",
+          "alias": "Rose Seahorse",
+          "aliasID": "65c6799fed6eefce4c011ce3",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/a86d16f54d21e4c64071d5c35e0626e8.png",
+          "created": "2023-10-05T16:31:01.250Z",
+          "name": "French Fox",
+          "serviceAccount": false,
+          "urlName": "french-fox"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a12ada524eacac17c7f47f6",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a12500d1e75e00bbdcdcba0",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{651ee4c59bd9ae5010c127e1|full_name} Hi, AWS didn't have an outage according to https://health.aws.amazon.com/health/status . A third-party, maybe!",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -425,7 +478,7 @@
   "files": [],
   "ideaID": "6a12500d1e75e00bbdcdcba2",
   "imageURLs": [],
-  "lastUpdated": 1779910804823,
+  "lastUpdated": 1779914403978,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -441,7 +494,7 @@
   "subCategoryID": null,
   "title": "~120k concurrent users hard server limit",
   "trendingScore": 2943.5911942273087,
-  "updatedAt": "2026-05-27T19:44:50.315819Z",
+  "updatedAt": "2026-05-27T20:45:17.939356Z",
   "updatedBy": "5e59bc346312bf2d549f33ab",
   "urlName": "120k-concurrent-users-hard-server-limit",
   "viewerIsAuthor": false,

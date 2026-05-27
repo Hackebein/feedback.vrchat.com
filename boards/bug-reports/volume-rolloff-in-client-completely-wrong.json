@@ -1,10 +1,11 @@
 {
   "_id": "6a16fec7487796175918c6a1",
   "aiCategories": [
-    "loc.in-world",
-    "audio.steam-audio"
+    "audio.steam-audio",
+    "loc.unity-sdk",
+    "loc.in-world"
   ],
-  "aiTaggedAt": "2026-05-27T18:49:11.164558Z",
+  "aiTaggedAt": "2026-05-27T20:45:18.044857Z",
   "author": {
     "_id": "5f2eaed841e042066f65cb45",
     "alias": "Gainsboro Blackbird",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a1701d447687d01991fe62d",
@@ -107,13 +108,71 @@
       "postDeleted": false,
       "postID": "6a16fec7487796175918c6a1",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "What you are experiencing are the limits of the ONSP to SteamAudio conversion code. At a \"Max Distance\" setting of over approximately 100-200 meters, the math simply doesn't allow for a clean, 1:1 conversion under all circumstances. All design decisions we have made in that algorithm, including the boosted volume for _very_ large distance like your 5000m source, are trade-offs - without them, other worlds would sound incorrect again. There is nothing wrong with using custom audio curves in that scenario, and it is the currently recommended way of approaching it.\n\nThe proper fix for this is to provide SteamAudio in the SDK, which is a longer term project we are working towards. Note that this will _not_ allow the mapping to behave like ONSP again, in fact quite the opposite, but it will allow you to use SteamAudio's actual physics based falloffs properly.\n\nHaving looked at your world, I don't see anything actionable at the moment that wouldn't break other worlds. Thank your for the detailed bug report either way.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a174f635a0b1399f2701da2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f2eaed841e042066f65cb45",
+        "alias": "Gainsboro Blackbird",
+        "aliasID": "65c2a2a0ed6eefce4c76962d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6884dcb4ec56824afc184b17601d7453.png",
+        "created": "2020-08-08T13:55:36.280Z",
+        "name": "Shiro K",
+        "serviceAccount": false,
+        "urlName": "shiro-k"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-27T20:09:07.156Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": "tau-26"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a1737a25a0b1399f2690dcc",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a16fec7487796175918c6a1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} Thanks for this fast answer. Does that mean that when I switch globally to custom rolloff in my projects, this option will also stay in future when SteamAudio is added in the SDK? I'd like to avoid having to adjust all my sounds again.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -133,7 +192,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/7751dfe42456e8ffbf1a1bb48d74fb2d.png"
   ],
-  "lastUpdated": 1779910804138,
+  "lastUpdated": 1779914403623,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -149,7 +208,7 @@
   "subCategoryID": null,
   "title": "Volume rolloff in client completely wrong",
   "trendingScore": 2943.636123185851,
-  "updatedAt": "2026-05-27T19:44:50.315819Z",
+  "updatedAt": "2026-05-27T20:45:17.939356Z",
   "updatedBy": "5f2eaed841e042066f65cb45",
   "urlName": "volume-rolloff-in-client-completely-wrong",
   "viewerIsAuthor": false,
