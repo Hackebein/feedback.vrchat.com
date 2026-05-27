@@ -1,7 +1,10 @@
 {
   "_id": "6a0023b1ace1f27057dae522",
-  "aiCategories": [],
-  "aiTaggedAt": "2026-05-17T21:32:05.937113Z",
+  "aiCategories": [
+    "loc.in-world",
+    "client.inventory"
+  ],
+  "aiTaggedAt": "2026-05-27T13:05:55.601557Z",
   "author": {
     "_id": "5f842ca27377595fbdc361cf",
     "alias": "Dramatic Puma",
@@ -24,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a00cc19cda87f514be19534",
@@ -61,7 +64,7 @@
       "postID": "6a0023b1ace1f27057dae522",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -115,6 +118,50 @@
       "value": "It might be good to have something like a radial menu for items that allows you to change the behavior and size of the items.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a16d55f9eb002c36fa08e65",
+      "aiGenerated": false,
+      "author": {
+        "_id": "697007546cefe3c2382fa8ff",
+        "alias": "Plastic Herring",
+        "aliasID": "697007546cefe3c2382fd782",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e9934b5329b17df464f8acd8be8ae817.png",
+        "created": "2026-01-20T22:53:08.128Z",
+        "name": "Mira Ocha",
+        "serviceAccount": false,
+        "urlName": "mira-ocha"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-27T11:28:31.768Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a0023b1ace1f27057dae522",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I think this feature would be great but not on all items, things that you place on the floor should be kept the same size for everyone. but hand held items should get the scaling, items like the snow spewer thingy already effect a huge area and I feel like it would be annoying to deal with.\n\nI understand anyone could just turn these items off but I still think it would just be more annoying then usefull.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -134,23 +181,23 @@
     "https://canny-assets.io/images/4b077dd1bd7590857e817e2143d53d7d.png",
     "https://canny-assets.io/images/260d9ee3dfc0e1bab8585bfcb6962652.png"
   ],
-  "lastUpdated": 1779880124711,
+  "lastUpdated": 1779886859338,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 56,
+  "maxScore": 57,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a0023b1ace1f27057dae522/1245961417.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 56,
+  "score": 57,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-10T06:20:33.123Z",
   "subCategoryID": null,
   "title": "Make the scale of items adjustable regardless of the avatar's scale",
-  "trendingScore": 2945.46745179305,
-  "updatedAt": "2026-05-27T11:13:23.053840Z",
+  "trendingScore": 2945.5431950321104,
+  "updatedAt": "2026-05-27T13:05:55.491287Z",
   "updatedBy": null,
   "urlName": "make-the-scale-of-items-adjustable-regardless-of-the-avatars-scale",
   "viewerIsAuthor": false,
@@ -162,6 +209,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "697007546cefe3c2382fa8ff",
+      "alias": "Plastic Herring",
+      "aliasID": "697007546cefe3c2382fd782",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e9934b5329b17df464f8acd8be8ae817.png",
+      "companies": [],
+      "name": "Mira Ocha",
+      "urlName": "mira-ocha",
+      "voteID": "6a16d4ae5a52cb2df0a2a38d"
+    },
     {
       "_id": "64e5d78acd62f7097b3ce74f",
       "alias": "Effective Swordtail",
@@ -260,17 +318,6 @@
       "name": "Runya~",
       "urlName": "runia-1",
       "voteID": "6a0f7a2e5a52cb2df0492d84"
-    },
-    {
-      "_id": "67c4a26aa41f3c50eba10d2d",
-      "alias": "Alloy Condor",
-      "aliasID": "6a0ef00b5a52cb2df043069f",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/23036890749d72235225f010dbd945d2.png",
-      "companies": [],
-      "name": "Rubiconas",
-      "urlName": "v-4865",
-      "voteID": "6a0ef0405a52cb2df0430807"
     }
   ]
 }
