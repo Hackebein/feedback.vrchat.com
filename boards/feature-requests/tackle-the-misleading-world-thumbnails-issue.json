@@ -65,7 +65,9 @@
       "postDeleted": false,
       "postID": "6a0d78b85f307f09c7819bdf",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -89,23 +91,23 @@
   "files": [],
   "ideaID": "6a0d78b85f307f09c7819c0d",
   "imageURLs": [],
-  "lastUpdated": 1779914404159,
+  "lastUpdated": 1779917577264,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 15,
+  "maxScore": 16,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a0d78b85f307f09c7819bdf/668068829.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 15,
+  "score": 16,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-20T09:02:48.310Z",
   "subCategoryID": null,
   "title": "Tackle the misleading world thumbnails issue",
-  "trendingScore": 2945.185611275093,
-  "updatedAt": "2026-05-27T20:45:17.939356Z",
+  "trendingScore": 2945.290554453941,
+  "updatedAt": "2026-05-27T21:37:55.468519Z",
   "updatedBy": "5f67899159b0841fe0d3891b",
   "urlName": "tackle-the-misleading-world-thumbnails-issue",
   "viewerIsAuthor": false,
@@ -117,6 +119,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64f8e8d313b550392ac6b63b",
+      "alias": "Daily Bear",
+      "aliasID": "65c29c85ed6eefce4c8cc730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/279d5344e6e3af3276b9dde2fa6b08a7.png",
+      "companies": [],
+      "name": "hdorriker",
+      "urlName": "hdorriker",
+      "voteID": "6a17602f5a52cb2df0a7b29f"
+    },
     {
       "_id": "6633baa5f287db2b14695232",
       "alias": "Golden poppy Eagle",
@@ -215,17 +228,6 @@
       "name": "PDB",
       "urlName": "pdb-4",
       "voteID": "6a0f66975a52cb2df0480ef3"
-    },
-    {
-      "_id": "5f2d586c7f57433511432c5a",
-      "alias": "Binding Cricket",
-      "aliasID": "65c28339ed6eefce4cc2dcf3",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/bcc8d2a0d1fbd1e2d9f8149098a69a48.png",
-      "companies": [],
-      "name": "Avislime",
-      "urlName": "avislime",
-      "voteID": "6a0ed1345a52cb2df0423959"
     }
   ]
 }
