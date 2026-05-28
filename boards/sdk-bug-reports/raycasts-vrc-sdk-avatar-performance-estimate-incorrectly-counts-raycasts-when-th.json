@@ -1,0 +1,92 @@
+{
+  "_id": "6a17ab4117b24602d7ab502a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-05-28T03:06:42.668747Z",
+  "author": {
+    "_id": "62df2c865968ab44bca883ce",
+    "alias": "Whisper pink Fish",
+    "aliasID": "65c2c0bced6eefce4c74c766",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a4a70311e815694772bd6580643f1154.png",
+    "created": "2022-07-25T23:51:34.230Z",
+    "name": "RuneFox237",
+    "serviceAccount": false,
+    "urlName": "runefox237"
+  },
+  "authorID": "62df2c865968ab44bca883ce",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 341,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-28T02:41:05.977Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When working with VRC Raycasts I've found that the SDK still tries to count any VRC Raycast components that are on a object or child of an object that is tagged as EditorOnly. \n\nThe expected behavior for this is that these components are not counted in the estimated performance rank like other components. \n\nSteps to reproduce:\n\n- Create an object on an avatar and add a raycast component to the object.\n\n- Observe the Performance Rank Estimate showing 1 Raycast\n\n- Mark the object as Editor Only\n\n- Observe the Performance Rank Estimate still showing 1 Raycast\n\nThis does not happen w/ other VRC Components like Contacts or Constraints. It seems unique to Raycasts.\n\nNotes:\n\n- Noticed that the Select button correctly selects all Non-EditorOnly raycasts properly when they exist, but if all you have are Raycasts that are currently EditorOnly then it selects the root of the avatar instead.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a17ab4117b24602d7ab500d",
+  "imageURLs": [],
+  "lastUpdated": 1779937313903,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-28T02:41:05.977Z",
+  "subCategoryID": null,
+  "title": "[Raycasts] VRC SDK Avatar Performance Estimate incorrectly counts Raycasts when they're under the EditorOnly tag.",
+  "trendingScore": 2943.7091289621408,
+  "updatedAt": "2026-05-28T03:06:42.565414Z",
+  "updatedBy": null,
+  "urlName": "raycasts-vrc-sdk-avatar-performance-estimate-incorrectly-counts-raycasts-when-th",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df2c865968ab44bca883ce",
+      "alias": "Whisper pink Fish",
+      "aliasID": "65c2c0bced6eefce4c74c766",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a4a70311e815694772bd6580643f1154.png",
+      "companies": [],
+      "name": "RuneFox237",
+      "urlName": "runefox237",
+      "voteID": "6a17ab425a52cb2df0a9ed5b"
+    }
+  ]
+}
