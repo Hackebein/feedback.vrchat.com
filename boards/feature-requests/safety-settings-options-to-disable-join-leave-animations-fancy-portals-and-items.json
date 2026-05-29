@@ -433,7 +433,9 @@
       "postDeleted": false,
       "postID": "6a13d3e7b94d2b86707854be",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -478,7 +480,7 @@
       "postID": "6a13d3e7b94d2b86707854be",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -503,23 +505,23 @@
   "files": [],
   "ideaID": "6a13d3e7b94d2b86707854c0",
   "imageURLs": [],
-  "lastUpdated": 1780074398354,
+  "lastUpdated": 1780080496373,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 148,
+  "maxScore": 149,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a13d3e7b94d2b86707854be/2008646621.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 148,
+  "score": 149,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-25T04:45:27.392Z",
   "subCategoryID": null,
   "title": "Safety settings options to disable: join/leave animations, fancy portals, and items",
-  "trendingScore": 2947.8158234935845,
-  "updatedAt": "2026-05-29T17:11:37.433975Z",
+  "trendingScore": 2947.826199248414,
+  "updatedAt": "2026-05-29T18:53:12.429043Z",
   "updatedBy": null,
   "urlName": "safety-settings-options-to-disable-join-leave-animations-fancy-portals-and-items",
   "viewerIsAuthor": false,
@@ -531,6 +533,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "60160424853bca45453eb076",
+      "alias": "Persian blue Flyingfish",
+      "aliasID": "65c39c72ed6eefce4c2d97f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3c6ba69ce6cd9534cf126cc066135c9f.png",
+      "companies": [],
+      "name": "MythicalCuddles",
+      "urlName": "<redacted>",
+      "voteID": "6a19da9486d7b8843b354d9b"
+    },
     {
       "_id": "62df2c865968ab44bca883ce",
       "alias": "Whisper pink Fish",
@@ -629,17 +642,6 @@
       "name": "Rosmic",
       "urlName": "<redacted>",
       "voteID": "6a191d8d5a52cb2df0b4f45b"
-    },
-    {
-      "_id": "62def505f209dd5684e418f1",
-      "alias": "Positive Locust",
-      "aliasID": "65c4ac29ed6eefce4c410281",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/41b618774bbb9663a52ee8fe44c8685a.png",
-      "companies": [],
-      "name": "Dinzee",
-      "urlName": "<redacted>",
-      "voteID": "6a191c865a52cb2df0b4f248"
     }
   ]
 }
