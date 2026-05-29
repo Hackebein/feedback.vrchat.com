@@ -1,10 +1,10 @@
 {
   "_id": "6a195539774091486d20db64",
   "aiCategories": [
-    "sdk.udon",
-    "loc.in-world"
+    "loc.unity-sdk",
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-05-29T09:09:15.948784Z",
+  "aiTaggedAt": "2026-05-29T15:07:20.021122Z",
   "author": {
     "_id": "65ce4f2a152f3207ae186591",
     "alias": "Indigo Parrotfish",
@@ -27,8 +27,53 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a199bf9270bfb7623b7db7d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62927f2714dfd40b77e3eb69",
+        "alias": "Allied Swift",
+        "aliasID": "65c2a2bced6eefce4c7aea94",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0386f75979ad8dc8116f9b092a6718d1.png",
+        "created": "2022-05-28T19:59:35.151Z",
+        "name": "Raingram",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-29T14:00:25.235Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a195539774091486d20db64",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I worry about people misusing it maliciously, but I suppose they can do that already. \n\nI'd like to add that various types of post processing can hurt people too, so having a toggle for each one would help a lot in some cases.\n\nI'd strongly suggest doing research into these various disabilities/sensitivities because, for instance, I didn't know that there are some known rules about photosensitivity and that it's not always flashing lights that sets it off but can also be repeating visual patterns. Getting the documentation and guidance right is important here too.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-05-29T08:58:33.836Z",
   "deleteID": null,
@@ -42,23 +87,23 @@
   "files": [],
   "ideaID": "6a195539774091486d20db0b",
   "imageURLs": [],
-  "lastUpdated": 1780059674337,
+  "lastUpdated": 1780066922052,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 8,
+  "maxScore": 11,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a195539774091486d20db64/426886035.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 8,
+  "score": 11,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-29T08:58:33.836Z",
   "subCategoryID": null,
   "title": "Udon accessibility preferences API",
-  "trendingScore": 2945.401482547875,
-  "updatedAt": "2026-05-29T13:06:20.182538Z",
+  "trendingScore": 2945.694860667603,
+  "updatedAt": "2026-05-29T15:07:17.834153Z",
   "updatedBy": null,
   "urlName": "udon-accessibility-preferences-api",
   "viewerIsAuthor": false,
@@ -70,6 +115,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62a066594ad7cf0bac8db24e",
+      "alias": "Distinguished Raccoon",
+      "aliasID": "66238d74d36452c1791da165",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/13bb9bd35c69602d89ab88f0764e840f.png",
+      "companies": [],
+      "name": "Deuchnord",
+      "urlName": "<redacted>",
+      "voteID": "6a19a5de86d7b8843b3354bc"
+    },
+    {
+      "_id": "62927f2714dfd40b77e3eb69",
+      "alias": "Allied Swift",
+      "aliasID": "65c2a2bced6eefce4c7aea94",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0386f75979ad8dc8116f9b092a6718d1.png",
+      "companies": [],
+      "name": "Raingram",
+      "urlName": "<redacted>",
+      "voteID": "6a1999ed86d7b8843b32d857"
+    },
+    {
+      "_id": "663161f4c44d43bc467d7aff",
+      "alias": "Favourable Bobcat",
+      "aliasID": "663161f4d36452c179f768e2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/29504f7e77640402a508e399686f5032.png",
+      "companies": [],
+      "name": "Mety72",
+      "urlName": "<redacted>",
+      "voteID": "6a19987a86d7b8843b32d22f"
+    },
     {
       "_id": "5ff89a9e3542de4cff93cf33",
       "alias": "Wonderful Tuna",
@@ -146,17 +224,6 @@
       "name": "ShoniaTV",
       "urlName": "<redacted>",
       "voteID": "6a19574f5a52cb2df0b5cfeb"
-    },
-    {
-      "_id": "65ce4f2a152f3207ae186591",
-      "alias": "Indigo Parrotfish",
-      "aliasID": "65ce4f2b0129d7ae44e7508c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/66530e5eadfea2790a29b849fc04febd.png",
-      "companies": [],
-      "name": "TheLastOperator",
-      "urlName": "<redacted>",
-      "voteID": "6a1955395a52cb2df0b5c5fc"
     }
   ]
 }
