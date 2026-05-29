@@ -1,0 +1,130 @@
+{
+  "_id": "6a19e89e08640b7f5657d5a6",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-05-29T19:51:20.207508Z",
+  "author": {
+    "_id": "632ad07ae29a9c44bc903920",
+    "alias": "Obedient Hare",
+    "aliasID": "65c2ff59ed6eefce4cabf780",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/da59898a41330e7d425619e909844d63.png",
+    "created": "2022-09-21T08:51:06.528Z",
+    "name": "Piano Walrus",
+    "serviceAccount": false,
+    "urlName": "piano-walrus"
+  },
+  "authorID": "632ad07ae29a9c44bc903920",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-29T19:27:26.200Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After the most recent update (2026.2.2 Build 1853), many members of my community are unable to join certain worlds, myself included. We attempt to join the world, it loads to 100%, then kicks us back to our home worlds. Preloading the world also stops at around 99%, then just hangs.\n\nI've confirmed this issue occurs on Desktop and PCVR. I haven't experienced it on mobile yet, and Quest users seem to be okay, but the issue I briefly mention below happened on Android mobile on a Samsung Galaxy S25 Ultra (again, only after updating to the most recent build).\n\nI've attached a log file that a community member provided me, and a couple images showcasing:\n\n1. The portion of my own log that I assume to be most relevant\n\n2. A screenshot from the mobile version of the new update that leads me to assume this issue may be related to the new image compressor that was implemented in the most recent update (though these could be two unrelated issues, I just figured I'd include it in case it's relevant).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/e35283cd1d336777ba1761dee0ff5c59.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-05-29_20-00-52",
+      "url": "https://canny-assets.io/files/e35283cd1d336777ba1761dee0ff5c59.txt"
+    }
+  ],
+  "ideaID": "6a19e89e08640b7f5657d5a5",
+  "imageURLs": [
+    "https://canny-assets.io/images/eb3ae9370e4305f3cfb2bd835e8d87ac.png",
+    "https://canny-assets.io/images/cb44c9bde42af0eec1e1c2eee7f91591.png"
+  ],
+  "lastUpdated": 1780083972652,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 4,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a19e89e08640b7f5657d5a6/1225397982.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 4,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-29T19:27:26.200Z",
+  "subCategoryID": null,
+  "title": "Unable to join certain worlds, booted back to home world before world download finishes",
+  "trendingScore": 2944.8685867055347,
+  "updatedAt": "2026-05-29T19:51:20.101227Z",
+  "updatedBy": null,
+  "urlName": "unable-to-join-certain-worlds-booted-back-to-home-world-before-world-download-fi",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a19eb4a86d7b8843b35f3fd",
+      "alias": "Linen Gazelle",
+      "aliasID": "6a19eb4a86d7b8843b35f401",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/808ce3bec1e21d66285eb65b6eda5eaa.png",
+      "companies": [],
+      "name": "Kozmocrat",
+      "urlName": "kozmocrat",
+      "voteID": "6a19eb4e86d7b8843b35f4d8"
+    },
+    {
+      "_id": "6a19ead686d7b8843b35ebf4",
+      "alias": "Eastern Parrotfish",
+      "aliasID": "6a19ead686d7b8843b35ebf8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d1604d7ba122d1c651919ddefecc3336.png",
+      "companies": [],
+      "name": "SpaceWitchLuna",
+      "urlName": "spacewitchluna",
+      "voteID": "6a19ead986d7b8843b35ebfd"
+    },
+    {
+      "_id": "62df0cc446e66844a852fd59",
+      "alias": "Structural Sparrow",
+      "aliasID": "65c26ed9ed6eefce4c854f1b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d8206706dbcd3900a03bf129a8e5bf33.png",
+      "companies": [],
+      "name": "＠QJusticeSummon",
+      "urlName": "voicesshiature",
+      "voteID": "6a19e94d86d7b8843b35db56"
+    },
+    {
+      "_id": "632ad07ae29a9c44bc903920",
+      "alias": "Obedient Hare",
+      "aliasID": "65c2ff59ed6eefce4cabf780",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/da59898a41330e7d425619e909844d63.png",
+      "companies": [],
+      "name": "Piano Walrus",
+      "urlName": "piano-walrus",
+      "voteID": "6a19e89e86d7b8843b35d612"
+    }
+  ]
+}
