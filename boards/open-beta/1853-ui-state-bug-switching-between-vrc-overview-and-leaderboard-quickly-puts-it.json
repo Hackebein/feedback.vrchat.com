@@ -1,23 +1,22 @@
 {
-  "__v": 0,
-  "_id": "64ef5165d4382d09663453ef",
+  "_id": "6a19a0829dca6a52a729c261",
   "aiCategories": [
-    "loc.in-world",
-    "audio.voice"
+    "loc.main-menu",
+    "monetization.vrc-plus"
   ],
-  "aiTaggedAt": "2026-05-18T05:46:29.241817Z",
+  "aiTaggedAt": "2026-05-29T15:07:17.933754Z",
   "author": {
-    "_id": "64888bce7cf7f509925263af",
-    "alias": "Corporate Pinniped",
-    "aliasID": "65c2c146ed6eefce4c85b1eb",
+    "_id": "6a199ec386d7b8843b32fbcf",
+    "alias": "Subsequent Boa",
+    "aliasID": "6a199ec486d7b8843b32fbd3",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/e49d4174101208c512fb2212a9d858c8.png",
-    "created": "2023-06-13T15:31:26.472Z",
-    "name": "Tathurai （タスライ）",
+    "avatarURL": "https://canny-assets.io/images/688e49c09cc5ef633d87592dfdba74d2.png",
+    "created": "2026-05-29T14:12:19.740Z",
+    "name": "Razzin_",
     "serviceAccount": false,
-    "urlName": "gandolph-2"
+    "urlName": "razzin"
   },
-  "authorID": "64888bce7cf7f509925263af",
+  "authorID": "6a199ec386d7b8843b32fbcf",
   "board": {
     "_id": "5b0746088fa72313783e3269",
     "name": "Open Beta",
@@ -38,8 +37,7 @@
   "commentCount": 1,
   "comments": [
     {
-      "__v": 0,
-      "_id": "65ce5b71c2aecb8d03406850",
+      "_id": "6a19a3f3b06d5b62ae473de3",
       "aiGenerated": false,
       "author": {
         "_id": "64873f159cf028090ce2c2e2",
@@ -55,8 +53,9 @@
       "authorID": null,
       "boardID": "5b0746088fa72313783e3269",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2024-02-15T18:44:01.242Z",
+      "created": "2026-05-29T14:34:27.321Z",
       "deleted": false,
+      "deletedAt": null,
       "fileURLs": [],
       "files": [],
       "imageURLs": [],
@@ -69,48 +68,62 @@
       "parentID": null,
       "pinned": false,
       "postDeleted": false,
-      "postID": "64ef5165d4382d09663453ef",
+      "postID": "6a19a0829dca6a52a729c261",
       "private": false,
       "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
-      "statusChangeID": "65ce5b71c2aecb8d0340684a",
-      "statusChangeNewStatus": "closed",
-      "value": "Thank you for reporting this issue. However, since the post is quite old and hasn't been updated recently, we encourage you to create a new ticket if the problem still persists.",
+      "statusChangeID": "6a19a3f3b06d5b62ae473de2",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
       "viewerReactions": null,
       "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2023-08-30T14:25:41.951Z",
+  "created": "2026-05-29T14:19:46.901Z",
+  "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Open VRChat Beta 1342 in desktop mode.\n\n2. No sound (background or voices). \n\n3. No audio output settings available in menu.",
+  "details": "1. Open the full menu\n\n2. Go to VRC+ tab\n\n3. Select Overview\n\n4. Switch quickly: Overview --> Leaderboard --> Overview\n\n5. Switch to leaderboard again (Nothing will happen)\n\nAfter step 4 the UI is probably put in the leaderboard state while showing overview",
   "error": null,
   "eta": null,
   "etaPublic": true,
-  "fileURLs": [],
-  "files": [],
-  "ideaID": "680bb99be4c3e90df13810a7",
-  "imageURLs": [],
-  "lastUpdated": 1780067120034,
+  "fileURLs": [
+    "https://canny-assets.io/files/fe47761b56d8dac3123cff03f6110f19.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "ui state bug2",
+      "url": "https://canny-assets.io/files/fe47761b56d8dac3123cff03f6110f19.mp4"
+    }
+  ],
+  "ideaID": "6a19a0829dca6a52a729c24c",
+  "imageURLs": [
+    "https://canny-assets.io/images/1adbba31291f3878210632999aa96a1f.png"
+  ],
+  "lastUpdated": 1780066921495,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
+  "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
   "score": 1,
   "sourceFeatureExtractionItem": null,
-  "status": "closed",
-  "statusChanged": "2024-02-15T18:44:01.204Z",
+  "status": "tracked",
+  "statusChanged": "2026-05-29T14:34:27.302Z",
   "subCategoryID": null,
-  "title": "[1342] No sound on desktop mode",
-  "trendingScore": 2800.636173091605,
+  "title": "[1853] UI state bug. Switching between VRC+ overview and leaderboard quickly puts it in wrong state",
+  "trendingScore": 2943.921300052584,
   "updatedAt": "2026-05-29T15:07:17.834153Z",
-  "updatedBy": null,
-  "urlName": "1342-no-sound-on-desktop-mode",
+  "updatedBy": "6a199ec386d7b8843b32fbcf",
+  "urlName": "1853-ui-state-bug-switching-between-vrc-overview-and-leaderboard-quickly-puts-it",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
@@ -121,15 +134,15 @@
   },
   "voters": [
     {
-      "_id": "64888bce7cf7f509925263af",
-      "alias": "Corporate Pinniped",
-      "aliasID": "65c2c146ed6eefce4c85b1eb",
+      "_id": "6a199ec386d7b8843b32fbcf",
+      "alias": "Subsequent Boa",
+      "aliasID": "6a199ec486d7b8843b32fbd3",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e49d4174101208c512fb2212a9d858c8.png",
+      "avatarURL": "https://canny-assets.io/images/688e49c09cc5ef633d87592dfdba74d2.png",
       "companies": [],
-      "name": "Tathurai （タスライ）",
-      "urlName": "gandolph-2",
-      "voteID": "64ef5166d4382d0966345423"
+      "name": "Razzin_",
+      "urlName": "razzin",
+      "voteID": "6a19a08386d7b8843b3314a3"
     }
   ]
 }
