@@ -1,0 +1,93 @@
+{
+  "_id": "6a19274a5e38208a9b71408b",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-05-29T07:18:28.395860Z",
+  "author": {
+    "_id": "67a0ed8d6e7354cc8f8c7acd",
+    "alias": "Cautious Minnow",
+    "aliasID": "67a0ed8eafacf378f12ca236",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4d5272fe6d7a1a54914577b0332a8d2b.png",
+    "created": "2025-02-03T16:23:41.681Z",
+    "name": "Uzer Tekton",
+    "serviceAccount": false,
+    "urlName": "uzer-tekton"
+  },
+  "authorID": "67a0ed8d6e7354cc8f8c7acd",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 812,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-29T05:42:34.403Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Because the default arm fully stretched straight forward is very unnatural for vast majority of pickups.\n\nThe best solution is fully expose the animation controller so we can customize the avatar animation and pickup position.\n\nIf not fully exposed, there should be a list of selectable preset postures for different types of items, and allow dynamically switching between them in Udon to make pickups more interesting to use. Perhaps even add a boolean toggle for two-handed variants.\n\nFor example:\n\n1A. For holding a generic spray bottle or pistol, at a medium distance with elbow bend (default).\n\n1B. For holding a pistol but aim down sight so that the object is centered and aligned with camera.\n\n1C. For holding a pistol but pointed down for idling\n\n1D. For holding a pistol but pointed up for idling\n\n2A/B/C/D. Same as 1 but adjusted for rifles.\n\n3A. For food and drink to hold something close to the face or for close inspection.\n\n3B. For food and drink to hold something close to the mouth. (Spam to simulate eating)\n\n3C. For holding something up as display, such as when making a toast.\n\n4A. For holding a one handed sword or stick.\n\n4B. For holding a sword but swung down and pointed down. (Spam to simulate sword swinging animation)\n\n4C. For poking things downward like during cooking or using a tool.\n\n4D. For pointing a sword or stick straight forward.\n\nYou get the idea",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a19274a5e38208a9b714048",
+  "imageURLs": [],
+  "lastUpdated": 1780038802610,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-29T05:42:34.403Z",
+  "subCategoryID": null,
+  "title": "Expose and allow override of pickup hand/arm animation/posture in VRC Pickup for PC players",
+  "trendingScore": 2943.869989701228,
+  "updatedAt": "2026-05-29T07:18:28.309159Z",
+  "updatedBy": null,
+  "urlName": "expose-and-allow-override-of-pickup-hand-arm-animation-posture-in-vrc-pickup-for",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67a0ed8d6e7354cc8f8c7acd",
+      "alias": "Cautious Minnow",
+      "aliasID": "67a0ed8eafacf378f12ca236",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4d5272fe6d7a1a54914577b0332a8d2b.png",
+      "companies": [],
+      "name": "Uzer Tekton",
+      "urlName": "uzer-tekton",
+      "voteID": "6a19274a5a52cb2df0b50e55"
+    }
+  ]
+}
