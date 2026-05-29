@@ -103,7 +103,9 @@
       "postDeleted": false,
       "postID": "5bf29f6c2ac002597778baca",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
@@ -145,7 +147,9 @@
       "postDeleted": false,
       "postID": "5bf29f6c2ac002597778baca",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
@@ -246,7 +250,7 @@
       "postID": "5bf29f6c2ac002597778baca",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -268,23 +272,23 @@
   "files": [],
   "ideaID": "680b7d6ae4c3e90df157d86d",
   "imageURLs": [],
-  "lastUpdated": 1779741064118,
+  "lastUpdated": 1780094127811,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 23,
+  "maxScore": 24,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5bf29f6c2ac002597778baca/510787373.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 23,
+  "score": 24,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2018-11-19T11:33:00.799Z",
   "subCategoryID": null,
   "title": "Ability to disable public instances of published world (As possible solution to improve game experience and lower social anxiety for visitors)",
-  "trendingScore": 2852.2332962877117,
-  "updatedAt": "2026-05-25T20:32:41.839391Z",
+  "trendingScore": 2942.8999187698414,
+  "updatedAt": "2026-05-29T22:35:31.180443Z",
   "urlName": "ability-to-disable-public-instances-of-published-world-as-possible-solution-to-i",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -295,6 +299,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/34fd388df4a3b79f83714855d8624742.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": "usemame-1",
+      "voteID": "6a16990e5a52cb2df0a10b9b"
+    },
     {
       "_id": "637036c7f6824a46f3fdc30e",
       "alias": "Judicial Crocodile",
@@ -355,7 +370,7 @@
       "alias": "Papaya whip Cougar",
       "aliasID": "65c71341ed6eefce4c3dc538",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/55f839bd9ef3041b4806bd94805ea4fc.png",
+      "avatarURL": "https://canny-assets.io/images/f4bd6b0ba61b2acab7252ecdb11cfbe4.png",
       "companies": [],
       "name": "Kawa_5",
       "urlName": "kawa5",
@@ -393,17 +408,6 @@
       "name": "MagXattab",
       "urlName": "magxattab",
       "voteID": "64cde11858d69b09c9b2063b"
-    },
-    {
-      "_id": "5acbfbfdc848e744874fa61a",
-      "alias": "Quartz Mouse",
-      "aliasID": "65ba07ceed6eefce4c94f3e5",
-      "anonymized": false,
-      "avatarURL": "https://canny.io/images/f0edbbb36921d4e005cc9cebf6f29502.png",
-      "companies": [],
-      "name": "KittyCraft",
-      "urlName": "kittycraft",
-      "voteID": "5c09366a6db2b5471c270118"
     }
   ]
 }
