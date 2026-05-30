@@ -2,10 +2,9 @@
   "_id": "6a1a4f625e38208a9be19215",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "sdk.udon"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-05-30T03:05:48.825008Z",
+  "aiTaggedAt": "2026-05-30T07:00:50.257228Z",
   "author": {
     "_id": "682f1dbe4ce84130beb0d1e9",
     "alias": "Tiny Peafowl",
@@ -42,7 +41,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "**Description:**\n\nI am very excited about the addition of `VRCTween` in the new SDK update.\n\nHowever, I have noticed an issue: when trying to tween large integers using `VRCTween.TweenInt`, the values get rounded up or down to specific numbers, leading to inaccurate results.\n\n```\n\nusing System;\n\nusing UdonSharp;\n\nusing UnityEngine;\n\nusing VRC.SDK3.Components;\n\npublic class VRCTweenTest : UdonSharpBehaviour\n\n{\n\n    [NonSerialized] public int _tweenedInt;\n\n    public void PrintCurrentValue()\n\n    {\n\n        Debug.Log(_tweenedInt);\n\n    }\n\n    void Start()\n\n    {\n\n        VRCTween.TweenInt(\n\n            1, 15, 2,\n\n            this, nameof(_tweenedInt), nameof(PrintCurrentValue), VRCTweenEase.Linear\n\n        );\n\n        VRCTween.TweenInt(\n\n            100000001, 100000015, 2,\n\n            this, nameof(_tweenedInt), nameof(PrintCurrentValue), VRCTweenEase.Linear\n\n        ).SetDelay(3);\n\n        VRCTween.TweenInt(\n\n            2000000001, 2000000015, 2,\n\n            this, nameof(_tweenedInt), nameof(PrintCurrentValue), VRCTweenEase.Linear\n\n        ).SetDelay(6);\n\n    }\n\n}\n\n```\n\n**Expected Behavior:**\n\nThe script should output all intermediate integer values smoothly:\n\n* `2` through `15`\n\n* `100000002` through `100000015`\n\n* `2000000002` through `2000000015`\n\n**Actual Behavior:**\n\nWhen running the script, the console outputs the following:\n\n* The first tween correctly prints `2` through `15`.\n\n* The second tween only prints `100000000`, `100000008`, and `100000016`.\n\n* The third tween only prints `2000000000`.\n\n**Cause Analysis:**\n\nI suspect this happens because `VRCTween.TweenInt` is internally utilizing `DOVirtual.Float` or otherwise casting the values to `float` during interpolation. Since a 32-bit float has a 24-bit significand, it cannot precisely represent all 32-bit integer values (precision loss occurs for integers larger than 2^24, which is 16,777,216).\n\nThank you for looking into this!",
+  "details": "**Description:**\n\nI am very excited about the addition of `VRCTween` in the new SDK update.\n\nHowever, I have noticed an issue: when trying to tween large integers using `VRCTween.TweenInt`, the values get rounded up or down to specific numbers, leading to inaccurate results.\n\n```\n\nusing System;\n\nusing UdonSharp;\n\nusing UnityEngine;\n\nusing VRC.SDK3.Components;\n\npublic class VRCTweenTest : UdonSharpBehaviour\n\n{\n\n    [NonSerialized] public int _tweenedInt;\n\n    public void PrintCurrentValue()\n\n    {\n\n        Debug.Log(_tweenedInt);\n\n    }\n\n    void Start()\n\n    {\n\n        VRCTween.TweenInt(\n\n            1, 15, 2,\n\n            this, nameof(_tweenedInt), nameof(PrintCurrentValue), VRCTweenEase.Linear\n\n        ).SetDelay(1);\n\n        VRCTween.TweenInt(\n\n            100000001, 100000015, 2,\n\n            this, nameof(_tweenedInt), nameof(PrintCurrentValue), VRCTweenEase.Linear\n\n        ).SetDelay(4);\n\n        VRCTween.TweenInt(\n\n            2000000001, 2000000015, 2,\n\n            this, nameof(_tweenedInt), nameof(PrintCurrentValue), VRCTweenEase.Linear\n\n        ).SetDelay(7);\n\n    }\n\n}\n\n```\n\n**Expected Behavior:**\n\nThe script should output all intermediate integer values smoothly:\n\n* `1` through `15`\n\n* `100000001` through `100000015`\n\n* `2000000001` through `2000000015`\n\n**Actual Behavior:**\n\nWhen running the script, the console outputs the following:\n\n* The first tween correctly prints `1` through `15`.\n\n* The second tween only prints `100000000`, `100000008`, and `100000016`.\n\n* The third tween only prints `2000000000`.\n\n**Cause Analysis:**\n\nI suspect this happens because `VRCTween.TweenInt` is internally utilizing `DOVirtual.Float` or otherwise casting the values to `float` during interpolation. Since a 32-bit float has a 24-bit significand, it cannot precisely represent all 32-bit integer values (precision loss occurs for integers larger than 2^24, which is 16,777,216).\n\nThank you for looking into this!",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -50,7 +49,7 @@
   "files": [],
   "ideaID": "6a1a4f625e38208a9be19212",
   "imageURLs": [],
-  "lastUpdated": 1780118061030,
+  "lastUpdated": 1780124154709,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -66,7 +65,7 @@
   "subCategoryID": null,
   "title": "[1853] [SDK 3.10.4 beta 2] VRCTween.TweenInt fails to tween large integers correctly due to 32-bit float precision loss",
   "trendingScore": 2943.995320214621,
-  "updatedAt": "2026-05-30T05:19:57.744800Z",
+  "updatedAt": "2026-05-30T07:00:50.149495Z",
   "updatedBy": "682f1dbe4ce84130beb0d1e9",
   "urlName": "1853-sdk-3104-beta-2-vrctweentweenint-fails-to-tween-large-integers-correctly-du",
   "viewerIsAuthor": false,
