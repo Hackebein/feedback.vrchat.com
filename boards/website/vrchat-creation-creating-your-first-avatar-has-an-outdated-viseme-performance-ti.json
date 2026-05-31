@@ -2,11 +2,9 @@
   "_id": "6a1b8a46ad398cb65f13bb16",
   "aiCategories": [
     "loc.website",
-    "web.creators-portal",
-    "avatars",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-05-31T01:44:41.887533Z",
+  "aiTaggedAt": "2026-05-31T03:07:27.860285Z",
   "author": {
     "_id": "68098a4626271974ef4d2775",
     "alias": "Extraordinary Peacock",
@@ -134,7 +132,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "VRChat Creation documentation has an outdated \"Viseme Performance Tip!\" at [Creating Your First Avatar § Lip sync mode](https://creators.vrchat.com/avatars/creating-your-first-avatar/#lip-sync-mode):\n\n> If you're an avatar creator, consider splitting your avatar into two skinned meshes - one for your body, and one for your head/face. The performance cost of blend shapes depends on how much of your 3D model they affect. Keeping blend shapes on a separate head mesh and having fewer blend shapes on your body mesh may improve your avatar's performance.\n\nThis performance tip is only relevant for Unity 2019. VRChat has moved on to Unity 2022 a long time ago.\n\nAs noted in March 2025 (over a year ago!) in [support ticket #506120](https://help.vrchat.com/hc/en-us/requests/506120) (attached as a screenshot), the response relayed by VRChat Support from VRChat's performance team was:\n\n> Since Unity 2022, shape key performance impact scales more with the amount of vertices affected by a shape key, not the total amount of vertices on the mesh - shape keys are stored and calculated sparsely. There's no longer a clear benefit from splitting shapekey-affected meshes from non-shapekey-affected meshes.\n\nA pet peeve of mine because I still run into VRChat users and friends telling me they've split their avatar's face and body meshes for Unity 2022 avatars because VRChat Creation documentation told to follow this outdated performance tip in the current year. \n\nPlease remove this outdated \"Viseme Performance Tip!\". The extra skinned mesh renderer from split face/body meshes incurs additional draw calls and thus CPU overhead, reducing avatar performance instead of improving it.",
+  "details": "VRChat Creation documentation has an outdated \"Viseme Performance Tip!\" at [Creating Your First Avatar § Lip sync mode](https://creators.vrchat.com/avatars/creating-your-first-avatar/#lip-sync-mode):\n\n> If you're an avatar creator, consider splitting your avatar into two skinned meshes - one for your body, and one for your head/face. The performance cost of blend shapes depends on how much of your 3D model they affect. Keeping blend shapes on a separate head mesh and having fewer blend shapes on your body mesh may improve your avatar's performance.\n\nThis performance tip is only relevant for Unity 2019. VRChat has moved on to Unity 2022 a long time ago.\n\nAs noted in March 2025 (over a year ago!) in [support ticket #506120](https://help.vrchat.com/hc/en-us/requests/506120) (attached as a screenshot), the response relayed by VRChat Support from VRChat's performance team was:\n\n> Since Unity 2022, shape key performance impact scales more with the amount of vertices affected by a shape key, not the total amount of vertices on the mesh - shape keys are stored and calculated sparsely. There's no longer a clear benefit from splitting shapekey-affected meshes from non-shapekey-affected meshes.\n\nA pet peeve of mine is hearing from VRChat users and friends telling me they've split their avatar's face and body meshes for newly created Unity 2022 avatars because VRChat Creation documentation told them this outdated \"performance tip\" in the current year. \n\nI suggest removing this outdated \"Viseme Performance Tip!\". The extra skinned mesh renderer from split face/body meshes incurs additional draw calls and thus CPU overhead, reducing avatar performance instead of improving it in general.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -142,9 +140,10 @@
   "files": [],
   "ideaID": "6a1b8a46ad398cb65f13bb13",
   "imageURLs": [
-    "https://canny-assets.io/images/c49091f973b3f8ba479dd4d8b89cf5f4.png"
+    "https://canny-assets.io/images/c49091f973b3f8ba479dd4d8b89cf5f4.png",
+    "https://canny-assets.io/images/0e4962c916de04237ac82d967f222911.png"
   ],
-  "lastUpdated": 1780191620577,
+  "lastUpdated": 1780196549610,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -160,7 +159,7 @@
   "subCategoryID": null,
   "title": "VRChat Creation: \"Creating Your First Avatar\" has an outdated \"Viseme Performance Tip!\" to split face/body meshes, which is now misleading and can reduce avatar performance since Unity 2022",
   "trendingScore": 2944.128607717101,
-  "updatedAt": "2026-05-31T01:44:41.785717Z",
+  "updatedAt": "2026-05-31T03:07:27.760189Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "vrchat-creation-creating-your-first-avatar-has-an-outdated-viseme-performance-ti",
   "viewerIsAuthor": false,
