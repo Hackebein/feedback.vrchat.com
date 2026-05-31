@@ -2,9 +2,10 @@
   "_id": "6a1b853b51be527d91f61831",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.vrcsdk",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-05-31T01:44:41.885248Z",
+  "aiTaggedAt": "2026-05-31T05:33:20.264259Z",
   "author": {
     "_id": "68098a4626271974ef4d2775",
     "alias": "Extraordinary Peacock",
@@ -41,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Since VRChat added support for iOS (mobile), the VRChat clients have been generally copyedited from \"Android compatible\" to \"Mobile compatible\". The text for SDK avatar dynamics robot samples hasn't been updated for this change yet, which seems unintended.\n\n- Avatar Dynamics Robot Avatar PC\n\n- Avatar Dynamics Robot Avatar Android\n\nSteps to reproduce: Open your avatar project and go to 'VRChat SDK > Samples.'\n\nExpected behavior: \"Avatar Dynamics Robot Avatar Mobile\"\n\nActual behavior: \"Avatar Dynamics Robot Avatar Android\"\n\nAdditional info: VRChat SDK - Avatars (3.10.3)",
+  "details": "Since VRChat added support for iOS (mobile), the VRChat clients have been generally copyedited from \"Quest compatible\" or \"Android compatible\" to \"Mobile compatible\". The text for SDK avatar dynamics robot samples hasn't been updated for this change yet, which seems unintended.\n\n- Avatar Dynamics Robot Avatar PC\n\n- Avatar Dynamics Robot Avatar Android\n\nSteps to reproduce: Open your avatar project and go to 'VRChat SDK > Samples.'\n\nExpected behavior: \"Avatar Dynamics Robot Avatar Mobile\"\n\nActual behavior: \"Avatar Dynamics Robot Avatar Android\"\n\nAdditional info: VRChat SDK - Avatars (3.10.3)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -51,7 +52,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/3e4a32495bb82107a96c8251a3531f7b.png"
   ],
-  "lastUpdated": 1780196549847,
+  "lastUpdated": 1780205279536,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -67,7 +68,7 @@
   "subCategoryID": null,
   "title": "The SDK sample \"Avatar Dynamics Robot Avatar Android\" should be named \"Avatar Dynamics Robot Avatar Mobile\" since the introduction of iOS support",
   "trendingScore": 2944.126473617399,
-  "updatedAt": "2026-05-31T03:07:27.760189Z",
+  "updatedAt": "2026-05-31T05:33:20.165906Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "the-sdk-sample-avatar-dynamics-robot-avatar-android-should-be-named-avatar-dynam",
   "viewerIsAuthor": false,
