@@ -1,0 +1,89 @@
+{
+  "_id": "6a1c02a39acdc766ecf52182",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics",
+    "avatars.impostors"
+  ],
+  "aiTaggedAt": "2026-05-31T10:02:23.333065Z",
+  "author": {
+    "_id": "5eafccab41c67d442b41c52b",
+    "alias": "Celadon Deer",
+    "aliasID": "65de339436dd86f1c4c69bf5",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/68ba2926833da611c0fc72836f81e0dc.png",
+    "created": "2020-05-04T08:04:59.592Z",
+    "name": "poiuytrewq4645",
+    "serviceAccount": false,
+    "urlName": "poiuytrewq4645"
+  },
+  "authorID": "5eafccab41c67d442b41c52b",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-05-31T09:42:59.560Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Avatar culling hides avatars but does not unload their PhysBones. This means your CPU is simulating PhysBones for every avatar that has loaded near you, not just the ones you can see. In a populated world this adds up fast.\n\nYou can confirm this with the PhysBones debug overlay — enable it while culling is active and you can still see PhysBones moving on hidden avatars.\n\nRepro:\n\nJoin a populated world, no avatar limit set\n\nHand Menu → Settings → Culling → Show Nearest X Avatars → set to 0\n\nRadial Menu → Options → Avatar → Avatar Overlay → PhysBones → enable\n\nPhysBones are still active on hidden avatars. The debug view has a range cutoff but performance confirms they're running beyond that\n\nHand Menu → Safety → switch to any safety preset to force avatars to fully reload\n\nPhysBones are now gone, performance improves\n\nSet your avatar limit back to what you want — performance is better, but degrades over time as new avatars load in and their PhysBones never unload\n\nTested on: i9-12900K, RX 7900 XTX, 32GB RAM — public world, 30-40 players. in the instance pictured i went from 100 - 150fps by hiding physbones\n\nDynamic Bones had limiter settings. PhysBones removed them, which wasn't a big deal at launch, but avatars use a lot more PhysBones now than they did back then.\n\nThe fix needed: PhysBones should unload when an avatar is culled. \n\nA user-facing PhysBone simulation limit would also go a long way.\n\nAlso noticed in this session many many users with physbones active for hidden meshes if some wizard can make these disable when the meshes referenced to the bones hide would also be a great optimization",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a1c02a39acdc766ecf52181",
+  "imageURLs": [
+    "https://canny-assets.io/images/a6926e960ba87f345790daa4becccd7a.png",
+    "https://canny-assets.io/images/40c0a1d5a286f0dbe1040f1dd9531b7b.png"
+  ],
+  "lastUpdated": 1780221466203,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-05-31T09:42:59.560Z",
+  "subCategoryID": null,
+  "title": "Avatar culling does not unload PhysBones — performance scales with total loaded avatars, not visible ones",
+  "trendingScore": 2944.17955509392,
+  "updatedAt": "2026-05-31T10:02:23.227828Z",
+  "updatedBy": null,
+  "urlName": "avatar-culling-does-not-unload-physbones-performance-scales-with-total-loaded-av",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5eafccab41c67d442b41c52b",
+      "alias": "Celadon Deer",
+      "aliasID": "65de339436dd86f1c4c69bf5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/68ba2926833da611c0fc72836f81e0dc.png",
+      "companies": [],
+      "name": "poiuytrewq4645",
+      "urlName": "poiuytrewq4645",
+      "voteID": "6a1c02a386d7b8843b71511c"
+    }
+  ]
+}
