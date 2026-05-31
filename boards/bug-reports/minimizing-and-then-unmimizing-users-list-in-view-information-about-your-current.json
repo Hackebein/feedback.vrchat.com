@@ -2,9 +2,10 @@
   "_id": "69e3329962c650a2a3ad41bd",
   "aiCategories": [
     "loc.quick-menu",
-    "social.nameplates"
+    "social.nameplates",
+    "social.instances"
   ],
-  "aiTaggedAt": "2026-05-17T08:56:49.004945Z",
+  "aiTaggedAt": "2026-05-31T15:33:18.974193Z",
   "author": {
     "_id": "68098a4626271974ef4d2775",
     "alias": "Extraordinary Peacock",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "69e33335d9ba91b470ef8332",
@@ -152,6 +153,50 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a18c3702421d74c6e487631",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-28T22:36:32.605Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "69e79f559084f205bdebade2",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69e3329962c650a2a3ad41bd",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "[VRChat 2026.2.2](https://docs.vrchat.com/docs/vrchat-202622)\n\n- Fixed an issue that could cause users' statuses in the Quick Menu's Here tab to revert to \"Status\".",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -182,7 +227,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/29d863e98f096b7fb7f714b50fc17347.png"
   ],
-  "lastUpdated": 1779928094568,
+  "lastUpdated": 1780241588325,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -198,7 +243,7 @@
   "subCategoryID": null,
   "title": "Minimizing and then unmimizing \"Users\" list in \"View information about your current instance\" tab shows placeholder \"Status\" text for status messages of users affected by the minimization fold",
   "trendingScore": 2938.023348310686,
-  "updatedAt": "2026-05-28T00:29:48.240692Z",
+  "updatedAt": "2026-05-31T15:33:18.873966Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "minimizing-and-then-unmimizing-users-list-in-view-information-about-your-current",
   "viewerIsAuthor": false,
