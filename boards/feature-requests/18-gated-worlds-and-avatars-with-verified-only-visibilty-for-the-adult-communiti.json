@@ -2,11 +2,12 @@
   "_id": "69f3cca9d9bcf05d62a6267a",
   "aiCategories": [
     "loc.in-world",
-    "account.age-verification",
     "worlds",
-    "avatars"
+    "avatars",
+    "account.age-verification",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-05-30T16:25:19.004440Z",
+  "aiTaggedAt": "2026-05-31T03:07:27.858787Z",
   "author": {
     "_id": "62defd8f54bf5c449ea78c27",
     "alias": "Beige Impala",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 55,
+  "commentCount": 56,
   "comments": [
     {
       "_id": "6a0a9a0a8567d2c0b7814e80",
@@ -661,7 +662,9 @@
       "postDeleted": false,
       "postID": "69f3cca9d9bcf05d62a6267a",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -705,13 +708,73 @@
       "postDeleted": false,
       "postID": "69f3cca9d9bcf05d62a6267a",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Also remind you the acct was suspended 2 days before FWA for stickers I appealed it and it was released after 12 hours and 3 stickers were removed but as the group has been removed and there not responding to get it back for something I worked hard on for 3 years. Side Note there raked as a F on the Better Business Bureau and filed a complaint with them when your dealing with money transactions you better have staff to help fix issues or your held liable as a business and better have better support",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a1b9934dad3883c2573c34a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62defd8f54bf5c449ea78c27",
+        "alias": "Beige Impala",
+        "aliasID": "65cbbc90ed6eefce4c698cbb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6b9480bd8d9d4ac1b6b1a6aca83bdace.png",
+        "created": "2022-07-25T20:31:11.759Z",
+        "name": "Kitsunaki",
+        "serviceAccount": false,
+        "urlName": "kitsunaki"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-05-31T02:13:08.861Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65a9e6527c897a195b744348",
+          "alias": "Xanthic Horse",
+          "aliasID": "65c2b73ced6eefce4c361614",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/015b4018f9910646ac94b7acd5a8b992.png",
+          "created": "2024-01-19T03:02:42.091Z",
+          "name": "PrideChaser",
+          "serviceAccount": false,
+          "urlName": "pridechaser"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a1b01fabd35d2dd45a258c1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69f3cca9d9bcf05d62a6267a",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65a9e6527c897a195b744348|full_name}Yeah I hear that problem over and over again: People don't understand what line was crossed, because action is taken without a deeper explanation than \"cuz TOS\" and if you write T&S team, they react with \"cuz TOS, here is the link\"",
       "viewerReactions": null,
       "voteID": null
     }
@@ -728,7 +791,7 @@
   "files": [],
   "ideaID": "69f3cca9d9bcf05d62a6268f",
   "imageURLs": [],
-  "lastUpdated": 1780191622138,
+  "lastUpdated": 1780196549008,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 444,
@@ -744,7 +807,7 @@
   "subCategoryID": null,
   "title": "18+ gated Worlds and Avatars with verified-only visibilty for the Adult Communities",
   "trendingScore": 2947.8742478106756,
-  "updatedAt": "2026-05-31T01:44:41.785717Z",
+  "updatedAt": "2026-05-31T03:07:27.760189Z",
   "updatedBy": null,
   "urlName": "18-gated-worlds-and-avatars-with-verified-only-visibilty-for-the-adult-communiti",
   "viewerIsAuthor": false,
