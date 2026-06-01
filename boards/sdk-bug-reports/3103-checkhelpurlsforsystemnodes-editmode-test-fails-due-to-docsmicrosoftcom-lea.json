@@ -1,0 +1,92 @@
+{
+  "_id": "6a1d5fdda89045723de1af9e",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-01T12:00:04.998185Z",
+  "author": {
+    "_id": "6a1d58ad86d7b8843b76b0db",
+    "alias": "Blank Mole",
+    "aliasID": "6a1d58ad86d7b8843b76b0df",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/37261498defecc130d63cb8e5a166a6d.png",
+    "created": "2026-06-01T10:02:21.199Z",
+    "name": "凡。-BON",
+    "serviceAccount": false,
+    "urlName": "bon-404"
+  },
+  "authorID": "6a1d58ad86d7b8843b76b0db",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 343,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-01T10:33:01.965Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "SDK Version: com.vrchat.worlds 3.10.3\n\nWhen running EditMode tests in the Unity Test Runner, \n\n`CheckHelpURLsForSystemNodes` fails with:\n\n  URL does not resolve for Const_SystemBooleanArray:\n\n  https://docs.microsoft.com/en-us/dotnet/api/system.array?view=netframework-4.8\n\n  Expected: True\n\n  But was: False\n\nRoot cause:\n\n`UdonGraphExtensions.cs` has hardcoded `docs.microsoft.com` URLs for several \n\nUdon node entries. Microsoft migrated their docs to `learn.microsoft.com` in \n\n2023, and the old domain now returns HTTP 301 redirects.\n\nThe test (`GraphNodeTests.cs:30`) uses `UnityWebRequest.Head` and checks \n\n`Result.Success`, which does not treat 301 as success → test fails.\n\nNote: Lines 192/194 of the same file are already updated to `learn.microsoft.com`, \n\nso this is an incomplete migration.\n\nAffected URLs (still using old domain):\n\n- https://docs.microsoft.com/en-us/dotnet/api/system.array?view=netframework-4.8\n\n  (and several other entries in UdonGraphExtensions.cs)\n\nFix: Update remaining `docs.microsoft.com` URLs to `learn.microsoft.com` in \n\n`UdonGraphExtensions.cs`.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a1d5fdda89045723de1af9d",
+  "imageURLs": [],
+  "lastUpdated": 1780314934825,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-01T10:33:01.965Z",
+  "subCategoryID": null,
+  "title": "[3.10.3] CheckHelpURLsForSystemNodes EditMode test fails due to docs.microsoft.com → learn.microsoft.com redirect",
+  "trendingScore": 2944.3273765117438,
+  "updatedAt": "2026-06-01T12:00:04.893643Z",
+  "updatedBy": null,
+  "urlName": "3103-checkhelpurlsforsystemnodes-editmode-test-fails-due-to-docsmicrosoftcom-lea",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a1d58ad86d7b8843b76b0db",
+      "alias": "Blank Mole",
+      "aliasID": "6a1d58ad86d7b8843b76b0df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/37261498defecc130d63cb8e5a166a6d.png",
+      "companies": [],
+      "name": "凡。-BON",
+      "urlName": "bon-404",
+      "voteID": "6a1d5fde86d7b8843b76d725"
+    }
+  ]
+}
