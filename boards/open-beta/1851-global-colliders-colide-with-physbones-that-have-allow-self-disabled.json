@@ -1,10 +1,11 @@
 {
   "_id": "6a1058d8ed6e17afae7b69f0",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.dynamics"
+    "avatars.dynamics",
+    "avatars.descriptor",
+    "loc.unity-sdk"
   ],
-  "aiTaggedAt": "2026-05-26T15:20:22.323254Z",
+  "aiTaggedAt": "2026-06-02T07:36:49.717694Z",
   "author": {
     "_id": "5fca5df4d58780532024a52b",
     "alias": "Toffee Tortoise",
@@ -34,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a108749ec6a4698b05bbd55",
@@ -170,6 +171,41 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a1e839dd872cf07ec4fefbf",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-02T07:17:49.011Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1058d8ed6e17afae7b69f0",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a1e839cd872cf07ec4fefbd",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -190,7 +226,7 @@
     "https://canny-assets.io/images/228799be1b62fc39698cf1aeb96e5ee8.png",
     "https://canny-assets.io/images/34025ff90a2fead341a8fa0b6a52a045.png"
   ],
-  "lastUpdated": 1780378278413,
+  "lastUpdated": 1780385505040,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 16,
@@ -201,12 +237,12 @@
   "pinnedComment": null,
   "score": 16,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-05-26T14:56:50.274Z",
+  "status": "available in future release",
+  "statusChanged": "2026-06-02T07:17:48.966Z",
   "subCategoryID": null,
   "title": "[1851] Global Colliders colide with PhysBones that have \"Allow Self\" disabled.",
   "trendingScore": 2945.255594336491,
-  "updatedAt": "2026-06-02T05:37:24.953932Z",
+  "updatedAt": "2026-06-02T07:36:38.714113Z",
   "updatedBy": "5fca5df4d58780532024a52b",
   "urlName": "1851-global-colliders-colide-with-physbones-that-have-allow-self-disabled",
   "viewerIsAuthor": false,
