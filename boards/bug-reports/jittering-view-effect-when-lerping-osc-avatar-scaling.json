@@ -1,0 +1,94 @@
+{
+  "_id": "6a1f1b157400e5c10e3c9fe2",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "client.osc"
+  ],
+  "aiTaggedAt": "2026-06-02T19:14:09.278092Z",
+  "author": {
+    "_id": "64b718213f29fc95b38f39a5",
+    "alias": "Responsible Gibbon",
+    "aliasID": "66202758e5d26962aa0eec05",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ca5921a4f4396cbb6e7c24f483fdba61.png",
+    "created": "2023-07-18T22:54:25.691Z",
+    "name": "CandyAero",
+    "serviceAccount": false,
+    "urlName": "candyaero"
+  },
+  "authorID": "64b718213f29fc95b38f39a5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-02T18:04:05.967Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am currently using an asset to utilize the new Avatar Scaling feature. However, when trying to trigger the function to slowly transition between the two eye heights, I get a nasty jittering effect, even while using a VR headset. I reached out to the creator and seem to be the only one experiencing this issue and it is occurring no matter which avatar I implement the functionality on, which leads me to believe it is some sort of hardware bug/incompatibility with my VR setup.\n\nAttached is a video showing the \"Jittering\" effect in question.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/701002f26d05f39fe31cc57e861040fa.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "VRCJitterScaling",
+      "url": "https://canny-assets.io/files/701002f26d05f39fe31cc57e861040fa.mp4"
+    }
+  ],
+  "ideaID": "6a1f1b157400e5c10e3c9fd1",
+  "imageURLs": [],
+  "lastUpdated": 1780427283533,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-02T18:04:05.967Z",
+  "subCategoryID": null,
+  "title": "Jittering view effect when Lerping OSC avatar scaling",
+  "trendingScore": 2944.5149822855537,
+  "updatedAt": "2026-06-02T19:14:09.178730Z",
+  "updatedBy": null,
+  "urlName": "jittering-view-effect-when-lerping-osc-avatar-scaling",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64b718213f29fc95b38f39a5",
+      "alias": "Responsible Gibbon",
+      "aliasID": "66202758e5d26962aa0eec05",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ca5921a4f4396cbb6e7c24f483fdba61.png",
+      "companies": [],
+      "name": "CandyAero",
+      "urlName": "candyaero",
+      "voteID": "6a1f1b1686d7b8843b85f59a"
+    }
+  ]
+}
