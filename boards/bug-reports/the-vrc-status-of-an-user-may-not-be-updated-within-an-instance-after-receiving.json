@@ -2,9 +2,10 @@
   "_id": "6a1e64e9d872cf07ec45aabb",
   "aiCategories": [
     "loc.in-world",
-    "monetization.vrc-plus"
+    "monetization.vrc-plus",
+    "content-official-events"
   ],
-  "aiTaggedAt": "2026-06-02T05:37:25.054707Z",
+  "aiTaggedAt": "2026-06-02T07:36:38.816313Z",
   "author": {
     "_id": "68098a4626271974ef4d2775",
     "alias": "Extraordinary Peacock",
@@ -69,7 +70,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Personally as someone who joined the event with an active VRC+ subscription, I received 1 month of gifted VRC+ in comparison but that's just anecdotal and sample bias.",
+      "value": "Personally as someone who joined the event with an active VRC+ subscription, I received 1 month of gifted VRC+ in comparison from a 50 gift drop (after non-VRC users were exhausted in selection) but that's just anecdotal and sample bias. (A total of 1 month in 200 gift drops.)",
       "viewerReactions": null,
       "voteID": null
     },
@@ -113,7 +114,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Steps to reproduce this internally:\n\n1. Join ~79 VRC+ users to an instance\n\n2. Join 1 non-VRC user to the instance\n\n3. Gift drop 1x VRC+ repeatedly from a VRC+ user in the instance prioritizing non-VRC users, say, 100 times and check who gets the most gifts\n\nIf my assumption is correct, the 1 non-VRC user will get the most gifts in this scenario.",
+      "value": "Steps to reproduce this internally:\n\n1. Join ~79 VRC+ users to an instance\n\n2. Join 1 non-VRC user to the instance\n\n3. Gift drop a mix of 1x VRC+ and 2-10x VRC+ repeatedly from a VRC+ user in the instance prioritizing non-VRC users, say, 100 times and check who gets the most gifts\n\nIf my assumption is correct, the 1 non-VRC user from step 2 will receive the most gifts in this scenario.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -123,7 +124,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Over the several hours in VRChat Official Pride Hub Music Event, (bot) users without an active VRC+ subscription or gifts (such as MapleAI and CelesteAI) seemed to receive an disproportionate amount of VRC+ gifts over the course of the event compared to the rest of the event population. The bots had no active VRC+ at the time the bot accounts joined the instance, and those accounts staid for several hours in the instance. | OPERATOR | reportedly said CelesteAI received 8 months of VRC+ during the event.\n\nVRC+ gift drops default to an option of prioritizing gifting VRC+ for those without an active VRC+ subscription.\n\nThis could be RNG / selection bias. There may be a bug where the VRC+ subscription status is not updated within an instance after a non-VRC+ user receives a VRC+ gift, making that user count as a non-VRC+ user (or bot) for gifting as long as the user/bot stays within the instance and gifts keep dropping.",
+  "details": "Over the several hours in VRChat Official Pride Hub Music Event, (bot) users without an active VRC+ subscription or gifts (such as [MapleAI](https://vrchat.com/home/user/usr_187b11fa-f71d-4166-bbfe-a49091559894) and [Celeste-AI](https://vrchat.com/home/user/usr_ff803344-a3a9-4949-b7a6-900b9b7b0b22)) seemed to receive an disproportionate amount of VRC+ gifts over the course of the event compared to the rest of the event population. The bots had no active VRC+ at the time the bot accounts joined the instance, and those accounts staid for several hours in the instance. | OPERATOR | reportedly said Celeste-AI received 8 months of VRC+ during the event (out of ~100 gifts, in an instance with 80 concurrent users).\n\nVRC+ gift drops default to an option of prioritizing gifting VRC+ for those without an active VRC+ subscription.\n\nThis could be RNG / bias in my observation. There may be a bug where the VRC+ subscription status is not updated within an instance after a non-VRC+ user receives a VRC+ gift, making that user count as a non-VRC+ user (or bot) for gifting as long as the user/bot stays within the instance and gifts keep dropping.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -131,7 +132,7 @@
   "files": [],
   "ideaID": "6a1e64e9d872cf07ec45aaba",
   "imageURLs": [],
-  "lastUpdated": 1780378262709,
+  "lastUpdated": 1780385492890,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -147,7 +148,7 @@
   "subCategoryID": null,
   "title": "The VRC+ status of an user may not be updated within an instance after receiving a VRC+ gift drop, possibly leading to continuing be eligible to be prioritized for gifts as a non-VRC+ target",
   "trendingScore": 2944.437872481486,
-  "updatedAt": "2026-06-02T05:37:24.953932Z",
+  "updatedAt": "2026-06-02T07:36:38.714113Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "the-vrc-status-of-an-user-may-not-be-updated-within-an-instance-after-receiving",
   "viewerIsAuthor": false,
