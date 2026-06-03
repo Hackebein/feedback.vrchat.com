@@ -1,0 +1,91 @@
+{
+  "_id": "6a2048275f360bfe4c0bfb4a",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-06-03T15:35:17.667616Z",
+  "author": {
+    "_id": "5f2eaed841e042066f65cb45",
+    "alias": "Gainsboro Blackbird",
+    "aliasID": "65c2a2a0ed6eefce4c76962d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/118e62a50df005c6f8c2ae777fc8fdb8.png",
+    "created": "2020-08-08T13:55:36.280Z",
+    "name": "Shiro K",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "5f2eaed841e042066f65cb45",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-03T15:28:39.291Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This happens for all types of stations which are rotating in any way.\n\nSteps to reproduce:\n\n- Add a station and set \"Immobilize For Vehicle\" and check the \"Seated\" flag (but doesn't matter for results)\n\n- Add a script, which rotates the station in Y axis by pressing Q or E keys (or sit into something drivevable)\n\n- Play in desktop mode, enter the station and watch your lower/upper body (may be affected in VR mode too)\n\n- Turn with Q or E\n\nIf you turn to left, your upper body turns to right until a certain point. The legs do a counter movement too. Turn back do the same thing in the opposite direction.\n\nAs additional point - there can be a twist already after you entered the station. It could depend on the direction from which the station was entered - but it's not 100% clear.\n\nThat happens independent from the avtar and independent if the station is set to seated or not. Also, there is no difference between \"Immoblize\" or \"Immobilize For Vehicle\".\n\nWhat suppresses it is using the \"AnimatorTrackingControl\" component and set the tracking for all body parts to \"Animation\". But the head will then not look around anymore using the mouse.\n\nI would expect, that the upper/lower body does nothing in a station, as long tracking is enabled only for \"Head\", \"Left Hand\" and \"Right Hand\".\n\nImages:\n\n1nd: Body after entered station\n\n2nd: Body after I turned to right (twisted)\n\n3rd: Body after I turned to left (twisted)\n\n3th: Body after entered station from side (twisted)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a2048275f360bfe4c0bfb49",
+  "imageURLs": [
+    "https://canny-assets.io/images/a6d6176127e27597bc9d8d553fdc13c3.png",
+    "https://canny-assets.io/images/8a835da356f612446c580487fd73a503.png",
+    "https://canny-assets.io/images/39df5f41fa407c0ba84077be8955ed71.png",
+    "https://canny-assets.io/images/9bae10875505e24a0939c8199950ab92.png"
+  ],
+  "lastUpdated": 1780500656762,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2048275f360bfe4c0bfb4a/1271014780.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-03T15:28:39.291Z",
+  "subCategoryID": null,
+  "title": "Lower/upper body twists in moving stations for desktop",
+  "trendingScore": 2944.6424184156795,
+  "updatedAt": "2026-06-03T15:35:17.563672Z",
+  "updatedBy": null,
+  "urlName": "lower-upper-body-twists-in-moving-stations-for-desktop",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2eaed841e042066f65cb45",
+      "alias": "Gainsboro Blackbird",
+      "aliasID": "65c2a2a0ed6eefce4c76962d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/118e62a50df005c6f8c2ae777fc8fdb8.png",
+      "companies": [],
+      "name": "Shiro K",
+      "urlName": "<redacted>",
+      "voteID": "6a20482786d7b8843b8ff891"
+    }
+  ]
+}
