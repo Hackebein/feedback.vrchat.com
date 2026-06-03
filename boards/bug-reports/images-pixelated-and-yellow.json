@@ -1,12 +1,12 @@
 {
   "_id": "6a1cafd53f03ece87eaf82f8",
   "aiCategories": [
-    "loc.main-menu",
     "loc.in-world",
-    "avatars",
-    "worlds"
+    "loc.main-menu",
+    "worlds",
+    "client"
   ],
-  "aiTaggedAt": "2026-06-01T00:32:10.137086Z",
+  "aiTaggedAt": "2026-06-03T15:35:17.672228Z",
   "author": {
     "_id": "6a1cad8a86d7b8843b733bd2",
     "alias": "Competent Gerbil",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a1cc8c65e38208a9b6a5991",
@@ -65,13 +65,61 @@
       "postDeleted": false,
       "postID": "6a1cafd53f03ece87eaf82f8",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate, can be merged with: https://feedback.vrchat.com/bug-reports/p/yellow-pixelated-world-images-after-recent-update-possible-bug-with-new-compress",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a20382332a4925bee6c0f69",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a20305786d7b8843b8ed785",
+        "alias": "Junior Shark",
+        "aliasID": "6a20305886d7b8843b8ed789",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c398cd4f3f66de7f0c2bf8644a6a5d72.png",
+        "created": "2026-06-03T13:47:03.964Z",
+        "name": "＿もぱ＿",
+        "serviceAccount": false,
+        "urlName": "7e1e9a"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-03T14:20:19.402Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/e0144a88a67a92f83dd74419a0fde02c.jpeg"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1cafd53f03ece87eaf82f8",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Same issue on AQUOS sense10 (Android 16).\n\nStarted around June 1st, 2025.\n\nYellow pixelated/noisy textures appear on world thumbnails, banners, profile images, and loading screens.\n\nReinstalling VRChat, clearing cache, changing network, and disabling HW overlays did not fix it.\n\nThe same account works normally on Pixel 5a.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -93,34 +141,45 @@
     "https://canny-assets.io/images/a99f6fa9f528cca232fc6b607831787c.jpeg",
     "https://canny-assets.io/images/3e6510f54421f118af87213dd7869f61.jpeg"
   ],
-  "lastUpdated": 1780493313634,
+  "lastUpdated": 1780500657477,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-31T22:01:57.609Z",
   "subCategoryID": null,
   "title": "images pixelated and yellow",
-  "trendingScore": 2944.2528653005998,
-  "updatedAt": "2026-06-03T13:33:26.122180Z",
+  "trendingScore": 2944.802284122341,
+  "updatedAt": "2026-06-03T15:35:17.563672Z",
   "updatedBy": null,
   "urlName": "images-pixelated-and-yellow",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a20305786d7b8843b8ed785",
+      "alias": "Junior Shark",
+      "aliasID": "6a20305886d7b8843b8ed789",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c398cd4f3f66de7f0c2bf8644a6a5d72.png",
+      "companies": [],
+      "name": "＿もぱ＿",
+      "urlName": "7e1e9a",
+      "voteID": "6a20352586d7b8843b8f008c"
+    },
     {
       "_id": "6a1cad8a86d7b8843b733bd2",
       "alias": "Competent Gerbil",
