@@ -3,9 +3,10 @@
   "_id": "66bbcbc5409073870f7a7377",
   "aiCategories": [
     "loc.mobile-app",
+    "platforms",
     "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-05-16T18:54:47.862329Z",
+  "aiTaggedAt": "2026-06-03T17:42:12.102234Z",
   "author": {
     "_id": "5a9b3ad0f5e0532e3ea468be",
     "alias": "Nutmeg Toucan",
@@ -35,53 +36,8 @@
     "urlName": "feedback"
   },
   "categoryID": "665799dd90a9d214cd2f9a4e",
-  "commentCount": 23,
+  "commentCount": 24,
   "comments": [
-    {
-      "__v": 0,
-      "_id": "66f36d41a9f6930d46160112",
-      "aiGenerated": false,
-      "author": {
-        "_id": "66f36c87062d1c34d94c98ef",
-        "alias": "Golden Mackerel",
-        "aliasID": "66f36c887d32abb6cac738e0",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/e14b70cd2404b134ae4ebd1549b30f80.png",
-        "created": "2024-09-25T01:51:03.970Z",
-        "name": "ひやかけ⁄Hiyakake",
-        "serviceAccount": false,
-        "urlName": "<redacted>"
-      },
-      "authorID": null,
-      "boardID": "6657990efd693fc2ebdcd62c",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2024-09-25T01:54:09.146Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "66bbcbc5409073870f7a7377",
-      "private": false,
-      "reactions": {
-        "like": 2
-      },
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "私もmacOSでiOS版のVRCが動作することを強く望んでいます。\n\nデスクトップ版と同じユーザー体験ができるべきだと思います。\n\nそれはmacOSのためでなく、iPadにキーボード付きケースを接続して利用したいユーザーにとっても意味があるでしょう。\n\nM1以降のチップであればQuest対応ワールドをプレイするには十分すぎる性能です。\n\nI also strongly hope that the iOS version of VRC will work on macOS.\n\nI think you should have the same user experience as the desktop version.\n\nIt is not for macOS, but also for users who want to connect a keyboard case to the iPad and use it.\n\nIf it is an M1 or later chip, the performance is more than enough to play Quest-compatible worlds.",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "__v": 0,
       "_id": "672a2e89b2111c710f6c03be",
@@ -597,7 +553,9 @@
       "postDeleted": false,
       "postID": "66bbcbc5409073870f7a7377",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -653,7 +611,9 @@
       "postDeleted": false,
       "postID": "66bbcbc5409073870f7a7377",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -774,6 +734,52 @@
       "value": "@{680c29503daf3a612c12a675|full_name} same ☺",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a20627060e99caa27bffd1f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a20621b86d7b8843b9110a2",
+        "alias": "Happy Thrush",
+        "aliasID": "6a20621b86d7b8843b9110b2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8378250dfcc9a7504ab6caac11702962.png",
+        "created": "2026-06-03T17:19:23.535Z",
+        "name": "βìղց",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "6657990efd693fc2ebdcd62c",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-03T17:20:48.884Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "66bbcbc5409073870f7a7377",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I heavily agree because it's already on the iOS and iPadOS App Store. as far as I'm aware it would be one button press to allow it.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -788,23 +794,23 @@
   "files": [],
   "ideaID": "680bba00e4c3e90df13942bb",
   "imageURLs": [],
-  "lastUpdated": 1780307357798,
+  "lastUpdated": 1780508219536,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 147,
+  "maxScore": 148,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66bbcbc5409073870f7a7377/73723002.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 147,
+  "score": 148,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2024-08-13T21:10:29.057Z",
   "subCategoryID": null,
   "title": "Apple Silicon Mac Support",
-  "trendingScore": 2942.3086331451505,
-  "updatedAt": "2026-06-01T09:50:54.711944Z",
+  "trendingScore": 2944.135683133251,
+  "updatedAt": "2026-06-03T17:42:11.988117Z",
   "updatedBy": "5a9b3ad0f5e0532e3ea468be",
   "urlName": "apple-silicon-mac-support",
   "viewerIsAuthor": false,
@@ -816,6 +822,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a20621b86d7b8843b9110a2",
+      "alias": "Happy Thrush",
+      "aliasID": "6a20621b86d7b8843b9110b2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8378250dfcc9a7504ab6caac11702962.png",
+      "companies": [],
+      "name": "βìղց",
+      "urlName": "<redacted>",
+      "voteID": "6a20622486d7b8843b9110cf"
+    },
     {
       "_id": "62af4d80b4b0cd0bb8cbdba0",
       "alias": "Beige Chinchilla",
@@ -876,7 +893,7 @@
       "alias": "Widespread Panther",
       "aliasID": "65c28a4bed6eefce4cd292e1",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/56d6d28ccbb2de4c30b2a0be139832fb.png",
+      "avatarURL": "https://canny-assets.io/images/15f0317a87c890ab6bb008744d41e091.png",
       "companies": [],
       "name": "Revons Rutabaga",
       "urlName": "<redacted>",
@@ -914,17 +931,6 @@
       "name": "ねこコン",
       "urlName": "<redacted>",
       "voteID": "69ad693195d05cb740e18027"
-    },
-    {
-      "_id": "5f2ccd4e74493130abccd84a",
-      "alias": "Nautical blue Bear",
-      "aliasID": "65c29031ed6eefce4cbd30ca",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a5372550f5f9706c8f1db4ea66fb4a74.png",
-      "companies": [],
-      "name": "Vard",
-      "urlName": "<redacted>",
-      "voteID": "69aa0b23804d20e970cc2e7d"
     }
   ]
 }
