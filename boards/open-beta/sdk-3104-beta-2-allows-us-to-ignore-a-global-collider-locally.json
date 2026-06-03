@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-05-31T03:07:27.859536Z",
+  "aiTaggedAt": "2026-06-03T19:18:32.998767Z",
   "author": {
     "_id": "5fca5df4d58780532024a52b",
     "alias": "Toffee Tortoise",
@@ -34,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a0fa0ca1e75e00bbd374c53",
@@ -342,6 +342,50 @@
       "value": "How difficult would it be to have a local collider blacklist instead of the current setup?",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a2073c39230609b780ffbc1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f30421bda52487c3a337b91",
+        "alias": "Thorough Sparrow",
+        "aliasID": "65c36d1ded6eefce4c3fd90c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/9d2a91ea30279c54e159f8e844bd2636.png",
+        "created": "2020-08-09T18:36:11.331Z",
+        "name": "Desmoulins",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-03T18:34:43.029Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a10527bd96c647ddd376104",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Very much needed. A list to define (blacklist) our own global colliders would be really helpful, my own global colliders (i use them to give my upper and lower body a collider to push other people's stuff out of my avatar) sometimes collide with my own physbones (tail, ears, other props)\n\nEDIT: They are already set to completely disallow collision and yet still do collide. So half of the collision settings don't even work.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -359,23 +403,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/fd0cd13a1936489d1ed7cac8f29a52d7.png"
   ],
-  "lastUpdated": 1780508225288,
+  "lastUpdated": 1780514015174,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 14,
+  "maxScore": 15,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a10527bd96c647ddd376104/1068827932.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 14,
+  "score": 15,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-05-27T15:33:27.832Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.4 beta 2] Allows us to ignore a global collider locally",
-  "trendingScore": 2945.215847640924,
-  "updatedAt": "2026-06-03T17:42:11.988117Z",
+  "trendingScore": 2945.4681520614063,
+  "updatedAt": "2026-06-03T19:18:32.891176Z",
   "updatedBy": null,
   "urlName": "sdk-3104-beta-2-allows-us-to-ignore-a-global-collider-locally",
   "viewerIsAuthor": false,
@@ -387,6 +431,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f30421bda52487c3a337b91",
+      "alias": "Thorough Sparrow",
+      "aliasID": "65c36d1ded6eefce4c3fd90c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9d2a91ea30279c54e159f8e844bd2636.png",
+      "companies": [],
+      "name": "Desmoulins",
+      "urlName": "<redacted>",
+      "voteID": "6a20734b86d7b8843b91b1ee"
+    },
     {
       "_id": "609243066681a677e50882ae",
       "alias": "Powerful Porcupine",
@@ -469,9 +524,9 @@
       "alias": "Structural Sparrow",
       "aliasID": "65c26ed9ed6eefce4c854f1b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d8206706dbcd3900a03bf129a8e5bf33.png",
+      "avatarURL": "https://canny-assets.io/images/aeae2a76a3333a41a6f2726deb665f2d.png",
       "companies": [],
-      "name": "＠QJusticeSummon",
+      "name": "＠SVoicesKarmaEX",
       "urlName": "<redacted>",
       "voteID": "6a1095565a52cb2df05089c7"
     },
@@ -485,17 +540,6 @@
       "name": "peepymou",
       "urlName": "<redacted>",
       "voteID": "6a1086675a52cb2df04fbdf1"
-    },
-    {
-      "_id": "601d7360a44f0f0365c55ad4",
-      "alias": "Yolk yellow Carp",
-      "aliasID": "65c45496ed6eefce4ce345e3",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/19d04f3d3a2f7466a540b1fc429982bf.png",
-      "companies": [],
-      "name": "Zerithax",
-      "urlName": "<redacted>",
-      "voteID": "6a105b1b5a52cb2df04e2235"
     }
   ]
 }
