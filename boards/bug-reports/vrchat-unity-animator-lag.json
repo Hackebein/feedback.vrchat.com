@@ -3,9 +3,10 @@
   "_id": "67a7dc67ff49d47d683476b1",
   "aiCategories": [
     "loc.in-world",
-    "avatars.fbt"
+    "loc.unity-sdk",
+    "avatars"
   ],
-  "aiTaggedAt": "2026-06-04T19:47:33.248954Z",
+  "aiTaggedAt": "2026-06-04T20:44:10.835005Z",
   "author": {
     "_id": "65f776cb8227b39069ef0811",
     "alias": "Traditional Guppy",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "__v": 0,
@@ -262,6 +263,50 @@
       "value": "@{68098a4626271974ef4d2775|full_name} https://docs.vrchat.com/docs/vrchat-202622p1",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a21d61927ef323e72e5a6ca",
+      "aiGenerated": false,
+      "author": {
+        "_id": "605ab80112b5f566263d79ff",
+        "alias": "Plum Bandicoot",
+        "aliasID": "65c49f9ced6eefce4c9dc2e7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/7cd2ce0937e4a17e86f6960f6ff1da1d.png",
+        "created": "2021-03-24T03:54:41.766Z",
+        "name": "LG",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-04T19:46:33.870Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a2048094263ee7d8b86d989",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67a7dc67ff49d47d683476b1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "W",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -279,23 +324,23 @@
     "https://canny-assets.io/images/cf76389d0bf778a378103f98c7326c81.png",
     "https://canny-assets.io/images/6daf42947695331d51573716383f7657.png"
   ],
-  "lastUpdated": 1780602060062,
+  "lastUpdated": 1780605591400,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 126,
+  "maxScore": 129,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67a7dc67ff49d47d683476b1/1454209571.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 126,
+  "score": 128,
   "sourceFeatureExtractionItem": null,
   "status": "available in future release",
   "statusChanged": "2026-06-03T15:28:09.001Z",
   "subCategoryID": null,
   "title": "VRChat Unity Animator Lag",
-  "trendingScore": 2946.6505286682777,
-  "updatedAt": "2026-06-04T19:47:33.142349Z",
+  "trendingScore": 2946.864808370642,
+  "updatedAt": "2026-06-04T20:44:10.726541Z",
   "updatedBy": null,
   "urlName": "vrchat-unity-animator-lag",
   "viewerIsAuthor": false,
@@ -307,6 +352,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f98f6222eaf9f0307a85a45",
+      "alias": "Olive green Chicken",
+      "aliasID": "65edcd98a6e3ea79dd11e4f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/75093ee48b8ee2027d7367b9c243f8f2.png",
+      "companies": [],
+      "name": "Bream",
+      "urlName": "<redacted>",
+      "voteID": "6a21dc7f86d7b8843b9c4c1a"
+    },
+    {
+      "_id": "628495166bb7820b748a1f66",
+      "alias": "Azure Unicorn",
+      "aliasID": "65c3900ded6eefce4cdcf051",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/98c1e7ae69570b2f42a76aa648bcf4e2.png",
+      "companies": [],
+      "name": "~Ashy",
+      "urlName": "<redacted>",
+      "voteID": "6a21d7c886d7b8843b9c22ca"
+    },
     {
       "_id": "5a33f59b7f2ea83fad4a5ecd",
       "alias": "Managerial Hornet",
@@ -394,28 +461,6 @@
       "name": "okgold",
       "urlName": "<redacted>",
       "voteID": "6a206abb86d7b8843b9152f3"
-    },
-    {
-      "_id": "63c2130366041430f307d07a",
-      "alias": "Current Coyote",
-      "aliasID": "65caf64fed6eefce4ccfa962",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/3e7fdd6f7a4b6217472c2fe1e1fdc696.png",
-      "companies": [],
-      "name": "Misaka-L",
-      "urlName": "<redacted>",
-      "voteID": "6a2053a986d7b8843b90734a"
-    },
-    {
-      "_id": "5e102940719a8a2497279026",
-      "alias": "Single Stingray",
-      "aliasID": "65c2a212ed6eefce4c61b9d2",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6740a0dcd0404f511fe585aaa8fd04e9.png",
-      "companies": [],
-      "name": "≻Danny",
-      "urlName": "<redacted>",
-      "voteID": "6a20501586d7b8843b90560d"
     }
   ]
 }
