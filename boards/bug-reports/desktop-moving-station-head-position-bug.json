@@ -2,9 +2,9 @@
   "_id": "6a2165098aa603371df6cf10",
   "aiCategories": [
     "loc.in-world",
-    "client.third-person"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-06-04T16:12:26.314509Z",
+  "aiTaggedAt": "2026-06-04T18:46:01.380195Z",
   "author": {
     "_id": "5b8059dd44451c40bfea25b3",
     "alias": "Theoretical Egret",
@@ -27,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "comments": [
     {
       "_id": "6a216de58aa603371df9e84f",
@@ -419,6 +419,50 @@
       "value": "@{64873f159cf028090ce2c2e2|full_name} LEGEND.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a21c1648aa603371d0f82a8",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5d6745ff863fcc6ee6ee4176",
+        "alias": "Flying Mouse",
+        "aliasID": "65c287e9ed6eefce4c76f560",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/00e7f68bfc57f09e9f4a929e48cbeedd.png",
+        "created": "2019-08-29T03:26:55.536Z",
+        "name": "★ Klonoa ★",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-04T18:18:12.819Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2165098aa603371df6cf10",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Oh my god someone finally made this problem get noticed, its been driving me up the walls for 6 months lmao",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -434,23 +478,23 @@
   "files": [],
   "ideaID": "6a2165098aa603371df6cf02",
   "imageURLs": [],
-  "lastUpdated": 1780595492528,
+  "lastUpdated": 1780598491460,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 52,
+  "maxScore": 53,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2165098aa603371df6cf10/1999942238.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 52,
+  "score": 53,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-06-04T14:05:12.032Z",
   "subCategoryID": null,
   "title": "Desktop Moving Station Head Position Bug",
-  "trendingScore": 2948.0530066436213,
-  "updatedAt": "2026-06-04T17:56:20.309289Z",
+  "trendingScore": 2948.072191051302,
+  "updatedAt": "2026-06-04T18:46:01.281910Z",
   "updatedBy": "5b8059dd44451c40bfea25b3",
   "urlName": "desktop-moving-station-head-position-bug",
   "viewerIsAuthor": false,
@@ -462,6 +506,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5d6745ff863fcc6ee6ee4176",
+      "alias": "Flying Mouse",
+      "aliasID": "65c287e9ed6eefce4c76f560",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/00e7f68bfc57f09e9f4a929e48cbeedd.png",
+      "companies": [],
+      "name": "★ Klonoa ★",
+      "urlName": "<redacted>",
+      "voteID": "6a21c16986d7b8843b9b1d85"
+    },
     {
       "_id": "606515e0fbe2815d2ba01829",
       "alias": "Ink Cod",
@@ -560,17 +615,6 @@
       "name": "Fuyusora-ふゆそら",
       "urlName": "<redacted>",
       "voteID": "6a219cd086d7b8843b99b19b"
-    },
-    {
-      "_id": "6807e820f1717d4bc1caf3c8",
-      "alias": "Accessible Orca",
-      "aliasID": "6807e8218ccc1d8b3bcb59f9",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/1dac65aac11c1afe5f502f4ccc75e872.png",
-      "companies": [],
-      "name": "OKBoomerFitz",
-      "urlName": "<redacted>",
-      "voteID": "6a21987286d7b8843b997afa"
     }
   ]
 }
