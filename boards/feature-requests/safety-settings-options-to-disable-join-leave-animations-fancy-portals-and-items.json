@@ -432,7 +432,9 @@
       "postDeleted": false,
       "postID": "6a13d3e7b94d2b86707854be",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -476,7 +478,9 @@
       "postDeleted": false,
       "postID": "6a13d3e7b94d2b86707854be",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -500,23 +504,23 @@
   "files": [],
   "ideaID": "6a13d3e7b94d2b86707854c0",
   "imageURLs": [],
-  "lastUpdated": 1780537848040,
+  "lastUpdated": 1780542182606,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 192,
+  "maxScore": 193,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a13d3e7b94d2b86707854be/2008646621.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 192,
+  "score": 193,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-25T04:45:27.392Z",
   "subCategoryID": null,
   "title": "Safety settings options to disable: join/leave animations, fancy portals, and items",
-  "trendingScore": 2948.3218959465203,
-  "updatedAt": "2026-06-04T01:55:15.419976Z",
+  "trendingScore": 2948.335258962659,
+  "updatedAt": "2026-06-04T03:09:38.346813Z",
   "updatedBy": null,
   "urlName": "safety-settings-options-to-disable-join-leave-animations-fancy-portals-and-items",
   "viewerIsAuthor": false,
@@ -528,6 +532,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "646b46f5e67dc809215ad295",
+      "alias": "Stable Dolphin",
+      "aliasID": "6957138af85d59c66d7fbbf5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/75db124772caf70ded62e3f4bda124e3.png",
+      "companies": [],
+      "name": "Okatsumo",
+      "urlName": "<redacted>",
+      "voteID": "6a20df7886d7b8843b9484c0"
+    },
     {
       "_id": "6306c04ce552ab44a397feec",
       "alias": "Closed Lamprey",
@@ -626,17 +641,6 @@
       "name": "Chrysophade",
       "urlName": "<redacted>",
       "voteID": "6a1fd73386d7b8843b8bf595"
-    },
-    {
-      "_id": "6494df0e3fa6da09bee4cfb8",
-      "alias": "Resulting Cougar",
-      "aliasID": "65f380dd76937e5248494ed0",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/cc8c697d5582847916a2f8f4725d908c.png",
-      "companies": [],
-      "name": "VincentGray88",
-      "urlName": "<redacted>",
-      "voteID": "6a1f010a86d7b8843b84ffa4"
     }
   ]
 }
