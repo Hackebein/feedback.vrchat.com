@@ -501,7 +501,9 @@
       "postDeleted": false,
       "postID": "663aa5af7acad7bd4c78ec5e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
@@ -569,23 +571,23 @@
   "files": [],
   "ideaID": "680bb9e1e4c3e90df138e57c",
   "imageURLs": [],
-  "lastUpdated": 1780248388385,
+  "lastUpdated": 1780619560071,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 134,
+  "maxScore": 138,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/663aa5af7acad7bd4c78ec5e/1943864418.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 134,
+  "score": 138,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2024-05-08T14:39:59.865Z",
   "subCategoryID": null,
   "title": "[1452] Allow setting preferred date format instead of tying it to the user's language",
-  "trendingScore": 2943.5232754105823,
-  "updatedAt": "2026-05-31T17:27:10.168749Z",
+  "trendingScore": 2945.529601980228,
+  "updatedAt": "2026-06-05T00:32:50.029571Z",
   "updatedBy": null,
   "urlName": "1452-allow-setting-preferred-date-format-instead-of-tying-it-to-the-users-langua",
   "viewerIsAuthor": false,
@@ -597,6 +599,50 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "58d1e656c86088564525a7b5",
+      "alias": "Aquamarine Stork",
+      "aliasID": "65c3d45ded6eefce4c3813c2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f9f008c2c899ee865b8f68d7340508e1.png",
+      "companies": [],
+      "name": "MarJVX",
+      "urlName": "<redacted>",
+      "voteID": "6a21cae386d7b8843b9baee6"
+    },
+    {
+      "_id": "5fe0a7b0149d3c2965c6f43f",
+      "alias": "Known Wildcat",
+      "aliasID": "65c2ae1fed6eefce4c0b9919",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b50ce3cfe2202b5a237be19e456bc6df.png",
+      "companies": [],
+      "name": "tw1l1ght75",
+      "urlName": "<redacted>",
+      "voteID": "6a2096bc86d7b8843b93132b"
+    },
+    {
+      "_id": "5f2d586c7f57433511432c5a",
+      "alias": "Binding Cricket",
+      "aliasID": "65c28339ed6eefce4cc2dcf3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/92b10469cc106866449f6461a74e7de1.png",
+      "companies": [],
+      "name": "Avislime",
+      "urlName": "<redacted>",
+      "voteID": "6a20699d86d7b8843b914bb7"
+    },
+    {
+      "_id": "651ee4c59bd9ae5010c127e1",
+      "alias": "Rose Seahorse",
+      "aliasID": "65c6799fed6eefce4c011ce3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a86d16f54d21e4c64071d5c35e0626e8.png",
+      "companies": [],
+      "name": "French Fox",
+      "urlName": "<redacted>",
+      "voteID": "6a20126286d7b8843b8dd06d"
+    },
     {
       "_id": "6a001992cf565b8f74f2784c",
       "alias": "Zircon Locust",
@@ -624,9 +670,9 @@
       "alias": "Structural Sparrow",
       "aliasID": "65c26ed9ed6eefce4c854f1b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d8206706dbcd3900a03bf129a8e5bf33.png",
+      "avatarURL": "https://canny-assets.io/images/d15c1153b308f5db965d1f6390b7c463.png",
       "companies": [],
-      "name": "＠QJusticeSummon",
+      "name": "＠SVoicesKarmaEX",
       "urlName": "<redacted>",
       "voteID": "6a0da9185a52cb2df038c7db"
     },
@@ -662,50 +708,6 @@
       "name": "Fercraft64",
       "urlName": "<redacted>",
       "voteID": "69a848d0804d20e97036a852"
-    },
-    {
-      "_id": "62a27bd2ae3d2c0ba0a9d01c",
-      "alias": "Eucalyptus Scallop",
-      "aliasID": "65de339436dd86f1c4c6a085",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/626dbafdc8aba4f2809ce4d0a8c0bd6b.png",
-      "companies": [],
-      "name": "SmileyFace ˸）",
-      "urlName": "<redacted>",
-      "voteID": "67bb7c02b324a96209278c87"
-    },
-    {
-      "_id": "61cce3cbf1f09b153ac05334",
-      "alias": "Wine Falcon",
-      "aliasID": "65c28a58ed6eefce4cd48630",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/f90cb84a11e87adee02e9d936f6f2eb8.png",
-      "companies": [],
-      "name": "BinoWulf",
-      "urlName": "<redacted>",
-      "voteID": "674bd828a367fa6392ed1124"
-    },
-    {
-      "_id": "631c763878943244b1988f64",
-      "alias": "Educational Gazelle",
-      "aliasID": "65c36fe7ed6eefce4ca2a020",
-      "anonymized": false,
-      "avatarURL": "https://canny.io/images/57ad827eb01381f637781d90ead1bc9b.png",
-      "companies": [],
-      "name": "Yferi",
-      "urlName": "<redacted>",
-      "voteID": "670d74d90f7e723d6e56fce3"
-    },
-    {
-      "_id": "5fd2dd606c94b54325bbb089",
-      "alias": "Cool Whitefish",
-      "aliasID": "65c28083ed6eefce4c570c7c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c693306596dc75a4c40640c98c72800a.png",
-      "companies": [],
-      "name": "Scena",
-      "urlName": "<redacted>",
-      "voteID": "66a490a5318f0a3252fe1dc8"
     }
   ]
 }

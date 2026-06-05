@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-06-03T13:33:26.226078Z",
+  "aiTaggedAt": "2026-06-05T00:32:50.129408Z",
   "author": {
     "_id": "6086e40cf54fe42106f55863",
     "alias": "Yellow green Firefly",
@@ -34,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a1f02ad1f0c312db2376d03",
@@ -114,6 +114,64 @@
       "value": "We can probably suppress this, but for the sake of completeness can you please confirm if you have \"All Logging Enabled\" turned on in the Settings tab of the VRChat SDK Control Panel, and if turning it off stops this message from appearing for you when editing the scene with the Builder tab visible?",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a2212e67e9acc9d1348b23e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6086e40cf54fe42106f55863",
+        "alias": "Yellow green Firefly",
+        "aliasID": "65c288dbed6eefce4c9b51ee",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a59d9d18250f6669f0cc52dc582475d7.png",
+        "created": "2021-04-26T16:02:20.131Z",
+        "name": "frou01",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-05T00:05:58.103Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/c02c9704d70da0d76af6e5ed1967604a.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a201537138f01baa6a81062",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a14ee09a7bd685498742123",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name}, there is no such option.\n\nI turned on API logging option long ago, because I had a problem during the upload process.\n\nAnyway, I can't seem to reproduce it properly...",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -129,7 +187,7 @@
   "files": [],
   "ideaID": "6a14ee09a7bd685498742125",
   "imageURLs": [],
-  "lastUpdated": 1780615444421,
+  "lastUpdated": 1780619273068,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -145,7 +203,7 @@
   "subCategoryID": null,
   "title": "VRCSdkControlPanelWorldBuilder.CheckFogSettings spamming Log",
   "trendingScore": 2943.4123173277167,
-  "updatedAt": "2026-06-04T23:28:47.445805Z",
+  "updatedAt": "2026-06-05T00:32:50.029571Z",
   "updatedBy": null,
   "urlName": "vrcsdkcontrolpanelworldbuildercheckfogsettings-spamming-log",
   "viewerIsAuthor": false,
