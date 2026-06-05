@@ -4,7 +4,7 @@
     "loc.in-world",
     "client"
   ],
-  "aiTaggedAt": "2026-06-03T00:40:28.396644Z",
+  "aiTaggedAt": "2026-06-05T05:32:17.433328Z",
   "author": {
     "_id": "66fddfa7d2f269d55bdb86e7",
     "alias": "Related Mink",
@@ -27,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a1f713876567117dfb8cea6",
@@ -75,13 +75,71 @@
       "postDeleted": false,
       "postID": "6a1f6ca01c0afbd6718494c1",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "It'd be more helpful to rephrase what you're saying @{66fddfa7d2f269d55bdb86e7|full_name} in a feature request format that's understandable to what the underlying issue is or how you would improve performance or need to be optimized. User-generated content can't be necessarily fixed, limitations with Unity's Built-In Render Pipeline I'm not sure about, and in VR you're going to be rendering at high resolutions at least two or three times (counting the desktop mode window).",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a22562e7d36dc87f4f1ff31",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66fddfa7d2f269d55bdb86e7",
+        "alias": "Related Mink",
+        "aliasID": "66fddfa77d32abb6ca8fa637",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/69219ffff1af68e6c03bd501f57a209f.png",
+        "created": "2024-10-03T00:04:55.142Z",
+        "name": "rootbeerlover",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-05T04:53:02.225Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a1f713876567117dfb8cea6",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1f6ca01c0afbd6718494c1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} sir or mam i don't understand what you fully mean. also even though switching to a different to a different software would be better and coding but that would take a lot of money and its known that vrchat needs to be optimize",
       "viewerReactions": null,
       "voteID": null
     }
@@ -99,7 +157,7 @@
   "files": [],
   "ideaID": "6a1f6c9f1c0afbd6718494c0",
   "imageURLs": [],
-  "lastUpdated": 1780628535429,
+  "lastUpdated": 1780637265931,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -115,7 +173,7 @@
   "subCategoryID": null,
   "title": "Optimization",
   "trendingScore": 2944.5494962339662,
-  "updatedAt": "2026-06-05T03:07:27.817194Z",
+  "updatedAt": "2026-06-05T05:32:17.327562Z",
   "updatedBy": null,
   "urlName": "optimization-1",
   "viewerIsAuthor": false,
