@@ -1,11 +1,13 @@
 {
   "_id": "6a22e816a65dd9597e0dbdca",
   "aiCategories": [
+    "loc.hud",
     "loc.in-world",
     "client.camera",
+    "audio",
     "audio.voice"
   ],
-  "aiTaggedAt": "2026-06-05T16:51:11.955030Z",
+  "aiTaggedAt": "2026-06-05T18:40:31.626543Z",
   "author": {
     "_id": "68e2d2984f674f1b1e234a6f",
     "alias": "Verdigris green Butterfly",
@@ -28,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a22f0d5c4f5b16d21218cd0",
@@ -108,13 +110,59 @@
       "postDeleted": false,
       "postID": "6a22e816a65dd9597e0dbdca",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Does spout have audio now? Last time I checked its a technology that is for video, like a shared video texture. \n\nThe general idea of being able to somehow get a differently configured audio out of vrchat is a good idea, I just think it's not going to invoke the SPOUT2 standard.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a230db452e4c4133177a5ba",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6051ea3c0127dc2014c112f0",
+        "alias": "Olive green Bobcat",
+        "aliasID": "65c2f69ded6eefce4cbccf90",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/096f7bbb704ecfeeac05fa59f70aad5d.png",
+        "created": "2021-03-17T11:38:36.420Z",
+        "name": "jangxx",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-05T17:56:04.573Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a22e816a65dd9597e0dbdca",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Spout does not support audio, it's a video-only system. I would still love to have a way to get clean world audio from the game in order to feed it into my Woojer vest though. Many years ago there was a mod that did this, but ever since that mod stopped working, there hasn't been a way to get a clean world audio feed.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -132,23 +180,23 @@
   "files": [],
   "ideaID": "6a22e816a65dd9597e0dbdc9",
   "imageURLs": [],
-  "lastUpdated": 1780680899177,
+  "lastUpdated": 1780684555780,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 9,
+  "maxScore": 11,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a22e816a65dd9597e0dbdca/1649353941.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 9,
+  "score": 11,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-06-05T15:15:34.422Z",
   "subCategoryID": null,
   "title": "SPOUT Capture - Seperate World Volume and Voice Volume",
-  "trendingScore": 2946.5410069542113,
-  "updatedAt": "2026-06-05T17:39:48.362160Z",
+  "trendingScore": 2946.805980728768,
+  "updatedAt": "2026-06-05T18:40:31.525207Z",
   "updatedBy": null,
   "urlName": "spout-capture-seperate-world-volume-and-voice-volume",
   "viewerIsAuthor": false,
@@ -160,6 +208,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5fe12908ccfb9d4462f4b726",
+      "alias": "Amazing Rhinoceros",
+      "aliasID": "66014002a63714bcb30c1213",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2f76023f53295b00f054091f6f2906e4.png",
+      "companies": [],
+      "name": "moethelawn",
+      "urlName": "<redacted>",
+      "voteID": "6a2312c186d7b8843ba3a6a0"
+    },
+    {
+      "_id": "6051ea3c0127dc2014c112f0",
+      "alias": "Olive green Bobcat",
+      "aliasID": "65c2f69ded6eefce4cbccf90",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/096f7bbb704ecfeeac05fa59f70aad5d.png",
+      "companies": [],
+      "name": "jangxx",
+      "urlName": "<redacted>",
+      "voteID": "6a230bf586d7b8843ba37a5d"
+    },
     {
       "_id": "5f9b02513de0c820e74d37d5",
       "alias": "Identical Seahorse",
@@ -247,17 +317,6 @@
       "name": "LylacSky",
       "urlName": "<redacted>",
       "voteID": "6a22e86e86d7b8843ba229a5"
-    },
-    {
-      "_id": "68e2d2984f674f1b1e234a6f",
-      "alias": "Verdigris green Butterfly",
-      "aliasID": "693894e14927a96e58905490",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/854fd261b59dfdeeb87191f1eebcda9c.png",
-      "companies": [],
-      "name": "Stroobie",
-      "urlName": "<redacted>",
-      "voteID": "6a22e81686d7b8843ba2270f"
     }
   ]
 }
