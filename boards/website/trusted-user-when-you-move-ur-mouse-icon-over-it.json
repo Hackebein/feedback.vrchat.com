@@ -121,7 +121,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Expected behavior: Display the checkmark on the shield with title \"Age Verified\" if the user has completed the age verification process regardless of 18+ status, else if the age has not been verified keep the current behavior.\n\nReason: It's awkward on the website when a person under 18 has completed their age verification and their bio says \"I am ID verified‚ its the checkmark on the shield․\", the website reports them as \"Age Not Verified\" but the app reports them as \"Age Verified\" on the shield icon.",
+      "value": "Expected behavior: Display the checkmark on the shield with title \"Age Verified\" if the user has completed the age verification process regardless of 18+ status, else if the age has not been verified keep the current behavior.\n\nReasoning: It's awkward on the website when a person under 18 has completed their age verification and their bio says \"I am ID verified‚ its the checkmark on the shield․\", the website reports them as \"Age Not Verified\" without a checkmark but the app reports them as \"Age Verified\" with a checkmark on the shield icon. The expected behavior outlined above would be consistent with the intent of [VRChat 2025.1.2](https://docs.vrchat.com/docs/vrchat-202512):\n\n> The Trust Shield icon on user profiles and nameplates will now show a checkmark for all users who have undergone age verification.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -141,7 +141,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/acb98f5fb2be4710ada9638cbcfd946c.png"
   ],
-  "lastUpdated": 1780681002861,
+  "lastUpdated": 1780684556338,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -157,7 +157,7 @@
   "subCategoryID": null,
   "title": "\"Trusted User\" When you move ur mouse icon over it.",
   "trendingScore": 2943.5974038990043,
-  "updatedAt": "2026-06-05T17:39:48.362160Z",
+  "updatedAt": "2026-06-05T18:40:31.525207Z",
   "updatedBy": null,
   "urlName": "trusted-user-when-you-move-ur-mouse-icon-over-it",
   "viewerIsAuthor": false,
