@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.quick-menu",
     "moderation.safety-system",
-    "client.inventory"
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-06-05T15:07:17.341121Z",
+  "aiTaggedAt": "2026-06-05T16:51:11.955726Z",
   "author": {
     "_id": "68098a4626271974ef4d2775",
     "alias": "Extraordinary Peacock",
@@ -80,7 +80,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Thumbnails for reported emojis have been missing since early 2026, some months ago. This affects both open & closed reports.\n\nSteps to reproduce:\n\n1. Have at least one reported emoji on your account (open or closed report). Ideally, report an emoji from a current instance where you can see the thumbnail of content to be reported.\n\n2. Open Quick Menu → Click the \"Report\" icon → \"View Reports\" → Emoji.\n\n3. Notice the thumbnail for the content you've reported is missing (black), even if it exists.\n\nExpected behavior: See the thumbnail of emojis content you've previously reported, so that reported content may be identified (e.g. to identify reported content for deleting an open report).\n\nActual behavior: The emoji thumbnail is always shown as a black image, with an API responding 404 Not Found (which is sometimes used as a HTTP response for not having permissions to view said content) when the emoji photo is expanded (\"View Photo\"). This also affects historical reports which would've also displayed a thumbnail or \"Image Not Found\" placeholders instead.\n\nUnclear if this was intentional, because it wasn't explicitly stated as a deliberate change in any recent patch notes. For some reason, avatar thumbnails are not affected. There is no difference when using Streamer Mode or by having Content Gating filters disabled.\n\nSticker reports are partially affected by this too... it takes several minutes for those to eventually load while the sticker reports list is open (< 50 closed sticker reports).",
+  "details": "Thumbnails for reported emojis have been missing since early 2026, some months ago. This affects both open & closed reports.\n\nSteps to reproduce:\n\n1. Have at least one reported emoji on your account (open or closed report). Ideally, report an emoji from a current instance where you can see the thumbnail of content to be reported.\n\n2. Open Quick Menu → Click the \"Report\" icon → \"View Reports\" → Emoji.\n\n3. Notice the thumbnail for the content you've reported is missing (black), even if it exists.\n\nExpected behavior: See the thumbnail of emojis you've previously reported, so that reported content may be identified (e.g. for deleting an open report).\n\nActual behavior: The emoji thumbnail is always shown as a black image, with an API responding 404 Not Found (which is sometimes used by VRChat as a HTTP response for not having permissions to view said content) when the emoji photo is expanded (\"View Photo\"). This also affects historical reports which would've also displayed a thumbnail or \"Image Not Found\" placeholders previously.\n\nUnclear if this was intentional, because it wasn't explicitly stated as a deliberate change in any recent patch notes. For some reason, avatar thumbnails are not affected. There is no difference when using Streamer Mode or by having Content Gating filters disabled.\n\nSticker reports are partially affected by this too... it takes several minutes for those to eventually load while the sticker reports list is open (< 50 closed sticker reports).",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -105,7 +105,7 @@
     "https://canny-assets.io/images/56daa02ced0460a5f639453ca9dfd80d.png",
     "https://canny-assets.io/images/c1976b1709936c476305d6c1816ed38f.png"
   ],
-  "lastUpdated": 1780671747402,
+  "lastUpdated": 1780677991778,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -121,7 +121,7 @@
   "subCategoryID": null,
   "title": "Unable to view thumbnails of reported emojis/stickers from View Reports",
   "trendingScore": 2944.9201915307585,
-  "updatedAt": "2026-06-05T15:07:17.243088Z",
+  "updatedAt": "2026-06-05T16:51:11.856314Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "unable-to-view-thumbnails-of-reported-emojis-stickers-from-view-reports",
   "viewerIsAuthor": false,
