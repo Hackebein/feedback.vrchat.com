@@ -2,10 +2,9 @@
   "_id": "6a240a6711b0a99efbb019b7",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.clientsim",
-    "sdk.world-building"
+    "sdk.clientsim"
   ],
-  "aiTaggedAt": "2026-06-06T12:27:38.081468Z",
+  "aiTaggedAt": "2026-06-06T13:35:23.725965Z",
   "author": {
     "_id": "5f2eaed841e042066f65cb45",
     "alias": "Gainsboro Blackbird",
@@ -35,7 +34,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When using \"Build & Test Your World\" with two instances, the offset of the player of the first instance (left view) looks wrong to the player of the second instance (right view).\n\nThis bug is not new with 1855 - it exists already for long time.",
+  "details": "When using \"Build & Test Your World\" with two instances, the offset of the player of the first instance (left view) looks wrong to the player of the second instance (right view).\n\nThis bug is not new with 1855 - it exists already for long time.\n\nThe bug happens not all time, but around 80% of time when loading 2 instances (but works always when you load the second instance later).",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -45,7 +44,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/6b881fc371558fe862e7c952cd0528b8.png"
   ],
-  "lastUpdated": 1780748562468,
+  "lastUpdated": 1780752606920,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -61,8 +60,8 @@
   "subCategoryID": null,
   "title": "Build & Test: Wrong offset of the player of the first instance",
   "trendingScore": 2945.049720919813,
-  "updatedAt": "2026-06-06T12:27:37.980650Z",
-  "updatedBy": null,
+  "updatedAt": "2026-06-06T13:35:23.618503Z",
+  "updatedBy": "5f2eaed841e042066f65cb45",
   "urlName": "build-test-wrong-offset-of-the-player-of-the-first-instance",
   "viewerIsAuthor": false,
   "viewerVote": 0,
