@@ -1,0 +1,93 @@
+{
+  "_id": "6a236f4a11b0a99efb977512",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-06T01:41:05.495971Z",
+  "author": {
+    "_id": "5e607dc532f5e02bee5f7f2f",
+    "alias": "Dandelion Krill",
+    "aliasID": "65c9c264ed6eefce4c8a6b13",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4b8e06247917b00a1ef2ae75c9a52a80.png",
+    "created": "2020-03-05T04:19:17.598Z",
+    "name": "Comrade General",
+    "serviceAccount": false,
+    "urlName": "alfa-10"
+  },
+  "authorID": "5e607dc532f5e02bee5f7f2f",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 151,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-06T00:52:26.251Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "TLDR; if an AudioClip on avatar is set to \"Decompress On Load\" which doesn't have \"Load In Background\" enabled (Which at least from my experience is literally how Unity imports AudioClips) - the avatar goes through the build process just fine, but then gives out an error \"Avatar Validation Failed\".\n\nIt's really just annoying and has no place making creators play a guessing game.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a236f4911b0a99efb977511",
+  "imageURLs": [],
+  "lastUpdated": 1780709798199,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-06T00:52:26.251Z",
+  "subCategoryID": null,
+  "title": "Display the \"Decompress on Load\" error in the SDK panel",
+  "trendingScore": 2944.984063451228,
+  "updatedAt": "2026-06-06T01:41:05.391781Z",
+  "updatedBy": null,
+  "urlName": "display-the-decompress-on-load-error-in-the-sdk-panel",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e607dc532f5e02bee5f7f2f",
+      "alias": "Dandelion Krill",
+      "aliasID": "65c9c264ed6eefce4c8a6b13",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4b8e06247917b00a1ef2ae75c9a52a80.png",
+      "companies": [],
+      "name": "Comrade General",
+      "urlName": "alfa-10",
+      "voteID": "6a236f4a86d7b8843ba66860"
+    }
+  ]
+}
