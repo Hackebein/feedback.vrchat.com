@@ -50,3 +50,10 @@ variable "CF_API_TOKEN" {
   description = "Cloudflare API token (TF_VAR_CF_API_TOKEN). Needs Zone:DNS:Edit + Zone:SSL and Certificates:Edit on the zone. Provisioned to /etc/feedback-search/cf.env on first boot for Cloudflare Origin CA cert issuance."
   sensitive   = true
 }
+
+variable "GH_ISSUE_TOKEN" {
+  type        = string
+  description = "GitHub fine-grained PAT (TF_VAR_GH_ISSUE_TOKEN). Needs Issues read and write on this repo. Provisioned to /etc/feedback-search/github.env for deploy-alert issues."
+  sensitive   = true
+  default     = ""
+}

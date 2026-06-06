@@ -3,6 +3,7 @@ locals {
     repo_url            = var.repo_url
     enable_public_https = var.enable_public_https
     cf_api_token        = var.CF_API_TOKEN
+    gh_issue_token      = var.GH_ISSUE_TOKEN
   })
 
   # Cloudflare publishes its current edge IPv4 / IPv6 ranges at these

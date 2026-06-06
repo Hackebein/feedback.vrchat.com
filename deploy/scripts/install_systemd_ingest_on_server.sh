@@ -37,8 +37,12 @@ fi
 
 install -m 0644 "${REPO_ROOT}/deploy/systemd/feedback-ingest.service" /etc/systemd/system/feedback-ingest.service
 install -m 0644 "${REPO_ROOT}/deploy/systemd/feedback-ingest.timer" /etc/systemd/system/feedback-ingest.timer
+install -m 0644 "${REPO_ROOT}/deploy/systemd/feedback-ingest-alert@.service" /etc/systemd/system/feedback-ingest-alert@.service
+install -m 0644 "${REPO_ROOT}/deploy/systemd/feedback-health.service" /etc/systemd/system/feedback-health.service
+install -m 0644 "${REPO_ROOT}/deploy/systemd/feedback-health.timer" /etc/systemd/system/feedback-health.timer
 
 sed -i "s|^WorkingDirectory=.*|WorkingDirectory=${REPO_ROOT}|" /etc/systemd/system/feedback-ingest.service
+sed -i "s|^WorkingDirectory=.*|WorkingDirectory=${REPO_ROOT}|" /etc/systemd/system/feedback-health.service
 
 # Pin the ingest unit to the venv interpreter via a systemd drop-in
 # (git_pull_reindex.sh and run_reindex_maybe.py honour $PYTHON / sys.executable).
@@ -49,7 +53,11 @@ Environment=PYTHON=${VENV_DIR}/bin/python
 EOF
 chmod 0644 /etc/systemd/system/feedback-ingest.service.d/python.conf
 
+install -d -m 0755 /var/lib/feedback-search
+
 systemctl daemon-reload
 systemctl enable --now feedback-ingest.timer
+systemctl enable --now feedback-health.timer
 
-echo "Enabled feedback-ingest.timer. Check: systemctl status feedback-ingest.timer" >&2
+echo "Enabled feedback-ingest.timer and feedback-health.timer." >&2
+echo "Check: systemctl status feedback-ingest.timer feedback-health.timer" >&2

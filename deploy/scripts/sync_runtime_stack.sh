@@ -10,6 +10,10 @@ set -euo pipefail
 REPO="${FEEDBACK_REPO_ROOT:?export FEEDBACK_REPO_ROOT first}"
 cd "${REPO}"
 
+if [[ "$(id -u)" -eq 0 ]] && ! swapon --show 2>/dev/null | awk 'NR > 1 { exit 0 } END { exit 1 }'; then
+  /bin/bash "${REPO}/deploy/scripts/ensure_swap.sh"
+fi
+
 WWW_ROOT="/var/www/feedback-search"
 
 if [[ -f /etc/feedback-search/admin.env ]]; then

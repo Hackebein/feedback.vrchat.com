@@ -1,6 +1,7 @@
 [Unit]
 Description=VRChat feedback scheduled ingest (git ff-only, runtime sync, OpenSearch bulk write)
 After=docker.service network-online.target network.target
+OnFailure=feedback-ingest-alert@%n.service
 
 [Service]
 Type=oneshot

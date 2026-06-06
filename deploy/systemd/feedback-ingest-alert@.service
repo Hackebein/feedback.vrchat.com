@@ -1,0 +1,9 @@
+[Unit]
+Description=Open GitHub issue after %i failed
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/feedback-search/ingest.env
+EnvironmentFile=-/etc/feedback-search/github.env
+ExecStart=/bin/bash -c 'journalctl -u %i -n 50 --no-pager | /bin/bash "${FEEDBACK_REPO_ROOT:-/srv/feedback.vrchat.com}/deploy/scripts/open_github_issue.sh" ingest-failure "%i failed" -'
