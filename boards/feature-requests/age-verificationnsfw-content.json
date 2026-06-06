@@ -582,7 +582,9 @@
       "postDeleted": false,
       "postID": "5cb1097e93de946184a87b00",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 0
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -784,23 +786,23 @@
   "files": [],
   "ideaID": "680b7d7ee4c3e90df1582fe7",
   "imageURLs": [],
-  "lastUpdated": 1780714900299,
+  "lastUpdated": 1780722914690,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2848,
+  "maxScore": 2849,
   "mergeCount": 3,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5cb1097e93de946184a87b00/1740465301.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2848,
+  "score": 2849,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2023-07-10T20:11:32.973Z",
   "subCategoryID": null,
   "title": "Age Verification/NSFW Content",
-  "trendingScore": 2946.9435025574667,
-  "updatedAt": "2026-06-06T03:06:29.606168Z",
+  "trendingScore": 2947.0771642182467,
+  "updatedAt": "2026-06-06T05:19:25.008517Z",
   "urlName": "age-verificationnsfw-content",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -811,6 +813,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a23922b86d7b8843ba6df28",
+      "alias": "Elderberry Parakeet",
+      "aliasID": "6a23922b86d7b8843ba6df2f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/63378e70c5181da7f25e991d24f30e60.png",
+      "companies": [],
+      "name": "もりさん",
+      "urlName": "<redacted>",
+      "voteID": "6a23927386d7b8843ba6e269"
+    },
     {
       "_id": "6a16ca1a5a52cb2df0a2790c",
       "alias": "Horizontal Bison",
@@ -909,17 +922,6 @@
       "name": "Donou Mikan",
       "urlName": "<redacted>",
       "voteID": "6a1aae1c86d7b8843b6bd5e2"
-    },
-    {
-      "_id": "64c0eed7f772ff0974c63012",
-      "alias": "Purple Pony",
-      "aliasID": "65c3e659ed6eefce4cb8aa17",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/31e23d3eaf76ca6d66f1b104bc63969c.png",
-      "companies": [],
-      "name": "noMA3",
-      "urlName": "<redacted>",
-      "voteID": "6a1aad2486d7b8843b6bd491"
     }
   ]
 }
