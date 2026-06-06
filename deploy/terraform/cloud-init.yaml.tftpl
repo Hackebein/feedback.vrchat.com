@@ -24,6 +24,9 @@ runcmd:
     fi
   - |
     set -eux
+    /bin/bash /srv/feedback.vrchat.com/deploy/scripts/ensure_swap.sh
+  - |
+    set -eux
     install -d -m 0700 -o root -g root /etc/feedback-search
     # Cloudflare API token (Zone:DNS:Edit + Zone:SSL and Certificates:Edit).
     # Consumed by deploy/scripts/install_origin_ca_cert.sh on first boot to
@@ -33,6 +36,14 @@ runcmd:
     CF_API_TOKEN=${cf_api_token}
     CF_ENV_EOF
     chmod 0600 /etc/feedback-search/cf.env
+  - |
+    set -eux
+    install -d -m 0700 -o root -g root /etc/feedback-search
+    umask 077
+    cat > /etc/feedback-search/github.env <<'GH_ENV_EOF'
+    GH_ISSUE_TOKEN=${gh_issue_token}
+    GH_ENV_EOF
+    chmod 0600 /etc/feedback-search/github.env
   - |
     set -eux
     cd /srv/feedback.vrchat.com
