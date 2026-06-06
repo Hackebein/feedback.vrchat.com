@@ -1,0 +1,93 @@
+{
+  "_id": "6a242a7cd99946168a0ada14",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-06T14:35:04.563134Z",
+  "author": {
+    "_id": "67114f74fb43558c4795ab40",
+    "alias": "Quinacridone magenta Amphibian",
+    "aliasID": "67114f750f7e723d6eff2aa8",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5e0450391ad57f039b3fb7ebd33e67a8.png",
+    "created": "2024-10-17T17:55:00.970Z",
+    "name": "橘花【きつか】",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "67114f74fb43558c4795ab40",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 410,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-06T14:11:08.722Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When a PhysBone component has a collider on a ignored branch the SDK warns you about a cyclic dependency.\n\n\"This avatar contains VRCPhysBone or VRCPhysBoneCollider components which have cyclic dependencies. As a result some components will run out of order. Remove or move these components to change their dependencies. See console for more information.\"\n\nHowever, since the branch is ignored no cyclic dependency should exist in reality.\n\nMinimal Reproduction:\n\nUse the simplest possible hierarchy:\n\n- BoneParent\n\n- BoneChild1\n\n- BoneChild2\n\nSetup:\n\n- Add one PhysBone component to BoneParent with BoneChild1 as ignored.\n\n- Add a VRCPhysBoneCollider to BoneChild1\n\n- Add BoneChild1 to the colliders list\n\nExpected Result:\n\nNo cyclic dependency warning\n\nActual Result:\n\nBoneParent VRCPhysBone detects a cyclic dependency with VRCPhysBoneCollider that is does not animate",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a242a7cd99946168a0ada13",
+  "imageURLs": [],
+  "lastUpdated": 1780756223315,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-06T14:11:08.722Z",
+  "subCategoryID": null,
+  "title": "False Cyclic Dependency Warning for Colliders on Ignored PhysBone Branches",
+  "trendingScore": 2945.063300400633,
+  "updatedAt": "2026-06-06T14:35:04.465447Z",
+  "updatedBy": "67114f74fb43558c4795ab40",
+  "urlName": "false-cyclic-dependency-warning-for-colliders-on-ignored-physbone-branches",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67114f74fb43558c4795ab40",
+      "alias": "Quinacridone magenta Amphibian",
+      "aliasID": "67114f750f7e723d6eff2aa8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e0450391ad57f039b3fb7ebd33e67a8.png",
+      "companies": [],
+      "name": "橘花【きつか】",
+      "urlName": "<redacted>",
+      "voteID": "6a242a7c86d7b8843bdaa412"
+    }
+  ]
+}
