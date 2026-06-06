@@ -1358,8 +1358,6 @@ function readHitVoteCount(hit: Record<string, unknown>): number | undefined {
 }
 
 function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
-  const { query: searchQuery } = useSearchBox();
-  const matchQuery = searchQuery.trim();
   const terms = useQueryTerms();
   const userNameById = useMemo(() => buildCannyUserNameMap(hit), [hit]);
   const urlName = typeof hit.urlName === "string" ? hit.urlName : undefined;
@@ -1429,14 +1427,6 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
               {part}
             </Fragment>
           ))}
-        </p>
-      ) : null}
-      {matchQuery ? (
-        <p className="hit-match-snippet" aria-label="Search match snippet">
-          <Snippet
-            hit={hit as Hit<Record<string, unknown>>}
-            attribute="combined_text"
-          />
         </p>
       ) : null}
       {aiCategories.length > 0 ? (
