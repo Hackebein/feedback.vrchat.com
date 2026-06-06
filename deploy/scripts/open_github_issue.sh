@@ -52,17 +52,16 @@ marker = os.environ["MARKER"]
 full_title = os.environ["FULL_TITLE"]
 body = os.environ["BODY"]
 
-m = re.search(r"github\.com[:/](?P<owner>[^/]+)/(?P<repo>[^/.]+)", remote)
+m = re.search(r"github\.com[:/](?P<owner>[^/:]+)[:/](?P<repo>[^/]+?)(?:\.git)?$", remote)
 if not m:
     print(f"[open_github_issue] cannot parse owner/repo from {remote!r}", file=sys.stderr)
     sys.exit(1)
 
 owner, repo = m.group("owner"), m.group("repo")
-api = f"https://api.github.com/repos/{owner}/{repo}"
+repo_api = f"https://api.github.com/repos/{owner}/{repo}"
 
 
-def request(method: str, path: str, payload: dict | None = None) -> dict | list:
-    url = f"{api}{path}"
+def request(method: str, url: str, payload: dict | None = None) -> dict | list:
     data = None
     headers = {
         "Authorization": f"Bearer {token}",
@@ -80,12 +79,13 @@ def request(method: str, path: str, payload: dict | None = None) -> dict | list:
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
         err = e.read().decode("utf-8", errors="replace")
-        print(f"[open_github_issue] {method} {path} -> HTTP {e.code}: {err}", file=sys.stderr)
+        print(f"[open_github_issue] {method} {url} -> HTTP {e.code}: {err}", file=sys.stderr)
         sys.exit(1)
 
 
 q = urllib.parse.quote(f"repo:{owner}/{repo} is:issue is:open in:title {marker}")
-search = request("GET", f"/search/issues?q={q}&per_page=5")
+search_url = f"https://api.github.com/search/issues?q={q}&per_page=5"
+search = request("GET", search_url)
 items = search.get("items", []) if isinstance(search, dict) else []
 
 comment_body = f"Recurring alert ({os.environ['KIND']}) at {__import__('datetime').datetime.utcnow().isoformat()}Z\n\n{body}"
@@ -93,12 +93,12 @@ comment_body = f"Recurring alert ({os.environ['KIND']}) at {__import__('datetime
 if items:
     issue = items[0]
     number = issue["number"]
-    request("POST", f"/issues/{number}/comments", {"body": comment_body})
+    request("POST", f"{repo_api}/issues/{number}/comments", {"body": comment_body})
     print(f"[open_github_issue] commented on #{number}", flush=True)
 else:
     created = request(
         "POST",
-        "/issues",
+        f"{repo_api}/issues",
         {"title": full_title, "body": comment_body},
     )
     print(f"[open_github_issue] created #{created.get('number')}", flush=True)
