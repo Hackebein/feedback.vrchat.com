@@ -341,7 +341,9 @@
       "postDeleted": false,
       "postID": "5a64735c62d1e14e7b0444fe",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
@@ -440,7 +442,7 @@
       "postID": "5a64735c62d1e14e7b0444fe",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -484,7 +486,9 @@
       "postDeleted": false,
       "postID": "5a64735c62d1e14e7b0444fe",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -505,23 +509,23 @@
   "files": [],
   "ideaID": "680b7d4ae4c3e90df15745e6",
   "imageURLs": [],
-  "lastUpdated": 1780392394177,
+  "lastUpdated": 1780748772663,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 222,
+  "maxScore": 223,
   "mergeCount": 3,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5a64735c62d1e14e7b0444fe/1115851480.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 222,
+  "score": 223,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2018-01-21T11:02:52.203Z",
   "subCategoryID": null,
   "title": "Party system",
-  "trendingScore": 2935.771872215139,
-  "updatedAt": "2026-06-02T09:27:14.945915Z",
+  "trendingScore": 2944.271167081698,
+  "updatedAt": "2026-06-06T12:27:37.980650Z",
   "urlName": "party-system",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -532,6 +536,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "60acfb0b0b2a811bba5dbe97",
+      "alias": "Considerable Peafowl",
+      "aliasID": "69a0375d804d20e970bd73f5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7c8ac5e19b49056c365048e226551897.png",
+      "companies": [],
+      "name": "ʀᴇᴅᴡʏʀᴇ",
+      "urlName": "simon-stevensonr3dr0s3clickup",
+      "voteID": "6a23402686d7b8843ba5a02f"
+    },
     {
       "_id": "61cce3cbf1f09b153ac05334",
       "alias": "Wine Falcon",
@@ -603,7 +618,7 @@
       "alias": "Thorough Sparrow",
       "aliasID": "65c36d1ded6eefce4c3fd90c",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d2162f5e975ac32f8b76056be2c1429c.png",
+      "avatarURL": "https://canny-assets.io/images/9d2a91ea30279c54e159f8e844bd2636.png",
       "companies": [],
       "name": "Desmoulins",
       "urlName": "desmoulins-2",
@@ -630,17 +645,6 @@
       "name": "SandFoxed",
       "urlName": "sandfoxed",
       "voteID": "6750a7caa367fa63921e0150"
-    },
-    {
-      "_id": "62e7bbe6e353fc44bda01012",
-      "alias": "Xenon blue Deer",
-      "aliasID": "65c282daed6eefce4cb424c6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d8340524f0e3237f399a963321554f1e.png",
-      "companies": [],
-      "name": "°Pancake",
-      "urlName": "pancakeenjoyer",
-      "voteID": "6736f35bc66e81bbd40f1eed"
     }
   ]
 }
