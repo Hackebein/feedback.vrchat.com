@@ -2,9 +2,9 @@
   "_id": "6a2347caba570d1ee51ba627",
   "aiCategories": [
     "loc.in-world",
-    "client.inventory"
+    "worlds"
   ],
-  "aiTaggedAt": "2026-06-05T22:29:47.105981Z",
+  "aiTaggedAt": "2026-06-07T07:23:27.346223Z",
   "author": {
     "_id": "678fd947b51d3c4f77851d07",
     "alias": "Recent Platypus",
@@ -34,7 +34,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "If you remote-grab the water gun item, it grabs it from the middle instead of the grip handle.\n\nItems _should_ have Gun Grip set, but at least until then, they should at least be remote-grabbed correctly.",
+  "details": "If you remote-grab the water gun item, it grabs it from the middle instead of the grip handle.\n\nThe bubble blaster has the pivot point set to the handle, the plunger gun has Gun Grip set.\n\nAll gun/blasters Items _should_ have Gun Grip set, but at least until then, they should at least be remote-grabbed correctly.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -42,7 +42,7 @@
   "files": [],
   "ideaID": "6a2347c9ba570d1ee51ba626",
   "imageURLs": [],
-  "lastUpdated": 1780810167101,
+  "lastUpdated": 1780816706996,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -58,8 +58,8 @@
   "subCategoryID": null,
   "title": "Remote-Grab Water Gun Item Grabs Middle instead of Grip",
   "trendingScore": 2945.685939100948,
-  "updatedAt": "2026-06-07T05:34:19.619992Z",
-  "updatedBy": null,
+  "updatedAt": "2026-06-07T07:23:27.245256Z",
+  "updatedBy": "678fd947b51d3c4f77851d07",
   "urlName": "remote-grab-water-gun-item-grabs-middle-instead-of-grip",
   "viewerIsAuthor": false,
   "viewerVote": 0,
