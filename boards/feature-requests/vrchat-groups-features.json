@@ -519,7 +519,9 @@
       "postDeleted": false,
       "postID": "6085c36b2bb0b5460b20918f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
@@ -540,23 +542,23 @@
   "files": [],
   "ideaID": "680bb892e4c3e90df134ba4a",
   "imageURLs": [],
-  "lastUpdated": 1780514196860,
+  "lastUpdated": 1780835470960,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 316,
+  "maxScore": 317,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6085c36b2bb0b5460b20918f/1335154556.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 316,
+  "score": 317,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2023-07-10T23:57:58.238Z",
   "subCategoryID": null,
   "title": "VRChat Groups Features",
-  "trendingScore": 2943.7252163013395,
-  "updatedAt": "2026-06-03T19:18:32.891176Z",
+  "trendingScore": 2944.7171220027262,
+  "updatedAt": "2026-06-07T12:32:24.607873Z",
   "urlName": "vrchat-groups-features",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -567,6 +569,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "632ad07ae29a9c44bc903920",
+      "alias": "Obedient Hare",
+      "aliasID": "65c2ff59ed6eefce4cabf780",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c69d598cec49e1c6a021f2080be3502b.png",
+      "companies": [],
+      "name": "Piano Walrus",
+      "urlName": "<redacted>",
+      "voteID": "6a23176186d7b8843ba3cf8d"
+    },
     {
       "_id": "67047d99f2b7fda6ab73b960",
       "alias": "Quinacridone magenta Owl",
@@ -605,7 +618,7 @@
       "alias": "Aquamarine Stork",
       "aliasID": "65c3d45ded6eefce4c3813c2",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/f9f008c2c899ee865b8f68d7340508e1.png",
+      "avatarURL": "https://canny-assets.io/images/75f18167d23b456dc4613e9afbd3a3e4.png",
       "companies": [],
       "name": "MarJVX",
       "urlName": "<redacted>",
@@ -638,7 +651,7 @@
       "alias": "Civilian Bandicoot",
       "aliasID": "65c53548ed6eefce4c89f71f",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/1b0e2f7ede94d3a6589f1eca82f5a097.png",
+      "avatarURL": "https://canny-assets.io/images/dd446682f0d20dd1b7dcd74d75e342c9.png",
       "companies": [],
       "name": "千種（ちくさ）ナオ",
       "urlName": "<redacted>",
@@ -665,17 +678,6 @@
       "name": "~Ashy",
       "urlName": "<redacted>",
       "voteID": "672f7bb6c66e81bbd4040aa2"
-    },
-    {
-      "_id": "627b1d699addbe5b676094ef",
-      "alias": "Xenon grey Marlin",
-      "aliasID": "65c2f3fded6eefce4c76e4ba",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/fc7f85ef981847ef3663f8ffad4a2e25.png",
-      "companies": [],
-      "name": "∗Lotus∗",
-      "urlName": "<redacted>",
-      "voteID": "66d3e7737d32abb6ca84348a"
     }
   ]
 }
