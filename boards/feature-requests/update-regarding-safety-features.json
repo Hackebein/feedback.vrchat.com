@@ -27,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 27,
+  "commentCount": 29,
   "comments": [
     {
       "_id": "6a25af00396b2d37faed1e76",
@@ -294,7 +294,7 @@
       "postID": "6a25a916d99946168a4d8762",
       "private": false,
       "reactions": {
-        "like": 7
+        "like": 8
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -487,7 +487,9 @@
       "postDeleted": false,
       "postID": "6a25a916d99946168a4d8762",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -531,7 +533,9 @@
       "postDeleted": false,
       "postID": "6a25a916d99946168a4d8762",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -555,23 +559,23 @@
   "files": [],
   "ideaID": "6a25a916d99946168a4d8761",
   "imageURLs": [],
-  "lastUpdated": 1780924892384,
+  "lastUpdated": 1780931096917,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 81,
+  "maxScore": 83,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a25a916d99946168a4d8762/1013186326.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 81,
+  "score": 83,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-06-07T17:23:34.540Z",
   "subCategoryID": null,
   "title": "Update regarding safety features",
-  "trendingScore": 2948.9753883138965,
-  "updatedAt": "2026-06-08T13:26:07.935575Z",
+  "trendingScore": 2949.0017008825926,
+  "updatedAt": "2026-06-08T15:09:40.668675Z",
   "updatedBy": null,
   "urlName": "update-regarding-safety-features",
   "viewerIsAuthor": false,
@@ -583,6 +587,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62c75c5af4e6342d217b4277",
+      "alias": "Midnight blue Salmon",
+      "aliasID": "69eb99b54a48bed1897cb249",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3ce23c026213752f35bf2d570812ffad.png",
+      "companies": [],
+      "name": "LittleHumanBits",
+      "urlName": "joselyn-hernandez-3",
+      "voteID": "6a26d30b86d7b8843be68060"
+    },
+    {
+      "_id": "6a26d09b86d7b8843be6678f",
+      "alias": "Graceful Sailfish",
+      "aliasID": "6a26d09b86d7b8843be66793",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d5091c27de10afaba74d67c0b6a19a92.png",
+      "companies": [],
+      "name": "Chirp_Format",
+      "urlName": "chirp-format",
+      "voteID": "6a26d0ab86d7b8843be6687d"
+    },
     {
       "_id": "6a268f8286d7b8843be44954",
       "alias": "Lichen Landfowl",
@@ -670,28 +696,6 @@
       "name": "ArashiSenpai",
       "urlName": "arashisenpai-1",
       "voteID": "6a265bc786d7b8843be336b5"
-    },
-    {
-      "_id": "6a265b0586d7b8843be332c0",
-      "alias": "Middle Ptarmigan",
-      "aliasID": "6a265b0686d7b8843be332c6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c5baed9b6e4162dc8ae12112c0f7e507.png",
-      "companies": [],
-      "name": "AstxriXJxke",
-      "urlName": "astxrixjxke",
-      "voteID": "6a265b0b86d7b8843be332ea"
-    },
-    {
-      "_id": "6a2654b386d7b8843be31b1f",
-      "alias": "Goldenrod Perch",
-      "aliasID": "6a2654b386d7b8843be31b23",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/cbc85797523e908ed2d3796f56b6f629.png",
-      "companies": [],
-      "name": "S-C-A-G-Z",
-      "urlName": "s-c-a-g-z",
-      "voteID": "6a26553d86d7b8843be31cb1"
     }
   ]
 }
