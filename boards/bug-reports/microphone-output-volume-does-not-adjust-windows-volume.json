@@ -1,10 +1,7 @@
 {
   "_id": "6a268b83db275017f42b5449",
-  "aiCategories": [
-    "loc.in-world",
-    "audio.voice"
-  ],
-  "aiTaggedAt": "2026-06-08T15:09:56.786448Z",
+  "aiCategories": [],
+  "aiTaggedAt": "2026-06-08T21:37:31.039610Z",
   "author": {
     "_id": "6593c4a4910c4a117fba8646",
     "alias": "Possible Falcon",
@@ -27,7 +24,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a26d3fce294d9d1be74d5f0",
@@ -73,6 +70,62 @@
       "value": "It is an intentional design decision to decouple the VRChat client's volume input from the system level. Audio settings on the OS level can always be wrong, but it is not an application's responsibility to fix that.\n\nThat said, we are working on improving our voice audio stack in general which should help with related quality issues.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a27329828d28b6ab62d516e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6593c4a4910c4a117fba8646",
+        "alias": "Possible Falcon",
+        "aliasID": "660e7aace5d26962aa4495b7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/54dec7059edd9ce0644d44278e6911ff.png",
+        "created": "2024-01-02T08:09:08.967Z",
+        "name": "Catboy Slim",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-08T21:22:32.346Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a26d3fce294d9d1be74d5f0",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a268b83db275017f42b5449",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name}  I would consider removing the slider then. Are there analytics on how many people have it set to less than 100%?",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -88,7 +141,7 @@
   "files": [],
   "ideaID": "6a268b83db275017f42b5448",
   "imageURLs": [],
-  "lastUpdated": 1780951404479,
+  "lastUpdated": 1780954344884,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -104,7 +157,7 @@
   "subCategoryID": null,
   "title": "Microphone output volume does not adjust Windows volume",
   "trendingScore": 2945.3210892068496,
-  "updatedAt": "2026-06-08T20:48:10.229937Z",
+  "updatedAt": "2026-06-08T21:37:30.937979Z",
   "updatedBy": null,
   "urlName": "microphone-output-volume-does-not-adjust-windows-volume",
   "viewerIsAuthor": false,
