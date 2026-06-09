@@ -294,7 +294,9 @@
       "postDeleted": false,
       "postID": "6a1ee613ec4cc3e21502a1dd",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -318,23 +320,23 @@
   "files": [],
   "ideaID": "6a1ee613ec4cc3e21502a1b8",
   "imageURLs": [],
-  "lastUpdated": 1781009621725,
+  "lastUpdated": 1781012999923,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 20,
+  "maxScore": 21,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a1ee613ec4cc3e21502a1dd/400962133.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 20,
+  "score": 21,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-06-02T14:17:55.413Z",
   "subCategoryID": null,
   "title": "Pride Month Hype Train Adjustments",
-  "trendingScore": 2947.0722059080445,
-  "updatedAt": "2026-06-09T12:57:49.352388Z",
+  "trendingScore": 2947.16978140888,
+  "updatedAt": "2026-06-09T13:55:00.834928Z",
   "updatedBy": null,
   "urlName": "pride-month-hype-train-adjustments",
   "viewerIsAuthor": false,
@@ -346,6 +348,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6949d435f85d59c66d74e72b",
+      "alias": "Worthwhile Swallow",
+      "aliasID": "6949d435f85d59c66d7508b3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8fb1a8215363532449416a9e5c326b97.png",
+      "companies": [],
+      "name": "Noobway",
+      "urlName": "noobway",
+      "voteID": "6a28147186d7b8843bef5052"
+    },
     {
       "_id": "5c17b3db857e0a3ecab8c5b5",
       "alias": "Yarrow Cuckoo",
@@ -444,17 +457,6 @@
       "name": "Chrysophade",
       "urlName": "chrysophade",
       "voteID": "6a1fd7e486d7b8843b8bfc17"
-    },
-    {
-      "_id": "66c7f83ba2fca0a622090327",
-      "alias": "Right Hoverfly",
-      "aliasID": "66c7f83b3e088c8d6b0e1c00",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/34fd388df4a3b79f83714855d8624742.png",
-      "companies": [],
-      "name": "Usemame",
-      "urlName": "usemame-1",
-      "voteID": "6a1f31d686d7b8843b881f31"
     }
   ]
 }
