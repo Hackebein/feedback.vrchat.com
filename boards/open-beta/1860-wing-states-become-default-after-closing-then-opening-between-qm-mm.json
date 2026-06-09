@@ -1,0 +1,101 @@
+{
+  "_id": "6a275cc5f0924dca4ca50dbf",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.main-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-09T00:28:26.887386Z",
+  "author": {
+    "_id": "60dd2a998871d03e7f3806ae",
+    "alias": "Thoughtful Cobra",
+    "aliasID": "65c28339ed6eefce4cc2dd8f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+    "created": "2021-07-01T02:38:17.778Z",
+    "name": "~Pausbe",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60dd2a998871d03e7f3806ae",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1289,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-09T00:22:29.783Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Steps to reproduce:\n\n- Close a wing on either the QM/MM\n\n- Open the opposite menu of the closed wing\n\n- Open the closed wing\n\n- Shows the Wing Menu instead of the previous closed wing state",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/291f3e5a187bebe93ce78d4f7ea8672f.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "8mb.video-QAD-MqQ5gOzJ",
+      "url": "https://canny-assets.io/files/291f3e5a187bebe93ce78d4f7ea8672f.mp4"
+    }
+  ],
+  "ideaID": "6a275cc5f0924dca4ca50dbc",
+  "imageURLs": [],
+  "lastUpdated": 1780964618771,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-09T00:22:29.783Z",
+  "subCategoryID": null,
+  "title": "[1860] Wing States become default after closing then opening between QM & MM",
+  "trendingScore": 2945.4096645962345,
+  "updatedAt": "2026-06-09T00:28:26.778629Z",
+  "updatedBy": null,
+  "urlName": "1860-wing-states-become-default-after-closing-then-opening-between-qm-mm",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": "<redacted>",
+      "voteID": "6a275cc586d7b8843beb8f63"
+    }
+  ]
+}
