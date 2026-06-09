@@ -1275,28 +1275,42 @@ function CommentsThread({
   terms: string[];
   userNameById: Map<string, string>;
 }) {
+  const [showComments, setShowComments] = useState(false);
+
   if (comments.length === 0) {
     return null;
   }
   const roots = buildCommentThreadTree(comments);
   return (
     <section className="comments-thread">
-      <h3 className="comments-heading">{formatCommentLabel(comments.length)}</h3>
-      <ul className="comments-list">
-        {roots.map((node, idx) => (
-          <CommentItem
-            key={
-              typeof node.comment._id === "string" && node.comment._id
-                ? node.comment._id
-                : `c-${idx}`
-            }
-            node={node}
-            terms={terms}
-            userNameById={userNameById}
-            depth={0}
-          />
-        ))}
-      </ul>
+      <div className="comments-heading-row">
+        <h3 className="comments-heading">{formatCommentLabel(comments.length)}</h3>
+        <button
+          type="button"
+          className="comments-toggle"
+          aria-expanded={showComments}
+          onClick={() => setShowComments((v) => !v)}
+        >
+          {showComments ? "Hide Comments" : "Show Comments"}
+        </button>
+      </div>
+      {showComments ? (
+        <ul className="comments-list">
+          {roots.map((node, idx) => (
+            <CommentItem
+              key={
+                typeof node.comment._id === "string" && node.comment._id
+                  ? node.comment._id
+                  : `c-${idx}`
+              }
+              node={node}
+              terms={terms}
+              userNameById={userNameById}
+              depth={0}
+            />
+          ))}
+        </ul>
+      ) : null}
     </section>
   );
 }
