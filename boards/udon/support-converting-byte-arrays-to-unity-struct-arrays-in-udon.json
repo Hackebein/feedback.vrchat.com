@@ -229,7 +229,9 @@
       "postDeleted": false,
       "postID": "69f92cec779ce022bdbe2f6d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 0
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -308,23 +310,23 @@
   "files": [],
   "ideaID": "69f92ced779ce022bdbe2f83",
   "imageURLs": [],
-  "lastUpdated": 1780988985671,
+  "lastUpdated": 1780995779967,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 180,
+  "maxScore": 181,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69f92cec779ce022bdbe2f6d/735387071.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 180,
+  "score": 181,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-05-04T23:34:04.955Z",
   "subCategoryID": null,
   "title": "Support converting byte arrays to Unity struct arrays in Udon",
-  "trendingScore": 2945.446907633537,
-  "updatedAt": "2026-06-09T07:12:30.636740Z",
+  "trendingScore": 2945.854491585413,
+  "updatedAt": "2026-06-09T09:07:22.025199Z",
   "updatedBy": "5f2cb35431807b34c94a2618",
   "urlName": "support-converting-byte-arrays-to-unity-struct-arrays-in-udon",
   "viewerIsAuthor": false,
@@ -336,6 +338,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "601c271320ff3963bf6d4a03",
+      "alias": "Maroon Hare",
+      "aliasID": "65f3347976937e52485ac125",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c5a21c5dd7f164ba6a898d80c9827074.png",
+      "companies": [],
+      "name": "PaNCo0035",
+      "urlName": "panco0035",
+      "voteID": "6a27c3be86d7b8843bed92ab"
+    },
     {
       "_id": "65564de989aa2b9e7ba85d17",
       "alias": "Integral Wolf",
@@ -434,17 +447,6 @@
       "name": "aini_bellwood",
       "urlName": "ainibellwood",
       "voteID": "69fef43bcf565b8f74ed10be"
-    },
-    {
-      "_id": "69fcb53a4a48bed1895e1b70",
-      "alias": "Prime Canid",
-      "aliasID": "69fcb53b4a48bed1895e1b79",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/f778882ee993d4cd63916559fbfd4f8a.png",
-      "companies": [],
-      "name": "わどぜりー",
-      "urlName": "e1ca7b",
-      "voteID": "69fcb5514a48bed1895e1d5a"
     }
   ]
 }
