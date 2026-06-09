@@ -1,0 +1,100 @@
+{
+  "_id": "6a27644e7b29a9a41a03f89e",
+  "aiCategories": [
+    "loc.main-menu",
+    "social.instances"
+  ],
+  "aiTaggedAt": "2026-06-09T01:38:44.644994Z",
+  "author": {
+    "_id": "60dd2a998871d03e7f3806ae",
+    "alias": "Thoughtful Cobra",
+    "aliasID": "65c28339ed6eefce4cc2dd8f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+    "created": "2021-07-01T02:38:17.778Z",
+    "name": "~Pausbe",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "60dd2a998871d03e7f3806ae",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1294,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-09T00:54:38.931Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Steps to reproduce:\n\n- Open instance on the Main Menu\n\n- Click \"Send Instance Announcement\" and add a message\n\n- World page UI overlaps \"Send Instance Announcement\" UI\n\nThis only happens on the first click of the \"Send Instance Announcement\" on the MM, if cancelled and pressed again it does not happen.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/1d5d35e5acfd2d9d138e1dadbf3a235a.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "8mb.video-KRi-TqWuxB0E",
+      "url": "https://canny-assets.io/files/1d5d35e5acfd2d9d138e1dadbf3a235a.mp4"
+    }
+  ],
+  "ideaID": "6a27644e7b29a9a41a03f89d",
+  "imageURLs": [],
+  "lastUpdated": 1780968868249,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a27644e7b29a9a41a03f89e/246009654.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-09T00:54:38.931Z",
+  "subCategoryID": null,
+  "title": "[1860] \"Send Instance Announcement\" causes MM UI to break after adding message",
+  "trendingScore": 2945.4128542961357,
+  "updatedAt": "2026-06-09T01:38:44.541998Z",
+  "updatedBy": null,
+  "urlName": "1860-send-instance-announcement-causes-mm-ui-to-break-after-adding-message",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": "<redacted>",
+      "voteID": "6a27644f86d7b8843bebb860"
+    }
+  ]
+}
