@@ -2,9 +2,10 @@
   "_id": "6a27577c28d28b6ab6340e49",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.world-building"
+    "sdk.vrcsdk",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-06-09T16:11:32.079616Z",
+  "aiTaggedAt": "2026-06-10T00:32:34.269224Z",
   "author": {
     "_id": "60dd2a998871d03e7f3806ae",
     "alias": "Thoughtful Cobra",
@@ -34,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a282c941c7545c9ebabdbe7",
@@ -80,6 +81,41 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a28a245f00721fb0edd220d",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-09T23:31:17.841Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a27577c28d28b6ab6340e49",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a28a245f00721fb0edd220a",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -98,7 +134,7 @@
     "https://canny-assets.io/images/23643e621b22e7e07bcda673917b2d07.png",
     "https://canny-assets.io/images/ae4bf3122a3d2fb1f6abc6c5390ba2b8.png"
   ],
-  "lastUpdated": 1781047635089,
+  "lastUpdated": 1781051391027,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -109,12 +145,12 @@
   "pinnedComment": null,
   "score": 1,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-06-09T15:09:08.364Z",
+  "status": "available in future release",
+  "statusChanged": "2026-06-09T23:31:17.789Z",
   "subCategoryID": null,
   "title": "[1860] Gradient Background UI editor \"Cancel & Apply\" buttons have incorrect styling",
   "trendingScore": 2945.4074263158113,
-  "updatedAt": "2026-06-09T23:32:29.239694Z",
+  "updatedAt": "2026-06-10T00:32:34.169634Z",
   "updatedBy": null,
   "urlName": "1860-gradient-background-ui-editor-cancel-apply-buttons-have-incorrect-styling",
   "viewerIsAuthor": false,
