@@ -1,28 +1,28 @@
 # VRChat Feedback Board Data
 
 Collected: **34,093** posts.<br>
-Freshness: From **2026-06-06 11:35 UTC (4d ago)** to now.<br>
-Scrape horizon: **2026-03-06 16:16 UTC (95d ago)**.
+Freshness: From **2026-06-06 12:27 UTC (4d ago)** to now.<br>
+Scrape horizon: **2026-03-07 02:03 UTC (95d ago)**.
 
 ## Boards
 
 | Board | Posts |
 |-------|------:|
 | `age-verification` | 190 / 190 (100.0%) |
-| `android` | 330 / 330 (100.0%) |
+| `android` | 331 / 331 (100.0%) |
 | `avatar-30` | 860 / 860 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 74 / 74 (100.0%) |
-| `bug-reports` | 10,445 / 10,447 (99.98%) |
+| `bug-reports` | 10,444 / 10,446 (99.98%) |
 | `creator-companion` | 285 / 285 (100.0%) |
 | `creator-economy` | 81 / 81 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 13,546 / 13,549 (99.98%) |
+| `feature-requests` | 13,547 / 13,550 (99.98%) |
 | `impostors` | 88 / 88 (100.0%) |
 | `ios-mobile-beta` | 253 / 253 (100.0%) |
 | `localization` | 613 / 613 (100.0%) |
 | `merch` | 33 / 33 (100.0%) |
-| `open-beta` | 2,711 / 2,711 (100.0%) |
+| `open-beta` | 2,710 / 2,710 (100.0%) |
 | `persistence` | 68 / 68 (100.0%) |
 | `sdk-bug-reports` | 1,375 / 1,375 (100.0%) |
 | `third-person-view` | 81 / 81 (100.0%) |
