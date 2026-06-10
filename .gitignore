@@ -13,3 +13,6 @@ deploy/terraform/.ssh/
 
 # board_store atomic writes
 boards/**/*.json.tmp
+
+# Local-only files
+*.local.*
