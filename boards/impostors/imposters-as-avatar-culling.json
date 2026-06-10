@@ -336,7 +336,7 @@
       "postID": "6562039e6fba1f284d7ae827",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -426,7 +426,7 @@
       "postID": "6562039e6fba1f284d7ae827",
       "private": false,
       "reactions": {
-        "like": 12
+        "like": 13
       },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -471,7 +471,9 @@
       "postDeleted": false,
       "postID": "6562039e6fba1f284d7ae827",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -550,23 +552,23 @@
   "files": [],
   "ideaID": "680bb9bee4c3e90df13867b7",
   "imageURLs": [],
-  "lastUpdated": 1781034237799,
+  "lastUpdated": 1781069280318,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 357,
+  "maxScore": 358,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6562039e6fba1f284d7ae827/1248458804.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 357,
+  "score": 358,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2023-11-25T14:24:30.166Z",
   "subCategoryID": null,
   "title": "Imposters as avatar culling",
-  "trendingScore": 2944.993800631145,
-  "updatedAt": "2026-06-09T19:44:31.503542Z",
+  "trendingScore": 2945.631398948002,
+  "updatedAt": "2026-06-10T05:33:26.421760Z",
   "updatedBy": null,
   "urlName": "imposters-as-avatar-culling",
   "viewerIsAuthor": false,
@@ -578,6 +580,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6949d435f85d59c66d74e72b",
+      "alias": "Worthwhile Swallow",
+      "aliasID": "6949d435f85d59c66d7508b3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8fb1a8215363532449416a9e5c326b97.png",
+      "companies": [],
+      "name": "Noobway",
+      "urlName": "<redacted>",
+      "voteID": "6a28ddaa86d7b8843b103fd7"
+    },
     {
       "_id": "64cd505242b27e0961e4fd35",
       "alias": "Kryptonite green Unicorn",
@@ -676,17 +689,6 @@
       "name": "basabasabassa_",
       "urlName": "<redacted>",
       "voteID": "69b2dffb95d05cb740187595"
-    },
-    {
-      "_id": "64666430e307dd5979d94964",
-      "alias": "Gainsboro Firefly",
-      "aliasID": "68d4adeca8ab97d7d9c00970",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ed2cd62b6a0dfc20e714eb0614065b9c.png",
-      "companies": [],
-      "name": "SeraphicOrange",
-      "urlName": "<redacted>",
-      "voteID": "69afbbf995d05cb740f1b037"
     }
   ]
 }

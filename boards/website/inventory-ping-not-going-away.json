@@ -311,7 +311,7 @@
       "postID": "69bd73a124be48effee54fba",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -356,7 +356,9 @@
       "postDeleted": false,
       "postID": "69bd73a124be48effee54fba",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -381,23 +383,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/99c372e7b1c6638c7a848abbdaf42884.png"
   ],
-  "lastUpdated": 1781060645855,
+  "lastUpdated": 1781069282064,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 37,
+  "maxScore": 38,
   "mergeCount": 3,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69bd73a124be48effee54fba/383416286.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 37,
+  "score": 38,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-03-23T15:23:11.031Z",
   "subCategoryID": null,
   "title": "Inventory ping not going away",
-  "trendingScore": 2945.174105000511,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "trendingScore": 2945.731214560135,
+  "updatedAt": "2026-06-10T05:33:26.421760Z",
   "updatedBy": null,
   "urlName": "inventory-ping-not-going-away",
   "viewerIsAuthor": false,
@@ -409,6 +411,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6949d435f85d59c66d74e72b",
+      "alias": "Worthwhile Swallow",
+      "aliasID": "6949d435f85d59c66d7508b3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8fb1a8215363532449416a9e5c326b97.png",
+      "companies": [],
+      "name": "Noobway",
+      "urlName": "<redacted>",
+      "voteID": "6a28e05586d7b8843b11c635"
+    },
     {
       "_id": "5fdaf665000e9a5b6a16b90e",
       "alias": "Eggplant Opossum",
@@ -507,17 +520,6 @@
       "name": "Tathurai （タスライ）",
       "urlName": "<redacted>",
       "voteID": "6a00c818cf565b8f74f590a4"
-    },
-    {
-      "_id": "603b04282fa90e5c53608eb6",
-      "alias": "Variable Turtle",
-      "aliasID": "65c27d10ed6eefce4cc8cf32",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
-      "companies": [],
-      "name": "RavenWorks",
-      "urlName": "<redacted>",
-      "voteID": "69fe7c50cf565b8f74b8ac39"
     }
   ]
 }
