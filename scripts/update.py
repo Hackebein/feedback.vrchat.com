@@ -994,6 +994,10 @@ def main():
                         help="Re-run AI categorization on posts with stale taxonomy (taxonomyVersion mismatch)")
     parser.add_argument("--retag-ai-all", action="store_true",
                         help="With --retag-ai, re-tag every stored post (not only stale)")
+    parser.add_argument("--retag-ai-limit", type=int, default=None,
+                        help="With --retag-ai, process at most N stale posts (resume-safe)")
+    parser.add_argument("--retag-ai-board", type=str, default=None,
+                        help="With --retag-ai, restrict to a single board slug")
     parser.add_argument("boards", nargs="*", default=None, help="Board slugs (default: all)")
     args = parser.parse_args()
 
@@ -1014,6 +1018,36 @@ def main():
 
     t0 = time.time()
 
+    tree = categorize.load_tree()
+    if args.retag_ai or args.retag_ai_all:
+        stored, deduped = load_all_stored(boards)
+        print(f"[UPDATE] {len(stored)} stored across {len(boards)} board(s)")
+        if deduped:
+            print(f"[UPDATE] {deduped} cross-board duplicate(s) consolidated")
+        api_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or None
+        only_stale = not args.retag_ai_all
+        label = "stale" if only_stale else "all"
+        scope = f" on board {args.retag_ai_board}" if args.retag_ai_board else ""
+        limit_note = f", limit {args.retag_ai_limit}" if args.retag_ai_limit else ""
+        print(
+            f"[UPDATE] Re-tagging {label} posts{scope}{limit_note} "
+            f"(taxonomy v{categorize.taxonomy_version(tree)})..."
+        )
+        tagged = categorize.retag_all_posts(
+            stored,
+            tree,
+            api_key,
+            only_stale=only_stale,
+            write_fn=board_store.write_post,
+            board_slug_filter=args.retag_ai_board,
+            limit=args.retag_ai_limit,
+            workers=_minimax_workers(),
+        )
+        print(f"[UPDATE] Re-tagged {tagged} post(s)")
+        elapsed = time.time() - t0
+        print(f"\n[UPDATE] Done in {elapsed:.1f}s")
+        return
+
     fresh_by_board, single_page_totals = fetch_newest_all(boards)
     board_totals = {b["urlName"]: b.get("postCount") or 0
                     for b in fetch_boards() if b.get("urlName")}
@@ -1024,24 +1058,6 @@ def main():
     print(f"[UPDATE] {len(stored)} stored across {len(boards)} board(s)")
     if deduped:
         print(f"[UPDATE] {deduped} cross-board duplicate(s) consolidated")
-
-    tree = categorize.load_tree()
-    if args.retag_ai or args.retag_ai_all:
-        api_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or None
-        only_stale = not args.retag_ai_all
-        label = "stale" if only_stale else "all"
-        print(f"[UPDATE] Re-tagging {label} posts (taxonomy v{categorize.taxonomy_version(tree)})...")
-        tagged = categorize.retag_all_posts(
-            stored,
-            tree,
-            api_key,
-            only_stale=only_stale,
-            write_fn=board_store.write_post,
-        )
-        print(f"[UPDATE] Re-tagged {tagged} post(s)")
-        elapsed = time.time() - t0
-        print(f"\n[UPDATE] Done in {elapsed:.1f}s")
-        return
 
     scan_targets, new_count, updated_count, newest_count, oldest_count = build_scan_targets(
         stored, fresh_by_board, args.refresh_oldest, args.refresh_newest,

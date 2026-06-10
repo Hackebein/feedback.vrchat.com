@@ -14,6 +14,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -1078,6 +1079,9 @@ def retag_all_posts(
     *,
     only_stale: bool = True,
     write_fn,
+    board_slug_filter: str | None = None,
+    limit: int | None = None,
+    workers: int = 6,
 ) -> int:
     """Re-classify posts in stored. write_fn(board_slug, post) persists each post. Returns count tagged."""
     if not tree:
@@ -1086,18 +1090,51 @@ def retag_all_posts(
     if not eff_key:
         _warn_missing_key()
         return 0
-    count = 0
+
+    tag_jobs: list[tuple[dict, str]] = []
     for info in stored.values():
         post = info.get("post")
         board_slug = info.get("board_slug") or (post.get("board") or {}).get("urlName")
         if not post or not board_slug:
             continue
+        if board_slug_filter and board_slug != board_slug_filter:
+            continue
         if only_stale and not is_stale_taxonomy(post):
             continue
+        tag_jobs.append((post, board_slug))
+        if limit is not None and len(tag_jobs) >= limit:
+            break
+
+    total = len(tag_jobs)
+    if total == 0:
+        return 0
+
+    print(f"[UPDATE] Re-tagging {total} post(s) with {workers} worker(s)...")
+    count = 0
+    write_lock = threading.Lock()
+
+    def _apply_tags(post: dict, board_slug: str) -> None:
         tags = tag_post(post, board_slug, tree, None, api_key)
         post["aiCategories"] = tags["aiCategories"]
         post["aiTaggedAt"] = tags["aiTaggedAt"]
         post["aiTaxonomyVersion"] = tags.get("aiTaxonomyVersion")
-        write_fn(board_slug, post)
-        count += 1
+        with write_lock:
+            write_fn(board_slug, post)
+
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as ex:
+        futures = {
+            ex.submit(_apply_tags, post, board_slug): (post, board_slug)
+            for post, board_slug in tag_jobs
+        }
+        for fut in as_completed(futures):
+            post, board_slug = futures[fut]
+            try:
+                fut.result()
+                count += 1
+                if count % 100 == 0 or count == total:
+                    print(f"[UPDATE] Re-tagged {count}/{total}...")
+            except Exception as e:
+                pid = post.get("_id", "?")
+                print(f"[ERROR] AI retag crashed for {board_slug}/{pid}: {e}")
+
     return count
