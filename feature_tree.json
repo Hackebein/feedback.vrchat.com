@@ -1,8 +1,9 @@
 {
+  "taxonomyVersion": 3,
   "buckets": [
     {
       "id": "user-support",
-      "description": "Individual or self-inflicted help: forgot password, account recovery, \"my friend banned me\", personal config trouble. Not a VRChat product bug or feature report."
+      "description": "One-off personal help only: forgot password, account recovery for self, \"my friend banned me\", asking staff to fix their account. NOT reproducible product bugs—even if phrased in first person (login failures, no audio, avatars not loading, crashes, high ping affecting everyone are product feedback)."
     },
     {
       "id": "vrchat-meta",
@@ -41,7 +42,7 @@
     {
       "id": "loc.in-world",
       "name": "In-world",
-      "description": "Inside an instance: players, world content, in-world interactions."
+      "description": "Inside a running instance only: other players, world objects, in-world interactions. Do NOT use for website, login, SDK/Unity Editor, or VCC issues."
     },
     {
       "id": "loc.loading-screen",
@@ -70,13 +71,23 @@
     },
     {
       "id": "loc.mobile-app",
-      "name": "Mobile app",
-      "description": "iOS mobile beta client."
+      "name": "Mobile app (phone)",
+      "description": "VRChat on phones only: iOS App Store and Android Google Play mobile apps. Browse, chat, stay connected on the go. NOT Meta Quest or Pico standalone VR."
+    },
+    {
+      "id": "loc.standalone-vr",
+      "name": "Standalone VR client",
+      "description": "Untethered VR headset app: Meta Quest and Pico. Full VR without a PC. NOT phone mobile apps."
+    },
+    {
+      "id": "loc.pc-client",
+      "name": "PC & PCVR client",
+      "description": "VRChat on desktop or PCVR via Steam or Viveport. Includes desktop mode and SteamVR."
     },
     {
       "id": "loc.external",
       "name": "External platform",
-      "description": "Third-party platforms: Discord, Steam community, Reddit, VRCX, etc."
+      "description": "Third-party surfaces outside VRChat clients: Discord, Steam community hub, Reddit, VRCX, etc. (NOT the Steam/Viveport VRChat app itself—use loc.pc-client)."
     }
   ],
   "features": [
@@ -278,12 +289,68 @@
     {
       "id": "platforms",
       "name": "Platforms",
-      "description": "Cross-platform parity and behavior.",
+      "description": "Which VRChat client the issue is about. VRChat defines three groups: Mobile (phone), Standalone VR (Quest/Pico), PC & PCVR (Steam/Viveport).",
       "children": [
         {
           "id": "platforms.cross-platform",
           "name": "Cross-platform",
-          "description": "Crossplay, platform parity, cross-platform instances."
+          "description": "Crossplay, parity across client types, or not specific to one platform."
+        },
+        {
+          "id": "platforms.mobile",
+          "name": "Mobile (phone)",
+          "description": "Phone apps: iOS and Android Google Play. NOT Quest/Pico VR headsets.",
+          "children": [
+            {
+              "id": "platforms.mobile.ios",
+              "name": "iOS mobile",
+              "description": "iPhone/iPad App Store client."
+            },
+            {
+              "id": "platforms.mobile.android",
+              "name": "Android mobile",
+              "description": "Android phone Google Play client only. NOT Meta Quest standalone."
+            }
+          ]
+        },
+        {
+          "id": "platforms.standalone-vr",
+          "name": "Standalone VR",
+          "description": "Untethered VR: Meta Quest and Pico. No PC required.",
+          "children": [
+            {
+              "id": "platforms.standalone-vr.quest",
+              "name": "Meta Quest",
+              "description": "Meta Quest standalone VR app (Quest 2/3/Pro etc.). Runs on Android but is NOT the phone mobile app."
+            },
+            {
+              "id": "platforms.standalone-vr.pico",
+              "name": "Pico",
+              "description": "Pico standalone VR headsets."
+            }
+          ]
+        },
+        {
+          "id": "platforms.pc",
+          "name": "PC & PCVR",
+          "description": "Desktop and PCVR via Steam or Viveport.",
+          "children": [
+            {
+              "id": "platforms.pc.steam",
+              "name": "Steam",
+              "description": "VRChat on Steam (desktop mode and SteamVR/PCVR)."
+            },
+            {
+              "id": "platforms.pc.viveport",
+              "name": "Viveport",
+              "description": "VRChat on Viveport."
+            },
+            {
+              "id": "platforms.pc.desktop",
+              "name": "Desktop mode (PC)",
+              "description": "Non-VR desktop mode on PC when the store is unclear or the issue affects all PC builds."
+            }
+          ]
         }
       ]
     },
@@ -427,6 +494,46 @@
       "name": "Websites & web services",
       "description": "What is wrong or requested on web/API surfaces (where is loc.website).",
       "children": [
+        {
+          "id": "web.home",
+          "name": "Web home & dashboard",
+          "description": "vrchat.com home, navigation bar, featured worlds, download page, general site chrome."
+        },
+        {
+          "id": "web.profiles",
+          "name": "User profiles (web)",
+          "description": "Profile pages, bio, PFP/banner upload, user search results, profile cards."
+        },
+        {
+          "id": "web.worlds",
+          "name": "World pages & search (web)",
+          "description": "World info pages, world search/list UI, capacity/thumbnails/tags on the website."
+        },
+        {
+          "id": "web.social",
+          "name": "Social & friends (web)",
+          "description": "Friends wing, online/offline status, invites, messages, notifications on the website."
+        },
+        {
+          "id": "web.groups",
+          "name": "Groups (web)",
+          "description": "Group pages, member lists, group banners/icons, group calendars on the website."
+        },
+        {
+          "id": "web.auth",
+          "name": "Login & signup (web)",
+          "description": "Website login, signup, captcha, password reset, 2FA pages on vrchat.com."
+        },
+        {
+          "id": "web.docs",
+          "name": "Help & documentation (web)",
+          "description": "help.vrchat.com, docs content, FAQ pages, outdated documentation on web."
+        },
+        {
+          "id": "web.store",
+          "name": "Web store",
+          "description": "VRChat store/cosmetics purchase flows on the website."
+        },
         {
           "id": "web.feedback",
           "name": "Feedback site (Canny)",

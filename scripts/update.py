@@ -727,6 +727,8 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
                     tags = fut.result()
                     post["aiCategories"] = tags["aiCategories"]
                     post["aiTaggedAt"] = tags["aiTaggedAt"]
+                    if tags.get("aiTaxonomyVersion") is not None:
+                        post["aiTaxonomyVersion"] = tags["aiTaxonomyVersion"]
                 except Exception as e:
                     pid = post.get("_id", "?")
                     print(f"[ERROR] AI categorize crashed for {pid}: {e}")
@@ -988,6 +990,10 @@ def main():
                         help="Top up the scan with the N globally-oldest-updatedAt posts after new+updated (default: all)")
     parser.add_argument("--refresh-newest", type=int, default=500,
                         help="Top up the scan with the N globally-newest-lastActivityAt posts after new+updated (default: 500). Pass 0 to disable.")
+    parser.add_argument("--retag-ai", action="store_true",
+                        help="Re-run AI categorization on posts with stale taxonomy (taxonomyVersion mismatch)")
+    parser.add_argument("--retag-ai-all", action="store_true",
+                        help="With --retag-ai, re-tag every stored post (not only stale)")
     parser.add_argument("boards", nargs="*", default=None, help="Board slugs (default: all)")
     args = parser.parse_args()
 
@@ -1019,6 +1025,24 @@ def main():
     if deduped:
         print(f"[UPDATE] {deduped} cross-board duplicate(s) consolidated")
 
+    tree = categorize.load_tree()
+    if args.retag_ai or args.retag_ai_all:
+        api_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or None
+        only_stale = not args.retag_ai_all
+        label = "stale" if only_stale else "all"
+        print(f"[UPDATE] Re-tagging {label} posts (taxonomy v{categorize.taxonomy_version(tree)})...")
+        tagged = categorize.retag_all_posts(
+            stored,
+            tree,
+            api_key,
+            only_stale=only_stale,
+            write_fn=board_store.write_post,
+        )
+        print(f"[UPDATE] Re-tagged {tagged} post(s)")
+        elapsed = time.time() - t0
+        print(f"\n[UPDATE] Done in {elapsed:.1f}s")
+        return
+
     scan_targets, new_count, updated_count, newest_count, oldest_count = build_scan_targets(
         stored, fresh_by_board, args.refresh_oldest, args.refresh_newest,
     )
@@ -1028,16 +1052,20 @@ def main():
     results = fetch_all_pages(scan_targets)
 
     now = iso_now()
-    tree = categorize.load_tree()
     sanitized = 0
     if tree:
         for info in stored.values():
-            if categorize.sanitize_ai_tags(info["post"], tree):
+            post = info.get("post")
+            board_slug = info.get("board_slug")
+            if not post or not board_slug:
+                continue
+            if categorize.sanitize_ai_tags(post, tree):
                 sanitized += 1
+                board_store.write_post(board_slug, post)
         if sanitized:
             print(
                 f"[UPDATE] Sanitized AI tags on {sanitized} post(s) "
-                "(removed unknown or stale ids)",
+                "(removed unknown ids, stale taxonomy, or normalized parents)",
             )
     system_prompt = categorize.build_system_prompt(tree)
     api_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or None
