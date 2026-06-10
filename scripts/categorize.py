@@ -29,7 +29,7 @@ def _minimax_chat_url() -> str:
 
 
 def _minimax_model() -> str:
-    return (os.environ.get("MINIMAX_MODEL") or "MiniMax-M2.7").strip()
+    return (os.environ.get("MINIMAX_MODEL") or "MiniMax-M3").strip()
 
 USER_AGENT = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
 
@@ -41,7 +41,7 @@ _tree_lock = threading.Lock()
 _cached_tree: dict | None = None
 
 _TAG_RE = re.compile(r"```(?:json)?\s*([\s\S]*?)\s*```")
-# M2.x models may prefix assistant text with interleaved thinking (see MiniMax OpenAI-compat docs).
+# M2.x/M3 models may inline thinking in content; M3 can also use reasoning_content with reasoning_split.
 _THINKING_RE = re.compile(r"<think>[\s\S]*?</think>", re.IGNORECASE)
 
 
