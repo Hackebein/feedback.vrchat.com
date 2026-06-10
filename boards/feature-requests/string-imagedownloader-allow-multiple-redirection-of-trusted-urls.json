@@ -2,10 +2,10 @@
   "_id": "6a281de43ad7ad1ed22c0ca1",
   "aiCategories": [
     "loc.in-world",
-    "worlds.video",
-    "sdk.udon"
+    "sdk.udon",
+    "worlds.video"
   ],
-  "aiTaggedAt": "2026-06-09T18:47:34.759718Z",
+  "aiTaggedAt": "2026-06-10T07:25:18.060361Z",
   "author": {
     "_id": "620a5d1fe252983eec300b4c",
     "alias": "Eastern Whitefish",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a281e5fe4deb1f9c757e7ae",
@@ -117,6 +117,62 @@
       "value": "Last time I checked, VRChat's Image and String loader have a redirect limit of ZERO, as in no redirects at all for security reasons. \n\nAs a world creator I think you SHOULD tell players what to do. You could take in the link, and then present a full watch link as a text box that they can copy out of.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a28fd2593ba6573b6b986a8",
+      "aiGenerated": false,
+      "author": {
+        "_id": "620a5d1fe252983eec300b4c",
+        "alias": "Eastern Whitefish",
+        "aliasID": "65e4b9eaa6e3ea79dd44eed1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/be53cb7f9050c568039af4e972a4cf7b.png",
+        "created": "2022-02-14T13:46:07.367Z",
+        "name": "하루룽짱harunadev",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-10T05:59:01.108Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e0e9a23bc510d6aa62c0d515b73bc1e3.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a2859ee76d228f8161e895d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a281de43ad7ad1ed22c0ca1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name} You're correct, I can make a converter Input Field (or something like \"How about this URL: *url*\"), for convinence. The one I want it to be fixed is to allow redirections of 'known' URLs, such as youtu.be -> youtube.com patterns.\n\nThis is pretty good idea to minimize the user hassle. But I think it's easily solvable by VRC allowing at least one redirection for trusted (or even separated list of redirection allowed) URLs.\n\nI know this is pretty much optional and both youtu.be and youtube.com/watch?v= works just fine with yt-dlp (it just parses ID from URL and does its thing), but I think this (at least) 1 allowed redirection of trusted URLs might be helpful for some creators, including me and many more in future.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -135,7 +191,7 @@
     "https://canny-assets.io/images/f0d8661ce1f4d6a96fedf3bc69a6ac2b.png",
     "https://canny-assets.io/images/2597a829ffd2b2e069dc7dad1d0c2834.png"
   ],
-  "lastUpdated": 1781069280632,
+  "lastUpdated": 1781076145915,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 8,
@@ -151,7 +207,7 @@
   "subCategoryID": null,
   "title": "[String/ImageDownloader] Allow multiple redirection of trusted URLs",
   "trendingScore": 2947.0423065616187,
-  "updatedAt": "2026-06-10T05:33:26.421760Z",
+  "updatedAt": "2026-06-10T07:25:17.956450Z",
   "updatedBy": "620a5d1fe252983eec300b4c",
   "urlName": "string-imagedownloader-allow-multiple-redirection-of-trusted-urls",
   "viewerIsAuthor": false,
