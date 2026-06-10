@@ -2,10 +2,9 @@
   "_id": "69da24a082d59289cf00d10d",
   "aiCategories": [
     "loc.in-world",
-    "avatars.impostors",
-    "moderation.safety-system"
+    "avatars.impostors"
   ],
-  "aiTaggedAt": "2026-05-28T05:26:26.868416Z",
+  "aiTaggedAt": "2026-06-10T05:33:26.530084Z",
   "author": {
     "_id": "5f390f48e5ef6a7b6dbccdf0",
     "alias": "Krypton green Stingray",
@@ -35,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "651f01e56cd5864320c2c5b2",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a17c0514e0e79946c0425e5",
@@ -71,13 +70,73 @@
       "postDeleted": false,
       "postID": "69da24a082d59289cf00d10d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I generally agree, but my personal preference is to avoid having to \"Show Avatar\" before reporting. I'd like to be able to report while remaining an imposter.\n\n概ね同意しますが、通報する際に一度Show Avatarしないといけないのでそれを避けたいというのが個人的な考えです。インポスターのまま通報をさせてほしいです。",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a28db37e8f755779b9911b0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6949d435f85d59c66d74e72b",
+        "alias": "Worthwhile Swallow",
+        "aliasID": "6949d435f85d59c66d7508b3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8fb1a8215363532449416a9e5c326b97.png",
+        "created": "2025-12-22T23:28:53.468Z",
+        "name": "Noobway",
+        "serviceAccount": false,
+        "urlName": "noobway"
+      },
+      "authorID": null,
+      "boardID": "651f00c29b934e9c99db0b22",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-10T03:34:15.466Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5f2cb67c7f57433511403feb",
+          "alias": "Heavy Kingfisher",
+          "aliasID": "65c39efaed6eefce4ca2d3bc",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/2e08af41a46b8e0dfbdcd483b59621f1.png",
+          "created": "2020-08-07T02:03:40.125Z",
+          "name": "kazu（かず）",
+          "serviceAccount": false,
+          "urlName": "kazu-10"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a17c0514e0e79946c0425e5",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69da24a082d59289cf00d10d",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5f2cb67c7f57433511403feb|full_name} this would also make it possible to report without being crashed. The fact this is still a problem is dissapointing.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -94,23 +153,23 @@
   "files": [],
   "ideaID": "69da24a082d59289cf00d128",
   "imageURLs": [],
-  "lastUpdated": 1781060631567,
+  "lastUpdated": 1781069280355,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 53,
+  "maxScore": 54,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69da24a082d59289cf00d10d/896766831.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 53,
+  "score": 54,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-04-11T10:38:24.526Z",
   "subCategoryID": null,
   "title": "Please allow players to report inappropriate Imposters from within the game",
-  "trendingScore": 2944.5515285376882,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "trendingScore": 2945.4209119660586,
+  "updatedAt": "2026-06-10T05:33:26.421760Z",
   "updatedBy": null,
   "urlName": "please-allow-players-to-report-inappropriate-imposters-from-within-the-game",
   "viewerIsAuthor": false,
@@ -122,6 +181,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6949d435f85d59c66d74e72b",
+      "alias": "Worthwhile Swallow",
+      "aliasID": "6949d435f85d59c66d7508b3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8fb1a8215363532449416a9e5c326b97.png",
+      "companies": [],
+      "name": "Noobway",
+      "urlName": "noobway",
+      "voteID": "6a28d93386d7b8843b0d7f9a"
+    },
     {
       "_id": "624babfacd4a8d52875bbe0f",
       "alias": "Ivory Ostrich",
@@ -220,17 +290,6 @@
       "name": "chu_syaki_chang",
       "urlName": "5e5945",
       "voteID": "69dc095435a0fd8564eff8a1"
-    },
-    {
-      "_id": "671340945c9cf130ce70478d",
-      "alias": "Zinc Pheasant",
-      "aliasID": "671340950f7e723d6ea37c8e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/19a4ec381bbb50129781983aa17ea136.png",
-      "companies": [],
-      "name": "izuruu",
-      "urlName": "izuruu-1",
-      "voteID": "69dbb03d35a0fd856442bb68"
     }
   ]
 }
