@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "640c5dbfcced02451499d9bb",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-06-11T19:01:26.946071Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2e069f8fc2c972dd4a0430",
     "alias": "Electrical Swallow",
@@ -271,7 +277,7 @@
   "imageURLs": [
     "https://canny.io/images/f1646fe4e45193abe000077adda07432.jpg"
   ],
-  "lastUpdated": 1780801487492,
+  "lastUpdated": 1781204304970,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -286,7 +292,7 @@
   "subCategoryID": null,
   "title": "HMD (Head) motion makes UI selection jitter, which can cause missclicks or typo's.",
   "trendingScore": 2802.852047900136,
-  "updatedAt": "2026-06-07T03:06:55.537460Z",
+  "updatedAt": "2026-06-11T19:01:20.024110Z",
   "updatedBy": null,
   "urlName": "hmd-head-motion-makes-ui-selection-jitter-which-can-cause-missclicks-or-typos",
   "viewerIsAuthor": false,
