@@ -42,8 +42,6 @@ jobs:
       - name: Run update
         env:
           MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
-          MINIMAX_WORKERS: "48"
-          FETCH_WORKERS: "24"
         run: python3 scripts/update.py --refresh-oldest ${{ github.event.inputs.refresh-oldest || '500' }} --refresh-newest ${{ github.event.inputs.refresh-newest || '500' }}
 
       - name: Commit and push changes
