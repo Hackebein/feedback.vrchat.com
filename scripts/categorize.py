@@ -51,18 +51,25 @@ class _MiniMaxRateLimiter:
         self._lock = threading.Lock()
         self._cooldown_until = 0.0
         self.rate_limit_hits = 0
+        self.stop_requested = False
 
     def wait(self):
         with self._lock:
+            if self.stop_requested:
+                return
             sleep_for = max(0.0, self._cooldown_until - time.time())
         if sleep_for > 0:
             print(f"[UPDATE] MiniMax rate limit cooldown ({sleep_for:.0f}s remaining)...")
             time.sleep(sleep_for)
 
-    def hit_429(self):
-        cooldown = _minimax_rate_limit_cooldown()
+    def hit_429(self, body: str = ""):
         with self._lock:
             self.rate_limit_hits += 1
+            if _in_ci() or _is_plan_quota_error(body):
+                self.stop_requested = True
+                print("[UPDATE] MiniMax rate limit hit; stopping AI tagging early")
+                return
+            cooldown = _minimax_rate_limit_cooldown()
             self._cooldown_until = max(self._cooldown_until, time.time() + cooldown)
         print(f"[UPDATE] MiniMax rate limit hit; waiting {cooldown:.0f}s before retry...")
 
@@ -72,9 +79,20 @@ class _MiniMaxRateLimiter:
     def reset_hits(self):
         with self._lock:
             self.rate_limit_hits = 0
+            self.stop_requested = False
 
 
 _MINIMAX_LIMITER = _MiniMaxRateLimiter()
+
+
+def _in_ci() -> bool:
+    return (os.environ.get("CI") or "").strip().lower() in ("1", "true")
+
+
+def _is_plan_quota_error(body: str) -> bool:
+    if not body:
+        return False
+    return "2062" in body or "Token Plan rate limit" in body
 
 BOARD_LOCATION_PRIORS: dict[str, str] = {
     "website": "loc.website",
@@ -814,7 +832,7 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
     _MINIMAX_LIMITER.wait()
     code, body = _urllib_post_minimax(_minimax_chat_url(), api_key, payload, timeout=90)
     if code == 429:
-        _MINIMAX_LIMITER.hit_429()
+        _MINIMAX_LIMITER.hit_429(body)
     elif code == 200:
         _MINIMAX_LIMITER.ok()
     return code, body
@@ -822,6 +840,18 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
 
 def minimax_rate_limit_hits() -> int:
     return _MINIMAX_LIMITER.rate_limit_hits
+
+
+def minimax_stop_requested() -> bool:
+    return _MINIMAX_LIMITER.stop_requested
+
+
+def should_stop_ai_tagging(api_key: str | None = None) -> bool:
+    if _MINIMAX_LIMITER.stop_requested:
+        return True
+    if _MINIMAX_LIMITER.rate_limit_hits > 0 and not probe_minimax(api_key):
+        return True
+    return False
 
 
 def reset_minimax_rate_limit_hits() -> None:
@@ -1020,6 +1050,8 @@ def _chat_once(
         code, body = _minimax_chat(api_key, system_prompt, user)
         last_body = body
         if code == 429:
+            if _MINIMAX_LIMITER.stop_requested:
+                break
             _MINIMAX_LIMITER.wait()
             continue
         if code == 401:
@@ -1182,6 +1214,86 @@ def apply_ai_tags(
     post["aiTaxonomyVersion"] = tags.get("aiTaxonomyVersion")
 
 
+def run_ai_tag_jobs(
+    jobs: list[tuple[dict, str, dict | None]],
+    *,
+    tree: dict,
+    system_prompt: str | None,
+    api_key: str | None,
+    workers: int,
+    write_fn=None,
+    progress_every: int = 100,
+    progress_label: str = "Tagged",
+) -> tuple[int, bool]:
+    """Run tag_post in parallel. Returns (count tagged, rate_limited)."""
+    if not jobs:
+        return 0, False
+
+    quota_stop = threading.Event()
+    done_ids: set[str] = set()
+    count = 0
+    total = len(jobs)
+
+    def _tag_one(post: dict, board_slug: str) -> bool:
+        if quota_stop.is_set() or _MINIMAX_LIMITER.stop_requested:
+            return False
+        tags = tag_post(post, board_slug, tree, system_prompt, api_key)
+        if quota_stop.is_set() or _MINIMAX_LIMITER.stop_requested:
+            return False
+        post["aiCategories"] = tags["aiCategories"]
+        post["aiTaggedAt"] = tags["aiTaggedAt"]
+        if tags.get("aiTaxonomyVersion") is not None:
+            post["aiTaxonomyVersion"] = tags["aiTaxonomyVersion"]
+        if write_fn:
+            write_fn(board_slug, post)
+        return True
+
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as ex:
+        futures = {
+            ex.submit(_tag_one, post, board_slug): (post, board_slug, prev)
+            for post, board_slug, prev in jobs
+        }
+        rate_limited = False
+        for fut in as_completed(futures):
+            if quota_stop.is_set():
+                break
+            post, board_slug, prev = futures[fut]
+            pid = post.get("_id")
+            try:
+                if fut.result() and pid:
+                    done_ids.add(pid)
+                    count += 1
+                    if count % progress_every == 0 or count == total:
+                        print(f"[UPDATE] {progress_label} {count}/{total}...")
+            except Exception as e:
+                print(f"[ERROR] AI categorize crashed for {post.get('_id', '?')}: {e}")
+            if should_stop_ai_tagging(api_key):
+                rate_limited = True
+                quota_stop.set()
+                print("[UPDATE] Stopping AI tagging; MiniMax rate limited")
+                break
+
+    for fut, (post, _board_slug, _prev) in futures.items():
+        if not fut.done():
+            continue
+        pid = post.get("_id")
+        if not pid or pid in done_ids:
+            continue
+        try:
+            if fut.result():
+                done_ids.add(pid)
+        except Exception:
+            pass
+
+    if rate_limited:
+        for post, _board_slug, prev in jobs:
+            pid = post.get("_id")
+            if pid and pid not in done_ids:
+                carry_over_ai_tags(post, prev)
+
+    return count, rate_limited
+
+
 def retag_all_posts(
     stored: dict,
     tree: dict | None,
@@ -1220,43 +1332,20 @@ def retag_all_posts(
         return 0
 
     print(f"[UPDATE] Re-tagging {total} post(s) with {workers} worker(s)...")
-    count = 0
     write_lock = threading.Lock()
-    quota_stop = threading.Event()
 
-    def _apply_tags(post: dict, board_slug: str) -> None:
-        if quota_stop.is_set():
-            return
-        tags = tag_post(post, board_slug, tree, None, api_key)
-        if quota_stop.is_set():
-            return
-        post["aiCategories"] = tags["aiCategories"]
-        post["aiTaggedAt"] = tags["aiTaggedAt"]
-        post["aiTaxonomyVersion"] = tags.get("aiTaxonomyVersion")
+    def _write(board_slug: str, post: dict) -> None:
         with write_lock:
             write_fn(board_slug, post)
 
-    with ThreadPoolExecutor(max_workers=max(1, workers)) as ex:
-        futures = {
-            ex.submit(_apply_tags, post, board_slug): (post, board_slug)
-            for post, board_slug in tag_jobs
-        }
-        for fut in as_completed(futures):
-            if quota_stop.is_set():
-                break
-            post, board_slug = futures[fut]
-            try:
-                fut.result()
-                count += 1
-                if count % 100 == 0 or count == total:
-                    print(f"[UPDATE] Re-tagged {count}/{total}...")
-            except Exception as e:
-                pid = post.get("_id", "?")
-                print(f"[ERROR] AI retag crashed for {board_slug}/{pid}: {e}")
-            if _MINIMAX_LIMITER.rate_limit_hits > 0 and not quota_stop.is_set():
-                if not probe_minimax(api_key):
-                    print("[UPDATE] Stopping retag pass; MiniMax rate limited")
-                    quota_stop.set()
-                    break
-
+    count, rate_limited = run_ai_tag_jobs(
+        [(post, board_slug, None) for post, board_slug in tag_jobs],
+        tree=tree,
+        system_prompt=None,
+        api_key=api_key,
+        workers=workers,
+        write_fn=_write,
+        progress_every=100,
+        progress_label="Re-tagged",
+    )
     return count

@@ -668,8 +668,9 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
     """
     added = deleted = refreshed = moved = 0
     eff_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or (api_key or "").strip()
-    tag_jobs: list[tuple[dict, str]] = []
+    tag_jobs: list[tuple[dict, str, dict | None]] = []
     pending_writes: list[tuple[str, dict]] = []
+    ai_rate_limited = False
 
     for pid, (post, comments, not_found, transient) in results.items():
         info = stored.get(pid, {})
@@ -705,7 +706,7 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
                 post, actual_board, prev_post, tree, system_prompt, api_key,
             )
         else:
-            tag_jobs.append((post, actual_board))
+            tag_jobs.append((post, actual_board, prev_post))
 
         if original and original_url and original != actual_board:
             board_store.delete_post(original, original_url)
@@ -722,24 +723,17 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
 
     if tag_jobs:
         workers = _minimax_workers()
-        with ThreadPoolExecutor(max_workers=workers) as ex:
-            futures = {
-                ex.submit(
-                    categorize.tag_post, post, board_slug, tree, system_prompt, api_key,
-                ): post
-                for post, board_slug in tag_jobs
-            }
-            for fut in as_completed(futures):
-                post = futures[fut]
-                try:
-                    tags = fut.result()
-                    post["aiCategories"] = tags["aiCategories"]
-                    post["aiTaggedAt"] = tags["aiTaggedAt"]
-                    if tags.get("aiTaxonomyVersion") is not None:
-                        post["aiTaxonomyVersion"] = tags["aiTaxonomyVersion"]
-                except Exception as e:
-                    pid = post.get("_id", "?")
-                    print(f"[ERROR] AI categorize crashed for {pid}: {e}")
+        tagged, ai_rate_limited = categorize.run_ai_tag_jobs(
+            tag_jobs,
+            tree=tree,
+            system_prompt=system_prompt,
+            api_key=api_key,
+            workers=workers,
+            progress_every=100,
+            progress_label="AI tagged",
+        )
+        if tagged:
+            print(f"[UPDATE] AI tagged {tagged} post(s)")
 
     for board_slug, post in pending_writes:
         board_store.write_post(board_slug, post)
@@ -749,6 +743,7 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         "deleted": deleted,
         "refreshed": refreshed,
         "moved": moved,
+        "ai_rate_limited": ai_rate_limited,
     }
 
 
@@ -1088,6 +1083,9 @@ def _retag_with_rate_limit_retry(
     total_tagged += tagged
     if not rate_limited:
         return total_tagged
+    if categorize._in_ci():
+        print("[UPDATE] MiniMax rate limit reached; skipping retry in CI")
+        return total_tagged
 
     print("[UPDATE] MiniMax rate limit reached; waiting 5 minutes before retry...")
     if not categorize.wait_for_minimax_quota(api_key):
@@ -1164,6 +1162,9 @@ def main():
         _commit_rebase_push_board_update()
         elapsed = time.time() - t0
         print(f"\n[UPDATE] Done in {elapsed:.1f}s")
+        if categorize.minimax_stop_requested():
+            print("[UPDATE] Stopped early due to MiniMax rate limit (partial success)")
+            sys.exit(0)
         return
 
     fresh_by_board, single_page_totals = fetch_newest_all(boards)
@@ -1225,6 +1226,11 @@ def main():
         print("[UPDATE] README regenerated")
     except Exception as e:
         print(f"[UPDATE] README generation skipped: {e}")
+
+    if totals.get("ai_rate_limited") or categorize.minimax_stop_requested():
+        print("[UPDATE] Stopped early due to MiniMax rate limit (partial success)")
+        sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
