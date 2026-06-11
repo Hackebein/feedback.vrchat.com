@@ -46,14 +46,22 @@ USER_AGENT           = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
 BOARD_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def _minimax_workers():
-    raw = (os.environ.get("MINIMAX_WORKERS") or "").strip()
+def _env_int(name: str, default: int) -> int:
+    raw = (os.environ.get(name) or "").strip()
     if raw:
         try:
             return max(1, int(raw))
         except ValueError:
             pass
-    return AI_WORKERS
+    return default
+
+
+def _minimax_workers():
+    return _env_int("MINIMAX_WORKERS", AI_WORKERS)
+
+
+def _fetch_workers():
+    return _env_int("FETCH_WORKERS", MAX_WORKERS)
 
 
 # ---------------------------------------------------------------------------
@@ -467,7 +475,7 @@ def fetch_newest_all(boards):
     fresh_by_board = {}
     single_page_totals = {}
     print(f"[UPDATE] Fetching newest from {len(boards)} board(s)...")
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+    with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
         futures = {ex.submit(fetch_board_posts, b, "newest"): b for b in boards}
         for fut in as_completed(futures):
             slug = futures[fut]
@@ -639,7 +647,7 @@ def fetch_all_pages(scan_targets):
     if not scan_targets:
         return {}
     results = {}
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+    with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
         futures = {
             ex.submit(fetch_post_page, b, slug): pid
             for b, pid, slug in scan_targets

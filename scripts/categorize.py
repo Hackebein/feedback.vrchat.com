@@ -86,6 +86,16 @@ def _minimax_model() -> str:
     return (os.environ.get("MINIMAX_MODEL") or "MiniMax-M3").strip()
 
 
+def _minimax_max_tokens() -> int:
+    raw = (os.environ.get("MINIMAX_MAX_TOKENS") or "").strip()
+    if raw:
+        try:
+            return max(64, int(raw))
+        except ValueError:
+            pass
+    return 2048
+
+
 USER_AGENT = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
 
 _missing_key_warned = False
@@ -745,7 +755,8 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
             {"role": "user", "content": user_prompt},
         ],
         "temperature": 0.1,
-        "max_completion_tokens": 2048,
+        "max_completion_tokens": _minimax_max_tokens(),
+        "thinking": {"type": "disabled"},
     }
     return _urllib_post_minimax(_minimax_chat_url(), api_key, payload, timeout=90)
 
