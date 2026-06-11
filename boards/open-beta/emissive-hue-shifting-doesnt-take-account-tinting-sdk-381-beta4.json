@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6827aa21e203ddedfffde2ce",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-11T09:38:58.224453Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6227bc1f4c691f5f50ea5902",
     "alias": "Yolk Python",
@@ -27,7 +32,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1286,
+    "postCount": 1303,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -259,7 +264,7 @@
     "https://canny-assets.io/images/b71b6465bda2c88fd81860600ca145d8.png",
     "https://canny-assets.io/images/87b3e78287db65a99b4ccaa29867e975.png"
   ],
-  "lastUpdated": 1780781009810,
+  "lastUpdated": 1781170109749,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 7,
@@ -275,7 +280,7 @@
   "subCategoryID": null,
   "title": "Emissive Hue Shifting Doesn't Take Account Tinting (SDK 3.8.1-beta.4)",
   "trendingScore": 2891.7930736114204,
-  "updatedAt": "2026-06-06T21:25:43.759048Z",
+  "updatedAt": "2026-06-11T09:28:45.436469Z",
   "updatedBy": null,
   "urlName": "emissive-hue-shifting-doesnt-take-account-tinting-sdk-381-beta4",
   "viewerIsAuthor": false,
