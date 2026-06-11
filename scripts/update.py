@@ -991,6 +991,116 @@ def get_boards():
     return [b["urlName"] for b in fetch_boards() if b.get("urlName")]
 
 
+def _count_stale_posts(stored, tree, *, only_stale=True, board_slug_filter=None) -> int:
+    count = 0
+    for info in stored.values():
+        post = info.get("post")
+        board_slug = info.get("board_slug") or (post.get("board") or {}).get("urlName")
+        if not post or not board_slug:
+            continue
+        if board_slug_filter and board_slug != board_slug_filter:
+            continue
+        if only_stale and not categorize.is_stale_taxonomy(post):
+            continue
+        count += 1
+    return count
+
+
+def _git_run(args, *, check=True):
+    cmd = ["git", "-C", str(ROOT), *args]
+    print(f"[UPDATE] {' '.join(cmd)}")
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.stdout.strip():
+        print(r.stdout.rstrip())
+    if r.stderr.strip():
+        print(r.stderr.rstrip())
+    if check and r.returncode != 0:
+        raise RuntimeError(f"git {' '.join(args)} failed ({r.returncode})")
+    return r
+
+
+def _commit_rebase_push_board_update() -> None:
+    status = _git_run(["status", "--short"], check=False)
+    if not status.stdout.strip():
+        print("[UPDATE] No board changes to commit")
+        return
+    _git_run(["add", "boards/"])
+    commit = _git_run(["commit", "-m", "Board Update"], check=False)
+    if commit.returncode != 0:
+        print("[UPDATE] Nothing committed")
+        return
+    _git_run(["fetch", "origin", "main"])
+    rebase = _git_run(["rebase", "origin/main"], check=False)
+    while rebase.returncode != 0:
+        conflicted = [
+            p for p in _git_run(["diff", "--name-only", "--diff-filter=U"], check=False).stdout.splitlines()
+            if p.strip()
+        ]
+        if not conflicted:
+            raise RuntimeError("git rebase failed without listed conflicts")
+        for path in conflicted:
+            _git_run(["checkout", "--ours", "--", path], check=False)
+            _git_run(["add", "--", path], check=False)
+        rebase = _git_run(["rebase", "--continue"], check=False)
+    _git_run(["push", "origin", "HEAD:main"])
+    print("[UPDATE] Pushed board update to origin/main")
+
+
+def _retag_with_rate_limit_retry(
+    stored,
+    tree,
+    api_key,
+    *,
+    only_stale=True,
+    board_slug_filter=None,
+    limit=None,
+    workers=None,
+) -> int:
+    """Retag until rate limited, wait 5 minutes, retry once; stop if limited again."""
+    workers = workers or _minimax_workers()
+    total_tagged = 0
+
+    def _one_pass() -> tuple[int, bool]:
+        categorize.reset_minimax_rate_limit_hits()
+        stale = _count_stale_posts(
+            stored, tree, only_stale=only_stale, board_slug_filter=board_slug_filter,
+        )
+        if stale == 0:
+            return 0, False
+        tagged = categorize.retag_all_posts(
+            stored,
+            tree,
+            api_key,
+            only_stale=only_stale,
+            write_fn=board_store.write_post,
+            board_slug_filter=board_slug_filter,
+            limit=limit,
+            workers=workers,
+        )
+        rate_limited = categorize.minimax_rate_limit_hits() > 0
+        stale_after = _count_stale_posts(
+            stored, tree, only_stale=only_stale, board_slug_filter=board_slug_filter,
+        )
+        print(f"[UPDATE] Re-tagged {tagged} post(s) this pass ({stale_after} stale remaining)")
+        return tagged, rate_limited
+
+    tagged, rate_limited = _one_pass()
+    total_tagged += tagged
+    if not rate_limited:
+        return total_tagged
+
+    print("[UPDATE] MiniMax rate limit reached; waiting 5 minutes before retry...")
+    if not categorize.wait_for_minimax_quota(api_key):
+        print("[UPDATE] MiniMax rate limit persists after cooldown")
+        return total_tagged
+
+    tagged, rate_limited = _one_pass()
+    total_tagged += tagged
+    if rate_limited:
+        print("[UPDATE] MiniMax rate limit reached again after cooldown")
+    return total_tagged
+
+
 def main():
     parser = argparse.ArgumentParser(description="VRChat Canny Feedback Archiver")
     parser.add_argument("--dry-run", action="store_true")
@@ -1041,17 +1151,17 @@ def main():
             f"[UPDATE] Re-tagging {label} posts{scope}{limit_note} "
             f"(taxonomy v{categorize.taxonomy_version(tree)})..."
         )
-        tagged = categorize.retag_all_posts(
+        tagged = _retag_with_rate_limit_retry(
             stored,
             tree,
             api_key,
             only_stale=only_stale,
-            write_fn=board_store.write_post,
             board_slug_filter=args.retag_ai_board,
             limit=args.retag_ai_limit,
             workers=_minimax_workers(),
         )
-        print(f"[UPDATE] Re-tagged {tagged} post(s)")
+        print(f"[UPDATE] Re-tagged {tagged} post(s) total")
+        _commit_rebase_push_board_update()
         elapsed = time.time() - t0
         print(f"\n[UPDATE] Done in {elapsed:.1f}s")
         return

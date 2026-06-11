@@ -31,6 +31,50 @@ MAX_COMMENT_LINES = 20
 MAX_COMMENT_VALUE_CHARS = 1_500
 MAX_CHAT_HTTP_RETRIES = 3
 MAX_VALIDATION_ROUNDS = 4
+DEFAULT_MINIMAX_RATE_LIMIT_COOLDOWN = 300.0
+
+
+def _minimax_rate_limit_cooldown() -> float:
+    raw = (os.environ.get("MINIMAX_RATE_LIMIT_COOLDOWN") or "").strip()
+    if raw:
+        try:
+            return max(1.0, float(raw))
+        except ValueError:
+            pass
+    return DEFAULT_MINIMAX_RATE_LIMIT_COOLDOWN
+
+
+class _MiniMaxRateLimiter:
+    """Shared cooldown across worker threads after HTTP 429."""
+
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._cooldown_until = 0.0
+        self.rate_limit_hits = 0
+
+    def wait(self):
+        with self._lock:
+            sleep_for = max(0.0, self._cooldown_until - time.time())
+        if sleep_for > 0:
+            print(f"[UPDATE] MiniMax rate limit cooldown ({sleep_for:.0f}s remaining)...")
+            time.sleep(sleep_for)
+
+    def hit_429(self):
+        cooldown = _minimax_rate_limit_cooldown()
+        with self._lock:
+            self.rate_limit_hits += 1
+            self._cooldown_until = max(self._cooldown_until, time.time() + cooldown)
+        print(f"[UPDATE] MiniMax rate limit hit; waiting {cooldown:.0f}s before retry...")
+
+    def ok(self):
+        pass
+
+    def reset_hits(self):
+        with self._lock:
+            self.rate_limit_hits = 0
+
+
+_MINIMAX_LIMITER = _MiniMaxRateLimiter()
 
 BOARD_LOCATION_PRIORS: dict[str, str] = {
     "website": "loc.website",
@@ -758,7 +802,53 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
         "max_completion_tokens": _minimax_max_tokens(),
         "thinking": {"type": "disabled"},
     }
-    return _urllib_post_minimax(_minimax_chat_url(), api_key, payload, timeout=90)
+    _MINIMAX_LIMITER.wait()
+    code, body = _urllib_post_minimax(_minimax_chat_url(), api_key, payload, timeout=90)
+    if code == 429:
+        _MINIMAX_LIMITER.hit_429()
+    elif code == 200:
+        _MINIMAX_LIMITER.ok()
+    return code, body
+
+
+def minimax_rate_limit_hits() -> int:
+    return _MINIMAX_LIMITER.rate_limit_hits
+
+
+def reset_minimax_rate_limit_hits() -> None:
+    _MINIMAX_LIMITER.reset_hits()
+
+
+def probe_minimax(api_key: str | None = None) -> bool:
+    """Return True when MiniMax accepts a minimal chat request (not rate limited)."""
+    eff = (os.environ.get("MINIMAX_API_KEY") or "").strip() or (api_key or "").strip()
+    if not eff:
+        return False
+    payload = {
+        "model": _minimax_model(),
+        "messages": [
+            {"role": "system", "content": "Reply with OK."},
+            {"role": "user", "content": "OK"},
+        ],
+        "temperature": 0.1,
+        "max_completion_tokens": 16,
+        "thinking": {"type": "disabled"},
+    }
+    code, _ = _urllib_post_minimax(_minimax_chat_url(), eff, payload, timeout=30)
+    return code == 200
+
+
+def wait_for_minimax_quota(api_key: str | None = None) -> bool:
+    """Wait one cooldown window, then probe. Return True if quota is available."""
+    cooldown = _minimax_rate_limit_cooldown()
+    print(f"[UPDATE] Waiting {cooldown:.0f}s for MiniMax quota...")
+    time.sleep(cooldown)
+    reset_minimax_rate_limit_hits()
+    if probe_minimax(api_key):
+        print("[UPDATE] MiniMax quota available again")
+        return True
+    print("[UPDATE] MiniMax rate limit persists after cooldown")
+    return False
 
 
 def _truncate_text(text: str, max_chars: int) -> str:
@@ -921,7 +1011,7 @@ def _chat_once(
         code, body = _minimax_chat(api_key, system_prompt, user)
         last_body = body
         if code == 429:
-            time.sleep(2.0 * (attempt + 1))
+            _MINIMAX_LIMITER.wait()
             continue
         if code == 401:
             _warn_minimax_401_once(len(api_key))
@@ -1123,9 +1213,14 @@ def retag_all_posts(
     print(f"[UPDATE] Re-tagging {total} post(s) with {workers} worker(s)...")
     count = 0
     write_lock = threading.Lock()
+    quota_stop = threading.Event()
 
     def _apply_tags(post: dict, board_slug: str) -> None:
+        if quota_stop.is_set():
+            return
         tags = tag_post(post, board_slug, tree, None, api_key)
+        if quota_stop.is_set():
+            return
         post["aiCategories"] = tags["aiCategories"]
         post["aiTaggedAt"] = tags["aiTaggedAt"]
         post["aiTaxonomyVersion"] = tags.get("aiTaxonomyVersion")
@@ -1138,6 +1233,8 @@ def retag_all_posts(
             for post, board_slug in tag_jobs
         }
         for fut in as_completed(futures):
+            if quota_stop.is_set():
+                break
             post, board_slug = futures[fut]
             try:
                 fut.result()
@@ -1147,5 +1244,10 @@ def retag_all_posts(
             except Exception as e:
                 pid = post.get("_id", "?")
                 print(f"[ERROR] AI retag crashed for {board_slug}/{pid}: {e}")
+            if _MINIMAX_LIMITER.rate_limit_hits > 0 and not quota_stop.is_set():
+                if not probe_minimax(api_key):
+                    print("[UPDATE] Stopping retag pass; MiniMax rate limited")
+                    quota_stop.set()
+                    break
 
     return count
