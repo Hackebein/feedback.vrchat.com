@@ -1,6 +1,11 @@
 {
   "_id": "69cfe037d084c3d47bb98858",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-11T06:45:27.937558Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "612a02ff537735196f11ff83",
     "alias": "Brick red Lungfish",
@@ -26,7 +31,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1286,
+    "postCount": 1303,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -308,23 +313,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/9c651118f32ab09a9362b540c3691017.png"
   ],
-  "lastUpdated": 1780961305161,
+  "lastUpdated": 1781160084743,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 78,
+  "maxScore": 79,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69cfe037d084c3d47bb98858/277505136.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 78,
+  "score": 79,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-04-07T14:55:26.684Z",
   "subCategoryID": null,
   "title": "[1818] VRC Raycast component player collisions are only visible to the player being collided with.",
-  "trendingScore": 2945.4863499448456,
-  "updatedAt": "2026-06-08T23:29:28.981316Z",
+  "trendingScore": 2945.9732723277934,
+  "updatedAt": "2026-06-11T06:45:26.094946Z",
   "updatedBy": "612a02ff537735196f11ff83",
   "urlName": "1818-vrc-raycast-component-player-collisions-are-only-visible-to-the-player-bein",
   "viewerIsAuthor": false,
@@ -336,6 +341,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "60283c7c4c9a9639a694c668",
+      "alias": "Maximum Otter",
+      "aliasID": "65c2824ced6eefce4c9ed3d3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6776765cc171d0e62da010aac7f7402d.png",
+      "companies": [],
+      "name": "BluWizard",
+      "urlName": "<redacted>",
+      "voteID": "6a2a29cc86d7b8843b1c23d3"
+    },
     {
       "_id": "69ba46c9ed082c9981cdcc0f",
       "alias": "Mantis Vole",
@@ -434,17 +450,6 @@
       "name": "OηiJayuu",
       "urlName": "<redacted>",
       "voteID": "6a024370cf565b8f74002703"
-    },
-    {
-      "_id": "631a2053a6c75444bf9a4f30",
-      "alias": "Worthwhile Swan",
-      "aliasID": "65cac663ed6eefce4c06d3c6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/03185b342885e72f1687473a1f426244.png",
-      "companies": [],
-      "name": "Mr․ Imagination",
-      "urlName": "<redacted>",
-      "voteID": "69ffed8dcf565b8f74f13e3b"
     }
   ]
 }
