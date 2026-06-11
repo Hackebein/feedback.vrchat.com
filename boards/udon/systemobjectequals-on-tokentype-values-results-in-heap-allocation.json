@@ -1,6 +1,11 @@
 {
   "_id": "69ed4b011d3372f715948f0b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-11T04:03:32.000470Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c1475afb7ce126e9e0e3a39",
     "alias": "Wineberry Leopard",
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 968,
+    "postCount": 969,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -127,7 +132,7 @@
     "https://canny-assets.io/images/aa9d9ce2277a93e654f02e16b1fc4f96.png",
     "https://canny-assets.io/images/598cad96ad5f2d615fb09d063bb75970.png"
   ],
-  "lastUpdated": 1780766953682,
+  "lastUpdated": 1781142698107,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -143,7 +148,7 @@
   "subCategoryID": null,
   "title": "System.Object.equals on TokenType values results in heap allocation",
   "trendingScore": 2939.745774240403,
-  "updatedAt": "2026-06-06T17:29:20.138500Z",
+  "updatedAt": "2026-06-11T01:52:08.702909Z",
   "updatedBy": null,
   "urlName": "systemobjectequals-on-tokentype-values-results-in-heap-allocation",
   "viewerIsAuthor": false,

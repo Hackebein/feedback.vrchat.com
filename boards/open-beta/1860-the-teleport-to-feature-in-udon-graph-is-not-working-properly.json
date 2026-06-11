@@ -1,10 +1,11 @@
 {
   "_id": "6a2983c29b982466f9f15fbf",
   "aiCategories": [
-    "loc.unity-sdk",
+    "loc.in-world",
+    "worlds.travel",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-11T00:41:29.507444Z",
+  "aiTaggedAt": "2026-06-11T01:52:10.356545Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "647214fb5117760951ae63e3",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "_id": "6a29ee3e09be8cd623e64d60",
@@ -118,7 +119,7 @@
       "postID": "6a2983c29b982466f9f15fbf",
       "private": false,
       "reactions": {
-        "like": 8
+        "like": 10
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -276,7 +277,7 @@
       "postID": "6a2983c29b982466f9f15fbf",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -321,13 +322,59 @@
       "postDeleted": false,
       "postID": "6a2983c29b982466f9f15fbf",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I should add that issue is still present in Build 1861",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a2a0c45790839395516c6db",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67e58e6e182101f97678d171",
+        "alias": "Taupe Lemming",
+        "aliasID": "67e58e6e5388f556dbe64517",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d50e0224b109935c1710ac9a5d1b12f9.png",
+        "created": "2025-03-27T17:44:14.374Z",
+        "name": "こたろ-Kotaro",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-11T01:15:49.178Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2983c29b982466f9f15fbf",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "needs urgent fix",
       "viewerReactions": null,
       "voteID": null
     }
@@ -345,23 +392,23 @@
   "files": [],
   "ideaID": "6a2983c29b982466f9f15f9e",
   "imageURLs": [],
-  "lastUpdated": 1781138478133,
+  "lastUpdated": 1781142435173,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 92,
+  "maxScore": 108,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2983c29b982466f9f15fbf/1598116202.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 92,
+  "score": 108,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-06-10T15:33:22.347Z",
   "subCategoryID": null,
   "title": "[1860] The “Teleport To” feature in Udon Graph is not working properly",
-  "trendingScore": 2949.5281645460454,
-  "updatedAt": "2026-06-11T00:41:18.546783Z",
+  "trendingScore": 2949.6886251631954,
+  "updatedAt": "2026-06-11T01:52:08.702909Z",
   "updatedBy": null,
   "urlName": "1860-the-teleport-to-feature-in-udon-graph-is-not-working-properly",
   "viewerIsAuthor": false,
@@ -374,114 +421,114 @@
   },
   "voters": [
     {
-      "_id": "5fcaa3406b9eeb390426d873",
-      "alias": "Jasper Harrier",
-      "aliasID": "6605f6c6d90e505763d6dd60",
+      "_id": "62e13ca051568d5cdab22436",
+      "alias": "Familiar Bovid",
+      "aliasID": "660912cfe5d26962aa8aaed0",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/19206883a7aef1ce62d323f4554bb879.png",
+      "avatarURL": "https://canny-assets.io/images/5b33779333fd163d340bd90bb2669ece.png",
       "companies": [],
-      "name": "QP.",
+      "name": "ׅׅ▲ׅ",
       "urlName": "<redacted>",
-      "voteID": "6a2a02c386d7b8843b1b8b95"
+      "voteID": "6a2a11d686d7b8843b1bc816"
     },
     {
-      "_id": "62df112d9e0ae944b14095d7",
-      "alias": "Gentle Ladybug",
-      "aliasID": "66eea79c7d32abb6ca1c53e5",
+      "_id": "66f6b35e9e2f20321d40b84f",
+      "alias": "Fairy tale Mink",
+      "aliasID": "66f6b35f7d32abb6caa8cd1d",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a8787038bcef3971cf74b44be61895e8.png",
+      "avatarURL": "https://canny-assets.io/images/acc40a7dbcf9146e551efa0bc7b124d1.png",
       "companies": [],
-      "name": "draeve",
+      "name": "こんせんと",
       "urlName": "<redacted>",
-      "voteID": "6a2a01ad86d7b8843b1b8904"
+      "voteID": "6a2a114886d7b8843b1bc4c1"
     },
     {
-      "_id": "6a2a01a586d7b8843b1b88f3",
-      "alias": "Devoted Jay",
-      "aliasID": "6a2a01a686d7b8843b1b88f6",
+      "_id": "67bd4b1e8caf98b23b3e50ff",
+      "alias": "International orange Gerbil",
+      "aliasID": "67bd4b1eb324a96209681fab",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/79873e585bb902f2f8422e7d97778204.png",
+      "avatarURL": "https://canny-assets.io/images/2a2afd193ebe61eef81787027457d5de.png",
       "companies": [],
-      "name": "JoshMagic",
+      "name": "Just a Kuudere",
       "urlName": "<redacted>",
-      "voteID": "6a2a01ab86d7b8843b1b88fc"
+      "voteID": "6a2a105886d7b8843b1bc1b9"
     },
     {
-      "_id": "65347b5cdd53aa459da8b040",
-      "alias": "Yellow green Locust",
-      "aliasID": "6608b155e5d26962aab5f422",
+      "_id": "6856726f16069571f6b04cee",
+      "alias": "Teal blue Scallop",
+      "aliasID": "6856726f16069571f6b0581f",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2b9a07376def731665df2c7b18285c9d.png",
+      "avatarURL": "https://canny-assets.io/images/b41d6a03bb32b336bb892cb1d20cfa76.png",
       "companies": [],
-      "name": "Zoru Blitzfire",
+      "name": "Chloro_",
       "urlName": "<redacted>",
-      "voteID": "6a2a00a886d7b8843b1b86ed"
+      "voteID": "6a2a0fcd86d7b8843b1bc022"
     },
     {
-      "_id": "5c35ba9c292fe82e2288d858",
-      "alias": "Reduced Lynx",
-      "aliasID": "65c65bdeed6eefce4c032957",
+      "_id": "68049ebd940a9bda67d40642",
+      "alias": "Wandering Barracuda",
+      "aliasID": "68049ebd8ccc1d8b3b1b58da",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ccf412e485e8088f29aed4885a966faa.png",
+      "avatarURL": "https://canny-assets.io/images/c7cd48515c1829898aa6af44c20266a0.png",
       "companies": [],
-      "name": "Rathain Kuromaru",
+      "name": "superiol",
       "urlName": "<redacted>",
-      "voteID": "6a29ff6586d7b8843b1b81b2"
+      "voteID": "6a2a0f6f86d7b8843b1bbf5f"
     },
     {
-      "_id": "6a29fe3486d7b8843b1b7c4b",
-      "alias": "Venetian yellow Anteater",
-      "aliasID": "6a29fe3486d7b8843b1b7c4f",
+      "_id": "68743c4d89ac9916891e874f",
+      "alias": "Gleaming Newt",
+      "aliasID": "68743c4e89ac9916891ec9e9",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/addcd0609f1a44a3fb61911047136982.png",
+      "avatarURL": "https://canny-assets.io/images/c4940fe4651aa51e25ec2f7cf4c34fa3.png",
       "companies": [],
-      "name": "SOBA127",
+      "name": "Mystle",
       "urlName": "<redacted>",
-      "voteID": "6a29fe3b86d7b8843b1b7c65"
+      "voteID": "6a2a0e9e86d7b8843b1bbd9f"
     },
     {
-      "_id": "5cdea801a6118222143193f3",
-      "alias": "Minimum Hornet",
-      "aliasID": "65f2e18176937e5248602261",
+      "_id": "67e58e6e182101f97678d171",
+      "alias": "Taupe Lemming",
+      "aliasID": "67e58e6e5388f556dbe64517",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2585d0ce7475c4cf859acb74e0f47e92.png",
+      "avatarURL": "https://canny-assets.io/images/d50e0224b109935c1710ac9a5d1b12f9.png",
       "companies": [],
-      "name": "The Demon Slate",
+      "name": "こたろ-Kotaro",
       "urlName": "<redacted>",
-      "voteID": "6a29fdea86d7b8843b1b7bb2"
+      "voteID": "6a2a0c1386d7b8843b1bb3f5"
     },
     {
-      "_id": "6a29fcba86d7b8843b1b7978",
-      "alias": "Rapid Pigeon",
-      "aliasID": "6a29fcba86d7b8843b1b797c",
+      "_id": "68b3af86ce2ca2b52027cba9",
+      "alias": "Circular Salamander",
+      "aliasID": "68b3af86ce2ca2b52027d6ed",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a3fe9a12d2162c42753da3184de18815.png",
+      "avatarURL": "https://canny-assets.io/images/6b6c881ba11b62d4818ff2a404aa6f57.png",
       "companies": [],
-      "name": "poop 78e2",
+      "name": "SP-220 HawkFire",
       "urlName": "<redacted>",
-      "voteID": "6a29fcbd86d7b8843b1b798a"
+      "voteID": "6a2a0b2e86d7b8843b1bb0ba"
     },
     {
-      "_id": "69afe25d95d05cb740d038dd",
-      "alias": "Celestial blue Lemming",
-      "aliasID": "69afe25e95d05cb740d056b7",
+      "_id": "6064d5ded9f7731dba16126b",
+      "alias": "Gray Sheep",
+      "aliasID": "65c47d27ed6eefce4c8c1fb8",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7ed5a19ac13eaffc3e5ac41ca26ff392.png",
+      "avatarURL": "https://canny-assets.io/images/57b38f4de405b1de3b882d5d20c21860.png",
       "companies": [],
-      "name": "_-Zero-_",
+      "name": "AtomAlp",
       "urlName": "<redacted>",
-      "voteID": "6a29fc5386d7b8843b1b7808"
+      "voteID": "6a2a09ce86d7b8843b1babd1"
     },
     {
-      "_id": "5e80645c82edb3758aa01214",
-      "alias": "Brass Lamprey",
-      "aliasID": "65c2a219ed6eefce4c62c1bd",
+      "_id": "6a169b065a52cb2df0a111af",
+      "alias": "Economic Whippet",
+      "aliasID": "6a169b075a52cb2df0a111b2",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e7f20692ba9b240b41289fc35933a198.png",
+      "avatarURL": "https://canny-assets.io/images/21f03e64f4071a48400f85ac931fd453.png",
       "companies": [],
-      "name": "satsuki（桜月）",
+      "name": "みどりのり",
       "urlName": "<redacted>",
-      "voteID": "6a29fa8886d7b8843b1b6d83"
+      "voteID": "6a2a09b186d7b8843b1bab76"
     }
   ]
 }

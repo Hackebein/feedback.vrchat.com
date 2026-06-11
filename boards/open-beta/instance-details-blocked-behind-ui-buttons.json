@@ -1,6 +1,12 @@
 {
   "_id": "6a2712227b29a9a41af4fd42",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "loc.main-menu",
+    "platforms.pc.steam"
+  ],
+  "aiTaggedAt": "2026-06-11T01:52:10.387779Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
     "alias": "Dynamic Starfish",
@@ -198,34 +204,45 @@
   "imageURLs": [
     "https://canny-assets.io/images/4149635233f045203068cf53422acc22.png"
   ],
-  "lastUpdated": 1781127540249,
+  "lastUpdated": 1781142435908,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 5,
+  "maxScore": 6,
   "mergeCount": 2,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2712227b29a9a41af4fd42/38001635.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 5,
+  "score": 6,
   "sourceFeatureExtractionItem": null,
   "status": "available in future release",
   "statusChanged": "2026-06-09T15:58:36.851Z",
   "subCategoryID": null,
   "title": "Instance Details Blocked Behind UI Buttons",
-  "trendingScore": 2946.5431776873816,
-  "updatedAt": "2026-06-10T21:43:36.321101Z",
+  "trendingScore": 2946.735351472862,
+  "updatedAt": "2026-06-11T01:52:08.702909Z",
   "updatedBy": null,
   "urlName": "instance-details-blocked-behind-ui-buttons",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
-    "highEngagement": false,
+    "highEngagement": true,
     "lowEngagement": false,
-    "moderateEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6050972e03276b03f63ca0b8",
+      "alias": "Iced lavender Crow",
+      "aliasID": "65c28083ed6eefce4c570d77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a3e012df48a774adc74704443e3852b0.png",
+      "companies": [],
+      "name": "Tran Fox",
+      "urlName": "<redacted>",
+      "voteID": "6a29e64b86d7b8843b1a8e1d"
+    },
     {
       "_id": "60c87a5d16d979790d8309cf",
       "alias": "Tawny Raven",

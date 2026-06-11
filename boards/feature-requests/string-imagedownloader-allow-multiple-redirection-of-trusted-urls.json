@@ -1,6 +1,13 @@
 {
   "_id": "6a281de43ad7ad1ed22c0ca1",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "worlds.video",
+    "worlds.content-gating"
+  ],
+  "aiTaggedAt": "2026-06-11T01:52:10.429143Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "620a5d1fe252983eec300b4c",
     "alias": "Eastern Whitefish",
@@ -186,7 +193,7 @@
     "https://canny-assets.io/images/f0d8661ce1f4d6a96fedf3bc69a6ac2b.png",
     "https://canny-assets.io/images/2597a829ffd2b2e069dc7dad1d0c2834.png"
   ],
-  "lastUpdated": 1781127540502,
+  "lastUpdated": 1781142436212,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 8,
@@ -202,7 +209,7 @@
   "subCategoryID": null,
   "title": "[String/ImageDownloader] Allow multiple redirection of trusted URLs",
   "trendingScore": 2947.0423065616187,
-  "updatedAt": "2026-06-10T21:43:36.321101Z",
+  "updatedAt": "2026-06-11T01:52:08.702909Z",
   "updatedBy": "620a5d1fe252983eec300b4c",
   "urlName": "string-imagedownloader-allow-multiple-redirection-of-trusted-urls",
   "viewerIsAuthor": false,
