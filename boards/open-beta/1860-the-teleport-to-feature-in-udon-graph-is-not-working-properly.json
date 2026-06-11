@@ -1,10 +1,12 @@
 {
   "_id": "6a2983c29b982466f9f15fbf",
   "aiCategories": [
+    "loc.in-world",
     "loc.unity-sdk",
-    "sdk.udon"
+    "sdk.udon",
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-06-11T06:45:27.933761Z",
+  "aiTaggedAt": "2026-06-11T11:33:31.884383Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "647214fb5117760951ae63e3",
@@ -35,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 8,
+  "commentCount": 9,
   "comments": [
     {
       "_id": "6a29ee3e09be8cd623e64d60",
@@ -118,7 +120,7 @@
       "postID": "6a2983c29b982466f9f15fbf",
       "private": false,
       "reactions": {
-        "like": 11
+        "like": 12
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -326,7 +328,7 @@
       "postID": "6a2983c29b982466f9f15fbf",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -428,6 +430,50 @@
       "value": "Plz fix, it also affecting what I’m working on too",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a2a925a397ea6df240b5d42",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65995c14d2a772001a44e393",
+        "alias": "Julep green Sawfish",
+        "aliasID": "65c2a2c2ed6eefce4c7bd714",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/196a1f8d37c7a003a259a8dc60ac4d1e.png",
+        "created": "2024-01-06T13:56:36.098Z",
+        "name": "Shadryn",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-11T10:47:54.705Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2983c29b982466f9f15fbf",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "plz fix this yo",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -443,23 +489,23 @@
   "files": [],
   "ideaID": "6a2983c29b982466f9f15f9e",
   "imageURLs": [],
-  "lastUpdated": 1781169854640,
+  "lastUpdated": 1781177337594,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 132,
+  "maxScore": 139,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2983c29b982466f9f15fbf/1598116202.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 132,
+  "score": 139,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-06-10T15:33:22.347Z",
   "subCategoryID": null,
   "title": "[1860] The “Teleport To” feature in Udon Graph is not working properly",
-  "trendingScore": 2949.8937444358357,
-  "updatedAt": "2026-06-11T09:28:45.436469Z",
+  "trendingScore": 2949.948068548368,
+  "updatedAt": "2026-06-11T11:33:30.001278Z",
   "updatedBy": null,
   "urlName": "1860-the-teleport-to-feature-in-udon-graph-is-not-working-properly",
   "viewerIsAuthor": false,
@@ -471,6 +517,83 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "67ed34895a2279b95e900a04",
+      "alias": "Jonquil yellow Tapir",
+      "aliasID": "67ed348a5388f556db9b99d7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/68150c0e072f3ab32da366f60204bef3.png",
+      "companies": [],
+      "name": "ozpxxly",
+      "urlName": "<redacted>",
+      "voteID": "6a2a958723fd92cd3c499cdb"
+    },
+    {
+      "_id": "62a7cc4b5bb57d0bb240b0cb",
+      "alias": "Upper Parrotfish",
+      "aliasID": "65c8a417ed6eefce4c58d8be",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f8f495627cbd0881ce7ac1f68b18a8e2.png",
+      "companies": [],
+      "name": "Cyberboy55126",
+      "urlName": "<redacted>",
+      "voteID": "6a2a938823fd92cd3c499518"
+    },
+    {
+      "_id": "65995c14d2a772001a44e393",
+      "alias": "Julep green Sawfish",
+      "aliasID": "65c2a2c2ed6eefce4c7bd714",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/196a1f8d37c7a003a259a8dc60ac4d1e.png",
+      "companies": [],
+      "name": "Shadryn",
+      "urlName": "<redacted>",
+      "voteID": "6a2a925e23fd92cd3c498dac"
+    },
+    {
+      "_id": "68760a0989ac99168932de02",
+      "alias": "Extra Hamster",
+      "aliasID": "68760a0a89ac991689330691",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a967f9c6f8a32e01e16ac79fc5808572.png",
+      "companies": [],
+      "name": "ppk86",
+      "urlName": "<redacted>",
+      "voteID": "6a2a8dfa23fd92cd3c497104"
+    },
+    {
+      "_id": "5a4f061ba3192e49202db0a1",
+      "alias": "Thick Thrush",
+      "aliasID": "65ba01d8ed6eefce4cfc72d9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/48d7895f85f44672d8ca9d36278910a4.png",
+      "companies": [],
+      "name": "Nolfinkol",
+      "urlName": "<redacted>",
+      "voteID": "6a2a8aee23fd92cd3c4962bd"
+    },
+    {
+      "_id": "5f55aac93ed3001b746621d3",
+      "alias": "Excellent Tapir",
+      "aliasID": "65c4979aed6eefce4c8dfb51",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c83de85d3b715b214c1fe7ec5104d9c5.png",
+      "companies": [],
+      "name": "Tokiame",
+      "urlName": "<redacted>",
+      "voteID": "6a2a88ee23fd92cd3c49537c"
+    },
+    {
+      "_id": "69364d574927a96e58e952d7",
+      "alias": "Ultraviolet Haddock",
+      "aliasID": "69364d584927a96e58e96683",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d25f60ab856c8d4d7c7f6cdbeae58f7b.png",
+      "companies": [],
+      "name": "Minazuki 5378",
+      "urlName": "<redacted>",
+      "voteID": "6a2a82fc23fd92cd3c492a45"
+    },
     {
       "_id": "62e06cd0bf6ab044a2054664",
       "alias": "Exuberant Cattle",
@@ -503,83 +626,6 @@
       "name": "TrueHiddenS",
       "urlName": "<redacted>",
       "voteID": "6a2a764c23fd92cd3c48c081"
-    },
-    {
-      "_id": "62def935a3f99544ac97e57f",
-      "alias": "Harlequin Tapir",
-      "aliasID": "66f6ce877d32abb6caca2d05",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7eb578b3dbef4cafc0c8abdd893a0682.png",
-      "companies": [],
-      "name": "MikuChanAnime",
-      "urlName": "<redacted>",
-      "voteID": "6a2a670723fd92cd3c487c9d"
-    },
-    {
-      "_id": "679fbbe2ce517e89ea632a9a",
-      "alias": "Lexical Sailfish",
-      "aliasID": "679fbbe2afacf378f11611ad",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6ed7724ce20c76f6e86f415aba7cc059.png",
-      "companies": [],
-      "name": "BuIlDaLiBlE",
-      "urlName": "<redacted>",
-      "voteID": "6a2a640323fd92cd3c486b88"
-    },
-    {
-      "_id": "64c4a4b2878ae528e3467285",
-      "alias": "Xenia silver Koi",
-      "aliasID": "6a2a638d23fd92cd3c4869b4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/612534f27a2b692220c64ac7ce8ac88b.png",
-      "companies": [],
-      "name": "蒼鳴／Souna",
-      "urlName": "<redacted>",
-      "voteID": "6a2a639923fd92cd3c4869c7"
-    },
-    {
-      "_id": "61c1d3e2dd59d468fac26926",
-      "alias": "Jute Marmot",
-      "aliasID": "66be4c863e088c8d6b7ae032",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/5fc1b6f1f9fd1d3ae855d8c090fc4151.png",
-      "companies": [],
-      "name": "Yuko Akiharu",
-      "urlName": "<redacted>",
-      "voteID": "6a2a639523fd92cd3c4869bf"
-    },
-    {
-      "_id": "5f70af43c3c2316a736cb944",
-      "alias": "Cyan Sheep",
-      "aliasID": "65c449dded6eefce4cd13bea",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/3ce92f75de54521431bbac950080af14.png",
-      "companies": [],
-      "name": "nkt_にこまる",
-      "urlName": "<redacted>",
-      "voteID": "6a2a62cb23fd92cd3c4866f7"
-    },
-    {
-      "_id": "6812af58a6e84b00f64bf0ba",
-      "alias": "Noble Tyrannosaurus",
-      "aliasID": "6812af598ccc1d8b3bf764aa",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/241a6dbb4c988d72ea4da24dfc724bd0.png",
-      "companies": [],
-      "name": "_Bibou_",
-      "urlName": "<redacted>",
-      "voteID": "6a2a5db923fd92cd3c483e56"
-    },
-    {
-      "_id": "64c83654b2f58063d127056b",
-      "alias": "Ivory Gopher",
-      "aliasID": "65d5a9990129d7ae44a21e8d",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ee0556addb844d705d0677a13fa2feca.png",
-      "companies": [],
-      "name": "SweetCandy3000",
-      "urlName": "<redacted>",
-      "voteID": "6a2a4f1723fd92cd3c48052f"
     }
   ]
 }
