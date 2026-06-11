@@ -1,7 +1,11 @@
 {
   "_id": "6a25e8ea79fe2ce16a4e34db",
-  "aiCategories": [],
-  "aiTaggedAt": "2026-06-09T23:32:29.342834Z",
+  "aiCategories": [
+    "loc.in-world",
+    "content-official-events"
+  ],
+  "aiTaggedAt": "2026-06-11T00:41:29.434732Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "641fa41c6d715b45cde4f5ca",
     "alias": "Buff Pike",
@@ -67,7 +71,9 @@
       "postDeleted": false,
       "postID": "6a25e8ea79fe2ce16a4e34db",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -91,23 +97,23 @@
   "files": [],
   "ideaID": "6a25e8ea79fe2ce16a4e34da",
   "imageURLs": [],
-  "lastUpdated": 1781127541332,
+  "lastUpdated": 1781138477802,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 17,
+  "maxScore": 19,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a25e8ea79fe2ce16a4e34db/1026048519.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 17,
+  "score": 19,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-06-07T21:55:54.941Z",
   "subCategoryID": null,
   "title": "Change Pride flag",
-  "trendingScore": 2947.640017291372,
-  "updatedAt": "2026-06-10T21:43:36.321101Z",
+  "trendingScore": 2947.7726551664864,
+  "updatedAt": "2026-06-11T00:41:18.546783Z",
   "updatedBy": null,
   "urlName": "change-pride-flag",
   "viewerIsAuthor": false,
@@ -119,6 +125,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62e03f4e44af5544b2228fa5",
+      "alias": "Burnt sienna Landfowl",
+      "aliasID": "65c2c12eed6eefce4c82d31d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/445b53aabed1e11c4cde8a879aae29b9.png",
+      "companies": [],
+      "name": "Comfy Chloe",
+      "urlName": "comfy-chloe",
+      "voteID": "6a29ecce86d7b8843b1aaed8"
+    },
+    {
+      "_id": "62dee8d16509e344b6eb41a1",
+      "alias": "Persistent Llama",
+      "aliasID": "6860086516069571f6db4c64",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6f46282245ad03f56f34e9b0a5970e1a.png",
+      "companies": [],
+      "name": "Vanity™",
+      "urlName": "vanity-5",
+      "voteID": "6a29ead886d7b8843b1aa732"
+    },
     {
       "_id": "5f35192f7fdec8616ef4e7c9",
       "alias": "Acute Loon",
@@ -206,28 +234,6 @@
       "name": "Hana Seong",
       "urlName": "hana-seong",
       "voteID": "6a28885886d7b8843bf4c5d9"
-    },
-    {
-      "_id": "60eff978031b842a5e2b7fff",
-      "alias": "Olive drab Armadillo",
-      "aliasID": "65f20d7876937e52485cc657",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2d2c2b45cc1d247a0d81da45a6ee4234.png",
-      "companies": [],
-      "name": "MimmiPeppermint",
-      "urlName": "mimmi-uwu",
-      "voteID": "6a2886d386d7b8843bf4be59"
-    },
-    {
-      "_id": "5f2c5ef48a580227505d567c",
-      "alias": "Additional Deer",
-      "aliasID": "65e103b6a6e3ea79dd91cae6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/fbf9af5efed40b520fe38b42954953dd.png",
-      "companies": [],
-      "name": "pinkiceygirl",
-      "urlName": "pinkiceygirl",
-      "voteID": "6a287f6386d7b8843bf482ad"
     }
   ]
 }
