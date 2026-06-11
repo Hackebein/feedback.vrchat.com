@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "62c74a833b72cf0bad5b3627",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.action-menu",
+    "loc.main-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-11T11:48:43.531492Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fca5df4d58780532024a52b",
     "alias": "Toffee Tortoise",
@@ -37,7 +44,7 @@
   "files": [],
   "ideaID": "680bb8ffe4c3e90df13627e1",
   "imageURLs": [],
-  "lastUpdated": 1780784641669,
+  "lastUpdated": 1781177535412,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -52,7 +59,7 @@
   "subCategoryID": null,
   "title": "Opening the Action or Main Menu does not block UI input to worlds",
   "trendingScore": 2741.51283905652,
-  "updatedAt": "2026-06-06T22:26:01.721703Z",
+  "updatedAt": "2026-06-11T11:33:30.001278Z",
   "urlName": "opening-the-action-or-main-menu-does-not-block-ui-input-to-worlds",
   "viewerIsAuthor": false,
   "viewerVote": 0,
