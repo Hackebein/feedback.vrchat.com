@@ -1,0 +1,93 @@
+{
+  "_id": "6a2abc97403b50d51dc5c4d3",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-11T14:55:48.355965Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "646257b2486c4a0932080360",
+    "alias": "Quartz Trout",
+    "aliasID": "65f3347a76937e52485ac26a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/0abf1246006f5fc4671f36a3beaa40c2.png",
+    "created": "2023-05-15T16:02:58.925Z",
+    "name": "ここあ こあ",
+    "serviceAccount": false,
+    "urlName": "234ff5"
+  },
+  "authorID": "646257b2486c4a0932080360",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 970,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-11T13:48:07.931Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Environment:\n\n- Unity version: 2022.3.22f1\n\n- VRChat SDK Worlds: 3.10.3\n\n- VRChat SDK Base: 3.10.3\n\n- UdonSharp included with SDK\n\n- Project uses Prefab Mode / PrefabStage with UdonSharpBehaviour components\n\n- YamaPlayer package present: net.kwxxx.yama-stream 1.5.18\n\nObserved:\n\nWhen opening or editing prefabs containing UdonSharpBehaviour components in Prefab Mode, Unity logs repeated ArgumentNullException errors from OdinSerializer UnitySerializationUtility.\n\nError:\n\nArgumentNullException: Value cannot be null.\n\nParameter name: unityObject\n\nVRC.Udon.Serialization.OdinSerializer.UnitySerializationUtility.SerializeUnityObject(...)\n\nUdonSharp.UdonSharpBehaviour.UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize()\n\nand similarly:\n\nUnitySerializationUtility.DeserializeUnityObject(...)\n\nUdonSharp.UdonSharpBehaviour.UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize()\n\nTrigger:\n\n- Open a prefab containing UdonSharpBehaviour in Prefab Mode\n\n- Move a child object or let PrefabStage autosave run\n\n- Errors repeat, sometimes dozens/hundreds per save\n\nExpected:\n\nPrefabStage autosave should not throw if a Unity pseudo-null UdonSharpBehaviour or serialized target is encountered. It should skip invalid objects or handle UnityEngine.Object pseudo-null safely.\n\nAdditional finding:\n\nFor diagnosis only, I temporarily tested a local guard around the SDK serialization path. The test indicated that the affected object was not a normal C# null reference, but behaved as null through Unity's overloaded UnityEngine.Object null comparison. With that guard in place, the exception stopped.\n\nI am not using this as a permanent workaround and do not intend to publish content with a modified SDK. This observation is included only to help identify the likely failure path.\n\nAdditional observation:\n\nI have encountered this issue twice. In both cases, once the issue started occurring in the project, checking out older repository commits did not reliably make the issue disappear. This suggests that the trigger may involve Unity Library/cache/generated SDK state or some project-local serialized state, not only the currently checked out asset files.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a2abc97403b50d51dc5c4bd",
+  "imageURLs": [],
+  "lastUpdated": 1781189334898,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2abc97403b50d51dc5c4d3/294826673.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-11T13:48:07.931Z",
+  "subCategoryID": null,
+  "title": "UdonSharpBehaviour throws ArgumentNullException during PrefabStage autosave when Unity pseudo-null object is serialized",
+  "trendingScore": 2945.7753029775176,
+  "updatedAt": "2026-06-11T14:55:46.198798Z",
+  "updatedBy": null,
+  "urlName": "udonsharpbehaviour-throws-argumentnullexception-during-prefabstage-autosave-when",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "646257b2486c4a0932080360",
+      "alias": "Quartz Trout",
+      "aliasID": "65f3347a76937e52485ac26a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0abf1246006f5fc4671f36a3beaa40c2.png",
+      "companies": [],
+      "name": "ここあ こあ",
+      "urlName": "234ff5",
+      "voteID": "6a2abc9823fd92cd3c4a9c5d"
+    }
+  ]
+}
