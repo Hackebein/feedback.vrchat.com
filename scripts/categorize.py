@@ -465,6 +465,15 @@ def is_stale_taxonomy(post: dict | None) -> bool:
         return True
 
 
+def needs_retag(post: dict | None) -> bool:
+    """True when a stored post should be (re)classified by retag-ai."""
+    if not post:
+        return False
+    if not post.get("aiTaggedAt"):
+        return True
+    return is_stale_taxonomy(post)
+
+
 def clear_ai_tags_for_retag(post: dict) -> bool:
     """Clear AI tag fields so the post will be re-classified. Returns True if modified."""
     had = post.get("aiTaggedAt") is not None or post.get("aiCategories") is not None
@@ -1200,7 +1209,7 @@ def retag_all_posts(
             continue
         if board_slug_filter and board_slug != board_slug_filter:
             continue
-        if only_stale and not is_stale_taxonomy(post):
+        if only_stale and not needs_retag(post):
             continue
         tag_jobs.append((post, board_slug))
         if limit is not None and len(tag_jobs) >= limit:

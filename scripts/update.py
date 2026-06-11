@@ -36,8 +36,8 @@ ROOT                 = Path(__file__).resolve().parent.parent
 BOARD_DIR            = board_store.BOARD_DIR
 README_FILE          = ROOT / "README.md"
 README_TEMPLATE_NAME = "README.md.j2"
-MAX_WORKERS          = 4
-AI_WORKERS           = 6
+MAX_WORKERS          = 2
+AI_WORKERS           = 4
 CANNY_HOST           = "feedback.vrchat.com"
 API_URL              = f"https://{CANNY_HOST}/api/posts/get"
 SITE_URL             = f"https://{CANNY_HOST}"
@@ -1000,7 +1000,7 @@ def _count_stale_posts(stored, tree, *, only_stale=True, board_slug_filter=None)
             continue
         if board_slug_filter and board_slug != board_slug_filter:
             continue
-        if only_stale and not categorize.is_stale_taxonomy(post):
+        if only_stale and not categorize.needs_retag(post):
             continue
         count += 1
     return count
