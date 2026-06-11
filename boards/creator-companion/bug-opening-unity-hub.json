@@ -4,7 +4,7 @@
     "loc.creator-companion",
     "sdk.vpm"
   ],
-  "aiTaggedAt": "2026-06-10T15:29:12.511276Z",
+  "aiTaggedAt": "2026-06-11T15:16:46.140000Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62defc82409a3144a973a961",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a15ed55fba07b4d531ca00a",
@@ -64,7 +64,9 @@
       "postDeleted": false,
       "postID": "6a11d10d1e75e00bbdb27599",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -108,6 +110,52 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a2acd38f1fe9f7420330eca",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ba54f21e3c8761e8c3080d8",
+        "alias": "Gossamer Muskox",
+        "aliasID": "65c2a244ed6eefce4c691969",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7107cd56a8fba42363ee1fb8cafd758.png",
+        "created": "2018-09-21T20:05:53.617Z",
+        "name": "Fires~",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "617b2e52d78bc972ff325a03",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-11T14:59:04.410Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a11d10d1e75e00bbdb27599",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I have this problem too.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -123,23 +171,23 @@
   "files": [],
   "ideaID": "6a11d10d1e75e00bbdb2759b",
   "imageURLs": [],
-  "lastUpdated": 1781189493937,
+  "lastUpdated": 1781190667523,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 4,
+  "maxScore": 5,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a11d10d1e75e00bbdb27599/2074983273.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 4,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-06-02T16:16:51.420Z",
   "subCategoryID": null,
   "title": "Bug opening unity hub",
-  "trendingScore": 2945.19344674103,
-  "updatedAt": "2026-06-11T14:55:46.198798Z",
+  "trendingScore": 2945.8357461038586,
+  "updatedAt": "2026-06-11T15:16:43.963012Z",
   "updatedBy": null,
   "urlName": "bug-opening-unity-hub",
   "viewerIsAuthor": false,
@@ -151,6 +199,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5ba54f21e3c8761e8c3080d8",
+      "alias": "Gossamer Muskox",
+      "aliasID": "65c2a244ed6eefce4c691969",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7107cd56a8fba42363ee1fb8cafd758.png",
+      "companies": [],
+      "name": "Fires~",
+      "urlName": "<redacted>",
+      "voteID": "6a2accd323fd92cd3c4b3159"
+    },
     {
       "_id": "5fca36def30ebe2c29400767",
       "alias": "Fortunate Swordtail",
