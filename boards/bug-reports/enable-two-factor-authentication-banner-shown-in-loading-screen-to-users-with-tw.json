@@ -1,7 +1,10 @@
 {
   "_id": "69f65df6b9f09a1132a4dce9",
-  "aiCategories": [],
-  "aiTaggedAt": "2026-06-10T20:30:42.893418Z",
+  "aiCategories": [
+    "loc.loading-screen",
+    "account.2fa"
+  ],
+  "aiTaggedAt": "2026-06-11T22:38:14.763967Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -25,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "69f7db49bb0e74aa9ef50ba1",
@@ -105,6 +108,62 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a2b34a9b6febfa30100d231",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-11T22:20:25.987Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "60dd2a998871d03e7f3806ae",
+          "alias": "Thoughtful Cobra",
+          "aliasID": "65c28339ed6eefce4cc2dd8f",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
+          "created": "2021-07-01T02:38:17.778Z",
+          "name": "~Pausbe",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69f65df6b9f09a1132a4dce9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I think the status of this bug should be changed \"complete\", it seems to be fixed.\n\nAccording to VRChat Wiki (or more specifically @{60dd2a998871d03e7f3806ae|full_name}), this is only shown when 2FA is not enabled. https://wiki.vrchat.com/wiki/Loading_Screens#Banners\n\nThe undocumented infopush API contains submitted data from the client about 2FA status nowadays (in addition to platform such as PC, VR/desktop, PCVR, VRC+ status, etc).\n\nI loaded up `wld_c95b8313-8607-4437-a808-57bd86eef5a1` for an infinite loading screen and I did not run into this 2FA banner for several minutes any longer. (I had 2FA enabled.)",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -121,7 +180,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/31ea386a59b0cd2caf115a17f99711bd.png"
   ],
-  "lastUpdated": 1781163312306,
+  "lastUpdated": 1781217191423,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -137,7 +196,7 @@
   "subCategoryID": null,
   "title": "\"Enable two-factor authentication\" banner shown in loading screen to users with two-factor authentication enabled",
   "trendingScore": 2941.3401723510187,
-  "updatedAt": "2026-06-11T07:36:30.889796Z",
+  "updatedAt": "2026-06-11T22:38:13.255954Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "enable-two-factor-authentication-banner-shown-in-loading-screen-to-users-with-tw",
   "viewerIsAuthor": false,
