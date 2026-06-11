@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "63998b8a848ab80a718a43a4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-11T01:52:10.354863Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5bbfe7082f9bdf3d5024c14d",
     "alias": "Incarnadine Meerkat",
@@ -142,7 +147,7 @@
         "alias": "Gainsboro Blackbird",
         "aliasID": "65c2a2a0ed6eefce4c76962d",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/301b9fcb05fe01a2ecd2fdd08d82142b.png",
+        "avatarURL": "https://canny-assets.io/images/fb5a1a40209d42073e3354fe798bcda5.png",
         "created": "2020-08-08T13:55:36.280Z",
         "name": "Shiro K",
         "serviceAccount": false,
@@ -342,7 +347,7 @@
       "postID": "63998b8a848ab80a718a43a4",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -369,23 +374,23 @@
     "https://canny.io/images/321f908c94b7b8d8c20cc47dd3d2e282.png",
     "https://canny.io/images/022294578d3745a7911fc7406b3ef07b.png"
   ],
-  "lastUpdated": 1781127634322,
+  "lastUpdated": 1781142435344,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 31,
+  "maxScore": 33,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/63998b8a848ab80a718a43a4/1054125842.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 31,
+  "score": 33,
   "sourceFeatureExtractionItem": null,
   "status": "in progress",
   "statusChanged": "2026-05-26T21:00:20.790Z",
   "subCategoryID": null,
   "title": "[1275] InputUse is called twice per mouse click",
-  "trendingScore": 2944.3303395465746,
-  "updatedAt": "2026-06-10T21:43:36.321101Z",
+  "trendingScore": 2945.9278350529908,
+  "updatedAt": "2026-06-11T01:52:08.702909Z",
   "urlName": "1275-inputuse-is-called-twice-per-mouse-click",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -396,6 +401,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "60ee9e81572cc51ad4e847e6",
+      "alias": "Vervain Falcon",
+      "aliasID": "65c291bded6eefce4cf7d1c9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/83e02963b4f98b417c8670b892a41953.png",
+      "companies": [],
+      "name": "BobyStar",
+      "urlName": "bobystar",
+      "voteID": "6a2a0f1586d7b8843b1bbe8c"
+    },
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/38c9c43845fc98cba69a5e2e0d5c5298.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": "bryan-bortz",
+      "voteID": "6a2a0e3f86d7b8843b1bbcc9"
+    },
     {
       "_id": "62df0cc446e66844a852fd59",
       "alias": "Structural Sparrow",
@@ -483,28 +510,6 @@
       "name": "PeachBight",
       "urlName": "peachbight",
       "voteID": "67c0a3c1b324a96209fe9322"
-    },
-    {
-      "_id": "62def540a43c56449fa0079a",
-      "alias": "Zephyr Leopard",
-      "aliasID": "65c2b8e3ed6eefce4c6f7a2e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ef83e6e646446fcbdc211184e29c3b9e.png",
-      "companies": [],
-      "name": "Kyrowo",
-      "urlName": "kyrowo",
-      "voteID": "678aac2649f71d913e2baa46"
-    },
-    {
-      "_id": "6443a06382ac9e0912532701",
-      "alias": "High Salmon",
-      "aliasID": "65c297eded6eefce4ce58306",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2f07eaaa7a0c3876c62c3cc237a348e2.png",
-      "companies": [],
-      "name": "vavassor",
-      "urlName": "vavassor",
-      "voteID": "6753ad28a367fa63927dc0fa"
     }
   ]
 }
