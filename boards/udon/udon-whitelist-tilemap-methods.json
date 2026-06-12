@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "635d6fddbfb540451a10d6ea",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-12T11:21:11.482589Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2ce897a860ab34bc740b47",
     "alias": "Agreeable Harrier",
@@ -44,22 +49,22 @@
   "files": [],
   "ideaID": "680bb94ce4c3e90df1371bd6",
   "imageURLs": [],
-  "lastUpdated": 1781041096396,
+  "lastUpdated": 1781262895611,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 13,
+  "maxScore": 14,
   "mergeCount": 0,
   "notFound": false,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 13,
+  "score": 14,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2022-10-29T18:24:29.930Z",
   "subCategoryID": null,
   "title": "Udon Whitelist Tilemap Methods",
-  "trendingScore": 2759.2155183623845,
-  "updatedAt": "2026-06-09T21:38:22.891565Z",
+  "trendingScore": 2945.207116760913,
+  "updatedAt": "2026-06-12T11:21:09.255494Z",
   "urlName": "udon-whitelist-tilemap-methods",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -70,6 +75,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5fddbcadccfb9d4462e5037b",
+      "alias": "Daffodil Kite",
+      "aliasID": "65ec8812a6e3ea79dd446e88",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5f0172d055b22946316e652779b1d2b0.png",
+      "companies": [],
+      "name": "Marro64",
+      "urlName": "marro64",
+      "voteID": "6a2be3d0363a2f245181a328"
+    },
     {
       "_id": "5af7da856c3fb30c33347d4d",
       "alias": "Quicksand Parakeet",
@@ -168,17 +184,6 @@
       "name": "Main_Zayne",
       "urlName": "mainzayne",
       "voteID": "635d8f0d058e844525a9aeb1"
-    },
-    {
-      "_id": "635d8e8e40bbc0450934d70a",
-      "alias": "Damask Pheasant",
-      "aliasID": "65efa182a6e3ea79dde45567",
-      "anonymized": false,
-      "avatarURL": null,
-      "companies": [],
-      "name": "TenksBeGood",
-      "urlName": "tenksbegood",
-      "voteID": "635d8e93bfb540451a1fa811"
     }
   ]
 }
