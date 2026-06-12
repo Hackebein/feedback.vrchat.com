@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5df6a86387aded2de32c8201",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-12T13:06:16.242089Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "59cb4676d4edc012b9dca22f",
     "alias": "Managing Meerkat",
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 968,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -344,7 +349,7 @@
   "imageURLs": [
     "https://canny.io/images/a30a640f561d8d1802ab8102de8aee82.png"
   ],
-  "lastUpdated": 1780878647056,
+  "lastUpdated": 1781269408363,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 64,
@@ -360,7 +365,7 @@
   "subCategoryID": null,
   "title": "Quaternion.ToAngleAxis Broken",
   "trendingScore": 2638.1401387240944,
-  "updatedAt": "2026-06-08T00:30:53.400096Z",
+  "updatedAt": "2026-06-12T13:06:05.080023Z",
   "urlName": "quaterniontoangleaxis-broken",
   "viewerIsAuthor": false,
   "viewerVote": 0,
