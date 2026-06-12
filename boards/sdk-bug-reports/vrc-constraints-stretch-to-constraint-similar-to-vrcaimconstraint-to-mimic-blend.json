@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "669a9014531028366455fe3b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-12T20:47:53.523861Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6593c4a4910c4a117fba8646",
     "alias": "Possible Falcon",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:30.034Z",
     "name": "Feature Request",
     "parentID": null,
-    "postCount": 151,
+    "postCount": 153,
     "urlName": "feature-request"
   },
   "categoryID": "6616d2ceedd9a0e35fce972c",
@@ -228,23 +233,23 @@
   "files": [],
   "ideaID": "680bb9f0e4c3e90df1391d78",
   "imageURLs": [],
-  "lastUpdated": 1781060790558,
+  "lastUpdated": 1781296923330,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 21,
+  "maxScore": 22,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/669a9014531028366455fe3b/838459869.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 21,
+  "score": 22,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2024-07-19T16:11:00.177Z",
   "subCategoryID": null,
   "title": "[VRC Constraints] \"Stretch to\" constraint similar to VRCAimConstraint to mimic Blender's Stretch To constraint",
-  "trendingScore": 2914.2532580165844,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "trendingScore": 2945.2631489599867,
+  "updatedAt": "2026-06-12T20:47:51.235481Z",
   "updatedBy": null,
   "urlName": "vrc-constraints-stretch-to-constraint-similar-to-vrcaimconstraint-to-mimic-blend",
   "viewerIsAuthor": false,
@@ -256,6 +261,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a2c2cde363a2f2451839a28",
+      "alias": "Traditional Cod",
+      "aliasID": "6a2c2cdf363a2f2451839a2c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f27a401d81b5cc1498fdd2c529015f02.png",
+      "companies": [],
+      "name": "LostInTheBox",
+      "urlName": "<redacted>",
+      "voteID": "6a2c6830363a2f245185abc7"
+    },
     {
       "_id": "687f6db4c1f0e1f01640201c",
       "alias": "Citrine Cobra",
@@ -354,17 +370,6 @@
       "name": "Fizzytaco",
       "urlName": "<redacted>",
       "voteID": "6783f85e41622bb95a7772ba"
-    },
-    {
-      "_id": "5a43b6d74a8da674278047fa",
-      "alias": "Empty Cougar",
-      "aliasID": "65ba01c9ed6eefce4cfafd01",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7bc23e37149222ef9deb6e2932e95e42.png",
-      "companies": [],
-      "name": "DrDarkly",
-      "urlName": "<redacted>",
-      "voteID": "67823b0441622bb95a5756b3"
     }
   ]
 }
