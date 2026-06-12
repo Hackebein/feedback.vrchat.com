@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5e82f91fc5f5e9204b163399",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-12T15:05:59.236031Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e82f168f71d790eeb6a04a3",
     "alias": "Buff Condor",
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 968,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -195,7 +200,7 @@
   "imageURLs": [
     "https://canny.io/images/13358cce67bedddeda3c726529ad77ab.png"
   ],
-  "lastUpdated": 1780883314076,
+  "lastUpdated": 1781276537566,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -210,7 +215,7 @@
   "subCategoryID": null,
   "title": "Using Int Op Multiplication node output multiple times prevents graph compilation and throws error",
   "trendingScore": 2623.97032532684,
-  "updatedAt": "2026-06-08T01:48:56.862166Z",
+  "updatedAt": "2026-06-12T15:05:42.933667Z",
   "urlName": "using-int-op-multiplication-node-output-multiple-times-prevents-graph-compilatio",
   "viewerIsAuthor": false,
   "viewerVote": 0,
