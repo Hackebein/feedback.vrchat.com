@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "65ff7f5098341c60c163f4aa",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "platforms.cross-platform",
+    "sdk.udon",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-12T05:36:54.416458Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6222c8bd759f2e2d1462eca6",
     "alias": "Unlikely Trout",
@@ -272,7 +279,7 @@
   "imageURLs": [
     "https://canny.io/images/025217323615d6ed8ed07b0df3a81e74.png"
   ],
-  "lastUpdated": 1780846270930,
+  "lastUpdated": 1781242467898,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 20,
@@ -288,7 +295,7 @@
   "subCategoryID": null,
   "title": "Large number of MeshRenderer child objects under synced UdonBehaviour causes lag for non-owners",
   "trendingScore": 2839.517033130992,
-  "updatedAt": "2026-06-07T15:34:27.033932Z",
+  "updatedAt": "2026-06-12T05:36:15.939746Z",
   "updatedBy": null,
   "urlName": "large-number-of-meshrenderer-child-objects-under-synced-udonbehaviour-causes-lag",
   "viewerIsAuthor": false,
