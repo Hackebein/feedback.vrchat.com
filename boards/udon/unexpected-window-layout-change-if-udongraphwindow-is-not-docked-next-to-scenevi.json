@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ed9bc46bebff8152e500ad6",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-12T19:41:24.208144Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a983204a1528d415c5ced46",
     "alias": "Chief Finch",
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 968,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -128,7 +133,7 @@
   "files": [],
   "ideaID": "680b7daee4c3e90df15905cb",
   "imageURLs": [],
-  "lastUpdated": 1780911280921,
+  "lastUpdated": 1781293106884,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -143,7 +148,7 @@
   "subCategoryID": null,
   "title": "Unexpected window layout change if UdonGraphWindow is not docked next to SceneView",
   "trendingScore": 2631.8568623707056,
-  "updatedAt": "2026-06-08T09:35:24.069142Z",
+  "updatedAt": "2026-06-12T19:41:22.684915Z",
   "urlName": "unexpected-window-layout-change-if-udongraphwindow-is-not-docked-next-to-scenevi",
   "viewerIsAuthor": false,
   "viewerVote": 0,
