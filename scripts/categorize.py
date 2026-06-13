@@ -106,6 +106,8 @@ BOARD_LOCATION_PRIORS: dict[str, str] = {
     "creator-companion": "loc.creator-companion",
     "avatar-30": "loc.in-world",
     "impostors": "loc.in-world",
+    "age-verification": "loc.website",
+    "localization": "loc.main-menu",
 }
 
 BOARD_FEATURE_PRIORS: dict[str, str] = {
@@ -118,6 +120,7 @@ BOARD_FEATURE_PRIORS: dict[str, str] = {
     "creator-companion": "sdk.vpm",
     "avatar-30": "avatars",
     "localization": "localization",
+    "age-verification": "account.age-verification",
     "persistence": "worlds.persistence",
     "vrchat-ik-20": "avatars.fbt",
     "third-person-view": "client.third-person",
@@ -1077,6 +1080,27 @@ def _chat_once(
     return None, f"minimax error (http): {last_body[:500]}"
 
 
+def _corrective_hint(err: str | None) -> str:
+    """Retry hint targeted at the previous round's validation/parse failure."""
+    e = (err or "").lower()
+    base = "Reply with ONLY valid JSON {\"categories\":[...]}."
+    if "location" in e:
+        return (
+            "Your previous answer omitted the location. Add at least one loc.* id for "
+            "where the issue occurs (loc.website for vrchat.com, loc.in-world in-game, "
+            "loc.unity-sdk in Unity, loc.mobile-app on mobile, loc.main-menu in menus). " + base
+        )
+    if "feature" in e:
+        return ("Your previous answer omitted the feature. Add at least one leaf feature id "
+                "that names the affected system. " + base)
+    if "bucket" in e:
+        return ("Return EITHER one bucket id alone OR only loc.* plus feature ids — never mix "
+                "the two. " + base)
+    if "unknown category id" in e:
+        return ("Use only ids that appear verbatim in the lists above; do not invent ids. " + base)
+    return base
+
+
 def _run_classify(
     api_key: str,
     tree: dict,
@@ -1090,17 +1114,14 @@ def _run_classify(
     the caller can avoid stamping the post.
     """
     system = build_system_prompt(tree)
-    hints = [
-        None,
-        "Reply with ONLY valid JSON {\"categories\":[...]}: one bucket id alone, or "
-        "loc.* plus leaf feature id(s).",
-        "Use leaf feature ids only. Include loc.website for vrchat.com issues.",
-        "Never mix a bucket id with loc/feature ids.",
-    ]
     last_err: str | None = None
     last_cats: list[str] | None = None
-    for round_i in range(min(MAX_VALIDATION_ROUNDS, len(hints))):
-        body, err = _chat_once(api_key, system, user_prompt, hints[round_i])
+    for round_i in range(MAX_VALIDATION_ROUNDS):
+        # Round 0 gets no hint; later rounds get a hint targeted at the exact
+        # validation/parse error from the previous round so the model can
+        # self-correct (e.g. add the loc.* it forgot) instead of us guessing.
+        hint = None if round_i == 0 else _corrective_hint(last_err)
+        body, err = _chat_once(api_key, system, user_prompt, hint)
         if err or not body:
             last_err = err or "empty response"
             continue
