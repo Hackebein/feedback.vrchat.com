@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "63f7eae22a09c3450c1d24fb",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "platforms.standalone-vr.quest",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T22:33:45.139834Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fb75a5959b6fc72ce0fdad9",
     "alias": "Venetian red Lark",
@@ -27,7 +33,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -563,7 +569,7 @@
     "https://canny.io/images/0b8aed87d2723a53b4e718d5c0d499e1.png",
     "https://canny.io/images/0b530aa39fd711d9a152c8a2f756b025.png"
   ],
-  "lastUpdated": 1781041084226,
+  "lastUpdated": 1781389632095,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 79,
@@ -579,7 +585,7 @@
   "subCategoryID": null,
   "title": "[Build: 1282] Image loader on quest loads images upside down",
   "trendingScore": 2793.919068172902,
-  "updatedAt": "2026-06-09T21:38:22.891565Z",
+  "updatedAt": "2026-06-13T22:27:27.716050Z",
   "urlName": "build-1282-image-loader-on-quest-loads-images-upside-down",
   "viewerIsAuthor": false,
   "viewerVote": 0,

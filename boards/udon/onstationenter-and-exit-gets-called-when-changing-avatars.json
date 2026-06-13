@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "64cce58d431f6f093dd0ac4a",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.unity-sdk",
+    "worlds.persistence",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T22:35:16.816970Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f58ab99f35c9979a8c6a65a",
     "alias": "Presidential Mackerel",
@@ -27,7 +34,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -45,7 +52,7 @@
   "files": [],
   "ideaID": "680bb98fe4c3e90df137f179",
   "imageURLs": [],
-  "lastUpdated": 1781041092139,
+  "lastUpdated": 1781389647499,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 7,
@@ -61,7 +68,7 @@
   "subCategoryID": null,
   "title": "onStationEnter and exit gets called when changing avatars",
   "trendingScore": 2909.501288192435,
-  "updatedAt": "2026-06-09T21:38:22.891565Z",
+  "updatedAt": "2026-06-13T22:27:27.716050Z",
   "updatedBy": "5f58ab99f35c9979a8c6a65a",
   "urlName": "onstationenter-and-exit-gets-called-when-changing-avatars",
   "viewerIsAuthor": false,
