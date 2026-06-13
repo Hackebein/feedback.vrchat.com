@@ -1,6 +1,12 @@
 {
   "_id": "69ce4c59d653b761fee9b556",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.inventory",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-06-13T05:33:20.270008Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5adf7c5644b24b6ef7cb0f28",
     "alias": "International orange Manatee",
@@ -494,23 +500,23 @@
   "files": [],
   "ideaID": "69ce4c5ad653b761fee9b584",
   "imageURLs": [],
-  "lastUpdated": 1781047885147,
+  "lastUpdated": 1781328476007,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 195,
+  "maxScore": 196,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69ce4c59d653b761fee9b556/1013590572.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 195,
+  "score": 196,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-04-02T11:00:41.984Z",
   "subCategoryID": null,
   "title": "The ability to block a specific item globally",
-  "trendingScore": 2945.4248134066333,
-  "updatedAt": "2026-06-09T23:32:29.239694Z",
+  "trendingScore": 2946.060097517944,
+  "updatedAt": "2026-06-13T05:33:18.350018Z",
   "updatedBy": null,
   "urlName": "the-ability-to-block-a-specific-item-globally",
   "viewerIsAuthor": false,
@@ -522,6 +528,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "68218adfc6e7750efd4e8e6d",
+      "alias": "Independent Rooster",
+      "aliasID": "6a2cc9f4363a2f245188ec11",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c6a8dae956de55014c4677f06abc6ab4.png",
+      "companies": [],
+      "name": "PumpkinBatt",
+      "urlName": "<redacted>",
+      "voteID": "6a2ccc51363a2f245188fa21"
+    },
     {
       "_id": "690bed164f8511f380b0fcae",
       "alias": "Hazel Clownfish",
@@ -620,17 +637,6 @@
       "name": "PDB",
       "urlName": "<redacted>",
       "voteID": "6a0f670a5a52cb2df0481455"
-    },
-    {
-      "_id": "66cda1ebbc4953c0bd72f40f",
-      "alias": "Flax Mammal",
-      "aliasID": "66cda1ec8c4bf668c5e60b1b",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d0269f77e4318a95e29fbf5a4e7d3d42.png",
-      "companies": [],
-      "name": "suteppi",
-      "urlName": "<redacted>",
-      "voteID": "6a0a4c175a52cb2df020b6f2"
     }
   ]
 }
