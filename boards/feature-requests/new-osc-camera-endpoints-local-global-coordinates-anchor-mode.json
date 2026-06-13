@@ -1,6 +1,12 @@
 {
   "_id": "68d1cd4bf3cc1b82531772f9",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.osc",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-13T17:42:13.627965Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63180cda10858444c1b3cc5b",
     "alias": "Fiscal Marsupial",
@@ -82,23 +88,23 @@
   "files": [],
   "ideaID": "68d1cd4bf3cc1b825317739d",
   "imageURLs": [],
-  "lastUpdated": 1781013204513,
+  "lastUpdated": 1781372047185,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 72,
+  "maxScore": 73,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68d1cd4bf3cc1b82531772f9/512560408.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 72,
+  "score": 73,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2025-09-22T22:27:23.324Z",
   "subCategoryID": null,
   "title": "New OSC camera endpoints - local/global coordinates, anchor mode",
-  "trendingScore": 2920.455831213212,
-  "updatedAt": "2026-06-09T13:55:00.834928Z",
+  "trendingScore": 2945.2285368336816,
+  "updatedAt": "2026-06-13T17:34:46.950224Z",
   "updatedBy": null,
   "urlName": "new-osc-camera-endpoints-local-global-coordinates-anchor-mode",
   "viewerIsAuthor": false,
@@ -110,6 +116,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5e7b1d5a69dde84b6979c3d6",
+      "alias": "United Guppy",
+      "aliasID": "6721d90cc66e81bbd4784ee2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9d5bf9614843d2d1dfc5bd79ea74c5ed.png",
+      "companies": [],
+      "name": "Colorles",
+      "urlName": "<redacted>",
+      "voteID": "6a2c166b363a2f245182f05d"
+    },
     {
       "_id": "5f2d586c7f57433511432c5a",
       "alias": "Binding Cricket",
@@ -208,17 +225,6 @@
       "name": "Six_no",
       "urlName": "<redacted>",
       "voteID": "68d6f6304f674f1b1e993147"
-    },
-    {
-      "_id": "5cfb491476b5b77800e860ec",
-      "alias": "Papaya whip Echidna",
-      "aliasID": "65c65be0ed6eefce4c038fc6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/1d6aad7285272a82b7b995c3ce075132.png",
-      "companies": [],
-      "name": "Ericbazinga",
-      "urlName": "<redacted>",
-      "voteID": "68d6cc384f674f1b1e52d47f"
     }
   ]
 }
