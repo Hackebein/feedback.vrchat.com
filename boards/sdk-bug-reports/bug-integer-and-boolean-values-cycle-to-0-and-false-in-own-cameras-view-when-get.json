@@ -1,7 +1,15 @@
 {
   "__v": 0,
   "_id": "6290db248467e90b655ec313",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.in-world",
+    "avatars.expressions",
+    "avatars.descriptor",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-13T09:08:36.998282Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6f28035d0756238f715efc",
     "alias": "Natural Cat",
@@ -37,7 +45,7 @@
   "files": [],
   "ideaID": "680bb8f6e4c3e90df1360ef0",
   "imageURLs": [],
-  "lastUpdated": 1780964819733,
+  "lastUpdated": 1781341462676,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -52,7 +60,7 @@
   "subCategoryID": null,
   "title": "[BUG] Integer and Boolean values cycle to 0 and False in own camera's view when getting teleported in newer World SDKs",
   "trendingScore": 2768.1389997007277,
-  "updatedAt": "2026-06-09T00:28:26.778629Z",
+  "updatedAt": "2026-06-13T09:05:10.083044Z",
   "urlName": "bug-integer-and-boolean-values-cycle-to-0-and-false-in-own-cameras-view-when-get",
   "viewerIsAuthor": false,
   "viewerVote": 0,
