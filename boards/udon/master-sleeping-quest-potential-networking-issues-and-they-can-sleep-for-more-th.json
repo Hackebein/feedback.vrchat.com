@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "65cef6c7d42716a752b8ee54",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T22:35:10.319418Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "614de6bab1382e4d89857763",
     "alias": "Nectar Carp",
@@ -27,7 +34,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -774,7 +781,7 @@
   "imageURLs": [
     "https://canny.io/images/207d2410682951d744a2acd2154f07c0.png"
   ],
-  "lastUpdated": 1781041090186,
+  "lastUpdated": 1781389643889,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 65,
@@ -790,7 +797,7 @@
   "subCategoryID": null,
   "title": "Master + Sleeping Quest => Potential networking issues (and they can sleep for more than an hour)",
   "trendingScore": 2834.74086854352,
-  "updatedAt": "2026-06-09T21:38:22.891565Z",
+  "updatedAt": "2026-06-13T22:27:27.716050Z",
   "updatedBy": "614de6bab1382e4d89857763",
   "urlName": "master-sleeping-quest-potential-networking-issues-and-they-can-sleep-for-more-th",
   "viewerIsAuthor": false,

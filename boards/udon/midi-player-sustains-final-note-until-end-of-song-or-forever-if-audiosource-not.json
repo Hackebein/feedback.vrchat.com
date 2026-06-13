@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "63faa5a0d8bc94451ee13b00",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T22:35:12.676513Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63180cda10858444c1b3cc5b",
     "alias": "Fiscal Marsupial",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -44,7 +49,7 @@
   "files": [],
   "ideaID": "680bb96ae4c3e90df137808c",
   "imageURLs": [],
-  "lastUpdated": 1781041090781,
+  "lastUpdated": 1781389644989,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -59,7 +64,7 @@
   "subCategoryID": null,
   "title": "MIDI player sustains final note until end of song, or forever if audioSource not set to loop",
   "trendingScore": 2775.104129527182,
-  "updatedAt": "2026-06-09T21:38:22.891565Z",
+  "updatedAt": "2026-06-13T22:27:27.716050Z",
   "urlName": "midi-player-sustains-final-note-until-end-of-song-or-forever-if-audiosource-not",
   "viewerIsAuthor": false,
   "viewerVote": 0,
