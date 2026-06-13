@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "661910cb33a1073dbc6999af",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T23:03:36.242111Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f8bcd4b6dbb722ec2152a06",
     "alias": "Limited Owl",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -47,7 +52,7 @@
   "imageURLs": [
     "https://canny.io/images/55da46abdd2abb98ad5484fcb96359b1.png"
   ],
-  "lastUpdated": 1781044384505,
+  "lastUpdated": 1781391579295,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 9,
@@ -63,7 +68,7 @@
   "subCategoryID": null,
   "title": "OnInputMethodChanged get wrongly called as a keyboard if you're using a controller and pull up the gesture wheel",
   "trendingScore": 2834.7743207924327,
-  "updatedAt": "2026-06-09T22:34:57.305200Z",
+  "updatedAt": "2026-06-13T23:00:32.162594Z",
   "updatedBy": null,
   "urlName": "oninputmethodchanged-get-wrongly-called-as-a-keyboard-if-youre-using-a-controlle",
   "viewerIsAuthor": false,

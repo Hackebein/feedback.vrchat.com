@@ -1,6 +1,11 @@
 {
   "_id": "69ea7c66f85bae427d7eb414",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T23:03:31.639268Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
     "alias": "Toffee Coyote",
@@ -26,7 +31,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -124,7 +129,7 @@
   "files": [],
   "ideaID": "69ea7c66f85bae427d7eb42a",
   "imageURLs": [],
-  "lastUpdated": 1781044383959,
+  "lastUpdated": 1781391578805,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -140,7 +145,7 @@
   "subCategoryID": null,
   "title": "UdonSharp components eat the body of the component beneath them on first view",
   "trendingScore": 2938.8131048566515,
-  "updatedAt": "2026-06-09T22:34:57.305200Z",
+  "updatedAt": "2026-06-13T23:00:32.162594Z",
   "updatedBy": null,
   "urlName": "udonsharp-components-eat-the-body-of-the-component-beneath-them-on-first-view",
   "viewerIsAuthor": false,

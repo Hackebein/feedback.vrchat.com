@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "64d7a0e9b532d909b545396e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-06-13T23:01:05.049051Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3287055bc2dc276e0f1630",
     "alias": "Lemon Silverfish",
@@ -27,7 +33,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -179,7 +185,7 @@
   "files": [],
   "ideaID": "680bb992e4c3e90df137fd1c",
   "imageURLs": [],
-  "lastUpdated": 1781041098523,
+  "lastUpdated": 1781391441850,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 30,
@@ -195,7 +201,7 @@
   "subCategoryID": null,
   "title": "VRCObjectSync doesn't sync Gravity/Kinematic flags reliably",
   "trendingScore": 2930.781783954889,
-  "updatedAt": "2026-06-09T21:38:22.891565Z",
+  "updatedAt": "2026-06-13T23:00:32.162594Z",
   "updatedBy": "5f3287055bc2dc276e0f1630",
   "urlName": "vrcobjectsync-doesnt-sync-gravitykinematic-flags-reliably",
   "viewerIsAuthor": false,

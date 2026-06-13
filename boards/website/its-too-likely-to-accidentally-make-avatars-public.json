@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "64b5f014193071097b105304",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.profiles",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-13T23:05:01.680449Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e4ca2145f9b3726b3b389e7",
     "alias": "Wild strawberry Canidae",
@@ -31,7 +37,7 @@
     "urlName": "general-feedback"
   },
   "categoryID": "6307c36bc22b1844b7e1425c",
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "__v": 0,
@@ -126,7 +132,7 @@
         "alias": "Amaranth Llama",
         "aliasID": "65c26da3ed6eefce4c4d09df",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/55a25c31cfb315657dec3023ed4baa0c.png",
+        "avatarURL": "https://canny-assets.io/images/5263a29bc59d661b3a8245b48eae1441.png",
         "created": "2020-09-20T16:55:45.186Z",
         "name": "Patroll",
         "serviceAccount": false,
@@ -316,6 +322,52 @@
       "value": "Thank you for the request! This was fixed in a recent website update.\n\nPublishing your avatar has been moved to the DANGER ZONE at the bottom of the page.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a2d55a00b6832df92eb14c6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5d142650329e7856f7f7b664",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-13T13:05:36.150Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "64b5f014193071097b105304",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Unfortunate to have seen this reverted on the website at some point. The same issues of \"Make Avatar Public\" raised in the OP are also a risk in the SDK: https://feedback.vrchat.com/sdk-bug-reports/p/the-content-manager-tab-in-sdk-has-a-footgun-make-public-has-no-confirmation-pro",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -332,7 +384,7 @@
   "imageURLs": [
     "https://canny.io/images/ac4e56842de82d7af7595fdc630ac769.png"
   ],
-  "lastUpdated": 1781044396194,
+  "lastUpdated": 1781391625956,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 113,
@@ -341,14 +393,14 @@
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/64b5f014193071097b105304/688578329.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 112,
+  "score": 113,
   "sourceFeatureExtractionItem": null,
   "status": "complete",
   "statusChanged": "2024-10-30T19:20:12.871Z",
   "subCategoryID": null,
   "title": "It's too likely to accidentally make avatars public.",
-  "trendingScore": 2851.510550622112,
-  "updatedAt": "2026-06-09T22:34:57.305200Z",
+  "trendingScore": 2945.3662301984127,
+  "updatedAt": "2026-06-13T23:00:32.162594Z",
   "updatedBy": null,
   "urlName": "its-too-likely-to-accidentally-make-avatars-public",
   "viewerIsAuthor": false,
@@ -360,6 +412,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "<redacted>",
+      "voteID": "6a2d5bb8363a2f2451bc3a13"
+    },
     {
       "_id": "5f31e1379dcbb575795df78a",
       "alias": "Inquisitive Pinniped",
@@ -458,17 +521,6 @@
       "name": "mochamofu｜もちゃもふ",
       "urlName": "<redacted>",
       "voteID": "651425b835d86409e5785ef1"
-    },
-    {
-      "_id": "6064f17b6e17781db41678c0",
-      "alias": "Indigo Mink",
-      "aliasID": "65c6e36eed6eefce4c1b152c",
-      "anonymized": false,
-      "avatarURL": "https://canny.io/images/4a0019150ecb09cfe54a0a4ccdef4c1f.png",
-      "companies": [],
-      "name": "Foolsgoldᵀᴹ",
-      "urlName": "<redacted>",
-      "voteID": "65140fcc7aad890a3602223c"
     }
   ]
 }
