@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "674c94db1f4c98e8483d26a8",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "platforms.mobile.android",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-06-13T13:37:54.620983Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5baf6139b49f620eba95cdfa",
     "alias": "Xenon grey Ant",
@@ -384,23 +391,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/e3c7e8280a8b76b77ac4f3ef0bab29ba.png"
   ],
-  "lastUpdated": 1780989080421,
+  "lastUpdated": 1781357660205,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 121,
+  "maxScore": 122,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/674c94db1f4c98e8483d26a8/317800962.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 121,
+  "score": 122,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2024-12-01T16:54:51.068Z",
   "subCategoryID": null,
   "title": "Enable \"Force RTP TCP\" for faster RTSP live stream loading in Quest/Android",
-  "trendingScore": 2941.0377930585023,
-  "updatedAt": "2026-06-09T07:12:30.636740Z",
+  "trendingScore": 2945.0252213968397,
+  "updatedAt": "2026-06-13T13:36:02.841827Z",
   "updatedBy": null,
   "urlName": "enable-force-rtp-tcp-for-faster-rtsp-live-stream-loading-in-quest-android",
   "viewerIsAuthor": false,
@@ -412,6 +419,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "684947d25cd9b29f8322bcd3",
+      "alias": "Jasmine Swordtail",
+      "aliasID": "684947d25cd9b29f8322d5e5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9114f8082a8d5b122a4ffabf07a2fcfa.png",
+      "companies": [],
+      "name": "7nds",
+      "urlName": "<redacted>",
+      "voteID": "6a2a09db86d7b8843b1bac00"
+    },
     {
       "_id": "66753a6449c782103595d779",
       "alias": "Dahlia Squirrel",
@@ -510,17 +528,6 @@
       "name": "Sayamame",
       "urlName": "<redacted>",
       "voteID": "67d2e932b324a96209b6cd39"
-    },
-    {
-      "_id": "6799bfe7f8e397b0872abe33",
-      "alias": "Heather Gibbon",
-      "aliasID": "6799bfe7546b2d4224533c36",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8629b557cf517001b4f02a40646b60cc.png",
-      "companies": [],
-      "name": "TheYellingBird",
-      "urlName": "<redacted>",
-      "voteID": "67af0782b324a9620975754d"
     }
   ]
 }
