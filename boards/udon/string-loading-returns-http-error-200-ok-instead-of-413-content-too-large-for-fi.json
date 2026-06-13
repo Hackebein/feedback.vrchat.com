@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66f4895f30df2ba568997da7",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T19:34:55.534654Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62dfe0edaf6e2b46739c8b09",
     "alias": "Rare Walrus",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -82,7 +87,7 @@
   "files": [],
   "ideaID": "680bba16e4c3e90df13981af",
   "imageURLs": [],
-  "lastUpdated": 1781021474867,
+  "lastUpdated": 1781379063829,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 7,
@@ -98,7 +103,7 @@
   "subCategoryID": null,
   "title": "String Loading returns HTTP error 200 OK instead of 413 Content Too Large for files over the 100 MB size limit.",
   "trendingScore": 2942.283992471104,
-  "updatedAt": "2026-06-09T16:11:17.636142Z",
+  "updatedAt": "2026-06-13T19:33:16.926632Z",
   "updatedBy": "62dfe0edaf6e2b46739c8b09",
   "urlName": "string-loading-returns-http-error-200-ok-instead-of-413-content-too-large-for-fi",
   "viewerIsAuthor": false,
