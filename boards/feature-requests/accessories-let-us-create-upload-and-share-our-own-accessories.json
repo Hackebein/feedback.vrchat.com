@@ -67,7 +67,7 @@
       "postID": "69c6ebfba80e1fdf367d7510",
       "private": false,
       "reactions": {
-        "like": 9
+        "like": 10
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -155,7 +155,9 @@
       "postDeleted": false,
       "postID": "69c6ebfba80e1fdf367d7510",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -178,23 +180,23 @@
   "files": [],
   "ideaID": "69c6ebfba80e1fdf367d7580",
   "imageURLs": [],
-  "lastUpdated": 1781364806214,
+  "lastUpdated": 1781368044172,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 68,
+  "maxScore": 69,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69c6ebfba80e1fdf367d7510/1714969811.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 68,
+  "score": 69,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-03-27T20:43:39.721Z",
   "subCategoryID": null,
   "title": "[Accessories] Let us create, upload, and share our own accessories",
-  "trendingScore": 2947.597267887497,
-  "updatedAt": "2026-06-13T15:36:09.143192Z",
+  "trendingScore": 2947.7007895271613,
+  "updatedAt": "2026-06-13T16:32:11.415542Z",
   "updatedBy": "5e828313c5f5e9204b146fc3",
   "urlName": "accessories-let-us-create-upload-and-share-our-own-accessories",
   "viewerIsAuthor": false,
@@ -206,6 +208,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "656c0ecf63d7175eabb0607d",
+      "alias": "Artificial Pike",
+      "aliasID": "65c2907aed6eefce4cc8a796",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f1135116f85c678e066abdced2540a1c.png",
+      "companies": [],
+      "name": "Brightquill",
+      "urlName": "hydraptorym",
+      "voteID": "6a2d7fcb363a2f2451bc9754"
+    },
     {
       "_id": "5f2e069f8fc2c972dd4a0430",
       "alias": "Electrical Swallow",
@@ -304,17 +317,6 @@
       "name": "Tahvo",
       "urlName": "tahvo",
       "voteID": "6a23c1a386d7b8843ba74ec1"
-    },
-    {
-      "_id": "5ef1439a8cff030361d65992",
-      "alias": "Horizon blue Marsupial",
-      "aliasID": "65c28083ed6eefce4c570d23",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/903415bfe11f6275d5e0095234b9e937.png",
-      "companies": [],
-      "name": "SummerSong",
-      "urlName": "adam-paul-6",
-      "voteID": "6a22f51186d7b8843ba2a5b4"
     }
   ]
 }

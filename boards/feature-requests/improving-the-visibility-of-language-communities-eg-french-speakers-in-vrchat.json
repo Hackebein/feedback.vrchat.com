@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "67f7b531dbc9a95c18fc41b4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.main-menu",
+    "loc.in-world",
+    "worlds.travel",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-06-13T16:46:19.932758Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67f6ed0be794198f0ff0b32f",
     "alias": "Prospective Sturgeon",
@@ -44,23 +51,23 @@
     "https://canny-assets.io/images/be22b5bf7b5adf120a366bae30ea5c79.png",
     "https://canny-assets.io/images/0ae914f728afa34121b39e351b798e79.jpeg"
   ],
-  "lastUpdated": 1781009860593,
+  "lastUpdated": 1781368300077,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 38,
+  "maxScore": 39,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/67f7b531dbc9a95c18fc41b4/2133276253.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 38,
+  "score": 39,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2025-04-10T12:10:25.252Z",
   "subCategoryID": null,
   "title": "Improving the Visibility of Language Communities (e.g., French speakers) in VRChat",
-  "trendingScore": 2940.378466549274,
-  "updatedAt": "2026-06-09T12:57:49.352388Z",
+  "trendingScore": 2945.2955643963373,
+  "updatedAt": "2026-06-13T16:32:11.415542Z",
   "updatedBy": "67f6ed0be794198f0ff0b32f",
   "urlName": "improving-the-visibility-of-language-communities-eg-french-speakers-in-vrchat",
   "viewerIsAuthor": false,
@@ -72,6 +79,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a2c9955363a2f2451880cbf",
+      "alias": "Giant Seahorse",
+      "aliasID": "6a2c9955363a2f2451880cc3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/709b6e4809957381a795048f5e88795b.png",
+      "companies": [],
+      "name": "rirame",
+      "urlName": "rirame",
+      "voteID": "6a2ca369363a2f2451882ebe"
+    },
     {
       "_id": "69fa11514a48bed189419fda",
       "alias": "Neutral Tapir",
@@ -170,17 +188,6 @@
       "name": "Ericbazinga",
       "urlName": "ericbazinga",
       "voteID": "6801f54b8ccc1d8b3b5b8518"
-    },
-    {
-      "_id": "62def2256d6050449f81d870",
-      "alias": "Pure Chipmunk",
-      "aliasID": "66069c01d90e50576379a6c9",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e46e0b49f3675db89edcb5a6287e37a6.png",
-      "companies": [],
-      "name": "BlitzAceRosin",
-      "urlName": "blitzacerosin",
-      "voteID": "680119798ccc1d8b3baea6b4"
     }
   ]
 }
