@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "649683cad113f85f3c0007b8",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T23:01:04.309070Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f8bcd4b6dbb722ec2152a06",
     "alias": "Limited Owl",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -92,7 +97,7 @@
   "files": [],
   "ideaID": "680bb986e4c3e90df137d7b6",
   "imageURLs": [],
-  "lastUpdated": 1781041098185,
+  "lastUpdated": 1781391441641,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -108,7 +113,7 @@
   "subCategoryID": null,
   "title": "VRCJson breaks if a byte order mark is present in the json",
   "trendingScore": 2818.4377584160075,
-  "updatedAt": "2026-06-09T21:38:22.891565Z",
+  "updatedAt": "2026-06-13T23:00:32.162594Z",
   "updatedBy": null,
   "urlName": "vrcjson-breaks-if-a-byte-order-mark-is-present-in-the-json",
   "viewerIsAuthor": false,
