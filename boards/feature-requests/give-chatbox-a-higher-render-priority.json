@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66f24b10211bb95be4244087",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-06-13T14:49:14.588740Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
     "alias": "Dynamic Starfish",
@@ -343,7 +348,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/5dde09e885222f9d7836251d2e33f23d.png"
   ],
-  "lastUpdated": 1780995983583,
+  "lastUpdated": 1781361996452,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 37,
@@ -359,7 +364,7 @@
   "subCategoryID": null,
   "title": "Give chatbox a higher render priority",
   "trendingScore": 2900.4171512367025,
-  "updatedAt": "2026-06-09T09:07:22.025199Z",
+  "updatedAt": "2026-06-13T14:47:34.539866Z",
   "updatedBy": null,
   "urlName": "give-chatbox-a-higher-render-priority",
   "viewerIsAuthor": false,
