@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6517e72e746e0a0955bc712d",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-13T10:19:06.296157Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63882dc1f272550ad4b6b553",
     "alias": "Nautical blue Horse",
@@ -80,7 +86,7 @@
   "files": [],
   "ideaID": "680bb9a8e4c3e90df1383583",
   "imageURLs": [],
-  "lastUpdated": 1780969074321,
+  "lastUpdated": 1781345420956,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -95,7 +101,7 @@
   "subCategoryID": null,
   "title": "Expose chatbox messages to Udon for accessibility purposes",
   "trendingScore": 2805.033965530428,
-  "updatedAt": "2026-06-09T01:38:44.541998Z",
+  "updatedAt": "2026-06-13T10:10:46.177337Z",
   "updatedBy": "63882dc1f272550ad4b6b553",
   "urlName": "expose-chatbox-messages-to-udon-for-accessibility-purposes",
   "viewerIsAuthor": false,
