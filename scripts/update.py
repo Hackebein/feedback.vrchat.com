@@ -1135,6 +1135,7 @@ def main():
     t0 = time.time()
 
     tree = categorize.load_tree()
+    categorize.reset_usage_tracking(True)
     if args.retag_ai or args.retag_ai_all:
         stored, deduped = load_all_stored(boards)
         print(f"[UPDATE] {len(stored)} stored across {len(boards)} board(s)")
@@ -1159,6 +1160,7 @@ def main():
             workers=_minimax_workers(),
         )
         print(f"[UPDATE] Re-tagged {tagged} post(s) total")
+        print(categorize.format_usage_stats())
         _commit_rebase_push_board_update()
         elapsed = time.time() - t0
         print(f"\n[UPDATE] Done in {elapsed:.1f}s")
@@ -1216,6 +1218,7 @@ def main():
           f"~{totals['refreshed']} refreshed, "
           f">{totals['moved']} moved, "
           f"={totals['deduped']} deduped")
+    print(categorize.format_usage_stats())
 
     try:
         print("[UPDATE] Regenerating README...")
