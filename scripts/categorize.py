@@ -31,7 +31,9 @@ MAX_COMMENT_LINES = 20
 MAX_COMMENT_VALUE_CHARS = 1_500
 MAX_CHAT_HTTP_RETRIES = 3
 MAX_VALIDATION_ROUNDS = 4
-DEFAULT_MINIMAX_RATE_LIMIT_COOLDOWN = 300.0
+MIN_RATE_LIMIT_BACKOFF = 2.0
+MAX_RATE_LIMIT_BACKOFF = 30.0
+MAX_RATE_LIMIT_RETRIES = 6
 
 
 def _minimax_rate_limit_cooldown() -> float:
@@ -41,45 +43,51 @@ def _minimax_rate_limit_cooldown() -> float:
             return max(1.0, float(raw))
         except ValueError:
             pass
-    return DEFAULT_MINIMAX_RATE_LIMIT_COOLDOWN
+    return MAX_RATE_LIMIT_BACKOFF
 
 
 class _MiniMaxRateLimiter:
-    """Shared cooldown across worker threads after HTTP 429."""
+    """Adaptive backoff shared across worker threads after HTTP 429.
+
+    On 429 the shared cooldown window grows exponentially (with jitter) so all
+    threads briefly pause together, then resume at safe concurrency. On clean
+    responses the backoff decays back toward zero. A burst 429 is recoverable,
+    so it never permanently stops AI tagging.
+    """
 
     def __init__(self):
         self._lock = threading.Lock()
         self._cooldown_until = 0.0
+        self._backoff = 0.0
         self.rate_limit_hits = 0
         self.stop_requested = False
 
     def wait(self):
         with self._lock:
-            if self.stop_requested:
-                return
             sleep_for = max(0.0, self._cooldown_until - time.time())
         if sleep_for > 0:
-            print(f"[UPDATE] MiniMax rate limit cooldown ({sleep_for:.0f}s remaining)...")
             time.sleep(sleep_for)
 
     def hit_429(self, body: str = ""):
         with self._lock:
             self.rate_limit_hits += 1
-            if _in_ci() or _is_plan_quota_error(body):
-                self.stop_requested = True
-                print("[UPDATE] MiniMax rate limit hit; stopping AI tagging early")
-                return
-            cooldown = _minimax_rate_limit_cooldown()
-            self._cooldown_until = max(self._cooldown_until, time.time() + cooldown)
-        print(f"[UPDATE] MiniMax rate limit hit; waiting {cooldown:.0f}s before retry...")
+            cap = _minimax_rate_limit_cooldown()
+            self._backoff = min(max(self._backoff * 2.0, MIN_RATE_LIMIT_BACKOFF), cap)
+            jitter = self._backoff * 0.25 * (os.urandom(1)[0] / 255.0)
+            self._cooldown_until = max(
+                self._cooldown_until, time.time() + self._backoff + jitter,
+            )
 
     def ok(self):
-        pass
+        with self._lock:
+            self._backoff = max(0.0, self._backoff * 0.5)
 
     def reset_hits(self):
         with self._lock:
             self.rate_limit_hits = 0
             self.stop_requested = False
+            self._backoff = 0.0
+            self._cooldown_until = 0.0
 
 
 _MINIMAX_LIMITER = _MiniMaxRateLimiter()
@@ -87,12 +95,6 @@ _MINIMAX_LIMITER = _MiniMaxRateLimiter()
 
 def _in_ci() -> bool:
     return (os.environ.get("CI") or "").strip().lower() in ("1", "true")
-
-
-def _is_plan_quota_error(body: str) -> bool:
-    if not body:
-        return False
-    return "2062" in body or "Token Plan rate limit" in body
 
 BOARD_LOCATION_PRIORS: dict[str, str] = {
     "website": "loc.website",
@@ -155,7 +157,9 @@ def _minimax_max_tokens() -> int:
             return max(64, int(raw))
         except ValueError:
             pass
-    return 2048
+    # The classifier emits a small JSON object; capping output saves quota
+    # (output tokens are billed ~4x input on the Token Plan).
+    return 512
 
 
 USER_AGENT = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
@@ -372,79 +376,42 @@ def _shared_rules_lines() -> list[str]:
     ]
 
 
-def build_pass1_system_prompt(tree: dict | None) -> str:
+_singlepass_prompt_cache: dict[int, str] = {}
+
+
+def build_system_prompt(tree: dict | None) -> str:
+    """Constant, cacheable single-pass classification prompt.
+
+    Lists the whole taxonomy (buckets + locations + features) and asks for the
+    final categories in one call. It is byte-identical across every post
+    (memoized per taxonomy version) so MiniMax passive prompt caching reuses the
+    system-prompt prefix; only the per-post user message is billed at full price.
+    """
     if not tree:
         return ""
+    ver = tree.get("taxonomy_version") or taxonomy_version(tree)
+    cached = _singlepass_prompt_cache.get(ver)
+    if cached is not None:
+        return cached
     raw = tree["raw"]
-    domains = ", ".join(tree["top_level_features"])
     lines = [
-        "You classify VRChat Canny feedback posts. Pass 1: decide bucket vs product domain.",
-        'Return ONLY valid JSON with one of these shapes:',
-        '  {"kind": "bucket", "categories": ["bucket-id"]}  — exactly one bucket id, alone',
-        '  {"kind": "product", "domains": ["top-level-id", ...]}  — one or more top-level feature ids',
+        "You classify VRChat Canny feedback posts.",
+        'Return ONLY valid JSON: {"categories": ["id", ...]} with no other keys.',
+        "Output EITHER exactly one bucket id alone, OR at least one loc.* id plus "
+        "at least one leaf feature id.",
+        "Use leaf feature ids only. List every location where the issue manifests.",
+        "If truly not classifiable, return {\"categories\": []}.",
         "",
         "Rules:",
         *_shared_rules_lines(),
         "",
-        "If truly not classifiable: {\"kind\": \"bucket\", \"categories\": []}.",
-        "",
-        "Buckets:",
+        "Buckets (use one alone; id: description):",
     ]
     for b in raw.get("buckets") or []:
         if isinstance(b, dict) and b.get("id"):
-            desc = (b.get("description") or "").strip()
-            lines.append(f"  {b['id']}: {desc}")
+            lines.append(f"  {b['id']}: {(b.get('description') or '').strip()}")
     lines.append("")
-    lines.append(f"Top-level product domains (use these ids in domains): {domains}")
-    return "\n".join(lines)
-
-
-def _feature_nodes_by_domain(raw: dict, domains: list[str]) -> list[dict]:
-    out: list[dict] = []
-    feats = raw.get("features")
-    if not isinstance(feats, list):
-        return out
-    domain_set = set(domains)
-    for n in feats:
-        if isinstance(n, dict) and n.get("id") in domain_set:
-            out.append(n)
-    return out
-
-
-def build_pass2_system_prompt(tree: dict | None, domains: list[str]) -> str:
-    if not tree:
-        return ""
-    raw = tree["raw"]
-    nodes = _feature_nodes_by_domain(raw, domains)
-    if not nodes:
-        nodes = raw.get("features") if isinstance(raw.get("features"), list) else []
-
-    lines = [
-        "You classify VRChat Canny feedback posts. Pass 2: assign location + feature ids.",
-        'Return ONLY valid JSON: {"categories": ["id", ...]} with no other keys.',
-        "Output at least one loc.* id AND at least one feature id from the lists below.",
-        "Use leaf feature ids only. List every location where the issue manifests.",
-        "",
-        "Rules:",
-        *_shared_rules_lines(),
-        "",
-        "Locations (id: name — description):",
-    ]
-
-    def fmt_flat(nodes_list, indent: int = 0):
-        pad = "  " * indent
-        for n in nodes_list or []:
-            if not isinstance(n, dict):
-                continue
-            nid = n.get("id", "")
-            name = (n.get("name") or "").strip()
-            desc = (n.get("description") or "").strip()
-            lines.append(f"{pad}{nid}: /{name}/ — {desc}")
-
-    fmt_flat(raw.get("locations") if isinstance(raw.get("locations"), list) else [])
-
-    lines.append("")
-    lines.append("Features for this post (id: name — description):")
+    lines.append("Locations (id: name — description):")
 
     def fmt_nodes(nodes_list, indent: int = 0):
         pad = "  " * indent
@@ -459,16 +426,13 @@ def build_pass2_system_prompt(tree: dict | None, domains: list[str]) -> str:
             if isinstance(ch, list) and ch:
                 fmt_nodes(ch, indent + 1)
 
-    fmt_nodes(nodes)
-    return "\n".join(lines)
-
-
-def build_system_prompt(tree: dict | None) -> str:
-    """Legacy single-pass prompt (pass 2 with full tree). Kept for compatibility."""
-    if not tree:
-        return ""
-    domains = tree["top_level_features"]
-    return build_pass2_system_prompt(tree, domains)
+    fmt_nodes(raw.get("locations") if isinstance(raw.get("locations"), list) else [])
+    lines.append("")
+    lines.append("Features (id: name — description):")
+    fmt_nodes(raw.get("features") if isinstance(raw.get("features"), list) else [])
+    s = "\n".join(lines)
+    _singlepass_prompt_cache[ver] = s
+    return s
 
 
 def is_stale_taxonomy(post: dict | None) -> bool:
@@ -704,47 +668,6 @@ def _parse_categories_from_response(body: str) -> tuple[list[str] | None, str | 
     return out, None
 
 
-def _parse_pass1_from_response(body: str, tree: dict) -> tuple[str | None, list[str] | None, str | None]:
-    """Returns (kind, ids, error). kind is 'bucket' or 'product'. ids are categories or domains."""
-    obj, err = _parse_json_object(body)
-    if err or obj is None:
-        return None, None, err
-    kind = obj.get("kind")
-    if kind is None and "categories" in obj:
-        cats = obj.get("categories")
-        if isinstance(cats, list):
-            out = [x.strip() for x in cats if isinstance(x, str) and x.strip()]
-            if not out:
-                return "bucket", [], None
-            if all(c in tree["bucket_ids"] for c in out):
-                return "bucket", out, None
-            if any(c in tree["location_ids"] or c in tree["feature_ids"] for c in out):
-                domains = [c for c in out if c in tree["top_level_features"]]
-                if domains:
-                    return "product", domains, None
-                return "product", tree["top_level_features"][:3], None
-    if kind == "bucket":
-        cats = obj.get("categories")
-        if cats is None:
-            return None, None, "pass1 bucket missing categories"
-        if not isinstance(cats, list):
-            return None, None, "pass1 categories must be a list"
-        out = [x.strip() for x in cats if isinstance(x, str) and x.strip()]
-        return "bucket", out, None
-    if kind == "product":
-        domains = obj.get("domains")
-        if domains is None:
-            return None, None, "pass1 product missing domains"
-        if not isinstance(domains, list):
-            return None, None, "pass1 domains must be a list"
-        top = set(tree["top_level_features"])
-        out = [x.strip() for x in domains if isinstance(x, str) and x.strip() and x.strip() in top]
-        if not out:
-            return None, None, "pass1 domains empty or invalid"
-        return "product", out, None
-    return None, None, f"pass1 unknown kind: {kind!r}"
-
-
 def _validate_categories(
     categories: list[str],
     tree: dict,
@@ -812,6 +735,74 @@ def _fallback_categories(
     return []
 
 
+_usage_lock = threading.Lock()
+_usage_accum = {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0, "cached_tokens": 0}
+_usage_enabled = False
+
+
+def reset_usage_tracking(enable: bool = True) -> None:
+    """Start/stop accumulating per-call token usage (used by the eval harness)."""
+    global _usage_enabled
+    with _usage_lock:
+        _usage_enabled = enable
+        for k in _usage_accum:
+            _usage_accum[k] = 0
+
+
+def get_usage() -> dict:
+    with _usage_lock:
+        return dict(_usage_accum)
+
+
+# MiniMax-M3 Token Plan list price (USD / 1M tokens): input / cached-read / output.
+_M3_PRICE_INPUT = 0.60
+_M3_PRICE_CACHED = 0.12
+_M3_PRICE_OUTPUT = 2.40
+
+
+def usage_cost(usage: dict | None = None) -> float:
+    """Estimated USD cost of accumulated usage at MiniMax-M3 Token Plan prices."""
+    u = usage if usage is not None else get_usage()
+    prompt = u.get("prompt_tokens", 0)
+    cached = u.get("cached_tokens", 0)
+    new_in = max(0, prompt - cached)
+    out = u.get("completion_tokens", 0)
+    return (new_in * _M3_PRICE_INPUT + cached * _M3_PRICE_CACHED + out * _M3_PRICE_OUTPUT) / 1_000_000.0
+
+
+def format_usage_stats(prefix: str = "[USAGE]") -> str:
+    """One-line summary of accumulated token usage, cache hit rate and est. cost."""
+    u = get_usage()
+    calls = u.get("calls", 0)
+    prompt = u.get("prompt_tokens", 0)
+    cached = u.get("cached_tokens", 0)
+    out = u.get("completion_tokens", 0)
+    total = prompt + out
+    hit = (100.0 * cached / prompt) if prompt else 0.0
+    return (
+        f"{prefix} calls={calls} prompt_tokens={prompt:,} cached_tokens={cached:,} "
+        f"({hit:.0f}% cache hit) completion_tokens={out:,} total_tokens={total:,} "
+        f"est_cost=${usage_cost(u):.4f}"
+    )
+
+
+def _record_usage(body: str) -> None:
+    if not _usage_enabled:
+        return
+    try:
+        u = (json.loads(body) or {}).get("usage") or {}
+    except Exception:
+        return
+    if not isinstance(u, dict):
+        return
+    cached = (u.get("prompt_tokens_details") or {}).get("cached_tokens", 0) or 0
+    with _usage_lock:
+        _usage_accum["calls"] += 1
+        _usage_accum["prompt_tokens"] += int(u.get("prompt_tokens") or 0)
+        _usage_accum["completion_tokens"] += int(u.get("completion_tokens") or 0)
+        _usage_accum["cached_tokens"] += int(cached)
+
+
 def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[int, str]:
     env_key = (os.environ.get("MINIMAX_API_KEY") or "").strip()
     if env_key:
@@ -835,6 +826,7 @@ def _minimax_chat(api_key: str, system_prompt: str, user_prompt: str) -> tuple[i
         _MINIMAX_LIMITER.hit_429(body)
     elif code == 200:
         _MINIMAX_LIMITER.ok()
+        _record_usage(body)
     return code, body
 
 
@@ -847,11 +839,9 @@ def minimax_stop_requested() -> bool:
 
 
 def should_stop_ai_tagging(api_key: str | None = None) -> bool:
-    if _MINIMAX_LIMITER.stop_requested:
-        return True
-    if _MINIMAX_LIMITER.rate_limit_hits > 0 and not probe_minimax(api_key):
-        return True
-    return False
+    # 429s are transient and handled by per-request backoff+retry, so we never
+    # abort the whole run on a rate limit; only an explicit stop request stops.
+    return _MINIMAX_LIMITER.stop_requested
 
 
 def reset_minimax_rate_limit_hits() -> None:
@@ -1011,6 +1001,20 @@ def _board_guidance(board_slug: str) -> str:
     return f"Board hint (soft prior, override if content says otherwise): {', '.join(parts)}.\n"
 
 
+def _has_no_classifiable_text(post: dict) -> bool:
+    """True when title, details and all comments are empty/whitespace."""
+    title = post.get("title")
+    if isinstance(title, str) and title.strip():
+        return False
+    details = post.get("details")
+    if isinstance(details, str) and details.strip():
+        return False
+    for c in post.get("comments") or []:
+        if isinstance(c, dict) and _comment_row_has_content(c):
+            return False
+    return True
+
+
 def _build_user_prompt(post: dict, board_slug: str) -> str:
     title = post.get("title") if isinstance(post.get("title"), str) else ""
     details = post.get("details") if isinstance(post.get("details"), str) else ""
@@ -1046,11 +1050,16 @@ def _chat_once(
 ) -> tuple[str | None, str | None]:
     user = user_prompt if not extra else user_prompt + "\n" + extra
     last_body = ""
-    for attempt in range(MAX_CHAT_HTTP_RETRIES):
+    attempt = 0
+    rate_limit_retries = 0
+    while attempt < MAX_CHAT_HTTP_RETRIES:
         code, body = _minimax_chat(api_key, system_prompt, user)
         last_body = body
         if code == 429:
-            if _MINIMAX_LIMITER.stop_requested:
+            # Transient burst limit: back off and retry on a separate budget so
+            # a recoverable 429 never burns the HTTP-retry allowance.
+            rate_limit_retries += 1
+            if rate_limit_retries > MAX_RATE_LIMIT_RETRIES:
                 break
             _MINIMAX_LIMITER.wait()
             continue
@@ -1060,60 +1069,33 @@ def _chat_once(
             return body, None
         if code in (-1, 0) or (code >= 500):
             time.sleep(1.0 * (attempt + 1))
+            attempt += 1
             continue
         if code != 200:
             break
+        attempt += 1
     return None, f"minimax error (http): {last_body[:500]}"
 
 
-def _run_pass1(
+def _run_classify(
     api_key: str,
     tree: dict,
-    user_prompt: str,
-) -> tuple[str | None, list[str] | None, str | None]:
-    system = build_pass1_system_prompt(tree)
-    hints = [
-        None,
-        "Reply with ONLY valid JSON: {\"kind\":\"bucket\",\"categories\":[...]} or {\"kind\":\"product\",\"domains\":[...]}.",
-        "If product feedback, domains must be top-level ids. If not product feedback, use a single bucket id.",
-    ]
-    last_err: str | None = None
-    for round_i in range(min(MAX_VALIDATION_ROUNDS, len(hints))):
-        body, err = _chat_once(api_key, system, user_prompt, hints[round_i])
-        if err or not body:
-            last_err = err or "empty response"
-            continue
-        kind, ids, perr = _parse_pass1_from_response(body, tree)
-        if perr:
-            last_err = perr
-            continue
-        if kind == "bucket":
-            if not ids:
-                return "bucket", [], None
-            ok, verr = _validate_categories(ids, tree)
-            if verr:
-                last_err = verr
-                continue
-            return "bucket", ok, None
-        if kind == "product":
-            return "product", ids, None
-        last_err = "pass1 parse failed"
-    return None, None, last_err or "pass1 failed"
-
-
-def _run_pass2(
-    api_key: str,
-    tree: dict,
-    domains: list[str],
     user_prompt: str,
     board_slug: str,
 ) -> tuple[list[str] | None, str | None]:
-    system = build_pass2_system_prompt(tree, domains)
+    """Single-pass classification against the full taxonomy.
+
+    Returns (categories, error). categories may be [] (deliberate
+    'not classifiable'); error is set only on a transient/parse/HTTP failure so
+    the caller can avoid stamping the post.
+    """
+    system = build_system_prompt(tree)
     hints = [
         None,
-        "Reply with ONLY valid JSON: {\"categories\": [...]} with at least one loc.* and one feature id.",
+        "Reply with ONLY valid JSON {\"categories\":[...]}: one bucket id alone, or "
+        "loc.* plus leaf feature id(s).",
         "Use leaf feature ids only. Include loc.website for vrchat.com issues.",
-        "Never mix bucket ids with loc/feature ids.",
+        "Never mix a bucket id with loc/feature ids.",
     ]
     last_err: str | None = None
     last_cats: list[str] | None = None
@@ -1139,9 +1121,9 @@ def _run_pass2(
             if fallback:
                 fok, _ = _validate_categories(fallback, tree, normalize=False)
                 if fok:
-                    print(f"[WARN] AI categorize used fallback for domains {domains}: {last_err}")
+                    print(f"[WARN] AI categorize used fallback for {board_slug}: {last_err}")
                     return fok, None
-    return None, last_err or "pass2 failed"
+    return None, last_err or "classify failed"
 
 
 def tag_post(
@@ -1151,44 +1133,36 @@ def tag_post(
     system_prompt: str | None,
     api_key: str | None,
 ) -> dict:
-    """Return {\"aiCategories\": [...], \"aiTaggedAt\": iso, \"aiTaxonomyVersion\": n}. Never raises."""
+    """Classify a post in a single LLM call. Returns either a success dict
+    {\"aiCategories\": [...], \"aiTaggedAt\": iso, \"aiTaxonomyVersion\": n} or a
+    failure marker {\"failed\": True} when the API call could not be completed.
+
+    A failure marker is NOT stamped onto the post, so a transient error (rate
+    limit, timeout, 5xx, unparseable response) leaves the post un-tagged and it
+    is retried on a later run instead of being frozen with empty categories.
+    An empty success ([]) is a deliberate \"not classifiable\" verdict. Never raises.
+    """
     tagged_at = iso_now_z()
     tax_ver = taxonomy_version(tree)
-    empty = {"aiCategories": [], "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
+    failed = {"failed": True}
     if not tree:
-        return empty
+        return failed
     eff_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or (api_key or "").strip()
     if not eff_key:
         _warn_missing_key()
-        return empty
+        return failed
+
+    # Posts with no classifiable text can't be categorized from text; skip the
+    # LLM call and record an explicit empty (unclassifiable) verdict.
+    if _has_no_classifiable_text(post):
+        return {"aiCategories": [], "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
 
     user_prompt = _build_user_prompt(post, board_slug)
-
-    kind, ids, err = _run_pass1(eff_key, tree, user_prompt)
+    cats, err = _run_classify(eff_key, tree, user_prompt, board_slug)
     if err:
-        print(f"[WARN] AI categorize pass1 failed for post {post.get('_id')}: {err}")
-        fallback = _fallback_categories([], tree, board_slug)
-        if fallback:
-            return {"aiCategories": fallback, "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
-        return empty
-
-    if kind == "bucket":
-        return {"aiCategories": ids or [], "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
-
-    if kind == "product" and ids:
-        cats, err2 = _run_pass2(eff_key, tree, ids, user_prompt, board_slug)
-        if err2:
-            print(f"[WARN] AI categorize pass2 failed for post {post.get('_id')}: {err2}")
-            fallback = _fallback_categories([], tree, board_slug)
-            if fallback:
-                return {"aiCategories": fallback, "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
-            return empty
-        return {"aiCategories": cats or [], "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
-
-    fallback = _fallback_categories([], tree, board_slug)
-    if fallback:
-        return {"aiCategories": fallback, "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
-    return empty
+        print(f"[WARN] AI categorize failed for post {post.get('_id')}: {err}")
+        return failed
+    return {"aiCategories": cats or [], "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
 
 
 def apply_ai_tags(
@@ -1209,6 +1183,9 @@ def apply_ai_tags(
         carry_over_ai_tags(post, previous_post)
         return
     tags = tag_post(post, board_slug, tree, system_prompt, api_key)
+    if tags.get("failed"):
+        carry_over_ai_tags(post, previous_post)
+        return
     post["aiCategories"] = tags["aiCategories"]
     post["aiTaggedAt"] = tags["aiTaggedAt"]
     post["aiTaxonomyVersion"] = tags.get("aiTaxonomyVersion")
@@ -1239,6 +1216,8 @@ def run_ai_tag_jobs(
             return False
         tags = tag_post(post, board_slug, tree, system_prompt, api_key)
         if quota_stop.is_set() or _MINIMAX_LIMITER.stop_requested:
+            return False
+        if tags.get("failed"):
             return False
         post["aiCategories"] = tags["aiCategories"]
         post["aiTaggedAt"] = tags["aiTaggedAt"]
