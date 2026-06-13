@@ -1,0 +1,98 @@
+{
+  "_id": "6a2d4a4bef5b018a04d68799",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-13T12:36:02.048567Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "wubthecaptain"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 346,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-13T12:17:15.249Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The Content Manager tab in the SDK has \"Make public\" and \"Copy ID\" right next to each other. This is a footgun with plausible legal or contractual consequences of shooting one self in the foot.\n\n1. Upload an avatar.\n\n2. Go to the Content Manager tab.\n\n3. Find small \"Make public\" and \"Copy ID\" buttons next to each other.\n\n4. Optionally, press the \"Make public\" button and see an avatar being made public immediately without a prompt.\n\nThis is a rephrased duplicate of a Feature Requests board topic: https://feedback.vrchat.com/feature-requests/p/confirm-button-when-making-avatars-public-to-avoid-accidental-ban\n\nOP had accidentally shot themselves in the foot by pressing \"Make public\" instead of \"Copy ID\", which doesn't have a confirmation prompt when pressed and went unnoticed. OP was aclaimedly banned from VRChat for a week for this.\n\nIn comparison, the \"Delete\" button has a confirmation prompt.\n\nThe legal consequences of accidentally making an avatar public are common with BOOTH style avatars, which allow avatars to be uploaded with Private status only. An avatar set to Public status would often be a license violation and may be subject to a DMCA takedown notice.\n\nThe contractual consequences of accidentally making an avatar public may result in conflict with VRChat's [Creator Guidelines](https://hello.vrchat.com/creator-guidelines) and subsequent suspensions, if the avatar content intended for private but accidentally made public has controversial topics, sensitive, intimate, or provocative material, or extreme horror or “shock” content, which is not permissible for public content.\n\nAccording to [avtrDB](https://avtrdb.com/)'s reported statistics, there are 1,567,380 public searchable avatars, and 4,003,344 private avatars (avatars that have never been made public). The number of private avatars seems to significantly outweigh the number of avatars intended for the public.\n\nIt's often plausible to copy an existing avatar ID from the Pipeline Manager, but there are cases where that may not be plausible, requiring a click of Copy ID or a visit to the VRChat Home website to acquire an existing avatar ID.\n\nWhen using the VRChat Home website, the avatar ID is in the URL and nowhere near the \"Make Avatar Public\" button. In the Content Manager, these buttons are close to each other.\n\nFor reasons stated before, I think this UI/UX design is unintended or anti-UX and should be considered an UI/UX bug.\n\nExpected behavior: Larger buttons, prompts to confirm to make public, or simply don't place these buttons close to each other or on this Content Manager tab. Anything to remove the footgun and anti-UX.\n\nActual behavior: \"Make public\" is a small button that can be misclicked (especially in SteamVR with a laser pointer from controllers) and doesn't have a prompt, with plausible legal consequences or unintended violations of Creator Guidelines, when an intent may have been to \"Copy ID\" instead.\n\nSDK 3.10.3\n\nReported-by: Ƙiri",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a2d4a4aef5b018a04d6876e",
+  "imageURLs": [
+    "https://canny-assets.io/images/deccb0d49bfc8003ed27cee919330986.png",
+    "https://canny-assets.io/images/4ad05fb79d0f1aeda036cd04327669df.png",
+    "https://canny-assets.io/images/89daf06f300ee3c943c9118af7a06d10.png",
+    "https://canny-assets.io/images/2f0ee5f907248a6d253bcb76a441ca2c.png"
+  ],
+  "lastUpdated": 1781353838362,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-13T12:17:15.249Z",
+  "subCategoryID": null,
+  "title": "The Content Manager tab in SDK has a footgun - \"Make public\" has no confirmation prompt and is located next to \"Copy ID\" (anti-UX)",
+  "trendingScore": 2946.052001679568,
+  "updatedAt": "2026-06-13T12:35:59.359414Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "the-content-manager-tab-in-sdk-has-a-footgun-make-public-has-no-confirmation-pro",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "wubthecaptain",
+      "voteID": "6a2d4a4b363a2f2451bc1200"
+    }
+  ]
+}
