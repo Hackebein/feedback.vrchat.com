@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "66ec5cbc0d3a53362177e4f2",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera",
+    "avatars.impostors"
+  ],
+  "aiTaggedAt": "2026-06-13T15:42:00.588753Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6193e80aef80a31ff074fc16",
     "alias": "Cyan Amphibian",
@@ -38,7 +44,7 @@
   "files": [],
   "ideaID": "680bba11e4c3e90df1397b86",
   "imageURLs": [],
-  "lastUpdated": 1781003112691,
+  "lastUpdated": 1781364918550,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -54,7 +60,7 @@
   "subCategoryID": null,
   "title": "Mirror masking that respects avatar culling",
   "trendingScore": 2859.109494744546,
-  "updatedAt": "2026-06-09T11:06:19.695064Z",
+  "updatedAt": "2026-06-13T15:36:09.143192Z",
   "updatedBy": null,
   "urlName": "mirror-masking-that-respects-avatar-culling",
   "viewerIsAuthor": false,
