@@ -1,6 +1,12 @@
 {
   "_id": "68e065f0d78a297a3101d086",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-14T23:32:35.805774Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
     "alias": "Toffee Coyote",
@@ -26,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -80,7 +86,7 @@
   "files": [],
   "ideaID": "68e065f1d78a297a3101d0de",
   "imageURLs": [],
-  "lastUpdated": 1781198109066,
+  "lastUpdated": 1781479778999,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -96,7 +102,7 @@
   "subCategoryID": null,
   "title": "Avatar auto collider transforms are not updated before an upload",
   "trendingScore": 2909.979894957511,
-  "updatedAt": "2026-06-11T17:15:15.992639Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": "5fa08ddb2644fb4c5a3dfe75",
   "urlName": "avatar-auto-collider-transforms-are-not-updated-before-an-upload",
   "viewerIsAuthor": false,

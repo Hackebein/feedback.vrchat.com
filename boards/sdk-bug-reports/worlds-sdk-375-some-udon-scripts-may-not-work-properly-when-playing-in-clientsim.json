@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "675b6526275a38eb6c3d4284",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "sdk.clientsim",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T23:35:31.573420Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6740db161d246d717ce55f25",
     "alias": "Molecular Walrus",
@@ -27,7 +34,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -137,7 +144,7 @@
   "files": [],
   "ideaID": "680bba37e4c3e90df139dfa0",
   "imageURLs": [],
-  "lastUpdated": 1781204406194,
+  "lastUpdated": 1781479914860,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -153,7 +160,7 @@
   "subCategoryID": null,
   "title": "[Worlds SDK 3.7.5] Some UDON scripts may not work properly when playing in ClientSim.",
   "trendingScore": 2873.1268193755677,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "worlds-sdk-375-some-udon-scripts-may-not-work-properly-when-playing-in-clientsim",
   "viewerIsAuthor": false,

@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "684c2f9f96ea10d16b7f0184",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-06-14T23:35:29.028230Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c1475afb7ce126e9e0e3a39",
     "alias": "Wineberry Leopard",
@@ -27,7 +33,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -82,7 +88,7 @@
   "files": [],
   "ideaID": "684c2fa096ea10d16b7f01e7",
   "imageURLs": [],
-  "lastUpdated": 1781204404393,
+  "lastUpdated": 1781479912669,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -98,7 +104,7 @@
   "subCategoryID": null,
   "title": "[VRCSDK 3.8.1] VRCSDK throws exceptions when encountering an avatar descriptor with an empty animation layer list but \"customize animation layers\" on",
   "trendingScore": 2895.036432851896,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "vrcsdk-381-vrcsdk-throws-exceptions-when-encountering-an-avatar-descriptor-with",
   "viewerIsAuthor": false,

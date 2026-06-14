@@ -1,6 +1,12 @@
 {
   "_id": "6989ea43502df59e6fb175ed",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-06-14T23:34:16.202782Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649ef865ada10f302b43d392",
     "alias": "Direct Canid",
@@ -26,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -80,7 +86,7 @@
   "files": [],
   "ideaID": "6989ea45502df59e6fb1794f",
   "imageURLs": [],
-  "lastUpdated": 1781204393656,
+  "lastUpdated": 1781479900316,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -96,7 +102,7 @@
   "subCategoryID": null,
   "title": "[SDK3.10.1] Meaningless \"VRCExpressionsMenu uses a parameter that is not defined.\" warning triggered for a parameter not used in the Expressions Menu during avatar upload",
   "trendingScore": 2931.5829198735573,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "sdk3101-meaningless-vrcexpressionsmenu-uses-a-parameter-that-is-not-defined-warn",
   "viewerIsAuthor": false,

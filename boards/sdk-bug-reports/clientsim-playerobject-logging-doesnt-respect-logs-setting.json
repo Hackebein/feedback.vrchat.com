@@ -1,6 +1,11 @@
 {
   "_id": "69d58d57328f32407e485de2",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.clientsim"
+  ],
+  "aiTaggedAt": "2026-06-14T23:32:45.528319Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60ee9e81572cc51ad4e847e6",
     "alias": "Vervain Falcon",
@@ -26,7 +31,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -80,7 +85,7 @@
   "files": [],
   "ideaID": "69d58d57328f32407e485e0b",
   "imageURLs": [],
-  "lastUpdated": 1781198112394,
+  "lastUpdated": 1781479785273,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -96,7 +101,7 @@
   "subCategoryID": null,
   "title": "ClientSim PlayerObject Logging Doesn't Respect Logs Setting",
   "trendingScore": 2937.2381216115023,
-  "updatedAt": "2026-06-11T17:15:15.992639Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": "60ee9e81572cc51ad4e847e6",
   "urlName": "clientsim-playerobject-logging-doesnt-respect-logs-setting",
   "viewerIsAuthor": false,

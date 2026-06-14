@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6733069d36893fdec18d17f0",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-14T23:34:08.561072Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63a2bda8b89ede3478a4719f",
     "alias": "Visiting Beetle",
@@ -27,7 +33,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -82,7 +88,7 @@
   "files": [],
   "ideaID": "680bba26e4c3e90df139b91a",
   "imageURLs": [],
-  "lastUpdated": 1781204389038,
+  "lastUpdated": 1781479895379,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -98,7 +104,7 @@
   "subCategoryID": null,
   "title": "[SDK 3.7.2] Avatar with spurious unityPackage crashes VRCSdkControlPanelAvatarBuilder::HandleAvatarSwitch()",
   "trendingScore": 2863.4531958387943,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "sdk-372-avatar-with-spurious-unitypackage-crashes-vrcsdkcontrolpanelavatarbuilde",
   "viewerIsAuthor": false,

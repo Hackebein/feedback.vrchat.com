@@ -1,6 +1,12 @@
 {
   "_id": "68c750bb02679eb13bd1a768",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-06-14T23:32:38.715246Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df2c865968ab44bca883ce",
     "alias": "Whisper pink Fish",
@@ -26,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -124,7 +130,7 @@
   "files": [],
   "ideaID": "68c750bb02679eb13bd1a7f2",
   "imageURLs": [],
-  "lastUpdated": 1781198110004,
+  "lastUpdated": 1781479780713,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -140,7 +146,7 @@
   "subCategoryID": null,
   "title": "Avatars SDK incorrectly warns of unsupported shader on EditorOnly objects for non-PC uploads",
   "trendingScore": 2907.261922573252,
-  "updatedAt": "2026-06-11T17:15:15.992639Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "avatars-sdk-incorrectly-warns-of-unsupported-shader-on-editoronly-objects-for-no",
   "viewerIsAuthor": false,

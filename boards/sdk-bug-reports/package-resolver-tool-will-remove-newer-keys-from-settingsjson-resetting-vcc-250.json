@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "685531a9344d7eb581cd248f",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.creator-companion",
+    "sdk.vpm"
+  ],
+  "aiTaggedAt": "2026-06-14T23:33:57.935035Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
     "alias": "Quince Pike",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -81,7 +86,7 @@
   "files": [],
   "ideaID": "685531aa344d7eb581cd25c2",
   "imageURLs": [],
-  "lastUpdated": 1781204382899,
+  "lastUpdated": 1781479887390,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -97,7 +102,7 @@
   "subCategoryID": null,
   "title": "Package Resolver Tool will remove newer keys from settings.json (resetting VCC 2.5.0+ data)",
   "trendingScore": 2940.040143110119,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": "63c9760ef519ef0b8ce99165",
   "urlName": "package-resolver-tool-will-remove-newer-keys-from-settingsjson-resetting-vcc-250",
   "viewerIsAuthor": false,

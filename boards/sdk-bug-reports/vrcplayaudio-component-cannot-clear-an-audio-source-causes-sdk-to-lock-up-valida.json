@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6692eab77a74e90412c93779",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-14T23:35:28.434719Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f465dd8d9b7356021eb6b52",
     "alias": "Brief Walrus",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -178,7 +183,7 @@
   "files": [],
   "ideaID": "680bb9efe4c3e90df139178e",
   "imageURLs": [],
-  "lastUpdated": 1781204404312,
+  "lastUpdated": 1781479912526,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 6,
@@ -194,7 +199,7 @@
   "subCategoryID": null,
   "title": "VRCPlayAudio Component Cannot Clear an Audio Source - Causes Sdk to Lock Up Validating Avatar",
   "trendingScore": 2847.757698291577,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": "5f465dd8d9b7356021eb6b52",
   "urlName": "vrcplayaudio-component-cannot-clear-an-audio-source-causes-sdk-to-lock-up-valida",
   "viewerIsAuthor": false,

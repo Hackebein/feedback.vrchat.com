@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "66565a0108f0214d1f26d686",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-06-14T23:35:13.020698Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
     "alias": "Quince Pike",
@@ -27,7 +33,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -137,7 +143,7 @@
   "imageURLs": [
     "https://canny.io/images/905953ecbb1578dfcbbf669646ab2294.png"
   ],
-  "lastUpdated": 1781204394316,
+  "lastUpdated": 1781479901325,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 9,
@@ -153,7 +159,7 @@
   "subCategoryID": null,
   "title": "Selected Avatar update not propagated under certain conditions",
   "trendingScore": 2875.3562902984513,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": "63c9760ef519ef0b8ce99165",
   "urlName": "selected-avatar-update-not-propagated-under-certain-conditions",
   "viewerIsAuthor": false,

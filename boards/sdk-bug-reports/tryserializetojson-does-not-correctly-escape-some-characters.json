@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "675592004ecf35c60b10e29c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T23:35:18.609926Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "628f0656df91460b6a64ac04",
     "alias": "Yacht club Tyrannosaurus",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -87,7 +92,7 @@
     "https://canny-assets.io/images/a65be55b3bab2d54808936db76970550.png",
     "https://canny-assets.io/images/6af91bfe528c453320e0fb9cec0f644c.png"
   ],
-  "lastUpdated": 1781204397407,
+  "lastUpdated": 1781479905118,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -103,7 +108,7 @@
   "subCategoryID": null,
   "title": "TrySerializeToJson does not correctly escape some characters",
   "trendingScore": 2867.707548047977,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "tryserializetojson-does-not-correctly-escape-some-characters",
   "viewerIsAuthor": false,

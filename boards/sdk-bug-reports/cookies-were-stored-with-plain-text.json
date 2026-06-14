@@ -1,6 +1,12 @@
 {
   "_id": "69ad8749c3fba5f074ee13cd",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.creator-companion",
+    "sdk.vrcsdk",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-06-14T23:32:47.078268Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "699d5496804d20e970b558de",
     "alias": "Valid Vicuna",
@@ -26,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -90,7 +96,7 @@
   "files": [],
   "ideaID": "69ad8749c3fba5f074ee13ec",
   "imageURLs": [],
-  "lastUpdated": 1781198113001,
+  "lastUpdated": 1781479786318,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -106,7 +112,7 @@
   "subCategoryID": null,
   "title": "cookies were stored with plain text",
   "trendingScore": 2932.20776613972,
-  "updatedAt": "2026-06-11T17:15:15.992639Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "cookies-were-stored-with-plain-text",
   "viewerIsAuthor": false,

@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66d1d0d5069773d4007adf14",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-14T23:32:42.075503Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6073407895eabc781f613da9",
     "alias": "Spicy Goat",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -90,7 +95,7 @@
   "files": [],
   "ideaID": "680bba0ce4c3e90df13962aa",
   "imageURLs": [],
-  "lastUpdated": 1781198110923,
+  "lastUpdated": 1781479783098,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -106,7 +111,7 @@
   "subCategoryID": null,
   "title": "Cancelling Build Prematurely leads to the SDK uploading a broken package",
   "trendingScore": 2854.095358231623,
-  "updatedAt": "2026-06-11T17:15:15.992639Z",
+  "updatedAt": "2026-06-14T23:32:19.478804Z",
   "updatedBy": null,
   "urlName": "cancelling-build-prematurely-leads-to-the-sdk-uploading-a-broken-package",
   "viewerIsAuthor": false,
