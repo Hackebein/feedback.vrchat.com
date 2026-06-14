@@ -1,0 +1,93 @@
+{
+  "_id": "6a2df5ce4c504a72c657ef38",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-14T01:50:36.493261Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "603b04282fa90e5c53608eb6",
+    "alias": "Variable Turtle",
+    "aliasID": "65c27d10ed6eefce4cc8cf32",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+    "created": "2021-02-28T02:47:04.064Z",
+    "name": "RavenWorks",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "603b04282fa90e5c53608eb6",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 411,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-14T00:29:02.002Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Sometimes, when I have an avatar with two nearby physbones that both have a physbone collider on them, and the physbones are set to collide with each other's collider:\n\n- if I *push* one physbone with an open hand (i.e. without grabbing) into the other physbone, both physbones will move, as expected\n\n- but if I *grab* one physbone, and *pull* it into the other physbone, the one that I'm grabbing will stop like it hit an immovable wall, and the second physbone won't react at all.\n\nIf physbones were just totally unable to mutually move each other via physbone colliders, I might have just assumed it was a shortcoming of the system; but if I can *push* one physbone into moving another, but I can't *pull* that same physbone into moving the other, that seems like a bug?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a2df5cd4c504a72c657ef2e",
+  "imageURLs": [],
+  "lastUpdated": 1781401529824,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2df5ce4c504a72c657ef38/1196277341.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-14T00:29:02.002Z",
+  "subCategoryID": null,
+  "title": "Physbone colliders sometimes can't move each other",
+  "trendingScore": 2946.12459837269,
+  "updatedAt": "2026-06-14T01:50:33.560057Z",
+  "updatedBy": null,
+  "urlName": "physbone-colliders-sometimes-cant-move-each-other",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": "<redacted>",
+      "voteID": "6a2df5ce363a2f2451be258d"
+    }
+  ]
+}
