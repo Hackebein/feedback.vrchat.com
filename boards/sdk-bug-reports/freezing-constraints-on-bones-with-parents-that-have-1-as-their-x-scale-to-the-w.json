@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "672a78d7c1f5d72f688a4cc8",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-14T03:09:42.727605Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "672a6ae40ac4ce04fa52d324",
     "alias": "Gainsboro Lungfish",
@@ -27,7 +33,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -132,7 +138,7 @@
     "https://canny-assets.io/images/b39cbfbb0942ff4eb9fdd92f7ced50e3.png",
     "https://canny-assets.io/images/eb807ce6dfde31c1a497a2dba2c1ae93.png"
   ],
-  "lastUpdated": 1781055893691,
+  "lastUpdated": 1781406396475,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -148,7 +154,7 @@
   "subCategoryID": null,
   "title": "Freezing constraints on bones with parents that have -1 as their X scale to the world",
   "trendingScore": 2862.526307827055,
-  "updatedAt": "2026-06-10T01:45:26.812378Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "freezing-constraints-on-bones-with-parents-that-have-1-as-their-x-scale-to-the-w",
   "viewerIsAuthor": false,

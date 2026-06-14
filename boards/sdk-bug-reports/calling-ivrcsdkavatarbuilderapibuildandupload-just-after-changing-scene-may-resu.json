@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "67f1809ff01b47c087d005c9",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-14T03:09:28.719546Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e4ca2145f9b3726b3b389e7",
     "alias": "Wild strawberry Canidae",
@@ -27,7 +33,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -210,7 +216,7 @@
   "files": [],
   "ideaID": "680bba5de4c3e90df13a4f87",
   "imageURLs": [],
-  "lastUpdated": 1781055890770,
+  "lastUpdated": 1781406387767,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -226,7 +232,7 @@
   "subCategoryID": null,
   "title": "Calling IVRCSdkAvatarBuilderApi.BuildAndUpload just after changing scene may results avatar id reset and fails to upload",
   "trendingScore": 2885.670007424527,
-  "updatedAt": "2026-06-10T01:45:26.812378Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": "5e4ca2145f9b3726b3b389e7",
   "urlName": "calling-ivrcsdkavatarbuilderapibuildandupload-just-after-changing-scene-may-resu",
   "viewerIsAuthor": false,

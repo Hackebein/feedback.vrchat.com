@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66f486f0a1d4c383d65a3f7b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-14T03:12:36.161955Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f30ecee654cd4491456a82f",
     "alias": "Confident Albatross",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -360,7 +365,7 @@
     "https://canny-assets.io/images/9207ccb0509c6f54c329f62a96db4f37.png",
     "https://canny-assets.io/images/462524124687bd5800efb3cac0d50714.png"
   ],
-  "lastUpdated": 1781060790455,
+  "lastUpdated": 1781406522600,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -376,7 +381,7 @@
   "subCategoryID": null,
   "title": "VRC Constraints drift over time when far away from world origin and seated",
   "trendingScore": 2913.0888977645504,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "vrc-constraints-drift-over-time-when-far-away-from-world-origin-and-seated",
   "viewerIsAuthor": false,

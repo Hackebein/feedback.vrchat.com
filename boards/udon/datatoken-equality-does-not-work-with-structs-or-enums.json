@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "680e9f23b78da8b513ae069b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T03:14:00.295451Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f363d5bfabaeb1c5ff1aa28",
     "alias": "Positive Piranha",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -45,7 +50,7 @@
   "files": [],
   "ideaID": "680e9f23b78da8b513ae0701",
   "imageURLs": [],
-  "lastUpdated": 1781060828875,
+  "lastUpdated": 1781406537443,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -61,7 +66,7 @@
   "subCategoryID": null,
   "title": "DataToken equality does not work with structs or enums",
   "trendingScore": 2907.267048209695,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": "5f363d5bfabaeb1c5ff1aa28",
   "urlName": "datatoken-equality-does-not-work-with-structs-or-enums",
   "viewerIsAuthor": false,

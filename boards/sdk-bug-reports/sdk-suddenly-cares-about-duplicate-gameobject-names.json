@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "662c3914f01635d0b148fbdb",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-14T03:12:21.432194Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d23cd6220d3ad1f2b3ee7b1",
     "alias": "Cultural Capybara",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -590,7 +595,7 @@
     "https://canny.io/images/1ecde93b9abaa16ed045f4a3c2f5b4e6.png",
     "https://canny.io/images/1d5f1d9395b77b8b69be9581566182fd.png"
   ],
-  "lastUpdated": 1781060787531,
+  "lastUpdated": 1781406514690,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 11,
@@ -606,7 +611,7 @@
   "subCategoryID": null,
   "title": "SDK Suddenly Cares About Duplicate GameObject Names",
   "trendingScore": 2842.1528514384504,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "sdk-suddenly-cares-about-duplicate-gameobject-names",
   "viewerIsAuthor": false,
