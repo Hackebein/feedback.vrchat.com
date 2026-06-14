@@ -160,10 +160,80 @@ _LIMITER = RateLimiter()
 
 
 # ---------------------------------------------------------------------------
+# HTTP stats
+# ---------------------------------------------------------------------------
+_http_lock = threading.Lock()
+_http_stats = {
+    "requests": 0,
+    "ok": 0,
+    "not_found": 0,
+    "rate_limited": 0,
+    "server_err": 0,
+    "errors": 0,
+    "retries": 0,
+    "bytes": 0,
+    "time": 0.0,
+}
+
+
+def reset_http_stats():
+    with _http_lock:
+        for k in _http_stats:
+            _http_stats[k] = 0 if k != "time" else 0.0
+
+
+def _record_http(code, body, elapsed):
+    with _http_lock:
+        _http_stats["requests"] += 1
+        _http_stats["bytes"] += len(body or "")
+        _http_stats["time"] += elapsed
+        if code == 200:
+            _http_stats["ok"] += 1
+        elif code == 404:
+            _http_stats["not_found"] += 1
+        elif code == 429:
+            _http_stats["rate_limited"] += 1
+        elif code >= 500:
+            _http_stats["server_err"] += 1
+        elif code == 0:
+            _http_stats["errors"] += 1
+        else:
+            _http_stats["errors"] += 1
+
+
+def record_http_retry():
+    with _http_lock:
+        _http_stats["retries"] += 1
+
+
+def _format_bytes(n):
+    if n >= 1_000_000:
+        return f"{n / 1_000_000:.1f}MB"
+    if n >= 1_000:
+        return f"{n / 1_000:.1f}KB"
+    return f"{n}B"
+
+
+def format_http_stats(prefix="[HTTP]"):
+    with _http_lock:
+        s = dict(_http_stats)
+    reqs = s["requests"]
+    total_time = s["time"]
+    avg_ms = int(1000 * total_time / reqs) if reqs else 0
+    return (
+        f"{prefix} requests={reqs} ok={s['ok']} 404={s['not_found']} "
+        f"429={s['rate_limited']} 5xx={s['server_err']} err={s['errors']} "
+        f"retries={s['retries']} bytes={_format_bytes(s['bytes'])} "
+        f"total={total_time:.1f}s avg={avg_ms}ms"
+    )
+
+
+# ---------------------------------------------------------------------------
 # HTTP helpers
 # ---------------------------------------------------------------------------
 def _curl_get(url, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
+    t0 = time.perf_counter()
     try:
         r = subprocess.run(
             ["curl", "-sS", "-L", "-w", "\n__HTTP_CODE__:%{http_code}",
@@ -174,15 +244,19 @@ def _curl_get(url, timeout=15):
         out = r.stdout
         m = re.search(r"\n__HTTP_CODE__:(\d+)\s*$", out)
         if not m:
+            _record_http(0, out, time.perf_counter() - t0)
             return 0, out
         code = int(m.group(1))
         body = out[:m.start()]
+        _record_http(code, body, time.perf_counter() - t0)
         return code, body
     except Exception:
+        _record_http(0, "", time.perf_counter() - t0)
         return 0, ""
 
 
 def _curl_post_json(url, payload, timeout=15):
+    t0 = time.perf_counter()
     try:
         r = subprocess.run(
             ["curl", "-sS", "-X", "POST", url,
@@ -192,8 +266,12 @@ def _curl_post_json(url, payload, timeout=15):
              "-m", str(timeout)],
             capture_output=True, text=True, timeout=timeout + 5,
         )
-        return r.stdout
+        out = r.stdout
+        code = 200 if out.strip() else 0
+        _record_http(code, out, time.perf_counter() - t0)
+        return out
     except Exception:
+        _record_http(0, "", time.perf_counter() - t0)
         return ""
 
 
@@ -368,16 +446,19 @@ def fetch_post_page(board_slug, url_slug, retries=3):
         if code == 429:
             _LIMITER.hit_429()
             last_err = "429"
+            record_http_retry()
             continue
         if code == 404:
             return None, [], True, False
         if code == 0 or code >= 500:
             _LIMITER.hit_429()
             last_err = f"http={code}"
+            record_http_retry()
             time.sleep(1.0 + attempt)
             continue
         if code != 200:
             last_err = f"http={code}"
+            record_http_retry()
             time.sleep(1.0 + attempt)
             continue
 
@@ -385,6 +466,7 @@ def fetch_post_page(board_slug, url_slug, retries=3):
         data = parse_canny_data(body)
         if not data:
             last_err = "parse"
+            record_http_retry()
             time.sleep(1.0 + attempt)
             continue
 
@@ -647,6 +729,9 @@ def fetch_all_pages(scan_targets):
     if not scan_targets:
         return {}
     results = {}
+    total = len(scan_targets)
+    done = 0
+    found = missing = transient_n = 0
     with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
         futures = {
             ex.submit(fetch_post_page, b, slug): pid
@@ -658,6 +743,20 @@ def fetch_all_pages(scan_targets):
                 results[pid] = fut.result()
             except Exception as e:
                 print(f"[ERROR] page fetch crashed for {pid}: {e}")
+                results[pid] = (None, [], False, True)
+            done += 1
+            post, _comments, nf, tr = results[pid]
+            if tr:
+                transient_n += 1
+            elif nf:
+                missing += 1
+            elif post:
+                found += 1
+            if done % 100 == 0 or done == total:
+                print(
+                    f"[UPDATE] fetched {done}/{total} pages "
+                    f"(found={found}, 404={missing}, transient={transient_n})..."
+                )
     return results
 
 
@@ -1136,6 +1235,7 @@ def main():
 
     tree = categorize.load_tree()
     categorize.reset_usage_tracking(True)
+    reset_http_stats()
     if args.retag_ai or args.retag_ai_all:
         stored, deduped = load_all_stored(boards)
         print(f"[UPDATE] {len(stored)} stored across {len(boards)} board(s)")
@@ -1161,6 +1261,7 @@ def main():
         )
         print(f"[UPDATE] Re-tagged {tagged} post(s) total")
         print(categorize.format_usage_stats())
+        print(format_http_stats())
         _commit_rebase_push_board_update()
         elapsed = time.time() - t0
         print(f"\n[UPDATE] Done in {elapsed:.1f}s")
@@ -1219,6 +1320,7 @@ def main():
           f">{totals['moved']} moved, "
           f"={totals['deduped']} deduped")
     print(categorize.format_usage_stats())
+    print(format_http_stats())
 
     try:
         print("[UPDATE] Regenerating README...")
