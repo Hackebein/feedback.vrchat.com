@@ -1,6 +1,11 @@
 {
   "_id": "694cfb5dad1af3a973924724",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-14T13:55:38.535266Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
     "alias": "Quince Pike",
@@ -26,7 +31,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -374,7 +379,7 @@
   "files": [],
   "ideaID": "694cfb5dad1af3a9739247d2",
   "imageURLs": [],
-  "lastUpdated": 1781124929841,
+  "lastUpdated": 1781444826983,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -390,7 +395,7 @@
   "subCategoryID": null,
   "title": "VRCConstraintsBase.OnEnable produces MissingReferenceException checking execution order with Physbones",
   "trendingScore": 2930.8596628041782,
-  "updatedAt": "2026-06-10T20:56:22.023154Z",
+  "updatedAt": "2026-06-14T13:47:07.787080Z",
   "updatedBy": "63c9760ef519ef0b8ce99165",
   "urlName": "vrcconstraintsbaseonenable-produces-missingreferenceexception-checking-execution",
   "viewerIsAuthor": false,

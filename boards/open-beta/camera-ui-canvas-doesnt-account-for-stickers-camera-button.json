@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66f619174d8016ad195e3a37",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-14T13:51:43.942832Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
     "alias": "Dynamic Starfish",
@@ -27,7 +32,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1299,
+    "postCount": 1307,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -128,7 +133,7 @@
   "files": [],
   "ideaID": "680bba16e4c3e90df13981d5",
   "imageURLs": [],
-  "lastUpdated": 1781124903919,
+  "lastUpdated": 1781444801141,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -144,7 +149,7 @@
   "subCategoryID": null,
   "title": "Camera UI Canvas doesn't account for Stickers Camera button",
   "trendingScore": 2858.0020909578534,
-  "updatedAt": "2026-06-10T20:56:22.023154Z",
+  "updatedAt": "2026-06-14T13:47:07.787080Z",
   "updatedBy": null,
   "urlName": "camera-ui-canvas-doesnt-account-for-stickers-camera-button",
   "viewerIsAuthor": false,

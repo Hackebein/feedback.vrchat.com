@@ -1,6 +1,12 @@
 {
   "_id": "69a1f9e564f373e74400fe6c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T13:54:34.384540Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5bad030cf511392c4ddf27bc",
     "alias": "Evergreen Alligator",
@@ -26,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -758,7 +764,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/8e4207bf3097d986e6cb5c3f9734dcd5.png"
   ],
-  "lastUpdated": 1781124928074,
+  "lastUpdated": 1781444825100,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 63,
@@ -774,7 +780,7 @@
   "subCategoryID": null,
   "title": "[SDK 3.10.2] All URL loading methods error when called.",
   "trendingScore": 2938.820750763305,
-  "updatedAt": "2026-06-10T20:56:22.023154Z",
+  "updatedAt": "2026-06-14T13:47:07.787080Z",
   "updatedBy": null,
   "urlName": "sdk-3102-all-url-loading-methods-error-when-called",
   "viewerIsAuthor": false,
