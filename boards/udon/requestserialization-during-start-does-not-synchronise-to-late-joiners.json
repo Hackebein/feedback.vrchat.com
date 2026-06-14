@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "674064c58b36f95c6c5e7028",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T03:24:37.878936Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e7fc59ec4c8917c6442302b",
     "alias": "Rosewood Gayal",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -651,7 +656,7 @@
   "files": [],
   "ideaID": "680bba2ce4c3e90df139c63e",
   "imageURLs": [],
-  "lastUpdated": 1781060836614,
+  "lastUpdated": 1781407299140,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 273,
@@ -667,7 +672,7 @@
   "subCategoryID": null,
   "title": "`RequestSerialization` during `Start` does not synchronise to Late-Joiners",
   "trendingScore": 2882.2772589947754,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:24:34.088427Z",
   "updatedBy": "5e7fc59ec4c8917c6442302b",
   "urlName": "requestserialization-during-start-does-not-synchronise-to-late-joiners",
   "viewerIsAuthor": false,
