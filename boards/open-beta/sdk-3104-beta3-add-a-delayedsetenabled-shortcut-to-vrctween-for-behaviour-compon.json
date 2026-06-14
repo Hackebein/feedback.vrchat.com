@@ -1,0 +1,93 @@
+{
+  "_id": "6a2e11a5f999014a9703ad15",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T03:09:18.563893Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a2e10cf363a2f2451be7ac1",
+    "alias": "Bisque Rook",
+    "aliasID": "6a2e10cf363a2f2451be7ac5",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/57242dde5f293900476e83a4b1f28e7c.png",
+    "created": "2026-06-14T02:24:15.409Z",
+    "name": "hassaku",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6a2e10cf363a2f2451be7ac1",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 459,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-14T02:27:49.806Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "# Add delayed enable/disable support for Behaviour components\n\n`VRCTween.DelayedSetActive` was recently added, and I have found it very useful.\n\nI would like to request a similar shortcut for delayed changes to `Behaviour.enabled`.\n\n## Background\n\nVRCTween already provides many convenient shortcut methods, including `DelayedSetActive`.\n\nIt also has built-in tween support for components such as `AudioSource` and `Image`. These components inherit from `Behaviour`, so enabling or disabling them after a delay is a natural use case.\n\nCurrently, if we want to enable or disable a `Behaviour` after a delay, we need to create custom wrapper logic in Udon.\n\nHaving a built-in shortcut would make this pattern more concise and consistent with `DelayedSetActive`.\n\n## Example\n\nCurrent approach:\n\n```\n\npublic Behaviour target;\n\npublic void DisableLater()\n\n{\n\n    SendCustomEventDelayedSeconds(nameof(DisableTarget), delay);\n\n}\n\npublic void DisableTarget()\n\n{\n\n    target.enabled = false;\n\n}\n\n```\n\nProposed:\n\n```\n\n// Example only.\n\nVRCTween.DelayedSetEnabled(target, false, delay);\n\n```\n\n## Benefits\n\n* Consistent with `DelayedSetActive`\n\n* Useful for `Behaviour` components such as `AudioSource`, `Image`, and many others\n\n* Reduces boilerplate Udon code\n\n* Makes delayed enable/disable operations easier to read",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a2e11a5f999014a9703ad14",
+  "imageURLs": [],
+  "lastUpdated": 1781406186508,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-14T02:27:49.806Z",
+  "subCategoryID": null,
+  "title": "[SDK 3.10.4-beta.3] Add a `DelayedSetEnabled` shortcut to VRCTween for Behaviour components",
+  "trendingScore": 2946.1363842142905,
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
+  "updatedBy": "6a2e10cf363a2f2451be7ac1",
+  "urlName": "sdk-3104-beta3-add-a-delayedsetenabled-shortcut-to-vrctween-for-behaviour-compon",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a2e10cf363a2f2451be7ac1",
+      "alias": "Bisque Rook",
+      "aliasID": "6a2e10cf363a2f2451be7ac5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/57242dde5f293900476e83a4b1f28e7c.png",
+      "companies": [],
+      "name": "hassaku",
+      "urlName": "<redacted>",
+      "voteID": "6a2e11a5363a2f2451be7bf9"
+    }
+  ]
+}

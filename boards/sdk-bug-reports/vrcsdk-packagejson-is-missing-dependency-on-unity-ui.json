@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66507692f389039f87169c0b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-14T03:12:42.994815Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
     "alias": "Toffee Coyote",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -470,7 +475,7 @@
   "files": [],
   "ideaID": "680bb9e5e4c3e90df138f7bc",
   "imageURLs": [],
-  "lastUpdated": 1781060791908,
+  "lastUpdated": 1781406525773,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -486,7 +491,7 @@
   "subCategoryID": null,
   "title": "VRCSDK package.json is missing dependency on Unity UI",
   "trendingScore": 2861.858934760359,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "vrcsdk-packagejson-is-missing-dependency-on-unity-ui",
   "viewerIsAuthor": false,

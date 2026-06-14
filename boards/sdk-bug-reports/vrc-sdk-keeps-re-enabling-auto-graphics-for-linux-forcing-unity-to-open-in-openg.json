@@ -1,6 +1,11 @@
 {
   "_id": "6a03c1e754ddecad2ae494d1",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-14T03:12:37.894442Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a03c185cf565b8f740ae9b7",
     "alias": "Jasmine green Puffin",
@@ -26,7 +31,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -49,7 +54,7 @@
     "https://canny-assets.io/images/8ad6fe7e94c7f727b643c611de411570.png",
     "https://canny-assets.io/images/5a5341f5431e7fad0ad856a1757ef0ba.png"
   ],
-  "lastUpdated": 1781060790980,
+  "lastUpdated": 1781406523113,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -65,7 +70,7 @@
   "subCategoryID": null,
   "title": "VRC SDK keeps re-enabling Auto Graphics for Linux, forcing unity to open in opengl instead of vulkan (overriding previous settings)",
   "trendingScore": 2941.5515198483845,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "vrc-sdk-keeps-re-enabling-auto-graphics-for-linux-forcing-unity-to-open-in-openg",
   "viewerIsAuthor": false,

@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "664f4097a8f4ceca713dcc1c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T03:13:58.629541Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "629b08c4d500080b65918bd9",
     "alias": "Khaki Reptile",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -118,7 +123,7 @@
   "files": [],
   "ideaID": "680bb9e5e4c3e90df138f780",
   "imageURLs": [],
-  "lastUpdated": 1781060828516,
+  "lastUpdated": 1781406536365,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 16,
@@ -134,7 +139,7 @@
   "subCategoryID": null,
   "title": "char type variables only network sync the least significant byte, leading to unexpected data loss",
   "trendingScore": 2852.9566386999513,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": "629b08c4d500080b65918bd9",
   "urlName": "char-type-variables-only-network-sync-the-least-significant-byte-leading-to-unex",
   "viewerIsAuthor": false,

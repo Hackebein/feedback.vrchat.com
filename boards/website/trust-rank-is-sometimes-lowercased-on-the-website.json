@@ -1,0 +1,97 @@
+{
+  "_id": "6a2e182b49367954c7fefe9c",
+  "aiCategories": [
+    "loc.website",
+    "web.profiles"
+  ],
+  "aiTaggedAt": "2026-06-14T03:09:21.102310Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 315,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-14T02:55:39.033Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Visit profiles of a Trusted User and a Visitor to find case styles inconsistent with the app (Steam), or all lowercase.\n\nSteps to reproduce:\n\n- Visitor: https://vrchat.com/home/user/usr_7935774d-01bc-4f74-8e48-6586e412df18\n\n- Trusted User: https://vrchat.com/home/user/usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c\n\nExpected behavior: \n\n- Visitor to appear as \"Visitor\" on the website\n\n- Trusted User to appear as \"Trusted User\" the website\n\nActual behavior:\n\n- Visitor appears as \"visitor\" on the website (\"Visitor\" in-app)\n\n- Trusted User appears as \"Trusted user\" on the website (\"Trusted User\" in-app)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a2e182a49367954c7fefe9b",
+  "imageURLs": [
+    "https://canny-assets.io/images/fa7f6c99c8eac165b5a288d8684da822.png",
+    "https://canny-assets.io/images/7baf8d01961206ae0648a7fa01b9b61f.png",
+    "https://canny-assets.io/images/bb1889fd6b74e70e525de092669f5f2a.png"
+  ],
+  "lastUpdated": 1781406186958,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-14T02:55:39.033Z",
+  "subCategoryID": null,
+  "title": "Trust rank is sometimes lowercased on the website",
+  "trendingScore": 2946.1391441051633,
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "trust-rank-is-sometimes-lowercased-on-the-website",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "<redacted>",
+      "voteID": "6a2e182b363a2f2451be8aba"
+    }
+  ]
+}

@@ -1,10 +1,11 @@
 {
   "_id": "6a2c5f3a49367954c76e8a8d",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.expressions"
+    "loc.quick-menu",
+    "avatars.expressions",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-06-13T01:46:05.692663Z",
+  "aiTaggedAt": "2026-06-14T03:09:22.655223Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63283ca2360db044b072dafe",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a2c6d0ef999014a9779d565",
@@ -241,6 +242,50 @@
       "value": "@{60e65f577ae9d0492b0f2a75|full_name}\n\nweird.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a2e0a442fa42c61a81a7c81",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63283ca2360db044b072dafe",
+        "alias": "Fandango Bird",
+        "aliasID": "6609a8fae5d26962aafe5e75",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/faf1b85bc7709aadb4a2e417aa13acba.png",
+        "created": "2022-09-19T09:55:46.860Z",
+        "name": "Tehrasha",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-14T01:56:20.827Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a2c6d0ef999014a9779d565",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2c5f3a49367954c76e8a8d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Continued testing.  Using Looks is not pert of the issue.  Just closing the QM while the Wings are closed is enough to trigger it.\n\nhttps://youtu.be/PYf22Ks47UQ",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -256,7 +301,7 @@
   "files": [],
   "ideaID": "6a2c5f3a49367954c76e8a72",
   "imageURLs": [],
-  "lastUpdated": 1781401536175,
+  "lastUpdated": 1781406187007,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -272,7 +317,7 @@
   "subCategoryID": null,
   "title": "Wings reset to default if they are closed when a Looks is selected.",
   "trendingScore": 2945.952503124674,
-  "updatedAt": "2026-06-14T01:50:33.560057Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "wings-reset-to-default-if-they-are-closed-when-a-looks-is-selected",
   "viewerIsAuthor": false,

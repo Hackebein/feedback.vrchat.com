@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "67bc098b8aff64bedc11675e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.clientsim",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-06-14T03:10:52.042567Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "601d7360a44f0f0365c55ad4",
     "alias": "Yolk yellow Carp",
@@ -27,7 +33,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -45,7 +51,7 @@
   "files": [],
   "ideaID": "680bba4ce4c3e90df13a1e31",
   "imageURLs": [],
-  "lastUpdated": 1781060779387,
+  "lastUpdated": 1781406464744,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -61,7 +67,7 @@
   "subCategoryID": null,
   "title": "Invalid PlayerObject Content Breaks Client Simulator in the Unity Editor",
   "trendingScore": 2910.974280808532,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "invalid-playerobject-content-breaks-client-simulator-in-the-unity-editor",
   "viewerIsAuthor": false,

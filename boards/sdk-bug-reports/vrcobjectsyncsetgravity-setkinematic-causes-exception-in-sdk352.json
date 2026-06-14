@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6626641824e8755bef6d45d8",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T03:12:40.675178Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d09f39124a63950e4b890dc",
     "alias": "Mixed Eagle",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -576,7 +581,7 @@
   "files": [],
   "ideaID": "680bb9dde4c3e90df138d972",
   "imageURLs": [],
-  "lastUpdated": 1781060791513,
+  "lastUpdated": 1781406524724,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 25,
@@ -592,7 +597,7 @@
   "subCategoryID": null,
   "title": "VRCObjectSync.SetGravity/SetKinematic causes exception in SDK3.5.2",
   "trendingScore": 2890.2122399204845,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "vrcobjectsyncsetgravity-setkinematic-causes-exception-in-sdk352",
   "viewerIsAuthor": false,

@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "66b9f4f34a6cba7eb1b9327b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-14T03:12:17.417496Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66b9ec5b70da9d2bb9855c65",
     "alias": "Lapis lazuli Marmot",
@@ -27,7 +33,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -240,7 +246,7 @@
   ],
   "ideaID": "680bb9fbe4c3e90df1393c6f",
   "imageURLs": [],
-  "lastUpdated": 1781060786686,
+  "lastUpdated": 1781406513129,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -256,7 +262,7 @@
   "subCategoryID": null,
   "title": "SDK keeps getting HTTP404 when PUTting avatar thumbnail to server",
   "trendingScore": 2850.3341848913738,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": null,
   "urlName": "sdk-keeps-getting-http404-when-putting-avatar-thumbnail-to-server",
   "viewerIsAuthor": false,

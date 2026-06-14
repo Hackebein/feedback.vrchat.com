@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66c2d1b3d46aa20c63a8eb21",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-14T03:12:13.445308Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66c2d1a1d75f6983541a99f8",
     "alias": "Fuchsia Moth",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -98,7 +103,7 @@
   ],
   "ideaID": "680bba05e4c3e90df1395685",
   "imageURLs": [],
-  "lastUpdated": 1781060785836,
+  "lastUpdated": 1781406510942,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -114,7 +119,7 @@
   "subCategoryID": null,
   "title": "SDK Always fails to compile or load correctly",
   "trendingScore": 2851.2945026807256,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:09:14.905722Z",
   "updatedBy": "66c2d1a1d75f6983541a99f8",
   "urlName": "sdk-always-fails-to-compile-or-load-correctly",
   "viewerIsAuthor": false,
