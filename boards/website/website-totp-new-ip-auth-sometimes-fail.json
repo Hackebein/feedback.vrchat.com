@@ -1,6 +1,13 @@
 {
   "_id": "6911310c69b2dd816acfd6db",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.auth",
+    "account.auth",
+    "account.2fa"
+  ],
+  "aiTaggedAt": "2026-06-14T11:49:08.498679Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60651324fbe2815d2b9ff6cb",
     "alias": "Russet Pinniped",
@@ -26,7 +33,7 @@
     "created": "2022-08-25T18:45:44.822Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 313,
+    "postCount": 316,
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
@@ -44,7 +51,7 @@
   "files": [],
   "ideaID": "6911310c69b2dd816acfd74c",
   "imageURLs": [],
-  "lastUpdated": 1781104030842,
+  "lastUpdated": 1781437528641,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -60,7 +67,7 @@
   "subCategoryID": null,
   "title": "Website totp & new IP auth sometimes fail",
   "trendingScore": 2915.7231388624164,
-  "updatedAt": "2026-06-10T15:07:12.043419Z",
+  "updatedAt": "2026-06-14T11:48:35.589789Z",
   "updatedBy": null,
   "urlName": "website-totp-new-ip-auth-sometimes-fail",
   "viewerIsAuthor": false,
