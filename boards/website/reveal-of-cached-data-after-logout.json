@@ -1,6 +1,12 @@
 {
   "_id": "695baf6e2016730224310e14",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.auth",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-06-14T14:49:48.187888Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60e65f577ae9d0492b0f2a75",
     "alias": "Just Wildcat",
@@ -26,7 +32,7 @@
     "created": "2022-08-25T18:45:44.822Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 313,
+    "postCount": 316,
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
@@ -61,7 +67,7 @@
     "https://canny-assets.io/images/f6a1b0b2b7b96a9b281a32a2d882b8be.png",
     "https://canny-assets.io/images/f27b8f5b5ab6177b6ed786ab369316ca.png"
   ],
-  "lastUpdated": 1781124978433,
+  "lastUpdated": 1781448402541,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -77,7 +83,7 @@
   "subCategoryID": null,
   "title": "Reveal of cached data after logout",
   "trendingScore": 2923.3392551162415,
-  "updatedAt": "2026-06-10T20:56:22.023154Z",
+  "updatedAt": "2026-06-14T14:49:16.475999Z",
   "updatedBy": "60e65f577ae9d0492b0f2a75",
   "urlName": "reveal-of-cached-data-after-logout",
   "viewerIsAuthor": false,
