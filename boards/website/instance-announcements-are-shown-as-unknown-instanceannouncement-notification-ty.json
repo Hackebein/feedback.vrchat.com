@@ -1,0 +1,95 @@
+{
+  "_id": "6a2e3c8bef5b018a041f64ad",
+  "aiCategories": [
+    "loc.website",
+    "web.home"
+  ],
+  "aiTaggedAt": "2026-06-14T05:36:21.723491Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 316,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-14T05:30:51.337Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "`instance.announcement` notification type is missing an icon and localized text.\n\n1. Send an instance announcement in-app from an instance.\n\n2. Open notifications on VRChat Home website and notice the notification type.\n\nExpected behavior: Notification bell icon, \"Instance Announcement\" text.\n\nActual behavior: \"?\" icon, \"instance.announcement\"",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a2e3c8bef5b018a041f64a5",
+  "imageURLs": [
+    "https://canny-assets.io/images/90a3a250d2ffc61581ee92547c81a787.png"
+  ],
+  "lastUpdated": 1781415070810,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-14T05:30:51.337Z",
+  "subCategoryID": null,
+  "title": "Instance announcements are shown as unknown \"instance.announcement\" notification type",
+  "trendingScore": 2946.154541467101,
+  "updatedAt": "2026-06-14T05:36:17.958287Z",
+  "updatedBy": null,
+  "urlName": "instance-announcements-are-shown-as-unknown-instanceannouncement-notification-ty",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": "<redacted>",
+      "voteID": "6a2e3c8b363a2f2451bef8d7"
+    }
+  ]
+}
