@@ -1,6 +1,12 @@
 {
   "_id": "699d92542c846e93503e00dd",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.clientsim",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T22:28:31.350814Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e8487f1fd13be66cecc227b",
     "alias": "Parental Pelican",
@@ -26,7 +32,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1303,
+    "postCount": 1307,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -237,7 +243,7 @@
     "https://canny-assets.io/images/23dfd5f184c06d2d90dd6ac9d0c88d2b.png",
     "https://canny-assets.io/images/a4891a103eaf3b3aa0a0b98dd69eb2bf.png"
   ],
-  "lastUpdated": 1781198094928,
+  "lastUpdated": 1781476082752,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 28,
@@ -253,7 +259,7 @@
   "subCategoryID": null,
   "title": "ClientSim cannot call VRCImageDownloader.DownloadImage() from Udonsharp",
   "trendingScore": 2935.151069400373,
-  "updatedAt": "2026-06-11T17:15:15.992639Z",
+  "updatedAt": "2026-06-14T22:28:11.902091Z",
   "updatedBy": null,
   "urlName": "clientsim-cannot-call-vrcimagedownloaderdownloadimage-from-udonsharp",
   "viewerIsAuthor": false,
