@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "66c51d0ef09a952bb7933960",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T03:24:53.145859Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "629b08c4d500080b65918bd9",
     "alias": "Khaki Reptile",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -84,7 +89,7 @@
   "files": [],
   "ideaID": "680bba05e4c3e90df13954ae",
   "imageURLs": [],
-  "lastUpdated": 1781060838788,
+  "lastUpdated": 1781407304104,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -100,7 +105,7 @@
   "subCategoryID": null,
   "title": "Udon synched variables do not sort themselves properly when serialized",
   "trendingScore": 2886.248874517196,
-  "updatedAt": "2026-06-10T03:07:24.226649Z",
+  "updatedAt": "2026-06-14T03:24:34.088427Z",
   "updatedBy": null,
   "urlName": "udon-synched-variables-do-not-sort-themselves-properly-when-serialized",
   "viewerIsAuthor": false,
