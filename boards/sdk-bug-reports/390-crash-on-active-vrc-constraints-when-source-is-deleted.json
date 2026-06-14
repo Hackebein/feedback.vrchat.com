@@ -1,6 +1,11 @@
 {
   "_id": "68e47cc6c0b63f7a233b1693",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-14T09:13:10.962594Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63180cda10858444c1b3cc5b",
     "alias": "Fiscal Marsupial",
@@ -26,7 +31,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -133,7 +138,7 @@
   ],
   "ideaID": "68e47cc6c0b63f7a233b1752",
   "imageURLs": [],
-  "lastUpdated": 1781096717741,
+  "lastUpdated": 1781428070268,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -149,7 +154,7 @@
   "subCategoryID": null,
   "title": "[3.9.0] Crash on active VRC constraints when source is deleted",
   "trendingScore": 2911.9757895415387,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T09:08:39.496424Z",
   "updatedBy": null,
   "urlName": "390-crash-on-active-vrc-constraints-when-source-is-deleted",
   "viewerIsAuthor": false,

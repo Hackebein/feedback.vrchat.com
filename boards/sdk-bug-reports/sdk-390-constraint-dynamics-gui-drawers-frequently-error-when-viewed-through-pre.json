@@ -1,6 +1,12 @@
 {
   "_id": "692ef615ad85445d3c620695",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-14T09:13:30.525769Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
     "alias": "Quince Pike",
@@ -26,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -121,7 +127,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/4786535a4b68297e46c85886e5834065.png"
   ],
-  "lastUpdated": 1781096720472,
+  "lastUpdated": 1781428079122,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -137,7 +143,7 @@
   "subCategoryID": null,
   "title": "[SDK 3.9.0+] Constraint/Dynamics GUI drawers frequently error when viewed through prefab overrides",
   "trendingScore": 2923.734181510338,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T09:08:39.496424Z",
   "updatedBy": "63c9760ef519ef0b8ce99165",
   "urlName": "sdk-390-constraint-dynamics-gui-drawers-frequently-error-when-viewed-through-pre",
   "viewerIsAuthor": false,

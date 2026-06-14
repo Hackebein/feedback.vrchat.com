@@ -1,6 +1,11 @@
 {
   "_id": "6922bfd7cd7ded5d2e106125",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T09:14:52.024775Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3287055bc2dc276e0f1630",
     "alias": "Lemon Silverfish",
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -44,7 +49,7 @@
   "files": [],
   "ideaID": "6922bfd7cd7ded5d2e10618f",
   "imageURLs": [],
-  "lastUpdated": 1781096723692,
+  "lastUpdated": 1781428119324,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -60,7 +65,7 @@
   "subCategoryID": null,
   "title": "OnPlayerLeft() fires without OnPlayerJoined()",
   "trendingScore": 2918.5886371616416,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T09:08:39.496424Z",
   "updatedBy": null,
   "urlName": "onplayerleft-fires-without-onplayerjoined",
   "viewerIsAuthor": false,

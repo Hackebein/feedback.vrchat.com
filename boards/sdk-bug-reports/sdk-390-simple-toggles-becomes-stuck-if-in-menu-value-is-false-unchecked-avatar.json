@@ -1,6 +1,12 @@
 {
   "_id": "68f1b94d2fda5c1199d516fc",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-06-14T09:13:30.552625Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68f1ae7fd5830af7f19fc3b8",
     "alias": "Huge Grasshopper",
@@ -26,7 +32,7 @@
     "created": "2024-04-10T17:56:34.317Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 345,
+    "postCount": 346,
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
@@ -233,7 +239,7 @@
   "files": [],
   "ideaID": "68f1b94d2fda5c1199d51738",
   "imageURLs": [],
-  "lastUpdated": 1781096720438,
+  "lastUpdated": 1781428079218,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -249,7 +255,7 @@
   "subCategoryID": null,
   "title": "SDK 3.9.0 Simple toggles becomes stuck if in menu value is false/unchecked (Avatar uploads with the bug!)",
   "trendingScore": 2911.857297080527,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T09:08:39.496424Z",
   "updatedBy": "68f1ae7fd5830af7f19fc3b8",
   "urlName": "sdk-390-simple-toggles-becomes-stuck-if-in-menu-value-is-false-unchecked-avatar",
   "viewerIsAuthor": false,

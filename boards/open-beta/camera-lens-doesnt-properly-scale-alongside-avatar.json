@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6495073c2387480963d84ee9",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-14T09:10:22.021013Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
     "alias": "Dynamic Starfish",
@@ -27,7 +33,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1298,
+    "postCount": 1307,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -91,7 +97,7 @@
     "https://canny.io/images/50e81c692c38d2c3b8b4dc45e359a5ba.jpg",
     "https://canny.io/images/f88bbbfac63ea96a23ec96831cd5527e.jpg"
   ],
-  "lastUpdated": 1781096680322,
+  "lastUpdated": 1781428012010,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 11,
@@ -107,7 +113,7 @@
   "subCategoryID": null,
   "title": "Camera lens doesn't properly scale alongside avatar",
   "trendingScore": 2837.206627051918,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T09:08:39.496424Z",
   "updatedBy": null,
   "urlName": "camera-lens-doesnt-properly-scale-alongside-avatar",
   "viewerIsAuthor": false,

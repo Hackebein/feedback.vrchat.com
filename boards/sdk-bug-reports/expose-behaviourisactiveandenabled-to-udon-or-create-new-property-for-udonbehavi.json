@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "68a809b0179faa561e50bee6",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T09:13:21.322799Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60ee9e81572cc51ad4e847e6",
     "alias": "Vervain Falcon",
@@ -27,7 +32,7 @@
     "created": "2024-04-10T17:56:30.034Z",
     "name": "Feature Request",
     "parentID": null,
-    "postCount": 151,
+    "postCount": 155,
     "urlName": "feature-request"
   },
   "categoryID": "6616d2ceedd9a0e35fce972c",
@@ -147,7 +152,7 @@
   "files": [],
   "ideaID": "68a809b0179faa561e50bf21",
   "imageURLs": [],
-  "lastUpdated": 1781096718917,
+  "lastUpdated": 1781428074857,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 11,
@@ -163,7 +168,7 @@
   "subCategoryID": null,
   "title": "Expose Behaviour.isActiveAndEnabled to Udon (or Create new property for UdonBehaviour)",
   "trendingScore": 2942.6091707060186,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T09:08:39.496424Z",
   "updatedBy": null,
   "urlName": "expose-behaviourisactiveandenabled-to-udon-or-create-new-property-for-udonbehavi",
   "viewerIsAuthor": false,
