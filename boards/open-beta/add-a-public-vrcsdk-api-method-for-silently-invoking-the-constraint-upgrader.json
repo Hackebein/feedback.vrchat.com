@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "66a198e9429f8b9f6a8026bf",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-14T13:36:57.407832Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
     "alias": "Toffee Coyote",
@@ -27,7 +33,7 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 456,
+    "postCount": 459,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
@@ -425,7 +431,7 @@
   "files": [],
   "ideaID": "680bb9f5e4c3e90df139236b",
   "imageURLs": [],
-  "lastUpdated": 1781121063114,
+  "lastUpdated": 1781444187403,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 38,
@@ -441,7 +447,7 @@
   "subCategoryID": null,
   "title": "Add a public VRCSDK API method for silently invoking the constraint upgrader",
   "trendingScore": 2853.4185368854746,
-  "updatedAt": "2026-06-10T19:51:15.363574Z",
+  "updatedAt": "2026-06-14T13:36:38.746057Z",
   "updatedBy": null,
   "urlName": "add-a-public-vrcsdk-api-method-for-silently-invoking-the-constraint-upgrader",
   "viewerIsAuthor": false,

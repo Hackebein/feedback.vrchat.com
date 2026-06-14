@@ -1,6 +1,12 @@
 {
   "_id": "69b8148e18947e6280d7cbb1",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-06-14T13:36:47.428612Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67688e59df2606b92281bc7a",
     "alias": "Thin Spoonbill",
@@ -91,7 +97,7 @@
   ],
   "ideaID": "69b8148e18947e6280d7cbd1",
   "imageURLs": [],
-  "lastUpdated": 1781120981416,
+  "lastUpdated": 1781444077813,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -107,7 +113,7 @@
   "subCategoryID": null,
   "title": "VRCPlayerApi.SetAvatarAudioFarRadius does not restore avatar audio if playback starts while muted",
   "trendingScore": 2933.7577024536895,
-  "updatedAt": "2026-06-10T19:51:15.363574Z",
+  "updatedAt": "2026-06-14T13:36:38.746057Z",
   "updatedBy": null,
   "urlName": "vrcplayerapisetavataraudiofarradius-does-not-restore-avatar-audio-if-playback-st",
   "viewerIsAuthor": false,

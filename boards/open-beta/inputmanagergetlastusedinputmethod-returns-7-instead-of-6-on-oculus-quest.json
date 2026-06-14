@@ -1,7 +1,15 @@
 {
   "__v": 0,
   "_id": "6534e2a45ca45559f74185e0",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.standalone-vr",
+    "open-beta",
+    "platforms.standalone-vr.quest",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T13:38:24.876411Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d09f39124a63950e4b890dc",
     "alias": "Mixed Eagle",
@@ -27,7 +35,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1298,
+    "postCount": 1307,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -164,7 +172,7 @@
   "files": [],
   "ideaID": "680bb9b2e4c3e90df138488d",
   "imageURLs": [],
-  "lastUpdated": 1781121068260,
+  "lastUpdated": 1781444196966,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 14,
@@ -180,7 +188,7 @@
   "subCategoryID": null,
   "title": "InputManager.GetLastUsedInputMethod() returns 7 instead of 6 on Oculus Quest",
   "trendingScore": 2834.858701498035,
-  "updatedAt": "2026-06-10T19:51:15.363574Z",
+  "updatedAt": "2026-06-14T13:36:38.746057Z",
   "updatedBy": null,
   "urlName": "inputmanagergetlastusedinputmethod-returns-7-instead-of-6-on-oculus-quest",
   "viewerIsAuthor": false,

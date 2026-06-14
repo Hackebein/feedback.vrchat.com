@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6663d10dd614e54333e41d17",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.hud",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-14T13:38:18.123173Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
     "alias": "Dynamic Starfish",
@@ -27,7 +32,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1298,
+    "postCount": 1307,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -176,7 +181,7 @@
   "imageURLs": [
     "https://canny.io/images/3e4fdc5abae954f60f558522a04153b4.png"
   ],
-  "lastUpdated": 1781121067145,
+  "lastUpdated": 1781444195311,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -192,7 +197,7 @@
   "subCategoryID": null,
   "title": "HUD notifs longer than 1 line overlap with other notifs",
   "trendingScore": 2841.925271517038,
-  "updatedAt": "2026-06-10T19:51:15.363574Z",
+  "updatedAt": "2026-06-14T13:36:38.746057Z",
   "updatedBy": null,
   "urlName": "hud-notifs-longer-than-1-line-overlap-with-other-notifs",
   "viewerIsAuthor": false,
