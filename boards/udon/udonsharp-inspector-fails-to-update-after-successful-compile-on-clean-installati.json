@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "68b77d03f7923246ee90a77e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-14T11:01:32.920117Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64dcc33d4e5ef40cc1e20c86",
     "alias": "High Dormouse",
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:34.467Z",
     "name": "Bug Reports",
     "parentID": null,
-    "postCount": 969,
+    "postCount": 970,
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
@@ -191,7 +196,7 @@
   ],
   "ideaID": "68b77d03f7923246ee90a7f2",
   "imageURLs": [],
-  "lastUpdated": 1781096724369,
+  "lastUpdated": 1781434715906,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -207,7 +212,7 @@
   "subCategoryID": null,
   "title": "UdonSharp Inspector Fails to Update After Successful Compile on Clean Installations",
   "trendingScore": 2905.5469092258645,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T11:01:25.019584Z",
   "updatedBy": null,
   "urlName": "udonsharp-inspector-fails-to-update-after-successful-compile-on-clean-installati",
   "viewerIsAuthor": false,

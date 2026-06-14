@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "68ba016a910acc25732a4cd9",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.groups",
+    "groups.roles"
+  ],
+  "aiTaggedAt": "2026-06-14T11:01:48.675974Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64663e632f173c09926ada3d",
     "alias": "Unexpected Chipmunk",
@@ -27,7 +33,7 @@
     "created": "2022-08-25T18:45:44.822Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 313,
+    "postCount": 316,
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
@@ -45,7 +51,7 @@
   "files": [],
   "ideaID": "68ba016a910acc25732a4d6a",
   "imageURLs": [],
-  "lastUpdated": 1781096727431,
+  "lastUpdated": 1781434721886,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -61,7 +67,7 @@
   "subCategoryID": null,
   "title": "Group audit log missing join request block deletion event",
   "trendingScore": 2905.8196726989136,
-  "updatedAt": "2026-06-10T13:06:28.668089Z",
+  "updatedAt": "2026-06-14T11:01:25.019584Z",
   "updatedBy": null,
   "urlName": "group-audit-log-missing-join-request-block-deletion-event",
   "viewerIsAuthor": false,
