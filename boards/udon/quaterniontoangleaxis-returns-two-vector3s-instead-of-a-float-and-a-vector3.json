@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5dfd1148ac50865038dbd326",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-15T22:58:36.844655Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "59cb4676d4edc012b9dca22f",
     "alias": "Managing Meerkat",
@@ -88,7 +93,7 @@
   "imageURLs": [
     "https://canny.io/images/675d8229b8af2ef927c8c146a0efdb49.png"
   ],
-  "lastUpdated": 1781269523489,
+  "lastUpdated": 1781563989045,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -104,7 +109,7 @@
   "subCategoryID": null,
   "title": "Quaternion.ToAngleAxis returns two vector3's instead of a float and a vector3",
   "trendingScore": 2608.920050561524,
-  "updatedAt": "2026-06-12T13:06:05.080023Z",
+  "updatedAt": "2026-06-15T22:53:09.419934Z",
   "urlName": "quaterniontoangleaxis-returns-two-vector3s-instead-of-a-float-and-a-vector3",
   "viewerIsAuthor": false,
   "viewerVote": 0,
