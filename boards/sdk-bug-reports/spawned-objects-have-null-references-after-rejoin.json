@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5d6c9c54e5977e367c94e406",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-15T22:09:09.127631Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5aab30ea0b6da707273dbb98",
     "alias": "Dew Barracuda",
@@ -242,7 +247,7 @@
   "files": [],
   "ideaID": "680b7d90e4c3e90df1587bb2",
   "imageURLs": [],
-  "lastUpdated": 1781263229784,
+  "lastUpdated": 1781560968324,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 8,
@@ -258,7 +263,7 @@
   "subCategoryID": null,
   "title": "Spawned Objects have Null References after rejoin",
   "trendingScore": 2594.166827808256,
-  "updatedAt": "2026-06-12T11:21:09.255494Z",
+  "updatedAt": "2026-06-15T22:03:24.627024Z",
   "urlName": "spawned-objects-have-null-references-after-rejoin",
   "viewerIsAuthor": false,
   "viewerVote": 0,
