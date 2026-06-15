@@ -1,7 +1,15 @@
 {
   "__v": 0,
   "_id": "60583cba00eea75d846e571f",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.controls",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-15T01:55:55.980072Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5baa1068e0b68928323f5213",
     "alias": "Zaffre blue Tapir",
@@ -165,7 +173,7 @@
   "imageURLs": [
     "https://canny.io/images/6d0299d7514961587f3515adc29cfb9d.jpg"
   ],
-  "lastUpdated": 1781210990664,
+  "lastUpdated": 1781488279013,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 21,
@@ -181,7 +189,7 @@
   "subCategoryID": null,
   "title": "Bring back taking analog values for Oculus controller triggers in the default settings of SteamVRInput (for UDON gameworld). [SteamVRInput]",
   "trendingScore": 2866.732702253638,
-  "updatedAt": "2026-06-11T20:50:50.579630Z",
+  "updatedAt": "2026-06-15T01:52:58.229368Z",
   "urlName": "bring-back-taking-analog-values-for-oculus-controller-triggers-in-the-default-se",
   "viewerIsAuthor": false,
   "viewerVote": 0,
