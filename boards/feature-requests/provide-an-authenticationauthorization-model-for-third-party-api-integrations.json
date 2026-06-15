@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5db63fc70005e72c2e05e2d6",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.api"
+  ],
+  "aiTaggedAt": "2026-06-15T06:00:15.543950Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c1475afb7ce126e9e0e3a39",
     "alias": "Wineberry Leopard",
@@ -408,7 +413,7 @@
   "files": [],
   "ideaID": "680b7d94e4c3e90df1588e8f",
   "imageURLs": [],
-  "lastUpdated": 1781217436322,
+  "lastUpdated": 1781502593913,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 330,
@@ -417,14 +422,14 @@
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5db63fc70005e72c2e05e2d6/90820132.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 329,
+  "score": 330,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2023-07-13T19:43:58.540Z",
   "subCategoryID": null,
   "title": "Provide an authentication/authorization model for third-party API integrations",
-  "trendingScore": 2945.0049551006728,
-  "updatedAt": "2026-06-11T22:38:13.255954Z",
+  "trendingScore": 2945.7999835183723,
+  "updatedAt": "2026-06-15T05:50:16.682266Z",
   "urlName": "provide-an-authenticationauthorization-model-for-third-party-api-integrations",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -435,6 +440,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "65564de989aa2b9e7ba85d17",
+      "alias": "Integral Wolf",
+      "aliasID": "65cecee20129d7ae44daee58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e37fb846994c55d86b018918633d0ac7.png",
+      "companies": [],
+      "name": "Ner0kun",
+      "urlName": "<redacted>",
+      "voteID": "6a2bd153363a2f2451815593"
+    },
     {
       "_id": "685ec05f16069571f61327ac",
       "alias": "Empirical Yak",
@@ -517,7 +533,7 @@
       "alias": "Kryptonite green Unicorn",
       "aliasID": "69feb568cf565b8f74ba4eab",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e81b26125ace668587f02ba0cfe64587.png",
+      "avatarURL": "https://canny-assets.io/images/6508b0c31d1f930ac6876582658299dd.png",
       "companies": [],
       "name": "OnirismCorp",
       "urlName": "<redacted>",
@@ -533,17 +549,6 @@
       "name": "Furami123",
       "urlName": "<redacted>",
       "voteID": "69fe50d6cf565b8f74b74527"
-    },
-    {
-      "_id": "61d99cd1956e49420f72ec87",
-      "alias": "Added Goose",
-      "aliasID": "69fd43034a48bed189636dff",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/0b4caff883bcdaa47988c86a9b382635.png",
-      "companies": [],
-      "name": "Aki -",
-      "urlName": "<redacted>",
-      "voteID": "69fd434a4a48bed189636e90"
     }
   ]
 }
