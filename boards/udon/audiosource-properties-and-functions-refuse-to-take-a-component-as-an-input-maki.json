@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "5ba09cc6c8589f18213ef597",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-06-15T13:09:17.057651Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5acad9ecc9dba010c9c3ec68",
     "alias": "Evolutionary Vicuna",
@@ -87,7 +93,7 @@
   "imageURLs": [
     "https://canny.io/images/7aa678b804101458a48233f59173a115.png"
   ],
-  "lastUpdated": 1781229018989,
+  "lastUpdated": 1781528777505,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -102,7 +108,7 @@
   "subCategoryID": null,
   "title": "AudioSource properties and functions refuse to take a Component as an input, making it impossible to define an AudioSource without explicitly defining it in the node itself",
   "trendingScore": 2542.446702867564,
-  "updatedAt": "2026-06-12T01:51:31.568867Z",
+  "updatedAt": "2026-06-15T13:06:31.042167Z",
   "urlName": "audiosource-properties-and-functions-refuse-to-take-a-component-as-an-input-maki",
   "viewerIsAuthor": false,
   "viewerVote": 0,

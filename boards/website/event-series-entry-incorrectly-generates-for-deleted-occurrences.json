@@ -1,6 +1,12 @@
 {
   "_id": "69f674da631cfa220f8eb43c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.groups",
+    "groups.calendar"
+  ],
+  "aiTaggedAt": "2026-06-15T13:08:13.671195Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
     "alias": "Dynamic Starfish",
@@ -26,7 +32,7 @@
     "created": "2022-08-25T18:45:44.822Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 313,
+    "postCount": 316,
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
@@ -95,7 +101,7 @@
     "https://canny-assets.io/images/c805e81996dc6c6faa31a5e424d5bfde.png",
     "https://canny-assets.io/images/6ba4c2c9ef910ecacef9645c014cdadd.png"
   ],
-  "lastUpdated": 1781224607184,
+  "lastUpdated": 1781528671085,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -111,7 +117,7 @@
   "subCategoryID": null,
   "title": "Event Series Entry Incorrectly Generates for Deleted Occurrences",
   "trendingScore": 2940.674537700782,
-  "updatedAt": "2026-06-12T00:36:49.063381Z",
+  "updatedAt": "2026-06-15T13:06:31.042167Z",
   "updatedBy": null,
   "urlName": "event-series-entry-incorrectly-generates-for-deleted-occurrences",
   "viewerIsAuthor": false,

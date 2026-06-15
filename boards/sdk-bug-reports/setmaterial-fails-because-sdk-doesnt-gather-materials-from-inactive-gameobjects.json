@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5b7b5521368410623f9cbfa5",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-15T13:08:03.079894Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a983204a1528d415c5ced46",
     "alias": "Chief Finch",
@@ -35,7 +40,7 @@
   "files": [],
   "ideaID": "680b7d5de4c3e90df157995f",
   "imageURLs": [],
-  "lastUpdated": 1781224601473,
+  "lastUpdated": 1781528667366,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 16,
@@ -51,7 +56,7 @@
   "subCategoryID": null,
   "title": "SetMaterial fails because SDK doesn't gather Materials from inactive GameObjects",
   "trendingScore": 2714.581296848545,
-  "updatedAt": "2026-06-12T00:36:49.063381Z",
+  "updatedAt": "2026-06-15T13:06:31.042167Z",
   "urlName": "setmaterial-fails-because-sdk-doesnt-gather-materials-from-inactive-gameobjects",
   "viewerIsAuthor": false,
   "viewerVote": 0,
