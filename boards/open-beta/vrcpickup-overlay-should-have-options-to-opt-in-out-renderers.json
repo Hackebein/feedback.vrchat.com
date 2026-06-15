@@ -1,10 +1,11 @@
 {
   "_id": "6a2a345b8fb3079d25988253",
   "aiCategories": [
+    "loc.unity-sdk",
     "loc.in-world",
-    "avatars.descriptor"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-06-15T10:09:15.107585Z",
+  "aiTaggedAt": "2026-06-15T21:04:47.796844Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "626f5e4270cd436eda16e3d5",
@@ -35,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a2fcc17727dce874728d15e",
@@ -83,6 +84,108 @@
       "value": "Thanks for your report. If possible, please provide the ID of the world in your screenshot for our reference.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a30648bdf999bf918ee484a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-15T20:46:03.077Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2a345b8fb3079d25988253",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Outlining based on skinned meshes for pickups in worlds is planned to be temporarily rolled back for the live release of 2026.2.3 while we investigate this issue.\n\nWe are currently aiming to expose a renderer array for VRCPickup in the SDK to allow world creators to manually define which meshes should be used for the outline if they want to. If none are defined, the system will try to determine the outline automatically instead.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a3066b5c10e54bc57406342",
+      "aiGenerated": false,
+      "author": {
+        "_id": "626f5e4270cd436eda16e3d5",
+        "alias": "Sapphire Raven",
+        "aliasID": "65c2b472ed6eefce4cda4345",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b55a970f374e09472f02607c4f25034b.png",
+        "created": "2022-05-02T04:29:54.221Z",
+        "name": "Salena",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-15T20:55:17.283Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": "<redacted>"
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a2fcc17727dce874728d15e",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2a345b8fb3079d25988253",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name} Here's the world ID for the screenshot: wrld_e3708472-f5e6-41ca-a2ea-19a6498cd445",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -100,23 +203,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/0521965be4ec74bc32bff67fada248cd.png"
   ],
-  "lastUpdated": 1781550934119,
+  "lastUpdated": 1781557194071,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 25,
+  "maxScore": 26,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2a345b8fb3079d25988253/1437358591.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 25,
+  "score": 26,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-06-15T09:55:35.140Z",
   "subCategoryID": null,
   "title": "VRCPickup Overlay should have options to opt in/out renderers",
-  "trendingScore": 2948.65263780933,
-  "updatedAt": "2026-06-15T19:21:53.775324Z",
+  "trendingScore": 2948.7030121923353,
+  "updatedAt": "2026-06-15T21:04:43.813063Z",
   "updatedBy": null,
   "urlName": "vrcpickup-overlay-should-have-options-to-opt-in-out-renderers",
   "viewerIsAuthor": false,
@@ -128,6 +231,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5ff8a7f3b7023359219e0dd9",
+      "alias": "Tawny Pony",
+      "aliasID": "65c3251ced6eefce4c9bb6bc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4c1c847af6364d310aaa9a1641f8a4f7.png",
+      "companies": [],
+      "name": "Tokkio",
+      "urlName": "<redacted>",
+      "voteID": "6a3057d1363a2f2451c790b9"
+    },
     {
       "_id": "6219f63f55639e536dc83162",
       "alias": "Imaginative Sloth",
@@ -226,17 +340,6 @@
       "name": "Zerithax",
       "urlName": "<redacted>",
       "voteID": "6a2f861c363a2f2451c27a0e"
-    },
-    {
-      "_id": "62527baf8c368f529a82aebd",
-      "alias": "Tangerine yellow Swift",
-      "aliasID": "65c27bd8ed6eefce4c9b54ea",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2f46b2b3b6e6a453422ea8a23a1f45ae.png",
-      "companies": [],
-      "name": "cubee_cb",
-      "urlName": "<redacted>",
-      "voteID": "6a2f79d5363a2f2451c25c15"
     }
   ]
 }

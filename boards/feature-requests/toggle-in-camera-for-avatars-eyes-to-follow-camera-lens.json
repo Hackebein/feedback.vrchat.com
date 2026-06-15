@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "61dcb06daa5d7e207439cf96",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-06-15T21:12:46.650561Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61159f1bd6c0026f470c4521",
     "alias": "Ube Crayfish",
@@ -599,23 +605,23 @@
     "https://canny.io/images/39e1bbc2610a54d65af02688c489dbdb.jpg",
     "https://canny.io/images/bbc42fdd884eced7273b4dcf39e3b191.jpg"
   ],
-  "lastUpdated": 1781256249290,
+  "lastUpdated": 1781557479219,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 219,
+  "maxScore": 222,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/61dcb06daa5d7e207439cf96/467837075.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 219,
+  "score": 222,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2023-07-13T19:32:11.508Z",
   "subCategoryID": null,
   "title": "Toggle In Camera For Avatars Eyes To Follow Camera Lens",
-  "trendingScore": 2946.1250958286896,
-  "updatedAt": "2026-06-12T09:24:27.795140Z",
+  "trendingScore": 2947.0658425827073,
+  "updatedAt": "2026-06-15T21:04:43.813063Z",
   "urlName": "toggle-in-camera-for-avatars-eyes-to-follow-camera-lens",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -626,6 +632,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f4197723ba17b416b4a99b9",
+      "alias": "Yellowwood Lemming",
+      "aliasID": "65f2e18276937e5248604e6b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d240d299859a38c8365f14fb9bea2983.png",
+      "companies": [],
+      "name": "le Saii",
+      "urlName": "<redacted>",
+      "voteID": "6a2f65da363a2f2451c20a02"
+    },
+    {
+      "_id": "69ce4800bcda4ee632406ea2",
+      "alias": "Dynamic Meadowlark",
+      "aliasID": "69ce4801bcda4ee6324082b8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d1f475ac49d36bda2bda328a5ddc861a.png",
+      "companies": [],
+      "name": "ぽぶ茶_pob",
+      "urlName": "<redacted>",
+      "voteID": "6a2ea938363a2f2451bfb9e3"
+    },
+    {
+      "_id": "6332c4aa1bf4ef44cb52566e",
+      "alias": "Neon carrot Guppy",
+      "aliasID": "688bac5d076be5baa64e3b3e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/190379897345768f64bf9f7f04487473.png",
+      "companies": [],
+      "name": "ibCheechy",
+      "urlName": "<redacted>",
+      "voteID": "6a2cc20c363a2f245188d0b4"
+    },
     {
       "_id": "5e625b9bd70c8732769bc89f",
       "alias": "Very Turtle",
@@ -702,39 +741,6 @@
       "name": "Kararii",
       "urlName": "<redacted>",
       "voteID": "68b50171ce2ca2b520f86cca"
-    },
-    {
-      "_id": "61aac8a9de50114e6485a254",
-      "alias": "Ginger Crab",
-      "aliasID": "65c2b40fed6eefce4cccc7a1",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/08673e910e7e1b0f283ee58d1bc9321b.png",
-      "companies": [],
-      "name": "Atomiklan",
-      "urlName": "<redacted>",
-      "voteID": "68b263cdce2ca2b520d4a287"
-    },
-    {
-      "_id": "63ace48815e9e6450a89e432",
-      "alias": "Sunny Sparrow",
-      "aliasID": "65c4b713ed6eefce4ca2e6b6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/0eefbea67d881991042545fbcca50f6f.png",
-      "companies": [],
-      "name": "zipfile_d",
-      "urlName": "<redacted>",
-      "voteID": "68aecd3e9b8a25d17e723849"
-    },
-    {
-      "_id": "630076d4274ac0449d6fb8ca",
-      "alias": "Compact Newt",
-      "aliasID": "6898465d2eba8cb5edcbabc4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a202ef2dc11da99f7a0af8f4d0452e4b.png",
-      "companies": [],
-      "name": "Sairodi",
-      "urlName": "<redacted>",
-      "voteID": "68aa3fcd9b8a25d17e9cca64"
     }
   ]
 }

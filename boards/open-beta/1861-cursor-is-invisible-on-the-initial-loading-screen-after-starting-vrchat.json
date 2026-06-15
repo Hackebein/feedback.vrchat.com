@@ -1,0 +1,102 @@
+{
+  "_id": "6a305395e59f50ccc456e2b4",
+  "aiCategories": [
+    "loc.pc-client",
+    "loc.loading-screen",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-15T21:04:47.794947Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6803db1e9fd01c0ccde96cf7",
+    "alias": "Miniature Chipmunk",
+    "aliasID": "6803db1f8ccc1d8b3b473335",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b38d9b644472a94c7080eab16b3eb69b.png",
+    "created": "2025-04-19T17:19:26.798Z",
+    "name": "PWSmith1",
+    "serviceAccount": false,
+    "urlName": "<redacted>"
+  },
+  "authorID": "6803db1e9fd01c0ccde96cf7",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1307,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-15T19:33:41.419Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "basically what the title says. it is mostly a minor inconvenience, so i kept playing for a bit after reporting it in my logs, but still figured it was worth reporting.\n\nattached a video of the bug like i did with the last open beta\n\nsteps to reproduce:\n\n1. open VRChat while on the open beta branch\n\nthis is only a partial paste of said logs since the entire thing exceeds Pastebin's upload limits: https://pastebin.com/BUBSytWd",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/9e81c5161ba37b1c4326a1351deafed9.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "VRChat - 2026-06-15 2-41-47 PM",
+      "url": "https://canny-assets.io/files/9e81c5161ba37b1c4326a1351deafed9.mp4"
+    }
+  ],
+  "ideaID": "6a305395e59f50ccc456e2b3",
+  "imageURLs": [],
+  "lastUpdated": 1781557192579,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-15T19:33:41.419Z",
+  "subCategoryID": null,
+  "title": "[1861] cursor is invisible on the initial loading screen after starting VRChat",
+  "trendingScore": 2946.381013135421,
+  "updatedAt": "2026-06-15T21:04:43.813063Z",
+  "updatedBy": null,
+  "urlName": "1861-cursor-is-invisible-on-the-initial-loading-screen-after-starting-vrchat",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6803db1e9fd01c0ccde96cf7",
+      "alias": "Miniature Chipmunk",
+      "aliasID": "6803db1f8ccc1d8b3b473335",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b38d9b644472a94c7080eab16b3eb69b.png",
+      "companies": [],
+      "name": "PWSmith1",
+      "urlName": "<redacted>",
+      "voteID": "6a305395363a2f2451c7731e"
+    }
+  ]
+}
