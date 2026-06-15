@@ -71,7 +71,9 @@
       "postDeleted": false,
       "postID": "6a2a345b8fb3079d25988253",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -98,23 +100,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/0521965be4ec74bc32bff67fada248cd.png"
   ],
-  "lastUpdated": 1781528511674,
+  "lastUpdated": 1781538989553,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 22,
+  "maxScore": 24,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2a345b8fb3079d25988253/1437358591.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 22,
+  "score": 24,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-06-15T09:55:35.140Z",
   "subCategoryID": null,
   "title": "VRCPickup Overlay should have options to opt in/out renderers",
-  "trendingScore": 2948.4886128590942,
-  "updatedAt": "2026-06-15T13:06:31.042167Z",
+  "trendingScore": 2948.600294901157,
+  "updatedAt": "2026-06-15T16:01:02.441001Z",
   "updatedBy": null,
   "urlName": "vrcpickup-overlay-should-have-options-to-opt-in-out-renderers",
   "viewerIsAuthor": false,
@@ -126,6 +128,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6064d021466d3f6922a4b271",
+      "alias": "Cloudy Rook",
+      "aliasID": "65c915d0ed6eefce4cadce2b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/40d77603d26c2a57f04dea6b94974bec.png",
+      "companies": [],
+      "name": "Humi 歩心",
+      "urlName": "<redacted>",
+      "voteID": "6a301a8f363a2f2451c55e98"
+    },
+    {
+      "_id": "5f3640fb06dcf51467239ddc",
+      "alias": "Wild strawberry Ocelot",
+      "aliasID": "65c26df1ed6eefce4c5aac29",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/910662f11acffa11b6841107c5aab0f0.png",
+      "companies": [],
+      "name": "S a c r e d",
+      "urlName": "<redacted>",
+      "voteID": "6a30079c363a2f2451c4df9f"
+    },
     {
       "_id": "5be30e967f5f1e3396732b2f",
       "alias": "Arctic lime Zebra",
@@ -213,28 +237,6 @@
       "name": "KirianVR",
       "urlName": "<redacted>",
       "voteID": "6a2f6c1c363a2f2451c21ced"
-    },
-    {
-      "_id": "5fb73a1eea850753021f6c1c",
-      "alias": "Intensive Orangutan",
-      "aliasID": "65c26defed6eefce4c5a335e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a352a96a36a95a03858eb83d5af66709.png",
-      "companies": [],
-      "name": "Undertrash",
-      "urlName": "<redacted>",
-      "voteID": "6a2f6091363a2f2451c1fc25"
-    },
-    {
-      "_id": "63e70d70f1684e450d14723f",
-      "alias": "Top Lizard",
-      "aliasID": "65c5aef0ed6eefce4cebd8a5",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6b95078afc68c2e1da65b896bd0a977c.png",
-      "companies": [],
-      "name": "kazin138",
-      "urlName": "<redacted>",
-      "voteID": "6a2f5879363a2f2451c1e7e8"
     }
   ]
 }
