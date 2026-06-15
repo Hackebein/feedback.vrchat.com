@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6877999967700be2cf9d72b6",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.groups",
+    "groups.roles"
+  ],
+  "aiTaggedAt": "2026-06-15T00:35:11.776339Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5baf5260b49f620eba95cca2",
     "alias": "Rapid Dingo",
@@ -27,7 +33,7 @@
     "created": "2022-08-25T18:45:44.822Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 313,
+    "postCount": 316,
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
@@ -92,7 +98,7 @@
   "files": [],
   "ideaID": "6877999967700be2cf9d7321",
   "imageURLs": [],
-  "lastUpdated": 1781204437242,
+  "lastUpdated": 1781483564684,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 25,
@@ -108,7 +114,7 @@
   "subCategoryID": null,
   "title": "Group role deletions don't clean up assigned role IDs on users",
   "trendingScore": 2914.6016894163527,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-15T00:34:49.314432Z",
   "updatedBy": null,
   "urlName": "group-role-deletions-dont-clean-up-assigned-role-ids-on-users",
   "viewerIsAuthor": false,

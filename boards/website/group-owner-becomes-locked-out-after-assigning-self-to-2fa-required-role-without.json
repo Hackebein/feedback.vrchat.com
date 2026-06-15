@@ -1,6 +1,12 @@
 {
   "_id": "691739046b51a981826e11d8",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.groups",
+    "groups.roles"
+  ],
+  "aiTaggedAt": "2026-06-15T00:35:10.550895Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6917366914923d07944fef02",
     "alias": "Absinthe green Yak",
@@ -26,7 +32,7 @@
     "created": "2022-08-25T18:45:44.822Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 313,
+    "postCount": 316,
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
@@ -230,7 +236,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/2952784707d4e3138beb491d75955617.png"
   ],
-  "lastUpdated": 1781204436530,
+  "lastUpdated": 1781483564170,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -246,7 +252,7 @@
   "subCategoryID": null,
   "title": "Group owner becomes locked out after assigning self to 2FA-required role without having 2FA enabled",
   "trendingScore": 2922.567238789593,
-  "updatedAt": "2026-06-11T19:01:20.024110Z",
+  "updatedAt": "2026-06-15T00:34:49.314432Z",
   "updatedBy": null,
   "urlName": "group-owner-becomes-locked-out-after-assigning-self-to-2fa-required-role-without",
   "viewerIsAuthor": false,
