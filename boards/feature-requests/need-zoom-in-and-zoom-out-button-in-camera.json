@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ce671067b067941d4daa974",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-15T03:18:01.941097Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ce670487b067941d4daa6ae",
     "alias": "Raspberry rose Leopard",
@@ -78,7 +83,7 @@
   "files": [],
   "ideaID": "680b7d84e4c3e90df15848e8",
   "imageURLs": [],
-  "lastUpdated": 1781214168548,
+  "lastUpdated": 1781492846559,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 14,
@@ -86,14 +91,14 @@
   "notFound": false,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 13,
+  "score": 14,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2019-05-23T10:08:06.242Z",
   "subCategoryID": null,
   "title": "Need zoom in and zoom out button in camera!",
-  "trendingScore": 2884.765138068783,
-  "updatedAt": "2026-06-11T21:43:43.493463Z",
+  "trendingScore": 2945.5089349487434,
+  "updatedAt": "2026-06-15T03:08:21.313985Z",
   "urlName": "need-zoom-in-and-zoom-out-button-in-camera",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -104,6 +109,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "69ce4800bcda4ee632406ea2",
+      "alias": "Dynamic Meadowlark",
+      "aliasID": "69ce4801bcda4ee6324082b8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d1f475ac49d36bda2bda328a5ddc861a.png",
+      "companies": [],
+      "name": "ぽぶ茶_pob",
+      "urlName": "<redacted>",
+      "voteID": "6a2eacdb363a2f2451bfc2a9"
+    },
     {
       "_id": "62dfcb4251871f468ac99a6a",
       "alias": "Permanent Ant",
@@ -202,17 +218,6 @@
       "name": "Maenei",
       "urlName": "<redacted>",
       "voteID": "5cec08d427ff3a25d65ef38d"
-    },
-    {
-      "_id": "5b46cade55708a657f724518",
-      "alias": "Wide Sloth",
-      "aliasID": "65c361aced6eefce4caff23e",
-      "anonymized": false,
-      "avatarURL": "https://canny.io/images/9b5debc8ecaec5272b55e2b6c79ae35f.jpg",
-      "companies": [],
-      "name": "Vanilla Neko",
-      "urlName": "<redacted>",
-      "voteID": "5cec005027ff3a25d65ee619"
     }
   ]
 }
