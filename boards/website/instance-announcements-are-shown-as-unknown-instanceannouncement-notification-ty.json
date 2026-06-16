@@ -2,9 +2,10 @@
   "_id": "6a2e3c8bef5b018a041f64ad",
   "aiCategories": [
     "loc.website",
-    "web.home"
+    "web.home",
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-06-15T16:01:12.302955Z",
+  "aiTaggedAt": "2026-06-16T01:57:44.552208Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -31,7 +32,7 @@
     "created": "2022-08-25T18:45:44.822Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 315,
+    "postCount": 310,
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
@@ -81,6 +82,37 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a309e71a4efd9fb927d9c72",
+      "author": {
+        "_id": "6849cfb15cd9b29f83429c7b",
+        "alias": "Carmine Porcupine",
+        "aliasID": "6849cfb25cd9b29f8342cb16",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0104e3f3bacacd6dfbf101b546c78af0.jpeg",
+        "created": "2025-06-11T18:49:21.514Z",
+        "name": "Ticky",
+        "serviceAccount": false,
+        "urlName": "<redacted>"
+      },
+      "boardID": "5d142650329e7856f7f7b664",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-16T00:53:05.850Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6a309e71a4efd9fb927d9c72",
+      "mergedPostDetails": "It's not mapped to a human readable text",
+      "mergedPostTitle": "Unhandled \"localNotifs\" notification type string key",
+      "pinned": false,
+      "postID": "6a2e3c8bef5b018a041f64ad",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -98,31 +130,31 @@
   "imageURLs": [
     "https://canny-assets.io/images/90a3a250d2ffc61581ee92547c81a787.png"
   ],
-  "lastUpdated": 1781570164365,
+  "lastUpdated": 1781574685914,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
-  "mergeCount": 0,
+  "maxScore": 2,
+  "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2e3c8bef5b018a041f64ad/1141548772.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-06-15T15:00:34.570Z",
   "subCategoryID": null,
   "title": "Instance announcements are shown as unknown \"instance.announcement\" notification type",
-  "trendingScore": 2946.154541467101,
-  "updatedAt": "2026-06-16T00:41:33.577093Z",
+  "trendingScore": 2946.1545416919707,
+  "updatedAt": "2026-06-16T01:57:39.768586Z",
   "updatedBy": null,
   "urlName": "instance-announcements-are-shown-as-unknown-instanceannouncement-notification-ty",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false
   },
   "voters": [
@@ -136,6 +168,17 @@
       "name": "WubTheCaptain",
       "urlName": "<redacted>",
       "voteID": "6a2e3c8b363a2f2451bef8d7"
+    },
+    {
+      "_id": "5f67899159b0841fe0d3891b",
+      "alias": "Amaranth Llama",
+      "aliasID": "65c26da3ed6eefce4c4d09df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5263a29bc59d661b3a8245b48eae1441.png",
+      "companies": [],
+      "name": "Patroll",
+      "urlName": "<redacted>",
+      "voteID": "6a309e71363a2f2451ca3dda"
     }
   ]
 }
