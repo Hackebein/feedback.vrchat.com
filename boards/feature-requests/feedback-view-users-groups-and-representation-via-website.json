@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6395e8eeb1c4e91aacf36d6c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.profiles",
+    "groups.nameplates"
+  ],
+  "aiTaggedAt": "2026-06-16T19:22:32.072215Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "600bb08cb76d6f78b108fb38",
     "alias": "Zircon Yak",
@@ -11,7 +17,7 @@
     "created": "2021-01-23T05:13:48.067Z",
     "name": "DAG-XR",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "600bb08cb76d6f78b108fb38",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2018-09-23T08:08:19.901Z",
         "name": "100の人",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -83,7 +89,7 @@
   "files": [],
   "ideaID": "680bb95ce4c3e90df1374e62",
   "imageURLs": [],
-  "lastUpdated": 1781320010198,
+  "lastUpdated": 1781637221317,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -98,7 +104,7 @@
   "subCategoryID": null,
   "title": "[FEEDBACK] View user's groups and representation via website",
   "trendingScore": 2770.4646112121795,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "updatedBy": null,
   "urlName": "feedback-view-users-groups-and-representation-via-website",
   "viewerIsAuthor": false,
@@ -118,7 +124,7 @@
       "avatarURL": "https://canny-assets.io/images/e8aeeca9df37b71f0f92049c9d335073.png",
       "companies": [],
       "name": "Sequor",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63df07d2e84e48615be719f3"
     },
     {
@@ -129,7 +135,7 @@
       "avatarURL": "https://canny-assets.io/images/28be024219e5d5a76a743e59faa1a194.png",
       "companies": [],
       "name": "100の人",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63bd4c56ad3a15444800f316"
     },
     {
@@ -140,7 +146,7 @@
       "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
       "companies": [],
       "name": "DrBlackRat",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "639610467573837a5f731eda"
     },
     {
@@ -151,7 +157,7 @@
       "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
       "companies": [],
       "name": "DAG-XR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6395e8eeb1c4e91aacf36d94"
     }
   ]

@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "619381081d2d4b0a38a84a4b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:15:55.363046Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5aab30ea0b6da707273dbb98",
     "alias": "Dew Barracuda",
@@ -11,7 +16,7 @@
     "created": "2018-03-16T02:50:18.758Z",
     "name": "Fionna",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5aab30ea0b6da707273dbb98",
   "board": {
@@ -44,7 +49,7 @@
   "files": [],
   "ideaID": "680bb8cae4c3e90df1357eef",
   "imageURLs": [],
-  "lastUpdated": 1781315128020,
+  "lastUpdated": 1781637093647,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -59,7 +64,7 @@
   "subCategoryID": null,
   "title": "Object Sync objects cannot change Trigger to false",
   "trendingScore": 2708.3869927699247,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "object-sync-objects-cannot-change-trigger-to-false",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +83,7 @@
       "avatarURL": "https://canny-assets.io/images/976cdd071ca50df10da145bf3d25fad6.png",
       "companies": [],
       "name": "Tony_Lewis",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6193ac653b01a37035de4e35"
     },
     {
@@ -89,7 +94,7 @@
       "avatarURL": "https://canny.io/images/833c66b891dbc04385009d159c139d66.png",
       "companies": [],
       "name": "CyanLaser",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "619381f988ac27203b7edd35"
     },
     {
@@ -100,7 +105,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6193811dadb6010ee51fda9d"
     },
     {
@@ -111,7 +116,7 @@
       "avatarURL": "https://canny-assets.io/images/18510a7a53ae57ea3fe726097d2cd765.png",
       "companies": [],
       "name": "Fionna",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "619381081d2d4b0a38a84a52"
     }
   ]

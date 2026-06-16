@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6127933a71d6db04843bc0fc",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:16:10.865912Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3cf7361b136917b119d507",
     "alias": "Mandarin Kite",
@@ -11,7 +16,7 @@
     "created": "2020-08-19T09:56:06.909Z",
     "name": "Yodokoro",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f3cf7361b136917b119d507",
   "board": {
@@ -45,7 +50,7 @@
         "created": "2018-05-13T16:04:43.424Z",
         "name": "zeshin",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -88,7 +93,7 @@
         "created": "2021-02-17T15:52:54.264Z",
         "name": "Tom Leylan",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -131,7 +136,7 @@
         "created": "2021-09-24T14:54:50.474Z",
         "name": "Puppet~",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -155,7 +160,7 @@
           "created": "2021-02-17T15:52:54.264Z",
           "name": "Tom Leylan",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -184,7 +189,7 @@
         "created": "2021-09-24T14:54:50.474Z",
         "name": "Puppet~",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -225,7 +230,7 @@
         "created": "2021-09-24T14:54:50.474Z",
         "name": "Puppet~",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -268,7 +273,7 @@
         "created": "2021-02-17T15:52:54.264Z",
         "name": "Tom Leylan",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -292,7 +297,7 @@
           "created": "2021-09-24T14:54:50.474Z",
           "name": "Puppet~",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -323,7 +328,7 @@
         "created": "2021-02-17T15:52:54.264Z",
         "name": "Tom Leylan",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -364,7 +369,7 @@
         "created": "2021-06-07T20:39:13.616Z",
         "name": "miru_kitsune",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -388,7 +393,7 @@
           "created": "2021-02-17T15:52:54.264Z",
           "name": "Tom Leylan",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -417,7 +422,7 @@
         "created": "2021-02-17T15:52:54.264Z",
         "name": "Tom Leylan",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -441,7 +446,7 @@
           "created": "2021-06-07T20:39:13.616Z",
           "name": "miru_kitsune",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -470,7 +475,7 @@
         "created": "2021-06-07T20:39:13.616Z",
         "name": "miru_kitsune",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -494,7 +499,7 @@
           "created": "2021-02-17T15:52:54.264Z",
           "name": "Tom Leylan",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -523,7 +528,7 @@
   "files": [],
   "ideaID": "680bb8b1e4c3e90df13539f4",
   "imageURLs": [],
-  "lastUpdated": 1781315132744,
+  "lastUpdated": 1781637132491,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 65,
@@ -539,7 +544,7 @@
   "subCategoryID": null,
   "title": "VRCPlayerApi.playerId may returns -1 in OnPlayerLeft()",
   "trendingScore": 2921.238857628968,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "vrcplayerapiplayerid-may-returns-1-in-onplayerleft",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -558,7 +563,7 @@
       "avatarURL": "https://canny-assets.io/images/8c48ea6c445faa77946ecb676ee3d82d.png",
       "companies": [],
       "name": "Heal Howels",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "694eb2cdf85d59c66d2fe2cc"
     },
     {
@@ -569,7 +574,7 @@
       "avatarURL": "https://canny-assets.io/images/e37fb846994c55d86b018918633d0ac7.png",
       "companies": [],
       "name": "Ner0kun",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "677b405aa367fa6392e63add"
     },
     {
@@ -580,7 +585,7 @@
       "avatarURL": "https://canny-assets.io/images/2647c66959c819a7950a78f7232da000.png",
       "companies": [],
       "name": "Clifford_",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6771c1e3a367fa6392978c75"
     },
     {
@@ -591,7 +596,7 @@
       "avatarURL": "https://canny-assets.io/images/81973ad86fbc2ebd5324208e0b65ba52.png",
       "companies": [],
       "name": "のりたま（NORITAMA）",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "675029b5a367fa6392706470"
     },
     {
@@ -602,7 +607,7 @@
       "avatarURL": "https://canny-assets.io/images/35139cc56749da293b455a9870eb94a7.png",
       "companies": [],
       "name": "Rin_A",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "674f0b18a367fa63922fcaf0"
     },
     {
@@ -613,7 +618,7 @@
       "avatarURL": "https://canny-assets.io/images/26990b8cdb461c47a0c45b8a068b4850.png",
       "companies": [],
       "name": "［Anne․C］庵 千代日",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "674d89fea367fa639238d109"
     },
     {
@@ -624,7 +629,7 @@
       "avatarURL": "https://canny-assets.io/images/76996b5ede7e23350cfdb1ee81a98a38.png",
       "companies": [],
       "name": "めかにゃんこ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67079e798c4554f38c3cc231"
     },
     {
@@ -635,7 +640,7 @@
       "avatarURL": "https://canny-assets.io/images/e51a004c9a0dcb771981b5d873f49548.png",
       "companies": [],
       "name": "kawashirov",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66fe76217d32abb6ca5857ac"
     },
     {
@@ -646,7 +651,7 @@
       "avatarURL": "https://canny-assets.io/images/82c035d428d36070757d70836e6ea998.png",
       "companies": [],
       "name": "rinvo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66fd3beb7d32abb6ca6828af"
     },
     {
@@ -657,7 +662,7 @@
       "avatarURL": "https://canny-assets.io/images/170091a275ea2f14e5d3b3535bbe5234.png",
       "companies": [],
       "name": "ToshioSP",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66e075d47d32abb6ca483cff"
     }
   ]

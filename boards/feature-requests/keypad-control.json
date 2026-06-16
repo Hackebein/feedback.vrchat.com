@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "63712d29ae9fd8101945c2c7",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-06-16T19:23:57.639927Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62552cca475bbe5290d91ae7",
     "alias": "Kind Camel",
@@ -11,7 +16,7 @@
     "created": "2022-04-12T07:39:54.489Z",
     "name": "Wytanio_VR",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62552cca475bbe5290d91ae7",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb94ee4c3e90df1372899",
   "imageURLs": [],
-  "lastUpdated": 1781320019250,
+  "lastUpdated": 1781637229772,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Keypad control",
   "trendingScore": 2759.2273964629676,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "keypad-control",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Wytanio_VR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63712d2aae9fd8101945c2e8"
     }
   ]

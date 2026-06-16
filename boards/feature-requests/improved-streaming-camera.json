@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "63610c0769bba23872f6e960",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T19:23:50.270984Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63610aa1b4636b62ac950d42",
     "alias": "Silver Clownfish",
@@ -11,7 +16,7 @@
     "created": "2022-11-01T12:01:37.833Z",
     "name": "Lunarfay",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "63610aa1b4636b62ac950d42",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb94ce4c3e90df1371c4e",
   "imageURLs": [],
-  "lastUpdated": 1781320017736,
+  "lastUpdated": 1781637228101,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "improved streaming camera",
   "trendingScore": 2757.479614217597,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "improved-streaming-camera",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/a0ef6aa344bf209ab13fcf3f482ff686.png",
       "companies": [],
       "name": "Lunarfay",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63610c0769bba23872f6e991"
     }
   ]

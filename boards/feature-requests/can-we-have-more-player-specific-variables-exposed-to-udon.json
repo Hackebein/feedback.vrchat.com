@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "63f2c12cf407874520ae8272",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:18:51.483011Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f344e780a160405c7389a1a",
     "alias": "Cyan Otter",
@@ -11,7 +16,7 @@
     "created": "2020-08-12T20:18:00.153Z",
     "name": "ChuggaChoo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f344e780a160405c7389a1a",
   "board": {
@@ -72,7 +77,7 @@
         "created": "2022-11-07T14:13:43.431Z",
         "name": "Fax",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -183,7 +188,7 @@
   "files": [],
   "ideaID": "680bb969e4c3e90df1377aaa",
   "imageURLs": [],
-  "lastUpdated": 1781319925234,
+  "lastUpdated": 1781637204701,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -198,7 +203,7 @@
   "subCategoryID": null,
   "title": "Can we have more player-specific variables exposed to udon?",
   "trendingScore": 2847.4946171519555,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "can-we-have-more-player-specific-variables-exposed-to-udon",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -217,7 +222,7 @@
       "avatarURL": "https://canny-assets.io/images/eb16f5692edaec39c3c011d48826865b.png",
       "companies": [],
       "name": "CyanoTex",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66a62608318f0a3252c08d98"
     },
     {
@@ -228,7 +233,7 @@
       "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
       "companies": [],
       "name": "JessicaOnMain",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6603bea8a63714bcb3e0f12b"
     },
     {
@@ -239,7 +244,7 @@
       "avatarURL": "https://canny.io/images/4247b265b683009f419f96c55c68b267.png",
       "companies": [],
       "name": "VF1DraGoN",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6603b8d4a63714bcb331f93d"
     },
     {
@@ -250,7 +255,7 @@
       "avatarURL": "https://canny-assets.io/images/05857cd008476975b39ff33d39132535.png",
       "companies": [],
       "name": "ChuggaChoo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63f2c12cf407874520ae8298"
     }
   ]

@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "61118e93840e1034f87f3f91",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:15:52.117561Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6085122bd929365b8450d1b7",
     "alias": "Saffron Kingfisher",
@@ -11,7 +16,7 @@
     "created": "2021-04-25T06:54:35.879Z",
     "name": "metaphira",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6085122bd929365b8450d1b7",
   "board": {
@@ -45,7 +50,7 @@
         "created": "2021-02-13T23:11:28.997Z",
         "name": "Phasedragon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -87,7 +92,7 @@
   "files": [],
   "ideaID": "680bb8ade4c3e90df135326d",
   "imageURLs": [],
-  "lastUpdated": 1781315126897,
+  "lastUpdated": 1781637091911,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -102,7 +107,7 @@
   "subCategoryID": null,
   "title": "Implementing OnOwnershipRequest breaks requesting sync immediately after set owner",
   "trendingScore": 2695.022706510381,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "implementing-onownershiprequest-breaks-requesting-sync-immediately-after-set-own",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -121,7 +126,7 @@
       "avatarURL": "https://canny.io/images/d36e887ddca95aefbb1b5ec3abdd5889.png",
       "companies": [],
       "name": "metaphira",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61118e93840e1034f87f3f98"
     }
   ]

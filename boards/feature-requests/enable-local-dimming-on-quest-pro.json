@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6377318381b698445540f04d",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T19:21:21.165556Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63639d686716fa0b3720bc7d",
     "alias": "Vast Hedgehog",
@@ -11,7 +17,7 @@
     "created": "2022-11-03T10:52:24.447Z",
     "name": "jenspr74",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "63639d686716fa0b3720bc7d",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb94ee4c3e90df137292f",
   "imageURLs": [],
-  "lastUpdated": 1781320006444,
+  "lastUpdated": 1781637217079,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "Enable Local Dimming on Quest Pro",
   "trendingScore": 2759.8793966969292,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "enable-local-dimming-on-quest-pro",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "jenspr74",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6377318381b698445540f06e"
     }
   ]

@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "638c005ddb649258c4e76544",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.groups",
+    "groups.roles"
+  ],
+  "aiTaggedAt": "2026-06-16T19:20:06.475331Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b7efd0f2929584072ccb6ff",
     "alias": "Tangelo Ptarmigan",
@@ -11,7 +17,7 @@
     "created": "2018-08-23T18:29:35.940Z",
     "name": "Code-Floof",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5b7efd0f2929584072ccb6ff",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb958e4c3e90df13747a6",
   "imageURLs": [],
-  "lastUpdated": 1781319993042,
+  "lastUpdated": 1781637211006,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "Closed groups should be treated like private groups",
   "trendingScore": 2762.717439210618,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "updatedBy": null,
   "urlName": "closed-groups-should-be-treated-like-private-groups",
   "viewerIsAuthor": false,
@@ -72,7 +78,7 @@
       "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
       "companies": [],
       "name": "DAG-XR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63903ec96c42e355a36693b7"
     },
     {
@@ -83,7 +89,7 @@
       "avatarURL": "https://canny-assets.io/images/8395374228f54b7b44567af3d02a8ef1.png",
       "companies": [],
       "name": "Code-Floof",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "638c005ddb649258c4e7656c"
     }
   ]

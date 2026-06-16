@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "61c4b2322615b54cfb40016d",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:16:01.768382Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f31e1eb4b9b1262d3a22a19",
     "alias": "Cyan Puffin",
@@ -11,7 +16,7 @@
     "created": "2020-08-11T00:10:19.784Z",
     "name": "Katfish",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f31e1eb4b9b1262d3a22a19",
   "board": {
@@ -44,7 +49,7 @@
   "files": [],
   "ideaID": "680bb8cee4c3e90df135929b",
   "imageURLs": [],
-  "lastUpdated": 1781315130366,
+  "lastUpdated": 1781637097178,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -59,7 +64,7 @@
   "subCategoryID": null,
   "title": "Set UIToggle isOn through Udon results in client crash",
   "trendingScore": 2712.7973577857188,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "set-uitoggle-ison-through-udon-results-in-client-crash",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +83,7 @@
       "avatarURL": "https://canny.io/images/e9cc1e6762b6162e2c83bebbaf646307.png",
       "companies": [],
       "name": "Katfish",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61c4b2322615b54cfb400174"
     }
   ]

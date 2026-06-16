@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6191fac1a75c236c61efd462",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:16:06.455414Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6191f7757d5b2a26ec38e098",
     "alias": "Probable Starfish",
@@ -11,7 +16,7 @@
     "created": "2021-11-15T06:00:21.739Z",
     "name": "nFinity8",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6191f7757d5b2a26ec38e098",
   "board": {
@@ -45,7 +50,7 @@
         "created": "2021-11-15T06:00:21.739Z",
         "name": "nFinity8",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -88,7 +93,7 @@
   "imageURLs": [
     "https://canny.io/images/67af46b1173bd5da85766907d2198226.png"
   ],
-  "lastUpdated": 1781315131498,
+  "lastUpdated": 1781637130159,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -103,7 +108,7 @@
   "subCategoryID": null,
   "title": "Transform.RotateAround only rotates about origin",
   "trendingScore": 2707.301721562174,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "transformrotatearound-only-rotates-about-origin",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -122,7 +127,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "nFinity8",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6191fac1a75c236c61efd469"
     }
   ]

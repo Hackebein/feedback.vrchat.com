@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "612fd5d863be6c6c6e1b1fb3",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "loc.unity-sdk",
+    "platforms.standalone-vr.quest",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:14:45.771946Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e8e17d9fee00771682fa953",
     "alias": "Quickest Lark",
@@ -11,7 +18,7 @@
     "created": "2020-04-08T18:28:41.418Z",
     "name": "Bob64",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e8e17d9fee00771682fa953",
   "board": {
@@ -44,7 +51,7 @@
   "files": [],
   "ideaID": "680bb8b3e4c3e90df1354014",
   "imageURLs": [],
-  "lastUpdated": 1781315125752,
+  "lastUpdated": 1781637089573,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -59,7 +66,7 @@
   "subCategoryID": null,
   "title": "Datetime.utcnow on quest is 1 hour behind.",
   "trendingScore": 2696.6668386769225,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "datetimeutcnow-on-quest-is-1-hour-behind",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +85,7 @@
       "avatarURL": "https://canny.io/images/bf70c80571e6ff1ac8d583437896bc3b.png",
       "companies": [],
       "name": "Bob64",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "612fd5d863be6c6c6e1b1fbd"
     }
   ]

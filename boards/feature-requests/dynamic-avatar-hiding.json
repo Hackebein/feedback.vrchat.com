@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "63b27e50e1db7e0ffd437990",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "avatars",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T19:21:21.083483Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df214cbc352b44adb9c3fd",
     "alias": "Managerial Hawk",
@@ -11,7 +17,7 @@
     "created": "2022-07-25T23:03:40.741Z",
     "name": "Aussywoo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62df214cbc352b44adb9c3fd",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb95fe4c3e90df1375b22",
   "imageURLs": [],
-  "lastUpdated": 1781320006085,
+  "lastUpdated": 1781637216729,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "Dynamic Avatar Hiding",
   "trendingScore": 2766.718577591447,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "dynamic-avatar-hiding",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": "https://canny-assets.io/images/56a3faa8e0e7526b6a5c0bf5dcc81c6a.png",
       "companies": [],
       "name": "Fizzytaco",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63b2b66ec029470be973c446"
     },
     {
@@ -82,7 +88,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Aussywoo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63b27e50e1db7e0ffd4379b6"
     }
   ]

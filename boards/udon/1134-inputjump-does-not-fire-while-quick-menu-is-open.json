@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "617cfbf651bee57d1002ddac",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.quick-menu",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:14:37.861375Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d204b74493130abcdca6e",
     "alias": "Happy Jellyfish",
@@ -11,7 +17,7 @@
     "created": "2020-08-07T09:35:07.038Z",
     "name": "Haï~",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f2d204b74493130abcdca6e",
   "board": {
@@ -45,7 +51,7 @@
         "created": "2021-02-13T23:11:28.997Z",
         "name": "Phasedragon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -87,7 +93,7 @@
   "files": [],
   "ideaID": "680bb8c2e4c3e90df1357215",
   "imageURLs": [],
-  "lastUpdated": 1781315123285,
+  "lastUpdated": 1781637085827,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -102,7 +108,7 @@
   "subCategoryID": null,
   "title": "[1134] InputJump does not fire while Quick Menu is open",
   "trendingScore": 2705.7234286918597,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "1134-inputjump-does-not-fire-while-quick-menu-is-open",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -121,7 +127,7 @@
       "avatarURL": "https://canny-assets.io/images/976cdd071ca50df10da145bf3d25fad6.png",
       "companies": [],
       "name": "Tony_Lewis",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "617d1dcaef24c137efddc8e6"
     },
     {
@@ -132,7 +138,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "617cfc058097b9693c7a58c8"
     },
     {
@@ -143,7 +149,7 @@
       "avatarURL": "https://canny-assets.io/images/e865a419b452d452db17b2330d5bddf4.png",
       "companies": [],
       "name": "Haï~",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "617cfbf651bee57d1002ddb3"
     }
   ]

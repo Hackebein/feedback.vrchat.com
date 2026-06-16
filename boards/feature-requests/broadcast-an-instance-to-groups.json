@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "63aa30457b470a3a1774afaa",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.groups",
+    "groups.instances"
+  ],
+  "aiTaggedAt": "2026-06-16T19:18:35.348147Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63aa2fcf3026785358bace1b",
     "alias": "Conventional Deer",
@@ -11,7 +17,7 @@
     "created": "2022-12-26T23:35:43.173Z",
     "name": "Tunity",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "63aa2fcf3026785358bace1b",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb95fe4c3e90df1375acf",
   "imageURLs": [],
-  "lastUpdated": 1781319922594,
+  "lastUpdated": 1781637200103,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "\"Broadcast\" An instance to Groups",
   "trendingScore": 2769.743477513994,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "broadcast-an-instance-to-groups",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": "https://canny-assets.io/images/27cc69f694cb656f75c0a081300a658d.png",
       "companies": [],
       "name": "14anthony7095",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63d87fe83ea07b4049f930d7"
     },
     {
@@ -82,7 +88,7 @@
       "avatarURL": "https://canny.io/images/b92ead77a400869a090a3fe5d3e09791.png",
       "companies": [],
       "name": "Tunity",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63aa30457b470a3a1774afcf"
     }
   ]

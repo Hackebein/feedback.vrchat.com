@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "63bf0fa166791639e051fb21",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "client.controls",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T19:19:51.563729Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63bf0eb7b267381eb6936ab7",
     "alias": "Vermilion Stoat",
@@ -11,7 +17,7 @@
     "created": "2023-01-11T19:32:07.627Z",
     "name": "Mytea",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "63bf0eb7b267381eb6936ab7",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb960e4c3e90df137616c",
   "imageURLs": [],
-  "lastUpdated": 1781319926461,
+  "lastUpdated": 1781637206635,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -53,7 +59,7 @@
   "subCategoryID": null,
   "title": "change keyboard controls",
   "trendingScore": 2918.1607213764837,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "change-keyboard-controls",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -72,7 +78,7 @@
       "avatarURL": "https://canny-assets.io/images/0bbdb393cc5405e799b4b6aa9300b0a3.png",
       "companies": [],
       "name": "Avalonnie",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69324ab34927a96e58a3492f"
     },
     {
@@ -83,7 +89,7 @@
       "avatarURL": "https://canny-assets.io/images/e1d779529256c3a3b02b37d93e05d649.png",
       "companies": [],
       "name": "Lunchcube",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68af43819b8a25d17e7599a3"
     },
     {
@@ -94,7 +100,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Mytea",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63bf0fa166791639e051fb60"
     }
   ]

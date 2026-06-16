@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "61445016d1393d69731b4acc",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:15:55.835550Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f4d0c8c4efb1c1bee087245",
     "alias": "Tawny Aardvark",
@@ -11,7 +16,7 @@
     "created": "2020-08-31T14:43:24.515Z",
     "name": "Guribo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f4d0c8c4efb1c1bee087245",
   "board": {
@@ -45,7 +50,7 @@
         "created": "2020-08-31T14:43:24.515Z",
         "name": "Guribo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -127,7 +132,7 @@
         "created": "2020-08-30T23:22:56.091Z",
         "name": "CyanLaser",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -155,7 +160,7 @@
           "created": "2019-12-05T17:37:30.047Z",
           "name": "Momo the Monster",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -185,7 +190,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -210,7 +215,7 @@
           "created": "2020-08-30T23:22:56.091Z",
           "name": "CyanLaser",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -244,7 +249,7 @@
     "https://canny.io/images/26e863a0fef16e1b4795e84b0a434681.png",
     "https://canny.io/images/0b3474da861d51667045102b8089bf48.png"
   ],
-  "lastUpdated": 1781315128229,
+  "lastUpdated": 1781637093991,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 27,
@@ -260,7 +265,7 @@
   "subCategoryID": null,
   "title": "OnPlayerTriggerEnter does not fire",
   "trendingScore": 2933.794081886574,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "onplayertriggerenter-does-not-fire",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -279,7 +284,7 @@
       "avatarURL": "https://canny-assets.io/images/3672d63f1b6f83e5fb66c4ff3a41bd8f.png",
       "companies": [],
       "name": "Escortti",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69c29084bcda4ee6329dcc80"
     },
     {
@@ -290,7 +295,7 @@
       "avatarURL": "https://canny-assets.io/images/2f07eaaa7a0c3876c62c3cc237a348e2.png",
       "companies": [],
       "name": "vavassor",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "679e15ecafacf378f1714e1c"
     },
     {
@@ -301,7 +306,7 @@
       "avatarURL": "https://canny-assets.io/images/279d5344e6e3af3276b9dde2fa6b08a7.png",
       "companies": [],
       "name": "hdorriker",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "650d120e15768491500fe27d"
     },
     {
@@ -312,7 +317,7 @@
       "avatarURL": "https://canny-assets.io/images/2d9ea919c56b9926addd22a07bcf0f6a.png",
       "companies": [],
       "name": "Yodokoro",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61627ba754478c11ef288b46"
     },
     {
@@ -323,7 +328,7 @@
       "avatarURL": "https://canny-assets.io/images/5d46bb169a50914a277f9145ef243fc0.png",
       "companies": [],
       "name": "IgbarVonSquid",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "614e4bf11d96121a34d26760"
     },
     {
@@ -334,7 +339,7 @@
       "avatarURL": "https://canny-assets.io/images/a3d27ac5c84ae85ba9d5769c707d60d4.png",
       "companies": [],
       "name": "Starkstruck",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61450cacb0f4f639f6cda6d8"
     },
     {
@@ -345,7 +350,7 @@
       "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
       "companies": [],
       "name": "LefTonbo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6144c193c497cb2a2a405090"
     },
     {
@@ -356,7 +361,7 @@
       "avatarURL": "https://canny-assets.io/images/147babcd984b3008c90a6e5ccae896e6.png",
       "companies": [],
       "name": "VTail",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6144b3345062e47358cf23e9"
     },
     {
@@ -367,7 +372,7 @@
       "avatarURL": "https://canny-assets.io/images/8358213d149eabc101a743ce413b3a05.png",
       "companies": [],
       "name": "Uni Power",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6144b224a3e1bb4d97cf1a42"
     },
     {
@@ -378,7 +383,7 @@
       "avatarURL": "https://canny.io/images/6afc47bb0e1e24eebfe6851b2f96715b.png",
       "companies": [],
       "name": "39-95",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61449417ca22cf3a0222dd80"
     }
   ]

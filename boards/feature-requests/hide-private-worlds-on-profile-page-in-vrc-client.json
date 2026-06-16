@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "635c834148fcca496db35344",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.hud",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-06-16T19:22:44.745157Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f31e1379dcbb575795df78a",
     "alias": "Inquisitive Pinniped",
@@ -11,7 +17,7 @@
     "created": "2020-08-11T00:07:19.781Z",
     "name": "Jar",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f31e1379dcbb575795df78a",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2022-09-26T02:46:13.054Z",
         "name": "pongman-79",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -83,7 +89,7 @@
     "https://canny.io/images/db83bc7dc01641b852adecec39920bde.png",
     "https://canny.io/images/5c7bfa000d24e6cf7c4ce18ffa06009b.png"
   ],
-  "lastUpdated": 1781320014410,
+  "lastUpdated": 1781637225185,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -98,7 +104,7 @@
   "subCategoryID": null,
   "title": "Hide private worlds on profile page in VRC client",
   "trendingScore": 2757.6822618837355,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "hide-private-worlds-on-profile-page-in-vrc-client",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -117,7 +123,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "pongman-79",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "635c8901bfb540451a993729"
     },
     {
@@ -128,7 +134,7 @@
       "avatarURL": "https://canny-assets.io/images/689aa025ee6ae149a1aabd51aeb24755.png",
       "companies": [],
       "name": "Plague_VR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "635c855ebfb540451a972545"
     },
     {
@@ -139,7 +145,7 @@
       "avatarURL": "https://canny-assets.io/images/ffccf8619b7165aa7dc10715da0da035.png",
       "companies": [],
       "name": "Jar",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "635c834148fcca496db35364"
     }
   ]

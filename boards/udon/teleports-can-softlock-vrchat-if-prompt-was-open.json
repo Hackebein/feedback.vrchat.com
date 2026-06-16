@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "615ca74b5e8d740d0a7624fe",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:16:04.260412Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f8a26770aaa28611fedd6b6",
     "alias": "Average Loon",
@@ -11,7 +16,7 @@
     "created": "2020-10-16T23:02:15.960Z",
     "name": "Faxmashine",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f8a26770aaa28611fedd6b6",
   "board": {
@@ -45,7 +50,7 @@
         "created": "2020-10-16T23:02:15.960Z",
         "name": "Faxmashine",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2020-10-16T23:02:15.960Z",
         "name": "Faxmashine",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -129,7 +134,7 @@
   "files": [],
   "ideaID": "680bb8b6e4c3e90df1354c8d",
   "imageURLs": [],
-  "lastUpdated": 1781315131000,
+  "lastUpdated": 1781637128287,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -144,7 +149,7 @@
   "subCategoryID": null,
   "title": "Teleports can softlock VRChat if prompt was open",
   "trendingScore": 2701.523325809859,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "teleports-can-softlock-vrchat-if-prompt-was-open",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -163,7 +168,7 @@
       "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
       "companies": [],
       "name": "Faxmashine",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "615ca74c5e8d740d0a762505"
     }
   ]

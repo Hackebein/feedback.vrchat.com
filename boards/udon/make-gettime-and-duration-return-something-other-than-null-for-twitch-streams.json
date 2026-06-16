@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "613b7d40ed33355c9d6c8a39",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:15:53.542858Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e89d0822aedbc56a3155d12",
     "alias": "Aegean Llama",
@@ -11,7 +17,7 @@
     "created": "2020-04-05T12:35:14.620Z",
     "name": "Whaddageek",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e89d0822aedbc56a3155d12",
   "board": {
@@ -27,7 +33,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -44,7 +50,7 @@
   "files": [],
   "ideaID": "680bb8b3e4c3e90df1354058",
   "imageURLs": [],
-  "lastUpdated": 1781315127275,
+  "lastUpdated": 1781637092664,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -59,7 +65,7 @@
   "subCategoryID": null,
   "title": "Make GetTime and Duration return something other than null for Twitch Streams",
   "trendingScore": 2697.9296555436554,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "make-gettime-and-duration-return-something-other-than-null-for-twitch-streams",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +84,7 @@
       "avatarURL": "https://canny-assets.io/images/616c7b720248db1509813a8626fa40da.png",
       "companies": [],
       "name": "Whaddageek",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "613b7d40ed33355c9d6c8a40"
     }
   ]

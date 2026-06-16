@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6369a1488fcd56208cb41aa4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-06-16T19:21:27.143625Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6369a110a4881c1f6fb8819a",
     "alias": "Gray Woodpecker",
@@ -11,7 +17,7 @@
     "created": "2022-11-08T00:21:36.347Z",
     "name": "NerosDemon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6369a110a4881c1f6fb8819a",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb94de4c3e90df137228f",
   "imageURLs": [],
-  "lastUpdated": 1781320008280,
+  "lastUpdated": 1781637219022,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "Facial/eye tracking oculus pro",
   "trendingScore": 2759.019017613787,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "facialeye-tracking-oculus-pro",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": "https://canny-assets.io/images/417c04bb3e402b86f6803d87f692b1d1.png",
       "companies": [],
       "name": "Groxxy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "636e68c5ebd4296b3436aa5c"
     },
     {
@@ -82,7 +88,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "NerosDemon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6369a1498fcd56208cb41c10"
     }
   ]

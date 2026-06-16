@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "616e43d02028400b7d6cc542",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T19:14:40.841665Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6be62b15f9fa5364f1834c",
     "alias": "Damask Impala",
@@ -11,7 +16,7 @@
     "created": "2020-09-24T00:19:55.786Z",
     "name": "techanon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f6be62b15f9fa5364f1834c",
   "board": {
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -45,7 +50,7 @@
         "created": "2018-02-07T09:36:11.764Z",
         "name": "PhaxeNor",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2020-09-24T00:19:55.786Z",
         "name": "techanon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -111,7 +116,7 @@
           "created": "2018-02-07T09:36:11.764Z",
           "name": "PhaxeNor",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -139,7 +144,7 @@
   "files": [],
   "ideaID": "680bb8bfe4c3e90df1356600",
   "imageURLs": [],
-  "lastUpdated": 1781315123906,
+  "lastUpdated": 1781637086950,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -154,7 +159,7 @@
   "subCategoryID": null,
   "title": "Add method to Udon to check if a particular behaviour has a given event name exported in the UASM",
   "trendingScore": 2704.137600272119,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "add-method-to-udon-to-check-if-a-particular-behaviour-has-a-given-event-name-exp",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -173,7 +178,7 @@
       "avatarURL": "https://canny-assets.io/images/90c170d0dd512c0a5f023fc46700cb27.png",
       "companies": [],
       "name": "BocuD",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "616eb94ec5e3134d120361c8"
     },
     {
@@ -184,7 +189,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "616e44b5c1d9323a263d9bd4"
     },
     {
@@ -195,7 +200,7 @@
       "avatarURL": "https://canny-assets.io/images/ffc9926290b2ca2f36303f2d26ea8e98.png",
       "companies": [],
       "name": "techanon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "616e43d02028400b7d6cc549"
     }
   ]

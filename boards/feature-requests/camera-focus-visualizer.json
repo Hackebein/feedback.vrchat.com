@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6440e6ce10e248f3282d9c7c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T19:18:45.211701Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3ce71f9363815f7eb8e135",
     "alias": "Selected Mollusk",
@@ -11,7 +16,7 @@
     "created": "2020-08-19T08:47:27.034Z",
     "name": "K_Tyras",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f3ce71f9363815f7eb8e135",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb979e4c3e90df137abff",
   "imageURLs": [],
-  "lastUpdated": 1781319924129,
+  "lastUpdated": 1781637202502,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -53,7 +58,7 @@
   "subCategoryID": null,
   "title": "Camera Focus Visualizer",
   "trendingScore": 2786.584860236905,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T19:14:20.308348Z",
   "urlName": "camera-focus-visualizer",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -72,7 +77,7 @@
       "avatarURL": "https://canny-assets.io/images/9f5d7765f8994791de33f25ec0b2c83d.png",
       "companies": [],
       "name": "lun-4",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "646d8162e402df098ea80923"
     },
     {
@@ -83,7 +88,7 @@
       "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
       "companies": [],
       "name": "syncpulse",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "646d80b7ae3086092c1d9d51"
     },
     {
@@ -94,7 +99,7 @@
       "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
       "companies": [],
       "name": "camegone",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6446add92cd0db09fcb2863c"
     },
     {
@@ -105,7 +110,7 @@
       "avatarURL": "https://canny-assets.io/images/e2b6bf1ec2f48fe9c4d162d3c58b0706.png",
       "companies": [],
       "name": "K_Tyras",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6440e6ce10e248f3282d9cc5"
     }
   ]
