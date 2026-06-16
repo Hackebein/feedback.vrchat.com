@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "605c2eb89644b2219a6fbd4a",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:55:12.585360Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b7c3929d5fc6b20af6b960a",
     "alias": "Frozen Emu",
@@ -11,7 +16,7 @@
     "created": "2018-08-21T16:09:13.064Z",
     "name": "Lyuma",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5b7c3929d5fc6b20af6b960a",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2018-08-21T16:09:13.064Z",
         "name": "Lyuma",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -88,7 +93,7 @@
     "https://canny.io/images/5c3aaad996410a010991f3db7dcf4957.png",
     "https://canny.io/images/293d3be69a091979f7b81b5a107f097f.png"
   ],
-  "lastUpdated": 1781293271964,
+  "lastUpdated": 1781596361367,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -103,7 +108,7 @@
   "subCategoryID": null,
   "title": "Set Variable is ignored when sharing an input",
   "trendingScore": 2673.732182304568,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "set-variable-is-ignored-when-sharing-an-input",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -122,7 +127,7 @@
       "avatarURL": "https://canny-assets.io/images/02280587074a5f85ba0e7046d47d8008.png",
       "companies": [],
       "name": "Lyuma",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "605c2eb89644b2219a6fbd51"
     }
   ]

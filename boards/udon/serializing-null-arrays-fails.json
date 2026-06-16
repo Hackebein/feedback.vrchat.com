@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60ad89c0a4a72e36e02744ab",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:55:10.997326Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f8a26770aaa28611fedd6b6",
     "alias": "Average Loon",
@@ -11,7 +16,7 @@
     "created": "2020-10-16T23:02:15.960Z",
     "name": "Faxmashine",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f8a26770aaa28611fedd6b6",
   "board": {
@@ -43,7 +48,7 @@
   "files": [],
   "ideaID": "680bb8a0e4c3e90df134fb0a",
   "imageURLs": [],
-  "lastUpdated": 1781293271144,
+  "lastUpdated": 1781596360851,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -59,7 +64,7 @@
   "subCategoryID": null,
   "title": "Serializing null arrays fails",
   "trendingScore": 2861.3411812687573,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "serializing-null-arrays-fails",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +83,7 @@
       "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
       "companies": [],
       "name": "LefTonbo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "671fc306001ff2baccda1657"
     },
     {
@@ -89,7 +94,7 @@
       "avatarURL": "https://canny-assets.io/images/a59d9d18250f6669f0cc52dc582475d7.png",
       "companies": [],
       "name": "frou01",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "671f4d780f7e723d6e0b1937"
     },
     {
@@ -100,7 +105,7 @@
       "avatarURL": "https://canny-assets.io/images/c30a68ae2238456105ebdc8cedea5b4a.png",
       "companies": [],
       "name": "Fairplex",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "65bf77e6ed6eefce4c9d70a7"
     },
     {
@@ -111,7 +116,7 @@
       "avatarURL": "https://canny.io/images/4a9c05b0f2f59834080dafac22494360.png",
       "companies": [],
       "name": "Satetu",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60b05b452b72c07b981507bf"
     },
     {
@@ -122,7 +127,7 @@
       "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
       "companies": [],
       "name": "Faxmashine",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60ad89c0a4a72e36e02744b5"
     }
   ]

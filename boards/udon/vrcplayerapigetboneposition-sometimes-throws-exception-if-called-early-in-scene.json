@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ec0a7502f188626db349d75",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:55:33.437983Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c663504b1f7e423a9aef09b",
     "alias": "Relevant Ox",
@@ -11,7 +16,7 @@
     "created": "2019-02-15T03:41:56.351Z",
     "name": "Hiina Kuukan",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c663504b1f7e423a9aef09b",
   "board": {
@@ -43,7 +48,7 @@
   "files": [],
   "ideaID": "680b7dace4c3e90df158f995",
   "imageURLs": [],
-  "lastUpdated": 1781293110425,
+  "lastUpdated": 1781596373538,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -58,7 +63,7 @@
   "subCategoryID": null,
   "title": "VRCPlayerApi.GetBonePosition sometimes throws exception if called early in scene",
   "trendingScore": 2630.8540999369425,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "vrcplayerapigetboneposition-sometimes-throws-exception-if-called-early-in-scene",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -77,7 +82,7 @@
       "avatarURL": "https://canny.io/images/475a952cf06640b7057555d4af713213.png",
       "companies": [],
       "name": "kafeijao",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ed0b86818cf8d653fa69d2c"
     },
     {
@@ -88,7 +93,7 @@
       "avatarURL": "https://canny.io/images/6d7fd9a2818f95ae16fbb4be009f1dd8.png",
       "companies": [],
       "name": "LastRar",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ecbfa79e6b7a05ae0eade64"
     },
     {
@@ -99,7 +104,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Hiina Kuukan",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ec0a7502f188626db349d7d"
     }
   ]

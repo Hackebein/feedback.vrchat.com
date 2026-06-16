@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60204dfc20ff3963bf898bf4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:55:13.136514Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "601f91f2f76d3163c50f8419",
     "alias": "Purple Trout",
@@ -11,7 +16,7 @@
     "created": "2021-02-07T07:08:34.012Z",
     "name": "Laughless",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "601f91f2f76d3163c50f8419",
   "board": {
@@ -45,7 +50,7 @@
   "imageURLs": [
     "https://canny.io/images/b8e1bb840ed82edd3180820d680d5ecd.png"
   ],
-  "lastUpdated": 1781293272772,
+  "lastUpdated": 1781596361710,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -60,7 +65,7 @@
   "subCategoryID": null,
   "title": "Setting a material variable sync to true desyncs the pickup object the graph is on.",
   "trendingScore": 2667.24382946644,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "setting-a-material-variable-sync-to-true-desyncs-the-pickup-object-the-graph-is",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -79,7 +84,7 @@
       "avatarURL": "https://canny-assets.io/images/94128897a39b9193020c9471d1852744.png",
       "companies": [],
       "name": "Laughless",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60204dfc20ff3963bf898bfb"
     }
   ]

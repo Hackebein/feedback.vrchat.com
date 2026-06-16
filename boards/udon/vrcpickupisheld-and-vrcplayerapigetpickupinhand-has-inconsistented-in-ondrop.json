@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ff3ccd447a68e043c6e49ae",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:55:32.794518Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3cf7361b136917b119d507",
     "alias": "Mandarin Kite",
@@ -11,7 +16,7 @@
     "created": "2020-08-19T09:56:06.909Z",
     "name": "Yodokoro",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f3cf7361b136917b119d507",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2020-08-19T09:56:06.909Z",
         "name": "Yodokoro",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -85,7 +90,7 @@
   "files": [],
   "ideaID": "680bb7ffe4c3e90df1322476",
   "imageURLs": [],
-  "lastUpdated": 1781293280315,
+  "lastUpdated": 1781596373095,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 22,
@@ -100,7 +105,7 @@
   "subCategoryID": null,
   "title": "VRC_PickUp.IsHeld and VRCPlayerApi.GetPickupInHand has inconsistented in OnDrop()",
   "trendingScore": 2854.7927994527117,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "vrcpickupisheld-and-vrcplayerapigetpickupinhand-has-inconsistented-in-ondrop",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -119,7 +124,7 @@
       "avatarURL": "https://canny-assets.io/images/ed303d9957092e0d261919a673c80850.png",
       "companies": [],
       "name": "sIash",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66e97ffd7d32abb6ca35745a"
     },
     {
@@ -130,7 +135,7 @@
       "avatarURL": "https://canny-assets.io/images/b04037a9fc50518292ee42152e316d02.png",
       "companies": [],
       "name": "ShadeLuxon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63aa794fc1d6a369ef98682c"
     },
     {
@@ -141,7 +146,7 @@
       "avatarURL": "https://canny-assets.io/images/26732cf736800e803a2011fca95b6bc0.png",
       "companies": [],
       "name": "みみー／Mimy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "630754ad5a0cbb7af001492a"
     },
     {
@@ -152,7 +157,7 @@
       "avatarURL": "https://canny-assets.io/images/67ad29b15ab10e55928470ef0d2f8596.png",
       "companies": [],
       "name": "KinoPro",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "622087faef3fbc0ea8386ab5"
     },
     {
@@ -163,7 +168,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "そこそこ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61fa133638f83c28631cd5f7"
     },
     {
@@ -171,10 +176,10 @@
       "alias": "Tough Rhinoceros",
       "aliasID": "65c72844ed6eefce4ce286bd",
       "anonymized": false,
-      "avatarURL": "https://canny.io/images/2fc0d661a790bb8cbe9d70a1e83f29af.png",
+      "avatarURL": "https://canny-assets.io/images/513d5d8af134bdb224311f74fb4e9bc4.png",
       "companies": [],
       "name": "4410",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61c1c56a5949143c39e9a673"
     },
     {
@@ -185,7 +190,7 @@
       "avatarURL": "https://canny-assets.io/images/9d6d9532ee1dbad1322f55aad869ef0b.png",
       "companies": [],
       "name": "Petanoco_P",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "619df4989a9b103cef840f6f"
     },
     {
@@ -196,7 +201,7 @@
       "avatarURL": "https://canny-assets.io/images/ffe67b6dd41032aa389643749d086381.png",
       "companies": [],
       "name": "suzukiriri",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61912ecb58b1185d6ade33f9"
     },
     {
@@ -207,7 +212,7 @@
       "avatarURL": "https://canny-assets.io/images/34f1b13f4743cccd31aea8b8d019cbe2.png",
       "companies": [],
       "name": "ぽがぽが",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6161489721da0434abc79914"
     },
     {
@@ -218,7 +223,7 @@
       "avatarURL": "https://canny.io/images/1c2b137f85a79cfd2545b11399f51db4.png",
       "companies": [],
       "name": "amepan",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6129d9f3f480a7198e6427aa"
     }
   ]

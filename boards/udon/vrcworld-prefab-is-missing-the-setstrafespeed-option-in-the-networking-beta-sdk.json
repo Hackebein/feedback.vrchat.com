@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60545147e93e7c49c4a60ae4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:56:31.655028Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6be62b15f9fa5364f1834c",
     "alias": "Damask Impala",
@@ -11,7 +16,7 @@
     "created": "2020-09-24T00:19:55.786Z",
     "name": "techanon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f6be62b15f9fa5364f1834c",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -128,7 +133,7 @@
   "files": [],
   "ideaID": "680bb812e4c3e90df1325c25",
   "imageURLs": [],
-  "lastUpdated": 1781293281100,
+  "lastUpdated": 1781596374903,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -143,7 +148,7 @@
   "subCategoryID": null,
   "title": "VRCWorld prefab is missing the SetStrafeSpeed option in the Networking Beta SDK",
   "trendingScore": 2673.7412440200105,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "vrcworld-prefab-is-missing-the-setstrafespeed-option-in-the-networking-beta-sdk",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -162,7 +167,7 @@
       "avatarURL": "https://canny-assets.io/images/38c9c43845fc98cba69a5e2e0d5c5298.png",
       "companies": [],
       "name": "owlboy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "605957f3aeeb08348f77b818"
     },
     {
@@ -173,7 +178,7 @@
       "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
       "companies": [],
       "name": "LefTonbo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6054656de64d667581c538ff"
     },
     {
@@ -184,7 +189,7 @@
       "avatarURL": "https://canny-assets.io/images/ffc9926290b2ca2f36303f2d26ea8e98.png",
       "companies": [],
       "name": "techanon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60545147e93e7c49c4a60aeb"
     }
   ]

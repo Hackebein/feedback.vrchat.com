@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6019f4c0f76d3163c5decdba",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:56:30.091744Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6019cff0a44f0f03659ddfad",
     "alias": "Peach puff Pinniped",
@@ -11,7 +16,7 @@
     "created": "2021-02-02T22:19:28.583Z",
     "name": "doodledrop",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6019cff0a44f0f03659ddfad",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2020-08-08T19:35:34.951Z",
         "name": "Gharlane",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -87,7 +92,7 @@
   "imageURLs": [
     "https://canny.io/images/6f9bed81bc62560b2f917b07ff5f23f1.png"
   ],
-  "lastUpdated": 1781293280837,
+  "lastUpdated": 1781596374242,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -102,7 +107,7 @@
   "subCategoryID": null,
   "title": "VRCPlayer.TeleportTo breaks desktop players ability to rotate VRC Pickup objects.",
   "trendingScore": 2672.506924060136,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "vrcplayerteleportto-breaks-desktop-players-ability-to-rotate-vrc-pickup-objects",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -121,7 +126,7 @@
       "avatarURL": "https://canny.io/images/28734efe0c602485b60560c40f318e93.png",
       "companies": [],
       "name": "Gharlane",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60573f735418412acec5bc31"
     },
     {
@@ -132,7 +137,7 @@
       "avatarURL": "https://canny.io/images/6c17e4e80542e550fe22da5cda83c86a.png",
       "companies": [],
       "name": "doodledrop",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6019f4c2f76d3163c5decdd0"
     }
   ]

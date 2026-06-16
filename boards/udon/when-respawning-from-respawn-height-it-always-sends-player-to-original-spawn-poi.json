@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "5eec7bcbdc5f4a10b47c9b77",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:56:33.390722Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c9d5c699cbfb22688db5014",
     "alias": "Daffodil Jaguar",
@@ -11,7 +17,7 @@
     "created": "2019-03-28T23:44:41.222Z",
     "name": "AltCentauri",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c9d5c699cbfb22688db5014",
   "board": {
@@ -44,7 +50,7 @@
         "created": "2019-03-28T23:44:41.222Z",
         "name": "AltCentauri",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -88,7 +94,7 @@
         "created": "2022-11-07T14:13:43.431Z",
         "name": "Fax",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -130,7 +136,7 @@
   "files": [],
   "ideaID": "680b7db1e4c3e90df159115a",
   "imageURLs": [],
-  "lastUpdated": 1781293143341,
+  "lastUpdated": 1781596375589,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 29,
@@ -146,7 +152,7 @@
   "subCategoryID": null,
   "title": "When respawning from respawn height, it always sends player to original spawn point in world.",
   "trendingScore": 2812.202479991733,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "when-respawning-from-respawn-height-it-always-sends-player-to-original-spawn-poi",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -165,7 +171,7 @@
       "avatarURL": "https://canny-assets.io/images/34a7025649fc6ecea3daef07c972335a.png",
       "companies": [],
       "name": "tanitta",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6560745b994fe3b0c011dc53"
     },
     {
@@ -176,7 +182,7 @@
       "avatarURL": "https://canny-assets.io/images/4f835107f5a5d3c99a23cd880affed8e.png",
       "companies": [],
       "name": "Alex Lotor",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f74d0a24928f978a5b9a0c2"
     },
     {
@@ -187,7 +193,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Jens",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f171610f090fe19f791966f"
     },
     {
@@ -198,7 +204,7 @@
       "avatarURL": "https://canny-assets.io/images/790edd7ee9459d947f4c0bc1ff2a8907.png",
       "companies": [],
       "name": "Jasper Raine",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f11d7aedabf7f367fbcb3ca"
     },
     {
@@ -209,7 +215,7 @@
       "avatarURL": "https://canny-assets.io/images/14f780efc3a8e6e61e9db19517ba2532.png",
       "companies": [],
       "name": "Amega",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f0dd45773103169baf8c32c"
     },
     {
@@ -220,7 +226,7 @@
       "avatarURL": "https://canny.io/images/826375774a6e2e6fbec59cb7403e6d94.png",
       "companies": [],
       "name": "NotFish",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f0949e895ffa944efa0b058"
     },
     {
@@ -231,7 +237,7 @@
       "avatarURL": "https://canny.io/images/1119b47d566add0ae77bf42b9f68289f.png",
       "companies": [],
       "name": "Kdrn",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f08da302dd1cb44fb1075d8"
     },
     {
@@ -242,7 +248,7 @@
       "avatarURL": "https://canny.io/images/287d8f9abcaa8657c56fd3ceeeeb18ad.png",
       "companies": [],
       "name": "Alex Lotor",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5efdee6e2307d613bf156780"
     },
     {
@@ -253,7 +259,7 @@
       "avatarURL": "https://canny.io/images/5965f8a1a4d32560a432ed20613e65f9.png",
       "companies": [],
       "name": "Sero Kaiju",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5efdc90317c26a640fdb3a09"
     },
     {
@@ -264,7 +270,7 @@
       "avatarURL": "https://canny.io/images/cc9780580b6b1d4d0c1340d01a621ffd.png",
       "companies": [],
       "name": "AuroraBorealis",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ef9050b57b19d6ef986a07e"
     }
   ]

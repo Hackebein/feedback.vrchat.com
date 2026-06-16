@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60dac205824fb639f7b805e1",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T07:55:14.781784Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fbdcc7dfe8ecb2ff881066a",
     "alias": "Fawn Antlion",
@@ -11,7 +16,7 @@
     "created": "2020-11-25T03:16:13.379Z",
     "name": "~Maru~",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5fbdcc7dfe8ecb2ff881066a",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2021-02-13T23:11:28.997Z",
         "name": "Phasedragon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
   "files": [],
   "ideaID": "680bb8a5e4c3e90df1351303",
   "imageURLs": [],
-  "lastUpdated": 1781293272857,
+  "lastUpdated": 1781596361748,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -102,7 +107,7 @@
   "subCategoryID": null,
   "title": "Setting Ownership to someone else in the same tick as RequestSerialization causes a race condition",
   "trendingScore": 2703.8916815006774,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T07:55:00.383659Z",
   "urlName": "setting-ownership-to-someone-else-in-the-same-tick-as-requestserialization-cause",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -121,7 +126,7 @@
       "avatarURL": "https://canny.io/images/d226db37011651a415858cd5d7e8926c.png",
       "companies": [],
       "name": "Kaj",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6178e818e8a43d2ec93a21ea"
     },
     {
@@ -132,7 +137,7 @@
       "avatarURL": "https://canny.io/images/3d62b10695d967060cef9cd14334f877.png",
       "companies": [],
       "name": "TimeLincoln",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60dacdcc8dc8783a4e90db58"
     },
     {
@@ -143,7 +148,7 @@
       "avatarURL": "https://canny.io/images/23949db6d5e9b9042ad6a126c02b7b32.png",
       "companies": [],
       "name": "~Maru~",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60dac205824fb639f7b805e8"
     }
   ]
