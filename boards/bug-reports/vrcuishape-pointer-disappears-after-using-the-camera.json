@@ -1,6 +1,11 @@
 {
   "_id": "69183d21c9edee09d11e720c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T15:45:38.835696Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ae51ece906bfd12e600d6f6",
     "alias": "Quaint Turtle",
@@ -10,7 +15,7 @@
     "created": "2018-04-29T01:24:30.124Z",
     "name": "chiugame",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5ae51ece906bfd12e600d6f6",
   "board": {
@@ -45,7 +50,7 @@
   ],
   "ideaID": "69183d21c9edee09d11e727f",
   "imageURLs": [],
-  "lastUpdated": 1781311032019,
+  "lastUpdated": 1781624488471,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -61,7 +66,7 @@
   "subCategoryID": null,
   "title": "VRCUiShape pointer disappears after using the camera",
   "trendingScore": 2916.030768932379,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": null,
   "urlName": "vrcuishape-pointer-disappears-after-using-the-camera",
   "viewerIsAuthor": false,
@@ -81,7 +86,7 @@
       "avatarURL": "https://canny-assets.io/images/93ea8277fd68e3097e6d92bc9b52089e.png",
       "companies": [],
       "name": "chiugame",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69183d2114923d0794af1c71"
     }
   ]

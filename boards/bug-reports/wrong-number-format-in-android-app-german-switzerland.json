@@ -1,6 +1,12 @@
 {
   "_id": "68bf0f08f00369b00f0c24f9",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.mobile-app",
+    "platforms.mobile.android",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-06-16T15:45:51.357077Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66ec8924645aac82300cde9f",
     "alias": "Nougat Echidna",
@@ -10,7 +16,7 @@
     "created": "2024-09-19T20:27:16.683Z",
     "name": "Feuerswut",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "66ec8924645aac82300cde9f",
   "board": {
@@ -39,7 +45,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/cb0066828aff69f8f329d4774ea943e7.png"
   ],
-  "lastUpdated": 1781311040366,
+  "lastUpdated": 1781624492371,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -55,7 +61,7 @@
   "subCategoryID": null,
   "title": "Wrong number format in Android App (German, Switzerland)",
   "trendingScore": 2906.3672349442836,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": null,
   "urlName": "wrong-number-format-in-android-app-german-switzerland",
   "viewerIsAuthor": false,
@@ -75,7 +81,7 @@
       "avatarURL": "https://canny-assets.io/images/a05d595c0e72b617742f54fd3ae80566.png",
       "companies": [],
       "name": "Feuerswut",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68bf0f08ce2ca2b520919f48"
     }
   ]

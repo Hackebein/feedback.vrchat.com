@@ -1,6 +1,11 @@
 {
   "_id": "6932a381b9ee51dd2eb3150e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T15:44:18.055321Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6932a1b44927a96e58986cce",
     "alias": "Overall Echidna",
@@ -10,7 +15,7 @@
     "created": "2025-12-05T09:11:16.796Z",
     "name": "Saro Pawn",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6932a1b44927a96e58986cce",
   "board": {
@@ -37,7 +42,7 @@
         "created": "2025-12-05T09:11:16.796Z",
         "name": "Saro Pawn",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -90,7 +95,7 @@
   ],
   "ideaID": "6932a381b9ee51dd2eb31555",
   "imageURLs": [],
-  "lastUpdated": 1781311015824,
+  "lastUpdated": 1781624481246,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -106,7 +111,7 @@
   "subCategoryID": null,
   "title": "VRC leads to PC crash.",
   "trendingScore": 2918.891456464621,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": null,
   "urlName": "vrc-leads-to-pc-crash",
   "viewerIsAuthor": false,
@@ -126,7 +131,7 @@
       "avatarURL": "https://canny-assets.io/images/06730437b254fcf73bd6e0a666cf05e4.png",
       "companies": [],
       "name": "Saro Pawn",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6932a3814927a96e58032431"
     }
   ]

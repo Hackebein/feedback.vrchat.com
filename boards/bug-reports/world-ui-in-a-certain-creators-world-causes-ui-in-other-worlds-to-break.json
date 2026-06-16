@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "68a7a7e61f2dbd3e27bb0e4e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence",
+    "worlds.layers"
+  ],
+  "aiTaggedAt": "2026-06-16T15:45:51.128937Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f66a5f56c30885955c4a580",
     "alias": "Far Sloth",
@@ -11,7 +17,7 @@
     "created": "2020-09-20T00:44:37.509Z",
     "name": "Killed By Code",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f66a5f56c30885955c4a580",
   "board": {
@@ -39,7 +45,7 @@
         "created": "2019-09-25T20:02:21.142Z",
         "name": "The Snooze",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -86,7 +92,7 @@
         "created": "2023-06-12T15:51:49.320Z",
         "name": "StormRel",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -166,7 +172,7 @@
         "created": "2021-01-04T22:58:39.651Z",
         "name": "Provania",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -216,7 +222,7 @@
     "https://canny-assets.io/images/cd3dda59fe93e536446529382d27c8ad.png",
     "https://canny-assets.io/images/12cfb64e6524fc38a6c014ff6c5f2d38.png"
   ],
-  "lastUpdated": 1781311039628,
+  "lastUpdated": 1781624492070,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 15,
@@ -232,7 +238,7 @@
   "subCategoryID": null,
   "title": "World UI in a certain creator's world causes UI in other worlds to break",
   "trendingScore": 2924.2804455991118,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": null,
   "urlName": "world-ui-in-a-certain-creators-world-causes-ui-in-other-worlds-to-break",
   "viewerIsAuthor": false,
@@ -252,7 +258,7 @@
       "avatarURL": "https://canny-assets.io/images/c693306596dc75a4c40640c98c72800a.png",
       "companies": [],
       "name": "Scena",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "696ac48d6cefe3c238e8a089"
     },
     {
@@ -263,7 +269,7 @@
       "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
       "companies": [],
       "name": "syncpulse",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68b40e9ece2ca2b5207e0f06"
     },
     {
@@ -274,7 +280,7 @@
       "avatarURL": "https://canny-assets.io/images/fcab6d75f3d625b3bf2ce24b9b707688.png",
       "companies": [],
       "name": "K9-424",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68b2cdb1ce2ca2b520c1f2d6"
     },
     {
@@ -285,7 +291,7 @@
       "avatarURL": "https://canny-assets.io/images/59f7ce323c0933b4eb5d7bc947b74de5.png",
       "companies": [],
       "name": "valenvrc",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68b2096cce2ca2b520046780"
     },
     {
@@ -296,7 +302,7 @@
       "avatarURL": "https://canny-assets.io/images/bd02ffeacfe65163dd930366abffcb73.png",
       "companies": [],
       "name": "Haxy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68ac9b5e9b8a25d17e23400c"
     },
     {
@@ -307,7 +313,7 @@
       "avatarURL": "https://canny-assets.io/images/7737ad812f1b95331cb07f3cfa0c2995.png",
       "companies": [],
       "name": "GHOST_OP",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68aaccd09b8a25d17e6e3b70"
     },
     {
@@ -318,7 +324,7 @@
       "avatarURL": "https://canny-assets.io/images/bf8acf17e094751073c5419492195731.png",
       "companies": [],
       "name": "Cooledtea",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68a851ec9b8a25d17e1e24d8"
     },
     {
@@ -329,7 +335,7 @@
       "avatarURL": "https://canny-assets.io/images/dab26a6828554c4d6c6ccd2d7785b696.png",
       "companies": [],
       "name": "FlyingFly",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68a7c91d9b8a25d17ec81a4b"
     },
     {
@@ -340,7 +346,7 @@
       "avatarURL": "https://canny-assets.io/images/56a3faa8e0e7526b6a5c0bf5dcc81c6a.png",
       "companies": [],
       "name": "Fizzytaco",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68a7c3ed9b8a25d17ebf1167"
     },
     {
@@ -351,7 +357,7 @@
       "avatarURL": "https://canny-assets.io/images/d31aa25812ca6b2a3f531e81adb6dbea.png",
       "companies": [],
       "name": "~Pausbe",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68a7b8789b8a25d17ebaa840"
     }
   ]

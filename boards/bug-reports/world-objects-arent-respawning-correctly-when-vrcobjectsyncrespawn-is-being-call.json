@@ -1,6 +1,12 @@
 {
   "_id": "69131c578207d49c8ccf93b4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-16T15:45:49.748747Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66a2cd8a9d15368fab9609ce",
     "alias": "Revolutionary Nightingale",
@@ -10,7 +16,7 @@
     "created": "2024-07-25T22:11:22.252Z",
     "name": "SK1768",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "66a2cd8a9d15368fab9609ce",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "69131c578207d49c8ccf93eb",
   "imageURLs": [],
-  "lastUpdated": 1781311038937,
+  "lastUpdated": 1781624491580,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -53,7 +59,7 @@
   "subCategoryID": null,
   "title": "World objects aren't respawning correctly when VRCObjectSync.Respawn() is being called.",
   "trendingScore": 2915.4750907966313,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": "66a2cd8a9d15368fab9609ce",
   "urlName": "world-objects-arent-respawning-correctly-when-vrcobjectsyncrespawn-is-being-call",
   "viewerIsAuthor": false,
@@ -73,7 +79,7 @@
       "avatarURL": "https://canny-assets.io/images/2578cba07051bd276d062edf9d5f992d.png",
       "companies": [],
       "name": "SK1768",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69131c5714923d0794ae9516"
     }
   ]

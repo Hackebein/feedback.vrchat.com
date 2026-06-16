@@ -1,6 +1,12 @@
 {
   "_id": "68ca8ac6ceab0227400585b3",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "client.settings",
+    "platforms.pc.desktop"
+  ],
+  "aiTaggedAt": "2026-06-16T15:44:23.406337Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "646b987585839518c2f438b2",
     "alias": "Cerise pink Rhinoceros",
@@ -10,7 +16,7 @@
     "created": "2023-05-22T16:29:41.230Z",
     "name": "SymphonyVR",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "646b987585839518c2f438b2",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "68ca8ac6ceab022740058664",
   "imageURLs": [],
-  "lastUpdated": 1781311019615,
+  "lastUpdated": 1781624482922,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -53,7 +59,7 @@
   "subCategoryID": null,
   "title": "VRChat cache location works partially, it still saves some files on the %temp% directory",
   "trendingScore": 2907.611570241076,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": null,
   "urlName": "vrchat-cache-location-works-partially-it-still-saves-some-files-on-the-temp-dire",
   "viewerIsAuthor": false,
@@ -73,7 +79,7 @@
       "avatarURL": "https://canny-assets.io/images/2c0a266286cfe73b1a40cb5d3b538e5b.png",
       "companies": [],
       "name": "SymphonyVR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68ca8ac6004e8728237cb852"
     }
   ]

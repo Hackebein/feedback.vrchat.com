@@ -1,6 +1,12 @@
 {
   "_id": "68d00df8037d8b54ee071175",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "client.settings",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-06-16T15:44:28.433068Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67d846d03d6ebfe503750b95",
     "alias": "Tame Manatee",
@@ -10,7 +16,7 @@
     "created": "2025-03-17T15:59:12.052Z",
     "name": "whitevampy",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "67d846d03d6ebfe503750b95",
   "board": {
@@ -45,7 +51,7 @@
   ],
   "ideaID": "68d00df9037d8b54ee071213",
   "imageURLs": [],
-  "lastUpdated": 1781311022975,
+  "lastUpdated": 1781624484823,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -61,7 +67,7 @@
   "subCategoryID": null,
   "title": "VRChat freezes because Websocket exploded!",
   "trendingScore": 2908.2089028278815,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": null,
   "urlName": "vrchat-freezes-because-websocket-exploded",
   "viewerIsAuthor": false,
@@ -81,7 +87,7 @@
       "avatarURL": "https://canny-assets.io/images/d62caa63bd9111d57ca76b126aaf7275.png",
       "companies": [],
       "name": "whitevampy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68d00df9a8ab97d7d9c708d0"
     }
   ]

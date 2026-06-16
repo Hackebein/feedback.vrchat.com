@@ -1,6 +1,12 @@
 {
   "_id": "690c6fa400cd256b54abe5e5",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T15:45:47.416370Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61af28116b1f36339f75bc78",
     "alias": "Whole Swordfish",
@@ -10,7 +16,7 @@
     "created": "2021-12-07T09:23:29.961Z",
     "name": "Nicalay2",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "61af28116b1f36339f75bc78",
   "board": {
@@ -59,7 +65,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/bd602e8b0a869788175b420dd301614f.png"
   ],
-  "lastUpdated": 1781311037345,
+  "lastUpdated": 1781624490959,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -75,7 +81,7 @@
   "subCategoryID": null,
   "title": "[Windows On ARM] Game tends to get stuck while launching",
   "trendingScore": 2914.7518319375044,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "updatedBy": null,
   "urlName": "windows-on-arm-game-tends-to-get-stuck-while-launching",
   "viewerIsAuthor": false,
@@ -95,7 +101,7 @@
       "avatarURL": "https://canny-assets.io/images/6c4ccad58c61999ee09b0f5144ed3f4c.png",
       "companies": [],
       "name": "Nicalay2",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "690c6fa44f8511f3804a42a9"
     }
   ]

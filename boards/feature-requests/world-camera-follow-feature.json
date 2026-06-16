@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "631309a3351ad144b87eee82",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T15:43:10.713630Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60f490804e21011b16142f5d",
     "alias": "Flexible Gibbon",
@@ -11,7 +16,7 @@
     "created": "2021-07-18T20:35:12.731Z",
     "name": "FKite294",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "60f490804e21011b16142f5d",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb927e4c3e90df136ab81",
   "imageURLs": [],
-  "lastUpdated": 1781307078804,
+  "lastUpdated": 1781624374893,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "World Camera Follow Feature",
   "trendingScore": 2749.0265389067504,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "urlName": "world-camera-follow-feature",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny.io/images/c7f9d3021c7671f7a6dc63769b43fa39.png",
       "companies": [],
       "name": "FKite294",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631309a3351ad144b87eeecd"
     }
   ]

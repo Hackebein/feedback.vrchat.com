@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6110968bd720b064571ecc09",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-16T15:43:18.156900Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f0932762dd1cb44fb11e5e6",
     "alias": "Welcome Shark",
@@ -11,7 +17,7 @@
     "created": "2020-07-11T03:31:02.656Z",
     "name": "Ribbon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f0932762dd1cb44fb11e5e6",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2020-02-13T01:09:17.899Z",
         "name": "Franada",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -81,7 +87,7 @@
         "created": "2019-03-12T13:56:56.814Z",
         "name": "MrDummy_NL",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -122,7 +128,7 @@
         "created": "2020-07-11T03:31:02.656Z",
         "name": "Ribbon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -149,7 +155,7 @@
           "created": "2019-03-12T13:56:56.814Z",
           "name": "MrDummy_NL",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -177,7 +183,7 @@
         "created": "2020-07-11T03:31:02.656Z",
         "name": "Ribbon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -202,7 +208,7 @@
           "created": "2020-02-13T01:09:17.899Z",
           "name": "Franada",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -230,7 +236,7 @@
         "created": "2020-08-14T17:29:51.616Z",
         "name": "Squid",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -255,7 +261,7 @@
           "created": "2019-03-12T13:56:56.814Z",
           "name": "MrDummy_NL",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -283,7 +289,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -308,7 +314,7 @@
           "created": "2020-07-11T03:31:02.656Z",
           "name": "Ribbon",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -338,7 +344,7 @@
         "created": "2020-07-11T03:31:02.656Z",
         "name": "Ribbon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -363,7 +369,7 @@
           "created": "2019-12-05T17:37:30.047Z",
           "name": "Momo the Monster",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -391,7 +397,7 @@
         "created": "2017-12-20T21:39:56.045Z",
         "name": "Ruuubick - Designer",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -435,7 +441,7 @@
   "imageURLs": [
     "https://canny.io/images/8bfb94ab50610871a0dddc2abf66f1b2.png"
   ],
-  "lastUpdated": 1781307226698,
+  "lastUpdated": 1781624408828,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -455,7 +461,7 @@
       "created": "2019-12-05T17:37:30.047Z",
       "name": "Momo the Monster",
       "serviceAccount": false,
-      "urlName": "<redacted>"
+      "urlName": null
     },
     "authorID": null,
     "boardID": "5d09629c3511d825c8e56214",
@@ -480,7 +486,7 @@
         "created": "2020-07-11T03:31:02.656Z",
         "name": "Ribbon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       }
     ],
     "mergeID": null,
@@ -504,7 +510,7 @@
   "subCategoryID": null,
   "title": "Avatar does not build when both SDK3 packages are present.",
   "trendingScore": 2693.9742228968466,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T15:41:34.926764Z",
   "urlName": "avatar-does-not-build-when-both-sdk3-packages-are-present",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -523,7 +529,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "611098317625021db2c7d580"
     },
     {
@@ -534,7 +540,7 @@
       "avatarURL": "https://canny-assets.io/images/a355a8320f0184f6b4aa20df4f9a717b.png",
       "companies": [],
       "name": "Squid",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "611096a3fd3e2233d8d24357"
     },
     {
@@ -545,7 +551,7 @@
       "avatarURL": "https://canny.io/images/416c6e4c3232950e5b8432a33dcc4bc0.png",
       "companies": [],
       "name": "Ribbon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6110968bd720b064571ecc10"
     }
   ]
