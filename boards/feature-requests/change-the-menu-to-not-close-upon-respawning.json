@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e72814eb9a3044b89c47f7",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-06-16T09:48:54.544687Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62955c20f8c03468ee4fb67c",
     "alias": "Azure Mockingbird",
@@ -11,7 +16,7 @@
     "created": "2022-05-31T00:06:56.915Z",
     "name": "Lavenbaka",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62955c20f8c03468ee4fb67c",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb914e4c3e90df1366cb4",
   "imageURLs": [],
-  "lastUpdated": 1781300025301,
+  "lastUpdated": 1781603268931,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Change the menu to not close upon respawning",
   "trendingScore": 2744.2715945987147,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T09:48:37.460947Z",
   "urlName": "change-the-menu-to-not-close-upon-respawning",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Lavenbaka",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e72815eb9a3044b89c4824"
     }
   ]

@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e2584aa27f0d44bef5b493",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.quick-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T09:51:20.470709Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "607ce823c790be2ccf97d4a1",
     "alias": "Rosewood Lynx",
@@ -11,7 +16,7 @@
     "created": "2021-04-19T02:17:07.065Z",
     "name": "Aqo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "607ce823c790be2ccf97d4a1",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb90fe4c3e90df13653cc",
   "imageURLs": [],
-  "lastUpdated": 1781300088148,
+  "lastUpdated": 1781603276277,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Feature Request: Pinned Settings",
   "trendingScore": 2944.2529394675926,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T09:48:37.460947Z",
   "urlName": "feature-request-pinned-settings",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/c69d598cec49e1c6a021f2080be3502b.png",
       "companies": [],
       "name": "Piano Walrus",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a23159186d7b8843ba3b820"
     },
     {
@@ -82,7 +87,7 @@
       "avatarURL": "https://canny.io/images/9751a17b710a879acd032285ba62f20a.png",
       "companies": [],
       "name": "Aqo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e2584aa27f0d44bef5b4ba"
     }
   ]

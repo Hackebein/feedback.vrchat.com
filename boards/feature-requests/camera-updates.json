@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e3658e2bff7944b5e3a6ac",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T09:48:51.897343Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f7fee2fa2bb4c7165fa6e08",
     "alias": "Lagoon Chimpanzee",
@@ -11,7 +16,7 @@
     "created": "2020-10-09T04:59:27.166Z",
     "name": "Axphy",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f7fee2fa2bb4c7165fa6e08",
   "board": {
@@ -39,7 +44,7 @@
   "imageURLs": [
     "https://canny.io/images/dcd93f02f9ad6f8bad9e2976d3291637.gif"
   ],
-  "lastUpdated": 1781300024607,
+  "lastUpdated": 1781603268342,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -54,7 +59,7 @@
   "subCategoryID": null,
   "title": "Camera Updates",
   "trendingScore": 2743.8641760380337,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T09:48:37.460947Z",
   "urlName": "camera-updates",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -73,7 +78,7 @@
       "avatarURL": "https://canny.io/images/11c1582d0d7052426409e1142cfb913b.png",
       "companies": [],
       "name": "Axphy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e3658e2bff7944b5e3a6d5"
     }
   ]

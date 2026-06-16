@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e3392738751244f9cb7fd3",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-06-16T09:52:54.861544Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def0fa5d81e144a78a1f12",
     "alias": "Convincing Marlin",
@@ -11,7 +16,7 @@
     "created": "2022-07-25T19:37:30.649Z",
     "name": "MidniteLites",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62def0fa5d81e144a78a1f12",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb910e4c3e90df13659c0",
   "imageURLs": [],
-  "lastUpdated": 1781300125815,
+  "lastUpdated": 1781603314090,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Locomotion/Movement Lock Button",
   "trendingScore": 2944.507002880291,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T09:48:37.460947Z",
   "urlName": "locomotionmovement-lock-button",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
       "companies": [],
       "name": "RavenWorks",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a256dcb86d7b8843bded235"
     },
     {
@@ -82,7 +87,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "MidniteLites",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e3392738751244f9cb7ffb"
     }
   ]

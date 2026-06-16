@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "62edfe797421b444ae62c755",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-06-16T09:50:21.815997Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62edfdaf9a9c1944c4117388",
     "alias": "Harlequin Silverfish",
@@ -11,7 +17,7 @@
     "created": "2022-08-06T05:35:43.982Z",
     "name": "VSink",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62edfdaf9a9c1944c4117388",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb91ae4c3e90df1367947",
   "imageURLs": [],
-  "lastUpdated": 1781300087211,
+  "lastUpdated": 1781603275305,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "Fbt on the quest",
   "trendingScore": 2745.7202039779186,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T09:48:37.460947Z",
   "urlName": "fbt-on-the-quest",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Gmi40",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f4a850d87d0014007fd496"
     },
     {
@@ -82,7 +88,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "VSink",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62edfe7a7421b444ae62c775"
     }
   ]
