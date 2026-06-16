@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ee18b582856ff323ed58773",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T03:15:51.428905Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a983204a1528d415c5ced46",
     "alias": "Chief Finch",
@@ -176,7 +181,7 @@
     "https://canny.io/images/7762add2e4eefd8901435006a90f0b54.png",
     "https://canny.io/images/fdf4a305dc69fc1cad48ea6f4aa02dd2.png"
   ],
-  "lastUpdated": 1781289592579,
+  "lastUpdated": 1781579305944,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -191,7 +196,7 @@
   "subCategoryID": null,
   "title": "Pasting nodes to other graph causes NullReferenceException if they contains variable accesss",
   "trendingScore": 2632.703028643854,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T03:08:27.531262Z",
   "urlName": "pasting-nodes-to-other-graph-causes-nullreferenceexception-if-they-contains-vari",
   "viewerIsAuthor": false,
   "viewerVote": 0,

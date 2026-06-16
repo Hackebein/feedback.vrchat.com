@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ece68e90ec85946bb535e63",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T03:12:56.317220Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c724f586a9e8a2255b7fc07",
     "alias": "Kelp Crane",
@@ -131,7 +136,7 @@
   "imageURLs": [
     "https://canny.io/images/6fe318168ee20a72d465207d94683549.png"
   ],
-  "lastUpdated": 1781289568919,
+  "lastUpdated": 1781579271089,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 17,
@@ -147,7 +152,7 @@
   "subCategoryID": null,
   "title": "Collider.Raycast() broken, hit.point is always Vector3(0,0,0)",
   "trendingScore": 2779.3902541515376,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T03:08:27.531262Z",
   "urlName": "colliderraycast-broken-hitpoint-is-always-vector3000",
   "viewerIsAuthor": false,
   "viewerVote": 0,

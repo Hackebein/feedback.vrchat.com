@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5e9934f78b6b9c12ab820924",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T03:15:40.111303Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c13315057f6093e67a2e7e7",
     "alias": "Continuous Macaw",
@@ -378,7 +383,7 @@
   "files": [],
   "ideaID": "680b7da9e4c3e90df158ea65",
   "imageURLs": [],
-  "lastUpdated": 1781289588691,
+  "lastUpdated": 1781579300206,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 84,
@@ -394,7 +399,7 @@
   "subCategoryID": null,
   "title": "null-check on gameObject will throw exception if the gameObj is Destroyed",
   "trendingScore": 2941.909497947093,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T03:08:27.531262Z",
   "urlName": "null-check-on-gameobject-will-throw-exception-if-the-gameobj-is-destroyed",
   "viewerIsAuthor": false,
   "viewerVote": 0,
