@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6063daaba0787448979aea30",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:59:08.318145Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "604c33fbbe941f7ca5b0515c",
     "alias": "Organic Wolverine",
@@ -11,7 +16,7 @@
     "created": "2021-03-13T03:39:39.429Z",
     "name": "gladeare",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "604c33fbbe941f7ca5b0515c",
   "board": {
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -46,7 +51,7 @@
     "https://canny.io/images/0aebcd20cd513530aeb8442c37b1aace.png",
     "https://canny.io/images/0fed2b8a611e0480150efebf7cdf5458.png"
   ],
-  "lastUpdated": 1781293235574,
+  "lastUpdated": 1781589111165,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -61,7 +66,7 @@
   "subCategoryID": null,
   "title": "Reroute MIDI Note On with velocity 0 to Note Off by default",
   "trendingScore": 2674.563483118887,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "reroute-midi-note-on-with-velocity-0-to-note-off-by-default",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -80,7 +85,7 @@
       "avatarURL": "https://canny.io/images/cdd1321c8dca1c75fe8bf4826e7911e7.png",
       "companies": [],
       "name": "gladeare",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6063daaba0787448979aea37"
     }
   ]

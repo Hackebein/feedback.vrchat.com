@@ -1,7 +1,15 @@
 {
   "__v": 0,
   "_id": "67db54c8880144ff39c04961",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "platforms.pc.desktop",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T05:54:51.333180Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67db54528c4a7a581a30ad06",
     "alias": "Youthful Carp",
@@ -11,7 +19,7 @@
     "created": "2025-03-19T23:33:38.739Z",
     "name": "alex50",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "67db54528c4a7a581a30ad06",
   "board": {
@@ -39,7 +47,7 @@
         "created": "2021-01-23T05:13:48.067Z",
         "name": "DAG-XR",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -84,7 +92,7 @@
   "files": [],
   "ideaID": "680bba52e4c3e90df13a376b",
   "imageURLs": [],
-  "lastUpdated": 1781293157883,
+  "lastUpdated": 1781589011349,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -100,7 +108,7 @@
   "subCategoryID": null,
   "title": "vrchat using 100% of cpu",
   "trendingScore": 2881.690727021003,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "updatedBy": null,
   "urlName": "vrchat-using-100-of-cpu",
   "viewerIsAuthor": false,
@@ -120,7 +128,7 @@
       "avatarURL": "https://canny-assets.io/images/09c1c19fecbcdb579a11b40f7bd240f7.png",
       "companies": [],
       "name": "alex50",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67db54c88bda4d8ce97df9c6"
     }
   ]

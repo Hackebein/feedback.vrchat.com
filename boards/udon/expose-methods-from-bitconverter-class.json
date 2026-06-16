@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5fe61e7d0207c14114d80243",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:57:29.549460Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e82f168f71d790eeb6a04a3",
     "alias": "Buff Condor",
@@ -11,7 +16,7 @@
     "created": "2020-03-31T07:29:44.806Z",
     "name": "Demkeys",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e82f168f71d790eeb6a04a3",
   "board": {
@@ -37,7 +42,7 @@
         "created": "2020-04-28T01:04:27.016Z",
         "name": "llealloo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -79,7 +84,7 @@
         "created": "2022-05-24T15:58:30.642Z",
         "name": "White Lotuz",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -123,7 +128,7 @@
         "created": "2022-05-24T15:58:30.642Z",
         "name": "White Lotuz",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -166,7 +171,7 @@
   "files": [],
   "ideaID": "680bb7fae4c3e90df1321e33",
   "imageURLs": [],
-  "lastUpdated": 1781293221708,
+  "lastUpdated": 1781589090302,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 25,
@@ -182,7 +187,7 @@
   "subCategoryID": null,
   "title": "Expose methods from BitConverter class",
   "trendingScore": 2808.8120606130483,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "expose-methods-from-bitconverter-class",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -201,7 +206,7 @@
       "avatarURL": "https://canny-assets.io/images/64afa5c473513c855bd96c382dc8fba3.png",
       "companies": [],
       "name": "AltCentauri",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "653f1c9f53cf9510232f8bec"
     },
     {
@@ -212,7 +217,7 @@
       "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
       "companies": [],
       "name": "camegone",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "65324a3f3f9ba15e5f19e4ad"
     },
     {
@@ -223,7 +228,7 @@
       "avatarURL": "https://canny-assets.io/images/580364725fbde2001b4da742264019c8.png",
       "companies": [],
       "name": "JanSharp",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64e75a521a81b73fc46fb0f4"
     },
     {
@@ -234,7 +239,7 @@
       "avatarURL": "https://canny-assets.io/images/322f37b5e10539910572abd1c79e8a74.png",
       "companies": [],
       "name": "nemurigi",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64c1cca29f9481096d3535ca"
     },
     {
@@ -245,7 +250,7 @@
       "avatarURL": "https://canny-assets.io/images/919581903e315f5d232ab1c8000a4417.png",
       "companies": [],
       "name": "NEET ENGINEER",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "643a326b40d89a090bf5cfda"
     },
     {
@@ -256,7 +261,7 @@
       "avatarURL": "https://canny-assets.io/images/56a3faa8e0e7526b6a5c0bf5dcc81c6a.png",
       "companies": [],
       "name": "Fizzytaco",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631160d4198ab044bac4fde1"
     },
     {
@@ -267,7 +272,7 @@
       "avatarURL": "https://canny-assets.io/images/0e056094eccbd9a7ddf55975e2afeb93.png",
       "companies": [],
       "name": "Kilerbomb",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6311022301f79a44ab8c4240"
     },
     {
@@ -278,7 +283,7 @@
       "avatarURL": "https://canny-assets.io/images/24311fe09785c81ca189fedf5c831544.png",
       "companies": [],
       "name": "llealloo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631100689bc8fd44bf3af062"
     },
     {
@@ -289,7 +294,7 @@
       "avatarURL": "https://canny.io/images/50d8a9c7f2ea4c4e6c4b958fd32de39b.png",
       "companies": [],
       "name": "2d8f63a2d9e9449",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6310ff88db5ec77758ace2cb"
     },
     {
@@ -300,7 +305,7 @@
       "avatarURL": "https://canny-assets.io/images/5328f49d753f3bc855a55bd3e00b61f3.png",
       "companies": [],
       "name": "GlitchyDev",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "630aad462fd9f444aa0ab8ac"
     }
   ]

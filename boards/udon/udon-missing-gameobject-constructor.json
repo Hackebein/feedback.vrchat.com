@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ed1a6be573d3760408c8b0a",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:53:38.440342Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "59af5f24723da239ff2c5257",
     "alias": "Nautical blue Harrier",
@@ -11,7 +16,7 @@
     "created": "2017-09-06T02:36:20.613Z",
     "name": "snail",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "59af5f24723da239ff2c5257",
   "board": {
@@ -43,7 +48,7 @@
   "files": [],
   "ideaID": "680b7daee4c3e90df15903fb",
   "imageURLs": [],
-  "lastUpdated": 1781289640063,
+  "lastUpdated": 1781588994427,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -59,7 +64,7 @@
   "subCategoryID": null,
   "title": "Udon missing GameObject constructor.",
   "trendingScore": 2901.5737128769842,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "udon-missing-gameobject-constructor",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +83,7 @@
       "avatarURL": "https://canny-assets.io/images/524ec82f036d5ba9357b6f227bf46082.png",
       "companies": [],
       "name": "stereofoxmuviz",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "689937e52eba8cb5edeb75e5"
     },
     {
@@ -89,7 +94,7 @@
       "avatarURL": "https://canny.io/images/61afbbdb3462baef282039850bbc15f2.png",
       "companies": [],
       "name": "snail",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ed1a6be573d3760408c8b12"
     }
   ]

@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "605b3471ed4c41334d7ffe4e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:56:17.476256Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3287055bc2dc276e0f1630",
     "alias": "Lemon Silverfish",
@@ -11,7 +16,7 @@
     "created": "2020-08-11T11:54:45.784Z",
     "name": "Reimajo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f3287055bc2dc276e0f1630",
   "board": {
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -44,7 +49,7 @@
         "created": "2020-10-07T07:41:22.594Z",
         "name": "RedSpeeds",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -85,7 +90,7 @@
         "created": "2020-08-11T11:54:45.784Z",
         "name": "Reimajo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -110,7 +115,7 @@
           "created": "2020-10-07T07:41:22.594Z",
           "name": "RedSpeeds",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -138,7 +143,7 @@
         "created": "2020-08-07T21:12:57.132Z",
         "name": "Kaugumme",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -179,7 +184,7 @@
         "created": "2020-08-11T11:54:45.784Z",
         "name": "Reimajo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -204,7 +209,7 @@
           "created": "2020-08-07T21:12:57.132Z",
           "name": "Kaugumme",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -234,7 +239,7 @@
         "created": "2021-02-05T03:51:22.802Z",
         "name": "BocuD",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -259,7 +264,7 @@
           "created": "2020-08-11T11:54:45.784Z",
           "name": "Reimajo",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -289,7 +294,7 @@
         "created": "2020-08-11T11:54:45.784Z",
         "name": "Reimajo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -314,7 +319,7 @@
           "created": "2021-02-05T03:51:22.802Z",
           "name": "BocuD",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -344,7 +349,7 @@
         "created": "2021-02-05T03:51:22.802Z",
         "name": "BocuD",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -369,7 +374,7 @@
           "created": "2020-08-11T11:54:45.784Z",
           "name": "Reimajo",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -397,7 +402,7 @@
   "files": [],
   "ideaID": "680bb812e4c3e90df1325ccb",
   "imageURLs": [],
-  "lastUpdated": 1781293213260,
+  "lastUpdated": 1781589078172,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 26,
@@ -412,7 +417,7 @@
   "subCategoryID": null,
   "title": "Add Self-Report API to Udon",
   "trendingScore": 2796.4995756901785,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "add-self-report-api-to-udon",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -431,7 +436,7 @@
       "avatarURL": "https://canny-assets.io/images/ffe5a2afbe775a85d2f3cfd6d68783f3.png",
       "companies": [],
       "name": "DnutCfe-Obscura",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64cb043d6e51f4891dfe4ed2"
     },
     {
@@ -442,7 +447,7 @@
       "avatarURL": "https://canny-assets.io/images/08673e910e7e1b0f283ee58d1bc9321b.png",
       "companies": [],
       "name": "Atomiklan",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64c6ca566a424c0970e51e03"
     },
     {
@@ -453,7 +458,7 @@
       "avatarURL": "https://canny.io/images/bb916ed4f80c8f433856f10bd8c9fc64.png",
       "companies": [],
       "name": "iigo丸",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6272e415535ad313fd678ad1"
     },
     {
@@ -464,7 +469,7 @@
       "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
       "companies": [],
       "name": "LefTonbo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60fbab1b92ee5968276a969d"
     },
     {
@@ -475,7 +480,7 @@
       "avatarURL": "https://canny.io/images/9eaa5c00ce65d36015753be52077f707.png",
       "companies": [],
       "name": "VoHeLi",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60f445c50e0d835bca11d706"
     },
     {
@@ -486,7 +491,7 @@
       "avatarURL": "https://canny.io/images/bf5d868a8e362a8c8d778ac4952165ed.png",
       "companies": [],
       "name": "GhostlySeadog",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60675ecbfba7f566d76372fb"
     },
     {
@@ -497,7 +502,7 @@
       "avatarURL": "https://canny-assets.io/images/b9ad020e8776b5ff0552a771f98a2536.png",
       "companies": [],
       "name": "ToasterTheFox",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "606160d8c2f0457dce414b1d"
     },
     {
@@ -508,7 +513,7 @@
       "avatarURL": "https://canny-assets.io/images/5c6897d014706e49792c383b3ed45b22.png",
       "companies": [],
       "name": "Blu Cao",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6060c3cc584ad03a243b08b3"
     },
     {
@@ -519,7 +524,7 @@
       "avatarURL": "https://canny-assets.io/images/90c170d0dd512c0a5f023fc46700cb27.png",
       "companies": [],
       "name": "BocuD",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "605ebbdca844bd5b7b36ebe5"
     },
     {
@@ -530,7 +535,7 @@
       "avatarURL": "https://canny-assets.io/images/574532dd1eb6eec35220441110a2bf27.png",
       "companies": [],
       "name": "Coygaroo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "605bf0c6c445b66af09f4b12"
     }
   ]

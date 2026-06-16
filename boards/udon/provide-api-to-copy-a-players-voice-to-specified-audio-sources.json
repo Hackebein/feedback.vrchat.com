@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "60598e376d08fd53168fc1e8",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-06-16T05:59:03.792765Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2cc09ac00297464bd2dd84",
     "alias": "Willow Coral",
@@ -11,7 +17,7 @@
     "created": "2020-08-07T02:46:50.417Z",
     "name": "Μerlin",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f2cc09ac00297464bd2dd84",
   "board": {
@@ -26,7 +32,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -44,7 +50,7 @@
         "created": "2018-04-26T03:44:25.252Z",
         "name": "rollthered",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -85,7 +91,7 @@
   "files": [],
   "ideaID": "680bb812e4c3e90df1325c9a",
   "imageURLs": [],
-  "lastUpdated": 1781293233940,
+  "lastUpdated": 1781589108485,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 36,
@@ -101,7 +107,7 @@
   "subCategoryID": null,
   "title": "Provide API to copy a player's voice to specified audio sources",
   "trendingScore": 2933.02328332851,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "provide-api-to-copy-a-players-voice-to-specified-audio-sources",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -120,7 +126,7 @@
       "avatarURL": "https://canny-assets.io/images/c2269c5e48f37ee14723efccc2dac5ec.png",
       "companies": [],
       "name": "deavial",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69b623c8ed082c9981b1529b"
     },
     {
@@ -131,7 +137,7 @@
       "avatarURL": "https://canny-assets.io/images/65017c189c59c32942d033fa71461e83.png",
       "companies": [],
       "name": "C0D3 M4513R",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69b3d30795d05cb740324963"
     },
     {
@@ -142,7 +148,7 @@
       "avatarURL": "https://canny-assets.io/images/66530e5eadfea2790a29b849fc04febd.png",
       "companies": [],
       "name": "TheLastOperator",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "686d785189ac991689757eee"
     },
     {
@@ -153,7 +159,7 @@
       "avatarURL": "https://canny-assets.io/images/a1d069b227d4b4824154dad1b0ef75d2.png",
       "companies": [],
       "name": "called_D",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "682c122bb25ebd72195652a3"
     },
     {
@@ -164,7 +170,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "monptt",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "656ab1f53d279c6cf4f5ab9d"
     },
     {
@@ -175,7 +181,7 @@
       "avatarURL": "https://canny-assets.io/images/ef8aa9d9e19e31c56ffaa65206ba77eb.png",
       "companies": [],
       "name": "aruma256",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64ff050c5d12860971f8211b"
     },
     {
@@ -183,10 +189,10 @@
       "alias": "Cultural Capybara",
       "aliasID": "65c2a219ed6eefce4c62c49a",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2c476e33837f1bfc901368c351eac127.png",
+      "avatarURL": "https://canny-assets.io/images/be0794272549b72a538c0c1c7378a46f.png",
       "companies": [],
       "name": "Enverex",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64f5af7dc95c310a30dd66f3"
     },
     {
@@ -197,7 +203,7 @@
       "avatarURL": "https://canny-assets.io/images/ab9dcee8dfa08c92044546399e6fbeb5.png",
       "companies": [],
       "name": "rapt らぷと",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6402b6909759f7203ad1e48d"
     },
     {
@@ -208,7 +214,7 @@
       "avatarURL": "https://canny.io/images/a9c378d6621c462c5f0fde3f3f72fd0f.png",
       "companies": [],
       "name": "DJPadbit",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61154c3a2377517583a7aba5"
     },
     {
@@ -219,7 +225,7 @@
       "avatarURL": "https://canny.io/images/23949db6d5e9b9042ad6a126c02b7b32.png",
       "companies": [],
       "name": "~Maru~",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60ac561637f0ef1bdeeea81e"
     }
   ]

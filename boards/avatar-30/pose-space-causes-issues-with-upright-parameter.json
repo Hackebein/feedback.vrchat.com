@@ -16,7 +16,7 @@
     "created": "2023-04-09T00:14:13.107Z",
     "name": "peepymou",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "64320355debe2a09d344abff",
   "board": {
@@ -44,7 +44,7 @@
         "created": "2023-06-12T15:51:49.320Z",
         "name": "StormRel",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5ed571497ee72a2434704a15",
@@ -88,34 +88,45 @@
   "files": [],
   "ideaID": "680bb9f7e4c3e90df13929ff",
   "imageURLs": [],
-  "lastUpdated": 1781440642409,
+  "lastUpdated": 1781588806028,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 5,
+  "maxScore": 6,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66a6609195238d7d1b103563/857003396.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 5,
+  "score": 6,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2024-08-01T13:57:19.785Z",
   "subCategoryID": null,
   "title": "Pose space causes issues with upright parameter",
-  "trendingScore": 2895.4548516997356,
-  "updatedAt": "2026-06-14T12:40:34.037112Z",
+  "trendingScore": 2945.7485483151454,
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "updatedBy": null,
   "urlName": "pose-space-causes-issues-with-upright-parameter",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
-    "highEngagement": false,
+    "highEngagement": true,
     "lowEngagement": false,
-    "moderateEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64658c524a76655978f28121",
+      "alias": "Tuscany Zebra",
+      "aliasID": "69410c194927a96e58d6798f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dbab50ecf1bb98a8f53fd7f97758c423.png",
+      "companies": [],
+      "name": "lemon8",
+      "urlName": null,
+      "voteID": "6a30e2f2363a2f2451cb614c"
+    },
     {
       "_id": "5f30ecee654cd4491456a82f",
       "alias": "Confident Albatross",
@@ -124,7 +135,7 @@
       "avatarURL": "https://canny-assets.io/images/d808422b56d9d38ae3b4822abdd19f87.png",
       "companies": [],
       "name": "lackofbindings",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6860c01616069571f6029d4c"
     },
     {
@@ -135,7 +146,7 @@
       "avatarURL": "https://canny-assets.io/images/6b95078afc68c2e1da65b896bd0a977c.png",
       "companies": [],
       "name": "kazin138",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66aa9628318f0a3252778bd6"
     },
     {
@@ -146,7 +157,7 @@
       "avatarURL": "https://canny-assets.io/images/bb6ee56fcb9caf313ee12be3399811bc.png",
       "companies": [],
       "name": "Rainwolf plush",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66aa9277318f0a3252c97ae9"
     },
     {
@@ -157,7 +168,7 @@
       "avatarURL": "https://canny-assets.io/images/672d5a826d673eebef7771709be66c20.png",
       "companies": [],
       "name": "sylvstuffs",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66aa8f65318f0a32523eb506"
     },
     {
@@ -168,7 +179,7 @@
       "avatarURL": "https://canny-assets.io/images/d00d4067e76e943974b1fd64174213d3.png",
       "companies": [],
       "name": "peepymou",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66a66092318f0a32529146c2"
     }
   ]

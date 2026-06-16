@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "680911dce91c4a59ab63e179",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.travel",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T05:53:43.821153Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68090f3fb104338439539be0",
     "alias": "Daffodil Whitefish",
@@ -11,7 +17,7 @@
     "created": "2025-04-23T16:03:11.245Z",
     "name": "notiyda",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "68090f3fb104338439539be0",
   "board": {
@@ -39,7 +45,7 @@
         "created": "2022-06-24T20:33:18.686Z",
         "name": "_tau_",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -119,7 +125,7 @@
         "created": "2022-06-24T20:33:18.686Z",
         "name": "_tau_",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -214,7 +220,7 @@
   ],
   "ideaID": "680bba67e4c3e90df13a622f",
   "imageURLs": [],
-  "lastUpdated": 1781293154743,
+  "lastUpdated": 1781589007521,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -230,7 +236,7 @@
   "subCategoryID": null,
   "title": "VRChat client crashes/closes completely when current instance closes instead of returning to Home World.",
   "trendingScore": 2886.646951741572,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "updatedBy": null,
   "urlName": "vrchat-client-crashes-closes-completely-when-current-instance-closes-instead-of",
   "viewerIsAuthor": false,
@@ -250,7 +256,7 @@
       "avatarURL": "https://canny-assets.io/images/da97a9adcf99180445ba166aa8b31d0f.png",
       "companies": [],
       "name": "notiyda",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "680911dd8ccc1d8b3b96c009"
     }
   ]

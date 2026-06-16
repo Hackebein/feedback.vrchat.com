@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "5fffa867d3601c76f1aa1daf",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-06-16T05:56:28.689664Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ffd1c9e07bbca2adc92ddc4",
     "alias": "Saffron Roadrunner",
@@ -11,7 +17,7 @@
     "created": "2021-01-12T03:50:54.270Z",
     "name": "FerventFerret",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5ffd1c9e07bbca2adc92ddc4",
   "board": {
@@ -45,7 +51,7 @@
   "imageURLs": [
     "https://canny.io/images/adff32a6c1b97dad1b5da282d3cc93fa.png"
   ],
-  "lastUpdated": 1781293217214,
+  "lastUpdated": 1781589084138,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -61,7 +67,7 @@
   "subCategoryID": null,
   "title": "Changing VRC_Station mobility via Udon after second player to join world enters station causes first player to become stuck",
   "trendingScore": 2663.706229256453,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "changing-vrcstation-mobility-via-udon-after-second-player-to-join-world-enters-s",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -80,7 +86,7 @@
       "avatarURL": "https://canny.io/images/4ae7c0d4315a6e12ea321b9cdca2ad4c.png",
       "companies": [],
       "name": "FerventFerret",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5fffa868d3601c76f1aa1db6"
     }
   ]

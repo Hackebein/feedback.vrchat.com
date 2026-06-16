@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60c33f097fef5f3e005d4afb",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:56:23.341515Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3287055bc2dc276e0f1630",
     "alias": "Lemon Silverfish",
@@ -11,7 +16,7 @@
     "created": "2020-08-11T11:54:45.784Z",
     "name": "Reimajo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f3287055bc2dc276e0f1630",
   "board": {
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -44,7 +49,7 @@
         "created": "2021-02-13T23:11:28.997Z",
         "name": "Phasedragon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2021-02-13T23:11:28.997Z",
         "name": "Phasedragon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -128,7 +133,7 @@
   "files": [],
   "ideaID": "680bb8a3e4c3e90df135099c",
   "imageURLs": [],
-  "lastUpdated": 1781293215114,
+  "lastUpdated": 1781589081279,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -143,7 +148,7 @@
   "subCategoryID": null,
   "title": "Also call OnPreSerialization() / OnPostSerialization() when being alone in an instance",
   "trendingScore": 2783.369803440807,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "also-call-onpreserialization-onpostserialization-when-being-alone-in-an-instance",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -162,7 +167,7 @@
       "avatarURL": "https://canny-assets.io/images/c79c3e3bfa68539a3c62feb4eda8b2cb.png",
       "companies": [],
       "name": "｜KitKat｜",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64565f29d44a0d0997f3db0e"
     },
     {
@@ -173,7 +178,7 @@
       "avatarURL": "https://canny-assets.io/images/38c081222540fbe548c41493c9650ae2.png",
       "companies": [],
       "name": "Reimajo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60c33f097fef5f3e005d4b02"
     }
   ]

@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "682abab469b09d49650b38fc",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-06-16T05:53:44.779857Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e89d0822aedbc56a3155d12",
     "alias": "Aegean Llama",
@@ -11,7 +17,7 @@
     "created": "2020-04-05T12:35:14.620Z",
     "name": "Whaddageek",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e89d0822aedbc56a3155d12",
   "board": {
@@ -38,7 +44,7 @@
   "files": [],
   "ideaID": "682abab469b09d49650b3932",
   "imageURLs": [],
-  "lastUpdated": 1781293154814,
+  "lastUpdated": 1781589007789,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -54,7 +60,7 @@
   "subCategoryID": null,
   "title": "VRChat client does not properly attempt reauthorization on disconnect.",
   "trendingScore": 2890.2942916903153,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "updatedBy": null,
   "urlName": "vrchat-client-does-not-properly-attempt-reauthorization-on-disconnect",
   "viewerIsAuthor": false,
@@ -74,7 +80,7 @@
       "avatarURL": "https://canny-assets.io/images/616c7b720248db1509813a8626fa40da.png",
       "companies": [],
       "name": "Whaddageek",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "682abab4cd82760dac87c890"
     }
   ]

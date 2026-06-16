@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "609b5dda2ee44e536b256e23",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:58:59.499578Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c738d5668cb2502ac216bf4",
     "alias": "Logical Barracuda",
@@ -11,7 +16,7 @@
     "created": "2019-02-25T06:38:14.761Z",
     "name": "リノール",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c738d5668cb2502ac216bf4",
   "board": {
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -44,7 +49,7 @@
         "created": "2021-02-18T18:30:33.816Z",
         "name": "Balphagore",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -87,7 +92,7 @@
         "created": "2020-07-03T14:57:38.659Z",
         "name": "miner28_3",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -130,7 +135,7 @@
         "created": "2021-02-18T18:30:33.816Z",
         "name": "Balphagore",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -154,7 +159,7 @@
           "created": "2020-07-03T14:57:38.659Z",
           "name": "miner28_3",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -183,7 +188,7 @@
         "created": "2020-07-03T14:57:38.659Z",
         "name": "miner28_3",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -207,7 +212,7 @@
           "created": "2021-02-18T18:30:33.816Z",
           "name": "Balphagore",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -237,7 +242,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -319,7 +324,7 @@
         "created": "2022-11-07T14:13:43.431Z",
         "name": "Fax",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -364,7 +369,7 @@
   "files": [],
   "ideaID": "680bb89ae4c3e90df134e6af",
   "imageURLs": [],
-  "lastUpdated": 1781293232379,
+  "lastUpdated": 1781589105965,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 27,
@@ -380,7 +385,7 @@
   "subCategoryID": null,
   "title": "Please expose StringBuilder",
   "trendingScore": 2941.395344601521,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "please-expose-stringbuilder",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -399,7 +404,7 @@
       "avatarURL": "https://canny-assets.io/images/f90cb84a11e87adee02e9d936f6f2eb8.png",
       "companies": [],
       "name": "BinoWulf",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a08b6805a52cb2df01bd17c"
     },
     {
@@ -410,7 +415,7 @@
       "avatarURL": "https://canny-assets.io/images/c1b54bfd22772de9f35e37ff2dedc2d5.png",
       "companies": [],
       "name": "u-Kotovsky",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66c6234e3e088c8d6bf55502"
     },
     {
@@ -421,7 +426,7 @@
       "avatarURL": "https://canny-assets.io/images/38c9c43845fc98cba69a5e2e0d5c5298.png",
       "companies": [],
       "name": "owlboy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66c56a133e088c8d6bca0f1c"
     },
     {
@@ -432,7 +437,7 @@
       "avatarURL": "https://canny-assets.io/images/44351940bcde6f5be8e722866748df2a.png",
       "companies": [],
       "name": "Nestorboy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66c51c9b3e088c8d6bc98b8f"
     },
     {
@@ -443,7 +448,7 @@
       "avatarURL": "https://canny-assets.io/images/580364725fbde2001b4da742264019c8.png",
       "companies": [],
       "name": "JanSharp",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66aa6b5f318f0a3252a88981"
     },
     {
@@ -454,7 +459,7 @@
       "avatarURL": "https://canny-assets.io/images/53363905344caead4573d2822d3f8818.png",
       "companies": [],
       "name": "Pkl",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "668900655423128e43d3ac08"
     },
     {
@@ -465,7 +470,7 @@
       "avatarURL": "https://canny-assets.io/images/e74d42785f4d4d716ece6cc75b4bde0a.png",
       "companies": [],
       "name": "のぉのぉ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "661a7845e5d26962aadbbdd1"
     },
     {
@@ -476,7 +481,7 @@
       "avatarURL": "https://canny-assets.io/images/2f67512728e67b1027885b1a868f812f.png",
       "companies": [],
       "name": "kurotori",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "65dc78d70129d7ae447e792a"
     },
     {
@@ -487,7 +492,7 @@
       "avatarURL": "https://canny-assets.io/images/5328f49d753f3bc855a55bd3e00b61f3.png",
       "companies": [],
       "name": "GlitchyDev",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63f50546432ce1152a938d52"
     },
     {
@@ -498,7 +503,7 @@
       "avatarURL": "https://canny-assets.io/images/919581903e315f5d232ab1c8000a4417.png",
       "companies": [],
       "name": "NEET ENGINEER",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63f099ea145fa304d075e4f7"
     }
   ]

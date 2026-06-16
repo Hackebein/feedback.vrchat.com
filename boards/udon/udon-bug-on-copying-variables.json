@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ed6dc1697cb2073c0eb3bdc",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:53:36.142714Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ed6dc1651c36e2e8d78ce20",
     "alias": "Sensitive Gayal",
@@ -11,7 +16,7 @@
     "created": "2020-06-02T23:09:10.546Z",
     "name": "Thomas Stone",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5ed6dc1651c36e2e8d78ce20",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -88,7 +93,7 @@
   "imageURLs": [
     "https://canny.io/images/15f6555de5eefc868a67b99f4e5b198f.png"
   ],
-  "lastUpdated": 1781289639219,
+  "lastUpdated": 1781588993249,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -103,7 +108,7 @@
   "subCategoryID": null,
   "title": "Udon bug on copying variables",
   "trendingScore": 2657.446121158941,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "udon-bug-on-copying-variables",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -122,7 +127,7 @@
       "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
       "companies": [],
       "name": "JessicaOnMain",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5fc940331b01061bf4f307df"
     },
     {
@@ -133,7 +138,7 @@
       "avatarURL": "https://canny-assets.io/images/0aa045d5e8feeaa089ecb690aa546f42.png",
       "companies": [],
       "name": "IkebaVT",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5fbc8fa33a1a145ff800f4bd"
     },
     {
@@ -144,7 +149,7 @@
       "avatarURL": "https://canny-assets.io/images/790edd7ee9459d947f4c0bc1ff2a8907.png",
       "companies": [],
       "name": "Jasper Raine",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5fb6d997a27c5e08f27ccaeb"
     },
     {
@@ -155,7 +160,7 @@
       "avatarURL": "https://canny.io/images/09ca332bc6530b739d995423984bfeca.jpg",
       "companies": [],
       "name": "Thomas Stone",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ed6dc1697cb2073c0eb3be4"
     }
   ]

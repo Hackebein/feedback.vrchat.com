@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60f379d7efbbc87402c26193",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:59:11.786108Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f4c34d0995917085be1218d",
     "alias": "Zinc white Dragon",
@@ -11,7 +16,7 @@
     "created": "2020-08-30T23:22:56.091Z",
     "name": "CyanLaser",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f4c34d0995917085be1218d",
   "board": {
@@ -45,7 +50,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -87,7 +92,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -129,7 +134,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -174,7 +179,7 @@
     "https://canny.io/images/350e8a1231cf6efb7648cf3b0d657db2.png",
     "https://canny.io/images/e2a6d0efb7fc84f9ab45040501aa25eb.png"
   ],
-  "lastUpdated": 1781293236648,
+  "lastUpdated": 1781589112841,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -189,7 +194,7 @@
   "subCategoryID": null,
   "title": "[SDK 2021.07.13.13.39] Setting a value type variable with sendChange checked fails to set the variable",
   "trendingScore": 2691.0426780907724,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "sdk-202107131339-setting-a-value-type-variable-with-sendchange-checked-fails-to",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -208,7 +213,7 @@
       "avatarURL": "https://canny-assets.io/images/29c8ca796305b94c6131b938c889a396.png",
       "companies": [],
       "name": "orels1",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60f37a7337381e211e743893"
     },
     {
@@ -219,7 +224,7 @@
       "avatarURL": "https://canny-assets.io/images/5d46bb169a50914a277f9145ef243fc0.png",
       "companies": [],
       "name": "IgbarVonSquid",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60f37a18d399e80ef6acc400"
     },
     {
@@ -230,7 +235,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60f379eba1fdbd70fdfe27f5"
     },
     {
@@ -241,7 +246,7 @@
       "avatarURL": "https://canny.io/images/833c66b891dbc04385009d159c139d66.png",
       "companies": [],
       "name": "CyanLaser",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60f379d7efbbc87402c2619a"
     }
   ]

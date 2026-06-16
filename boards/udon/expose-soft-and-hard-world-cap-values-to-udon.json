@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60217c116b726153704ee564",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:57:31.171453Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a9de400f3791b4155afcc5b",
     "alias": "Rosé pink Yak",
@@ -11,7 +16,7 @@
     "created": "2018-03-06T00:42:40.626Z",
     "name": "FairlySadPanda",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5a9de400f3791b4155afcc5b",
   "board": {
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -45,7 +50,7 @@
         "created": "2022-11-07T14:13:43.431Z",
         "name": "Fax",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -88,7 +93,7 @@
         "created": "2022-11-07T14:13:43.431Z",
         "name": "Fax",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -131,7 +136,7 @@
   "files": [],
   "ideaID": "680bb803e4c3e90df132379d",
   "imageURLs": [],
-  "lastUpdated": 1781293222210,
+  "lastUpdated": 1781589091203,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 24,
@@ -147,7 +152,7 @@
   "subCategoryID": null,
   "title": "Expose soft and hard world cap values to Udon",
   "trendingScore": 2787.6197028265883,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "expose-soft-and-hard-world-cap-values-to-udon",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -166,7 +171,7 @@
       "avatarURL": "https://canny-assets.io/images/bd02ffeacfe65163dd930366abffcb73.png",
       "companies": [],
       "name": "Haxy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "643a347c9b364a0908095078"
     },
     {
@@ -177,7 +182,7 @@
       "avatarURL": "https://canny-assets.io/images/536592fb8a3e55b665c9586c3f322dea.png",
       "companies": [],
       "name": "Melo the Marten",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6439756d1982ff454cf2b9af"
     },
     {
@@ -188,7 +193,7 @@
       "avatarURL": "https://canny-assets.io/images/a59d9d18250f6669f0cc52dc582475d7.png",
       "companies": [],
       "name": "frou01",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64391cb4e35cc8091aeb3215"
     },
     {
@@ -199,7 +204,7 @@
       "avatarURL": "https://canny-assets.io/images/161fc4f363843cbeeb902fe7d462a3e5.png",
       "companies": [],
       "name": "lLavy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6430a230554ce20a06dc203a"
     },
     {
@@ -210,7 +215,7 @@
       "avatarURL": "https://canny-assets.io/images/e7963fb42efb1e205f4553061b4bb4e8.png",
       "companies": [],
       "name": "Chriin",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "643070dc0e7a5a09d2cf33d0"
     },
     {
@@ -221,7 +226,7 @@
       "avatarURL": "https://canny-assets.io/images/64afa5c473513c855bd96c382dc8fba3.png",
       "companies": [],
       "name": "AltCentauri",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "642f66d88f0fb809dee78690"
     },
     {
@@ -232,7 +237,7 @@
       "avatarURL": "https://canny-assets.io/images/976cdd071ca50df10da145bf3d25fad6.png",
       "companies": [],
       "name": "Tony_Lewis",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "642f66c3b8751b25bf30dc1d"
     },
     {
@@ -243,7 +248,7 @@
       "avatarURL": "https://canny-assets.io/images/616c7b720248db1509813a8626fa40da.png",
       "companies": [],
       "name": "Whaddageek",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "620f370091560870c38b3864"
     },
     {
@@ -254,7 +259,7 @@
       "avatarURL": "https://canny-assets.io/images/473ac99c2a47b8456c1524536eb079d4.png",
       "companies": [],
       "name": "ballfun",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "620b9e35bd20cb3db9c86fec"
     },
     {
@@ -265,7 +270,7 @@
       "avatarURL": "https://canny-assets.io/images/516fccb556a2c4e94f31dfcacf1ff095.png",
       "companies": [],
       "name": "KidKwazine",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "620b35c3a9725d1a1862cf30"
     }
   ]

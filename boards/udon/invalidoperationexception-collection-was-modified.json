@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60cd5208f1713a75db79ab7f",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:57:38.277234Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c1475afb7ce126e9e0e3a39",
     "alias": "Wineberry Leopard",
@@ -11,7 +16,7 @@
     "created": "2018-12-15T03:31:59.071Z",
     "name": "bd_",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c1475afb7ce126e9e0e3a39",
   "board": {
@@ -43,7 +48,7 @@
   "files": [],
   "ideaID": "680bb8a4e4c3e90df1350fb7",
   "imageURLs": [],
-  "lastUpdated": 1781293224809,
+  "lastUpdated": 1781589095052,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -58,7 +63,7 @@
   "subCategoryID": null,
   "title": "InvalidOperationException: Collection was modified",
   "trendingScore": 2792.3063976851854,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "invalidoperationexception-collection-was-modified",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -77,7 +82,7 @@
       "avatarURL": "https://canny.io/images/44128977983dd19e1d78ea26d4e65ab3.png",
       "companies": [],
       "name": "hig747",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64a8d7dd8338450987dbd8e8"
     },
     {
@@ -88,7 +93,7 @@
       "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
       "companies": [],
       "name": "bd_",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60cd5208f1713a75db79ab86"
     }
   ]

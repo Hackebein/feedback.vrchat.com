@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5f1265e6dd2056513bb2af73",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:53:43.193414Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b07745b55c49e65e1c522d7",
     "alias": "Still Goat",
@@ -11,7 +16,7 @@
     "created": "2018-05-25T02:26:35.755Z",
     "name": "Merlin",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5b07745b55c49e65e1c522d7",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -128,7 +133,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -153,7 +158,7 @@
           "created": "2018-05-25T02:26:35.755Z",
           "name": "Merlin",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -183,7 +188,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -225,7 +230,7 @@
   "files": [],
   "ideaID": "680b7e81e4c3e90df15c82d9",
   "imageURLs": [],
-  "lastUpdated": 1781289642170,
+  "lastUpdated": 1781588996869,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 9,
@@ -241,7 +246,7 @@
   "subCategoryID": null,
   "title": "Unable to set object references to null in Udon behaviour inspector",
   "trendingScore": 2640.78273794598,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "unable-to-set-object-references-to-null-in-udon-behaviour-inspector",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -260,7 +265,7 @@
       "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
       "companies": [],
       "name": "LefTonbo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f2d96fd63aa6f7311d3f428"
     },
     {
@@ -271,7 +276,7 @@
       "avatarURL": "https://canny.io/images/525964d69f825130efb048b56a21ee70.png",
       "companies": [],
       "name": "John Harris",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f188db171fc15152fd26ae4"
     },
     {
@@ -282,7 +287,7 @@
       "avatarURL": "https://canny-assets.io/images/38c9c43845fc98cba69a5e2e0d5c5298.png",
       "companies": [],
       "name": "owlboy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f177ede19ae832705039149"
     },
     {
@@ -293,7 +298,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f177c73d6fdf864a8a35973"
     },
     {
@@ -304,7 +309,7 @@
       "avatarURL": "https://canny.io/images/6d7fd9a2818f95ae16fbb4be009f1dd8.png",
       "companies": [],
       "name": "LastRar",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f16e71099d4584323d339c0"
     },
     {
@@ -315,7 +320,7 @@
       "avatarURL": "https://canny-assets.io/images/fa25ea51b0ffdee81fc3f508e3f239b7.png",
       "companies": [],
       "name": "Dukmos",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f15d9268aee722a3d895e0b"
     },
     {
@@ -326,7 +331,7 @@
       "avatarURL": "https://canny-assets.io/images/29c8ca796305b94c6131b938c889a396.png",
       "companies": [],
       "name": "orels1",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f15d08724fe3945da442ea3"
     },
     {
@@ -337,7 +342,7 @@
       "avatarURL": "https://canny.io/images/4375e4d0705996a3cb2916d41c510145.png",
       "companies": [],
       "name": "AkiraMiura",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f15c1463be20545fdbb8515"
     },
     {
@@ -348,7 +353,7 @@
       "avatarURL": "https://canny.io/images/9383debb6758a064248994e1720842c2.png",
       "companies": [],
       "name": "Merlin",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f1265e6dd2056513bb2af7b"
     }
   ]

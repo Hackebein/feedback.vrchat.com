@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5ecc944656406019f1f9fbc4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:53:31.296230Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ec2044bc5fa7e61477195a9",
     "alias": "Experimental Pony",
@@ -11,7 +16,7 @@
     "created": "2020-05-18T03:43:07.880Z",
     "name": "Tesla",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5ec2044bc5fa7e61477195a9",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2020-05-18T03:43:07.880Z",
         "name": "Tesla",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -85,7 +90,7 @@
         "created": "2020-05-18T03:43:07.880Z",
         "name": "Tesla",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -128,7 +133,7 @@
   "imageURLs": [
     "https://canny.io/images/7a97a9d345c477c1ccb91f2775d5f020.png"
   ],
-  "lastUpdated": 1781289636967,
+  "lastUpdated": 1781588990528,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -143,7 +148,7 @@
   "subCategoryID": null,
   "title": "Syncing too many objects causes insane log spam and desync",
   "trendingScore": 2631.8448418751636,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "syncing-too-many-objects-causes-insane-log-spam-and-desync",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -162,7 +167,7 @@
       "avatarURL": "https://canny.io/images/4dcd820f127364ce4fc49573fa20d00e.png",
       "companies": [],
       "name": "Ville672 -",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ed9dba3f9e9a514e5dda957"
     },
     {
@@ -173,7 +178,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Nathan Chamot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ecc9e0e69a521372efc314e"
     },
     {
@@ -184,7 +189,7 @@
       "avatarURL": "https://canny.io/images/5d500fd3e49e0814e14799ee38f196c3.png",
       "companies": [],
       "name": "kataze",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ecc9728976f3c3765c6725c"
     },
     {
@@ -195,7 +200,7 @@
       "avatarURL": "https://canny.io/images/8afeddce88c36fc1854ebcc5ab8ad24a.png",
       "companies": [],
       "name": "Tesla",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5ecc944756406019f1f9fbcc"
     }
   ]

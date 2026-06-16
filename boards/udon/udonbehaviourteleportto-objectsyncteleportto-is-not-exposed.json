@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5f0e7bde270103749f344efa",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:53:40.904076Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ce6f0d545dd3d4bfec1a7b8",
     "alias": "Burnt sienna Python",
@@ -11,7 +16,7 @@
     "created": "2019-05-23T19:13:25.117Z",
     "name": "M.O.O.N",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5ce6f0d545dd3d4bfec1a7b8",
   "board": {
@@ -78,7 +83,7 @@
         "created": "2022-11-07T14:13:43.431Z",
         "name": "Fax",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -121,7 +126,7 @@
   "files": [],
   "ideaID": "680b7db6e4c3e90df1592a3c",
   "imageURLs": [],
-  "lastUpdated": 1781289641138,
+  "lastUpdated": 1781588995621,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 9,
@@ -137,7 +142,7 @@
   "subCategoryID": null,
   "title": "UdonBehaviour.TeleportTo / ObjectSync.TeleportTo is not exposed.",
   "trendingScore": 2832.6825626636905,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "udonbehaviourteleportto-objectsyncteleportto-is-not-exposed",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -156,7 +161,7 @@
       "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
       "companies": [],
       "name": "JessicaOnMain",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "661d748de5d26962aa638979"
     },
     {
@@ -167,7 +172,7 @@
       "avatarURL": "https://canny.io/images/9fc21ef15d58cadc68538901ae52437c.png",
       "companies": [],
       "name": "Naticus",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f21711c6397e101facd7fef"
     },
     {
@@ -178,7 +183,7 @@
       "avatarURL": "https://canny.io/images/9c9b69df7ab49f5703300a41aa0d2920.jpg",
       "companies": [],
       "name": "Foxx",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f1a13c23acd5f4b6a54329c"
     },
     {
@@ -189,7 +194,7 @@
       "avatarURL": "https://canny.io/images/8412f9429da5d8b314b26a591d38df5b.jpg",
       "companies": [],
       "name": "Aaron Bregger",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f15e3860eba1c3f17e5838d"
     },
     {
@@ -200,7 +205,7 @@
       "avatarURL": "https://canny.io/images/4375e4d0705996a3cb2916d41c510145.png",
       "companies": [],
       "name": "AkiraMiura",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f15c09824fe3945da438645"
     },
     {
@@ -211,7 +216,7 @@
       "avatarURL": "https://canny.io/images/a37478d3d56f80d62169126714f56411.png",
       "companies": [],
       "name": "poplopo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f0f42d5b241e44329baa906"
     },
     {
@@ -222,7 +227,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f0e7c306aa1cb7a0f0dead8"
     },
     {
@@ -233,7 +238,7 @@
       "avatarURL": "https://canny-assets.io/images/38c9c43845fc98cba69a5e2e0d5c5298.png",
       "companies": [],
       "name": "owlboy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f0e7c0b6aa1cb7a0f0dea0d"
     },
     {
@@ -244,7 +249,7 @@
       "avatarURL": "https://canny.io/images/a819e2c5bcdd1862ed2b6c8b218fe728.png",
       "companies": [],
       "name": "M.O.O.N",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5f0e7bde270103749f344f02"
     }
   ]

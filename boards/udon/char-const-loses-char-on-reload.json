@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60f35b3237381e211e7405af",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:56:29.480856Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e891fbcd87cbd0b05f32824",
     "alias": "Wenge Porcupine",
@@ -11,7 +16,7 @@
     "created": "2020-04-05T00:01:00.303Z",
     "name": "Pillazo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e891fbcd87cbd0b05f32824",
   "board": {
@@ -46,7 +51,7 @@
   "imageURLs": [
     "https://canny.io/images/8622fbefc8e70bd2e0d43c7461673393.png"
   ],
-  "lastUpdated": 1781293217218,
+  "lastUpdated": 1781589084186,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -61,7 +66,7 @@
   "subCategoryID": null,
   "title": "Char const loses char on reload",
   "trendingScore": 2690.11333619511,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "char-const-loses-char-on-reload",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -80,7 +85,7 @@
       "avatarURL": "https://canny.io/images/8bd721099e43d36e1c6bd0de80fdc0d0.png",
       "companies": [],
       "name": "Pillazo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60f35b3237381e211e7405b6"
     }
   ]

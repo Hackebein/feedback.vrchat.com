@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "603a5e616dfe2d5b85b96e70",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:58:50.738134Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3287055bc2dc276e0f1630",
     "alias": "Lemon Silverfish",
@@ -11,7 +16,7 @@
     "created": "2020-08-11T11:54:45.784Z",
     "name": "Reimajo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f3287055bc2dc276e0f1630",
   "board": {
@@ -26,7 +31,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -44,7 +49,7 @@
         "created": "2021-02-18T18:30:33.816Z",
         "name": "Balphagore",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -87,7 +92,7 @@
         "created": "2021-02-17T15:52:54.264Z",
         "name": "Tom Leylan",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -129,7 +134,7 @@
         "created": "2024-12-01T14:36:46.676Z",
         "name": "Ophura",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -173,7 +178,7 @@
   "files": [],
   "ideaID": "680bb80ce4c3e90df13243ba",
   "imageURLs": [],
-  "lastUpdated": 1781293228985,
+  "lastUpdated": 1781589101643,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 38,
@@ -189,7 +194,7 @@
   "subCategoryID": null,
   "title": "OnPlayerLeft() should have the updated VRCPlayerApi.GetPlayers() already",
   "trendingScore": 2941.5816698149033,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "onplayerleft-should-have-the-updated-vrcplayerapigetplayers-already",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -208,7 +213,7 @@
       "avatarURL": "https://canny-assets.io/images/2d9ea919c56b9926addd22a07bcf0f6a.png",
       "companies": [],
       "name": "Yodokoro",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a0a6eb15a52cb2df021577e"
     },
     {
@@ -219,7 +224,7 @@
       "avatarURL": "https://canny-assets.io/images/4733d61c142e2aac9ef6e33a7e2c6250.png",
       "companies": [],
       "name": "Trudolph",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6934cb684927a96e58fce6cc"
     },
     {
@@ -230,7 +235,7 @@
       "avatarURL": "https://canny-assets.io/images/510b3dff00d2ae92b543a05142054f6a.png",
       "companies": [],
       "name": "Varneon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68b333bdce2ca2b520441ddb"
     },
     {
@@ -241,7 +246,7 @@
       "avatarURL": "https://canny-assets.io/images/547f27303cb6518968cd855a6eb8a49a.png",
       "companies": [],
       "name": "Beyond",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6897e7762eba8cb5ed261ed6"
     },
     {
@@ -252,7 +257,7 @@
       "avatarURL": "https://canny-assets.io/images/c693306596dc75a4c40640c98c72800a.png",
       "companies": [],
       "name": "Scena",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6897ad952eba8cb5ed21d74b"
     },
     {
@@ -263,7 +268,7 @@
       "avatarURL": "https://canny-assets.io/images/059ba23257b38a54cb5297168f62bfb6.png",
       "companies": [],
       "name": "Quap",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6569c7eb3d279c6cf486f609"
     },
     {
@@ -274,7 +279,7 @@
       "avatarURL": "https://canny-assets.io/images/64afa5c473513c855bd96c382dc8fba3.png",
       "companies": [],
       "name": "AltCentauri",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "65699ed63d279c6cf4f570c6"
     },
     {
@@ -285,7 +290,7 @@
       "avatarURL": "https://canny-assets.io/images/580364725fbde2001b4da742264019c8.png",
       "companies": [],
       "name": "JanSharp",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64540181ee5502090ba0477b"
     },
     {
@@ -296,7 +301,7 @@
       "avatarURL": "https://canny.io/images/13be9fa6f41b6becee8f28bfe073f16f.png",
       "companies": [],
       "name": "namanonamako",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "644fdf39c5daef090d2bbd66"
     },
     {
@@ -307,7 +312,7 @@
       "avatarURL": "https://canny-assets.io/images/5ad910f79df0e0fc772a2acb58a6b4f5.png",
       "companies": [],
       "name": "Jaydev",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "642f9184718e4a09c6ee92d2"
     }
   ]

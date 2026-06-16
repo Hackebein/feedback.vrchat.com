@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "609e1aed6196347f985e85c7",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:59:02.003336Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5dc5ffef0892247f76089a24",
     "alias": "Civic Raccoon",
@@ -11,7 +16,7 @@
     "created": "2019-11-08T23:53:19.146Z",
     "name": "LefTonbo",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5dc5ffef0892247f76089a24",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2020-08-11T00:07:19.781Z",
         "name": "Jar",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -111,7 +116,7 @@
           "created": "2019-12-05T17:37:30.047Z",
           "name": "Momo the Monster",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -142,7 +147,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -187,7 +192,7 @@
   "files": [],
   "ideaID": "680bb89be4c3e90df134e9ec",
   "imageURLs": [],
-  "lastUpdated": 1781293233426,
+  "lastUpdated": 1781589107621,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 22,
@@ -203,7 +208,7 @@
   "subCategoryID": null,
   "title": "Please provide `GetInstanceOwner()`",
   "trendingScore": 2800.8433047470267,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "please-provide-getinstanceowner",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -219,10 +224,10 @@
       "alias": "Cultural Capybara",
       "aliasID": "65c2a219ed6eefce4c62c49a",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2c476e33837f1bfc901368c351eac127.png",
+      "avatarURL": "https://canny-assets.io/images/be0794272549b72a538c0c1c7378a46f.png",
       "companies": [],
       "name": "Enverex",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64f5acae020c540986a62586"
     },
     {
@@ -233,7 +238,7 @@
       "avatarURL": "https://canny-assets.io/images/e51a004c9a0dcb771981b5d873f49548.png",
       "companies": [],
       "name": "kawashirov",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64e7179957128948ca736c63"
     },
     {
@@ -244,7 +249,7 @@
       "avatarURL": "https://canny-assets.io/images/7ebe266a1b801979bb4799573caee9f0.png",
       "companies": [],
       "name": "lorow",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64d52db30850cd096d952e07"
     },
     {
@@ -255,7 +260,7 @@
       "avatarURL": "https://canny-assets.io/images/fde60151048f2ae18eb6b836fb6c24d6.png",
       "companies": [],
       "name": "Fujisawa",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "645157590b2162090d6950ea"
     },
     {
@@ -266,7 +271,7 @@
       "avatarURL": "https://canny.io/images/bb916ed4f80c8f433856f10bd8c9fc64.png",
       "companies": [],
       "name": "iigo丸",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631e967167fa8c44a3fb6262"
     },
     {
@@ -277,7 +282,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "TheHatedRogue",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e1e5172143e444a8b189a3"
     },
     {
@@ -288,7 +293,7 @@
       "avatarURL": "https://canny-assets.io/images/1da95499d422b11afe523a6b37897478.png",
       "companies": [],
       "name": "Junii23",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62defba2ef382044b75f062d"
     },
     {
@@ -299,7 +304,7 @@
       "avatarURL": "https://canny-assets.io/images/5b17e818f411904c684c05fdbea73057.png",
       "companies": [],
       "name": "Vandercat",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62def6266509e344b6f63c70"
     },
     {
@@ -310,7 +315,7 @@
       "avatarURL": "https://canny.io/images/2216d26d85b3c495e2bbbd8005eb443c.png",
       "companies": [],
       "name": "BioAleks",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "629a9a4a2cd9335e44f30ad1"
     },
     {
@@ -321,7 +326,7 @@
       "avatarURL": "https://canny-assets.io/images/38c9c43845fc98cba69a5e2e0d5c5298.png",
       "companies": [],
       "name": "owlboy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61d64c8dbd11222e43619670"
     }
   ]

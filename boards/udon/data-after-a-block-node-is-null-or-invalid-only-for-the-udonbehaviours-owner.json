@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60a04465c1faf4189b8becfe",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:56:33.887132Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5bbfe7082f9bdf3d5024c14d",
     "alias": "Incarnadine Meerkat",
@@ -11,7 +16,7 @@
     "created": "2018-10-12T00:12:56.548Z",
     "name": "Joker is punk",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5bbfe7082f9bdf3d5024c14d",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -88,7 +93,7 @@
   "imageURLs": [
     "https://canny.io/images/4d1256066897e07c3b4c9e9e134f6199.png"
   ],
-  "lastUpdated": 1781293218948,
+  "lastUpdated": 1781589086671,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -103,7 +108,7 @@
   "subCategoryID": null,
   "title": "Data after a Block node is null or invalid only for the UdonBehaviour's owner",
   "trendingScore": 2785.8687973809524,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "data-after-a-block-node-is-null-or-invalid-only-for-the-udonbehaviours-owner",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -122,7 +127,7 @@
       "avatarURL": "https://canny.io/images/a89d1481bc138e4968a07772f6f13346.png",
       "companies": [],
       "name": "MrCupOfTea",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "646d6f08ddf031ce06477684"
     },
     {
@@ -133,7 +138,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60a0461685a19d3fe5cfb5cb"
     },
     {
@@ -144,7 +149,7 @@
       "avatarURL": "https://canny-assets.io/images/40b5e700aeb8c2cf9d9191e490ca5b80.png",
       "companies": [],
       "name": "Joker is punk",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60a04465c1faf4189b8bed05"
     }
   ]

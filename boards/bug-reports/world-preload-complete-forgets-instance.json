@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "67e87363f85aa7e213b3cd11",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-06-16T05:55:00.496285Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a766b8a0868b44b53569ce4",
     "alias": "Legitimate Mollusk",
@@ -11,7 +17,7 @@
     "created": "2018-02-04T02:10:18.895Z",
     "name": "GenesisAria",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5a766b8a0868b44b53569ce4",
   "board": {
@@ -39,7 +45,7 @@
         "created": "2018-02-04T02:10:18.895Z",
         "name": "GenesisAria",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -86,7 +92,7 @@
         "created": "2023-06-12T15:51:49.320Z",
         "name": "StormRel",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -132,7 +138,7 @@
   "files": [],
   "ideaID": "680bba5be4c3e90df13a486c",
   "imageURLs": [],
-  "lastUpdated": 1781293160538,
+  "lastUpdated": 1781589014847,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -148,7 +154,7 @@
   "subCategoryID": null,
   "title": "World Preload Complete forgets instance",
   "trendingScore": 2883.595036782573,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "updatedBy": null,
   "urlName": "world-preload-complete-forgets-instance",
   "viewerIsAuthor": false,
@@ -168,7 +174,7 @@
       "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
       "companies": [],
       "name": "syncpulse",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67ea71235388f556dbddaf12"
     },
     {
@@ -179,7 +185,7 @@
       "avatarURL": "https://canny-assets.io/images/64a1e0db8a82c0f458d4c66db961199d.png",
       "companies": [],
       "name": "GenesisAria",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67e873635388f556db4f4b87"
     }
   ]

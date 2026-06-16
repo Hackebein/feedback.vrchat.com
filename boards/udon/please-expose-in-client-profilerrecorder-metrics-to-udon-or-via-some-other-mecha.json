@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6106220732a01b105010f3be",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:58:57.344641Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c1475afb7ce126e9e0e3a39",
     "alias": "Wineberry Leopard",
@@ -11,7 +16,7 @@
     "created": "2018-12-15T03:31:59.071Z",
     "name": "bd_",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c1475afb7ce126e9e0e3a39",
   "board": {
@@ -27,7 +32,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 821,
+    "postCount": 820,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -44,7 +49,7 @@
   "files": [],
   "ideaID": "680bb8ace4c3e90df1352b9b",
   "imageURLs": [],
-  "lastUpdated": 1781293231636,
+  "lastUpdated": 1781589105142,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -59,7 +64,7 @@
   "subCategoryID": null,
   "title": "Please expose in-client ProfilerRecorder metrics to Udon (or via some other mechanism)",
   "trendingScore": 2795.1466658151458,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "please-expose-in-client-profilerrecorder-metrics-to-udon-or-via-some-other-mecha",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +83,7 @@
       "avatarURL": "https://canny-assets.io/images/ab9dcee8dfa08c92044546399e6fbeb5.png",
       "companies": [],
       "name": "rapt らぷと",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "64c30dff48411609a506df52"
     },
     {
@@ -89,7 +94,7 @@
       "avatarURL": "https://canny-assets.io/images/ad615942837faff8bdddfcb7f46c7744.png",
       "companies": [],
       "name": "Zhakami Zhako",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6314be6f43bd48561c7db3cc"
     },
     {
@@ -100,7 +105,7 @@
       "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
       "companies": [],
       "name": "bd_",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6106220732a01b105010f3c5"
     }
   ]

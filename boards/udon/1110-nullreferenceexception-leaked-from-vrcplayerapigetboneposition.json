@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "60e27b20f85b8733a3b4fdab",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:55:11.828858Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c1475afb7ce126e9e0e3a39",
     "alias": "Wineberry Leopard",
@@ -11,7 +16,7 @@
     "created": "2018-12-15T03:31:59.071Z",
     "name": "bd_",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c1475afb7ce126e9e0e3a39",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2018-12-15T03:31:59.071Z",
         "name": "bd_",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -85,7 +90,7 @@
   "files": [],
   "ideaID": "680bb8a8e4c3e90df13518a5",
   "imageURLs": [],
-  "lastUpdated": 1781293209816,
+  "lastUpdated": 1781589039112,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 9,
@@ -100,7 +105,7 @@
   "subCategoryID": null,
   "title": "[1110] NullReferenceException leaked from VRCPlayerApi.GetBonePosition",
   "trendingScore": 2784.259865085979,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "1110-nullreferenceexception-leaked-from-vrcplayerapigetboneposition",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -119,7 +124,7 @@
       "avatarURL": "https://canny-assets.io/images/ef83e6e646446fcbdc211184e29c3b9e.png",
       "companies": [],
       "name": "Kyrowo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "645e95ee3e5912090eae9e5e"
     },
     {
@@ -130,7 +135,7 @@
       "avatarURL": "https://canny-assets.io/images/26732cf736800e803a2011fca95b6bc0.png",
       "companies": [],
       "name": "みみー／Mimy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62959e0b636b5568f5e11f5c"
     },
     {
@@ -141,7 +146,7 @@
       "avatarURL": "https://canny-assets.io/images/7549556cfd5d02c833b754fc1ca9cc2c.png",
       "companies": [],
       "name": "noriro_08",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60e4a3fa4dd5131501269a18"
     },
     {
@@ -152,7 +157,7 @@
       "avatarURL": "https://canny-assets.io/images/76473dd7a5fa37277ead16c31a521862.png",
       "companies": [],
       "name": "Koyomi - こよみ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60e2e267f85b8733a3b83c96"
     },
     {
@@ -163,7 +168,7 @@
       "avatarURL": "https://canny.io/images/81a7453db64adb2c8f4735233c342df6.png",
       "companies": [],
       "name": "神城アオイ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60e29527e0bac30bad0c2d01"
     },
     {
@@ -174,7 +179,7 @@
       "avatarURL": "https://canny-assets.io/images/bd0878343141a2d94152963c3a8ee2ce.png",
       "companies": [],
       "name": "narazaka",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60e283b0f85b8733a3b51edd"
     },
     {
@@ -185,7 +190,7 @@
       "avatarURL": "https://canny-assets.io/images/5d46bb169a50914a277f9145ef243fc0.png",
       "companies": [],
       "name": "IgbarVonSquid",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60e27d39af93e3121cc46c53"
     },
     {
@@ -196,7 +201,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60e27c4696b2585db2585562"
     },
     {
@@ -207,7 +212,7 @@
       "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
       "companies": [],
       "name": "bd_",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60e27b20f85b8733a3b4fdb2"
     }
   ]

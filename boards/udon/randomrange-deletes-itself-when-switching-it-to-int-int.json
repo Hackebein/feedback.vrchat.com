@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5eac42e34e2d593e896aef7e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:52:13.111529Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e9b35b050f94818f4b07147",
     "alias": "Aquamarine Capybara",
@@ -11,7 +16,7 @@
     "created": "2020-04-18T17:15:28.222Z",
     "name": "Sionix",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e9b35b050f94818f4b07147",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
   "files": [],
   "ideaID": "680b7daae4c3e90df158f1fa",
   "imageURLs": [],
-  "lastUpdated": 1781289627232,
+  "lastUpdated": 1781588978790,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -101,7 +106,7 @@
   "subCategoryID": null,
   "title": "Random.Range deletes itself when switching it to (int, int)",
   "trendingScore": 2626.929289851691,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "randomrange-deletes-itself-when-switching-it-to-int-int",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -120,7 +125,7 @@
       "avatarURL": "https://canny.io/images/8e79a7bf209fe2395a3f0158cdfd7ab3.png",
       "companies": [],
       "name": "Sionix",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5eac42e34e2d593e896aef86"
     }
   ]

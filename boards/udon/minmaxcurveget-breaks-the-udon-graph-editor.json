@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5fefb37408e4312ca5216c4a",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:57:44.466700Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e82f168f71d790eeb6a04a3",
     "alias": "Buff Condor",
@@ -11,7 +16,7 @@
     "created": "2020-03-31T07:29:44.806Z",
     "name": "Demkeys",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e82f168f71d790eeb6a04a3",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
   "files": [],
   "ideaID": "680bb7ffe4c3e90df1322450",
   "imageURLs": [],
-  "lastUpdated": 1781293226630,
+  "lastUpdated": 1781589097914,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -101,7 +106,7 @@
   "subCategoryID": null,
   "title": "MinMaxCurve[].Get() breaks the Udon graph editor",
   "trendingScore": 2662.3826987429425,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "minmaxcurveget-breaks-the-udon-graph-editor",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -120,7 +125,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5fefb40cbe5bca1a1a346b85"
     },
     {
@@ -131,7 +136,7 @@
       "avatarURL": "https://canny.io/images/b4f329a76e4e5304336bb2658ef22dac.png",
       "companies": [],
       "name": "Demkeys",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5fefb37508e4312ca5216c51"
     }
   ]

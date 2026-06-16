@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "60c85b75c1380e3600ef3ecf",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:57:40.613504Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5bc7a9d0d651c8301543a7f2",
     "alias": "Ink Antelope",
@@ -11,7 +17,7 @@
     "created": "2018-10-17T21:29:52.827Z",
     "name": "Varneon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5bc7a9d0d651c8301543a7f2",
   "board": {
@@ -45,7 +51,7 @@
   "imageURLs": [
     "https://canny.io/images/409c6ed515fd69c5bd7a22ca044335ac.png"
   ],
-  "lastUpdated": 1781293225564,
+  "lastUpdated": 1781589096201,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -60,7 +66,7 @@
   "subCategoryID": null,
   "title": "Large number of UdonBehaviours crashes VRChat when using Udon networking debug overlay",
   "trendingScore": 2686.3734796985705,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "large-number-of-udonbehaviours-crashes-vrchat-when-using-udon-networking-debug-o",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -79,7 +85,7 @@
       "avatarURL": "https://canny-assets.io/images/e9759ab5eb81b26b906c79fe94547d11.png",
       "companies": [],
       "name": "Table",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60c87afd72a0c75141abcd04"
     },
     {
@@ -90,7 +96,7 @@
       "avatarURL": "https://canny-assets.io/images/6c79d42362a5eb00738655b60eddf986.png",
       "companies": [],
       "name": "Salbug",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60c8619a728b085549c67495"
     },
     {
@@ -101,7 +107,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "60c85b9200862b516f33301c"
     }
   ]

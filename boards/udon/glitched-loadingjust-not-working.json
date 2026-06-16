@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "610b3b400f1772216b0e0cc6",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-06-16T05:57:34.872916Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "610b3af4a554551863f540de",
     "alias": "Surprised Gazelle",
@@ -11,7 +17,7 @@
     "created": "2021-08-05T01:12:20.966Z",
     "name": "GammaRaize",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "610b3af4a554551863f540de",
   "board": {
@@ -44,7 +50,7 @@
   "files": [],
   "ideaID": "680bb8ace4c3e90df1352c63",
   "imageURLs": [],
-  "lastUpdated": 1781293223842,
+  "lastUpdated": 1781589093242,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -59,7 +65,7 @@
   "subCategoryID": null,
   "title": "Glitched Loading/Just not working",
   "trendingScore": 2692.7004490630006,
-  "updatedAt": "2026-06-12T19:41:22.684915Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "glitched-loadingjust-not-working",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -78,7 +84,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "GammaRaize",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "610b3b400f1772216b0e0ccd"
     }
   ]

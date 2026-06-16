@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "5eda226df08f1849b083b9a3",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T05:52:28.430109Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b7fb61894211b58b866e8ae",
     "alias": "Binding Condor",
@@ -11,7 +16,7 @@
     "created": "2018-08-24T07:39:04.453Z",
     "name": "Phasedragon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5b7fb61894211b58b866e8ae",
   "board": {
@@ -44,7 +49,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -86,7 +91,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5df404cc2072644ac4b5e385",
@@ -132,7 +137,7 @@
     "https://canny.io/images/51181cdd16f64d10e4050009d5985f87.png",
     "https://canny.io/images/37ab9d3c874ff4a008b82e8b3933b5f4.png"
   ],
-  "lastUpdated": 1781289633436,
+  "lastUpdated": 1781588986064,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -147,7 +152,7 @@
   "subCategoryID": null,
   "title": "set/get variables are missing the variable selector dropdown if they are added through the search menu",
   "trendingScore": 2631.9001000244757,
-  "updatedAt": "2026-06-12T18:40:42.299547Z",
+  "updatedAt": "2026-06-16T05:51:54.493267Z",
   "urlName": "setget-variables-are-missing-the-variable-selector-dropdown-if-they-are-added-th",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -166,7 +171,7 @@
       "avatarURL": "https://canny-assets.io/images/70cde677671ad2efe0439d243d6dec09.png",
       "companies": [],
       "name": "Phasedragon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "5eda226df08f1849b083b9ab"
     }
   ]
