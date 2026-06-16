@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6368cec7e443fa533187156b",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T21:05:27.585061Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60849703d1c6d70a031d0c74",
     "alias": "Coastal Landfowl",
@@ -11,7 +16,7 @@
     "created": "2021-04-24T22:09:07.263Z",
     "name": "Masti 「マス」",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "60849703d1c6d70a031d0c74",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb94de4c3e90df1372291",
   "imageURLs": [],
-  "lastUpdated": 1781320020149,
+  "lastUpdated": 1781643746495,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Manual Horizon Adjust control",
   "trendingScore": 2828.6326987400794,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T21:05:17.467925Z",
   "urlName": "manual-horizon-adjust-control",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/e51a004c9a0dcb771981b5d873f49548.png",
       "companies": [],
       "name": "kawashirov",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "65f814c0a63714bcb315fa72"
     },
     {
@@ -82,7 +87,7 @@
       "avatarURL": "https://canny.io/images/c7f9d3021c7671f7a6dc63769b43fa39.png",
       "companies": [],
       "name": "FKite294",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "636ca0681ca02924f16f9280"
     },
     {
@@ -93,7 +98,7 @@
       "avatarURL": "https://canny-assets.io/images/2a04b5de99098146d32ecebb6f534f13.png",
       "companies": [],
       "name": "Zarniwoop",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "636a7d7e0d16140b506a87b4"
     },
     {
@@ -104,7 +109,7 @@
       "avatarURL": "https://canny.io/images/b5ac3395d3d9f58d7607c322bda852af.png",
       "companies": [],
       "name": "Masti 「マス」",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6368cec7e443fa533187158c"
     }
   ]

@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6351f80f90135e2d3e8f5e43",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-06-16T21:06:49.451562Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6351f76da91f3a1cc3f9123b",
     "alias": "Exceptional Dingo",
@@ -11,7 +17,7 @@
     "created": "2022-10-21T01:35:41.718Z",
     "name": "GitShinx",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6351f76da91f3a1cc3f9123b",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb949e4c3e90df1371006",
   "imageURLs": [],
-  "lastUpdated": 1781320027949,
+  "lastUpdated": 1781643756273,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "Quest Hand Tracking With The New Unity Hands 2.0 SDK",
   "trendingScore": 2757.423427361353,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T21:05:17.467925Z",
   "urlName": "quest-hand-tracking-with-the-new-unity-hands-20-sdk",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": "https://canny-assets.io/images/c48fae1df4db0aac88a829e1e11d14f5.png",
       "companies": [],
       "name": "WillyB1337",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6363058d22bbd349dc38b265"
     },
     {
@@ -82,7 +88,7 @@
       "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
       "companies": [],
       "name": "camegone",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6354ada488a2ca703c68fdcd"
     },
     {
@@ -93,7 +99,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "GitShinx",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6351f80f90135e2d3e8f5e62"
     }
   ]

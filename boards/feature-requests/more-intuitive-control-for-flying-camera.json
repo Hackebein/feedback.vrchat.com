@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "633b8c5de418252c46c7e761",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-06-16T21:05:32.681099Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df5ff8e551fe469af90e01",
     "alias": "Rosso corsa Cobra",
@@ -11,7 +17,7 @@
     "created": "2022-07-26T03:31:04.876Z",
     "name": "greybell",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62df5ff8e551fe469af90e01",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb941e4c3e90df136fd29",
   "imageURLs": [],
-  "lastUpdated": 1781320021458,
+  "lastUpdated": 1781643748546,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "More intuitive control for Flying camera",
   "trendingScore": 2772.34364878248,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T21:05:17.467925Z",
   "urlName": "more-intuitive-control-for-flying-camera",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": "https://canny-assets.io/images/16d2b193dd9ecb80c870e90f93ffb207.png",
       "companies": [],
       "name": "leb0x64",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63f09dde526f604524e46bfc"
     },
     {
@@ -82,7 +88,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "greybell",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "633b8c5de418252c46c7e782"
     }
   ]

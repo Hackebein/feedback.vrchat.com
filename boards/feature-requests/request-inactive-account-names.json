@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "63660301f21a9d728d2a1b3d",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.profiles",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-06-16T21:06:54.281041Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fbdc0740762374d03938df0",
     "alias": "Midnight blue Wallaby",
@@ -11,7 +17,7 @@
     "created": "2020-11-25T02:24:52.262Z",
     "name": "Beach Bunny",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5fbdc0740762374d03938df0",
   "board": {
@@ -39,7 +45,7 @@
   "imageURLs": [
     "https://canny.io/images/50be4bd1615aebb9ce6b3edd6fe3d22e.png"
   ],
-  "lastUpdated": 1781320029132,
+  "lastUpdated": 1781643758024,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -55,7 +61,7 @@
   "subCategoryID": null,
   "title": "Request inactive account names",
   "trendingScore": 2919.5525212433863,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T21:05:17.467925Z",
   "urlName": "request-inactive-account-names",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -74,7 +80,7 @@
       "avatarURL": "https://canny-assets.io/images/04ca4cefbc3784b070aef18e802e1aea.png",
       "companies": [],
       "name": "NikkyAI",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "693f22d44927a96e58cc71ba"
     },
     {
@@ -85,7 +91,7 @@
       "avatarURL": "https://canny.io/images/df241bcc52c9ce7b9a5a072c1a8222ac.png",
       "companies": [],
       "name": "Beach Bunny",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63660301f21a9d728d2a1b6e"
     }
   ]

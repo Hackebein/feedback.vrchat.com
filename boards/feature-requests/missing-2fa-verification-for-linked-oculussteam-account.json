@@ -1,7 +1,15 @@
 {
   "__v": 0,
   "_id": "63637ebc2c43420b500ce2a3",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "web.auth",
+    "account.auth",
+    "account.2fa",
+    "account.linking"
+  ],
+  "aiTaggedAt": "2026-06-16T21:05:30.918427Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63637c4c5df4230b5caff502",
     "alias": "Peaceful Jay",
@@ -11,7 +19,7 @@
     "created": "2022-11-03T08:31:08.898Z",
     "name": "SolaceWicker",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "63637c4c5df4230b5caff502",
   "board": {
@@ -38,7 +46,7 @@
         "created": "2022-07-26T05:34:16.920Z",
         "name": "Docteh",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +87,7 @@
   "files": [],
   "ideaID": "680bb94ce4c3e90df1371c77",
   "imageURLs": [],
-  "lastUpdated": 1781320021102,
+  "lastUpdated": 1781643747960,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -94,7 +102,7 @@
   "subCategoryID": null,
   "title": "Missing 2FA Verification for \"Linked\" Oculus/Steam Account",
   "trendingScore": 2757.7448871078086,
-  "updatedAt": "2026-06-13T03:07:12.495874Z",
+  "updatedAt": "2026-06-16T21:05:17.467925Z",
   "urlName": "missing-2fa-verification-for-linked-oculussteam-account",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +121,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "SolaceWicker",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63637ebc2c43420b500ce2cf"
     }
   ]
