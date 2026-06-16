@@ -2,9 +2,10 @@
   "_id": "69e1109614916839a1a48a59",
   "aiCategories": [
     "loc.pc-client",
+    "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-06-16T11:49:15.834043Z",
+  "aiTaggedAt": "2026-06-16T17:46:20.187245Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f9e18279199552bb123e8b0",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "_id": "69e243c23999f0b02605362f",
@@ -333,6 +334,50 @@
       "value": "I think I've also been having this issue lately. Happened last in VR mode but it also happens in desktop. Took a while to get enough control of my pc back to kill the game",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a318690f930e6bb82e4bdf7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "689d760bd43d87f28041f16c",
+        "alias": "Cerise pink Bass",
+        "aliasID": "689d760bd43d87f280420a8e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3521e365f3872d771266240eb5efae56.png",
+        "created": "2025-08-14T05:37:15.242Z",
+        "name": "BlasterM5",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-16T17:23:28.278Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69e1109614916839a1a48a59",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This has happened to me recently. More than once. I didn't have logs to show at the time, but I know now there's a problem with it, as I discovered another app with the problem...\n\nI'm in Fedora on a 5700X3D / 9070 XT, using GE-Proton for VRC, but I discovered VNyan, a vtubing app, does the same thing (using Wine for VNyan, not Proton), where it's fine for a while until it suddenly isn't, and the whole system hangs on a mega I/O chokepoint. VNyan also uses the Unity engine. For me, I had to sit and wait several minutes for the system to close out the game/app for being out of memory (which I didn't know that was the problem, the system straight up froze, but I waited it out to see if the OS could recover, and it did). \n\nHaving done hardware tests (overnight memtest, etc.), I have since ruled out the problem being my PC (which has >32GB GB RAM, and when on VRC in a busy Instance rarely exceeds 16GB total RAM usage, OS and all), and I know how people feel about this, but 99% of the time a problem with a game in linux is not a linux problem. This could be a Unity engine problem, considering it's been happening with other Unity games too. I will need to test this theory by long playing more Unity games of the same Unity version.\n\nNext time this happens, I'll try and get logs too.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -347,23 +392,23 @@
   "files": [],
   "ideaID": "69e1109614916839a1a48a75",
   "imageURLs": [],
-  "lastUpdated": 1781624230789,
+  "lastUpdated": 1781631595440,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 15,
+  "maxScore": 16,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69e1109614916839a1a48a59/1530113725.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 15,
+  "score": 16,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-04-17T14:57:22.031Z",
   "subCategoryID": null,
   "title": "Memory Leak Issues 2026",
-  "trendingScore": 2945.808275785757,
-  "updatedAt": "2026-06-16T15:41:34.926764Z",
+  "trendingScore": 2946.506273050672,
+  "updatedAt": "2026-06-16T17:46:15.295356Z",
   "updatedBy": null,
   "urlName": "memory-leak-issues-2026",
   "viewerIsAuthor": false,
@@ -375,6 +420,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "689d760bd43d87f28041f16c",
+      "alias": "Cerise pink Bass",
+      "aliasID": "689d760bd43d87f280420a8e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3521e365f3872d771266240eb5efae56.png",
+      "companies": [],
+      "name": "BlasterM5",
+      "urlName": null,
+      "voteID": "6a3186e9363a2f2451d0ce19"
+    },
     {
       "_id": "5b9835649f27746b7c68b378",
       "alias": "Upper Tuna",
@@ -473,17 +529,6 @@
       "name": "DnutCfe-Obscura",
       "urlName": null,
       "voteID": "69e92d0c65c4cf9dd9328000"
-    },
-    {
-      "_id": "60a6a70509beab60b25bff89",
-      "alias": "Ecru Llama",
-      "aliasID": "68d486e6a8ab97d7d942d3b3",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/86fcb2bef6d6cbb76240d1fc77deec8c.png",
-      "companies": [],
-      "name": "TwistedCris",
-      "urlName": null,
-      "voteID": "69e1f68fda2ea486f4ee504d"
     }
   ]
 }

@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "622abb6d092efb6076b0544e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-06-16T17:46:34.484929Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5eaa2ee714148f4f31916d15",
     "alias": "Yarrow Antlion",
@@ -11,7 +17,7 @@
     "created": "2020-04-30T01:50:31.981Z",
     "name": "NotIntense",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5eaa2ee714148f4f31916d15",
   "board": {
@@ -39,7 +45,7 @@
   "imageURLs": [
     "https://canny.io/images/cc728a25e1162dcc46118b9a47cb7c13.jpg"
   ],
-  "lastUpdated": 1781315114635,
+  "lastUpdated": 1781631963431,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -54,7 +60,7 @@
   "subCategoryID": null,
   "title": "Adding custom expression menu breaks avatar",
   "trendingScore": 2723.8539630965656,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T17:46:15.295356Z",
   "urlName": "adding-custom-expression-menu-breaks-avatar",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -73,7 +79,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "NotIntense",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "622abb6d092efb6076b0546b"
     }
   ]

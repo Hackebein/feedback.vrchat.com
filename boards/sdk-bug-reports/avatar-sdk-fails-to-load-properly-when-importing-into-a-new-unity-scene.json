@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62211a03cb143c3c5ad9a50a",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-16T17:46:36.539728Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fcd676570b59138e6ef0271",
     "alias": "Unlikely Emu",
@@ -11,7 +16,7 @@
     "created": "2020-12-06T23:21:09.190Z",
     "name": "Smash-ter",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5fcd676570b59138e6ef0271",
   "board": {
@@ -39,7 +44,7 @@
   "imageURLs": [
     "https://canny.io/images/1bbd8971da0631bc19b6ce50bc88c511.png"
   ],
-  "lastUpdated": 1781315115408,
+  "lastUpdated": 1781631964624,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -54,7 +59,7 @@
   "subCategoryID": null,
   "title": "Avatar SDK fails to load properly when importing into a new Unity Scene",
   "trendingScore": 2722.8104024599916,
-  "updatedAt": "2026-06-13T01:46:03.443415Z",
+  "updatedAt": "2026-06-16T17:46:15.295356Z",
   "urlName": "avatar-sdk-fails-to-load-properly-when-importing-into-a-new-unity-scene",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -73,7 +78,7 @@
       "avatarURL": "https://canny-assets.io/images/89711696e2b573a62aea01cebfa51e8a.png",
       "companies": [],
       "name": "Smash-ter",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62211a04cb143c3c5ad9a52b"
     }
   ]

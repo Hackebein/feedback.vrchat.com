@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "611fd2ac972a600a905e1f49",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-06-16T17:46:30.243799Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "611fd22c5d9f1b4bcaa46b5d",
     "alias": "Purring Condor",
@@ -11,7 +17,7 @@
     "created": "2021-08-20T16:02:52.770Z",
     "name": "Wyldcard",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "611fd22c5d9f1b4bcaa46b5d",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2018-10-02T22:08:17.742Z",
         "name": "ＩＮＹＯ",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -79,7 +85,7 @@
   "files": [],
   "ideaID": "680bb8b1e4c3e90df13539cc",
   "imageURLs": [],
-  "lastUpdated": 1781310931422,
+  "lastUpdated": 1781631837340,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -94,7 +100,7 @@
   "subCategoryID": null,
   "title": "VRCSDK Signing out before upload.",
   "trendingScore": 2694.931739140712,
-  "updatedAt": "2026-06-13T00:37:47.202209Z",
+  "updatedAt": "2026-06-16T17:46:15.295356Z",
   "urlName": "vrcsdk-signing-out-before-upload",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +119,7 @@
       "avatarURL": "https://canny-assets.io/images/6420214ee51ae366382a05d0e35d5ec8.png",
       "companies": [],
       "name": "Wyldcard",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "611fd2ac972a600a905e1f50"
     }
   ]
