@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "62fe1e82e9c1e444bc12300e",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-06-16T11:52:54.310376Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5cebd38448bfd8245f7e542d",
     "alias": "Mammoth Chimpanzee",
@@ -11,7 +17,7 @@
     "created": "2019-05-27T12:09:40.456Z",
     "name": "NEMELIS",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5cebd38448bfd8245f7e542d",
   "board": {
@@ -39,7 +45,7 @@
   "imageURLs": [
     "https://canny.io/images/4e69bdb38ea82d6101d5a920e1ac58ed.png"
   ],
-  "lastUpdated": 1781303634929,
+  "lastUpdated": 1781610495407,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -54,7 +60,7 @@
   "subCategoryID": null,
   "title": "chatbox for specific friend with toggleable permission policy",
   "trendingScore": 2747.693856580991,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "chatbox-for-specific-friend-with-toggleable-permission-policy",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -73,7 +79,7 @@
       "avatarURL": "https://canny-assets.io/images/ffe3c6e4942cff51a135ff6fcb71babe.png",
       "companies": [],
       "name": "FriendlyGaymer",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fecc4b64929544cd6c0969"
     },
     {
@@ -84,7 +90,7 @@
       "avatarURL": "https://canny.io/images/728296b1a3402dbc2e767c76e9fde598.png",
       "companies": [],
       "name": "Zh1n1nZ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fe3824905ee544ac9d70c5"
     },
     {
@@ -95,7 +101,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "TyronFox",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fe23e9f7d49044b22b92f1"
     }
   ]

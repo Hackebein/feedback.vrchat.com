@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "62f9c39fd49aba2362fd30f9",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-06-16T11:54:27.629909Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60beef08cb1b3a0913dabd4c",
     "alias": "Plain Angelfish",
@@ -11,7 +17,7 @@
     "created": "2021-06-08T04:16:08.747Z",
     "name": "Scarlett Puppy",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "60beef08cb1b3a0913dabd4c",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2020-08-07T06:26:42.101Z",
         "name": "Miss Widgey",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +85,7 @@
   "files": [],
   "ideaID": "680bb921e4c3e90df1369254",
   "imageURLs": [],
-  "lastUpdated": 1781303641810,
+  "lastUpdated": 1781610504788,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -94,7 +100,7 @@
   "subCategoryID": null,
   "title": "Freeze Frame implementation for content creators",
   "trendingScore": 2748.707168926011,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "freeze-frame-implementation-for-content-creators",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +119,7 @@
       "avatarURL": "https://canny-assets.io/images/e34678efbcbb7bf6881b86a9f96560f2.png",
       "companies": [],
       "name": "NexVice",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6315184ea092c744bbd69f87"
     },
     {
@@ -124,7 +130,7 @@
       "avatarURL": "https://canny-assets.io/images/2e7472e3798e9538db630858ce6af932.png",
       "companies": [],
       "name": "Miss Widgey",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fb07b059410c44a3b81a54"
     },
     {
@@ -135,7 +141,7 @@
       "avatarURL": "https://canny-assets.io/images/6d83eb6cc90353f3ef31da7d23565fcb.png",
       "companies": [],
       "name": "Scarlett Puppy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f9c39fd49aba2362fd313c"
     }
   ]

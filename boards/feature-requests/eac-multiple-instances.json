@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6303fd53d77db777e4a91fd8",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-06-16T11:53:13.287669Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6303fcd0ce7c7644d10d0781",
     "alias": "Protective Warbler",
@@ -11,7 +17,7 @@
     "created": "2022-08-22T22:01:52.229Z",
     "name": "DiscoBVRD",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6303fcd0ce7c7644d10d0781",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2020-06-27T09:07:29.774Z",
         "name": "Gureumi",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +85,7 @@
   "files": [],
   "ideaID": "680bb924e4c3e90df1369f62",
   "imageURLs": [],
-  "lastUpdated": 1781303637763,
+  "lastUpdated": 1781610499643,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -94,7 +100,7 @@
   "subCategoryID": null,
   "title": "EAC Multiple Instances",
   "trendingScore": 2747.395930931387,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "eac-multiple-instances",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +119,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "DiscoBVRD",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6303fd53d77db777e4a91ff7"
     }
   ]

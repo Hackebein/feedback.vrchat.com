@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6317e5c26522ae44d502012a",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.website",
+    "loc.in-world",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-06-16T11:54:30.461304Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c87baa8e6d1a57be67871ec",
     "alias": "Thoughtful Hoverfly",
@@ -11,7 +17,7 @@
     "created": "2019-03-12T13:56:56.814Z",
     "name": "MrDummy_NL",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c87baa8e6d1a57be67871ec",
   "board": {
@@ -37,32 +43,43 @@
   "files": [],
   "ideaID": "680bb92be4c3e90df136b17c",
   "imageURLs": [],
-  "lastUpdated": 1781303642375,
+  "lastUpdated": 1781610505367,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 5,
+  "maxScore": 6,
   "mergeCount": 0,
   "notFound": false,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 5,
+  "score": 6,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2022-09-07T00:28:50.166Z",
   "subCategoryID": null,
   "title": "Friend Request system rework needed (security).",
-  "trendingScore": 2751.8900931440307,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "trendingScore": 2945.562250221561,
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "friend-request-system-rework-needed-security",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
-    "highEngagement": false,
+    "highEngagement": true,
     "lowEngagement": false,
-    "moderateEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f300c1b489155684c047f98",
+      "alias": "Outer Zebra",
+      "aliasID": "660d0920e5d26962aa50041e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4be5cbea1e636daa97634b0fe41888a9.png",
+      "companies": [],
+      "name": "Crow_Se7en",
+      "urlName": null,
+      "voteID": "6a2f2ad0363a2f2451c17508"
+    },
     {
       "_id": "605aa1c5ed4c41334d7b8299",
       "alias": "Silky Boa",
@@ -71,7 +88,7 @@
       "avatarURL": "https://canny-assets.io/images/e7a34c9152bc6ed7b1e39c76299858bd.png",
       "companies": [],
       "name": "Ｍａｇｍａａ火",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6330c0be67215e44bdc28bb0"
     },
     {
@@ -82,7 +99,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Squirreltastic",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631af4e00366ab44a37728c0"
     },
     {
@@ -93,7 +110,7 @@
       "avatarURL": "https://canny.io/images/bf8db133a24ed9de4a63fd7fab3fdbd3.png",
       "companies": [],
       "name": "Muunnie",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631a383942bdd344b4a4efb6"
     },
     {
@@ -104,7 +121,7 @@
       "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
       "companies": [],
       "name": "ni1chigo2115",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6319e0653b4c7d44c1b477f7"
     },
     {
@@ -115,7 +132,7 @@
       "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
       "companies": [],
       "name": "MrDummy_NL",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6317e5c26522ae44d5020149"
     }
   ]

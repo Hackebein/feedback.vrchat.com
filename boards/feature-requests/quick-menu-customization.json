@@ -1,6 +1,11 @@
 {
   "_id": "69f2b296efb1f36de81aed5f",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.quick-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T11:49:15.836908Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62781fe82a98465292dc55b7",
     "alias": "Verdigris green Bobcat",
@@ -10,7 +15,7 @@
     "created": "2022-05-08T19:54:16.796Z",
     "name": "Vivi Fae",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62781fe82a98465292dc55b7",
   "board": {
@@ -37,34 +42,45 @@
   "files": [],
   "ideaID": "69f2b296efb1f36de81aed74",
   "imageURLs": [],
-  "lastUpdated": 1781300135828,
+  "lastUpdated": 1781610269101,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-04-30T01:38:30.325Z",
   "subCategoryID": null,
   "title": "Quick Menu Customization",
-  "trendingScore": 2939.702919960818,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "trendingScore": 2945.7823120641515,
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "updatedBy": null,
   "urlName": "quick-menu-customization",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6256da0e86e19b68570ef763",
+      "alias": "Green Quail",
+      "aliasID": "65de339436dd86f1c4c69f22",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0fc2b38d97d472877318b6cc27251dac.png",
+      "companies": [],
+      "name": "LupusCarnifex",
+      "urlName": null,
+      "voteID": "6a312d4c363a2f2451cd38d8"
+    },
     {
       "_id": "62781fe82a98465292dc55b7",
       "alias": "Verdigris green Bobcat",
@@ -73,7 +89,7 @@
       "avatarURL": "https://canny-assets.io/images/784fa6552372eb6b54c2b866847a161b.png",
       "companies": [],
       "name": "Vivi Fae",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69f2b2964a48bed189dde694"
     }
   ]

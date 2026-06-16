@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e77eff06eb0a44b05a09d0",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.osc"
+  ],
+  "aiTaggedAt": "2026-06-16T11:49:28.080035Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa4f2e66bb57411ab916067",
     "alias": "Just Locust",
@@ -11,7 +16,7 @@
     "created": "2020-11-06T06:53:26.087Z",
     "name": "-ShyShy-",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5fa4f2e66bb57411ab916067",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb914e4c3e90df1366cc0",
   "imageURLs": [],
-  "lastUpdated": 1781300131786,
+  "lastUpdated": 1781610384711,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "OSC update rate",
   "trendingScore": 2785.5424517642195,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "osc-update-rate",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/92b10469cc106866449f6461a74e7de1.png",
       "companies": [],
       "name": "Avislime",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "646a6c0a2815dc08fd7b27db"
     },
     {
@@ -82,7 +87,7 @@
       "avatarURL": "https://canny.io/images/cd1f91bcafa648c66c29843146d4ec96.png",
       "companies": [],
       "name": "妖精の姿煮",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ee4afd0887b344bec84f18"
     },
     {
@@ -93,7 +98,7 @@
       "avatarURL": "https://canny.io/images/26742b6f79327b6a99d1b58c9fc026e5.png",
       "companies": [],
       "name": "-ShyShy-",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e77eff06eb0a44b05a09ef"
     }
   ]

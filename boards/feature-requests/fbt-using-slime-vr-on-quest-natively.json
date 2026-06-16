@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "62f4a96918f4de5d38a2f3bb",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-06-16T11:54:15.039492Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62f4a82cda857b5d13a10f56",
     "alias": "Distinguished Meerkat",
@@ -11,7 +17,7 @@
     "created": "2022-08-11T06:56:44.184Z",
     "name": "Gmi40",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62f4a82cda857b5d13a10f56",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb91de4c3e90df1368651",
   "imageURLs": [],
-  "lastUpdated": 1781303639404,
+  "lastUpdated": 1781610501871,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "FBT using Slime VR on Quest natively",
   "trendingScore": 2745.735015185686,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "fbt-using-slime-vr-on-quest-natively",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Gmi40",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f4a96918f4de5d38a2f3ef"
     }
   ]

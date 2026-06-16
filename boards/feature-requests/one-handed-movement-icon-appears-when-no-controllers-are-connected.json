@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62f378614f499b44a889b7a0",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.hud",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T11:56:57.865370Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df092c5968ab44bc91eed9",
     "alias": "Useful Swan",
@@ -11,7 +16,7 @@
     "created": "2022-07-25T21:20:44.823Z",
     "name": "Blithe Alchemy",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62df092c5968ab44bc91eed9",
   "board": {
@@ -39,7 +44,7 @@
   "imageURLs": [
     "https://canny.io/images/47ef65a0f78fb84f082292de9131061e.jpg"
   ],
-  "lastUpdated": 1781303651799,
+  "lastUpdated": 1781610516684,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -54,7 +59,7 @@
   "subCategoryID": null,
   "title": "One handed movement icon appears when no controllers are connected.",
   "trendingScore": 2745.6059005924317,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "one-handed-movement-icon-appears-when-no-controllers-are-connected",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -73,7 +78,7 @@
       "avatarURL": "https://canny-assets.io/images/b888d2002b0b880d3d1b17d9b3faad81.png",
       "companies": [],
       "name": "Blithe Alchemy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f378614f499b44a889b7bf"
     }
   ]

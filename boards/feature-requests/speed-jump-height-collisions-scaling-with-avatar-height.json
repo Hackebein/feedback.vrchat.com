@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e25f5c6f379244b0224b14",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T11:52:02.595400Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62defe7627f09644b5a25db0",
     "alias": "Linen Condor",
@@ -11,7 +16,7 @@
     "created": "2022-07-25T20:35:02.231Z",
     "name": "Tiny Plume",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62defe7627f09644b5a25db0",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb90fe4c3e90df13653ea",
   "imageURLs": [],
-  "lastUpdated": 1781300140497,
+  "lastUpdated": 1781610426798,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Speed, Jump Height, Collisions scaling with avatar Height",
   "trendingScore": 2911.920988396164,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "speed-jump-height-collisions-scaling-with-avatar-height",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/20cefe52c911ef320d1b9b96459f44f5.png",
       "companies": [],
       "name": "KutayX7",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68f8b5551f833c417cd71055"
     },
     {
@@ -82,7 +87,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Tiny Plume",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e25f5c6f379244b0224b34"
     }
   ]

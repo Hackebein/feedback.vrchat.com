@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "62ff43ee4b6faa44aa89d605",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T11:55:35.630460Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2ccdefc1c881463f11c7af",
     "alias": "Reluctant Impala",
@@ -11,7 +17,7 @@
     "created": "2020-08-07T03:43:43.763Z",
     "name": "Constapatience",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f2ccdefc1c881463f11c7af",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2020-08-07T03:43:43.763Z",
         "name": "Constapatience",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +85,7 @@
   "files": [],
   "ideaID": "680bb923e4c3e90df136990b",
   "imageURLs": [],
-  "lastUpdated": 1781303646293,
+  "lastUpdated": 1781610510225,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -94,7 +100,7 @@
   "subCategoryID": null,
   "title": "Invert mouse look should also Invert Fly Camera",
   "trendingScore": 2753.871873598137,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "updatedBy": null,
   "urlName": "invert-mouse-look-should-also-invert-fly-camera",
   "viewerIsAuthor": false,
@@ -114,7 +120,7 @@
       "avatarURL": "https://canny-assets.io/images/d9b91d486aa11c2da89bf6ca78c0a085.png",
       "companies": [],
       "name": "Ximmer",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "634620b8bbd1642a9ad2fa15"
     },
     {
@@ -125,7 +131,7 @@
       "avatarURL": "https://canny-assets.io/images/44a8d4fa3e15d9560582c5d3a38e6137.png",
       "companies": [],
       "name": "StephenVR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ffdbee545eef44b84d32d8"
     },
     {
@@ -136,7 +142,7 @@
       "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
       "companies": [],
       "name": "DrBlackRat",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ff95763aafaa44b1050f7d"
     },
     {
@@ -147,7 +153,7 @@
       "avatarURL": "https://canny-assets.io/images/a352a96a36a95a03858eb83d5af66709.png",
       "companies": [],
       "name": "Undertrash",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ff60d889f3d244c8afd105"
     },
     {
@@ -158,7 +164,7 @@
       "avatarURL": "https://canny-assets.io/images/d91876ec010c806a75c9048197fe263e.png",
       "companies": [],
       "name": "Constapatience",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ff43ee4b6faa44aa89d640"
     }
   ]

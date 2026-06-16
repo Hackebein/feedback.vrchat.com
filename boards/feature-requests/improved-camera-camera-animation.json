@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62fc615032e61844b6fd04e4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T11:55:32.910919Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f7fee2fa2bb4c7165fa6e08",
     "alias": "Lagoon Chimpanzee",
@@ -11,7 +16,7 @@
     "created": "2020-10-09T04:59:27.166Z",
     "name": "Axphy",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f7fee2fa2bb4c7165fa6e08",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb923e4c3e90df136987b",
   "imageURLs": [],
-  "lastUpdated": 1781303645477,
+  "lastUpdated": 1781610509286,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Improved Camera - camera animation",
   "trendingScore": 2767.0549731080832,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "improved-camera-camera-animation",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "greybell",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63bfcf5fb135a44f7a1c6497"
     },
     {
@@ -82,7 +87,7 @@
       "avatarURL": "https://canny.io/images/11c1582d0d7052426409e1142cfb913b.png",
       "companies": [],
       "name": "Axphy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fc615132e61844b6fd053b"
     }
   ]

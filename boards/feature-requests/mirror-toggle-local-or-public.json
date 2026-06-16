@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62f24435ee1b5d44b8223f77",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence"
+  ],
+  "aiTaggedAt": "2026-06-16T11:55:46.996635Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62f1f438feed4144a8d1c249",
     "alias": "Integrated Perch",
@@ -11,7 +16,7 @@
     "created": "2022-08-09T05:44:24.575Z",
     "name": "Flaminglynx",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62f1f438feed4144a8d1c249",
   "board": {
@@ -38,7 +43,7 @@
         "created": "2022-04-22T21:33:09.785Z",
         "name": "BigSoulja",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +84,7 @@
   "files": [],
   "ideaID": "680bb91be4c3e90df1367fed",
   "imageURLs": [],
-  "lastUpdated": 1781303649093,
+  "lastUpdated": 1781610513452,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -94,7 +99,7 @@
   "subCategoryID": null,
   "title": "Mirror toggle local or public",
   "trendingScore": 2745.4754587199122,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "mirror-toggle-local-or-public",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +118,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Flaminglynx",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f24436ee1b5d44b8223f96"
     }
   ]

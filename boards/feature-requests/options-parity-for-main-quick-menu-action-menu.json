@@ -1,7 +1,14 @@
 {
   "__v": 0,
   "_id": "62f43f681cb7f8140632a4d6",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.main-menu",
+    "loc.quick-menu",
+    "loc.action-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T11:57:01.318143Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62393928546a41082c280c5b",
     "alias": "Dual Emu",
@@ -11,7 +18,7 @@
     "created": "2022-03-22T02:49:12.166Z",
     "name": "FriendlyGaymer",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62393928546a41082c280c5b",
   "board": {
@@ -37,7 +44,7 @@
   "files": [],
   "ideaID": "680bb91de4c3e90df1368609",
   "imageURLs": [],
-  "lastUpdated": 1781303652338,
+  "lastUpdated": 1781610517553,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +59,7 @@
   "subCategoryID": null,
   "title": "Options Parity for Main & Quick Menu (+Action Menu)",
   "trendingScore": 2746.134898815496,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "options-parity-for-main-quick-menu-action-menu",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +78,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Pentatron",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f54b96d3fba644b7048679"
     },
     {
@@ -82,7 +89,7 @@
       "avatarURL": "https://canny-assets.io/images/ffe3c6e4942cff51a135ff6fcb71babe.png",
       "companies": [],
       "name": "FriendlyGaymer",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f43f691cb7f8140632a4f5"
     }
   ]

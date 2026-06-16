@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62ffa5b5da1de744b4b883ad",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T11:52:25.117431Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fca5df4d58780532024a52b",
     "alias": "Toffee Tortoise",
@@ -11,7 +16,7 @@
     "created": "2020-12-04T16:04:04.984Z",
     "name": "DrBlackRat",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5fca5df4d58780532024a52b",
   "board": {
@@ -38,7 +43,7 @@
         "created": "2020-12-04T16:04:04.984Z",
         "name": "DrBlackRat",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -85,7 +90,7 @@
     "https://canny.io/images/aa00651e70d1b2df344ddc386c990f79.png",
     "https://canny.io/images/1b0ca89d9a10920478a38648fa10b35d.png"
   ],
-  "lastUpdated": 1781303633845,
+  "lastUpdated": 1781610493644,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -100,7 +105,7 @@
   "subCategoryID": null,
   "title": "[Bug] Personal Mirror has issues with fog?",
   "trendingScore": 2842.148117175926,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "updatedBy": null,
   "urlName": "bug-personal-mirror-has-issues-with-fog",
   "viewerIsAuthor": false,
@@ -120,7 +125,7 @@
       "avatarURL": "https://canny-assets.io/images/03f13d15f5688b798a159da923b81e6c.png",
       "companies": [],
       "name": "Lyzak",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6674ceedd5dd336a20fc3f54"
     },
     {
@@ -131,7 +136,7 @@
       "avatarURL": "https://canny-assets.io/images/44a8d4fa3e15d9560582c5d3a38e6137.png",
       "companies": [],
       "name": "StephenVR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ffdbea545eef44b84d2f39"
     },
     {
@@ -142,7 +147,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ffa5e214693844aa86c49d"
     },
     {
@@ -153,7 +158,7 @@
       "avatarURL": "https://canny-assets.io/images/c593743545cb83b649df8bda2339dbeb.png",
       "companies": [],
       "name": "DrBlackRat",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62ffa5b5da1de744b4b883cf"
     }
   ]

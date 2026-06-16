@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62f675da4ae19144ae973504",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T11:52:23.007160Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "602fd4baed8b85581ed7c066",
     "alias": "Opera mauve Kingfisher",
@@ -11,7 +16,7 @@
     "created": "2021-02-19T15:09:46.300Z",
     "name": "yuukixx",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "602fd4baed8b85581ed7c066",
   "board": {
@@ -39,7 +44,7 @@
         "created": "2022-04-22T11:32:14.047Z",
         "name": "azuma14",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -81,7 +86,7 @@
         "created": "2025-08-31T14:17:08.892Z",
         "name": "Centum_C",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -125,7 +130,7 @@
         "created": "2025-12-12T18:23:53.579Z",
         "name": "Kitto Dev",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -169,7 +174,7 @@
   "files": [],
   "ideaID": "680bb91ee4c3e90df1368b83",
   "imageURLs": [],
-  "lastUpdated": 1781303633822,
+  "lastUpdated": 1781610493577,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 33,
@@ -185,7 +190,7 @@
   "subCategoryID": null,
   "title": "\"Burst mode\" feature to camera",
   "trendingScore": 2936.599211998032,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "burst-mode-feature-to-camera",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -204,7 +209,7 @@
       "avatarURL": "https://canny-assets.io/images/3dfaf29e7139f1804c1b9b9bc76ef774.png",
       "companies": [],
       "name": "Inaar",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69dbe4b235a0fd856487a9fb"
     },
     {
@@ -215,7 +220,7 @@
       "avatarURL": "https://canny-assets.io/images/3f98c92174fcf94ea44d15f877f9289b.png",
       "companies": [],
       "name": "yoko-chance",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69bb55dded082c9981f7be90"
     },
     {
@@ -226,7 +231,7 @@
       "avatarURL": "https://canny-assets.io/images/36649bddded0e80a6f0b6721972b4ddf.png",
       "companies": [],
       "name": "Exhibits",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69b6deb4ed082c998165b69a"
     },
     {
@@ -237,7 +242,7 @@
       "avatarURL": "https://canny-assets.io/images/7b4c338647638ff424edda584480c016.png",
       "companies": [],
       "name": "Kitto Dev",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69ab6c7f95d05cb740b868cc"
     },
     {
@@ -248,7 +253,7 @@
       "avatarURL": "https://canny-assets.io/images/d8340524f0e3237f399a963321554f1e.png",
       "companies": [],
       "name": "°Pancake",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69aa75c4804d20e970e9e29f"
     },
     {
@@ -259,7 +264,7 @@
       "avatarURL": "https://canny-assets.io/images/3b038bd85cfd8ebf9304443fdd01f742.png",
       "companies": [],
       "name": "PeeshiBean",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69a48535804d20e9707fcabc"
     },
     {
@@ -270,7 +275,7 @@
       "avatarURL": "https://canny-assets.io/images/a3749207ffc544572c476be8d91d2f3a.png",
       "companies": [],
       "name": "Chantaro",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69a48320804d20e970157083"
     },
     {
@@ -281,7 +286,7 @@
       "avatarURL": "https://canny-assets.io/images/32ba177505f1d979d18e8623014e798b.png",
       "companies": [],
       "name": "Centum_C",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68b4596ace2ca2b520c8bc13"
     },
     {
@@ -292,7 +297,7 @@
       "avatarURL": "https://canny-assets.io/images/28f3663eae36e48122d3d1a2ac4d7be2.png",
       "companies": [],
       "name": "Devious-",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66c57d853e088c8d6bf04605"
     },
     {
@@ -303,7 +308,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Chibisan",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66ab77e9318f0a3252d2e466"
     }
   ]

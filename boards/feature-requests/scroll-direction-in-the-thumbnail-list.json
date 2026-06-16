@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "62e73549267bf044ad559921",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.main-menu",
+    "client.controls",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T11:50:56.869257Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "610cccebca912c27c4e544bb",
     "alias": "Typical Sailfish",
@@ -11,7 +17,7 @@
     "created": "2021-08-06T05:47:23.643Z",
     "name": "そらみみ",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "610cccebca912c27c4e544bb",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb914e4c3e90df1366cb8",
   "imageURLs": [],
-  "lastUpdated": 1781300138493,
+  "lastUpdated": 1781610393728,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +58,7 @@
   "subCategoryID": null,
   "title": "Scroll direction in the thumbnail list",
   "trendingScore": 2748.7476447821628,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "scroll-direction-in-the-thumbnail-list",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +77,7 @@
       "avatarURL": "https://canny-assets.io/images/191433fda8e993da6a48d8f50360fef2.png",
       "companies": [],
       "name": "Sayamame",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6316c11f97f47144bc68c39a"
     },
     {
@@ -82,7 +88,7 @@
       "avatarURL": "https://canny-assets.io/images/23ad0379e47b0398c7bf6eadb1e846e2.png",
       "companies": [],
       "name": "そらみみ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e73549267bf044ad559940"
     }
   ]

@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62f7f0c84b46a659b5c21f78",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-06-16T11:53:12.191857Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fee2a5e4749b21a206646a9",
     "alias": "Main Dragonfly",
@@ -11,7 +16,7 @@
     "created": "2020-12-31T19:45:34.194Z",
     "name": "pema99",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5fee2a5e4749b21a206646a9",
   "board": {
@@ -38,7 +43,7 @@
         "created": "2020-04-28T01:04:27.016Z",
         "name": "llealloo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -81,7 +86,7 @@
         "created": "2018-04-24T18:49:57.778Z",
         "name": "Synergiance",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -124,7 +129,7 @@
         "created": "2017-12-22T01:28:00.657Z",
         "name": "Xiexe",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -167,7 +172,7 @@
         "created": "2018-04-24T18:49:57.778Z",
         "name": "Synergiance",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -208,7 +213,7 @@
         "created": "2020-12-31T19:45:34.194Z",
         "name": "pema99",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -232,7 +237,7 @@
           "created": "2017-12-22T01:28:00.657Z",
           "name": "Xiexe",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -261,7 +266,7 @@
         "created": "2017-12-22T01:28:00.657Z",
         "name": "Xiexe",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -285,7 +290,7 @@
           "created": "2020-12-31T19:45:34.194Z",
           "name": "pema99",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -314,7 +319,7 @@
         "created": "2020-12-31T19:45:34.194Z",
         "name": "pema99",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -338,7 +343,7 @@
           "created": "2017-12-22T01:28:00.657Z",
           "name": "Xiexe",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -369,7 +374,7 @@
         "created": "2020-04-28T01:04:27.016Z",
         "name": "llealloo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -410,7 +415,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -454,7 +459,7 @@
         "created": "2020-04-28T01:04:27.016Z",
         "name": "llealloo",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -497,7 +502,7 @@
         "created": "2022-05-13T17:27:02.127Z",
         "name": "Scout - VRChat Head of Quality Assurance",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -539,7 +544,7 @@
   "files": [],
   "ideaID": "680bb91ee4c3e90df1368ca9",
   "imageURLs": [],
-  "lastUpdated": 1781303637345,
+  "lastUpdated": 1781610498889,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 30,
@@ -558,7 +563,7 @@
       "created": "2019-12-05T17:37:30.047Z",
       "name": "Momo the Monster",
       "serviceAccount": false,
-      "urlName": "<redacted>"
+      "urlName": null
     },
     "authorID": null,
     "boardID": "58c62efae9868f3662e9d9a1",
@@ -595,7 +600,7 @@
   "subCategoryID": null,
   "title": "Don't force _Udon prefix for textures set with VRCShader.SetGlobalTexture",
   "trendingScore": 2812.2822406941154,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "dont-force-udon-prefix-for-textures-set-with-vrcshadersetglobaltexture",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -614,7 +619,7 @@
       "avatarURL": "https://canny-assets.io/images/89711696e2b573a62aea01cebfa51e8a.png",
       "companies": [],
       "name": "Smash-ter",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655ebd03994fe3b0c070e8b6"
     },
     {
@@ -625,7 +630,7 @@
       "avatarURL": "https://canny-assets.io/images/8bcd965c04b5c07e6525087c856d1ca4.png",
       "companies": [],
       "name": "Billard",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6553c2dbcebec437166291a1"
     },
     {
@@ -636,7 +641,7 @@
       "avatarURL": "https://canny-assets.io/images/eb16f5692edaec39c3c011d48826865b.png",
       "companies": [],
       "name": "CyanoTex",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "647b90920ec2130920fa1532"
     },
     {
@@ -647,7 +652,7 @@
       "avatarURL": "https://canny-assets.io/images/0f5320f95d429f781a82ef11d3e74878.png",
       "companies": [],
       "name": "Teeh",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6453c1ff2fc4e2097d958c8e"
     },
     {
@@ -658,7 +663,7 @@
       "avatarURL": "https://canny-assets.io/images/c97b0f6b7e79676a7a97d6f82214c84a.png",
       "companies": [],
       "name": "dmx512",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63652f78bb8b5c6c7e23c147"
     },
     {
@@ -669,7 +674,7 @@
       "avatarURL": "https://canny-assets.io/images/6d83eb6cc90353f3ef31da7d23565fcb.png",
       "companies": [],
       "name": "Scarlett Puppy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "63083c2850d0fb624dbaa380"
     },
     {
@@ -680,7 +685,7 @@
       "avatarURL": "https://canny-assets.io/images/67c3740a7f1749a0d61b551aff9f094f.png",
       "companies": [],
       "name": "4Bakers",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fdeb52a9b61a44b2f9863a"
     },
     {
@@ -691,7 +696,7 @@
       "avatarURL": "https://canny-assets.io/images/28f00fa0da91790b2a07b6a310fedc98.png",
       "companies": [],
       "name": "Waai!",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fd1a13aa196144ac7d7711"
     },
     {
@@ -702,7 +707,7 @@
       "avatarURL": "https://canny-assets.io/images/e5f3d8fcaabe4863decc8c213d40ecb8.png",
       "companies": [],
       "name": "FoxSerito",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fce7e1ddf63644a90ae50b"
     },
     {
@@ -713,7 +718,7 @@
       "avatarURL": "https://canny-assets.io/images/5e0490710a3613ca27bb6f2d49bbfef6.png",
       "companies": [],
       "name": "Fooma",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62fcd1714373cd449d5ebca3"
     }
   ]

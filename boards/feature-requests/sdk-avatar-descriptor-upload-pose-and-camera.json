@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e82abaeb9a3044b8524545",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-06-16T11:50:58.354576Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ae243864dc68c67fe796424",
     "alias": "Fern Fish",
@@ -11,7 +16,7 @@
     "created": "2018-04-26T21:24:22.393Z",
     "name": "MissStabby",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5ae243864dc68c67fe796424",
   "board": {
@@ -38,7 +43,7 @@
         "created": "2018-04-26T21:24:22.393Z",
         "name": "MissStabby",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +84,7 @@
   "files": [],
   "ideaID": "680bb914e4c3e90df1366ce6",
   "imageURLs": [],
-  "lastUpdated": 1781300138610,
+  "lastUpdated": 1781610393907,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -94,7 +99,7 @@
   "subCategoryID": null,
   "title": "SDK: Avatar Descriptor Upload Pose and Camera",
   "trendingScore": 2744.381073840613,
-  "updatedAt": "2026-06-12T21:36:12.238792Z",
+  "updatedAt": "2026-06-16T11:49:11.096797Z",
   "urlName": "sdk-avatar-descriptor-upload-pose-and-camera",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +118,7 @@
       "avatarURL": "https://canny-assets.io/images/6786294103b8368e4b4f3fec03105181.png",
       "companies": [],
       "name": "MissStabby",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e82abaeb9a3044b852456a"
     }
   ]
