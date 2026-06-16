@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "632726f6fca43444a0826f64",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T13:43:59.139618Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62fc62302714df44abc0d48b",
     "alias": "Steady Hummingbird",
@@ -11,7 +17,7 @@
     "created": "2022-08-17T03:36:16.914Z",
     "name": "悪魔 Abaddon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62fc62302714df44abc0d48b",
   "board": {
@@ -39,7 +45,7 @@
         "created": "2021-11-13T11:51:40.718Z",
         "name": "Chirping_Cat",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -83,7 +89,7 @@
         "created": "2022-03-06T22:44:22.477Z",
         "name": "Nori Yote",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -127,7 +133,7 @@
         "created": "2018-03-07T13:31:04.903Z",
         "name": "kawashirov",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -169,7 +175,7 @@
         "created": "2018-03-07T13:31:04.903Z",
         "name": "kawashirov",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -213,7 +219,7 @@
         "created": "2024-03-28T17:38:24.443Z",
         "name": "explodes",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -258,7 +264,7 @@
         "created": "2021-12-06T07:51:04.670Z",
         "name": "Hintswen",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -301,7 +307,7 @@
         "created": "2022-11-07T14:13:43.431Z",
         "name": "Fax",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "boardID": "58c62efae9868f3662e9d9a1",
       "companyID": "58c62e995865713647a7115d",
@@ -334,7 +340,7 @@
         "created": "2022-11-11T18:37:35.900Z",
         "name": "ENA?",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -379,7 +385,7 @@
         "created": "2018-04-17T05:10:31.522Z",
         "name": "- siri -",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -424,7 +430,7 @@
         "created": "2022-04-28T05:55:30.926Z",
         "name": "LED Lamp",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -469,7 +475,7 @@
         "created": "2022-04-28T05:55:30.926Z",
         "name": "LED Lamp",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -493,7 +499,7 @@
           "created": "2018-04-17T05:10:31.522Z",
           "name": "- siri -",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -526,7 +532,7 @@
         "created": "2022-04-28T05:55:30.926Z",
         "name": "LED Lamp",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -550,7 +556,7 @@
           "created": "2024-03-28T17:38:24.443Z",
           "name": "explodes",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -583,7 +589,7 @@
         "created": "2018-04-17T05:10:31.522Z",
         "name": "- siri -",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -607,7 +613,7 @@
           "created": "2022-04-28T05:55:30.926Z",
           "name": "LED Lamp",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -638,7 +644,7 @@
         "created": "2022-06-24T20:33:18.686Z",
         "name": "_tau_",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -685,7 +691,7 @@
   "files": [],
   "ideaID": "680bb939e4c3e90df136ea0d",
   "imageURLs": [],
-  "lastUpdated": 1781307195174,
+  "lastUpdated": 1781617059235,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 322,
@@ -701,7 +707,7 @@
   "subCategoryID": null,
   "title": "Make Chatboxes Default Everyone because...",
   "trendingScore": 2898.129062278973,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "make-chatboxes-default-everyone-because",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -720,7 +726,7 @@
       "avatarURL": "https://canny-assets.io/images/87cd6af859af72cd3c14ee6a45522169.png",
       "companies": [],
       "name": "elysiaxuntar",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67e971a55388f556db49ff6c"
     },
     {
@@ -731,7 +737,7 @@
       "avatarURL": "https://canny-assets.io/images/3f98c92174fcf94ea44d15f877f9289b.png",
       "companies": [],
       "name": "yoko-chance",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "679703f5546b2d4224849007"
     },
     {
@@ -742,7 +748,7 @@
       "avatarURL": "https://canny-assets.io/images/5deea4015c47d220f55f19ccd15b7282.png",
       "companies": [],
       "name": "AChubbyWiggle",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6737282ec66e81bbd44a117b"
     },
     {
@@ -753,7 +759,7 @@
       "avatarURL": "https://canny-assets.io/images/1748c0be4b0c7d6e06093a9a01d49fa3.png",
       "companies": [],
       "name": "yսki",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66e529727d32abb6ca234fc8"
     },
     {
@@ -764,7 +770,7 @@
       "avatarURL": "https://canny-assets.io/images/8635f7872a8a697c6a82568bf99e2dd7.png",
       "companies": [],
       "name": "ぱすた。Pasta",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66d545b57d32abb6ca6af4f1"
     },
     {
@@ -775,7 +781,7 @@
       "avatarURL": "https://canny-assets.io/images/506fa0ecb53e789528b2ad4e9db5e5a2.png",
       "companies": [],
       "name": "unnamedau",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66c8d8b51f860fbed306550b"
     },
     {
@@ -786,7 +792,7 @@
       "avatarURL": "https://canny-assets.io/images/a5fd57b42c39c201e519bbbe39011355.png",
       "companies": [],
       "name": "たすとつちあ",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66bed0353e088c8d6bbc297b"
     },
     {
@@ -797,7 +803,7 @@
       "avatarURL": "https://canny-assets.io/images/852cc52cd14eac91b93d7f1730962498.png",
       "companies": [],
       "name": "Blackrobe",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66beb1a23e088c8d6b369126"
     },
     {
@@ -808,7 +814,7 @@
       "avatarURL": "https://canny-assets.io/images/26195c4afbcbb4a72d393746511db8b5.png",
       "companies": [],
       "name": "EldritchElias",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66bea4593e088c8d6b2c266e"
     },
     {
@@ -819,7 +825,7 @@
       "avatarURL": "https://canny-assets.io/images/a910649be1eb0dede1c840046ac4282f.png",
       "companies": [],
       "name": "Shaun",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66bbc69c3e088c8d6b98e435"
     }
   ]

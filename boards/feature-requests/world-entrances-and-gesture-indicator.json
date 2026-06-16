@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "62e408d443e7a544a8d86118",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.hud",
+    "client.third-person"
+  ],
+  "aiTaggedAt": "2026-06-16T13:41:11.667487Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df02ab82494544a253ab51",
     "alias": "Striking Camel",
@@ -11,7 +16,7 @@
     "created": "2022-07-25T20:52:59.297Z",
     "name": "ReignyLondon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62df02ab82494544a253ab51",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb910e4c3e90df1365a28",
   "imageURLs": [],
-  "lastUpdated": 1781303530024,
+  "lastUpdated": 1781616962347,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "World Entrances and Gesture Indicator",
   "trendingScore": 2744.35300877118,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "world-entrances-and-gesture-indicator",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/73f9dae283d22e3f56e94934b45af4eb.png",
       "companies": [],
       "name": "Seedsy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e46c77d95a1144af90aef3"
     },
     {
@@ -82,7 +87,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "ReignyLondon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e408d443e7a544a8d86149"
     }
   ]

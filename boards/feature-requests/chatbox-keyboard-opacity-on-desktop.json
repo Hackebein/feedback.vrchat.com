@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6324a7be2bc2fd44a24c2f4c",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-06-16T13:41:30.549350Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61ccf27b6b455b597066b23d",
     "alias": "Mobile Alligator",
@@ -11,7 +17,7 @@
     "created": "2021-12-29T23:42:51.688Z",
     "name": "Vinkkamph",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "61ccf27b6b455b597066b23d",
   "board": {
@@ -37,7 +43,7 @@
   "files": [],
   "ideaID": "680bb938e4c3e90df136e427",
   "imageURLs": [],
-  "lastUpdated": 1781307178063,
+  "lastUpdated": 1781617047241,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -53,7 +59,7 @@
   "subCategoryID": null,
   "title": "Chatbox Keyboard Opacity on Desktop.",
   "trendingScore": 2750.935578978675,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "chatbox-keyboard-opacity-on-desktop",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -72,7 +78,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Vinkkamph",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6324a7be2bc2fd44a24c2f6b"
     }
   ]

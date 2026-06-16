@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6312fbdf0a06144d64799559",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.layers"
+  ],
+  "aiTaggedAt": "2026-06-16T13:39:53.648869Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2cf422a2990547bfbfbf22",
     "alias": "Rosso corsa Elk",
@@ -11,7 +16,7 @@
     "created": "2020-08-07T06:26:42.101Z",
     "name": "Miss Widgey",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f2cf422a2990547bfbfbf22",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb927e4c3e90df136ab5d",
   "imageURLs": [],
-  "lastUpdated": 1781303661107,
+  "lastUpdated": 1781616952561,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Spawnable local lights.",
   "trendingScore": 2749.020713137901,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "spawnable-local-lights",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny-assets.io/images/2e7472e3798e9538db630858ce6af932.png",
       "companies": [],
       "name": "Miss Widgey",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6312fbdf0a06144d6479957a"
     }
   ]

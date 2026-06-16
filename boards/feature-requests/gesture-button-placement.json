@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "631e6ce8fd155144b6754c50",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.hud",
+    "loc.in-world",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-06-16T13:42:46.731703Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f9c7c26b9539445413970d1",
     "alias": "Bisque Cobra",
@@ -11,7 +17,7 @@
     "created": "2020-10-30T20:48:38.789Z",
     "name": "Midnight_NOW",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f9c7c26b9539445413970d1",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2021-09-16T03:40:01.951Z",
         "name": "Sayamame",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -81,7 +87,7 @@
   "imageURLs": [
     "https://canny.io/images/735488008111c7f4161160ffaa1fbff0.jpg"
   ],
-  "lastUpdated": 1781307188792,
+  "lastUpdated": 1781617054790,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -97,7 +103,7 @@
   "subCategoryID": null,
   "title": "gesture button placement",
   "trendingScore": 2750.9649741153903,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "updatedBy": null,
   "urlName": "gesture-button-placement",
   "viewerIsAuthor": false,
@@ -117,7 +123,7 @@
       "avatarURL": "https://canny-assets.io/images/86a9c444877c45f549a39832cd979ecb.png",
       "companies": [],
       "name": "Gargrimm",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631ea741fac7a444b84fbbea"
     },
     {
@@ -128,7 +134,7 @@
       "avatarURL": "https://canny-assets.io/images/27cc69f694cb656f75c0a081300a658d.png",
       "companies": [],
       "name": "14anthony7095",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631e9cd740fcb944b3604761"
     },
     {
@@ -139,7 +145,7 @@
       "avatarURL": "https://canny-assets.io/images/77dc3cbf7fc3cc257c57531c5e6797af.png",
       "companies": [],
       "name": "Midnight_NOW",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "631e6ce9fd155144b6754c7e"
     }
   ]

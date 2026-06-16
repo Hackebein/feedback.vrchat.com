@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "632f40b824056044af2d6f14",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T13:41:33.627645Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "614de83dce09e54afba9c570",
     "alias": "Monetary Kangaroo",
@@ -11,7 +16,7 @@
     "created": "2021-09-24T15:01:17.766Z",
     "name": "glitterberry22",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "614de83dce09e54afba9c570",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb93fe4c3e90df136f1d9",
   "imageURLs": [],
-  "lastUpdated": 1781307179771,
+  "lastUpdated": 1781617048343,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Cloud drive",
   "trendingScore": 2752.0839290100907,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "cloud-drive-1",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny.io/images/8cc7b98ae1c13b636d4345ea1ab67543.png",
       "companies": [],
       "name": "glitterberry22",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "632f40b824056044af2d6f34"
     }
   ]

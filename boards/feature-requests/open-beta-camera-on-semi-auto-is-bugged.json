@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "632b213c9363df44c41da8d4",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-16T13:45:11.994459Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6034398fed8b85581ef6991c",
     "alias": "Crimson Haddock",
@@ -11,7 +16,7 @@
     "created": "2021-02-22T23:09:03.357Z",
     "name": "view",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "6034398fed8b85581ef6991c",
   "board": {
@@ -37,7 +42,7 @@
   "files": [],
   "ideaID": "680bb93ee4c3e90df136effd",
   "imageURLs": [],
-  "lastUpdated": 1781307202856,
+  "lastUpdated": 1781617065001,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -52,7 +57,7 @@
   "subCategoryID": null,
   "title": "Open beta camera on Semi Auto is bugged",
   "trendingScore": 2751.637163330527,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "open-beta-camera-on-semi-auto-is-bugged",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -71,7 +76,7 @@
       "avatarURL": "https://canny.io/images/c7f75e5fe2cb8171a1c3e175aa33b04e.png",
       "companies": [],
       "name": "view",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "632b213d9363df44c41da8f4"
     }
   ]

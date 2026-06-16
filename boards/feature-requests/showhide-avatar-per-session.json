@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "6311ddf8e1feb7556e45166d",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.settings",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-06-16T13:39:50.686904Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fc9ff437c4e5f2b52150884",
     "alias": "Better Antlion",
@@ -11,7 +17,7 @@
     "created": "2020-12-04T09:20:03.078Z",
     "name": "LabeVR",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5fc9ff437c4e5f2b52150884",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2020-08-08T04:31:52.592Z",
         "name": "Observer․",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +85,7 @@
   "files": [],
   "ideaID": "680bb927e4c3e90df136ab45",
   "imageURLs": [],
-  "lastUpdated": 1781303660435,
+  "lastUpdated": 1781616951527,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -94,7 +100,7 @@
   "subCategoryID": null,
   "title": "Show/Hide Avatar per Session",
   "trendingScore": 2749.7355888859774,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "showhide-avatar-per-session",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +119,7 @@
       "avatarURL": "https://canny.io/images/a5571a7138137ce3eabd0f01bf6fc662.png",
       "companies": [],
       "name": "Cabs~",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6315c6af6777615ae9327365"
     },
     {
@@ -124,7 +130,7 @@
       "avatarURL": "https://canny-assets.io/images/6ce5ab5024a5b2f8e1cd94b960614641.png",
       "companies": [],
       "name": "Observer․",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6312a195e9584e44b2e7d43d"
     },
     {
@@ -135,7 +141,7 @@
       "avatarURL": "https://canny-assets.io/images/a5fba7d51907f230a760559939500116.png",
       "companies": [],
       "name": "LabeVR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6311ddf8e1feb7556e45168c"
     }
   ]

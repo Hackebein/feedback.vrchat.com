@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "6320f33ce4cbd844b3c77e88",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-06-16T13:42:45.080656Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62fc62302714df44abc0d48b",
     "alias": "Steady Hummingbird",
@@ -11,7 +16,7 @@
     "created": "2022-08-17T03:36:16.914Z",
     "name": "悪魔 Abaddon",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62fc62302714df44abc0d48b",
   "board": {
@@ -38,7 +43,7 @@
         "created": "2022-08-17T03:36:16.914Z",
         "name": "悪魔 Abaddon",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -79,7 +84,7 @@
   "files": [],
   "ideaID": "680bb938e4c3e90df136e3b8",
   "imageURLs": [],
-  "lastUpdated": 1781307188171,
+  "lastUpdated": 1781617054161,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -94,7 +99,7 @@
   "subCategoryID": null,
   "title": "Fixes to the Chatbox",
   "trendingScore": 2750.9418105267464,
-  "updatedAt": "2026-06-12T23:33:48.193373Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "fixes-to-the-chatbox",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -113,7 +118,7 @@
       "avatarURL": "https://canny-assets.io/images/790edd7ee9459d947f4c0bc1ff2a8907.png",
       "companies": [],
       "name": "Jasper Raine",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6321032814388c44bd444936"
     },
     {
@@ -124,7 +129,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "悪魔 Abaddon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6320f33ce4cbd844b3c77ea7"
     }
   ]

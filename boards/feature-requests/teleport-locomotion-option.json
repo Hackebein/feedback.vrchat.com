@@ -1,7 +1,13 @@
 {
   "__v": 0,
   "_id": "62f265988912fe44b7c18840",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.standalone-vr",
+    "loc.pc-client",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-06-16T13:40:01.998278Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5af5ba7f6c3fb30c33346267",
     "alias": "Loyal Condor",
@@ -11,7 +17,7 @@
     "created": "2018-05-11T15:45:03.583Z",
     "name": "AlphaSatanOmega",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5af5ba7f6c3fb30c33346267",
   "board": {
@@ -38,7 +44,7 @@
         "created": "2026-04-05T20:02:19.958Z",
         "name": "mr_matt",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -84,7 +90,7 @@
   "files": [],
   "ideaID": "680bb91be4c3e90df1367fe5",
   "imageURLs": [],
-  "lastUpdated": 1781303662438,
+  "lastUpdated": 1781616954882,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -99,7 +105,7 @@
   "subCategoryID": null,
   "title": "Teleport Locomotion Option",
   "trendingScore": 2935.5478549189816,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "teleport-locomotion-option",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -118,7 +124,7 @@
       "avatarURL": "https://canny-assets.io/images/0bca86e62f8c7a7d078602801bd47dac.png",
       "companies": [],
       "name": "mr_matt",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69d2bfcea4b6d376adf0a738"
     },
     {
@@ -129,7 +135,7 @@
       "avatarURL": "https://canny.io/images/bee7297b9eda4f54e336df4ae9efacb2.png",
       "companies": [],
       "name": "AlphaSatanOmega",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f265988912fe44b7c1885f"
     }
   ]

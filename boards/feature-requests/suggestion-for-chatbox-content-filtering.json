@@ -1,7 +1,12 @@
 {
   "__v": 0,
   "_id": "630c175abc36a544af2884e9",
-  "aiCategories": [],
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-06-16T13:39:56.845561Z",
+  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "630c1748c52d9044c1f38cf7",
     "alias": "Steep Squirrel",
@@ -11,7 +16,7 @@
     "created": "2022-08-29T01:32:56.025Z",
     "name": "wedgevic",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "630c1748c52d9044c1f38cf7",
   "board": {
@@ -38,7 +43,7 @@
         "created": "2021-10-12T01:52:40.613Z",
         "name": "el ff1493",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -81,7 +86,7 @@
   "files": [],
   "ideaID": "680bb925e4c3e90df136a57f",
   "imageURLs": [],
-  "lastUpdated": 1781303661623,
+  "lastUpdated": 1781616953583,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -96,7 +101,7 @@
   "subCategoryID": null,
   "title": "Suggestion for chatbox content filtering",
   "trendingScore": 2749.0328093129037,
-  "updatedAt": "2026-06-12T22:34:23.459688Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "urlName": "suggestion-for-chatbox-content-filtering",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -115,7 +120,7 @@
       "avatarURL": "https://canny-assets.io/images/79f20dc71f43cf03ac361cccaac8dade.png",
       "companies": [],
       "name": "Note24",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "630d7101fb66ad44b09b1016"
     },
     {
@@ -126,7 +131,7 @@
       "avatarURL": "https://canny-assets.io/images/bbf84365be0add12086580962e021956.png",
       "companies": [],
       "name": "el ff1493",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "630d17ca4f004d44a8e59b54"
     },
     {
@@ -137,7 +142,7 @@
       "avatarURL": "https://canny.io/images/f579fcee3ff63aac31d3b7375850e587.png",
       "companies": [],
       "name": "wedgevic",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "630c175abc36a544af288515"
     }
   ]

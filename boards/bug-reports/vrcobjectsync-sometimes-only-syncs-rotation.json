@@ -5,7 +5,7 @@
     "loc.in-world",
     "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-06-16T01:57:54.750915Z",
+  "aiTaggedAt": "2026-06-16T13:38:23.858307Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "632ad07ae29a9c44bc903920",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "comments": [
     {
       "__v": 0,
@@ -390,6 +390,62 @@
       "value": "@{63691297469f06772579fe6f|full_name} I can confirm that this issue still occurs on Beta Build 1862, with at least 3 players in an instance (in my experience, I can reliably reproduce this using 3 Build & Test clients). One player takes ownership of all 1200 VRCObjectSyncs through UdonSharp by interacting with the world's UI, then moves approximately 100 of them by picking them up using their respective VRCPickup components, then one of the other 2+ players rejoins to see most or all of them reporting \"No Samples\" in Debug Menu 8, a state I have yet to find any information about unfortunately. The VRCObjectSync components that report \"No Samples\" have their rotation correct, but not their position, as described in the original post. The rest are fine.\n\nAttached is a screenshot of the Debug Menu 8 stats of a pile of 15 bugged VRCObjectSync components from the perspective of the late joiner on Beta Build 1862 (as, again, all 3 clients were running the same Beta Build 1862). Each object in the pile is initially overlapping, and has its child objects (most of which either having a MeshRenderer, or TMP_Text component) initially disabled, until the player joins and Udon enables these child objects according to manually synced strings (each string pertaining to a given pile of VRCObjectSyncs, for a total of 16 synced strings).\n\nI don't believe the issue to just be related to any of the factors I've outlined, though. I've made a test world where I've recreated most of the relevant functionality present in the bugged world, and I haven't been able to reproduce it there. The only world I've been able to reliably reproduce this issue in is that one public world on my account with all the cards, so I'm inclined to believe it has something to do with how VRCObjectSync behaves when something specific happens, that only happens in that world. It doesn't seem to be related to string/image loading, any number of video players, MiniGreen's Coffee Set prefab, or significant amounts of Udon data serialized upon joining (that public world doesn't serialize nearly as much data as my test world, and doesn't have nearly as many VRCObjectSync objects as the test world has, yet the test world is perfectly fine). I could absolutely be missing something in my test world implementation, but regardless, hopefully at least some of that information proves helpful in fixing this issue.\n\nAlso, thank you so much for looking at this canny and attempting to fix VRCObjectSync!",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a31396b357e66c44ed64222",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63691297469f06772579fe6f",
+        "alias": "Sage Meadowlark",
+        "aliasID": "65c28116ed6eefce4c6d7d2d",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0958f7577d869b58b8a4407e6b9fddab.png",
+        "created": "2022-11-07T14:13:43.431Z",
+        "name": "Fax",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-16T11:54:19.735Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "632ad07ae29a9c44bc903920",
+          "alias": "Obedient Hare",
+          "aliasID": "65c2ff59ed6eefce4cabf780",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c69d598cec49e1c6a021f2080be3502b.png",
+          "created": "2022-09-21T08:51:06.528Z",
+          "name": "Piano Walrus",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a16d1984877961759072d07",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "685d9c4eb5eceade54c5e666",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{632ad07ae29a9c44bc903920|full_name}: Thank you for confirming that the issue is still present! We have not yet published a fix, but we expect it to be included in a future release.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -404,7 +460,7 @@
   "files": [],
   "ideaID": "685d9c4fb5eceade54c5e6a4",
   "imageURLs": [],
-  "lastUpdated": 1781610272407,
+  "lastUpdated": 1781616782239,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 21,
@@ -420,7 +476,7 @@
   "subCategoryID": null,
   "title": "VRCObjectSync Sometimes Only Syncs Rotation",
   "trendingScore": 2946.916728946513,
-  "updatedAt": "2026-06-16T11:49:11.096797Z",
+  "updatedAt": "2026-06-16T13:38:19.590766Z",
   "updatedBy": null,
   "urlName": "vrcobjectsync-sometimes-only-syncs-rotation",
   "viewerIsAuthor": false,
