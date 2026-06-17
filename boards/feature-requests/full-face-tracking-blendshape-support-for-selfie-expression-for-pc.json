@@ -1,12 +1,11 @@
 {
   "_id": "699f71a2484a1cf78366b347",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.expressions",
-    "avatars.tracking",
-    "platforms.pc.desktop"
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-06-13T20:31:50.362007Z",
+  "aiTaggedAt": "2026-06-17T22:46:08.063824Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62d9e1390acfc147b90e3dbb",
@@ -17,7 +16,7 @@
     "created": "2022-07-21T23:28:57.969Z",
     "name": "Rycia",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62d9e1390acfc147b90e3dbb",
   "board": {
@@ -30,8 +29,53 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a2e4b64ef5b018a0422631f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62527baf8c368f529a82aebd",
+        "alias": "Tangerine yellow Swift",
+        "aliasID": "65c27bd8ed6eefce4c9b54ea",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2f46b2b3b6e6a453422ea8a23a1f45ae.png",
+        "created": "2022-04-10T06:39:43.297Z",
+        "name": "cubee_cb",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-14T06:34:12.561Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "699f71a2484a1cf78366b347",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "since it wasn't directly specified here i'd add that Expression Mode probably should be a per-avatar setting, like legacy fingers (or perhaps an avatar setting set via SDK), as the \"best option\" will naturally differ due to both avatar support and users' preferences.\n\nUE also has Blended Shapes, which does complicate implementation a little bit.\n\nthese could be used for lower quality levels if available, though care should be taken to mix the appropriate shapes when both Base and Blended Shapes are used in the same avatar, and to avoid stacking them with other conflicting Shapes if present:\n\nhttps://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/unified-blendshapes#ue-blended-shapes",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-02-25T22:03:14.747Z",
   "deletedAt": null,
@@ -44,23 +88,23 @@
   "files": [],
   "ideaID": "699f71a3484a1cf78366b3ac",
   "imageURLs": [],
-  "lastUpdated": 1781382250811,
+  "lastUpdated": 1781736229037,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 3,
+  "maxScore": 5,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/699f71a2484a1cf78366b347/1584446534.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 3,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-02-25T22:03:14.747Z",
   "subCategoryID": null,
   "title": "Full Face Tracking blendshape support for Selfie Expression for PC",
-  "trendingScore": 2944.3442543231386,
-  "updatedAt": "2026-06-13T20:24:20.692161Z",
+  "trendingScore": 2946.3723743915148,
+  "updatedAt": "2026-06-17T22:46:03.035425Z",
   "updatedBy": "62d9e1390acfc147b90e3dbb",
   "urlName": "full-face-tracking-blendshape-support-for-selfie-expression-for-pc",
   "viewerIsAuthor": false,
@@ -73,6 +117,28 @@
   },
   "voters": [
     {
+      "_id": "691c965f14923d0794bf393e",
+      "alias": "Nougat Lion",
+      "aliasID": "691c969614923d0794d43089",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e16218336e7bd0594391dfae6c7b8bac.png",
+      "companies": [],
+      "name": "Yumemi makura",
+      "urlName": null,
+      "voteID": "6a2f9169363a2f2451c2a6f2"
+    },
+    {
+      "_id": "62527baf8c368f529a82aebd",
+      "alias": "Tangerine yellow Swift",
+      "aliasID": "65c27bd8ed6eefce4c9b54ea",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2f46b2b3b6e6a453422ea8a23a1f45ae.png",
+      "companies": [],
+      "name": "cubee_cb",
+      "urlName": null,
+      "voteID": "6a2e46c2363a2f2451bf0bbc"
+    },
+    {
       "_id": "64cd505242b27e0961e4fd35",
       "alias": "Kryptonite green Unicorn",
       "aliasID": "69feb568cf565b8f74ba4eab",
@@ -80,7 +146,7 @@
       "avatarURL": "https://canny-assets.io/images/6508b0c31d1f930ac6876582658299dd.png",
       "companies": [],
       "name": "OnirismCorp",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a23ed4b86d7b8843bd977f5"
     },
     {
@@ -91,7 +157,7 @@
       "avatarURL": "https://canny-assets.io/images/d614d546d323e928fa13217d30d10648.png",
       "companies": [],
       "name": "EmikoTheSkittle",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "699f8345804d20e970251555"
     },
     {
@@ -102,7 +168,7 @@
       "avatarURL": "https://canny-assets.io/images/4ac53677d8b54efc9fb149b1b5fa2b55.png",
       "companies": [],
       "name": "Rycia",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "699f71a3804d20e9705c9af1"
     }
   ]
