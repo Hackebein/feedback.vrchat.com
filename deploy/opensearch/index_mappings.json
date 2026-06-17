@@ -29,7 +29,7 @@
         "analyzer": "standard",
         "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
       },
-      "details": { "type": "text", "analyzer": "standard" },
+      "details": { "type": "text", "analyzer": "standard", "index_options": "offsets" },
       "urlName": { "type": "keyword", "ignore_above": 512 },
 
       "ideaID": { "type": "keyword" },
