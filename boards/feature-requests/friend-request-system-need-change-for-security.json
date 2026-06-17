@@ -18,7 +18,7 @@
     "created": "2019-03-12T13:56:56.814Z",
     "name": "MrDummy_NL",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5c87baa8e6d1a57be67871ec",
   "board": {
@@ -45,7 +45,7 @@
   "files": [],
   "ideaID": "680bb9a6e4c3e90df1382979",
   "imageURLs": [],
-  "lastUpdated": 1781350708599,
+  "lastUpdated": 1781656521500,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -53,25 +53,36 @@
   "notFound": false,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2023-09-24T23:45:15.243Z",
   "subCategoryID": null,
   "title": "Friend Request system need change for security.",
-  "trendingScore": 2804.773720688049,
-  "updatedAt": "2026-06-13T11:40:04.663392Z",
+  "trendingScore": 2945.562273907077,
+  "updatedAt": "2026-06-17T00:35:45.130932Z",
   "updatedBy": "5c87baa8e6d1a57be67871ec",
   "urlName": "friend-request-system-need-change-for-security",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f300c1b489155684c047f98",
+      "alias": "Outer Zebra",
+      "aliasID": "660d0920e5d26962aa50041e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4be5cbea1e636daa97634b0fe41888a9.png",
+      "companies": [],
+      "name": "Crow_Se7en",
+      "urlName": null,
+      "voteID": "6a2f2adf363a2f2451c17527"
+    },
     {
       "_id": "5c87baa8e6d1a57be67871ec",
       "alias": "Thoughtful Hoverfly",
@@ -80,7 +91,7 @@
       "avatarURL": "https://canny-assets.io/images/ad165b9ce910ca4873e52037984c945d.png",
       "companies": [],
       "name": "MrDummy_NL",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6510ca0b52b7310946be687c"
     }
   ]
