@@ -147,7 +147,6 @@ export function searchkitConfig(host: string, username: string, password: string
         "mergeCount",
         "trendingScore",
         "commentCount",
-        "combined_text",
         "viewerVote",
         "viewerIsAuthor",
         "loading",
@@ -179,7 +178,7 @@ export function searchkitConfig(host: string, username: string, password: string
         "aiTaggedAt",
       ],
       highlight_attributes: ["title", "details", "author.name"],
-      snippet_attributes: ["details:200", "combined_text:220"],
+      snippet_attributes: ["details:200"],
       facet_attributes: [
         {
           attribute: "board_slug",
