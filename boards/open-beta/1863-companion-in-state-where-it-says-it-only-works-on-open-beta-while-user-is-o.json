@@ -1,0 +1,95 @@
+{
+  "_id": "6a33ca73871fb67bec323a6b",
+  "aiCategories": [
+    "loc.in-world",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-18T11:36:07.718022Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df2c865968ab44bca883ce",
+    "alias": "Whisper pink Fish",
+    "aliasID": "65c2c0bced6eefce4c74c766",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/01261b7531e856423f5710d05f3d120a.png",
+    "created": "2022-07-25T23:51:34.230Z",
+    "name": "RuneFox237",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df2c865968ab44bca883ce",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1310,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-18T10:37:39.567Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I encountered a weird bug where the companion of another user was stuck in the state which makes it say that it only works on the Open Beta despite I and the other user both being on the Open Beta at the time. Their bugged cube was colored in the same color as my personal companion, but after putting their cube away and pulling it back out again it regained normal functionality and was colored their correct color.\n\nThese are the steps that I think likely resulted in the bug, but I did not have time to test this to confirm.\n\n1. Be in an instance w/ someone who has the companion out.\n\n2. Leave the instance to go to another instance\n\n3. Come back to the instance and see if the companion is bugged.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a33ca73871fb67bec323a6a",
+  "imageURLs": [
+    "https://canny-assets.io/images/5ba80ca3a1c50a3ffd4ed490313d855a.jpeg"
+  ],
+  "lastUpdated": 1781782187298,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-18T10:37:39.567Z",
+  "subCategoryID": null,
+  "title": "[1863] Companion in state where it says it only works on open beta while user is on the open beta.",
+  "trendingScore": 2946.7564069267573,
+  "updatedAt": "2026-06-18T11:36:02.749516Z",
+  "updatedBy": null,
+  "urlName": "1863-companion-in-state-where-it-says-it-only-works-on-open-beta-while-user-is-o",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df2c865968ab44bca883ce",
+      "alias": "Whisper pink Fish",
+      "aliasID": "65c2c0bced6eefce4c74c766",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/01261b7531e856423f5710d05f3d120a.png",
+      "companies": [],
+      "name": "RuneFox237",
+      "urlName": null,
+      "voteID": "6a33ca73363a2f2451031f0a"
+    }
+  ]
+}
