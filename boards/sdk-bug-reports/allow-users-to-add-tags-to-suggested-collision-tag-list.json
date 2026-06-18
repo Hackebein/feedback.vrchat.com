@@ -15,7 +15,7 @@
     "created": "2017-09-06T20:16:01.823Z",
     "name": "jetdog8808",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "59b05781f76da93741a4617e",
   "board": {
@@ -42,7 +42,7 @@
         "created": "2020-08-08T02:13:34.907Z",
         "name": "ZenithVal",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -64,7 +64,9 @@
       "postDeleted": false,
       "postID": "68cf4bcbc247c0375c480da3",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -86,7 +88,7 @@
         "created": "2017-03-13T16:41:51.683Z",
         "name": "owlboy",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -111,7 +113,7 @@
           "created": "2020-08-08T02:13:34.907Z",
           "name": "ZenithVal",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -142,7 +144,7 @@
         "created": "2024-03-15T20:37:55.984Z",
         "name": "Dexvoid",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "5d09629c3511d825c8e56214",
@@ -165,7 +167,7 @@
       "postID": "68cf4bcbc247c0375c480da3",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -190,23 +192,23 @@
   "files": [],
   "ideaID": "68cf4bcbc247c0375c480ddb",
   "imageURLs": [],
-  "lastUpdated": 1781545123620,
+  "lastUpdated": 1781788969819,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 42,
+  "maxScore": 43,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/68cf4bcbc247c0375c480da3/997756267.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 42,
+  "score": 43,
   "sourceFeatureExtractionItem": null,
   "status": "interested",
   "statusChanged": "2025-10-03T10:38:03.503Z",
   "subCategoryID": null,
   "title": "Allow users to add tags to suggested collision tag list.",
-  "trendingScore": 2945.712465329639,
-  "updatedAt": "2026-06-15T17:44:49.477302Z",
+  "trendingScore": 2946.6022077271077,
+  "updatedAt": "2026-06-18T13:28:41.646344Z",
   "updatedBy": "59b05781f76da93741a4617e",
   "urlName": "allow-users-to-add-tags-to-suggested-collision-tag-list",
   "viewerIsAuthor": false,
@@ -219,14 +221,25 @@
   },
   "voters": [
     {
+      "_id": "64320355debe2a09d344abff",
+      "alias": "Contemporary Cod",
+      "aliasID": "65c2edb4ed6eefce4cc0e724",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d00d4067e76e943974b1fd64174213d3.png",
+      "companies": [],
+      "name": "peepymou",
+      "urlName": null,
+      "voteID": "6a33e221363a2f245103a1cb"
+    },
+    {
       "_id": "60411ec5cc01c21febdcbe37",
       "alias": "Yellowwood Kite",
       "aliasID": "65cf1eeb0129d7ae44b687e4",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8fc9e4760696a7267bcdd23485e3f838.png",
+      "avatarURL": "https://canny-assets.io/images/4bb84baf0d1f20c1070f58f91fc352a9.png",
       "companies": [],
       "name": "PDB",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a30311c363a2f2451c63017"
     },
     {
@@ -237,7 +250,7 @@
       "avatarURL": "https://canny-assets.io/images/2cb9f7faf07523974fa956f18c6091c4.png",
       "companies": [],
       "name": "Invertex",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a0c2cb05a52cb2df02d4496"
     },
     {
@@ -248,7 +261,7 @@
       "avatarURL": "https://canny-assets.io/images/34fd388df4a3b79f83714855d8624742.png",
       "companies": [],
       "name": "Usemame",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a0b3fa15a52cb2df0267cce"
     },
     {
@@ -259,7 +272,7 @@
       "avatarURL": "https://canny-assets.io/images/a88073e2cf674ce283faa003c5d4404b.png",
       "companies": [],
       "name": "たくあん_",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69f28d354a48bed189dc474b"
     },
     {
@@ -270,7 +283,7 @@
       "avatarURL": "https://canny-assets.io/images/c693306596dc75a4c40640c98c72800a.png",
       "companies": [],
       "name": "Scena",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69d93c0935a0fd85646cb9fd"
     },
     {
@@ -281,7 +294,7 @@
       "avatarURL": "https://canny-assets.io/images/c697def85e138ae50eb784ca8bbe6621.png",
       "companies": [],
       "name": "Jammyberrys",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69d8655c35a0fd8564983a73"
     },
     {
@@ -292,7 +305,7 @@
       "avatarURL": "https://canny-assets.io/images/d08b4fe11c943622cb083bfa17686679.png",
       "companies": [],
       "name": "NeoSnivy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69d3d3e8a4b6d376ada07d08"
     },
     {
@@ -303,7 +316,7 @@
       "avatarURL": "https://canny-assets.io/images/6d83eb6cc90353f3ef31da7d23565fcb.png",
       "companies": [],
       "name": "Scarlett Puppy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69d34c05a4b6d376ad597a9e"
     },
     {
@@ -314,19 +327,8 @@
       "avatarURL": "https://canny-assets.io/images/263a0ce6297b082449fab49c2bd7e0e9.png",
       "companies": [],
       "name": "anmeire",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69cdfe85bcda4ee63246e3ec"
-    },
-    {
-      "_id": "5f37d49903604668b2392db9",
-      "alias": "Various Lemur",
-      "aliasID": "65c3e659ed6eefce4cb8ad53",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/b15651ffeec6ae3d566c51f564c249fe.png",
-      "companies": [],
-      "name": "夕凪 ［JP］",
-      "urlName": "<redacted>",
-      "voteID": "69b27e9295d05cb7409b6973"
     }
   ]
 }
