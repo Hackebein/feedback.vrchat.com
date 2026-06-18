@@ -1,23 +1,23 @@
 {
-  "_id": "6a2ff3e51b48e35e88754e8c",
+  "_id": "6a33fd2c9acee0e55da6129f",
   "aiCategories": [
-    "loc.quick-menu",
-    "avatars.upload-performance"
+    "loc.in-world",
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-06-15T19:21:58.115958Z",
+  "aiTaggedAt": "2026-06-18T15:17:33.408317Z",
   "aiTaxonomyVersion": 3,
   "author": {
-    "_id": "6a2ff31d363a2f2451c459a4",
-    "alias": "Charcoal grey Nightingale",
-    "aliasID": "6a2ff31d363a2f2451c459a8",
+    "_id": "6a33fd1c363a2f245104774c",
+    "alias": "Sunny Frog",
+    "aliasID": "6a33fd1d363a2f2451047751",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/e8387836ce2ce7fc945410e50e005ee2.png",
-    "created": "2026-06-15T12:42:05.011Z",
-    "name": "Shortstack2007",
+    "avatarURL": "https://canny-assets.io/images/e0fcbe6ec7108178536209120f00d4a6.png",
+    "created": "2026-06-18T14:13:48.642Z",
+    "name": "ᴀᴡᴇᴇ",
     "serviceAccount": false,
     "urlName": null
   },
-  "authorID": "6a2ff31d363a2f2451c459a4",
+  "authorID": "6a33fd1c363a2f245104774c",
   "board": {
     "_id": "58c62f2b3cf8f8367753b2f0",
     "name": "Bug Reports",
@@ -31,7 +31,7 @@
   "commentCount": 2,
   "comments": [
     {
-      "_id": "6a303887c1c0f3d470e4cf6c",
+      "_id": "6a3404267b9818e4f51ebd2a",
       "aiGenerated": false,
       "author": {
         "_id": "68098a4626271974ef4d2775",
@@ -47,7 +47,7 @@
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-06-15T17:38:15.879Z",
+      "created": "2026-06-18T14:43:50.156Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -62,7 +62,7 @@
       "parentID": null,
       "pinned": false,
       "postDeleted": false,
-      "postID": "6a2ff3e51b48e35e88754e8c",
+      "postID": "6a33fd2c9acee0e55da6129f",
       "private": false,
       "reactions": null,
       "restoredAt": null,
@@ -70,12 +70,12 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "More information is needed to reproduce.\n\n1. Use a good title to describe the issue.\n\n2. Describe the issue in the body - what, why, how.\n\n3. Include steps to reproduce (with avatar ID): 1. 2. 3.\n\n4. Expected behavior:\n\n5. Actual behavior:\n\n6. Attach full [Output Logs](https://help.vrchat.com/hc/en-us/articles/9521522810899-Where-do-I-find-my-Output-Logs-and-Crash-Dumps)/screenshots/videos.",
+      "value": "Can you provide [Output Logs](https://help.vrchat.com/hc/en-us/articles/9521522810899-Where-do-I-find-my-Output-Logs-and-Crash-Dumps)?\n\nCan you provide affected/unaffected sample world IDs?\n\nCan you provide the exact description of errors and the affected/unaffected GPU driver versions?",
       "viewerReactions": null,
       "voteID": null
     },
     {
-      "_id": "6a3038f9c10e54bc573a034a",
+      "_id": "6a3407f49acee0e55da8c695",
       "aiGenerated": false,
       "author": {
         "_id": "68098a4626271974ef4d2775",
@@ -91,34 +91,35 @@
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-06-15T17:40:09.188Z",
+      "created": "2026-06-18T15:00:04.360Z",
       "deleted": false,
       "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
+      "fileURLs": [
+        "https://canny-assets.io/files/4006af141b0e993b05ccc21c4ddab7e9.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-06-18_14-55-31",
+          "url": "https://canny-assets.io/files/4006af141b0e993b05ccc21c4ddab7e9.txt"
+        }
+      ],
+      "imageURLs": [
+        "https://canny-assets.io/images/f781e5f34d311f6c07081598176c230c.jpeg",
+        "https://canny-assets.io/images/58098396d911744f959c8d9d03b0ca00.jpeg",
+        "https://canny-assets.io/images/601c48b470e6eb04e8edc94d3c3eadb0.png",
+        "https://canny-assets.io/images/2fd583d486921785b7469956d02e7153.png"
+      ],
       "integrationSourceType": null,
       "internal": false,
       "itemSourceType": null,
       "mentionedUserIDs": null,
-      "mentionedUsers": [
-        {
-          "_id": "6a2ff31d363a2f2451c459a4",
-          "alias": "Charcoal grey Nightingale",
-          "aliasID": "6a2ff31d363a2f2451c459a8",
-          "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/e8387836ce2ce7fc945410e50e005ee2.png",
-          "created": "2026-06-15T12:42:05.011Z",
-          "name": "Shortstack2007",
-          "serviceAccount": false,
-          "urlName": null
-        }
-      ],
+      "mentionedUsers": [],
       "mergeID": null,
-      "parentID": "6a303887c1c0f3d470e4cf6c",
+      "parentID": null,
       "pinned": false,
       "postDeleted": false,
-      "postID": "6a2ff3e51b48e35e88754e8c",
+      "postID": "6a33fd2c9acee0e55da6129f",
       "private": false,
       "reactions": null,
       "restoredAt": null,
@@ -126,25 +127,25 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{6a2ff31d363a2f2451c459a4|full_name} Please also clarify what \"game\" you're talking about. Is this a world with avatar pedestrals, or the VRChat client (social app) and its Quick Menu/Main Menu you're referring to?",
+      "value": "Unable to reproduce.\n\n- NVIDIA Studio Driver 610.62 (`610.62-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`) - released June 16, 2026\n\n- VRCSDK 3.10.4 world ([TweenTestFive](https://vrchat.com/home/world/wrld_fc0f450f-dec4-44aa-9edd-5c9e8b0bf5c8) by MomoTheMonster)\n\n- VRChat in VR mode\n\n- VRChat Build 1856 (live)",
       "viewerReactions": null,
       "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-06-15T12:45:25.490Z",
+  "created": "2026-06-18T14:14:04.064Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I've tried to change avatars five times and it doesn't change at all i closed and reopened the game but it still doesn't work",
+  "details": "New NVIDIA GPU Update disallows people to join 3.10.3+ VRCSDK worlds in VR. That's pretty much all, idk about the details, I didn't ask people the version but I know it happened with recent updates, temporary fix is going to 3.10.2 or just downgrading GPU Drivers. (I hope this is how you do reports, hope it's going to be useful ^^)",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a2ff3e51b48e35e88754e8b",
+  "ideaID": "6a33fd2b9acee0e55da6121c",
   "imageURLs": [],
-  "lastUpdated": 1781795554413,
+  "lastUpdated": 1781795533713,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -156,13 +157,13 @@
   "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-06-15T12:45:25.490Z",
+  "statusChanged": "2026-06-18T14:14:04.064Z",
   "subCategoryID": null,
-  "title": "menu is bugging out",
-  "trendingScore": 2946.340510733801,
+  "title": "New NVIDIA GPU Update disallows people to join 3.10.3+ VRCSDK worlds in VR",
+  "trendingScore": 2946.777875966936,
   "updatedAt": "2026-06-18T15:17:28.407921Z",
   "updatedBy": null,
-  "urlName": "menu-is-bugging-out",
+  "urlName": "new-nvidia-gpu-update-disallows-people-to-join-3103-vrcsdk-worlds-in-vr",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
@@ -173,15 +174,15 @@
   },
   "voters": [
     {
-      "_id": "6a2ff31d363a2f2451c459a4",
-      "alias": "Charcoal grey Nightingale",
-      "aliasID": "6a2ff31d363a2f2451c459a8",
+      "_id": "6a33fd1c363a2f245104774c",
+      "alias": "Sunny Frog",
+      "aliasID": "6a33fd1d363a2f2451047751",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e8387836ce2ce7fc945410e50e005ee2.png",
+      "avatarURL": "https://canny-assets.io/images/e0fcbe6ec7108178536209120f00d4a6.png",
       "companies": [],
-      "name": "Shortstack2007",
+      "name": "ᴀᴡᴇᴇ",
       "urlName": null,
-      "voteID": "6a2ff3e5363a2f2451c45e96"
+      "voteID": "6a33fd2c363a2f24510477a8"
     }
   ]
 }
