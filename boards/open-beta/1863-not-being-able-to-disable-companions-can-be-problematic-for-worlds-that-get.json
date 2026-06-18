@@ -1,0 +1,93 @@
+{
+  "_id": "6a3345032b6f38bc05c5dacf",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.accessories"
+  ],
+  "aiTaggedAt": "2026-06-18T01:19:38.806041Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6050972e03276b03f63ca0b8",
+    "alias": "Iced lavender Crow",
+    "aliasID": "65c28083ed6eefce4c570d77",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a3e012df48a774adc74704443e3852b0.png",
+    "created": "2021-03-16T11:31:58.052Z",
+    "name": "Tran Fox",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6050972e03276b03f63ca0b8",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 460,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-18T01:08:19.921Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Due to the fact that companions have colliders on Item/UI/Pickup this can cause Raycasts and some other physics calls to unexpectedly fail due to it returning null or be blocked by them because they are on the same layers as items (Item, UI layers).\n\nCompanions also appear on the Pickup layer during repositioning which can also cause the same issues.\n\nI'll try to put together an example world where this can occur in a bit (I'll edit the post once it's done)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a3345032b6f38bc05c5dacc",
+  "imageURLs": [],
+  "lastUpdated": 1781745209040,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-18T01:08:19.921Z",
+  "subCategoryID": null,
+  "title": "[1863] Not being able to disable Companions can be problematic for worlds that get colliders on the UI/Item/Pickup layers",
+  "trendingScore": 2946.6999260826765,
+  "updatedAt": "2026-06-18T01:19:33.838895Z",
+  "updatedBy": null,
+  "urlName": "1863-not-being-able-to-disable-companions-can-be-problematic-for-worlds-that-get",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6050972e03276b03f63ca0b8",
+      "alias": "Iced lavender Crow",
+      "aliasID": "65c28083ed6eefce4c570d77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a3e012df48a774adc74704443e3852b0.png",
+      "companies": [],
+      "name": "Tran Fox",
+      "urlName": null,
+      "voteID": "6a334504363a2f2451e144d6"
+    }
+  ]
+}
