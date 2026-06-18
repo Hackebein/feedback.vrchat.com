@@ -1,0 +1,108 @@
+{
+  "_id": "6a3461d13347d04b7dde483e",
+  "aiCategories": [
+    "loc.quick-menu",
+    "client.settings",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-18T21:54:03.929334Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1311,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-18T21:23:29.409Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I can't find a way to view reports on open-beta anymore. I think this is a regression.\n\n1. Open Quick Menu\n\n2. Click the Report icon\n\n3. Try to find a View Reports button from this report menu\n\nExpected result: Find the button there in both live (build 1856) and open-beta (build 1863). It's needed to delete open reports, etc.\n\nActual result: Found in live (build 1856). The button has been removed in open-beta (build 1863).\n\nThere's no mention of this change at: https://docs.vrchat.com/docs/vrchat-202623-open-beta",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/b9d32fa41bcf8d23abc5035b114af993.mp4",
+    "https://canny-assets.io/files/9ffa91146ddd3f9759be346f6f8ada7b.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "open-beta",
+      "url": "https://canny-assets.io/files/b9d32fa41bcf8d23abc5035b114af993.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "live",
+      "url": "https://canny-assets.io/files/9ffa91146ddd3f9759be346f6f8ada7b.mp4"
+    }
+  ],
+  "ideaID": "6a3461d13347d04b7dde483d",
+  "imageURLs": [],
+  "lastUpdated": 1781819277831,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-18T21:23:29.409Z",
+  "subCategoryID": null,
+  "title": "[1863] View Reports button is gone",
+  "trendingScore": 2946.8204774591645,
+  "updatedAt": "2026-06-18T21:53:58.949235Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "1863-view-reports-button-is-gone",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a3461d1363a2f245107db76"
+    }
+  ]
+}
