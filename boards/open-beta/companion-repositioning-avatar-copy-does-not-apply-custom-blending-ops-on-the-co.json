@@ -1,0 +1,162 @@
+{
+  "_id": "6a3417bc0f452e5e63e735d7",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.in-world",
+    "client.inventory",
+    "avatars.descriptor",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-18T17:17:46.350474Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1310,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a34184cac39c6133d1ec47e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-18T16:09:48.256Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/8d8d68c151c308634e8b86beac206dd2.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3417bc0f452e5e63e735d7",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "In comparison, the public avatar [Outline UNK](https://vrchat.com/home/avatar/avtr_1c0b752a-d874-4715-ab4e-332ad4655995) (`avtr_1c0b752a-d874-4715-ab4e-332ad4655995`) by Timothy Thuggin uses a low alpha transparency value (~3) with regular blending ops on the main color and works mostly fine in this example scenario.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-18T16:07:24.126Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "# Background\n\nI have an avatar which uses a black main color with alpha 255 (opaque) and blending ops to make the \"opaque\" material look transparent, with opaque preset blending ops used to make the outline visible, rendered at renderer queue Transparent (3000). This is also a somewhat deliberate design choice for fallback shaders (Mobile Toon Standard) and impostor generation, and to avoid viewing occluded outlines of the mesh through the mesh.\n\nI cannot use alpha 0 for the main color, because the main color alpha value in Poiyomi Toon 9.3.64 also controls the outline transparency. (IIRC, the minimum workable option is alpha 3.)\n\n# The bug\n\nThe companion repositioned avatar copy ignores my custom blending ops applied to the material and acts like a face/personal mirror. My avatar looks transparent as intended in (most) world mirrors and in person.\n\nAffected avatar (private): [Outline Rusk](https://vrchat.com/home/avatar/avtr_ea270d17-f69f-4015-8e33-1a5a13bc1458) (`avtr_ea270d17-f69f-4015-8e33-1a5a13bc1458`) by [WubTheCaptain](https://vrchat.com/home/user/usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c)\n\nSteps to reproduce:\n\n1. Redeem a Reference Cube Companion by using the code `CUBEFRIEND`: https://vrch.at/redeem?code=CUBEFRIEND\n\n2. Launch VRChat in desktop mode in open-beta\n\n3. Switch to an affected avatar (e.g. Outline Rusk)\n\n4. Stand in front of a world mirror\n\n5. Open up Quick Menu, go to your Inventory, find your Reference Cube Companion\n\n6. Spawn a Reference Cube Companion\n\n7. Reopen your inventory\n\n8. Click the \"Reposition\" button on the companion from the inventory to spawn an avatar copy (fade in)\n\n9. Press F5 to enter third-person mode\n\n10. Use your Action Menu to take out a personal mirror and face mirror\n\nExpected result: The avatar should look like my avatar in person and in world mirrors (transparent body, white outlines).\n\nActual result: The avatar looks like a black void with white outlines in the companion repositioning avatar copy, same as in personal and face mirror. Tell me I've goofed up my material.\n\nWorld mirror used for testing: [NULL](https://vrchat.com/home/world/wrld_ee094638-9514-47b4-a5ac-83b810d7ff38/info) by Ziggor",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/1d920a73f92afe440f0d5613c28221d2.txt",
+    "https://canny-assets.io/files/c246460a9dcf47eb5a11a4a64731f28d.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-06-18_15-34-39_short",
+      "url": "https://canny-assets.io/files/1d920a73f92afe440f0d5613c28221d2.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "acknowledgements",
+      "url": "https://canny-assets.io/files/c246460a9dcf47eb5a11a4a64731f28d.txt"
+    }
+  ],
+  "ideaID": "6a3417bb0f452e5e63e735c0",
+  "imageURLs": [
+    "https://canny-assets.io/images/0677509a28fc94d0033e1b853cd1153f.png",
+    "https://canny-assets.io/images/719881741ff69216f4082714bee33b26.png",
+    "https://canny-assets.io/images/fd3c3e8e8f6cb30ad6f928a48167787f.png",
+    "https://canny-assets.io/images/d59ed2a3d525bcd8fb77729c57ce52b1.png"
+  ],
+  "lastUpdated": 1781802721754,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-18T16:07:24.126Z",
+  "subCategoryID": null,
+  "title": "Companion repositioning avatar copy does not apply custom blending ops on the copy like the avatar itself (avatar copy uses personal/face mirror main color transparency)",
+  "trendingScore": 2946.789119453212,
+  "updatedAt": "2026-06-18T17:17:41.908245Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "companion-repositioning-avatar-copy-does-not-apply-custom-blending-ops-on-the-co",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a3417bc363a2f2451055dc5"
+    }
+  ]
+}
