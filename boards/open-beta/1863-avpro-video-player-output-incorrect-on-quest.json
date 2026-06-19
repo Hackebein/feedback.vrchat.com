@@ -1,0 +1,153 @@
+{
+  "_id": "6a3481f73347d04b7de2a5fb",
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "worlds.video",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-19T01:24:15.215494Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6219f63f55639e536dc83162",
+    "alias": "Imaginative Sloth",
+    "aliasID": "65c26df1ed6eefce4c5aac1a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
+    "created": "2022-02-26T09:43:27.682Z",
+    "name": "syncpulse",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6219f63f55639e536dc83162",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1313,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-18T23:40:39.703Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The video output from AVPro players on both PC and Quest has historically needed to go through a gamma to linear conversion to look correct. This is something that has been handled at the shader level in video player prefabs - USharpVideo does an explicit `pow(color, 2.2f)`, ProTV uses GammaToLinearSpace(), etc.\n\nSince the open beta update that includes the new AVPro version, this seems to no longer be the case on Quest. Videos played through AVPro players on Quest will now look incorrect with that conversion applied. You can verify this by going to [Video Player Showroom](https://vrchat.com/home/world/wrld_985acb34-cc17-4b5a-85ae-04ade5195059) and playing a familiar video in the ProTV player. With default settings, the video will appear very dark with a crushed black level. I will reiterate that this issue is not specific to the ProTV player prefab but instead to AVPro-based players generally.\n\nIt is certainly possible for world/prefab developers to detect Quest and skip performing this color space conversion. However, in its current state, this causes incorrect playback in basically every existing VRChat world using an AVPro-based player. All of these worlds would need to be updated to ensure correct playback if this current open beta gets shipped to live.\n\nSome player prefabs such as ProTV include a user-facing option to skip this conversion, however I would consider it a regression if suddenly every Quest user needs to enable this option.\n\nIt also seems presently impossible to come up with a method by which users can have correct playback on both the current live version as well as the current open beta. I basically have to choose which one I want to break.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a3481f73347d04b7de2a5fa",
+  "imageURLs": [
+    "https://canny-assets.io/images/ce77f1f5fa6846a757adebd52f0afacf.png",
+    "https://canny-assets.io/images/7167ae87d24b1d45e2cac84c84aa8639.png"
+  ],
+  "lastUpdated": 1781831942830,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 6,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a3481f73347d04b7de2a5fb/344083198.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 6,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-18T23:40:39.703Z",
+  "subCategoryID": null,
+  "title": "[1863] AVPro video player output incorrect on Quest",
+  "trendingScore": 2948.0892386473265,
+  "updatedAt": "2026-06-19T01:24:10.689073Z",
+  "updatedBy": "6219f63f55639e536dc83162",
+  "urlName": "1863-avpro-video-player-output-incorrect-on-quest",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/38c9c43845fc98cba69a5e2e0d5c5298.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": null,
+      "voteID": "6a3492e4363a2f245108e2fa"
+    },
+    {
+      "_id": "612a753b33cc9831211d2f58",
+      "alias": "Clever Beetle",
+      "aliasID": "65c3aa23ed6eefce4ca342fb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e9a15ad398016d5c3d3f46d5b517e364.png",
+      "companies": [],
+      "name": "nick o⁄",
+      "urlName": null,
+      "voteID": "6a348fa3363a2f245108cfdf"
+    },
+    {
+      "_id": "6222c626995e5832490fb7d4",
+      "alias": "Imperial red Aardvark",
+      "aliasID": "65c62eaced6eefce4c2a9b9a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cbf81fbcf04c17dc35f84807fde1b79a.png",
+      "companies": [],
+      "name": "lun-4",
+      "urlName": null,
+      "voteID": "6a34872e363a2f245108ab16"
+    },
+    {
+      "_id": "6a27345586d7b8843beab6c8",
+      "alias": "Surviving Nightingale",
+      "aliasID": "6a27345686d7b8843beab6cc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/08a2cc880f8761b656aa0bf602c23146.png",
+      "companies": [],
+      "name": "cool_lantern",
+      "urlName": null,
+      "voteID": "6a348559363a2f245108a223"
+    },
+    {
+      "_id": "5f683bb45ead2a4b371e798a",
+      "alias": "Marigold Llama",
+      "aliasID": "65c270b7ed6eefce4cd25ef9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dc785b9f46342d88b86d0cc4bac23f4a.png",
+      "companies": [],
+      "name": "HOBaRT",
+      "urlName": null,
+      "voteID": "6a34823d363a2f24510893a1"
+    },
+    {
+      "_id": "6219f63f55639e536dc83162",
+      "alias": "Imaginative Sloth",
+      "aliasID": "65c26df1ed6eefce4c5aac1a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
+      "companies": [],
+      "name": "syncpulse",
+      "urlName": null,
+      "voteID": "6a3481f7363a2f245108929d"
+    }
+  ]
+}
