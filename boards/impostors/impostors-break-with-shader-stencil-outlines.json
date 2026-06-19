@@ -16,7 +16,7 @@
     "created": "2020-04-19T05:22:55.531Z",
     "name": "SpiritedSpy",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5e9be02f512429192a294282",
   "board": {
@@ -51,7 +51,7 @@
         "created": "2020-04-19T05:22:55.531Z",
         "name": "SpiritedSpy",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "651f00c29b934e9c99db0b22",
@@ -93,7 +93,7 @@
         "created": "2023-06-12T15:51:49.320Z",
         "name": "StormRel",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "651f00c29b934e9c99db0b22",
@@ -136,7 +136,7 @@
         "created": "2020-04-19T05:22:55.531Z",
         "name": "SpiritedSpy",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "651f00c29b934e9c99db0b22",
@@ -213,7 +213,7 @@
         "created": "2023-11-07T18:08:31.263Z",
         "name": "Truce",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "651f00c29b934e9c99db0b22",
@@ -260,7 +260,7 @@
     "https://canny.io/images/f11eae6e519e2c8ff2fb1edcf5288e87.png",
     "https://canny.io/images/21489b72e93f188f6ab64756897eb80e.png"
   ],
-  "lastUpdated": 1781454833328,
+  "lastUpdated": 1781848659586,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 11,
@@ -276,7 +276,7 @@
   "subCategoryID": null,
   "title": "Impostors break with shader stencil outlines",
   "trendingScore": 2853.987186216931,
-  "updatedAt": "2026-06-14T16:34:47.984643Z",
+  "updatedAt": "2026-06-19T05:58:37.377500Z",
   "updatedBy": null,
   "urlName": "impostors-break-with-shader-stencil-outlines",
   "viewerIsAuthor": false,
@@ -296,7 +296,7 @@
       "avatarURL": "https://canny-assets.io/images/7fec1b5ff0605cb6fd18b82cb0ee2b78.png",
       "companies": [],
       "name": "-nyae",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66e210ba7d32abb6caf6295c"
     },
     {
@@ -307,7 +307,7 @@
       "avatarURL": "https://canny-assets.io/images/417c04bb3e402b86f6803d87f692b1d1.png",
       "companies": [],
       "name": "Groxxy",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655cf390cebec4371682b7b0"
     },
     {
@@ -318,7 +318,7 @@
       "avatarURL": "https://canny-assets.io/images/fa25ea51b0ffdee81fc3f508e3f239b7.png",
       "companies": [],
       "name": "Dukmos",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c9ba4cebec437169d112a"
     },
     {
@@ -329,7 +329,7 @@
       "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
       "companies": [],
       "name": "camegone",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c932fcebec437167f5bce"
     },
     {
@@ -340,7 +340,7 @@
       "avatarURL": "https://canny-assets.io/images/976cdd071ca50df10da145bf3d25fad6.png",
       "companies": [],
       "name": "Tony_Lewis",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c9039cebec437161a47fc"
     },
     {
@@ -351,7 +351,7 @@
       "avatarURL": "https://canny.io/images/1af864f0336ee2c2a3fb2501947ebd35.png",
       "companies": [],
       "name": "MrBalrog",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c8515cebec4371697e471"
     },
     {
@@ -362,7 +362,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c704acebec43716812f33"
     },
     {
@@ -373,7 +373,7 @@
       "avatarURL": "https://canny-assets.io/images/6c79d42362a5eb00738655b60eddf986.png",
       "companies": [],
       "name": "Salbug",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c7031cebec437167d8e45"
     },
     {
@@ -384,7 +384,7 @@
       "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
       "companies": [],
       "name": "JessicaOnMain",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c702ecebec437167d106a"
     },
     {
@@ -392,10 +392,10 @@
       "alias": "Arctic lime Zebra",
       "aliasID": "65c279aded6eefce4c46a77a",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/56a3faa8e0e7526b6a5c0bf5dcc81c6a.png",
+      "avatarURL": "https://canny-assets.io/images/3bcc0737f3e4d99cf27447b4a2a20287.png",
       "companies": [],
       "name": "Fizzytaco",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "655c6ff9cebec43716753929"
     }
   ]
