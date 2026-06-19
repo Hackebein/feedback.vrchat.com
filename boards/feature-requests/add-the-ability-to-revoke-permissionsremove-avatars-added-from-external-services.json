@@ -16,7 +16,7 @@
     "created": "2020-08-14T17:29:51.616Z",
     "name": "Squid",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5f36ca0f8e14fe68faceb186",
   "board": {
@@ -42,7 +42,7 @@
         "created": "2020-08-09T03:36:39.473Z",
         "name": "Sequor",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -85,7 +85,7 @@
         "created": "2021-12-04T13:21:03.717Z",
         "name": "chrapacz2000",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -126,7 +126,7 @@
         "created": "2021-10-01T19:10:46.500Z",
         "name": "Squid",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -170,7 +170,7 @@
         "created": "2021-01-23T05:13:48.067Z",
         "name": "DAG-XR",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -213,7 +213,7 @@
         "created": "2021-01-23T05:13:48.067Z",
         "name": "DAG-XR",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -237,7 +237,7 @@
           "created": "2021-10-01T19:10:46.500Z",
           "name": "Squid",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -266,7 +266,7 @@
         "created": "2018-10-12T00:12:56.548Z",
         "name": "Joker is punk",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -290,7 +290,7 @@
           "created": "2021-10-01T19:10:46.500Z",
           "name": "Squid",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -321,7 +321,7 @@
   "files": [],
   "ideaID": "680bb8a3e4c3e90df1350d5c",
   "imageURLs": [],
-  "lastUpdated": 1781488165517,
+  "lastUpdated": 1781901707249,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 67,
@@ -337,7 +337,7 @@
   "subCategoryID": null,
   "title": "Add the ability to revoke permissions/remove avatars added from external services.",
   "trendingScore": 2726.5492991637843,
-  "updatedAt": "2026-06-15T01:52:58.229368Z",
+  "updatedAt": "2026-06-19T20:43:27.560279Z",
   "urlName": "add-the-ability-to-revoke-permissionsremove-avatars-added-from-external-services",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -356,7 +356,7 @@
       "avatarURL": "https://canny-assets.io/images/6c79d42362a5eb00738655b60eddf986.png",
       "companies": [],
       "name": "Salbug",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62434420085485528b33f72a"
     },
     {
@@ -367,7 +367,7 @@
       "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
       "companies": [],
       "name": "DAG-XR",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "624343a5667379528bf5b420"
     },
     {
@@ -378,7 +378,7 @@
       "avatarURL": "https://canny-assets.io/images/e428517002fdbbc51ea2cb01562da39b.png",
       "companies": [],
       "name": "moi²",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "621ae41ee65a007c090c9e45"
     },
     {
@@ -389,7 +389,7 @@
       "avatarURL": "https://canny.io/images/63434981d65865c40714820535107538.png",
       "companies": [],
       "name": "Unity Man",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6219267252e97442f5c5fa8f"
     },
     {
@@ -400,7 +400,7 @@
       "avatarURL": "https://canny.io/images/666d603c3aa20b78d0d4c775171cc1a5.png",
       "companies": [],
       "name": "sentinel373",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "621856ceda48134a4223d4cc"
     },
     {
@@ -411,7 +411,7 @@
       "avatarURL": "https://canny-assets.io/images/b2a514509aeb0aa28d6466fcc4134aa4.png",
       "companies": [],
       "name": "PhaxeNor",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "621804576aae817cae39f436"
     },
     {
@@ -419,10 +419,10 @@
       "alias": "Nautical blue Bear",
       "aliasID": "65c29031ed6eefce4cbd30ca",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a5372550f5f9706c8f1db4ea66fb4a74.png",
+      "avatarURL": "https://canny-assets.io/images/184033f03e57a01a1a491b493068bcc9.png",
       "companies": [],
       "name": "Vard",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6217e6a5bec0127716ecf3b0"
     },
     {
@@ -433,7 +433,7 @@
       "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
       "companies": [],
       "name": "bd_",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6216cd275796ed1c720279db"
     },
     {
@@ -444,7 +444,7 @@
       "avatarURL": "https://canny-assets.io/images/5e9e56b40ba74fb6413337fc4a41c034.png",
       "companies": [],
       "name": "Faxmashine",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6216c5c94124f104e4c84aac"
     },
     {
@@ -455,7 +455,7 @@
       "avatarURL": "https://canny-assets.io/images/f0482da78e4ea68a1191176d6b66f29f.png",
       "companies": [],
       "name": "CottonCandyPup",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "61e8ff2af35a2d3bb634e59a"
     }
   ]
