@@ -2,10 +2,11 @@
   "__v": 0,
   "_id": "678756d9b3f703d41491d8c1",
   "aiCategories": [
+    "loc.in-world",
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-10T14:53:57.524507Z",
+  "aiTaggedAt": "2026-06-20T12:52:18.355319Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -16,7 +17,7 @@
     "created": "2018-09-10T07:42:14.630Z",
     "name": "kurotori",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5b962056b037d80b53475262",
   "board": {
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "__v": 0,
@@ -44,7 +45,7 @@
         "created": "2023-06-12T15:51:49.320Z",
         "name": "StormRel",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -90,7 +91,7 @@
         "created": "2017-09-06T20:16:01.823Z",
         "name": "jetdog8808",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -139,7 +140,7 @@
         "created": "2020-08-11T00:07:19.781Z",
         "name": "Jar",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
@@ -170,6 +171,50 @@
       "value": "Still running into this",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a3199c2d48e8088b2b0a748",
+      "aiGenerated": false,
+      "author": {
+        "_id": "627a907bd1186610f1505731",
+        "alias": "Mobile Sailfish",
+        "aliasID": "6608b2b3e5d26962aad6ac29",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3d54996819670d763de9fdb651c66024.png",
+        "created": "2022-05-10T16:19:07.794Z",
+        "name": "plejadis",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-16T18:45:22.708Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "678756d9b3f703d41491d8c1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "SDK 3.10.3, have the same problem\n\nEdit: In this Feedback post https://feedback.vrchat.com/udon/p/serialized-field-of-type-runtimeanimatorcontroller-throws-exception-in-game was a comment about using AnimatorOverrideController  instead and that worked for me as well",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -184,23 +229,23 @@
   "files": [],
   "ideaID": "680bba3ce4c3e90df139f899",
   "imageURLs": [],
-  "lastUpdated": 1781563892146,
+  "lastUpdated": 1781959825851,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 14,
+  "maxScore": 15,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/678756d9b3f703d41491d8c1/234562761.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 14,
+  "score": 15,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2025-01-15T15:41:35.667Z",
   "subCategoryID": null,
   "title": "[1554] When RuntimeAnimatorController is assigned to a field, all other fields become null.",
-  "trendingScore": 2902.594793353333,
-  "updatedAt": "2026-06-15T22:53:09.419934Z",
+  "trendingScore": 2945.8258240112436,
+  "updatedAt": "2026-06-20T12:52:13.858188Z",
   "updatedBy": null,
   "urlName": "1554-when-runtimeanimatorcontroller-is-assigned-to-a-field-all-other-fields-beco",
   "viewerIsAuthor": false,
@@ -213,6 +258,17 @@
   },
   "voters": [
     {
+      "_id": "627a907bd1186610f1505731",
+      "alias": "Mobile Sailfish",
+      "aliasID": "6608b2b3e5d26962aad6ac29",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3d54996819670d763de9fdb651c66024.png",
+      "companies": [],
+      "name": "plejadis",
+      "urlName": null,
+      "voteID": "6a319982363a2f2451d16fbd"
+    },
+    {
       "_id": "5f31e1379dcbb575795df78a",
       "alias": "Inquisitive Pinniped",
       "aliasID": "65c26da3ed6eefce4c4d076c",
@@ -220,7 +276,7 @@
       "avatarURL": "https://canny-assets.io/images/ffccf8619b7165aa7dc10715da0da035.png",
       "companies": [],
       "name": "Jar",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "68a293efd2f94455f0a50d9f"
     },
     {
@@ -231,7 +287,7 @@
       "avatarURL": "https://canny-assets.io/images/480d8a5b6f142b98628298b3ddfefaa8.png",
       "companies": [],
       "name": "Steve The Mitochondria",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "687475d289ac99168924ba5e"
     },
     {
@@ -242,7 +298,7 @@
       "avatarURL": "https://canny-assets.io/images/510b3dff00d2ae92b543a05142054f6a.png",
       "companies": [],
       "name": "Varneon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6851668816069571f6704bac"
     },
     {
@@ -253,7 +309,7 @@
       "avatarURL": "https://canny-assets.io/images/976cdd071ca50df10da145bf3d25fad6.png",
       "companies": [],
       "name": "Tony_Lewis",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67ede2bfc74421e545b92321"
     },
     {
@@ -264,7 +320,7 @@
       "avatarURL": "https://canny-assets.io/images/e9ccb11e0323465cc163f50c45e013bd.png",
       "companies": [],
       "name": "jetdog8808",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67edddfac74421e5450d25ab"
     },
     {
@@ -275,7 +331,7 @@
       "avatarURL": "https://canny-assets.io/images/83e02963b4f98b417c8670b892a41953.png",
       "companies": [],
       "name": "BobyStar",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67edddf4c74421e5450c2a2e"
     },
     {
@@ -286,7 +342,7 @@
       "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
       "companies": [],
       "name": "IssueNest-Bot",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "67eddd83c74421e545f9c85f"
     },
     {
@@ -297,7 +353,7 @@
       "avatarURL": "https://canny-assets.io/images/8d74b38fb2e7cee80c6f0f77547da0c0.png",
       "companies": [],
       "name": "らぃむ（dimebag29）",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6789a14141622bb95a938940"
     },
     {
@@ -308,19 +364,8 @@
       "avatarURL": "https://canny-assets.io/images/81973ad86fbc2ebd5324208e0b65ba52.png",
       "companies": [],
       "name": "のりたま（NORITAMA）",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6788e12941622bb95a9759f3"
-    },
-    {
-      "_id": "6788dd966e02ed8523dd91e3",
-      "alias": "Periwinkle Opossum",
-      "aliasID": "6788dd9741622bb95ae18cf5",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/eae60d9a94ececd32efd8e26a268af49.png",
-      "companies": [],
-      "name": "UuxuU",
-      "urlName": "<redacted>",
-      "voteID": "6788ddcc41622bb95aec5b98"
     }
   ]
 }
