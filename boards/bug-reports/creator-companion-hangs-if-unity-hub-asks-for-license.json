@@ -16,7 +16,7 @@
     "created": "2021-12-29T22:40:11.510Z",
     "name": "BinoWulf",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "61cce3cbf1f09b153ac05334",
   "board": {
@@ -43,34 +43,45 @@
   "files": [],
   "ideaID": "680bb9dae4c3e90df138cc61",
   "imageURLs": [],
-  "lastUpdated": 1781539178720,
+  "lastUpdated": 1781934105336,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2024-04-07T15:09:45.345Z",
   "subCategoryID": null,
   "title": "Creator Companion hangs if Unity Hub asks for license",
-  "trendingScore": 2832.211972272326,
-  "updatedAt": "2026-06-15T16:01:02.441001Z",
+  "trendingScore": 2946.082559770172,
+  "updatedAt": "2026-06-20T05:43:28.218116Z",
   "updatedBy": null,
   "urlName": "creator-companion-hangs-if-unity-hub-asks-for-license",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5ba749f34dca6b351d658330",
+      "alias": "Flame Swan",
+      "aliasID": "65c2913aed6eefce4ce43005",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/28be024219e5d5a76a743e59faa1a194.png",
+      "companies": [],
+      "name": "100の人",
+      "urlName": null,
+      "voteID": "6a33f80c363a2f2451044bec"
+    },
     {
       "_id": "61cce3cbf1f09b153ac05334",
       "alias": "Wine Falcon",
@@ -79,7 +90,7 @@
       "avatarURL": "https://canny-assets.io/images/f90cb84a11e87adee02e9d936f6f2eb8.png",
       "companies": [],
       "name": "BinoWulf",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6612b739e5d26962aa16417c"
     }
   ]
