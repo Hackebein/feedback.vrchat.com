@@ -2,10 +2,9 @@
   "_id": "6a25b86e20c14f60624672c3",
   "aiCategories": [
     "loc.unity-sdk",
-    "loc.in-world",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-12T17:52:13.397012Z",
+  "aiTaggedAt": "2026-06-20T21:40:38.441840Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "603b04282fa90e5c53608eb6",
@@ -36,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a2c37d00b6832df928fd503",
@@ -81,6 +80,62 @@
       "value": "Just speculating, maybe try rotating both the player and the StationEnter to 0,0,0 just before entering station, and then rotate the station back to whatever rotation you want",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a36faa8a86acbe7977eceac",
+      "aiGenerated": false,
+      "author": {
+        "_id": "603b04282fa90e5c53608eb6",
+        "alias": "Variable Turtle",
+        "aliasID": "65c27d10ed6eefce4cc8cf32",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/eb25bb33dc7f7595988e51700ed388da.png",
+        "created": "2021-02-28T02:47:04.064Z",
+        "name": "RavenWorks",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-20T20:40:08.342Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "67a0ed8d6e7354cc8f8c7acd",
+          "alias": "Cautious Minnow",
+          "aliasID": "67a0ed8eafacf378f12ca236",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e9b45947ddee28809e2f00c76f79cfb9.png",
+          "created": "2025-02-03T16:23:41.681Z",
+          "name": "Uzer Tekton",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a2c37d00b6832df928fd503",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a25b86e20c14f60624672c3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{67a0ed8d6e7354cc8f8c7acd|full_name} Good idea, but nope, same result; anything that involves setting a FBT player's world rotation seems to force the FBT perspective to change, even when it should line up...",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -96,7 +151,7 @@
   "files": [],
   "ideaID": "6a25b86d20c14f60624672c2",
   "imageURLs": [],
-  "lastUpdated": 1781987772101,
+  "lastUpdated": 1781991279389,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -112,7 +167,7 @@
   "subCategoryID": null,
   "title": "Enter station without teleporting",
   "trendingScore": 2945.2317417820814,
-  "updatedAt": "2026-06-20T20:40:13.523385Z",
+  "updatedAt": "2026-06-20T21:40:33.429868Z",
   "updatedBy": null,
   "urlName": "enter-station-without-teleporting",
   "viewerIsAuthor": false,
