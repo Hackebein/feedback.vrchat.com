@@ -2,9 +2,11 @@
   "_id": "6a35b8f346abefe6be7cec12",
   "aiCategories": [
     "loc.in-world",
-    "avatars.tracking"
+    "avatars.tracking",
+    "avatars.expressions",
+    "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-06-19T22:30:37.891750Z",
+  "aiTaggedAt": "2026-06-20T01:13:48.184414Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "666351299e68485eed4eedb1",
@@ -42,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "As stated, sometimes when playing on desktop with webcam hand tracking (selfie expression) enabled hands freeze in weird position in front of the face. \n\nIt often looks like holding your forearm horizontally with a hand folded inwards and backwards. Sometimes hands move in some odd position and stay like this for an extended period of time (10+ seconds) or sometimes repeatedly move in and out such positions. It could happen with either left or right hand. It happens even when hands lie on a mouse and a keyboard (webcamera cannot see them from such position)\n\nClearly showing your hands to the camera may fix it for a little bit but it never fully stops. Turning a desk lamp for better illumination also may help but it a bright light straight to the face obviously irritates eyes and worsens the vision.\n\nObviously, webcam tracking will never be perfect but this issue has been present for many months (since October 2025 at the very least) but it's been happening more and more for the past few weeks. Other destop players did report similar hand behavior (original Reddit post is lost).",
+  "details": "As stated, sometimes when playing on desktop with webcam hand tracking (selfie expression) enabled hands freeze in weird position in front of the face. \n\nIt often looks like holding your forearm horizontally with a hand folded inwards and backwards. Sometimes hands move in some odd position and stay like this for an extended period of time (10+ seconds) or sometimes repeatedly move in and out such positions. It could happen with either left or right hand. It happens even when hands lie on a mouse and a keyboard (webcamera cannot see them from such position)\n\nClearly showing your hands to the camera may fix it for a little bit but it never fully stops. Turning a desk lamp for better illumination also may help but it a bright light straight to the face obviously irritates eyes and worsens the vision.\n\nObviously, webcam tracking cannot be very accurate but this issue has been present for many months (since October 2025 at the very least) but it's been happening more and more for the past few weeks. Other destop players did report similar hand behavior (original Reddit post is lost) and I feel like the reason is not only necessarily FPS or resolution but VRChat's tracking / hand recognition algorithms.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,13 +62,13 @@
     "https://canny-assets.io/images/acc8e5c8b7e1fbb77456ea02361c399a.png",
     "https://canny-assets.io/images/0bf07874d9bc07d9085f0f4955021f66.png"
   ],
-  "lastUpdated": 1781911783489,
+  "lastUpdated": 1781917697746,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
-  "ogImageURL": null,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a35b8f346abefe6be7cec12/1297710390.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 1,
@@ -74,11 +76,11 @@
   "status": "open",
   "statusChanged": "2026-06-19T21:47:31.625Z",
   "subCategoryID": null,
-  "title": "Hands freeze in weird position in front of the face if using sefie expression (desktop webcam tracking)",
+  "title": "Hands freeze in weird positions if using sefie expression / desktop webcam tracking",
   "trendingScore": 2946.9657192175973,
-  "updatedAt": "2026-06-19T23:35:49.092033Z",
+  "updatedAt": "2026-06-20T01:13:43.235368Z",
   "updatedBy": "666351299e68485eed4eedb1",
-  "urlName": "hands-freeze-in-weird-position-in-front-of-the-face-if-using-sefie-expression-de",
+  "urlName": "hands-freeze-in-weird-positions-if-using-sefie-expression-desktop-webcam-trackin",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
