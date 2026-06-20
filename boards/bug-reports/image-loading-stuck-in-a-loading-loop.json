@@ -16,7 +16,7 @@
     "created": "2021-01-23T20:22:52.110Z",
     "name": "Dystin",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "600c859cb5c00e5547d084ac",
   "board": {
@@ -43,34 +43,45 @@
   "files": [],
   "ideaID": "680bba11e4c3e90df1397bab",
   "imageURLs": [],
-  "lastUpdated": 1781560900641,
+  "lastUpdated": 1781956022820,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2024-09-19T22:38:59.577Z",
   "subCategoryID": null,
   "title": "Image loading STUCK in a loading loop",
-  "trendingScore": 2855.8279679791713,
-  "updatedAt": "2026-06-15T22:03:24.627024Z",
+  "trendingScore": 2945.729484054233,
+  "updatedAt": "2026-06-20T11:48:29.185930Z",
   "updatedBy": null,
   "urlName": "image-loading-stuck-in-a-loading-loop",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a30b52d363a2f2451cab2c6",
+      "alias": "Ube Ox",
+      "aliasID": "6a30b52d363a2f2451cab2d6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9ee9b6cd87af6604e234e1b153f8dd25.png",
+      "companies": [],
+      "name": "SwanyLee",
+      "urlName": null,
+      "voteID": "6a30b5e7363a2f2451cabc49"
+    },
     {
       "_id": "600c859cb5c00e5547d084ac",
       "alias": "Cadmium red Tuna",
@@ -79,7 +90,7 @@
       "avatarURL": "https://canny-assets.io/images/f7b3c5249da6b5b2d35458223b040948.png",
       "companies": [],
       "name": "Dystin",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "66eca8037d32abb6caba99e2"
     }
   ]

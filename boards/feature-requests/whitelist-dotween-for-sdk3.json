@@ -3,9 +3,10 @@
   "_id": "5fcd173be537ea378073a7bc",
   "aiCategories": [
     "loc.unity-sdk",
+    "sdk.vrcsdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-12T09:24:46.314535Z",
+  "aiTaggedAt": "2026-06-20T11:48:38.308552Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a7ac88bf5a5c52c08064fb9",
@@ -16,7 +17,7 @@
     "created": "2018-02-07T09:36:11.764Z",
     "name": "PhaxeNor",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "5a7ac88bf5a5c52c08064fb9",
   "board": {
@@ -28,7 +29,7 @@
   "by": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "69bc9ec809e1f0f3da6ef914",
@@ -42,7 +43,7 @@
         "created": "2025-04-24T00:48:06.176Z",
         "name": "WubTheCaptain",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -88,7 +89,7 @@
         "created": "2019-12-05T17:37:30.047Z",
         "name": "Momo the Monster",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -135,7 +136,7 @@
         "created": "2023-01-10T02:11:14.555Z",
         "name": "Vισʅα Lαყɳҽ",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -160,7 +161,7 @@
           "created": "2025-04-24T00:48:06.176Z",
           "name": "WubTheCaptain",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": null,
@@ -178,6 +179,53 @@
       "value": "@{68098a4626271974ef4d2775|full_name} All of the listings for \"tracked, interested, in progress, ect\" need to be updated. Right now it's a mess that reminds me of people who have just a bunch of random files/folders/ect on their desktop while never actually using that display let alone the files on them",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a32e9e17e0342531b350bcc",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5de9405aea7cc52772fcc359",
+        "alias": "Robust Crow",
+        "aliasID": "65c27d11ed6eefce4cc8dee3",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/3832aa8915d09f633a5ab11ddec4d91f.jpg",
+        "created": "2019-12-05T17:37:30.047Z",
+        "name": "Momo the Monster",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-17T18:39:29.674Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5fcd173be537ea378073a7bc",
+      "private": false,
+      "reactions": {
+        "like": 2
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a32e9e17e0342531b350bcb",
+      "statusChangeNewStatus": "complete",
+      "value": "Now available in SDK 3.10.4!",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -191,23 +239,23 @@
   "files": [],
   "ideaID": "680bb7f7e4c3e90df132121c",
   "imageURLs": [],
-  "lastUpdated": 1781560842769,
+  "lastUpdated": 1781956050546,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 63,
+  "maxScore": 64,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/5fcd173be537ea378073a7bc/917835912.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 63,
+  "score": 64,
   "sourceFeatureExtractionItem": null,
-  "status": "in progress",
-  "statusChanged": "2026-05-02T22:43:43.106Z",
+  "status": "complete",
+  "statusChanged": "2026-06-17T18:39:29.650Z",
   "subCategoryID": null,
   "title": "Whitelist DOTween for SDK3",
-  "trendingScore": 2946.193342330469,
-  "updatedAt": "2026-06-15T22:03:24.627024Z",
+  "trendingScore": 2946.8928465641648,
+  "updatedAt": "2026-06-20T11:48:29.185930Z",
   "urlName": "whitelist-dotween-for-sdk3",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -219,6 +267,17 @@
   },
   "voters": [
     {
+      "_id": "632b57fd1ad5e044cbdde5d9",
+      "alias": "Bellflower Stoat",
+      "aliasID": "6a351badf51f79a5dba289bd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/552cc303a81431ee2a2d242765305653.png",
+      "companies": [],
+      "name": "TonyEric",
+      "urlName": null,
+      "voteID": "6a351bb6f51f79a5dba29498"
+    },
+    {
       "_id": "5f9f1ebfa308d05f19397b80",
       "alias": "Reliable Warbler",
       "aliasID": "65c28115ed6eefce4c6d4a60",
@@ -226,7 +285,7 @@
       "avatarURL": "https://canny-assets.io/images/168f08ca4c4987a906f7e699a7e60c2c.png",
       "companies": [],
       "name": "JessicaOnMain",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a2ae00a23fd92cd3c4be6e6"
     },
     {
@@ -234,10 +293,10 @@
       "alias": "Southern Harrier",
       "aliasID": "6882003ac1f0e1f0162555ea",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/bf66f63f41f36d47af743bf8bd1f3acf.png",
+      "avatarURL": "https://canny-assets.io/images/9c36622b1b41a67a84adc44e27e0a44b.png",
       "companies": [],
       "name": "SkatingFool",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a29cb4b86d7b8843b19e1fb"
     },
     {
@@ -248,7 +307,7 @@
       "avatarURL": "https://canny-assets.io/images/f90cb84a11e87adee02e9d936f6f2eb8.png",
       "companies": [],
       "name": "BinoWulf",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a29c72f86d7b8843b19c750"
     },
     {
@@ -259,7 +318,7 @@
       "avatarURL": "https://canny-assets.io/images/ab576980cf0817c42eb2ba2326e2c5ec.png",
       "companies": [],
       "name": "dorpomi",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a15986f5a52cb2df0996f50"
     },
     {
@@ -267,10 +326,10 @@
       "alias": "Contemporary Gopher",
       "aliasID": "65cc7eaced6eefce4c63b7f3",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/5ee73335de9c31d82fd2c546e9748839.png",
+      "avatarURL": "https://canny-assets.io/images/24787df15996b187f60ef33792027283.png",
       "companies": [],
       "name": "GiggleL0rd",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a0be87e5a52cb2df02bd0d5"
     },
     {
@@ -281,7 +340,7 @@
       "avatarURL": "https://canny-assets.io/images/e73e3b21f664176f291d323158acb99c.png",
       "companies": [],
       "name": "LefTonbo",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a09dd0c5a52cb2df01f222b"
     },
     {
@@ -292,7 +351,7 @@
       "avatarURL": "https://canny-assets.io/images/279d5344e6e3af3276b9dde2fa6b08a7.png",
       "companies": [],
       "name": "hdorriker",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "6a03617ccf565b8f7408360e"
     },
     {
@@ -303,7 +362,7 @@
       "avatarURL": "https://canny-assets.io/images/8c4bfd9f22846fe4b53065c15894486c.png",
       "companies": [],
       "name": "＠SVoicesKarmaEX",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69fe7730cf565b8f74b88c99"
     },
     {
@@ -314,19 +373,8 @@
       "avatarURL": "https://canny-assets.io/images/6e73ca6e9b9f28da941def86bac16dc3.png",
       "companies": [],
       "name": "feebie",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "69fcebb74a48bed18960b876"
-    },
-    {
-      "_id": "5fd2dd606c94b54325bbb089",
-      "alias": "Cool Whitefish",
-      "aliasID": "65c28083ed6eefce4c570c7c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c693306596dc75a4c40640c98c72800a.png",
-      "companies": [],
-      "name": "Scena",
-      "urlName": "<redacted>",
-      "voteID": "69faa6404a48bed1894d976a"
     }
   ]
 }
