@@ -16,7 +16,7 @@
     "created": "2022-07-25T20:53:06.977Z",
     "name": "NullCase",
     "serviceAccount": false,
-    "urlName": "<redacted>"
+    "urlName": null
   },
   "authorID": "62df02b24a256544ac8b10fc",
   "board": {
@@ -43,7 +43,7 @@
         "created": "2017-03-22T20:33:08.848Z",
         "name": "Mimi",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -86,7 +86,7 @@
         "created": "2019-03-12T13:56:56.814Z",
         "name": "MrDummy_NL",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -129,7 +129,7 @@
         "created": "2018-03-16T02:50:18.758Z",
         "name": "Fionna",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -154,7 +154,7 @@
           "created": "2019-03-12T13:56:56.814Z",
           "name": "MrDummy_NL",
           "serviceAccount": false,
-          "urlName": "<redacted>"
+          "urlName": null
         }
       ],
       "mergeID": "62f613fa25fbd844a2613ea3",
@@ -184,7 +184,7 @@
         "created": "2020-08-24T04:46:34.003Z",
         "name": "khr_",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -227,7 +227,7 @@
         "created": "2021-10-16T06:51:17.972Z",
         "name": "timduru",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
@@ -269,7 +269,7 @@
         "created": "2018-06-02T17:30:22.821Z",
         "name": "1",
         "serviceAccount": false,
-        "urlName": "<redacted>"
+        "urlName": null
       },
       "boardID": "58c62efae9868f3662e9d9a1",
       "companyID": "58c62e995865713647a7115d",
@@ -301,7 +301,7 @@
   "files": [],
   "ideaID": "680bb905e4c3e90df1363487",
   "imageURLs": [],
-  "lastUpdated": 1781570415058,
+  "lastUpdated": 1781967374825,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 37,
@@ -316,7 +316,7 @@
   "subCategoryID": null,
   "title": "Add Portable Mirrors",
   "trendingScore": 2745.5391233063147,
-  "updatedAt": "2026-06-16T00:41:33.577093Z",
+  "updatedAt": "2026-06-20T14:57:25.090732Z",
   "urlName": "add-portable-mirrors",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -335,7 +335,7 @@
       "avatarURL": "https://canny-assets.io/images/1edc6f0ab066a1bbaca8445dbf8db358.png",
       "companies": [],
       "name": "timduru",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e102fc111d715ccb5da4da"
     },
     {
@@ -346,7 +346,7 @@
       "avatarURL": "https://canny-assets.io/images/be8efda6a07b21d9194d488c02db3940.png",
       "companies": [],
       "name": "camegone",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e0c0249950e9465503f5cd"
     },
     {
@@ -357,7 +357,7 @@
       "avatarURL": "https://canny-assets.io/images/7fdfe7807f398a628385c5c2cb04396d.png",
       "companies": [],
       "name": "SargonDragon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62e09297a3a2bd44bb396a0a"
     },
     {
@@ -365,10 +365,10 @@
       "alias": "Spontaneous Raccoon",
       "aliasID": "65d4375d0129d7ae4491ac14",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8ad2d92d432db685a2a190137d281055.png",
+      "avatarURL": "https://canny-assets.io/images/9bbc459c549f23b7fa04861e3b20dd60.png",
       "companies": [],
       "name": "Sin․",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f613d07ae27144ada3d09d"
     },
     {
@@ -379,7 +379,7 @@
       "avatarURL": "https://canny.io/images/60e638f11d9994afd588d21df1f6eb73.png",
       "companies": [],
       "name": "tuz",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f613fb25fbd844a2613f1d"
     },
     {
@@ -390,7 +390,7 @@
       "avatarURL": "https://canny-assets.io/images/0b349e5cc952cc7e10cbb52f5b1c27eb.png",
       "companies": [],
       "name": "Kyrah Abattoir",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f613fb25fbd844a2613f1b"
     },
     {
@@ -401,7 +401,7 @@
       "avatarURL": null,
       "companies": [],
       "name": "Kerlebsky",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62f613d07ae27144ada3d09f"
     },
     {
@@ -412,7 +412,7 @@
       "avatarURL": "https://canny-assets.io/images/9fd9e760c070a63548ef7f526d92c53d.png",
       "companies": [],
       "name": "Espera",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62df4d9ab2870d468c2ca709"
     },
     {
@@ -423,7 +423,7 @@
       "avatarURL": "https://canny-assets.io/images/a958fe05caeeffddd2fb0b482de7c44a.png",
       "companies": [],
       "name": "Foxicon",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62df2f92fbf8e344b6ac5473"
     },
     {
@@ -434,7 +434,7 @@
       "avatarURL": "https://canny.io/images/d2fcaccb3763d68ea8f4caae6cf692fa.png",
       "companies": [],
       "name": "khr_",
-      "urlName": "<redacted>",
+      "urlName": null,
       "voteID": "62df2325465d5152bc67a347"
     }
   ]
