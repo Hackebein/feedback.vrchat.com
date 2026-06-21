@@ -12,6 +12,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Iterator
@@ -342,11 +343,14 @@ def main() -> int:
         sys.stderr.write(f"refusing overwrite: backing index exists: {new_idx}\n")
         return 2
 
+    reindex_start = time.perf_counter()
+
     client.indices.create(index=new_idx, body=body)
 
     def docs() -> Iterable[tuple[str, dict[str, Any]]]:
         yield from iter_board_documents(boards_root)
 
+    bulk_start = time.perf_counter()
     n_ok, _ = bulk(
         client,
         gen_bulk(new_idx, docs()),
@@ -356,6 +360,12 @@ def main() -> int:
         chunk_size=args.bulk_chunks,
     )
     client.indices.refresh(index=new_idx)
+    bulk_elapsed = time.perf_counter() - bulk_start
+    rate = n_ok / bulk_elapsed if bulk_elapsed > 0 else 0.0
+    print(
+        f"bulk-indexed {n_ok} docs into {new_idx} in {bulk_elapsed:.1f}s ({rate:.0f} docs/s)",
+        file=sys.stderr,
+    )
 
     print(f'alias "{alias}" -> {new_idx}', file=sys.stderr)
 
@@ -372,6 +382,13 @@ def main() -> int:
             dry_run=False,
             keep_prev=max(0, args.keep_prev),
         )
+
+    reindex_elapsed = time.perf_counter() - reindex_start
+    print(
+        f"reindex complete: {n_ok} docs, alias {alias} -> {new_idx}, "
+        f"total {reindex_elapsed:.1f}s",
+        file=sys.stderr,
+    )
 
     return 0
 

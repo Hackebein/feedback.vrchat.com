@@ -104,6 +104,7 @@ install -d /etc/nginx/conf.d
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-public-cors.inc" /etc/nginx/conf.d/feedback-search-public-cors.inc
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-http-proxy-defaults.inc" /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.conf" /etc/nginx/conf.d/feedback-search-gateway-upstream.conf
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-notify-upstream.conf" /etc/nginx/conf.d/feedback-notify-upstream.conf
 
 bash "${REPO}/deploy/scripts/install_cloudflare_real_ip.sh"
 
@@ -121,4 +122,11 @@ systemctl reload nginx
 if systemctl cat feedback-search-gateway.service >/dev/null 2>&1; then
   systemctl daemon-reload
   systemctl restart feedback-search-gateway.service
+fi
+
+# Notification dispatcher (Web Push + webhooks). Builds the Go binary and
+# (re)registers the unit; skipped until bootstrap_security.sh has minted the
+# VAPID keypair into notify.env.
+if [[ -f /etc/feedback-search/notify.env ]]; then
+  FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/install_notify_service_on_server.sh"
 fi

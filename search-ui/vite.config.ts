@@ -16,6 +16,12 @@ export default defineConfig({
   },
   server: {
     proxy: {
+      // More specific prefix first so notification API calls reach the Go
+      // service instead of the search gateway.
+      "/api/notify": {
+        target: "http://127.0.0.1:3334",
+        changeOrigin: true,
+      },
       "/api": {
         target: "http://127.0.0.1:3333",
         changeOrigin: true,

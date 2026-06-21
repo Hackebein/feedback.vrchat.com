@@ -41,6 +41,20 @@ server {
         proxy_set_header Connection "";
     }
 
+    # Notification API (Web Push subscriptions + webhooks). Longer prefix than
+    # /api/ so these requests reach the Go dispatcher, not the search gateway.
+    location ^~ /api/notify/ {
+        include /etc/nginx/conf.d/feedback-search-public-cors.inc;
+        include /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc;
+        proxy_pass http://feedback_notify;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Connection "";
+    }
+
     location ^~ /api/ {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
         include /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc;

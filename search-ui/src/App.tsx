@@ -35,6 +35,8 @@ import { AttachmentTextView } from "./AttachmentTextView";
 import { EmbeddedImageView } from "./EmbeddedImageView";
 import { aiCategoryDescription, aiCategoryName } from "./featureTree";
 import { MarkdownText } from "./MarkdownText";
+import { Notifications } from "./Notifications";
+import { setCurrentSearchParams } from "./searchFilterStore";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
 
@@ -578,9 +580,33 @@ function createFeedbackSearchClient(apiUrl: string) {
   }
   return Object.assign(inner, {
     async search(requests: unknown) {
+      captureSearchParams(requests);
       return fetchSearchJson(requests);
     },
   });
+}
+
+/**
+ * Capture the primary search request's params so notification subscriptions can
+ * replay the exact filter the user is viewing. Facet-only sub-queries (which
+ * carry `facetName`) are skipped in favor of the main search request.
+ */
+function captureSearchParams(requests: unknown): void {
+  if (!Array.isArray(requests) || requests.length === 0) {
+    return;
+  }
+  const withParams = requests.filter(
+    (r): r is { params: Record<string, unknown> } =>
+      typeof r === "object" &&
+      r !== null &&
+      "params" in r &&
+      typeof (r as { params?: unknown }).params === "object",
+  );
+  const main =
+    withParams.find((r) => !("facetName" in r.params)) ?? withParams[0];
+  if (main) {
+    setCurrentSearchParams(main.params);
+  }
 }
 
 type LuceneAttrRow = { field: string; kind: string; example: string };
@@ -1544,23 +1570,26 @@ export function App() {
       <Configure hitsPerPage={50} maxValuesPerFacet={200} />
       <main className="layout">
         <header className="top">
-          <h1>
-            <a
-              className="site-title-link"
-              href={CANNY_ORIGIN}
-              target="_blank"
-              rel="noreferrer"
-            >
-              VRChat feedback search
-            </a>
-          </h1>
-          <p className="lede">
-            Search VRChat feedback posts.{" "}
-            <a href="/openapi.html" target="_blank" rel="noreferrer">
-              API reference
-            </a>
-            .
-          </p>
+          <div className="top-heading">
+            <h1>
+              <a
+                className="site-title-link"
+                href={CANNY_ORIGIN}
+                target="_blank"
+                rel="noreferrer"
+              >
+                VRChat feedback search
+              </a>
+            </h1>
+            <p className="lede">
+              Search VRChat feedback posts.{" "}
+              <a href="/openapi.html" target="_blank" rel="noreferrer">
+                API reference
+              </a>
+              .
+            </p>
+          </div>
+          <Notifications luceneMode={luceneMode} />
         </header>
 
         <div className="panels">
