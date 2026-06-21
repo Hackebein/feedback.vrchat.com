@@ -50,6 +50,15 @@ ensure_go() {
 ensure_go
 export PATH="/usr/local/go/bin:${PATH}"
 
+# systemd runs this with a minimal environment (no $HOME), so Go cannot derive
+# GOPATH/GOMODCACHE/GOCACHE and `go build` aborts with "module cache not found".
+# Pin them to persistent, writable locations.
+export HOME="${HOME:-/root}"
+export GOPATH="${GOPATH:-${BIN_DIR}/go}"
+export GOMODCACHE="${GOPATH}/pkg/mod"
+export GOCACHE="${GOCACHE:-${BIN_DIR}/go-build}"
+install -d "${GOPATH}" "${GOCACHE}"
+
 install -d "${BIN_DIR}"
 (cd "${REPO_ROOT}/notify" && GOFLAGS=-mod=mod go build -o "${BIN_PATH}" .)
 
