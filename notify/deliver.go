@@ -74,10 +74,61 @@ func (d *Dispatcher) deliverPush(sub Subscription, events []NotificationEvent) {
 	}
 }
 
+type discordWebhookPayload struct {
+	Embeds []discordEmbed `json:"embeds"`
+}
+
+type discordEmbed struct {
+	Title       string         `json:"title,omitempty"`
+	Description string         `json:"description,omitempty"`
+	URL         string         `json:"url,omitempty"`
+	Color       int            `json:"color,omitempty"`
+	Fields      []discordField `json:"fields,omitempty"`
+	Timestamp   string         `json:"timestamp,omitempty"`
+}
+
+type discordField struct {
+	Name   string `json:"name"`
+	Value  string `json:"value"`
+	Inline bool   `json:"inline,omitempty"`
+}
+
+const (
+	discordEmbedTitleMax       = 256
+	discordEmbedDescriptionMax = 4096
+	discordEmbedFieldValueMax  = 1024
+	discordColorPost           = 0x57F287
+	discordColorComment        = 0xFEE75C
+)
+
+func buildDiscordWebhookPayload(events []NotificationEvent) ([]byte, error) {
+	embeds := make([]discordEmbed, 0, len(events))
+	for _, ev := range events {
+		color := discordColorPost
+		if ev.Type == "comment" {
+			color = discordColorComment
+		}
+		desc := ev.Body
+		if desc == "" {
+			desc = ev.Excerpt
+		}
+		embeds = append(embeds, discordEmbed{
+			Title:       truncate(ev.Title, discordEmbedTitleMax),
+			Description: truncate(desc, discordEmbedDescriptionMax),
+			URL:         ev.URL,
+			Color:       color,
+			Fields: []discordField{
+				{Name: "Board", Value: truncate(ev.Board, discordEmbedFieldValueMax), Inline: true},
+				{Name: "Author", Value: truncate(ev.Author, discordEmbedFieldValueMax), Inline: true},
+			},
+			Timestamp: ev.Created,
+		})
+	}
+	return json.Marshal(discordWebhookPayload{Embeds: embeds})
+}
+
 func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, events []NotificationEvent) {
-	body, err := json.Marshal(map[string]interface{}{
-		"events": events,
-	})
+	body, err := buildDiscordWebhookPayload(events)
 	if err != nil {
 		return
 	}

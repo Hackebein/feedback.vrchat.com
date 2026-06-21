@@ -47,6 +47,7 @@ type createSubscriptionRequest struct {
 }
 
 type createWebhookRequest struct {
+	Kind       string                 `json:"kind"`
 	WebhookURL string                 `json:"webhookUrl"`
 	Filter     map[string]interface{} `json:"filter"`
 	Lucene     bool                   `json:"lucene"`
@@ -162,6 +163,10 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 		writeError(w, http.StatusBadRequest, "invalid JSON body")
 		return
 	}
+	if req.Kind != "post" && req.Kind != "comment" {
+		writeError(w, http.StatusBadRequest, "kind must be 'post' or 'comment'")
+		return
+	}
 	url := strings.TrimSpace(req.WebhookURL)
 	if !strings.HasPrefix(url, "https://") && !strings.HasPrefix(url, "http://") {
 		writeError(w, http.StatusBadRequest, "webhookUrl must be an http(s) URL")
@@ -174,22 +179,25 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 	}
 
 	nowMS := time.Now().UnixMilli()
-	// A webhook receives both new posts and new comments for the captured filter.
-	for _, kind := range []string{"post", "comment"} {
-		if _, err := s.store.CreateSubscription(Subscription{
-			Kind:        kind,
-			Target:      "webhook",
-			WebhookURL:  url,
-			Lucene:      req.Lucene,
-			FilterJSON:  filterJSON,
-			Label:       strings.TrimSpace(req.Label),
-			WatermarkMS: nowMS,
-		}, nowMS); err != nil {
-			writeError(w, http.StatusInternalServerError, "create webhook")
-			return
-		}
+	id, err := s.store.CreateSubscription(Subscription{
+		Kind:        req.Kind,
+		Target:      "webhook",
+		WebhookURL:  url,
+		Lucene:      req.Lucene,
+		FilterJSON:  filterJSON,
+		Label:       strings.TrimSpace(req.Label),
+		WatermarkMS: nowMS,
+	}, nowMS)
+	if err != nil {
+		writeError(w, http.StatusInternalServerError, "create webhook")
+		return
 	}
-	writeJSON(w, http.StatusCreated, map[string]string{"status": "created"})
+	writeJSON(w, http.StatusCreated, SubscriptionView{
+		ID:        id,
+		Kind:      req.Kind,
+		Label:     strings.TrimSpace(req.Label),
+		CreatedAt: nowMS,
+	})
 }
 
 func decodeJSON(r *http.Request, dst interface{}) error {

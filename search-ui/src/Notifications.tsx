@@ -87,6 +87,7 @@ interface BellMenuProps {
   busy: boolean;
   error: string | null;
   open: boolean;
+  luceneMode: boolean;
   onToggle: () => void;
   onEnable: () => void;
   onDelete: (id: number) => void;
@@ -100,11 +101,49 @@ function BellMenu({
   busy,
   error,
   open,
+  luceneMode,
   onToggle,
   onEnable,
   onDelete,
 }: BellMenuProps) {
+  const [webhook, setWebhook] = useState("");
+  const [webhookStatus, setWebhookStatus] = useState<string | null>(null);
+  const [webhookBusy, setWebhookBusy] = useState(false);
   const active = subs.length > 0;
+
+  const addWebhook = useCallback(async () => {
+    const url = webhook.trim();
+    if (!url) return;
+    setWebhookBusy(true);
+    setWebhookStatus(null);
+    try {
+      const filter = getCurrentSearchParams();
+      const res = await fetch(`${NOTIFY_BASE}/webhooks`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          kind,
+          webhookUrl: url,
+          filter,
+          lucene: luceneMode,
+          label: describeFilter(filter, kind),
+        }),
+      });
+      if (!res.ok) {
+        const data = (await res.json().catch(() => null)) as
+          | { message?: string }
+          | null;
+        throw new Error(data?.message ?? "Could not add webhook.");
+      }
+      setWebhook("");
+      setWebhookStatus(`Webhook added for ${KIND_LABEL[kind]}.`);
+    } catch (err) {
+      setWebhookStatus(err instanceof Error ? err.message : "Could not add webhook.");
+    } finally {
+      setWebhookBusy(false);
+    }
+  }, [webhook, kind, luceneMode]);
+
   return (
     <div className="notify-bell">
       <button
@@ -154,6 +193,32 @@ function BellMenu({
               ))
             )}
           </div>
+          <div className="notify-webhook notify-webhook-menu">
+            <input
+              type="url"
+              className="notify-webhook-input"
+              placeholder={"Webhook URL\u2026"}
+              value={webhook}
+              onChange={(e) => {
+                setWebhook(e.target.value);
+                setWebhookStatus(null);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") void addWebhook();
+              }}
+            />
+            <button
+              type="button"
+              className="notify-webhook-add"
+              onClick={() => void addWebhook()}
+              disabled={webhookBusy || webhook.trim() === ""}
+            >
+              {webhookBusy ? "Adding\u2026" : "Add webhook"}
+            </button>
+            {webhookStatus ? (
+              <span className="notify-webhook-status">{webhookStatus}</span>
+            ) : null}
+          </div>
         </div>
       ) : null}
     </div>
@@ -174,9 +239,6 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
     post: null,
     comment: null,
   });
-  const [webhook, setWebhook] = useState("");
-  const [webhookStatus, setWebhookStatus] = useState<string | null>(null);
-  const [webhookBusy, setWebhookBusy] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -311,38 +373,6 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
     [endpoint, refreshList],
   );
 
-  const addWebhook = useCallback(async () => {
-    const url = webhook.trim();
-    if (!url) return;
-    setWebhookBusy(true);
-    setWebhookStatus(null);
-    try {
-      const filter = getCurrentSearchParams();
-      const res = await fetch(`${NOTIFY_BASE}/webhooks`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          webhookUrl: url,
-          filter,
-          lucene: luceneMode,
-          label: describeFilter(filter, "post"),
-        }),
-      });
-      if (!res.ok) {
-        const data = (await res.json().catch(() => null)) as
-          | { message?: string }
-          | null;
-        throw new Error(data?.message ?? "Could not add webhook.");
-      }
-      setWebhook("");
-      setWebhookStatus("Webhook added for the current filter.");
-    } catch (err) {
-      setWebhookStatus(err instanceof Error ? err.message : "Could not add webhook.");
-    } finally {
-      setWebhookBusy(false);
-    }
-  }, [webhook, luceneMode]);
-
   if (!supported) {
     return null;
   }
@@ -359,37 +389,12 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
           busy={busy === kind}
           error={errors[kind]}
           open={openMenu === kind}
+          luceneMode={luceneMode}
           onToggle={() => setOpenMenu((m) => (m === kind ? null : kind))}
           onEnable={() => void enableBell(kind)}
           onDelete={(id) => void deleteSub(kind, id)}
         />
       ))}
-      <div className="notify-webhook">
-        <input
-          type="url"
-          className="notify-webhook-input"
-          placeholder={"Webhook URL\u2026"}
-          value={webhook}
-          onChange={(e) => {
-            setWebhook(e.target.value);
-            setWebhookStatus(null);
-          }}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") void addWebhook();
-          }}
-        />
-        <button
-          type="button"
-          className="notify-webhook-add"
-          onClick={() => void addWebhook()}
-          disabled={webhookBusy || webhook.trim() === ""}
-        >
-          {webhookBusy ? "Adding\u2026" : "Add"}
-        </button>
-        {webhookStatus ? (
-          <span className="notify-webhook-status">{webhookStatus}</span>
-        ) : null}
-      </div>
     </div>
   );
 }

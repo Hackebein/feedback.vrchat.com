@@ -1747,6 +1747,18 @@ mark {
   flex-wrap: wrap;
 }
 
+.notify-webhook-menu {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid #2a3142;
+}
+
+.notify-webhook-menu .notify-webhook-input {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+}
+
 .notify-webhook-input {
   width: 13rem;
   max-width: 60vw;
