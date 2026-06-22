@@ -2,9 +2,10 @@
   "_id": "6a38747205b6a2467512c294",
   "aiCategories": [
     "loc.in-world",
+    "client.chatbox",
     "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-06-21T23:39:33.699612Z",
+  "aiTaggedAt": "2026-06-22T06:08:36.990156Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "679c0426e377b2be5fff17c2",
@@ -35,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "In the report option, when reporting emojis and other content, it doesn't show who sent out a sticker or emoji, you can only report the contents. This can make it difficult to know who to moderate if certain stickers and content are against the rules of an instance!",
+  "details": "In the report option, when reporting emojis and other content, it doesn't show who sent out a sticker or emoji to people who have sufficient kick/warn/mute permissions. (only very specific people, apparently) You can only report the contents. This can make it difficult to know who to moderate if certain stickers and content are against the rules of an instance!",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -43,7 +44,7 @@
   "files": [],
   "ideaID": "6a38747205b6a2467512c27b",
   "imageURLs": [],
-  "lastUpdated": 1782088950525,
+  "lastUpdated": 1782108293037,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -59,7 +60,7 @@
   "subCategoryID": null,
   "title": "Show Who Sent What Content in the Report Tab",
   "trendingScore": 2947.9561758841965,
-  "updatedAt": "2026-06-22T00:43:10.649554Z",
+  "updatedAt": "2026-06-22T06:08:32.584642Z",
   "updatedBy": "679c0426e377b2be5fff17c2",
   "urlName": "show-who-sent-what-content-in-the-report-tab",
   "viewerIsAuthor": false,
