@@ -183,7 +183,7 @@ func (s *Store) DeleteSubscription(id int64) error {
 // ListAll returns every subscription joined with push keys, for dispatching.
 func (s *Store) ListAll() ([]Subscription, error) {
 	rows, err := s.db.Query(
-		`SELECT sub.id, sub.kind, sub.target, sub.push_subscription_id, sub.webhook_url,
+		`SELECT sub.id, sub.kind, sub.target, sub.push_subscription_id, COALESCE(sub.webhook_url, ''),
 		        sub.lucene, sub.filter_json, sub.label, sub.watermark_ms, sub.error_since_ms,
 		        COALESCE(ps.endpoint, ''), COALESCE(ps.p256dh, ''), COALESCE(ps.auth, '')
 		   FROM subscription sub
