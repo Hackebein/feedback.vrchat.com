@@ -3,9 +3,10 @@
   "_id": "667de9033d8ab3c111e7f9cd",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.vrcsdk",
+    "sdk.world-building"
   ],
-  "aiTaggedAt": "2026-06-14T23:32:26.161161Z",
+  "aiTaggedAt": "2026-06-22T14:34:55.723240Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2eaed841e042066f65cb45",
@@ -36,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "__v": 0,
@@ -208,7 +209,7 @@
       "postID": "667de9033d8ab3c111e7f9cd",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -264,6 +265,62 @@
       "value": "[3.8.2] I would like to extend this bug also to canvas components (with a VRC UI Shape component on it).\n\nThe collider in the screenshot is exactly in the middle of the UI sliders. The collider is on a layer which should be transparent to interaction (PhysicCollider - like on the screenshot of the initial post).\n\nA desktop user with the head above the collider can move the sliders only until the point it intersects above the collider. A desktop user with the head below the collider can move the sliders only until the point it intersects below with the collider.\n\nThe raycast to interact with UI element in desktop should respect the interact passthrough setting too.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a39404e5f32f628f44f026b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a394016f51f79a5dbe602da",
+        "alias": "New Stork",
+        "aliasID": "6a394016f51f79a5dbe602e2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/403423a003b581a0457af63c9cb52b10.png",
+        "created": "2026-06-22T14:00:54.421Z",
+        "name": "mzgckit",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-22T14:01:50.704Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "60189fe37ae30b2338042f44",
+          "alias": "Circular Marsupial",
+          "aliasID": "65c297eded6eefce4ce58324",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/a998696efa48a82986d84e8046ae1b1e.png",
+          "created": "2021-02-02T00:42:11.303Z",
+          "name": "BoatFloater",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "685cbac150a24d2a2806ae32",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "667de9033d8ab3c111e7f9cd",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{60189fe37ae30b2338042f44|full_name}Thank you very much！",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -284,7 +341,7 @@
     "https://canny.io/images/ce3b87f204df28ffa536ac950d3075d3.png",
     "https://canny.io/images/6f705832ca4b9c288dd44e77c75687bc.png"
   ],
-  "lastUpdated": 1781895040073,
+  "lastUpdated": 1782138701300,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 29,
@@ -300,7 +357,7 @@
   "subCategoryID": null,
   "title": "[3.6.x] Interact Passthrough broken?",
   "trendingScore": 2942.263548194669,
-  "updatedAt": "2026-06-19T18:51:09.673525Z",
+  "updatedAt": "2026-06-22T14:34:48.056877Z",
   "updatedBy": null,
   "urlName": "36x-interact-passthrough-broken",
   "viewerIsAuthor": false,
@@ -416,7 +473,7 @@
       "alias": "Sapphire Raven",
       "aliasID": "65c2b472ed6eefce4cda4345",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/b55a970f374e09472f02607c4f25034b.png",
+      "avatarURL": "https://canny-assets.io/images/911d29b1438104be0473d2333fbc5b09.png",
       "companies": [],
       "name": "Salena",
       "urlName": null,
