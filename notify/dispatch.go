@@ -105,10 +105,14 @@ func (d *Dispatcher) processSubscription(ctx context.Context, sub Subscription) 
 	log.Printf("[notify] sub=%d target=%s kind=%s hits=%d events=%d watermark=%d", sub.ID, sub.Target, sub.Kind, len(hits), len(events), sub.WatermarkMS)
 
 	if len(events) == 0 {
-		// Nothing matched; keep the watermark fresh so the search window does
-		// not grow without bound.
-		if nowMS > sub.WatermarkMS {
-			return d.store.UpdateWatermark(sub.ID, nowMS)
+		// Nothing matched; nudge the watermark forward so the search window
+		// does not grow without bound. Stay WatermarkLag behind wall-clock so
+		// posts that are still propagating through the ingest pipeline (and
+		// therefore carry a `created` timestamp older than now) are not skipped
+		// once they become searchable.
+		safeMS := nowMS - d.cfg.WatermarkLag.Milliseconds()
+		if safeMS > sub.WatermarkMS {
+			return d.store.UpdateWatermark(sub.ID, safeMS)
 		}
 		return nil
 	}
