@@ -627,11 +627,18 @@ def build_scan_targets(stored, fresh_by_board, refresh_oldest, refresh_newest):
     `refresh_oldest`. If `refresh_oldest` is None all stored posts are included
     in the oldest pass. Pass `refresh_newest=0` to skip the newest-activity pass.
 
-    Returns (scan_targets, new_count, updated_count, newest_count, oldest_count)
-    where scan_targets is a list of (search_board_slug, pid, url_slug).
+    Stored posts present in the newest sweep whose listing fields all match are
+    recorded in `verified_unchanged` and skipped by the newest-activity pass
+    (no detail fetch needed). The oldest pass deliberately does NOT skip them so
+    that it still re-verifies each post individually as its `updatedAt` ages.
+
+    Returns (scan_targets, new_count, updated_count, newest_count, oldest_count,
+    skipped_verified) where scan_targets is a list of (search_board_slug, pid,
+    url_slug).
     """
     scan_targets = []
     seen = set()
+    verified_unchanged = set()
     new_count = 0
     updated_count = 0
 
@@ -667,6 +674,7 @@ def build_scan_targets(stored, fresh_by_board, refresh_oldest, refresh_newest):
                     "voteSettings",
                 )
             ):
+                verified_unchanged.add(pid)
                 continue
             slug = p.get("urlName") or stored_post.get("urlName") or ""
             if not slug:
@@ -687,8 +695,15 @@ def build_scan_targets(stored, fresh_by_board, refresh_oldest, refresh_newest):
         newest_sorted = newest_sorted[:refresh_newest]
 
     newest_count = 0
+    skipped_verified = 0
     for pid, info in newest_sorted:
         if pid in seen:
+            continue
+        if pid in verified_unchanged:
+            # Listing showed no change: skip the detail fetch this run. Do NOT
+            # add to `seen` so the oldest pass can still re-verify it later once
+            # its updatedAt ages into the oldest window.
+            skipped_verified += 1
             continue
         slug = info["post"].get("urlName") or ""
         if not slug:
@@ -718,7 +733,7 @@ def build_scan_targets(stored, fresh_by_board, refresh_oldest, refresh_newest):
         seen.add(pid)
         oldest_count += 1
 
-    return scan_targets, new_count, updated_count, newest_count, oldest_count
+    return scan_targets, new_count, updated_count, newest_count, oldest_count, skipped_verified
 
 
 def fetch_all_pages(scan_targets):
@@ -1281,11 +1296,12 @@ def main():
     if deduped:
         print(f"[UPDATE] {deduped} cross-board duplicate(s) consolidated")
 
-    scan_targets, new_count, updated_count, newest_count, oldest_count = build_scan_targets(
+    scan_targets, new_count, updated_count, newest_count, oldest_count, skipped_verified = build_scan_targets(
         stored, fresh_by_board, args.refresh_oldest, args.refresh_newest,
     )
     print(f"[UPDATE] scanning {len(scan_targets)} posts "
-          f"(new={new_count}, updated={updated_count}, newest={newest_count}, oldest={oldest_count})...")
+          f"(new={new_count}, updated={updated_count}, newest={newest_count}, "
+          f"oldest={oldest_count}, skipped_verified={skipped_verified})...")
 
     results = fetch_all_pages(scan_targets)
 
