@@ -19,7 +19,8 @@ const QUERY_STRING_COMMON = {
   analyze_wildcard: true,
 };
 
-const NESTED_PATH = "comments";
+const COMMENTS_PATH = "comments";
+const VOTERS_PATH = "voters";
 
 /** Split on whitespace-delimited AND at paren-depth 0, outside quotes. */
 export function splitTopLevelAnd(query: string): string[] {
@@ -162,7 +163,7 @@ export function stripOuterParens(s: string): string {
 
 const LEADING_FIELD = /^([A-Za-z_][\w.]*)\s*:/;
 
-export type ClauseBucket = "post" | "comments";
+export type ClauseBucket = "post" | "comments" | "voters";
 
 /** Classifies by the first clause field segment (after NOT / outer parens). */
 export function classifyClause(rest: string): { bucket: ClauseBucket; clause: string } {
@@ -174,6 +175,9 @@ export function classifyClause(rest: string): { bucket: ClauseBucket; clause: st
   }
   if (field === "comments" || field.startsWith("comments.")) {
     return { bucket: "comments", clause };
+  }
+  if (field === "voters" || field.startsWith("voters.")) {
+    return { bucket: "voters", clause };
   }
   return { bucket: "post", clause };
 }
@@ -188,10 +192,10 @@ function postQueryString(query: string): ElasticsearchQuery {
   };
 }
 
-function commentsNested(query: string): ElasticsearchQuery {
+function nestedQueryString(path: string, query: string): ElasticsearchQuery {
   return {
     nested: {
-      path: NESTED_PATH,
+      path,
       query: {
         query_string: {
           query,
@@ -200,6 +204,14 @@ function commentsNested(query: string): ElasticsearchQuery {
       },
     },
   };
+}
+
+function commentsNested(query: string): ElasticsearchQuery {
+  return nestedQueryString(COMMENTS_PATH, query);
+}
+
+function votersNested(query: string): ElasticsearchQuery {
+  return nestedQueryString(VOTERS_PATH, query);
 }
 
 /**
@@ -219,6 +231,8 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
   const postNegative: string[] = [];
   const commentsPositive: string[] = [];
   const commentsNegative: string[] = [];
+  const votersPositive: string[] = [];
+  const votersNegative: string[] = [];
 
   for (const rawChunk of chunks) {
     const { negated, rest } = stripNotLayers(rawChunk);
@@ -233,6 +247,9 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
     if (bucket === "comments") {
       if (targetNeg) commentsNegative.push(c);
       else commentsPositive.push(c);
+    } else if (bucket === "voters") {
+      if (targetNeg) votersNegative.push(c);
+      else votersPositive.push(c);
     } else {
       if (targetNeg) postNegative.push(c);
       else postPositive.push(c);
@@ -242,27 +259,31 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
   if (
     postPositive.length === 0 &&
     commentsPositive.length === 0 &&
+    votersPositive.length === 0 &&
     postNegative.length === 0 &&
-    commentsNegative.length === 0
+    commentsNegative.length === 0 &&
+    votersNegative.length === 0
   ) {
     return { match_all: {} };
   }
 
-  const usesCommentsRouting =
+  const usesNestedOrNegativeRouting =
     commentsPositive.length +
       commentsNegative.length +
+      votersPositive.length +
+      votersNegative.length +
       postNegative.length >
     0;
 
   if (
-    !usesCommentsRouting &&
+    !usesNestedOrNegativeRouting &&
     postPositive.length === 1
   ) {
     return postQueryString(postPositive[0]!);
   }
 
   if (
-    !usesCommentsRouting &&
+    !usesNestedOrNegativeRouting &&
     postPositive.length > 1
   ) {
     return postQueryString(postPositive.join(" AND "));
@@ -282,6 +303,10 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
     must.push(commentsNested(c));
   }
 
+  for (const c of votersPositive) {
+    must.push(votersNested(c));
+  }
+
   const must_not: ElasticsearchQuery[] = [];
 
   for (const c of postNegative) {
@@ -290,6 +315,10 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
 
   for (const c of commentsNegative) {
     must_not.push(commentsNested(c));
+  }
+
+  for (const c of votersNegative) {
+    must_not.push(votersNested(c));
   }
 
   if (

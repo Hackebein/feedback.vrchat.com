@@ -228,6 +228,13 @@ export function searchkitConfig(host: string, username: string, password: string
         { attribute: "post_updated", field: "updatedAt", type: "numeric" },
         { attribute: "post_statusChanged", field: "statusChanged", type: "numeric" },
         {
+          attribute: "voter_name",
+          field: "name.keyword",
+          type: "string",
+          nestedPath: "voters",
+          facetQuery: slugSafeFacetQuery,
+        },
+        {
           attribute: "comment_author_name",
           field: "author.name.keyword",
           type: "string",

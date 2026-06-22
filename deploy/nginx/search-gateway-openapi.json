@@ -391,7 +391,7 @@
                 "items": {
                   "type": "string"
                 },
-                "description": "Facet attributes whose counts accompany the hits. Common post facets: **`board_slug`**, **`board_name`**, **`status`**, **`category_name`**, **`author_name`**, **`aiCategories`**, **`vote_highEngagement`**, **`vote_moderateEngagement`**, **`vote_lowEngagement`**; quantitative facets **`score`**, **`maxScore`**, **`commentCount`**, **`mergeCount`**, **`trendingScore`**, **`post_created`**, **`post_updated`**, **`post_statusChanged`**; nested comment facets **`comment_author_name`**, **`comment_pinned`**, **`comment_likeCount`**, **`comment_created`**."
+                "description": "Facet attributes whose counts accompany the hits. Common post facets: **`board_slug`**, **`board_name`**, **`status`**, **`category_name`**, **`author_name`**, **`aiCategories`**, **`vote_highEngagement`**, **`vote_moderateEngagement`**, **`vote_lowEngagement`**; quantitative facets **`score`**, **`maxScore`**, **`commentCount`**, **`mergeCount`**, **`trendingScore`**, **`post_created`**, **`post_updated`**, **`post_statusChanged`**; nested comment facets **`comment_author_name`**, **`comment_pinned`**, **`comment_likeCount`**, **`comment_created`**; nested voter facet **`voter_name`**."
               },
               "facetFilters": {
                 "description": "Algolia **`facetFilters`**: a **`string`**, **`string[]`**, or nested **`array`** (**OR-of-AND** groups).",

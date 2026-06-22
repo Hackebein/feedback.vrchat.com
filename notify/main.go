@@ -41,7 +41,7 @@ func main() {
 	dispatcher := newDispatcher(cfg, store)
 	go dispatcher.Run(ctx)
 
-	srv := newServer(cfg, store)
+	srv := newServer(cfg, store, dispatcher)
 	addr := net.JoinHostPort(cfg.Bind, strconv.Itoa(cfg.Port))
 	httpServer := &http.Server{
 		Addr:              addr,

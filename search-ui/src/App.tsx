@@ -356,6 +356,7 @@ const REFINEMENT_LIST_ATTRS: AttrEntry[] = [
   { urlKey: "category.name", attr: "category_name" },
   { urlKey: "aiCategories", attr: "aiCategories" },
   { urlKey: "author.name", attr: "author_name" },
+  { urlKey: "voters.name", attr: "voter_name" },
   { urlKey: "comments.author.name", attr: "comment_author_name" },
 ];
 
@@ -688,6 +689,12 @@ const LUCENE_ATTRIBUTE_ROWS: LuceneAttrRow[] = [
     kind: "date",
     example: `updatedAt:["2025-01-01" TO "*"]`,
   },
+  { field: "voters.name", kind: "text", example: `voters.name:Alice` },
+  {
+    field: "voters.name.keyword",
+    kind: "keyword",
+    example: `voters.name.keyword:"Jane Doe"`,
+  },
   {
     field: "voteSettings.highEngagement",
     kind: "keyword/bool-like",
@@ -721,7 +728,7 @@ function LuceneAttributesPanel({ onClose }: { onClose: () => void }) {
           Field reference
         </h2>
         <p className="lucene-attributes-note">
-          <code className="lucene-inline-code">comments.*</code> clause matches if <strong>any</strong> single comment satisfies it. Bare terms target the default text fields (combined title, body, author name).
+          <code className="lucene-inline-code">comments.*</code> and <code className="lucene-inline-code">voters.*</code> clauses match if <strong>any</strong> single comment or voter satisfies them. Bare terms target the default text fields (combined title, body, author name).
         </p>
       </div>
       <ul className="lucene-attributes-list">
@@ -1774,6 +1781,20 @@ export function App() {
                       attribute="author_name"
                       searchable
                       searchablePlaceholder="Filter authors…"
+                      showMore
+                      limit={10}
+                      showMoreLimit={500}
+                    />
+                  </section>
+                  <section className="facet-section">
+                    <h2 className="facet-heading">Voted by</h2>
+                    <p className="facet-hint">
+                      Posts with at least one matching voter.
+                    </p>
+                    <RefinementList
+                      attribute="voter_name"
+                      searchable
+                      searchablePlaceholder="Filter voters…"
                       showMore
                       limit={10}
                       showMoreLimit={500}

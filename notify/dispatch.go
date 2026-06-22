@@ -94,61 +94,13 @@ type gwResponse struct {
 }
 
 func (d *Dispatcher) processSubscription(ctx context.Context, sub Subscription) error {
-	hits, err := d.queryGateway(ctx, sub)
+	hits, err := d.queryGateway(ctx, sub, d.cfg.IndexName+"_created_asc", true, 100)
 	if err != nil {
 		return err
 	}
 
 	nowMS := time.Now().UnixMilli()
-	maxSeen := sub.WatermarkMS
-	events := []NotificationEvent{}
-
-	for _, raw := range hits {
-		var hit gwHit
-		if err := json.Unmarshal(raw, &hit); err != nil {
-			continue
-		}
-		link := cannyPostURL(hit.Board.URLName, hit.URLName)
-		if sub.Kind == "post" {
-			createdMS, ok := parseTimeMS(hit.Created)
-			if !ok || createdMS <= sub.WatermarkMS {
-				continue
-			}
-			if createdMS > maxSeen {
-				maxSeen = createdMS
-			}
-			events = append(events, NotificationEvent{
-				Type:    "post",
-				Title:   fmt.Sprintf("New post in %s", boardLabel(hit.Board.Name, hit.Board.URLName)),
-				Body:    hit.Title,
-				URL:     link,
-				Board:   hit.Board.Name,
-				Author:  hit.Author.Name,
-				Excerpt: excerpt(hit.Details, 200),
-				Created: hit.Created,
-			})
-		} else { // comment
-			for _, c := range hit.Comments {
-				createdMS, ok := parseTimeMS(c.Created)
-				if !ok || createdMS <= sub.WatermarkMS {
-					continue
-				}
-				if createdMS > maxSeen {
-					maxSeen = createdMS
-				}
-				events = append(events, NotificationEvent{
-					Type:    "comment",
-					Title:   fmt.Sprintf("New comment on %q", hit.Title),
-					Body:    excerpt(c.Value, 200),
-					URL:     link,
-					Board:   hit.Board.Name,
-					Author:  c.Author.Name,
-					Excerpt: excerpt(c.Value, 200),
-					Created: c.Created,
-				})
-			}
-		}
-	}
+	events, maxSeen := buildEvents(sub, hits, sub.WatermarkMS)
 
 	log.Printf("[notify] sub=%d target=%s kind=%s hits=%d events=%d watermark=%d", sub.ID, sub.Target, sub.Kind, len(hits), len(events), sub.WatermarkMS)
 
@@ -169,25 +121,120 @@ func (d *Dispatcher) processSubscription(ctx context.Context, sub Subscription) 
 	return d.store.UpdateWatermark(sub.ID, maxSeen)
 }
 
-// queryGateway replays the stored InstantSearch filter against the gateway,
-// adding a watermark numeric filter on the registered created facet so only new
-// content comes back.
-func (d *Dispatcher) queryGateway(ctx context.Context, sub Subscription) ([]json.RawMessage, error) {
+// SendInitial delivers the single most recent existing item matching the
+// subscription's filter, as a "first message" right after the subscription is
+// created. It ignores the watermark and does not advance it: the item already
+// exists (created <= now == watermark), so the regular poll loop will not
+// re-send it. Best-effort; errors are logged.
+func (d *Dispatcher) SendInitial(ctx context.Context, sub Subscription) {
+	index := d.cfg.IndexName
+	if sub.Kind == "comment" {
+		// Order by activity so posts carrying the newest comments come first.
+		index = d.cfg.IndexName + "_activity_desc"
+	}
+	hits, err := d.queryGateway(ctx, sub, index, false, 25)
+	if err != nil {
+		log.Printf("[notify] initial sub=%d target=%s kind=%s: %v", sub.ID, sub.Target, sub.Kind, err)
+		return
+	}
+
+	events, _ := buildEvents(sub, hits, -1)
+	if len(events) == 0 {
+		log.Printf("[notify] initial sub=%d target=%s kind=%s: no matching item", sub.ID, sub.Target, sub.Kind)
+		return
+	}
+
+	latest := events[0]
+	latestMS, _ := parseTimeMS(latest.Created)
+	for _, ev := range events[1:] {
+		ms, ok := parseTimeMS(ev.Created)
+		if ok && ms > latestMS {
+			latest, latestMS = ev, ms
+		}
+	}
+
+	log.Printf("[notify] initial sub=%d target=%s kind=%s delivering latest=%s", sub.ID, sub.Target, sub.Kind, latest.Created)
+	d.deliver(ctx, sub, []NotificationEvent{latest})
+}
+
+// buildEvents turns gateway hits into notification events for content created
+// after sinceMS (exclusive). It returns the events plus the greatest created
+// timestamp seen (clamped to at least sinceMS) so callers can advance a
+// watermark. Pass sinceMS = -1 to include every item.
+func buildEvents(sub Subscription, hits []json.RawMessage, sinceMS int64) ([]NotificationEvent, int64) {
+	maxSeen := sinceMS
+	events := []NotificationEvent{}
+
+	for _, raw := range hits {
+		var hit gwHit
+		if err := json.Unmarshal(raw, &hit); err != nil {
+			continue
+		}
+		link := cannyPostURL(hit.Board.URLName, hit.URLName)
+		if sub.Kind == "post" {
+			createdMS, ok := parseTimeMS(hit.Created)
+			if !ok || createdMS <= sinceMS {
+				continue
+			}
+			if createdMS > maxSeen {
+				maxSeen = createdMS
+			}
+			events = append(events, NotificationEvent{
+				Type:    "post",
+				Title:   fmt.Sprintf("New post in %s", boardLabel(hit.Board.Name, hit.Board.URLName)),
+				Body:    hit.Title,
+				URL:     link,
+				Board:   hit.Board.Name,
+				Author:  hit.Author.Name,
+				Excerpt: excerpt(hit.Details, 200),
+				Created: hit.Created,
+			})
+		} else { // comment
+			for _, c := range hit.Comments {
+				createdMS, ok := parseTimeMS(c.Created)
+				if !ok || createdMS <= sinceMS {
+					continue
+				}
+				if createdMS > maxSeen {
+					maxSeen = createdMS
+				}
+				events = append(events, NotificationEvent{
+					Type:    "comment",
+					Title:   fmt.Sprintf("New comment on %q", hit.Title),
+					Body:    excerpt(c.Value, 200),
+					URL:     link,
+					Board:   hit.Board.Name,
+					Author:  c.Author.Name,
+					Excerpt: excerpt(c.Value, 200),
+					Created: c.Created,
+				})
+			}
+		}
+	}
+
+	return events, maxSeen
+}
+
+// queryGateway replays the stored InstantSearch filter against the given index
+// replica. When applyWatermark is true it adds a numeric filter on the
+// registered created facet so only content newer than the watermark comes back.
+func (d *Dispatcher) queryGateway(ctx context.Context, sub Subscription, indexName string, applyWatermark bool, hitsPerPage int) ([]json.RawMessage, error) {
 	var params map[string]interface{}
 	if err := json.Unmarshal([]byte(sub.FilterJSON), &params); err != nil || params == nil {
 		params = map[string]interface{}{}
 	}
 
-	watermarkAttr := "post_created"
-	if sub.Kind == "comment" {
-		watermarkAttr = "comment_created"
+	if applyWatermark {
+		watermarkAttr := "post_created"
+		if sub.Kind == "comment" {
+			watermarkAttr = "comment_created"
+		}
+		watermarkFilter := fmt.Sprintf("%s > %d", watermarkAttr, sub.WatermarkMS)
+		existing, _ := params["numericFilters"].([]interface{})
+		params["numericFilters"] = append(existing, watermarkFilter)
 	}
-	watermarkFilter := fmt.Sprintf("%s > %d", watermarkAttr, sub.WatermarkMS)
-
-	existing, _ := params["numericFilters"].([]interface{})
-	params["numericFilters"] = append(existing, watermarkFilter)
 	params["page"] = 0
-	params["hitsPerPage"] = 100
+	params["hitsPerPage"] = hitsPerPage
 	// Strip presentation-only params: facets/highlighting are irrelevant for
 	// dispatch, and any attributesToRetrieve/responseFields restriction would
 	// trim the _source we need to build notifications.
@@ -202,7 +249,7 @@ func (d *Dispatcher) queryGateway(ctx context.Context, sub Subscription) ([]json
 
 	body := []map[string]interface{}{
 		{
-			"indexName": d.cfg.IndexName + "_created_asc",
+			"indexName": indexName,
 			"params":    params,
 		},
 	}

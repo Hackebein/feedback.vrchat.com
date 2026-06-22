@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"database/sql"
 	"encoding/json"
 	"net/http"
@@ -11,12 +12,13 @@ import (
 
 // Server exposes the notification management API consumed by the frontend.
 type Server struct {
-	cfg   Config
-	store *Store
+	cfg      Config
+	store    *Store
+	dispatch *Dispatcher
 }
 
-func newServer(cfg Config, store *Store) *Server {
-	return &Server{cfg: cfg, store: store}
+func newServer(cfg Config, store *Store, dispatch *Dispatcher) *Server {
+	return &Server{cfg: cfg, store: store, dispatch: dispatch}
 }
 
 func (s *Server) routes() http.Handler {
@@ -113,6 +115,22 @@ func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request
 		Label:     strings.TrimSpace(req.Label),
 		CreatedAt: nowMS,
 	})
+
+	// Best-effort: deliver the most recent matching item as a first message.
+	go s.dispatch.SendInitial(context.Background(), Subscription{
+		ID:                 id,
+		Kind:               req.Kind,
+		Target:             "push",
+		PushSubscriptionID: sql.NullInt64{Int64: pushID, Valid: true},
+		Lucene:             req.Lucene,
+		FilterJSON:         filterJSON,
+		WatermarkMS:        nowMS,
+		Push: PushKeys{
+			Endpoint: req.PushSubscription.Endpoint,
+			P256dh:   req.PushSubscription.Keys.P256dh,
+			Auth:     req.PushSubscription.Keys.Auth,
+		},
+	})
 }
 
 func (s *Server) handleListSubscriptions(w http.ResponseWriter, r *http.Request) {
@@ -197,6 +215,17 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 		Kind:      req.Kind,
 		Label:     strings.TrimSpace(req.Label),
 		CreatedAt: nowMS,
+	})
+
+	// Best-effort: deliver the most recent matching item as a first message.
+	go s.dispatch.SendInitial(context.Background(), Subscription{
+		ID:          id,
+		Kind:        req.Kind,
+		Target:      "webhook",
+		WebhookURL:  url,
+		Lucene:      req.Lucene,
+		FilterJSON:  filterJSON,
+		WatermarkMS: nowMS,
 	})
 }
 
