@@ -20,7 +20,6 @@ type Config struct {
 	DBPath          string
 	PollInterval    time.Duration
 	WebhookErrorTTL time.Duration
-	WatermarkLag    time.Duration
 }
 
 func envStr(key, fallback string) string {
@@ -40,7 +39,6 @@ func loadConfig() (Config, error) {
 		VAPIDSubject:    envStr("VAPID_SUBJECT", "mailto:admin@hackebein.dev"),
 		PollInterval:    60 * time.Second,
 		WebhookErrorTTL: 3 * 24 * time.Hour,
-		WatermarkLag:    15 * time.Minute,
 	}
 
 	port, err := strconv.Atoi(envStr("NOTIFY_PORT", "3334"))
@@ -65,12 +63,6 @@ func loadConfig() (Config, error) {
 	if secs := strings.TrimSpace(os.Getenv("NOTIFY_POLL_SECONDS")); secs != "" {
 		if n, err := strconv.Atoi(secs); err == nil && n > 0 {
 			cfg.PollInterval = time.Duration(n) * time.Second
-		}
-	}
-
-	if secs := strings.TrimSpace(os.Getenv("NOTIFY_WATERMARK_LAG_SECONDS")); secs != "" {
-		if n, err := strconv.Atoi(secs); err == nil && n >= 0 {
-			cfg.WatermarkLag = time.Duration(n) * time.Second
 		}
 	}
 

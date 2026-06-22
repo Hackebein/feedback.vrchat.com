@@ -99,21 +99,17 @@ func (d *Dispatcher) processSubscription(ctx context.Context, sub Subscription) 
 		return err
 	}
 
-	nowMS := time.Now().UnixMilli()
 	events, maxSeen := buildEvents(sub, hits, sub.WatermarkMS)
 
 	log.Printf("[notify] sub=%d target=%s kind=%s hits=%d events=%d watermark=%d", sub.ID, sub.Target, sub.Kind, len(hits), len(events), sub.WatermarkMS)
 
 	if len(events) == 0 {
-		// Nothing matched; nudge the watermark forward so the search window
-		// does not grow without bound. Stay WatermarkLag behind wall-clock so
-		// posts that are still propagating through the ingest pipeline (and
-		// therefore carry a `created` timestamp older than now) are not skipped
-		// once they become searchable.
-		safeMS := nowMS - d.cfg.WatermarkLag.Milliseconds()
-		if safeMS > sub.WatermarkMS {
-			return d.store.UpdateWatermark(sub.ID, safeMS)
-		}
+		// Nothing new matched. Leave the watermark pinned to the last item we
+		// actually saw (the `created`/`comment_created` timestamp). It is never
+		// advanced on wall-clock, so an item is always caught once it becomes
+		// searchable, no matter how large or irregular the ingest lag is. The
+		// search window stays bounded because `created > watermark` only ever
+		// matches undelivered content.
 		return nil
 	}
 
