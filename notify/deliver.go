@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"io"
 	"log"
 	"net/http"
 	"time"
@@ -112,16 +113,22 @@ func buildDiscordWebhookPayload(events []NotificationEvent) ([]byte, error) {
 		if desc == "" {
 			desc = ev.Excerpt
 		}
+		// Discord rejects an embed field whose value is empty (HTTP 400), so
+		// only emit Board/Author when they actually carry a value.
+		fields := make([]discordField, 0, 2)
+		if board := truncate(ev.Board, discordEmbedFieldValueMax); board != "" {
+			fields = append(fields, discordField{Name: "Board", Value: board, Inline: true})
+		}
+		if author := truncate(ev.Author, discordEmbedFieldValueMax); author != "" {
+			fields = append(fields, discordField{Name: "Author", Value: author, Inline: true})
+		}
 		embeds = append(embeds, discordEmbed{
 			Title:       truncate(ev.Title, discordEmbedTitleMax),
 			Description: truncate(desc, discordEmbedDescriptionMax),
 			URL:         ev.URL,
 			Color:       color,
-			Fields: []discordField{
-				{Name: "Board", Value: truncate(ev.Board, discordEmbedFieldValueMax), Inline: true},
-				{Name: "Author", Value: truncate(ev.Author, discordEmbedFieldValueMax), Inline: true},
-			},
-			Timestamp: ev.Created,
+			Fields:      fields,
+			Timestamp:   ev.Created,
 		})
 	}
 	return json.Marshal(discordWebhookPayload{Embeds: embeds})
@@ -130,10 +137,13 @@ func buildDiscordWebhookPayload(events []NotificationEvent) ([]byte, error) {
 func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, events []NotificationEvent) {
 	body, err := buildDiscordWebhookPayload(events)
 	if err != nil {
+		log.Printf("[notify] webhook sub=%d build payload: %v", sub.ID, err)
+		d.recordWebhookFailure(sub)
 		return
 	}
 	req, err := http.NewRequestWithContext(ctx, http.MethodPost, sub.WebhookURL, bytes.NewReader(body))
 	if err != nil {
+		log.Printf("[notify] webhook sub=%d build request: %v", sub.ID, err)
 		d.recordWebhookFailure(sub)
 		return
 	}
@@ -142,11 +152,14 @@ func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, event
 
 	resp, err := d.client.Do(req)
 	if err != nil {
+		log.Printf("[notify] webhook sub=%d transport error: %v", sub.ID, err)
 		d.recordWebhookFailure(sub)
 		return
 	}
 	defer resp.Body.Close()
+	respBody, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode >= 200 && resp.StatusCode < 300 {
+		log.Printf("[notify] webhook sub=%d status=%d events=%d delivered", sub.ID, resp.StatusCode, len(events))
 		if sub.ErrorSinceMS.Valid {
 			if err := d.store.ClearWebhookError(sub.ID); err != nil {
 				log.Printf("[notify] clear webhook error sub=%d: %v", sub.ID, err)
@@ -154,6 +167,7 @@ func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, event
 		}
 		return
 	}
+	log.Printf("[notify] webhook sub=%d status=%d events=%d rejected: %s", sub.ID, resp.StatusCode, len(events), truncate(string(respBody), 300))
 	d.recordWebhookFailure(sub)
 }
 

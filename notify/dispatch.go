@@ -150,6 +150,8 @@ func (d *Dispatcher) processSubscription(ctx context.Context, sub Subscription) 
 		}
 	}
 
+	log.Printf("[notify] sub=%d target=%s kind=%s hits=%d events=%d watermark=%d", sub.ID, sub.Target, sub.Kind, len(hits), len(events), sub.WatermarkMS)
+
 	if len(events) == 0 {
 		// Nothing matched; keep the watermark fresh so the search window does
 		// not grow without bound.
