@@ -50,11 +50,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions@users.noreply.github.com"
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git pull
           git add -A
-          git commit -m "Boards updated ($(date -u '+%Y-%m-%d %H:%M'))"
-          git push origin HEAD:${GITHUB_REF_NAME}
+          git commit -m "Boards updated ($(date -u '+%Y-%m-%d %H:%M'))" || { echo "Nothing to commit."; exit 0; }
+          git push origin HEAD:"${GITHUB_REF_NAME}"
