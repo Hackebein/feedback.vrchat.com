@@ -40,6 +40,7 @@ MAX_WORKERS          = 2
 AI_WORKERS           = 4
 CANNY_HOST           = "feedback.vrchat.com"
 API_URL              = f"https://{CANNY_HOST}/api/posts/get"
+VOTERS_URL           = f"https://{CANNY_HOST}/api/posts/getVoters"
 SITE_URL             = f"https://{CANNY_HOST}"
 USER_AGENT           = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
 
@@ -515,6 +516,42 @@ def fetch_post_page(board_slug, url_slug, retries=3):
     return None, [], False, True
 
 
+def fetch_voters(post_id, retries=3):
+    """Fetch the complete voters list for a post via /api/posts/getVoters.
+
+    The post detail page only embeds the first ~10 voters, so this is needed to
+    capture every voter once a post's vote count grows past that. Returns the
+    voters list on success, or None on a transient failure (caller should keep
+    the existing voters rather than wiping them).
+    """
+    if not post_id:
+        return None
+    payload = {
+        "__canny_requestID": f"voters-{post_id}",
+        "__host": CANNY_HOST,
+        "postID": post_id,
+    }
+    for attempt in range(retries):
+        _LIMITER.wait()
+        raw = _curl_post_json(VOTERS_URL, payload, timeout=30)
+        if raw.strip():
+            try:
+                data = json.loads(raw)
+            except Exception:
+                record_http_retry()
+                time.sleep(1.0 + attempt)
+                continue
+            result = data.get("result")
+            if isinstance(result, dict) and isinstance(result.get("voters"), list):
+                _LIMITER.ok()
+                return result["voters"]
+            # An {"error": ...} payload is a hard failure, not transient.
+            return None
+        record_http_retry()
+        time.sleep(1.0 + attempt)
+    return None
+
+
 # ---------------------------------------------------------------------------
 # Storage helpers
 # ---------------------------------------------------------------------------
@@ -780,9 +817,10 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
 
     Returns stats: {"added", "deleted", "refreshed", "moved"}.
     """
-    added = deleted = refreshed = moved = 0
+    added = deleted = refreshed = moved = voters_refreshed = 0
     eff_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or (api_key or "").strip()
     tag_jobs: list[tuple[dict, str, dict | None]] = []
+    voter_jobs: list[tuple[str, dict]] = []
     pending_writes: list[tuple[str, dict]] = []
     ai_rate_limited = False
 
@@ -813,6 +851,15 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
             continue
 
         prev_post = info.get("post")
+
+        # When the vote count changed, the post page only embeds the first ~10
+        # voters, so fetch the full voters list. If the new score still fits in
+        # the embedded list (<= what the page returned) it is already complete.
+        new_score = post.get("score") or 0
+        embedded_voters = len(post.get("voters") or [])
+        if new_score != (prev_post or {}).get("score") and new_score > embedded_voters:
+            voter_jobs.append((pid, post))
+
         if not categorize.needs_ai_retag(prev_post, post):
             categorize.carry_over_ai_tags(post, prev_post)
         elif not eff_key:
@@ -849,6 +896,17 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         if tagged:
             print(f"[UPDATE] AI tagged {tagged} post(s)")
 
+    if voter_jobs:
+        with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
+            futures = {ex.submit(fetch_voters, pid): post for pid, post in voter_jobs}
+            for fut in as_completed(futures):
+                post = futures[fut]
+                voters = fut.result()
+                if voters is not None:
+                    post["voters"] = voters
+                    voters_refreshed += 1
+        print(f"[UPDATE] Refreshed voters on {voters_refreshed}/{len(voter_jobs)} post(s)")
+
     for board_slug, post in pending_writes:
         board_store.write_post(board_slug, post)
 
@@ -857,6 +915,7 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         "deleted": deleted,
         "refreshed": refreshed,
         "moved": moved,
+        "voters_refreshed": voters_refreshed,
         "ai_rate_limited": ai_rate_limited,
     }
 
@@ -1334,7 +1393,8 @@ def main():
           f"-{totals['deleted']} deleted, "
           f"~{totals['refreshed']} refreshed, "
           f">{totals['moved']} moved, "
-          f"={totals['deduped']} deduped")
+          f"={totals['deduped']} deduped, "
+          f"^{totals['voters_refreshed']} voters")
     print(categorize.format_usage_stats())
     print(format_http_stats())
 
