@@ -4,7 +4,7 @@
     "loc.in-world",
     "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-06-23T16:20:34.049349Z",
+  "aiTaggedAt": "2026-06-24T14:19:09.255546Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e80645c82edb3758aa01214",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a3a7e37eb92096b230563aa",
@@ -111,7 +111,7 @@
       "postID": "6a3a0add6f29510d8f7d19dc",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -120,6 +120,50 @@
       "statusChangeID": "6a3aad37a6dc6e176231fdae",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a3bdac572130b082f26bb16",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f98c86df4451a4eed062c76",
+        "alias": "Charcoal Bee",
+        "aliasID": "65c3e659ed6eefce4cb8adb6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a2966305efd7445265d8a933ba0f3f60.png",
+        "created": "2020-10-28T01:25:01.811Z",
+        "name": "ほいっぷあいす",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-24T13:25:25.067Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3a0add6f29510d8f7d19dc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The frequency of this issue appears to be lower when users remain idle after joining an instance and do not perform any actions.\n\nBased on our observations so far, EAC disconnections seem more likely to occur while users are actively interacting with the world, such as manipulating objects or holding pickupable objects.\n\nHowever, there appear to be multiple factors involved in triggering this issue, and interaction with such objects may not be a required condition for it to occur.\n\nThis issue has been reproduced in both VR mode and Desktop mode.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -139,7 +183,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/2a3d3f254d7ce744c437864c5f86b681.png"
   ],
-  "lastUpdated": 1782292537801,
+  "lastUpdated": 1782309211812,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 21,
@@ -155,7 +199,7 @@
   "subCategoryID": null,
   "title": "In some worlds, EAC shows “Disconnected” and we can't play.",
   "trendingScore": 2949.8613928823233,
-  "updatedAt": "2026-06-24T09:16:15.343347Z",
+  "updatedAt": "2026-06-24T14:19:04.351285Z",
   "updatedBy": null,
   "urlName": "in-some-worlds-eac-shows-disconnected-and-we-cant-play",
   "viewerIsAuthor": false,
@@ -276,127 +320,6 @@
       "name": "Ellarik",
       "urlName": null,
       "voteID": "6a3a2e0af51f79a5dbee0bae"
-    },
-    {
-      "_id": "644f2f62faaf5908ff18c870",
-      "alias": "Fundamental Giraffe",
-      "aliasID": "6a3a259ef51f79a5dbedda46",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/02146efc84f7ef9347d2794666d091e0.png",
-      "companies": [],
-      "name": "sousui_vr",
-      "urlName": null,
-      "voteID": "6a3a25b0f51f79a5dbeddace"
-    },
-    {
-      "_id": "5e8487f1fd13be66cecc227b",
-      "alias": "Parental Pelican",
-      "aliasID": "65c27264ed6eefce4c1809f0",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/79fba3b32b3665413f072117ecfd367b.png",
-      "companies": [],
-      "name": "みみー／Mimy",
-      "urlName": null,
-      "voteID": "6a3a2299f51f79a5dbeda6f3"
-    },
-    {
-      "_id": "6a3a1e98f51f79a5dbed6104",
-      "alias": "Vanilla ice Armadillo",
-      "aliasID": "6a3a1e98f51f79a5dbed6117",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2f0315077858af5b98b7e228a1b64a03.png",
-      "companies": [],
-      "name": "しぃぐ5121",
-      "urlName": null,
-      "voteID": "6a3a1ea6f51f79a5dbed62bd"
-    },
-    {
-      "_id": "5baf55186a38b40c7660a9da",
-      "alias": "Green Locust",
-      "aliasID": "65cf55270129d7ae4432da5e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/191a4b3bc6458520c806d5b2117900d1.png",
-      "companies": [],
-      "name": "itokotyan",
-      "urlName": null,
-      "voteID": "6a3a1e62f51f79a5dbed5f64"
-    },
-    {
-      "_id": "5f98c86df4451a4eed062c76",
-      "alias": "Charcoal Bee",
-      "aliasID": "65c3e659ed6eefce4cb8adb6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a2966305efd7445265d8a933ba0f3f60.png",
-      "companies": [],
-      "name": "ほいっぷあいす",
-      "urlName": null,
-      "voteID": "6a3a1c18f51f79a5dbed4d2f"
-    },
-    {
-      "_id": "5b99d19aee038460c535199e",
-      "alias": "Secret Peafowl",
-      "aliasID": "65c32201ed6eefce4c4d2267",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/55888c871b6719e6da43024734a4cb05.png",
-      "companies": [],
-      "name": "MinaFrancesca",
-      "urlName": null,
-      "voteID": "6a3a14edf51f79a5dbed2669"
-    },
-    {
-      "_id": "684827535cd9b29f8343fbab",
-      "alias": "Parallel Stingray",
-      "aliasID": "684827545cd9b29f83441449",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8c7cbb4a73c3aebba7e657084386f268.png",
-      "companies": [],
-      "name": "しりるえーてる",
-      "urlName": null,
-      "voteID": "6a3a0f2ef51f79a5dbecfd7f"
-    },
-    {
-      "_id": "66bef52e086cfb00a3a06da5",
-      "alias": "Delighted Otter",
-      "aliasID": "66bef52e3e088c8d6b598e80",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ef8e1c683f559562273137784ad84dbf.png",
-      "companies": [],
-      "name": "AkimotoTeppei",
-      "urlName": null,
-      "voteID": "6a3a0ed9f51f79a5dbecfcce"
-    },
-    {
-      "_id": "6222eec190a23d3ca10695ff",
-      "alias": "Petite Turtle",
-      "aliasID": "65c52c2ced6eefce4c2a8d51",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ba7273e723e1954e973d3de8e6df3871.png",
-      "companies": [],
-      "name": "amae",
-      "urlName": null,
-      "voteID": "6a3a0eb4f51f79a5dbecfc53"
-    },
-    {
-      "_id": "644f2a9fc5daef090daa4512",
-      "alias": "Ivory Dormouse",
-      "aliasID": "65c6d730ed6eefce4c05c08e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d7dba717593624254462746bde75f8f9.png",
-      "companies": [],
-      "name": "せいぎょく_Law",
-      "urlName": null,
-      "voteID": "6a3a0e07f51f79a5dbecf8eb"
-    },
-    {
-      "_id": "5e80645c82edb3758aa01214",
-      "alias": "Brass Lamprey",
-      "aliasID": "65c2a219ed6eefce4c62c1bd",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/5446aaea2734908fd2900e641436bbee.png",
-      "companies": [],
-      "name": "satsuki（桜月）",
-      "urlName": null,
-      "voteID": "6a3a0addf51f79a5dbecea97"
     }
   ]
 }
