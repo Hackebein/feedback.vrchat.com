@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.in-world",
     "worlds.travel",
-    "groups.instances",
-    "moderation.safety-system"
+    "moderation.safety-system",
+    "groups.instances"
   ],
-  "aiTaggedAt": "2026-06-24T22:23:50.512106Z",
+  "aiTaggedAt": "2026-06-24T23:51:21.934400Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67528d96a9f0ca8a017491dd",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a3a8790d6e2adff55bbd0e3",
@@ -261,6 +261,50 @@
       "value": "（EN)\n\nHere is a supplementary note in case a partial implementation is considered:\n\nWe have seen cases where bad actors circumvent moderation by creating 'Group Public' instances using unrelated, open-to-all groups.\n\nTherefore, relying solely on a blacklist approach would likely be ineffective, especially against malicious and persistent harassment.\n\n（JP)\n\n部分的な実装が検討される場合のための補足です。\n\n迷惑行為者が、無関係の誰でも入れるグループを利用してGroup Publicインスタンスを作成し、モデレーションを回避した事例があります。\n\nそのため、ブラックリスト方式だけに頼ることは、特に悪質な執拗な嫌がらせに対しては効果がない可能性が高いと考えています。",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a3c618b3959e847601f2155",
+      "aiGenerated": false,
+      "author": {
+        "_id": "607fc4c1cb81923b7d6b8bd7",
+        "alias": "Green Dolphin",
+        "aliasID": "6605e6b5d90e505763836696",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/302e1496dceebff0c1135dc3965a5f5e.png",
+        "created": "2021-04-21T06:22:57.889Z",
+        "name": "nozomu365",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-24T23:00:27.484Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3a798248e024a58d77f24d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I support this Canny :)\n\nThat's because these features aren't mandatory, and players who don't like these moderation measures have the option not to visit that world.\n\n私はこのCannyを支持します。\n\nこれらの機能は支配的ではなく、これらのモデレーションが嫌なプレイヤーはそのワールドに行かないという選択が可能だからです。",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -276,7 +320,7 @@
   "files": [],
   "ideaID": "6a3a798248e024a58d77f230",
   "imageURLs": [],
-  "lastUpdated": 1782341815088,
+  "lastUpdated": 1782343443473,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 24,
@@ -292,7 +336,7 @@
   "subCategoryID": null,
   "title": "Proposal for Expanding Moderation Features to Ensure Safe Spaces in VRChat",
   "trendingScore": 2950.0907169345537,
-  "updatedAt": "2026-06-24T23:22:50.178295Z",
+  "updatedAt": "2026-06-24T23:51:16.441980Z",
   "updatedBy": null,
   "urlName": "proposal-for-expanding-moderation-features-to-ensure-safe-spaces-in-vrchat",
   "viewerIsAuthor": false,
@@ -413,160 +457,6 @@
       "name": "さらみせんべい⁄Sarami",
       "urlName": null,
       "voteID": "6a3b86b6f51f79a5dbf9cbc8"
-    },
-    {
-      "_id": "63e89869bda7b8450f5ce6fc",
-      "alias": "Misty rose Orca",
-      "aliasID": "65c38bd1ed6eefce4c15d87c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6b5befa7481ea7db6019576ed5bd048f.png",
-      "companies": [],
-      "name": "リールク⁄liruk",
-      "urlName": null,
-      "voteID": "6a3b848ef51f79a5dbf9c0fc"
-    },
-    {
-      "_id": "63fbe843c99ad34524b1ff48",
-      "alias": "Mandarin Octopus",
-      "aliasID": "65c2719aed6eefce4cf65963",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/88ba8f32081a85a49b390d0ddd6540cb.png",
-      "companies": [],
-      "name": "YUMIZU3",
-      "urlName": null,
-      "voteID": "6a3b3bb8f51f79a5dbf80960"
-    },
-    {
-      "_id": "63df238f2fde875d05349186",
-      "alias": "Quinacridone magenta Dinosaur",
-      "aliasID": "65d3a0df0129d7ae44940410",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/4c4a36b90190d7500ebd5926b95b90cc.png",
-      "companies": [],
-      "name": "ぶるーきゃっと",
-      "urlName": null,
-      "voteID": "6a3b2c68f51f79a5dbf7a60e"
-    },
-    {
-      "_id": "62e1d741a27f0d44be9f0598",
-      "alias": "Gold Wolverine",
-      "aliasID": "65d3a0df0129d7ae449404f9",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/975ea235242218ec2967678ff165b22f.png",
-      "companies": [],
-      "name": "AAA159",
-      "urlName": null,
-      "voteID": "6a3b2a51f51f79a5dbf79945"
-    },
-    {
-      "_id": "5fb7f72f977e99199744530a",
-      "alias": "Convincing Squid",
-      "aliasID": "65fc44f7a63714bcb364649c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a6442328c08446ee33b16d610faebc19.png",
-      "companies": [],
-      "name": "海-Umi-",
-      "urlName": null,
-      "voteID": "6a3b11bbf51f79a5dbf6ea1d"
-    },
-    {
-      "_id": "6a1691d75a52cb2df0a0d4de",
-      "alias": "Used Grouse",
-      "aliasID": "6a1691d75a52cb2df0a0d4e1",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/616e78d0a3583b635b5b1a4e4e62699c.png",
-      "companies": [],
-      "name": "雨宮キミノ",
-      "urlName": null,
-      "voteID": "6a3b0958f51f79a5dbf6b7f0"
-    },
-    {
-      "_id": "6734fda68b28032de76b843d",
-      "alias": "Burgundy Gibbon",
-      "aliasID": "6734fda6c66e81bbd4da858a",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/3560e4c3c6049a1f9e3de7aa973ecc39.png",
-      "companies": [],
-      "name": "あおの．",
-      "urlName": null,
-      "voteID": "6a3afb02f51f79a5dbf64444"
-    },
-    {
-      "_id": "5f611d53e2ad422996978ca6",
-      "alias": "Old Lynx",
-      "aliasID": "65c3900ded6eefce4cdced9b",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a9ef004725f8e123c88de8f9ae828590.png",
-      "companies": [],
-      "name": "Curious Cryptogenic",
-      "urlName": null,
-      "voteID": "6a3ac032f51f79a5dbf40d67"
-    },
-    {
-      "_id": "5f681cf85ead2a4b371dd403",
-      "alias": "Gray Flamingo",
-      "aliasID": "65ca85f2ed6eefce4cffccce",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/cef7fb4f63890037c4015a2a8cbbde6e.png",
-      "companies": [],
-      "name": "FallenAngelRK",
-      "urlName": null,
-      "voteID": "6a3a8c96f51f79a5dbf15205"
-    },
-    {
-      "_id": "66bfa1c05581fc6b8093ca8a",
-      "alias": "Comprehensive Rabbit",
-      "aliasID": "66bfa1c13e088c8d6bcf3fa4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ec9e2d3a08135b785ee440d83bd27039.png",
-      "companies": [],
-      "name": "そーかる«SOKOL»",
-      "urlName": null,
-      "voteID": "6a3a8ab1f51f79a5dbf13fc3"
-    },
-    {
-      "_id": "6a3a87a0f51f79a5dbf123ef",
-      "alias": "Venetian red Bee",
-      "aliasID": "6a3a87a0f51f79a5dbf123f3",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/57505c54c08d4f34b183b408c78f52b0.png",
-      "companies": [],
-      "name": "MAXIMSCARLET",
-      "urlName": null,
-      "voteID": "6a3a87aef51f79a5dbf12436"
-    },
-    {
-      "_id": "6a3a861df51f79a5dbf11673",
-      "alias": "Independent Horse",
-      "aliasID": "6a3a861df51f79a5dbf11677",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ebec8b12a6a9c3b4075cd2964667bfaa.png",
-      "companies": [],
-      "name": "Toshiaki-F",
-      "urlName": null,
-      "voteID": "6a3a8624f51f79a5dbf116d0"
-    },
-    {
-      "_id": "619e021f7202295bab7fed38",
-      "alias": "Bright Ocelot",
-      "aliasID": "65ecc015a6e3ea79dd43e8c3",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/4393cf45065963996edad1e8c4a89399.png",
-      "companies": [],
-      "name": "伊予ハブ",
-      "urlName": null,
-      "voteID": "6a3a7d09f51f79a5dbf0d327"
-    },
-    {
-      "_id": "67528d96a9f0ca8a017491dd",
-      "alias": "Heather Reindeer",
-      "aliasID": "67528d96a367fa63921299ea",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e5b8c66d55ddb5e7ec6461ac48dd16bc.png",
-      "companies": [],
-      "name": "やがて捨てられる補助輪",
-      "urlName": null,
-      "voteID": "6a3a7982f51f79a5dbf0b60f"
     }
   ]
 }
