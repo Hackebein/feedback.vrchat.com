@@ -1,0 +1,95 @@
+{
+  "_id": "6a3b3ef3df3460bafccfd8ce",
+  "aiCategories": [
+    "loc.website",
+    "web.home"
+  ],
+  "aiTaggedAt": "2026-06-24T03:29:02.060772Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 312,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-24T02:20:35.921Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Receive a boop from a friend\n\n2. Check the notification from VRChat Home\n\n3. Notice the two icons are indistinguishable and only the first one may have a tooltip\n\nThe second one is named \"View [user]'s profile\", but on Microsoft Edge 149.0.4022.69 the hyperlink takes priority for focus and the tooltip's not shown as alt text on hover.\n\nExpected result: Use eye icon for the profile link, two different tooltips.\n\nActual result: Two checkmarks, only one has a working tooltip.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a3b3ef3df3460bafccfd8c7",
+  "imageURLs": [
+    "https://canny-assets.io/images/79b55ccf38002d14a1627b22d5fef5e7.png"
+  ],
+  "lastUpdated": 1782270116965,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-24T02:20:35.921Z",
+  "subCategoryID": null,
+  "title": "View profile button in boop notifications looks identical to \"Acknowledge and dismiss this notification\"",
+  "trendingScore": 2947.5642379419687,
+  "updatedAt": "2026-06-24T03:28:55.980999Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "view-profile-button-in-boop-notifications-looks-identical-to-acknowledge-and-dis",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a3b3ef4f51f79a5dbf81bef"
+    }
+  ]
+}
