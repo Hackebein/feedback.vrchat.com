@@ -32,7 +32,7 @@
     "created": "2023-09-19T19:15:41.243Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 820,
+    "postCount": 822,
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
@@ -125,7 +125,9 @@
       "postDeleted": false,
       "postID": "64de9a6163db0b09590e8e31",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
@@ -146,7 +148,7 @@
   "files": [],
   "ideaID": "680bb992e4c3e90df137feca",
   "imageURLs": [],
-  "lastUpdated": 1782089199941,
+  "lastUpdated": 1782265127929,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -154,14 +156,14 @@
   "notFound": false,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "complete",
   "statusChanged": "2023-08-18T08:41:40.631Z",
   "subCategoryID": null,
   "title": "HTTP Request in VRChat",
-  "trendingScore": 2799.66603651593,
-  "updatedAt": "2026-06-22T00:47:30.979702Z",
+  "trendingScore": 2946.7302517030425,
+  "updatedAt": "2026-06-24T01:40:11.348876Z",
   "updatedBy": null,
   "urlName": "http-request-in-vrchat",
   "viewerIsAuthor": false,
@@ -173,6 +175,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "646b46f5e67dc809215ad295",
+      "alias": "Stable Dolphin",
+      "aliasID": "6957138af85d59c66d7fbbf5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/00658eb2a2421d4d861e8e3c55ac7b47.png",
+      "companies": [],
+      "name": "Okatsumo",
+      "urlName": null,
+      "voteID": "6a39f238f51f79a5dbec3d8f"
+    },
     {
       "_id": "60b253c727f96d0ec42fbfbf",
       "alias": "Wet Lamprey",
