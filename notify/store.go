@@ -154,9 +154,13 @@ func openStore(path string) (*Store, error) {
 	return s, nil
 }
 
-// migrate rebuilds a legacy `subscription` table (single `kind` column) into the
-// current events-set schema. Fresh installs skip this and openStore's schema
-// CREATE handles everything.
+// migrate drops a legacy `subscription` table (single `kind` column). The old
+// two-bell model stored one row per kind, which is incompatible with the new
+// per-filter events model and would otherwise collide on the unique
+// (push_subscription_id, filter_json) index. Old subscriptions are cleared so
+// the new schema starts clean; browsers re-subscribe via the bell. The
+// push_subscription registrations are kept, so existing browsers keep their
+// push endpoints and simply re-toggle their filters.
 func (s *Store) migrate() error {
 	hasKind, hasEvents, err := s.subscriptionColumns()
 	if err != nil {
@@ -165,49 +169,10 @@ func (s *Store) migrate() error {
 	if !hasKind || hasEvents {
 		return nil // fresh install or already migrated
 	}
-
-	tx, err := s.db.Begin()
-	if err != nil {
-		return err
+	if _, err := s.db.Exec(`DROP TABLE subscription`); err != nil {
+		return fmt.Errorf("migrate drop legacy subscription: %w", err)
 	}
-	defer func() { _ = tx.Rollback() }()
-
-	if _, err := tx.Exec(`
-CREATE TABLE subscription_new (
-  id                   INTEGER PRIMARY KEY AUTOINCREMENT,
-  events               TEXT NOT NULL DEFAULT '[]',
-  target               TEXT NOT NULL,
-  push_subscription_id INTEGER REFERENCES push_subscription(id) ON DELETE CASCADE,
-  webhook_url          TEXT,
-  lucene               INTEGER NOT NULL DEFAULT 0,
-  filter_json          TEXT NOT NULL,
-  label                TEXT NOT NULL DEFAULT '',
-  watermark_ms         INTEGER NOT NULL,
-  watermark_comment_ms INTEGER NOT NULL DEFAULT 0,
-  error_since_ms       INTEGER,
-  created_at           INTEGER NOT NULL
-);`); err != nil {
-		return fmt.Errorf("migrate create: %w", err)
-	}
-
-	// json_array(kind) turns the old single kind into a one-element events set.
-	if _, err := tx.Exec(`
-INSERT INTO subscription_new
-  (id, events, target, push_subscription_id, webhook_url, lucene, filter_json,
-   label, watermark_ms, watermark_comment_ms, error_since_ms, created_at)
-SELECT id, json_array(kind), target, push_subscription_id, webhook_url, lucene,
-       filter_json, label, watermark_ms, watermark_ms, error_since_ms, created_at
-  FROM subscription;`); err != nil {
-		return fmt.Errorf("migrate copy: %w", err)
-	}
-
-	if _, err := tx.Exec(`DROP TABLE subscription;`); err != nil {
-		return fmt.Errorf("migrate drop: %w", err)
-	}
-	if _, err := tx.Exec(`ALTER TABLE subscription_new RENAME TO subscription;`); err != nil {
-		return fmt.Errorf("migrate rename: %w", err)
-	}
-	return tx.Commit()
+	return nil
 }
 
 func (s *Store) subscriptionColumns() (hasKind, hasEvents bool, err error) {
@@ -274,23 +239,25 @@ func (s *Store) DeletePushSubscriptionByEndpoint(endpoint string) error {
 
 // UpsertPushFilterSubscription creates or overwrites the push subscription for a
 // browser endpoint + filter pair. Re-toggling the same filter overwrites its
-// event set. Returns the subscription id and whether the row was newly created.
-func (s *Store) UpsertPushFilterSubscription(sub Subscription, nowMS int64) (int64, bool, error) {
+// event set. Returns the subscription id and the event set the row had before
+// this call (nil when the row was newly created).
+func (s *Store) UpsertPushFilterSubscription(sub Subscription, nowMS int64) (int64, []string, error) {
 	var id int64
+	var prevEvents string
 	err := s.db.QueryRow(
-		`SELECT id FROM subscription
+		`SELECT id, events FROM subscription
 		  WHERE target = 'push' AND push_subscription_id = ? AND filter_json = ?`,
 		sub.PushSubscriptionID, sub.FilterJSON,
-	).Scan(&id)
+	).Scan(&id, &prevEvents)
 	if err == nil {
 		_, uerr := s.db.Exec(
 			`UPDATE subscription SET events = ?, lucene = ?, label = ? WHERE id = ?`,
 			marshalEvents(sub.Events), boolToInt(sub.Lucene), sub.Label, id,
 		)
-		return id, false, uerr
+		return id, parseEvents(prevEvents), uerr
 	}
 	if err != sql.ErrNoRows {
-		return 0, false, err
+		return 0, nil, err
 	}
 	res, err := s.db.Exec(
 		`INSERT INTO subscription
@@ -300,21 +267,23 @@ func (s *Store) UpsertPushFilterSubscription(sub Subscription, nowMS int64) (int
 		sub.FilterJSON, sub.Label, nowMS, nowMS, nowMS,
 	)
 	if err != nil {
-		return 0, false, err
+		return 0, nil, err
 	}
 	newID, err := res.LastInsertId()
-	return newID, true, err
+	return newID, nil, err
 }
 
 // UpsertWebhookSubscription creates or overwrites the subscription for a webhook
 // URL. A known webhook URL overwrites its previously committed settings (filter,
-// events, lucene, label). Returns the subscription id and whether it was new.
-func (s *Store) UpsertWebhookSubscription(sub Subscription, nowMS int64) (int64, bool, error) {
+// events, lucene, label). Returns the subscription id and the event set the row
+// had before this call (nil when newly created).
+func (s *Store) UpsertWebhookSubscription(sub Subscription, nowMS int64) (int64, []string, error) {
 	var id int64
+	var prevEvents string
 	err := s.db.QueryRow(
-		`SELECT id FROM subscription WHERE target = 'webhook' AND webhook_url = ?`,
+		`SELECT id, events FROM subscription WHERE target = 'webhook' AND webhook_url = ?`,
 		sub.WebhookURL,
-	).Scan(&id)
+	).Scan(&id, &prevEvents)
 	if err == nil {
 		// Overwrite committed settings and reset the watermark/error streak so the
 		// reconfigured webhook behaves like a fresh subscription.
@@ -327,16 +296,16 @@ func (s *Store) UpsertWebhookSubscription(sub Subscription, nowMS int64) (int64,
 			nowMS, nowMS, id,
 		)
 		if uerr != nil {
-			return 0, false, uerr
+			return 0, nil, uerr
 		}
 		// Drop stale snapshots so the reconfigured filter re-seeds cleanly.
 		if _, derr := s.db.Exec(`DELETE FROM post_state WHERE subscription_id = ?`, id); derr != nil {
-			return 0, false, derr
+			return 0, nil, derr
 		}
-		return id, false, nil
+		return id, parseEvents(prevEvents), nil
 	}
 	if err != sql.ErrNoRows {
-		return 0, false, err
+		return 0, nil, err
 	}
 	res, err := s.db.Exec(
 		`INSERT INTO subscription
@@ -346,10 +315,10 @@ func (s *Store) UpsertWebhookSubscription(sub Subscription, nowMS int64) (int64,
 		sub.FilterJSON, sub.Label, nowMS, nowMS, nowMS,
 	)
 	if err != nil {
-		return 0, false, err
+		return 0, nil, err
 	}
 	newID, err := res.LastInsertId()
-	return newID, true, err
+	return newID, nil, err
 }
 
 // ListByEndpoint returns the push subscriptions belonging to a single browser,

@@ -322,41 +322,90 @@ func buildCommentEvents(hits []json.RawMessage, sinceMS int64) ([]NotificationEv
 	return events, maxSeen
 }
 
-// SendInitial delivers the single most recent existing item matching the
-// subscription's filter, as a "first message" right after a push subscription
-// is created. It ignores watermarks and does not advance them. Best-effort.
-func (d *Dispatcher) SendInitial(ctx context.Context, sub Subscription) {
-	index := d.cfg.IndexName
-	if sub.HasEvent(EventComment) && !sub.HasEvent(EventPost) {
-		index = d.cfg.IndexName + "_activity_desc"
+// SendTest delivers a confirmation message for each freshly-enabled event type,
+// right after a subscription is created or an event is toggled on. Post/comment
+// replay the most recent matching item; votes/status/deleted send a clearly
+// labelled sample (there is no existing "change" to replay). Best-effort.
+func (d *Dispatcher) SendTest(ctx context.Context, sub Subscription, events []string) {
+	want := make(map[string]bool, len(events))
+	for _, e := range events {
+		want[e] = true
 	}
-	hits, err := d.queryGatewayPage(ctx, sub, index, 0, 25, nil)
-	if err != nil {
-		log.Printf("[notify] initial sub=%d target=%s: %v", sub.ID, sub.Target, err)
+	if len(want) == 0 {
 		return
 	}
-	var events []NotificationEvent
-	var maxMS int64 = -1
-	if sub.HasEvent(EventPost) {
-		evs, _ := buildPostEvents(hits, -1)
-		for _, ev := range evs {
-			if ms, ok := parseTimeMS(ev.Created); ok && ms > maxMS {
-				maxMS, events = ms, []NotificationEvent{ev}
+
+	var out []NotificationEvent
+
+	if want[EventPost] || want[EventVotes] || want[EventStatus] || want[EventDeleted] {
+		hits, err := d.queryGatewayPage(ctx, sub, d.cfg.IndexName, 0, 25, nil)
+		if err != nil {
+			log.Printf("[notify] test sub=%d target=%s: %v", sub.ID, sub.Target, err)
+		} else {
+			if want[EventPost] {
+				if ev, ok := latestPostEvent(hits); ok {
+					out = append(out, ev)
+				}
+			}
+			if sample, ok := firstHit(hits); ok {
+				if want[EventVotes] {
+					out = append(out, testEvent(sample, EventVotes))
+				}
+				if want[EventStatus] {
+					out = append(out, testEvent(sample, EventStatus))
+				}
+				if want[EventDeleted] {
+					out = append(out, testEvent(sample, EventDeleted))
+				}
 			}
 		}
 	}
-	if len(events) == 0 && sub.HasEvent(EventComment) {
-		evs, _ := buildCommentEvents(hits, -1)
-		for _, ev := range evs {
-			if ms, ok := parseTimeMS(ev.Created); ok && ms > maxMS {
-				maxMS, events = ms, []NotificationEvent{ev}
-			}
+
+	if want[EventComment] {
+		hits, err := d.queryGatewayPage(ctx, sub, d.cfg.IndexName+"_activity_desc", 0, 25, nil)
+		if err != nil {
+			log.Printf("[notify] test sub=%d target=%s (comment): %v", sub.ID, sub.Target, err)
+		} else if ev, ok := latestCommentEvent(hits); ok {
+			out = append(out, ev)
 		}
 	}
-	if len(events) == 0 {
-		return
+
+	if len(out) > 0 {
+		d.deliver(ctx, sub, out)
 	}
-	d.deliver(ctx, sub, events)
+}
+
+func firstHit(hits []json.RawMessage) (gwHit, bool) {
+	for _, raw := range hits {
+		var h gwHit
+		if err := json.Unmarshal(raw, &h); err == nil && h.id() != "" {
+			return h, true
+		}
+	}
+	return gwHit{}, false
+}
+
+func latestByCreated(evs []NotificationEvent) (NotificationEvent, bool) {
+	var best NotificationEvent
+	var bestMS int64
+	found := false
+	for _, ev := range evs {
+		ms, _ := parseTimeMS(ev.Created)
+		if !found || ms > bestMS {
+			best, bestMS, found = ev, ms, true
+		}
+	}
+	return best, found
+}
+
+func latestPostEvent(hits []json.RawMessage) (NotificationEvent, bool) {
+	evs, _ := buildPostEvents(hits, -1)
+	return latestByCreated(evs)
+}
+
+func latestCommentEvent(hits []json.RawMessage) (NotificationEvent, bool) {
+	evs, _ := buildCommentEvents(hits, -1)
+	return latestByCreated(evs)
 }
 
 // queryGatewayAll pages through every hit matching the subscription's filter,

@@ -306,6 +306,39 @@ func buildStatusEvent(hit gwHit, prevStatus, newStatus string, names map[string]
 	}
 }
 
+// testEvent builds a clearly-labelled sample notification for a state-change
+// event type (votes/status/deleted), based on a recent matching post, so users
+// get confirmation that the subscription works and a preview of the format.
+func testEvent(hit gwHit, eventType string) NotificationEvent {
+	board := boardLabel(hit.Board.Name, hit.Board.URLName)
+	ev := NotificationEvent{
+		Type:         eventType,
+		PostTitle:    hit.Title,
+		URL:          cannyPostURL(hit.Board.URLName, hit.URLName),
+		Board:        board,
+		Category:     categoryName(hit),
+		Author:       hit.Author.Name,
+		VoteCount:    hit.Score,
+		CommentCount: hit.CommentCount,
+		Created:      time.Now().UTC().Format(time.RFC3339),
+	}
+	switch eventType {
+	case EventVotes:
+		ev.Title = "Test: vote-change alerts enabled"
+		ev.Body = fmt.Sprintf("You'll be notified when votes change on matching posts. This post currently has %d.", hit.Score)
+	case EventStatus:
+		ev.Title = "Test: status-change alerts enabled"
+		ev.Body = fmt.Sprintf("You'll be notified when a matching post's status changes. This post is currently %q.", trimSpace(hit.Status))
+	case EventDeleted:
+		ev.Title = "Test: deletion alerts enabled"
+		ev.Body = "You'll be notified when a matching post is deleted or migrated."
+	default:
+		ev.Title = "Test notification"
+		ev.Body = "Notifications are enabled."
+	}
+	return ev
+}
+
 func buildDeletedEvent(old PostState) NotificationEvent {
 	board := old.Board
 	title := old.Title

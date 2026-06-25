@@ -65,6 +65,22 @@ func (s *Server) handleVapidKey(w http.ResponseWriter, _ *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]string{"key": s.cfg.VAPIDPublicKey})
 }
 
+// addedEvents returns the events present in next but not in prev (the ones just
+// toggled on), so we only send a test message for newly-enabled actions.
+func addedEvents(next, prev []string) []string {
+	prevSet := make(map[string]bool, len(prev))
+	for _, e := range prev {
+		prevSet[e] = true
+	}
+	var added []string
+	for _, e := range next {
+		if !prevSet[e] {
+			added = append(added, e)
+		}
+	}
+	return added
+}
+
 // sanitizeEvents keeps only known event names, de-duplicated and order-stable.
 func sanitizeEvents(events []string) []string {
 	seen := map[string]bool{}
@@ -128,7 +144,7 @@ func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request
 		FilterJSON:         filterJSON,
 		Label:              strings.TrimSpace(req.Label),
 	}
-	id, created, err := s.store.UpsertPushFilterSubscription(sub, nowMS)
+	id, prevEvents, err := s.store.UpsertPushFilterSubscription(sub, nowMS)
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "create subscription")
 		return
@@ -142,9 +158,9 @@ func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request
 		CreatedAt: nowMS,
 	})
 
-	if created {
-		// Best-effort: deliver the most recent matching item as a first message.
-		go s.dispatch.SendInitial(context.Background(), Subscription{
+	// Best-effort: send a confirmation/test message for each newly-enabled event.
+	if added := addedEvents(events, prevEvents); len(added) > 0 {
+		go s.dispatch.SendTest(context.Background(), Subscription{
 			ID:                 id,
 			Events:             events,
 			Target:             "push",
@@ -158,7 +174,7 @@ func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request
 				P256dh:   req.PushSubscription.Keys.P256dh,
 				Auth:     req.PushSubscription.Keys.Auth,
 			},
-		})
+		}, added)
 	}
 }
 
@@ -236,7 +252,7 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 		FilterJSON: filterJSON,
 		Label:      strings.TrimSpace(req.Label),
 	}
-	id, created, err := s.store.UpsertWebhookSubscription(sub, nowMS)
+	id, prevEvents, err := s.store.UpsertWebhookSubscription(sub, nowMS)
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "create webhook")
 		return
@@ -250,9 +266,9 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 		CreatedAt: nowMS,
 	})
 
-	if created {
-		// Best-effort: deliver the most recent matching item as a first message.
-		go s.dispatch.SendInitial(context.Background(), Subscription{
+	// Best-effort: send a confirmation/test message for each newly-enabled event.
+	if added := addedEvents(events, prevEvents); len(added) > 0 {
+		go s.dispatch.SendTest(context.Background(), Subscription{
 			ID:                 id,
 			Events:             events,
 			Target:             "webhook",
@@ -261,7 +277,7 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 			FilterJSON:         filterJSON,
 			WatermarkMS:        nowMS,
 			CommentWatermarkMS: nowMS,
-		})
+		}, added)
 	}
 }
 
