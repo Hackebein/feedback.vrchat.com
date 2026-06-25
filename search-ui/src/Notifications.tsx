@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { getCurrentSearchParams } from "./searchFilterStore";
 
@@ -167,6 +167,26 @@ function toggleEvent(events: EventType[], type: EventType): EventType[] {
     return events.filter((e) => e !== type);
   }
   return [...events, type];
+}
+
+/** Recursively sort object keys so two equivalent filters serialize identically. */
+function canonical(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (value && typeof value === "object") {
+    const obj = value as Record<string, unknown>;
+    const sorted: Record<string, unknown> = {};
+    for (const key of Object.keys(obj).sort()) {
+      sorted[key] = canonical(obj[key]);
+    }
+    return sorted;
+  }
+  return value;
+}
+
+/** Stable identity for a filter, so the current filter and a saved row that
+ *  describe the same search resolve to a single subscription. */
+function filterKey(filter: Record<string, unknown> | null | undefined): string {
+  return JSON.stringify(canonical(filter ?? {}));
 }
 
 export function Notifications({ luceneMode }: { luceneMode: boolean }) {
@@ -347,12 +367,14 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
     }
   }, [webhook, webhookEvents, luceneMode]);
 
-  const currentLabel = useMemo(
-    () => describeFilter(getCurrentSearchParams()),
-    // Recompute whenever the menu opens so the label reflects the live filter.
-    [open],
-  );
-  const currentSub = subs.find((s) => s.label === currentLabel) ?? null;
+  // Match the live filter to a saved subscription by filter contents (not label,
+  // which can collide), so the current row and saved list stay in sync and never
+  // duplicate the same filter.
+  const currentFilter = getCurrentSearchParams();
+  const currentLabel = describeFilter(currentFilter);
+  const currentKey = filterKey(currentFilter);
+  const currentSub =
+    subs.find((s) => filterKey(s.filter) === currentKey) ?? null;
   const currentEvents = currentSub?.events ?? [];
   const otherSubs = subs.filter((s) => s.id !== currentSub?.id);
 
