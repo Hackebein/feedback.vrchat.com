@@ -1604,6 +1604,7 @@ export function App() {
             <div className="facets-toolbar">
               <div className="search-row">
                 <SearchBox
+                  autoFocus
                   placeholder={
                     luceneMode
                       ? "Lucene query (field:value, ranges, booleans)…"
