@@ -4,29 +4,66 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
+	"mime/multipart"
 	"net/http"
+	"path"
+	"sort"
+	"strconv"
+	"strings"
 	"time"
 
 	webpush "github.com/SherClockHolmes/webpush-go"
 )
 
+// FileAttachment is a file/image shipped with a post or comment.
+type FileAttachment struct {
+	Name string `json:"name"`
+	URL  string `json:"url"`
+	Mime string `json:"mime,omitempty"`
+}
+
 // NotificationEvent is the normalized payload sent to browsers and webhooks.
 type NotificationEvent struct {
-	Type    string `json:"type"` // "post" | "comment"
-	Title   string `json:"title"`
-	Body    string `json:"body"`
-	URL     string `json:"url"`
-	Board   string `json:"board"`
-	Author  string `json:"author"`
-	Excerpt string `json:"excerpt"`
-	Created string `json:"created"`
+	Type         string           `json:"type"` // post|comment|votes|status|deleted
+	Title        string           `json:"title"`
+	PostTitle    string           `json:"postTitle,omitempty"`
+	Body         string           `json:"body"`
+	URL          string           `json:"url"`
+	Board        string           `json:"board,omitempty"`
+	Category     string           `json:"category,omitempty"`
+	Author       string           `json:"author,omitempty"`
+	VoteCount    int              `json:"voteCount,omitempty"`
+	CommentCount int              `json:"commentCount,omitempty"`
+	PrevStatus   string           `json:"prevStatus,omitempty"`
+	NewStatus    string           `json:"newStatus,omitempty"`
+	Images       []string         `json:"images,omitempty"`
+	Files        []FileAttachment `json:"files,omitempty"`
+	PostExcerpt  string           `json:"postExcerpt,omitempty"`
+	ParentChain  []string         `json:"parentChain,omitempty"`
+	Created      string           `json:"created"`
 }
 
 // maxEventsPerTick caps how many notifications a single subscription emits per
 // poll so a burst of matches cannot flood a browser or webhook.
 const maxEventsPerTick = 10
+
+// Text budgets for assembling notification bodies.
+const (
+	postExcerptMax        = 400
+	commentBodyMax        = 1500
+	parentCommentMax      = 240
+	parentChainCharBudget = 1200
+	parentChainMaxItems   = 5
+)
+
+// Discord webhook attachment limits.
+const (
+	maxAttachments    = 5
+	maxAttachmentSize = 8 << 20 // 8 MiB per file
+)
 
 func (d *Dispatcher) deliver(ctx context.Context, sub Subscription, events []NotificationEvent) {
 	if len(events) > maxEventsPerTick {
@@ -66,7 +103,6 @@ func (d *Dispatcher) deliverPush(sub Subscription, events []NotificationEvent) {
 		status := resp.StatusCode
 		resp.Body.Close()
 		if status == http.StatusNotFound || status == http.StatusGone {
-			// Browser unsubscribed / endpoint expired: drop it and cascade.
 			if err := d.store.DeletePushSubscriptionByEndpoint(sub.Push.Endpoint); err != nil {
 				log.Printf("[notify] delete gone push endpoint: %v", err)
 			}
@@ -74,6 +110,234 @@ func (d *Dispatcher) deliverPush(sub Subscription, events []NotificationEvent) {
 		}
 	}
 }
+
+// ---------------------------------------------------------------------------
+// Event builders
+// ---------------------------------------------------------------------------
+
+func categoryName(hit gwHit) string {
+	if hit.Category != nil {
+		return trimSpace(hit.Category.Name)
+	}
+	return ""
+}
+
+func convFiles(files []gwFile) []FileAttachment {
+	out := make([]FileAttachment, 0, len(files))
+	for _, f := range files {
+		if f.URL == "" {
+			continue
+		}
+		name := f.Name
+		if name == "" {
+			name = urlBasename(f.URL)
+		}
+		out = append(out, FileAttachment{Name: name, URL: f.URL, Mime: f.MimeType})
+	}
+	return out
+}
+
+func displayName(name string) string {
+	if n := trimSpace(name); n != "" {
+		return n
+	}
+	return "Anonymous"
+}
+
+func newPostEvent(hit gwHit) NotificationEvent {
+	names := buildUserNameMap(hit)
+	board := boardLabel(hit.Board.Name, hit.Board.URLName)
+	return NotificationEvent{
+		Type:         EventPost,
+		Title:        fmt.Sprintf("New post in %s", board),
+		PostTitle:    hit.Title,
+		Body:         excerpt(substituteMentions(hit.Details, names), commentBodyMax),
+		URL:          cannyPostURL(hit.Board.URLName, hit.URLName),
+		Board:        board,
+		Category:     categoryName(hit),
+		Author:       hit.Author.Name,
+		VoteCount:    hit.Score,
+		CommentCount: hit.CommentCount,
+		Images:       hit.ImageURLs,
+		Files:        convFiles(hit.Files),
+		Created:      hit.Created,
+	}
+}
+
+func commentBody(c gwComment) string {
+	if trimSpace(c.Value) != "" {
+		return c.Value
+	}
+	if c.StatusChangeNewStatus != "" {
+		return "marked this post as " + c.StatusChangeNewStatus
+	}
+	return ""
+}
+
+func newCommentEvent(hit gwHit, c gwComment, names map[string]string) NotificationEvent {
+	board := boardLabel(hit.Board.Name, hit.Board.URLName)
+	return NotificationEvent{
+		Type:         EventComment,
+		Title:        fmt.Sprintf("New comment on %q", hit.Title),
+		PostTitle:    hit.Title,
+		Body:         excerpt(substituteMentions(commentBody(c), names), commentBodyMax),
+		URL:          cannyPostURL(hit.Board.URLName, hit.URLName),
+		Board:        board,
+		Category:     categoryName(hit),
+		Author:       c.Author.Name,
+		VoteCount:    hit.Score,
+		CommentCount: hit.CommentCount,
+		Images:       c.ImageURLs,
+		Files:        convFiles(c.Files),
+		PostExcerpt:  excerpt(substituteMentions(hit.Details, names), postExcerptMax),
+		ParentChain:  buildParentChain(hit, c, names),
+		Created:      c.Created,
+	}
+}
+
+// buildParentChain walks a sub-comment's ancestors (parent, grandparent, ...)
+// and returns them oldest-first as "Author: body" lines, bounded by a count and
+// character budget so the webhook body stays within Discord's limits.
+func buildParentChain(hit gwHit, c gwComment, names map[string]string) []string {
+	if c.ParentID == "" {
+		return nil
+	}
+	byID := make(map[string]gwComment, len(hit.Comments))
+	for _, cc := range hit.Comments {
+		if cc.ID != "" {
+			byID[cc.ID] = cc
+		}
+	}
+	// Climb nearest-first.
+	var nearestFirst []gwComment
+	pid := c.ParentID
+	for guard := 0; pid != "" && guard < 50; guard++ {
+		parent, ok := byID[pid]
+		if !ok {
+			break
+		}
+		nearestFirst = append(nearestFirst, parent)
+		pid = parent.ParentID
+	}
+	// Select within budget, preferring the nearest ancestors.
+	var selected []gwComment
+	used := 0
+	for _, p := range nearestFirst {
+		if len(selected) >= parentChainMaxItems {
+			break
+		}
+		line := excerpt(p.Value, parentCommentMax)
+		if used+len(line) > parentChainCharBudget && len(selected) > 0 {
+			break
+		}
+		used += len(line)
+		selected = append(selected, p)
+	}
+	// Emit oldest-first.
+	out := make([]string, 0, len(selected))
+	for i := len(selected) - 1; i >= 0; i-- {
+		p := selected[i]
+		body := substituteMentions(excerpt(commentBody(p), parentCommentMax), names)
+		out = append(out, fmt.Sprintf("%s: %s", displayName(p.Author.Name), body))
+	}
+	return out
+}
+
+func buildVotesEvent(hit gwHit, old PostState, curVoters, names map[string]string) NotificationEvent {
+	prevVoters := decodeVoters(old.VotersJSON)
+	var added, removed []string
+	for id, name := range curVoters {
+		if _, ok := prevVoters[id]; !ok {
+			added = append(added, displayName(name))
+		}
+	}
+	for id, name := range prevVoters {
+		if _, ok := curVoters[id]; !ok {
+			removed = append(removed, displayName(name))
+		}
+	}
+	sort.Strings(added)
+	sort.Strings(removed)
+
+	parts := []string{fmt.Sprintf("Votes: %d \u2192 %d", old.Score, hit.Score)}
+	if len(added) > 0 {
+		parts = append(parts, "Added: "+strings.Join(added, ", "))
+	}
+	if len(removed) > 0 {
+		parts = append(parts, "Removed: "+strings.Join(removed, ", "))
+	}
+
+	board := boardLabel(hit.Board.Name, hit.Board.URLName)
+	return NotificationEvent{
+		Type:         EventVotes,
+		Title:        fmt.Sprintf("Votes changed on %q", hit.Title),
+		PostTitle:    hit.Title,
+		Body:         strings.Join(parts, "\n"),
+		URL:          cannyPostURL(hit.Board.URLName, hit.URLName),
+		Board:        board,
+		Category:     categoryName(hit),
+		Author:       hit.Author.Name,
+		VoteCount:    hit.Score,
+		CommentCount: hit.CommentCount,
+		Created:      time.Now().UTC().Format(time.RFC3339),
+	}
+}
+
+func buildStatusEvent(hit gwHit, prevStatus, newStatus string, names map[string]string) NotificationEvent {
+	prevLabel := prevStatus
+	if prevLabel == "" {
+		prevLabel = "unknown"
+	}
+	board := boardLabel(hit.Board.Name, hit.Board.URLName)
+	return NotificationEvent{
+		Type:         EventStatus,
+		Title:        fmt.Sprintf("Status changed on %q", hit.Title),
+		PostTitle:    hit.Title,
+		Body:         fmt.Sprintf("%s \u2192 %s", prevLabel, newStatus),
+		URL:          cannyPostURL(hit.Board.URLName, hit.URLName),
+		Board:        board,
+		Category:     categoryName(hit),
+		Author:       hit.Author.Name,
+		VoteCount:    hit.Score,
+		CommentCount: hit.CommentCount,
+		PrevStatus:   prevStatus,
+		NewStatus:    newStatus,
+		Created:      time.Now().UTC().Format(time.RFC3339),
+	}
+}
+
+func buildDeletedEvent(old PostState) NotificationEvent {
+	board := old.Board
+	title := old.Title
+	if title == "" {
+		title = "(removed post)"
+	}
+	return NotificationEvent{
+		Type:      EventDeleted,
+		Title:     fmt.Sprintf("Post removed: %q", title),
+		PostTitle: title,
+		Body:      "This post was deleted or migrated.",
+		URL:       old.URL,
+		Board:     board,
+		Created:   time.Now().UTC().Format(time.RFC3339),
+	}
+}
+
+func urlBasename(u string) string {
+	clean := u
+	if i := strings.IndexAny(clean, "?#"); i >= 0 {
+		clean = clean[:i]
+	}
+	base := path.Base(clean)
+	if base == "." || base == "/" || base == "" {
+		return "file"
+	}
+	return base
+}
+
+// ---------------------------------------------------------------------------
+// Discord webhook delivery
+// ---------------------------------------------------------------------------
 
 type discordWebhookPayload struct {
 	Embeds []discordEmbed `json:"embeds"`
@@ -100,54 +364,104 @@ const (
 	discordEmbedFieldValueMax  = 1024
 	discordColorPost           = 0x57F287
 	discordColorComment        = 0xFEE75C
+	discordColorVotes          = 0x5865F2
+	discordColorStatus         = 0xEB459E
+	discordColorDeleted        = 0xED4245
 )
 
-func buildDiscordWebhookPayload(events []NotificationEvent) ([]byte, error) {
+func discordColor(eventType string) int {
+	switch eventType {
+	case EventComment:
+		return discordColorComment
+	case EventVotes:
+		return discordColorVotes
+	case EventStatus:
+		return discordColorStatus
+	case EventDeleted:
+		return discordColorDeleted
+	default:
+		return discordColorPost
+	}
+}
+
+// discordDescription assembles the embed body: for comments it prepends the
+// post excerpt and any ancestor comments (quoted) before the comment itself.
+func discordDescription(ev NotificationEvent) string {
+	if ev.Type != EventComment {
+		return ev.Body
+	}
+	var parts []string
+	if ev.PostExcerpt != "" {
+		parts = append(parts, "> "+ev.PostExcerpt)
+	}
+	for _, p := range ev.ParentChain {
+		parts = append(parts, "> "+p)
+	}
+	if ev.Body != "" {
+		parts = append(parts, ev.Body)
+	}
+	return strings.Join(parts, "\n\n")
+}
+
+func eventToEmbed(ev NotificationEvent) discordEmbed {
+	title := ev.PostTitle
+	if title == "" {
+		title = ev.Title
+	}
+	fields := make([]discordField, 0, 5)
+	if author := truncate(ev.Author, discordEmbedFieldValueMax); author != "" {
+		fields = append(fields, discordField{Name: "Author", Value: author, Inline: true})
+	}
+	if board := truncate(ev.Board, discordEmbedFieldValueMax); board != "" {
+		fields = append(fields, discordField{Name: "Board", Value: board, Inline: true})
+	}
+	if category := truncate(ev.Category, discordEmbedFieldValueMax); category != "" {
+		fields = append(fields, discordField{Name: "Category", Value: category, Inline: true})
+	}
+	if ev.VoteCount > 1 {
+		fields = append(fields, discordField{Name: "Votes", Value: strconv.Itoa(ev.VoteCount), Inline: true})
+	}
+	if ev.CommentCount > 0 {
+		fields = append(fields, discordField{Name: "Comments", Value: strconv.Itoa(ev.CommentCount), Inline: true})
+	}
+	return discordEmbed{
+		Title:       truncate(title, discordEmbedTitleMax),
+		Description: truncate(discordDescription(ev), discordEmbedDescriptionMax),
+		URL:         ev.URL,
+		Color:       discordColor(ev.Type),
+		Fields:      fields,
+		Timestamp:   ev.Created,
+	}
+}
+
+func buildDiscordEmbeds(events []NotificationEvent) []discordEmbed {
 	embeds := make([]discordEmbed, 0, len(events))
 	for _, ev := range events {
-		color := discordColorPost
-		if ev.Type == "comment" {
-			color = discordColorComment
-		}
-		desc := ev.Body
-		if desc == "" {
-			desc = ev.Excerpt
-		}
-		// Discord rejects an embed field whose value is empty (HTTP 400), so
-		// only emit Board/Author when they actually carry a value.
-		fields := make([]discordField, 0, 2)
-		if board := truncate(ev.Board, discordEmbedFieldValueMax); board != "" {
-			fields = append(fields, discordField{Name: "Board", Value: board, Inline: true})
-		}
-		if author := truncate(ev.Author, discordEmbedFieldValueMax); author != "" {
-			fields = append(fields, discordField{Name: "Author", Value: author, Inline: true})
-		}
-		embeds = append(embeds, discordEmbed{
-			Title:       truncate(ev.Title, discordEmbedTitleMax),
-			Description: truncate(desc, discordEmbedDescriptionMax),
-			URL:         ev.URL,
-			Color:       color,
-			Fields:      fields,
-			Timestamp:   ev.Created,
-		})
+		embeds = append(embeds, eventToEmbed(ev))
 	}
-	return json.Marshal(discordWebhookPayload{Embeds: embeds})
+	return embeds
+}
+
+// buildDiscordWebhookPayload renders the embeds-only JSON body (no attachments).
+func buildDiscordWebhookPayload(events []NotificationEvent) ([]byte, error) {
+	return json.Marshal(discordWebhookPayload{Embeds: buildDiscordEmbeds(events)})
+}
+
+type webhookAttachment struct {
+	filename string
+	data     []byte
 }
 
 func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, events []NotificationEvent) {
-	body, err := buildDiscordWebhookPayload(events)
-	if err != nil {
-		log.Printf("[notify] webhook sub=%d build payload: %v", sub.ID, err)
-		d.recordWebhookFailure(sub)
-		return
-	}
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, sub.WebhookURL, bytes.NewReader(body))
+	payload := discordWebhookPayload{Embeds: buildDiscordEmbeds(events)}
+	attachments := d.collectAttachments(ctx, events)
+
+	req, err := buildWebhookRequest(ctx, sub.WebhookURL, payload, attachments)
 	if err != nil {
 		log.Printf("[notify] webhook sub=%d build request: %v", sub.ID, err)
 		d.recordWebhookFailure(sub)
 		return
 	}
-	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", "feedback-notify/1.0")
 
 	resp, err := d.client.Do(req)
@@ -159,7 +473,7 @@ func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, event
 	defer resp.Body.Close()
 	respBody, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-		log.Printf("[notify] webhook sub=%d status=%d events=%d delivered", sub.ID, resp.StatusCode, len(events))
+		log.Printf("[notify] webhook sub=%d status=%d events=%d files=%d delivered", sub.ID, resp.StatusCode, len(events), len(attachments))
 		if sub.ErrorSinceMS.Valid {
 			if err := d.store.ClearWebhookError(sub.ID); err != nil {
 				log.Printf("[notify] clear webhook error sub=%d: %v", sub.ID, err)
@@ -169,6 +483,123 @@ func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, event
 	}
 	log.Printf("[notify] webhook sub=%d status=%d events=%d rejected: %s", sub.ID, resp.StatusCode, len(events), truncate(string(respBody), 300))
 	d.recordWebhookFailure(sub)
+}
+
+// buildWebhookRequest builds either a JSON request (no files) or a multipart
+// request with payload_json + downloaded file parts (Discord attachments).
+func buildWebhookRequest(ctx context.Context, webhookURL string, payload discordWebhookPayload, attachments []webhookAttachment) (*http.Request, error) {
+	if len(attachments) == 0 {
+		body, err := json.Marshal(payload)
+		if err != nil {
+			return nil, err
+		}
+		req, err := http.NewRequestWithContext(ctx, http.MethodPost, webhookURL, bytes.NewReader(body))
+		if err != nil {
+			return nil, err
+		}
+		req.Header.Set("Content-Type", "application/json")
+		return req, nil
+	}
+
+	var buf bytes.Buffer
+	mw := multipart.NewWriter(&buf)
+	payloadJSON, err := json.Marshal(payload)
+	if err != nil {
+		return nil, err
+	}
+	if err := mw.WriteField("payload_json", string(payloadJSON)); err != nil {
+		return nil, err
+	}
+	for i, a := range attachments {
+		part, err := mw.CreateFormFile(fmt.Sprintf("files[%d]", i), a.filename)
+		if err != nil {
+			return nil, err
+		}
+		if _, err := part.Write(a.data); err != nil {
+			return nil, err
+		}
+	}
+	if err := mw.Close(); err != nil {
+		return nil, err
+	}
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, webhookURL, &buf)
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Set("Content-Type", mw.FormDataContentType())
+	return req, nil
+}
+
+// collectAttachments downloads images and files referenced by the events, up to
+// maxAttachments and maxAttachmentSize each. Oversized or failing downloads are
+// skipped.
+func (d *Dispatcher) collectAttachments(ctx context.Context, events []NotificationEvent) []webhookAttachment {
+	type ref struct{ name, url string }
+	var refs []ref
+	seen := map[string]bool{}
+	for _, ev := range events {
+		for _, img := range ev.Images {
+			if img != "" && !seen[img] {
+				seen[img] = true
+				refs = append(refs, ref{urlBasename(img), img})
+			}
+		}
+		for _, f := range ev.Files {
+			if f.URL != "" && !seen[f.URL] {
+				seen[f.URL] = true
+				name := f.Name
+				if name == "" {
+					name = urlBasename(f.URL)
+				}
+				refs = append(refs, ref{name, f.URL})
+			}
+		}
+	}
+
+	out := make([]webhookAttachment, 0, maxAttachments)
+	used := map[string]int{}
+	for _, r := range refs {
+		if len(out) >= maxAttachments {
+			break
+		}
+		data, ok := d.downloadCapped(ctx, r.url, maxAttachmentSize)
+		if !ok {
+			continue
+		}
+		name := r.name
+		// Discord requires distinct filenames per request.
+		if used[name] > 0 {
+			name = fmt.Sprintf("%d-%s", used[name], name)
+		}
+		used[r.name]++
+		out = append(out, webhookAttachment{filename: name, data: data})
+	}
+	return out
+}
+
+// downloadCapped fetches up to limit bytes; returns false if the request fails
+// or the body exceeds the limit.
+func (d *Dispatcher) downloadCapped(ctx context.Context, rawURL string, limit int64) ([]byte, bool) {
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, rawURL, nil)
+	if err != nil {
+		return nil, false
+	}
+	resp, err := d.client.Do(req)
+	if err != nil {
+		return nil, false
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+		return nil, false
+	}
+	data, err := io.ReadAll(io.LimitReader(resp.Body, limit+1))
+	if err != nil {
+		return nil, false
+	}
+	if int64(len(data)) > limit {
+		return nil, false // too large to attach
+	}
+	return data, true
 }
 
 // recordWebhookFailure starts (or continues) the error streak for a webhook and

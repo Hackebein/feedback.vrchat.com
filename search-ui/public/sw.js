@@ -18,9 +18,12 @@ self.addEventListener("push", (event) => {
 
   const title = data.title || "VRChat feedback";
   const url = data.url || "https://feedback.vrchat.com";
+  const type = data.type || "post";
   const options = {
     body: data.body || "",
-    tag: url + "#" + (data.created || ""),
+    // Include the event type so e.g. a status change and a vote change on the
+    // same post don't collapse into a single notification.
+    tag: url + "#" + type + "#" + (data.created || ""),
     data: { url },
     icon: "/favicon.ico",
     badge: "/favicon.ico",

@@ -1,21 +1,21 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import { getCurrentSearchParams } from "./searchFilterStore";
 
 const NOTIFY_BASE = "/api/notify";
 
-type Kind = "post" | "comment";
+type EventType = "post" | "comment" | "votes" | "status" | "deleted";
+
+const EVENT_ORDER: EventType[] = ["post", "comment", "votes", "status", "deleted"];
 
 interface SubscriptionView {
   id: number;
-  kind: Kind;
+  events: EventType[];
   label: string;
+  filter: Record<string, unknown> | null;
+  lucene: boolean;
   createdAt: number;
 }
-
-const KIND_LABEL: Record<Kind, string> = {
-  post: "new posts",
-  comment: "new comments",
-};
 
 function pushSupported(): boolean {
   return (
@@ -38,7 +38,7 @@ function urlBase64ToUint8Array(base64String: string): Uint8Array {
 }
 
 /** Build a short, human-readable label from the live search filter. */
-function describeFilter(params: Record<string, unknown>, kind: Kind): string {
+function describeFilter(params: Record<string, unknown>): string {
   const parts: string[] = [];
   const q = typeof params.query === "string" ? params.query.trim() : "";
   if (q) parts.push(`"${q}"`);
@@ -57,7 +57,7 @@ function describeFilter(params: Record<string, unknown>, kind: Kind): string {
   }
 
   if (parts.length === 0) {
-    return kind === "comment" ? "All comments" : "All posts";
+    return "All posts";
   }
   return parts.join(" \u00b7 ");
 }
@@ -79,166 +79,110 @@ const BellIcon = ({ filled }: { filled: boolean }) => (
   </svg>
 );
 
-interface BellMenuProps {
-  kind: Kind;
-  vapidKey: string | null;
-  endpoint: string | null;
-  subs: SubscriptionView[];
-  busy: boolean;
-  error: string | null;
-  open: boolean;
-  luceneMode: boolean;
-  onToggle: () => void;
-  onEnable: () => void;
-  onDelete: (id: number) => void;
+/** Icon glyphs for each event type, rendered inside the toggle buttons. */
+function EventGlyph({ type }: { type: EventType }) {
+  const common = {
+    width: 16,
+    height: 16,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 2,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+  switch (type) {
+    case "post":
+      return (
+        <svg {...common}>
+          <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+          <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" />
+          <path d="M12 11v6M9 14h6" />
+        </svg>
+      );
+    case "comment":
+      return (
+        <svg {...common}>
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+      );
+    case "votes":
+      return (
+        <svg {...common}>
+          <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+      );
+    case "status":
+      return (
+        <svg {...common}>
+          <path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5" />
+        </svg>
+      );
+    case "deleted":
+      return (
+        <svg {...common}>
+          <path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+        </svg>
+      );
+  }
 }
 
-function BellMenu({
-  kind,
-  vapidKey,
-  endpoint,
-  subs,
-  busy,
-  error,
-  open,
-  luceneMode,
+const EVENT_LABEL: Record<EventType, string> = {
+  post: "New posts",
+  comment: "New comments",
+  votes: "Vote changes",
+  status: "Status changes",
+  deleted: "Deletions / migrations",
+};
+
+function EventToggle({
+  type,
+  active,
+  disabled,
   onToggle,
-  onEnable,
-  onDelete,
-}: BellMenuProps) {
-  const [webhook, setWebhook] = useState("");
-  const [webhookStatus, setWebhookStatus] = useState<string | null>(null);
-  const [webhookBusy, setWebhookBusy] = useState(false);
-  const active = subs.length > 0;
-
-  const addWebhook = useCallback(async () => {
-    const url = webhook.trim();
-    if (!url) return;
-    setWebhookBusy(true);
-    setWebhookStatus(null);
-    try {
-      const filter = getCurrentSearchParams();
-      const res = await fetch(`${NOTIFY_BASE}/webhooks`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          kind,
-          webhookUrl: url,
-          filter,
-          lucene: luceneMode,
-          label: describeFilter(filter, kind),
-        }),
-      });
-      if (!res.ok) {
-        const data = (await res.json().catch(() => null)) as
-          | { message?: string }
-          | null;
-        throw new Error(data?.message ?? "Could not add webhook.");
-      }
-      setWebhook("");
-      setWebhookStatus(`Webhook added for ${KIND_LABEL[kind]}.`);
-    } catch (err) {
-      setWebhookStatus(err instanceof Error ? err.message : "Could not add webhook.");
-    } finally {
-      setWebhookBusy(false);
-    }
-  }, [webhook, kind, luceneMode]);
-
+}: {
+  type: EventType;
+  active: boolean;
+  disabled: boolean;
+  onToggle: () => void;
+}) {
   return (
-    <div className="notify-bell">
-      <button
-        type="button"
-        className={`notify-bell-button${active ? " is-active" : ""}`}
-        aria-haspopup="true"
-        aria-expanded={open}
-        title={`Notifications for ${KIND_LABEL[kind]}`}
-        onClick={onToggle}
-        disabled={!vapidKey}
-      >
-        <BellIcon filled={active} />
-        {active ? <span className="notify-badge">{subs.length}</span> : null}
-      </button>
-      {open ? (
-        <div className="notify-menu" role="menu">
-          <div className="notify-menu-head">Notify me of {KIND_LABEL[kind]}</div>
-          <button
-            type="button"
-            className="notify-enable"
-            onClick={onEnable}
-            disabled={busy}
-          >
-            {busy ? "Enabling\u2026" : "Enable for current filter"}
-          </button>
-          {error ? <div className="notify-error">{error}</div> : null}
-          <div className="notify-list">
-            {subs.length === 0 ? (
-              <div className="notify-empty">No active subscriptions.</div>
-            ) : (
-              subs.map((s) => (
-                <div className="notify-item" key={s.id}>
-                  <span className="notify-item-label" title={s.label}>
-                    {s.label || "(filter)"}
-                  </span>
-                  <button
-                    type="button"
-                    className="notify-remove"
-                    title="Remove"
-                    aria-label="Remove subscription"
-                    onClick={() => onDelete(s.id)}
-                    disabled={!endpoint}
-                  >
-                    {"\u00d7"}
-                  </button>
-                </div>
-              ))
-            )}
-          </div>
-          <div className="notify-webhook notify-webhook-menu">
-            <input
-              type="url"
-              className="notify-webhook-input"
-              placeholder={"Webhook URL\u2026"}
-              value={webhook}
-              onChange={(e) => {
-                setWebhook(e.target.value);
-                setWebhookStatus(null);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") void addWebhook();
-              }}
-            />
-            <button
-              type="button"
-              className="notify-webhook-add"
-              onClick={() => void addWebhook()}
-              disabled={webhookBusy || webhook.trim() === ""}
-            >
-              {webhookBusy ? "Adding\u2026" : "Add webhook"}
-            </button>
-            {webhookStatus ? (
-              <span className="notify-webhook-status">{webhookStatus}</span>
-            ) : null}
-          </div>
-        </div>
-      ) : null}
-    </div>
+    <button
+      type="button"
+      className={`notify-toggle${active ? " is-on" : ""}`}
+      title={EVENT_LABEL[type]}
+      aria-label={EVENT_LABEL[type]}
+      aria-pressed={active}
+      disabled={disabled}
+      onClick={onToggle}
+    >
+      <EventGlyph type={type} />
+    </button>
   );
+}
+
+function toggleEvent(events: EventType[], type: EventType): EventType[] {
+  if (events.includes(type)) {
+    return events.filter((e) => e !== type);
+  }
+  return [...events, type];
 }
 
 export function Notifications({ luceneMode }: { luceneMode: boolean }) {
   const supported = pushSupported();
   const [vapidKey, setVapidKey] = useState<string | null>(null);
   const [endpoint, setEndpoint] = useState<string | null>(null);
-  const [subs, setSubs] = useState<Record<Kind, SubscriptionView[]>>({
-    post: [],
-    comment: [],
-  });
-  const [openMenu, setOpenMenu] = useState<Kind | null>(null);
-  const [busy, setBusy] = useState<Kind | null>(null);
-  const [errors, setErrors] = useState<Record<Kind, string | null>>({
-    post: null,
-    comment: null,
-  });
+  const [subs, setSubs] = useState<SubscriptionView[]>([]);
+  const [open, setOpen] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const [webhook, setWebhook] = useState("");
+  const [webhookEvents, setWebhookEvents] = useState<EventType[]>(["post"]);
+  const [webhookStatus, setWebhookStatus] = useState<string | null>(null);
+  const [webhookBusy, setWebhookBusy] = useState(false);
+
   const rootRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -252,7 +196,6 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
         }
       })
       .catch(() => undefined);
-    // Reuse an existing browser push subscription if one is already registered.
     navigator.serviceWorker
       .getRegistration()
       .then((reg) => reg?.pushManager.getSubscription())
@@ -272,11 +215,7 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
       );
       if (!res.ok) return;
       const data = (await res.json()) as { subscriptions?: SubscriptionView[] };
-      const next: Record<Kind, SubscriptionView[]> = { post: [], comment: [] };
-      for (const s of data.subscriptions ?? []) {
-        if (s.kind === "post" || s.kind === "comment") next[s.kind].push(s);
-      }
-      setSubs(next);
+      setSubs(data.subscriptions ?? []);
     } catch {
       /* ignore */
     }
@@ -286,17 +225,16 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
     if (endpoint) void refreshList(endpoint);
   }, [endpoint, refreshList]);
 
-  // Close the dropdown on outside click.
   useEffect(() => {
-    if (!openMenu) return;
+    if (!open) return;
     function onClick(e: MouseEvent) {
       if (rootRef.current && !rootRef.current.contains(e.target as Node)) {
-        setOpenMenu(null);
+        setOpen(false);
       }
     }
     document.addEventListener("mousedown", onClick);
     return () => document.removeEventListener("mousedown", onClick);
-  }, [openMenu]);
+  }, [open]);
 
   const ensureSubscription = useCallback(async (): Promise<{
     endpoint: string;
@@ -322,23 +260,27 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
     return { endpoint: sub.endpoint, json: sub.toJSON() };
   }, [vapidKey]);
 
-  const enableBell = useCallback(
-    async (kind: Kind) => {
-      setBusy(kind);
-      setErrors((e) => ({ ...e, [kind]: null }));
+  // Persist the event set for a given filter (push). An empty set deletes it.
+  const applyEvents = useCallback(
+    async (
+      filter: Record<string, unknown>,
+      lucene: boolean,
+      label: string,
+      events: EventType[],
+    ) => {
+      setBusy(true);
+      setError(null);
       try {
         const result = await ensureSubscription();
         if (!result) throw new Error("Push notifications are unavailable.");
-        const filter = getCurrentSearchParams();
-        const label = describeFilter(filter, kind);
         const res = await fetch(`${NOTIFY_BASE}/subscriptions`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            kind,
+            events,
             pushSubscription: result.json,
             filter,
-            lucene: luceneMode,
+            lucene,
             label,
           }),
         });
@@ -346,19 +288,16 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
         setEndpoint(result.endpoint);
         await refreshList(result.endpoint);
       } catch (err) {
-        setErrors((e) => ({
-          ...e,
-          [kind]: err instanceof Error ? err.message : "Something went wrong.",
-        }));
+        setError(err instanceof Error ? err.message : "Something went wrong.");
       } finally {
-        setBusy(null);
+        setBusy(false);
       }
     },
-    [ensureSubscription, luceneMode, refreshList],
+    [ensureSubscription, refreshList],
   );
 
   const deleteSub = useCallback(
-    async (kind: Kind, id: number) => {
+    async (id: number) => {
       if (!endpoint) return;
       try {
         const res = await fetch(
@@ -367,32 +306,208 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
         );
         if (res.ok) await refreshList(endpoint);
       } catch {
-        setErrors((e) => ({ ...e, [kind]: "Could not remove subscription." }));
+        setError("Could not remove subscription.");
       }
     },
     [endpoint, refreshList],
+  );
+
+  const addWebhook = useCallback(async () => {
+    const url = webhook.trim();
+    if (!url || webhookEvents.length === 0) return;
+    setWebhookBusy(true);
+    setWebhookStatus(null);
+    try {
+      const filter = getCurrentSearchParams();
+      const res = await fetch(`${NOTIFY_BASE}/webhooks`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          events: webhookEvents,
+          webhookUrl: url,
+          filter,
+          lucene: luceneMode,
+          label: describeFilter(filter),
+        }),
+      });
+      if (!res.ok) {
+        const data = (await res.json().catch(() => null)) as
+          | { message?: string }
+          | null;
+        throw new Error(data?.message ?? "Could not add webhook.");
+      }
+      setWebhook("");
+      setWebhookStatus("Webhook saved.");
+    } catch (err) {
+      setWebhookStatus(
+        err instanceof Error ? err.message : "Could not add webhook.",
+      );
+    } finally {
+      setWebhookBusy(false);
+    }
+  }, [webhook, webhookEvents, luceneMode]);
+
+  const currentLabel = useMemo(
+    () => describeFilter(getCurrentSearchParams()),
+    // Recompute whenever the menu opens so the label reflects the live filter.
+    [open],
+  );
+  const currentSub = subs.find((s) => s.label === currentLabel) ?? null;
+  const currentEvents = currentSub?.events ?? [];
+  const otherSubs = subs.filter((s) => s.id !== currentSub?.id);
+
+  const toggleCurrent = useCallback(
+    (type: EventType) => {
+      const next = toggleEvent(currentEvents, type);
+      void applyEvents(getCurrentSearchParams(), luceneMode, currentLabel, next);
+    },
+    [applyEvents, currentEvents, currentLabel, luceneMode],
+  );
+
+  const toggleSaved = useCallback(
+    (sub: SubscriptionView, type: EventType) => {
+      const next = toggleEvent(sub.events, type);
+      void applyEvents(sub.filter ?? {}, sub.lucene, sub.label, next);
+    },
+    [applyEvents],
   );
 
   if (!supported) {
     return null;
   }
 
+  const activeCount = subs.length;
+
+  const renderToggles = (
+    events: EventType[],
+    onToggle: (type: EventType) => void,
+  ): ReactNode => (
+    <div className="notify-toggles">
+      {EVENT_ORDER.map((type) => (
+        <EventToggle
+          key={type}
+          type={type}
+          active={events.includes(type)}
+          disabled={busy || !vapidKey}
+          onToggle={() => onToggle(type)}
+        />
+      ))}
+    </div>
+  );
+
   return (
     <div className="notify-bar" ref={rootRef}>
-      {(["post", "comment"] as Kind[]).map((kind) => (
-        <BellMenu
-          key={kind}
-          kind={kind}
-          vapidKey={vapidKey}
-          endpoint={endpoint}
-          subs={subs[kind]}
-          busy={busy === kind}
-          error={errors[kind]}
-          open={openMenu === kind}
-          luceneMode={luceneMode}
-          onToggle={() => setOpenMenu((m) => (m === kind ? null : kind))}
-          onEnable={() => void enableBell(kind)}
-          onDelete={(id) => void deleteSub(kind, id)}
+      <div className="notify-bell">
+        <button
+          type="button"
+          className={`notify-bell-button${activeCount > 0 ? " is-active" : ""}`}
+          aria-haspopup="true"
+          aria-expanded={open}
+          title="Notifications"
+          onClick={() => setOpen((v) => !v)}
+          disabled={!vapidKey}
+        >
+          <BellIcon filled={activeCount > 0} />
+          {activeCount > 0 ? (
+            <span className="notify-badge">{activeCount}</span>
+          ) : null}
+        </button>
+        {open ? (
+          <div className="notify-menu" role="menu">
+            <div className="notify-menu-head">Notify me of</div>
+
+            <div className="notify-section">
+              <div className="notify-section-title">Current filter</div>
+              <div className="notify-item is-current">
+                <span className="notify-item-label" title={currentLabel}>
+                  {currentLabel}
+                </span>
+                {renderToggles(currentEvents, toggleCurrent)}
+              </div>
+            </div>
+
+            {error ? <div className="notify-error">{error}</div> : null}
+
+            {otherSubs.length > 0 ? (
+              <div className="notify-section">
+                <div className="notify-section-title">Saved filters</div>
+                <div className="notify-list">
+                  {otherSubs.map((s) => (
+                    <div className="notify-item" key={s.id}>
+                      <span className="notify-item-label" title={s.label}>
+                        {s.label || "(filter)"}
+                      </span>
+                      {renderToggles(s.events, (type) => toggleSaved(s, type))}
+                      <button
+                        type="button"
+                        className="notify-remove"
+                        title="Remove"
+                        aria-label="Remove subscription"
+                        onClick={() => void deleteSub(s.id)}
+                        disabled={!endpoint}
+                      >
+                        {"\u00d7"}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            <div className="notify-section notify-webhook-menu">
+              <div className="notify-section-title">Discord webhook</div>
+              <div className="notify-webhook">
+                <input
+                  type="url"
+                  className="notify-webhook-input"
+                  placeholder={"Webhook URL\u2026"}
+                  value={webhook}
+                  onChange={(e) => {
+                    setWebhook(e.target.value);
+                    setWebhookStatus(null);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") void addWebhook();
+                  }}
+                />
+                <button
+                  type="button"
+                  className="notify-webhook-add"
+                  onClick={() => void addWebhook()}
+                  disabled={
+                    webhookBusy ||
+                    webhook.trim() === "" ||
+                    webhookEvents.length === 0
+                  }
+                >
+                  {webhookBusy ? "Saving\u2026" : "Save"}
+                </button>
+              </div>
+              {renderWebhookToggles(webhookEvents, setWebhookEvents)}
+              {webhookStatus ? (
+                <span className="notify-webhook-status">{webhookStatus}</span>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+function renderWebhookToggles(
+  events: EventType[],
+  setEvents: (next: EventType[]) => void,
+): ReactNode {
+  return (
+    <div className="notify-toggles notify-webhook-toggles">
+      {EVENT_ORDER.map((type) => (
+        <EventToggle
+          key={type}
+          type={type}
+          active={events.includes(type)}
+          disabled={false}
+          onToggle={() => setEvents(toggleEvent(events, type))}
         />
       ))}
     </div>

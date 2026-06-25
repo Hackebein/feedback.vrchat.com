@@ -41,7 +41,7 @@ type pushSubscriptionPayload struct {
 }
 
 type createSubscriptionRequest struct {
-	Kind             string                  `json:"kind"`
+	Events           []string                `json:"events"`
 	PushSubscription pushSubscriptionPayload `json:"pushSubscription"`
 	Filter           map[string]interface{}  `json:"filter"`
 	Lucene           bool                    `json:"lucene"`
@@ -49,7 +49,7 @@ type createSubscriptionRequest struct {
 }
 
 type createWebhookRequest struct {
-	Kind       string                 `json:"kind"`
+	Events     []string               `json:"events"`
 	WebhookURL string                 `json:"webhookUrl"`
 	Filter     map[string]interface{} `json:"filter"`
 	Lucene     bool                   `json:"lucene"`
@@ -65,14 +65,25 @@ func (s *Server) handleVapidKey(w http.ResponseWriter, _ *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]string{"key": s.cfg.VAPIDPublicKey})
 }
 
+// sanitizeEvents keeps only known event names, de-duplicated and order-stable.
+func sanitizeEvents(events []string) []string {
+	seen := map[string]bool{}
+	out := make([]string, 0, len(events))
+	for _, e := range events {
+		e = strings.TrimSpace(e)
+		if !validEvent(e) || seen[e] {
+			continue
+		}
+		seen[e] = true
+		out = append(out, e)
+	}
+	return out
+}
+
 func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request) {
 	var req createSubscriptionRequest
 	if err := decodeJSON(r, &req); err != nil {
 		writeError(w, http.StatusBadRequest, "invalid JSON body")
-		return
-	}
-	if req.Kind != "post" && req.Kind != "comment" {
-		writeError(w, http.StatusBadRequest, "kind must be 'post' or 'comment'")
 		return
 	}
 	if req.PushSubscription.Endpoint == "" || req.PushSubscription.Keys.P256dh == "" || req.PushSubscription.Keys.Auth == "" {
@@ -84,6 +95,7 @@ func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request
 		writeError(w, http.StatusBadRequest, "invalid filter")
 		return
 	}
+	events := sanitizeEvents(req.Events)
 
 	nowMS := time.Now().UnixMilli()
 	pushID, err := s.store.UpsertPushSubscription(PushKeys{
@@ -96,41 +108,58 @@ func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	id, err := s.store.CreateSubscription(Subscription{
-		Kind:               req.Kind,
+	pushRef := sql.NullInt64{Int64: pushID, Valid: true}
+
+	// An empty event set means "stop notifying for this filter": delete it.
+	if len(events) == 0 {
+		if _, derr := s.store.deletePushFilter(pushRef, filterJSON); derr != nil {
+			writeError(w, http.StatusInternalServerError, "remove subscription")
+			return
+		}
+		w.WriteHeader(http.StatusNoContent)
+		return
+	}
+
+	sub := Subscription{
+		Events:             events,
 		Target:             "push",
-		PushSubscriptionID: sql.NullInt64{Int64: pushID, Valid: true},
+		PushSubscriptionID: pushRef,
 		Lucene:             req.Lucene,
 		FilterJSON:         filterJSON,
 		Label:              strings.TrimSpace(req.Label),
-		WatermarkMS:        nowMS,
-	}, nowMS)
+	}
+	id, created, err := s.store.UpsertPushFilterSubscription(sub, nowMS)
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "create subscription")
 		return
 	}
 	writeJSON(w, http.StatusCreated, SubscriptionView{
 		ID:        id,
-		Kind:      req.Kind,
+		Events:    events,
 		Label:     strings.TrimSpace(req.Label),
+		Filter:    json.RawMessage(filterJSON),
+		Lucene:    req.Lucene,
 		CreatedAt: nowMS,
 	})
 
-	// Best-effort: deliver the most recent matching item as a first message.
-	go s.dispatch.SendInitial(context.Background(), Subscription{
-		ID:                 id,
-		Kind:               req.Kind,
-		Target:             "push",
-		PushSubscriptionID: sql.NullInt64{Int64: pushID, Valid: true},
-		Lucene:             req.Lucene,
-		FilterJSON:         filterJSON,
-		WatermarkMS:        nowMS,
-		Push: PushKeys{
-			Endpoint: req.PushSubscription.Endpoint,
-			P256dh:   req.PushSubscription.Keys.P256dh,
-			Auth:     req.PushSubscription.Keys.Auth,
-		},
-	})
+	if created {
+		// Best-effort: deliver the most recent matching item as a first message.
+		go s.dispatch.SendInitial(context.Background(), Subscription{
+			ID:                 id,
+			Events:             events,
+			Target:             "push",
+			PushSubscriptionID: pushRef,
+			Lucene:             req.Lucene,
+			FilterJSON:         filterJSON,
+			WatermarkMS:        nowMS,
+			CommentWatermarkMS: nowMS,
+			Push: PushKeys{
+				Endpoint: req.PushSubscription.Endpoint,
+				P256dh:   req.PushSubscription.Keys.P256dh,
+				Auth:     req.PushSubscription.Keys.Auth,
+			},
+		})
+	}
 }
 
 func (s *Server) handleListSubscriptions(w http.ResponseWriter, r *http.Request) {
@@ -139,12 +168,7 @@ func (s *Server) handleListSubscriptions(w http.ResponseWriter, r *http.Request)
 		writeError(w, http.StatusBadRequest, "endpoint query param is required")
 		return
 	}
-	kind := r.URL.Query().Get("kind")
-	if kind != "" && kind != "post" && kind != "comment" {
-		writeError(w, http.StatusBadRequest, "kind must be 'post' or 'comment'")
-		return
-	}
-	views, err := s.store.ListByEndpoint(endpoint, kind)
+	views, err := s.store.ListByEndpoint(endpoint)
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "list subscriptions")
 		return
@@ -181,10 +205,6 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 		writeError(w, http.StatusBadRequest, "invalid JSON body")
 		return
 	}
-	if req.Kind != "post" && req.Kind != "comment" {
-		writeError(w, http.StatusBadRequest, "kind must be 'post' or 'comment'")
-		return
-	}
 	url := strings.TrimSpace(req.WebhookURL)
 	if !strings.HasPrefix(url, "https://") && !strings.HasPrefix(url, "http://") {
 		writeError(w, http.StatusBadRequest, "webhookUrl must be an http(s) URL")
@@ -195,38 +215,54 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 		writeError(w, http.StatusBadRequest, "invalid filter")
 		return
 	}
+	events := sanitizeEvents(req.Events)
 
 	nowMS := time.Now().UnixMilli()
-	id, err := s.store.CreateSubscription(Subscription{
-		Kind:        req.Kind,
-		Target:      "webhook",
-		WebhookURL:  url,
-		Lucene:      req.Lucene,
-		FilterJSON:  filterJSON,
-		Label:       strings.TrimSpace(req.Label),
-		WatermarkMS: nowMS,
-	}, nowMS)
+
+	if len(events) == 0 {
+		if _, derr := s.store.deleteWebhook(url); derr != nil {
+			writeError(w, http.StatusInternalServerError, "remove webhook")
+			return
+		}
+		w.WriteHeader(http.StatusNoContent)
+		return
+	}
+
+	sub := Subscription{
+		Events:     events,
+		Target:     "webhook",
+		WebhookURL: url,
+		Lucene:     req.Lucene,
+		FilterJSON: filterJSON,
+		Label:      strings.TrimSpace(req.Label),
+	}
+	id, created, err := s.store.UpsertWebhookSubscription(sub, nowMS)
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "create webhook")
 		return
 	}
 	writeJSON(w, http.StatusCreated, SubscriptionView{
 		ID:        id,
-		Kind:      req.Kind,
+		Events:    events,
 		Label:     strings.TrimSpace(req.Label),
+		Filter:    json.RawMessage(filterJSON),
+		Lucene:    req.Lucene,
 		CreatedAt: nowMS,
 	})
 
-	// Best-effort: deliver the most recent matching item as a first message.
-	go s.dispatch.SendInitial(context.Background(), Subscription{
-		ID:          id,
-		Kind:        req.Kind,
-		Target:      "webhook",
-		WebhookURL:  url,
-		Lucene:      req.Lucene,
-		FilterJSON:  filterJSON,
-		WatermarkMS: nowMS,
-	})
+	if created {
+		// Best-effort: deliver the most recent matching item as a first message.
+		go s.dispatch.SendInitial(context.Background(), Subscription{
+			ID:                 id,
+			Events:             events,
+			Target:             "webhook",
+			WebhookURL:         url,
+			Lucene:             req.Lucene,
+			FilterJSON:         filterJSON,
+			WatermarkMS:        nowMS,
+			CommentWatermarkMS: nowMS,
+		})
+	}
 }
 
 func decodeJSON(r *http.Request, dst interface{}) error {

@@ -1646,8 +1646,8 @@ mark {
   top: calc(100% + 0.4rem);
   right: 0;
   z-index: 50;
-  width: 17rem;
-  max-width: 80vw;
+  width: 21rem;
+  max-width: 90vw;
   padding: 0.65rem;
   border: 1px solid #2a3142;
   border-radius: 10px;
@@ -1703,13 +1703,71 @@ mark {
   padding: 0.25rem 0;
 }
 
+.notify-section {
+  margin-top: 0.6rem;
+}
+
+.notify-section-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #7d8699;
+  margin-bottom: 0.3rem;
+}
+
+.notify-toggles {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex: none;
+}
+
+.notify-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid #2a3142;
+  border-radius: 6px;
+  background: #11161f;
+  color: #7d8699;
+  cursor: pointer;
+  padding: 0;
+}
+
+.notify-toggle:hover:not(:disabled) {
+  color: #eaeaf0;
+  background: #232a3a;
+}
+
+.notify-toggle.is-on {
+  color: #0f1218;
+  background: #9bb6f0;
+  border-color: #9bb6f0;
+}
+
+.notify-toggle:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .notify-item {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.3rem 0.45rem;
+  padding: 0.35rem 0.45rem;
   border-radius: 6px;
   background: #11161f;
+}
+
+.notify-item.is-current {
+  background: #161d2b;
+  border: 1px solid #2a3142;
+}
+
+.notify-webhook-toggles {
+  margin-top: 0.45rem;
 }
 
 .notify-item-label {
