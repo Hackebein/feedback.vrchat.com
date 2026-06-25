@@ -324,8 +324,9 @@ func buildCommentEvents(hits []json.RawMessage, sinceMS int64) ([]NotificationEv
 
 // SendTest delivers a confirmation message for each freshly-enabled event type,
 // right after a subscription is created or an event is toggled on. Post/comment
-// replay the most recent matching item; votes/status/deleted send a clearly
-// labelled sample (there is no existing "change" to replay). Best-effort.
+// replay the most recent matching item; votes/status/deleted send a filter-level
+// confirmation describing what is now being watched (there is no existing
+// "change" to replay, and a filter can span many posts). Best-effort.
 func (d *Dispatcher) SendTest(ctx context.Context, sub Subscription, events []string) {
 	want := make(map[string]bool, len(events))
 	for _, e := range events {
@@ -337,27 +338,12 @@ func (d *Dispatcher) SendTest(ctx context.Context, sub Subscription, events []st
 
 	var out []NotificationEvent
 
-	if want[EventPost] || want[EventVotes] || want[EventStatus] || want[EventDeleted] {
+	if want[EventPost] {
 		hits, err := d.queryGatewayPage(ctx, sub, d.cfg.IndexName, 0, 25, nil)
 		if err != nil {
 			log.Printf("[notify] test sub=%d target=%s: %v", sub.ID, sub.Target, err)
-		} else {
-			if want[EventPost] {
-				if ev, ok := latestPostEvent(hits); ok {
-					out = append(out, ev)
-				}
-			}
-			if sample, ok := firstHit(hits); ok {
-				if want[EventVotes] {
-					out = append(out, testEvent(sample, EventVotes))
-				}
-				if want[EventStatus] {
-					out = append(out, testEvent(sample, EventStatus))
-				}
-				if want[EventDeleted] {
-					out = append(out, testEvent(sample, EventDeleted))
-				}
-			}
+		} else if ev, ok := latestPostEvent(hits); ok {
+			out = append(out, ev)
 		}
 	}
 
@@ -370,19 +356,17 @@ func (d *Dispatcher) SendTest(ctx context.Context, sub Subscription, events []st
 		}
 	}
 
-	if len(out) > 0 {
-		d.deliver(ctx, sub, out)
-	}
-}
-
-func firstHit(hits []json.RawMessage) (gwHit, bool) {
-	for _, raw := range hits {
-		var h gwHit
-		if err := json.Unmarshal(raw, &h); err == nil && h.id() != "" {
-			return h, true
+	for _, e := range []string{EventVotes, EventStatus, EventDeleted} {
+		if want[e] {
+			out = append(out, watchConfirmation(sub, e))
 		}
 	}
-	return gwHit{}, false
+
+	// Deliver each confirmation as its own message (one webhook POST / push per
+	// event) rather than bundling them into a single multi-embed message.
+	for _, ev := range out {
+		d.deliver(ctx, sub, []NotificationEvent{ev})
+	}
 }
 
 func latestByCreated(evs []NotificationEvent) (NotificationEvent, bool) {

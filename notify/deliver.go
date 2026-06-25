@@ -306,35 +306,31 @@ func buildStatusEvent(hit gwHit, prevStatus, newStatus string, names map[string]
 	}
 }
 
-// testEvent builds a clearly-labelled sample notification for a state-change
-// event type (votes/status/deleted), based on a recent matching post, so users
-// get confirmation that the subscription works and a preview of the format.
-func testEvent(hit gwHit, eventType string) NotificationEvent {
-	board := boardLabel(hit.Board.Name, hit.Board.URLName)
+// watchConfirmation builds a one-time confirmation for a state-change event
+// type (votes/status/deleted) when it is first enabled. These watch a whole
+// filter (potentially many posts with different statuses/vote counts), so the
+// message describes the filter-level watch rather than asserting any single
+// post's current state.
+func watchConfirmation(sub Subscription, eventType string) NotificationEvent {
+	label := trimSpace(sub.Label)
+	if label == "" {
+		label = "all posts"
+	}
 	ev := NotificationEvent{
-		Type:         eventType,
-		PostTitle:    hit.Title,
-		URL:          cannyPostURL(hit.Board.URLName, hit.URLName),
-		Board:        board,
-		Category:     categoryName(hit),
-		Author:       hit.Author.Name,
-		VoteCount:    hit.Score,
-		CommentCount: hit.CommentCount,
-		Created:      time.Now().UTC().Format(time.RFC3339),
+		Type:    eventType,
+		URL:     "https://feedback.vrchat.com",
+		Created: time.Now().UTC().Format(time.RFC3339),
 	}
 	switch eventType {
 	case EventVotes:
-		ev.Title = "Test: vote-change alerts enabled"
-		ev.Body = fmt.Sprintf("You'll be notified when votes change on matching posts. This post currently has %d.", hit.Score)
+		ev.Title = "Now watching for vote changes"
+		ev.Body = fmt.Sprintf("You'll be notified when votes change on posts matching this filter: %s.", label)
 	case EventStatus:
-		ev.Title = "Test: status-change alerts enabled"
-		ev.Body = fmt.Sprintf("You'll be notified when a matching post's status changes. This post is currently %q.", trimSpace(hit.Status))
+		ev.Title = "Now watching for status changes"
+		ev.Body = fmt.Sprintf("You'll be notified when a matching post's status changes. Filter: %s.", label)
 	case EventDeleted:
-		ev.Title = "Test: deletion alerts enabled"
-		ev.Body = "You'll be notified when a matching post is deleted or migrated."
-	default:
-		ev.Title = "Test notification"
-		ev.Body = "Notifications are enabled."
+		ev.Title = "Now watching for deletions"
+		ev.Body = fmt.Sprintf("You'll be notified when a matching post is deleted or migrated. Filter: %s.", label)
 	}
 	return ev
 }
