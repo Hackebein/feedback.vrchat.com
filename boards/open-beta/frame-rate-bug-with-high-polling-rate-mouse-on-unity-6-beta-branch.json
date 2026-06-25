@@ -1,13 +1,14 @@
 {
   "_id": "6a3c271df744a3cbd7603107",
   "aiCategories": [
-    "loc.pc-client",
+    "loc.main-menu",
     "loc.quick-menu",
+    "loc.pc-client",
     "platforms.pc.steam",
     "open-beta",
-    "client.controls"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-06-24T21:45:56.851388Z",
+  "aiTaggedAt": "2026-06-25T15:24:45.442651Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67af1e54775ac546d54c0238",
@@ -31,7 +32,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a3c32c41bf9eec4abacfc3c",
@@ -305,6 +306,51 @@
       "spam": false,
       "synthetic": true,
       "value": ""
+    },
+    {
+      "_id": "6a3d3d79fdbcfdd6072112fe",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-25T14:38:49.554Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3c271df744a3cbd7603107",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a3d3d79fdbcfdd6072112fd",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -328,7 +374,7 @@
   ],
   "ideaID": "6a3c271df744a3cbd7603106",
   "imageURLs": [],
-  "lastUpdated": 1782382525388,
+  "lastUpdated": 1782399417461,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 13,
@@ -339,12 +385,12 @@
   "pinnedComment": null,
   "score": 13,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-06-24T18:51:09.373Z",
+  "status": "tracked",
+  "statusChanged": "2026-06-25T14:38:49.537Z",
   "subCategoryID": null,
   "title": "Frame rate bug with High Polling rate mouse  on Unity 6 beta branch",
   "trendingScore": 2949.6344484122415,
-  "updatedAt": "2026-06-25T10:46:21.520548Z",
+  "updatedAt": "2026-06-25T15:24:38.838616Z",
   "updatedBy": "67af1e54775ac546d54c0238",
   "urlName": "frame-rate-bug-with-high-polling-rate-mouse-on-unity-6-beta-branch",
   "viewerIsAuthor": false,
@@ -465,39 +511,6 @@
       "name": "L.E.G.O.S.",
       "urlName": null,
       "voteID": "6a3c4479f51f79a5dbff7e71"
-    },
-    {
-      "_id": "680e3b34396d7921799095b8",
-      "alias": "Cognitive Falcon",
-      "aliasID": "680e3b358ccc1d8b3be314b6",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e4ece84f4752228f143558cd425524b8.png",
-      "companies": [],
-      "name": "Kitshay",
-      "urlName": null,
-      "voteID": "6a3c43d2f51f79a5dbff7c83"
-    },
-    {
-      "_id": "6147b0f3ed97741328fba015",
-      "alias": "Initial Wildfowl",
-      "aliasID": "65c69b1eed6eefce4ca96cec",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e21b8b1446e226299cd367eb187a03ac.png",
-      "companies": [],
-      "name": "≻Lincoln",
-      "urlName": null,
-      "voteID": "6a3c38c4f51f79a5dbfe7f9e"
-    },
-    {
-      "_id": "67af1e54775ac546d54c0238",
-      "alias": "Distinct Perch",
-      "aliasID": "6924d5fc4927a96e582fcda5",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/b7aeae5f2bcad493307ce907ee8b2b2b.png",
-      "companies": [],
-      "name": "ascfire",
-      "urlName": null,
-      "voteID": "6a3c271df51f79a5dbfe0a22"
     }
   ]
 }

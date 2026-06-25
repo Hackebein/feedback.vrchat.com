@@ -1,0 +1,147 @@
+{
+  "_id": "6a3d39bb995b5d40fb950c80",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-25T15:24:43.315048Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a3d3777f51f79a5db18feea",
+    "alias": "Agricultural Coyote",
+    "aliasID": "6a3d3777f51f79a5db18feee",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6637476019cd3acd034beefe2178f99f.png",
+    "created": "2026-06-25T14:13:11.180Z",
+    "name": "u2730",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6a3d3777f51f79a5db18feea",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1321,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a3d3c1695812a18b916f8b9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-25T14:32:54.754Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3d39bb995b5d40fb950c80",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a3d3c1695812a18b916f8b7",
+      "statusChangeNewStatus": "needs more information",
+      "value": "This is our obfuscation layer working as intended. Do you have an actual issue with the build you are trying to report too? The log file you posted is benign.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-25T14:22:51.912Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am encountering several issues with the Unity 6 version of VRChat. While examining the output_log.txt file for debugging purposes, I discovered a bug where the error details are appearing as garbled text.\n\nI have attached a sample of the garbled text below.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/90a29024246dc5d756704b7382ab3a2a.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log",
+      "url": "https://canny-assets.io/files/90a29024246dc5d756704b7382ab3a2a.txt"
+    }
+  ],
+  "ideaID": "6a3d39bb995b5d40fb950c7f",
+  "imageURLs": [],
+  "lastUpdated": 1782399416039,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a3d39bb995b5d40fb950c80/1719728058.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "needs more information",
+  "statusChanged": "2026-06-25T14:32:54.722Z",
+  "subCategoryID": null,
+  "title": "The error details in output_log.txt are garbled.",
+  "trendingScore": 2947.7787487595942,
+  "updatedAt": "2026-06-25T15:24:38.838616Z",
+  "updatedBy": null,
+  "urlName": "the-error-details-in-output-logtxt-are-garbled",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a3d3777f51f79a5db18feea",
+      "alias": "Agricultural Coyote",
+      "aliasID": "6a3d3777f51f79a5db18feee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6637476019cd3acd034beefe2178f99f.png",
+      "companies": [],
+      "name": "u2730",
+      "urlName": null,
+      "voteID": "6a3d39bcf51f79a5db1912d5"
+    }
+  ]
+}
