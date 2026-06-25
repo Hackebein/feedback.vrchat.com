@@ -1,0 +1,107 @@
+{
+  "_id": "6a3d93b5c5de1fbcd44989e1",
+  "aiCategories": [
+    "loc.in-world",
+    "audio.voice",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-25T21:40:41.392722Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f4d0c8c4efb1c1bee087245",
+    "alias": "Tawny Aardvark",
+    "aliasID": "65c2892ded6eefce4ca818ef",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/64cbbfc38901663f96be404e01bda9a1.png",
+    "created": "2020-08-31T14:43:24.515Z",
+    "name": "Guribo",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f4d0c8c4efb1c1bee087245",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1323,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-25T20:46:45.908Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When setting up global audio filters they no longer apply to voices, menu sounds, world audio like they used to in Unity 2022 and before\n\nSetup is as seen in the picture, the reverb preset is adjusted at runtime when entering some of the \"building\" in this world: \n\nhttps://vrchat.com/home/launch?worldId=wrld_986de640-baf0-4912-90f1-b16bd0aef831\n\nTo test expected behaviour on live first:\n\n1. Go to my world using any non Unity 6 build\n\n2. wait for the video to start playing (youtube vrchat trailer)\n\n3. walk into any of the structures, e.g. tunnel on the left of the screen (has strong \"bathroom\" reverb preset\n\n4. Expected behaviour: reverb is strongly affecting video sound\n\nTo test unexpected behaviour on Unity 6:\n\n1. switch to Unity 6 Beta branch\n\n2. Go to the same world and repeat\n\n3. Observed behaviour: video audio is only muffled due to the filters on the video audio source itself triggered by the occlusion used in the world. No reverb added.\n\n4. Expected behaviour: reverb is added to every sound, just like in 2022 builds\n\nTested on both Windows 11 and Linux (Nobara with Proton-GE-RTSP).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a3d93b5c5de1fbcd44989e0",
+  "imageURLs": [
+    "https://canny-assets.io/images/72c3336ae9a8a84f855caeabd28b46f4.jpeg"
+  ],
+  "lastUpdated": 1782422035572,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a3d93b5c5de1fbcd44989e1/124978708.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-25T20:46:45.908Z",
+  "subCategoryID": null,
+  "title": "[1864] Global Audio Effects/Filters no longer working in Unity 6",
+  "trendingScore": 2948.222716828028,
+  "updatedAt": "2026-06-25T21:40:35.904980Z",
+  "updatedBy": null,
+  "urlName": "1864-global-audio-effects-filters-no-longer-working-in-unity-6",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60f7e2e5160e9525fc0b816a",
+      "alias": "Significant Bear",
+      "aliasID": "6a3d96a8f51f79a5db1c45ae",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4827330f463fd3ddfd65dfb997f5687b.png",
+      "companies": [],
+      "name": "FroozenAlex",
+      "urlName": null,
+      "voteID": "6a3d96abf51f79a5db1c45bb"
+    },
+    {
+      "_id": "5f4d0c8c4efb1c1bee087245",
+      "alias": "Tawny Aardvark",
+      "aliasID": "65c2892ded6eefce4ca818ef",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/64cbbfc38901663f96be404e01bda9a1.png",
+      "companies": [],
+      "name": "Guribo",
+      "urlName": null,
+      "voteID": "6a3d93b6f51f79a5db1c2aca"
+    }
+  ]
+}
