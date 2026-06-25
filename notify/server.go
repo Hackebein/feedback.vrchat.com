@@ -167,6 +167,7 @@ func (s *Server) handleCreateSubscription(w http.ResponseWriter, r *http.Request
 			PushSubscriptionID: pushRef,
 			Lucene:             req.Lucene,
 			FilterJSON:         filterJSON,
+			Label:              strings.TrimSpace(req.Label),
 			WatermarkMS:        nowMS,
 			CommentWatermarkMS: nowMS,
 			Push: PushKeys{
@@ -275,6 +276,7 @@ func (s *Server) handleCreateWebhook(w http.ResponseWriter, r *http.Request) {
 			WebhookURL:         url,
 			Lucene:             req.Lucene,
 			FilterJSON:         filterJSON,
+			Label:              strings.TrimSpace(req.Label),
 			WatermarkMS:        nowMS,
 			CommentWatermarkMS: nowMS,
 		}, added)

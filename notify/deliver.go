@@ -9,6 +9,7 @@ import (
 	"log"
 	"mime/multipart"
 	"net/http"
+	neturl "net/url"
 	"path"
 	"sort"
 	"strconv"
@@ -432,35 +433,60 @@ func discordDescription(ev NotificationEvent) string {
 	return strings.Join(parts, "\n\n")
 }
 
+// addField appends an inline embed field only when the value is non-empty after
+// trimming. Discord rejects fields with empty/whitespace-only values (and the
+// whole embed with it), so this guards every field we emit.
+func addField(fields []discordField, name, value string) []discordField {
+	value = trimSpace(value)
+	if value == "" {
+		return fields
+	}
+	return append(fields, discordField{Name: name, Value: truncate(value, discordEmbedFieldValueMax), Inline: true})
+}
+
+// validEmbedURL reports whether s is safe to use as an embed/link URL. Discord
+// rejects an embed outright if its url is present but malformed.
+func validEmbedURL(s string) bool {
+	s = trimSpace(s)
+	if s == "" {
+		return false
+	}
+	u, err := neturl.Parse(s)
+	return err == nil && (u.Scheme == "http" || u.Scheme == "https") && u.Host != ""
+}
+
 func eventToEmbed(ev NotificationEvent) discordEmbed {
-	title := ev.PostTitle
+	title := trimSpace(ev.PostTitle)
 	if title == "" {
-		title = ev.Title
+		title = trimSpace(ev.Title)
 	}
+	if title == "" {
+		title = "VRChat feedback"
+	}
+
 	fields := make([]discordField, 0, 5)
-	if author := truncate(ev.Author, discordEmbedFieldValueMax); author != "" {
-		fields = append(fields, discordField{Name: "Author", Value: author, Inline: true})
-	}
-	if board := truncate(ev.Board, discordEmbedFieldValueMax); board != "" {
-		fields = append(fields, discordField{Name: "Board", Value: board, Inline: true})
-	}
-	if category := truncate(ev.Category, discordEmbedFieldValueMax); category != "" {
-		fields = append(fields, discordField{Name: "Category", Value: category, Inline: true})
-	}
+	fields = addField(fields, "Author", ev.Author)
+	fields = addField(fields, "Board", ev.Board)
+	fields = addField(fields, "Category", ev.Category)
 	if ev.VoteCount > 1 {
-		fields = append(fields, discordField{Name: "Votes", Value: strconv.Itoa(ev.VoteCount), Inline: true})
+		fields = addField(fields, "Votes", strconv.Itoa(ev.VoteCount))
 	}
 	if ev.CommentCount > 0 {
-		fields = append(fields, discordField{Name: "Comments", Value: strconv.Itoa(ev.CommentCount), Inline: true})
+		fields = addField(fields, "Comments", strconv.Itoa(ev.CommentCount))
 	}
-	return discordEmbed{
+
+	embed := discordEmbed{
 		Title:       truncate(title, discordEmbedTitleMax),
 		Description: truncate(discordDescription(ev), discordEmbedDescriptionMax),
-		URL:         ev.URL,
 		Color:       discordColor(ev.Type),
 		Fields:      fields,
 		Timestamp:   ev.Created,
 	}
+	// Only attach a url when it is well-formed; a bad url rejects the embed.
+	if validEmbedURL(ev.URL) {
+		embed.URL = trimSpace(ev.URL)
+	}
+	return embed
 }
 
 func buildDiscordEmbeds(events []NotificationEvent) []discordEmbed {
@@ -510,7 +536,11 @@ func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, event
 		}
 		return
 	}
-	log.Printf("[notify] webhook sub=%d status=%d events=%d rejected: %s", sub.ID, resp.StatusCode, len(events), truncate(string(respBody), 300))
+	// Include the payload we sent so a rejection (e.g. an invalid embed) can be
+	// diagnosed without re-deploying: the response alone is often opaque.
+	sentJSON, _ := json.Marshal(payload)
+	log.Printf("[notify] webhook sub=%d status=%d events=%d rejected: %s | sent: %s",
+		sub.ID, resp.StatusCode, len(events), truncate(string(respBody), 300), truncate(string(sentJSON), 1500))
 	d.recordWebhookFailure(sub)
 }
 
