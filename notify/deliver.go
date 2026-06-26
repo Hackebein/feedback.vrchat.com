@@ -58,6 +58,11 @@ const (
 	parentCommentMax      = 240
 	parentChainCharBudget = 1200
 	parentChainMaxItems   = 5
+	// maxVoterNames bounds how many added/removed voter names are listed in a
+	// votes embed. Above this we show only the count: the indexed voter list is
+	// partial for popular posts, so large name lists are both unreliable and risk
+	// exceeding Discord's embed-size limits.
+	maxVoterNames = 8
 )
 
 // Discord webhook attachment limits.
@@ -244,6 +249,20 @@ func buildParentChain(hit gwHit, c gwComment, names map[string]string) []string 
 	return out
 }
 
+// voterListLine renders an "Added: a, b, c" / "Removed: …" line, listing names
+// only when there are few of them and otherwise collapsing to a count, so the
+// embed stays small and avoids dumping an unreliable partial voter list.
+func voterListLine(label string, names []string) string {
+	switch {
+	case len(names) == 0:
+		return ""
+	case len(names) <= maxVoterNames:
+		return fmt.Sprintf("%s: %s", label, strings.Join(names, ", "))
+	default:
+		return fmt.Sprintf("%s: %d voters", label, len(names))
+	}
+}
+
 func buildVotesEvent(hit gwHit, old PostState, curVoters, names map[string]string) NotificationEvent {
 	prevVoters := decodeVoters(old.VotersJSON)
 	var added, removed []string
@@ -261,11 +280,11 @@ func buildVotesEvent(hit gwHit, old PostState, curVoters, names map[string]strin
 	sort.Strings(removed)
 
 	parts := []string{fmt.Sprintf("Votes: %d \u2192 %d", old.Score, hit.Score)}
-	if len(added) > 0 {
-		parts = append(parts, "Added: "+strings.Join(added, ", "))
+	if line := voterListLine("Added", added); line != "" {
+		parts = append(parts, line)
 	}
-	if len(removed) > 0 {
-		parts = append(parts, "Removed: "+strings.Join(removed, ", "))
+	if line := voterListLine("Removed", removed); line != "" {
+		parts = append(parts, line)
 	}
 
 	board := boardLabel(hit.Board.Name, hit.Board.URLName)

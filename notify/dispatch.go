@@ -243,7 +243,12 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 			continue
 		}
 
-		if sub.HasEvent(EventVotes) && (old.Score != cur.Score || old.VotersJSON != cur.VotersJSON) {
+		// Trigger on score change only. The indexed voter list is partial for
+		// popular posts (the ingester only fetches the full list when the score
+		// moves), so diffing voter identity alone produces large false churn
+		// (e.g. "1231 → 1231" with hundreds added/removed). Score is the reliable
+		// signal and still captures both adds (score up) and removes (score down).
+		if sub.HasEvent(EventVotes) && old.Score != cur.Score {
 			events = append(events, buildVotesEvent(hit, old, curVoters, userMap))
 		}
 		if sub.HasEvent(EventStatus) && cur.Status != "" && old.Status != cur.Status {
