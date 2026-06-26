@@ -411,12 +411,41 @@ const (
 	discordEmbedTitleMax       = 256
 	discordEmbedDescriptionMax = 4096
 	discordEmbedFieldValueMax  = 1024
-	discordColorPost           = 0x57F287
-	discordColorComment        = 0xFEE75C
-	discordColorVotes          = 0x5865F2
-	discordColorStatus         = 0xEB459E
-	discordColorDeleted        = 0xED4245
+	discordEmbedFieldNameMax   = 256
+	// discordMessageCharBudget is Discord's combined limit across every embed in
+	// one message (title + description + field names/values + footer + author).
+	discordMessageCharBudget = 6000
+	// maxEmbedsPerMessage is Discord's hard cap on embeds in a single message.
+	maxEmbedsPerMessage = 10
+	discordColorPost    = 0x57F287
+	discordColorComment = 0xFEE75C
+	discordColorVotes   = 0x5865F2
+	discordColorStatus  = 0xEB459E
+	discordColorDeleted = 0xED4245
 )
+
+// embedCutNote is appended to any embed text we shorten so recipients can tell
+// the content was truncated rather than naturally ending.
+const embedCutNote = "\u2026 (truncated)"
+
+// clip shortens s to at most max runes, INCLUDING a trailing cut note, so the
+// result is always within max and visibly marked when content was removed.
+func clip(s string, max int) string {
+	if max <= 0 {
+		return ""
+	}
+	r := []rune(s)
+	if len(r) <= max {
+		return s
+	}
+	note := []rune(embedCutNote)
+	if max <= len(note) {
+		return string(r[:max]) // no room for the note; hard cut
+	}
+	return string(r[:max-len(note)]) + embedCutNote
+}
+
+func runeLen(s string) int { return len([]rune(s)) }
 
 func discordColor(eventType string) int {
 	switch eventType {
@@ -460,7 +489,11 @@ func addField(fields []discordField, name, value string) []discordField {
 	if value == "" {
 		return fields
 	}
-	return append(fields, discordField{Name: name, Value: truncate(value, discordEmbedFieldValueMax), Inline: true})
+	return append(fields, discordField{
+		Name:   clip(name, discordEmbedFieldNameMax),
+		Value:  clip(value, discordEmbedFieldValueMax),
+		Inline: true,
+	})
 }
 
 // validEmbedURL reports whether s is safe to use as an embed/link URL. Discord
@@ -495,8 +528,8 @@ func eventToEmbed(ev NotificationEvent) discordEmbed {
 	}
 
 	embed := discordEmbed{
-		Title:       truncate(title, discordEmbedTitleMax),
-		Description: truncate(discordDescription(ev), discordEmbedDescriptionMax),
+		Title:       clip(title, discordEmbedTitleMax),
+		Description: clip(discordDescription(ev), discordEmbedDescriptionMax),
 		Color:       discordColor(ev.Type),
 		Fields:      fields,
 		Timestamp:   ev.Created,
@@ -512,6 +545,48 @@ func buildDiscordEmbeds(events []NotificationEvent) []discordEmbed {
 	embeds := make([]discordEmbed, 0, len(events))
 	for _, ev := range events {
 		embeds = append(embeds, eventToEmbed(ev))
+	}
+	return enforceMessageBudget(embeds)
+}
+
+// embedFixedSize returns the chars Discord counts toward the 6000 limit for an
+// embed, excluding the description (which we trim to fit). URL, timestamp and
+// color do not count.
+func embedFixedSize(e discordEmbed) int {
+	n := runeLen(e.Title)
+	for _, f := range e.Fields {
+		n += runeLen(f.Name) + runeLen(f.Value)
+	}
+	return n
+}
+
+// enforceMessageBudget guarantees a set of embeds can always be delivered: it
+// caps the embed count and trims descriptions (proportionally, with a visible
+// cut note) so the combined character count stays within Discord's 6000 limit.
+func enforceMessageBudget(embeds []discordEmbed) []discordEmbed {
+	if len(embeds) > maxEmbedsPerMessage {
+		embeds = embeds[:maxEmbedsPerMessage]
+	}
+	fixed, descTotal := 0, 0
+	for i := range embeds {
+		fixed += embedFixedSize(embeds[i])
+		descTotal += runeLen(embeds[i].Description)
+	}
+	if fixed+descTotal <= discordMessageCharBudget {
+		return embeds
+	}
+	budget := discordMessageCharBudget - fixed
+	if budget < 0 {
+		budget = 0
+	}
+	for i := range embeds {
+		dl := runeLen(embeds[i].Description)
+		if dl == 0 || descTotal == 0 {
+			continue
+		}
+		// Give each embed a share of the budget proportional to its size; integer
+		// division keeps the total at or under budget.
+		embeds[i].Description = clip(embeds[i].Description, budget*dl/descTotal)
 	}
 	return embeds
 }

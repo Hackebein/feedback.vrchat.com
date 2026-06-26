@@ -514,9 +514,11 @@ func parseTimeMS(s string) (int64, bool) {
 	return t.UnixMilli(), true
 }
 
+// excerpt collapses whitespace and shortens content for display, marking it
+// with a cut note when truncated so readers know it was trimmed.
 func excerpt(s string, max int) string {
 	s = collapseWhitespace(s)
-	return truncate(s, max)
+	return clip(s, max)
 }
 
 func truncate(s string, max int) string {
