@@ -70,6 +70,12 @@ const (
 	maxAttachmentSize = 8 << 20 // 8 MiB per file
 )
 
+// Discord webhook 429 (rate limit) retry policy.
+const (
+	maxWebhookRetries    = 5
+	maxWebhookRetryDelay = 60 * time.Second
+)
+
 func (d *Dispatcher) deliver(ctx context.Context, sub Subscription, events []NotificationEvent) {
 	if len(events) > maxEventsPerTick {
 		events = events[len(events)-maxEventsPerTick:]
@@ -620,41 +626,99 @@ type webhookAttachment struct {
 	data     []byte
 }
 
+// deliverWebhook sends each event as its own Discord message (one embed per
+// POST) rather than bundling several embeds into a single message.
 func (d *Dispatcher) deliverWebhook(ctx context.Context, sub Subscription, events []NotificationEvent) {
-	payload := discordWebhookPayload{Embeds: buildDiscordEmbeds(events)}
-	attachments := d.collectAttachments(ctx, events)
-
-	req, err := buildWebhookRequest(ctx, sub.WebhookURL, payload, attachments)
-	if err != nil {
-		log.Printf("[notify] webhook sub=%d build request: %v", sub.ID, err)
-		d.recordWebhookFailure(sub)
-		return
+	for _, ev := range events {
+		d.deliverWebhookEvent(ctx, sub, ev)
 	}
-	req.Header.Set("User-Agent", "feedback-notify/1.0")
+}
 
-	resp, err := d.client.Do(req)
-	if err != nil {
-		log.Printf("[notify] webhook sub=%d transport error: %v", sub.ID, err)
-		d.recordWebhookFailure(sub)
-		return
-	}
-	defer resp.Body.Close()
-	respBody, _ := io.ReadAll(resp.Body)
-	if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-		log.Printf("[notify] webhook sub=%d status=%d events=%d files=%d delivered", sub.ID, resp.StatusCode, len(events), len(attachments))
-		if sub.ErrorSinceMS.Valid {
-			if err := d.store.ClearWebhookError(sub.ID); err != nil {
-				log.Printf("[notify] clear webhook error sub=%d: %v", sub.ID, err)
+func (d *Dispatcher) deliverWebhookEvent(ctx context.Context, sub Subscription, ev NotificationEvent) {
+	batch := []NotificationEvent{ev}
+	payload := discordWebhookPayload{Embeds: buildDiscordEmbeds(batch)}
+	attachments := d.collectAttachments(ctx, batch)
+
+	for attempt := 0; ; attempt++ {
+		req, err := buildWebhookRequest(ctx, sub.WebhookURL, payload, attachments)
+		if err != nil {
+			log.Printf("[notify] webhook sub=%d build request: %v", sub.ID, err)
+			d.recordWebhookFailure(sub)
+			return
+		}
+		req.Header.Set("User-Agent", "feedback-notify/1.0")
+
+		resp, err := d.client.Do(req)
+		if err != nil {
+			log.Printf("[notify] webhook sub=%d transport error: %v", sub.ID, err)
+			d.recordWebhookFailure(sub)
+			return
+		}
+		respBody, _ := io.ReadAll(resp.Body)
+		resp.Body.Close()
+		status := resp.StatusCode
+
+		// Rate limited: wait the server-specified delay and retry, so the message
+		// is delayed rather than dropped. A rate limit is not an endpoint failure,
+		// so it does not count toward the webhook's error streak.
+		if status == http.StatusTooManyRequests && attempt < maxWebhookRetries {
+			delay := webhookRetryAfter(resp, respBody)
+			log.Printf("[notify] webhook sub=%d status=429 type=%s rate limited; retrying in %s (attempt %d/%d)",
+				sub.ID, ev.Type, delay, attempt+1, maxWebhookRetries)
+			select {
+			case <-ctx.Done():
+				return
+			case <-time.After(delay):
 			}
+			continue
+		}
+
+		if status >= 200 && status < 300 {
+			log.Printf("[notify] webhook sub=%d status=%d type=%s files=%d delivered", sub.ID, status, ev.Type, len(attachments))
+			if sub.ErrorSinceMS.Valid {
+				if err := d.store.ClearWebhookError(sub.ID); err != nil {
+					log.Printf("[notify] clear webhook error sub=%d: %v", sub.ID, err)
+				}
+			}
+			return
+		}
+
+		// Include the payload we sent so a rejection (e.g. an invalid embed) can be
+		// diagnosed without re-deploying: the response alone is often opaque.
+		sentJSON, _ := json.Marshal(payload)
+		log.Printf("[notify] webhook sub=%d status=%d type=%s rejected: %s | sent: %s",
+			sub.ID, status, ev.Type, truncate(string(respBody), 300), truncate(string(sentJSON), 1500))
+		// Persistent rate limiting (retries exhausted) is throttling, not a broken
+		// endpoint, so don't penalize the webhook's error streak for it.
+		if status != http.StatusTooManyRequests {
+			d.recordWebhookFailure(sub)
 		}
 		return
 	}
-	// Include the payload we sent so a rejection (e.g. an invalid embed) can be
-	// diagnosed without re-deploying: the response alone is often opaque.
-	sentJSON, _ := json.Marshal(payload)
-	log.Printf("[notify] webhook sub=%d status=%d events=%d rejected: %s | sent: %s",
-		sub.ID, resp.StatusCode, len(events), truncate(string(respBody), 300), truncate(string(sentJSON), 1500))
-	d.recordWebhookFailure(sub)
+}
+
+// webhookRetryAfter returns how long to wait before retrying a 429, preferring
+// Discord's JSON retry_after (fractional seconds) and falling back to the
+// standard Retry-After header. The result is clamped to a sane ceiling.
+func webhookRetryAfter(resp *http.Response, body []byte) time.Duration {
+	var delay time.Duration
+	var parsed struct {
+		RetryAfter float64 `json:"retry_after"`
+	}
+	if json.Unmarshal(body, &parsed) == nil && parsed.RetryAfter > 0 {
+		delay = time.Duration(parsed.RetryAfter * float64(time.Second))
+	} else if h := resp.Header.Get("Retry-After"); h != "" {
+		if secs, err := strconv.ParseFloat(strings.TrimSpace(h), 64); err == nil && secs > 0 {
+			delay = time.Duration(secs * float64(time.Second))
+		}
+	}
+	if delay <= 0 {
+		delay = time.Second
+	}
+	if delay > maxWebhookRetryDelay {
+		delay = maxWebhookRetryDelay
+	}
+	return delay
 }
 
 // buildWebhookRequest builds either a JSON request (no files) or a multipart

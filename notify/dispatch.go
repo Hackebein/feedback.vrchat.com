@@ -379,11 +379,9 @@ func (d *Dispatcher) SendTest(ctx context.Context, sub Subscription, events []st
 		}
 	}
 
-	// Deliver each confirmation as its own message (one webhook POST / push per
-	// event) rather than bundling them into a single multi-embed message.
-	for _, ev := range out {
-		d.deliver(ctx, sub, []NotificationEvent{ev})
-	}
+	// deliver sends one message per event (push and webhook both split per event),
+	// so each confirmation arrives as its own message.
+	d.deliver(ctx, sub, out)
 }
 
 func latestByCreated(evs []NotificationEvent) (NotificationEvent, bool) {
