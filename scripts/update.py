@@ -859,6 +859,15 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
         embedded_voters = len(post.get("voters") or [])
         if new_score != (prev_post or {}).get("score") and new_score > embedded_voters:
             voter_jobs.append((pid, post))
+        elif prev_post:
+            # Not refetching this run: the detail scrape only embeds ~10 voters,
+            # which would shrink a previously-fetched complete list back down.
+            # Keep the richer stored list so the indexed voters stay complete
+            # (vote-change notifications diff this list to name added/removed
+            # voters, and a partial list makes that diff unreliable).
+            prev_voters = prev_post.get("voters") or []
+            if len(prev_voters) > embedded_voters:
+                post["voters"] = prev_voters
 
         if not categorize.needs_ai_retag(prev_post, post):
             categorize.carry_over_ai_tags(post, prev_post)
