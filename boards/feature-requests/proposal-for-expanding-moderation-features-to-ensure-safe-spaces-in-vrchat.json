@@ -2,10 +2,10 @@
   "_id": "6a3a798248e024a58d77f24d",
   "aiCategories": [
     "loc.in-world",
-    "groups.instances",
-    "moderation.safety-system"
+    "moderation.safety-system",
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-06-26T02:11:20.577048Z",
+  "aiTaggedAt": "2026-06-26T03:08:34.358625Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67528d96a9f0ca8a017491dd",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 13,
+  "commentCount": 14,
   "comments": [
     {
       "_id": "6a3a8790d6e2adff55bbd0e3",
@@ -208,7 +208,7 @@
       "postID": "6a3a798248e024a58d77f24d",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -666,6 +666,62 @@
       "value": "@{616398cc56d6a8195ee29255|full_name}\n\nYou are absolutely right. If mishandled, this could indeed turn into a tool for emotional, subjective judgment, and extending this to the world level naturally carries a risk of \"arbitrary exclusion.\" I completely agree with your realistic concern that not everyone can act as a \"fair judge,\" and that emotional exclusion is a genuine risk.\n\nHowever, I believe this system can ultimately achieve a fair balance due to the following two factors:\n\nPrivate Instances Remain Unaffected: This proposal does not block access to the world entirely. Therefore, even if a user is restricted from a specific Group Public instance, they are not completely banned from the world itself and can still enjoy the content in other instances.\n\nMarket Dynamics (User Judgment): Once published, a world is subject to community consensus. If a world author abuses this feature and enforces autocratic exclusion, users will naturally pushes back and choose not to visit that world. Consequently, poorly managed spaces will lose their audience and fail. This dynamic acts as a strong, organic check and balance on the creator's authority.\n\nRegarding the burden on creators, the same logic applies: this is strictly proposed as an optional \"feature\" (opt-in), not a forced \"duty.\" Creators who do not wish to bear the administrative burden retain the full choice to simply not use this feature.\n\nYour point about affecting the access route is spot on. However, I believe this has two sides. While the negative side is the impact on user traffic as you mentioned, the positive side is that by disrupting the route that malicious trolls use to cruise through public spaces, we can effectively prevent the escalation of harassment.\n\nI completely agree that the most ideal solution would be one that fully respects the freedom of innocent users while strictly targeting malicious trolls. This proposal is my attempt to present the most reasonable and balanced compromise between that ideal and the harsh realities we face in public spaces.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a3de35b1a4e937e88e63428",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a3bc366f51f79a5dbfb13e6",
+        "alias": "Implicit Panda",
+        "aliasID": "6a3bc367f51f79a5dbfb13eb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/43ded69cf159867c5121d7a741775172.png",
+        "created": "2026-06-24T11:45:42.835Z",
+        "name": "Lumoshar",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-26T02:26:35.723Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "67528d96a9f0ca8a017491dd",
+          "alias": "Heather Reindeer",
+          "aliasID": "67528d96a367fa63921299ea",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e5b8c66d55ddb5e7ec6461ac48dd16bc.png",
+          "created": "2024-12-06T05:37:26.050Z",
+          "name": "やがて捨てられる補助輪",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a3be249de26967e364e32e2",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3a798248e024a58d77f24d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{67528d96a9f0ca8a017491dd|full_name}\n\n(EN)\n\nIt is my honour to receive your reply.\n\nI say my opinion about your question clearly, it is not beneficial. The Group function is provided to us for managing groups, not for controlling worlds, to say nothing for controlling other users encounters. And its lack of remedy processes is only permissible because its scope is limited to a specific group I think. I believe that extending Group function to public spaces is problematic from the perspective of fairness and equality. While the world is the creator's private property, it is simultaneously a public space. The creator's rules should be respected, but they are not absolute in a public setting.\n\nFurthermore, regarding the opinion that it would be more constructive for me to provide new feedback, I must say that view is misguided. My comments were made in direct relation to the proposal at hand; my point was that certain \"issues\"—which might have been acceptable within the limited scope of a \"group\"—should not simply be carried over into the much broader public. I do not believe there are any significant issues with the group feature itself.\n\nAnd we have to read Terms of Service and Community Guideline with care. The foundational principle of the CG is \"VRChat is a platform and community where you can be anyone, create anything, and interact with people from all walks of life.\" It means this principle is the framework for interpretation.\n\n(JP)\n\nご返信をいただきありがとうございます。\n\n「パブリックで行われる加害に対してGroup機能をワールドパブリックまで拡張する選択肢を作るのはどうか」という問いに対しては、それは有益なことではないと考えます。Group機能はグループの管理のために用意されているものであり、グループという限られた範囲の中で用いられるが故に、救済措置の欠如が認められているのではないでしょうか。Group機能をパブリックインスタンスにまで拡張することは、より広範に影響を及ぼすことになるため、公正性と平等の観点から問題があると考えます。\n\nワールドは作者の私有地的なものではありますが、同時に公共空間でもあります。作者のルールはもちろん尊重され遵守すべきものですが、公共空間においてそれが常に絶対視されるものではありません。\n\nまた、私がフィードバックを行う方が建設的とのご意見ですが、失当と言わざるを得ません。私のコメントは、グループという狭い範囲に効果があることから許されていたある種の「問題」を、パブリックという広い範囲にそのまま拡張するべきではないという意見であり、本提案に関連付けられるものです。グループ機能そのものには特段の問題はないと考えています。\n\nなにより、利用規約やコミュニティガイドラインは慎重に読まれるべきものです。コミュニティガイドラインの冒頭に書かれていることは「VRChatは、誰でもなりきることができ、何でも創造でき、あらゆる分野の人々と交流できるプラットフォームでありコミュニティです。」であり、この条項は解釈の基準として参考にされるべきものであるはずです。",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -681,7 +737,7 @@
   "files": [],
   "ideaID": "6a3a798248e024a58d77f230",
   "imageURLs": [],
-  "lastUpdated": 1782439857019,
+  "lastUpdated": 1782443137199,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 27,
@@ -697,7 +753,7 @@
   "subCategoryID": null,
   "title": "Proposal for Expanding Moderation Features to Ensure Safe Spaces in VRChat",
   "trendingScore": 2950.2239040546,
-  "updatedAt": "2026-06-26T02:11:15.390753Z",
+  "updatedAt": "2026-06-26T03:08:29.524594Z",
   "updatedBy": null,
   "urlName": "proposal-for-expanding-moderation-features-to-ensure-safe-spaces-in-vrchat",
   "viewerIsAuthor": false,
