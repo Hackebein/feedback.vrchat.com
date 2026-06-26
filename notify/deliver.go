@@ -58,11 +58,10 @@ const (
 	parentCommentMax      = 240
 	parentChainCharBudget = 1200
 	parentChainMaxItems   = 5
-	// maxVoterNames bounds how many added/removed voter names are listed in a
-	// votes embed. Above this we show only the count: the indexed voter list is
-	// partial for popular posts, so large name lists are both unreliable and risk
-	// exceeding Discord's embed-size limits.
-	maxVoterNames = 8
+	// voterLineCharBudget bounds how many characters of voter names a votes embed
+	// lists before collapsing the remainder into "… and N more voters", keeping
+	// the embed within Discord's size limits.
+	voterLineCharBudget = 900
 )
 
 // Discord webhook attachment limits.
@@ -249,42 +248,62 @@ func buildParentChain(hit gwHit, c gwComment, names map[string]string) []string 
 	return out
 }
 
-// voterListLine renders an "Added: a, b, c" / "Removed: …" line, listing names
-// only when there are few of them and otherwise collapsing to a count, so the
-// embed stays small and avoids dumping an unreliable partial voter list.
+// voterListLine renders an "Added: a, b, c" line, listing as many names as fit
+// within voterLineCharBudget and appending "… and N more voters" for the rest,
+// so the names are shown but the embed can never blow past Discord's limits.
 func voterListLine(label string, names []string) string {
-	switch {
-	case len(names) == 0:
+	if len(names) == 0 {
 		return ""
-	case len(names) <= maxVoterNames:
-		return fmt.Sprintf("%s: %s", label, strings.Join(names, ", "))
-	default:
-		return fmt.Sprintf("%s: %d voters", label, len(names))
 	}
+	var b strings.Builder
+	shown := 0
+	for _, n := range names {
+		sep := ""
+		if shown > 0 {
+			sep = ", "
+		}
+		if shown > 0 && b.Len()+len(sep)+len(n) > voterLineCharBudget {
+			break
+		}
+		b.WriteString(sep)
+		b.WriteString(n)
+		shown++
+	}
+	out := label + ": " + b.String()
+	if shown < len(names) {
+		out += fmt.Sprintf(", \u2026 and %d more voters", len(names)-shown)
+	}
+	return out
 }
 
-func buildVotesEvent(hit gwHit, old PostState, curVoters, names map[string]string) NotificationEvent {
-	prevVoters := decodeVoters(old.VotersJSON)
-	var added, removed []string
-	for id, name := range curVoters {
-		if _, ok := prevVoters[id]; !ok {
-			added = append(added, displayName(name))
-		}
-	}
-	for id, name := range prevVoters {
-		if _, ok := curVoters[id]; !ok {
-			removed = append(removed, displayName(name))
-		}
-	}
-	sort.Strings(added)
-	sort.Strings(removed)
-
+// buildVotesEvent builds a vote-change notification. The named added/removed
+// lists are only included when reliable is true (both snapshots held a complete
+// voter list); otherwise just the score delta is shown, because the indexed
+// voter list is partial for popular posts and would otherwise report a huge,
+// bogus diff (e.g. "+1 vote" but "519 added").
+func buildVotesEvent(hit gwHit, old PostState, curVoters, names map[string]string, reliable bool) NotificationEvent {
 	parts := []string{fmt.Sprintf("Votes: %d \u2192 %d", old.Score, hit.Score)}
-	if line := voterListLine("Added", added); line != "" {
-		parts = append(parts, line)
-	}
-	if line := voterListLine("Removed", removed); line != "" {
-		parts = append(parts, line)
+	if reliable {
+		prevVoters := decodeVoters(old.VotersJSON)
+		var added, removed []string
+		for id, name := range curVoters {
+			if _, ok := prevVoters[id]; !ok {
+				added = append(added, displayName(name))
+			}
+		}
+		for id, name := range prevVoters {
+			if _, ok := curVoters[id]; !ok {
+				removed = append(removed, displayName(name))
+			}
+		}
+		sort.Strings(added)
+		sort.Strings(removed)
+		if line := voterListLine("Added", added); line != "" {
+			parts = append(parts, line)
+		}
+		if line := voterListLine("Removed", removed); line != "" {
+			parts = append(parts, line)
+		}
 	}
 
 	board := boardLabel(hit.Board.Name, hit.Board.URLName)

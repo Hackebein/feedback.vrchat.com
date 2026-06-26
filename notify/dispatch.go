@@ -222,6 +222,7 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 
 		userMap := buildUserNameMap(hit)
 		curVoters := votersMap(hit.Voters)
+		curComplete := votersComplete(curVoters, hit.Score)
 		createdMS, _ := parseTimeMS(hit.Created)
 		cur := PostState{
 			PostID:       pid,
@@ -243,18 +244,29 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 			continue
 		}
 
-		// Trigger on score change only. The indexed voter list is partial for
-		// popular posts (the ingester only fetches the full list when the score
-		// moves), so diffing voter identity alone produces large false churn
-		// (e.g. "1231 → 1231" with hundreds added/removed). Score is the reliable
-		// signal and still captures both adds (score up) and removes (score down).
+		// Trigger on score change only. Score is the reliable signal and captures
+		// both adds (score up) and removes (score down).
 		if sub.HasEvent(EventVotes) && old.Score != cur.Score {
-			events = append(events, buildVotesEvent(hit, old, curVoters, userMap))
+			// The indexed voter list is partial for popular posts (the ingester
+			// only fetches the full list when the score moves), so the named
+			// added/removed diff is only trustworthy when BOTH snapshots held a
+			// complete voter list. Otherwise we report just the score delta.
+			oldVoters := decodeVoters(old.VotersJSON)
+			reliable := curComplete && votersComplete(oldVoters, old.Score)
+			events = append(events, buildVotesEvent(hit, old, curVoters, userMap, reliable))
 		}
 		if sub.HasEvent(EventStatus) && cur.Status != "" && old.Status != cur.Status {
 			events = append(events, buildStatusEvent(hit, old.Status, cur.Status, userMap))
 		}
-		_ = d.store.UpsertPostState(sub.ID, cur)
+
+		// Preserve a complete voter baseline: when the current list is only the
+		// partial embedded set, keep the last complete list so a later real change
+		// diffs against truth instead of producing huge false churn.
+		toStore := cur
+		if !curComplete && votersComplete(decodeVoters(old.VotersJSON), old.Score) && old.Score == cur.Score {
+			toStore.VotersJSON = old.VotersJSON
+		}
+		_ = d.store.UpsertPostState(sub.ID, toStore)
 	}
 
 	// Reconcile vanished posts only when we retrieved the complete result set;
@@ -631,4 +643,15 @@ func votersMap(voters []gwUser) map[string]string {
 		out[v.ID] = v.Name
 	}
 	return out
+}
+
+// votersComplete reports whether a voter list looks complete, i.e. it holds at
+// least as many voters as the score. The ingester embeds only ~10 voters until
+// a score change forces a full fetch, so a shorter list is a partial snapshot
+// that must not be trusted for a named added/removed diff.
+func votersComplete(voters map[string]string, score int) bool {
+	if score <= 0 {
+		return true
+	}
+	return len(voters) >= score
 }
