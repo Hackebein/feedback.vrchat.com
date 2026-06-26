@@ -208,6 +208,12 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 
 	present := make(map[string]bool, len(hits))
 	var events []NotificationEvent
+	// Baseline mutations are collected and applied only AFTER delivery, so a
+	// crash/restart (e.g. a deploy) between detecting a change and delivering it
+	// re-detects and re-delivers on the next poll (at-least-once) instead of
+	// advancing the baseline and silently losing the notification.
+	var toUpsert []PostState
+	var toDelete []string
 
 	for _, raw := range hits {
 		var hit gwHit
@@ -240,7 +246,7 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 		if !seen {
 			// First sighting for this subscription: seed only. New-post alerts are
 			// the watermark pass's job, so we never notify here.
-			_ = d.store.UpsertPostState(sub.ID, cur)
+			toUpsert = append(toUpsert, cur)
 			continue
 		}
 
@@ -266,7 +272,7 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 		if !curComplete && votersComplete(decodeVoters(old.VotersJSON), old.Score) && old.Score == cur.Score {
 			toStore.VotersJSON = old.VotersJSON
 		}
-		_ = d.store.UpsertPostState(sub.ID, toStore)
+		toUpsert = append(toUpsert, toStore)
 	}
 
 	// Reconcile vanished posts only when we retrieved the complete result set;
@@ -279,12 +285,19 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 			if sub.HasEvent(EventDeleted) {
 				events = append(events, buildDeletedEvent(old))
 			}
-			_ = d.store.DeletePostState(sub.ID, pid)
+			toDelete = append(toDelete, pid)
 		}
 	}
 
+	// Deliver first, then advance the baseline (see toUpsert/toDelete comment).
 	if len(events) > 0 {
 		d.deliver(ctx, sub, events)
+	}
+	for _, st := range toUpsert {
+		_ = d.store.UpsertPostState(sub.ID, st)
+	}
+	for _, pid := range toDelete {
+		_ = d.store.DeletePostState(sub.ID, pid)
 	}
 	return nil
 }
