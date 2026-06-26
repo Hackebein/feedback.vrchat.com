@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"net/url"
 	"regexp"
+	"strconv"
 	"sync/atomic"
 	"time"
 )
@@ -22,6 +23,21 @@ type Dispatcher struct {
 	store  *Store
 	client *http.Client
 	tick   atomic.Int64
+
+	// snapCache memoizes the full snapshot scan within a single tick so
+	// subscriptions sharing an identical filter (e.g. several "all posts"
+	// webhooks) hit the gateway once instead of once each. runTick is
+	// sequential, so no locking is required.
+	snapCacheTick int64
+	snapCache     map[string]snapResult
+}
+
+// snapResult is a memoized snapshot scan shared across subscriptions with the
+// same filter during one tick.
+type snapResult struct {
+	hits     []json.RawMessage
+	complete bool
+	err      error
 }
 
 func newDispatcher(cfg Config, store *Store) *Dispatcher {
@@ -36,10 +52,16 @@ func newDispatcher(cfg Config, store *Store) *Dispatcher {
 // through. When a subscription's filter matches more than this, deletion
 // detection is skipped that tick to avoid false "deleted" notifications for
 // posts that merely fell off the end of the (incomplete) result set.
-const snapshotMaxHits = 5000
+//
+// This must stay <= the index's index.max_result_window (see
+// deploy/opensearch/index_mappings.json), since the snapshot uses from/size
+// pagination. It is sized to cover the entire post corpus so vote/status/
+// deletion changes are detected on every post, not just the oldest N.
+const snapshotMaxHits = 50000
 
-// snapshotPageSize is the per-request page size for the snapshot pass.
-const snapshotPageSize = 100
+// snapshotPageSize is the per-request page size for the snapshot pass. Larger
+// pages keep the full-corpus scan to a few dozen requests per tick.
+const snapshotPageSize = 1000
 
 // Run blocks, polling until ctx is cancelled.
 func (d *Dispatcher) Run(ctx context.Context) {
@@ -197,7 +219,7 @@ func (d *Dispatcher) processNewComments(ctx context.Context, sub Subscription) e
 // processSnapshot pages through the entire matching set, diffs each post
 // against its stored snapshot, and emits vote/status/deletion events.
 func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick int64) error {
-	hits, complete, err := d.queryGatewayAll(ctx, sub)
+	hits, complete, err := d.snapshotHits(ctx, sub, tick)
 	if err != nil {
 		return err
 	}
@@ -272,7 +294,12 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 		if !curComplete && votersComplete(decodeVoters(old.VotersJSON), old.Score) && old.Score == cur.Score {
 			toStore.VotersJSON = old.VotersJSON
 		}
-		toUpsert = append(toUpsert, toStore)
+		// Only persist when something actually changed. The snapshot scans the
+		// whole corpus every tick; re-writing every unchanged row would be tens
+		// of thousands of pointless SQLite writes per minute.
+		if !postStateEqual(old, toStore) {
+			toUpsert = append(toUpsert, toStore)
+		}
 	}
 
 	// Reconcile vanished posts only when we retrieved the complete result set;
@@ -436,6 +463,36 @@ func (d *Dispatcher) queryGatewayAll(ctx context.Context, sub Subscription) ([]j
 		}
 	}
 	return all, false, nil // hit the cap; set may be incomplete
+}
+
+// snapshotHits returns the full snapshot scan for a subscription's filter,
+// memoized per tick. Subscriptions with an identical (lucene, filter) pair
+// share a single gateway scan within the same tick.
+func (d *Dispatcher) snapshotHits(ctx context.Context, sub Subscription, tick int64) ([]json.RawMessage, bool, error) {
+	if d.snapCache == nil || d.snapCacheTick != tick {
+		d.snapCacheTick = tick
+		d.snapCache = make(map[string]snapResult)
+	}
+	key := strconv.FormatBool(sub.Lucene) + "\n" + sub.FilterJSON
+	if r, ok := d.snapCache[key]; ok {
+		return r.hits, r.complete, r.err
+	}
+	hits, complete, err := d.queryGatewayAll(ctx, sub)
+	d.snapCache[key] = snapResult{hits: hits, complete: complete, err: err}
+	return hits, complete, err
+}
+
+// postStateEqual reports whether two snapshots carry identical persisted state,
+// so unchanged posts can skip a redundant write.
+func postStateEqual(a, b PostState) bool {
+	return a.Title == b.Title &&
+		a.URL == b.URL &&
+		a.Board == b.Board &&
+		a.Score == b.Score &&
+		a.Status == b.Status &&
+		a.CommentCount == b.CommentCount &&
+		a.VotersJSON == b.VotersJSON &&
+		a.CreatedMS == b.CreatedMS
 }
 
 // queryGatewayPage replays the stored InstantSearch filter against the given
