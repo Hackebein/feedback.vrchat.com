@@ -1,0 +1,96 @@
+{
+  "_id": "6a3f38e856d8704aacaba50f",
+  "aiCategories": [
+    "loc.in-world",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-06-27T03:50:23.712017Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "694675aef85d59c66dee33b2",
+    "alias": "Chief Parrotfish",
+    "aliasID": "694675aff85d59c66dee48dd",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5cc70351aee03b47de2914f21ef95c0f.png",
+    "created": "2025-12-20T10:08:46.789Z",
+    "name": "しとら。",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "694675aef85d59c66dee33b2",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1329,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-27T02:43:52.768Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Observation:\n\nI wanted to share an observation regarding the Unity 6 beta. When visiting a certain world, I noticed a difference in the mesh collider positions compared to the current Live build.\n\nWorld Link:\n\nWorld: -yuuri-憩いの島\n\nAuthor: o_ゆうり_o \n\nhttps://vrchat.com/home/world/wrld_f8f0c2b8-7d9f-4189-846f-3899ea860a8f\n\nDetails:\n\nJust to clarify what is happening, in the Unity 6 version, the avatar is clipping into the intended collider due to this positional difference.\n\nAttachments:\n\nI have attached screenshots for comparison:\n\nImage 1: Current Live build\n\nImage 2: Unity 6 version (showing the avatar clipping)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a3f38e856d8704aacaba50e",
+  "imageURLs": [
+    "https://canny-assets.io/images/6e0062045837990477b1f992ffc332d8.png",
+    "https://canny-assets.io/images/34b4b01ba8e59b5110ae7dca852d86dc.png"
+  ],
+  "lastUpdated": 1782530499247,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-27T02:43:52.768Z",
+  "subCategoryID": null,
+  "title": "[Unity 6] Difference in mesh collider position (Avatar clipping)",
+  "trendingScore": 2947.9951192465323,
+  "updatedAt": "2026-06-27T03:50:18.133181Z",
+  "updatedBy": null,
+  "urlName": "unity-6-difference-in-mesh-collider-position-avatar-clipping",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "694675aef85d59c66dee33b2",
+      "alias": "Chief Parrotfish",
+      "aliasID": "694675aff85d59c66dee48dd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5cc70351aee03b47de2914f21ef95c0f.png",
+      "companies": [],
+      "name": "しとら。",
+      "urlName": null,
+      "voteID": "6a3f38e8f51f79a5db27b203"
+    }
+  ]
+}
