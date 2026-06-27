@@ -1,0 +1,21 @@
+# Cap syslog growth on the feedback indexer host. Ingest timer output can be
+# very verbose; without a size limit a single noisy job can fill the root disk
+# and trigger OpenSearch disk watermarks.
+/var/log/syslog
+/var/log/mail.log
+/var/log/kern.log
+/var/log/auth.log
+/var/log/user.log
+/var/log/cron.log
+{
+    rotate 7
+    size 100M
+    missingok
+    notifempty
+    compress
+    delaycompress
+    sharedscripts
+    postrotate
+        /usr/lib/rsyslog/rsyslog-rotate
+    endscript
+}

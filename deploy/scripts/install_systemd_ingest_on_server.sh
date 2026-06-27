@@ -55,6 +55,8 @@ chmod 0644 /etc/systemd/system/feedback-ingest.service.d/python.conf
 
 install -d -m 0755 /var/lib/feedback-search
 
+install -m 0644 "${REPO_ROOT}/deploy/logrotate/syslog-feedback" /etc/logrotate.d/syslog-feedback
+
 systemctl daemon-reload
 systemctl enable --now feedback-ingest.timer
 systemctl enable --now feedback-health.timer

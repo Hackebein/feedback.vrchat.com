@@ -16,7 +16,7 @@ LAST_DEPLOYED = STATE_DIR / "last_deployed_sha"
 LAST_INGESTED = STATE_DIR / "last_ingested_sha"
 
 
-def git(args: list[str]) -> str:
+def git(args: list[str], *, quiet: bool = False) -> str:
     p = subprocess.run(
         ["git", "-C", str(REPO_ROOT), *args],
         stdout=subprocess.PIPE,
@@ -24,9 +24,11 @@ def git(args: list[str]) -> str:
         text=True,
         check=False,
     )
-    sys.stdout.write(p.stdout)
     if p.returncode != 0:
+        sys.stdout.write(p.stdout)
         sys.exit(p.returncode)
+    if not quiet:
+        sys.stdout.write(p.stdout)
     return p.stdout.strip()
 
 
@@ -77,19 +79,26 @@ def sync_to_remote() -> tuple[str, str]:
     return cur, new
 
 
-def changed_paths(base_sha: str, head_sha: str) -> list[str]:
-    if not base_sha:
-        return ["__initial__"]
-    out = git(["diff", "--name-only", f"{base_sha}..{head_sha}"])
-    return [line for line in out.splitlines() if line.strip()]
-
-
 def path_requires_deploy(path: str) -> bool:
     if path == "README.md":
         return False
     if path.startswith("boards/"):
         return False
     return True
+
+
+def changed_paths(base_sha: str, head_sha: str) -> list[str]:
+    if not base_sha:
+        return ["__initial__"]
+    out = git(["diff", "--name-only", f"{base_sha}..{head_sha}"], quiet=True)
+    paths = [line for line in out.splitlines() if line.strip()]
+    deploy_count = sum(1 for path in paths if path_requires_deploy(path))
+    print(
+        f"Changed paths @{base_sha[:12]}..{head_sha[:12]}: "
+        f"{len(paths)} total, {deploy_count} require deploy",
+        flush=True,
+    )
+    return paths
 
 
 def needs_deploy(head_sha: str) -> bool:

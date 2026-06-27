@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Alert when the newest OpenSearch backing index is older than STALE_AFTER_MIN.
+# Alert when the newest OpenSearch backing index is older than STALE_AFTER_MIN
+# or root disk usage exceeds DISK_WARN_AFTER_PCT.
 set -euo pipefail
 
 STALE_AFTER_MIN="${STALE_AFTER_MIN:-120}"
+DISK_WARN_AFTER_PCT="${DISK_WARN_AFTER_PCT:-80}"
 ALIAS="${OPENSEARCH_ALIAS:-feedback-posts}"
 
 if [[ -f /etc/feedback-search/ingest.env ]]; then
@@ -25,6 +27,22 @@ OS_URL="${OS_URL%/}"
 
 if [[ -z "${OPENSEARCH_USER:-}" || -z "${OPENSEARCH_PASSWORD:-}" ]]; then
   echo "[check_ingest_health] missing OpenSearch credentials in ingest.env" >&2
+  exit 1
+fi
+
+disk_use_pct="$(df -P / | awk 'NR==2 {gsub(/%/,"",$5); print $5}')"
+disk_avail="$(df -hP / | awk 'NR==2 {print $4}')"
+if (( disk_use_pct >= DISK_WARN_AFTER_PCT )); then
+  BODY="$(cat <<EOF
+Root filesystem usage is **${disk_use_pct}%** (threshold **${DISK_WARN_AFTER_PCT}%**).
+Available: **${disk_avail}**
+OpenSearch may block index creation at 90% and enter read-only mode at 95%.
+EOF
+)"
+  printf '%s\n' "${BODY}" | FEEDBACK_REPO_ROOT="${REPO_ROOT}" \
+    /bin/bash "${REPO_ROOT}/deploy/scripts/open_github_issue.sh" \
+    disk-usage "root disk at ${disk_use_pct}%" -
+  echo "[check_ingest_health] alerted: root disk at ${disk_use_pct}%" >&2
   exit 1
 fi
 
