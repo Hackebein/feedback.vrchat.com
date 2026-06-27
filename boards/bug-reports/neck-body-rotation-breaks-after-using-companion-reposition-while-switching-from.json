@@ -1,0 +1,90 @@
+{
+  "_id": "6a3f65c95994320469e3054d",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.quick-menu",
+    "client.third-person"
+  ],
+  "aiTaggedAt": "2026-06-27T06:32:19.889659Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "640d55bdcced02451427b76e",
+    "alias": "Personal Shrimp",
+    "aliasID": "661336c7e5d26962aa479eb1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/0f59c781d8a95ba0803b0ee7dcf48da1.png",
+    "created": "2023-03-12T04:31:57.504Z",
+    "name": "Mute Alt",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "640d55bdcced02451427b76e",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-27T05:55:21.973Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Explanation:\n\nWhile in the third person view in VRChat spawning a follower companion and entering the reposition mode the player’s neck/head rotation can become misaligned after rotating in third person and returning to first person the head can be rotated 180 degrees backward compared to the body.\n\nSteps to reproduce:\n\n1. While in VRChat and go into third person view.\n\n2. Open the radial menu.\n\n3. Spawn or pull out a follower companion.\n\n4. Select the option to reposition the companion.\n\n5. While still in the reposition mode press tab to enable third person rotation controls.\n\n6. Rotate your character 180 degrees so you are looking behind yourself.\n\n7. Scroll back into first person view.\n\n8. The player’s neck/head rotation is now facing backward compared to the body.\n\nAdditional notes:\n\nyou are still in companion reposition mode when doing this. Pressing left click exits or confirms the reposition mode and fixes the neck/head rotation.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a3f65c95994320469e30544",
+  "imageURLs": [
+    "https://canny-assets.io/images/814b94db8a804904bef6f687bdc7acab.png",
+    "https://canny-assets.io/images/8787307bb184cb945c961b596ba96331.png"
+  ],
+  "lastUpdated": 1782540317092,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-27T05:55:21.973Z",
+  "subCategoryID": null,
+  "title": "Neck/Body Rotation Breaks After Using Companion Reposition While Switching From Third Person to First Person",
+  "trendingScore": 2948.014115996698,
+  "updatedAt": "2026-06-27T06:32:14.936965Z",
+  "updatedBy": null,
+  "urlName": "neck-body-rotation-breaks-after-using-companion-reposition-while-switching-from",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "640d55bdcced02451427b76e",
+      "alias": "Personal Shrimp",
+      "aliasID": "661336c7e5d26962aa479eb1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0f59c781d8a95ba0803b0ee7dcf48da1.png",
+      "companies": [],
+      "name": "Mute Alt",
+      "urlName": null,
+      "voteID": "6a3f65caf51f79a5db286479"
+    }
+  ]
+}
