@@ -3,13 +3,83 @@
     "number_of_shards": 1,
     "number_of_replicas": 0,
     "index.mapping.total_fields.limit": 2000,
-    "index.max_result_window": 50000
+    "index.max_result_window": 50000,
+    "analysis": {
+      "char_filter": {
+        "vrc_plus_normalizer": {
+          "type": "pattern_replace",
+          "pattern": "(?i)\\bvrc(hat)?\\s*\\+",
+          "replacement": "vrcplus"
+        }
+      },
+      "filter": {
+        "english_possessive_stemmer": {
+          "type": "stemmer",
+          "language": "possessive_english"
+        },
+        "english_stop": {
+          "type": "stop",
+          "stopwords": "_english_"
+        },
+        "english_stemmer": {
+          "type": "stemmer",
+          "language": "english"
+        },
+        "feedback_synonyms": {
+          "type": "synonym_graph",
+          "synonyms": [
+            "avi, avatar",
+            "vrc, vrchat",
+            "vrcplus, vrchatplus, vrchat plus, vrc plus",
+            "perf, performance",
+            "optimisation, optimization",
+            "fps, framerate, frame rate",
+            "mic, microphone",
+            "udon, udonsharp",
+            "sdk, vrcsdk",
+            "vcc, creator companion",
+            "vpm, vrchat package manager",
+            "quest, questie, meta quest",
+            "pcvr, pc vr",
+            "deskie, desktop",
+            "fbt, full body tracking",
+            "ft, face tracking, facial tracking",
+            "ik, inverse kinematics",
+            "physbones, physbone, dynamic bones, squishbones",
+            "eac, easy anti-cheat",
+            "osc, open sound control",
+            "2fa, two factor authentication",
+            "rp, roleplay, role play",
+            "repro, reproduce, reproduction",
+            "impostor, imposter, impostors, imposters",
+            "poly, polys, polygon, polygons, tri, tris, triangle, triangles",
+            "shapekey, shapekeys, blendshape, blendshapes, blend shape"
+          ]
+        }
+      },
+      "analyzer": {
+        "text_index": {
+          "char_filter": ["vrc_plus_normalizer"],
+          "tokenizer": "standard",
+          "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "english_stemmer"]
+        },
+        "text_search": {
+          "char_filter": ["vrc_plus_normalizer"],
+          "tokenizer": "standard",
+          "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "feedback_synonyms", "english_stemmer"]
+        }
+      }
+    }
   },
   "mappings": {
     "dynamic": false,
     "properties": {
       "post_id": { "type": "keyword" },
-      "combined_text": { "type": "text", "analyzer": "standard" },
+      "combined_text": {
+        "type": "text",
+        "analyzer": "text_index",
+        "search_analyzer": "text_search"
+      },
 
       "aiCategories": {
         "type": "text",
@@ -27,10 +97,16 @@
 
       "title": {
         "type": "text",
-        "analyzer": "standard",
+        "analyzer": "text_index",
+        "search_analyzer": "text_search",
         "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
       },
-      "details": { "type": "text", "analyzer": "standard", "index_options": "offsets" },
+      "details": {
+        "type": "text",
+        "analyzer": "text_index",
+        "search_analyzer": "text_search",
+        "index_options": "offsets"
+      },
       "urlName": { "type": "keyword", "ignore_above": 512 },
 
       "ideaID": { "type": "keyword" },
@@ -121,7 +197,8 @@
           },
           "name": {
             "type": "text",
-            "analyzer": "standard",
+            "analyzer": "text_index",
+            "search_analyzer": "text_search",
             "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
           },
           "serviceAccount": { "type": "boolean" },
@@ -238,11 +315,13 @@
           },
           "mergedPostTitle": {
             "type": "text",
-            "analyzer": "standard"
+            "analyzer": "text_index",
+            "search_analyzer": "text_search"
           },
           "mergedPostDetails": {
             "type": "text",
-            "analyzer": "standard"
+            "analyzer": "text_index",
+            "search_analyzer": "text_search"
           },
           "sourceFeatureExtractionItemID": { "type": "keyword" },
           "sourceLink": { "type": "keyword", "ignore_above": 2048 },
@@ -250,7 +329,8 @@
           "itemSourceType": { "type": "keyword", "ignore_above": 256 },
           "value": {
             "type": "text",
-            "analyzer": "standard",
+            "analyzer": "text_index",
+            "search_analyzer": "text_search",
             "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
           },
           "created": {

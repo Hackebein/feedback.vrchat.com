@@ -55,27 +55,42 @@ export function instantSearchStrictQuery(
   // contain a stray bare letter token.
   const primary = fieldsWithBoost(searchAttributes, 1);
   const phrase = fieldsWithBoost(searchAttributes, 2);
+  const should: ElasticsearchQuery[] = [
+    {
+      multi_match: {
+        query: q,
+        fields: primary,
+        type: "best_fields",
+        operator: "and",
+        fuzziness: 0,
+        auto_generate_synonyms_phrase_query: false,
+      },
+    },
+    {
+      multi_match: {
+        query: q,
+        type: "phrase",
+        fields: phrase,
+      },
+    },
+  ];
+  if (q.length > 2) {
+    should.push({
+      multi_match: {
+        query: q,
+        fields: fieldsWithBoost(searchAttributes, 0.5),
+        type: "best_fields",
+        operator: "and",
+        fuzziness: "AUTO",
+        prefix_length: 1,
+        max_expansions: 50,
+        auto_generate_synonyms_phrase_query: false,
+      },
+    });
+  }
   return {
     bool: {
-      should: [
-        {
-          multi_match: {
-            query: q,
-            fields: primary,
-            type: "best_fields",
-            operator: "and",
-            fuzziness: 0,
-            auto_generate_synonyms_phrase_query: false,
-          },
-        },
-        {
-          multi_match: {
-            query: q,
-            type: "phrase",
-            fields: phrase,
-          },
-        },
-      ],
+      should,
       minimum_should_match: 1,
     },
   };
