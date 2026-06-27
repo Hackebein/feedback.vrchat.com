@@ -2,11 +2,10 @@
   "_id": "6a3d93b5c5de1fbcd44989e1",
   "aiCategories": [
     "loc.unity-sdk",
-    "loc.in-world",
-    "audio.voice",
-    "sdk.vrcsdk"
+    "sdk.udon",
+    "audio.steam-audio"
   ],
-  "aiTaggedAt": "2026-06-26T15:17:52.808547Z",
+  "aiTaggedAt": "2026-06-27T02:35:24.003591Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f4d0c8c4efb1c1bee087245",
@@ -37,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a3e8c548218a5db0dd415ca",
@@ -83,6 +82,50 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a3f28fd0f1a11624dc024d6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5a55f2c46765067d861f5004",
+        "alias": "Equivalent Dingo",
+        "aliasID": "65ba01f2ed6eefce4cfefbf8",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1b596af5c0ea240d8e07af54e58e8386.png",
+        "created": "2018-01-10T11:02:28.973Z",
+        "name": "Jordo",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-27T01:35:57.300Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3d93b5c5de1fbcd44989e1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Would be nice to be able to keep that through the Unity 6 migration, I use it in one of my world to make an explosive effect more immersive.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -100,7 +143,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/72c3336ae9a8a84f855caeabd28b46f4.jpeg"
   ],
-  "lastUpdated": 1782511051490,
+  "lastUpdated": 1782526065988,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 19,
@@ -116,7 +159,7 @@
   "subCategoryID": null,
   "title": "[1864] Global Audio Effects/Filters no longer working in Unity 6",
   "trendingScore": 2950.193876770067,
-  "updatedAt": "2026-06-26T22:23:24.997955Z",
+  "updatedAt": "2026-06-27T02:35:16.983246Z",
   "updatedBy": null,
   "urlName": "1864-global-audio-effects-filters-no-longer-working-in-unity-6",
   "viewerIsAuthor": false,

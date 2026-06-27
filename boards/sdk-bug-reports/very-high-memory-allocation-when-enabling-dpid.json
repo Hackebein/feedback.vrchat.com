@@ -1,0 +1,96 @@
+{
+  "_id": "6a3f2ff65994320469dd9161",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-06-27T02:35:21.967069Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f2d1a0924735547e299a84f",
+    "alias": "Incredible Limpet",
+    "aliasID": "65c28349ed6eefce4cc54fa4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a16adc8a1cc96b83027b0f99c69e2b06.png",
+    "created": "2020-08-07T09:08:25.696Z",
+    "name": "MissingNO123",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f2d1a0924735547e299a84f",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 351,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-27T02:05:42.817Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After enabling the setting \"Override Kaiser mipmapping with Detail-Preserving Image Downscaling (BETA)\" in the SDK Settings panel and all of your assets start to get re-processed for DPID, the system's physical and virtual memory fills up and is not freed until either the processing is done or the system crashes. This seems to be related to the amount of asset data being processed at once. \n\nFor reference this was observed in SDK 3.10.4",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a3f2ff65994320469dd9160",
+  "imageURLs": [
+    "https://canny-assets.io/images/de88390be4fb81d1bd128beea7125f8e.png",
+    "https://canny-assets.io/images/5157b9c1f24fb19303e3ad332caac05e.png"
+  ],
+  "lastUpdated": 1782526063336,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-27T02:05:42.817Z",
+  "subCategoryID": null,
+  "title": "Very High Memory Allocation When Enabling DPID",
+  "trendingScore": 2947.991332924608,
+  "updatedAt": "2026-06-27T02:35:16.983246Z",
+  "updatedBy": null,
+  "urlName": "very-high-memory-allocation-when-enabling-dpid",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2d1a0924735547e299a84f",
+      "alias": "Incredible Limpet",
+      "aliasID": "65c28349ed6eefce4cc54fa4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a16adc8a1cc96b83027b0f99c69e2b06.png",
+      "companies": [],
+      "name": "MissingNO123",
+      "urlName": null,
+      "voteID": "6a3f2ff6f51f79a5db279428"
+    }
+  ]
+}
