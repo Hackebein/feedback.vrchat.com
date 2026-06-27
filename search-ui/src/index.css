@@ -1656,10 +1656,129 @@ mark {
 }
 
 .notify-menu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   font-size: 0.8rem;
   font-weight: 650;
   color: #9aa3b8;
   margin-bottom: 0.5rem;
+}
+
+.notify-help-wrap {
+  position: relative;
+  flex: none;
+}
+
+.notify-help-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  padding: 0;
+  border: 1px solid #2a3142;
+  border-radius: 999px;
+  background: #151a24;
+  color: #9aa3b8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.notify-help-button:hover {
+  color: #eaeaf0;
+  background: #232a3a;
+}
+
+.notify-help-button[aria-expanded="true"] {
+  color: #9bb6f0;
+  border-color: #3a4877;
+  background: #1c2536;
+}
+
+.notify-help-pop {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  z-index: 60;
+  width: 18rem;
+  max-width: 85vw;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid #2a3142;
+  border-radius: 8px;
+  background: #151a24;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  font-size: 0.74rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #b8c0d4;
+}
+
+.notify-help-lead {
+  margin: 0 0 0.55rem;
+  color: #cdd8f5;
+}
+
+.notify-help-block + .notify-help-block {
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid #232a3a;
+}
+
+.notify-help-heading {
+  margin-bottom: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #7d8699;
+}
+
+.notify-help-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notify-help-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.notify-help-list li:last-child {
+  margin-bottom: 0;
+}
+
+.notify-help-list li svg {
+  flex: none;
+  margin-top: 0.1rem;
+  width: 14px;
+  height: 14px;
+  color: #9aa3b8;
+}
+
+.notify-help-list-plain li {
+  display: list-item;
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+.notify-help-list-plain strong {
+  color: #cdd8f5;
+  font-weight: 600;
+}
+
+.notify-help-note {
+  margin: 0.35rem 0 0;
+  font-size: 0.7rem;
+  color: #7d8699;
 }
 
 .notify-enable {

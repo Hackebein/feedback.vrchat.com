@@ -169,6 +169,60 @@ function toggleEvent(events: EventType[], type: EventType): EventType[] {
   return [...events, type];
 }
 
+function NotifyHelpPopover() {
+  return (
+    <div className="notify-help-pop" role="tooltip" id="notify-help-tooltip">
+      <p className="notify-help-lead">
+        Subscribe to changes on feedback posts that match your search filter.
+      </p>
+
+      <div className="notify-help-block">
+        <div className="notify-help-heading">Event types</div>
+        <ul className="notify-help-list">
+          {EVENT_ORDER.map((type) => (
+            <li key={type}>
+              <EventGlyph type={type} />
+              <span>{EVENT_LABEL[type]}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="notify-help-note">
+          Toggle icons for the current filter or saved filters. Turning all off
+          removes that watch.
+        </p>
+      </div>
+
+      <div className="notify-help-block">
+        <div className="notify-help-heading">Delivery</div>
+        <ul className="notify-help-list notify-help-list-plain">
+          <li>
+            <strong>Browser push</strong> — one notification per event; your
+            browser asks for permission the first time you enable a watch.
+          </li>
+          <li>
+            <strong>Discord webhook</strong> — each event is sent as an embed
+            (title, board, author, votes/comments, link) with images and files
+            attached when present.
+          </li>
+        </ul>
+      </div>
+
+      <div className="notify-help-block">
+        <div className="notify-help-heading">Output</div>
+        <ul className="notify-help-list notify-help-list-plain">
+          <li>Up to 10 events per check.</li>
+          <li>Long text is truncated; Discord gets one embed per event.</li>
+          <li>Up to 5 attachments per webhook message.</li>
+          <li>
+            Vote changes show the score delta and added/removed voters when
+            known.
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 /** Recursively sort object keys so two equivalent filters serialize identically. */
 function canonical(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(canonical);
@@ -195,6 +249,7 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
   const [endpoint, setEndpoint] = useState<string | null>(null);
   const [subs, setSubs] = useState<SubscriptionView[]>([]);
   const [open, setOpen] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -244,6 +299,12 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
   useEffect(() => {
     if (endpoint) void refreshList(endpoint);
   }, [endpoint, refreshList]);
+
+  useEffect(() => {
+    if (!open) {
+      setHelpOpen(false);
+    }
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
@@ -436,7 +497,25 @@ export function Notifications({ luceneMode }: { luceneMode: boolean }) {
         </button>
         {open ? (
           <div className="notify-menu" role="menu">
-            <div className="notify-menu-head">Notify me of</div>
+            <div className="notify-menu-head">
+              <span>Notify me of</span>
+              <div className="notify-help-wrap">
+                <button
+                  type="button"
+                  className="notify-help-button"
+                  aria-label="How notifications work"
+                  aria-expanded={helpOpen}
+                  aria-controls="notify-help-tooltip"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setHelpOpen((v) => !v);
+                  }}
+                >
+                  ?
+                </button>
+                {helpOpen ? <NotifyHelpPopover /> : null}
+              </div>
+            </div>
 
             <div className="notify-section">
               <div className="notify-section-title">Current filter</div>

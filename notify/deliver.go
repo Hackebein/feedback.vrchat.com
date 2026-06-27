@@ -47,10 +47,6 @@ type NotificationEvent struct {
 	Created      string           `json:"created"`
 }
 
-// maxEventsPerTick caps how many notifications a single subscription emits per
-// poll so a burst of matches cannot flood a browser or webhook.
-const maxEventsPerTick = 10
-
 // Text budgets for assembling notification bodies.
 const (
 	postExcerptMax        = 400
@@ -77,9 +73,6 @@ const (
 )
 
 func (d *Dispatcher) deliver(ctx context.Context, sub Subscription, events []NotificationEvent) {
-	if len(events) > maxEventsPerTick {
-		events = events[len(events)-maxEventsPerTick:]
-	}
 	switch sub.Target {
 	case "push":
 		d.deliverPush(sub, events)
