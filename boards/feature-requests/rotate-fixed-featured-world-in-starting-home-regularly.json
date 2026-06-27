@@ -2,9 +2,9 @@
   "_id": "6a3eabfeb1dde9ed5cfa0cab",
   "aiCategories": [
     "loc.main-menu",
-    "client.settings"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-06-27T15:55:46.832121Z",
+  "aiTaggedAt": "2026-06-27T16:22:48.301997Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a3eab9ef51f79a5db2390a8",
@@ -124,7 +124,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Current Problem:\n\nThe official featured/pinned popular world slot is permanently locked to one single map for weeks or even months.\n\nThis creates multiple negative experiences:\n\n1. New players only see the same map every time they open the game, missing out on many other high-quality, popular community worlds.\n\n2. The permanently featured world becomes extremely overcrowded, causing lag, performance drops, and long loading times for everyone who joins.\n\n3. Talented world creators cannot get exposure for their popular maps, as the featured spot never cycles.\n\n4. Regular players get bored seeing the same pinned map every day with no variety.\n\nFeature Request:\n\nAdd an automatic rotation system for the official featured popular world slot:\n\n1. Cycle a selection of high-popularity, well-rated community worlds on a fixed schedule (e.g., every 24 / 48 / 72 hours).\n\n2. Keep the original featured slot UI, just swap out the map on rotation timers.\n\n3. Prioritize worlds with stable player counts, positive user ratings, and active creators for the rotation pool.\n\n4. Keep seasonal/event worlds in the rotation pool during their active periods.\n\nBenefits for VRChat & Players:\n\n1. Distribute player traffic across multiple popular worlds to reduce overcrowding and lag.\n\n2. Give more world creators fair visibility to grow their audiences.\n\n3. Offer daily variety for returning players, improving long-term engagement.\n\n4. Help new users discover more types of VRChat environments instead of only one fixed map.\n\n5. No heavy performance or backend cost; only a simple timed content swap for the featured UI panel.",
+  "details": "Current Problem\n\n \n\nThe official pinned featured world slot in the Home spawn lobby stays locked to a single map for weeks, sometimes months, with zero rotation. This leads to a range of persistent bad user experiences:\n\n \n\n1. New players are only exposed to one world on launch. They falsely assume this is the main social hub of VRChat and overlook countless high-quality, well-liked community worlds of all genres.\n\n​\n\n2. The permanently pinned world hits its 80-player cap constantly. Overcrowding triggers severe frame drops, lag, extended loading screens, and frequent crashes especially for Quest users.\n\n​\n\n3. Dedicated world creators miss critical front-page exposure. Even highly rated, consistently populated custom worlds never get featured, killing motivation to update and create new content long-term.\n\n​\n\n4. Veteran players lose exploration incentive. Seeing the identical pinned map every login makes the platform feel stale and repetitive over time.\n\n \n\nFeature Request\n\n \n\nImplement an automatic scheduled rotation system exclusively for the Home lobby’s top pinned featured world slot:\n\n \n\n1. Rotate a curated pool of well-performing community worlds on an adjustable fixed timer (24/48/72 hour cycles as options).\n\n​\n\n2. Retain the existing featured portal UI entirely; only automate map swaps based on the rotation timer, no major interface redesign required.\n\n​\n\n3. Curate the rotation pool to prioritize worlds with steady player counts, high user ratings, and actively updating creators.\n\n​\n\n4. Include limited-time seasonal and event worlds within the pool while their events are live for timely themed variety.\n\n \n\nBenefits for VRChat, Creators & All Players\n\n \n\n1. Natural player traffic distribution across multiple top worlds to ease overcrowding, frame lag, and device crashes.\n\n​\n\n2. Fair, equal front-page visibility for more map creators to grow their communities sustainably.\n\n​\n\n3. Daily fresh featured content to retain long-term players and boost platform engagement.\n\n​\n\n4. Broaden new players’ first impression of VRChat, letting them discover diverse scene types beyond a single fixed world.\n\n​\n\n5. Minimal backend and performance overhead; this only requires simple timed asset swapping for the featured UI panel, with no extra server load.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -132,7 +132,7 @@
   "files": [],
   "ideaID": "6a3eabfdb1dde9ed5cfa0ca8",
   "imageURLs": [],
-  "lastUpdated": 1782574106840,
+  "lastUpdated": 1782575807783,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -146,11 +146,11 @@
   "status": "open",
   "statusChanged": "2026-06-26T16:42:38.238Z",
   "subCategoryID": null,
-  "title": "Rotate Featured Popular Worlds Instead of Locking on a Single One",
+  "title": "Rotate Fixed Featured World in Starting Home Regularly",
   "trendingScore": 2947.935472197921,
-  "updatedAt": "2026-06-27T15:55:41.323201Z",
-  "updatedBy": null,
-  "urlName": "rotate-featured-popular-worlds-instead-of-locking-on-a-single-one",
+  "updatedAt": "2026-06-27T16:22:42.750983Z",
+  "updatedBy": "6a3eab9ef51f79a5db2390a8",
+  "urlName": "rotate-fixed-featured-world-in-starting-home-regularly",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
