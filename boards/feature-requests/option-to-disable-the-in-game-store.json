@@ -1,10 +1,10 @@
 {
   "_id": "6a3e366d7ab97c1e83661122",
   "aiCategories": [
-    "loc.in-world",
+    "loc.main-menu",
     "monetization.shop"
   ],
-  "aiTaggedAt": "2026-06-26T22:56:35.074175Z",
+  "aiTaggedAt": "2026-06-27T23:40:42.002386Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "627757b4c39b16529dacbcf1",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a3e9c350fb853d9fb61b3c6",
@@ -64,7 +64,9 @@
       "postDeleted": false,
       "postID": "6a3e366d7ab97c1e83661122",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -109,7 +111,7 @@
       "postID": "6a3e366d7ab97c1e83661122",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -117,6 +119,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I agree",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a4056415994320469fb6b3b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a4053c4f51f79a5db5fed18",
+        "alias": "Nectarine Hamster",
+        "aliasID": "6a4053c5f51f79a5db5fed1c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6a2c48eda317b28ae304c227c38dc21c.png",
+        "created": "2026-06-27T22:50:44.899Z",
+        "name": "Xaero97",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-27T23:01:21.742Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3e366d7ab97c1e83661122",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I do buy stuff from the store ofc, but It is annoying that every single I join, all the ads for items or add-ons is constantly stuck in my notification box. There should in-fact some kind of filter option that turns All or at least, which ones you want on or off.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -134,7 +180,7 @@
   "files": [],
   "ideaID": "6a3e366c7ab97c1e83661120",
   "imageURLs": [],
-  "lastUpdated": 1782601178156,
+  "lastUpdated": 1782601995918,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 6,
@@ -150,7 +196,7 @@
   "subCategoryID": null,
   "title": "Option to disable the in-game store",
   "trendingScore": 2949.1954813447123,
-  "updatedAt": "2026-06-27T23:12:20.818289Z",
+  "updatedAt": "2026-06-27T23:40:36.559940Z",
   "updatedBy": "627757b4c39b16529dacbcf1",
   "urlName": "option-to-disable-the-in-game-store",
   "viewerIsAuthor": false,
