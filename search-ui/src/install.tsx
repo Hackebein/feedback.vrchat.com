@@ -86,8 +86,7 @@ function InstallPage(): React.ReactElement {
           >
             feedback.vrchat.com
           </a>{" "}
-          with this faster gateway search. It runs in a userscript manager
-          such as Tampermonkey or Violentmonkey.
+          with this more advanced search engine. It runs in a userscript manager.
         </p>
       </header>
 
