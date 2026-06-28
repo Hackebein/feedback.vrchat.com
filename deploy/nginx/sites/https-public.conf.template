@@ -69,19 +69,29 @@ server {
 
     location = /openapi.json {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
+        include /etc/nginx/conf.d/feedback-search-static-cache-short.inc;
         alias /var/www/feedback-search/openapi.json;
         default_type application/json;
         charset utf-8;
     }
 
+    location ^~ /assets/ {
+        include /etc/nginx/conf.d/feedback-search-public-cors.inc;
+        include /etc/nginx/conf.d/feedback-search-static-cache-immutable.inc;
+        root /var/www/feedback-search;
+        try_files $uri =404;
+    }
+
     location = / {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
+        include /etc/nginx/conf.d/feedback-search-static-cache-short.inc;
         root /var/www/feedback-search;
         try_files /index.html =404;
     }
 
     location / {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
+        include /etc/nginx/conf.d/feedback-search-static-cache-short.inc;
         root /var/www/feedback-search;
         try_files $uri $uri/ /index.html;
     }

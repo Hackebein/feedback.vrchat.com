@@ -31,6 +31,8 @@ install -d /etc/nginx/conf.d
 
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-public-cors.inc" /etc/nginx/conf.d/feedback-search-public-cors.inc
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-http-proxy-defaults.inc" /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-static-cache-short.inc" /etc/nginx/conf.d/feedback-search-static-cache-short.inc
+install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-static-cache-immutable.inc" /etc/nginx/conf.d/feedback-search-static-cache-immutable.inc
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.conf" /etc/nginx/conf.d/feedback-search-gateway-upstream.conf
 
 bash "${DEPLOY_ROOT}/scripts/install_cloudflare_real_ip.sh"
