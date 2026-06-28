@@ -71,6 +71,9 @@ type BoardOption = { slug: string; name: string };
 /** Set before dropdown-driven router navigation; consumed by bridge preselect. */
 let suppressBoardPreselect = false;
 
+/** True once the user has opened the create form; preserved across dropdown board changes. */
+let createFormExpanded = false;
+
 /** Returns true once if the create-post dropdown just navigated boards. */
 export function consumeBoardPreselectSuppression(): boolean {
   if (!suppressBoardPreselect) {
@@ -206,6 +209,7 @@ function navigateToBoard(target: Window & typeof globalThis, slug: string): void
   const history = getRouterHistory(target);
   if (history) {
     suppressBoardPreselect = true;
+    createFormExpanded = true;
     history.push(`/${slug}`);
   } else {
     console.warn("[vrcfb] router history not found; cannot switch board");
@@ -219,6 +223,7 @@ function buildToggle(target: Window & typeof globalThis): HTMLButtonElement {
   button.type = "button";
   button.textContent = "Create post";
   button.addEventListener("click", () => {
+    createFormExpanded = true;
     target.document.documentElement.classList.remove(COLLAPSED_CLASS);
   });
   return button;
@@ -279,6 +284,7 @@ export function installCreateBoardSelect(target: Window & typeof globalThis): vo
     if (!isLocationCovered(target)) {
       removeExisting();
       doc.documentElement.classList.remove(COLLAPSED_CLASS);
+      createFormExpanded = false;
       return;
     }
     if (doc.getElementById(PICKER_ID) && doc.getElementById(TOGGLE_ID)) {
@@ -303,7 +309,11 @@ export function installCreateBoardSelect(target: Window & typeof globalThis): vo
         form.appendChild(picker);
       }
     }
-    doc.documentElement.classList.add(COLLAPSED_CLASS);
+    if (createFormExpanded) {
+      doc.documentElement.classList.remove(COLLAPSED_CLASS);
+    } else {
+      doc.documentElement.classList.add(COLLAPSED_CLASS);
+    }
   };
 
   // On a direct load / reload Canny server-renders the create form and then
