@@ -104,7 +104,6 @@ export const LUCENE_HELP_INTRO = [
 ];
 
 export const SORT_HELP = [
-  "Sorting uses Canny’s existing sort menu — the bridge maps it to OpenSearch:",
-  "Search (no sort chosen): relevance.",
-  "New → newest, Trending → last activity, Top → votes, Old → oldest.",
+  "Pick a sort with the dropdown next to the search box.",
+  "With a query and no sort chosen, results fall back to relevance.",
 ];

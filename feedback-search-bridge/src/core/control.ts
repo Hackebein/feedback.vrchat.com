@@ -1,4 +1,11 @@
-import { hasActiveFilters } from "./filter-state";
+import {
+  DEFAULT_SORT,
+  getSort,
+  hasActiveFilters,
+  onFilterStateChange,
+  setSort,
+} from "./filter-state";
+import { LUCENE_CLASS, SORT_OPTIONS } from "./filter-sidebar";
 import { LUCENE_HELP_INTRO, LUCENE_HELP_ROWS, SORT_HELP } from "./lucene-help";
 import { readActiveSearchQuery } from "./search-refresh";
 import type { BridgeSettings, BridgeStorage } from "./types";
@@ -37,6 +44,23 @@ const CONTROL_CSS = `
 }
 #${CONTROL_ID} input {
   margin: 0;
+}
+#${CONTROL_ID} .vrcfb-control-sort {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+html.${LUCENE_CLASS} #${CONTROL_ID} .vrcfb-control-sort {
+  display: inline-flex;
+}
+#${CONTROL_ID} .vrcfb-control-sort select {
+  padding: 3px 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.7);
+  color: inherit;
+  font: inherit;
 }
 #${CONTROL_ID} .vrcfb-help-btn {
   display: inline-flex;
@@ -222,6 +246,26 @@ function createControlRoot(
   });
   luceneLabel.append(luceneInput, document.createTextNode("Lucene"));
 
+  const sortLabel = document.createElement("label");
+  sortLabel.className = "vrcfb-control-sort";
+  sortLabel.appendChild(document.createTextNode("Sort"));
+  const sortSelect = document.createElement("select");
+  for (const option of SORT_OPTIONS) {
+    const opt = document.createElement("option");
+    opt.value = option.value;
+    opt.textContent = option.label;
+    sortSelect.appendChild(opt);
+  }
+  sortSelect.value = getSort() || DEFAULT_SORT;
+  sortSelect.addEventListener("change", () => {
+    setSort(sortSelect.value);
+    onSearchRefresh();
+  });
+  onFilterStateChange(() => {
+    sortSelect.value = getSort() || DEFAULT_SORT;
+  });
+  sortLabel.appendChild(sortSelect);
+
   const helpBtn = document.createElement("button");
   helpBtn.type = "button";
   helpBtn.className = "vrcfb-help-btn";
@@ -238,7 +282,7 @@ function createControlRoot(
     helpBtn.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
-  root.append(luceneLabel, helpBtn);
+  root.append(luceneLabel, sortLabel, helpBtn);
 
   document.addEventListener("vrcfb-settings-changed", ((event: CustomEvent<BridgeSettings>) => {
     current = event.detail;

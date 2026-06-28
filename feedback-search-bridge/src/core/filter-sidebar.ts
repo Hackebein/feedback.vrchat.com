@@ -29,7 +29,7 @@ function valueLabel(attr: string, value: string): string {
 
 const STYLE_ID = "vrcfb-sidebar-style";
 const PANEL_ID = "vrcfb-filter-panel";
-const LUCENE_CLASS = "vrcfb-lucene";
+export const LUCENE_CLASS = "vrcfb-lucene";
 const SIDEBAR_CONTAINER_SELECTOR = ".sidebarContainer";
 const NATIVE_BOARD_SELECTOR = "ul.boardListContainer";
 const COLLAPSED_LIMIT = 8;
@@ -94,7 +94,7 @@ const SECTIONS: Section[] = [
   },
 ];
 
-const SORT_OPTIONS: { label: string; value: string }[] = [
+export const SORT_OPTIONS: { label: string; value: string }[] = [
   { label: "Newest", value: "newest" },
   { label: "Oldest", value: "created_asc" },
   { label: "Newest activity", value: "activity_desc" },
