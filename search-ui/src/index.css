@@ -1982,3 +1982,77 @@ mark {
     justify-content: flex-start;
   }
 }
+
+.install-layout {
+  max-width: 52rem;
+}
+
+.install-status {
+  margin: 0 0 1.5rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+.install-status--ok {
+  background: #16261a;
+  border-color: #2f5d3a;
+  color: #b7e6c2;
+}
+
+.install-status--idle {
+  background: #1a1f2a;
+  border-color: #3a4258;
+  color: #9aa3b8;
+}
+
+.install-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.install-step {
+  padding: 1.1rem 1.2rem;
+  background: #151a23;
+  border: 1px solid #28303f;
+  border-radius: 10px;
+}
+
+.install-step h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.install-step ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.install-step li {
+  margin: 0.25rem 0;
+}
+
+.install-button {
+  display: inline-block;
+  margin: 0.3rem 0;
+  padding: 0.65rem 1.3rem;
+  background: #3b6fe0;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.install-button:hover {
+  background: #4d7df0;
+}
+
+.install-hint {
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  color: #8a93a8;
+}

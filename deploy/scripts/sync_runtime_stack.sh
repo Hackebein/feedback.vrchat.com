@@ -97,9 +97,10 @@ rm -rf "${WWW_ROOT}/assets"
 cp -a "${REPO}/search-ui/dist/web/"* "${WWW_ROOT}/"
 
 (cd "${REPO}/feedback-search-bridge" && npm ci && npm run build)
+# Path must end in ".user.js" so userscript managers auto-trigger the install prompt.
 install -m 0644 \
-  "${REPO}/feedback-search-bridge/dist/vrchat-feedback-search.user.js" \
-  "${WWW_ROOT}/vrchat-feedback-search.user.js"
+  "${REPO}/feedback-search-bridge/dist/feedback.vrchat.com.user.js" \
+  "${WWW_ROOT}/feedback.vrchat.com.user.js"
 
 chmod -R a+rX "${WWW_ROOT}"
 

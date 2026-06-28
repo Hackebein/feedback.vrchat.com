@@ -1594,8 +1594,7 @@ export function App() {
                 API reference
               </a>
               .{" "}
-              <a href="/vrchat-feedback-search.user.js">Install userscript</a>{" "}
-              (requires Tampermonkey or Violentmonkey).
+              <a href="/install.html">Install userscript</a>.
             </p>
           </div>
           <Notifications luceneMode={luceneMode} />

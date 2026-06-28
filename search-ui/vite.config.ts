@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: path.resolve(import.meta.dirname, "index.html"),
         openapi: path.resolve(import.meta.dirname, "openapi.html"),
+        install: path.resolve(import.meta.dirname, "install.html"),
       },
     },
   },
