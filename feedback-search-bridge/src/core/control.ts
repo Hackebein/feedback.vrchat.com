@@ -208,7 +208,8 @@ function buildHelpPanel(): HTMLElement {
 function positionHelpPanel(panel: HTMLElement, anchor: HTMLElement): void {
   const rect = anchor.getBoundingClientRect();
   panel.style.right = `${Math.max(12, window.innerWidth - rect.right)}px`;
-  panel.style.bottom = `${Math.max(12, window.innerHeight - rect.top + 8)}px`;
+  panel.style.top = `${rect.bottom + 8}px`;
+  panel.style.bottom = "auto";
   panel.style.left = "auto";
 }
 

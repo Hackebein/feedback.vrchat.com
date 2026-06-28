@@ -24,6 +24,18 @@ export function viewerId(target?: Window & typeof globalThis): string {
   );
 }
 
+export function viewerName(target?: Window & typeof globalThis): string {
+  const viewer = (target as unknown as {
+    __data?: { viewer?: { name?: string; fullName?: string } };
+  } | undefined)?.__data?.viewer;
+  const name = typeof viewer?.name === "string" ? viewer.name.trim() : "";
+  if (name) {
+    return name;
+  }
+  const fullName = typeof viewer?.fullName === "string" ? viewer.fullName.trim() : "";
+  return fullName;
+}
+
 /** Collected voter ids (`_id` and `aliasID`) for a gateway hit. */
 function voterIds(hit: Record<string, unknown>): Set<string> {
   const ids = new Set<string>();

@@ -38,6 +38,17 @@ html:not(.${COLLAPSED_CLASS}) #${TOGGLE_ID} {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
+#${PICKER_ID} {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#${PICKER_ID} .descriptionLabel {
+  margin: 0;
+}
+#${PICKER_ID} .descriptionLabel p {
+  margin: 0;
+}
 `;
 
 type BoardOption = { slug: string; name: string };
@@ -218,7 +229,7 @@ function buildPicker(target: Window & typeof globalThis): HTMLElement | null {
   label.className = "descriptionLabel";
   const labelText = doc.createElement("p");
   labelText.className = "textV2 bodyMd medium-weight";
-  labelText.textContent = "Post to board";
+  labelText.textContent = "Board";
   label.appendChild(labelText);
   wrap.appendChild(label);
 

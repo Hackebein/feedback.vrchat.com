@@ -60,6 +60,8 @@ type PostMeta = {
   createdISO: string;
 };
 
+export type { PostMeta };
+
 let metaByUrlName = new Map<string, PostMeta>();
 let activeTerms: string[] = [];
 
@@ -141,32 +143,36 @@ function urlNameFromLink(link: HTMLAnchorElement): string | null {
   }
 }
 
-function appendSeparator(
-  target: Window & typeof globalThis,
-  parent: HTMLElement,
-): void {
-  const sep = target.document.createElement("span");
+function appendSeparator(doc: Document, parent: HTMLElement): void {
+  const sep = doc.createElement("span");
   sep.className = "vrcfb-sep";
   sep.setAttribute("aria-hidden", "true");
   sep.textContent = "·";
   parent.appendChild(sep);
 }
 
-function buildMetaGroup(
-  target: Window & typeof globalThis,
-  meta: PostMeta,
-): HTMLElement {
-  const group = target.document.createElement("span");
+export function postMetaFromHit(hit: Record<string, unknown>): PostMeta {
+  const author = hit.author;
+  return {
+    authorName: readString(author, "name"),
+    avatarURL: readString(author, "avatarURL"),
+    createdLabel: formatCreatedAt(hit.created),
+    createdISO: typeof hit.created === "string" ? hit.created : "",
+  };
+}
+
+export function buildPostMeta(doc: Document, meta: PostMeta): HTMLElement {
+  const group = doc.createElement("span");
   group.className = `${META_CLASS} text-secondary-foreground text-sm`;
 
   if (meta.authorName) {
-    appendSeparator(target, group);
+    appendSeparator(doc, group);
 
-    const chip = target.document.createElement("span");
+    const chip = doc.createElement("span");
     chip.className = "vrcfb-chip";
 
     if (meta.avatarURL) {
-      const avatar = target.document.createElement("img");
+      const avatar = doc.createElement("img");
       avatar.className = "vrcfb-avatar";
       avatar.src = meta.avatarURL;
       avatar.alt = "";
@@ -174,14 +180,14 @@ function buildMetaGroup(
       avatar.referrerPolicy = "no-referrer";
       chip.appendChild(avatar);
     } else {
-      const placeholder = target.document.createElement("span");
+      const placeholder = doc.createElement("span");
       placeholder.className = "vrcfb-avatar vrcfb-avatar-placeholder";
       placeholder.setAttribute("aria-hidden", "true");
       placeholder.textContent = meta.authorName.slice(0, 1);
       chip.appendChild(placeholder);
     }
 
-    const author = target.document.createElement("span");
+    const author = doc.createElement("span");
     author.className = "vrcfb-author";
     author.textContent = meta.authorName;
     chip.appendChild(author);
@@ -190,11 +196,11 @@ function buildMetaGroup(
   }
 
   if (meta.createdLabel) {
-    appendSeparator(target, group);
+    appendSeparator(doc, group);
 
-    const chip = target.document.createElement("span");
+    const chip = doc.createElement("span");
     chip.className = "vrcfb-chip";
-    const created = target.document.createElement("time");
+    const created = doc.createElement("time");
     created.textContent = meta.createdLabel;
     if (meta.createdISO) {
       created.dateTime = meta.createdISO;
@@ -204,6 +210,13 @@ function buildMetaGroup(
   }
 
   return group;
+}
+
+function buildMetaGroup(
+  target: Window & typeof globalThis,
+  meta: PostMeta,
+): HTMLElement {
+  return buildPostMeta(target.document, meta);
 }
 
 function findMetaTarget(item: HTMLElement): HTMLElement | null {
@@ -220,6 +233,9 @@ function augmentAll(target: Window & typeof globalThis): void {
     target.document.querySelectorAll<HTMLElement>(POST_ITEM_SELECTOR),
   );
   for (const item of items) {
+    if (item.closest("#vrcfb-roadmap")) {
+      continue;
+    }
     const link = item.querySelector<HTMLAnchorElement>("a.postLink");
     const metaTarget = findMetaTarget(item);
     if (!link || !metaTarget) {
@@ -265,6 +281,9 @@ function applyHighlights(target: Window & typeof globalThis): void {
   );
 
   for (const item of items) {
+    if (item.closest("#vrcfb-roadmap")) {
+      continue;
+    }
     const walker = target.document.createTreeWalker(item, NodeFilter.SHOW_TEXT);
     let node = walker.nextNode();
     while (node) {

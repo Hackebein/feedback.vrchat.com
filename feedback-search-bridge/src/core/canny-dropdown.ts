@@ -49,11 +49,6 @@ const DROPDOWN_CSS = `
   z-index: 5250;
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
-  border: 1px solid rgba(127, 127, 127, 0.35);
-  background: var(--popover, var(--background, #fff));
-  color: inherit;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 .vrcfb-dropdown-panel.hidden {
@@ -64,7 +59,6 @@ const DROPDOWN_CSS = `
   align-items: center;
   gap: 6px;
   padding: 6px 8px;
-  border-bottom: 1px solid rgba(127, 127, 127, 0.25);
 }
 .vrcfb-dropdown-search svg {
   flex-shrink: 0;
@@ -97,14 +91,7 @@ const DROPDOWN_CSS = `
   color: inherit;
   font: inherit;
   padding: 6px 8px;
-  border-radius: 4px;
   cursor: pointer;
-}
-.vrcfb-dropdown-option:hover {
-  background: rgba(127, 127, 127, 0.12);
-}
-.vrcfb-dropdown-option[aria-selected="true"] {
-  background: rgba(0, 123, 255, 0.12);
 }
 .vrcfb-dropdown-empty {
   padding: 8px;
@@ -199,13 +186,14 @@ export function createCannyDropdown(opts: CannyDropdownOptions): CannyDropdownHa
   trigger.append(valueEl, chevron);
 
   const panel = doc.createElement("div");
-  panel.className = "vrcfb-dropdown-panel hidden";
+  panel.className =
+    "vrcfb-dropdown-panel bg-popover text-popover-foreground base-border shadow-md rounded-sm hidden";
   panel.setAttribute("role", "listbox");
 
   let searchInput: HTMLInputElement | null = null;
   if (searchable) {
     const searchWrap = doc.createElement("div");
-    searchWrap.className = "vrcfb-dropdown-search";
+    searchWrap.className = "vrcfb-dropdown-search base-border-b p-1";
     searchWrap.innerHTML = SEARCH_SVG;
     searchInput = doc.createElement("input");
     searchInput.type = "text";
@@ -252,7 +240,16 @@ export function createCannyDropdown(opts: CannyDropdownOptions): CannyDropdownHa
     for (const option of filtered) {
       const button = doc.createElement("button");
       button.type = "button";
-      button.className = "vrcfb-dropdown-option";
+      const selected = option.value === value;
+      button.className = [
+        "vrcfb-dropdown-option",
+        "rounded-sm",
+        "hover:bg-accent",
+        "hover:text-accent-foreground",
+        selected ? "bg-accent text-accent-foreground" : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
       button.setAttribute("role", "option");
       button.setAttribute("aria-selected", option.value === value ? "true" : "false");
       button.textContent = option.label;

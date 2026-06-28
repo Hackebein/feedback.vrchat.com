@@ -1,6 +1,7 @@
 import { currentSlug, isLocationCovered, onRouteChange } from "./coverage";
+import { buildPostMeta, postMetaFromHit } from "./list-augment";
 import { fetchPresetPosts, type PresetQuery } from "./search-handler";
-import { hitVotedByViewer } from "./viewer-votes";
+import { hitVotedByViewer, viewerLoggedIn, viewerName } from "./viewer-votes";
 import type { BridgeOptions } from "./types";
 
 const STYLE_ID = "vrcfb-roadmap-style";
@@ -119,6 +120,24 @@ function postUrl(hit: Record<string, unknown>): string | null {
   return `/${boardSlug}/p/${postSlug}`;
 }
 
+function columnsFor(target: Window & typeof globalThis): Column[] {
+  const columns = [...COLUMNS];
+  if (viewerLoggedIn(target)) {
+    const name = viewerName(target);
+    if (name) {
+      columns.push({
+        title: "Your votes",
+        color: "#0ea5e9",
+        preset: {
+          refinements: { voter_name: [name] },
+          sort: "activity_desc",
+        },
+      });
+    }
+  }
+  return columns;
+}
+
 function note(doc: Document, text: string): HTMLElement {
   const div = doc.createElement("div");
   div.className = "vrcfb-roadmap-note";
@@ -189,6 +208,11 @@ function renderItems(
       body.appendChild(boardEl);
     }
 
+    const meta = postMetaFromHit(hit);
+    if (meta.authorName || meta.createdLabel) {
+      body.appendChild(buildPostMeta(doc, meta));
+    }
+
     link.appendChild(body);
     item.appendChild(link);
     posts.appendChild(item);
@@ -218,7 +242,7 @@ function buildRoadmap(
   columns.className = "roadmapColumns";
   root.appendChild(columns);
 
-  for (const column of COLUMNS) {
+  for (const column of columnsFor(target)) {
     const col = doc.createElement("div");
     col.className = "roadmapColumn";
 
