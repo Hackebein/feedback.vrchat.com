@@ -2,22 +2,52 @@ import { currentSlug, isLocationCovered, onRouteChange } from "./coverage";
 
 const STYLE_ID = "vrcfb-board-picker-style";
 const PICKER_ID = "vrcfb-board-picker";
+const TOGGLE_ID = "vrcfb-create-toggle";
 const CREATE_FORM_SELECTOR = ".createPostFormV2";
 const NATIVE_BOARD_LINK_SELECTOR = "ul.boardListContainer a";
+const COLLAPSED_CLASS = "vrcfb-create-collapsed";
 
 // Reuse Canny's `.createPostFormSection` / `.descriptionLabel` wrappers and its
 // `.input-border` utility on the <select>; the rest mimics Canny's dropdowns
 // (bordered, rounded, chevron affordance) via an appearance reset.
 const PICKER_CSS = `
+html.${COLLAPSED_CLASS} .createPostFormV2 > *:not(#${TOGGLE_ID}) {
+  display: none !important;
+}
+html:not(.${COLLAPSED_CLASS}) #${TOGGLE_ID} {
+  display: none !important;
+}
+#${TOGGLE_ID} {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+#${TOGGLE_ID}:hover {
+  background: #1d4ed8;
+}
+#${TOGGLE_ID}:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
 #${PICKER_ID} select {
   width: 100%;
   box-sizing: border-box;
   height: 32px;
   padding: 0 30px 0 12px;
   border-radius: 6px;
+  border: 1px solid rgba(127, 127, 127, 0.4);
   color: inherit;
   font: inherit;
-  background-color: transparent;
+  background-color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -27,9 +57,28 @@ const PICKER_CSS = `
   background-size: 16px;
   cursor: pointer;
 }
+#${PICKER_ID} select:hover {
+  border-color: rgba(127, 127, 127, 0.6);
+}
+#${PICKER_ID} select:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
 `;
 
 type BoardOption = { slug: string; name: string };
+
+/** Set before dropdown-driven router navigation; consumed by bridge preselect. */
+let suppressBoardPreselect = false;
+
+/** Returns true once if the create-post dropdown just navigated boards. */
+export function consumeBoardPreselectSuppression(): boolean {
+  if (!suppressBoardPreselect) {
+    return false;
+  }
+  suppressBoardPreselect = false;
+  return true;
+}
 
 function ensureStyles(target: Window & typeof globalThis): void {
   const doc = target.document;
@@ -156,10 +205,23 @@ function navigateToBoard(target: Window & typeof globalThis, slug: string): void
   // fields and the URL updates without a full reload (preserving filter state).
   const history = getRouterHistory(target);
   if (history) {
+    suppressBoardPreselect = true;
     history.push(`/${slug}`);
   } else {
     console.warn("[vrcfb] router history not found; cannot switch board");
   }
+}
+
+function buildToggle(target: Window & typeof globalThis): HTMLButtonElement {
+  const doc = target.document;
+  const button = doc.createElement("button");
+  button.id = TOGGLE_ID;
+  button.type = "button";
+  button.textContent = "Create post";
+  button.addEventListener("click", () => {
+    target.document.documentElement.classList.remove(COLLAPSED_CLASS);
+  });
+  return button;
 }
 
 function buildPicker(target: Window & typeof globalThis): HTMLElement | null {
@@ -209,15 +271,17 @@ export function installCreateBoardSelect(target: Window & typeof globalThis): vo
 
   const removeExisting = (): void => {
     target.document.getElementById(PICKER_ID)?.remove();
+    target.document.getElementById(TOGGLE_ID)?.remove();
   };
 
   const mount = (): void => {
     const doc = target.document;
     if (!isLocationCovered(target)) {
       removeExisting();
+      doc.documentElement.classList.remove(COLLAPSED_CLASS);
       return;
     }
-    if (doc.getElementById(PICKER_ID)) {
+    if (doc.getElementById(PICKER_ID) && doc.getElementById(TOGGLE_ID)) {
       return;
     }
     const form = doc.querySelector<HTMLElement>(CREATE_FORM_SELECTOR);
@@ -228,7 +292,18 @@ export function installCreateBoardSelect(target: Window & typeof globalThis): vo
     if (!picker) {
       return;
     }
-    form.insertBefore(picker, form.firstChild);
+    if (!doc.getElementById(TOGGLE_ID)) {
+      form.insertBefore(buildToggle(target), form.firstChild);
+    }
+    if (!doc.getElementById(PICKER_ID)) {
+      const toggle = doc.getElementById(TOGGLE_ID);
+      if (toggle?.nextSibling) {
+        form.insertBefore(picker, toggle.nextSibling);
+      } else {
+        form.appendChild(picker);
+      }
+    }
+    doc.documentElement.classList.add(COLLAPSED_CLASS);
   };
 
   // On a direct load / reload Canny server-renders the create form and then
@@ -240,7 +315,8 @@ export function installCreateBoardSelect(target: Window & typeof globalThis): vo
     mount();
 
     const observer = new MutationObserver(() => {
-      if (!target.document.getElementById(PICKER_ID)) {
+      const doc = target.document;
+      if (!doc.getElementById(PICKER_ID) || !doc.getElementById(TOGGLE_ID)) {
         mount();
       }
     });

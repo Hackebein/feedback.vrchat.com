@@ -1,7 +1,10 @@
 import { installNetworkIntercept } from "./intercept";
 import { installListAugment } from "./list-augment";
 import { applyLuceneMode, installFilterSidebar } from "./filter-sidebar";
-import { installCreateBoardSelect } from "./create-board-select";
+import {
+  consumeBoardPreselectSuppression,
+  installCreateBoardSelect,
+} from "./create-board-select";
 import { installRoadmap } from "./roadmap";
 import { installAttribution } from "./attribution";
 import {
@@ -109,6 +112,9 @@ export function installBridge(
   // Preselect the board facet when arriving at a board via SPA navigation too
   // (the empty-guard inside keeps it from clobbering an existing selection).
   onRouteChange(target, () => {
+    if (consumeBoardPreselectSuppression()) {
+      return;
+    }
     if (preselectCurrentBoard(target)) {
       triggerRefresh();
     }
