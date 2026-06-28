@@ -97,7 +97,7 @@ export const LUCENE_HELP_ROWS: LuceneHelpRow[] = [
 ];
 
 export const LUCENE_HELP_INTRO = [
-  "Lucene is on by default. Uncheck for plain keyword search.",
+  "Check Lucene for field:value queries; uncheck for plain keyword search with filters.",
   "Use field:value in the search box. Quotes for phrases. [min TO max] for ranges.",
   "comments.* and voters.* match if any nested comment/voter satisfies the clause.",
   "Bare terms search combined title, body, and author name.",
