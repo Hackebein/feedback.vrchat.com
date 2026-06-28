@@ -307,6 +307,14 @@ export function searchkitConfig(host: string, username: string, password: string
           field: "lastActivityAt",
           order: "asc" as const,
         },
+        _statusChanged_desc: {
+          field: "statusChanged",
+          order: "desc" as const,
+        },
+        _statusChanged_asc: {
+          field: "statusChanged",
+          order: "asc" as const,
+        },
       },
       query_rules: [],
     },

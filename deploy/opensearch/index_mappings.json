@@ -3,6 +3,7 @@
     "number_of_shards": 1,
     "number_of_replicas": 0,
     "index.mapping.total_fields.limit": 2000,
+    "index.mapping.nested_objects.limit": 1000000,
     "index.max_result_window": 50000,
     "analysis": {
       "char_filter": {

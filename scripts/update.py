@@ -852,22 +852,22 @@ def apply_results(stored, results, now, tree, system_prompt, api_key):
 
         prev_post = info.get("post")
 
-        # When the vote count changed, the post page only embeds the first ~10
-        # voters, so fetch the full voters list. If the new score still fits in
-        # the embedded list (<= what the page returned) it is already complete.
+        # The post detail scrape only embeds the first ~10 voters, so for any
+        # post with more votes than that the stored list is incomplete. Keep
+        # whichever list we already have that is larger (never shrink a
+        # previously-fetched complete list back to the embedded subset), then
+        # (re)fetch the full list via getVoters whenever the score shows the
+        # best list we hold is still incomplete. This self-heals stable popular
+        # posts that were first scraped with only the embedded voters, and keeps
+        # the list complete as the score grows. (Vote-change notifications diff
+        # this list to name added/removed voters, so a partial list is unreliable.)
         new_score = post.get("score") or 0
-        embedded_voters = len(post.get("voters") or [])
-        if new_score != (prev_post or {}).get("score") and new_score > embedded_voters:
+        embedded_voters = post.get("voters") or []
+        prev_voters = (prev_post or {}).get("voters") or []
+        best_voters = embedded_voters if len(embedded_voters) >= len(prev_voters) else prev_voters
+        post["voters"] = best_voters
+        if new_score > len(best_voters):
             voter_jobs.append((pid, post))
-        elif prev_post:
-            # Not refetching this run: the detail scrape only embeds ~10 voters,
-            # which would shrink a previously-fetched complete list back down.
-            # Keep the richer stored list so the indexed voters stay complete
-            # (vote-change notifications diff this list to name added/removed
-            # voters, and a partial list makes that diff unreliable).
-            prev_voters = prev_post.get("voters") or []
-            if len(prev_voters) > embedded_voters:
-                post["voters"] = prev_voters
 
         if not categorize.needs_ai_retag(prev_post, post):
             categorize.carry_over_ai_tags(post, prev_post)

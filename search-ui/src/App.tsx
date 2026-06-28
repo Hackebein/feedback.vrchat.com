@@ -1593,7 +1593,9 @@ export function App() {
               <a href="/openapi.html" target="_blank" rel="noreferrer">
                 API reference
               </a>
-              .
+              .{" "}
+              <a href="/vrchat-feedback-search.user.js">Install userscript</a>{" "}
+              (requires Tampermonkey or Violentmonkey).
             </p>
           </div>
           <Notifications luceneMode={luceneMode} />

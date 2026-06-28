@@ -96,6 +96,11 @@ fi
 rm -rf "${WWW_ROOT}/assets"
 cp -a "${REPO}/search-ui/dist/web/"* "${WWW_ROOT}/"
 
+(cd "${REPO}/feedback-search-bridge" && npm ci && npm run build)
+install -m 0644 \
+  "${REPO}/feedback-search-bridge/dist/vrchat-feedback-search.user.js" \
+  "${WWW_ROOT}/vrchat-feedback-search.user.js"
+
 chmod -R a+rX "${WWW_ROOT}"
 
 NGINX_SRC="${REPO}/deploy/nginx"
