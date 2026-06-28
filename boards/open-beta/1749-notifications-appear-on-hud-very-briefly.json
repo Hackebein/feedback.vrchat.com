@@ -2,9 +2,11 @@
   "_id": "690bee1710a5a092c74b8c1a",
   "aiCategories": [
     "loc.hud",
-    "client.settings"
+    "client.settings",
+    "platforms.pc.steam",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-06-10T20:41:19.860526Z",
+  "aiTaggedAt": "2026-06-28T17:15:50.109347Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def3ad053b0a44a0fa904b",
@@ -35,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "690e171f2dd4b4a7ed093dd3",
@@ -175,6 +177,50 @@
       "value": "This issue still occurs as of build `1818`.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a414ff96723de31023d1c6a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62def3ad053b0a44a0fa904b",
+        "alias": "Vivid Locust",
+        "aliasID": "65d1231b0129d7ae44cb0bfa",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/96964455a1b23c6f4fa3eb3f6d4952f4.png",
+        "created": "2022-07-25T19:49:01.684Z",
+        "name": "1080p Cat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-28T16:46:49.973Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "690bee1710a5a092c74b8c1a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Still an issue as of build [1865]\n\nIf anything it's gotten slightly worse, where sometimes its not appearing at all, only playing the sound.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -189,7 +235,7 @@
   "files": [],
   "ideaID": "690bee1710a5a092c74b8c8b",
   "imageURLs": [],
-  "lastUpdated": 1782651692354,
+  "lastUpdated": 1782665325808,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 12,
@@ -205,7 +251,7 @@
   "subCategoryID": null,
   "title": "[1749] Notifications appear on hud very briefly",
   "trendingScore": 2919.737245489133,
-  "updatedAt": "2026-06-28T13:09:07.742350Z",
+  "updatedAt": "2026-06-28T17:15:44.574075Z",
   "updatedBy": null,
   "urlName": "1749-notifications-appear-on-hud-very-briefly",
   "viewerIsAuthor": false,
