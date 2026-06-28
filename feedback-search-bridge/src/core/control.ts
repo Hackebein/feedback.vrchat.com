@@ -1,3 +1,4 @@
+import { createCannyDropdown } from "./canny-dropdown";
 import {
   DEFAULT_SORT,
   getSort,
@@ -53,14 +54,6 @@ const CONTROL_CSS = `
 }
 html.${LUCENE_CLASS} #${CONTROL_ID} .vrcfb-control-sort {
   display: inline-flex;
-}
-#${CONTROL_ID} .vrcfb-control-sort select {
-  padding: 3px 6px;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  background: rgba(255, 255, 255, 0.7);
-  color: inherit;
-  font: inherit;
 }
 #${CONTROL_ID} .vrcfb-help-btn {
   display: inline-flex;
@@ -249,22 +242,21 @@ function createControlRoot(
   const sortLabel = document.createElement("label");
   sortLabel.className = "vrcfb-control-sort";
   sortLabel.appendChild(document.createTextNode("Sort"));
-  const sortSelect = document.createElement("select");
-  for (const option of SORT_OPTIONS) {
-    const opt = document.createElement("option");
-    opt.value = option.value;
-    opt.textContent = option.label;
-    sortSelect.appendChild(opt);
-  }
-  sortSelect.value = getSort() || DEFAULT_SORT;
-  sortSelect.addEventListener("change", () => {
-    setSort(sortSelect.value);
-    onSearchRefresh();
+  const sortDropdown = createCannyDropdown({
+    doc: document,
+    options: SORT_OPTIONS,
+    value: getSort() || DEFAULT_SORT,
+    searchable: false,
+    variant: "compact",
+    onChange: (value) => {
+      setSort(value);
+      onSearchRefresh();
+    },
   });
   onFilterStateChange(() => {
-    sortSelect.value = getSort() || DEFAULT_SORT;
+    sortDropdown.setValue(getSort() || DEFAULT_SORT);
   });
-  sortLabel.appendChild(sortSelect);
+  sortLabel.appendChild(sortDropdown.root);
 
   const helpBtn = document.createElement("button");
   helpBtn.type = "button";

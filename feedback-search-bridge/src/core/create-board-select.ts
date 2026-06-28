@@ -1,3 +1,4 @@
+import { createCannyDropdown } from "./canny-dropdown";
 import { currentSlug, isLocationCovered, onRouteChange } from "./coverage";
 
 const STYLE_ID = "vrcfb-board-picker-style";
@@ -7,9 +8,8 @@ const CREATE_FORM_SELECTOR = ".createPostFormV2";
 const NATIVE_BOARD_LINK_SELECTOR = "ul.boardListContainer a";
 const COLLAPSED_CLASS = "vrcfb-create-collapsed";
 
-// Reuse Canny's `.createPostFormSection` / `.descriptionLabel` wrappers and its
-// `.input-border` utility on the <select>; the rest mimics Canny's dropdowns
-// (bordered, rounded, chevron affordance) via an appearance reset.
+// Reuse Canny's `.createPostFormSection` / `.descriptionLabel` wrappers; the board
+// picker uses the shared Canny-style searchable dropdown component.
 const PICKER_CSS = `
 html.${COLLAPSED_CLASS} .createPostFormV2 > *:not(#${TOGGLE_ID}) {
   display: none !important;
@@ -37,32 +37,6 @@ html:not(.${COLLAPSED_CLASS}) #${TOGGLE_ID} {
 #${TOGGLE_ID}:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
-}
-#${PICKER_ID} select {
-  width: 100%;
-  box-sizing: border-box;
-  height: 32px;
-  padding: 0 30px 0 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(127, 127, 127, 0.4);
-  color: inherit;
-  font: inherit;
-  background-color: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 16px;
-  cursor: pointer;
-}
-#${PICKER_ID} select:hover {
-  border-color: rgba(127, 127, 127, 0.6);
-}
-#${PICKER_ID} select:focus-visible {
-  outline: 2px solid #2563eb;
-  outline-offset: 1px;
 }
 `;
 
@@ -248,25 +222,20 @@ function buildPicker(target: Window & typeof globalThis): HTMLElement | null {
   label.appendChild(labelText);
   wrap.appendChild(label);
 
-  const select = doc.createElement("select");
-  select.className = "input-border";
   const current = currentSlug(target);
-  for (const option of options) {
-    const node = doc.createElement("option");
-    node.value = option.slug;
-    node.textContent = option.name;
-    if (option.slug === current) {
-      node.selected = true;
-    }
-    select.appendChild(node);
-  }
-  select.addEventListener("change", () => {
-    const slug = select.value;
-    if (slug && slug !== currentSlug(target)) {
-      navigateToBoard(target, slug);
-    }
+  const dropdown = createCannyDropdown({
+    doc,
+    options: options.map((option) => ({ value: option.slug, label: option.name })),
+    value: current,
+    placeholder: "Select board",
+    searchable: true,
+    onChange: (slug) => {
+      if (slug && slug !== currentSlug(target)) {
+        navigateToBoard(target, slug);
+      }
+    },
   });
-  wrap.appendChild(select);
+  wrap.appendChild(dropdown.root);
 
   return wrap;
 }

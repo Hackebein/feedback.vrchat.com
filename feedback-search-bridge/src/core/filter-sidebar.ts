@@ -1,3 +1,4 @@
+import { createCannyDropdown } from "./canny-dropdown";
 import {
   DATE_ATTRS,
   DEFAULT_SORT,
@@ -184,14 +185,6 @@ html.${ACTIVE_CLASS}.${LUCENE_CLASS} .mainContainer { width: 100% !important; ma
   padding: 0;
 }
 #${PANEL_ID} .vrcfb-sort { display: flex; flex-direction: column; gap: 4px; }
-#${PANEL_ID} .vrcfb-sort select {
-  width: 100%;
-  padding: 5px 6px;
-  border-radius: 6px;
-  border: 1px solid rgba(127, 127, 127, 0.4);
-  background: inherit;
-  color: inherit;
-}
 #${PANEL_ID} .vrcfb-section { display: flex; flex-direction: column; gap: 6px; }
 #${PANEL_ID} .vrcfb-section-heading {
   font-size: 12px;
@@ -566,21 +559,20 @@ function buildSort(
 ): HTMLElement {
   const wrap = el(doc, "div", "vrcfb-sort");
   wrap.appendChild(el(doc, "span", "vrcfb-panel-title", "Sort"));
-  const select = el(doc, "select");
-  for (const option of SORT_OPTIONS) {
-    const opt = el(doc, "option", undefined, option.label);
-    opt.value = option.value;
-    select.appendChild(opt);
-  }
-  select.value = getSort() || DEFAULT_SORT;
-  select.addEventListener("change", () => {
-    setSort(select.value);
-    refresh();
+  const dropdown = createCannyDropdown({
+    doc,
+    options: SORT_OPTIONS,
+    value: getSort() || DEFAULT_SORT,
+    searchable: false,
+    onChange: (value) => {
+      setSort(value);
+      refresh();
+    },
   });
   registerUpdate(() => {
-    select.value = getSort() || DEFAULT_SORT;
+    dropdown.setValue(getSort() || DEFAULT_SORT);
   });
-  wrap.appendChild(select);
+  wrap.appendChild(dropdown.root);
   return wrap;
 }
 
