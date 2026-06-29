@@ -25,6 +25,7 @@ const DROPDOWN_CSS = `
   color: inherit;
   font: inherit;
   text-align: left;
+  text-transform: none;
   cursor: pointer;
 }
 .vrcfb-dropdown-trigger .vrcfb-dropdown-value {
@@ -90,6 +91,7 @@ const DROPDOWN_CSS = `
   background: transparent;
   color: inherit;
   font: inherit;
+  text-transform: none;
   padding: 6px 8px;
   cursor: pointer;
 }

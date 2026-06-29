@@ -49,6 +49,12 @@ html:not(.${COLLAPSED_CLASS}) #${TOGGLE_ID} {
 #${PICKER_ID} .descriptionLabel p {
   margin: 0;
 }
+#${PICKER_ID} .vrcfb-dropdown,
+#${PICKER_ID} .vrcfb-dropdown-trigger,
+#${PICKER_ID} .vrcfb-dropdown-value,
+#${PICKER_ID} .vrcfb-dropdown-option {
+  text-transform: none;
+}
 `;
 
 type BoardOption = { slug: string; name: string };

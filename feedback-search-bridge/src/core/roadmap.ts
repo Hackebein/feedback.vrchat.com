@@ -59,6 +59,21 @@ const ROADMAP_CSS = `
   font-size: 13px;
   opacity: 0.6;
 }
+#${ROADMAP_ID} .postListItem {
+  align-items: flex-start;
+}
+#${ROADMAP_ID} .postVotesV2 {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  min-width: 36px;
+}
+#${ROADMAP_ID} .postLink {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+#${ROADMAP_ID} .boardName {
+  text-transform: none;
+}
 `;
 
 /** The brand tint Canny applies to a voted vote button (border/background/chevron). */
@@ -203,7 +218,7 @@ function renderItems(
     const boardName = readString(board?.name);
     if (boardName) {
       const boardEl = doc.createElement("div");
-      boardEl.className = "uppercaseHeader boardName";
+      boardEl.className = "boardName text-secondary-foreground text-sm";
       boardEl.textContent = boardName;
       body.appendChild(boardEl);
     }
