@@ -1,0 +1,95 @@
+{
+  "_id": "6a44223e9a7d049e78205961",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-06-30T20:38:35.715080Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "69512c4cf85d59c66d954f86",
+    "alias": "Wise Chickadee",
+    "aliasID": "69512c4df85d59c66d956afb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/42cb1391d2d14a1943e801f86b237442.png",
+    "created": "2025-12-28T13:10:36.938Z",
+    "name": "Svet0ch",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "69512c4cf85d59c66d954f86",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-30T20:08:30.997Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Precondition:\n\n1. Use VRChat on VR\n\n2. Load to any instance\n\n3. Open the camera\n\nReproduction steps:\n\n1. Click on the camera orientation change button\n\n2. Launch any of the standart VRChat animated emojis\n\nExpected Result: The emoji's orientation aligns with the camera's orientation\n\nActual Result: The orientation of the emoji does not match the camera. This is especially noticeable on the bee emoji",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/5d5467b5086324fbfdb143dd44abddff.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "ScreenRecording_2026.06.30-22.56.00",
+      "url": "https://canny-assets.io/files/5d5467b5086324fbfdb143dd44abddff.mp4"
+    }
+  ],
+  "ideaID": "6a44223e9a7d049e78205960",
+  "imageURLs": [],
+  "lastUpdated": 1782850335020,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-30T20:08:30.997Z",
+  "subCategoryID": null,
+  "title": "Incorrect emoji orientation on portrait the camera",
+  "trendingScore": 2948.5273253171345,
+  "updatedAt": "2026-06-30T20:38:30.154627Z",
+  "updatedBy": null,
+  "urlName": "incorrect-emoji-orientation-on-portrait-the-camera",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "69512c4cf85d59c66d954f86",
+      "alias": "Wise Chickadee",
+      "aliasID": "69512c4df85d59c66d956afb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/42cb1391d2d14a1943e801f86b237442.png",
+      "companies": [],
+      "name": "Svet0ch",
+      "urlName": null,
+      "voteID": "6a44223ff51f79a5db8bc183"
+    }
+  ]
+}
