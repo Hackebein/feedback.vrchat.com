@@ -416,7 +416,12 @@ type discordEmbed struct {
 	URL         string         `json:"url,omitempty"`
 	Color       int            `json:"color,omitempty"`
 	Fields      []discordField `json:"fields,omitempty"`
+	Footer      *discordFooter `json:"footer,omitempty"`
 	Timestamp   string         `json:"timestamp,omitempty"`
+}
+
+type discordFooter struct {
+	Text string `json:"text"`
 }
 
 type discordField struct {
@@ -477,6 +482,21 @@ func discordColor(eventType string) int {
 		return discordColorDeleted
 	default:
 		return discordColorPost
+	}
+}
+
+func discordTypeLabel(eventType string) string {
+	switch eventType {
+	case EventComment:
+		return "Comment"
+	case EventVotes:
+		return "Vote"
+	case EventStatus:
+		return "Status"
+	case EventDeleted:
+		return "Deleted"
+	default:
+		return "Post"
 	}
 }
 
@@ -550,6 +570,7 @@ func eventToEmbed(ev NotificationEvent) discordEmbed {
 		Description: clip(discordDescription(ev), discordEmbedDescriptionMax),
 		Color:       discordColor(ev.Type),
 		Fields:      fields,
+		Footer:      &discordFooter{Text: discordTypeLabel(ev.Type)},
 		Timestamp:   ev.Created,
 	}
 	// Only attach a url when it is well-formed; a bad url rejects the embed.
@@ -572,6 +593,9 @@ func buildDiscordEmbeds(events []NotificationEvent) []discordEmbed {
 // color do not count.
 func embedFixedSize(e discordEmbed) int {
 	n := runeLen(e.Title)
+	if e.Footer != nil {
+		n += runeLen(e.Footer.Text)
+	}
 	for _, f := range e.Fields {
 		n += runeLen(f.Name) + runeLen(f.Value)
 	}
