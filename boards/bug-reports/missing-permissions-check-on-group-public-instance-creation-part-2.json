@@ -2,10 +2,11 @@
   "_id": "69b6381045d9277c50941278",
   "aiCategories": [
     "loc.website",
-    "groups.instances",
-    "groups.roles"
+    "loc.in-world",
+    "groups.roles",
+    "groups.instances"
   ],
-  "aiTaggedAt": "2026-06-12T23:38:24.647039Z",
+  "aiTaggedAt": "2026-06-30T03:53:14.103488Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649520bdbec709090d4453cd",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "69b80fd9e3ad0f1c1d05e02f",
@@ -75,6 +76,50 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a43278ced6fb94775d6cd59",
+      "aiGenerated": false,
+      "author": {
+        "_id": "649520bdbec709090d4453cd",
+        "alias": "Sharp Lobster",
+        "aliasID": "65c5b834ed6eefce4cd9b2af",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2722ca1c4f48828657a47a8311a6298c.png",
+        "created": "2023-06-23T04:34:05.758Z",
+        "name": "Slone Fallion",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-06-30T02:18:52.327Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69b6381045d9277c50941278",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Hey! Just a reminder that my group members have been forced to make Group+ instead of Group instances for three months now, due to the serious security vulnerability addressed above. With the recent survey on using groups as a funds proxy for VRChat via boosts, it's not a great look to just leave glaring security issues like this open and then look to squeeze money out of the groups that are supporting the platform.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -91,7 +136,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/b3d434f630f2a2c37159b235d36453e8.png"
   ],
-  "lastUpdated": 1782773164076,
+  "lastUpdated": 1782789711908,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 25,
@@ -107,7 +152,7 @@
   "subCategoryID": null,
   "title": "Missing permissions check on group public instance creation. Part 2.",
   "trendingScore": 2943.710926573683,
-  "updatedAt": "2026-06-29T23:11:50.616891Z",
+  "updatedAt": "2026-06-30T03:53:08.577874Z",
   "updatedBy": "649520bdbec709090d4453cd",
   "urlName": "missing-permissions-check-on-group-public-instance-creation-part-2",
   "viewerIsAuthor": false,
