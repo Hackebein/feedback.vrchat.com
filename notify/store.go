@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS subscription (
   label                TEXT NOT NULL DEFAULT '',
   watermark_ms         INTEGER NOT NULL,
   watermark_comment_ms INTEGER NOT NULL DEFAULT 0,
+  seeded_ms            INTEGER,
   error_since_ms       INTEGER,
   created_at           INTEGER NOT NULL
 );
@@ -96,6 +97,7 @@ type Subscription struct {
 	Label              string
 	WatermarkMS        int64 // watermark for new posts (post.created)
 	CommentWatermarkMS int64 // watermark for new comments (comment.created)
+	SeededMS           sql.NullInt64 // set after the first complete snapshot seed
 	ErrorSinceMS       sql.NullInt64
 	CreatedAtMS        int64
 	Push               PushKeys
@@ -150,6 +152,10 @@ func openStore(path string) (*Store, error) {
 	if _, err := db.Exec(schema); err != nil {
 		_ = db.Close()
 		return nil, fmt.Errorf("apply schema: %w", err)
+	}
+	if err := s.migrateColumns(); err != nil {
+		_ = db.Close()
+		return nil, err
 	}
 	return s, nil
 }
@@ -207,6 +213,48 @@ func (s *Store) subscriptionColumns() (hasKind, hasEvents bool, err error) {
 		return false, false, rows.Err()
 	}
 	return hasKind, hasEvents, rows.Err()
+}
+
+// migrateColumns adds columns introduced after the initial schema without
+// recreating tables on existing databases.
+func (s *Store) migrateColumns() error {
+	cols, err := s.subscriptionColumnSet()
+	if err != nil {
+		return err
+	}
+	if len(cols) == 0 {
+		return nil // fresh install: CREATE TABLE already has current columns
+	}
+	if !cols["seeded_ms"] {
+		if _, err := s.db.Exec(`ALTER TABLE subscription ADD COLUMN seeded_ms INTEGER`); err != nil {
+			return fmt.Errorf("migrate add seeded_ms: %w", err)
+		}
+	}
+	return nil
+}
+
+func (s *Store) subscriptionColumnSet() (map[string]bool, error) {
+	rows, err := s.db.Query(`PRAGMA table_info(subscription)`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	out := map[string]bool{}
+	for rows.Next() {
+		var (
+			cid     int
+			name    string
+			ctype   string
+			notnull int
+			dflt    sql.NullString
+			pk      int
+		)
+		if err := rows.Scan(&cid, &name, &ctype, &notnull, &dflt, &pk); err != nil {
+			return nil, err
+		}
+		out[name] = true
+	}
+	return out, rows.Err()
 }
 
 func (s *Store) Close() error { return s.db.Close() }
@@ -290,7 +338,7 @@ func (s *Store) UpsertWebhookSubscription(sub Subscription, nowMS int64) (int64,
 		_, uerr := s.db.Exec(
 			`UPDATE subscription
 			    SET events = ?, lucene = ?, filter_json = ?, label = ?,
-			        watermark_ms = ?, watermark_comment_ms = ?, error_since_ms = NULL
+			        watermark_ms = ?, watermark_comment_ms = ?, seeded_ms = NULL, error_since_ms = NULL
 			  WHERE id = ?`,
 			marshalEvents(sub.Events), boolToInt(sub.Lucene), sub.FilterJSON, sub.Label,
 			nowMS, nowMS, id,
@@ -408,7 +456,7 @@ func (s *Store) ListAll() ([]Subscription, error) {
 	rows, err := s.db.Query(
 		`SELECT sub.id, sub.events, sub.target, sub.push_subscription_id, COALESCE(sub.webhook_url, ''),
 		        sub.lucene, sub.filter_json, sub.label, sub.watermark_ms, sub.watermark_comment_ms,
-		        sub.error_since_ms, sub.created_at,
+		        sub.seeded_ms, sub.error_since_ms, sub.created_at,
 		        COALESCE(ps.endpoint, ''), COALESCE(ps.p256dh, ''), COALESCE(ps.auth, '')
 		   FROM subscription sub
 		   LEFT JOIN push_subscription ps ON ps.id = sub.push_subscription_id
@@ -426,7 +474,7 @@ func (s *Store) ListAll() ([]Subscription, error) {
 		if err := rows.Scan(
 			&sub.ID, &events, &sub.Target, &sub.PushSubscriptionID, &sub.WebhookURL,
 			&lucene, &sub.FilterJSON, &sub.Label, &sub.WatermarkMS, &sub.CommentWatermarkMS,
-			&sub.ErrorSinceMS, &sub.CreatedAtMS,
+			&sub.SeededMS, &sub.ErrorSinceMS, &sub.CreatedAtMS,
 			&sub.Push.Endpoint, &sub.Push.P256dh, &sub.Push.Auth,
 		); err != nil {
 			return nil, err
@@ -447,6 +495,12 @@ func (s *Store) UpdateWatermark(id, watermarkMS int64) error {
 // UpdateCommentWatermark advances the new-comment watermark.
 func (s *Store) UpdateCommentWatermark(id, watermarkMS int64) error {
 	_, err := s.db.Exec(`UPDATE subscription SET watermark_comment_ms = ? WHERE id = ?`, watermarkMS, id)
+	return err
+}
+
+// MarkSeeded records that the subscription's first complete snapshot seed finished.
+func (s *Store) MarkSeeded(id, seededMS int64) error {
+	_, err := s.db.Exec(`UPDATE subscription SET seeded_ms = ? WHERE id = ?`, seededMS, id)
 	return err
 }
 

@@ -11,6 +11,7 @@ import (
 	"net/url"
 	"regexp"
 	"strconv"
+	"strings"
 	"sync/atomic"
 	"time"
 )
@@ -110,10 +111,52 @@ func (d *Dispatcher) processSubscription(ctx context.Context, sub Subscription, 
 	if sub.HasEvent(EventComment) {
 		record(d.processNewComments(ctx, sub))
 	}
-	if sub.HasEvent(EventVotes) || sub.HasEvent(EventStatus) || sub.HasEvent(EventDeleted) {
+	if needsSnapshotPass(sub) {
 		record(d.processSnapshot(ctx, sub, tick))
 	}
 	return firstErr
+}
+
+// needsSnapshotPass reports whether the subscription requires a full filter scan
+// this tick (vote/status/deletion diffs, or scoped new-post entry detection).
+func needsSnapshotPass(sub Subscription) bool {
+	if sub.HasEvent(EventVotes) || sub.HasEvent(EventStatus) || sub.HasEvent(EventDeleted) {
+		return true
+	}
+	return sub.HasEvent(EventPost) && filterScoped(sub.FilterJSON)
+}
+
+// filterScoped reports whether a subscription filter narrows results beyond the
+// full corpus (e.g. voter/status facets). Unscoped "all posts" subscriptions
+// only need the cheap watermark pass for new posts.
+func filterScoped(filterJSON string) bool {
+	var params map[string]interface{}
+	if err := json.Unmarshal([]byte(filterJSON), &params); err != nil || params == nil {
+		return false
+	}
+	if q, ok := params["query"].(string); ok && strings.TrimSpace(q) != "" {
+		return true
+	}
+	if filters, ok := params["filters"].(string); ok && strings.TrimSpace(filters) != "" {
+		return true
+	}
+	if filters, ok := params["filters"].(map[string]interface{}); ok && len(filters) > 0 {
+		return true
+	}
+	return filterArrayNonEmpty(params["facetFilters"]) ||
+		filterArrayNonEmpty(params["numericFilters"]) ||
+		filterArrayNonEmpty(params["tagFilters"])
+}
+
+func filterArrayNonEmpty(v interface{}) bool {
+	switch arr := v.(type) {
+	case []interface{}:
+		return len(arr) > 0
+	case []string:
+		return len(arr) > 0
+	default:
+		return false
+	}
 }
 
 // gwHit is the subset of a gateway search hit we care about.
@@ -266,8 +309,13 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 
 		old, seen := prev[pid]
 		if !seen {
-			// First sighting for this subscription: seed only. New-post alerts are
-			// the watermark pass's job, so we never notify here.
+			// First sighting for this subscription: seed the baseline. After the
+			// initial complete seed, older posts that newly enter a scoped filter
+			// (e.g. a voter upvotes) emit a New post event; brand-new posts are
+			// still handled by the watermark pass.
+			if sub.HasEvent(EventPost) && sub.SeededMS.Valid && createdMS <= sub.WatermarkMS {
+				events = append(events, newPostEvent(hit))
+			}
 			toUpsert = append(toUpsert, cur)
 			continue
 		}
@@ -325,6 +373,9 @@ func (d *Dispatcher) processSnapshot(ctx context.Context, sub Subscription, tick
 	}
 	for _, pid := range toDelete {
 		_ = d.store.DeletePostState(sub.ID, pid)
+	}
+	if complete && !sub.SeededMS.Valid {
+		_ = d.store.MarkSeeded(sub.ID, time.Now().UnixMilli())
 	}
 	return nil
 }
