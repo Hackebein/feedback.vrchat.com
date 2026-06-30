@@ -1,0 +1,88 @@
+{
+  "_id": "6a43cca03467c2102bd451ca",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-06-30T14:59:35.697424Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a43cb4af51f79a5db8796b9",
+    "alias": "Legitimate Wolf",
+    "aliasID": "6a43cb4af51f79a5db8796bd",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c4a724d7f66fc68a5fd5b7575d00a00d.png",
+    "created": "2026-06-30T13:57:30.312Z",
+    "name": "DrGong",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6a43cb4af51f79a5db8796b9",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-06-30T14:03:12.246Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Open Camera Dolly (VRC+).\n\nCreate a first path and set up a camera.\n\nAdd a second (or third) path.\n\nObserve the green border on the second camera’s preview.\n\nTry to adjust zoom or set a keyframe – nothing happens.\n\nTry to change lens visibility – only the first camera responds.\n\nExpected behavior: All paths’ cameras should allow zoom keyframing and visibility control independently.\n\nActual behavior: Only the first path works; additional paths are visually marked with a green border and are unresponsive to zoom and visibility controls.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a43cc9f3467c2102bd451c9",
+  "imageURLs": [
+    "https://canny-assets.io/images/ce207159dc28e8502217a33849a8fad5.png"
+  ],
+  "lastUpdated": 1782829964780,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-06-30T14:03:12.246Z",
+  "subCategoryID": null,
+  "title": "In VRChat’s Camera Dolly feature, when I add a second path (or more), the recording view from the second camera displays a green border. I am unable to control zoom or set keyframes for this camera. Also, when I click the camera settings to adjust lens visibility, it only affects the first path’s camera; the second and subsequent cameras remain uncontrolled and their visibility cannot be changed.",
+  "trendingScore": 2948.491083972888,
+  "updatedAt": "2026-06-30T14:59:30.202266Z",
+  "updatedBy": null,
+  "urlName": "in-vrchats-camera-dolly-feature-when-i-add-a-second-path-or-more-the-recording-v",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a43cb4af51f79a5db8796b9",
+      "alias": "Legitimate Wolf",
+      "aliasID": "6a43cb4af51f79a5db8796bd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c4a724d7f66fc68a5fd5b7575d00a00d.png",
+      "companies": [],
+      "name": "DrGong",
+      "urlName": null,
+      "voteID": "6a43cca0f51f79a5db87a123"
+    }
+  ]
+}
