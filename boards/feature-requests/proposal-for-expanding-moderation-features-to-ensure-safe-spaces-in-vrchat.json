@@ -2,10 +2,9 @@
   "_id": "6a3a798248e024a58d77f24d",
   "aiCategories": [
     "loc.in-world",
-    "moderation.safety-system",
-    "groups.instances"
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-07-02T12:14:27.404215Z",
+  "aiTaggedAt": "2026-07-02T19:25:44.183941Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67528d96a9f0ca8a017491dd",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 45,
+  "commentCount": 47,
   "comments": [
     {
       "_id": "6a3a8790d6e2adff55bbd0e3",
@@ -1012,7 +1011,7 @@
       "postID": "6a3a798248e024a58d77f24d",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -2047,7 +2046,7 @@
         "alias": "Ready Squirrel",
         "aliasID": "66c947011f860fbed35d0748",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/be7af7a56bd650349d89480303f5842d.png",
+        "avatarURL": "https://canny-assets.io/images/4b6e933056bd22ecbd992630872447e1.png",
         "created": "2024-08-24T02:35:45.380Z",
         "name": "蒼井 拓凪",
         "serviceAccount": false,
@@ -2074,7 +2073,7 @@
       "postID": "6a3a798248e024a58d77f24d",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -2093,7 +2092,7 @@
         "alias": "Ready Squirrel",
         "aliasID": "66c947011f860fbed35d0748",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/be7af7a56bd650349d89480303f5842d.png",
+        "avatarURL": "https://canny-assets.io/images/4b6e933056bd22ecbd992630872447e1.png",
         "created": "2024-08-24T02:35:45.380Z",
         "name": "蒼井 拓凪",
         "serviceAccount": false,
@@ -2120,7 +2119,7 @@
       "postID": "6a3a798248e024a58d77f24d",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -2164,7 +2163,7 @@
           "alias": "Ready Squirrel",
           "aliasID": "66c947011f860fbed35d0748",
           "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/be7af7a56bd650349d89480303f5842d.png",
+          "avatarURL": "https://canny-assets.io/images/4b6e933056bd22ecbd992630872447e1.png",
           "created": "2024-08-24T02:35:45.380Z",
           "name": "蒼井 拓凪",
           "serviceAccount": false,
@@ -2274,6 +2273,106 @@
       "value": "(JP)\n\nありがとうございます、ご指摘の内容は適切であると考えております。\n\n仰る通り、同じ「ワールドでのグループパブリックに関する権限」でありながら、３つの案はそれぞれに異なる性質を持っています。\n\n同時に、今回これらを一つの案にまとめて投稿したのには、以下の理由があります。\n\n１．指定グループのパブリックを標準インスタンスに設定する場合\n\n仰る通り最も管理が行いやすく実現可能性が高いと考えられますが、同時に「それ以外を認めない」という観点から、「イベントで使いたい」等の選択肢を除外することになるデメリットや、「独裁的である」という批判が起こり得るリスクなどがあります。\n\n２．これは中間案となり、制作者が認めるグループを許可することで、イベントでの使用などを行える余地も存在します。\n\n反面、管理運営については許可したグループ内でのモデレーションに依存するため、一定の迷惑行為者が入り込む（複数グループを横断する等）リスクが存在します。\n\nこの選択の場合、特定グループをBANされたとしても、必ずしも全てのグループパブリックを利用できなくなるわけではない。という救済余地もあります。\n\n３．もっとも限定的な権限であり、特に悪質なグループ「ワールド狙い撃ちによる集団加害」に対しての特効薬的な案ではありますが、あくまで防げるのは「特定のグループ」のみであり、迷惑行為者がパブリックグループを隠れ蓑にした場合、無関係なグループが加害の足場として利用されるリスクがあります。\n\nただし、その反面基本的な利用者の自由は確保され、「特に問題ありもの」を除けば一定の自由が確保されます。\n\nこうした観点から、ワールド制作者のグラデーションある対応を可能にすることで、「全て駄目」「全て許す」ではなく、ワールドやクリエイター毎の裁量を可能にするという目的と、部分的採用の場合のメリットとデメリットを含めて公式側に検討していただければという余地を残したものとなっております。\n\nあなたがご指摘くださった内容は、実現可能性や既存のルールとどのように関わるかという観点などを含む、検討する上で非常に大切なご指摘となっております。\n\nその懸念点も含めて、公式にこの内容をご検討いただければわたしとしても幸いです。\n\nなお、パブリックインスタンスにおける有害行為への対策については、わたしも注視しております。\n\nそこで何か現在の状況を変え得る対策が取られるのであれば、それに越したことはありません。",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a46afe14778521543447c3b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66c947010daa05cca41b03bc",
+        "alias": "Ready Squirrel",
+        "aliasID": "66c947011f860fbed35d0748",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4b6e933056bd22ecbd992630872447e1.png",
+        "created": "2024-08-24T02:35:45.380Z",
+        "name": "蒼井 拓凪",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-02T18:37:21.751Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "67528d96a9f0ca8a017491dd",
+          "alias": "Heather Reindeer",
+          "aliasID": "67528d96a367fa63921299ea",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e5b8c66d55ddb5e7ec6461ac48dd16bc.png",
+          "created": "2024-12-06T05:37:26.050Z",
+          "name": "やがて捨てられる補助輪",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a4619f48161b00e6cc8ac96",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3a798248e024a58d77f24d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{67528d96a9f0ca8a017491dd|full_name}\n\n(EN)\n\nThank you for the detailed response. Before anything else, I’d like to confirm the intended behavior of feature 1, as the supplementary comment and the main text appear to describe it differently.\n\nThe supplementary comment describes feature 1 as: auto-generated instances become the designated group’s Group Public instead of Public — i.e., a change to the default value only. Under that reading, other users and groups could still manually create Public or Group Public instances for the world, and use cases like events would be unaffected.\n\nThe main text, however, describes it as the ability to “specify and restrict the baseline instance settings allowed,” and the section on preserved rights lists only Invite(+), Friend(+), and Group(+). Your reply above also describes feature 1 as “not permitting anything else.” Under that reading, feature 1 would place the public tier under the exclusive control of a single designated group — arguably making it the most restrictive of the three features rather than the least.\n\nCould you clarify which is intended?\n\n(a) Default change only — other groups and users can still manually create (Group) Public instances for the world.\n\n(b) Public-tier restriction — only the designated group can create Public/Group Public instances for the world.\n\nSince votes are being cast on the proposal as written, making this distinction explicit would benefit both reviewers and voters.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a46aff3a74f30478ade40b4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66c947010daa05cca41b03bc",
+        "alias": "Ready Squirrel",
+        "aliasID": "66c947011f860fbed35d0748",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4b6e933056bd22ecbd992630872447e1.png",
+        "created": "2024-08-24T02:35:45.380Z",
+        "name": "蒼井 拓凪",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-02T18:37:39.156Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a4619f48161b00e6cc8ac96",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3a798248e024a58d77f24d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "(JP)\n\nご丁寧な返信をありがとうございます。まず機能1の意図された挙動について確認させてください。補足コメントと本文とで、記述が異なっているように見えるためです。\n\n補足コメントでは、機能1は「自動的に生成されるインスタンスが、パブリックである代わりに指定グループのグループパブリックに設定される」──つまり初期値のみの変更と説明されています。この読解では、他のユーザーやグループは従来通り手動でPublicやGroup Publicインスタンスを作成でき、イベント等の利用も影響を受けません。\n\n一方、本文では「基本のインスタンス設定を指定・制限できる機能」とされ、制限後も残る権利としてはInvite(+)、Friend(+)、Group(+)のみが列挙されています。上のご返信でも、機能1は「それ以外を認めない」ものとして説明されています。この読解では、機能1はパブリック帯を単一の指定グループの独占下に置くことになり、3機能の中で最も制限的なものになり得ます。\n\n意図された仕様は次のどちらでしょうか。\n\n(a) 初期値のみの変更──他のグループやユーザーも引き続き手動で（グループ）パブリックを作成できる\n\n(b) パブリック帯の制限──指定グループのみが当該ワールドでPublic/Group Publicを作成できる\n\n本提案は現在の記述のまま投票が行われているため、この区別を明確にすることは、審査側と投票者の双方にとって有益だと考えます。",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -2289,7 +2388,7 @@
   "files": [],
   "ideaID": "6a3a798248e024a58d77f230",
   "imageURLs": [],
-  "lastUpdated": 1783012819857,
+  "lastUpdated": 1783018738957,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 45,
@@ -2305,7 +2404,7 @@
   "subCategoryID": null,
   "title": "Proposal for Expanding Moderation Features to Ensure Safe Spaces in VRChat",
   "trendingScore": 2951.062793842033,
-  "updatedAt": "2026-07-02T17:30:03.052105Z",
+  "updatedAt": "2026-07-02T19:25:38.698622Z",
   "updatedBy": null,
   "urlName": "proposal-for-expanding-moderation-features-to-ensure-safe-spaces-in-vrchat",
   "viewerIsAuthor": false,
