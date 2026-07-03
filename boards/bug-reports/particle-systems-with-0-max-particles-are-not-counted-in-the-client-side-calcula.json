@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-03T09:28:44.436850Z",
+  "aiTaggedAt": "2026-07-03T12:23:31.806422Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -35,7 +35,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Create an Excellent avatar in Unity Editor\n\n2. Add N particle systems (can be disabled), set its max particles to 0\n\n3. Build & Test Your Avatar, check the local SDK test avatar performance rating in-app (Excellent)\n\n4. Build & Publish Your Avatar Online, and check the performance ranking of the uploaded avatar, it'll be Good or worse as the particle systems are counted on the server\n\nAffected avatar: [Robot （0 max particles）](https://vrchat.com/home/avatar/avtr_e785d1e7-6121-4e73-99bd-4bae65e24636) (`avtr_e785d1e7-6121-4e73-99bd-4bae65e24636`) by WubTheCaptain - this has N=1\n\nExpected result: Overall Performance Estimate: Good (or worse) in both scenarios for having > 0 particle systems\n\nActual result: Overall Performance Estimate: Excellent in local SDK test avatar (0 particle systems, 0 max particles), Good performance ranking once uploaded to VRChat.",
+  "details": "1. Create an Excellent avatar in Unity Editor\n\n2. Add N particle systems (can be disabled), set its max particles to 0\n\n3. Build & Test Your Avatar, check the local SDK test avatar performance rating in-app (Excellent)\n\n4. Build & Publish Your Avatar Online, and check the performance ranking of the uploaded avatar, it'll be Good or worse as the particle systems are counted on the server\n\nAffected avatar: [Robot （0 max particles）](https://vrchat.com/home/avatar/avtr_e785d1e7-6121-4e73-99bd-4bae65e24636) (`avtr_e785d1e7-6121-4e73-99bd-4bae65e24636`) by WubTheCaptain - this has N=1\n\nExpected result: Overall Performance Estimate: Good (or worse) in both scenarios for having > 0 particle systems.\n\nActual result: Overall Performance Estimate: Excellent in local SDK test avatar (0 particle systems, 0 max particles), Good performance ranking once uploaded to VRChat.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -57,7 +57,7 @@
     "https://canny-assets.io/images/710fe2f360ad9868b80403b1c3be121f.png",
     "https://canny-assets.io/images/eca4af34426d47688e36dac81a929031.png"
   ],
-  "lastUpdated": 1783069262809,
+  "lastUpdated": 1783079764825,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -73,7 +73,7 @@
   "subCategoryID": null,
   "title": "Particle systems with 0 max particles are not counted in the client-side calculated performance ranking (local SDK test avatars)",
   "trendingScore": 2948.8850706354215,
-  "updatedAt": "2026-07-03T09:28:38.915263Z",
+  "updatedAt": "2026-07-03T12:23:26.277743Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "particle-systems-with-0-max-particles-are-not-counted-in-the-client-side-calcula",
   "viewerIsAuthor": false,
