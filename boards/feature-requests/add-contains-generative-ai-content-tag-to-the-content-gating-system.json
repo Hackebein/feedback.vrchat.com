@@ -1,10 +1,11 @@
 {
   "_id": "6a47f7ad48ab8093bddc0501",
   "aiCategories": [
+    "loc.website",
     "loc.in-world",
     "worlds.content-gating"
   ],
-  "aiTaggedAt": "2026-07-03T21:33:16.035993Z",
+  "aiTaggedAt": "2026-07-03T22:29:32.898123Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6187011bf8abef7201776f3e",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a48005dbbaa713013076236",
@@ -65,7 +66,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 6
+        "like": 7
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -111,7 +112,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -249,7 +250,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -340,13 +341,71 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "i hate this AI topic, but this is more of like clickbate previews made or enhanced with AI.\n\nalso i don't mind if one single object was made by AI, the final composition should be true to the user uploading and tagged correctly",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a482bf4506de6fd185abbdc",
+      "aiGenerated": false,
+      "author": {
+        "_id": "687c57ccc1f0e1f016029ab9",
+        "alias": "Chartreuse Dormouse",
+        "aliasID": "687c57cdc1f0e1f01602b5b4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e29ec90dac4b614707dd81ec29d4bd7d.png",
+        "created": "2025-07-20T02:43:24.975Z",
+        "name": "HiiJax_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-03T21:39:00.952Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a480afaf51f79a5dba6c0a1",
+          "alias": "Splendid Gull",
+          "aliasID": "6a480afaf51f79a5dba6c0a6",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/35d205013da937d38e3d4f7d172cafa7.png",
+          "created": "2026-07-03T19:18:18.126Z",
+          "name": "ふあゆき",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a4815d2bbaa71301309b61f",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a47f7ad48ab8093bddc0501",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a480afaf51f79a5dba6c0a1|full_name} ok fine, how about two tags then? toggle 1: DOES contain AI content, which is active if you are aware of AI content in the world or have used it yourself, can be forced on if players report with proof of AI usage. toggle 2: MAY contain AI content, which is active if you used other assets and haven’t vetted whether they used AI or not.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -366,23 +425,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/0975b614532eda0d8feca209480dd70c.png"
   ],
-  "lastUpdated": 1783114474419,
+  "lastUpdated": 1783116104064,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 129,
+  "maxScore": 143,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a47f7ad48ab8093bddc0501/682972098.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 129,
+  "score": 143,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-03T17:55:57.677Z",
   "subCategoryID": null,
   "title": "Add \"Contains Generative AI Content\" tag to the Content Gating system",
-  "trendingScore": 2953.1584654862786,
-  "updatedAt": "2026-07-03T22:00:33.098750Z",
+  "trendingScore": 2953.2589408354274,
+  "updatedAt": "2026-07-03T22:29:27.393263Z",
   "updatedBy": null,
   "urlName": "add-contains-generative-ai-content-tag-to-the-content-gating-system",
   "viewerIsAuthor": false,
@@ -394,6 +453,237 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62df1dd9403c6762cabcccba",
+      "alias": "Major Moose",
+      "aliasID": "6817e5a58ccc1d8b3bc94f30",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/582502ff18d1594bc466cd4bb5948fdf.png",
+      "companies": [],
+      "name": "PurityStar",
+      "urlName": null,
+      "voteID": "6a4837c3f51f79a5dba785a9"
+    },
+    {
+      "_id": "62def43bd2351e449fecb613",
+      "alias": "Decisive Pinniped",
+      "aliasID": "65c2a04eed6eefce4c2003bd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9148a0bebbb902834c65ab252d6102cb.png",
+      "companies": [],
+      "name": "Astral Melodia",
+      "urlName": null,
+      "voteID": "6a4836e4f51f79a5dba77ed5"
+    },
+    {
+      "_id": "5f0c6c47c80786400360c037",
+      "alias": "Tangerine yellow Marmot",
+      "aliasID": "65c2b551ed6eefce4cf80d67",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f893419553ceb5007741a66c8a759273.png",
+      "companies": [],
+      "name": "JCity",
+      "urlName": null,
+      "voteID": "6a483654f51f79a5dba77d53"
+    },
+    {
+      "_id": "62df1bbd7ff46044b6bd731c",
+      "alias": "Mighty Marmot",
+      "aliasID": "6a4835e7f51f79a5dba77bca",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8d7bb35042530d17716d5c9c4f023f7e.png",
+      "companies": [],
+      "name": "~×৷ Puppy ৷×~",
+      "urlName": null,
+      "voteID": "6a4835ecf51f79a5dba77bd8"
+    },
+    {
+      "_id": "64ddee5eac84b5826cd595c0",
+      "alias": "Fandango Wildebeest",
+      "aliasID": "65c5312bed6eefce4cd9b7b2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a599f1229c94a954c682faffd7871daa.png",
+      "companies": [],
+      "name": "deadofnothing",
+      "urlName": null,
+      "voteID": "6a4835bdf51f79a5dba77b92"
+    },
+    {
+      "_id": "6443a06382ac9e0912532701",
+      "alias": "High Salmon",
+      "aliasID": "65c297eded6eefce4ce58306",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/71b27b8cf95e7975f51b5335ac31f544.png",
+      "companies": [],
+      "name": "vavassor",
+      "urlName": null,
+      "voteID": "6a483592f51f79a5dba77b39"
+    },
+    {
+      "_id": "5fb73840f071232c20633b88",
+      "alias": "Blush Vole",
+      "aliasID": "66062f3bd90e505763ff068f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9df0f32d1f8c6fa28387c8a59e32e3ca.png",
+      "companies": [],
+      "name": "Puppetself",
+      "urlName": null,
+      "voteID": "6a483332f51f79a5dba77263"
+    },
+    {
+      "_id": "58d1e656c86088564525a7b5",
+      "alias": "Aquamarine Stork",
+      "aliasID": "65c3d45ded6eefce4c3813c2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a9e97416775a83029b3c87a10f7d7291.png",
+      "companies": [],
+      "name": "MarJVX",
+      "urlName": null,
+      "voteID": "6a4830f6f51f79a5dba76b34"
+    },
+    {
+      "_id": "5f3112cf654cd4491457303f",
+      "alias": "Umbral green Orca",
+      "aliasID": "65c29139ed6eefce4ce419d4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b4f7d374c6e67b6e789e19316f51385a.png",
+      "companies": [],
+      "name": "Pwotato",
+      "urlName": null,
+      "voteID": "6a482ed2f51f79a5dba765a7"
+    },
+    {
+      "_id": "672abfcc7ddbcea076454b34",
+      "alias": "Manual Mink",
+      "aliasID": "672abfcdc66e81bbd40d6177",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0e404623c01d89af9324c0fb916162fb.png",
+      "companies": [],
+      "name": "Just_Name_",
+      "urlName": null,
+      "voteID": "6a482e87f51f79a5dba76521"
+    },
+    {
+      "_id": "65bd21b6f881e4525f3a3873",
+      "alias": "Yinmn blue Opossum",
+      "aliasID": "65c2a1fced6eefce4c5e99af",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1dc9903f95f1bf947b1db12162e2066a.png",
+      "companies": [],
+      "name": "Blueberry Bud",
+      "urlName": null,
+      "voteID": "6a482e79f51f79a5dba764e9"
+    },
+    {
+      "_id": "68d51ed5a8ab97d7d9717abd",
+      "alias": "Apricot cream Flamingo",
+      "aliasID": "68d51ed5a8ab97d7d9719493",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/073d2de744db6aad16d6648c03c31e01.png",
+      "companies": [],
+      "name": "TurboTheSergal",
+      "urlName": null,
+      "voteID": "6a482e00f51f79a5dba763ff"
+    },
+    {
+      "_id": "6a482d22f51f79a5dba76211",
+      "alias": "Bittersweet Sloth",
+      "aliasID": "6a482d22f51f79a5dba76215",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/df6e46321e4242ddbc90952408062451.png",
+      "companies": [],
+      "name": "LupusTalbain",
+      "urlName": null,
+      "voteID": "6a482d31f51f79a5dba76233"
+    },
+    {
+      "_id": "5a7466e1210f3722d556b9ab",
+      "alias": "Brick red Marten",
+      "aliasID": "65ba02b3ed6eefce4c1226f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d9b2a27cafc2fea5c4ee4424ab030f07.png",
+      "companies": [],
+      "name": "Kazy",
+      "urlName": null,
+      "voteID": "6a482d24f51f79a5dba76217"
+    },
+    {
+      "_id": "64e672d6f0724b8305f425d8",
+      "alias": "International Dove",
+      "aliasID": "660c2171e5d26962aa7f53bf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6e73ca6e9b9f28da941def86bac16dc3.png",
+      "companies": [],
+      "name": "feebie",
+      "urlName": null,
+      "voteID": "6a482d05f51f79a5dba761c7"
+    },
+    {
+      "_id": "644d6a82f48c970917724af7",
+      "alias": "Cooing Kiwi",
+      "aliasID": "65c2a1fced6eefce4c5e9008",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a96543a4e1887ba93e9dd9252150a150.png",
+      "companies": [],
+      "name": "-CMC-",
+      "urlName": null,
+      "voteID": "6a482c78f51f79a5dba75e42"
+    },
+    {
+      "_id": "6a482be2f51f79a5dba75cd6",
+      "alias": "Peaceful Possum",
+      "aliasID": "6a482be3f51f79a5dba75cda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/41e22a919b5fdfcdc297918e235771d1.png",
+      "companies": [],
+      "name": "OrbitingNeptune",
+      "urlName": null,
+      "voteID": "6a482bebf51f79a5dba75cf0"
+    },
+    {
+      "_id": "60a5b283f47725609173bff3",
+      "alias": "Sure Woodpecker",
+      "aliasID": "65d569ca0129d7ae44f63ba3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9ae160fe9bc263a624a8bbe78a8b04f0.png",
+      "companies": [],
+      "name": "De Pelos",
+      "urlName": null,
+      "voteID": "6a482bb8f51f79a5dba75ac7"
+    },
+    {
+      "_id": "5f2f1e8d06be3a5585d42016",
+      "alias": "Tuscany Bandicoot",
+      "aliasID": "65fb2952a63714bcb33ff50c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7fe61d40d837cd0521be44873e40d3d2.png",
+      "companies": [],
+      "name": "Threevee",
+      "urlName": null,
+      "voteID": "6a482b4ff51f79a5dba7598d"
+    },
+    {
+      "_id": "62def4ebdf935044abf430d7",
+      "alias": "Xylophone gold Cod",
+      "aliasID": "65f20d7876937e52485cd341",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb7bd1038c6d2b20bb559c2239dce807.png",
+      "companies": [],
+      "name": "Bibisim",
+      "urlName": null,
+      "voteID": "6a482b2af51f79a5dba7592c"
+    },
+    {
+      "_id": "62defa24930a3044b6030668",
+      "alias": "Manual Koi",
+      "aliasID": "65d576780129d7ae44737d82",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f7ee526956fba6ded794d6aad225c093.png",
+      "companies": [],
+      "name": "BombardToo",
+      "urlName": null,
+      "voteID": "6a482b0cf51f79a5dba758e6"
+    },
     {
       "_id": "687c57ccc1f0e1f016029ab9",
       "alias": "Chartreuse Dormouse",
