@@ -2,10 +2,10 @@
   "_id": "6a4832555151d19dc3e9807f",
   "aiCategories": [
     "loc.pc-client",
-    "client.settings",
-    "platforms.cross-platform"
+    "platforms.cross-platform",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-07-03T23:25:52.172723Z",
+  "aiTaggedAt": "2026-07-03T23:54:50.825944Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -71,7 +71,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "At this time I am not entirely sure what can cause a Moderation Report Closed notification to be re-issued with an update, but I suspect it may have something to do with an avatar being reported in two separate categories (Sexual Content / Child exploitation and abuse) and being actioned in both categories (because content not actioned generally does not generate a notification and a report is silently closed in `/moderationReports` API from what I understand).",
+      "value": "At this time I am not entirely sure what can cause a Moderation Report Closed notification to be re-issued with an update, but I suspect it may have something to do with an avatar being reported in two separate categories (Sexual Content / Child exploitation and abuse) and being actioned in only one of these categories or both (because content not actioned generally does not generate a notification and a report is silently closed in `/moderationReports` API from what I understand).",
       "viewerReactions": null,
       "voteID": null
     },
@@ -133,7 +133,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I'm resubmitting an older bug report due to age and new information available.\n\nWhen something triggers a Moderation Report Closed notification to be updated, a new notification for the update is sent out with the same `createdAt` date and an unique `updatedAt` date. At this point in time, the user may have two Moderation Report Closed notifications with identical `createdAt` dates, but unique `updatedAt` dates.\n\nIn the example attached `notifications.json` response retrieved from `GET https://vrchat.com/api/1/notifications?limit=100`, notifications #5 and #6 from the top share the same `\"createdAt\": \"2026-07-03T18:00:19.902Z\"` date for Moderation Report Closed notifications.\n\nWhen VRChat `Build 1865` sees these two notifications with identical `createdAt` dates from the API, it's interpreted as bad response data by `Transmtn.PostOffice.ProcessNotification` for having duplicate `createdAt` keys and notifications older than this never arrive to the client or are never processed by it. Effectively, a \"crash\" of notifications processing.\n\nAffected notification IDs (identical `createdAt` keys):\n\n- `not_13cf4c6c-6585-443c-af8c-0b0e4ca92867`\n\n- `not_baaa6d95-c41e-4780-adf7-4b4c716cc49f`\n\nExpected result: 34 notifications in VRChat Home (API response) and VRChat `Build 1865`.\n\nActual result: 34 notifications on VRChat Home (API response), 5 notifications in VRChat `Build 1865` and an inner stack exception in output logs.\n\nAdditional details: https://feedback.vrchat.com/bug-reports/p/error-api-inner-stack-exception-an-item-with-the-same-key-has-already-been-added",
+  "details": "I'm resubmitting an older bug report due to age and new information available.\n\nWhen something triggers a Moderation Report Closed notification to be updated, a new notification for the update is sent out with the same `createdAt` date and an unique `updatedAt` date. At this point in time, the user may have two Moderation Report Closed notifications with identical `createdAt` dates, but unique `updatedAt` dates.\n\nIn the example attached `notifications.json` response retrieved from `GET https://vrchat.com/api/1/notifications?limit=100`, notifications #5 and #6 from the top share the same `\"createdAt\": \"2026-07-03T18:00:19.902Z\"` date for Moderation Report Closed notifications.\n\nWhen VRChat `Build 1865` sees these two notifications with identical `createdAt` dates from the API on client launch, it's interpreted as bad response data by `Transmtn.PostOffice.ProcessNotification` for having duplicate `createdAt` keys and notifications older than this never arrive to the client or are never processed by it. Effectively, a \"crash\" of notifications processing.\n\nAffected notification IDs (identical `createdAt` keys):\n\n- `not_13cf4c6c-6585-443c-af8c-0b0e4ca92867`\n\n- `not_baaa6d95-c41e-4780-adf7-4b4c716cc49f`\n\nExpected result: 34 notifications in VRChat Home (API response) and VRChat `Build 1865`.\n\nActual result: 34 notifications on VRChat Home (API response), 5 notifications in VRChat `Build 1865` and an inner stack exception in output logs.\n\nAdditional info:\n\n- https://feedback.vrchat.com/bug-reports/p/error-api-inner-stack-exception-an-item-with-the-same-key-has-already-been-added\n\n- `/moderationReports?status=closed` response in comments",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -164,7 +164,7 @@
     "https://canny-assets.io/images/c62913343fbb174a2603394626d84fa5.png",
     "https://canny-assets.io/images/12a70e764cbb93a8551aac74fee6e477.png"
   ],
-  "lastUpdated": 1783119615800,
+  "lastUpdated": 1783121342615,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -180,7 +180,7 @@
   "subCategoryID": null,
   "title": "An updated Moderation Report Closed notification causes notifications processor (Transmtn.PostOffice.ProcessNotification) to stop processing older notifications (identical createdAt date keys)",
   "trendingScore": 2948.9675743110165,
-  "updatedAt": "2026-07-03T23:25:46.654377Z",
+  "updatedAt": "2026-07-03T23:54:45.846145Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "an-updated-moderation-report-closed-notification-causes-notifications-processor",
   "viewerIsAuthor": false,
