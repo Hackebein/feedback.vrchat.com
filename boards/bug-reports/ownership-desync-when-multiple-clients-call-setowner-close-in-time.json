@@ -1,0 +1,88 @@
+{
+  "_id": "6a495a39bbaa71301323f5f6",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-07-04T19:40:28.926102Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5c1475afb7ce126e9e0e3a39",
+    "alias": "Wineberry Leopard",
+    "aliasID": "65c26da3ed6eefce4c4d098e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+    "created": "2018-12-15T03:31:59.071Z",
+    "name": "bd_",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5c1475afb7ce126e9e0e3a39",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-04T19:08:41.752Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When multiple clients call SetOwner on the same object at the same time, a persistent desync can result, which can only be resolved by taking ownership by a third client.\n\nI have a simple repro world here: https://vrchat.com/home/world/wrld_9ee8c772-e157-416a-acc4-513615d36776\n\nSource code: https://gist.github.com/bdunderscore/028b06692dab73ffc8732204f2108f14\n\nWhen the cube is turned on (blue), the local client will attempt to take ownership every 0.2-0.4 seconds.\n\nTo repro: Connect with three or more clients. On two of the non-master clients, click the cube. Wait until the Owner: indicator settles down into a desynced state. Then turn the cube back off. Observe that it remains desynced.\n\nI tested this on the unity 6 beta, but this repro was based on a bug report for a more complex system on live as well, so I expect the bug is present on both.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a495a39bbaa71301323f5f5",
+  "imageURLs": [
+    "https://canny-assets.io/images/df5d7fc51c24dec38a26b517f9f7aafe.png"
+  ],
+  "lastUpdated": 1783192167315,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-04T19:08:41.752Z",
+  "subCategoryID": null,
+  "title": "Ownership desync when multiple clients call SetOwner close in time",
+  "trendingScore": 2949.092819240745,
+  "updatedAt": "2026-07-04T19:40:23.383727Z",
+  "updatedBy": null,
+  "urlName": "ownership-desync-when-multiple-clients-call-setowner-close-in-time",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075321cd63d227959c77856a77d84c1b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": null,
+      "voteID": "6a495a39f51f79a5dbdd0cef"
+    }
+  ]
+}

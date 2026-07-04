@@ -2,9 +2,9 @@
   "_id": "6a4951b55151d19dc300e12b",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.clientsim"
   ],
-  "aiTaggedAt": "2026-07-04T19:07:58.002096Z",
+  "aiTaggedAt": "2026-07-04T19:40:28.928285Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "632b57fd1ad5e044cbdde5d9",
@@ -42,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "CRT - 256x128/R8 UNORM/Point\n\nTexture2D - 556x128/R8/Point",
+  "details": "CRT - 256x128/R8 UNORM/Point\n\nTexture2D - 556x128/R8/Point\n\n```\n\nvar px = new byte[chunkGenerator.width * chunkGenerator.height];\n\nif (!request.TryGetData(px)) return;\n\nminiTex.LoadRawTextureData(px);\n\nminiTex.Apply();\n\n```",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -53,7 +53,7 @@
     "https://canny-assets.io/images/fe48437bbb38eeb389c373b81dd5fe2c.png",
     "https://canny-assets.io/images/ef813f8d580d02ce1011ab788be5de91.jpeg"
   ],
-  "lastUpdated": 1783190206828,
+  "lastUpdated": 1783192168293,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -69,7 +69,7 @@
   "subCategoryID": null,
   "title": "AsyncGPUReadback from CTR to Texture2D Unity6",
   "trendingScore": 2949.089214457346,
-  "updatedAt": "2026-07-04T19:07:52.486676Z",
+  "updatedAt": "2026-07-04T19:40:23.383727Z",
   "updatedBy": "632b57fd1ad5e044cbdde5d9",
   "urlName": "asyncgpureadback-from-ctr-to-texture2d-unity6",
   "viewerIsAuthor": false,
