@@ -2,9 +2,11 @@
   "_id": "6a47f7ad48ab8093bddc0501",
   "aiCategories": [
     "loc.website",
+    "worlds.content-gating",
+    "avatars",
     "web.worlds"
   ],
-  "aiTaggedAt": "2026-07-04T07:05:38.585826Z",
+  "aiTaggedAt": "2026-07-04T08:00:48.694054Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6187011bf8abef7201776f3e",
@@ -28,54 +30,8 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 15,
+  "commentCount": 16,
   "comments": [
-    {
-      "_id": "6a4815d2bbaa71301309b61f",
-      "aiGenerated": false,
-      "author": {
-        "_id": "6a480afaf51f79a5dba6c0a1",
-        "alias": "Splendid Gull",
-        "aliasID": "6a480afaf51f79a5dba6c0a6",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/35d205013da937d38e3d4f7d172cafa7.png",
-        "created": "2026-07-03T19:18:18.126Z",
-        "name": "ふあゆき",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62efae9868f3662e9d9a1",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-07-03T20:04:34.223Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6a47f7ad48ab8093bddc0501",
-      "private": false,
-      "reactions": {
-        "like": 4
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "As a practical matter, this will not work.\n\nMost world creators rely on external assets from platforms like BOOTH. Furthermore, for programming elements like Udon and shaders, the use of AI coding assistants has become commonplace. Unless the original creators of these assets explicitly disclose AI usage, it is impossible for the world creator to detect it.\n\nIn short, placing the entire burden of verification and disclosure solely on the final world creator is structurally unrealistic.",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "6a48163d8f344dcc17319db5",
       "aiGenerated": false,
@@ -261,62 +217,6 @@
       "voteID": null
     },
     {
-      "_id": "6a482bf4506de6fd185abbdc",
-      "aiGenerated": false,
-      "author": {
-        "_id": "687c57ccc1f0e1f016029ab9",
-        "alias": "Chartreuse Dormouse",
-        "aliasID": "687c57cdc1f0e1f01602b5b4",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/cc1f34589cef56cb9770952a6590c27e.png",
-        "created": "2025-07-20T02:43:24.975Z",
-        "name": "HiiJax_",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62efae9868f3662e9d9a1",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-07-03T21:39:00.952Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [
-        {
-          "_id": "6a480afaf51f79a5dba6c0a1",
-          "alias": "Splendid Gull",
-          "aliasID": "6a480afaf51f79a5dba6c0a6",
-          "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/35d205013da937d38e3d4f7d172cafa7.png",
-          "created": "2026-07-03T19:18:18.126Z",
-          "name": "ふあゆき",
-          "serviceAccount": false,
-          "urlName": null
-        }
-      ],
-      "mergeID": null,
-      "parentID": "6a4815d2bbaa71301309b61f",
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6a47f7ad48ab8093bddc0501",
-      "private": false,
-      "reactions": null,
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "@{6a480afaf51f79a5dba6c0a1|full_name} ok fine, how about two tags then? toggle 1: DOES contain AI content, which is active if you are aware of AI content in the world or have used it yourself, can be forced on if players report with proof of AI usage. toggle 2: MAY contain AI content, which is active if you used other assets and haven’t vetted whether they used AI or not.",
-      "viewerReactions": null,
-      "voteID": null
-    },
-    {
       "_id": "6a483b565151d19dc3ea2d31",
       "aiGenerated": false,
       "author": {
@@ -351,7 +251,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -397,7 +297,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -443,7 +343,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -500,7 +400,9 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -599,23 +501,23 @@
       "voteID": null
     },
     {
-      "_id": "6a48a9053e2c16d5de2053e9",
+      "_id": "6a48b506cc6252874b88af46",
       "aiGenerated": false,
       "author": {
-        "_id": "6a480afaf51f79a5dba6c0a1",
-        "alias": "Splendid Gull",
-        "aliasID": "6a480afaf51f79a5dba6c0a6",
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/35d205013da937d38e3d4f7d172cafa7.png",
-        "created": "2026-07-03T19:18:18.126Z",
-        "name": "ふあゆき",
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
         "serviceAccount": false,
         "urlName": null
       },
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-07-04T06:32:37.834Z",
+      "created": "2026-07-04T07:23:50.157Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -625,21 +527,9 @@
       "internal": false,
       "itemSourceType": null,
       "mentionedUserIDs": null,
-      "mentionedUsers": [
-        {
-          "_id": "687c57ccc1f0e1f016029ab9",
-          "alias": "Chartreuse Dormouse",
-          "aliasID": "687c57cdc1f0e1f01602b5b4",
-          "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/cc1f34589cef56cb9770952a6590c27e.png",
-          "created": "2025-07-20T02:43:24.975Z",
-          "name": "HiiJax_",
-          "serviceAccount": false,
-          "urlName": null
-        }
-      ],
+      "mentionedUsers": [],
       "mergeID": null,
-      "parentID": "6a4815d2bbaa71301309b61f",
+      "parentID": null,
       "pinned": false,
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
@@ -650,7 +540,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{687c57ccc1f0e1f016029ab9|full_name}That sounds like a fair compromise. \n\nBut, personally, I don't think it would work in practice.\n\nFrom a creator’s perspective, if you use even one external asset, you'd have to check \"MAY\" just to be safe. (Personally, I’d hav to set all my worlds to \"MAY.\") \n\nAs a result, almost every world would end up with this tag, completely ruining the filter.\n\nFurthermore, allowing players to report worlds would only fuel baseless witch hunts. The community is already exhausted by toxic BAN movements, and this would officially accelerate that drama.",
+      "value": "External feedback: https://old.reddit.com/r/VRchat/comments/1umlnnk/please_add_content_contains_generative_ai_to/",
       "viewerReactions": null,
       "voteID": null
     }
@@ -670,23 +560,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/0975b614532eda0d8feca209480dd70c.png"
   ],
-  "lastUpdated": 1783146836739,
+  "lastUpdated": 1783150426440,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 216,
+  "maxScore": 218,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a47f7ad48ab8093bddc0501/682972098.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 216,
+  "score": 218,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-03T17:55:57.677Z",
   "subCategoryID": null,
   "title": "Add \"Contains Generative AI Content\" tag to the Content Gating system",
-  "trendingScore": 2953.676528366066,
-  "updatedAt": "2026-07-04T07:05:33.032148Z",
+  "trendingScore": 2953.686005069932,
+  "updatedAt": "2026-07-04T08:00:43.162300Z",
   "updatedBy": null,
   "urlName": "add-contains-generative-ai-content-tag-to-the-content-gating-system",
   "viewerIsAuthor": false,
@@ -698,6 +588,50 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a48bbd8f51f79a5dbdac5e0",
+      "alias": "Lapis lazuli Stoat",
+      "aliasID": "6a48bbd9f51f79a5dbdac5e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/98fcbc98adabd00d06e2006eb8aca2ac.png",
+      "companies": [],
+      "name": "KajTaotsu",
+      "urlName": null,
+      "voteID": "6a48bc1cf51f79a5dbdac789"
+    },
+    {
+      "_id": "690fc0aa14923d07949ac77f",
+      "alias": "Alabaster Puma",
+      "aliasID": "690fc0ab14923d07949ae932",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9916443c07344a456f6bdc40f7e71506.png",
+      "companies": [],
+      "name": "Woke Moralist",
+      "urlName": null,
+      "voteID": "6a48b7cef51f79a5dbdabfd6"
+    },
+    {
+      "_id": "62e991074cff2944b26f0d01",
+      "alias": "Late Ostrich",
+      "aliasID": "6608b1fee5d26962aac6e650",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/31f8cafd755b92f097c895da8594b1d1.png",
+      "companies": [],
+      "name": "Bungle Bear",
+      "urlName": null,
+      "voteID": "6a48b61df51f79a5dbd46783"
+    },
+    {
+      "_id": "623da9fa8ded1552a46005ef",
+      "alias": "Satisfied Parrotfish",
+      "aliasID": "69c58d8dbcda4ee632ad03d1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b9fba3dd082376182cccad616becfdd5.png",
+      "companies": [],
+      "name": "Waya Adanvdo",
+      "urlName": null,
+      "voteID": "6a48b160f51f79a5dbb3a1db"
+    },
     {
       "_id": "602d914fbbf7d7113001066b",
       "alias": "Regional Whitefish",
