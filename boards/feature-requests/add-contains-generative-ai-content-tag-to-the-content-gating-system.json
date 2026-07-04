@@ -1,10 +1,10 @@
 {
   "_id": "6a47f7ad48ab8093bddc0501",
   "aiCategories": [
-    "loc.in-world",
+    "loc.website",
     "worlds.content-gating"
   ],
-  "aiTaggedAt": "2026-07-03T23:54:50.826798Z",
+  "aiTaggedAt": "2026-07-04T00:23:55.630333Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6187011bf8abef7201776f3e",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "comments": [
     {
       "_id": "6a48005dbbaa713013076236",
@@ -442,7 +442,9 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -495,6 +497,50 @@
       "value": "I see others stating that world creators are going to be potentially witch hunted over someone crying wolf in regards to something that looks like AI to them in the worlds, but having grown incredibly tired of seeing so many different worlds with AI generated preview images that are just undeniably identifiable as AI, I think doing something like this would be possible with the more evident instances of AI content being noticed on VRChat's platform. I definitely feel strongly for ensuring something like this isn't abused but I would love to see some sort of way of labeling these worlds with a tag that I can use to then filter out from searches.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a484a52e7e161e315b0218e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6265b7ce52dd8f7df79bedb3",
+        "alias": "Mauve Wallaby",
+        "aliasID": "65c26da3ed6eefce4c4d0948",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/85c9f03a4e630d6afed137b5fe5535fe.png",
+        "created": "2022-04-24T20:49:18.655Z",
+        "name": "ironicsoap",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-03T23:48:34.256Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a47f7ad48ab8093bddc0501",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I think that creators may still lie about the usage of genAI, combating it on the platform should go hand in hand with a like+dislike system for worlds. Worlds with misleading AI thumbnails, or noticeable AI usage (or even just bad quality/broken worlds) will get more dislikes.\n\nhttps://feedback.vrchat.com/feature-requests/p/the-ability-to-like-and-dislike-or-vote-on-worlds",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -512,23 +558,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/0975b614532eda0d8feca209480dd70c.png"
   ],
-  "lastUpdated": 1783121342816,
+  "lastUpdated": 1783122968132,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 158,
+  "maxScore": 162,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a47f7ad48ab8093bddc0501/682972098.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 158,
+  "score": 162,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-03T17:55:57.677Z",
   "subCategoryID": null,
   "title": "Add \"Contains Generative AI Content\" tag to the Content Gating system",
-  "trendingScore": 2953.3569670165575,
-  "updatedAt": "2026-07-03T23:54:45.846145Z",
+  "trendingScore": 2953.381718757195,
+  "updatedAt": "2026-07-04T00:23:51.166112Z",
   "updatedBy": null,
   "urlName": "add-contains-generative-ai-content-tag-to-the-content-gating-system",
   "viewerIsAuthor": false,
@@ -540,6 +586,83 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62deeb21a3f99544ac8c1e9e",
+      "alias": "Informal Lemming",
+      "aliasID": "6603f7eba63714bcb31e9882",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/154a100b20b402f14caa1db6b7e4b1b3.png",
+      "companies": [],
+      "name": "Sayorain",
+      "urlName": null,
+      "voteID": "6a485282f51f79a5dba7df1c"
+    },
+    {
+      "_id": "61ba21ab7b7f18766e50ad71",
+      "alias": "Relevant Turtle",
+      "aliasID": "65c2e4cced6eefce4cb7d842",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a000e0cd755beeeeda230783a18f3ba9.png",
+      "companies": [],
+      "name": "DX_30",
+      "urlName": null,
+      "voteID": "6a484fccf51f79a5dba7d976"
+    },
+    {
+      "_id": "67e0c7c78aea484a57d5764a",
+      "alias": "Confident Meerkat",
+      "aliasID": "67e0c7c88bda4d8ce9416e35",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cd2347886fce52d402ec8e598209fbee.png",
+      "companies": [],
+      "name": "chemu",
+      "urlName": null,
+      "voteID": "6a484ccdf51f79a5dba7d1e5"
+    },
+    {
+      "_id": "63927e7aff78de5d6e4cbe95",
+      "alias": "Keppel green Bass",
+      "aliasID": "65c2c0bced6eefce4c74c786",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/44e3fe195ee77715c9260e02ae906eee.png",
+      "companies": [],
+      "name": "Goblin_Mode",
+      "urlName": null,
+      "voteID": "6a484b83f51f79a5dba7cdfc"
+    },
+    {
+      "_id": "5f998f714f37522ddfc3c615",
+      "alias": "Instant Swallow",
+      "aliasID": "66492d91b9e8e8fe661dcb65",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/524797ee596338e21b5d69253e2e1032.png",
+      "companies": [],
+      "name": "Firhelm",
+      "urlName": null,
+      "voteID": "6a484a04f51f79a5dba7c350"
+    },
+    {
+      "_id": "6265b7ce52dd8f7df79bedb3",
+      "alias": "Mauve Wallaby",
+      "aliasID": "65c26da3ed6eefce4c4d0948",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/85c9f03a4e630d6afed137b5fe5535fe.png",
+      "companies": [],
+      "name": "ironicsoap",
+      "urlName": null,
+      "voteID": "6a4848fcf51f79a5dba7c1f9"
+    },
+    {
+      "_id": "6a48474cf51f79a5dba7bd46",
+      "alias": "Lapis lazuli Trout",
+      "aliasID": "6a48474df51f79a5dba7bd49",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3a84b5b1e8a7e1ae3ee0d525fd012280.png",
+      "companies": [],
+      "name": "tokinamu",
+      "urlName": null,
+      "voteID": "6a48474ff51f79a5dba7bd4d"
+    },
     {
       "_id": "6659fdaa52b3b86bd00b0b77",
       "alias": "Rosé pink Barnacle",
@@ -1364,17 +1487,6 @@
       "name": "Ikeiwa",
       "urlName": null,
       "voteID": "6a481670f51f79a5dba7041d"
-    },
-    {
-      "_id": "60e65f577ae9d0492b0f2a75",
-      "alias": "Just Wildcat",
-      "aliasID": "65c26de3ed6eefce4c583d87",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/10c44eafe65575366c2860d7faf99821.png",
-      "companies": [],
-      "name": "Hackebein",
-      "urlName": null,
-      "voteID": "6a481657f51f79a5dba702fe"
     },
     {
       "_id": "6a4815ddf51f79a5dba7016f",
