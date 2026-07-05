@@ -762,7 +762,9 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -864,7 +866,9 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -946,23 +950,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/0975b614532eda0d8feca209480dd70c.png"
   ],
-  "lastUpdated": 1783219661092,
+  "lastUpdated": 1783224934048,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 322,
+  "maxScore": 323,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a47f7ad48ab8093bddc0501/682972098.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 322,
+  "score": 323,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-03T17:55:57.677Z",
   "subCategoryID": null,
   "title": "Add \"Contains Generative AI Content\" tag to the Content Gating system",
-  "trendingScore": 2954.1088239823125,
-  "updatedAt": "2026-07-05T03:14:35.702736Z",
+  "trendingScore": 2954.112304355689,
+  "updatedAt": "2026-07-05T04:41:14.696376Z",
   "updatedBy": null,
   "urlName": "add-contains-generative-ai-content-tag-to-the-content-gating-system",
   "viewerIsAuthor": false,
@@ -974,6 +978,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f631b6ca962250cb22b15d3",
+      "alias": "Cinnabar Panther",
+      "aliasID": "65c2c411ed6eefce4cdaeaf9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3512e2c0a17dbae5de07b12a4520dd6b.png",
+      "companies": [],
+      "name": "labcatluke",
+      "urlName": null,
+      "voteID": "6a49df63f51f79a5dbe10844"
+    },
+    {
+      "_id": "63c774c63908c55b962fb382",
+      "alias": "Slim Dormouse",
+      "aliasID": "6625538ed36452c17933b487",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7b2d9276eab743b3f59d2beec28c3848.png",
+      "companies": [],
+      "name": "SeamossDNB",
+      "urlName": null,
+      "voteID": "6a49dc7cf51f79a5dbe10383"
+    },
+    {
+      "_id": "698ae2714e32484d290639f5",
+      "alias": "Misty Wombat",
+      "aliasID": "698ae2714e32484d290657f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5901a70ea1e7ddb761e6deb96d77427a.png",
+      "companies": [],
+      "name": "~Trixie",
+      "urlName": null,
+      "voteID": "6a49d101f51f79a5dbe0f238"
+    },
     {
       "_id": "608ed38f475d8427ce409074",
       "alias": "Wisteria Eagle",
