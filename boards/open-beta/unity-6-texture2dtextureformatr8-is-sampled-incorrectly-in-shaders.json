@@ -1,11 +1,10 @@
 {
   "_id": "6a4a7d9882dc142fb8a27bc4",
   "aiCategories": [
-    "loc.unity-sdk",
-    "sdk.vrcsdk",
+    "loc.pc-client",
     "open-beta"
   ],
-  "aiTaggedAt": "2026-07-05T16:35:53.623433Z",
+  "aiTaggedAt": "2026-07-05T17:07:48.010512Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "632b57fd1ad5e044cbdde5d9",
@@ -43,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "After the VRChat client migrated to Unity 6, Texture2D(TextureFormat.R8) no longer behaves correctly when sampled in shaders.\n\nI verified the following:\n\nTexture2D(TextureFormat.R8) is created successfully.\n\nSetPixels() correctly stores only the red channel, confirming that the texture is truly single-channel.\n\nLoadRawTextureData() also accepts exactly 1 byte per pixel with no size mismatch.\n\nBoth SetPixels() and LoadRawTextureData() produce the same incorrect shader output.\n\nLoad(), Sample(), and tex2D() all return identical incorrect results.\n\nThis indicates that the texture data is stored correctly, but is decoded incorrectly when sampled in a shader.\n\nIn addition to the red channel becoming non-linear, the sampled green and blue channels are always returned as 1.0, even though TextureFormat.R8 only stores a single red channel. This behavior is unexpected and was not present before the Unity 6 client migration.\n\nThis behavior did not occur before the Unity 6 client migration.\n\nfirst image: old version\n\nsecond image: U6 Beta",
+  "details": "After the VRChat client migrated to Unity 6, Texture2D(TextureFormat.R8) no longer behaves correctly when sampled in shaders.\n\nI verified the following:\n\nTexture2D(TextureFormat.R8) is created successfully.\n\nThe texture accepts exactly 1 byte per pixel.\n\nUsing SetPixels(), I compared writing the same red value both with and without different green and blue values. The shader output remained identical, confirming that the green and blue channels are ignored during storage, as expected for TextureFormat.R8.\n\nApply() succeeds without errors.\n\nLoad(), Sample(), and tex2D() all produce identical incorrect results.\n\nThis indicates that the texture data is stored correctly, but is decoded incorrectly when sampled in a shader.\n\nIn addition to the red channel becoming non-linear, the sampled green and blue channels are always returned as 1.0, even though TextureFormat.R8 stores only a single red channel.\n\nThe sampled red values remain monotonic (their order is preserved), but they are no longer linear. Low values are compressed into a much smaller range, making TextureFormat.R8 unusable as a byte-accurate data texture.\n\nThis behavior did not occur before the VRChat client migrated to Unity 6.\n\nFirst image: old version\n\nSecond image: Unity 6 Beta",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -54,7 +53,7 @@
     "https://canny-assets.io/images/6ea23ebd8da18da39d5d4aa71417044e.png",
     "https://canny-assets.io/images/32ad5bcd8b886f47c330dbe5906aff1a.png"
   ],
-  "lastUpdated": 1783267498367,
+  "lastUpdated": 1783269430954,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -70,7 +69,7 @@
   "subCategoryID": null,
   "title": "[Unity 6] Texture2D(TextureFormat.R8) is sampled incorrectly in shaders",
   "trendingScore": 2949.2161498715323,
-  "updatedAt": "2026-07-05T16:35:48.059520Z",
+  "updatedAt": "2026-07-05T17:07:42.490558Z",
   "updatedBy": "632b57fd1ad5e044cbdde5d9",
   "urlName": "unity-6-texture2dtextureformatr8-is-sampled-incorrectly-in-shaders",
   "viewerIsAuthor": false,
