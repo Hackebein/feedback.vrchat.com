@@ -3,9 +3,10 @@
   "_id": "6832adb1ebc20d5ea425891c",
   "aiCategories": [
     "loc.in-world",
-    "client.chatbox"
+    "worlds.travel",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-06-12T22:48:47.247296Z",
+  "aiTaggedAt": "2026-07-06T15:11:51.385498Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "622893dc14e3795af3d9ed30",
@@ -35,7 +36,7 @@
   "created": "2025-05-25T05:42:09.433Z",
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I and many others who I've interacted with have noticed an issue in desktop mode when using a world that makes heavy use of UI \"inputfields\". (Karaoke central being a common example)\n\nAt seemingly random, keyboard inputs meant for movement suddenly start typing into inputfields. VRChat has long since moved past this style of typing into inputfields, (it now brings up a keyboard menu specific to input fields.) Despite this, when walking around normally or crouching or jumping, Characters get typed into the inputfield.\n\nAfter finally trying to find out what causes this in game, I found that clicking down(hold) on nearby UI elements, and moving your cursor, before using a keyboard input seem to cause the UI input to start accepting keyboard input without the keyboard popup.\n\nI'm unable to find any more specific details on requirements to cause this bug. UI inputfield existing, and clicking and dragging on any other UI in the map.",
+  "details": "[Updated old post, as I didn't understand this 'bug' prior]\n\nThis is an issue in many worlds that makes use of UI inputfields. (Karaoke central being a common example)\n\nAt seemingly random, keyboard movement will suddenly start typing into inputfields. I assume this functionality even exists because VRChat once didn't have the popup for a keyboard in desktop. However, VRChat now uses a keyboard popup specifically for inputfields, and navigation is almost never left on intentionally for worlds. Leaving this as something that worsens the quality of maps from newer creators without them understanding why.\n\nI'm not sure if the 'navigation' is bugged, or if this is some \"feature\" that isn't documented and is on by default. But considering the inconsistency of it's activation, and the QoL it would be if it were outright removed, I assume it's a bug.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -43,7 +44,7 @@
   "files": [],
   "ideaID": "6832adb1ebc20d5ea425896e",
   "imageURLs": [],
-  "lastUpdated": 1783312096988,
+  "lastUpdated": 1783349252881,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -57,11 +58,11 @@
   "status": "open",
   "statusChanged": "2025-05-25T05:42:09.433Z",
   "subCategoryID": null,
-  "title": "InputField seems to allow keyboard input when you've clicked nearby unrelated UI.",
+  "title": "InputField accepts all keyboard inputs when navigation is not set to \"None\" on the component.",
   "trendingScore": 2891.561264296309,
-  "updatedAt": "2026-07-06T04:52:23.872069Z",
-  "updatedBy": null,
-  "urlName": "inputfield-seems-to-allow-keyboard-input-when-youve-clicked-nearby-unrelated-ui",
+  "updatedAt": "2026-07-06T15:11:45.937841Z",
+  "updatedBy": "622893dc14e3795af3d9ed30",
+  "urlName": "inputfield-accepts-all-keyboard-inputs-when-navigation-is-not-set-to-none-on-the",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
