@@ -1,0 +1,89 @@
+{
+  "_id": "6a4b82fd1bb21a5c0f70edca",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-07-06T11:22:19.309937Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "61ba21ab7b7f18766e50ad71",
+    "alias": "Relevant Turtle",
+    "aliasID": "65c2e4cced6eefce4cb7d842",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a0eebc844f510090e952de40f7865375.png",
+    "created": "2021-12-15T17:11:07.381Z",
+    "name": "DX_30",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "61ba21ab7b7f18766e50ad71",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-06T10:27:09.647Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I was trying to do the following setup (indicated in the image) to be able to create a pointer to select items in a menu.\n\nI noticed that the pointer (in the test case, a contact sender type Box) doesn't calculate the interaction between the cursor and the contact receiver correctly.\n\nIn my tests, it seems to creates a bonding box around the cursor and calculates based on that, thus showing a proximity that is not consistent with the intersection of the sender with the receiver.\n\nThis bug affects all currently available versions: public, open beta, Unity-6 and SDK\n\nhere an an avatar with a example of the bug:\n\nhttps://vrchat.com/home/avatar/avtr_175e72f7-ca81-403b-89be-fa2ad211180c\n\nand here the link for a VRCfury prefab with the setup:\n\nhttps://drive.google.com/file/d/1Y-CZVjsg7-ydc9afXYO6-Ee5HmeCoMf4/view?usp=sharing\n\n*Note: If you change the cursor type from box to Capsule, the receiver stops working completely, this is also not expected behavior.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a4b82fd1bb21a5c0f70edc2",
+  "imageURLs": [
+    "https://canny-assets.io/images/bd46f01fb7289d2b06d6bff8cb7d8393.png",
+    "https://canny-assets.io/images/0d6c215ca13cbd81d2d05125b9760a96.jpeg"
+  ],
+  "lastUpdated": 1783335452381,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a4b82fd1bb21a5c0f70edca/1901054692.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-06T10:27:09.647Z",
+  "subCategoryID": null,
+  "title": "Contact Receiver Box with Face Proximity calculate the Incorrect Distance",
+  "trendingScore": 2949.3267939513935,
+  "updatedAt": "2026-07-06T11:22:13.776341Z",
+  "updatedBy": null,
+  "urlName": "contact-receiver-box-with-face-proximity-calculate-the-incorrect-distance",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61ba21ab7b7f18766e50ad71",
+      "alias": "Relevant Turtle",
+      "aliasID": "65c2e4cced6eefce4cb7d842",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a0eebc844f510090e952de40f7865375.png",
+      "companies": [],
+      "name": "DX_30",
+      "urlName": null,
+      "voteID": "6a4b82fdf51f79a5dbe6c0e0"
+    }
+  ]
+}
