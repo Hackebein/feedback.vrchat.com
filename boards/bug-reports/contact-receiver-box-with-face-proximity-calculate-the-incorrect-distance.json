@@ -1,10 +1,11 @@
 {
   "_id": "6a4b82fd1bb21a5c0f70edca",
   "aiCategories": [
-    "loc.in-world",
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-07-06T12:44:35.340531Z",
+  "aiTaggedAt": "2026-07-07T20:29:34.087797Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61ba21ab7b7f18766e50ad71",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a4b8f3a9f9bb472bbc7d473",
@@ -64,13 +65,59 @@
       "postDeleted": false,
       "postID": "6a4b82fd1bb21a5c0f70edca",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "This may be related to the issue I found w/ long & wide but thin boxes interacting incorrectly w/ long and thin capsules as your note at the end would result a similar setup to what I had in my testing.\n\nI should probably test that same setup w/ a box contact instead to see if something similar occurs.\n\nhttps://feedback.vrchat.com/avatar-30/p/box-contact-fails-to-register-contact-with-long-capsule-contacts-under-some-circ",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a4d531cec0c188090914da5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "61ba21ab7b7f18766e50ad71",
+        "alias": "Relevant Turtle",
+        "aliasID": "65c2e4cced6eefce4cb7d842",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a0eebc844f510090e952de40f7865375.png",
+        "created": "2021-12-15T17:11:07.381Z",
+        "name": "DX_30",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-07T19:27:24.420Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a4b82fd1bb21a5c0f70edca",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "From my research, it seems to have something to do with scale, both the scale on the contact receiver component and the gameobject.\n\nChanging the scale of the X and Y axes does not change how the distance is calculated.\n\nThe Gizmos visuals are updated, but the calculation doesn't appear to use the same information.\n\nIt's probably something left over from the capsule and sphere code, it ignores the scale of the gameObject if the scale is not uniform.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -91,7 +138,7 @@
     "https://canny-assets.io/images/bd46f01fb7289d2b06d6bff8cb7d8393.png",
     "https://canny-assets.io/images/0d6c215ca13cbd81d2d05125b9760a96.jpeg"
   ],
-  "lastUpdated": 1783443947785,
+  "lastUpdated": 1783454557926,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 14,
@@ -107,7 +154,7 @@
   "subCategoryID": null,
   "title": "Contact Receiver Box with Face Proximity calculate the Incorrect Distance",
   "trendingScore": 2951.379058569918,
-  "updatedAt": "2026-07-07T17:32:38.718367Z",
+  "updatedAt": "2026-07-07T20:29:29.564739Z",
   "updatedBy": null,
   "urlName": "contact-receiver-box-with-face-proximity-calculate-the-incorrect-distance",
   "viewerIsAuthor": false,
