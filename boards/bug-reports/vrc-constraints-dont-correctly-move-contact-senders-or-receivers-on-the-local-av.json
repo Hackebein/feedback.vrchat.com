@@ -1,0 +1,100 @@
+{
+  "_id": "6a4c8920174437bb238467a7",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-07-07T06:10:53.924461Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "622893dc14e3795af3d9ed30",
+    "alias": "Aquamarine Gayal",
+    "aliasID": "65c2ce8bed6eefce4c1e378a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7b52f642641dff664fd315496205d1a1.png",
+    "created": "2022-03-09T11:47:40.949Z",
+    "name": "TheCreationKing",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "622893dc14e3795af3d9ed30",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-07T05:05:36.720Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Resubmission of this bug:\n\nhttps://feedback.vrchat.com/bug-reports/p/1472-vrc-constraints-dont-move-contact-senders-or-receivers\n\nAvatar example:\n\nhttps://vrchat.com/home/avatar/avtr_75f8493b-b10b-4401-b659-6632b9798421\n\n(Expressions > Customization > Outfits > Dullahan)\n\nThe contact for the head punch collider (for PVP) is intended to move along side the head, which it fails to do. Only, however, on the local client. Other users seem to see the contact move correctly.\n\nAnimation state changes that modify how the IK controls the animator seem to temporarily resolve the issue. For example, playing a default animation (dance, cheer, die, etc.) and then jumping",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a4c8920174437bb238467a6",
+  "imageURLs": [
+    "https://canny-assets.io/images/0aa83876b92a871ae03192e5df420c7b.png",
+    "https://canny-assets.io/images/1fcfaa2b75d79405d3db0f0ae00c4d96.png"
+  ],
+  "lastUpdated": 1783403034530,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a4c8920174437bb238467a7/2006617037.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-07T05:05:36.720Z",
+  "subCategoryID": null,
+  "title": "VRC constraints don't correctly move contact senders or receivers on the local avatar.",
+  "trendingScore": 2949.843375460971,
+  "updatedAt": "2026-07-07T06:10:48.296876Z",
+  "updatedBy": null,
+  "urlName": "vrc-constraints-dont-correctly-move-contact-senders-or-receivers-on-the-local-av",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66b59376a7c34428de181436",
+      "alias": "Vivacious Deer",
+      "aliasID": "66b59376f66f1f693aed11d8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e1d5818e20ab7380b189db953d5860c2.png",
+      "companies": [],
+      "name": "Insect Thirteen",
+      "urlName": null,
+      "voteID": "6a4c8a40f51f79a5dbef60f4"
+    },
+    {
+      "_id": "622893dc14e3795af3d9ed30",
+      "alias": "Aquamarine Gayal",
+      "aliasID": "65c2ce8bed6eefce4c1e378a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7b52f642641dff664fd315496205d1a1.png",
+      "companies": [],
+      "name": "TheCreationKing",
+      "urlName": null,
+      "voteID": "6a4c8920f51f79a5dbef5df5"
+    }
+  ]
+}
