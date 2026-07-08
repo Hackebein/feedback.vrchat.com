@@ -66,7 +66,7 @@
       "postID": "6a4d77317ed20ef0e2c237a4",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -156,7 +156,7 @@
       "postID": "6a4d77317ed20ef0e2c237a4",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -201,7 +201,9 @@
       "postDeleted": false,
       "postID": "6a4d77317ed20ef0e2c237a4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -225,34 +227,45 @@
   "files": [],
   "ideaID": "6a4d77307ed20ef0e2c23774",
   "imageURLs": [],
-  "lastUpdated": 1783468944875,
+  "lastUpdated": 1783477812263,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 5,
+  "maxScore": 6,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a4d77317ed20ef0e2c237a4/1979872900.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 5,
+  "score": 6,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-07T22:01:21.157Z",
   "subCategoryID": null,
   "title": "Remove case by case exceptions no Very Poors.",
-  "trendingScore": 2950.640181512843,
-  "updatedAt": "2026-07-08T00:31:29.313924Z",
+  "trendingScore": 2950.79692019118,
+  "updatedAt": "2026-07-08T02:57:14.752450Z",
   "updatedBy": "6a4abb0ef51f79a5dbe3a9a5",
   "urlName": "remove-case-by-case-exceptions-no-very-poors",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
-    "highEngagement": false,
+    "highEngagement": true,
     "lowEngagement": false,
-    "moderateEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64fb7fa28c03ee0968a1745b",
+      "alias": "Planned Wallaby",
+      "aliasID": "65e0f70fa6e3ea79ddca206c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bbed6e9d18d352ff7b1704d476945cdc.png",
+      "companies": [],
+      "name": "EldritchElias",
+      "urlName": null,
+      "voteID": "6a4da8def51f79a5db248f0b"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
