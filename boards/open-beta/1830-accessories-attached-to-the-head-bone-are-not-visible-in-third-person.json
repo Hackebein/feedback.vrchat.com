@@ -2,9 +2,10 @@
   "_id": "69d9ab0f59a529b14e427cc0",
   "aiCategories": [
     "loc.in-world",
-    "avatars.accessories"
+    "avatars.accessories",
+    "client.third-person"
   ],
-  "aiTaggedAt": "2026-06-11T09:28:47.304826Z",
+  "aiTaggedAt": "2026-07-09T23:35:17.324611Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61156bdffb15af250e67c5b6",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "69dd0591f758fdec465df46e",
@@ -116,6 +117,51 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a500b2377babd576285a54a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-09T20:57:07.768Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69d9ab0f59a529b14e427cc0",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a500b2377babd576285a549",
+      "statusChangeNewStatus": "complete",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -132,7 +178,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/c9acaa97fe890a5d6e9be64a6692b79f.png"
   ],
-  "lastUpdated": 1783624500704,
+  "lastUpdated": 1783639549824,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 7,
@@ -143,12 +189,12 @@
   "pinnedComment": null,
   "score": 7,
   "sourceFeatureExtractionItem": null,
-  "status": "available in future release",
-  "statusChanged": "2026-04-14T18:34:24.824Z",
+  "status": "complete",
+  "statusChanged": "2026-07-09T20:57:07.733Z",
   "subCategoryID": null,
   "title": "[1830] Accessories attached to the head bone are not visible in third-person",
   "trendingScore": 2938.448402789831,
-  "updatedAt": "2026-07-09T19:23:41.864296Z",
+  "updatedAt": "2026-07-09T23:35:09.899494Z",
   "updatedBy": null,
   "urlName": "1830-accessories-attached-to-the-head-bone-are-not-visible-in-third-person",
   "viewerIsAuthor": false,
