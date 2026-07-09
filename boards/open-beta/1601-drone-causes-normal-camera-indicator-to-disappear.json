@@ -2,10 +2,10 @@
   "__v": 0,
   "_id": "67d1fad9a5f5f90a3f5af9c8",
   "aiCategories": [
-    "loc.in-world",
-    "social.nameplates"
+    "loc.pc-client",
+    "client.camera"
   ],
-  "aiTaggedAt": "2026-06-10T20:27:37.239568Z",
+  "aiTaggedAt": "2026-07-09T22:56:43.829802Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fca5df4d58780532024a52b",
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "__v": 0,
@@ -119,6 +119,51 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a500ba981298c7629c9dd8b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-09T20:59:21.278Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67d1fad9a5f5f90a3f5af9c8",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a500ba981298c7629c9dd8a",
+      "statusChangeNewStatus": "complete",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -135,7 +180,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/59fd71613c5714d54eca523c0898476e.png"
   ],
-  "lastUpdated": 1783621471776,
+  "lastUpdated": 1783637049946,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 10,
@@ -146,12 +191,12 @@
   "pinnedComment": null,
   "score": 10,
   "sourceFeatureExtractionItem": null,
-  "status": "available in future release",
-  "statusChanged": "2025-03-20T20:14:05.582Z",
+  "status": "complete",
+  "statusChanged": "2026-07-09T20:59:21.256Z",
   "subCategoryID": null,
   "title": "[1601] Drone causes normal camera indicator to disappear",
   "trendingScore": 2882.405668383569,
-  "updatedAt": "2026-07-09T18:36:07.935513Z",
+  "updatedAt": "2026-07-09T22:55:20.318588Z",
   "updatedBy": null,
   "urlName": "1601-drone-causes-normal-camera-indicator-to-disappear",
   "viewerIsAuthor": false,

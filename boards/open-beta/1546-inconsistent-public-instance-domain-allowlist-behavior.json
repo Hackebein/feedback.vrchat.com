@@ -3,9 +3,10 @@
   "_id": "6737299183e4af3494d4c723",
   "aiCategories": [
     "loc.in-world",
-    "worlds.video"
+    "worlds.video",
+    "worlds.content-gating"
   ],
-  "aiTaggedAt": "2026-06-10T20:21:53.043496Z",
+  "aiTaggedAt": "2026-07-09T22:55:28.449247Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6219f63f55639e536dc83162",
@@ -36,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "__v": 0,
@@ -119,6 +120,51 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a500bdf52a3b8ac4170b396",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-09T21:00:15.074Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6737299183e4af3494d4c723",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a500bdf52a3b8ac4170b395",
+      "statusChangeNewStatus": "complete",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -135,7 +181,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/cf700d8089a75d3b3c34962cc29526bb.png"
   ],
-  "lastUpdated": 1783621451420,
+  "lastUpdated": 1783637004929,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 6,
@@ -146,12 +192,12 @@
   "pinnedComment": null,
   "score": 6,
   "sourceFeatureExtractionItem": null,
-  "status": "available in future release",
-  "statusChanged": "2024-11-18T20:39:02.543Z",
+  "status": "complete",
+  "statusChanged": "2026-07-09T21:00:15.059Z",
   "subCategoryID": null,
   "title": "[1546] Inconsistent public instance domain allowlist behavior",
   "trendingScore": 2865.245847985341,
-  "updatedAt": "2026-07-09T18:36:07.935513Z",
+  "updatedAt": "2026-07-09T22:55:20.318588Z",
   "updatedBy": null,
   "urlName": "1546-inconsistent-public-instance-domain-allowlist-behavior",
   "viewerIsAuthor": false,
