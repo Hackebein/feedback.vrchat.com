@@ -1,10 +1,10 @@
 {
   "_id": "6a2756777b29a9a41a01a1c6",
   "aiCategories": [
-    "loc.pc-client",
-    "web.store"
+    "loc.main-menu",
+    "client.inventory"
   ],
-  "aiTaggedAt": "2026-06-11T01:52:10.408270Z",
+  "aiTaggedAt": "2026-07-09T21:12:29.690011Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60dd2a998871d03e7f3806ae",
@@ -35,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a282ab35fdb75d30de78521",
@@ -116,6 +116,51 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a50059d6c28204bf1a133c2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "637283d99bf1a03c74a71501",
+        "alias": "Supreme Mongoose",
+        "aliasID": "65c281a2ed6eefce4c82ebcf",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4af1e5dcfb01a026dded3be93d382ec1.gif",
+        "created": "2022-11-14T18:07:21.897Z",
+        "name": "A",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-09T20:33:33.078Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2756777b29a9a41a01a1c6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a50059d6c28204bf1a133c1",
+      "statusChangeNewStatus": "complete",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -134,7 +179,7 @@
     "https://canny-assets.io/images/7d0f0f5805e8323347f852518d990ef5.png",
     "https://canny-assets.io/images/0690e00087677e1177d7da0c0b30ecf6.png"
   ],
-  "lastUpdated": 1783613085134,
+  "lastUpdated": 1783631115422,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -145,12 +190,12 @@
   "pinnedComment": null,
   "score": 2,
   "sourceFeatureExtractionItem": null,
-  "status": "available in future release",
-  "statusChanged": "2026-06-09T21:56:24.771Z",
+  "status": "complete",
+  "statusChanged": "2026-07-09T20:33:33.061Z",
   "subCategoryID": null,
   "title": "[1860] Inventory/Wallet page UI doesn't extend to bottom of page",
   "trendingScore": 2945.8139221395113,
-  "updatedAt": "2026-07-09T16:12:47.841696Z",
+  "updatedAt": "2026-07-09T21:12:24.098847Z",
   "updatedBy": "60dd2a998871d03e7f3806ae",
   "urlName": "1860-inventory-wallet-page-ui-doesnt-extend-to-bottom-of-page",
   "viewerIsAuthor": false,
