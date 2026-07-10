@@ -5,7 +5,7 @@
     "client.camera",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-06-17T21:48:43.862021Z",
+  "aiTaggedAt": "2026-07-10T23:04:35.193119Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "698ae2714e32484d290639f5",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a2824d5e563bf4d0e93b011",
@@ -119,6 +119,62 @@
       "value": "I used the physbones and contacts overlay with the camera all the time to debug my avatars. It's been difficult to do that ever since they stopped showing up in the camera preview :(",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a5173446c28204bf1d58974",
+      "aiGenerated": false,
+      "author": {
+        "_id": "698ae2714e32484d290639f5",
+        "alias": "Misty Wombat",
+        "aliasID": "698ae2714e32484d290657f2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5901a70ea1e7ddb761e6deb96d77427a.png",
+        "created": "2026-02-10T07:46:57.302Z",
+        "name": "~Trixie",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-10T22:33:40.856Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "649b83fd8ca61609383735ec",
+          "alias": "Rosewood Orca",
+          "aliasID": "65c28396ed6eefce4cd16ac0",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/0ad05bf5e14ab34c2b7bcfa45ca40289.png",
+          "created": "2023-06-28T00:51:09.973Z",
+          "name": "Purpzie",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a330c0e8fb9b8cab27f6910",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a25b779dc5a91d6ec9d9c0e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{649b83fd8ca61609383735ec|full_name} Well they should still show up if you turn on UI masking afaik no? I know I did some stuff like that as well when working on my avi just to easily see physbones and its not that long ago....\n\nBut I feel like they should show up ONLY if UI layer is on (since it is an UI element id say) and not inconsistently between preview/file",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -136,7 +192,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/dc6ff71a2b81149886447b231dccc734.png"
   ],
-  "lastUpdated": 1783715647454,
+  "lastUpdated": 1783723032739,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
@@ -152,7 +208,7 @@
   "subCategoryID": null,
   "title": "Physbone Avatar Overlay shows in photos, but not on camera UI",
   "trendingScore": 2946.8771974287033,
-  "updatedAt": "2026-07-10T20:56:34.719322Z",
+  "updatedAt": "2026-07-10T23:04:29.595443Z",
   "updatedBy": null,
   "urlName": "physbone-avatar-overlay-shows-in-photos-but-not-on-camera-ui",
   "viewerIsAuthor": false,
