@@ -2,10 +2,10 @@
   "_id": "6a43aab7a3aa3fdb9cb8a55b",
   "aiCategories": [
     "loc.pc-client",
-    "worlds.layers",
-    "platforms.cross-platform"
+    "open-beta",
+    "worlds"
   ],
-  "aiTaggedAt": "2026-07-10T12:59:36.058906Z",
+  "aiTaggedAt": "2026-07-10T20:56:40.668814Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a1fdee386d7b8843b8c1ef3",
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a4bc3b034d20cc9557907e9",
@@ -107,7 +107,9 @@
       "postDeleted": false,
       "postID": "6a43aab7a3aa3fdb9cb8a55b",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -115,6 +117,50 @@
       "statusChangeID": "6a50e51717503524e18a4715",
       "statusChangeNewStatus": "available in future release",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a5154806c28204bf1d2ba38",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a1fdee386d7b8843b8c1ef3",
+        "alias": "Traditional Duck",
+        "aliasID": "6a1fdee386d7b8843b8c1ef7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b7f7c65bd03e87891a5f9de91b50cd48.png",
+        "created": "2026-06-03T07:59:31.277Z",
+        "name": "しらわんこ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-10T20:22:24.305Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a43aab7a3aa3fdb9cb8a55b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I have confirmed that this issue has been fixed in Unity 6 Build 1866.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -135,7 +181,7 @@
     "https://canny-assets.io/images/5873ecda25165489cd50a74d5dc8fbc5.png",
     "https://canny-assets.io/images/0511b32a5e98b45b619fc777c50c432d.png"
   ],
-  "lastUpdated": 1783713191271,
+  "lastUpdated": 1783715374527,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -151,7 +197,7 @@
   "subCategoryID": null,
   "title": "[Unity-6] Text color saturation changes",
   "trendingScore": 2949.158331133167,
-  "updatedAt": "2026-07-10T20:22:50.984110Z",
+  "updatedAt": "2026-07-10T20:56:34.719322Z",
   "updatedBy": null,
   "urlName": "unity-6-text-color-saturation-changes",
   "viewerIsAuthor": false,

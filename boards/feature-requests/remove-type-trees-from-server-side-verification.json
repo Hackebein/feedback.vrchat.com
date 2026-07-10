@@ -1,11 +1,10 @@
 {
   "_id": "6a5123cebc15255d0cfbdb29",
   "aiCategories": [
-    "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "worlds.travel"
+    "loc.website",
+    "web.worlds"
   ],
-  "aiTaggedAt": "2026-07-10T18:39:11.439428Z",
+  "aiTaggedAt": "2026-07-10T20:56:39.678297Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "678fd947b51d3c4f77851d07",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a512fa4d68628157f6b6311",
@@ -74,6 +73,62 @@
       "value": "Does this do anything with performance or is this just for cool factor?",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a5150cdb7dd2e259ab54fbe",
+      "aiGenerated": false,
+      "author": {
+        "_id": "678fd947b51d3c4f77851d07",
+        "alias": "Recent Platypus",
+        "aliasID": "68363f0bb25ebd72193c0ccb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a3e89d81db448ea80f8842bdb1596aec.png",
+        "created": "2025-01-21T17:28:39.945Z",
+        "name": "CompuGeniusCode",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-10T20:06:37.987Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e0e9a23bc510d6aa62c0d515b73bc1e3.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a512fa4d68628157f6b6311",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a5123cebc15255d0cfbdb29",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name} Afaik it does not affect runtime performance.\n\nIt's quite a niche request haha, but worth asking.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -89,7 +144,7 @@
   "files": [],
   "ideaID": "6a5123cdbc15255d0cfbdb28",
   "imageURLs": [],
-  "lastUpdated": 1783706680588,
+  "lastUpdated": 1783715374025,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -105,7 +160,7 @@
   "subCategoryID": null,
   "title": "Remove Type-Trees From Server-Side Verification",
   "trendingScore": 2950.3423084303504,
-  "updatedAt": "2026-07-10T18:39:05.885516Z",
+  "updatedAt": "2026-07-10T20:56:34.719322Z",
   "updatedBy": null,
   "urlName": "remove-type-trees-from-server-side-verification",
   "viewerIsAuthor": false,
