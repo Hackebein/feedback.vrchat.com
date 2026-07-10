@@ -1,10 +1,11 @@
 {
   "_id": "6a4e1179a1677846c4722cb6",
   "aiCategories": [
-    "loc.unity-sdk",
-    "client.settings"
+    "loc.in-world",
+    "open-beta",
+    "client.third-person"
   ],
-  "aiTaggedAt": "2026-07-09T17:12:19.335998Z",
+  "aiTaggedAt": "2026-07-10T15:32:47.996430Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "697170946cefe3c2387f2fd5",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a4e7d1471d1b908d6d45294",
@@ -186,6 +187,62 @@
       "value": "@{697170946cefe3c2387f2fd5|full_name}: Thank you for the video! This article describes where you can find log files: https://help.vrchat.com/hc/en-us/articles/9521522810899-Where-do-I-find-my-Output-Logs-and-Crash-Dumps\n\nYou can submit them here or via pastebin, github gists, etc.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a5102ae91b05abba245004c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "697170946cefe3c2387f2fd5",
+        "alias": "Broad Parakeet",
+        "aliasID": "697170956cefe3c2387f5e17",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/855ea10c8346b49791d5b4f623f783b7.png",
+        "created": "2026-01-22T00:34:28.931Z",
+        "name": "Arikazei",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-10T14:33:18.906Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a4e7d1471d1b908d6d45294",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a4e1179a1677846c4722cb6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name}\n\nHi, i found the logfiles from the two sessions i recorded.\n\nhttps://gist.github.com/Arikazei/8ff349833119a4922193167ab3a65dda\n\nI uploaded them onto the github thingy.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -201,7 +258,7 @@
   "files": [],
   "ideaID": "6a4e1178a1677846c4722c9d",
   "imageURLs": [],
-  "lastUpdated": 1783676178098,
+  "lastUpdated": 1783695928768,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -217,7 +274,7 @@
   "subCategoryID": null,
   "title": "Unity 6 Bug with worlds.",
   "trendingScore": 2949.6038240630005,
-  "updatedAt": "2026-07-10T09:58:17.965701Z",
+  "updatedAt": "2026-07-10T15:32:42.413965Z",
   "updatedBy": null,
   "urlName": "unity-6-bug-with-worlds",
   "viewerIsAuthor": false,
