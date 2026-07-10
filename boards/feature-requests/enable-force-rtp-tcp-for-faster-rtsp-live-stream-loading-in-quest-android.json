@@ -4,10 +4,9 @@
   "aiCategories": [
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
-    "platforms.mobile.android",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-06-13T13:37:54.620983Z",
+  "aiTaggedAt": "2026-07-10T01:11:34.856079Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5baf6139b49f620eba95cdfa",
@@ -31,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "__v": 0,
@@ -375,6 +374,53 @@
       "value": "Some testing in the following linked feature request has revealed that rtsp udp can go through a NAT, if the client sends some udp packets first\n\nhttps://feedback.vrchat.com/feature-requests/p/implement-libvlc-or-similar-for-vrchat-video-players-current-solutions-are-nothi",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a500b2d283ab4b4e5f2ebd2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-09T20:57:17.595Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "674c94db1f4c98e8483d26a8",
+      "private": false,
+      "reactions": {
+        "like": 5
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a500b2d283ab4b4e5f2ebd1",
+      "statusChangeNewStatus": "tracked",
+      "value": "Based on the information we have collected, we will consider turning on the \"Force RTP TCP\" flag on all Android builds.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -391,23 +437,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/e3c7e8280a8b76b77ac4f3ef0bab29ba.png"
   ],
-  "lastUpdated": 1783630348882,
+  "lastUpdated": 1783644606389,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 132,
+  "maxScore": 133,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/674c94db1f4c98e8483d26a8/317800962.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 132,
+  "score": 133,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2024-12-01T16:54:51.068Z",
+  "status": "tracked",
+  "statusChanged": "2026-07-09T20:57:17.570Z",
   "subCategoryID": null,
   "title": "Enable \"Force RTP TCP\" for faster RTSP live stream loading in Quest/Android",
-  "trendingScore": 2950.81758400711,
-  "updatedAt": "2026-07-09T21:12:24.098847Z",
+  "trendingScore": 2950.988092308531,
+  "updatedAt": "2026-07-10T01:11:29.298256Z",
   "updatedBy": null,
   "urlName": "enable-force-rtp-tcp-for-faster-rtsp-live-stream-loading-in-quest-android",
   "viewerIsAuthor": false,
@@ -419,6 +465,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "606a85abd6e3a737fda6d778",
+      "alias": "Strong Tuna",
+      "aliasID": "65d791570129d7ae4442ed21",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1d39ef8c2f985f94192942427619d2ee.png",
+      "companies": [],
+      "name": "Faas",
+      "urlName": null,
+      "voteID": "6a50239ff51f79a5db3603ca"
+    },
     {
       "_id": "5fa08ddb2644fb4c5a3dfe75",
       "alias": "Toffee Coyote",
