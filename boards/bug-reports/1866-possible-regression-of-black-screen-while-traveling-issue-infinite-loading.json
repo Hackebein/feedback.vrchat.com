@@ -2,10 +2,9 @@
   "_id": "6a51f30fc13da53fe6e8ea3e",
   "aiCategories": [
     "loc.loading-screen",
-    "loc.in-world",
-    "avatars.upload-performance"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-07-11T13:52:51.626436Z",
+  "aiTaggedAt": "2026-07-11T14:27:23.833637Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6722e794691e04e140901be7",
@@ -145,7 +144,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Related issue:\n\nhttps://feedback.vrchat.com/open-beta/p/black-screen-while-traveling\n\nThis may be a regression related to the black screen while traveling issue that was fixed in build 1853.\n\nThe previous issue caused the loading screen/rendering path to fail, resulting in a permanent black screen.\n\nHowever, the current issue (observed since build 1865) behaves differently:\n\n* The loading screen renders correctly.\n\n* The \"Connecting...\" / \"Initializing...\" screens also render correctly.\n\n* After that point, the client becomes stuck in an infinite loading loop and never completes the world transition.\n\n**Steps to reproduce:**\n\n1. Travel to another world.\n\n2. During the transition, the client may become stuck in an infinite loading loop.\n\n(The issue appears to occur more frequently while using a heavy avatar with many textures/assets.)\n\n**Expected behavior:**\n\nThe world transition should complete normally, or the client should recover gracefully from a failed asset loading state.\n\n**Actual behavior:**\n\nThe client remains stuck in an infinite loading loop.\n\n**Additional information:**\n\nThe following log entries appear repeatedly while the client is stuck:\n\n```text\n\nVRC.DataModel.Textures.NativeTextureDownloader.DownloadTexture\n\n```\n\nwith:\n\n```text\n\nHTTP/1.1 404 Not Found\n\nThe thumbnail for that image is not available\n\n```\n\nThis appears to be related to the previous async/race condition issue, but the failure mode has changed.\n\nPrevious behavior:\n\n* Loading/rendering path failed → permanent black screen\n\nCurrent behavior:\n\n* Loading UI remains active → async exception continues to occur → infinite loading loop\n\nThe issue occurs on both Unity 2022 and Unity 6, although the frequency may vary.\n\n**Additional logs:**\n\nThis exception pattern is repeatedly logged while the client is stuck in the infinite loading loop:\n\n```text\n\nCysharp.Threading.Tasks.UniTaskCompletionSourceCore`1[TResult].TrySetException (System.Exception error)\n\nUnityEngine.AsyncOperation.InvokeCompletionEvent ()\n\n```\n\nThis exception pattern was also observed during the previous black screen issue before it was fixed in build 1853.\n\nThe main difference is that the loading UI no longer fails to render, but the client does not appear to recover from the failed async operation or complete the world transition.",
+  "details": "Related issue:\n\nhttps://feedback.vrchat.com/open-beta/p/black-screen-while-traveling\n\nThis may be a regression related to the black screen while traveling issue that was fixed in build 1853.\n\nThe previous issue caused the loading screen/rendering path to fail, resulting in a permanent black screen.\n\nHowever, the current issue (observed since build 1865) behaves differently:\n\n* The loading screen renders correctly.\n\n* The \"Connecting...\" / \"Initializing...\" screens also render correctly.\n\n* After that point, the client becomes stuck in an infinite loading loop and never completes the world transition.\n\n**Steps to reproduce:**\n\n1. Travel to another world.\n\n2. During the transition, the client may become stuck in an infinite loading loop.\n\n(The issue appears to occur more frequently while using a heavy avatar with many textures/assets.)\n\n**Expected behavior:**\n\nThe world transition should complete normally, or the client should recover gracefully from a failed asset loading state.\n\n**Actual behavior:**\n\nThe client remains stuck in an infinite loading loop.\n\n**Additional information:**\n\nThe following log entries appear repeatedly while the client is stuck:\n\n```text\n\nVRC.DataModel.Textures.NativeTextureDownloader.DownloadTexture\n\n```\n\nwith:\n\n```text\n\nHTTP/1.1 404 Not Found\n\nThe thumbnail for that image is not available\n\n```\n\nThis appears to be related to the previous async/race condition issue, but the failure mode has changed.\n\nPrevious behavior:\n\n* Loading/rendering path failed → permanent black screen\n\nCurrent behavior:\n\n* Loading UI remains active → async exception continues to occur → infinite loading loop\n\nThe issue occurs on both Unity 2022 and Unity 6, although the frequency may vary.\n\n**Additional logs:**\n\nThis exception pattern is repeatedly logged while the client is stuck in the infinite loading loop:\n\n```text\n\nCysharp.Threading.Tasks.UniTaskCompletionSourceCore`1[TResult].TrySetException (System.Exception error)\n\nUnityEngine.AsyncOperation.InvokeCompletionEvent ()\n\n```\n\nThis exception pattern was also observed during the previous black screen issue before it was fixed in build 1853.\n\nThe main difference is that the loading UI no longer fails to render, but the client does not appear to recover from the failed async operation or complete the world transition.\n\nVideo:\n\nhttps://xgf.nu/9048T",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -161,7 +160,7 @@
   ],
   "ideaID": "6a51f30fc13da53fe6e8ea31",
   "imageURLs": [],
-  "lastUpdated": 1783776363557,
+  "lastUpdated": 1783778426608,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -177,7 +176,7 @@
   "subCategoryID": null,
   "title": "[1866] Possible regression of black screen while traveling issue: infinite loading loop after build 1865",
   "trendingScore": 2950.024389651625,
-  "updatedAt": "2026-07-11T13:52:46.038895Z",
+  "updatedAt": "2026-07-11T14:27:18.314754Z",
   "updatedBy": "6722e794691e04e140901be7",
   "urlName": "1866-possible-regression-of-black-screen-while-traveling-issue-infinite-loading",
   "viewerIsAuthor": false,
