@@ -4,9 +4,9 @@
   "aiCategories": [
     "loc.in-world",
     "loc.loading-screen",
-    "client.settings"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-07-08T16:15:32.747541Z",
+  "aiTaggedAt": "2026-07-12T09:56:01.573883Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67f03288a8d955ebb94dfe8b",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "693a844b81ce0d07cd387231",
@@ -297,6 +297,50 @@
       "value": "Surprisingly, I can join the world on Android phone. However, I can't enter PC version of this world.\n\nThings I have tried\n\n* Restart PC\n\n* Restart Unity editor\n\n* Remove Library folder\n\n* Remove Library and Obj folder\n\n* Reload VRC SDK\n\n* Updating VRC SDK from 3.10.1 to 3.10.4\n\n* Updating VRC World Toolkit from 3.3.2 to 3.4.1\n\n* Disabling all post processing volume\n\n* There is no error on VRC Control Panel\n\n* When I play and stop on editor I see 2 errors. They are irrelevent with this issue. I have seen these errors before but did not cause asset bundle error. Errors on editor:\n\n```\n\nCan't remove AudioListener because AudioReverbFilter depends on it\n\nUnityEngine.Object:DestroyImmediate (UnityEngine.Object)\n\nVRC.SDK3.ClientSim.ClientSimTrackingProviderBase:Start () (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Player/PlayerTracking/ClientSimTrackingProviderBase.cs:104)\n\nSome objects were not cleaned up when closing the scene. (Did you spawn new GameObjects from OnDestroy?)\n\nThe following scene GameObjects were found:\n\nCube\n\nCylinder\n\nPlane\n\nSphere\n\nQuad\n\nCapsule\n\nUdonManager\n\n```\n\n* Removing useless namespaces on recently changed codes\n\n* Regenerating Network Scene IDs\n\n* Removing VRChat world cache",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a5359dfc13da53fe6053b0e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67d5f1de4c2ae6458e6c0a83",
+        "alias": "Denim Condor",
+        "aliasID": "67d5f1df8bda4d8ce9bc6ab9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2072409228bd6cc71285d82ec85c4118.png",
+        "created": "2025-03-15T21:32:14.820Z",
+        "name": "_Semo_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-12T09:09:51.167Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "69818e033895ab1aa4bdadde",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67f03316fb43178776e9eb9f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I just uploade a world that does not have the asset bundle error. These are the only change I have done but I don't think this is a fix.\n\nI started looking into that is asset bundle and CRC (Cyclic Redundancy Check). I wanted to check what CRC am I actually getting. My VRC SDK version is 3.10.4.\n\n* First change ------\n\nVRCSdkControlPanelWorldBuilder: line 3317\n\nFunction\n\n`public async Task BuildAndUpload(VRCWorld world, string signature, string thumbnailPath = null,\n\n    CancellationToken cancellationToken = default)`\n\nRight after\n\n`await Upload(world, buildResult.path, buildResult.signature, thumbnailPath, cancellationToken);`\n\nI added this line\n\n`Debug.Log($\"World Id: {world.ID}\\nBuild signature: {buildResult.signature}\\nBuild path: {buildResult.path}\");`\n\n* Second change ------\n\nVRCSdkControlPanelWorldBuilder: 2654\n\nFunction\n\n`private async Task<(string path, string signature)> Build(bool runAfterBuild)`\n\nRight after\n\n`WorldSignatureOfLastBuild = worldSignature;`\n\nI added these lines\n\n```\n\nuint crc = 0;\n\nif (File.Exists(bundlePath))\n\n{\n\n    crc = CalculateUnityCRC32(bundlePath);\n\n}\n\nDebug.Log($\"Task status: {successTask.Task.Status.ToString()}\\nBuild hash: {worldSignature}\\nBundle path: {bundlePath}\\nCRC Path Hex: {crc.ToString(\"x\")}\\nCRC Path UInt: {crc}\");\n\n```\n\n------\n\nThese 2 changes are me trying to calculate CRC by myself. I was not able to find the actual CRC uploaded because I haven't found where is the asset bundle manifest yet. I don't know why this has fixed the asset bundle error. Maybe uploading multiple times fixed it?",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -313,7 +357,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/aa2619a5efa96a4143098e8c7e6bc5ea.png"
   ],
-  "lastUpdated": 1783845876763,
+  "lastUpdated": 1783848564014,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 2,
@@ -329,7 +373,7 @@
   "subCategoryID": null,
   "title": "Error Downloading/Insantiating scene",
   "trendingScore": 2892.121177736211,
-  "updatedAt": "2026-07-12T09:09:25.252302Z",
+  "updatedAt": "2026-07-12T09:55:56.004292Z",
   "updatedBy": null,
   "urlName": "error-downloading-insantiating-scene",
   "viewerIsAuthor": false,
