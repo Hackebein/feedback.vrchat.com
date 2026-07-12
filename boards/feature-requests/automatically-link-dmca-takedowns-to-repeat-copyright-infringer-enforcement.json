@@ -64,7 +64,7 @@
       "postID": "6a5374dcf2a871f85d858690",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -256,7 +256,7 @@
       "postID": "6a5374dcf2a871f85d858690",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -363,7 +363,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{6a480afaf51f79a5dba6c0a1|full_name}\n\nI understand the concern, and this is an important point when discussing DMCA systems.\n\nI also understand that a DMCA takedown action and a final determination of actual infringement are not necessarily the same thing.\n\nThis proposal is not intended to apply penalties based solely on a DMCA notice.\n\nThe purpose is to ensure that, after VRChat has completed a valid DMCA-based takedown action, the result is properly reflected in the existing Repeat Infringer Policy workflow.\n\nExisting DMCA procedures and protections, including counter-notifications, would remain in place.\n\nRegarding account enforcement, my understanding is that final decisions are made through an appropriate review process.\n\nThe intended automation is to trigger the Repeat Infringer Policy workflow once a predefined strike threshold is reached, rather than replacing human judgment.\n\nThis is not a proposal to create a new enforcement standard, but to improve the system so that the existing policy can be applied consistently.\n\nManual review may be sufficient when the number of cases is small.\n\nHowever, as the volume increases, relying entirely on manual processes creates risks such as incomplete history tracking, inconsistent handling, and unnecessary burden on copyright owners.\n\nThe purpose of automation is not to make legal decisions automatically, but to ensure that cases requiring review and action are identified accurately and consistently.",
+      "value": "@{6a480afaf51f79a5dba6c0a1|full_name}\n\nI understand the concern, and this is an important point when discussing DMCA systems.\n\nI also understand that a DMCA takedown action and a final determination of actual infringement are not necessarily the same thing.\n\nThis proposal is not intended to apply penalties based solely on a DMCA notice.\n\nThe purpose is to ensure that, after VRChat has completed a valid DMCA-based takedown action, the result is properly reflected in the existing Repeat Infringer Policy workflow.\n\nExisting DMCA procedures and protections, including counter-notifications, would remain in place.\n\nRegarding account enforcement, my understanding is that final decisions are made through an appropriate review process.\n\nThe intended automation is to trigger the Repeat Infringer Policy workflow once a predefined strike threshold is reached, rather than replacing human judgment.\n\nThis is not a proposal to create a new enforcement standard, but to improve the system so that the existing policy can be applied consistently.\n\nManual review may be sufficient when the number of cases is small.\n\nHowever, as the volume increases, relying entirely on manual processes creates risks such as incomplete history tracking, inconsistent handling, and unnecessary burden on copyright owners.\n\nThe purpose of automation is not to make legal decisions automatically, but to ensure that cases requiring review and action are identified accurately and consistently.\n\n追記：\n\n> DMCAの核心は「Notice and Takedown」であり、形式さえ整っていれば違法性を実精査することなく、即座にアクセスを遮断することがプラットフォームの免責条件となると理解しています。\n\nこのご意見に書かれている免責条件とは、17 U.S.C. § 512(c)(1)(C)に定められているものであると思います。\n\nDMCAには複数のセーフハーバー要件があり、今回の提案は17 U.S.C. § 512(i)(1)(A)に関するものとなります。\n\n表現に曖昧な部分があり、意図が十分に伝わっていなかったかもしれません。",
       "viewerReactions": null,
       "voteID": null
     },
@@ -669,10 +669,10 @@
   "files": [],
   "ideaID": "6a5374dcf2a871f85d85868f",
   "imageURLs": [],
-  "lastUpdated": 1783878100192,
+  "lastUpdated": 1783891914404,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 20,
+  "maxScore": 21,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a5374dcf2a871f85d858690/1152463566.jpeg",
@@ -684,8 +684,8 @@
   "statusChanged": "2026-07-12T11:05:00.878Z",
   "subCategoryID": null,
   "title": "Automatically Link DMCA Takedowns to Repeat Copyright Infringer Enforcement",
-  "trendingScore": 2952.548102531786,
-  "updatedAt": "2026-07-12T18:09:21.367560Z",
+  "trendingScore": 2952.596341973415,
+  "updatedAt": "2026-07-12T21:48:55.108728Z",
   "updatedBy": null,
   "urlName": "automatically-link-dmca-takedowns-to-repeat-copyright-infringer-enforcement",
   "viewerIsAuthor": false,
