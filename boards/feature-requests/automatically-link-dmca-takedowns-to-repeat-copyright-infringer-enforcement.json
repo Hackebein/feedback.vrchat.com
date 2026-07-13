@@ -1,9 +1,10 @@
 {
   "_id": "6a5374dcf2a871f85d858690",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.website",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-07-13T11:21:00.323810Z",
+  "aiTaggedAt": "2026-07-13T12:33:21.028390Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68dc714f4f674f1b1ee7879f",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 14,
+  "commentCount": 15,
   "comments": [
     {
       "_id": "6a5389d16e082658231dd17b",
@@ -716,6 +717,62 @@
       "value": "@{68dc714f4f674f1b1ee7879f|full_name}\n\n先にハッボホテルが書いてくれている通り、提案本文の記載は「DMCAによる複数回の削除」をトリガーとしてアカウントBANを実行すると読み取れます。\n\nとりあえず投稿者の意図はそこに無く、あくまで既存のポリシーを一貫して適用するためのワークフロー改善にある点は理解しました。\n\nしかしながら、そもそもアカウントBANはユーザーの資産を剥奪する重大な措置であり、そこには「人間の介在」という安全弁は不可欠であると考えます。\n\n現状、DMCA削除後に権利者が別途報告を行わなければならない仕様になっているのは怠慢ではなく、「DMCA対応」と「ユーザーの権利剥奪」という性質の異なる二つの判断を慎重に切り離しているバッファであると解釈しています。\n\n仮に自動化するにしても「DMCA削除＝即ストライク確定」ではなく、「DMCA削除＝ストライクの保留」とし、ユーザーに異議申し立ての機会を通知し、一定期間（例：14日間）に異議申し立てがない、あるいは「手動精査」にて異議が却下された場合に初めて「正式なストライク」としてカウントする等が適当かと思います。\n\nAs ハッボホテル pointed out, the wording in the original proposal can indeed be read as executing account BAN directly triggered by multiple DMCA-based removals. That said, I now understand that this was not the author's actual intention, and that the goal is simply to improve the workflow so that the existing policy can be applied consistently.\n\nHowever, an account BAN is a severe disciplinary action that completely strips users of their assets, meaning that the safety net of \"human intervention\" is absolutely indispensable. I interpret the current specification—where copyright owners must submit a separate report after a DMCA takedown—not as administrative negligence, but as a deliberate buffer designed to carefully separate two fundamentally different judgments: \"expeditious DMCA compliance\" and \"the deprivation of user rights.\"\n\nEven if some form of automation were to be introduced, it should not operate under a rigid \"DMCA removal = immediate strike confirmation\" model. A more appropriate implementation would be to treat a DMCA removal as a \"pending strike.\" The system would then notify the user of their right to file a counter-notification; a \"formal strike\" would only be counted if no counter-notification is received within a certain period (e.g., 14 days), or if the submitted counter-notification is officially rejected after undergoing a thorough \"manual review.\"",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a54c8a5a8253ab972e3688d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68dc714f4f674f1b1ee7879f",
+        "alias": "Coming Dinosaur",
+        "aliasID": "68dc71504f674f1b1ee7ab13",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/cb2f34f5319053882e2a77c5c89e888a.png",
+        "created": "2025-10-01T00:09:51.856Z",
+        "name": "Avatar DMCA",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-13T11:14:45.259Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a480afaf51f79a5dba6c0a1",
+          "alias": "Splendid Gull",
+          "aliasID": "6a480afaf51f79a5dba6c0a6",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/35d205013da937d38e3d4f7d172cafa7.png",
+          "created": "2026-07-03T19:18:18.126Z",
+          "name": "ふあゆき",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a53a68511f8ea6de0cd3064",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a5374dcf2a871f85d858690",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a480afaf51f79a5dba6c0a1|full_name}\n\nThank you for your thoughtful feedback.\n\nI agree that account enforcement should continue to involve appropriate human review, and that the design of the review process is an important consideration.\n\nHowever, my proposal is not intended to change VRChat's existing copyright policy or how the Repeat Infringer Policy is applied.\n\nThose policy decisions are ultimately up to VRChat.\n\nThe purpose of this request is simply to improve the system that supports the existing workflow, so that completed DMCA actions can be tracked consistently and repeat infringement history does not depend on separate manual reports or manual record-keeping.\n\nWhatever review process VRChat chooses to use—whether it includes manual review, a waiting period, counter-notifications, or other safeguards—could still operate on top of the same underlying system.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -731,7 +788,7 @@
   "files": [],
   "ideaID": "6a5374dcf2a871f85d85868f",
   "imageURLs": [],
-  "lastUpdated": 1783939974479,
+  "lastUpdated": 1783944032513,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 23,
@@ -747,7 +804,7 @@
   "subCategoryID": null,
   "title": "Automatically Link DMCA Takedowns to Repeat Copyright Infringer Enforcement",
   "trendingScore": 2952.7760700053814,
-  "updatedAt": "2026-07-13T11:20:55.356973Z",
+  "updatedAt": "2026-07-13T12:33:15.515411Z",
   "updatedBy": null,
   "urlName": "automatically-link-dmca-takedowns-to-repeat-copyright-infringer-enforcement",
   "viewerIsAuthor": false,
