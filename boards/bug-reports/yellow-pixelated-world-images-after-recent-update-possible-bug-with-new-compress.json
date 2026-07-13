@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.mobile-app",
     "platforms.mobile.android",
-    "client.settings"
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-13T05:34:55.800769Z",
+  "aiTaggedAt": "2026-07-13T17:09:29.440051Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "632ad07ae29a9c44bc903920",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 11,
+  "commentCount": 12,
   "comments": [
     {
       "_id": "6a1ed4743754aafb7415e5d7",
@@ -75,37 +75,6 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
-    },
-    {
-      "_id": "6a22dc11700d1e972fa34558",
-      "author": {
-        "_id": "64873f159cf028090ce2c2e2",
-        "alias": "Papaya Python",
-        "aliasID": "65c26df7ed6eefce4c5bafd9",
-        "anonymized": false,
-        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
-        "created": "2023-06-12T15:51:49.320Z",
-        "name": "StormRel",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-06-05T14:24:17.817Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "internal": false,
-      "mergeID": "6a22dc11700d1e972fa34558",
-      "mergedPostDetails": "1. VRChat Mobileを起動\n\n2. Android端末（AQUOS sense10）でログイン\n\n3. ワールド一覧、アバター一覧、イベントバナー、プロフィールを表示\n\n4. サムネイル画像に黄色いノイズや破損した表示が発生する\n\n追加情報：\n\n・ワールドサムネイル\n\n・アバターサムネイル\n\n・イベントバナー\n\n・プリントカメラ画像\n\nで同様の症状を確認\n\nVRChatのUIやローディング画面は正常表示される",
-      "mergedPostTitle": "AQUOS sense10でサムネイル画像に黄色ノイズが発生する",
-      "pinned": false,
-      "postID": "6a1a44030f5d444d2b12ba4b",
-      "private": false,
-      "spam": false,
-      "synthetic": true,
-      "value": ""
     },
     {
       "_id": "6a24662a11b0a99efbc59813",
@@ -467,6 +436,52 @@
       "value": "@{5f42e5a54014a60529c7931e|full_name}\n\nSame issue, same specs\n\nOnePlus13 Snapdragon 8Elite with Adreno GPU",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a550f85c804140e1bd92d41",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a550f191e3b2bc758bd40f3",
+        "alias": "Better Orca",
+        "aliasID": "6a550f1a1e3b2bc758bd40fd",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/68546a6a718453420cf223fdb3b6662f.png",
+        "created": "2026-07-13T16:15:22.010Z",
+        "name": "Spiral09",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-13T16:17:09.674Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/3a597a439f8e71e9dcca90d2849ec76e.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1a44030f5d444d2b12ba4b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Same here on my OnePlus 13 every image is yellowish",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -485,23 +500,23 @@
     "https://canny-assets.io/images/cfc149d65d5ee62bd413e8b1196e8130.jpeg",
     "https://canny-assets.io/images/1c387e5a455b34984b057a5ff0eaf7c1.jpeg"
   ],
-  "lastUpdated": 1783948036177,
+  "lastUpdated": 1783960915698,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 15,
+  "maxScore": 16,
   "mergeCount": 5,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a1a44030f5d444d2b12ba4b/515309327.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 15,
+  "score": 16,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-06-02T13:02:44.898Z",
   "subCategoryID": null,
   "title": "Yellow pixelated world images after recent update, possible bug with new compressor",
-  "trendingScore": 2949.8352441683123,
-  "updatedAt": "2026-07-13T13:26:35.007576Z",
+  "trendingScore": 2950.448374672484,
+  "updatedAt": "2026-07-13T17:09:23.967684Z",
   "updatedBy": null,
   "urlName": "yellow-pixelated-world-images-after-recent-update-possible-bug-with-new-compress",
   "viewerIsAuthor": false,
@@ -513,6 +528,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a550f191e3b2bc758bd40f3",
+      "alias": "Better Orca",
+      "aliasID": "6a550f1a1e3b2bc758bd40fd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/68546a6a718453420cf223fdb3b6662f.png",
+      "companies": [],
+      "name": "Spiral09",
+      "urlName": null,
+      "voteID": "6a550f3b1e3b2bc758bd41b7"
+    },
     {
       "_id": "6a5465b31e3b2bc758b9ddcc",
       "alias": "Wild Lizard",
