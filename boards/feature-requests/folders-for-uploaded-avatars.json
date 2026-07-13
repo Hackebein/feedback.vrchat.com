@@ -3,9 +3,9 @@
   "_id": "649c02bff7653609bdca47f6",
   "aiCategories": [
     "loc.main-menu",
-    "avatars"
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-07T12:59:48.312701Z",
+  "aiTaggedAt": "2026-07-13T04:16:18.296013Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e4ca2145f9b3726b3b389e7",
@@ -29,52 +29,8 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 22,
+  "commentCount": 23,
   "comments": [
-    {
-      "__v": 0,
-      "_id": "65f3ade5f8828e31d882a923",
-      "aiGenerated": false,
-      "author": {
-        "_id": "5f3df2f75af9f322b0f66e1b",
-        "alias": "Eggplant Swordfish",
-        "aliasID": "65c27264ed6eefce4c180a06",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/bd0878343141a2d94152963c3a8ee2ce.png",
-        "created": "2020-08-20T03:50:15.808Z",
-        "name": "narazaka",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62efae9868f3662e9d9a1",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2024-03-15T02:09:41.485Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "649c02bff7653609bdca47f6",
-      "private": false,
-      "reactions": {
-        "like": 12
-      },
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "https://ask.vrchat.com/t/developer-update-14-march-2024/23401\n\n> Avatar File and Memory Limit Changes\n\n>   Don’t pack many avatars worth of content into a single avatar\n\n>   “don’t put too much stuff on one avatar.”\n\nIt means that dozens of uploaded avatars we (Japanese) have will become hundreds of uploaded avatars, and the avatar selecting wing menu will be completely chaotic.\n\nSo, something that can manage uploaded avatars have to be implemented before the Avatar File and Memory Limit Changes.\n\nThis canny is becoming more and more important to us.\n\n> アバターファイルとメモリ制限の変更\n\n> 1つのアバターに多くのコンテンツを詰め込まないでください。\n\n> \"1つのアバターに多くの内容を詰め込まない\"。\n\nこれはつまり、我々（日本人）が持っている数十のアバターが数百のアバターになり、アバターを選ぶウィングメニューが完全に混沌と化すことを意味します。\n\nなので、アバターファイルとメモリ制限の変更の前に、アップロードされたアバターを管理できる何かを実装するべきです。\n\nこのCannyは、ますます重要になったと思います。",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "__v": 0,
       "_id": "65f3f0f00d83ec6593446901",
@@ -110,58 +66,12 @@
       "postID": "649c02bff7653609bdca47f6",
       "private": false,
       "reactions": {
-        "like": 6
+        "like": 7
       },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I'd love some sort of search function for your own uploaded avatars.\n\nアップロード済アバター用の検索機能があればいいと前々から思いました。",
-      "viewerReactions": null,
-      "voteID": null
-    },
-    {
-      "__v": 0,
-      "_id": "65f3f49d9e5ee186b819b437",
-      "aiGenerated": false,
-      "author": {
-        "_id": "5f3df2f75af9f322b0f66e1b",
-        "alias": "Eggplant Swordfish",
-        "aliasID": "65c27264ed6eefce4c180a06",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/bd0878343141a2d94152963c3a8ee2ce.png",
-        "created": "2020-08-20T03:50:15.808Z",
-        "name": "narazaka",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62efae9868f3662e9d9a1",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2024-03-15T07:11:25.898Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [
-        "https://canny.io/images/2122fc00ee95caa7b235781129b361e3.png"
-      ],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": "65f3ade5f8828e31d882a923",
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "649c02bff7653609bdca47f6",
-      "private": false,
-      "reactions": {
-        "like": 8
-      },
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "And look at the most desirable (one outfit content per avatar) avatar user's menu!\n\nI must choose the most suitable avatar for the situation from the chaotic menu that has 671 avatars.\n\nThis canny is my dream.",
       "viewerReactions": null,
       "voteID": null
     },
@@ -334,7 +244,7 @@
       "postID": "649c02bff7653609bdca47f6",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -381,7 +291,7 @@
       "postID": "649c02bff7653609bdca47f6",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -483,7 +393,9 @@
       "postDeleted": false,
       "postID": "649c02bff7653609bdca47f6",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -527,7 +439,9 @@
       "postDeleted": false,
       "postID": "649c02bff7653609bdca47f6",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -571,13 +485,59 @@
       "postDeleted": false,
       "postID": "649c02bff7653609bdca47f6",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Went to make the same recommendation and it showed me this thread. For the love of all that is good and holy please let me organize these uploads.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a544ffaf2a871f85d97ff16",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68228fc5dd067fe00ee702bf",
+        "alias": "Still Horse",
+        "aliasID": "68228fc5cd82760dac082a98",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/725e5d2bf4277910c58792d6ad8d2be1.png",
+        "created": "2025-05-13T00:18:13.060Z",
+        "name": "Jinx404",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-13T02:39:54.815Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "649c02bff7653609bdca47f6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "it's kind of wild we have so much freedom to upload to our hearts content and even often encouraged to make variants yet there's no real way to organize or even search my own avatars.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -597,7 +557,7 @@
     "https://canny.io/images/82af6c03504365fb3791df142c909cef.png",
     "https://canny.io/images/879ea77fb4324df97daba3c174ae3bb7.png"
   ],
-  "lastUpdated": 1783909973172,
+  "lastUpdated": 1783914648806,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 986,
@@ -613,7 +573,7 @@
   "subCategoryID": null,
   "title": "Folders for Uploaded Avatars",
   "trendingScore": 2950.0563545455693,
-  "updatedAt": "2026-07-13T03:05:03.403166Z",
+  "updatedAt": "2026-07-13T04:16:13.887515Z",
   "updatedBy": "5e4ca2145f9b3726b3b389e7",
   "urlName": "folders-for-uploaded-avatars",
   "viewerIsAuthor": false,
