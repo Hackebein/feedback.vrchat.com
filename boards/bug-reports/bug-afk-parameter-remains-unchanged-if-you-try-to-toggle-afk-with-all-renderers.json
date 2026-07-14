@@ -2,10 +2,10 @@
   "_id": "6a54fe507e8bb6ff8f3e11fa",
   "aiCategories": [
     "loc.in-world",
-    "loc.hud",
-    "avatars"
+    "avatars.descriptor",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-07-13T16:12:10.475156Z",
+  "aiTaggedAt": "2026-07-14T22:56:26.162985Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a54f2211e3b2bc758bc31f4",
@@ -44,7 +44,7 @@
   "files": [],
   "ideaID": "6a54fe4f7e8bb6ff8f3e11f9",
   "imageURLs": [],
-  "lastUpdated": 1784058061774,
+  "lastUpdated": 1784069748165,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -58,11 +58,11 @@
   "status": "open",
   "statusChanged": "2026-07-13T15:03:44.085Z",
   "subCategoryID": null,
-  "title": "[Bug] Unable to leave AFK state if all avatar's children aren't visible",
+  "title": "[Bug] AFK Parameter remains unchanged if you try to toggle AFK with all renderers disabled",
   "trendingScore": 2950.3542319027824,
-  "updatedAt": "2026-07-14T19:41:38.292830Z",
-  "updatedBy": null,
-  "urlName": "bug-unable-to-leave-afk-state-if-all-avatars-children-arent-visible",
+  "updatedAt": "2026-07-14T22:56:20.515419Z",
+  "updatedBy": "6a54f2211e3b2bc758bc31f4",
+  "urlName": "bug-afk-parameter-remains-unchanged-if-you-try-to-toggle-afk-with-all-renderers",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
