@@ -2,10 +2,9 @@
   "_id": "6a576b2b1254e99bbc4461d9",
   "aiCategories": [
     "loc.in-world",
-    "avatars",
-    "client.camera"
+    "avatars"
   ],
-  "aiTaggedAt": "2026-07-15T15:08:18.843214Z",
+  "aiTaggedAt": "2026-07-15T17:24:51.533316Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6257c74b4653373738ddf2e6",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a579b292643fb2337104b6a",
@@ -77,6 +76,65 @@
       "value": "Do you have an avatar ID we can use to reproduce this issue?",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a57b8ac9e9c648b587c6090",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6257c74b4653373738ddf2e6",
+        "alias": "Flax Krill",
+        "aliasID": "65c28a67ed6eefce4cd6a872",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c756ae7dada708d6532aaf5c7c1260b1.png",
+        "created": "2022-04-14T07:03:39.460Z",
+        "name": "nHaruka",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-15T16:43:24.878Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/f7cafe61c60e2c295e4ef621f2199b95.png",
+        "https://canny-assets.io/images/9819b746ceb964bb68836b5b639786eb.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a579b292643fb2337104b6a",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a576b2b1254e99bbc4461d9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name}\n\nhttps://vrchat.com/home/avatar/avtr_db13c38a-ec4e-4100-ace6-4960ab553928\n\nIt’s simply an avatar consisting of a Spotlight (Hard Shadows, Culling Mask: Everything), a Cube, and a Plane.\n\nOther players’ avatars and world objects do not appear only when viewed through the local player’s camera.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -95,23 +153,23 @@
     "https://canny-assets.io/images/f79d4c002574bbe02a370a5e16cc5d41.png",
     "https://canny-assets.io/images/7d437b28ffeb6cb5d50a532f9a3ef830.png"
   ],
-  "lastUpdated": 1784128409848,
+  "lastUpdated": 1784134652464,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 15,
+  "maxScore": 16,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a576b2b1254e99bbc4461d9/1135744861.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 15,
+  "score": 16,
   "sourceFeatureExtractionItem": null,
   "status": "needs more information",
   "statusChanged": "2026-07-15T14:37:29.423Z",
   "subCategoryID": null,
   "title": "Avatar light shadows: world geometry and other players do not cast shadows in the local player's mirror and camera views",
-  "trendingScore": 2952.7011804775543,
-  "updatedAt": "2026-07-15T15:41:01.181177Z",
+  "trendingScore": 2952.7634869085796,
+  "updatedAt": "2026-07-15T17:24:46.471997Z",
   "updatedBy": null,
   "urlName": "avatar-light-shadows-world-geometry-and-other-players-do-not-cast-shadows-in-the",
   "viewerIsAuthor": false,
@@ -123,6 +181,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a57b89f1e3b2bc758d0c5f2",
+      "alias": "Detailed Manatee",
+      "aliasID": "6a57b89f1e3b2bc758d0c5f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/557a5c63c6dd2db502f7ae9abd13f18a.png",
+      "companies": [],
+      "name": "mumuω",
+      "urlName": null,
+      "voteID": "6a57b8f31e3b2bc758d0c9f7"
+    },
     {
       "_id": "6a57a23a1e3b2bc758cfd287",
       "alias": "Midnight blue Cat",
