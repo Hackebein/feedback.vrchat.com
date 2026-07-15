@@ -1,0 +1,101 @@
+{
+  "_id": "6a577926b1dab0f38fc306b7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-07-15T13:07:35.294196Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "67a7a794c9467977e8b07090",
+    "alias": "Gradual Aardvark",
+    "aliasID": "67a7a794afacf378f1ae500b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/affe82ef57555f2fbc3440ac88a2729d.png",
+    "created": "2025-02-08T18:51:00.309Z",
+    "name": "BruceKnight",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "67a7a794c9467977e8b07090",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 358,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-15T12:12:22.653Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am trying to create a touch screen of sorts using the new box contacts.\n\nUnfortunately with the current system, the \"Face Proximity\" seems to calculate the distance from the Z face to the closest point in of the sender instead of its center. This makes it impossible to use in this case as scaling a capsule contact will change what value the face proximity will report, even if it stays in the same position\n\nAdditionally, there seems to be some sort of a smoothing curve applied to the end result which makes the reported value very inaccurate.\n\nThese options make sense for most contacts, but face proximity should not have this behavior. There should be an option to calculate the distance of from the senders center point to make the calculations scale-agnostic and the smoothing curve should be removed contacts.\n\nSDK Version 3.10.4",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/3b2d0669a05027d6509db36e7c21285f.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-07-15-1345-12",
+      "url": "https://canny-assets.io/files/3b2d0669a05027d6509db36e7c21285f.mp4"
+    }
+  ],
+  "ideaID": "6a577926b1dab0f38fc30697",
+  "imageURLs": [],
+  "lastUpdated": 1784119244119,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-15T12:12:22.653Z",
+  "subCategoryID": null,
+  "title": "Box Contact \"Face Proximity\" is scale dependent and very inaccurate",
+  "trendingScore": 2950.6229463621075,
+  "updatedAt": "2026-07-15T13:07:30.325910Z",
+  "updatedBy": "67a7a794c9467977e8b07090",
+  "urlName": "box-contact-face-proximity-is-scale-dependent-and-very-inaccurate",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67a7a794c9467977e8b07090",
+      "alias": "Gradual Aardvark",
+      "aliasID": "67a7a794afacf378f1ae500b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/affe82ef57555f2fbc3440ac88a2729d.png",
+      "companies": [],
+      "name": "BruceKnight",
+      "urlName": null,
+      "voteID": "6a5779261e3b2bc758ce1fd9"
+    }
+  ]
+}
