@@ -1,0 +1,96 @@
+{
+  "_id": "6a571e43de182f4524f10a56",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-07-15T06:30:32.168336Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "644daf9a2b50e0a6f54d7e40",
+    "alias": "Coral Koala",
+    "aliasID": "65c3903bed6eefce4ce54425",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e0ecf6cd0b02950fa5ceb89019f6de01.png",
+    "created": "2023-04-30T00:00:26.272Z",
+    "name": "Vinyarion",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "644daf9a2b50e0a6f54d7e40",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 357,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-15T05:44:35.917Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "SDK 3.10.4 and earlier\n\nExecuting the following UdonSharp code yields the attached behavior:\n\n`Debug.Log($\"int -> long: {new DataToken(-1).Long}\");`\n\n`Debug.Log($\"uint -> long: {new DataToken(0u).Long}\");`\n\nThe first line prints `int -> long: 4294967295` instead of the expected text `int -> long: -1`. This implies DataToken is treating the 32-bit integral value as unsigned during the conversion instead of signed as is expected.\n\nThe second line throws an exception with the message `Attempted to access UInt token as Long` and does not print the expected text `uint -> long: 0`. This makes no sense, as the canonical widening conversion from uint to long is lossless.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a571e43de182f4524f10a55",
+  "imageURLs": [
+    "https://canny-assets.io/images/0876ef90887a216e814ac1a3467fd08e.png",
+    "https://canny-assets.io/images/2aa89f58e109f6c25fb44a344a09eedb.png"
+  ],
+  "lastUpdated": 1784095449595,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a571e43de182f4524f10a56/1860429777.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-15T05:44:35.917Z",
+  "subCategoryID": null,
+  "title": "[SDK 3.10.4] DataToken.Long getter has incorrect behavior for TokenType.Int & UInt",
+  "trendingScore": 2950.584476302584,
+  "updatedAt": "2026-07-15T06:30:26.555304Z",
+  "updatedBy": "644daf9a2b50e0a6f54d7e40",
+  "urlName": "sdk-3104-datatokenlong-getter-has-incorrect-behavior-for-tokentypeint-uint",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "644daf9a2b50e0a6f54d7e40",
+      "alias": "Coral Koala",
+      "aliasID": "65c3903bed6eefce4ce54425",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e0ecf6cd0b02950fa5ceb89019f6de01.png",
+      "companies": [],
+      "name": "Vinyarion",
+      "urlName": null,
+      "voteID": "6a571e441e3b2bc758cba4d2"
+    }
+  ]
+}
