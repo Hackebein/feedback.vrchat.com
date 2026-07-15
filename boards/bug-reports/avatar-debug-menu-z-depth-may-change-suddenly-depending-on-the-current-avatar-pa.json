@@ -3,10 +3,9 @@
   "aiCategories": [
     "loc.main-menu",
     "loc.action-menu",
-    "loc.quick-menu",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-15T08:59:35.064977Z",
+  "aiTaggedAt": "2026-07-15T09:49:39.840428Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -37,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Launch VRChat in desktop mode.\n\n2. Change avatar into [classlessssssszzsxxxxsddfvcss](https://vrchat.com/home/avatar/avtr_bf3ec01e-cc75-4835-a1b2-7f4e8ccd6392) (`avtr_bf3ec01e-cc75-4835-a1b2-7f4e8ccd6392`) by Sab-R. (This step is important.)\n\n3. Open avatar debug menu from Action Menu.\n\n4. Navigate to Current Avatar in Main Menu.\n\n5. Scroll down in Current Avatar page with the avatar debug menu open in the background. Notice the erratic behavior with determining which UI should be on top (main menu right wing) depending on scroll wheel position. If the bug can't be replicated for some reason, pressing PgDn in avatar debug menu to scroll the avatar debug menu down may help sometimes.\n\n6. Retry steps 3-5 with another avatar and notice the issue doesn't occur.\n\nExpected result: Main Menu / Current Avatar and the right side winglet should always be on top of the avatar debug menu, as usual.\n\nActual result: Avatar debug menu is sometimes on top of Main Menu / Current Avatar depending on the scroll position in the Current Avatar page, when wearing this specific classlessssssszzsxxxxsddfvcss avatar.\n\nAdditional info: Video, logs attached. Affects both main Unity 2022.3.22f2 and Unity 6 public beta branches of `Build 1867`. I don't know why this happens with only this specific public avatar (classlessssssszzsxxxxsddfvcss) I've found. I also have to be looking at Current Avatar (I think the Performance Breakdown section specifically), trying to scroll down in Recently Used or the Shop tab with the avatar's 3D preview doesn't trigger the bug.",
+  "details": "1. Launch VRChat in desktop mode.\n\n2. Change avatar into [classlessssssszzsxxxxsddfvcss](https://vrchat.com/home/avatar/avtr_bf3ec01e-cc75-4835-a1b2-7f4e8ccd6392) (`avtr_bf3ec01e-cc75-4835-a1b2-7f4e8ccd6392`) by Sab-R. (This step is important.)\n\n3. Open avatar debug menu from Action Menu.\n\n4. Navigate to Current Avatar in Main Menu.\n\n5. Scroll down in Current Avatar page with the avatar debug menu open in the background. Notice the erratic behavior with determining which UI should be on top (main menu right wing) depending on scroll wheel position. If the bug can't be replicated for some reason, pressing PgDn on keyboard to scroll the avatar debug menu down may help sometimes.\n\n6. Retry steps 3-5 with another avatar and notice the issue doesn't occur.\n\nExpected result: Main Menu / Current Avatar and the right side winglet should always be on top of the avatar debug menu, as usual.\n\nActual result: Avatar debug menu is sometimes on top of Main Menu / Current Avatar depending on the scroll position in the Current Avatar page, when wearing this specific classlessssssszzsxxxxsddfvcss avatar.\n\nAdditional info: Video, logs attached. Affects both main Unity 2022.3.22f2  `Build 1867` and Unity 6 public beta branch  `Build 1866`. I don't know why this happens with only this specific public avatar (classlessssssszzsxxxxsddfvcss) I've found. I also have to be looking at Current Avatar (I think the Performance Breakdown section specifically), trying to scroll down in Recently Used or the Shop tab with the avatar's 3D preview doesn't trigger the bug.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -59,7 +58,7 @@
   ],
   "ideaID": "6a5740b3bdc8e6c27727eabc",
   "imageURLs": [],
-  "lastUpdated": 1784104358479,
+  "lastUpdated": 1784107340096,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -75,7 +74,7 @@
   "subCategoryID": null,
   "title": "Avatar Debug Menu Z-depth may change suddenly depending on the Current Avatar page scroll position with a specific avatar",
   "trendingScore": 2950.599053560355,
-  "updatedAt": "2026-07-15T08:59:29.289879Z",
+  "updatedAt": "2026-07-15T09:49:36.710237Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "avatar-debug-menu-z-depth-may-change-suddenly-depending-on-the-current-avatar-pa",
   "viewerIsAuthor": false,
