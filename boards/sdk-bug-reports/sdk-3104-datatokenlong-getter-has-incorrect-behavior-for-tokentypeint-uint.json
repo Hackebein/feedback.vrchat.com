@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-07-15T06:30:32.168336Z",
+  "aiTaggedAt": "2026-07-15T16:56:32.860191Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "644daf9a2b50e0a6f54d7e40",
@@ -42,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "SDK 3.10.4 and earlier\n\nExecuting the following UdonSharp code yields the attached behavior:\n\n`Debug.Log($\"int -> long: {new DataToken(-1).Long}\");`\n\n`Debug.Log($\"uint -> long: {new DataToken(0u).Long}\");`\n\nThe first line prints `int -> long: 4294967295` instead of the expected text `int -> long: -1`. This implies DataToken is treating the 32-bit integral value as unsigned during the conversion instead of signed as is expected.\n\nThe second line throws an exception with the message `Attempted to access UInt token as Long` and does not print the expected text `uint -> long: 0`. This makes no sense, as the canonical widening conversion from uint to long is lossless.",
+  "details": "SDK 3.10.4 and earlier\n\nExecuting the following UdonSharp code yields the attached behavior:\n\n`Debug.Log($\"int -> long: {new DataToken(-1).Long}\");`\n\n`Debug.Log($\"uint -> long: {new DataToken(0u).Long}\");`\n\nThe first line prints `int -> long: 4294967295` instead of the expected text `int -> long: -1`. This implies DataToken is treating the 32-bit integral value as unsigned during the conversion instead of signed as is expected.\n\nThe second line throws an exception with the message `Attempted to access UInt token as Long` and does not print the expected text `uint -> long: 0`. This makes no sense, as the canonical widening conversion from uint to long is lossless. This implies that the uint case is simply not explicitly handled by the getter.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -53,7 +53,7 @@
     "https://canny-assets.io/images/0876ef90887a216e814ac1a3467fd08e.png",
     "https://canny-assets.io/images/2aa89f58e109f6c25fb44a344a09eedb.png"
   ],
-  "lastUpdated": 1784126443591,
+  "lastUpdated": 1784132946453,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 3,
@@ -69,7 +69,7 @@
   "subCategoryID": null,
   "title": "[SDK 3.10.4] DataToken.Long getter has incorrect behavior for TokenType.Int & UInt",
   "trendingScore": 2951.2946900620045,
-  "updatedAt": "2026-07-15T15:08:13.869800Z",
+  "updatedAt": "2026-07-15T16:56:27.950025Z",
   "updatedBy": "644daf9a2b50e0a6f54d7e40",
   "urlName": "sdk-3104-datatokenlong-getter-has-incorrect-behavior-for-tokentypeint-uint",
   "viewerIsAuthor": false,
