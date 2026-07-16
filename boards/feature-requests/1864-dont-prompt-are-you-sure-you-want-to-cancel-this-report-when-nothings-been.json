@@ -1,0 +1,105 @@
+{
+  "_id": "6a5933b2e3e60dc9ce3c6579",
+  "aiCategories": [
+    "loc.in-world",
+    "moderation.safety-system"
+  ],
+  "aiTaggedAt": "2026-07-16T20:36:56.489976Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-16T19:40:34.556Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Since VRChat 2026.2.3 `Build 1864`, an additional prompt to cancel was added to the first \"Report content\" page before any content is selected for reporting. This is unnecessary and a regression.\n\nI often look at the Report UI to see a print or emoji I may have missed, with no intent to report anything. Sometimes there isn't even anything to report in an instance, yet the new UX forces me to confirm with a click I don't have anything to report.\n\nPlease remove the \"Cancel Report\" prompt where seen on the attached video (except for the \"World\" button).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/b81f02759478d0b1a708d5fc99ee1e69.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-07-16 19-35-13",
+      "url": "https://canny-assets.io/files/b81f02759478d0b1a708d5fc99ee1e69.mp4"
+    }
+  ],
+  "ideaID": "6a5933b2e3e60dc9ce3c6578",
+  "imageURLs": [],
+  "lastUpdated": 1784232242158,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-16T19:40:34.556Z",
+  "subCategoryID": null,
+  "title": "[1864] Don't prompt \"Are you sure you want to cancel this report?\" when nothing's been selected for a report",
+  "trendingScore": 2951.2162453465367,
+  "updatedAt": "2026-07-16T20:36:50.870006Z",
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "1864-dont-prompt-are-you-sure-you-want-to-cancel-this-report-when-nothings-been",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5e5eaad1d85884539b238412",
+      "alias": "Active Anglerfish",
+      "aliasID": "65c26df1ed6eefce4c5aabe3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4e9c9d9f821b751bdbad8bbc382a8106.png",
+      "companies": [],
+      "name": "camegone",
+      "urlName": null,
+      "voteID": "6a5937531e3b2bc758dcfb73"
+    },
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a5933b21e3b2bc758dcd8fe"
+    }
+  ]
+}
