@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-07-13T16:12:11.704231Z",
+  "aiTaggedAt": "2026-07-16T20:02:30.409489Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61ba21ab7b7f18766e50ad71",
@@ -166,6 +166,37 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a592d00e3e60dc9ce3b12e9",
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-16T19:12:00.762Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6a592d00e3e60dc9ce3b12e9",
+      "mergedPostDetails": "I am trying to create a touch screen of sorts using the new box contacts.\n\nUnfortunately with the current system, the \"Face Proximity\" seems to calculate the distance from the Z face to the closest point in of the sender instead of its center. This makes it impossible to use in this case as scaling a capsule contact will change what value the face proximity will report, even if it stays in the same position\n\nAdditionally, there seems to be some sort of a smoothing curve applied to the end result which makes the reported value very inaccurate.\n\nThese options make sense for most contacts, but face proximity should not force this behavior. There should be an option to calculate the distance of from the senders center point to make the calculations scale-agnostic and not use the smoothing curve for accuracy.\n\nSDK Version 3.10.4",
+      "mergedPostTitle": "Box Contact \"Face Proximity\" is scale dependent and very inaccurate",
+      "pinned": false,
+      "postID": "6a4b82fd1bb21a5c0f70edca",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -184,11 +215,11 @@
     "https://canny-assets.io/images/bd46f01fb7289d2b06d6bff8cb7d8393.png",
     "https://canny-assets.io/images/0d6c215ca13cbd81d2d05125b9760a96.jpeg"
   ],
-  "lastUpdated": 1784221083278,
+  "lastUpdated": 1784230497904,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 18,
-  "mergeCount": 0,
+  "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a4b82fd1bb21a5c0f70edca/1901054692.jpeg",
   "opportunities": [],
@@ -199,8 +230,8 @@
   "statusChanged": "2026-07-13T14:46:48.649Z",
   "subCategoryID": null,
   "title": "Contact Receiver Box with Face Proximity calculate the Incorrect Distance",
-  "trendingScore": 2951.8241539092246,
-  "updatedAt": "2026-07-16T17:24:06.657685Z",
+  "trendingScore": 2951.768342676286,
+  "updatedAt": "2026-07-16T20:02:25.395363Z",
   "updatedBy": null,
   "urlName": "contact-receiver-box-with-face-proximity-calculate-the-incorrect-distance",
   "viewerIsAuthor": false,
@@ -228,7 +259,7 @@
       "alias": "Gradual Aardvark",
       "aliasID": "67a7a794afacf378f1ae500b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/af90be1fac588a655b450c976f4e0bd6.png",
+      "avatarURL": "https://canny-assets.io/images/eead3773221c5f062bf03b61ce49ddf6.png",
       "companies": [],
       "name": "BruceKnight",
       "urlName": null,
@@ -321,94 +352,6 @@
       "name": "JohnnyBrav1nho",
       "urlName": null,
       "voteID": "6a4bf72bf51f79a5dbeaf84f"
-    },
-    {
-      "_id": "66931e10feb62b2c7064b530",
-      "alias": "Orchid bloom Lobster",
-      "aliasID": "66931e106b10505b94a1f147",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ec01e627e05ff3d651f6f66ea9740eef.png",
-      "companies": [],
-      "name": "PuzzleChild",
-      "urlName": null,
-      "voteID": "6a4bdbacf51f79a5dbe973b1"
-    },
-    {
-      "_id": "67aab73a5f99c066f125f143",
-      "alias": "Mushy Walrus",
-      "aliasID": "67aab73bafacf378f1eee45a",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/5d11c99a8d2b0d8f00d1253bd3e26834.png",
-      "companies": [],
-      "name": "Baby_",
-      "urlName": null,
-      "voteID": "6a4bca3ff51f79a5dbe8e91e"
-    },
-    {
-      "_id": "6064d021466d3f6922a4b271",
-      "alias": "Cloudy Rook",
-      "aliasID": "65c915d0ed6eefce4cadce2b",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2a19aba926f829306552270b8265fbc6.png",
-      "companies": [],
-      "name": "Humi 歩心",
-      "urlName": null,
-      "voteID": "6a4bc638f51f79a5dbe8c8e8"
-    },
-    {
-      "_id": "67a9b3de7f8cf62bfa0217af",
-      "alias": "Navy Jaguar",
-      "aliasID": "67a9b3dfafacf378f13bdc0b",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/5f8ffeb7c45bf4d50ca3bdfe3b157857.png",
-      "companies": [],
-      "name": "yNova",
-      "urlName": null,
-      "voteID": "6a4bb536f51f79a5dbe8147e"
-    },
-    {
-      "_id": "63365253bbf18e44afc76ae2",
-      "alias": "Evergreen Pike",
-      "aliasID": "66fd723a7d32abb6caeaa32e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/38a713e9098370b3bfd9612d01764f41.png",
-      "companies": [],
-      "name": "Euky",
-      "urlName": null,
-      "voteID": "6a4bb487f51f79a5dbe80f09"
-    },
-    {
-      "_id": "606b60e136d9a564540294aa",
-      "alias": "Acid green Salmon",
-      "aliasID": "65c52c2bed6eefce4c2a8a1c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/982a28d5189a1493f8eaf76a920088fb.png",
-      "companies": [],
-      "name": "Zeican",
-      "urlName": null,
-      "voteID": "6a4ba41ff51f79a5dbe79701"
-    },
-    {
-      "_id": "62df2c865968ab44bca883ce",
-      "alias": "Whisper pink Fish",
-      "aliasID": "65c2c0bced6eefce4c74c766",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/b6cb3fe6ae3122ab9221d16ba1dd0d30.png",
-      "companies": [],
-      "name": "RuneFox237",
-      "urlName": null,
-      "voteID": "6a4b8f3df51f79a5dbe6f4d8"
-    },
-    {
-      "_id": "61ba21ab7b7f18766e50ad71",
-      "alias": "Relevant Turtle",
-      "aliasID": "65c2e4cced6eefce4cb7d842",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a0eebc844f510090e952de40f7865375.png",
-      "companies": [],
-      "name": "DX_30",
-      "urlName": null,
-      "voteID": "6a4b82fdf51f79a5dbe6c0e0"
     }
   ]
 }
