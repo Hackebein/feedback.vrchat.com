@@ -1,0 +1,140 @@
+{
+  "_id": "6a577926b1dab0f38fc306b7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-07-17T09:50:41.643629Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "67a7a794c9467977e8b07090",
+    "alias": "Gradual Aardvark",
+    "aliasID": "67a7a794afacf378f1ae500b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/30b897137a32f1f630d8297cefb853a5.png",
+    "created": "2025-02-08T18:51:00.309Z",
+    "name": "BruceKnight",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "67a7a794c9467977e8b07090",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a59f0c500f18587a6339ad2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-17T09:07:17.650Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a577926b1dab0f38fc306b7",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a59f0c500f18587a6339ad1",
+      "statusChangeNewStatus": "needs more information",
+      "value": "Hi, thanks for your report.\n\nSorry for unmerging your issue from another similar one, but we're struggling to reproduce the issue you're showing in your video clip. To help us with debugging, please consider uploading an avatar with this setup on it and then sharing the ID of that avatar here. The avatar doesn't need to be public, and you don't need to worry about setting up animator controls to move the capsule sender around - we can move it manually.\n\nTo clarify, proximity is intended to be calculated from the nearest point inside the sender to the receiver's positive Z face as the docs describe. So while your video does seem to show proximity behaving in the wrong way, the expected value would be the right edge of the capsule, not its center point. This is the intended behavior and probably won't change - if you need the middle of the shape specifically, you could consider reducing the capsule's radius instead.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-15T12:12:22.653Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am trying to create a touch screen of sorts using the new box contacts.\n\nUnfortunately with the current system, the \"Face Proximity\" seems to calculate the distance from the Z face to the closest point in of the sender instead of its center. This makes it impossible to use in this case as scaling a capsule contact will change what value the face proximity will report, even if it stays in the same position\n\nAdditionally, there seems to be some sort of a smoothing curve applied to the end result which makes the reported value very inaccurate.\n\nThese options make sense for most contacts, but face proximity should not force this behavior. There should be an option to calculate the distance of from the senders center point to make the calculations scale-agnostic and not use the smoothing curve for accuracy.\n\nSDK Version 3.10.4",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/3b2d0669a05027d6509db36e7c21285f.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-07-15-1345-12",
+      "url": "https://canny-assets.io/files/3b2d0669a05027d6509db36e7c21285f.mp4"
+    }
+  ],
+  "ideaID": "6a577926b1dab0f38fc30697",
+  "imageURLs": [],
+  "lastUpdated": 1784280120165,
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "needs more information",
+  "statusChanged": "2026-07-17T09:07:17.611Z",
+  "subCategoryID": null,
+  "title": "Box Contact \"Face Proximity\" is scale dependent and very inaccurate",
+  "trendingScore": 2950.6229463621075,
+  "updatedAt": "2026-07-17T09:50:36.646876Z",
+  "updatedBy": "67a7a794c9467977e8b07090",
+  "urlName": "box-contact-face-proximity-is-scale-dependent-and-very-inaccurate",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67a7a794c9467977e8b07090",
+      "alias": "Gradual Aardvark",
+      "aliasID": "67a7a794afacf378f1ae500b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/30b897137a32f1f630d8297cefb853a5.png",
+      "companies": [],
+      "name": "BruceKnight",
+      "urlName": null,
+      "voteID": "6a5779261e3b2bc758ce1fd9"
+    }
+  ]
+}
