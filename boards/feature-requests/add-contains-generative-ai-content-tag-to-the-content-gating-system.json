@@ -513,7 +513,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 8
+        "like": 9
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -1511,7 +1511,9 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1537,23 +1539,23 @@
   "imageURLs": [
     "https://canny-assets.io/images/0975b614532eda0d8feca209480dd70c.png"
   ],
-  "lastUpdated": 1784239803169,
+  "lastUpdated": 1784247111434,
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 399,
+  "maxScore": 400,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a47f7ad48ab8093bddc0501/682972098.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 399,
+  "score": 400,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-03T17:55:57.677Z",
   "subCategoryID": null,
   "title": "Add \"Contains Generative AI Content\" tag to the Content Gating system",
-  "trendingScore": 2954.497760166737,
-  "updatedAt": "2026-07-16T22:37:40.018732Z",
+  "trendingScore": 2954.51050405393,
+  "updatedAt": "2026-07-17T00:39:41.572696Z",
   "updatedBy": null,
   "urlName": "add-contains-generative-ai-content-tag-to-the-content-gating-system",
   "viewerIsAuthor": false,
@@ -1565,6 +1567,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62e6e72adc4b8444a8907bd2",
+      "alias": "Universal Beetle",
+      "aliasID": "6a5977a01e3b2bc758de7515",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/aa9adb849e23965d56bdb08fe4595919.png",
+      "companies": [],
+      "name": "RossRaccoon",
+      "urlName": null,
+      "voteID": "6a5977b21e3b2bc758de7545"
+    },
+    {
+      "_id": "62289f85f2738f169305ca66",
+      "alias": "Salmon Cheetah",
+      "aliasID": "670806f10f7e723d6e996c4e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ea09234193066b73d16702d7044f6856.png",
+      "companies": [],
+      "name": "Ryley_Oleander",
+      "urlName": null,
+      "voteID": "6a5977071e3b2bc758de73c2"
+    },
+    {
+      "_id": "5f98f45832cfce07937a0685",
+      "alias": "Aquamarine Jellyfish",
+      "aliasID": "65c38218ed6eefce4c67a9e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0d43d0e052ec031589ea71b2fd076ca8.png",
+      "companies": [],
+      "name": "Cat Girl Eddie",
+      "urlName": null,
+      "voteID": "6a596d241e3b2bc758de4498"
+    },
     {
       "_id": "5b6b4e8cb1b04a6db0be465d",
       "alias": "Lapis lazuli Peacock",
