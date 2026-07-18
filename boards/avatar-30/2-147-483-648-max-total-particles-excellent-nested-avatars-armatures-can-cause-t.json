@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-18T13:38:35.182887Z",
+  "aiTaggedAt": "2026-07-18T14:07:33.239876Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -148,10 +148,19 @@
       "created": "2026-07-18T13:09:05.963Z",
       "deleted": false,
       "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
+      "fileURLs": [
+        "https://canny-assets.io/files/f62f79d7db7d57fcb45119a2be196c84.mp4"
+      ],
+      "files": [
+        {
+          "mimeType": "video/mp4",
+          "name": "2026-07-18 13-22-08",
+          "url": "https://canny-assets.io/files/f62f79d7db7d57fcb45119a2be196c84.mp4"
+        }
+      ],
       "imageURLs": [
-        "https://canny-assets.io/images/d7ab9a942d6b41da7015bc2e3bed27bb.png"
+        "https://canny-assets.io/images/d7ab9a942d6b41da7015bc2e3bed27bb.png",
+        "https://canny-assets.io/images/38dae57940ce12f24533dc06551a7786.png"
       ],
       "integrationSourceType": null,
       "internal": false,
@@ -180,7 +189,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Affected private avatar: [Robot （nested armatures）](https://vrchat.com/home/avatar/avtr_6cb82e04-86d1-4afe-9261-583b03496c06) (`avtr_6cb82e04-86d1-4afe-9261-583b03496c06`) by WubTheCaptain\n\n1. Create a minimal Excellent avatar (Robot) with 1 particle system, set its max particles to 2.\n\n2. Duplicate the minimal Excellent/Good avatar (Robot) and nest it under the avatar.\n\n3. Modify the particle system under the nested avatar to have a maximum of 2147483647 particles.\n\n4. Delete the animator component, VRC avatar descriptor and pipeline manager script from the duplicated avatar nested under the actual avatar. (Optionally, delete the armature and body meshes too.)\n\n5. Build & Test.\n\n6. Build & Publish as a private avatar.\n\n7. Check the avatar stats of the local SDK test avatar & uploaded avatar separately.\n\nExpected result: Red, Very Poor 2,147,483,647 particles in local SDK avatar, SDK performance rank estimation and after upload.\n\nActual result: Local SDK test avatar and SDK performance ranking estimate reports Very Poor 2,147,483,647 particles. However, after Build & Publish the avatar shows Excellent, -2,147,483,648 particles. The avatar is simultaneously ranked both \"Good\" and \"Very Poor\" in the client.\n\nTypically these avatars behave like unbounded number of particles (a crasher avatar) when particle limiter is disabled in client settings, even if the particle count is reported as negative.\n\nAdditional info: Nested avatars/armatures must be used, because otherwise the particles will always be capped at maximum integer value (2,147,483,647).\n\nSDK 3.10.4, VRChat 2026.2.3p2 `Build 1866` (unity-6). Affects both the main branch and unity-6 public beta branch.",
+  "details": "Affected private avatar: [Robot （nested armatures）](https://vrchat.com/home/avatar/avtr_6cb82e04-86d1-4afe-9261-583b03496c06) (`avtr_6cb82e04-86d1-4afe-9261-583b03496c06`) by WubTheCaptain\n\n1. Create a minimal Excellent avatar (Robot) with 1 particle system, set its max particles to 2.\n\n2. Duplicate the minimal Excellent/Good avatar (Robot) and nest it under the avatar.\n\n3. Modify the particle system under the nested avatar to have a maximum of 2147483647 particles.\n\n4. Delete the animator component, VRC avatar descriptor and pipeline manager script from the duplicated avatar nested under the actual avatar. (Optionally, delete the armature and body meshes too.)\n\n5. Build & Test.\n\n6. Build & Publish as a private avatar.\n\n7. Check the avatar stats of the local SDK test avatar & uploaded avatar separately.\n\nExpected result: Red, Very Poor 2,147,483,647 particles in local SDK avatar, SDK performance rank estimation and after upload.\n\nActual result: Local SDK test avatar and SDK performance ranking estimate reports Very Poor 2,147,483,647 particles. However, after Build & Publish the avatar shows Excellent, -2,147,483,648 particles. The avatar is simultaneously ranked both \"Good\" and \"Very Poor\" in the client. **Remote and local users see this as a Good avatar on nameplate.**\n\nTypically these avatars behave like unbounded number of particles (a crasher avatar) when particle limiter is disabled in client settings, even if the particle count is reported as negative.\n\nAdditional info: Nested avatars/armatures must be used, because otherwise the particles will always be capped at maximum integer value (2,147,483,647).\n\nSDK 3.10.4, VRChat 2026.2.3p2 `Build 1866` (unity-6). Affects both the main branch and unity-6 public beta branch.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -207,7 +216,7 @@
     "https://canny-assets.io/images/31af76f5e6acc8cf8ab54304d3e51d06.png",
     "https://canny-assets.io/images/a82f47cf87b81974e7002d6d12c89d41.png"
   ],
-  "lastUpdated": 1784380332573,
+  "lastUpdated": 1784381986699,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -223,7 +232,7 @@
   "subCategoryID": null,
   "title": "-2,147,483,648 max total particles (Excellent): Nested avatars/armatures can cause total max particles / mesh particle triangles to overflow into negative integers after server-side performance ranking calculations",
   "trendingScore": 2951.0493990778814,
-  "updatedAt": "2026-07-18T13:38:29.598966Z",
+  "updatedAt": "2026-07-18T14:07:29.439301Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "2-147-483-648-max-total-particles-excellent-nested-avatars-armatures-can-cause-t",
   "viewerIsAuthor": false,
