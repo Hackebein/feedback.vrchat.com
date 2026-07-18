@@ -3,7 +3,7 @@
   "aiCategories": [
     "vrchat-meta"
   ],
-  "aiTaggedAt": "2026-07-18T08:54:07.262536Z",
+  "aiTaggedAt": "2026-07-18T09:33:30.993254Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -34,7 +34,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I think the websocket server updates for avatar changes are currently paused, but this broke my workflow for reviewing new & recently updated public avatars.\n\nI asked around and this issue affects several people. This issue started < 12 hours ago.\n\n1. Launch VRChat.\n\n2. Visit https://vrchat.com/home/avatar/avtr_c38a1615-5bf5-42b4-84eb-a8b6c37cbd11\n\n3. Click \"Change Into Avatar\" on VRChat Home. Notice \"You have successfully changed avatars!\" message on the website.\n\n4. Check in VRChat app. Nothing happens. Your \"Current Avatar\" indicates your previous avatar.\n\n5. Check your profile on VRChat Home. Your avatar has been changed.\n\n6. Restart VRChat. You'll now be the avatar you chose from VRChat Home.\n\nExpected result: Change into the avatar in app a few seconds after clicking Change Into Avatar (step 3).\n\nActual behavior: I have to copy an avatar ID from VRChat Home and go to a dynamic avatar pedestral with an avatar ID input field to change into recently updated public avatars, because Change Into Avatar does nothing for the current client session.\n\nI don't see a status update at https://status.vrchat.com/ indicating an issue. Could be temporarily related to: https://feedback.vrchat.com/bug-reports/p/avatar-changes-sometimes-revert-back-to-the-previously-used-avatar-immediately-a\n\nPicture: Current Avatar is Robot on VRChat Home (after step 1), but remains Outline Rusk in app.",
+  "details": "I think the websocket server updates for avatar changes are currently paused, but this broke my workflow for reviewing new & recently updated public avatars.\n\nI asked around and this issue affects several people. This issue started < 12 hours ago.\n\n1. Launch VRChat.\n\n2. Visit https://vrchat.com/home/avatar/avtr_c38a1615-5bf5-42b4-84eb-a8b6c37cbd11\n\n3. Click \"Change Into Avatar\" on VRChat Home. Notice \"You have successfully changed avatars!\" message on the website.\n\n4. Check in VRChat app. Nothing happens. Your \"Current Avatar\" indicates your previous avatar.\n\n5. Check your profile on VRChat Home. Your avatar has been changed.\n\n6. Restart VRChat. You'll now be the avatar you chose from VRChat Home.\n\nExpected result: Change into the avatar in app a few seconds after clicking Change Into Avatar (step 3).\n\nActual behavior: I have to copy an avatar ID from VRChat Home and go to a dynamic avatar pedestral with an avatar ID input field to change into recently updated public avatars, because Change Into Avatar does nothing for the current client session.\n\nI don't see a status update at https://status.vrchat.com/ indicating an issue. Could be temporarily related to: https://feedback.vrchat.com/bug-reports/p/avatar-changes-sometimes-revert-back-to-the-previously-used-avatar-immediately-a\n\nPicture: Current Avatar is Robot on VRChat Home (after step 3), but remains Outline Rusk in app (step 5).",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -50,9 +50,9 @@
   ],
   "ideaID": "6a5b36e0973c8dd4179fb80e",
   "imageURLs": [
-    "https://canny-assets.io/images/0a536fa665eb762b4a40031b8036eee0.png"
+    "https://canny-assets.io/images/a6faea2fa65990212e8e010ab1d0e5bb.png"
   ],
-  "lastUpdated": 1784363236842,
+  "lastUpdated": 1784365497924,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -68,7 +68,7 @@
   "subCategoryID": null,
   "title": "Change Into Avatar from VRChat Home has no effect in VRChat app without an app restart",
   "trendingScore": 2951.0283332321474,
-  "updatedAt": "2026-07-18T08:54:02.307071Z",
+  "updatedAt": "2026-07-18T09:33:25.378769Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "change-into-avatar-from-vrchat-home-has-no-effect-in-vrchat-app-without-an-app-r",
   "viewerIsAuthor": false,
