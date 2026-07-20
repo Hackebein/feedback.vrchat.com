@@ -2,9 +2,10 @@
   "_id": "6a5e036dd1a91d65098a9586",
   "aiCategories": [
     "loc.hud",
-    "platforms.pc.steam"
+    "platforms.cross-platform",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-07-20T12:18:26.482858Z",
+  "aiTaggedAt": "2026-07-20T16:40:41.618786Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60e65f577ae9d0492b0f2a75",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a5e050846e4f0766ebb40e3",
@@ -80,6 +81,50 @@
       "value": "build 1865 also",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a5e464d90e322d0a05b2c7f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62e03f4e44af5544b2228fa5",
+        "alias": "Burnt sienna Landfowl",
+        "aliasID": "65c2c12eed6eefce4c82d31d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/084de2f43b3dcef5f08be26ec5ecd129.png",
+        "created": "2022-07-26T19:23:58.425Z",
+        "name": "Comfy Chloe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-20T16:01:17.156Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a5e036dd1a91d65098a9586",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Another profile that causes this https://vrchat.com/home/user/usr_e1460ae2-ffa2-47d4-b996-f51cf4b3a651",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -97,7 +142,7 @@
   "imageURLs": [
     "https://canny-assets.io/images/210b998b5b6cb8a14d1b124d7c6835e0.png"
   ],
-  "lastUpdated": 1784561715424,
+  "lastUpdated": 1784563897170,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 4,
@@ -113,7 +158,7 @@
   "subCategoryID": null,
   "title": "[1866] HUD notifications broken by unicode",
   "trendingScore": 2952.2580673382413,
-  "updatedAt": "2026-07-20T16:08:19.324471Z",
+  "updatedAt": "2026-07-20T16:40:37.835953Z",
   "updatedBy": null,
   "urlName": "1866-hud-notifications-broken-by-unicode",
   "viewerIsAuthor": false,
