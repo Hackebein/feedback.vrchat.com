@@ -2,9 +2,10 @@
   "_id": "6a5b73f3ef5ab533a1d5fb04",
   "aiCategories": [
     "loc.unity-sdk",
+    "sdk.vrcsdk",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-20T10:33:01.939432Z",
+  "aiTaggedAt": "2026-07-20T15:22:24.592719Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -88,7 +89,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Create an Excellent avatar (Robot).\n\n2. Add 3 particle systems, each with 2147483647 max particles and 2147483647 max lights using one shared point light prefab.\n\n3. Add 3 point lights.\n\n4. Check the SDK builder for alerts to review.\n\nExpected result: Show a Very Poor performance alert in the SDK builder about 2147483647 lights.\n\nActual result: No alert, the lights counter has overflowed into negative integers (-2147483647 lights), \"Excellent\".\n\nAdditional info: No effect on the avatar's stats itself if the avatar is published to VRChat. Having only 2 point lights reports 2147483647 lights in the SDK (screenshot 2), as intended.",
+  "details": "1. Create an Excellent avatar (Robot).\n\n2. Add 3 particle systems, each with 2147483647 max particles and 2147483647 max lights using one shared point light prefab.\n\n3. Add 3 point lights.\n\n4. Check the SDK builder for alerts to review.\n\nExpected result: Show a Very Poor performance alert in the SDK builder about 2147483647 lights.\n\nActual result: No alert, the lights counter has overflowed into negative integers (-2147483648 lights), \"Excellent\".\n\nAdditional info: No effect on the avatar's stats itself if the avatar is published to VRChat. Having only 2 point lights reports 2147483647 lights in the SDK (screenshot 2), as intended.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -99,7 +100,7 @@
     "https://canny-assets.io/images/73ddb09a4225b8ea06423412e959bbfe.png",
     "https://canny-assets.io/images/37c1c64673de1e058ef7fedf57b1b130.png"
   ],
-  "lastUpdated": 1784543315612,
+  "lastUpdated": 1784559310245,
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -115,7 +116,7 @@
   "subCategoryID": null,
   "title": "[SDK 3.10.4] SDK avatar performance rank estimation can display negative lights (-2147473648 lights, Excellent)",
   "trendingScore": 2951.0541843945152,
-  "updatedAt": "2026-07-20T10:32:56.915585Z",
+  "updatedAt": "2026-07-20T15:22:20.056443Z",
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "sdk-3104-sdk-avatar-performance-rank-estimation-can-display-negative-lights-2147",
   "viewerIsAuthor": false,
