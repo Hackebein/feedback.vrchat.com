@@ -105,25 +105,3 @@ def ensure_worktree() -> Path:
     )
     return dest
 
-
-def migrate_scraped_at_from_boards(boards_root: Path | None = None) -> dict[str, Any]:
-    """Seed scrapedAt from board JSON updatedAt fields."""
-    import board_store  # local
-
-    state = load_state()
-    scraped = dict(state.get("scrapedAt") or {})
-    root = boards_root or board_store.BOARD_DIR
-    for slug in sorted(p.name for p in root.iterdir() if p.is_dir() and not p.name.startswith("_")):
-        for path in sorted(root.joinpath(slug).glob("*.json")):
-            if path.name.endswith(".json.tmp"):
-                continue
-            try:
-                post = json.loads(path.read_text(encoding="utf-8"))
-            except (OSError, json.JSONDecodeError):
-                continue
-            pid = post.get("_id")
-            ua = post.get("updatedAt")
-            if pid and ua and str(pid) not in scraped:
-                scraped[str(pid)] = str(ua)
-    state["scrapedAt"] = scraped
-    return state

@@ -151,8 +151,7 @@ def transform_post(line: dict[str, Any], *, scraper_id: str | None = None) -> di
 
     # _id is reserved by OpenSearch as a metadata field at the document root.
     safe.pop("_id", None)
-    # Local scrape bookkeeping must not be indexed.
-    safe.pop("updatedAt", None)
+    # Volatile Canny client field; do not index.
     safe.pop("lastUpdated", None)
 
     title = safe.get("title") or ""

@@ -780,9 +780,6 @@ def build_scan_targets(
 
     def _scraped_key(pid):
         sa = scraped_at.get(pid)
-        if sa is None:
-            # Fall back to legacy board updatedAt during migration.
-            sa = (stored.get(pid) or {}).get("post", {}).get("updatedAt")
         return (sa is None, sa or "")
 
     oldest_sorted = sorted(stored.items(), key=lambda kv: _scraped_key(kv[0]))
@@ -854,8 +851,8 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
     """Merge fetch results back into per-post JSON files.
 
     Scraped-at bookkeeping is written to `scraped_at` (scrape-state), not into
-    the board JSON. Volatile Canny keys (`updatedAt`, `lastUpdated`) are stripped
-    on write so routine scrapes do not rewrite every file.
+    the board JSON. Canny's volatile post `lastUpdated` is stripped on write so
+    routine scrapes do not rewrite every file.
 
     Returns stats: {"added", "deleted", "refreshed", "moved"}.
     """
@@ -885,7 +882,6 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
         if not post:
             continue
 
-        post.pop("updatedAt", None)
         post.pop("lastUpdated", None)
         post["comments"] = comments
         scraped_at[pid] = now
@@ -1046,8 +1042,7 @@ def generate_readme(
     `inferred_totals` comes from `main()`'s newest sweep for homepage-missing
     boards. If omitted (standalone regen), one quiet newest sweep fills both
     inferred totals (single-page boards) and scrape horizon when needed.
-    Freshness uses scrape-state `scrapedAt` (falls back to legacy board
-    `updatedAt` during migration).
+    Freshness uses scrape-state `scrapedAt` (oldest scrape timestamp across posts).
     """
     import jinja2
 
@@ -1145,18 +1140,6 @@ def generate_readme(
                 freshness = dt
         except Exception:
             pass
-    if freshness is None:
-        for slug in board_store.board_slugs():
-            for p in board_store.iter_board_posts(slug):
-                ua = p.get("updatedAt")
-                if not ua:
-                    continue
-                try:
-                    dt = datetime.fromisoformat(ua.replace("Z", "+00:00"))
-                    if freshness is None or dt < freshness:
-                        freshness = dt
-                except Exception:
-                    pass
     now = datetime.now(timezone.utc)
     if freshness:
         delta = now - freshness
