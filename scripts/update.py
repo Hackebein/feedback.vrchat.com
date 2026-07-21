@@ -851,8 +851,8 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
     """Merge fetch results back into per-post JSON files.
 
     Scraped-at bookkeeping is written to `scraped_at` (scrape-state), not into
-    the board JSON. Canny's volatile post `lastUpdated` is stripped on write so
-    routine scrapes do not rewrite every file.
+    the board JSON. Canny post fields `lastUpdated` / `updatedAt` are stripped on
+    write so routine scrapes do not rewrite every file for timestamp-only churn.
 
     Returns stats: {"added", "deleted", "refreshed", "moved"}.
     """
@@ -883,6 +883,7 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
             continue
 
         post.pop("lastUpdated", None)
+        post.pop("updatedAt", None)  # Canny API field; not used for freshness
         post["comments"] = comments
         scraped_at[pid] = now
 

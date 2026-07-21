@@ -151,8 +151,9 @@ def transform_post(line: dict[str, Any], *, scraper_id: str | None = None) -> di
 
     # _id is reserved by OpenSearch as a metadata field at the document root.
     safe.pop("_id", None)
-    # Volatile Canny client field; do not index.
+    # Volatile Canny timestamps; do not index.
     safe.pop("lastUpdated", None)
+    safe.pop("updatedAt", None)
 
     title = safe.get("title") or ""
     details = safe.get("details") or ""
