@@ -1,0 +1,93 @@
+{
+  "_id": "6a577d834d5991026ade448a",
+  "aiCategories": [
+    "loc.website",
+    "web.home"
+  ],
+  "aiTaggedAt": "2026-07-15T13:07:35.295298Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 317,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-15T12:30:59.507Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "An error message displaying during a VRChat Home outage displays the old Twitter branding. Twitter was rebranded to X in 2023.\n\nActual result: \"Check our [twitter](https://twitter.com/VRChat)?\" (https://twitter.com/VRChat)\n\nExpected result: \"Check our social media [@VRChat on X](https://x.com/VRChat)?\" (https://x.com/VRChat)\n\nAdditional info: The full error message is quoted below.\n\n----\n\nVRChat\n\nAn error has occurred. To continue:\n\nPress the F5 to refresh the website, or\n\nPress the back button to leave the website, or\n\nCheck our twitter?\n\nPress CTRL+ALT+DEL to restart your computer. If you do this, you will lose any unsaved information in all open applications.\n\n`500 Request failed with status code 500`",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a577d834d5991026ade4489",
+  "imageURLs": [
+    "https://canny-assets.io/images/3d195cbd0b59ce572397fc6600c1539a.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a577d834d5991026ade448a/384187492.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-15T12:30:59.507Z",
+  "subCategoryID": null,
+  "title": "Old \"twitter\" (–2023) branding instead of \"X\" (2023–) in an error message",
+  "trendingScore": 2950.6247930601894,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "old-twitter-2023-branding-instead-of-x-2023-in-an-error-message",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a577d831e3b2bc758ce480d"
+    }
+  ]
+}

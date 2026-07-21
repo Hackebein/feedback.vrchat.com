@@ -1,0 +1,293 @@
+{
+  "_id": "694586ee58ea10140732b413",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds"
+  ],
+  "aiTaggedAt": "2026-06-13T00:26:02.792570Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6163d2754d39c94e1e8f96dc",
+    "alias": "Main Giraffe",
+    "aliasID": "65c26de3ed6eefce4c583dee",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b42d9c85af04772f4892420754b87715.png",
+    "created": "2021-10-11T05:58:13.495Z",
+    "name": "nekochanfood",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6163d2754d39c94e1e8f96dc",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "696a5eb42bb88ccf00e2d63b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-01-16T15:52:20.929Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "694586ee58ea10140732b413",
+      "private": false,
+      "reactions": {
+        "like": 2
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "696a5eb42bb88ccf00e2d627",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2025-12-19T17:10:06.382Z",
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Pen item \"Frosted Scribe\" pickup state is out of sync in certain situations, preventing ownership transfers from working properly.\n\nThe following issue occur:\n\n- X: Jittering occurs when a pen is taken from a user holding it.\n\n- Y: The state of holding the pen persists even if the user holding the pen has it taken by another user.\n\n- Z: When the user holding the pen has it taken by another user and the user who took it releases the pen, the pen returns to its original state and can be written with. However, it does not appear to the other users that the pen has returned, and they cannot see what is being written.\n\nHere I will define `user A` and `user B` and describe how to reproduce the issue.\n\n1. User A equips the \"Frosted Scribe\".\n\n2. User B takes the \"Frosted Scribe\" from User A. (At this point, Issue Y occurs.)\n\n3. User B manipulates the stolen pen. (At this point, Issue X occurs.)\n\n4. User B releases the stolen pen.\n\n5. User A can see the pen returned to their hand. However, to User B, the pen appears to be in the same location as when they released it, and it does not appear to have returned to User A.\n\n6. User A manipulates the pen. (At this point, Issue Z occurs.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/4cbbdc9c373b86c8edcb14b9f2b1f27e.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2025-12-20 01-40-37_1_1",
+      "url": "https://canny-assets.io/files/4cbbdc9c373b86c8edcb14b9f2b1f27e.mp4"
+    }
+  ],
+  "ideaID": "694586ee58ea10140732b4b8",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 15,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/694586ee58ea10140732b413/988315363.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 15,
+  "sourceFeatureExtractionItem": null,
+  "status": "tracked",
+  "statusChanged": "2026-01-16T15:52:20.851Z",
+  "subCategoryID": null,
+  "title": "Pen item \"Frosted Scribe\" pickup and ownership synchronisation issues",
+  "trendingScore": 2925.4023494689945,
+  "updatedBy": "6163d2754d39c94e1e8f96dc",
+  "urlName": "pen-item-frosted-scribe-pickup-and-ownership-synchronisation-issues",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": true,
+    "lowEngagement": false,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3df2f75af9f322b0f66e1b",
+      "alias": "Eggplant Swordfish",
+      "aliasID": "65c27264ed6eefce4c180a06",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bd0878343141a2d94152963c3a8ee2ce.png",
+      "companies": [],
+      "name": "narazaka",
+      "urlName": null,
+      "voteID": "6969ced0f85d59c66dcee0b9"
+    },
+    {
+      "_id": "5e8487f1fd13be66cecc227b",
+      "alias": "Parental Pelican",
+      "aliasID": "65c27264ed6eefce4c1809f0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ba76cefd0b866ecf58a1adf3a2accbff.png",
+      "companies": [],
+      "name": "みみー／Mimy",
+      "urlName": null,
+      "voteID": "6969ceaef85d59c66dc78bd0"
+    },
+    {
+      "_id": "64491be82e40b99a16e6489c",
+      "alias": "Prairie sand Crocodile",
+      "aliasID": "65c281a2ed6eefce4c82e32a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e065af1fbd605c4c12d32e8cb554ef2c.png",
+      "companies": [],
+      "name": "しらす⁄shirasu",
+      "urlName": null,
+      "voteID": "6969ce6af85d59c66db8cb30"
+    },
+    {
+      "_id": "5baa1068e0b68928323f5213",
+      "alias": "Zaffre blue Tapir",
+      "aliasID": "65c2719aed6eefce4cf65a16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf51168827ab923469f4495bd96b6dbf.png",
+      "companies": [],
+      "name": "ni1chigo2115",
+      "urlName": null,
+      "voteID": "6955c05ef85d59c66dbfb596"
+    },
+    {
+      "_id": "6495466abec709090d6195a7",
+      "alias": "Contemporary Gopher",
+      "aliasID": "65cc7eaced6eefce4c63b7f3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/643804dbd0a1861a6e899805bc72ae49.png",
+      "companies": [],
+      "name": "GiggleL0rd",
+      "urlName": null,
+      "voteID": "694c49def85d59c66d63fe3d"
+    },
+    {
+      "_id": "58c6cbcffd04b1785f747b6c",
+      "alias": "Huge Cat",
+      "aliasID": "65ba012ced6eefce4cea0f7d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ee5bcfb6ce3f0f2cfb7af091815f4481.png",
+      "companies": [],
+      "name": "owlboy",
+      "urlName": null,
+      "voteID": "694b1771f85d59c66dc4b81d"
+    },
+    {
+      "_id": "6219f63f55639e536dc83162",
+      "alias": "Imaginative Sloth",
+      "aliasID": "65c26df1ed6eefce4c5aac1a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4eeae059a7abc52f9c753667e18f007d.png",
+      "companies": [],
+      "name": "syncpulse",
+      "urlName": null,
+      "voteID": "6947593bf85d59c66d9b31e9"
+    },
+    {
+      "_id": "5ce09c4ff1ef661188867ab5",
+      "alias": "Probable Elk",
+      "aliasID": "65c2756eed6eefce4c9639c6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/976cdd071ca50df10da145bf3d25fad6.png",
+      "companies": [],
+      "name": "Tony_Lewis",
+      "urlName": null,
+      "voteID": "694748f9f85d59c66d4aca3f"
+    },
+    {
+      "_id": "5cf93565a2233c25df81dbc8",
+      "alias": "Lime Egret",
+      "aliasID": "65c2756eed6eefce4c963a58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/59ddf613e7dcf756632168ff833e7587.png",
+      "companies": [],
+      "name": "IssueNest-Bot",
+      "urlName": null,
+      "voteID": "69474868f85d59c66d2c0306"
+    },
+    {
+      "_id": "6142bc91c830f70736b61114",
+      "alias": "Secondary Swordtail",
+      "aliasID": "65c27264ed6eefce4c18098a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/191433fda8e993da6a48d8f50360fef2.png",
+      "companies": [],
+      "name": "Sayamame",
+      "urlName": null,
+      "voteID": "69474847f85d59c66d24ba51"
+    },
+    {
+      "_id": "618b95228d51085a8cb9ed8a",
+      "alias": "Direct Orangutan",
+      "aliasID": "65c2c1c8ed6eefce4c95a1da",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/73f061ce94762f72c74ff6c4341f6000.png",
+      "companies": [],
+      "name": "がそさん／いついそ もと",
+      "urlName": null,
+      "voteID": "69464f53f85d59c66d70f592"
+    },
+    {
+      "_id": "5a983204a1528d415c5ced46",
+      "alias": "Chief Finch",
+      "aliasID": "65ba04aeed6eefce4c43afb3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/914c5bb9643b7d8ae8b037e9684786f0.png",
+      "companies": [],
+      "name": "naqtn",
+      "urlName": null,
+      "voteID": "6946184cf85d59c66d3e35b6"
+    },
+    {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3bcc0737f3e4d99cf27447b4a2a20287.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": null,
+      "voteID": "6945f777f85d59c66d80db22"
+    },
+    {
+      "_id": "600bb08cb76d6f78b108fb38",
+      "alias": "Zircon Yak",
+      "aliasID": "65c26de3ed6eefce4c583db2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/74d9eac6e032ed333d11a9e908bfcbe0.png",
+      "companies": [],
+      "name": "DAG-XR",
+      "urlName": null,
+      "voteID": "6945af22f85d59c66d1533fb"
+    },
+    {
+      "_id": "6163d2754d39c94e1e8f96dc",
+      "alias": "Main Giraffe",
+      "aliasID": "65c26de3ed6eefce4c583dee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7a63f3ea97789f01060d628f5f6fbf07.png",
+      "companies": [],
+      "name": "nekochanfood",
+      "urlName": null,
+      "voteID": "694586eef85d59c66d78b8a9"
+    }
+  ]
+}

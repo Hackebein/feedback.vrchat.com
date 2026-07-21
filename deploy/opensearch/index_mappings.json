@@ -1,0 +1,542 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "index.mapping.total_fields.limit": 2000,
+    "index.mapping.nested_objects.limit": 1000000,
+    "index.max_result_window": 50000,
+    "analysis": {
+      "char_filter": {
+        "vrc_plus_normalizer": {
+          "type": "pattern_replace",
+          "pattern": "(?i)\\bvrc(hat)?\\s*\\+",
+          "replacement": "vrcplus"
+        }
+      },
+      "filter": {
+        "english_possessive_stemmer": {
+          "type": "stemmer",
+          "language": "possessive_english"
+        },
+        "english_stop": {
+          "type": "stop",
+          "stopwords": "_english_"
+        },
+        "english_stemmer": {
+          "type": "stemmer",
+          "language": "english"
+        },
+        "feedback_synonyms": {
+          "type": "synonym_graph",
+          "synonyms": [
+            "avi, avatar",
+            "vrc, vrchat",
+            "vrcplus, vrchatplus, vrchat plus, vrc plus",
+            "perf, performance",
+            "optimisation, optimization",
+            "fps, framerate, frame rate",
+            "mic, microphone",
+            "udon, udonsharp",
+            "sdk, vrcsdk",
+            "vcc, creator companion",
+            "vpm, vrchat package manager",
+            "quest, questie, meta quest",
+            "pcvr, pc vr",
+            "deskie, desktop",
+            "fbt, full body tracking",
+            "ft, face tracking, facial tracking",
+            "ik, inverse kinematics",
+            "physbones, physbone, dynamic bones, squishbones",
+            "eac, easy anti-cheat",
+            "osc, open sound control",
+            "2fa, two factor authentication",
+            "rp, roleplay, role play",
+            "repro, reproduce, reproduction",
+            "impostor, imposter, impostors, imposters",
+            "poly, polys, polygon, polygons, tri, tris, triangle, triangles",
+            "shapekey, shapekeys, blendshape, blendshapes, blend shape"
+          ]
+        }
+      },
+      "analyzer": {
+        "text_index": {
+          "char_filter": ["vrc_plus_normalizer"],
+          "tokenizer": "standard",
+          "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "english_stemmer"]
+        },
+        "text_search": {
+          "char_filter": ["vrc_plus_normalizer"],
+          "tokenizer": "standard",
+          "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "feedback_synonyms", "english_stemmer"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "post_id": { "type": "keyword" },
+      "combined_text": {
+        "type": "text",
+        "analyzer": "text_index",
+        "search_analyzer": "text_search"
+      },
+
+      "aiCategories": {
+        "type": "text",
+        "analyzer": "standard",
+        "fields": {
+          "keyword": { "type": "keyword", "ignore_above": 512 }
+        }
+      },
+      "aiTaggedAt": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+
+      "__v": { "type": "integer" },
+
+      "title": {
+        "type": "text",
+        "analyzer": "text_index",
+        "search_analyzer": "text_search",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+      },
+      "details": {
+        "type": "text",
+        "analyzer": "text_index",
+        "search_analyzer": "text_search",
+        "index_options": "offsets"
+      },
+      "urlName": { "type": "keyword", "ignore_above": 512 },
+
+      "ideaID": { "type": "keyword" },
+      "boardID": { "type": "keyword" },
+      "categoryID": { "type": "keyword" },
+      "subCategoryID": { "type": "keyword" },
+      "companyID": { "type": "keyword" },
+      "authorID": { "type": "keyword" },
+      "deleteID": { "type": "keyword" },
+      "deletedBy": { "type": "keyword" },
+      "updatedBy": { "type": "keyword" },
+      "by": { "type": "keyword" },
+      "byID": { "type": "keyword" },
+
+      "status": { "type": "keyword" },
+      "score": { "type": "integer" },
+      "maxScore": { "type": "integer" },
+      "mergeCount": { "type": "integer" },
+      "trendingScore": { "type": "float" },
+      "commentCount": { "type": "integer" },
+      "viewerVote": { "type": "integer" },
+      "viewerIsAuthor": { "type": "boolean" },
+      "loading": { "type": "boolean" },
+      "notFound": { "type": "boolean" },
+      "etaPublic": { "type": "boolean" },
+      "eta": { "type": "keyword", "ignore_above": 256 },
+
+      "ogImageURL": { "type": "keyword", "ignore_above": 2048 },
+      "imageURLs": { "type": "keyword", "ignore_above": 2048 },
+      "fileURLs": { "type": "keyword", "ignore_above": 2048 },
+      "opportunities": { "type": "keyword", "ignore_above": 1024 },
+
+      "created": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "statusChanged": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "lastActivityAt": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "deletedAt": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+      "lastUpdated": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis||epoch_second"
+      },
+
+      "error": { "type": "object", "enabled": false },
+      "linkedEntry": { "type": "object", "enabled": false },
+      "sourceFeatureExtractionItem": { "type": "object", "enabled": false },
+
+      "files": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "mimeType": { "type": "keyword", "ignore_above": 256 },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+          },
+          "url": { "type": "keyword", "ignore_above": 2048 }
+        }
+      },
+
+      "author": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "alias": { "type": "keyword", "ignore_above": 256 },
+          "aliasID": { "type": "keyword" },
+          "anonymized": { "type": "boolean" },
+          "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "name": {
+            "type": "text",
+            "analyzer": "text_index",
+            "search_analyzer": "text_search",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+          },
+          "serviceAccount": { "type": "boolean" },
+          "urlName": { "type": "keyword", "ignore_above": 512 }
+        }
+      },
+
+      "board": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "urlName": { "type": "keyword", "ignore_above": 256 }
+        }
+      },
+
+      "category": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "parentID": { "type": "keyword" },
+          "postCount": { "type": "integer" },
+          "urlName": { "type": "keyword", "ignore_above": 256 }
+        }
+      },
+
+      "voteSettings": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "highEngagement": { "type": "boolean" },
+          "lowEngagement": { "type": "boolean" },
+          "moderateEngagement": { "type": "boolean" },
+          "votesHidden": { "type": "boolean" }
+        }
+      },
+
+      "voters": {
+        "type": "nested",
+        "dynamic": false,
+        "properties": {
+          "_id": { "type": "keyword" },
+          "alias": { "type": "keyword", "ignore_above": 256 },
+          "aliasID": { "type": "keyword" },
+          "anonymized": { "type": "boolean" },
+          "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+          "companies": { "type": "object", "enabled": false },
+          "name": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+          },
+          "urlName": { "type": "keyword", "ignore_above": 512 },
+          "voteID": { "type": "keyword" }
+        }
+      },
+
+      "comments": {
+        "type": "nested",
+        "dynamic": false,
+        "properties": {
+          "__v": { "type": "integer" },
+          "_id": { "type": "keyword" },
+          "aiGenerated": { "type": "boolean" },
+          "author": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
+          },
+          "authorID": { "type": "keyword" },
+          "boardID": { "type": "keyword" },
+          "companyID": { "type": "keyword" },
+          "postID": { "type": "keyword" },
+          "parentID": { "type": "keyword" },
+          "mergeID": { "type": "keyword" },
+          "voteID": { "type": "keyword" },
+          "statusChangeID": { "type": "keyword" },
+          "statusChangeNewStatus": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "mergedPostTitle": {
+            "type": "text",
+            "analyzer": "text_index",
+            "search_analyzer": "text_search"
+          },
+          "mergedPostDetails": {
+            "type": "text",
+            "analyzer": "text_index",
+            "search_analyzer": "text_search"
+          },
+          "sourceFeatureExtractionItemID": { "type": "keyword" },
+          "sourceLink": { "type": "keyword", "ignore_above": 2048 },
+          "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
+          "itemSourceType": { "type": "keyword", "ignore_above": 256 },
+          "value": {
+            "type": "text",
+            "analyzer": "text_index",
+            "search_analyzer": "text_search",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "updatedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deletedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "restoredAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deleted": { "type": "boolean" },
+          "internal": { "type": "boolean" },
+          "private": { "type": "boolean" },
+          "pinned": { "type": "boolean" },
+          "spam": { "type": "boolean" },
+          "postDeleted": { "type": "boolean" },
+          "likeCount": { "type": "integer" },
+          "reactions": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "like": { "type": "integer" }
+            }
+          },
+          "viewerReactions": { "type": "object", "enabled": false },
+          "fileURLs": { "type": "keyword", "ignore_above": 2048 },
+          "imageURLs": { "type": "keyword", "ignore_above": 2048 },
+          "files": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "mimeType": { "type": "keyword", "ignore_above": 256 },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "url": { "type": "keyword", "ignore_above": 2048 }
+            }
+          },
+          "mentionedUserIDs": { "type": "keyword" },
+          "mentionedUsers": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
+          }
+        }
+      },
+
+      "pinnedComment": {
+        "type": "object",
+        "dynamic": false,
+        "properties": {
+          "__v": { "type": "integer" },
+          "_id": { "type": "keyword" },
+          "aiGenerated": { "type": "boolean" },
+          "isAdminComment": { "type": "boolean" },
+          "author": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
+          },
+          "authorID": { "type": "keyword" },
+          "boardID": { "type": "keyword" },
+          "companyID": { "type": "keyword" },
+          "postID": { "type": "keyword" },
+          "parentID": { "type": "keyword" },
+          "mergeID": { "type": "keyword" },
+          "voteID": { "type": "keyword" },
+          "statusChangeID": { "type": "keyword" },
+          "statusChangeNewStatus": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "mergedPostTitle": {
+            "type": "text",
+            "analyzer": "standard"
+          },
+          "mergedPostDetails": {
+            "type": "text",
+            "analyzer": "standard"
+          },
+          "sourceFeatureExtractionItemID": { "type": "keyword" },
+          "sourceLink": { "type": "keyword", "ignore_above": 2048 },
+          "integrationSourceType": { "type": "keyword", "ignore_above": 256 },
+          "itemSourceType": { "type": "keyword", "ignore_above": 256 },
+          "value": {
+            "type": "text",
+            "analyzer": "standard",
+            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+          },
+          "created": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "updatedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deletedAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "restoredAt": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis||epoch_second"
+          },
+          "deleted": { "type": "boolean" },
+          "internal": { "type": "boolean" },
+          "private": { "type": "boolean" },
+          "pinned": { "type": "boolean" },
+          "spam": { "type": "boolean" },
+          "postDeleted": { "type": "boolean" },
+          "likeCount": { "type": "integer" },
+          "reactions": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "like": { "type": "integer" }
+            }
+          },
+          "viewerReactions": { "type": "object", "enabled": false },
+          "fileURLs": { "type": "keyword", "ignore_above": 2048 },
+          "imageURLs": { "type": "keyword", "ignore_above": 2048 },
+          "files": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "mimeType": { "type": "keyword", "ignore_above": 256 },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "url": { "type": "keyword", "ignore_above": 2048 }
+            }
+          },
+          "mentionedUserIDs": { "type": "keyword" },
+          "mentionedUsers": {
+            "type": "object",
+            "dynamic": false,
+            "properties": {
+              "_id": { "type": "keyword" },
+              "alias": { "type": "keyword", "ignore_above": 256 },
+              "aliasID": { "type": "keyword" },
+              "anonymized": { "type": "boolean" },
+              "avatarURL": { "type": "keyword", "ignore_above": 2048 },
+              "created": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis||epoch_second"
+              },
+              "name": {
+                "type": "text",
+                "analyzer": "standard",
+                "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+              },
+              "serviceAccount": { "type": "boolean" },
+              "urlName": { "type": "keyword", "ignore_above": 512 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

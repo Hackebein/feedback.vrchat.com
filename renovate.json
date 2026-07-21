@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "timezone": "Etc/UTC",
+  "dependencyDashboard": true,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    { "matchManagers": ["npm"], "groupName": "npm dependencies" },
+    { "matchManagers": ["terraform"], "groupName": "terraform dependencies" },
+    { "matchManagers": ["github-actions"], "groupName": "github-actions" },
+    { "matchManagers": ["pip_requirements"], "groupName": "python dependencies" },
+    { "matchManagers": ["docker-compose"], "groupName": "docker images" }
+  ]
+}

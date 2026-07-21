@@ -1,0 +1,10 @@
+[Unit]
+Description=VRChat feedback ingest health check (OpenSearch index staleness)
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/feedback-search/ingest.env
+EnvironmentFile=-/etc/feedback-search/github.env
+WorkingDirectory=/srv/feedback.vrchat.com
+ExecStart=/bin/bash deploy/scripts/check_ingest_health.sh

@@ -1,0 +1,23 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Terraform
+deploy/terraform/.terraform/
+deploy/terraform/*.tfstate
+deploy/terraform/*.tfstate.*
+deploy/terraform/*.tfvars
+deploy/terraform/.terraform.tfstate.lock.info
+
+deploy/terraform/.ssh/
+
+# board_store atomic writes
+boards/**/*.json.tmp
+
+# Local-only files
+*.local.*
+*.txt
+.cursor/
+
+# Scrape bookkeeping worktree (lives on orphan branch scrape-state)
+.scrape-state/

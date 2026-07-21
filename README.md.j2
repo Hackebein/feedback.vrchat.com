@@ -1,0 +1,18 @@
+# VRChat Feedback Board Data
+
+Collected: **{{ total_collected | comma }}** posts.<br>
+Freshness: From **{{ oldest_updated }}** to now.<br>
+Scrape horizon: **{{ newest_scrape_horizon }}**.
+
+## Boards
+
+| Board | Posts |
+|-------|------:|
+{%- for board in boards %}
+| `{{ board.slug }}` | {{ board.collected | comma }}{% if board.total is not none %} / {{ board.total | comma }} ({{ board.coverage_str }}){% endif %} |
+{%- endfor %}
+| **Total** | **{{ total_row.collected | comma }}**{% if total_row.total is not none %} / **{{ total_row.total | comma }}**{% endif %} ({{ total_row.coverage_str }}) |
+
+## OpenSearch
+
+Query the scraped corpus via [vrchat-canny.hackebein.dev](https://vrchat-canny.hackebein.dev).

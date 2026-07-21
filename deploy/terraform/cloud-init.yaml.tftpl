@@ -1,0 +1,62 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+
+write_files:
+  - path: /etc/sysctl.d/99-feedback-opensearch-vm.conf
+    content: |
+      vm.max_map_count = 262144
+    permissions: "0644"
+
+runcmd:
+  - [sysctl, --system]
+  - |
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update -y
+    apt-get install -y docker.io docker-compose-v2 git python3-venv openssl ca-certificates curl
+  - [systemctl, enable, --now, docker]
+  - |
+    set -eux
+    install -d /srv
+    if [ ! -d '/srv/feedback.vrchat.com/.git' ]; then
+      git clone --depth 1 '${repo_url}' /srv/feedback.vrchat.com
+    fi
+  - |
+    set -eux
+    /bin/bash /srv/feedback.vrchat.com/deploy/scripts/ensure_swap.sh
+  - |
+    set -eux
+    install -d -m 0700 -o root -g root /etc/feedback-search
+    # Cloudflare API token (Zone:DNS:Edit + Zone:SSL and Certificates:Edit).
+    # Consumed by deploy/scripts/install_origin_ca_cert.sh on first boot to
+    # issue a Cloudflare Origin CA certificate for the public hostname.
+    umask 077
+    cat > /etc/feedback-search/cf.env <<'CF_ENV_EOF'
+    CF_API_TOKEN=${cf_api_token}
+    CF_ENV_EOF
+    chmod 0600 /etc/feedback-search/cf.env
+  - |
+    set -eux
+    install -d -m 0700 -o root -g root /etc/feedback-search
+    umask 077
+    cat > /etc/feedback-search/github.env <<'GH_ENV_EOF'
+    GH_ISSUE_TOKEN=${gh_issue_token}
+    GH_ENV_EOF
+    chmod 0600 /etc/feedback-search/github.env
+  - |
+    set -eux
+    cd /srv/feedback.vrchat.com
+    # bootstrap_security.sh generates secrets, starts OpenSearch when needed,
+    # provisions gateway/ingest users, writes gateway.env and ingest.env.
+    FEEDBACK_REPO_ROOT=/srv/feedback.vrchat.com \
+      /bin/bash deploy/scripts/bootstrap_security.sh
+%{ if enable_public_https ~}
+  - |
+    set -eux
+    bash /srv/feedback.vrchat.com/deploy/scripts/bootstrap_https_on_server.sh
+%{ endif ~}
+  - |
+    set -eux
+    FEEDBACK_REPO_ROOT=/srv/feedback.vrchat.com \
+      bash /srv/feedback.vrchat.com/deploy/scripts/install_systemd_ingest_on_server.sh

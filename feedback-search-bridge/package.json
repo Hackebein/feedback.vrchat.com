@@ -1,0 +1,16 @@
+{
+  "name": "feedback-search-bridge",
+  "private": true,
+  "version": "1.0.5",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "tsx scripts/test-mapping.ts && tsx scripts/test-integration.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.8.3"
+  }
+}

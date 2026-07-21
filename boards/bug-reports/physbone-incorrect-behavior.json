@@ -1,0 +1,83 @@
+{
+  "__v": 0,
+  "_id": "642bedd8d5b83009dcfbe0eb",
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-06-13T00:30:56.660214Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "639a588124a4fe6d7e0e2570",
+    "alias": "Governing Hawk",
+    "aliasID": "65c2c0f9ed6eefce4c7c4ad5",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d91f77f18d1591ccc6e120bdc4134f07.png",
+    "created": "2022-12-14T23:13:05.191Z",
+    "name": "Darryl Nebula",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "639a588124a4fe6d7e0e2570",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2023-04-04T09:28:56.509Z",
+  "deletedAt": null,
+  "details": "Wear a avatar of choice, let your quest friend grab something that has physics on the avatar, check if it grabs a different bone that is not related to what they are grabbing.\n\ngrab one of their bones, it should also cause incorrect behavior for them. (nothing, or also incorrect bones. have not experimented a lot myself yet)\n\nif needed, i can provide a avatar that has this incorrect behavior as an example\n\nthis appearantly is caused by the network id utility update, but both my pc and quest side match, with 4 extra physbones on the pc side all the way at the end of the list.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb971e4c3e90df137995e",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2023-04-04T09:28:56.509Z",
+  "subCategoryID": null,
+  "title": "physbone incorrect behavior",
+  "trendingScore": 2779.4638756263275,
+  "updatedBy": null,
+  "urlName": "physbone-incorrect-behavior",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "639a588124a4fe6d7e0e2570",
+      "alias": "Governing Hawk",
+      "aliasID": "65c2c0f9ed6eefce4c7c4ad5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d91f77f18d1591ccc6e120bdc4134f07.png",
+      "companies": [],
+      "name": "Darryl Nebula",
+      "urlName": null,
+      "voteID": "642bedd8d5b83009dcfbe149"
+    }
+  ]
+}

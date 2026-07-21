@@ -1,0 +1,570 @@
+{
+  "taxonomyVersion": 3,
+  "buckets": [
+    {
+      "id": "user-support",
+      "description": "One-off personal help only: forgot password, account recovery for self, \"my friend banned me\", asking staff to fix their account. NOT reproducible product bugs—even if phrased in first person (login failures, no audio, avatars not loading, crashes, high ping affecting everyone are product feedback)."
+    },
+    {
+      "id": "vrchat-meta",
+      "description": "VRChat the company, team, policy, legal or ToS complaints, community programs, release-note chatter—not a specific in-product feature."
+    },
+    {
+      "id": "off-topic",
+      "description": "Not about VRChat (another game, random rants)."
+    },
+    {
+      "id": "spam",
+      "description": "Ads, scams, abuse, junk."
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc.main-menu",
+      "name": "Main menu",
+      "description": "Main menu tabs, home screen navigation in the VRChat client."
+    },
+    {
+      "id": "loc.quick-menu",
+      "name": "Quick menu",
+      "description": "Quick menu / radial, quick launcher."
+    },
+    {
+      "id": "loc.action-menu",
+      "name": "Action menu",
+      "description": "Action menu and radial menus for actions."
+    },
+    {
+      "id": "loc.hud",
+      "name": "HUD",
+      "description": "Heads-up display elements in the client."
+    },
+    {
+      "id": "loc.in-world",
+      "name": "In-world",
+      "description": "Inside a running instance only: other players, world objects, in-world interactions. Do NOT use for website, login, SDK/Unity Editor, or VCC issues."
+    },
+    {
+      "id": "loc.loading-screen",
+      "name": "Loading screen",
+      "description": "Splash, loading UI, world transition screens."
+    },
+    {
+      "id": "loc.login",
+      "name": "Login",
+      "description": "Login and authentication screens."
+    },
+    {
+      "id": "loc.website",
+      "name": "Website",
+      "description": "VRChat-owned web properties (vrchat.com, store, feedback, creators)."
+    },
+    {
+      "id": "loc.unity-sdk",
+      "name": "Unity / SDK",
+      "description": "Unity Editor with the VRChat SDK."
+    },
+    {
+      "id": "loc.creator-companion",
+      "name": "Creator Companion",
+      "description": "The VCC standalone application."
+    },
+    {
+      "id": "loc.mobile-app",
+      "name": "Mobile app (phone)",
+      "description": "VRChat on phones only: iOS App Store and Android Google Play mobile apps. Browse, chat, stay connected on the go. NOT Meta Quest or Pico standalone VR."
+    },
+    {
+      "id": "loc.standalone-vr",
+      "name": "Standalone VR client",
+      "description": "Untethered VR headset app: Meta Quest and Pico. Full VR without a PC. NOT phone mobile apps."
+    },
+    {
+      "id": "loc.pc-client",
+      "name": "PC & PCVR client",
+      "description": "VRChat on desktop or PCVR via Steam or Viveport. Includes desktop mode and SteamVR."
+    },
+    {
+      "id": "loc.external",
+      "name": "External platform",
+      "description": "Third-party surfaces outside VRChat clients: Discord, Steam community hub, Reddit, VRCX, etc. (NOT the Steam/Viveport VRChat app itself—use loc.pc-client)."
+    }
+  ],
+  "features": [
+    {
+      "id": "groups",
+      "name": "Groups",
+      "description": "Social groups: membership, roles, visibility, banners, group UI.",
+      "children": [
+        {
+          "id": "groups.calendar",
+          "name": "Group calendar & events",
+          "description": "Scheduled events, calendar UI, RSVPs, web calendar; always tied to groups."
+        },
+        {
+          "id": "groups.instances",
+          "name": "Group instances",
+          "description": "Group-owned instances, queues, join rules, group activity row."
+        },
+        {
+          "id": "groups.roles",
+          "name": "Group roles & permissions",
+          "description": "Roles, invites, joinability, admin tools for groups."
+        },
+        {
+          "id": "groups.creation",
+          "name": "Creating & owning groups",
+          "description": "Creating a group, ownership limits, transferring ownership."
+        },
+        {
+          "id": "groups.nameplates",
+          "name": "Representing groups & nameplates",
+          "description": "Representing a group on profile, group banner on nameplate."
+        }
+      ]
+    },
+    {
+      "id": "avatars",
+      "name": "Avatars",
+      "description": "Avatar systems in VRChat generally.",
+      "children": [
+        {
+          "id": "avatars.upload-performance",
+          "name": "Avatar upload & performance",
+          "description": "Performance ranking, limits, upload errors, fallback avatars."
+        },
+        {
+          "id": "avatars.descriptor",
+          "name": "Avatar Descriptor",
+          "description": "Avatar 3.0 descriptor, viewpoint, preview, pipeline id."
+        },
+        {
+          "id": "avatars.dynamics",
+          "name": "Avatar Dynamics & PhysBones",
+          "description": "PhysBones, constraints, avatar dynamics, SquishBones."
+        },
+        {
+          "id": "avatars.dynamic-bones",
+          "name": "Dynamic Bones (legacy)",
+          "description": "Legacy dynamic bones behavior and migration topics."
+        },
+        {
+          "id": "avatars.accessories",
+          "name": "Avatar accessories",
+          "description": "Accessories attachment system."
+        },
+        {
+          "id": "avatars.fbt",
+          "name": "Full-Body Tracking on avatars",
+          "description": "FBT / IK on avatars, tracking offsets."
+        },
+        {
+          "id": "avatars.marketplace",
+          "name": "Avatar Marketplace",
+          "description": "Buying/selling/listing avatars in the marketplace."
+        },
+        {
+          "id": "avatars.expressions",
+          "name": "Expressions & emotes",
+          "description": "Gesture-based expressions, AV3 emotes, selfie expression."
+        },
+        {
+          "id": "avatars.tracking",
+          "name": "Face & hand tracking",
+          "description": "Face tracking, eye tracking, hand tracking on avatars."
+        },
+        {
+          "id": "avatars.impostors",
+          "name": "Impostors",
+          "description": "Avatar impostors for distant/out-of-view rendering."
+        }
+      ]
+    },
+    {
+      "id": "worlds",
+      "name": "Worlds",
+      "description": "World systems and content—not SDK scripting (see sdk.udon).",
+      "children": [
+        {
+          "id": "worlds.travel",
+          "name": "Travel & joining",
+          "description": "Portals, mirrors, joining instances, world thumbnails (feature area, not the loading screen shell)."
+        },
+        {
+          "id": "worlds.content-gating",
+          "name": "Content gating & trust",
+          "description": "Content gating, blocked URLs, trusted/untrusted URLs in worlds."
+        },
+        {
+          "id": "worlds.video",
+          "name": "Video players",
+          "description": "In-world video, allowlisted media URLs, stream issues in worlds."
+        },
+        {
+          "id": "worlds.persistence",
+          "name": "Persistence & stations",
+          "description": "World persistence, saved data, spawn/station setups."
+        },
+        {
+          "id": "worlds.layers",
+          "name": "Layers & lighting",
+          "description": "Quality presets, lighting, layers where relevant to worlds."
+        }
+      ]
+    },
+    {
+      "id": "sdk",
+      "name": "SDK & creation tools",
+      "description": "Creation pipeline: Unity SDK, packages, scripting tools.",
+      "children": [
+        {
+          "id": "sdk.vrcsdk",
+          "name": "VRChat SDK",
+          "description": "Unity VRChat SDK builds, panels, SDK errors."
+        },
+        {
+          "id": "sdk.vpm",
+          "name": "VPM & curated packages",
+          "description": "VRChat Package Manager, curated listing, package install."
+        },
+        {
+          "id": "sdk.udon",
+          "name": "Udon & UdonSharp",
+          "description": "World scripting Udon, UdonSharp, graph/runtime in worlds."
+        },
+        {
+          "id": "sdk.clientsim",
+          "name": "ClientSim",
+          "description": "Unity Client Simulator for testing in editor."
+        },
+        {
+          "id": "sdk.world-building",
+          "name": "World building (Unity/Blender)",
+          "description": "Scene setup, Blender world tools, baked lightmaps workflows."
+        }
+      ]
+    },
+    {
+      "id": "client",
+      "name": "VRChat client",
+      "description": "In-client features other than main/quick/action menu and HUD (those are Locations).",
+      "children": [
+        {
+          "id": "client.camera",
+          "name": "Camera & recording",
+          "description": "In-app camera, drone, dolly, streamer mode."
+        },
+        {
+          "id": "client.third-person",
+          "name": "Third-person view",
+          "description": "Third-person camera mode."
+        },
+        {
+          "id": "client.settings",
+          "name": "Settings",
+          "description": "Client settings, toggles, controls bindings."
+        },
+        {
+          "id": "client.controls",
+          "name": "Controls & input",
+          "description": "Bindings, comfort settings, launch options."
+        },
+        {
+          "id": "client.chatbox",
+          "name": "Chatbox & text",
+          "description": "In-world chatbox, emoji, text chat UX."
+        },
+        {
+          "id": "client.inventory",
+          "name": "Inventory & items",
+          "description": "VRChat inventory, items if user-facing."
+        },
+        {
+          "id": "client.osc",
+          "name": "OSC & OSCQuery",
+          "description": "OSC integration from external apps into VRChat."
+        }
+      ]
+    },
+    {
+      "id": "platforms",
+      "name": "Platforms",
+      "description": "Which VRChat client the issue is about. VRChat defines three groups: Mobile (phone), Standalone VR (Quest/Pico), PC & PCVR (Steam/Viveport).",
+      "children": [
+        {
+          "id": "platforms.cross-platform",
+          "name": "Cross-platform",
+          "description": "Crossplay, parity across client types, or not specific to one platform."
+        },
+        {
+          "id": "platforms.mobile",
+          "name": "Mobile (phone)",
+          "description": "Phone apps: iOS and Android Google Play. NOT Quest/Pico VR headsets.",
+          "children": [
+            {
+              "id": "platforms.mobile.ios",
+              "name": "iOS mobile",
+              "description": "iPhone/iPad App Store client."
+            },
+            {
+              "id": "platforms.mobile.android",
+              "name": "Android mobile",
+              "description": "Android phone Google Play client only. NOT Meta Quest standalone."
+            }
+          ]
+        },
+        {
+          "id": "platforms.standalone-vr",
+          "name": "Standalone VR",
+          "description": "Untethered VR: Meta Quest and Pico. No PC required.",
+          "children": [
+            {
+              "id": "platforms.standalone-vr.quest",
+              "name": "Meta Quest",
+              "description": "Meta Quest standalone VR app (Quest 2/3/Pro etc.). Runs on Android but is NOT the phone mobile app."
+            },
+            {
+              "id": "platforms.standalone-vr.pico",
+              "name": "Pico",
+              "description": "Pico standalone VR headsets."
+            }
+          ]
+        },
+        {
+          "id": "platforms.pc",
+          "name": "PC & PCVR",
+          "description": "Desktop and PCVR via Steam or Viveport.",
+          "children": [
+            {
+              "id": "platforms.pc.steam",
+              "name": "Steam",
+              "description": "VRChat on Steam (desktop mode and SteamVR/PCVR)."
+            },
+            {
+              "id": "platforms.pc.viveport",
+              "name": "Viveport",
+              "description": "VRChat on Viveport."
+            },
+            {
+              "id": "platforms.pc.desktop",
+              "name": "Desktop mode (PC)",
+              "description": "Non-VR desktop mode on PC when the store is unclear or the issue affects all PC builds."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "description": "Voice, spatial audio, related client audio.",
+      "children": [
+        {
+          "id": "audio.voice",
+          "name": "Voice & spatial audio",
+          "description": "Voice loudness, falloff, voice issues in instances."
+        },
+        {
+          "id": "audio.earmuffs",
+          "name": "Earmuff mode",
+          "description": "Earmuffs / hearing range limiting."
+        },
+        {
+          "id": "audio.steam-audio",
+          "name": "Steam Audio",
+          "description": "Steam Audio / occlusion in supported contexts."
+        },
+        {
+          "id": "audio.boop",
+          "name": "Boop & Booping",
+          "description": "Boop interactions and related audio/social cues."
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social",
+      "description": "Friends, invites, presence, social graph.",
+      "children": [
+        {
+          "id": "social.friends",
+          "name": "Friends & invites",
+          "description": "Friend list, invites, mutuals."
+        },
+        {
+          "id": "social.instances",
+          "name": "Instances (non-group)",
+          "description": "Public/private/friend instances, instance management not specific to groups."
+        },
+        {
+          "id": "social.nameplates",
+          "name": "Nameplates & status",
+          "description": "Nameplates, social status display."
+        }
+      ]
+    },
+    {
+      "id": "account",
+      "name": "Account",
+      "description": "Login and identity (product flows, not individual support tickets).",
+      "children": [
+        {
+          "id": "account.auth",
+          "name": "Login & security",
+          "description": "Login, sessions, password, security flows."
+        },
+        {
+          "id": "account.2fa",
+          "name": "Two-factor authentication (2FA)",
+          "description": "2FA enrollment and recovery."
+        },
+        {
+          "id": "account.linking",
+          "name": "Account linking",
+          "description": "Linking Steam/Oculus/etc. accounts."
+        },
+        {
+          "id": "account.merging",
+          "name": "Account merging",
+          "description": "Merging accounts, migration between accounts."
+        },
+        {
+          "id": "account.age-verification",
+          "name": "Age verification",
+          "description": "Age verification flows and gates."
+        },
+        {
+          "id": "account.trust",
+          "name": "Trust & Safety rank",
+          "description": "Trust rank progression, visitor/new user, limitations."
+        }
+      ]
+    },
+    {
+      "id": "moderation",
+      "name": "Moderation & safety",
+      "description": "User and content safety tooling.",
+      "children": [
+        {
+          "id": "moderation.safety-system",
+          "name": "Safety & blocking",
+          "description": "Safety systems, mutes, blocks, reporting UI."
+        },
+        {
+          "id": "moderation.bans",
+          "name": "Bans & enforcement",
+          "description": "Account/world bans, moderation outcomes."
+        }
+      ]
+    },
+    {
+      "id": "monetization",
+      "name": "Monetization & economy",
+      "description": "Paid offerings and creator payouts.",
+      "children": [
+        {
+          "id": "monetization.vrc-plus",
+          "name": "VRChat Plus (VRC+)",
+          "description": "VRC+ subscription, perks, gallery."
+        },
+        {
+          "id": "monetization.creator-economy",
+          "name": "Creator Economy",
+          "description": "Creator payouts, paid roles, group economy features."
+        },
+        {
+          "id": "monetization.shop",
+          "name": "Shop & cosmetics",
+          "description": "VRChat Store, cosmetics, stickers, gifting."
+        },
+        {
+          "id": "monetization.merch",
+          "name": "Merchandise",
+          "description": "Physical merch, merch store topics."
+        },
+        {
+          "id": "monetization.credits",
+          "name": "Credits & currency",
+          "description": "VRChat credits, virtual currency where applicable."
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "name": "Websites & web services",
+      "description": "What is wrong or requested on web/API surfaces (where is loc.website).",
+      "children": [
+        {
+          "id": "web.home",
+          "name": "Web home & dashboard",
+          "description": "vrchat.com home, navigation bar, featured worlds, download page, general site chrome."
+        },
+        {
+          "id": "web.profiles",
+          "name": "User profiles (web)",
+          "description": "Profile pages, bio, PFP/banner upload, user search results, profile cards."
+        },
+        {
+          "id": "web.worlds",
+          "name": "World pages & search (web)",
+          "description": "World info pages, world search/list UI, capacity/thumbnails/tags on the website."
+        },
+        {
+          "id": "web.social",
+          "name": "Social & friends (web)",
+          "description": "Friends wing, online/offline status, invites, messages, notifications on the website."
+        },
+        {
+          "id": "web.groups",
+          "name": "Groups (web)",
+          "description": "Group pages, member lists, group banners/icons, group calendars on the website."
+        },
+        {
+          "id": "web.auth",
+          "name": "Login & signup (web)",
+          "description": "Website login, signup, captcha, password reset, 2FA pages on vrchat.com."
+        },
+        {
+          "id": "web.docs",
+          "name": "Help & documentation (web)",
+          "description": "help.vrchat.com, docs content, FAQ pages, outdated documentation on web."
+        },
+        {
+          "id": "web.store",
+          "name": "Web store",
+          "description": "VRChat store/cosmetics purchase flows on the website."
+        },
+        {
+          "id": "web.feedback",
+          "name": "Feedback site (Canny)",
+          "description": "feedback.vrchat.com itself—only if the post is about the feedback platform."
+        },
+        {
+          "id": "web.api",
+          "name": "API & developer web",
+          "description": "VRChat API, developer docs sites, status pages."
+        },
+        {
+          "id": "web.creators-portal",
+          "name": "Creators & docs portals",
+          "description": "creators.vrchat.com, docs subsites, package/web tooling."
+        }
+      ]
+    },
+    {
+      "id": "open-beta",
+      "name": "Open Beta program",
+      "description": "Open beta branch, beta-specific regressions."
+    },
+    {
+      "id": "localization",
+      "name": "Localization & languages",
+      "description": "Translations, locale-specific UI or text."
+    },
+    {
+      "id": "content-official-events",
+      "name": "Official events & seasonal content",
+      "description": "Official VRChat seasonal hubs, jams, or one-off official worlds (not core product bugs)."
+    }
+  ]
+}

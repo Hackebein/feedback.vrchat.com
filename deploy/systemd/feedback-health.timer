@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer feedback ingest health check
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=20min
+Unit=feedback-health.service
+
+[Install]
+WantedBy=timers.target

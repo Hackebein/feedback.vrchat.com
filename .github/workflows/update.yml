@@ -1,0 +1,138 @@
+name: Update boards
+
+on:
+  schedule:
+    - cron: "0/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      refresh-oldest:
+        description: "How many oldest posts to refresh on top of new+updated+notifications"
+        required: false
+        default: "500"
+      refresh-newest:
+        description: "How many activity-based posts to refresh on top of new+updated"
+        required: false
+        default: "500"
+      vote-batch:
+        description: "Max posts to upvote this run"
+        required: false
+        default: "50"
+  repository_dispatch:
+    types: [canny-email]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-boards
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up scrape-state worktree
+        run: |
+          set -euo pipefail
+          git fetch origin scrape-state:scrape-state || true
+          rm -rf .scrape-state
+          if git show-ref --verify --quiet refs/heads/scrape-state; then
+            git worktree add .scrape-state scrape-state
+          elif git ls-remote --exit-code --heads origin scrape-state >/dev/null 2>&1; then
+            git fetch origin scrape-state:scrape-state
+            git worktree add .scrape-state scrape-state
+          else
+            echo "scrape-state branch missing; creating orphan seed"
+            mkdir -p .scrape-state
+            git -C .scrape-state init
+            # Placeholder; updater will write scrape-state.json
+            printf '%s\n' '{"scrapedAt":{},"votedPostIds":[],"scraperUserId":null,"seenNotificationIds":[]}' \
+              > .scrape-state/scrape-state.json
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install jinja2 pyotp
+
+      - name: Run update
+        env:
+          PYTHONUNBUFFERED: "1"
+          SCRAPE_STATE_DIR: ${{ github.workspace }}/.scrape-state
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+          VRCHAT_USERNAME: ${{ secrets.VRCHAT_USERNAME }}
+          VRCHAT_PASSWORD: ${{ secrets.VRCHAT_PASSWORD }}
+          VRCHAT_TOTP_SECRET: ${{ secrets.VRCHAT_TOTP_SECRET }}
+          # Optional device-trust cookie to skip VRChat "new location" email OTP on runners.
+          VRCHAT_TWO_FACTOR_AUTH: ${{ secrets.VRCHAT_TWO_FACTOR_AUTH }}
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
+            # Canny email wake-up: refresh only posts from /api/notifications/get
+            python3 scripts/update.py --notifications-only
+            exit 0
+          fi
+          OLDEST="${{ github.event.inputs.refresh-oldest }}"
+          NEWEST="${{ github.event.inputs.refresh-newest }}"
+          VOTES="${{ github.event.inputs.vote-batch }}"
+          # schedule / workflow_dispatch → plan defaults
+          OLDEST="${OLDEST:-500}"
+          NEWEST="${NEWEST:-500}"
+          VOTES="${VOTES:-50}"
+          python3 scripts/update.py \
+            --refresh-oldest "${OLDEST}" \
+            --refresh-newest "${NEWEST}" \
+            --vote-batch "${VOTES}"
+
+      - name: Commit and push main
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          # Never commit the scrape-state worktree into main
+          git reset -q -- .scrape-state || true
+          if git diff --cached --quiet; then
+            echo "Nothing to commit on main."
+          else
+            git commit -m "Boards updated ($(date -u '+%Y-%m-%d %H:%M'))"
+            git push origin HEAD:main
+          fi
+
+      - name: Commit and push scrape-state
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions@users.noreply.github.com"
+          if [[ ! -d .scrape-state/.git ]] && [[ ! -f .scrape-state/scrape-state.json ]]; then
+            echo "No scrape-state worktree; skip"
+            exit 0
+          fi
+          if [[ -d .scrape-state/.git ]] || git -C .scrape-state rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+            cd .scrape-state
+            git add scrape-state.json
+            if git diff --cached --quiet; then
+              echo "Nothing to commit on scrape-state."
+            else
+              git commit -m "scrape-state $(date -u '+%Y-%m-%d %H:%M')"
+              git push origin HEAD:scrape-state
+            fi
+          else
+            # First-time orphan push from a plain directory
+            cd .scrape-state
+            git init
+            git checkout --orphan scrape-state
+            git add scrape-state.json
+            git commit -m "scrape-state seed"
+            git push -u origin HEAD:scrape-state
+          fi

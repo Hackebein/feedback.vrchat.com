@@ -1,0 +1,145 @@
+import { GATEWAY_ORIGIN, INDEX_NAME, SEARCH_API_PATH } from "./config";
+import type { BridgeOptions } from "./types";
+
+export const ACTIVE_CLASS = "vrcfb-active";
+
+let coveredSlugs: Set<string> | null = null;
+
+const coverageListeners = new Set<() => void>();
+const routeListeners = new Set<() => void>();
+let routeHooked = false;
+
+export function onCoverageChange(listener: () => void): () => void {
+  coverageListeners.add(listener);
+  return () => {
+    coverageListeners.delete(listener);
+  };
+}
+
+function notifyCoverage(): void {
+  for (const listener of coverageListeners) {
+    try {
+      listener();
+    } catch (error) {
+      console.warn("[vrcfb] coverage listener failed", error);
+    }
+  }
+}
+
+/**
+ * Fetches the set of board slugs the gateway actually indexes (the `board_slug`
+ * facet). Boards present in Canny but absent here are "not covered" and the
+ * bridge stays out of their way.
+ */
+export async function loadCoverage(options: BridgeOptions): Promise<void> {
+  try {
+    const response = await options.transport({
+      url: `${GATEWAY_ORIGIN}${SEARCH_API_PATH}`,
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify([
+        {
+          indexName: INDEX_NAME,
+          params: {
+            query: "",
+            hitsPerPage: 0,
+            page: 0,
+            facets: ["board_slug"],
+            maxValuesPerFacet: 500,
+          },
+        },
+      ]),
+    });
+    if (response.status < 200 || response.status >= 300) {
+      return;
+    }
+    const data = JSON.parse(response.responseText) as {
+      results?: { facets?: Record<string, Record<string, number>> }[];
+    };
+    const facet = data.results?.[0]?.facets?.board_slug;
+    if (facet && typeof facet === "object") {
+      coveredSlugs = new Set(Object.keys(facet));
+      notifyCoverage();
+    }
+  } catch (error) {
+    console.warn("[vrcfb] coverage load failed", error);
+  }
+}
+
+export function currentSlug(target: Window & typeof globalThis): string {
+  return target.location.pathname.split("/").filter(Boolean)[0] ?? "";
+}
+
+/**
+ * Post detail pages look like `/{board}/p/{postSlug}`. The bridge (filters,
+ * intercept, etc.) should stay off these so Canny renders the post normally.
+ */
+export function isPostDetail(target: Window & typeof globalThis): boolean {
+  return target.location.pathname.split("/").filter(Boolean)[1] === "p";
+}
+
+/**
+ * The home page and every indexed board count as covered. Until coverage has
+ * loaded we optimistically treat everything as covered so covered boards never
+ * flash the plain Canny UI; once loaded, genuinely unknown slugs are excluded.
+ */
+export function isLocationCovered(target: Window & typeof globalThis): boolean {
+  if (isPostDetail(target)) {
+    return false;
+  }
+  const slug = currentSlug(target);
+  if (slug === "") {
+    return true;
+  }
+  if (!coveredSlugs) {
+    return true;
+  }
+  return coveredSlugs.has(slug);
+}
+
+export function applyActiveClass(target: Window & typeof globalThis): void {
+  target.document.documentElement.classList.toggle(
+    ACTIVE_CLASS,
+    isLocationCovered(target),
+  );
+}
+
+function ensureRouteHook(target: Window & typeof globalThis): void {
+  if (routeHooked) {
+    return;
+  }
+  routeHooked = true;
+  const fire = (): void => {
+    for (const listener of routeListeners) {
+      try {
+        listener();
+      } catch (error) {
+        console.warn("[vrcfb] route listener failed", error);
+      }
+    }
+  };
+  const history = target.history;
+  const wrap = <T extends (...args: never[]) => unknown>(original: T): T =>
+    function wrapped(this: History, ...args: Parameters<T>) {
+      const result = original.apply(this, args);
+      fire();
+      return result;
+    } as unknown as T;
+  history.pushState = wrap(history.pushState.bind(history));
+  history.replaceState = wrap(history.replaceState.bind(history));
+  target.addEventListener("popstate", fire);
+}
+
+export function onRouteChange(
+  target: Window & typeof globalThis,
+  listener: () => void,
+): () => void {
+  ensureRouteHook(target);
+  routeListeners.add(listener);
+  return () => {
+    routeListeners.delete(listener);
+  };
+}

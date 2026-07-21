@@ -1,0 +1,146 @@
+import {
+  buildCannySearchBody,
+  buildPostQueryParams,
+  readActiveSearchQuery,
+  syncSearchInputValue,
+  triggerSearchViaHistory,
+} from "./canny-query";
+import {
+  applyCannySearchResults,
+  getCannyReduxStore,
+  invalidateCannyPostQueries,
+} from "./canny-store";
+import { hasActiveFilters } from "./filter-state";
+import { handleCannySearch } from "./search-handler";
+import { stripSearchPostQueries } from "./ssr-hook";
+import type { BridgeOptions } from "./types";
+
+const BOOT_REFRESH_DELAYS_MS = [150, 500, 1200, 2500, 5000];
+
+let refreshGeneration = 0;
+let refreshInFlight = false;
+
+export { readActiveSearchQuery } from "./canny-query";
+
+export function stripCachedSearchQueries(
+  target: Window & typeof globalThis,
+): void {
+  const data = (target as Window & { __data?: Record<string, unknown> }).__data;
+  if (data && typeof data === "object") {
+    stripSearchPostQueries(data);
+  }
+}
+
+export async function runSearchRefresh(
+  options: BridgeOptions,
+  target: Window & typeof globalThis,
+  refreshOptions: { forceHistory?: boolean } = {},
+): Promise<boolean> {
+  const query = readActiveSearchQuery(target);
+
+  if (refreshInFlight) {
+    return false;
+  }
+
+  refreshInFlight = true;
+  try {
+    stripCachedSearchQueries(target);
+    if (query) {
+      syncSearchInputValue(target, query);
+    }
+
+    const store = getCannyReduxStore(target);
+
+    // With an active text query we can inject results directly into the post
+    // query Canny keys by, avoiding a flash of native results.
+    if (query && store) {
+      const queryParams = buildPostQueryParams(target, store);
+      if (queryParams) {
+        try {
+          const cannyBody = buildCannySearchBody(target, queryParams);
+          const cannyResponse = await handleCannySearch(options, cannyBody);
+          applyCannySearchResults(store, queryParams, cannyResponse);
+          return true;
+        } catch (error) {
+          console.warn("[vrcfb] direct search refresh failed", error);
+        }
+      }
+    }
+
+    // Board browsing / filter-only changes: force Canny to refetch the list,
+    // which the network intercept serves from the gateway with the current
+    // filter state applied.
+    if (invalidateCannyPostQueries(target)) {
+      return true;
+    }
+
+    if (refreshOptions.forceHistory || !store) {
+      triggerSearchViaHistory(target, query);
+      return true;
+    }
+
+    return false;
+  } finally {
+    refreshInFlight = false;
+  }
+}
+
+export function scheduleSearchRefresh(
+  options: BridgeOptions,
+  target: Window & typeof globalThis,
+  delayMs = 0,
+  refreshOptions: { forceHistory?: boolean } = {},
+): void {
+  const generation = ++refreshGeneration;
+
+  const run = (): void => {
+    if (generation !== refreshGeneration) {
+      return;
+    }
+    if (!readActiveSearchQuery(target) && !hasActiveFilters()) {
+      return;
+    }
+    void runSearchRefresh(options, target, refreshOptions);
+  };
+
+  if (delayMs <= 0) {
+    run();
+    return;
+  }
+
+  target.setTimeout(run, delayMs);
+}
+
+/**
+ * Fetches the gateway once for the current view to populate the sidebar facet
+ * counts without touching Canny's rendered list (Canny often serves the initial
+ * board list from its SSR cache, so the network intercept may not fire on load).
+ */
+export async function primeFacets(
+  options: BridgeOptions,
+  target: Window & typeof globalThis,
+): Promise<void> {
+  const store = getCannyReduxStore(target);
+  const queryParams = buildPostQueryParams(target, store) ?? { textSearch: "" };
+  try {
+    const cannyBody = buildCannySearchBody(target, queryParams);
+    await handleCannySearch(options, cannyBody);
+  } catch (error) {
+    console.warn("[vrcfb] facet prime failed", error);
+  }
+}
+
+export function scheduleInitialSearchRefresh(
+  options: BridgeOptions,
+  target: Window & typeof globalThis,
+): void {
+  for (const delayMs of BOOT_REFRESH_DELAYS_MS) {
+    scheduleSearchRefresh(options, target, delayMs);
+  }
+  scheduleSearchRefresh(
+    options,
+    target,
+    BOOT_REFRESH_DELAYS_MS[BOOT_REFRESH_DELAYS_MS.length - 1],
+    { forceHistory: true },
+  );
+}

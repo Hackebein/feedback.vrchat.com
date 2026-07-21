@@ -1,0 +1,98 @@
+{
+  "_id": "6a476f6b369869a5a99493d7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-07-03T12:23:31.806422Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-03T08:14:35.371Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Create an Excellent avatar in Unity Editor\n\n2. Add N particle systems (can be disabled), set its max particles to 0\n\n3. Build & Test Your Avatar, check the local SDK test avatar performance rating in-app (Excellent)\n\n4. Build & Publish Your Avatar Online, and check the performance ranking of the uploaded avatar, it'll be Good or worse as the particle systems are counted on the server\n\nAffected avatar: [Robot （0 max particles）](https://vrchat.com/home/avatar/avtr_e785d1e7-6121-4e73-99bd-4bae65e24636) (`avtr_e785d1e7-6121-4e73-99bd-4bae65e24636`) by WubTheCaptain - this has N=1\n\nExpected result: Overall Performance Estimate: Good (or worse) in both scenarios for having > 0 particle systems.\n\nActual result: Overall Performance Estimate: Excellent in local SDK test avatar (0 particle systems, 0 max particles), Good performance ranking once uploaded to VRChat.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/54297e3fbcf6284779f6d917173ba019.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-07-03_08-06-31",
+      "url": "https://canny-assets.io/files/54297e3fbcf6284779f6d917173ba019.txt"
+    }
+  ],
+  "ideaID": "6a476f6b369869a5a99493d0",
+  "imageURLs": [
+    "https://canny-assets.io/images/8f3d3ef74a22ab13e3682b0cdbb6f3b6.png",
+    "https://canny-assets.io/images/e35f8d07b17dea923e18aa7ac3d7caf7.png",
+    "https://canny-assets.io/images/3a2d391d1d898eb806019f1f10ce9212.png",
+    "https://canny-assets.io/images/710fe2f360ad9868b80403b1c3be121f.png",
+    "https://canny-assets.io/images/eca4af34426d47688e36dac81a929031.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a476f6b369869a5a99493d7/927287122.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-03T08:14:35.371Z",
+  "subCategoryID": null,
+  "title": "Particle systems with 0 max particles are not counted in the client-side calculated performance ranking (local SDK test avatars)",
+  "trendingScore": 2948.8850706354215,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "particle-systems-with-0-max-particles-are-not-counted-in-the-client-side-calcula",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a476f6bf51f79a5dba25f77"
+    }
+  ]
+}
