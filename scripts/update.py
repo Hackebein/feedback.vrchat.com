@@ -1069,7 +1069,13 @@ def generate_readme(
         }
 
     inferred = dict(inferred_totals or {})
-    if inferred_totals is None:
+    # Homepage omits some boards (e.g. avatar-accessories); fill from a single-page
+    # newest sweep. Callers may pass inferred_totals={} when they skipped that sweep
+    # (notifications-only) — still merge after our meta fetch.
+    if needs_meta_fetch:
+        for slug, n in single_page.items():
+            inferred.setdefault(slug, n)
+    elif inferred_totals is None:
         inferred.update(single_page)
 
     if newest_scrape_horizon is None:
