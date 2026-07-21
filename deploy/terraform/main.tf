@@ -63,13 +63,6 @@ resource "hcloud_firewall" "opensearch" {
     }
   }
 
-  rule {
-    description = "SMTP inbound (Canny notify mail)"
-    direction   = "in"
-    protocol    = "tcp"
-    port        = "25"
-    source_ips  = ["0.0.0.0/0", "::/0"]
-  }
 }
 
 resource "hcloud_server" "opensearch" {

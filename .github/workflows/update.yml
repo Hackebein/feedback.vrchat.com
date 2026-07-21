@@ -18,7 +18,7 @@ on:
         required: false
         default: "50"
   repository_dispatch:
-    types: [canny-email]
+    types: [canny-wake]
 
 permissions:
   contents: write
@@ -78,8 +78,8 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
-            # Canny email wake-up: refresh only posts from /api/notifications/get
-            python3 scripts/update.py --notifications-only
+            # Host canny-wake poller: newest sweep + notifications; skip oldest/voting.
+            python3 scripts/update.py --refresh-oldest 0 --refresh-newest 0 --vote-batch 0
             exit 0
           fi
           OLDEST="${{ github.event.inputs.refresh-oldest }}"

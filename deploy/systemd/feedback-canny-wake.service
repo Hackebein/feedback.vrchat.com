@@ -1,0 +1,13 @@
+[Unit]
+Description=Canny notification + newest-post wake poll (repository_dispatch)
+After=network-online.target network.target
+
+[Service]
+Type=oneshot
+# VRChat SSO for /api/notifications/get
+EnvironmentFile=-/etc/feedback-search/canny.env
+# GH_ISSUE_TOKEN / GH_DISPATCH_TOKEN for repository_dispatch
+EnvironmentFile=-/etc/feedback-search/github.env
+WorkingDirectory=/srv/feedback.vrchat.com
+# Interpreter path rewritten by install_canny_wake_on_server.sh
+ExecStart=/opt/feedback-canny-wake/venv/bin/python deploy/scripts/canny_wake_poll.py

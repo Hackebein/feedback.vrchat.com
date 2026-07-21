@@ -150,7 +150,8 @@ if [[ -f /etc/feedback-search/notify.env ]]; then
   FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/install_notify_service_on_server.sh"
 fi
 
-# Inbound Postfix for Canny notify wake-ups; non-Canny mail → mail-drop.
-if [[ -d "${REPO}/deploy/mail" ]]; then
-  FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/install_mail_on_server.sh"
-fi
+# Retire Postfix email wake-up if a previous deploy installed it.
+FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/uninstall_mail_on_server.sh"
+
+# Canny notification + newest-post wake poller → repository_dispatch canny-wake.
+FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/install_canny_wake_on_server.sh"
