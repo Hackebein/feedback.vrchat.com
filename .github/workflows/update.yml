@@ -106,6 +106,8 @@ jobs:
             echo "Nothing to commit on main."
           else
             git commit -m "Boards updated ($(date -u '+%Y-%m-%d %H:%M'))"
+            # Shallow clone + concurrent pushes (manual/schedule) need rebase before push.
+            git pull --rebase --autostash origin main
             git push origin HEAD:main
           fi
 
@@ -125,6 +127,7 @@ jobs:
               echo "Nothing to commit on scrape-state."
             else
               git commit -m "scrape-state $(date -u '+%Y-%m-%d %H:%M')"
+              git pull --rebase --autostash origin scrape-state || true
               git push origin HEAD:scrape-state
             fi
           else
