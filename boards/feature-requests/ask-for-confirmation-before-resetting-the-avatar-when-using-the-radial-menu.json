@@ -3,9 +3,9 @@
   "_id": "64d1664cd203c609bbacbd3b",
   "aiCategories": [
     "loc.action-menu",
-    "avatars.descriptor"
+    "avatars"
   ],
-  "aiTaggedAt": "2026-07-17T08:11:32.202981Z",
+  "aiTaggedAt": "2026-07-22T17:10:01.315276Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e41a2339fd8a250987927d3",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "__v": 0,
@@ -258,6 +258,50 @@
       "value": "generally to provide a good user experience, any \"reset\" or \"delete\" action should have a confirmation, or be easily undone if pressed by mistake. (ideally both)\n\nthe hierarchy of these actions should also be considered; in VRChat, often these options are right next to frequently-used actions (Action Menu), or are the most prominent button in the menu (Quick Menu Expressions Wing)\n\n- ideally, reset actions should be placed somewhere accessible, but not frequently accessed -> out of sight until needed, not nested among the day-to-day actions.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a60f6dc5d0c988d044dc1ea",
+      "aiGenerated": false,
+      "author": {
+        "_id": "626f5e4270cd436eda16e3d5",
+        "alias": "Sapphire Raven",
+        "aliasID": "65c2b472ed6eefce4cda4345",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/289ab46c37498aed912e7f2cdae55f62.png",
+        "created": "2022-05-02T04:29:54.221Z",
+        "name": "Salena",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-22T16:59:08.042Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "64d1664cd203c609bbacbd3b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "As my stick drift loves the reset button, I would like having a confirmation message for it.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -274,19 +318,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 55,
+  "maxScore": 56,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/64d1664cd203c609bbacbd3b/1659239203.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 55,
+  "score": 56,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2023-08-07T21:46:52.826Z",
   "subCategoryID": null,
   "title": "Ask for confirmation before resetting the avatar when using the radial menu",
-  "trendingScore": 2953.325733059757,
+  "trendingScore": 2953.4153054708217,
   "updatedBy": null,
   "urlName": "ask-for-confirmation-before-resetting-the-avatar-when-using-the-radial-menu",
   "viewerIsAuthor": false,
@@ -298,6 +342,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "626f5e4270cd436eda16e3d5",
+      "alias": "Sapphire Raven",
+      "aliasID": "65c2b472ed6eefce4cda4345",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/289ab46c37498aed912e7f2cdae55f62.png",
+      "companies": [],
+      "name": "Salena",
+      "urlName": null,
+      "voteID": "6a60f69ed4058d953b437f16"
+    },
     {
       "_id": "63197c5950a74f44b5892015",
       "alias": "Persian blue Hare",
