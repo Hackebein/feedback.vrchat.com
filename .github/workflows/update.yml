@@ -72,6 +72,8 @@ jobs:
           key: vrchat-canny-session-v1
 
       - name: Run update
+        id: update
+        continue-on-error: true
         env:
           PYTHONUNBUFFERED: "1"
           SCRAPE_STATE_DIR: ${{ github.workspace }}/.scrape-state
@@ -102,6 +104,7 @@ jobs:
             --vote-batch "${VOTES}"
 
       - name: Commit and push main
+        if: steps.update.outcome == 'success' || steps.update.outcome == 'failure'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -120,6 +123,7 @@ jobs:
           fi
 
       - name: Commit and push scrape-state
+        if: steps.update.outcome == 'success' || steps.update.outcome == 'failure'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -147,3 +151,10 @@ jobs:
             git commit -m "scrape-state seed"
             git push -u origin HEAD:scrape-state
           fi
+
+      - name: Fail job if update failed
+        if: steps.update.outcome == 'failure'
+        run: |
+          echo "Update step failed (often Canny SSO / VRChat session limit)." >&2
+          echo "Board/scrape-state commits above still ran when there was work to push." >&2
+          exit 1

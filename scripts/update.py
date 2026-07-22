@@ -1462,25 +1462,38 @@ def main():
     scraped_at = dict(state.get("scrapedAt") or {})
     session = None
     notify_pids = []
+    auth_failed = False
     if not args.skip_auth:
         try:
             session = canny_auth.login_canny_session()
         except canny_auth.CannyAuthError as e:
+            auth_failed = True
             print(f"[ERROR] Canny SSO failed: {e}", file=sys.stderr)
+            print(
+                "[WARN] Continuing without SSO (no notifications/votes); "
+                "public board scrape will still run",
+                file=sys.stderr,
+            )
+        if session is not None:
+            if session.scraper_user_id:
+                state["scraperUserId"] = session.scraper_user_id
+                print(f"[auth] scraper Canny user id: {session.scraper_user_id}")
+            notes = canny_auth.fetch_notifications(session, pages=20)
+            notify_pids = canny_auth.notification_post_ids(notes)
+            print(f"[auth] {len(notes)} notification(s), {len(notify_pids)} post target(s)")
+            # Track seen notification ids (best-effort delta bookkeeping).
+            seen = set(state.get("seenNotificationIds") or [])
+            for n in notes:
+                nid = n.get("_id") or n.get("id")
+                if isinstance(nid, str) and nid:
+                    seen.add(nid)
+            state["seenNotificationIds"] = list(seen)[-5000:]
+        elif args.notifications_only:
+            print(
+                "[ERROR] --notifications-only requires Canny SSO",
+                file=sys.stderr,
+            )
             sys.exit(2)
-        if session.scraper_user_id:
-            state["scraperUserId"] = session.scraper_user_id
-            print(f"[auth] scraper Canny user id: {session.scraper_user_id}")
-        notes = canny_auth.fetch_notifications(session, pages=20)
-        notify_pids = canny_auth.notification_post_ids(notes)
-        print(f"[auth] {len(notes)} notification(s), {len(notify_pids)} post target(s)")
-        # Track seen notification ids (best-effort delta bookkeeping).
-        seen = set(state.get("seenNotificationIds") or [])
-        for n in notes:
-            nid = n.get("_id") or n.get("id")
-            if isinstance(nid, str) and nid:
-                seen.add(nid)
-        state["seenNotificationIds"] = list(seen)[-5000:]
 
     stored, deduped = load_all_stored(boards)
     print(f"[UPDATE] {len(stored)} stored across {len(boards)} board(s)")
@@ -1600,6 +1613,10 @@ def main():
     if totals.get("ai_rate_limited") or categorize.minimax_stop_requested():
         print("[UPDATE] Stopped early due to MiniMax rate limit (partial success)")
         sys.exit(0)
+
+    if auth_failed:
+        print("[ERROR] Canny SSO failed earlier; scrape finished without auth", file=sys.stderr)
+        sys.exit(2)
 
 
 if __name__ == "__main__":
