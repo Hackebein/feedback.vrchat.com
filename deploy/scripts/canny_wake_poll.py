@@ -27,6 +27,7 @@ import canny_auth  # noqa: E402
 STATE_PATH = Path(
     os.environ.get("CANNY_WAKE_STATE") or "/var/lib/feedback-search/canny-wake-state.json"
 )
+DEFAULT_COOKIE_JAR = "/var/lib/feedback-search/canny-cookies.jar"
 DEBOUNCE_SECS = int(os.environ.get("CANNY_WAKE_DEBOUNCE_SECS") or "60")
 DEFAULT_REPO = "Hackebein/feedback.vrchat.com"
 CANNY_HOST = "feedback.vrchat.com"
@@ -34,6 +35,15 @@ API_URL = f"https://{CANNY_HOST}/api/posts/get"
 USER_AGENT = canny_auth.USER_AGENT
 NOTIFY_PAGES = int(os.environ.get("CANNY_WAKE_NOTIFY_PAGES") or "10")
 NEWEST_PAGES = int(os.environ.get("CANNY_WAKE_NEWEST_PAGES") or "50")
+
+
+def _ensure_cookie_jar_env() -> None:
+    """Persist VRChat/Canny cookies across wake ticks (avoids session exhaustion)."""
+    if (os.environ.get("CANNY_COOKIE_JAR") or "").strip():
+        return
+    path = Path(DEFAULT_COOKIE_JAR)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    os.environ["CANNY_COOKIE_JAR"] = str(path)
 
 
 def load_state(path: Path) -> dict[str, Any]:
@@ -187,6 +197,7 @@ def dispatch_canny_wake(token: str, repo: str) -> None:
 
 
 def main() -> int:
+    _ensure_cookie_jar_env()
     state = load_state(STATE_PATH)
     stored = board_store.existing_post_ids()
     pending = set(state.get("dispatchedPostIds") or [])

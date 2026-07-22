@@ -165,16 +165,180 @@ def _mirror_vrchat_web_cookies(cookie_jar: Path) -> None:
         print(f"[auth] mirrored VRChat cookies to {', '.join(lines)}")
 
 
+def _cookie_jar_path() -> Path | None:
+    raw = (os.environ.get("CANNY_COOKIE_JAR") or "").strip()
+    return Path(raw) if raw else None
+
+
 def _seed_two_factor_cookie(cookie_jar: Path) -> None:
+    """Ensure twoFactorAuth is present without wiping an existing jar."""
     tfa = (os.environ.get("VRCHAT_TWO_FACTOR_AUTH") or "").strip()
     if not tfa:
         return
-    cookie_jar.write_text(
-        "# Netscape HTTP Cookie File\n"
-        f"#HttpOnly_api.vrchat.cloud\tFALSE\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}\n"
-        f".vrchat.com\tTRUE\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}\n",
-        encoding="utf-8",
+    if read_cookie(cookie_jar, "twoFactorAuth"):
+        return
+    if not cookie_jar.is_file():
+        cookie_jar.parent.mkdir(parents=True, exist_ok=True)
+        cookie_jar.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
+    with cookie_jar.open("a", encoding="utf-8") as f:
+        f.write(
+            f"#HttpOnly_api.vrchat.cloud\tFALSE\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}\n"
+            f".vrchat.com\tTRUE\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}\n"
+        )
+
+
+def _error_message(data: dict[str, Any], raw: str = "") -> str:
+    err = data.get("error")
+    if isinstance(err, dict):
+        return str(err.get("message") or "")
+    if isinstance(err, str):
+        return err
+    return raw
+
+
+def _is_too_many_sessions(code: int, data: dict[str, Any], raw: str = "") -> bool:
+    if code != 429:
+        return False
+    msg = _error_message(data, raw).lower()
+    return "too many sessions" in msg
+
+
+def _auth_user_ok(data: dict[str, Any]) -> bool:
+    return bool(
+        (data.get("id") or data.get("username")) and not data.get("requiresTwoFactorAuth")
     )
+
+
+def _copy_jar(src: Path, dest: Path) -> None:
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(src.read_bytes())
+    try:
+        os.chmod(dest, 0o600)
+    except OSError:
+        pass
+
+
+def _persist_cookie_jar(jar: Path) -> None:
+    dest = _cookie_jar_path()
+    if dest is None or dest.resolve() == jar.resolve():
+        if dest is not None:
+            try:
+                os.chmod(dest, 0o600)
+            except OSError:
+                pass
+            print(f"[auth] persisted cookie jar → {dest}")
+        return
+    _copy_jar(jar, dest)
+    print(f"[auth] persisted cookie jar → {dest}")
+
+
+def _session_from_jar(
+    jar: Path,
+    *,
+    viewer: dict[str, Any] | None = None,
+) -> CannySession | None:
+    """Build a CannySession if the jar already has a working Canny login."""
+    csrf = extract_csrf_token(viewer) if viewer else None
+    uid = extract_user_id(viewer) if viewer else None
+    if not csrf:
+        # Reload home to recover csrf when cookies exist but viewer was incomplete.
+        code, html, _ = _curl(
+            f"https://{CANNY_HOST}/",
+            cookie_jar=jar,
+            follow=True,
+            timeout=30,
+            headers=["Accept: text/html,application/xhtml+xml"],
+        )
+        if code == 200:
+            viewer = _parse_viewer(html)
+            csrf = extract_csrf_token(viewer)
+            uid = extract_user_id(viewer) or uid
+    if not csrf:
+        return None
+    sess = CannySession(
+        cookie_jar=jar,
+        scraper_user_id=uid,
+        viewer=viewer,
+        csrf_token=csrf,
+    )
+    code, data = canny_post_json(sess, "/api/notifications/get", {"pages": 1})
+    if code in (401, 403):
+        return None
+    if isinstance(data, str) and "<html" in data.lower():
+        return None
+    if code != 200 or not (isinstance(data, dict) and "notifications" in data):
+        return None
+    if not sess.scraper_user_id:
+        sess.scraper_user_id = (
+            read_cookie(jar, "__canny__userID", domain_substr="feedback.vrchat")
+            or _discover_canny_user_id(sess)
+        )
+    return sess
+
+
+def _try_reuse_vrchat(cookie_jar: Path) -> dict[str, Any] | None:
+    """Validate existing auth cookie without Basic (does not create a session)."""
+    if not read_cookie(cookie_jar, "auth"):
+        return None
+    code, data, _raw = _auth_user(cookie_jar, basic=None)
+    if code == 200 and _auth_user_ok(data):
+        _mirror_vrchat_web_cookies(cookie_jar)
+        return data
+    return None
+
+
+def _finish_canny_session(jar: Path, *, vrchat_user: dict[str, Any] | None) -> CannySession:
+    if vrchat_user:
+        print(
+            f"[auth] VRChat user={vrchat_user.get('displayName') or vrchat_user.get('username')} "
+            f"id={vrchat_user.get('id')}"
+        )
+    tfa = read_cookie(jar, "twoFactorAuth")
+    if tfa:
+        print(f"[auth] twoFactorAuth cookie present (len={len(tfa)})")
+        print(
+            "[auth] Tip: store as Actions secret VRCHAT_TWO_FACTOR_AUTH to skip "
+            "new-location email OTP on GitHub runners."
+        )
+
+    viewer = sso_to_canny(jar)
+    uid = extract_user_id(viewer)
+    csrf = extract_csrf_token(viewer)
+    if not csrf:
+        raise CannyAuthError(
+            "Canny SSO succeeded without csrfToken in viewer; "
+            "API calls would fail with invalid csrf token"
+        )
+    sess = CannySession(
+        cookie_jar=jar,
+        scraper_user_id=uid,
+        viewer=viewer,
+        csrf_token=csrf,
+    )
+
+    code, data = canny_post_json(sess, "/api/notifications/get", {"pages": 1})
+    if code in (401, 403):
+        raise CannyAuthError(
+            f"Canny session not authenticated (HTTP {code}): {str(data)[:200]}"
+        )
+    if isinstance(data, str) and "<html" in data.lower():
+        raise CannyAuthError("Canny API returned HTML — SSO cookie missing")
+    if code != 200 or not (isinstance(data, dict) and "notifications" in data):
+        raise CannyAuthError(
+            f"Canny /api/notifications/get failed HTTP {code}: {str(data)[:200]}"
+        )
+
+    if not sess.scraper_user_id:
+        sess.scraper_user_id = (
+            read_cookie(jar, "__canny__userID", domain_substr="feedback.vrchat")
+            or _discover_canny_user_id(sess)
+        )
+    if sess.scraper_user_id:
+        print(f"[auth] Canny scraper user id: {sess.scraper_user_id}")
+    else:
+        print("[auth] warning: Canny user id not detected yet")
+    _persist_cookie_jar(jar)
+    return sess
 
 
 def _verify_email_otp(cookie_jar: Path, code: str) -> None:
@@ -310,11 +474,10 @@ def _complete_2fa(
     raise CannyAuthError(f"VRChat login incomplete HTTP {code}: {raw[:300]}")
 
 
-def vrchat_login(cookie_jar: Path) -> dict[str, Any]:
-    """Log into VRChat API. Returns the current-user JSON. Raises on failure."""
+def _vrchat_login_basic_once(cookie_jar: Path) -> dict[str, Any]:
+    """One Basic+2FA login attempt. Raises CannyAuthError (including too-many-sessions)."""
     password = _require_env("VRCHAT_PASSWORD")
     totp_secret = _require_env("VRCHAT_TOTP_SECRET")
-    _seed_two_factor_cookie(cookie_jar)
 
     last_invalid = ""
     for username in _login_usernames():
@@ -324,17 +487,15 @@ def vrchat_login(cookie_jar: Path) -> dict[str, Any]:
         _seed_two_factor_cookie(cookie_jar)
 
         code, data, raw = _auth_user(cookie_jar, basic=basic)
-        if code == 200 and (data.get("id") or data.get("username")) and not data.get(
-            "requiresTwoFactorAuth"
-        ):
+        if code == 200 and _auth_user_ok(data):
             print(f"[auth] logged in as {username}")
             _mirror_vrchat_web_cookies(cookie_jar)
             return data
 
-        msg = ""
-        err = data.get("error")
-        if isinstance(err, dict):
-            msg = str(err.get("message") or "")
+        if _is_too_many_sessions(code, data, raw):
+            raise CannyAuthError(f"VRChat login failed HTTP {code}: {raw[:300]}")
+
+        msg = _error_message(data, raw)
         msg_l = msg.lower()
         requires = data.get("requiresTwoFactorAuth") or []
         if isinstance(requires, str):
@@ -366,6 +527,47 @@ def vrchat_login(cookie_jar: Path) -> dict[str, Any]:
         "VRCHAT_USERNAME to the new login email). "
         f"Last error: {last_invalid or 'unknown'}"
     )
+
+
+def vrchat_login(cookie_jar: Path) -> dict[str, Any]:
+    """Log into VRChat API. Returns the current-user JSON. Raises on failure.
+
+    On "too many sessions", backs off without spamming Basic login and retries
+    cookie-only auth between waits (in case a persisted jar becomes usable).
+    """
+    reused = _try_reuse_vrchat(cookie_jar)
+    if reused is not None:
+        print("[auth] reusing VRChat auth cookie")
+        return reused
+
+    # Snapshot before Basic wipes the jar — restore for cookie-only probes after 429.
+    preload = cookie_jar.read_bytes() if cookie_jar.is_file() else None
+    last_err: Exception | None = None
+    for attempt in range(4):
+        try:
+            return _vrchat_login_basic_once(cookie_jar)
+        except CannyAuthError as e:
+            last_err = e
+            if "too many sessions" not in str(e).lower():
+                raise
+            if attempt >= 3:
+                break
+            wait = 300 * (attempt + 1)  # 5m, 10m, 15m
+            print(
+                f"[auth] too many VRChat sessions; sleeping {wait}s "
+                f"(attempt {attempt + 1}/4) before retry"
+            )
+            time.sleep(wait)
+            if preload:
+                cookie_jar.write_bytes(preload)
+            _seed_two_factor_cookie(cookie_jar)
+            reused = _try_reuse_vrchat(cookie_jar)
+            if reused is not None:
+                print("[auth] reusing VRChat auth cookie after backoff")
+                return reused
+
+    assert last_err is not None
+    raise last_err
 
 
 COMPANY_ID = "58c62e995865713647a7115d"
@@ -549,63 +751,57 @@ def _discover_canny_user_id(session: CannySession) -> str | None:
 
 
 def login_canny_session() -> CannySession:
-    """Full VRChat + SSO login. Raises CannyAuthError on failure."""
-    tmp = tempfile.NamedTemporaryFile(prefix="canny-cookies-", suffix=".jar", delete=False)
-    jar = Path(tmp.name)
-    tmp.close()
+    """VRChat + SSO login with optional cookie-jar reuse via CANNY_COOKIE_JAR.
+
+    Order: reuse Canny cookies → reuse VRChat auth + SSO → Basic login + SSO.
+    Persists the jar when CANNY_COOKIE_JAR is set.
+    """
+    persist = _cookie_jar_path()
+    if persist is not None:
+        persist.parent.mkdir(parents=True, exist_ok=True)
+        jar = persist
+        if not jar.is_file() or jar.stat().st_size == 0:
+            jar.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
+            try:
+                os.chmod(jar, 0o600)
+            except OSError:
+                pass
+        working = jar
+        cleanup_temp = False
+    else:
+        tmp = tempfile.NamedTemporaryFile(prefix="canny-cookies-", suffix=".jar", delete=False)
+        jar = Path(tmp.name)
+        tmp.close()
+        working = jar
+        cleanup_temp = True
+
     try:
-        user = vrchat_login(jar)
-        print(f"[auth] VRChat user={user.get('displayName') or user.get('username')} id={user.get('id')}")
-        tfa = read_cookie(jar, "twoFactorAuth")
-        if tfa:
-            print(f"[auth] twoFactorAuth cookie present (len={len(tfa)})")
-            print(
-                "[auth] Tip: store as Actions secret VRCHAT_TWO_FACTOR_AUTH to skip "
-                "new-location email OTP on GitHub runners."
-            )
+        _seed_two_factor_cookie(working)
 
-        viewer = sso_to_canny(jar)
-        uid = extract_user_id(viewer)
-        csrf = extract_csrf_token(viewer)
-        if not csrf:
-            raise CannyAuthError(
-                "Canny SSO succeeded without csrfToken in viewer; "
-                "API calls would fail with invalid csrf token"
-            )
-        sess = CannySession(
-            cookie_jar=jar,
-            scraper_user_id=uid,
-            viewer=viewer,
-            csrf_token=csrf,
-        )
+        # Fast path: Canny cookies still valid — no VRChat login.
+        reused = _session_from_jar(working)
+        if reused is not None:
+            print("[auth] reusing Canny session from cookie jar")
+            if reused.scraper_user_id:
+                print(f"[auth] Canny scraper user id: {reused.scraper_user_id}")
+            _persist_cookie_jar(working)
+            return reused
 
-        code, data = canny_post_json(sess, "/api/notifications/get", {"pages": 1})
-        if code in (401, 403):
-            raise CannyAuthError(
-                f"Canny session not authenticated (HTTP {code}): {str(data)[:200]}"
-            )
-        if isinstance(data, str) and "<html" in data.lower():
-            raise CannyAuthError("Canny API returned HTML — SSO cookie missing")
-        if code != 200 or not (isinstance(data, dict) and "notifications" in data):
-            raise CannyAuthError(
-                f"Canny /api/notifications/get failed HTTP {code}: {str(data)[:200]}"
-            )
+        # VRChat cookie reuse → SSO only (does not create a new API session).
+        user = _try_reuse_vrchat(working)
+        if user is not None:
+            print("[auth] reusing VRChat auth cookie; SSO to Canny")
+            return _finish_canny_session(working, vrchat_user=user)
 
-        if not sess.scraper_user_id:
-            sess.scraper_user_id = (
-                read_cookie(jar, "__canny__userID", domain_substr="feedback.vrchat")
-                or _discover_canny_user_id(sess)
-            )
-        if sess.scraper_user_id:
-            print(f"[auth] Canny scraper user id: {sess.scraper_user_id}")
-        else:
-            print("[auth] warning: Canny user id not detected yet")
-        return sess
+        # Cold login (Basic creates a new session).
+        user = vrchat_login(working)
+        return _finish_canny_session(working, vrchat_user=user)
     except Exception:
-        try:
-            jar.unlink(missing_ok=True)
-        except OSError:
-            pass
+        if cleanup_temp:
+            try:
+                working.unlink(missing_ok=True)
+            except OSError:
+                pass
         raise
 
 

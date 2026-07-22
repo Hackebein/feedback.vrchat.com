@@ -65,10 +65,17 @@ jobs:
       - name: Install dependencies
         run: pip install jinja2 pyotp
 
+      - name: Restore VRChat session cache
+        uses: actions/cache@v4
+        with:
+          path: .vrchat-session/cookies.jar
+          key: vrchat-canny-session-v1
+
       - name: Run update
         env:
           PYTHONUNBUFFERED: "1"
           SCRAPE_STATE_DIR: ${{ github.workspace }}/.scrape-state
+          CANNY_COOKIE_JAR: ${{ github.workspace }}/.vrchat-session/cookies.jar
           MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
           VRCHAT_USERNAME: ${{ secrets.VRCHAT_USERNAME }}
           VRCHAT_PASSWORD: ${{ secrets.VRCHAT_PASSWORD }}
@@ -100,8 +107,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions@users.noreply.github.com"
           git add -A
-          # Never commit the scrape-state worktree into main
+          # Never commit scrape-state worktree or VRChat session cookies into main
           git reset -q -- .scrape-state || true
+          git reset -q -- .vrchat-session || true
           if git diff --cached --quiet; then
             echo "Nothing to commit on main."
           else

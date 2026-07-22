@@ -44,6 +44,9 @@ VRCHAT_PASSWORD=
 VRCHAT_TOTP_SECRET=
 # Optional: twoFactorAuth cookie to skip new-location email OTP.
 # VRCHAT_TWO_FACTOR_AUTH=
+# Persisted Netscape cookie jar (reused across wake ticks; mode 0600).
+# Default if unset: /var/lib/feedback-search/canny-cookies.jar
+# CANNY_COOKIE_JAR=/var/lib/feedback-search/canny-cookies.jar
 # Optional override; otherwise GH_ISSUE_TOKEN from github.env is used.
 # GH_DISPATCH_TOKEN=
 # GH_DISPATCH_REPO=Hackebein/feedback.vrchat.com
@@ -52,6 +55,10 @@ EOF
   echo "Created ${CANNY_ENV} — fill VRCHAT_* before the timer can wake Actions." >&2
 fi
 chmod 0600 "${CANNY_ENV}" || true
+
+# Live session credential reused across wake ticks (avoids VRChat session exhaustion).
+touch /var/lib/feedback-search/canny-cookies.jar
+chmod 0600 /var/lib/feedback-search/canny-cookies.jar
 
 install -m 0644 "${UNIT_SRC}/feedback-canny-wake.service" /etc/systemd/system/feedback-canny-wake.service
 install -m 0644 "${UNIT_SRC}/feedback-canny-wake.timer" /etc/systemd/system/feedback-canny-wake.timer

@@ -21,3 +21,6 @@ boards/**/*.json.tmp
 
 # Scrape bookkeeping worktree (lives on orphan branch scrape-state)
 .scrape-state/
+
+# Ephemeral VRChat/Canny cookie jar (Actions cache / local reuse)
+.vrchat-session/
