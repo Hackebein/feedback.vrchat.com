@@ -1,11 +1,12 @@
 {
   "_id": "6a6152b63bf82aeb5b53bb0e",
   "aiCategories": [
-    "loc.website",
+    "loc.pc-client",
+    "groups.nameplates",
     "web.groups",
     "open-beta"
   ],
-  "aiTaggedAt": "2026-07-23T08:50:29.913486Z",
+  "aiTaggedAt": "2026-07-23T12:13:37.813075Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649520bdbec709090d4453cd",
@@ -36,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a615f4a92dd13c50ba1273e",
@@ -129,6 +130,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Also just look at this cropping guide that someone posted. I am sorry, but this is a total design nightmare. It is impossible to make images that neatly fit into all these situations.\n\nNeither the bottom nor top edges are consistent, even the sizing and position of the profile picture varies.\n\nCan we please get something a bit more design friendly? Less variations, more consistency across client and website (even if that means making the website images smaller, for example) and aligned edges?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6204da16562013f2ef92ff",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62defacd09328244c0badc00",
+        "alias": "Moderate Dolphin",
+        "aliasID": "689589e62eba8cb5ed49a469",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6685fd03f26ec69f0fb3b82542ad822b.png",
+        "created": "2022-07-25T20:19:25.248Z",
+        "name": "Alpe Kojot",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-23T12:11:06.997Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6152b63bf82aeb5b53bb0e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Just to point out another thing. Many role-play focused groups/events use group banners on nameplates to indicate consent (e.g. yes/no scares for horror events), roles people play as and/or to indicate who is a Staff member in case help/moderation is required. If banners become impossible to read/design due to these changes, then they essentially become a useless system.\n\nThe only alternative is to have some kind of indicator on your avatar but this would require to upload your own avatar which many people cannot do. While simply joining a group and representing said banner works for everyone.\n\nNot to mention that an avatar can be hidden (e.g. for performance reasons) and then said alternative indicator would become completely useless. While a banner always remains visible one way or another and is much easier to read, especially from a distance.\n\nTo summarize:\n\nGroup banners on nameplates are not just simple decoration. They have a function which is utilized by many many different groups of all kinds and this change could severely impact said function if not completely ruin it. Leaving us with no real alternative and making hosting such events a nightmare.",
       "viewerReactions": null,
       "voteID": null
     }
