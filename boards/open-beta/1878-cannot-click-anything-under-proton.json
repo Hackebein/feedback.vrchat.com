@@ -2,9 +2,10 @@
   "_id": "6a61cf2819cdafc5a79606fb",
   "aiCategories": [
     "loc.pc-client",
+    "platforms.pc.steam",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-07-23T08:44:43.325705Z",
+  "aiTaggedAt": "2026-07-23T09:04:01.717208Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64957854e3a07d09595b3a61",
@@ -31,7 +32,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1366,
+    "postCount": 1369,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -42,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Be under Linux and use unity-6 branch\n\n2. Open Vrchat\n\n3. Try to click anything\n\nNote Build Number is a guess, since I cannot actually navigate to the BuildNumber in the menu.\n\nAlso note: The Keyboard and Mouse are being detected.\n\nyou can type, look around and scroll, but you just cannot click anything.\n\nThe property of not being able to click anything includes the QuickMenu, Radial, TextBox and World Debug UI (I don't know of other ui-elements accessible via only Keyboard)",
+  "details": "1. Be under Linux and use unity-6 branch\n\n2. Open Vrchat\n\n3. Try to click anything\n\nNote Build Number is a guess, since I cannot actually navigate to the BuildNumber in the menu.\n\nAlso note: The Keyboard and Mouse are being detected.\n\nyou can type, look around and scroll, but you just cannot click anything.\n\nThe property of not being able to click anything includes the QuickMenu, Radial, TextBox and World Debug UI (I don't know of other ui-elements accessible via only Keyboard)\n\nThis is on GE-proton9-20-rtsp15",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -65,7 +66,7 @@
   "subCategoryID": null,
   "title": "[1878?] Cannot click anything under proton",
   "trendingScore": 2952.1486875860455,
-  "updatedBy": null,
+  "updatedBy": "64957854e3a07d09595b3a61",
   "urlName": "1878-cannot-click-anything-under-proton",
   "viewerIsAuthor": false,
   "viewerVote": 0,
