@@ -22,7 +22,7 @@ Scrape horizon: **2026-04-23 17:05 UTC (91d ago)**.
 | `ios-mobile-beta` | 257 / 257 (100.0%) |
 | `localization` | 626 / 626 (100.0%) |
 | `merch` | 34 / 34 (100.0%) |
-| `open-beta` | 2,877 / 2,875 (100.0%) |
+| `open-beta` | 2,877 / 2,876 (100.0%) |
 | `persistence` | 68 / 68 (100.0%) |
 | `sdk-bug-reports` | 1,398 / 1,398 (100.0%) |
 | `third-person-view` | 82 / 82 (100.0%) |
@@ -30,7 +30,7 @@ Scrape horizon: **2026-04-23 17:05 UTC (91d ago)**.
 | `vrchat-ik-20` | 285 / 285 (100.0%) |
 | `vrchat-plus-feature-ideas` | 122 / 122 (100.0%) |
 | `website` | 811 / 811 (100.0%) |
-| **Total** | **34,795** / **34,794** (100.0%) |
+| **Total** | **34,795** / **34,795** (100.0%) |
 
 ## OpenSearch
 
