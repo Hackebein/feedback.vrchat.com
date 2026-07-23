@@ -1,12 +1,11 @@
 {
   "_id": "6a610573fa4dec62af2f8346",
   "aiCategories": [
-    "loc.website",
     "loc.pc-client",
-    "web.profiles",
-    "platforms.cross-platform"
+    "loc.website",
+    "avatars"
   ],
-  "aiTaggedAt": "2026-07-22T22:05:24.433177Z",
+  "aiTaggedAt": "2026-07-23T02:21:00.177040Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63283ca2360db044b072dafe",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a613b4ed95311d8977bb671",
@@ -73,6 +72,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate, can be merged with: https://feedback.vrchat.com/bug-reports/p/change-into-avatar-from-vrchat-home-has-no-effect-in-vrchat-app-without-an-app-r",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a61794b92dd13c50ba4e6c9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63283ca2360db044b072dafe",
+        "alias": "Fandango Bird",
+        "aliasID": "6609a8fae5d26962aafe5e75",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/faf1b85bc7709aadb4a2e417aa13acba.png",
+        "created": "2022-09-19T09:55:46.860Z",
+        "name": "Tehrasha",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-23T02:15:39.989Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a613b4ed95311d8977bb671",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a610573fa4dec62af2f8346",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} You wouldn't believe how many iterations of this issue I searched for and came up completely empty every time!",
       "viewerReactions": null,
       "voteID": null
     }
