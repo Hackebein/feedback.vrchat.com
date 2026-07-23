@@ -72,7 +72,9 @@
       "postDeleted": false,
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -98,19 +100,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 9,
+  "maxScore": 11,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6155c9d586a21e1a176e96/527822014.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 9,
+  "score": 11,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-22T23:44:09.613Z",
   "subCategoryID": null,
   "title": "[1878] Let users override or disable custom profile themes for accessibility",
-  "trendingScore": 2953.301332739774,
+  "trendingScore": 2953.4839761330063,
   "updatedBy": null,
   "urlName": "1878-let-users-override-or-disable-custom-profile-themes-for-accessibility",
   "viewerIsAuthor": false,
@@ -122,6 +124,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f6dae4087d989489b562e09",
+      "alias": "Abstract Canidae",
+      "aliasID": "65c2b0e2ed6eefce4c65c4e0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/22aa1c6aa1ac4f34f2984e48baddd9d3.png",
+      "companies": [],
+      "name": "virus_of_doom",
+      "urlName": null,
+      "voteID": "6a615cecd4058d953b468e34"
+    },
+    {
+      "_id": "6a615b77d4058d953b4688a6",
+      "alias": "Successful Swordtail",
+      "aliasID": "6a615b77d4058d953b4688aa",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075c40d28a52a458d4229ec88f7fa204.png",
+      "companies": [],
+      "name": "e6z1",
+      "urlName": null,
+      "voteID": "6a615b7ad4058d953b4688b6"
+    },
+    {
+      "_id": "6054ebfde3c42a495dae9e33",
+      "alias": "Fun Basilisk",
+      "aliasID": "65c2ee83ed6eefce4cd63790",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51069c2e643997f98796e575bc1e1627.png",
+      "companies": [],
+      "name": "KiyoNetcat",
+      "urlName": null,
+      "voteID": "6a615ab8d4058d953b46651f"
+    },
     {
       "_id": "61ecb5e11643937b53e901d2",
       "alias": "Yarrow Marmot",
