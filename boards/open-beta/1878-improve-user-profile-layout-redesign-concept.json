@@ -31,7 +31,7 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 495,
+    "postCount": 496,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
@@ -348,7 +348,7 @@
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -441,7 +441,9 @@
       "postDeleted": false,
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -558,19 +560,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 95,
+  "maxScore": 98,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a616a523bf82aeb5b56dc8f/119337932.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 95,
+  "score": 98,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T01:11:46.689Z",
   "subCategoryID": null,
   "title": "[1878] Improve user profile layout [Redesign concept]",
-  "trendingScore": 2955.5810234656215,
+  "trendingScore": 2955.612421622388,
   "updatedBy": "5f67899159b0841fe0d3891b",
   "urlName": "1878-improve-user-profile-layout-redesign-concept",
   "viewerIsAuthor": false,
@@ -582,6 +584,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6064d021466d3f6922a4b271",
+      "alias": "Cloudy Rook",
+      "aliasID": "65c915d0ed6eefce4cadce2b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8a412f0cf5c73c4103242bafad698297.png",
+      "companies": [],
+      "name": "Humi 歩心",
+      "urlName": null,
+      "voteID": "6a61b1edd4058d953b480dee"
+    },
+    {
+      "_id": "6053391d03a48f2a6f66f62d",
+      "alias": "Comfortable Sheep",
+      "aliasID": "65e78069a6e3ea79dd1f2bf7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a39a0bb7ea9cba449590cbbd71387e2a.png",
+      "companies": [],
+      "name": "Soren Wolf",
+      "urlName": null,
+      "voteID": "6a61b190d4058d953b480bf4"
+    },
+    {
+      "_id": "6495466abec709090d6195a7",
+      "alias": "Contemporary Gopher",
+      "aliasID": "65cc7eaced6eefce4c63b7f3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9f0fc1c84a9b1947ce87023cea2958f0.png",
+      "companies": [],
+      "name": "GiggleL0rd",
+      "urlName": null,
+      "voteID": "6a61b046d4058d953b480623"
+    },
     {
       "_id": "5f4868ee3d99630da5379304",
       "alias": "Worthwhile Halibut",
