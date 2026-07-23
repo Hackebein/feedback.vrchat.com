@@ -32,7 +32,7 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 532,
+    "postCount": 534,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
@@ -176,7 +176,9 @@
       "postDeleted": false,
       "postID": "6a615dd8147dc304c2107741",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -221,7 +223,7 @@
       "postID": "6a615dd8147dc304c2107741",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -294,19 +296,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 49,
+  "maxScore": 50,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a615dd8147dc304c2107741/882316583.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 49,
+  "score": 50,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T00:18:32.421Z",
   "subCategoryID": null,
   "title": "[1878] Remove *nameplate* decorations entirely.",
-  "trendingScore": 2954.9836201169687,
+  "trendingScore": 2955.004483645684,
   "updatedBy": null,
   "urlName": "1878-remove-nameplate-decorations-entirely",
   "viewerIsAuthor": false,
@@ -318,6 +320,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "609142752efcb01336323cd8",
+      "alias": "Verdigris Rooster",
+      "aliasID": "660ea13ce5d26962aa54c37f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bbd1187d10dfc6896169d759f9a37ffd.png",
+      "companies": [],
+      "name": "Liliac",
+      "urlName": null,
+      "voteID": "6a627f33d4058d953b4ef0d6"
+    },
     {
       "_id": "5f71e194626ff47d20bfb43b",
       "alias": "Eggshell Raven",
