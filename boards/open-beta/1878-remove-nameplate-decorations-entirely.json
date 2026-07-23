@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.in-world",
     "social.nameplates",
-    "groups.nameplates"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-07-23T01:25:06.231855Z",
+  "aiTaggedAt": "2026-07-23T10:13:21.932040Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3640fb06dcf51467239ddc",
@@ -36,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a615e51b49cc4328b70ee91",
@@ -185,6 +185,50 @@
       "value": "@{6240093e1e20a252925093a3|full_name} This may fix the nameplate decoration issue, but creates a new problem - now world elements can make the text unreadable.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a61e4fc1a72c0b159470ccc",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f2dea8d22470972dc58e995",
+        "alias": "Peacock blue Parakeet",
+        "aliasID": "65c2a213ed6eefce4c61ed86",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f4707523fdb1f73c1fd0a636ea61db11.png",
+        "created": "2020-08-07T23:58:05.046Z",
+        "name": "GotoFinal",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-23T09:55:08.610Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a615dd8147dc304c2107741",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Especially for users like me that have them enabled at all times... if I would see these decorations only when opening the menu I would not care much, but seeing 60 spinning animating weird objects at all times on everyone is just obnoxious",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -202,19 +246,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 29,
+  "maxScore": 31,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a615dd8147dc304c2107741/882316583.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 29,
+  "score": 31,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T00:18:32.421Z",
   "subCategoryID": null,
   "title": "[1878] Remove *nameplate* decorations entirely.",
-  "trendingScore": 2954.422195964217,
+  "trendingScore": 2954.4891861273004,
   "updatedBy": null,
   "urlName": "1878-remove-nameplate-decorations-entirely",
   "viewerIsAuthor": false,
@@ -226,6 +270,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64dc1d165987bae0a165d647",
+      "alias": "Missing Kiwi",
+      "aliasID": "65c3848bed6eefce4cce313c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/78a6be2b98831acf2a7ab84b16e752db.png",
+      "companies": [],
+      "name": "ぐに-GuNi",
+      "urlName": null,
+      "voteID": "6a61e71ad4058d953b495824"
+    },
     {
       "_id": "5f2dea8d22470972dc58e995",
       "alias": "Peacock blue Parakeet",
