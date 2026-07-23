@@ -31,7 +31,7 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 498,
+    "postCount": 499,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
@@ -527,7 +527,9 @@
       "postDeleted": false,
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -556,19 +558,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 131,
+  "maxScore": 134,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a616a523bf82aeb5b56dc8f/119337932.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 131,
+  "score": 134,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T01:11:46.689Z",
   "subCategoryID": null,
   "title": "[1878] Improve user profile layout [Redesign concept]",
-  "trendingScore": 2955.9167348791075,
+  "trendingScore": 2955.9398603952395,
   "updatedBy": "5f67899159b0841fe0d3891b",
   "urlName": "1878-improve-user-profile-layout-redesign-concept",
   "viewerIsAuthor": false,
@@ -580,6 +582,39 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "60e65f577ae9d0492b0f2a75",
+      "alias": "Just Wildcat",
+      "aliasID": "65c26de3ed6eefce4c583d87",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1d39a69aec15ac7a310ce249dc9f9df7.png",
+      "companies": [],
+      "name": "Hackebein",
+      "urlName": null,
+      "voteID": "6a61ee70d4058d953b49831b"
+    },
+    {
+      "_id": "63486d98f74cb168093206ac",
+      "alias": "Walnut Dingo",
+      "aliasID": "65c270b7ed6eefce4cd26155",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c1b54bfd22772de9f35e37ff2dedc2d5.png",
+      "companies": [],
+      "name": "u-Kotovsky",
+      "urlName": null,
+      "voteID": "6a61ee3fd4058d953b498248"
+    },
+    {
+      "_id": "65aaaf02eb6f7428be4aaeda",
+      "alias": "Practical Hedgehog",
+      "aliasID": "65cfcaae0129d7ae44332aa1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ab576980cf0817c42eb2ba2326e2c5ec.png",
+      "companies": [],
+      "name": "dorpomi",
+      "urlName": null,
+      "voteID": "6a61ed89d4058d953b497d01"
+    },
     {
       "_id": "5d5e7c1bdd810218cb2ef7d8",
       "alias": "Enthusiastic Reptile",
