@@ -2,10 +2,10 @@
   "_id": "6a625edf922e2cffe7d6b29d",
   "aiCategories": [
     "loc.pc-client",
-    "client.settings",
-    "open-beta"
+    "open-beta",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-07-23T18:37:22.270507Z",
+  "aiTaggedAt": "2026-07-23T18:40:44.667659Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6063b381450d1c3e4462c17c",
@@ -43,14 +43,18 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Attempting to use any UI theme in the beta will only change the color of highlighted buttons on the left side of the UI, recoloring some buttons on the interface were already broken but now most of it is nonfunctional.",
+  "details": "Attempting to use any UI theme in the beta will only change the color of highlighted buttons and the cursor, recoloring some buttons on the interface were already broken but now most of it is nonfunctional. Attached pictures of the \"Embers\" theme in use as an example.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
   "ideaID": "6a625edf922e2cffe7d6b280",
-  "imageURLs": [],
+  "imageURLs": [
+    "https://canny-assets.io/images/0c9f5c24ff86d5e7131b7e5896c4f23b.png",
+    "https://canny-assets.io/images/54b77c7805f37dfb40c83d0f21855aab.png",
+    "https://canny-assets.io/images/4263ec6b833496aba806dcd9dfcfff96.png"
+  ],
   "linkedEntry": null,
   "loading": false,
   "maxScore": 1,
@@ -66,7 +70,7 @@
   "subCategoryID": null,
   "title": "UI themes no longer work",
   "trendingScore": 2951.8037812976236,
-  "updatedBy": null,
+  "updatedBy": "6063b381450d1c3e4462c17c",
   "urlName": "ui-themes-no-longer-work",
   "viewerIsAuthor": false,
   "viewerVote": 0,
