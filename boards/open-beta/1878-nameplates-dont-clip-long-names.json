@@ -32,7 +32,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1375,
+    "postCount": 1374,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -128,7 +128,9 @@
       "postDeleted": false,
       "postID": "6a616640fb4096a3914897b9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -201,19 +203,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 32,
+  "maxScore": 33,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a616640fb4096a3914897b9/682872475.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 32,
+  "score": 33,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-07-23T14:37:36.297Z",
   "subCategoryID": null,
   "title": "[1878] Nameplates don't clip long names",
-  "trendingScore": 2954.5294764710525,
+  "trendingScore": 2954.5611819398746,
   "updatedBy": null,
   "urlName": "1878-nameplates-dont-clip-long-names",
   "viewerIsAuthor": false,
@@ -225,6 +227,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62919eafd43fc31e7d2987b1",
+      "alias": "Flame Egret",
+      "aliasID": "6a62377bd4058d953b4c3a32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bdbdfeb9bded26f7352543c0c3d6c5ca.png",
+      "companies": [],
+      "name": "TeaDrink",
+      "urlName": null,
+      "voteID": "6a6237d2d4058d953b4c3c8e"
+    },
     {
       "_id": "66bd5814d72a3b861adc1b40",
       "alias": "Civic Warbler",
