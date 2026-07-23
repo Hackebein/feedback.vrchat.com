@@ -2,10 +2,10 @@
   "_id": "6a5b36e0973c8dd4179fb827",
   "aiCategories": [
     "loc.website",
-    "web.home",
+    "loc.in-world",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-21T21:25:09.002841Z",
+  "aiTaggedAt": "2026-07-23T18:01:43.382225Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -29,56 +29,8 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
-    {
-      "_id": "6a5cb0591d7b1ab886596a8f",
-      "aiGenerated": false,
-      "author": {
-        "_id": "68098a4626271974ef4d2775",
-        "alias": "Extraordinary Peacock",
-        "aliasID": "68098a468ccc1d8b3bb09eda",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
-        "created": "2025-04-24T00:48:06.176Z",
-        "name": "WubTheCaptain",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-07-19T11:09:13.793Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": "6a5f8b9e222e2fee64da5caf",
-      "mergedPostDetails": "So I logged on wanting to look at avatars, I opened the website and click on change avatar. Nothing happens, some time my stuff bugs out and avis stack so I change into another avatar. Again nothing, I look and it hasn't even changed the profile on my account, but it as on the website. I've reset my computer and my steam vr, still nothing and I've seen about three reports about this on the discord.",
-      "mergedPostTitle": "Can't change avatars via the website",
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6a5b36e0973c8dd4179fb827",
-      "private": false,
-      "reactions": {
-        "like": 2
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "Duplicate, can be merged with: https://feedback.vrchat.com/bug-reports/p/change-into-avatar-from-vrchat-home-has-no-effect-in-vrchat-app-without-an-app-r",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "6a5d616b6e3502f7e2bd5395",
       "aiGenerated": false,
@@ -222,6 +174,37 @@
       "voteID": null
     },
     {
+      "_id": "6a5f8b9e222e2fee64da5caf",
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-21T15:09:18.969Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6a5f8b9e222e2fee64da5caf",
+      "mergedPostDetails": "So I logged on wanting to look at avatars, I opened the website and click on change avatar. Nothing happens, some time my stuff bugs out and avis stack so I change into another avatar. Again nothing, I look and it hasn't even changed the profile on my account, but it as on the website. I've reset my computer and my steam vr, still nothing and I've seen about three reports about this on the discord.",
+      "mergedPostTitle": "Can't change avatars via the website",
+      "pinned": false,
+      "postID": "6a5b36e0973c8dd4179fb827",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
+    },
+    {
       "_id": "6a5f8bbf1793b24a65328057",
       "author": {
         "_id": "64873f159cf028090ce2c2e2",
@@ -318,7 +301,7 @@
       "postID": "6a5b36e0973c8dd4179fb827",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -327,6 +310,52 @@
       "statusChangeID": "6a5fe1900bcd321b190b2626",
       "statusChangeNewStatus": "tracked",
       "value": "Changing avatars from the VRChat Home website or via API interaction was temporarily disabled to mitigate an ongoing issue. We're working on re-enabling it and are hoping to have a fix soon.\n\nChanging avatars from within VRChat or using OSC still works fine.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6250efd82cb3ff34bc76c9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-23T17:35:43.041Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/81ce2a5faf8577ef4d39583b7ddb3f4e.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a5b36e0973c8dd4179fb827",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The new alert in VRChat Home about this issue when changing avatars or fallbacks is a welcomed change.",
       "viewerReactions": null,
       "voteID": null
     }
