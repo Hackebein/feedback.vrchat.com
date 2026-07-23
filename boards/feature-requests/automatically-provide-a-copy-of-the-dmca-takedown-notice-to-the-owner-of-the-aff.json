@@ -1,0 +1,83 @@
+{
+  "_id": "6a61ecbd7560de5c7714bc75",
+  "aiCategories": [
+    "vrchat-meta"
+  ],
+  "aiTaggedAt": "2026-07-23T10:29:31.542543Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62e653495410ba44afac544b",
+    "alias": "Azure Planarian",
+    "aliasID": "660959a7e5d26962aa2a51a7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a50ccfe765e93ebe333c48b5ea9fc4de.png",
+    "created": "2022-07-31T10:02:49.951Z",
+    "name": "Uehara_AlmondAi",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62e653495410ba44afac544b",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-23T10:28:13.178Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Proposal\n\nWhen content on VRChat is removed as a result of a DMCA takedown notice, VRChat should automatically provide the owner of the affected content with a copy of the full takedown notice.\n\nSpecifically, a copy of the DMCA takedown notice should be attached to the email informing the content owner that their content has been removed due to a DMCA takedown notice.\n\n2. Current Implementation\n\nCurrently, when an avatar, world, or other content is made unavailable on VRChat due to a DMCA takedown notice, the content owner receives an email containing the following information:\n\n・The content subject to the notice\n\n・The claimant’s name and contact information\n\nThe content owner is not informed of the details of the DMCA takedown notice and is instead instructed to contact the claimant directly for further information.\n\n3. Problems With the Current Implementation\n\nThe current system lacks transparency and creates an environment in which the DMCA process can be easily abused.\n\n3-1. VRChat Provides Significantly Less Information Than Other Services\n\nBelow is a summary of the information that content owners can automatically review when their content is removed due to a DMCA takedown notice on other services.\n\n   X: The full DMCA takedown notice is sent to the content owner.\n\n   Twitch:The full DMCA takedown notice is sent to the content owner.\n\n   GitHub:The full DMCA takedown notice is published after personal information has been redacted, and a link to the notice is sent to the content owner.\n\n   Google Search:The full DMCA takedown notice is published on an external website (lumen) after personal information has been redacted.\n\n   YouTube:The content owner is provided with the copyright holder’s name, a description of the copyrighted work, and the claimant’s legal name and email address. Details of the DMCA takedown notice are also provided upon request.\n\n   Meta:The content owner is provided with the copyright holder’s name, the claimant’s email address, and details of the claim.\n\n   VRChat:The content owner is provided with the content subject to the notice and the claimant’s name and contact information.\n\nOn X and Twitch, when content is removed, the full DMCA takedown notice is provided to the content owner.\n\nOn Google Search and GitHub, the full DMCA takedown notice is made publicly available after personal information has been redacted.\n\nCompared with these other services, VRChat has no system that automatically and reliably provides the substantive contents of a DMCA takedown notice to the affected content owner.\n\n3-2. The Claimant May Refuse to Provide the Contents of the DMCA takedown notice\n\nUnder VRChat’s current system, content owners who wish to know the details of a DMCA takedown notice are instructed to contact the claimant directly.\n\nHowever, a claimant may refuse to provide the contents of the DMCA takedown notice.\n\nFor example, my world has been made unavailable multiple times due to DMCA takedown notices submitted by the same claimant.\n\nI asked the claimant to provide the contents of the DMCA takedown notices, but no copy of any notice has been provided to me to date.\n\n3-3. VRChat Does Not Provide the DMCA takedown notice\n\nVRChat states that it may provide the contents of a DMCA takedown notice to the user whose content is the subject of the notice.\n\nHowever, because there is no system that automatically provides the DMCA takedown notice, a content owner who cannot obtain the information from the claimant must separately request it from VRChat.\n\nIf VRChat does not respond to that request, the content owner remains unable to know the detailed reason for the removal.\n\nIn practice, this individual request process does not function.\n\nIn the example described above, I explained that the claimant had refused to provide the contents of the notice and asked the VRChat Help Desk to provide me with the DMCA takedown notice. However, I have not received a single response to date.\n\nAs a result, when neither the claimant nor VRChat provides the relevant information, the content owner is unable to review the contents of the DMCA takedown notice.\n\n3-4. The Current System Creates an Environment in Which the DMCA Process Can Be Easily Abused\n\nGiven the circumstances described above, VRChat’s current system makes abuse of the DMCA process difficult to investigate and correct.\n\nFor example, if a false DMCA takedown notice were submitted, the following could occur:\n\n1,Content is removed as a result of a false DMCA takedown notice.\n\n2,Because only limited information is provided, the content owner cannot determine which copyrighted work allegedly justified the removal.\n\n3,The content owner asks the claimant to provide the contents of the DMCA takedown notice, but the claimant refuses.\n\n4,The content owner asks VRChat to provide the DMCA takedown notice, but receives no response.\n\n5,As a result, the content owner is never able to know the specific reason why the content was removed.\n\n6,Even if the content owner considers taking legal action in response to the false DMCA takedown notice, they cannot obtain the DMCA takedown notice, which would be important evidence.\n\n4. Reasons This Proposal Should Be Implemented\n\n4-1. It Would Bring VRChat’s Level of Transparency in Line With Other Services\n\nVRChat currently provides less transparency regarding DMCA takedown notices than other services.\n\nBy implementing this proposal, VRChat could provide a level of transparency comparable to services such as X and Google Search.\n\n4-2. It Would Deter Abuse of the DMCA Process and Enable Appropriate Responses\n\nAs described in Section 3-4, VRChat’s current system makes abuse of the DMCA process difficult to investigate and correct.\n\nIf this proposal were implemented, content owners would be able to review the contents of a DMCA takedown notice and promptly take appropriate action, even when the notice is false.\n\nA system that ensures the DMCA takedown notice is always provided to the affected content owner would also help deter abuse of the DMCA process.\n\n4-3. It Would Require Relatively Little Work From VRChat\n\nTo implement this proposal, VRChat would need to create a system that attaches the full DMCA takedown notice to the email informing the content owner that their content has been removed due to a DMCA takedown notice.\n\nBecause this could be incorporated into the existing removal notification process, it would not require an entirely new feature or system to be built from scratch and should be relatively straightforward to implement.\n\n---- ---- ---- ---- ---- ----\n\nタイトル：DMCA申立書の写しを、対象コンテンツのオーナーへ自動的に提供してほしい\n\n1. 提案事項\n\nDMCA申立てによってVRChat上のコンテンツが削除された場合、そのDMCA申立書の全文を、コンテンツのオーナーが自動的に確認できるようにしてほしいです。\n\n具体的には、当該コンテンツがDMCA申立てによって削除されたことを知らせるメールに、当該DMCA申立書の写しを添付してほしいです。\n\n2. 現在の実装\n\n現在、DMCA申立てによってVRChat上でアバターやワールドなどのコンテンツが公開停止になると、そのコンテンツのオーナーに対して以下の情報がメールで通知されます。\n\n・申立てを受けたコンテンツ\n\n・申立人の氏名と連絡先\n\nDMCA申立ての詳細は知らされず、申立人へ直接連絡するよう案内されます。\n\n3. 現在の実装の問題点\n\n情報の透明性が低く、DMCA制度が悪用されやすい点が問題です。\n\n3-1. 他社サービスと比較して通知される情報が極端に少ない\n\n以下に、他社サービスにおいてDMCA申立てによってコンテンツが削除された際に、コンテンツのオーナーが自動的に確認できる情報をまとめました。\n\n　X：DMCA申立書の全文がコンテンツのオーナーに送付される\n\n　Twitch：DMCA申立書の全文がコンテンツのオーナーに送付される\n\n　GitHub：DMCA申立書の全文が個人情報を削除したうえで公開され、そのリンクがコンテンツのオーナーに送付される\n\n　Google検索：DMCA申立書の全文が個人情報を削除したうえで外部サイト（lumen）に公開される\n\n　YouTube：権利者名、対象著作物の説明、申立人の法的氏名とメールアドレスがコンテンツのオーナーに送付される。要求に応じて、DMCA申立書の詳細がコンテンツのオーナーに送付される\n\n　Meta：権利者名、申立人のメールアドレス、申立ての詳細がコンテンツのオーナーに送付される\n\n　VRChat：申立てを受けたコンテンツ、申立人の氏名と連絡先がコンテンツのオーナーに送付される\n\nXやTwitchでは、コンテンツが削除された場合、コンテンツのオーナーにDMCA申立書の全文が提供されます。\n\nGoogle検索やGitHubでは、DMCA申立書の全文が、個人情報を伏せたうえで全世界に公開される仕組みとなっています。\n\nこれらの他社サービスと比較して、VRChatには、DMCA申立ての具体的な内容をコンテンツのオーナーへ自動的かつ確実に提供する仕組みがありません。\n\n3-2. 申立人からDMCA申立ての内容を得られない場合がある\n\nVRChatの現在の実装では、コンテンツのオーナーがDMCA申立ての詳細を知りたい場合、申立人へ直接連絡するよう案内されます。\n\nしかし、申立人がDMCA申立ての内容を提供することを拒否する場合があります。\n\n例えば、私のワールドは、同一の申立人による複数回のDMCA申立てを受け、公開停止となっています。\n\n私は申立人に対し、DMCA申立ての内容を提供するよう求めましたが、現在までDMCA申立書は提供されていません。\n\n3-3. VRChatがDMCA申立書を提供しない\n\nVRChatは、DMCA申立書の内容を、申立ての対象となったユーザーへ提供する場合があると規定しています。\n\nしかし、DMCA申立書が自動的に提供される仕組みがないため、申立人から情報を得られなかったコンテンツのオーナーは、VRChatへ個別に提供を求めなければなりません。\n\nVRChatが個別照会に回答しない場合、コンテンツのオーナーは削除理由の詳細を確認できないままとなります。\n\n実のところ、このような個別照会は機能していません。\n\n先ほど提示した事例において、私は、申立人からDMCA申立書の提供を拒否したことを説明したうえで、VRChat Help DeskにDMCA申立書を提供するよう求めました。しかし、現在まで一切返答がありません。\n\nこのように、申立人とVRChatの双方から情報を得られない場合、コンテンツのオーナーはDMCA申立ての内容を確認できなくなります。\n\n3-4. DMCA制度が悪用されやすい環境になっている\n\n上述の状況を踏まえると、現在のVRChatのシステムは、DMCA制度の悪用について、その調査や是正を行うことが困難になっています。\n\n例えば、虚偽のDMCA申立てが行われた場合、以下のような事態が起こり得ます。\n\n①虚偽のDMCA申立てによって、コンテンツが削除される\n\n②コンテンツのオーナーは、提供される情報が少ないため、自らのコンテンツがどの著作物の権利に基づいて削除されたのか確認できない\n\n③コンテンツのオーナーが申立人にDMCA申立ての内容を求めても、申立人から提供を拒否される\n\n④コンテンツのオーナーがVRChatにDMCA申立書の提供を求めても、回答を受けられない\n\n⑤結果として、コンテンツのオーナーは、コンテンツが削除された理由を最後まで確認できない\n\n⑥コンテンツのオーナーが、虚偽のDMCA申立てを理由として法的措置を検討する場合も、その重要な証拠となるDMCA申立書を入手できない\n\n4. 提案事項が実装されるべき理由\n\n4-1. 情報の透明性を他社と同水準まで高めることができる\n\nVRChatは現在、DMCA申立てに関する情報の透明性が、他社サービスと比較して低い状態にあります。\n\n提案事項を実装することによって、VRChatは、XやGoogle検索などの他社サービスと同等の情報の透明性を得ることができます。\n\n4-2. DMCA制度の悪用を抑止し、適切な対応を可能にする\n\n3-4で提示した例のように、VRChatの現行システムでは、DMCA制度の悪用について検証や是正を行うことが困難です。\n\n提案事項が実装されれば、虚偽のDMCA申立てが行われた場合であっても、コンテンツのオーナーはDMCA申立ての内容を確認し、速やかに適切な対応を取ることができます。\n\nこのように、DMCA申立書が必ずコンテンツのオーナーに提供される仕組みは、DMCA制度の悪用を抑止する上でも役立つと思われます。\n\n4-3. VRChat運営がすべき作業量が比較的少ないと思われる\n\n提案事項を実装するために必要な作業は、コンテンツがDMCA申立てによって削除されたことを知らせるメールに、当該DMCA申立書の全文を添付する仕組みを作ることです。\n\nこれは既存の削除通知フローに組み込むことができるため、全く新しい機能やシステムを一から実装する必要はなく、比較的容易に実装できると思われます。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a61ecbc7560de5c7714bc74",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a61ecbd7560de5c7714bc75/466432455.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-23T10:28:13.178Z",
+  "subCategoryID": null,
+  "title": "Automatically Provide a Copy of the DMCA Takedown Notice to the Owner of the Affected Content",
+  "trendingScore": 2951.75547041138,
+  "updatedBy": null,
+  "urlName": "automatically-provide-a-copy-of-the-dmca-takedown-notice-to-the-owner-of-the-aff",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62e653495410ba44afac544b",
+      "alias": "Azure Planarian",
+      "aliasID": "660959a7e5d26962aa2a51a7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a50ccfe765e93ebe333c48b5ea9fc4de.png",
+      "companies": [],
+      "name": "Uehara_AlmondAi",
+      "urlName": null,
+      "voteID": "6a61ecbdd4058d953b4975f0"
+    }
+  ]
+}
