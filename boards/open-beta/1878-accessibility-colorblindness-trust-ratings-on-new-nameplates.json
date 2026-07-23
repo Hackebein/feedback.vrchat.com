@@ -1,10 +1,11 @@
 {
   "_id": "6a624c95338c36acc65ac799",
   "aiCategories": [
-    "loc.hud",
-    "social.nameplates"
+    "loc.in-world",
+    "social.nameplates",
+    "account.trust"
   ],
-  "aiTaggedAt": "2026-07-23T17:17:52.498534Z",
+  "aiTaggedAt": "2026-07-23T17:23:34.322027Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def099a721d644ba069aea",
@@ -42,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "This is only technically related to the beta because it is something that only became relevant due to the layout change. It was something that could have been nice in the past, but unnecessary since there was support next to them before:\n\nThe shield icons that represent a user's trust rating are not setup to be colorblind friendly, but the avatar performance rating icons are. With the old nameplates, there was text clearly stating the trust rating next to the icon, but in the new nameplates, they are only represented with the icon. The problem is that these icons look exactly the same for every trust rating, and the only difference is the color. Colorblind friendly design holds heavy importance in being able to differentiate something in grayscale as well, if you are designing it in a mindful way. \n\nThe avatar performance rating symbols are seemingly made to be intentionally colorblind friendly in their designs (Star on excellent, circle in-fill expands outward as the rating gets worse, and then an exclamation point for very poor). I think it would be a change of interest to come up with new designs for the trust ratings on the nameplates, to support us colorblind people!\n\nImage attached to show the trust and performance symbols in greyscale, for examples. If you can't tell which is which in the image without the words, neither can a lot of regular players!",
+  "details": "This is only technically related to the beta because it is something that only became relevant due to the layout change. It was something that could have been nice in the past, but unnecessary since there was support next to them before:\n\nThe shield icons that represent a user's trust rating are not setup to be colorblind friendly, but the avatar performance rating icons are. With the old nameplates, there was text clearly stating the trust rating next to the icon, but in the new nameplates, they are only represented with the icon. The problem is that these icons look exactly the same for every trust rating, and the only difference is the color. Colorblind friendly design holds heavy importance in being able to differentiate something in grayscale as well, if you are designing it in a mindful way. \n\nThe avatar performance rating symbols are seemingly made to be intentionally colorblind friendly in their designs (Star on excellent, circle in-fill expands outward as the rating gets worse, and then an exclamation point for very poor). I think it would be a change of interest to come up with new designs for the trust ratings on the nameplates, to support us colorblind people!\n\nA suggestion could be something as simple as an increasing number of hash marks on the existing shields as the rank increases, and the friend one getting something special.\n\nImage attached to show the trust and performance symbols in greyscale, for examples. If you can't tell which is which in the image without the words, neither can a lot of regular players!",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -54,19 +55,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 4,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a624c95338c36acc65ac799/1620169422.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 4,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T17:17:09.270Z",
   "subCategoryID": null,
   "title": "[1878] Accessibility: Colorblindness; trust ratings on new nameplates",
-  "trendingScore": 2952.201535073447,
+  "trendingScore": 2952.712452913451,
   "updatedBy": "62def099a721d644ba069aea",
   "urlName": "1878-accessibility-colorblindness-trust-ratings-on-new-nameplates",
   "viewerIsAuthor": false,
@@ -78,6 +79,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5fa4c2804a7bf5087782b160",
+      "alias": "Tricky Hamster",
+      "aliasID": "65c2a298ed6eefce4c75509d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fbb2ca4938cc7d1a6e87698d9e9963c0.png",
+      "companies": [],
+      "name": "MondoCat",
+      "urlName": null,
+      "voteID": "6a624d4cd4058d953b4d0e62"
+    },
+    {
+      "_id": "5ceabfeed8a10d72699b8acb",
+      "alias": "Yellow green Mouse",
+      "aliasID": "65c389caed6eefce4cb8c2f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/42909c3f578c2173f3768104eefea022.png",
+      "companies": [],
+      "name": "MyNamesRaph",
+      "urlName": null,
+      "voteID": "6a624d19d4058d953b4d0ca6"
+    },
     {
       "_id": "62cb25ac25f5762880e53336",
       "alias": "Pink Orca",
