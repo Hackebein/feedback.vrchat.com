@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "open-beta",
-    "web.profiles"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-07-23T16:09:04.569558Z",
+  "aiTaggedAt": "2026-07-23T16:17:16.309017Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f67899159b0841fe0d3891b",
@@ -36,54 +36,8 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 23,
+  "commentCount": 25,
   "comments": [
-    {
-      "_id": "6a61dbf4b5f58b1db0590469",
-      "aiGenerated": false,
-      "author": {
-        "_id": "5f3e318d61625255b0332c55",
-        "alias": "Comparable Wren",
-        "aliasID": "65e2621da6e3ea79ddec7f46",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/8d9c6c8b807cfdae79210f7548425b6e.png",
-        "created": "2020-08-20T08:17:17.315Z",
-        "name": "Boe",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "5b0746088fa72313783e3269",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-07-23T09:16:36.589Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6a616a523bf82aeb5b56dc8f",
-      "private": false,
-      "reactions": {
-        "like": 1
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "The entire layout feels like its trying to be very cross-platform compatible but doesn't have any aesthetic or style that stands out. It looks very bland and almost discord-like (boo).",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "6a61e15878d63b1116355986",
       "aiGenerated": false,
@@ -255,7 +209,7 @@
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -301,7 +255,7 @@
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -395,7 +349,7 @@
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -487,7 +441,7 @@
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -532,13 +486,115 @@
       "postDeleted": false,
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This is so much better.\n\nThe \"before\" version is very tall, which works on the website where it's easy to scroll, but not ingame where it's more confined. It has way too much empty space and it feels much more difficult to navigate around. Your bio doesn't even show up until the bottom, and it gets cut off way too early. Having the represented group shown under the name feels like a bandaid fix for groups not even appearing until you scroll.\n\nThis concept fixes all of that.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a623cbca1c4233277bd8cff",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ceabfeed8a10d72699b8acb",
+        "alias": "Yellow green Mouse",
+        "aliasID": "65c389caed6eefce4cb8c2f6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/42909c3f578c2173f3768104eefea022.png",
+        "created": "2019-05-26T16:33:50.238Z",
+        "name": "MyNamesRaph",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-23T16:09:32.825Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a616a523bf82aeb5b56dc8f",
+      "private": false,
       "reactions": null,
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "This is so much better.\n\nThe \"before\" version is very tall, which works on the website where it's easy to scroll, but not ingame. It has way too much empty space and it feels much more difficult to navigate around. Your bio doesn't even show up until the bottom, and it gets cut off way too early. Having the represented group shown under the name feels like a bandaid fix for groups not even appearing until you scroll.\n\nThis concept fixes all of that.",
+      "value": "This is a good way to introduce a scrollable bio that wouldn't interfere with scrolling the whole page since it's off to the left you'd be much less likely to accidentally scroll the bio when trying to scroll the page.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a623d390d0418e9cdbb0934",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6803c76c9fd01c0ccdd2dd39",
+        "alias": "Leading Barnacle",
+        "aliasID": "6803c76c8ccc1d8b3b47bab6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/221022dfdc3aa856ba18331a1f9a86f6.png",
+        "created": "2025-04-19T15:55:24.217Z",
+        "name": "RednexTheFox",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-23T16:11:37.970Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "612ea6a7f4aca00a10286465",
+          "alias": "Jasper Viper",
+          "aliasID": "65c28ab5ed6eefce4ce1ffa1",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/85ad36a75a0c89ecc613c3a104bd536b.png",
+          "created": "2021-08-31T22:01:11.603Z",
+          "name": "MyroP",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a61e15878d63b1116355986",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a616a523bf82aeb5b56dc8f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{612ea6a7f4aca00a10286465|full_name} No need to seperate design, mobile already works perfectly fine from my experience",
       "viewerReactions": null,
       "voteID": null
     }
@@ -561,19 +617,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 197,
+  "maxScore": 198,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a616a523bf82aeb5b56dc8f/119337932.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 197,
+  "score": 198,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T01:11:46.689Z",
   "subCategoryID": null,
   "title": "[1878] Improve user profile layout [Redesign concept]",
-  "trendingScore": 2956.3382162984904,
+  "trendingScore": 2956.343491648546,
   "updatedBy": "5f67899159b0841fe0d3891b",
   "urlName": "1878-improve-user-profile-layout-redesign-concept",
   "viewerIsAuthor": false,
@@ -585,6 +641,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62df356535ad1046aadcffda",
+      "alias": "Psychological Panther",
+      "aliasID": "65f8b723a63714bcb3a8762c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9b00c7ba83e82f1374f54255c90236f1.png",
+      "companies": [],
+      "name": "Spineblade",
+      "urlName": null,
+      "voteID": "6a623e2dd4058d953b4c775a"
+    },
+    {
+      "_id": "649b83fd8ca61609383735ec",
+      "alias": "Rosewood Orca",
+      "aliasID": "65c28396ed6eefce4cd16ac0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ba91d0a52c61ad98af17c6a0ea8ba029.png",
+      "companies": [],
+      "name": "Purpzie",
+      "urlName": null,
+      "voteID": "6a623ca4d4058d953b4c6b39"
+    },
     {
       "_id": "6803c76c9fd01c0ccdd2dd39",
       "alias": "Leading Barnacle",
