@@ -1,0 +1,93 @@
+{
+  "_id": "6a624c95338c36acc65ac799",
+  "aiCategories": [
+    "loc.hud",
+    "social.nameplates"
+  ],
+  "aiTaggedAt": "2026-07-23T17:17:52.498534Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62def099a721d644ba069aea",
+    "alias": "Obvious Caribou",
+    "aliasID": "65c2c483ed6eefce4ce82932",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b6182c4c6ae045b98f3de2ccedcdc785.png",
+    "created": "2022-07-25T19:35:53.055Z",
+    "name": "Austen_",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62def099a721d644ba069aea",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "postCount": 527,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-23T17:17:09.270Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is only technically related to the beta because it is something that only became relevant due to the layout change. It was something that could have been nice in the past, but unnecessary since there was support next to them before:\n\nThe shield icons that represent a user's trust rating are not setup to be colorblind friendly, but the avatar performance rating icons are. With the old nameplates, there was text clearly stating the trust rating next to the icon, but in the new nameplates, they are only represented with the icon. The problem is that these icons look exactly the same for every trust rating, and the only difference is the color. Colorblind friendly design holds heavy importance in being able to differentiate something in grayscale as well, if you are designing it in a mindful way. \n\nThe avatar performance rating symbols are seemingly made to be intentionally colorblind friendly in their designs (Star on excellent, circle in-fill expands outward as the rating gets worse, and then an exclamation point for very poor). I think it would be a change of interest to come up with new designs for the trust ratings on the nameplates, to support us colorblind people!\n\nImage attached to show the trust and performance symbols in greyscale, for examples. If you can't tell which is which in the image without the words, neither can a lot of regular players!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a624c94338c36acc65ac783",
+  "imageURLs": [
+    "https://canny-assets.io/images/1e2d13fe028c6644107883bc621f67a7.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a624c95338c36acc65ac799/1620169422.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-23T17:17:09.270Z",
+  "subCategoryID": null,
+  "title": "[1878] Accessibility: Colorblindness; trust ratings on new nameplates",
+  "trendingScore": 2951.796039330031,
+  "updatedBy": "62def099a721d644ba069aea",
+  "urlName": "1878-accessibility-colorblindness-trust-ratings-on-new-nameplates",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62def099a721d644ba069aea",
+      "alias": "Obvious Caribou",
+      "aliasID": "65c2c483ed6eefce4ce82932",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b6182c4c6ae045b98f3de2ccedcdc785.png",
+      "companies": [],
+      "name": "Austen_",
+      "urlName": null,
+      "voteID": "6a624c95d4058d953b4d08cc"
+    }
+  ]
+}
