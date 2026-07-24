@@ -1,0 +1,106 @@
+{
+  "__v": 0,
+  "_id": "63384957e0c98a34d4094b42",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "audio.steam-audio"
+  ],
+  "aiTaggedAt": "2026-07-24T14:11:21.398920Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5fca5df4d58780532024a52b",
+    "alias": "Toffee Tortoise",
+    "aliasID": "65c26da3ed6eefce4c4d0863",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ea6d29f016f7e9414ca4dc827d8ed996.png",
+    "created": "2020-12-04T16:04:04.984Z",
+    "name": "DrBlackRat",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5fca5df4d58780532024a52b",
+  "board": {
+    "_id": "607e649994674f6af79c7a11",
+    "name": "Noise Beta",
+    "urlName": "noise-beta"
+  },
+  "boardID": "607e649994674f6af79c7a11",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-01T14:06:15.186Z",
+  "deletedAt": null,
+  "details": "# Issue:\n\nOn the VRC Spatial Audio Source there is an option to use the volume curve of the Audio Source for spatialization. (Use Audio Source Volume Curve) This setting is currently ignored during auto conversion which can result in Audio Sources being quieter, louder, etc than they are supposed to be.\n\n# Attachments:\n\nHere is a video showcasing the issue: https://streamable.com/jmwtfg  \n\nBelow you can see my Audio Source / VRC Spatial Audio Source settings:",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb941e4c3e90df136fc7a",
+  "imageURLs": [
+    "https://canny.io/images/8cd8c655ad0d4a4c5170e9263c968e10.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 3,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-01T14:06:15.186Z",
+  "subCategoryID": null,
+  "title": "[1243] useAudioSourceVolumeCurve isn't accounted for during auto conversion",
+  "trendingScore": 2951.221253688823,
+  "updatedBy": "5fca5df4d58780532024a52b",
+  "urlName": "1243-useaudiosourcevolumecurve-isnt-accounted-for-during-auto-conversion",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6a63643612d9cf9762696c9c"
+    },
+    {
+      "_id": "6170461b2ae5867c9bb22a14",
+      "alias": "Flamingo pink Cuckoo",
+      "aliasID": "65c28d72ed6eefce4c4dbddb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2435664d01d0f2682b90a7ee2a0afff6.png",
+      "companies": [],
+      "name": "৹lux",
+      "urlName": null,
+      "voteID": "637400040c5a95076f84d441"
+    },
+    {
+      "_id": "5fca5df4d58780532024a52b",
+      "alias": "Toffee Tortoise",
+      "aliasID": "65c26da3ed6eefce4c4d0863",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ea6d29f016f7e9414ca4dc827d8ed996.png",
+      "companies": [],
+      "name": "DrBlackRat",
+      "urlName": null,
+      "voteID": "63384957e0c98a34d4094b61"
+    }
+  ]
+}

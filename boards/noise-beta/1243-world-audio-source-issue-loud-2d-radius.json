@@ -1,0 +1,93 @@
+{
+  "__v": 0,
+  "_id": "633841cfcf211d44a872b316",
+  "aiCategories": [
+    "loc.in-world",
+    "audio.voice",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-07-24T14:11:21.400064Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "58c6b8ad227a56787575ebbd",
+    "alias": "Waterspout Bee",
+    "aliasID": "65ba012ced6eefce4cea0fc7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2a04b5de99098146d32ecebb6f534f13.png",
+    "created": "2017-03-13T15:20:13.362Z",
+    "name": "Zarniwoop",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "58c6b8ad227a56787575ebbd",
+  "board": {
+    "_id": "607e649994674f6af79c7a11",
+    "name": "Noise Beta",
+    "urlName": "noise-beta"
+  },
+  "boardID": "607e649994674f6af79c7a11",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-10-01T13:34:07.458Z",
+  "deletedAt": null,
+  "details": "https://vrchat.com/home/world/wrld_66ab34f1-f906-4cb2-8e9c-9ae6bc0f334a\nAt least two sound sources vastly differ from how they should sound like. On Noise they can be heard across the world, much louder than expected and they sound more 2D than 3D. On Live build they sound fine and the range, loudness and spatialization is as expected.\nThe troublesome sound sources are located in the world scene at:\n1. BabyDiasora > babyDiasora_skeletalMesh > root > COG > neck > head (Headbone has audio component)\n2. Red Car > Root > Base > MotorSound (The other cars have same issue)\nFrom what I can tell all the other audio sources act like how they're expected to.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb941e4c3e90df136fc6c",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-10-01T13:34:07.458Z",
+  "subCategoryID": null,
+  "title": "[1243] World audio source issue (loud, 2D, radius)",
+  "trendingScore": 2951.221252303241,
+  "urlName": "1243-world-audio-source-issue-loud-2d-radius",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6a63643512d9cf9762696c9b"
+    },
+    {
+      "_id": "58c6b8ad227a56787575ebbd",
+      "alias": "Waterspout Bee",
+      "aliasID": "65ba012ced6eefce4cea0fc7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2a04b5de99098146d32ecebb6f534f13.png",
+      "companies": [],
+      "name": "Zarniwoop",
+      "urlName": null,
+      "voteID": "633841cfcf211d44a872b343"
+    }
+  ]
+}
