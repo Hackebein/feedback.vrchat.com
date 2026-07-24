@@ -2,11 +2,11 @@
   "_id": "6a6152b63bf82aeb5b53bb0e",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
     "groups.nameplates",
-    "web.groups"
+    "web.groups",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-07-24T18:19:13.003800Z",
+  "aiTaggedAt": "2026-07-24T21:16:51.177956Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649520bdbec709090d4453cd",
@@ -37,7 +37,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 24,
+  "commentCount": 25,
   "comments": [
     {
       "_id": "6a624ccb0d0418e9cdbe6c8f",
@@ -561,7 +561,7 @@
       "postID": "6a6152b63bf82aeb5b53bb0e",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -655,7 +655,7 @@
       "postID": "6a6152b63bf82aeb5b53bb0e",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -663,6 +663,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Aside from the group banners barely being visible now, and no standardized sizing, I dislike how indicator icons are overlaid on top of the group banner. (Avatar Rating, Safety Rating, etc, etc.)\n\nI get it saves space and makes things less cluttered, but I'd prefer some different solution to this. Especially considering that a specifically colored group banner might interfere with the icon colors. So it just hurts visibility for both icons and banners at a glance.\n\nMade a quick mockup of a UI that keeps every element separate to not overlay things, which I would find ideal. In no way an ideal solution either, but I just wanna give thought on not having the icons overlap the other elements.\n\nWidth and height should be standardized and not dependent on username length. Just a fixed length that holds any username size, in tandem with the banner size. The pills for status and pronouns would expand up to the same length of the username/banner. The icons on the left would hide/show depending on what's applicable. Has room for more icons like mute/deafen, vrc+, or whatever else, and shows friend status. And could for example show a different icon for an incoming friend request. This specific design might make the UI look very crowded though, it's just a concept idea.\n\nMost importantly I agree with the main post, the sizing should have a standard that we can stick to and work with, so we won't have to guess, or find out it looks different for a person with a shorter/longer name. In a perfect world we'd get a web UI when uploading or choosing a banner, that shows what will be visible/cropped. But even a written size guide would be big deal.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a63d07ae677bcdd53c79f96",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a624f34d4058d953b4d2b56",
+        "alias": "Neon blue Roadrunner",
+        "aliasID": "6a624f34d4058d953b4d2b59",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/969b958da451f0ea7df8e510a46498a9.png",
+        "created": "2026-07-23T17:28:20.574Z",
+        "name": "polothepup",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-24T20:52:10.483Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "644fcbfc66bede093c62357f",
+          "alias": "Fellow Koi",
+          "aliasID": "65c46327ed6eefce4c494d95",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/a26e915e82147083f432612489bf0cc9.png",
+          "created": "2023-05-01T14:26:04.150Z",
+          "name": "Lightning4D",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a63abe9e677bcdd53c24368",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6152b63bf82aeb5b53bb0e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{644fcbfc66bede093c62357f|full_name} I likeeeeeee",
       "viewerReactions": null,
       "voteID": null
     }
@@ -684,19 +740,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 376,
+  "maxScore": 379,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6152b63bf82aeb5b53bb0e/2099692115.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 376,
+  "score": 379,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-07-23T18:36:06.968Z",
   "subCategoryID": null,
   "title": "[1878] Group Banners are useless with the new nameplates. Standardize group banner dimensions.",
-  "trendingScore": 2957.0332461097664,
+  "trendingScore": 2957.0425972473863,
   "updatedBy": null,
   "urlName": "1878-group-banners-are-useless-with-the-new-nameplates-standardize-group-banner",
   "viewerIsAuthor": false,
@@ -708,6 +764,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f9905bcea794e0337e71f92",
+      "alias": "Ginger orange Goose",
+      "aliasID": "65c26da3ed6eefce4c4d07ea",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9f6f4d1af836f3bb138cb874af1711d0.png",
+      "companies": [],
+      "name": "zexc",
+      "urlName": null,
+      "voteID": "6a63d2be12d9cf97626dcae0"
+    },
     {
       "_id": "629900b4f9ac880b73ad0e0e",
       "alias": "Good Deer",
