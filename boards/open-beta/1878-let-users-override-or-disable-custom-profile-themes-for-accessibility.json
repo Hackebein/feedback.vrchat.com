@@ -118,7 +118,9 @@
       "postDeleted": false,
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -144,19 +146,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 110,
+  "maxScore": 112,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6155c9d586a21e1a176e96/527822014.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 110,
+  "score": 112,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-22T23:44:09.613Z",
   "subCategoryID": null,
   "title": "[1878] Let users override or disable custom profile themes for accessibility",
-  "trendingScore": 2955.776724561081,
+  "trendingScore": 2955.7959846162416,
   "updatedBy": null,
   "urlName": "1878-let-users-override-or-disable-custom-profile-themes-for-accessibility",
   "viewerIsAuthor": false,
@@ -168,6 +170,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "61cea3c99954c41ea7b7a8d2",
+      "alias": "Violet Piranha",
+      "aliasID": "65e0d15ba6e3ea79dd7aa8ad",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3766d990ca9015d66f63baf3a29a0268.png",
+      "companies": [],
+      "name": "TrebleSketch",
+      "urlName": null,
+      "voteID": "6a62ace1d4058d953b504927"
+    },
+    {
+      "_id": "62229b02e709ef2a451893e1",
+      "alias": "Modern Whippet",
+      "aliasID": "660edb02e5d26962aa920f3c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e8022dedc056168a3a162a9144516ef6.png",
+      "companies": [],
+      "name": "Galeboomer",
+      "urlName": null,
+      "voteID": "6a62ac29d4058d953b50478d"
+    },
     {
       "_id": "612fe5a5d0e977457c0c26b8",
       "alias": "Natural Perch",

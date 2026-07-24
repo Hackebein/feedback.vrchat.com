@@ -116,7 +116,9 @@
       "postDeleted": false,
       "postID": "6a6181bf78d63b111623344d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -251,7 +253,7 @@
       "postID": "6a6181bf78d63b111623344d",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -372,19 +374,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 30,
+  "maxScore": 32,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6181bf78d63b111623344d/57755396.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 30,
+  "score": 32,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T02:51:43.028Z",
   "subCategoryID": null,
   "title": "[1878] Issues with new expanded nameplate (Widgets and pronouns)",
-  "trendingScore": 2954.4948197473673,
+  "trendingScore": 2954.562520085657,
   "updatedBy": null,
   "urlName": "1878-issues-with-new-expanded-nameplate-widgets-and-pronouns",
   "viewerIsAuthor": false,
@@ -396,6 +398,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5d16bb59d93fd30b78f2082f",
+      "alias": "Marvellous Iguana",
+      "aliasID": "65c332a3ed6eefce4c002d38",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f175104376a21fbda09a5350c921032b.png",
+      "companies": [],
+      "name": "Boofy․",
+      "urlName": null,
+      "voteID": "6a62ac28d4058d953b50478c"
+    },
+    {
+      "_id": "5f2e716884641507160067c0",
+      "alias": "Granite Frog",
+      "aliasID": "65c26da3ed6eefce4c4d07ad",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6fef2f5ce1bf534be059d162c44966bf.png",
+      "companies": [],
+      "name": "CyberKitsune",
+      "urlName": null,
+      "voteID": "6a62aac0d4058d953b503f42"
+    },
     {
       "_id": "5f3cbf1724a63b5139e26a2f",
       "alias": "Fine Hawk",
