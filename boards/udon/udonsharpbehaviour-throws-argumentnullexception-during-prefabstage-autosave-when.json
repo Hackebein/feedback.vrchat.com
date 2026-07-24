@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-15T17:44:56.842586Z",
+  "aiTaggedAt": "2026-07-24T14:21:23.424864Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "646257b2486c4a0932080360",
@@ -35,7 +35,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a3029a823b8e2233ee41693",
@@ -71,6 +71,50 @@
       "statusChangeID": "6a3029a823b8e2233ee41692",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a63739f606fa9f0e27bd363",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66c40b74fbf2cb01662b4e78",
+        "alias": "Growing Capybara",
+        "aliasID": "66c40b743e088c8d6b61e4e9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2a6478c13ae1e39fbb4ee184ad9656cc.png",
+        "created": "2024-08-20T03:20:20.508Z",
+        "name": "someka",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-24T14:15:59.841Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2abc97403b50d51dc5c4d3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Adding a note since I encountered the same exception with a different trigger.\n\n**Symptom**\n\nFor a prefab containing an UdonSharpBehaviour, after modifying the script (a class inheriting UdonSharpBehaviour) and then running \"Overrides\" > \"Apply All\" on a prefab instance already placed in the Hierarchy, I get a large number of `ArgumentNullException` errors with the same stack trace as this post.\n\n```\n\nArgumentNullException: Value cannot be null.\n\nParameter name: unityObject\n\nVRC.Udon.Serialization.OdinSerializer.UnitySerializationUtility.SerializeUnityObject(...)\n\nUdonSharp.UdonSharpBehaviour.UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize()\n\n```\n\nThe Apply itself completes successfully, and I haven't observed any actual harm to runtime values or builds.\n\n**Steps to reproduce**\n\n1. Remove or rename some fields on an UdonSharpBehaviour\n\n2. Select a prefab instance that includes this component and is already placed in the Hierarchy (in-scene)\n\n3. In the Inspector, run \"Overrides\" > \"Apply All\" for that component\n\n4. Numerous `ArgumentNullException` errors are logged to the console\n\n**How this may differ from ここあ こあ's report**\n\nAccording to ここあ こあ's report, the cause is attributed to a UnityObject field whose referenced target has become Unity's pseudo-null, during PrefabStage autosave / moving a child object.\n\nIn my case, I suspect it's different: modifying the script removes/renames the field itself, leaving an orphaned entry (for a field name that no longer has a corresponding definition) in the public variables table held by the in-scene instance. Re-serializing that orphaned entry during Apply then triggers the same exception.\n\nSince the stack trace (the code path where it occurs) looks identical, there's likely a shared underlying fragility in how OdinSerializer handles the UnityObject reference list. However, the actual trigger conditions may be a different pattern, so I'm sharing this as additional context.\n\n- Unity version: 2022.3.22f1\n\n- VRChat SDK Worlds: 3.10.4\n\n- VRChat SDK Base: 3.10.4\n\n- UdonSharp included with SDK",
       "viewerReactions": null,
       "voteID": null
     }
@@ -130,7 +174,7 @@
       "alias": "Intimate Otter",
       "aliasID": "6a5f9e9bd4058d953b392a73",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7e003000f53bfd62db2d20b86ece7413.png",
+      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
       "companies": [],
       "name": "HackebeinsBot",
       "urlName": null,
