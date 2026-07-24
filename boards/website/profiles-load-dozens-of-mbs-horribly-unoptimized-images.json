@@ -1,0 +1,96 @@
+{
+  "_id": "6a6392e6fdc02c134b6d7f33",
+  "aiCategories": [
+    "loc.website",
+    "web.profiles"
+  ],
+  "aiTaggedAt": "2026-07-24T16:31:45.077533Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f67899159b0841fe0d3891b",
+    "alias": "Amaranth Llama",
+    "aliasID": "65c26da3ed6eefce4c4d09df",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a851714aa7341a9768cd417322622b6b.png",
+    "created": "2020-09-20T16:55:45.186Z",
+    "name": "Patroll",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f67899159b0841fe0d3891b",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 325,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-24T16:29:26.452Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Opening profiles loads dozens of MBs of data because of unoptimized images which are uncompressed and too big for their actual size on the website. This can drain your mobile internet transfer. \n\nIt loads **horrible images like 2K 4.4MB image for a 20x20 pixels icon**\n\n# E.g. profiles\n\n(39 MB - usr_7d3dca04-5671-4738-a277-04fad9b586e4)\n\n(42 MB - usr_f8fcae7e-bc52-423f-9821-72d29901be64)\n\n(32 MB - usr_84f57819-bbca-46a0-a041-cd66258e0b30)\n\n(32 MB - usr_6212e6cc-3072-4cbf-8b1a-1467fe726f76)\n\n# E.g. elements\n\nElement vs what it actually loads\n\n- Mutual friend 20x20 icon = 4.3MB 2000x1000 \n\n- Own thumbnail 230x100 = 4.4MB 2000x1000 \n\n- Profile's Worlds section has 36 images 160x90 each = 1200x900 ~1-2MB x 36\n\n- Profile's group 40x40 icon = 7.4MB 1700x1700 \n\nUse proper scaled down images.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a6392e6fdc02c134b6d7f32",
+  "imageURLs": [
+    "https://canny-assets.io/images/07b22c923f9a5dbfdf224c987c8307e7.png",
+    "https://canny-assets.io/images/26d3968e703f6e2543742d4cfa7878ee.png",
+    "https://canny-assets.io/images/0afce9eb63cf937f2d6d592c0cf1c046.png",
+    "https://canny-assets.io/images/0865f1d67f401de19ce29a498bbef42a.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6392e6fdc02c134b6d7f33/251225645.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-24T16:29:26.452Z",
+  "subCategoryID": null,
+  "title": "Profiles load dozens of MBs - Horribly unoptimized images",
+  "trendingScore": 2951.9341630229874,
+  "updatedBy": "5f67899159b0841fe0d3891b",
+  "urlName": "profiles-load-dozens-of-mbs-horribly-unoptimized-images",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f67899159b0841fe0d3891b",
+      "alias": "Amaranth Llama",
+      "aliasID": "65c26da3ed6eefce4c4d09df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a851714aa7341a9768cd417322622b6b.png",
+      "companies": [],
+      "name": "Patroll",
+      "urlName": null,
+      "voteID": "6a6392e612d9cf97626b5921"
+    }
+  ]
+}
