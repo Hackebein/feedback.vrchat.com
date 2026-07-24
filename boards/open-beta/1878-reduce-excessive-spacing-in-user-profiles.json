@@ -5,7 +5,7 @@
     "loc.main-menu",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-07-24T13:40:47.754453Z",
+  "aiTaggedAt": "2026-07-24T13:57:50.232108Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d710dc1c881463f153789",
@@ -36,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a615e9482d05738710b5214",
@@ -168,13 +168,71 @@
       "postDeleted": false,
       "postID": "6a615d7bd586a21e1a18e6d5",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "You may be interested in some of the redesign concepts for the player profiles, \n\nhere was mine: https://feedback.vrchat.com/open-beta/p/1878-the-new-social-menu-ui-feedback-and-suggestions\n\nAnd here was one that I just found that redesigned the quick menu player preview: https://feedback.vrchat.com/open-beta/p/1878-improve-user-quickmenu-layout-redesign-concept",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a636e20e55b6979ee3b492d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5e666dabcd9011116f8e2f4f",
+        "alias": "Pink Reptile",
+        "aliasID": "65c7141eed6eefce4c4f1c91",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/075b820b4427b5ce7a6c50f1c9a674a0.png",
+        "created": "2020-03-09T16:24:11.421Z",
+        "name": "Arty~",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-24T13:52:32.637Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "622893dc14e3795af3d9ed30",
+          "alias": "Aquamarine Gayal",
+          "aliasID": "65c2ce8bed6eefce4c1e378a",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/7b52f642641dff664fd315496205d1a1.png",
+          "created": "2022-03-09T11:47:40.949Z",
+          "name": "TheCreationKing",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a636836a1a345eae5021f0b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a615d7bd586a21e1a18e6d5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{622893dc14e3795af3d9ed30|full_name} Here is another one, for the user profile:\n\nhttps://feedback.vrchat.com/open-beta/p/1878-improve-user-profile-layout-redesign-concept",
       "viewerReactions": null,
       "voteID": null
     }
@@ -199,19 +257,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 99,
+  "maxScore": 100,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a615d7bd586a21e1a18e6d5/966651761.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 99,
+  "score": 100,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-07-23T18:40:01.124Z",
   "subCategoryID": null,
   "title": "[1878] Reduce excessive spacing in user profiles",
-  "trendingScore": 2955.701621168571,
+  "trendingScore": 2955.712935673153,
   "updatedBy": null,
   "urlName": "1878-reduce-excessive-spacing-in-user-profiles",
   "viewerIsAuthor": false,
@@ -223,6 +281,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5e666dabcd9011116f8e2f4f",
+      "alias": "Pink Reptile",
+      "aliasID": "65c7141eed6eefce4c4f1c91",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/075b820b4427b5ce7a6c50f1c9a674a0.png",
+      "companies": [],
+      "name": "Arty~",
+      "urlName": null,
+      "voteID": "6a636e8312d9cf976269b717"
+    },
     {
       "_id": "641042524acac4451abfb265",
       "alias": "Pink Landfowl",
