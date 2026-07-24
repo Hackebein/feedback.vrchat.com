@@ -1,0 +1,106 @@
+{
+  "_id": "6a63082a606fa9f0e26785a3",
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-07-24T06:39:09.648293Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6438a7521b1999430a975cab",
+    "alias": "Sanguine brown Grasshopper",
+    "aliasID": "65f0b02ba6e3ea79dd2aefb8",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/001e1ff74d2024d936dfeb703143442f.png",
+    "created": "2023-04-14T01:07:30.491Z",
+    "name": "Danko_",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6438a7521b1999430a975cab",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1377,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-24T06:37:30.419Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "It seems like all spritesheet emoji with transparency have an issue where it fills any transparencys in with the nearest pixel. Doesn't seem to happen on desktop. First Image is the bug from PCVR perspective; Second is Desktop, both on Build #1878",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a63082a606fa9f0e267859e",
+  "imageURLs": [
+    "https://canny-assets.io/images/4ef98836cdf286a156577850f606b31d.png",
+    "https://canny-assets.io/images/c03e363f2418b8127a02acc3d97f3ba4.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a63082a606fa9f0e26785a3/1449763031.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-24T06:37:30.419Z",
+  "subCategoryID": null,
+  "title": "(Open Beta Build #1878) Custom Spritesheet-Animated Emoji Broken",
+  "trendingScore": 2952.2809223347326,
+  "updatedBy": null,
+  "urlName": "open-beta-build-1878-custom-spritesheet-animated-emoji-broken",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df09c0053b0a44a00820ad",
+      "alias": "Wide Mandrill",
+      "aliasID": "65c65c51ed6eefce4c13be36",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d5990dff479ea3feb69a29dcd10e5ede.png",
+      "companies": [],
+      "name": "Brikaro",
+      "urlName": null,
+      "voteID": "6a63084ad4058d953b526e83"
+    },
+    {
+      "_id": "6438a7521b1999430a975cab",
+      "alias": "Sanguine brown Grasshopper",
+      "aliasID": "65f0b02ba6e3ea79dd2aefb8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/001e1ff74d2024d936dfeb703143442f.png",
+      "companies": [],
+      "name": "Danko_",
+      "urlName": null,
+      "voteID": "6a63082ad4058d953b526e10"
+    }
+  ]
+}
