@@ -153,5 +153,5 @@ fi
 # Retire Postfix email wake-up if a previous deploy installed it.
 FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/uninstall_mail_on_server.sh"
 
-# Canny notification + newest-post wake poller → repository_dispatch canny-wake.
+# Canny host daemon (30s notify/new-posts + 65s×10 upvotes) → repository_dispatch canny-wake.
 FEEDBACK_REPO_ROOT="${REPO}" /bin/bash "${REPO}/deploy/scripts/install_canny_wake_on_server.sh"

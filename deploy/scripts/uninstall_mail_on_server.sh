@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Tear down Postfix Canny-email wake-up (replaced by feedback-canny-wake.timer).
+# Tear down Postfix Canny-email wake-up (replaced by feedback-canny-wake.service).
 # Idempotent. Safe if mail was never installed.
 
 set -euo pipefail

@@ -13,10 +13,6 @@ on:
         description: "How many activity-based posts to refresh on top of new+updated"
         required: false
         default: "500"
-      vote-batch:
-        description: "Max posts to upvote this run"
-        required: false
-        default: "50"
   repository_dispatch:
     types: [canny-wake]
 
@@ -87,21 +83,20 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
-            # Host canny-wake poller: newest sweep + notifications; skip oldest/voting.
+            # Host canny-wake daemon: newest sweep + notifications; voting stays on host.
             python3 scripts/update.py --refresh-oldest 0 --refresh-newest 0 --vote-batch 0
             exit 0
           fi
           OLDEST="${{ github.event.inputs.refresh-oldest }}"
           NEWEST="${{ github.event.inputs.refresh-newest }}"
-          VOTES="${{ github.event.inputs.vote-batch }}"
           # schedule / workflow_dispatch → plan defaults
           OLDEST="${OLDEST:-500}"
           NEWEST="${NEWEST:-500}"
-          VOTES="${VOTES:-50}"
+          # Host feedback-canny-wake daemon owns paced upvotes.
           python3 scripts/update.py \
             --refresh-oldest "${OLDEST}" \
             --refresh-newest "${NEWEST}" \
-            --vote-batch "${VOTES}"
+            --vote-batch 0
 
       - name: Commit and push main
         if: steps.update.outcome == 'success' || steps.update.outcome == 'failure'

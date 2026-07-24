@@ -1339,12 +1339,22 @@ def _vote_batch_limit() -> int:
 def _upvote_backlog(session, stored, state) -> int:
     """Upvote posts not yet in votedPostIds; returns number newly voted this run.
 
-    Stops the batch on Canny rate-limit (HTTP 429 / slow down).
+    Pending posts are ordered by most-recent activity first (same signal as
+    --refresh-newest). Stops the batch on Canny rate-limit (HTTP 429 / slow down).
     """
     voted = set(state.get("votedPostIds") or [])
     pending = [pid for pid in stored if pid not in voted]
-    # Prefer newly discovered / unscored-first is unnecessary; stable order.
-    pending.sort()
+
+    def _activity_key(pid: str):
+        info = stored.get(pid) or {}
+        post = info.get("post") if isinstance(info, dict) else None
+        dt = _post_last_activity_dt(post) if isinstance(post, dict) else None
+        # Ascending: dated posts first (newest activity via negated ts), then undated.
+        if dt is None:
+            return (1, 0.0, pid)
+        return (0, -dt.timestamp(), pid)
+
+    pending.sort(key=_activity_key)
     limit = _vote_batch_limit()
     batch = pending[:limit]
     ok = 0
