@@ -2,10 +2,11 @@
   "_id": "6a619e9378d63b111625f009",
   "aiCategories": [
     "loc.quick-menu",
-    "open-beta",
-    "social.friends"
+    "loc.main-menu",
+    "social.friends",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-07-23T16:54:36.865383Z",
+  "aiTaggedAt": "2026-07-24T05:21:58.069696Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "657db432e7f0dfbab9851270",
@@ -32,11 +33,11 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1373,
+    "postCount": 1376,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a6246c60d0418e9cdbd3349",
@@ -80,6 +81,50 @@
       "statusChangeID": "6a6246c60d0418e9cdbd3331",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a62f3279312719d766f8e02",
+      "aiGenerated": false,
+      "author": {
+        "_id": "657db432e7f0dfbab9851270",
+        "alias": "Fine Swordtail",
+        "aliasID": "6a619c94d4058d953b47c7d5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3f4796f20c3819c4b9f4aa0ce8a30288.png",
+        "created": "2023-12-16T14:29:06.197Z",
+        "name": "Skeeo",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-24T05:07:51.848Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a619e9378d63b111625f009",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Im still trying to reproduce it, but it seems to be a specific thing... im not sure",
       "viewerReactions": null,
       "voteID": null
     }
