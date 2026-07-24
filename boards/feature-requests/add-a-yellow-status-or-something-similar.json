@@ -1,10 +1,11 @@
 {
   "_id": "6a5a9fd44844de0e02ef33db",
   "aiCategories": [
-    "loc.in-world",
-    "social.nameplates"
+    "loc.main-menu",
+    "social.nameplates",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-07-24T02:02:03.975901Z",
+  "aiTaggedAt": "2026-07-24T06:00:53.762298Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a5a9c71d4058d953becbdc2",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a6268b99312719d765cf29a",
@@ -71,6 +72,118 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I think i would be too much niche case to consider, profiles are tied to instances not worlds  so i dont know why they would need over complex database relations just for that. \n\nAlso if people complain to you that they getting requested (or else you rally spaming it) its there problem not yours, there red and descriptive status for that. If you on orange, you bound to get requests.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a62fd70611dd3d5b6f793ea",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a5a9c71d4058d953becbdc2",
+        "alias": "Vanilla Amphibian",
+        "aliasID": "6a5a9c72d4058d953becbdc6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e9ea15a17280705e6e2bf18fa4410756.png",
+        "created": "2026-07-17T21:19:45.951Z",
+        "name": "AlviRunic",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-24T05:51:44.774Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5ae4f9f6801fa451b10edafc",
+          "alias": "Jasper Whippet",
+          "aliasID": "65ba0a43ed6eefce4cd6588b",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/f3bc086c39fe4eb4e5460686c437c9fe.png",
+          "created": "2018-04-28T22:47:18.692Z",
+          "name": "Shadowriver",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6268b99312719d765cf29a",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a5a9fd44844de0e02ef33db",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5ae4f9f6801fa451b10edafc|full_name} So when it comes to the instances thing, yeah I get that. I know my wording of the proposal doesn't necessarily take into account how the actual system itself works, but it's more of a concept anyway, less so meant to fully work out the minute details. As someone who knows nothing about VRChat's inner workings, there's not really any way I would be able to figure that stuff out on my own. Then again, that's not really expected here, to my knowledge. This is primarily just a forum to post suggestions on things we as a community would like to see in the game.\n\nYou're right on the second part as well. In reality, it is the problem of the person using the status, not the person requesting. The thing is that there are a good number of people (like myself) who get a sense that they're being rude somehow if they request without knowing what the person is doing, even if there's an assumed sense of who's problem it is. The suggestion is more of a thing to make those people feel more comfortable joining their friends. That's my main point with it.\n\nAnd also, given I've seen at least two other suggestions on this forum with a similar premise (one of them also directly referencing a Yellow status), it feels clear to me that there very much are other people who might feel this way, or at least in some way that leads to a similar conclusion.\n\nSo sure, it might be a little niche, but if you think about it, so is Blue status. Like, how hard is it to just accept an invite? Why do we really need to auto-accept when in practicality it only saves a few seconds? If the concern is that the person might be busy when they get the request, then your logic still applies in a way. The person requesting would likely understand that their friend might be busy at the moment, and thus would likely be comfortable with waiting for a response. There's still an assumption to be made about the situation.\n\nHaving a bridge status between open joining and request-only simply gives more information and leaves less to the person wanting to join to figure out. It would be easier to see someone on Yellow, see what world their in without seeing the specific instance, and say \"Hey, this person seems like they'd be available to hang out. I'll ask them!\" then it would to see someone on Orange with no other information and wonder if they want to be left alone or not.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a62fdca7fe6c05071e11936",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a5a9c71d4058d953becbdc2",
+        "alias": "Vanilla Amphibian",
+        "aliasID": "6a5a9c72d4058d953becbdc6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e9ea15a17280705e6e2bf18fa4410756.png",
+        "created": "2026-07-17T21:19:45.951Z",
+        "name": "AlviRunic",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-24T05:53:14.332Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5ae4f9f6801fa451b10edafc",
+          "alias": "Jasper Whippet",
+          "aliasID": "65ba0a43ed6eefce4cd6588b",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/f3bc086c39fe4eb4e5460686c437c9fe.png",
+          "created": "2018-04-28T22:47:18.692Z",
+          "name": "Shadowriver",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6268b99312719d765cf29a",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a5a9fd44844de0e02ef33db",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5ae4f9f6801fa451b10edafc|full_name} Also sorry for the long reply, I tend to be extremely verbose when it comes to things like this. It helps me to convey exactly what I'm thinking without leaving key information available to be potentially misinterpreted.",
       "viewerReactions": null,
       "voteID": null
     }
