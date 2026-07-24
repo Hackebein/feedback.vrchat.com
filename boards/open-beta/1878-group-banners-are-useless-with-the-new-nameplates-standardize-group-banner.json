@@ -560,7 +560,9 @@
       "postDeleted": false,
       "postID": "6a6152b63bf82aeb5b53bb0e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -604,7 +606,9 @@
       "postDeleted": false,
       "postID": "6a6152b63bf82aeb5b53bb0e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -656,7 +660,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Aside from the group banners barely being visible now, and no standardized sizing, I dislike how indicator icons are overlaid on top of the group banner. (Avatar Rating, Safety Rating, etc, etc.)\n\nI get it saves space and makes things less cluttered, but I'd prefer some different solution to this. Especially considering that a specifically colored group banner might interfere with the icon colors. So it just hurts visibility for both icons and banners at a glance.\n\nMade a quick mockup of a UI that keeps every element separate, which I would find ideal.\n\nWidth and height should be standardized and not dependent on username length. Just a fixed length that holds any username size. The pills for status and pronouns would expand up to the same length of the username/banner. The icons on the left would hide/show depending on what's applicable. Has room for more icons like mute/deafen or whatever else, and shows friend status, and could for example show a different icon for an incoming friend request. And keeps the banner clear of clutter of course. This specific design might make the UI look very crowded though, it's just a concept idea.\n\nMost importantly I agree with the main post, the sizing should have a standard that we can stick to and work with, so we won't have to guess, or it looks different for different length of a username. In a perfect world we'd get a web UI when uploading or choosing a banner, that shows what will be visible/cropped. But even a written size guide would be big deal.",
+      "value": "Aside from the group banners barely being visible now, and no standardized sizing, I dislike how indicator icons are overlaid on top of the group banner. (Avatar Rating, Safety Rating, etc, etc.)\n\nI get it saves space and makes things less cluttered, but I'd prefer some different solution to this. Especially considering that a specifically colored group banner might interfere with the icon colors. So it just hurts visibility for both icons and banners at a glance.\n\nMade a quick mockup of a UI that keeps every element separate to not overlay things, which I would find ideal. In no way an ideal solution either, but I just wanna give thought on not having the icons overlap the other elements.\n\nWidth and height should be standardized and not dependent on username length. Just a fixed length that holds any username size, in tandem with the banner size. The pills for status and pronouns would expand up to the same length of the username/banner. The icons on the left would hide/show depending on what's applicable. Has room for more icons like mute/deafen, vrc+, or whatever else, and shows friend status. And could for example show a different icon for an incoming friend request. This specific design might make the UI look very crowded though, it's just a concept idea.\n\nMost importantly I agree with the main post, the sizing should have a standard that we can stick to and work with, so we won't have to guess, or find out it looks different for a person with a shorter/longer name. In a perfect world we'd get a web UI when uploading or choosing a banner, that shows what will be visible/cropped. But even a written size guide would be big deal.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -678,19 +682,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 370,
+  "maxScore": 374,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6152b63bf82aeb5b53bb0e/2099692115.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 370,
+  "score": 374,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-07-23T18:36:06.968Z",
   "subCategoryID": null,
   "title": "[1878] Group Banners are useless with the new nameplates. Standardize group banner dimensions.",
-  "trendingScore": 2957.0144521430143,
+  "trendingScore": 2957.026989686808,
   "updatedBy": null,
   "urlName": "1878-group-banners-are-useless-with-the-new-nameplates-standardize-group-banner",
   "viewerIsAuthor": false,
@@ -702,6 +706,50 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "640e1e4c325daf45256145c6",
+      "alias": "Pink Gazelle",
+      "aliasID": "65e10671a6e3ea79ddf82cab",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/39c76f2bb3fb6b7a7afeb2e407283d65.png",
+      "companies": [],
+      "name": "JaySeeJC",
+      "urlName": null,
+      "voteID": "6a63b64012d9cf97626ce329"
+    },
+    {
+      "_id": "61af28116b1f36339f75bc78",
+      "alias": "Whole Swordfish",
+      "aliasID": "65c289eded6eefce4cc4b5fe",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/016e01af8130726edd736b35e9b0fde3.png",
+      "companies": [],
+      "name": "Nicalay2",
+      "urlName": null,
+      "voteID": "6a63b5ae12d9cf97626ce090"
+    },
+    {
+      "_id": "64f0ff2853487093ded0d991",
+      "alias": "Olympic Kiwi",
+      "aliasID": "6a63b49812d9cf97626cd88d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/911b9bac90dc5e8ad185d0521029ccad.png",
+      "companies": [],
+      "name": "ღIᴍAᴄɪᴅɪᴄღ",
+      "urlName": null,
+      "voteID": "6a63b49a12d9cf97626cd89b"
+    },
+    {
+      "_id": "62def0d454bf5c449e9e3174",
+      "alias": "Curious Locust",
+      "aliasID": "6a63b2cf12d9cf97626cc696",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e57486174dc8a3b4138cbca2c6f3815c.png",
+      "companies": [],
+      "name": "Noa15Lv",
+      "urlName": null,
+      "voteID": "6a63b30a12d9cf97626cc879"
+    },
     {
       "_id": "644fcbfc66bede093c62357f",
       "alias": "Fellow Koi",
