@@ -31,7 +31,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1376,
+    "postCount": 1377,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -292,7 +292,9 @@
       "postDeleted": false,
       "postID": "6a6198438494a22f8c15090e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -321,19 +323,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 33,
+  "maxScore": 34,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6198438494a22f8c15090e/1571679545.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 33,
+  "score": 34,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-07-23T14:40:06.352Z",
   "subCategoryID": null,
   "title": "[1878] Some shaders rendering incorrectly with new patch.",
-  "trendingScore": 2954.601065670246,
+  "trendingScore": 2954.6338168661705,
   "updatedBy": "67abe46b592c3fc68cc3b843",
   "urlName": "1878-some-shaders-rendering-incorrectly-with-new-patch",
   "viewerIsAuthor": false,
@@ -345,6 +347,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5e557a01a90649773175e927",
+      "alias": "Silver Butterfly",
+      "aliasID": "65c6b21bed6eefce4c7a662d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9285b447c89b2f069cd46928ccd8edb8.png",
+      "companies": [],
+      "name": "Gargrimm",
+      "urlName": null,
+      "voteID": "6a632edbd4058d953b5366ac"
+    },
     {
       "_id": "61618b9e21da0434abc84a00",
       "alias": "Jambalaya Reindeer",
