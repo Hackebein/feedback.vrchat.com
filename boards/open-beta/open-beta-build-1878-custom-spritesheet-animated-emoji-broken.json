@@ -1,11 +1,11 @@
 {
   "_id": "6a63082a606fa9f0e26785a3",
   "aiCategories": [
-    "loc.in-world",
-    "client.chatbox",
-    "platforms.cross-platform"
+    "loc.pc-client",
+    "open-beta",
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-07-24T06:39:09.648293Z",
+  "aiTaggedAt": "2026-07-24T10:16:57.196394Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6438a7521b1999430a975cab",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "It seems like all spritesheet emoji with transparency have an issue where it fills any transparencys in with the nearest pixel. Doesn't seem to happen on desktop. First Image is the bug from PCVR perspective; Second is Desktop, both on Build #1878",
+  "details": "It seems like spritesheet-animated emojis with transparency have an issue where it fills the transparency in with the nearest pixel color. Doesn't seem to happen on desktop. First Image is the bug from PCVR perspective; Second is Desktop, both on Build #1878",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -69,7 +69,7 @@
   "subCategoryID": null,
   "title": "(Open Beta Build #1878) Custom Spritesheet-Animated Emoji Broken",
   "trendingScore": 2952.7949802738176,
-  "updatedBy": null,
+  "updatedBy": "6438a7521b1999430a975cab",
   "urlName": "open-beta-build-1878-custom-spritesheet-animated-emoji-broken",
   "viewerIsAuthor": false,
   "viewerVote": 0,
