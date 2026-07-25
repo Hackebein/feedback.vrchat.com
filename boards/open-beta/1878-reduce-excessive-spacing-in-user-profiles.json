@@ -1,11 +1,13 @@
 {
   "_id": "6a615d7bd586a21e1a18e6d5",
   "aiCategories": [
+    "loc.pc-client",
     "loc.quick-menu",
     "loc.main-menu",
-    "platforms.pc.steam"
+    "open-beta",
+    "web.profiles"
   ],
-  "aiTaggedAt": "2026-07-24T19:10:59.034608Z",
+  "aiTaggedAt": "2026-07-25T02:34:36.056844Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d710dc1c881463f153789",
@@ -32,11 +34,11 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 562,
+    "postCount": 563,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a615e9482d05738710b5214",
@@ -169,7 +171,7 @@
       "postID": "6a615d7bd586a21e1a18e6d5",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -272,6 +274,50 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a6419ac4d1f749673dd6631",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f2d710dc1c881463f153789",
+        "alias": "Remarkable Grasshopper",
+        "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a027de631a7b0527852c72de657c254e.png",
+        "created": "2020-08-07T15:19:41.359Z",
+        "name": "Fusl",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-25T02:04:28.129Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a615d7bd586a21e1a18e6d5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I noticed that, just like several other posts, this post was marked as tracked and available in a future release, but without a specific callout in the change logs so I'd like to provide some more information:\n\nThe previous design already used a lot of spacing while showing relatively little information but the redesign made this problem worse. Large gaps, padding, and separate cards push things like notes, groups, and bios off-screen which makes profiles take significantly longer to scan and require much more scrolling.\n\nA commonly used name to describe this is \"content dispersion\" and also \"low information density\". Nielsen Norman Group describes content dispersion as layouts where large text, images, and negative space, fragmenting related information across multiple viewports and found that this makes it harder to ingest and understand information due to increased cognitive load:\n\nhttps://www.nngroup.com/articles/content-dispersion/\n\nhttps://www.nngroup.com/articles/content-dispersion-methodology/\n\nhttps://www.nngroup.com/articles/scrolling-and-attention/\n\nWhile spacing itself isn't bad as it can make UI easier to read when it's used to group and separate things, it becomes a problem when there's so much of it that related information no longer fits on a viewport together and can lead to accessibility problems as people with memory, attention, or other cognitive impairments may have a harder time keeping track of information shown in separate viewport scroll areas. More scrolling in the profile also means more repeated input, which, for people with motor impairments or fatigue, can be extremely uncomfortable, especially in VR.\n\nProfiles are used to quickly find information about someone. They should be easy to scan, not spread over several screens for the sake of looking spacious.\n\nTo be clear, I'm not asking for all whitespace to be removed or for everything to be made tiny. I'd just like the spacing to be reduced enough such that information fits together without having to excessively scroll around.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -294,7 +340,7 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 111,
+  "maxScore": 112,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a615d7bd586a21e1a18e6d5/966651761.jpeg",
@@ -306,7 +352,7 @@
   "statusChanged": "2026-07-24T18:52:09.830Z",
   "subCategoryID": null,
   "title": "[1878] Reduce excessive spacing in user profiles",
-  "trendingScore": 2955.831725175852,
+  "trendingScore": 2955.8424242833694,
   "updatedBy": null,
   "urlName": "1878-reduce-excessive-spacing-in-user-profiles",
   "viewerIsAuthor": false,
