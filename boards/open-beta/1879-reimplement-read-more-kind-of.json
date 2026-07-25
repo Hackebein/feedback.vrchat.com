@@ -1,11 +1,11 @@
 {
-  "_id": "6a64012f50b1d3f359d055ce",
+  "_id": "6a6404a9c88f9075fca5fe1f",
   "aiCategories": [
     "loc.main-menu",
-    "client.settings",
-    "open-beta"
+    "open-beta",
+    "web.profiles"
   ],
-  "aiTaggedAt": "2026-07-25T00:36:07.713501Z",
+  "aiTaggedAt": "2026-07-25T00:36:07.712405Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "622893dc14e3795af3d9ed30",
@@ -39,57 +39,44 @@
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-07-25T00:19:59.517Z",
+  "created": "2026-07-25T00:34:49.594Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I made a post about all the profile changes I think should be done and my feedback here:\n\nhttps://feedback.vrchat.com/open-beta/p/1878-the-new-social-menu-ui-feedback-and-suggestions\n\nThe main point of this request is to reduce the verticality problem of the current profile menu. By moving the badges, the groups tab would be visible when you check someone's profile. Important related post to make it consistent when checking your own profile: https://feedback.vrchat.com/open-beta/p/1879-current-avatar-shouldnt-be-displayed-in-the-local-profile\n\nEdit showing one potential version of this change.",
+  "details": "A few people requested replacing read more with a scrollbar in the 1878 beta for the profile menu, I disagree with this. But I can see why people would want it.\n\nInstead, you should still be able to expand the bio to full length by clicking the bio area. Makes both methods viable without making a button that takes up space.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a64012f50b1d3f359d055cd",
-  "imageURLs": [
-    "https://canny-assets.io/images/8733f8ec6148c5fa2b6670739cd49ca3.png"
-  ],
+  "ideaID": "6a6404a9c88f9075fca5fe18",
+  "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-07-25T00:19:59.517Z",
+  "statusChanged": "2026-07-25T00:34:49.594Z",
   "subCategoryID": null,
-  "title": "[1879] Badges shouldn't be their own bubble anymore in the profile",
-  "trendingScore": 2952.3863962202913,
+  "title": "[1879] Reimplement \"Read More\" - kind of",
+  "trendingScore": 2951.9823163662413,
   "updatedBy": "622893dc14e3795af3d9ed30",
-  "urlName": "1879-badges-shouldnt-be-their-own-bubble-anymore-in-the-profile",
+  "urlName": "1879-reimplement-read-more-kind-of",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a6401cc12d9cf97626e9be9"
-    },
     {
       "_id": "622893dc14e3795af3d9ed30",
       "alias": "Aquamarine Gayal",
@@ -99,7 +86,7 @@
       "companies": [],
       "name": "TheCreationKing",
       "urlName": null,
-      "voteID": "6a64012f12d9cf97626e95f6"
+      "voteID": "6a6404a912d9cf97626eab13"
     }
   ]
 }
