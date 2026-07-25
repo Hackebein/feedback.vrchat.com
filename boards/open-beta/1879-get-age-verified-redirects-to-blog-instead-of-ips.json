@@ -1,12 +1,10 @@
 {
-  "_id": "6a6510724113a4b156cf173e",
+  "_id": "6a651266d7b40a58eea0c688",
   "aiCategories": [
-    "loc.pc-client",
-    "open-beta",
-    "platforms.pc.steam",
-    "client.camera"
+    "loc.website",
+    "account.age-verification"
   ],
-  "aiTaggedAt": "2026-07-25T19:40:25.965571Z",
+  "aiTaggedAt": "2026-07-25T19:47:44.115374Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60dd2a998871d03e7f3806ae",
@@ -40,57 +38,46 @@
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-07-25T19:37:22.297Z",
+  "created": "2026-07-25T19:45:42.334Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When editing your profile, the icon and banner shows despite Streamer Mode being on. This is regression from previous behaviour.",
+  "details": "When clicking the \"Get Age Verified\" button on the profile, it will prompt you to open the \"Introducing Age Verification\" blog post instead of opening up the \"Age Verification\" IPS. This is a regression from previous behaviour.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a6510724113a4b156cf173d",
+  "ideaID": "6a651266d7b40a58eea0c687",
   "imageURLs": [
-    "https://canny-assets.io/images/ccafa9bc5cd44ed0c4d6226a8aa7190a.png"
+    "https://canny-assets.io/images/f4f9aab93897ba8ed1595bba1eb08a56.png"
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-07-25T19:37:22.297Z",
+  "statusChanged": "2026-07-25T19:45:42.334Z",
   "subCategoryID": null,
-  "title": "[1879] Streamer Mode doesn't respect Edit Profile modal",
-  "trendingScore": 2952.501314942194,
+  "title": "[1879] \"Get Age Verified\" redirects to blog instead of IPS",
+  "trendingScore": 2952.0964909173326,
   "updatedBy": null,
-  "urlName": "1879-streamer-mode-doesnt-respect-edit-profile-modal",
+  "urlName": "1879-get-age-verified-redirects-to-blog-instead-of-ips",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a6511c312d9cf9762a573f1"
-    },
     {
       "_id": "60dd2a998871d03e7f3806ae",
       "alias": "Thoughtful Cobra",
@@ -100,7 +87,7 @@
       "companies": [],
       "name": "~Pausbe",
       "urlName": null,
-      "voteID": "6a65107212d9cf9762a56f57"
+      "voteID": "6a65126612d9cf9762a57596"
     }
   ]
 }
