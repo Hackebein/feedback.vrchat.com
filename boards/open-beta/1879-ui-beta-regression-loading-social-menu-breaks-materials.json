@@ -1,0 +1,104 @@
+{
+  "_id": "6a64620ac88f9075fcafa282",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.in-world",
+    "avatars.upload-performance",
+    "platforms.pc.steam",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-07-25T07:14:33.605250Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62def4a446e66844a841a714",
+    "alias": "Agate Muskox",
+    "aliasID": "66512c91b9e8e8fe66d4a1ed",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e89a5376b1e4097f3e6a229ca79022de.png",
+    "created": "2022-07-25T19:53:08.207Z",
+    "name": "Shiapra",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62def4a446e66844a841a714",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1392,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-25T07:13:14.173Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This issue was first posted in the Poiyomi discord, as the bug seems to primarily affect Poiyomi, but I was directed to post here as well, as the issue stems from the UI Beta.\n\nShader Version: Poiyomi Toon 9.3.64\n\nLast working VRChat Version: 1867\n\nTested VRChat Version: Build 1879\n\nFirst affected: Unknown\n\nTested on 4 different machines: \n\n- Windows 11 - Nvidia\n\n- Windows 10 - Nvidia\n\n- Linux Proton 11 - AMD\n\n- Steamdeck Proton 11\n\n## Description\n\nLoading the \"All Friends\" social menu breaks tiled textures across all avatars rendered in game that use Poiyomi, ***including other players.*** There's a brief hitch from loading the UI that coincides with this.\n\nI've noticed this with the Normal, Detail Normal and Reflection Specular maps. Albedo doesn't seem to be affected.\n\nThis persists between avatar changes, avatar resets, and world changes. This can only be resolved through an entire game restart.\n\nIt almost looks like the texture's tiling is being changed 0 on a single axis, but there's one portion of the avatar where the texture is fine, then at the end of the tile, stretches. \n\nI've attached a video demonstrating the bug, and a screenshot of the tiling stretching mention above. Please let me know if you need further information.\n\n## Reproduction steps\n\n1. Use avatar with tiled Normal Map textures.\n\n2. Open Social Menu\n\n3. Open All Friends Menu\n\n## Additional details\n\n- The issue does not seem to affect standard shader materials or VRChat mobile materials. \n\n- Both transparent and opaque materials are affected.\n\n- The issue is re-producible with a new Poiyomi material with no other settings changed.\n\n- No material properties need to be marked as animated.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/6083ad468aa2c3c48de7f3d6915c948f.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "Screencast_20260724_195653",
+      "url": "https://canny-assets.io/files/6083ad468aa2c3c48de7f3d6915c948f.mp4"
+    }
+  ],
+  "ideaID": "6a646209c88f9075fcafa281",
+  "imageURLs": [
+    "https://canny-assets.io/images/749adc3e4d2dba6dbb2970a9898a62f2.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-25T07:13:14.173Z",
+  "subCategoryID": null,
+  "title": "[1879] UI Beta Regression - Loading Social Menu Breaks Materials",
+  "trendingScore": 2952.0218412405798,
+  "updatedBy": null,
+  "urlName": "1879-ui-beta-regression-loading-social-menu-breaks-materials",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62def4a446e66844a841a714",
+      "alias": "Agate Muskox",
+      "aliasID": "66512c91b9e8e8fe66d4a1ed",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e89a5376b1e4097f3e6a229ca79022de.png",
+      "companies": [],
+      "name": "Shiapra",
+      "urlName": null,
+      "voteID": "6a64620a12d9cf976283447f"
+    }
+  ]
+}
