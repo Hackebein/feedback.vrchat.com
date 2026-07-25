@@ -1,10 +1,11 @@
 {
   "_id": "6a647bb9c88f9075fcb243f4",
   "aiCategories": [
-    "loc.in-world",
-    "social.nameplates"
+    "loc.main-menu",
+    "social.nameplates",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-07-25T12:12:44.715370Z",
+  "aiTaggedAt": "2026-07-25T13:04:49.474788Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60411ec5cc01c21febdcbe37",
@@ -64,7 +65,9 @@
       "postDeleted": false,
       "postID": "6a647bb9c88f9075fcb243f4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -80,7 +83,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "i suggest restoring the features lost in the open beta nameplates, and to not completely remove these features on the main client, having such features is important, for moderation and for keeping our VRChat instances safe.",
+  "details": "i suggest restoring the features lost in the open beta nameplates, and to not completely remove these features on the main client, having such features is important, for moderation and for keeping our VRChat instances safe.\n\nicons such as:\n\nif they have you muted.\n\nif they are 18+ and not age verified.\n\nif they are using earmuff mode.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -103,7 +106,7 @@
   "subCategoryID": null,
   "title": "Restore lost nameplate features",
   "trendingScore": 2953.1339181281096,
-  "updatedBy": null,
+  "updatedBy": "60411ec5cc01c21febdcbe37",
   "urlName": "restore-lost-nameplate-features",
   "viewerIsAuthor": false,
   "viewerVote": 0,
