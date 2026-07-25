@@ -5,7 +5,7 @@
     "open-beta",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-25T20:48:06.531093Z",
+  "aiTaggedAt": "2026-07-25T21:40:48.315865Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def4a446e66844a841a714",
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a64ff4bd7b40a58ee9f09ef",
@@ -126,7 +126,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Can confirm that this is the cause. https://youtu.be/5bRtDLZyeSI",
+      "value": "Can confirm that this is reproducible on my end as well. https://youtu.be/5bRtDLZyeSI",
       "viewerReactions": null,
       "voteID": null
     },
@@ -178,7 +178,9 @@
       "postDeleted": false,
       "postID": "6a64620ac88f9075fcafa282",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -241,6 +243,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{68098a4626271974ef4d2775|full_name} Thank you for pointing me to this. Seems like they're likely relate. Although the repro steps seem to differ.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a652ae98ca1770c2793b710",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ba7e0881a53843243b76790",
+        "alias": "Sunglow Shark",
+        "aliasID": "65c2a2c2ed6eefce4c7bc15b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/09ac41ff694b0cb96a62db67358fbfa1.png",
+        "created": "2018-09-23T18:50:48.627Z",
+        "name": "Entorix",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-25T21:30:17.850Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62def4a446e66844a841a714",
+          "alias": "Agate Muskox",
+          "aliasID": "66512c91b9e8e8fe66d4a1ed",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e89a5376b1e4097f3e6a229ca79022de.png",
+          "created": "2022-07-25T19:53:08.207Z",
+          "name": "Shiapra",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6501cd8174a5622d45f12f",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a64620ac88f9075fcafa282",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62def4a446e66844a841a714|full_name} Go ahead!",
       "viewerReactions": null,
       "voteID": null
     }
