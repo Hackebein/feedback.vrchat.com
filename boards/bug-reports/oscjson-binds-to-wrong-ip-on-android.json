@@ -1,0 +1,87 @@
+{
+  "_id": "6a6419c6c88f9075fca8b264",
+  "aiCategories": [
+    "loc.mobile-app",
+    "platforms.mobile.android",
+    "client.osc"
+  ],
+  "aiTaggedAt": "2026-07-25T02:06:29.562558Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "61b6708861175844e57cda05",
+    "alias": "Yellow mellow Vole",
+    "aliasID": "65c2907aed6eefce4cc8b6f4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5cf8f1cb7b830bd93cab0fcc4ccae567.png",
+    "created": "2021-12-12T21:58:32.876Z",
+    "name": "noideaman",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "61b6708861175844e57cda05",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-25T02:04:54.924Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Android 17, oscjson port binds to wwan (cellphone) data even if wifi is on and prefered\n\n# Remote mdns browse response\n\navahi-browse -acrpt | grep VRChat-Client\n\n=;bridge6;IPv4;VRChat-Client-A5C6A8;_osc._udp;local;Android_2ZPQG8IS.local;192.168.6.138;9000;\n\n=;bridge6;IPv4;VRChat-Client-A5C6A8;_oscjson._tcp;local;Android_2ZPQG8IS.local;192.168.6.138;43535;\n\n#ip addresses from phone\n\ncheetah:/ $ ip addr show dev rmnet17                                                                                                                      \n\n31: rmnet17: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1436 qdisc mq state UNKNOWN group default qlen 1000\n\n    link/[519] \n\n    inet 48.X.X.93/32 scope global rmnet17\n\n       valid_lft forever preferred_lft forever\n\ncheetah:/ $ ip addr show dev wlan0                                                                                                                        \n\n47: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000\n\n    link/ether 16:7e:5f:13:7b:15 brd ff:ff:ff:ff:ff:ff\n\n    inet 192.168.6.138/24 brd 192.168.6.255 scope global dynamic wlan0\n\n       valid_lft 64931sec preferred_lft 64931sec\n\n       \n\n#ports bound on phone connected to wifi and wwan\n\ncheetah:/ $ ss -tnlup | grep 43535\n\nCannot open netlink socket: Permission denied\n\nCannot open netlink socket: Permission denied\n\ntcp    LISTEN     0      0      48.X.X.93:43535              0.0.0.0:*  \n\ncheetah:/ $ ss -tnlup | grep 9000                                                                                                                         \n\nCannot open netlink socket: Permission denied\n\nCannot open netlink socket: Permission denied\n\nudp    UNCONN     0      0      0.0.0.0:9000               0.0.0.0:*   \n\nif you disable mobile data it then binds to the waln0 (wifi) ip",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a6419c6c88f9075fca8b263",
+  "imageURLs": [
+    "https://canny-assets.io/images/1b625d70527c0ff051855475390ff975.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-25T02:04:54.924Z",
+  "subCategoryID": null,
+  "title": "oscjson binds to wrong ip on android",
+  "trendingScore": 2951.991253726526,
+  "updatedBy": null,
+  "urlName": "oscjson-binds-to-wrong-ip-on-android",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "61b6708861175844e57cda05",
+      "alias": "Yellow mellow Vole",
+      "aliasID": "65c2907aed6eefce4cc8b6f4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5cf8f1cb7b830bd93cab0fcc4ccae567.png",
+      "companies": [],
+      "name": "noideaman",
+      "urlName": null,
+      "voteID": "6a6419c712d9cf97626ee8f0"
+    }
+  ]
+}
