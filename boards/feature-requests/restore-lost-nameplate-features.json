@@ -1,11 +1,11 @@
 {
   "_id": "6a647bb9c88f9075fcb243f4",
   "aiCategories": [
-    "loc.main-menu",
+    "loc.in-world",
     "social.nameplates",
     "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-07-25T13:04:49.474788Z",
+  "aiTaggedAt": "2026-07-25T16:14:29.167842Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60411ec5cc01c21febdcbe37",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a64a36cc88f9075fcb4f972",
@@ -66,7 +66,7 @@
       "postID": "6a647bb9c88f9075fcb243f4",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -74,6 +74,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "You are being a little vague here. Which features specifically?\n\nI know the new Nameplate doesn't show if you have someone muted, or if they have you muted, which can be an issues. If there are more missing features, you will need to name them so people know what you are talking about.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a64dbd5d18ad2f3e0f10268",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6069689fb1a6982386d23f8f",
+        "alias": "Retail Marsupial",
+        "aliasID": "6607c41ae5d26962aadd53fd",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51886eda6972ba18315b821c8b637eaf.png",
+        "created": "2021-04-04T07:19:59.965Z",
+        "name": "ひょなb",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-25T15:52:53.333Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a647bb9c88f9075fcb243f4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "these are so important to know!!! devs, we need this",
       "viewerReactions": null,
       "voteID": null
     }
@@ -93,19 +137,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 6,
+  "maxScore": 7,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a647bb9c88f9075fcb243f4/3203599.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 6,
+  "score": 7,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-25T09:02:49.909Z",
   "subCategoryID": null,
   "title": "Restore lost nameplate features",
-  "trendingScore": 2953.2922800475367,
+  "trendingScore": 2953.4301013594145,
   "updatedBy": "60411ec5cc01c21febdcbe37",
   "urlName": "restore-lost-nameplate-features",
   "viewerIsAuthor": false,
@@ -117,6 +161,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6069689fb1a6982386d23f8f",
+      "alias": "Retail Marsupial",
+      "aliasID": "6607c41ae5d26962aadd53fd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51886eda6972ba18315b821c8b637eaf.png",
+      "companies": [],
+      "name": "ひょなb",
+      "urlName": null,
+      "voteID": "6a64dbaf12d9cf9762a3fbca"
+    },
     {
       "_id": "621aba0e9eb8e97f7fa1384f",
       "alias": "Ink Dragonfly",
