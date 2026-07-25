@@ -78,8 +78,6 @@ jobs:
           VRCHAT_USERNAME: ${{ secrets.VRCHAT_USERNAME }}
           VRCHAT_PASSWORD: ${{ secrets.VRCHAT_PASSWORD }}
           VRCHAT_TOTP_SECRET: ${{ secrets.VRCHAT_TOTP_SECRET }}
-          # Optional device-trust cookie to skip VRChat "new location" email OTP on runners.
-          VRCHAT_TWO_FACTOR_AUTH: ${{ secrets.VRCHAT_TWO_FACTOR_AUTH }}
         run: |
           set -euo pipefail
           if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then

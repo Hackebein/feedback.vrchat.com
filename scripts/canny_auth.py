@@ -170,23 +170,6 @@ def _cookie_jar_path() -> Path | None:
     return Path(raw) if raw else None
 
 
-def _seed_two_factor_cookie(cookie_jar: Path) -> None:
-    """Ensure twoFactorAuth is present without wiping an existing jar."""
-    tfa = (os.environ.get("VRCHAT_TWO_FACTOR_AUTH") or "").strip()
-    if not tfa:
-        return
-    if read_cookie(cookie_jar, "twoFactorAuth"):
-        return
-    if not cookie_jar.is_file():
-        cookie_jar.parent.mkdir(parents=True, exist_ok=True)
-        cookie_jar.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
-    with cookie_jar.open("a", encoding="utf-8") as f:
-        f.write(
-            f"#HttpOnly_api.vrchat.cloud\tFALSE\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}\n"
-            f".vrchat.com\tTRUE\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}\n"
-        )
-
-
 def _error_message(data: dict[str, Any], raw: str = "") -> str:
     err = data.get("error")
     if isinstance(err, dict):
@@ -296,10 +279,6 @@ def _finish_canny_session(jar: Path, *, vrchat_user: dict[str, Any] | None) -> C
     tfa = read_cookie(jar, "twoFactorAuth")
     if tfa:
         print(f"[auth] twoFactorAuth cookie present (len={len(tfa)})")
-        print(
-            "[auth] Tip: store as Actions secret VRCHAT_TWO_FACTOR_AUTH to skip "
-            "new-location email OTP on GitHub runners."
-        )
 
     viewer = sso_to_canny(jar)
     uid = extract_user_id(viewer)
@@ -484,7 +463,6 @@ def _vrchat_login_basic_once(cookie_jar: Path) -> dict[str, Any]:
         basic = base64.b64encode(f"{username}:{password}".encode("utf-8")).decode("ascii")
         # Fresh jar per username attempt (avoid mixing failed auth cookies).
         cookie_jar.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
-        _seed_two_factor_cookie(cookie_jar)
 
         code, data, raw = _auth_user(cookie_jar, basic=basic)
         if code == 200 and _auth_user_ok(data):
@@ -560,7 +538,6 @@ def vrchat_login(cookie_jar: Path) -> dict[str, Any]:
             time.sleep(wait)
             if preload:
                 cookie_jar.write_bytes(preload)
-            _seed_two_factor_cookie(cookie_jar)
             reused = _try_reuse_vrchat(cookie_jar)
             if reused is not None:
                 print("[auth] reusing VRChat auth cookie after backoff")
@@ -776,8 +753,6 @@ def login_canny_session() -> CannySession:
         cleanup_temp = True
 
     try:
-        _seed_two_factor_cookie(working)
-
         # Fast path: Canny cookies still valid — no VRChat login.
         reused = _session_from_jar(working)
         if reused is not None:

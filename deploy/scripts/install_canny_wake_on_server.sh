@@ -43,8 +43,6 @@ if [[ ! -f "${CANNY_ENV}" ]]; then
 VRCHAT_USERNAME=
 VRCHAT_PASSWORD=
 VRCHAT_TOTP_SECRET=
-# Optional: twoFactorAuth cookie to skip new-location email OTP.
-# VRCHAT_TWO_FACTOR_AUTH=
 # Persisted Netscape cookie jar (reused across ticks; mode 0600).
 # CANNY_COOKIE_JAR=/var/lib/feedback-search/canny-cookies.jar
 # Optional pacing overrides:

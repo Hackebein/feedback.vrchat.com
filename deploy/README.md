@@ -22,8 +22,8 @@ Separately, every **65s** it upvotes up to **10** most-active unscored posts
 `/var/lib/feedback-search/canny-wake-state.json` (`votedPostIds`).
 
 1. On the host, fill `/etc/feedback-search/canny.env` with the same
-   `VRCHAT_USERNAME` / `VRCHAT_PASSWORD` / `VRCHAT_TOTP_SECRET` (and optional
-   `VRCHAT_TWO_FACTOR_AUTH`) used by Actions. Install creates an empty skeleton.
+   `VRCHAT_USERNAME` / `VRCHAT_PASSWORD` / `VRCHAT_TOTP_SECRET` used by
+   Actions. Install creates an empty skeleton.
 2. Ensure `/etc/feedback-search/github.env` has `GH_ISSUE_TOKEN` with
    **Contents: Read and write** (enough for `repository_dispatch`), or set
    `GH_DISPATCH_TOKEN` in `canny.env`.
