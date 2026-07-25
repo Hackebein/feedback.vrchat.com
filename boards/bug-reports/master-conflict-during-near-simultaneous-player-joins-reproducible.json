@@ -1,0 +1,87 @@
+{
+  "_id": "6a647eba8174a5622d386fc7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-07-25T09:17:16.297987Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f3b366e8911d54a93a378bf",
+    "alias": "Satisfied Harrier",
+    "aliasID": "65c78b78ed6eefce4c35939a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ae0b24a97d5621651c78194a0d975bbd.png",
+    "created": "2020-08-18T02:01:18.817Z",
+    "name": "Wing_",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f3b366e8911d54a93a378bf",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-25T09:15:38.437Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The bug is real and highly reproducible. This issue started yesterday and appears to affect some worlds randomly, especially worlds with heavier networking logic.\n\nWhen multiple players join the same instance at nearly the same time, for example through a portal, some clients may incorrectly believe they are the instance Master. By extension, they also appear to believe they are the default network object owner.\n\nIn the attached screenshot, using the debug network overlay (Shift + ~ + 8), two players correctly receive different player IDs (1 and 2), but both clients believe they are the object owner. On each client, Networking.Master also reports the local client as the Master. It affects all udon logic that check for master.\n\nWhen this bug occurs, it reproduces every time in local SDK Build & Test. I suspect the instance join timing for each player in Build & Test is short enough to consistently trigger the issue. In production (real game) instances, this likely only affects players who join within a very short time window, but it is still a real bug.\n\nI tested a completely new blank world, simple blank world do not have this bug. However, after adding certain Udon scripts, I can reproduce the bug every time. I uploaded a test world for the VRChat team to inspect:\n\nhttps://vrchat.com/home/world/wrld_f41df1fb-1166-470b-843a-fc026732ccd7/info\n\nMy other published worlds had been working reliably before yesterday, but started showing this problem from yesterday. Because of that, I suspect a recent VRChat backend change may have introduced a bug, and some (not all, but maybe a specific function) Udon scripts may act as triggers that cause the issue to surface.\n\nI do not believe this is isolated to my world. Some creator friends have also reported similar issues today, and I have seen similar reports discussed in the official VRChat Discord server.\n\nPlease see the attached image showing both players believing they are the network owner, marked by the green O indicators beside players 1 and 2.\n\nI am not using Open Beta.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a647eba8174a5622d386fc6",
+  "imageURLs": [
+    "https://canny-assets.io/images/ece04d7da97616e462f069698c62f6e7.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a647eba8174a5622d386fc7/1017287811.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-25T09:15:38.437Z",
+  "subCategoryID": null,
+  "title": "Master Conflict During Near-Simultaneous Player Joins (Reproducible)",
+  "trendingScore": 2952.033984424277,
+  "updatedBy": null,
+  "urlName": "master-conflict-during-near-simultaneous-player-joins-reproducible",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3b366e8911d54a93a378bf",
+      "alias": "Satisfied Harrier",
+      "aliasID": "65c78b78ed6eefce4c35939a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ae0b24a97d5621651c78194a0d975bbd.png",
+      "companies": [],
+      "name": "Wing_",
+      "urlName": null,
+      "voteID": "6a647eba12d9cf9762a233b5"
+    }
+  ]
+}
