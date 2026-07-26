@@ -2,10 +2,9 @@
   "_id": "6a63667dad7c09ce7b04f8fd",
   "aiCategories": [
     "loc.in-world",
-    "worlds.persistence",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-07-26T10:26:35.636889Z",
+  "aiTaggedAt": "2026-07-26T23:36:48.861528Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f296274667e9234c9e5a439",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a64b0204113a4b156c3e963",
@@ -112,7 +111,7 @@
       "postID": "6a63667dad7c09ce7b04f8fd",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -214,7 +213,7 @@
       "postID": "6a63667dad7c09ce7b04f8fd",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -222,6 +221,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{63ec9430d19f4344f2992df7|full_name} This can occurs on the live version, non-open-beta. Tested and confirmed. Many game worlds are randomly broken by this bug recently",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6698d6d0d9dc10cad842a7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a168fd65a52cb2df0a0cefe",
+        "alias": "Sapphire Llama",
+        "aliasID": "6a168fd65a52cb2df0a0cf05",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/64844a58cb3260f65440d913fbfd8754.png",
+        "created": "2026-05-27T06:31:50.041Z",
+        "name": "hikaru313",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-26T23:31:34.470Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a63667dad7c09ce7b04f8fd",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "In fact, it doesn’t only affect game instances. Regular global buttons are affected as well, preventing the objects linked to those buttons from being activated globally. This means the issue has a very wide-ranging impact.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -241,19 +284,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 50,
+  "maxScore": 51,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a63667dad7c09ce7b04f8fd/1443945769.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 50,
+  "score": 51,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-24T13:19:57.710Z",
   "subCategoryID": null,
   "title": "Two clients joining at the exact same time can both be instance masters.",
-  "trendingScore": 2955.4097797116674,
+  "trendingScore": 2955.431009013223,
   "updatedBy": null,
   "urlName": "two-clients-joining-at-the-exact-same-time-can-both-be-instance-masters",
   "viewerIsAuthor": false,
@@ -265,6 +308,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5a4f061ba3192e49202db0a1",
+      "alias": "Thick Thrush",
+      "aliasID": "65ba01d8ed6eefce4cfc72d9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8326d711c74c7cf10e329964b7b1b9ab.png",
+      "companies": [],
+      "name": "Nolfinkol",
+      "urlName": null,
+      "voteID": "6a66977e12d9cf9762ab7f48"
+    },
     {
       "_id": "6a0fc2175a52cb2df04afeb9",
       "alias": "Extra Guppy",
