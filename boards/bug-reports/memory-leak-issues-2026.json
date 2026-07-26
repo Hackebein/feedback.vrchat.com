@@ -1,10 +1,12 @@
 {
   "_id": "69e1109614916839a1a48a59",
   "aiCategories": [
+    "loc.in-world",
     "loc.pc-client",
-    "client.settings"
+    "platforms.pc.desktop",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-16T14:58:24.932243Z",
+  "aiTaggedAt": "2026-07-26T10:26:35.637693Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f9e18279199552bb123e8b0",
@@ -28,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "comments": [
     {
       "_id": "69e243c23999f0b02605362f",
@@ -489,6 +491,50 @@
       "statusChangeID": "6a58e4916c04cd91b2ce3da7",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a65defefabb501d7e4089e6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5cb6a908df8d8e58c38318a3",
+        "alias": "Static Badger",
+        "aliasID": "65fc43eba63714bcb32ec335",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/9b80423d29b5e6307dd5eb80411c9380.png",
+        "created": "2019-04-17T04:18:16.853Z",
+        "name": "Graystripe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-26T10:18:38.982Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69e1109614916839a1a48a59",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It happened again last night. I never switched worlds, I basically stayed in the same place for 5 hours. These are the final logs in the log file before systemd killed the process. Memory usage over time is not logged because I'm not switching worlds.\n\n2026.07.25 22:41:50 Debug      -  [Behaviour] OnPlayerLeftRoom\n\n2026.07.25 22:41:50 Debug      -  [Behaviour] OnPlayerLeft Murphite (edited out ID)\n\n2026.07.25 22:41:50 Debug      -  Removed player Murphite\n\n2026.07.25 22:41:50 Debug      -  [Behaviour] Destroying Murphite\n\nsystemd log:\n\nJul 25 22:42:34 nibl-linux kernel: Memory cgroup out of memory: Killed process 36602 (VRChat.exe) total-vm:85154820kB, anon-rss:39261664kB, file-rss:406132kB, shmem-rss:65144kB, UID:1000 pgtables:82144kB oom_score_adj:200\n\nI don't think it's something I'm doing. I think it's somebody's avatar or something like that. Something I can't reproduce myself. Because I was literally AFK tabbed out in an idle game world when it triggered OOM. There's days where I can go two days there without this happening, but tonight only lasted 5 hours. I wish I could help diagnose this more but I don't have any clues. My own actions aren't causing it. I'm not doing anything different from the days where it goes 2 days straight just fine.",
       "viewerReactions": null,
       "voteID": null
     }
