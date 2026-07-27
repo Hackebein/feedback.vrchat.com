@@ -2,9 +2,9 @@
   "_id": "69f1952b29cb5ab8b423e998",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-07-14T15:57:30.006608Z",
+  "aiTaggedAt": "2026-07-27T18:44:17.558679Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69f192784a48bed189d2d75e",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a564ff9ca29b3164d344f35",
@@ -72,6 +72,50 @@
       "statusChangeID": "6a564ff9ca29b3164d344f34",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a67a6b0d0d9dc10ca0ecf01",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-27T18:42:56.879Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69f1952b29cb5ab8b423e998",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It is intended that raycasts will stop acting and generating parameter values as soon as they are disabled, so yes, the values will stick if nothing is affecting them anymore once the component is disabled.\n\nWe're now looking at setting the parameter values to correspond with a missed raycast once as they're disabled for convenience.",
       "viewerReactions": null,
       "voteID": null
     }
