@@ -116,7 +116,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Now I also tried it with the new 3rd-person view and the change in avatar's posture is still clearly visible (especially when looking down). One reason might be IK working in world space and scaling not affecting IK points and bones instantly as feet are going inward/outward while scaling. Making IK local space could potentially also fix arm/leg bending issues at small scales or in large worlds far from origin, but I'm not sure.",
+      "value": "Now I also tried it with the new 3rd-person view and the change in avatar's posture is still clearly visible (especially when looking down). ~~One reason might be IK working in world space and scaling not affecting IK points and bones instantly as feet are going inward/outward while scaling. Making IK local space could potentially also fix arm/leg bending issues at small scales or in large worlds far from origin, but I'm not sure.~~\n\nEdit: I am not sure about what's the cause and what would be the correct solution as I heard another person has this issue but in VR. https://feedback.vrchat.com/bug-reports/p/jittering-view-effect-when-lerping-osc-avatar-scaling",
       "viewerReactions": null,
       "voteID": null
     }
