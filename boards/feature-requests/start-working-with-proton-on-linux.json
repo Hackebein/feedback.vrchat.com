@@ -1,11 +1,9 @@
 {
   "_id": "6a67c01795b6f74b6d97d838",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.settings"
+    "vrchat-meta"
   ],
-  "aiTaggedAt": "2026-07-27T20:52:43.603087Z",
+  "aiTaggedAt": "2026-07-27T21:20:38.934611Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e59bc346312bf2d549f33ab",
@@ -29,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a67c2f700a996ee48d31e36",
@@ -72,6 +70,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "A native steam frame VRChat is likely to run android avatars.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a67c708196a1d0c3881e366",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5e59bc346312bf2d549f33ab",
+        "alias": "Beryl Wallaby",
+        "aliasID": "65c2aceaed6eefce4ce242b4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a8c9037196f69f69492acd2833f31d27.png",
+        "created": "2020-02-29T01:19:48.358Z",
+        "name": "peq42",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-27T21:00:56.906Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e0e9a23bc510d6aa62c0d515b73bc1e3.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a67c2f700a996ee48d31e36",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a67c01795b6f74b6d97d838",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name} that'd make 0 sense as, again, it'll be running LINUX. \n\nMaybe it'd show imppostors by default, but not android-versions of avatars.\n\nThat'd require an entirely new version of vrchat just for steamframe which would be a lot more work instead of just, you know, making a few damn changes to ensure the game works with Proton.",
       "viewerReactions": null,
       "voteID": null
     }
