@@ -399,7 +399,9 @@
       "postDeleted": false,
       "postID": "6a63667dad7c09ce7b04f8fd",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -426,19 +428,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 349,
+  "maxScore": 350,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a63667dad7c09ce7b04f8fd/1443945769.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 349,
+  "score": 350,
   "sourceFeatureExtractionItem": null,
   "status": "needs more information",
   "statusChanged": "2026-07-27T23:56:20.624Z",
   "subCategoryID": null,
   "title": "Two clients joining at the exact same time can both be instance masters.",
-  "trendingScore": 2957.3520243297753,
+  "trendingScore": 2957.355746133631,
   "updatedBy": null,
   "urlName": "two-clients-joining-at-the-exact-same-time-can-both-be-instance-masters",
   "viewerIsAuthor": false,
@@ -450,6 +452,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "601148e04fc43616c706f770",
+      "alias": "Thirsty Sparrow",
+      "aliasID": "660bdbade5d26962aae56ba5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cd9513d56e344d96563528103cde6ab5.png",
+      "companies": [],
+      "name": "teru-34",
+      "urlName": null,
+      "voteID": "6a6865db12d9cf9762b8b455"
+    },
+    {
+      "_id": "5dcae10f2fb049260da562f6",
+      "alias": "Underlying Marsupial",
+      "aliasID": "65c28083ed6eefce4c570d34",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dd918f7c7b00efe17c029fadffc2a89b.png",
+      "companies": [],
+      "name": "Asovrix",
+      "urlName": null,
+      "voteID": "6a685dcd12d9cf9762b88b3a"
+    },
     {
       "_id": "621b747ef0187c67a107f1cc",
       "alias": "Salmon Gazelle",
