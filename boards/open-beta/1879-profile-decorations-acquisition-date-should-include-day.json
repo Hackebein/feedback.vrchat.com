@@ -1,10 +1,11 @@
 {
-  "_id": "6a6914e780b0aa25289349d6",
+  "_id": "6a691a1f5f96aecec77da1fe",
   "aiCategories": [
     "loc.pc-client",
-    "web.feedback"
+    "platforms.pc.steam",
+    "client.inventory"
   ],
-  "aiTaggedAt": "2026-07-28T21:09:37.108706Z",
+  "aiTaggedAt": "2026-07-28T21:09:37.107620Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60dd2a998871d03e7f3806ae",
@@ -27,66 +28,57 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6317f3226fccd444a7af6064",
-    "created": "2022-09-07T01:25:54.001Z",
-    "name": "Bug Report",
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
     "parentID": null,
-    "postCount": 1412,
-    "urlName": "bug-report"
+    "postCount": 588,
+    "urlName": "feature-requests"
   },
-  "categoryID": "6317f3226fccd444a7af6064",
+  "categoryID": "6317ed8c023c7b5ec9566d28",
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-07-28T20:45:27.022Z",
+  "created": "2026-07-28T21:07:43.571Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "After submitting a bug report, trying to open it in the browser redirects you to a page needing permission to view. The bug report gets posted in the \"test-bugs\" board which seems like a placeholder.\n\nAlso it NEEDS to be made clear that submitting a bug report gets uploaded to Canny.",
+  "details": "Profile Decorations currently only shows the month & year that it was acquired on. \n\nIt should also include the day too, as this is inconsistent compared to the rest of the inventory content. Also, the way it's used is not grammatically correct.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a6914e680b0aa25289349b3",
-  "imageURLs": [],
+  "ideaID": "6a691a1f5f96aecec77da1ed",
+  "imageURLs": [
+    "https://canny-assets.io/images/880bea87b042893c83ebfc280a0fad77.png"
+  ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-07-28T20:45:27.022Z",
+  "statusChanged": "2026-07-28T21:07:43.571Z",
   "subCategoryID": null,
-  "title": "[1879] Open bug report in browser redirects to page needing permission",
-  "trendingScore": 2952.9366150453834,
-  "updatedBy": "60dd2a998871d03e7f3806ae",
-  "urlName": "1879-open-bug-report-in-browser-redirects-to-page-needing-permission",
+  "title": "[1879] Profile Decorations acquisition date should include day",
+  "trendingScore": 2952.5331993316845,
+  "updatedBy": null,
+  "urlName": "1879-profile-decorations-acquisition-date-should-include-day",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a69160a12d9cf9762bfbfbc"
-    },
     {
       "_id": "60dd2a998871d03e7f3806ae",
       "alias": "Thoughtful Cobra",
@@ -96,7 +88,7 @@
       "companies": [],
       "name": "~Pausbe",
       "urlName": null,
-      "voteID": "6a6914e712d9cf9762bfb5a2"
+      "voteID": "6a691a1f12d9cf9762bfdaae"
     }
   ]
 }
