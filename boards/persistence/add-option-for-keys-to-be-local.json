@@ -5,7 +5,7 @@
     "sdk.udon",
     "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-07-27T21:25:50.130594Z",
+  "aiTaggedAt": "2026-07-28T06:45:29.085234Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c1173145d0bd77896e30ad6",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "So this is very similar to https://feedback.vrchat.com/persistence/p/user-private-persistence however my reasoning is completely different.\n\nI have a leaderboard system and a settings panel in my world and they both use persistence, they work perfectly fine, but I recently introduced a Save-Load system, which lets players save pickup locations and pen drawings to their player-data, so they can load it later.\n\nThe issue comes because when something unrelated gets changed in the player-data, for example a value on the leaderboard. All of that player's persistent data still gets sent over the network, including the large save data, this creates a LOT of network lag and makes the instance unstable.\n\nUsing persistence is the only way I can make sure everyone can use the save-load system. I cant rely on a simple text box export alone or using the debug logs, as some users are on quest and that makes it quite difficult to extract debug logs/save text. And debug logs get automatically deleted, so It's unreliable.\n\nMy idea is to have a third, optional argument for PlayerData.Set<T>(), For example:\n\ninstead of: PlayerData.SetBytes(Key, Value);\n\nWe would have:\n\nPlayerData.SetBytes(Key, Value, true);\n\nThe third argument would be 'Local'\n\nit defaults to false so people would not need to update all their existing scripts\n\nWhen it is true, it makes it so that key is marked as Local Only, and doesn't get sent to other players, ever.\n\nIf somewhere else in the code, localplayer calls PlayerData.SetBytes(Key, Value, false);\n\nor without the third argument, it sets that variable back to global.\n\nI have included a mockup screenshot.",
+  "details": "Issue:\n\nSetting any value on playerdata (for example, a setting for the world) syncs all playerdata keys/values to all users (for example, SaveData), even ones that were not changed. I don't want to to sync certain keys, as they are very big and not commonly changed. I also don't need other players to be able to see certain keys.\n\nContext:\n\nSo this is very similar to https://feedback.vrchat.com/persistence/p/user-private-persistence however my reasoning is completely different.\n\nI have a leaderboard system and a settings panel in my world and they both use persistence, they work perfectly fine, but I recently introduced a Save-Load system, which lets players save pickup locations and pen drawings to their player-data, so they can load it later.\n\nThe issue comes because when something unrelated gets changed in the player-data, for example a value on the leaderboard. All of that player's persistent data still gets sent over the network, including the large save data, this creates a LOT of network lag and makes the instance unstable.\n\nUsing persistence is the only way I can make sure everyone can use the save-load system. I cant rely on a simple text box export alone or using the debug logs, as some users are on quest and that makes it quite difficult to extract debug logs/save text. And debug logs get automatically deleted, so It's unreliable.\n\nSolution:\n\nMy idea is to have a third, optional argument for PlayerData.Set<T>(), For example:\n\ninstead of: PlayerData.SetBytes(Key, Value);\n\nWe would have:\n\nPlayerData.SetBytes(Key, Value, true);\n\nThe third argument would be 'Local'\n\nit defaults to false so people would not need to update all their existing scripts\n\nWhen it is true, it makes it so that key is marked as Local Only, and doesn't get sent to other players, ever.\n\nIf somewhere else in the code, localplayer calls PlayerData.SetBytes(Key, Value, false);\n\nor without the third argument, it sets that variable back to global.\n\nI have included a mockup screenshot.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,7 +61,7 @@
   "subCategoryID": null,
   "title": "Add option for Keys to be Local",
   "trendingScore": 2953.493095397066,
-  "updatedBy": null,
+  "updatedBy": "5c1173145d0bd77896e30ad6",
   "urlName": "add-option-for-keys-to-be-local",
   "viewerIsAuthor": false,
   "viewerVote": 0,
