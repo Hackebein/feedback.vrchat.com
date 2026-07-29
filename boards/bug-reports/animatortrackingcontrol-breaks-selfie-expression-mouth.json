@@ -1,18 +1,18 @@
 {
   "_id": "6a66d15fde7302721e1d5785",
   "aiCategories": [
-    "loc.unity-sdk",
+    "loc.in-world",
     "avatars.expressions",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-07-29T15:40:36.478112Z",
+  "aiTaggedAt": "2026-07-29T23:33:47.081384Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a631fbdd4058d953b53034c",
     "alias": "Daffodil yellow Sheep",
     "aliasID": "6a631fbed4058d953b530350",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/2399bcdc304d54ec58fac0b1acaf57c9.png",
+    "avatarURL": "https://canny-assets.io/images/e4faefd44e362ff6cc3ed8e84e7139ef.png",
     "created": "2026-07-24T08:18:05.710Z",
     "name": "yamagoat",
     "serviceAccount": false,
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a6a181583203be781eac6f7",
@@ -73,6 +73,62 @@
       "statusChangeID": "6a6a181583203be781eac6f6",
       "statusChangeNewStatus": "needs more information",
       "value": "Can you provide an example avatar ID?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6a899ba2884442dd5e0471",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a631fbdd4058d953b53034c",
+        "alias": "Daffodil yellow Sheep",
+        "aliasID": "6a631fbed4058d953b530350",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e4faefd44e362ff6cc3ed8e84e7139ef.png",
+        "created": "2026-07-24T08:18:05.710Z",
+        "name": "yamagoat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-29T23:15:39.187Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6a181583203be781eac6f7",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a66d15fde7302721e1d5785",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name}\n\nI created a minimal test avatar that reproduces this issue. It only uses VRCAnimatorTrackingControl and contains no other gimmicks or custom settings. Press the TEST_SWITCH expression to toggle Mouth & Jaw between Animation and Tracking.\n\navtr_36420fb6-46d2-4a91-b79a-a559ad8d314f",
       "viewerReactions": null,
       "voteID": null
     }
@@ -165,7 +221,7 @@
       "alias": "Daffodil yellow Sheep",
       "aliasID": "6a631fbed4058d953b530350",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2399bcdc304d54ec58fac0b1acaf57c9.png",
+      "avatarURL": "https://canny-assets.io/images/e4faefd44e362ff6cc3ed8e84e7139ef.png",
       "companies": [],
       "name": "yamagoat",
       "urlName": null,
