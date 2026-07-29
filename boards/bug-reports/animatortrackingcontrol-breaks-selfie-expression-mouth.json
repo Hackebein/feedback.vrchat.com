@@ -2,9 +2,10 @@
   "_id": "6a66d15fde7302721e1d5785",
   "aiCategories": [
     "loc.in-world",
-    "avatars.expressions"
+    "avatars.expressions",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-07-27T03:34:33.468075Z",
+  "aiTaggedAt": "2026-07-29T07:08:56.766995Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a631fbdd4058d953b53034c",
@@ -35,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Enable Selfie Expression.\n\n2. In the FX Animator, use VRC Animator Tracking Control to switch Mouth & Jaw from Tracking to Animation.\n\n3. While Mouth & Jaw is set to Animation, the jaw sinks upward significantly, causing the facial expression to break.\n\n4. Switching back to Tracking restores the face to normal.\n\nAdditional Information\n\n* If you switch to Animation while the mouth is wide open during Tracking, the face remains in a normal state.\n\nHypothesis (Unconfirmed)\n\nSelfie Expression appears to use negative values of aa to represent the closed-mouth state.\n\nBecause of this, the mouth state at the moment of switching from Tracking to Animation may affect how the mouth shape is evaluated while Animation is active.",
+  "details": "1. Enable Selfie Expression.\n\n2. In the FX Animator, use VRCAnimatorTrackingControl to switch Mouth & Jaw from Tracking to Animation.\n\n3. While Mouth & Jaw is set to Animation, the jaw sinks upward significantly, causing the facial expression to break.\n\n4. Switching back to Tracking restores the face to normal.\n\nAdditional Information\n\n* If you switch to Animation while the mouth is wide open during Tracking, the face remains in a normal state.\n\nHypothesis (Unconfirmed)\n\nSelfie Expression appears to use negative values of aa to represent the closed-mouth state.\n\nBecause of this, the mouth state at the moment of switching from Tracking to Animation may affect how the mouth shape is evaluated while Animation is active.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -48,7 +49,7 @@
   "maxScore": 4,
   "mergeCount": 0,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a66d15fde7302721e1d5785/886954365.jpeg",
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a66d15fde7302721e1d5785/1676022453.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 4,
@@ -56,10 +57,10 @@
   "status": "open",
   "statusChanged": "2026-07-27T03:32:47.040Z",
   "subCategoryID": null,
-  "title": "Animator Tracking Control breaks Selfie Expression mouth",
+  "title": "AnimatorTrackingControl breaks Selfie Expression mouth",
   "trendingScore": 2953.2937854154347,
-  "updatedBy": null,
-  "urlName": "animator-tracking-control-breaks-selfie-expression-mouth",
+  "updatedBy": "6a631fbdd4058d953b53034c",
+  "urlName": "animatortrackingcontrol-breaks-selfie-expression-mouth",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
