@@ -1,0 +1,95 @@
+{
+  "_id": "6a69b7effef6debdfb726140",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-07-29T08:22:26.905620Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62f7982ae9d14e44b23d5768",
+    "alias": "Gold Carp",
+    "aliasID": "65e78f08a6e3ea79dd6de5eb",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/0db892d9ff08239a1cc22140df6d67ff.png",
+    "created": "2022-08-13T12:25:14.134Z",
+    "name": "markerss",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62f7982ae9d14e44b23d5768",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "postCount": 417,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-29T08:21:03.942Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Avatars in seats without any \"avatar\" set in the animator lag behind when the seat is moved in worlds.\n\navatar without \"avatar\" set in animator:\n\navtr_017879f6-dd90-42f3-90c5-f6390b2edbbe\n\navatar with \"avatar\" set in animator:\n\navtr_1129036e-0fa4-487b-bfaa-9f17397a1bf2\n\n1. create avatar without \"avatar\" set in animator\n\n2. sit in a seat in a world\n\n3. move the seat around and the avatar will lag behind it\n\nWorld you can use to test this where everyone is placed in seats:\n\nwrld_650084ad-f500-49da-b0a9-4ff498f7f23c",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a69b7effef6debdfb72613f",
+  "imageURLs": [
+    "https://canny-assets.io/images/6050115f83d4ef9d243e4c37dbbef817.png",
+    "https://canny-assets.io/images/fab92e0c17797a8e701a4f4b3aadde0e.png",
+    "https://canny-assets.io/images/54cf06538ed3055368ecd1b7a33c3211.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a69b7effef6debdfb726140/1284987411.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-29T08:21:03.942Z",
+  "subCategoryID": null,
+  "title": "Avatar seat bug",
+  "trendingScore": 2952.59999884888,
+  "updatedBy": null,
+  "urlName": "avatar-seat-bug",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62f7982ae9d14e44b23d5768",
+      "alias": "Gold Carp",
+      "aliasID": "65e78f08a6e3ea79dd6de5eb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0db892d9ff08239a1cc22140df6d67ff.png",
+      "companies": [],
+      "name": "markerss",
+      "urlName": null,
+      "voteID": "6a69b7f012d9cf9762c31028"
+    }
+  ]
+}
