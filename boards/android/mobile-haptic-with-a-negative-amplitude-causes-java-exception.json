@@ -4,10 +4,9 @@
     "loc.in-world",
     "loc.mobile-app",
     "platforms.mobile.android",
-    "sdk.udon",
-    "worlds.travel"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-07-29T21:17:03.799357Z",
+  "aiTaggedAt": "2026-07-29T21:49:55.333539Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60ee9e81572cc51ad4e847e6",
@@ -45,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Setup an Udon program to use `Networking.LocalPlayer.PlayHapticEventInHand` and provide it a negative amplitude.\n\n2. Build & Test or Publish the world for Android\n\n3. On an Android Flatscreen device launch the world.\n\n4. Activate the Udon program and notice the java illegal argument exception.\n\nTested with the parameters: `Right`, `0.1`, `-0.05`, `1`.",
+  "details": "1. Setup an Udon program to use `Networking.LocalPlayer.PlayHapticEventInHand` and provide it a negative amplitude.\n\n2. Build & Test or Publish the world for Android\n\n3. On an Android Flatscreen device launch the world.\n\n4. Activate the Udon program and notice the java illegal argument exception.\n\nTested with the parameters: `Right`, `0.1`, `-0.05`, `1`. Notably this does not cause an exception on Meta Quest native (Quest 2 on open-beta).",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -68,7 +67,7 @@
   "subCategoryID": null,
   "title": "Mobile Haptic with a Negative Amplitude causes Java Exception",
   "trendingScore": 2953.37009537499,
-  "updatedBy": null,
+  "updatedBy": "60ee9e81572cc51ad4e847e6",
   "urlName": "mobile-haptic-with-a-negative-amplitude-causes-java-exception",
   "viewerIsAuthor": false,
   "viewerVote": 0,
