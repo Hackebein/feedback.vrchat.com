@@ -1,11 +1,12 @@
 {
-  "_id": "6a69493535feec1330912caf",
+  "_id": "6a694a56046db5991db5813c",
   "aiCategories": [
-    "loc.main-menu",
-    "loc.quick-menu",
-    "social.instances"
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "avatars.expressions",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-07-29T00:30:16.270859Z",
+  "aiTaggedAt": "2026-07-29T00:35:22.972599Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f498858df2f180ebf64c3a5",
@@ -39,55 +40,46 @@
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-07-29T00:28:37.511Z",
+  "created": "2026-07-29T00:33:26.624Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I have a feeling this has already been reported, as this has been an issue for a long time but was you could work around it inside of the previous user profile main menu. however now, when a friend leaves an instance and i want to join them, I'm forced to go to a separate instance (like my home world), to join them. on the QM, it will just show Request and Send invite as grayed out. on MM, the user details page has only Send Invite, with no ability to request invite.\n\nExpected behavior:\n\nboth Main Menu and Quick Menu to allow you to request invite and send invites (when applicable) to someone after they leave the instance you were in.",
+  "details": "Small bug with the Unity 6 build. Some stickers and emotes with transparency are just broken. I've observed it with the crab sticker that was purchasable, and also some others, but mostly custom emotes, the strange thing is that not all stickers/emotes are broken. example photo here",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a69493535feec1330912cae",
-  "imageURLs": [],
+  "ideaID": "6a694a56046db5991db58135",
+  "imageURLs": [
+    "https://canny-assets.io/images/4b4f1c0d5d64ee945e992d2738a74a25.png"
+  ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-07-29T00:28:37.511Z",
+  "statusChanged": "2026-07-29T00:33:26.624Z",
   "subCategoryID": null,
-  "title": "[1879] Unable to request invite on a user who left instance you are in",
-  "trendingScore": 2952.9587004689106,
-  "updatedBy": null,
-  "urlName": "1879-unable-to-request-invite-on-a-user-who-left-instance-you-are-in",
+  "title": "[1879 + Unity 6] Transparency on some stickers and emotes are completely broken",
+  "trendingScore": 2952.553607643523,
+  "updatedBy": "5f498858df2f180ebf64c3a5",
+  "urlName": "1879-unity-6-transparency-on-some-stickers-and-emotes-are-completely-broken",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a6949f512d9cf9762c110c6"
-    },
     {
       "_id": "5f498858df2f180ebf64c3a5",
       "alias": "Zaffre blue Falcon",
@@ -97,7 +89,7 @@
       "companies": [],
       "name": "Pokéduel",
       "urlName": null,
-      "voteID": "6a69493512d9cf9762c109a8"
+      "voteID": "6a694a5612d9cf9762c11228"
     }
   ]
 }
