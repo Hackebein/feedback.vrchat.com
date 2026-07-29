@@ -2,10 +2,9 @@
   "_id": "6a6a4258db04dc190906c093",
   "aiCategories": [
     "loc.in-world",
-    "loc.main-menu",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-29T19:09:24.096780Z",
+  "aiTaggedAt": "2026-07-29T20:34:58.071504Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69d9817035a0fd856409df1b",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a6a4efd83203be781f40c38",
@@ -72,6 +71,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I saw a bug report recently stating that setting avatar via the API, so through the  vrchat home website, VRCX or other external tool could cause this.\n\nFix is to only change avatar in game when in game. I tried changing my avatar through the website once, didn't get to experience the bug, then got distracted.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6a5e93682e98d50e1c8f04",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-29T20:12:03.698Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6a4258db04dc190906c093",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Duplicate of: https://feedback.vrchat.com/bug-reports/p/avatar-changes-sometimes-revert-back-to-the-previously-used-avatar-immediately-a",
       "viewerReactions": null,
       "voteID": null
     }
