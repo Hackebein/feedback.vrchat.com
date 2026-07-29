@@ -4,7 +4,7 @@
     "loc.in-world",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-07-28T00:02:42.697246Z",
+  "aiTaggedAt": "2026-07-29T21:26:33.929445Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f296274667e9234c9e5a439",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "comments": [
     {
       "_id": "6a64b0204113a4b156c3e963",
@@ -353,7 +353,7 @@
       "postID": "6a63667dad7c09ce7b04f8fd",
       "private": false,
       "reactions": {
-        "like": 8
+        "like": 10
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -400,7 +400,7 @@
       "postID": "6a63667dad7c09ce7b04f8fd",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -409,6 +409,50 @@
       "statusChangeID": "6a67f024eecd9299e23aa573",
       "statusChangeNewStatus": "needs more information",
       "value": "A server side fix was deployed just under two hours ago. If you are still encountering this issue for instances created after this point please post a comment with details",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6a6e430d39921473b66d87",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df3896de46027f9581441b",
+        "alias": "Courageous Tyrannosaurus",
+        "aliasID": "6a66736912d9cf9762ab04a2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d822a1950c36110960d4fe1192ea41b8.png",
+        "created": "2022-07-26T00:43:02.940Z",
+        "name": "skecchy",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-29T21:18:59.446Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a63667dad7c09ce7b04f8fd",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I'm a beginner world dev, world not published yet, only tested with friends. I hit this on the same dates. Since it's tagged as needing more info, I re-tested with logging on.\n\nJuly 25, five of us in a live instance of my uploaded world: I was the instance master and could use the world normally. Nobody else could take a seat - the table sat at 1 of 4 (mine) all session, and my log shows the seat state never changing once for the other four while they clicked. A fresh instance got to 2 of 4, then stalled the same way. An hour later, same build, another instance: fine all evening.\n\nOne thing I haven't seen mentioned: what this does to a world that routes input to the owner. Mine sends every click to the object owner with SendCustomNetworkEvent(NetworkEventTarget.Owner, ...) and validates it there. If the instance doesn't agree who owns that object, a click either reaches a client that checks Networking.IsOwner, decides it isn't the owner and discards it, or it gets applied by one of two believed owners into a state nobody else sees. I can't say which happened to me (my build didn't log that path), but both are silent, and the master is immune since it applies its own clicks locally. So it presents as \"only the master can use the world\", which reads exactly like your own permission check being broken. Cost me two sessions before I found this report.\n\nNote for other world devs: if your owner-side handler just returns when it isn't the owner, this bug is invisible to you. Make that path log.\n\nRe-test after your server-side fix: July 29, 8 clients via Build and Test. Exactly one client reporting isMaster=True, all eight naming the same object owner, zero discarded owner-targeted events, no warnings in any of the eight logs. No reproduction.\n\nLimits: Build and Test starts clients seconds apart - ~37s first to last across my eight - so I may never have created the simultaneous-join condition. Read it as \"can't reproduce any more\", not verification. That run was join-and-lobby only, so non-master input with 8 clients is untested.\n\nMy July 25 logs have rotated out, and that build silently dropped unroutable requests, so I can't fully rule out a bug of my own. Offering this as correlation with your July 23-27 window, not proof.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -428,7 +472,7 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 361,
+  "maxScore": 362,
   "mergeCount": 1,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a63667dad7c09ce7b04f8fd/1443945769.jpeg",
@@ -440,7 +484,7 @@
   "statusChanged": "2026-07-27T23:56:20.624Z",
   "subCategoryID": null,
   "title": "Two clients joining at the exact same time can both be instance masters.",
-  "trendingScore": 2957.3989835044276,
+  "trendingScore": 2957.403041221322,
   "updatedBy": null,
   "urlName": "two-clients-joining-at-the-exact-same-time-can-both-be-instance-masters",
   "viewerIsAuthor": false,
