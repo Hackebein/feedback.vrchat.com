@@ -1,11 +1,11 @@
 {
-  "_id": "6a6b4996fa90a17056374855",
+  "_id": "6a6b4d29523cbfdeaf1bc1f7",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.settings"
+    "loc.hud",
+    "open-beta",
+    "social.nameplates"
   ],
-  "aiTaggedAt": "2026-07-30T12:59:49.009285Z",
+  "aiTaggedAt": "2026-07-30T13:11:39.378533Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a6b454412d9cf9762d0392f",
@@ -28,68 +28,55 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6317ed8c023c7b5ec9566d28",
-    "created": "2022-09-07T01:02:04.302Z",
-    "name": "Feature Requests",
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
     "parentID": null,
-    "postCount": 607,
-    "urlName": "feature-requests"
+    "postCount": 1428,
+    "urlName": "bug-report"
   },
-  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "categoryID": "6317f3226fccd444a7af6064",
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-07-30T12:54:46.309Z",
+  "created": "2026-07-30T13:10:01.896Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Pronouns should be on a new line as they take up the same space as names so they get cut off if the name is too long making them useless.\n\n2. Option to reordering profile links.\n\n3. Unless you plan to allow for colored names in the menu then names should be yellow, it was so much easier to read\n\n4. Newline key on keyboard in vr this is impossible without website",
+  "details": "1. Muted icon does not show on nameplate\n\n2. Mic level percentage does not show on nameplate",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a6b4995fa90a17056374854",
-  "imageURLs": [
-    "https://canny-assets.io/images/6af54f2eb35320bf9a694c1dfa7a3a6d.png"
-  ],
+  "ideaID": "6a6b4d29523cbfdeaf1bc1f6",
+  "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-07-30T12:54:46.309Z",
+  "statusChanged": "2026-07-30T13:10:01.896Z",
   "subCategoryID": null,
-  "title": "[Unity-6] Feature list",
-  "trendingScore": 2953.1756822072603,
+  "title": "[1626] Issues I've found",
+  "trendingScore": 2952.771523180891,
   "updatedBy": null,
-  "urlName": "unity-6-feature-list",
+  "urlName": "1626-issues-ive-found",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a6b4b0f12d9cf9762d05ee3"
-    },
     {
       "_id": "6a6b454412d9cf9762d0392f",
       "alias": "Mandarin Lynx",
@@ -99,7 +86,7 @@
       "companies": [],
       "name": "CatTree",
       "urlName": null,
-      "voteID": "6a6b499612d9cf9762d055a7"
+      "voteID": "6a6b4d2a12d9cf9762d06f27"
     }
   ]
 }
