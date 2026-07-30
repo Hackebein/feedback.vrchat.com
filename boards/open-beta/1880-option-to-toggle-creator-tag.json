@@ -1,10 +1,10 @@
 {
   "_id": "6a6a826007890f7d78db75d7",
   "aiCategories": [
-    "loc.website",
+    "loc.pc-client",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-07-30T22:04:36.143569Z",
+  "aiTaggedAt": "2026-07-30T22:12:50.800514Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "690d3eed4f8511f38043d604",
@@ -35,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a6bc42c3b792adc1ddfca3d",
@@ -116,7 +116,7 @@
       "postID": "6a6a826007890f7d78db75d7",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -170,6 +170,62 @@
       "value": "I do not see a reason to hide it tbh. Especially since most official creators have public worlds, so it would be known you are one anyways.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a6bcc18593db2240a5f8be6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62e03f4e44af5544b2228fa5",
+        "alias": "Burnt sienna Landfowl",
+        "aliasID": "65c2c12eed6eefce4c82d31d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6817052f9aab01c57982db16e2600259.png",
+        "created": "2022-07-26T19:23:58.425Z",
+        "name": "Comfy Chloe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-30T22:11:36.717Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "67a97b5af2bebc2711af4843",
+          "alias": "Wild strawberry Leopard",
+          "aliasID": "67a97b5aafacf378f1a929f8",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/463f00f30dcc2be8c5d97e023ff91974.png",
+          "created": "2025-02-10T04:06:50.249Z",
+          "name": "Taia_Hunter",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6bc92e0dc54cfff5b64654",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6a826007890f7d78db75d7",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{67a97b5af2bebc2711af4843|full_name} It seems Highly illogical to add a new ui element when badges are a Perfect in-place system, Take VRChat developers for example, They have the option to Hide their employment with vrchat, Some do some don't.\n\nAs a creator to VRChat some people might not want that acknowledgement, Everyone has different choices which is what VRChat gives us, Forcing this change is stripping us of that freedom.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -189,19 +245,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 6,
+  "maxScore": 7,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6a826007890f7d78db75d7/882660796.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 6,
+  "score": 7,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-29T22:44:48.546Z",
   "subCategoryID": null,
   "title": "[1880] Option to toggle creator tag",
-  "trendingScore": 2953.984048002623,
+  "trendingScore": 2954.1297275095526,
   "updatedBy": "690d3eed4f8511f38043d604",
   "urlName": "1880-option-to-toggle-creator-tag",
   "viewerIsAuthor": false,
@@ -213,6 +269,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a54ce9a1e3b2bc758bb3788",
+      "alias": "Cognitive Squid",
+      "aliasID": "6a54ce9a1e3b2bc758bb378c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dd923a62061c448fce5d0e07db3bc731.png",
+      "companies": [],
+      "name": "Dave-VR",
+      "urlName": null,
+      "voteID": "6a6bca7e12d9cf9762d7295d"
+    },
     {
       "_id": "628495166bb7820b748a1f66",
       "alias": "Azure Unicorn",
