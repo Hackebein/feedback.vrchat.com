@@ -3,10 +3,9 @@
   "_id": "5a79d12cc7ee6055197aa12f",
   "aiCategories": [
     "loc.in-world",
-    "avatars",
-    "sdk.udon"
+    "avatars.descriptor"
   ],
-  "aiTaggedAt": "2026-06-14T11:53:12.899260Z",
+  "aiTaggedAt": "2026-07-30T16:01:03.785035Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a57f2c9ed63fb3f2d42030e",
@@ -29,7 +28,7 @@
   "by": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 19,
+  "commentCount": 20,
   "comments": [
     {
       "__v": 0,
@@ -945,6 +944,50 @@
       "statusChangeID": null,
       "value": "Related:\nOptional Clock on HUD\nhttps://vrchat.canny.io/feature-requests/p/optional-clock-on-hud\nVRchat menu includes the time at the bottom\nhttps://vrchat.canny.io/feature-requests/p/vrchat-menu-includes-the-time-at-the-bottom",
       "viewerReactions": null
+    },
+    {
+      "_id": "6a6a4fb052a8d1458ef2d30a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-29T19:08:32.305Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5a79d12cc7ee6055197aa12f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This is currently possible in two ways on Windows: Custom shaders, or OSC clocks.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
