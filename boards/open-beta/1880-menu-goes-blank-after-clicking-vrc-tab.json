@@ -1,11 +1,12 @@
 {
-  "_id": "6a6af11f9178a9a79fba2ef2",
+  "_id": "6a6af2629178a9a79fba73b5",
   "aiCategories": [
-    "loc.in-world",
+    "loc.main-menu",
     "open-beta",
-    "social.nameplates"
+    "monetization.vrc-plus",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-07-30T06:38:57.448766Z",
+  "aiTaggedAt": "2026-07-30T06:44:05.617596Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -39,57 +40,44 @@
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-07-30T06:37:19.708Z",
+  "created": "2026-07-30T06:42:42.560Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1.) Open VRChat with User Icons turned off in Shield Levels.\n\n2.) Join an instance, seemingly random users will have a white image on top of the blurred out user icon. (screenshot attached)\n\n3.) Go into Shield Levels and turn User Icons back on, they'll still be blurred until you rejoin the instance, and even then a few seemingly random users will still be blurred out.",
+  "details": "1.) Click the VRC+ tab in the big menu.\n\n2.) Click on the name of any user who gifted you VRC+, then instead of clicking the back arrow, click the VRC+ tab, this will occasionally make the menu go blank, usually after a few times of doing this.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a6af11f9178a9a79fba2eed",
-  "imageURLs": [
-    "https://canny-assets.io/images/b6ffc6796e6eddb7e7076ccfb4449d9b.png"
-  ],
+  "ideaID": "6a6af2629178a9a79fba73b4",
+  "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-07-30T06:37:19.708Z",
+  "statusChanged": "2026-07-30T06:42:42.560Z",
   "subCategoryID": null,
-  "title": "[1880] User Icons not following Shield Levels consistently",
-  "trendingScore": 2953.1381407026956,
+  "title": "[1880] Menu goes blank after clicking VRC+ tab",
+  "trendingScore": 2952.733098351195,
   "updatedBy": null,
-  "urlName": "1880-user-icons-not-following-shield-levels-consistently",
+  "urlName": "1880-menu-goes-blank-after-clicking-vrc-tab",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a6af1e912d9cf9762ce5fc9"
-    },
     {
       "_id": "69ba3c32ed082c9981d6fed6",
       "alias": "Likely Orca",
@@ -99,7 +87,7 @@
       "companies": [],
       "name": "Orео",
       "urlName": null,
-      "voteID": "6a6af11f12d9cf9762ce53aa"
+      "voteID": "6a6af26212d9cf9762ce60e0"
     }
   ]
 }
