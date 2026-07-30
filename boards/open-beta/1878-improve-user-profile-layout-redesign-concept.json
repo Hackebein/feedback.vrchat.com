@@ -32,7 +32,7 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 612,
+    "postCount": 613,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
@@ -484,7 +484,9 @@
       "postDeleted": false,
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -530,7 +532,9 @@
       "postDeleted": false,
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -559,19 +563,19 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 420,
+  "maxScore": 421,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a616a523bf82aeb5b56dc8f/119337932.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 420,
+  "score": 421,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-23T01:11:46.689Z",
   "subCategoryID": null,
   "title": "[1878] Improve user profile layout [Redesign concept]",
-  "trendingScore": 2957.2012074217737,
+  "trendingScore": 2957.2074649507576,
   "updatedBy": "5f67899159b0841fe0d3891b",
   "urlName": "1878-improve-user-profile-layout-redesign-concept",
   "viewerIsAuthor": false,
@@ -583,6 +587,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "65eebc85bdc25820b5391396",
+      "alias": "Overall Raven",
+      "aliasID": "65eebc86a6e3ea79dda24eae",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3b4d902df3e4ced243b30bc0bccc06bf.png",
+      "companies": [],
+      "name": "ratpunk",
+      "urlName": null,
+      "voteID": "6a6bc7fe12d9cf9762d71669"
+    },
     {
       "_id": "60dd7d50541e4833cd4234f8",
       "alias": "Xanthic Bee",
