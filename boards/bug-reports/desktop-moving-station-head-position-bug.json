@@ -1,11 +1,11 @@
 {
   "_id": "6a2165098aa603371df6cf10",
   "aiCategories": [
-    "loc.in-world",
+    "loc.pc-client",
     "platforms.pc.desktop",
-    "worlds.persistence"
+    "avatars.fbt"
   ],
-  "aiTaggedAt": "2026-07-10T09:58:23.448698Z",
+  "aiTaggedAt": "2026-07-30T00:30:17.314108Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b8059dd44451c40bfea25b3",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 12,
+  "commentCount": 13,
   "comments": [
     {
       "_id": "6a216de58aa603371df9e84f",
@@ -611,6 +611,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "bug also is causing camera issues after exiting as well acting as if the bones themselves have shifted, perhaps the viewport is desyncing from the player itself as it seems to resolve after switching out of the avatar and back into it at least when you are out of the vehicle",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6a9a62e8a3d66252cae78a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5d6745ff863fcc6ee6ee4176",
+        "alias": "Flying Mouse",
+        "aliasID": "65c287e9ed6eefce4c76f560",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a43862a516e30879b2ee5a970a14e0fc.png",
+        "created": "2019-08-29T03:26:55.536Z",
+        "name": "★ Klonoa ★",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-30T00:27:14.708Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62defbfc6bc855559c0a671c",
+          "alias": "Sunglow Duck",
+          "aliasID": "684339e25cd9b29f830581b9",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/594b825f6110bed0e4cce44e075c44e3.png",
+          "created": "2022-07-25T20:24:28.545Z",
+          "name": "Darranis",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a50b1485df84f80fa1525cd",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2165098aa603371df6cf10",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62defbfc6bc855559c0a671c|full_name}\n\nYou can quickly force your avi to reload instead of swapping avis by turning off and on the OSC toggle in the little radial menu",
       "viewerReactions": null,
       "voteID": null
     }
