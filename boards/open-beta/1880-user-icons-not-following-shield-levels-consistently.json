@@ -1,11 +1,11 @@
 {
   "_id": "6a6af11f9178a9a79fba2ef2",
   "aiCategories": [
-    "loc.in-world",
+    "loc.pc-client",
     "open-beta",
-    "social.nameplates"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-07-30T06:38:57.448766Z",
+  "aiTaggedAt": "2026-07-30T07:07:02.871416Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1.) Open VRChat with User Icons turned off in Shield Levels.\n\n2.) Join an instance, seemingly random users will have a white image on top of the blurred out user icon. (screenshot attached)\n\n3.) Go into Shield Levels and turn User Icons back on, they'll still be blurred until you rejoin the instance, and even then a few seemingly random users will still be blurred out.",
+  "details": "1.) Open VRChat with User Icons turned off in Shield Levels.\n\n2.) Join an instance, seemingly random users will have a white image on top of the blurred out user icon. (screenshot attached)\n\n3.) Go into Shield Levels and turn User Icons back on, they'll still be blurred until you rejoin the instance, and even then a few seemingly random users will still be blurred out.\n\nThis inconsistent behavior also happens in the menu, user profiles, etc.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -68,7 +68,7 @@
   "subCategoryID": null,
   "title": "[1880] User Icons not following Shield Levels consistently",
   "trendingScore": 2953.1381407026956,
-  "updatedBy": null,
+  "updatedBy": "69ba3c32ed082c9981d6fed6",
   "urlName": "1880-user-icons-not-following-shield-levels-consistently",
   "viewerIsAuthor": false,
   "viewerVote": 0,
