@@ -1,12 +1,11 @@
 {
   "_id": "6a6ae605a88eededff8f438f",
   "aiCategories": [
-    "loc.in-world",
+    "loc.main-menu",
     "groups",
-    "moderation.safety-system",
-    "platforms.pc.steam"
+    "web.groups"
   ],
-  "aiTaggedAt": "2026-07-30T05:51:08.231896Z",
+  "aiTaggedAt": "2026-07-30T06:03:47.791555Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -33,7 +32,7 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 604,
+    "postCount": 605,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
@@ -44,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When viewing a group page in-game, there are stylization inconsistencies compared to the website.\n\n1.) It's currently (to my knowledge), not possible to block or unblock a group in-game from their groups page directly, while both are possible on the website.\n\n2.) After blocking a group, the website blacks out their icon and banner somewhat, it also hides the description, rules and other information. The in-game group page doesn't do any of this.\n\n3.) After blocking a group, helpful information, describing exactly what blocking the group does is shown on the website. The in-game group page doesn't do any of this.\n\nAll of these are helpful and these stylistic changes should be brought over in-game, much like user profiles recently were.",
+  "details": "When viewing a group page in-game, there are stylistic inconsistencies compared to the website.\n\n1.) It's currently (to my knowledge), not possible to block or unblock a group in-game from their groups page directly, while both are possible on the website.\n\n2.) After blocking a group, the website blacks out their icon and banner somewhat, it also hides the description, rules and other information. The in-game group page doesn't do any of this.\n\n3.) After blocking a group, helpful information, describing exactly what blocking the group does is shown on the website. The in-game group page doesn't do any of this.\n\nAll of these are helpful and these stylistic changes should be brought over to the client, making them more in-line with the website, much like user profiles recently were.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -56,30 +55,41 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-30T05:49:57.627Z",
   "subCategoryID": null,
-  "title": "[1880] Group pages have inconsistent stylization in-game compared to the website",
-  "trendingScore": 2952.72786535351,
-  "updatedBy": null,
-  "urlName": "1880-group-pages-have-inconsistent-stylization-in-game-compared-to-the-website",
+  "title": "[1880] Group pages have stylistic inconsistencies in-game compared to the website",
+  "trendingScore": 2953.1334292296388,
+  "updatedBy": "69ba3c32ed082c9981d6fed6",
+  "urlName": "1880-group-pages-have-stylistic-inconsistencies-in-game-compared-to-the-website",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6a6ae6b812d9cf9762ce2fff"
+    },
     {
       "_id": "69ba3c32ed082c9981d6fed6",
       "alias": "Likely Orca",
