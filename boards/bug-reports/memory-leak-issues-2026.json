@@ -1,12 +1,10 @@
 {
   "_id": "69e1109614916839a1a48a59",
   "aiCategories": [
-    "loc.in-world",
     "loc.pc-client",
-    "platforms.pc.desktop",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-26T10:26:35.637693Z",
+  "aiTaggedAt": "2026-07-30T04:43:39.483562Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f9e18279199552bb123e8b0",
@@ -30,119 +28,8 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 11,
+  "commentCount": 12,
   "comments": [
-    {
-      "_id": "69e243c23999f0b02605362f",
-      "aiGenerated": false,
-      "author": {
-        "_id": "64873f159cf028090ce2c2e2",
-        "alias": "Papaya Python",
-        "aliasID": "65c26df7ed6eefce4c5bafd9",
-        "anonymized": false,
-        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
-        "created": "2023-06-12T15:51:49.320Z",
-        "name": "StormRel",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-04-17T14:29:22.392Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "69e1109614916839a1a48a59",
-      "private": false,
-      "reactions": null,
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": "69e243c23999f0b026053621",
-      "statusChangeNewStatus": "needs more information",
-      "value": "Can you provide logs from when this happened?",
-      "viewerReactions": null,
-      "voteID": null
-    },
-    {
-      "_id": "69e248188809ec5b92936972",
-      "aiGenerated": false,
-      "author": {
-        "_id": "5f9e18279199552bb123e8b0",
-        "alias": "Impressive Perch",
-        "aliasID": "65d2eb320129d7ae4449aa7e",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/67d26ec5cfa0718a80a616d016bfb27a.png",
-        "created": "2020-11-01T02:06:31.216Z",
-        "name": "Skoodicai",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-04-17T14:47:52.232Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [
-        "https://canny-assets.io/files/2b213f070782de69128c211413d78298.txt"
-      ],
-      "files": [
-        {
-          "mimeType": "text/plain",
-          "name": "output_log_2026-04-16_05-51-28",
-          "url": "https://canny-assets.io/files/2b213f070782de69128c211413d78298.txt"
-        }
-      ],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [
-        {
-          "_id": "64873f159cf028090ce2c2e2",
-          "alias": "Papaya Python",
-          "aliasID": "65c26df7ed6eefce4c5bafd9",
-          "anonymized": false,
-          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
-          "created": "2023-06-12T15:51:49.320Z",
-          "name": "StormRel",
-          "serviceAccount": false,
-          "urlName": null
-        }
-      ],
-      "mergeID": null,
-      "parentID": "69e243c23999f0b02605362f",
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "69e1109614916839a1a48a59",
-      "private": false,
-      "reactions": {
-        "like": 1
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "@{64873f159cf028090ce2c2e2|full_name}\n\nHere's the most recent log I can grab where the memory leak happened. On the last instance, you can see the RAM usage was around 40+ GB before unloading the instance. I couldn't really see anything that's out of the ordinary, but maybe you guys will see something.",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "69e24a52368101ebed44d3b3",
       "aiGenerated": false,
@@ -535,6 +422,112 @@
       "spam": false,
       "statusChangeID": null,
       "value": "It happened again last night. I never switched worlds, I basically stayed in the same place for 5 hours. These are the final logs in the log file before systemd killed the process. Memory usage over time is not logged because I'm not switching worlds.\n\n2026.07.25 22:41:50 Debug      -  [Behaviour] OnPlayerLeftRoom\n\n2026.07.25 22:41:50 Debug      -  [Behaviour] OnPlayerLeft Murphite (edited out ID)\n\n2026.07.25 22:41:50 Debug      -  Removed player Murphite\n\n2026.07.25 22:41:50 Debug      -  [Behaviour] Destroying Murphite\n\nsystemd log:\n\nJul 25 22:42:34 nibl-linux kernel: Memory cgroup out of memory: Killed process 36602 (VRChat.exe) total-vm:85154820kB, anon-rss:39261664kB, file-rss:406132kB, shmem-rss:65144kB, UID:1000 pgtables:82144kB oom_score_adj:200\n\nI don't think it's something I'm doing. I think it's somebody's avatar or something like that. Something I can't reproduce myself. Because I was literally AFK tabbed out in an idle game world when it triggered OOM. There's days where I can go two days there without this happening, but tonight only lasted 5 hours. I wish I could help diagnose this more but I don't have any clues. My own actions aren't causing it. I'm not doing anything different from the days where it goes 2 days straight just fine.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6ad3502780f97aeb9291a4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5cb6a908df8d8e58c38318a3",
+        "alias": "Static Badger",
+        "aliasID": "65fc43eba63714bcb32ec335",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/9b80423d29b5e6307dd5eb80411c9380.png",
+        "created": "2019-04-17T04:18:16.853Z",
+        "name": "Graystripe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-30T04:30:08.308Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/1c2256e56e0cda2c76657f5dd3109ed4.txt",
+        "https://canny-assets.io/files/698f3b3ec7093a91283c6bb8550ae819.txt",
+        "https://canny-assets.io/files/7878f852bb7a18ed7f019464042ade71.txt",
+        "https://canny-assets.io/files/a9701372cc31a8c9b5568190934085ea.txt",
+        "https://canny-assets.io/files/19942ba2af4aa0d4b0faa53cf99e11fb.txt",
+        "https://canny-assets.io/files/318df1ad7aebd9ca811d669d60862530.txt",
+        "https://canny-assets.io/files/b07124bc5611b947206895a81e4724bd.txt",
+        "https://canny-assets.io/files/3efa8112ef078b41aa1efbd00f961639.txt",
+        "https://canny-assets.io/files/f74b817fd59bf800edabf235392ddfa2.txt",
+        "https://canny-assets.io/files/17664c4516cd1c2600a3adbc93b5a388.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-lsof-final",
+          "url": "https://canny-assets.io/files/1c2256e56e0cda2c76657f5dd3109ed4.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-lsof-initial",
+          "url": "https://canny-assets.io/files/698f3b3ec7093a91283c6bb8550ae819.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-pmap-initial",
+          "url": "https://canny-assets.io/files/7878f852bb7a18ed7f019464042ade71.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-pmap-later",
+          "url": "https://canny-assets.io/files/a9701372cc31a8c9b5568190934085ea.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-lsof-later",
+          "url": "https://canny-assets.io/files/19942ba2af4aa0d4b0faa53cf99e11fb.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-pmap-final",
+          "url": "https://canny-assets.io/files/318df1ad7aebd9ca811d669d60862530.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-07-29_12-31-26",
+          "url": "https://canny-assets.io/files/b07124bc5611b947206895a81e4724bd.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-smaps-final",
+          "url": "https://canny-assets.io/files/3efa8112ef078b41aa1efbd00f961639.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-smaps-later",
+          "url": "https://canny-assets.io/files/f74b817fd59bf800edabf235392ddfa2.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "vrchat-smaps-initial",
+          "url": "https://canny-assets.io/files/17664c4516cd1c2600a3adbc93b5a388.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69e1109614916839a1a48a59",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I managed to capture definitive proof of the memory leak in action. I began logging the process as soon as I noticed the memory usage climbing and captured continuous memory statistics along with smaps, pmap, and lsof snapshots at several points during the leak. Hopefully you (the devs) can use this to finally pin it down.\n\nAfter switching to another world, RSS did not return to normal. It remained at around 30.8 GB with 30.4 GB of it dirty. The snapshot immediately before the world change was 30.0 GB RSS. Some virtual address space was released, but the committed anonymous memory was retained until the client was closed.\n\nEdit: The order of the logs in pairs of three is initial -> later -> final, with the logs labeled 'final' occurring AFTER I switched to my home world and 'leter' occurring a bit before that.",
       "viewerReactions": null,
       "voteID": null
     }
