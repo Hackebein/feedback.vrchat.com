@@ -1,0 +1,94 @@
+{
+  "_id": "6a6bee9687986b952597a678",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-07-31T00:40:28.270759Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "651493a99f90130fe9323c84",
+    "alias": "Charcoal Jaguar",
+    "aliasID": "67164c350f7e723d6eb6bd76",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/064da507396827498e0cce9d0f9339ff.png",
+    "created": "2023-09-27T20:42:17.219Z",
+    "name": "Runya~",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "651493a99f90130fe9323c84",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 160,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-31T00:38:46.337Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "With the SDK 3.10.2 update, the Avatar Expressions Menu editor received the following UX change:\n\nWhen targeting a Boolean parameter, the Value attribute is now hidden and is always treated as enabled, since that's the only valid option for a Boolean (true when activated, false when deactivated).\n\nWhile I understand the reasoning behind this change, it removed a useful workflow that was previously possible.\n\nBefore this update, it was possible to create two menu controls targeting the same Boolean parameter: one with Value = True and another with Value = False. This allowed both controls to toggle the same parameter while only the control matching the current state would appear visually active.\n\nFor example:\n\nBadge toggle (Value = True)\n\nNameplate toggle (Value = False)\n\nWhen the Boolean is true, only the Badge toggle appears active. When it's false, only the Nameplate toggle appears active. This made it possible to represent two mutually exclusive states using a single Boolean while providing clear visual feedback in the Expressions Menu.\n\nSince the Value field is now hidden and always forced to true, this behavior is no longer possible.\n\nI'd like to see the Value option restored for Boolean parameters, even if it's tucked behind an advanced setting or warning. While the current behavior is simpler for most users, the previous implementation enabled legitimate use cases that are no longer possible.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a6bee9687986b952597a677",
+  "imageURLs": [
+    "https://canny-assets.io/images/ec3d807048f868bc4a0618e22630f5d2.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-31T00:38:46.337Z",
+  "subCategoryID": null,
+  "title": "Revert Boolean \"Value\" Visibility in Avatar Expressions Menu Editor",
+  "trendingScore": 2952.8398506850244,
+  "updatedBy": null,
+  "urlName": "revert-boolean-value-visibility-in-avatar-expressions-menu-editor",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "651493a99f90130fe9323c84",
+      "alias": "Charcoal Jaguar",
+      "aliasID": "67164c350f7e723d6eb6bd76",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/064da507396827498e0cce9d0f9339ff.png",
+      "companies": [],
+      "name": "Runya~",
+      "urlName": null,
+      "voteID": "6a6bee9612d9cf9762d85f54"
+    }
+  ]
+}
