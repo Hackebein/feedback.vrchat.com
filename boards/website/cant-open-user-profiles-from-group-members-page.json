@@ -2,9 +2,10 @@
   "_id": "6a6a36d283203be781f0092e",
   "aiCategories": [
     "loc.website",
+    "web.groups",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-07-30T16:01:02.562823Z",
+  "aiTaggedAt": "2026-07-31T14:16:45.855716Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "667e39ab5a5236c435f7878a",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6307c3580b3d9b44b26d3fbf",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a6a3f485018f95dc1294718",
@@ -170,6 +171,62 @@
       "statusChangeID": "6a6b6b7d4db09b159e7b0a26",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6caac09bce13f4a90a3a4c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62def099a721d644ba069aea",
+        "alias": "Obvious Caribou",
+        "aliasID": "65c2c483ed6eefce4ce82932",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b6182c4c6ae045b98f3de2ccedcdc785.png",
+        "created": "2022-07-25T19:35:53.055Z",
+        "name": "Austen_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d142650329e7856f7f7b664",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-31T14:01:36.047Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6b52e8ebf2eb4f317d79d8",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6a36d283203be781f0092e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} The two you linked are related, but not the same. The linked ones are no longer accurate after a change was made that instead has the current canny I'm making this comment in becoming accurate.\n\nThe other two were about the edit button being missing and making you open their profile every time you clicked.\n\nThis one is now the whole thing works as an edit button and there's no way to open their profile. \n\nEssentially the problem is inverted from the links you sent.",
       "viewerReactions": null,
       "voteID": null
     }
