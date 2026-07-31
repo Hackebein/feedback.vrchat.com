@@ -1,0 +1,91 @@
+{
+  "_id": "6a6befc889e0d09d82256aeb",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-07-31T00:45:34.873129Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a6bef7912d9cf9762d86223",
+    "alias": "Carmine Trout",
+    "aliasID": "6a6bef7912d9cf9762d86227",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/86e22779b54d21ff4897721e71b6ffed.png",
+    "created": "2026-07-31T00:42:33.509Z",
+    "name": "JLindseyB",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6a6bef7912d9cf9762d86223",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 362,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-07-31T00:43:52.473Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Hello. My unity keeps crashing whenever the VRC SDK base is added. \n\nThis is the error: [ Could not allocate memory: System out of memory!\n\nTrying to allocate: 1674037094537B with 16 alignment. MemoryLabel: TempOverflow\n\nAllocation happened at: Line:525 in C:\\build\\output\\unity\\unity\\Runtime\\Core\\Containers\\StringStorageDefault.h\n\nMemory overview\n\n[ ALLOC_TEMP_TLS ] used: 0B | peak: 0B | reserved: 57769984B \n\n[ ALLOC_MEMORYPROFILER ] used: 210528B | peak: 374224B | reserved: 1048576B \n\n[ ALLOC_DEFAULT ] used: 330694668B | peak: 0B | reserved: 357425152B \n\n[ ALLOC_TEMP_JOB_1_FRAME ] used: 0B | peak: 0B | reserved: 0B \n\n[ ALLOC_TEMP_JOB_2_FRAMES ] used: 0B | peak: 0B | reserved: 0B \n\n[ ALLOC_TEMP_JOB_4_FRAMES (JobTemp) ] used: 0B | peak: 0B | reserved: 33554432B \n\n[ ALLOC_TEMP_JOB_ASYNC (Background) ] used: 87B | peak: 0B | reserved: 9437184B \n\n[ ALLOC_GFX ] used: 13804352B | peak: 0B | reserved: 33554432B \n\n[ ALLOC_CACHEOBJECTS ] used: 23939508B | peak: 0B | reserved: 53133312B \n\n[ ALLOC_TYPETREE ] used: 1926456B | peak: 0B | reserved: 8388608B \n\n[ ALLOC_PROFILER ] used: 430000B | peak: 436768B | reserved: 16777216B \n\n[ ALLOC_PROFILER_EDITOR ] used: 0B | peak: 0B | reserved: 0B\n\nUnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&) ]\n\nI have confirmed hardware and virtual ram/memory is not faulty as older unity projects open and run, but any new projects almost immediately crash with the same above error. \n\nI have narrowed down the issue as coming from the XR plugins (openXR, OculusXR, XR plug in manager) that I have failed to remove or disable as unity auto reinstalls them and then crashes immediately when installed.\n\nI have confirmed this is the potential source as I ran a blank unity project without the SDK and the installed the XR manager/plugins, causing an instant crash.\n\nHow do I remedy this or is there an SDK version that does not install or use the XR plugin ins as i don’t test my models in VR within unity itself. \n\nLatest VRC SDK as of 7/30/2026",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a6befc889e0d09d82256aea",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-07-31T00:43:52.473Z",
+  "subCategoryID": null,
+  "title": "Unity ram leak",
+  "trendingScore": 2952.8403568879016,
+  "updatedBy": null,
+  "urlName": "unity-ram-leak",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a6bef7912d9cf9762d86223",
+      "alias": "Carmine Trout",
+      "aliasID": "6a6bef7912d9cf9762d86227",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/86e22779b54d21ff4897721e71b6ffed.png",
+      "companies": [],
+      "name": "JLindseyB",
+      "urlName": null,
+      "voteID": "6a6befc812d9cf9762d86504"
+    }
+  ]
+}
