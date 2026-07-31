@@ -2,11 +2,9 @@
   "_id": "6a369ef7c3d9bf3975f2e245",
   "aiCategories": [
     "loc.quick-menu",
-    "moderation.safety-system",
-    "open-beta",
-    "platforms.cross-platform"
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-07-03T22:57:37.538208Z",
+  "aiTaggedAt": "2026-07-31T19:33:11.101667Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -33,11 +31,11 @@
     "created": "2022-09-07T01:02:04.302Z",
     "name": "Feature Requests",
     "parentID": null,
-    "postCount": 613,
+    "postCount": 615,
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a4836f2cc6252874b7f6e5f",
@@ -80,6 +78,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Currently available workarounds:\n\n- For tracking reported public avatars/worlds in-app: Favorite slots.\n\n- For viewing reports: Query the API directly from https://vrchat.com/api/1/moderationReports?status=closed and https://vrchat.com/api/1/moderationReports - these API endpoints are still being updated, despite the removal of the button.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6cf24d2b7abb7347e4de52",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-31T19:06:53.021Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/765778765595225e77ab13a8b48bb73f.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a4836f2cc6252874b7f6e5f",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a369ef7c3d9bf3975f2e245",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "They can't keep getting away with it.",
       "viewerReactions": null,
       "voteID": null
     }
