@@ -2,10 +2,11 @@
   "_id": "6a61729d60c3376708311580",
   "aiCategories": [
     "loc.main-menu",
-    "open-beta",
-    "social.nameplates"
+    "social.nameplates",
+    "social.friends",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-07-30T22:04:36.144297Z",
+  "aiTaggedAt": "2026-07-31T00:16:39.446016Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
@@ -36,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a6169cad586a21e1a1ab484",
@@ -247,6 +248,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "We reverted some changes that caused this issue in [1879]. Anyone still seeing this one?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6be491cffa7424862ea9aa",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ca74f3fb98a820b3ffec9cf",
+        "alias": "Dynamic Starfish",
+        "aliasID": "65c26da3ed6eefce4c4d07d4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/83a20ec27798320c199e1dffa9915a95.png",
+        "created": "2016-04-09T02:19:38.000Z",
+        "name": "Salbug",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-07-30T23:56:01.002Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/51248b17f13e697973a19f1a9ce65fba.gif"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "654a7d1f1870ff9faf0911e8",
+          "alias": "Peacock blue Emu",
+          "aliasID": "6615a164e5d26962aabce722",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/53018074ce6df5449c6c10ba3cd8f48f.png",
+          "created": "2023-11-07T18:08:31.263Z",
+          "name": "Truce",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6bc771cffa7424862bdd56",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a61729d60c3376708311580",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{654a7d1f1870ff9faf0911e8|full_name}, This specific issue does appear to be resolved. Although I am noticing a somewhat related issue that status colours on your friends list for users `Active on Web` may be mismatched from their profile until you click on them.",
       "viewerReactions": null,
       "voteID": null
     }
