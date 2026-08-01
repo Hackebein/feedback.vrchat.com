@@ -1,6 +1,6 @@
 # VRChat Feedback Board Data
 
-Collected: **35,086** posts.<br>
+Collected: **35,087** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (10d ago)** to now.<br>
 Scrape horizon: **2026-04-30 01:38 UTC (92d ago)**.
 
@@ -30,8 +30,8 @@ Scrape horizon: **2026-04-30 01:38 UTC (92d ago)**.
 | `udon` | 1,847 / 1,847 (100.0%) |
 | `vrchat-ik-20` | 285 / 285 (100.0%) |
 | `vrchat-plus-feature-ideas` | 123 / 123 (100.0%) |
-| `website` | 837 / 837 (100.0%) |
-| **Total** | **35,086** / **35,086** (100.0%) |
+| `website` | 838 / 838 (100.0%) |
+| **Total** | **35,087** / **35,087** (100.0%) |
 
 ## OpenSearch
 
