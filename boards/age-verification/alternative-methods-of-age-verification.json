@@ -1,9 +1,10 @@
 {
   "_id": "699e34ecb7665f75e7741d62",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.website",
+    "account.age-verification"
   ],
-  "aiTaggedAt": "2026-06-10T13:21:37.878999Z",
+  "aiTaggedAt": "2026-08-02T02:34:48.138999Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61fb250fe15e5020d08326f3",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "69a89a5b22589c5b5d6f4157",
@@ -126,6 +127,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{61fb250fe15e5020d08326f3|full_name}\n\nI think the same general sentiment of the main post still applies. There needs to be more options. Maybe domains as verification won't work but something else can come from this post. Just need to get people talking about it.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6ea2a772c1938481d7e699",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a6ea20d50134251b8195778",
+        "alias": "Xenon Roadrunner",
+        "aliasID": "6a6ea20d50134251b8195780",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3fa3b9122d9dd34db3a0f3097e5f4367.png",
+        "created": "2026-08-02T01:49:01.673Z",
+        "name": "warumarc",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "674e1d3bd1a531fd71481978",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-02T01:51:35.956Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "699e34ecb7665f75e7741d62",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I personally believe there should be alternatives that do not involve a government ID due to the simple reason that no matter how safe a company states their methods are, if they store any data, it can be breached. Either an alternative or a guarantee that absolutely no information is saved once the process is completed, including the date of birth. And that includes whatever company manages \"Persona\".",
       "viewerReactions": null,
       "voteID": null
     }
