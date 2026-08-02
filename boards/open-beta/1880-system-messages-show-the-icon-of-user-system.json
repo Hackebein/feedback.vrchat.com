@@ -1,0 +1,93 @@
+{
+  "_id": "6a6ecf0aa64dc2aa4d726ace",
+  "aiCategories": [
+    "loc.pc-client",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-08-02T05:03:41.972020Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6078597a713ae019380ecc58",
+    "alias": "Raffia Catshark",
+    "aliasID": "65c27bd8ed6eefce4c9b5259",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e9fb21bad0488019367daf08744c326e.png",
+    "created": "2021-04-15T15:19:22.923Z",
+    "name": "Nidonocu",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6078597a713ae019380ecc58",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1438,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-02T05:00:58.869Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "For those that know, when a 'system message' is sent in VRChat, this is routed through one of the VRChat developer's accounts who happens to be named 'System'.\n\nThis fun quirk of how the messaging system was made was previously well hidden but with the new UI update, getting a system message such as purchasing VRChat credits now causes the user System's (as in the developer's) personal account picture to appear on the System message, covering the VRChat logo and is probably not intended!\n\nTo repo, do something that causes a System message to be sent such as generating an imposter or purchasing VRChat credits.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a6ecf0aa64dc2aa4d726acd",
+  "imageURLs": [
+    "https://canny-assets.io/images/c59ca3fce0b17822406690e83ac0f344.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6ecf0aa64dc2aa4d726ace/465204453.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-02T05:00:58.869Z",
+  "subCategoryID": null,
+  "title": "[1880] System Messages show the icon of user \"System\"",
+  "trendingScore": 2953.151577756784,
+  "updatedBy": null,
+  "urlName": "1880-system-messages-show-the-icon-of-user-system",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6078597a713ae019380ecc58",
+      "alias": "Raffia Catshark",
+      "aliasID": "65c27bd8ed6eefce4c9b5259",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e9fb21bad0488019367daf08744c326e.png",
+      "companies": [],
+      "name": "Nidonocu",
+      "urlName": null,
+      "voteID": "6a6ecf0b50134251b819e507"
+    }
+  ]
+}
