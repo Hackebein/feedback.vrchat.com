@@ -3,10 +3,9 @@
   "aiCategories": [
     "loc.in-world",
     "loc.mobile-app",
-    "platforms.mobile.android",
-    "worlds.video"
+    "platforms.mobile.android"
   ],
-  "aiTaggedAt": "2026-07-30T14:29:16.186104Z",
+  "aiTaggedAt": "2026-08-02T07:56:36.470845Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60ee9e81572cc51ad4e847e6",
@@ -90,7 +89,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Setup an Udon program to use `Networking.LocalPlayer.PlayHapticEventInHand` and provide it a negative amplitude.\n\n2. Build & Test or Publish the world for Android\n\n3. On an Android Flatscreen device launch the world.\n\n4. Activate the Udon program and notice the java illegal argument exception.\n\nTested with the parameters: `Right`, `0.1`, `-0.05`, `1`. Notably this does not cause an exception on Meta Quest native (Quest 2 on open-beta).",
+  "details": "1. Setup an Udon program to use `Networking.LocalPlayer.PlayHapticEventInHand` and provide it a negative amplitude.\n\n2. Build & Test or Publish the world for Android\n\n3. On an Android Flatscreen device launch the world.\n\n4. Activate the Udon program and notice the java illegal argument exception.\n\n`amplitude must either be DEFAULT_AMPLITUDE, or between 1 and 255 inclusive (amplitude=0)`\n\nTested with the parameters: `Right`, `0.1`, `0`, `1`. Notably this does not cause an exception on Meta Quest native (Quest 2 on open-beta).\n\nThis includes the value 0 as well as negative values which has been noted to be an issue in this world: https://vrchat.com/home/world/wrld_937e9703-1aff-4963-b3aa-84375c47796f",
   "error": null,
   "eta": null,
   "etaPublic": true,
