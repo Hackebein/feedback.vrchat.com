@@ -1,0 +1,95 @@
+{
+  "_id": "6a70fc3eb3862a14899ce63b",
+  "aiCategories": [
+    "loc.mobile-app",
+    "platforms.mobile.ios",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-08-03T20:40:10.249650Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6263455d711ac95292f4881b",
+    "alias": "Adorable Crocodile",
+    "aliasID": "66071364e5d26962aaebf8a7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3b639650e16216c4331cfc4e10dc1c7.png",
+    "created": "2022-04-23T00:16:29.096Z",
+    "name": "․minki․",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6263455d711ac95292f4881b",
+  "board": {
+    "_id": "6657990efd693fc2ebdcd62c",
+    "name": "iOS",
+    "urlName": "ios-mobile-beta"
+  },
+  "boardID": "6657990efd693fc2ebdcd62c",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "665799d6fd693fc2ebdda125",
+    "created": "2024-05-29T21:10:46.612Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 160,
+    "urlName": "bug-report"
+  },
+  "categoryID": "665799d6fd693fc2ebdda125",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-03T20:38:22.500Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When using VRChat on iOS, my public avatars that only have a PC and Quest upload (and rely on iOS automatic conversion) can appear completely different to other players.\n\nOn the iOS device, the avatar appears normal, but PC users see an entirely different result. It's almost as if it is rearranging the parameters, and it doesn't match up, which is not the case in Unity.\n\nAs an avatar creator, I do not upload a separate iOS version. I upload a Quest version and allow VRChat to automatically convert it for iOS. The issue seems to occur during or after this automatic conversion. I am using the newest SDK.\n\nThere is a censor on one image; there is no nudity, only a Barbie doll body, but I wanted it to remain tasteful.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a70fc3eb3862a14899ce5fe",
+  "imageURLs": [
+    "https://canny-assets.io/images/32ac05f8095470138189d7be1c3acf87.png",
+    "https://canny-assets.io/images/72a1a6f4a650e7ba42e1b0dd055b1f6d.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a70fc3eb3862a14899ce63b/1508221686.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-03T20:38:22.500Z",
+  "subCategoryID": null,
+  "title": "iOS auto-converted Quest avatars render incorrectly to other players (appearance differs from what the iOS user sees)",
+  "trendingScore": 2953.3874302708377,
+  "updatedBy": null,
+  "urlName": "ios-auto-converted-quest-avatars-render-incorrectly-to-other-players-appearance",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6263455d711ac95292f4881b",
+      "alias": "Adorable Crocodile",
+      "aliasID": "66071364e5d26962aaebf8a7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3b639650e16216c4331cfc4e10dc1c7.png",
+      "companies": [],
+      "name": "․minki․",
+      "urlName": null,
+      "voteID": "6a70fc3e50134251b824e0a1"
+    }
+  ]
+}
