@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-03T02:33:53.375556Z",
+  "aiTaggedAt": "2026-08-03T05:07:20.921983Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a6e166e50134251b816ed79",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a6e2ab6f79a2a44aff25944",
@@ -179,6 +179,65 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Updating the driver of my GPU did not work either",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a701ed7dc2ddc2b575d54b0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-03T04:53:43.971Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/00aa66b5028af5c23885682ce44f6c96.png",
+        "https://canny-assets.io/images/3c3d3898c45347189436b75792f46a12.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a6e166e50134251b816ed79",
+          "alias": "Miniature Swordtail",
+          "aliasID": "6a6e166f50134251b816ed83",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/dea86523fceb48b0f00b9a0b3c63569b.png",
+          "created": "2026-08-01T15:53:18.850Z",
+          "name": "GreenBeanWolf",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6e2ab6f79a2a44aff25944",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6e1859b7b74b0fa556e92d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a6e166e50134251b816ed79|full_name} Your logs indicate yt-dlp is trying to download the pre-muxed 360p video/audio (`-f=18`) with the `android_vr` extractor, as intended.\n\nIf `%LocalAppdata%Low\\VRChat\\VRChat\\Tools\\yt-dlp.exe` is version 2026.07.04 (modified by VRChat) - shown in file properties and in `yt-dlp.exe --version` output - there's not much that can be done about this as of writing this right now, because there's no newer stable yt-dlp release yet.\n\nIf you feel adventurous and technically adept, you can debug with:\n\n1. yt-dlp 2026.07.04 (upstream) from: https://github.com/yt-dlp/yt-dlp/releases/tag/2026.07.04\n\n2. yt-dlp nightly 2026.07.09.234832 or later from: https://github.com/yt-dlp/yt-dlp-nightly-builds/releases\n\nand share if the output of:\n\n1. `.\\yt-dlp.exe --version`\n\n2. `.\\yt-dlp.exe --extractor-args \"youtube:player_client=android_vr\" -F https://www.youtube.com/watch?v=kEAC8eeQWcg`\n\nfrom both versions. You may also replace the`-F` flag with `-f=18` to test downloading it directly and see if there's any change between these versions. It targets this commit from nightly: https://github.com/yt-dlp/yt-dlp/commit/59d9ae606a24a80523da35de9fb75b71eb35b501\n\nI'm unable to replicate your issue here myself with my connection, so you may be part of an A/B test by YouTube.",
       "viewerReactions": null,
       "voteID": null
     }
