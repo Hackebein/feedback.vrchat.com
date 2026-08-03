@@ -1,10 +1,11 @@
 {
-  "_id": "6a6fdf42f79a2a44af1d2d4a",
+  "_id": "6a6fe2024e58abccba633b65",
   "aiCategories": [
-    "loc.website",
-    "web.worlds"
+    "loc.in-world",
+    "open-beta",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-03T00:35:44.734134Z",
+  "aiTaggedAt": "2026-08-03T00:35:44.732148Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c87baa8e6d1a57be67871ec",
@@ -38,57 +39,46 @@
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-08-03T00:22:26.971Z",
+  "created": "2026-08-03T00:34:10.844Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When i observe Unity6 Beta build, i noticed something is missing in my worlds list.\n\nIn Live version, i know private worlds are marked with red bar below as private marking.\n\nBut they're simply missing in Unity6 Beta build.\n\nClicked on it for more information also no private tag found in the detailed page.\n\nIt's so weird to see it. It's better to fix this problem.\n\nOnly mouse over will tell it's private world.",
+  "details": "There is very, very low chance two identical avatars can showed up in the world. It just happened to me when i join the world again and i saw two times same name.\n\nOne of friends also saw same bug. But most of them have not this bug.\n\nThe double is not moving but it's fully functional avatar and is clickable for information.\n\nThis means there is some mistake or missing checks that cause possible double avatars.\n\nI suggest check the code and make sure the chance for doubles are not possible.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a6fdf42f79a2a44af1d2d36",
+  "ideaID": "6a6fe2024e58abccba633b64",
   "imageURLs": [
-    "https://canny-assets.io/images/a49e1b7c4e9dd1eac8846b872e10949d.png"
+    "https://canny-assets.io/images/8177c8e39fb28c9e63218ff26cd92790.png"
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-08-03T00:22:26.971Z",
+  "statusChanged": "2026-08-03T00:34:10.844Z",
   "subCategoryID": null,
-  "title": "[1880 Unity6Beta] No private worlds markings in uploaded worlds.",
-  "trendingScore": 2953.672368097819,
-  "updatedBy": "5c87baa8e6d1a57be67871ec",
-  "urlName": "1880-unity6beta-no-private-worlds-markings-in-uploaded-worlds",
+  "title": "[1880 Unity6 Beta] Very rare chance for \"double\" avatar in world.",
+  "trendingScore": 2953.267966618391,
+  "updatedBy": null,
+  "urlName": "1880-unity6-beta-very-rare-chance-for-double-avatar-in-world",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a6fdff850134251b81d9d27"
-    },
     {
       "_id": "5c87baa8e6d1a57be67871ec",
       "alias": "Thoughtful Hoverfly",
@@ -98,7 +88,7 @@
       "companies": [],
       "name": "MrDummy_NL",
       "urlName": null,
-      "voteID": "6a6fdf4350134251b81d9be1"
+      "voteID": "6a6fe20250134251b81da4d3"
     }
   ]
 }

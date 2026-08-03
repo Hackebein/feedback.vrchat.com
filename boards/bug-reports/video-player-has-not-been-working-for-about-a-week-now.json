@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-01T17:28:14.913903Z",
+  "aiTaggedAt": "2026-08-03T00:35:44.733362Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a6e166e50134251b816ed79",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a6e2ab6f79a2a44aff25944",
@@ -71,6 +71,70 @@
       "spam": false,
       "statusChangeID": null,
       "value": "The logs are only showing yt-dlp using a generic extractor from dmn.moe (YTS proxy). It suggests an error on YTS' proxy server.\n\n```\n\nPS C:\\Users\\linda.LINDALAP\\AppData\\Local\\Temp\\yt-dlp_upstream_2026.07.04> .\\yt-dlp -F https://dmn.moe/a/6/sr/30190\n\n[generic] Extracting URL: https://dmn.moe/a/6/sr/30190\n\n[generic] 30190: Downloading webpage\n\n[redirect] Following redirect to https://yts-static.dmn.moe/err/2/yts_error_message_e00.mp4\n\n[generic] Extracting URL: https://yts-static.dmn.moe/err/2/yts_error_message_e00.mp4\n\n[generic] yts_error_message_e00: Downloading webpage\n\n[info] Available formats for yts_error_message_e00:\n\nID  EXT RESOLUTION │ PROTO │ VCODEC  ACODEC\n\n────────────────────────────────────────────\n\nmp4 mp4 unknown    │ https │ unknown unknown\n\n```\n\nCan you try playing the following URLs and submit logs?\n\n- https://www.twitch.tv/videos/2786352062\n\n- https://www.youtube.com/watch?v=kEAC8eeQWcg",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a6fe1280fc8536181a459f7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a6e166e50134251b816ed79",
+        "alias": "Miniature Swordtail",
+        "aliasID": "6a6e166f50134251b816ed83",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/dea86523fceb48b0f00b9a0b3c63569b.png",
+        "created": "2026-08-01T15:53:18.850Z",
+        "name": "GreenBeanWolf",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-03T00:30:32.436Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/08da3b70e6db78bc294e78495b656435.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-08-02_17-12-40",
+          "url": "https://canny-assets.io/files/08da3b70e6db78bc294e78495b656435.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a6e2ab6f79a2a44aff25944",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6e1859b7b74b0fa556e92d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} It appears to be only YouTube videos that are not working for me specifically. The twitch link and even a Popcorn Palace Movie worked as well. However, people have been saying that this is an issue only affecting me, yet i do not know bow to fix something like this if the traditional methods did not work. Below are the logs",
       "viewerReactions": null,
       "voteID": null
     }
