@@ -1,10 +1,11 @@
 {
   "_id": "6a719ce443cdee2dddae2056",
   "aiCategories": [
-    "loc.action-menu",
+    "loc.main-menu",
+    "avatars",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-08-04T17:49:00.301752Z",
+  "aiTaggedAt": "2026-08-04T23:35:57.221297Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "627e4f5393fdf60b7d3605c2",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a721bf97e4cfdb098cfd228",
@@ -71,6 +72,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "It's already possible to view fallback shaders locally from avatar options in the Action Menu.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7271d1f8bb11cef4fca22b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "627e4f5393fdf60b7d3605c2",
+        "alias": "Umbral green Silverfish",
+        "aliasID": "68669c39083560ad2d45b3fc",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5989faf7d1b9334aa89e49dfb598f71e.png",
+        "created": "2022-05-13T12:30:11.912Z",
+        "name": "ぽんぽこぽん",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-04T23:12:17.127Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a721bf97e4cfdb098cfd228",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a719ce443cdee2dddae2056",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}\n\nThanks — you're right, and I should have checked that before writing. Fallback shader preview covers that part of the request.\n\nWhat I'm still asking for is the rest of it. Shaders are one of several things safety settings strip, and the others have no equivalent preview:\n\nAnimator disabled. This is the one I care about most. Expressions, toggles, and gimmicks all stop, and the avatar can end up in a default state the author never intended anyone to see. There's currently no way to check what that looks like.\n\nPhysBones, particles, audio, and lights stripped by performance-rank blocking.\n\nThe other half of the request is being able to preview by trust rank rather than by individual feature. Checking each toggle one at a time doesn't answer the practical question, which is \"what does someone on default Visitor settings actually see?\" A single preview per tier would.\n\nIf some of this is also already available and I've missed it, I'd appreciate being pointed at it.",
       "viewerReactions": null,
       "voteID": null
     }
