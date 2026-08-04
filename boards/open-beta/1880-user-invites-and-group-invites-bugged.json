@@ -3,10 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "open-beta",
-    "social.instances",
-    "social.friends"
+    "social.instances"
   ],
-  "aiTaggedAt": "2026-08-04T19:23:07.592053Z",
+  "aiTaggedAt": "2026-08-04T20:16:05.802991Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6069689fb1a6982386d23f8f",
@@ -37,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a722e6b262a5e5b24e8436f",
@@ -119,13 +118,71 @@
       "postDeleted": false,
       "postID": "6a722b7109ad38df3f89348f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "These issues are not exclusive to open-beta, and are also occurring on default main branch `Build 1867` rarely. I don't have exact steps to reproduce.\n\nThe issue passes and resolves on its own after a few minutes in main branch, possibly after several attempts to reopen the menu.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a723fdeb7b0feb4f72777b6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6069689fb1a6982386d23f8f",
+        "alias": "Retail Marsupial",
+        "aliasID": "6607c41ae5d26962aadd53fd",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51886eda6972ba18315b821c8b637eaf.png",
+        "created": "2021-04-04T07:19:59.965Z",
+        "name": "ひょなb",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-04T19:39:10.957Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a723617d89bd7abf782c604",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a722b7109ad38df3f89348f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} For me, being on the Unity 6 beta, the issue persisted over an entire 8 hour session and over multiple sessions.",
       "viewerReactions": null,
       "voteID": null
     }
