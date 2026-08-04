@@ -1,11 +1,12 @@
 {
   "_id": "6a72113a2b818a2765addf9b",
   "aiCategories": [
+    "loc.loading-screen",
     "loc.pc-client",
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-08-04T17:10:02.859437Z",
+  "aiTaggedAt": "2026-08-04T19:00:51.544403Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "65aaaf02eb6f7428be4aaeda",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a72172bd89bd7abf77d72d4",
@@ -72,6 +73,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Compiling shaders and the extra noise/heat from the process during loading a world isn't a bug, but a necessity. Are you sure this is a bug?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7232fe262a5e5b24e925a9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65aaaf02eb6f7428be4aaeda",
+        "alias": "Practical Hedgehog",
+        "aliasID": "65cfcaae0129d7ae44332aa1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0331901914d688c1627ac1ea11bbdbcb.png",
+        "created": "2024-01-19T17:18:58.366Z",
+        "name": "dorpomi",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-04T18:44:14.860Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a72172bd89bd7abf77d72d4",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a72113a2b818a2765addf9b",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} compiling shaders and loading the world is happening mostly on CPU, but it's the GPU that goes to 100%. You can see on the screenshot the performance overlay shows 169 fps, in less demanding worlds it goes up to a few hundred. It's literally like disabling V-Sync and just letting your GPU render as many frames as it can.",
       "viewerReactions": null,
       "voteID": null
     }

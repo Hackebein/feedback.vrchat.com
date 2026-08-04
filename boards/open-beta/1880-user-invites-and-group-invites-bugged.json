@@ -1,12 +1,12 @@
 {
   "_id": "6a722b7109ad38df3f89348f",
   "aiCategories": [
-    "loc.pc-client",
+    "loc.in-world",
     "open-beta",
-    "platforms.pc.steam",
-    "social.instances"
+    "social.instances",
+    "groups.instances"
   ],
-  "aiTaggedAt": "2026-08-04T18:31:38.223994Z",
+  "aiTaggedAt": "2026-08-04T19:00:51.546251Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6069689fb1a6982386d23f8f",
@@ -73,7 +73,9 @@
       "postDeleted": false,
       "postID": "6a722b7109ad38df3f89348f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -89,7 +91,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "This bug seems to only happen with certain users. This may make it harder to reproduce by someone else. Neither of these happen on live, so I am certain that this is a beta bug.\n\nFirst, the user invite bug:\n\nThis happens regardless of if the user is using green or orange status. Pressing ‘Request Invite’ will either be unable to select, or if it is, it will always say ‘Unable to request invite.’ regardless of the instance the user is in.\n\nSecond, the group invite bug:\n\nAttempting to invite affected users to a Group+ or Group Public instance will result in the message: ‘Unable to send invite. User is not a member of this group.’ (the exact wording may be different, but hopefully this message is familiar.) OR ‘Unable to send invite.’ It is important to note that BOTH messages show regardless of if the user is, in fact, a member of the group or not.\n\nI noticed this over multiple people, all with a different status mode and different group membership status. However, it didn’t happen with everyone. With some users, none of these bugs happen. I do not know what causes only certain people to be affected.",
+  "details": "This bug seems to only happen with certain users. This may make it harder to reproduce by someone else. Neither of these happen on live, so I am certain that this is a beta bug.\n\nFirst, the user invite bug:\n\nThis happens regardless of if the user is using green or orange status. Pressing ‘Request Invite’ will either be unable to select, or if it is, it will always say ‘Unable to request invite.’ regardless of the instance the user is in.\n\nSecond, the group invite bug:\n\nAttempting to invite affected users to a Group+ or Group Public instance will result in the message: ‘Unable to send invite. User is not a member of this group.’ (the exact wording may be different, but hopefully this message is familiar.) OR ‘Unable to send invite.’ It is important to note that BOTH messages show regardless of if the user is, in fact, a member of the group or not.\n\nI noticed this over multiple people, all with a different status mode and different group membership status. However, it didn’t happen with everyone. With some users, none of these bugs happen. I do not know what causes only certain people to be affected. It may be worth noting that I am using the Unity 6 beta, and I am unsure if the same behavior happens on the normal Open Beta.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -112,7 +114,7 @@
   "subCategoryID": null,
   "title": "[1880] User Invites and Group Invites bugged",
   "trendingScore": 2954.2090823055805,
-  "updatedBy": null,
+  "updatedBy": "6069689fb1a6982386d23f8f",
   "urlName": "1880-user-invites-and-group-invites-bugged",
   "viewerIsAuthor": false,
   "viewerVote": 0,
