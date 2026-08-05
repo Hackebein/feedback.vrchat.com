@@ -2,11 +2,10 @@
   "_id": "6a616a523bf82aeb5b56dc8f",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
     "platforms.cross-platform",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-08-05T22:44:33.468505Z",
+  "aiTaggedAt": "2026-08-05T23:09:38.123655Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f67899159b0841fe0d3891b",
@@ -37,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 47,
+  "commentCount": 48,
   "comments": [
     {
       "_id": "6a634ab5773f3d301d9a390f",
@@ -534,7 +533,7 @@
       "postID": "6a616a523bf82aeb5b56dc8f",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -543,6 +542,64 @@
       "statusChangeID": "6a73b8e9d4b632aab47d671b",
       "statusChangeNewStatus": "tracked",
       "value": "Thanks for the mockups! They were genuinely useful, and some of the proposed changes have already landed in different forms. \n\nWe tightened the profile spacing and made the bio scrollable with more lines visible, which covers a good chunk of the \"less info at a glance\" complaint. \n\nWe're still working on sizing to cut down the leftover empty space, which is a common issue cited both here and in other items. \n\nFor context, one major constraint we're operating with is cross-platform support: the profile must hold up across desktop, VR, and mobile. A layout that's great on one of those can fall apart on another.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a73bd810981cd48906bbae6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "61639c94f9e19e2b580bb791",
+        "alias": "Hilarious Iguana",
+        "aliasID": "674ea24ca367fa6392c5db44",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/dc758f7387678944f014e029aa592630.png",
+        "created": "2021-10-11T02:08:20.154Z",
+        "name": "lizard_tools",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-05T22:47:29.777Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/ac99e862d6c37615aa1b2dbe87ecdeb2.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5acad9ecc9dba010c9c3ec68",
+          "alias": "Evolutionary Vicuna",
+          "aliasID": "65ba088fed6eefce4ca8dc62",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/a96149971e91f0ceb638e9e86cef2b08.gif",
+          "created": "2018-04-09T03:11:40.225Z",
+          "name": "Tupper - VRChat Head of Community",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a73b8e9d4b632aab47d671c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a616a523bf82aeb5b56dc8f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5acad9ecc9dba010c9c3ec68|full_name} is there any chance we'll get back the location indicator in the quick menu? looking up someone's instance (to check how many people/friends are in there for example, or to check whose instance it is) now requires the extra step of opening the full menu every time and it's really annoying.",
       "viewerReactions": null,
       "voteID": null
     }
