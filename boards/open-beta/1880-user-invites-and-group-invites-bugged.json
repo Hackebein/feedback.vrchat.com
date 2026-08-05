@@ -1,11 +1,12 @@
 {
   "_id": "6a722b7109ad38df3f89348f",
   "aiCategories": [
-    "loc.pc-client",
-    "open-beta",
-    "social.instances"
+    "loc.in-world",
+    "social.instances",
+    "social.friends",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-08-04T20:16:05.802991Z",
+  "aiTaggedAt": "2026-08-05T00:50:27.826469Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6069689fb1a6982386d23f8f",
@@ -36,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a722e6b262a5e5b24e8436f",
@@ -185,6 +186,62 @@
       "value": "@{68098a4626271974ef4d2775|full_name} For me, being on the Unity 6 beta, the issue persisted over an entire 8 hour session and over multiple sessions.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a727f4cca93e83afa4be407",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df2c865968ab44bca883ce",
+        "alias": "Whisper pink Fish",
+        "aliasID": "65c2c0bced6eefce4c74c766",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c70c70ce92da2a630008529e74bc1953.png",
+        "created": "2022-07-25T23:51:34.230Z",
+        "name": "RuneFox237",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-05T00:09:48.966Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8f4352b414818a98f56cbd61381a5e95.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a723617d89bd7abf782c604",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a722b7109ad38df3f89348f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} I made a canny for the user invite one based on my testing/observations. It does seem to resolve itself in a few minutes in most cases, though in one case I was unable to request an invite from a user for over 10 minutes was only able to request after I left the instance we were both originally in.\n\nIt also seemed to happen more consistently on the Beta. On live I'd sometimes be able to request on the other user right away. \n\nhttps://feedback.vrchat.com/bug-reports/p/invite-invite-request-behavior-for-user-who-was-just-in-the-same-instance-is-bro",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -202,19 +259,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 4,
+  "maxScore": 5,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a722b7109ad38df3f89348f/888897887.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 4,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-04T18:12:01.352Z",
   "subCategoryID": null,
   "title": "[1880] User Invites and Group Invites bugged",
-  "trendingScore": 2954.433095874485,
+  "trendingScore": 2954.621245805379,
   "updatedBy": "6069689fb1a6982386d23f8f",
   "urlName": "1880-user-invites-and-group-invites-bugged",
   "viewerIsAuthor": false,
@@ -226,6 +283,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62df2c865968ab44bca883ce",
+      "alias": "Whisper pink Fish",
+      "aliasID": "65c2c0bced6eefce4c74c766",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c70c70ce92da2a630008529e74bc1953.png",
+      "companies": [],
+      "name": "RuneFox237",
+      "urlName": null,
+      "voteID": "6a727f5450134251b8323e4e"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
