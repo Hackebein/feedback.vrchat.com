@@ -1,11 +1,10 @@
 {
   "_id": "68f702c0f5a6af21409aa4c1",
   "aiCategories": [
-    "loc.in-world",
-    "social.friends",
-    "worlds.persistence"
+    "loc.main-menu",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-06-10T16:29:26.630917Z",
+  "aiTaggedAt": "2026-08-05T11:53:34.078341Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68f6fcc21f833c417c96ba6b",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6901520fba96c767dd063fa6",
@@ -74,6 +73,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "You can already do this with a launch url, you can specify instance details down to the id and as long as you both have the same link you'll both show up in the same world.\n\nYou can add this to your launch arguments:\n\n`vrchat://launch?id=WORLDID:INSTANCEID~group(GROUPID)~groupAccessType(plus)~region(us)`\n\nWORLDID and GROUPID are self explanatory, and the group stuff is optional.\n\nINSTANCEID can be nearly any regular ascii text/numbers combo",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a731a18874aead9011abce0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b4cfe34e2f8bb53f6847f7b",
+        "alias": "Thick Cricket",
+        "aliasID": "65c28071ed6eefce4c54530f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a7d18d3a058105f77bd49c851547e50c.png",
+        "created": "2018-07-16T20:21:08.210Z",
+        "name": "Haxy",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "66db2163be7366983d54d888",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-05T11:10:16.631Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "68f702c0f5a6af21409aa4c1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Dupe of https://feedback.vrchat.com/feature-requests/p/sharing-homes",
       "viewerReactions": null,
       "voteID": null
     }
