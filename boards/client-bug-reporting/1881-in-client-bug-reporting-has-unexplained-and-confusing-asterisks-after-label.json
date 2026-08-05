@@ -1,0 +1,137 @@
+{
+  "_id": "6a72e78f2b818a2765c26f92",
+  "aiCategories": [
+    "loc.quick-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-08-05T17:45:29.838309Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "69f3e15229c8d0dea5379a7b",
+    "name": "In-Client Bug Reporting",
+    "urlName": "client-bug-reporting"
+  },
+  "boardID": "69f3e15229c8d0dea5379a7b",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a72e7d2e7178097b34c42c3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "69f3e15229c8d0dea5379a7b",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-05T07:35:46.558Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/759c13b051c4557c9ebc6604d61bd526.mp4"
+      ],
+      "files": [
+        {
+          "mimeType": "video/mp4",
+          "name": "2026-08-05 07-34-12",
+          "url": "https://canny-assets.io/files/759c13b051c4557c9ebc6604d61bd526.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a72e78f2b818a2765c26f92",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Expected result: \"Category\" and \"Frequency\" empty in OP.\n\nActual result: \"Category\" is \"Audio\", \"Frequency\" is \"Once\".",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-05T07:34:39.813Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "## Description\n\nThe asterisks don't have any explained meaning, and the implied meaning of an asterisk indicating a \"required\" field is also not consistent. \"Category\" and \"Frequency\" have asterisks after the labels, but setting those fields is not required to submit a bug report (as demonstrated here).\n\n## Reproduction Steps\n\n1. Launch VRChat 2026.3.1 (OPEN BETA) build 1878 or later.\n\n2. Navigate to in-client bug reporting from Quick Menu - Report bug.\n\n3. Type in a single character to bug title, bug description and steps to reproduce. The \"Submit\" button will become active.\n\n4. Try submitting a bug report.\n\nSee the attached video from comments.\n\n## Details\n\n- Category: Audio\n\n- Frequency: Once\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1881-ac10ed3a53-Release\n\nunityVersion: 2022.3.22f2-DWR\n\n---\n\n**Log file:** [output_log_2026-08-05_07-33-39.txt](https://api.vrchat.cloud/api/1/file/file_3c35b0b3-a703-4de8-a789-2a12c0a86c23/1/file)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a72e78f2b818a2765c26f91",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a72e78f2b818a2765c26f92/1883726320.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-05T07:34:39.813Z",
+  "subCategoryID": null,
+  "title": "[1881] In-Client Bug Reporting has unexplained and confusing asterisks after labels",
+  "trendingScore": 2953.5953954089,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "1881-in-client-bug-reporting-has-unexplained-and-confusing-asterisks-after-label",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a72e78f50134251b8354b75"
+    }
+  ]
+}

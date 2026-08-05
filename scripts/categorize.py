@@ -103,6 +103,7 @@ BOARD_LOCATION_PRIORS: dict[str, str] = {
     "ios-mobile-beta": "loc.mobile-app",
     "android": "loc.mobile-app",
     "open-beta": "loc.pc-client",
+    "client-bug-reporting": "loc.pc-client",
     "creator-companion": "loc.creator-companion",
     "avatar-30": "loc.in-world",
     "impostors": "loc.in-world",
