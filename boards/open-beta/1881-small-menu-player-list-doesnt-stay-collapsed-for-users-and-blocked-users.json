@@ -1,11 +1,10 @@
 {
-  "_id": "6a736233aef45cdd488f5abc",
+  "_id": "6a736497ef1ac8d515c00dc8",
   "aiCategories": [
     "loc.quick-menu",
-    "open-beta",
-    "platforms.pc.steam"
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-08-05T16:19:46.718659Z",
+  "aiTaggedAt": "2026-08-05T16:30:00.910490Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -39,57 +38,44 @@
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-08-05T16:17:55.689Z",
+  "created": "2026-08-05T16:28:07.970Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "There appears to be a placeholder user entry in the small menu player list. I'm guessing this is meant to be where friends would show up, but when no friends are in the instance it just has this placeholder.",
+  "details": "1.) Block someone in the instance, open the small menu player list and collapse the \"Users\" and \"Blocked Users\" part of it.\n\n2.) Have someone leave or join the instance, this will cause the \"Users\" and \"Blocked Users\" list of players to show up, despite still being collapsed.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a736233aef45cdd488f5abb",
-  "imageURLs": [
-    "https://canny-assets.io/images/e910663979c9d99fe2c3f5ee161a072c.png"
-  ],
+  "ideaID": "6a736497ef1ac8d515c00dc7",
+  "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-08-05T16:17:55.689Z",
+  "statusChanged": "2026-08-05T16:28:07.970Z",
   "subCategoryID": null,
-  "title": "[1881] Placeholder user entry in the small menu player list",
-  "trendingScore": 2954.0528939664177,
+  "title": "[1881] Small menu player list doesn't stay collapsed for Users and Blocked Users",
+  "trendingScore": 2953.6483189133646,
   "updatedBy": null,
-  "urlName": "1881-placeholder-user-entry-in-the-small-menu-player-list",
+  "urlName": "1881-small-menu-player-list-doesnt-stay-collapsed-for-users-and-blocked-users",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a73631150134251b83937f3"
-    },
     {
       "_id": "69ba3c32ed082c9981d6fed6",
       "alias": "Likely Orca",
@@ -99,7 +85,7 @@
       "companies": [],
       "name": "Orео",
       "urlName": null,
-      "voteID": "6a73623350134251b83931a6"
+      "voteID": "6a73649850134251b83947b3"
     }
   ]
 }
