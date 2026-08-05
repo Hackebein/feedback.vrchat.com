@@ -4,7 +4,7 @@
     "loc.pc-client",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-08-05T15:29:21.276049Z",
+  "aiTaggedAt": "2026-08-05T20:22:33.683135Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a72685950134251b8316cb7",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a72a736262a5e5b24f47008",
@@ -64,7 +64,9 @@
       "postDeleted": false,
       "postID": "6a726ae87e4cfdb098d9b50a",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -108,7 +110,9 @@
       "postDeleted": false,
       "postID": "6a726ae87e4cfdb098d9b50a",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -152,7 +156,9 @@
       "postDeleted": false,
       "postID": "6a726ae87e4cfdb098d9b50a",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -160,6 +166,62 @@
       "statusChangeID": "6a734c9b82046a1201d19a63",
       "statusChangeNewStatus": "needs more information",
       "value": "Any logs or crashdumps from when this happens?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a73981bef1ac8d515c7ff4a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a72685950134251b8316cb7",
+        "alias": "Taupe Quail",
+        "aliasID": "6a72685a50134251b8316cc4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5dbba821c0265be02f2602d61320d8be.png",
+        "created": "2026-08-04T22:31:53.951Z",
+        "name": "Jefftheme",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-05T20:07:55.560Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a734c9b82046a1201d19a64",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a726ae87e4cfdb098d9b50a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name}Yes have many Minidumps files from these crashes but im unsure where I should upload them. Would a Google Drive link work?",
       "viewerReactions": null,
       "voteID": null
     }
