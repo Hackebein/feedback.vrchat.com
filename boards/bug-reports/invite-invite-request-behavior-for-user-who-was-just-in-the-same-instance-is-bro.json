@@ -1,0 +1,94 @@
+{
+  "_id": "6a727e25ba91fd6fbf4659ee",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.in-world",
+    "social.instances",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-08-05T00:07:02.321899Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df2c865968ab44bca883ce",
+    "alias": "Whisper pink Fish",
+    "aliasID": "65c2c0bced6eefce4c74c766",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c70c70ce92da2a630008529e74bc1953.png",
+    "created": "2022-07-25T23:51:34.230Z",
+    "name": "RuneFox237",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df2c865968ab44bca883ce",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-05T00:04:53.203Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When a user leaves the same instance you are currently in some invite functionality seems to break until the game registers that they are no longer in the same instance as you.\n\nNote: recording and most testing for this was on the Open Beta branch where it seems to occur more often. I was able to reproduce parts of this behavior on the current Live build which is why this isn't specifically in the Open Beta category.\n\nSteps:\n\n1. Have both users in the same instance. \n\n3. Have User 2 on orange so that user 1 needs to request an invite from them. (I had both users on orange for this testing so the steps may not be exactly the same if User 1 is not on Orange and is easily joinable)\n\n2. User 2 leaves the current instance to go to a new instance where they can accept and send invites.\n\n3. Have User 1 go to User 2's profile to request an invite from user 2.\n\n4. User 1 may not be able to see the 'request invite' button\n\n5. Have User 2 send an invite to User 1 and have User 1 decline that invite.\n\n6. Now have User 1 attempt to request an invite, it should now work.\n\nOther Notes:\n\n- User 1 viewing User 2 through the QM profile from the Friends wing while User 2 is in the new instance shows that the client still believes that User 2 is in the same instance as User 1. The Request Invite button says that the user is still in the instance. The Send Invite button incorrectly states that this user does not have the ability to invite users to this instance.\n\n- User 1 viewing User 2 through the MM profile shows am active invite button even when the QM profile shows it's invite button as inactive.\n\n- User 2 attempting to Request an Invite from User 1 while in the new instance will result in an 'unable to request invite' notification\n\n- User 2 inviting User 1 seems to fix User 1's ability to send and request invites if User 1 declines the invitation.\n\n- User 2 declining an invitation from User 1 fixes the 'unable to request invite' issue above.\n\n- User 1's inability to request an invite from User 2 seems to persist as long as User 1 is in the initial instance User 2 left. If User 1 leaves to a new instance, they will be able to request an invite from user 2. If User 1 rejoins the initial instance they will again be unable to request an invite off of User 2.\n\n- User 2's inability to request an invite from User 1 persists even if both users travel to new instances. The only way for User 2 to be able to request an invite from User 1 is for User 1 to send them an invite first and have User 2 decline it.\n\nAttachment:\n\nInviteBug.mp4 is a video showcasing the bug from the perspective of User 1 (Left) and  User 2 (Right).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/cee091721df678474c3a5fd07268c113.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "InviteBug",
+      "url": "https://canny-assets.io/files/cee091721df678474c3a5fd07268c113.mp4"
+    }
+  ],
+  "ideaID": "6a727e24ba91fd6fbf4659ec",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-05T00:04:53.203Z",
+  "subCategoryID": null,
+  "title": "Invite/Invite Request behavior for User who was just in the same instance is broken/inconsistent.",
+  "trendingScore": 2953.550774645011,
+  "updatedBy": null,
+  "urlName": "invite-invite-request-behavior-for-user-who-was-just-in-the-same-instance-is-bro",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df2c865968ab44bca883ce",
+      "alias": "Whisper pink Fish",
+      "aliasID": "65c2c0bced6eefce4c74c766",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c70c70ce92da2a630008529e74bc1953.png",
+      "companies": [],
+      "name": "RuneFox237",
+      "urlName": null,
+      "voteID": "6a727e2550134251b8322463"
+    }
+  ]
+}
