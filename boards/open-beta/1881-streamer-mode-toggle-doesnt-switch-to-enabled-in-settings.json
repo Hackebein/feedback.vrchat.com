@@ -1,12 +1,10 @@
 {
-  "_id": "6a735c3b064d1839904d3746",
+  "_id": "6a735fdc82046a1201d52155",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
-    "client.settings",
-    "platforms.pc.steam"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-05T15:54:36.145189Z",
+  "aiTaggedAt": "2026-08-05T16:12:39.688634Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -29,66 +27,57 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6317ed8c023c7b5ec9566d28",
-    "created": "2022-09-07T01:02:04.302Z",
-    "name": "Feature Requests",
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
     "parentID": null,
-    "postCount": 618,
-    "urlName": "feature-requests"
+    "postCount": 1445,
+    "urlName": "bug-report"
   },
-  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "categoryID": "6317f3226fccd444a7af6064",
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-08-05T15:52:27.914Z",
+  "created": "2026-08-05T16:07:56.819Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "There are several areas that aren't covered by any Shield Level option, profile pictures, avatar thumbnails and group banners/icons.\n\nGiven that all of these are far more prominent in the new user profile design than profile icons (which can be hidden), I think it would make sense to introduce the option for hiding these as well.",
+  "details": "When enabling Streamer Mode in the settings menu, it does function, but the toggle doesn't update and still shows as if it's disabled.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a735c3b064d1839904d3722",
-  "imageURLs": [],
+  "ideaID": "6a735fdc82046a1201d52154",
+  "imageURLs": [
+    "https://canny-assets.io/images/87acb11984346281eefcdde13e992ad0.png"
+  ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-08-05T15:52:27.914Z",
+  "statusChanged": "2026-08-05T16:07:56.819Z",
   "subCategoryID": null,
-  "title": "More consistent Shield Levels for user-generated content",
-  "trendingScore": 2954.050413466503,
+  "title": "[1881] Streamer Mode toggle doesn't switch to enabled in settings",
+  "trendingScore": 2953.646316366241,
   "updatedBy": null,
-  "urlName": "more-consistent-shield-levels-for-user-generated-content",
+  "urlName": "1881-streamer-mode-toggle-doesnt-switch-to-enabled-in-settings",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a735d6c50134251b838f61c"
-    },
     {
       "_id": "69ba3c32ed082c9981d6fed6",
       "alias": "Likely Orca",
@@ -98,7 +87,7 @@
       "companies": [],
       "name": "Orео",
       "urlName": null,
-      "voteID": "6a735c3c50134251b838d7de"
+      "voteID": "6a735fdd50134251b8391a17"
     }
   ]
 }
