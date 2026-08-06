@@ -13,7 +13,7 @@ Scrape horizon: **2026-05-03 18:43 UTC (94d ago)**.
 | `avatar-30` | 870 / 870 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 76 / 76 (100.0%) |
-| `bug-reports` | 10,743 / 10,742 (100.0%) |
+| `bug-reports` | 10,743 / 10,743 (100.0%) |
 | `client-bug-reporting` | 180 |
 | `creator-companion` | 289 / 289 (100.0%) |
 | `creator-economy` | 83 / 83 (100.0%) |
@@ -24,7 +24,7 @@ Scrape horizon: **2026-05-03 18:43 UTC (94d ago)**.
 | `localization` | 631 / 631 (100.0%) |
 | `merch` | 35 / 35 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,034 / 3,033 (100.0%) |
+| `open-beta` | 3,034 / 3,032 (100.0%) |
 | `persistence` | 69 / 69 (100.0%) |
 | `sdk-bug-reports` | 1,404 / 1,404 (100.0%) |
 | `third-person-view` | 83 / 83 (100.0%) |
