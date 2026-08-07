@@ -1,0 +1,86 @@
+{
+  "_id": "6a764d08cf07886b395d7b2d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-08-07T21:26:15.118112Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60411ec5cc01c21febdcbe37",
+    "alias": "Yellowwood Kite",
+    "aliasID": "65cf1eeb0129d7ae44b687e4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4dcf6507be2c715b5b5efcd79b49fbd3.png",
+    "created": "2021-03-04T17:54:13.598Z",
+    "name": "PDB",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60411ec5cc01c21febdcbe37",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-07T21:24:24.726Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "when browsing avatar details, we can see for example skinned meshes is 1/8, but then texture memory is 8.01 / ? the maximum is not specified like some other variables, some of them do not display the limit, this should be fixed, the limit should be written, i suggest to write avatardata/maximum per each variable.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a764d08cf07886b395d7b2c",
+  "imageURLs": [
+    "https://canny-assets.io/images/9d9eb78606d7e710b2eef6c9df23a4b6.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-07T21:24:24.726Z",
+  "subCategoryID": null,
+  "title": "multiple limits missing",
+  "trendingScore": 2953.9634259628024,
+  "updatedBy": null,
+  "urlName": "multiple-limits-missing",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60411ec5cc01c21febdcbe37",
+      "alias": "Yellowwood Kite",
+      "aliasID": "65cf1eeb0129d7ae44b687e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4dcf6507be2c715b5b5efcd79b49fbd3.png",
+      "companies": [],
+      "name": "PDB",
+      "urlName": null,
+      "voteID": "6a764d08c92bc8aa597b38fa"
+    }
+  ]
+}
