@@ -111,8 +111,9 @@ systemctl daemon-reload
 # Retire oneshot timer; run as a persistent daemon instead.
 systemctl disable --now feedback-canny-wake.timer 2>/dev/null || true
 rm -f /etc/systemd/system/feedback-canny-wake.timer
-systemctl enable --now feedback-canny-wake.service
+systemctl enable feedback-canny-wake.service
+systemctl restart feedback-canny-wake.service
 
-echo "Enabled feedback-canny-wake.service (daemon)." >&2
+echo "Restarted feedback-canny-wake.service (daemon)." >&2
 echo "Check: systemctl status feedback-canny-wake.service" >&2
 echo "Logs:  journalctl -u feedback-canny-wake.service -f" >&2
