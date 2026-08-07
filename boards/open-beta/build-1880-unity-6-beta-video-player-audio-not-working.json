@@ -1,13 +1,13 @@
 {
   "_id": "6a715fa087149f941383985e",
   "aiCategories": [
+    "loc.pc-client",
     "loc.in-world",
-    "loc.unity-sdk",
+    "open-beta",
     "worlds.video",
-    "audio.voice",
-    "open-beta"
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-08-07T20:18:37.645689Z",
+  "aiTaggedAt": "2026-08-07T23:40:43.198351Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a715c8850134251b8286dd8",
@@ -38,7 +38,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a721698262a5e5b24e4256c",
@@ -137,6 +137,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{68098a4626271974ef4d2775|full_name} 1. Video URLs, any and all videos do not have AUDIO for me. For World IDs is ANY and ALL worlds media players that is using \"AVPro\". \n\n~\n\n2. Output logs, how would I give you output logs for this issue?\n\n~\n\n3. My PC specs are:\n\n- CPU: 12th Gen Intel(R) Core(TM) i9-12900K\n\n- GPU: AMD Radeon RX 7800 XT (16GB VRAM)\n\n- RAM: 32 GB\n\nIf I run on either PC-VR or Desktop, it's the same issue. \n\n- VR Headset Currently Using: HTC VIVE",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a766b97df126c15e9d672d1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-07T23:34:47.554Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a715c8850134251b8286dd8",
+          "alias": "Civilian Swift",
+          "aliasID": "6a715c8950134251b8286ddd",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/a5cf9ed6190e0b1e4a4a57847ce0285e.png",
+          "created": "2026-08-04T03:29:12.819Z",
+          "name": "SeraphinaSefon",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a721698262a5e5b24e4256c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a715fa087149f941383985e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a715c8850134251b8286dd8|full_name} Which domains are you loading videos from? Can you try both:\n\n- https://www.twitch.tv/videos/2786352062\n\n- https://www.youtube.com/watch?v=kEAC8eeQWcg\n\nThe output logs may contain personal information such as your computer username, hardware details, or IP address. They can be attached directly here to this topic for the public to see (read: me), or via a support ticket privately (recommended by VRChat) at https://vrch.at/support (where I cannot read them).",
       "viewerReactions": null,
       "voteID": null
     }
