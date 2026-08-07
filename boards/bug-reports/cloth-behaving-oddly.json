@@ -5,7 +5,7 @@
     "loc.in-world",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-08-07T15:08:21.329813Z",
+  "aiTaggedAt": "2026-08-07T18:52:52.320639Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b68fbeec52d7b606b4182ec",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 23,
+  "commentCount": 24,
   "comments": [
     {
       "__v": 0,
@@ -756,6 +756,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{5b68fbeec52d7b606b4182ec|full_name} I'm not sure of the details, but that might be an problem that occurs when VRChat handles older FBX files.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a76266c5cbd9e5468763f8b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b68fbeec52d7b606b4182ec",
+        "alias": "Steep Dragon",
+        "aliasID": "65c2a31fed6eefce4c8947a1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/daea5e7b1143ebd7e22ef3e157e90d53.png",
+        "created": "2018-08-07T01:54:54.285Z",
+        "name": "ElfMom",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-07T18:39:40.573Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a4f07d5241509245a18ebdd",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "651c8594b562823cf03c5ac4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "LemonKaju this happened with models that were *new*\n\nAll I could figure out was that it was some sort of interaction between constraints, and cloth. If a model had too many constraints, it broke cloth somehow. \n\nI have yet to try reproducing it again and making a new thread however.",
       "viewerReactions": null,
       "voteID": null
     }
