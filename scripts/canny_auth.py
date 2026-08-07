@@ -834,6 +834,22 @@ def fetch_notifications(session: CannySession, pages: int = 10) -> list[dict[str
     return notification_items_from_response(data)
 
 
+def mark_all_notifications_read(session: CannySession) -> bool:
+    """Clear the scraper's Canny notification inbox (all boards).
+
+    Call only after notify post targets have been collected from a fetch, so a
+    wake dispatch cannot wipe unread items before update.py scans them.
+    """
+    code, data = canny_post_json(session, "/api/notifications/markAllRead", {})
+    ok = code == 200 and (
+        data == "success"
+        or (isinstance(data, str) and data.strip() == "success")
+    )
+    if not ok:
+        print(f"[notify] /api/notifications/markAllRead HTTP {code}: {str(data)[:200]}")
+    return ok
+
+
 def notification_post_ids(notifications: list[dict[str, Any]]) -> list[str]:
     out: list[str] = []
     seen: set[str] = set()

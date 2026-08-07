@@ -1498,6 +1498,10 @@ def main():
                 if isinstance(nid, str) and nid:
                     seen.add(nid)
             state["seenNotificationIds"] = list(seen)[-5000:]
+            if canny_auth.mark_all_notifications_read(session):
+                print("[auth] marked all notifications read")
+            else:
+                print("[WARN] markAllRead failed; inbox may still be unread", file=sys.stderr)
         elif args.notifications_only:
             print(
                 "[ERROR] --notifications-only requires Canny SSO",
