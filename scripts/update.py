@@ -1333,7 +1333,14 @@ def _retag_with_rate_limit_retry(
 
 
 def _vote_batch_limit() -> int:
-    return _env_int("VOTE_BATCH", 50)
+    """Max posts to upvote this run. 0 disables voting (unlike _env_int, which floors at 1)."""
+    raw = (os.environ.get("VOTE_BATCH") or "").strip()
+    if raw:
+        try:
+            return max(0, int(raw))
+        except ValueError:
+            pass
+    return 50
 
 
 def _upvote_backlog(session, stored, state) -> int:
@@ -1341,8 +1348,18 @@ def _upvote_backlog(session, stored, state) -> int:
 
     Pending posts are ordered by most-recent activity first (same signal as
     --refresh-newest). Stops the batch on Canny rate-limit (HTTP 429 / slow down).
+    Permanent failures (e.g. board vote denied) are recorded so they do not block
+    the backlog forever.
     """
     voted = set(state.get("votedPostIds") or [])
+    limit = _vote_batch_limit()
+    if limit <= 0:
+        print(
+            f"[vote] skipped (vote-batch=0); "
+            f"{len(voted)}/{len(stored)} total tracked"
+        )
+        return 0
+
     pending = [pid for pid in stored if pid not in voted]
 
     def _activity_key(pid: str):
@@ -1355,9 +1372,9 @@ def _upvote_backlog(session, stored, state) -> int:
         return (0, -dt.timestamp(), pid)
 
     pending.sort(key=_activity_key)
-    limit = _vote_batch_limit()
     batch = pending[:limit]
     ok = 0
+    skipped = 0
     stopped_rate_limit = False
     for pid in batch:
         result = canny_auth.vote_post(session, pid, score=1)
@@ -1367,9 +1384,18 @@ def _upvote_backlog(session, stored, state) -> int:
         elif result.rate_limited:
             stopped_rate_limit = True
             break
+        elif result.forbidden:
+            # Cannot vote (private/restricted board); stop retrying.
+            voted.add(pid)
+            skipped += 1
         time.sleep(1.0)
     state["votedPostIds"] = sorted(voted)
-    note = "; stopped early (rate-limited)" if stopped_rate_limit else ""
+    notes = []
+    if skipped:
+        notes.append(f"skipped {skipped} forbidden")
+    if stopped_rate_limit:
+        notes.append("stopped early (rate-limited)")
+    note = f"; {'; '.join(notes)}" if notes else ""
     print(
         f"[vote] upvoted {ok}/{len(batch)} this run "
         f"({len(voted)}/{len(stored)} total tracked){note}"

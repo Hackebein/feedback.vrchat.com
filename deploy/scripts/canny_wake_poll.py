@@ -363,6 +363,7 @@ def vote_once(state: dict[str, Any], session: canny_auth.CannySession | None) ->
         return session
 
     ok = 0
+    skipped = 0
     rate_limited = False
     for i, pid in enumerate(batch):
         if _STOP:
@@ -380,6 +381,15 @@ def vote_once(state: dict[str, Any], session: canny_auth.CannySession | None) ->
                 flush=True,
             )
             break
+        elif result.forbidden:
+            # Private/restricted board — record so it does not block the backlog.
+            voted.add(pid)
+            skipped += 1
+            print(
+                f"canny-wake: vote forbidden {pid}; marking tracked",
+                file=sys.stderr,
+                flush=True,
+            )
         else:
             print(f"canny-wake: vote failed {pid}; continuing", file=sys.stderr, flush=True)
         if i + 1 < len(batch) and not rate_limited and VOTE_GAP_SECS > 0:
@@ -387,7 +397,12 @@ def vote_once(state: dict[str, Any], session: canny_auth.CannySession | None) ->
 
     state["votedPostIds"] = sorted(voted)
     save_state(STATE_PATH, state)
-    note = "; rate-limited" if rate_limited else ""
+    notes = []
+    if skipped:
+        notes.append(f"skipped {skipped} forbidden")
+    if rate_limited:
+        notes.append("rate-limited")
+    note = f"; {'; '.join(notes)}" if notes else ""
     print(
         f"canny-wake: upvoted {ok}/{len(batch)} "
         f"(total tracked {len(voted)}){note}",

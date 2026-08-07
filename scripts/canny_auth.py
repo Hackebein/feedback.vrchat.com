@@ -784,6 +784,23 @@ def login_canny_session() -> CannySession:
 class VoteResult:
     ok: bool
     rate_limited: bool = False
+    # Permanent denial (e.g. private board); callers should stop retrying.
+    forbidden: bool = False
+
+
+def classify_vote_error(code: int, err: str) -> tuple[bool, bool]:
+    """Map HTTP code + error text to (rate_limited, forbidden)."""
+    err_l = (err or "").lower()
+    rate_limited = code == 429 or "slow down" in err_l
+    if rate_limited:
+        return True, False
+    forbidden = (
+        code in (401, 403)
+        or "not authorized" in err_l
+        or "unauthorized" in err_l
+        or "forbidden" in err_l
+    )
+    return False, forbidden
 
 
 def vote_post(session: CannySession, post_id: str, score: int = 1) -> VoteResult:
@@ -799,9 +816,9 @@ def vote_post(session: CannySession, post_id: str, score: int = 1) -> VoteResult
     err = ""
     if isinstance(data, dict):
         err = str(data.get("error") or "")
-    rate_limited = code == 429 or "slow down" in err.lower()
+    rate_limited, forbidden = classify_vote_error(code, err)
     print(f"[vote] post {post_id} HTTP {code}: {str(data)[:200]}")
-    return VoteResult(ok=False, rate_limited=rate_limited)
+    return VoteResult(ok=False, rate_limited=rate_limited, forbidden=forbidden)
 
 
 def notification_items_from_response(data: Any) -> list[dict[str, Any]]:
