@@ -804,6 +804,24 @@ def vote_post(session: CannySession, post_id: str, score: int = 1) -> VoteResult
     return VoteResult(ok=False, rate_limited=rate_limited)
 
 
+def notification_items_from_response(data: Any) -> list[dict[str, Any]]:
+    """Extract notification dicts from a /api/notifications/get payload.
+
+    Live Canny returns ``{notifications: {items: [...], unreadCount, ...}}``.
+    Older shapes may put a list under ``notifications`` or top-level ``items``.
+    """
+    if not isinstance(data, dict):
+        return []
+    notes = data.get("notifications")
+    if isinstance(notes, dict):
+        notes = notes.get("items")
+    if not isinstance(notes, list):
+        notes = data.get("items")
+    if not isinstance(notes, list):
+        return []
+    return [n for n in notes if isinstance(n, dict)]
+
+
 def fetch_notifications(session: CannySession, pages: int = 10) -> list[dict[str, Any]]:
     code, data = canny_post_json(
         session,
@@ -813,12 +831,7 @@ def fetch_notifications(session: CannySession, pages: int = 10) -> list[dict[str
     if code != 200 or not isinstance(data, dict):
         print(f"[notify] /api/notifications/get HTTP {code}: {str(data)[:200]}")
         return []
-    notes = data.get("notifications") or data.get("items") or []
-    if isinstance(notes, dict):
-        notes = list(notes.values())
-    if not isinstance(notes, list):
-        return []
-    return [n for n in notes if isinstance(n, dict)]
+    return notification_items_from_response(data)
 
 
 def notification_post_ids(notifications: list[dict[str, Any]]) -> list[str]:
