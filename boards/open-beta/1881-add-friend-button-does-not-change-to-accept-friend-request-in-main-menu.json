@@ -2,10 +2,9 @@
   "_id": "6a73c3b8080cde8f349f788d",
   "aiCategories": [
     "loc.main-menu",
-    "social.friends",
-    "platforms.cross-platform"
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-08-06T15:31:50.816058Z",
+  "aiTaggedAt": "2026-08-07T21:08:34.680770Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e4ca2145f9b3726b3b389e7",
@@ -36,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a749e737292d32059aa688d",
@@ -82,6 +81,41 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a76480129896866987125e6",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-07T21:02:57.390Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a73c3b8080cde8f349f788d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a76480129896866987125e5",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -107,8 +141,8 @@
   "pinnedComment": null,
   "score": 4,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-08-06T14:47:15.795Z",
+  "status": "available in future release",
+  "statusChanged": "2026-08-07T21:02:57.376Z",
   "subCategoryID": null,
   "title": "[1881] Add Friend button does not change to Accept Friend Request in Main Menu.",
   "trendingScore": 2954.6341078678424,
