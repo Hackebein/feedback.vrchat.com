@@ -1,11 +1,13 @@
 {
   "_id": "6a715fa087149f941383985e",
   "aiCategories": [
+    "loc.in-world",
     "loc.unity-sdk",
-    "open-beta",
-    "worlds.video"
+    "worlds.video",
+    "audio.voice",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-08-04T17:10:02.860207Z",
+  "aiTaggedAt": "2026-08-07T20:18:37.645689Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a715c8850134251b8286dd8",
@@ -32,11 +34,11 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1456,
+    "postCount": 1460,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a721698262a5e5b24e4256c",
@@ -79,6 +81,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Can you describe your issue in more detail? (Video URLs, world IDs.)\n\nDo you have [output logs](https://help.vrchat.com/hc/en-us/articles/9521522810899-Where-do-I-find-my-Output-Logs-and-Crash-Dumps)?\n\nWhat kind of device are you using?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a763bffbaeaa6e2ebd85fc4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a715c8850134251b8286dd8",
+        "alias": "Civilian Swift",
+        "aliasID": "6a715c8950134251b8286ddd",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a5cf9ed6190e0b1e4a4a57847ce0285e.png",
+        "created": "2026-08-04T03:29:12.819Z",
+        "name": "SeraphinaSefon",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-07T20:11:43.497Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a721698262a5e5b24e4256c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a715fa087149f941383985e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} 1. Video URLs, any and all videos do not have AUDIO for me. For World IDs is ANY and ALL worlds media players that is using \"AVPro\". \n\n~\n\n2. Output logs, how would I give you output logs for this issue?\n\n~\n\n3. My PC specs are:\n\n- CPU: 12th Gen Intel(R) Core(TM) i9-12900K\n\n- GPU: AMD Radeon RX 7800 XT (16GB VRAM)\n\n- RAM: 32 GB\n\nIf I run on either PC-VR or Desktop, it's the same issue. \n\n- VR Headset Currently Using: HTC VIVE",
       "viewerReactions": null,
       "voteID": null
     }
@@ -127,7 +185,7 @@
       "alias": "Intimate Otter",
       "aliasID": "6a5f9e9bd4058d953b392a73",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c0a3918ef63e4bea1bfcdb5e7b1dbe35.png",
+      "avatarURL": "https://canny-assets.io/images/4ba77136a56d8c022ed529babe82b825.png",
       "companies": [],
       "name": "HackebeinsBot",
       "urlName": null,
