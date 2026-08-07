@@ -5,7 +5,7 @@
     "loc.in-world",
     "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-06-10T13:57:31.478720Z",
+  "aiTaggedAt": "2026-08-07T17:03:27.579042Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f35fa1560d45f68c3d29ae4",
@@ -35,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "650db8783d561e5922d89ac4",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "__v": 0,
@@ -125,6 +125,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "More user interface options for Avatar menus would be great, and Color picking is probably the most common one for a cheap win. But how would a single joystick control 3 floats?  With Saturation, Brightness, and Hue, you'll lose something if you limit it to a Vector2. The example image for instance lacks grey scale options.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a73ada30c9535757cf0804d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "682350b6a79ba47e9cef2a1b",
+        "alias": "Slim Falcon",
+        "aliasID": "682350b7cd82760dacb99316",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1155bc477c444a7b504503fabb401a5d.png",
+        "created": "2025-05-13T14:01:26.177Z",
+        "name": "ShyyKitty",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-05T21:39:47.857Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/f2efb981f9f8bb765bb6fdadabcaa572.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5f458c8f3554b20662dc19fc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "As this still hasn't gotten anywhere yet I want to share some of my ideas on how this could work.\n\n1a. Instead of updating 3 floats, directly update the color values of renderers' materials. This could maybe be done by adding a component on the avatar with a list of renderers to affect and what property. It would also remove the need of hue/saturation/value shifts in shaders.\n\n1b. An option for updating 3 floats could be done if really need be, but I guess most people will probably not use this if option 1a exists.\n\n2. For UI the radial menu would be hard to use, instead something that would probably be easier to use as well could be having it open the color picker in \"the big menu\" kind of like when editing the color of cosmetics.\n\n3. Having support for presets, and importing/exporting pallets, like in the cosmetics color picker. (could maybe be monetized with VRC+ in some way)\n\n4. Have color sync \"bits\" be separate from bool/int/float type bits, I don't see a lot of people changing colors a lot so these really don't need to be updated in the same way as those other types. What VRChat decides to be a good cap on the amount of colors is up to them.\n\nThese are my thoughts, yours may be different, but I think these points would benefit most people. I really hope this gets another look by the VRChat team, especially now with the UI being updated again, this would be a great addition to make VRChat easier to use.",
       "viewerReactions": null,
       "voteID": null
     }
