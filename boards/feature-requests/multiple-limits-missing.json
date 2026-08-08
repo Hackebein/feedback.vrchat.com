@@ -1,10 +1,10 @@
 {
   "_id": "6a764d08cf07886b395d7b2d",
   "aiCategories": [
-    "loc.main-menu",
+    "loc.unity-sdk",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-08T00:07:36.852386Z",
+  "aiTaggedAt": "2026-08-08T14:23:23.065055Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60411ec5cc01c21febdcbe37",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a766fd9d633ee53ab8eb168",
@@ -71,6 +71,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "While it'd be nice, texture memory has soft caps (performance ranking). Download size and uncompressed size both have hard caps as well as and user-adjustable soft caps. There's may be no agreeable solution what the limit should be displayed as.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a773a0ad77020bc7a9c7a5f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df7cd83e007e467295c4e1",
+        "alias": "Orchid bloom Marlin",
+        "aliasID": "65c26defed6eefce4c5a3685",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e0e9a23bc510d6aa62c0d515b73bc1e3.png",
+        "created": "2022-07-26T05:34:16.920Z",
+        "name": "Docteh",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-08T14:15:38.418Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a764d08cf07886b395d7b2d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Personally I'd almost rather they go the other way, remove the maximum number. With something like 114241/70000 I've had it get read out to me as mumble/70000 and had to kinda argue with my friends to be more clear on the first part of the number",
       "viewerReactions": null,
       "voteID": null
     }
