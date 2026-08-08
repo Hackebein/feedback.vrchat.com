@@ -1,12 +1,10 @@
 {
   "_id": "6a746222bc123b32cfb37a53",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "open-beta",
-    "social.friends"
+    "loc.website",
+    "web.social"
   ],
-  "aiTaggedAt": "2026-08-07T14:22:23.961278Z",
+  "aiTaggedAt": "2026-08-08T22:32:36.034684Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e4ca2145f9b3726b3b389e7",
@@ -37,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a746b3890b13849638f905d",
@@ -129,6 +127,50 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a77abd71c21223ee356329d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b6b4e8cb1b04a6db0be465d",
+        "alias": "Lapis lazuli Peacock",
+        "aliasID": "65c287f9ed6eefce4c79635f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8dbf7109fa829e477245ca7fa5089886.png",
+        "created": "2018-08-08T20:11:56.277Z",
+        "name": "Kizzy",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-08T22:21:11.709Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a746222bc123b32cfb37a53",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Please make the friend names a yellow color again.\n\nIt looks visually messy now that every text is the same color whereas before you had a very easily identifiable way to immediately know if someone is a friend.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -146,19 +188,19 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 7,
+  "maxScore": 8,
   "mergeCount": 0,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a746222bc123b32cfb37a53/1824657700.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 7,
+  "score": 8,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-08-07T14:17:36.126Z",
   "subCategoryID": null,
   "title": "[1881] It's indistinguishable if a user is friend or not in recently seen page.",
-  "trendingScore": 2955.170007376704,
+  "trendingScore": 2955.330026393065,
   "updatedBy": null,
   "urlName": "1881-its-indistinguishable-if-a-user-is-friend-or-not-in-recently-seen-page",
   "viewerIsAuthor": false,
@@ -170,6 +212,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5b6b4e8cb1b04a6db0be465d",
+      "alias": "Lapis lazuli Peacock",
+      "aliasID": "65c287f9ed6eefce4c79635f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8dbf7109fa829e477245ca7fa5089886.png",
+      "companies": [],
+      "name": "Kizzy",
+      "urlName": null,
+      "voteID": "6a77ab7dc92bc8aa59b5d921"
+    },
     {
       "_id": "6050972e03276b03f63ca0b8",
       "alias": "Iced lavender Crow",
