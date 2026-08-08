@@ -6,7 +6,7 @@
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-08-08T10:08:45.149783Z",
+  "aiTaggedAt": "2026-08-08T10:10:28.633347Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -44,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I don't have any very specific ways of reproducing this, but this seems pretty reliable:\n\nPlay VRChat for around two hours, while switching between popular public instances (30+ players) and occasionally clicking around in your menu. I've found when the Texture Cache gets to more than a few hundred MB (from that session), is around when it happens.\n\nWhen it happens, you'll notice very sudden frame drops anywhere in the menu that has Worlds, this includes User Profiles (your own and others if they have worlds shown) and the Worlds tab itself.\n\nI imagine this is more noticeable on higher refresh rate monitors, but the frame drops are quite bad, to the point of making world and player mic audio cut out from simply navigating to a profile.\n\nThese frame drops will remain permanently until the game is restarted.\n\nI believe this regression is related to another bug that was fixed, that seems to be when it was introduced.\n\nhttps://feedback.vrchat.com/bug-reports/p/menu-goes-blank-after-clicking-worlds-tab",
+  "details": "I don't have any very specific ways of reproducing this, but this seems pretty reliable:\n\nPlay VRChat for at least two hours, while switching between popular public instances (30+ players) and occasionally clicking around in your menu. I've found when the Texture Cache gets to more than a few hundred MB (from that session), is around when it happens.\n\nWhen it happens, you'll notice very sudden frame drops anywhere in the menu that has Worlds, this includes User Profiles (your own and others if they have worlds shown) and the Worlds tab itself. Navigating in either direction from the Worlds tab to your User Profile is particularly bad.\n\nI imagine this is more noticeable on higher refresh rate monitors, but the frame drops are quite bad, to the point of making world and player mic audio cut out from simply navigating to a profile.\n\nThese frame drops will remain permanently until the game is restarted.\n\nI believe this regression is related to another bug that was fixed, that seems to be when it was introduced.\n\nhttps://feedback.vrchat.com/bug-reports/p/menu-goes-blank-after-clicking-worlds-tab",
   "error": null,
   "eta": null,
   "etaPublic": true,

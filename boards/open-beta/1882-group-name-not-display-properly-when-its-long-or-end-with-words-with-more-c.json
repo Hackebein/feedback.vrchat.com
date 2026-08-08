@@ -1,10 +1,11 @@
 {
   "_id": "6a76f37322b7d422578b2a85",
   "aiCategories": [
-    "loc.in-world",
-    "groups.nameplates"
+    "loc.quick-menu",
+    "groups.nameplates",
+    "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-08-08T09:20:58.576356Z",
+  "aiTaggedAt": "2026-08-08T10:10:28.632421Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66c7f83ba2fca0a622090327",
@@ -31,7 +32,7 @@
     "created": "2022-09-07T01:25:54.001Z",
     "name": "Bug Report",
     "parentID": null,
-    "postCount": 1466,
+    "postCount": 1467,
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
@@ -42,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Group like EEE.4075 have all japanese, but since it's long, it's being cut off in the group menu and the nameplate.\n\nGroup like PECO.9648, it have long english name but it's displayed fully.\n\nGroup like VRW.9033 listed long japanese and the english translated name also being cut off, it's also cut off in the group menu and unable to display full name.\n\nGroup like JPST.9254, it have rather short english name, while featured three words japanese name in the end, somehow cut off early on the english part.(ERAI.3263 have longr english part and very long japanese end)\n\nConclusion: When it's end with more character width it's likely bug, but if the group name is long, it's cut off anyway, which it shouldn't since it will sometime hard to tell what group it is",
+  "details": "Group like EEE.4075 have all japanese, but since it's long, it's being cut off in the group menu and the nameplate.\n\nGroup like PECO.9648, it have long english name but it's displayed fully.\n\nGroup like VRW.9033 listed long japanese and the english translated name also being cut off, it's also cut off in the group menu and unable to display full name.\n\nGroup like JPST.9254, it have rather short english name, while featured three words japanese name in the end, somehow cut off early on the english part.(ERAI.3263 have longer english part and very long japanese end, getting same issue)\n\nConclusion: When it's end with more character width bug will happens, but if the group name is long, it's cut off anyway, which it shouldn't since it will sometime hard to tell what group it is.(②The old group quick menu display will features full name no matter what, btw)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -50,7 +51,8 @@
   "files": [],
   "ideaID": "6a76f37322b7d422578b2a84",
   "imageURLs": [
-    "https://canny-assets.io/images/a13fe85a44c6100d38db9bc6f4000445.jpeg"
+    "https://canny-assets.io/images/a13fe85a44c6100d38db9bc6f4000445.jpeg",
+    "https://canny-assets.io/images/0aa050145aaa988f5ca89d9830b6b2ad.jpeg"
   ],
   "linkedEntry": null,
   "loading": false,
@@ -67,7 +69,7 @@
   "subCategoryID": null,
   "title": "[1882] Group name not display properly when it's long or end with words with more character width",
   "trendingScore": 2954.4396073377484,
-  "updatedBy": null,
+  "updatedBy": "66c7f83ba2fca0a622090327",
   "urlName": "1882-group-name-not-display-properly-when-its-long-or-end-with-words-with-more-c",
   "viewerIsAuthor": false,
   "viewerVote": 0,
