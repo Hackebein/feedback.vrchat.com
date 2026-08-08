@@ -1,0 +1,90 @@
+{
+  "_id": "6a76fed819bbf0f50db4c4dd",
+  "aiCategories": [
+    "loc.hud",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-08-08T10:08:45.150816Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66c7f83ba2fca0a622090327",
+    "alias": "Right Hoverfly",
+    "aliasID": "66c7f83b3e088c8d6b0e1c00",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/34fd388df4a3b79f83714855d8624742.png",
+    "created": "2024-08-23T02:47:23.348Z",
+    "name": "Usemame",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66c7f83ba2fca0a622090327",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-08T10:03:04.558Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "My UI is in Japanese, this was a old issue since the event calendar was a thing, but I only noticed what the issue was since the new nameplate in the beta 1882 also features the same issue(link: https://feedback.vrchat.com/open-beta/p/1882-group-name-not-display-properly-when-its-long-or-end-with-words-with-more-c).\n\nSince the date have numbers end with japaense(c in the example), and also features Japanese words in the title, non of both display correctly, which is very confusing since players will have no idea about the title and the date and the date/hours\n\n①It's fine on the site, but you will have to open it in browser to check, while the site always being in english, so it won't be as clear compares to in-game\n\n②Notice the title and the date is cut off on 202(should be 2026年8月8日 23:30- 23:59), the hours also not exist anymore\n\n③Switch the UI to english from japanese, the date is displayed correctly, but title isn't since it's in japanese.\n\n④The same case in japanese UI, the title is fine when it's in english, but the date is cut off\n\n⑤The sample of english title and english UI, everything is fine(not sure if the title being too long just like the group name issue on the link above, since the samples in japanese just cut off very early)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a76fed819bbf0f50db4c4dc",
+  "imageURLs": [
+    "https://canny-assets.io/images/ea51d28c966067d4b7e84525040d50d3.jpeg",
+    "https://canny-assets.io/images/ceac7b4674526875ea67aa130065feb5.jpeg",
+    "https://canny-assets.io/images/b50dbb6eac61534135252e3cc0fb6543.jpeg",
+    "https://canny-assets.io/images/6b97f9bc4bbec289215f2df8289a87e0.jpeg",
+    "https://canny-assets.io/images/72386e86048680926699de8c0f60f5a7.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-08T10:03:04.558Z",
+  "subCategoryID": null,
+  "title": "Event calendar display issue when the event name",
+  "trendingScore": 2954.038690273318,
+  "updatedBy": null,
+  "urlName": "event-calendar-display-issue-when-the-event-name",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/34fd388df4a3b79f83714855d8624742.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6a76fed8c92bc8aa59b09fce"
+    }
+  ]
+}
