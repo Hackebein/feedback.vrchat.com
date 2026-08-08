@@ -1,0 +1,93 @@
+{
+  "_id": "6a76f37322b7d422578b2a85",
+  "aiCategories": [
+    "loc.in-world",
+    "groups.nameplates"
+  ],
+  "aiTaggedAt": "2026-08-08T09:20:58.576356Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66c7f83ba2fca0a622090327",
+    "alias": "Right Hoverfly",
+    "aliasID": "66c7f83b3e088c8d6b0e1c00",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/34fd388df4a3b79f83714855d8624742.png",
+    "created": "2024-08-23T02:47:23.348Z",
+    "name": "Usemame",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66c7f83ba2fca0a622090327",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1466,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-08T09:14:27.494Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Group like EEE.4075 have all japanese, but since it's long, it's being cut off in the group menu and the nameplate.\n\nGroup like PECO.9648, it have long english name but it's displayed fully.\n\nGroup like VRW.9033 listed long japanese and the english translated name also being cut off, it's also cut off in the group menu and unable to display full name.\n\nGroup like JPST.9254, it have rather short english name, while featured three words japanese name in the end, somehow cut off early on the english part.(ERAI.3263 have longr english part and very long japanese end)\n\nConclusion: When it's end with more character width it's likely bug, but if the group name is long, it's cut off anyway, which it shouldn't since it will sometime hard to tell what group it is",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a76f37322b7d422578b2a84",
+  "imageURLs": [
+    "https://canny-assets.io/images/a13fe85a44c6100d38db9bc6f4000445.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-08T09:14:27.494Z",
+  "subCategoryID": null,
+  "title": "[1882] Group name not display properly when it's long or end with words with more character width",
+  "trendingScore": 2954.0338673301962,
+  "updatedBy": null,
+  "urlName": "1882-group-name-not-display-properly-when-its-long-or-end-with-words-with-more-c",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/34fd388df4a3b79f83714855d8624742.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6a76f373c92bc8aa59b08195"
+    }
+  ]
+}
