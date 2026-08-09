@@ -1,9 +1,10 @@
 {
   "_id": "6a61ecbd7560de5c7714bc75",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.website",
+    "moderation.bans"
   ],
-  "aiTaggedAt": "2026-07-30T00:48:12.367271Z",
+  "aiTaggedAt": "2026-08-09T14:41:47.144241Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62e653495410ba44afac544b",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a62409b08cc4d096f26ad7c",
@@ -116,6 +117,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "この提案に全面的に賛成します。\n\n同一の申立人による繰り返しの削除申請、直接尋ねても申立書の詳細が\n\n開示されない、申立人にもVRChatサポートにも問い合わせて返答が\n\n得られない――ここで説明されている状況は、透明性のある仕組みが\n\nあれば本来防げるはずのものです。\n\nハッボホテルさんが的確に指摘されている通り、17 U.S.C. §512(g)と\n\n§512(f)は、すでにコンテンツオーナーに対して実質的な権利を認めて\n\nいます。前者は、対抗通知（カウンターノーティス）を提出すれば、\n\n申立人が10〜14営業日以内に訴訟を提起しない限りコンテンツが\n\n復元される権利であり、後者は、虚偽の申立てを行った申立人の\n\n責任を問う権利です。しかし、これらの権利はいずれも、コンテンツ\n\nオーナーが実際に申立書の内容を確認できることを前提としています。\n\n申立書の文言が一切提供されないのであれば、これらの権利は\n\n書面上にしか存在しないことになります。実際に行使できない\n\n法律上の権利は、実質的には権利とは言えません。\n\n他のプラットフォームと比較すると、VRChatの現状の対応を正当化する\n\nのは難しいと言わざるを得ません。XやTwitchは申立書の全文を自動的に\n\n送付しており、GitHubやGoogle検索は個人情報を伏せたうえで全文を\n\n公開しています。それに対してVRChatは、申立人の氏名と連絡先のみを\n\n通知し、詳細については申立人に直接連絡するよう案内するだけです。\n\nしかし今回のケースが示す通り、申立人には応答する義務がなく、\n\n実際に拒否されてしまうケースが存在します。\n\nこれは透明性における些細な欠陥ではなく、DMCA制度の悪用を容易にし、\n\nその調査や是正をほぼ不可能にしてしまう構造的な問題です。\n\n提案されている対応策は、コスト面でも合理的です。既存の削除通知\n\nメールに申立書を添付するだけであれば、新しいシステムを一から\n\n構築する必要はなく、既存のワークフローへのわずかな追加で\n\n実現できます。\n\nVRChat運営には、この提案の実装を強く要望します。",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a788e61c98db82ddd246406",
+      "aiGenerated": false,
+      "author": {
+        "_id": "611e1d3b36812306f84a1b6c",
+        "alias": "Significant Peacock",
+        "aliasID": "65c28a12ed6eefce4cca5937",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1f5e72d87d327ab6ebf953d37ecd87c6.png",
+        "created": "2021-08-19T08:58:35.182Z",
+        "name": "DragonTamerWes",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-09T14:27:45.305Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a61ecbd7560de5c7714bc75",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Gerzybow has provided a video of the AvatarDMCA at gmail dot com guy aka Yusao Shiga on Twitter about this. https://x.com/i/status/2078473872018432457",
       "viewerReactions": null,
       "voteID": null
     }
