@@ -1,0 +1,106 @@
+{
+  "_id": "6a78e4cae1795305f7d68221",
+  "aiCategories": [
+    "loc.standalone-vr",
+    "loc.pc-client",
+    "platforms.cross-platform",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-08-09T20:38:40.304890Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "67371b36afd2fd53a2a073dc",
+    "alias": "Yellow ochre Mouse",
+    "aliasID": "67371b37c66e81bbd4afd27e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f166511c65d4cb213a34f4f03c79a3a6.png",
+    "created": "2024-11-15T09:58:14.751Z",
+    "name": "RokaOvO",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "67371b36afd2fd53a2a073dc",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-09T20:36:26.037Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I use translation software to communicate, and there may be instances where my expression is unclear. Please forgive me.\n\nSince the update to Unity6, this issue has occurred in both the official version and the U6 beta version:\n\nState 1: The login page is black, and the VR and PC views are also black.\n\nState 2: If you have previously logged in using VR, you will automatically log in again. However, the screen for automatic login will be black, and the loading of the room will be stuck at \"Connecting\" for 5 to 10 minutes. Subsequently, it will return to the login state, but the login page will be black.\n\nAdditional content for State 2: The room I have set as home has a loading screen that appears when entering the Connecting state. When the issue in State 2 occurs (when the VR view displays Connecting), the loading screen does not appear in the PC view.\n\nThe current quick solution is to reinstall the game, but every time I enter VR, there's a high probability of a black screen, and reinstalling and restarting the game may not necessarily solve this issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/30d8c5041f2e820a1857a4a6aa82f0de.txt",
+    "https://canny-assets.io/files/000eb0e98a925d71e61eceac37a67ead.txt",
+    "https://canny-assets.io/files/01d74443c3a114c711d1f4032be9187d.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-08-10_04-17-04",
+      "url": "https://canny-assets.io/files/30d8c5041f2e820a1857a4a6aa82f0de.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-08-10_04-16-22",
+      "url": "https://canny-assets.io/files/000eb0e98a925d71e61eceac37a67ead.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-08-10_04-15-50",
+      "url": "https://canny-assets.io/files/01d74443c3a114c711d1f4032be9187d.txt"
+    }
+  ],
+  "ideaID": "6a78e4c9e1795305f7d68220",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-09T20:36:26.037Z",
+  "subCategoryID": null,
+  "title": "The screen is black in VR mode (the game works normally, but there is no image output on the VR or PC side)",
+  "trendingScore": 2954.2443805320813,
+  "updatedBy": null,
+  "urlName": "the-screen-is-black-in-vr-mode-the-game-works-normally-but-there-is-no-image-out",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "67371b36afd2fd53a2a073dc",
+      "alias": "Yellow ochre Mouse",
+      "aliasID": "67371b37c66e81bbd4afd27e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f166511c65d4cb213a34f4f03c79a3a6.png",
+      "companies": [],
+      "name": "RokaOvO",
+      "urlName": null,
+      "voteID": "6a78e4cac92bc8aa59ba28da"
+    }
+  ]
+}
