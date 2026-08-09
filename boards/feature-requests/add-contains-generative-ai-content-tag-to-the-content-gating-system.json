@@ -1,10 +1,11 @@
 {
   "_id": "6a47f7ad48ab8093bddc0501",
   "aiCategories": [
-    "loc.in-world",
-    "worlds.content-gating"
+    "loc.website",
+    "worlds.content-gating",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-04T21:20:36.873651Z",
+  "aiTaggedAt": "2026-08-09T08:40:34.275101Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6187011bf8abef7201776f3e",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 57,
+  "commentCount": 58,
   "comments": [
     {
       "_id": "6a495d6d9a8244878e700e5b",
@@ -982,6 +983,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Sadly probably not legally applicable\n\nhttps://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai\n\n> Minimal or no risk\n\n> The AI Act does not introduce rules for AI that is deemed minimal or no risk. The vast majority of AI systems currently used in the EU fall into this category. This includes applications such as AI-enabled video games or spam filters.\n\nHowever, there is clear demand for transparency, regardless of the law. It is a matter of retaining community trust and UGC health. We need AI content labelled and option to opt-out.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a783862cad0b4e5c5bfe89f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67621f9100c5cd8b6ebc3b34",
+        "alias": "Vanilla Flamingo",
+        "aliasID": "67621f91a367fa639221e6a7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/76e1661a2de8c413ec3c520daa1b4b4b.png",
+        "created": "2024-12-18T01:04:17.554Z",
+        "name": "M0dZ_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-09T08:20:50.214Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "67a0ed8d6e7354cc8f8c7acd",
+          "alias": "Cautious Minnow",
+          "aliasID": "67a0ed8eafacf378f12ca236",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/0effd43e823a2c60c04e6061d6104e78.png",
+          "created": "2025-02-03T16:23:41.681Z",
+          "name": "Uzer Tekton",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a724dd24b35206149fe6739",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a47f7ad48ab8093bddc0501",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{67a0ed8d6e7354cc8f8c7acd|full_name} have you lost your ability to write? Everyone knows generative AI is bad but using AI to write your reply just makes it worse lmao",
       "viewerReactions": null,
       "voteID": null
     }
