@@ -1,0 +1,99 @@
+{
+  "_id": "6a77ee6c94ae158ac7664fe5",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-08-09T03:07:46.211720Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df2b4b7ff46044b6c705a2",
+    "alias": "Fuchsia Caterpillar",
+    "aliasID": "65e4e28fa6e3ea79dd891ab9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/cff3416babda8aee60555cd259c31d5b.png",
+    "created": "2022-07-25T23:46:19.168Z",
+    "name": "OwenTheProgram",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df2b4b7ff46044b6c705a2",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "postCount": 161,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-09T03:05:16.128Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The function ApplyHue in Packages/com.vrchat.base/Runtime/VRCSDK/Sample Assets/Shaders/Mobile/ToonStandard/CG/Helpers.cginc\n\ncan be replaced by the following function, yielding 1:1 results.\n\n// Rotates white-point to Z axis, rotates around Z, undo white-point rotation.\n\nhalf3 ApplyHue(half3 col, half hueAngle, half mask)\n\n{\n\n    UNITY_BRANCH\n\n    if (hueAngle == 0)\n\n    {\n\n        return col;\n\n    }\n\n    else\n\n    {\n\n        const half PI = 3.14159265359;\n\n        const half3 OFFSETS = PI * half3(0.0/3.0, 2.0/3.0, 4.0/3.0);\n\n        half3 ct = (1.0/3.0) + (2.0/3.0) * cos(hueAngle + OFFSETS);\n\n        half3 shifted = (col.rgb * ct.x) + (col.gbr * ct.y) + (col.brg * ct.z);\n\n        return lerp(col, shifted, mask);\n\n    }\n\n}\n\nIn my testing, the original ApplyHue function compiles to this:\n\n 0: sample r0.xyzw, v1.xyxx, t0.xyzw, s0\n\n 1: eq r0.w, cb0[2].x, l(0.000000)\n\n 2: if_nz r0.w\n\n 3:   mov o0.xyz, r0.xyzx\n\n 4: else \n\n 5:   sincos r1.x, r2.x, cb0[2].x\n\n 6:   mul r1.yzw, r0.zzxy, l(0.000000, 0.577350, 0.577350, 0.577350)\n\n 7:   mad r1.yzw, r0.zzxy, l(0.000000, 0.577350, 0.577350, 0.577350), -r1.wwyz\n\n 8:   mul r1.xyz, r1.xxxx, r1.yzwy\n\n 9:   mad r1.xyz, r0.xyzx, r2.xxxx, r1.xyzx\n\n10:   dp3 r0.w, l(0.577350, 0.577350, 0.577350, 0.000000), r0.xyzx\n\n11:   mul r0.w, r0.w, l(0.577350)\n\n12:   add r1.w, -r2.x, l(1.000000)\n\n13:   mad r1.xyz, r0.wwww, r1.wwww, r1.xyzx\n\n14:   add r1.xyz, -r0.xyzx, r1.xyzx\n\n15:   mad o0.xyz, v1.zzzz, r1.xyzx, r0.xyzx\n\n16: endif \n\n17: ret \n\nwhile my function this compiles to this:\n\n 0: sample r0.xyzw, v1.xyxx, t0.xyzw, s0\n\n 1: eq r0.w, cb0[2].x, l(0.000000)\n\n 2: if_nz r0.w\n\n 3:   mov o0.xyz, r0.xyzx\n\n 4: else \n\n 5:   add r1.xyz, cb0[2].xxxx, l(0.000000, 2.094395, 4.188790, 0.000000)\n\n 6:   sincos null, r1.xyz, r1.xyzx\n\n 7:   mad r1.xyz, r1.xyzx, l(0.666667, 0.666667, 0.666667, 0.000000), l(0.333333, 0.333333, 0.333333, 0.000000)\n\n 8:   mul r2.xyz, r0.yzxy, r1.yyyy\n\n 9:   mad r1.xyw, r0.xyxz, r1.xxxx, r2.xyxz\n\n10:   mad r1.xyz, r0.zxyz, r1.zzzz, r1.xywx\n\n11:   add r1.xyz, -r0.xyzx, r1.xyzx\n\n12:   mad o0.xyz, v1.zzzz, r1.xyzx, r0.xyzx\n\n13: endif \n\n14: ret \n\nBoth functions use two temporary registers when I tested them in fragment.\n\nOptionally\n\nhalf3 ct = (1.0/3.0) + (2.0/3.0) * cos(hueAngle + OFFSETS);\n\ncan be replaced with\n\nhalf3 ct = (1.0/3.0) + (2.0/3.0) * cos(hueAngle * UNITY_TWO_PI + OFFSETS);\n\nto resolve feedback like this one\n\nhttps://feedback.vrchat.com/sdk-bug-reports/p/mobile-toon-standard-hue-shift-should-go-from-0-to-1-not-628\n\nI have made supplemental demos in Desmos to showcase the methods:\n\nhttps://www.desmos.com/3d/w6lx6thiga\n\nhttps://www.desmos.com/calculator/qssso8prah\n\nI hereby grant legal rights to all shader code presented in this feature request. I present all of the above, granting full rights to use, reuse, modify, redistribute, and will not persue any form of legal action, following the guidelines of the MIT-0 No Attribution licence. blablabla open source, use it as you wish!\n\nApplyHueMinimal.shader (which I have renamed to .txt for sending) has the MIT-0 licence as a header segment by the way.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/79adcd54050618d7060d64e05de8e73d.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "ApplyHueMinimal",
+      "url": "https://canny-assets.io/files/79adcd54050618d7060d64e05de8e73d.txt"
+    }
+  ],
+  "ideaID": "6a77ee6b94ae158ac7664fe4",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a77ee6c94ae158ac7664fe5/1411845950.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-09T03:05:16.128Z",
+  "subCategoryID": null,
+  "title": "[Optimization] Better implementation of Helpers.cginc : ApplyHue",
+  "trendingScore": 2954.1400984065854,
+  "updatedBy": null,
+  "urlName": "optimization-better-implementation-of-helperscginc-applyhue",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df2b4b7ff46044b6c705a2",
+      "alias": "Fuchsia Caterpillar",
+      "aliasID": "65e4e28fa6e3ea79dd891ab9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cff3416babda8aee60555cd259c31d5b.png",
+      "companies": [],
+      "name": "OwenTheProgram",
+      "urlName": null,
+      "voteID": "6a77ee6cc92bc8aa59b711ab"
+    }
+  ]
+}
