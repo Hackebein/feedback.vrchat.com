@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.hud",
     "social.nameplates",
-    "account.trust"
+    "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-08-05T23:33:33.509093Z",
+  "aiTaggedAt": "2026-08-09T23:38:26.227019Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def099a721d644ba069aea",
@@ -36,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a73c42790b1384963819945",
@@ -82,6 +82,62 @@
       "statusChangeID": "6a73c42690b1384963819944",
       "statusChangeNewStatus": "interested",
       "value": "The performance icons were built to be distinguishable by shape and the trust shields weren't, and dropping the text label next to them on the new nameplate made that worse. \n\nWe acknowledge these can create new legibility concerns and will explore improving the contrast and visibility for these icons.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a790bd21c21223ee3667ad0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df2b4b7ff46044b6c705a2",
+        "alias": "Fuchsia Caterpillar",
+        "aliasID": "65e4e28fa6e3ea79dd891ab9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/cff3416babda8aee60555cd259c31d5b.png",
+        "created": "2022-07-25T23:46:19.168Z",
+        "name": "OwenTheProgram",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-09T23:22:58.282Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5acad9ecc9dba010c9c3ec68",
+          "alias": "Evolutionary Vicuna",
+          "aliasID": "65ba088fed6eefce4ca8dc62",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/a96149971e91f0ceb638e9e86cef2b08.gif",
+          "created": "2018-04-09T03:11:40.225Z",
+          "name": "Tupper - VRChat Head of Community",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a73c42790b1384963819945",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a624c95338c36acc65ac799",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5acad9ecc9dba010c9c3ec68|full_name} you could always have the first letter as a cutout into the shield icon itself, so F for friend, T for trusted, etc. FTKUNV all unique letters",
       "viewerReactions": null,
       "voteID": null
     }
