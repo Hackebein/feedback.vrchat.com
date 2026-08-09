@@ -2,10 +2,9 @@
   "_id": "6a51f30fc13da53fe6e8ea3e",
   "aiCategories": [
     "loc.loading-screen",
-    "loc.in-world",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-15T05:50:40.962837Z",
+  "aiTaggedAt": "2026-08-09T04:15:44.368873Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6722e794691e04e140901be7",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a52182d9cb8035eb274152b",
@@ -217,6 +216,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{64873f159cf028090ce2c2e2|full_name} I recreated avatar as a new blueprint and seems like fixed for now, maybe that was corrupted blueprint issue. will report back in a few days.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a77fc3a22b7d4225794fa12",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6722e794691e04e140901be7",
+        "alias": "Marigold Dragon",
+        "aliasID": "6722e794c66e81bbd43c13cf",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/7aab0f3b2b56f6eb9ef8893672eda1e2.png",
+        "created": "2024-10-31T02:12:36.188Z",
+        "name": "Riria Nee-chan",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-09T04:04:10.208Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a564fabec43e68732ad28a2",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a51f30fc13da53fe6e8ea3e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} Update: Creating a new Blueprint appears to temporarily resolve the issue.\n\nHowever, after some time, the problem eventually reoccurs even with the newly created Blueprint.\n\nAt this point, I have not been able to identify a specific trigger or consistent error pattern that causes it to return.",
       "viewerReactions": null,
       "voteID": null
     }
