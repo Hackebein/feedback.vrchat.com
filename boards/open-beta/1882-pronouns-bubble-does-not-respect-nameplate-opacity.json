@@ -1,0 +1,94 @@
+{
+  "_id": "6a7801bdee6fa72c647f25dd",
+  "aiCategories": [
+    "loc.hud",
+    "social.nameplates",
+    "platforms.pc.steam"
+  ],
+  "aiTaggedAt": "2026-08-09T04:34:05.911511Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6222df9d759f2e2d1469e0ce",
+    "alias": "Fuchsia Eagle",
+    "aliasID": "65ce5c9e0129d7ae44c761c3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/cb273530860b46954557ff2f651e91e6.png",
+    "created": "2022-03-05T03:57:17.959Z",
+    "name": "Boxofbiscuits97",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6222df9d759f2e2d1469e0ce",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "postCount": 1472,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-09T04:27:41.546Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Set nameplate opacity to 0%\n\nExpected Outcome\n\nAll nameplate background UI disappears\n\nActual Outcome\n\nPronouns bubble stays visible, being partially transparent\n\nThe bubble should become entirely transparent at 0%, so that it is no longer visible",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a7801bdee6fa72c647f25dc",
+  "imageURLs": [
+    "https://canny-assets.io/images/2453bcfafc0dc1e3f3ecf6908da10fd9.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a7801bdee6fa72c647f25dd/1433913830.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-09T04:27:41.546Z",
+  "subCategoryID": null,
+  "title": "[1882] Pronouns bubble does not respect nameplate opacity",
+  "trendingScore": 2954.1482752667043,
+  "updatedBy": null,
+  "urlName": "1882-pronouns-bubble-does-not-respect-nameplate-opacity",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6222df9d759f2e2d1469e0ce",
+      "alias": "Fuchsia Eagle",
+      "aliasID": "65ce5c9e0129d7ae44c761c3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cb273530860b46954557ff2f651e91e6.png",
+      "companies": [],
+      "name": "Boxofbiscuits97",
+      "urlName": null,
+      "voteID": "6a7801bdc92bc8aa59b76fae"
+    }
+  ]
+}
