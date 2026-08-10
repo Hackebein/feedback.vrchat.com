@@ -2,9 +2,9 @@
   "_id": "69f1952b29cb5ab8b423e998",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-07-27T18:44:17.558679Z",
+  "aiTaggedAt": "2026-08-10T17:17:31.687862Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69f192784a48bed189d2d75e",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a564ff9ca29b3164d344f35",
@@ -118,6 +118,41 @@
       "value": "It is intended that raycasts will stop acting and generating parameter values as soon as they are disabled, so yes, the values will stick if nothing is affecting them anymore once the component is disabled.\n\nWe're now looking at setting the parameter values to correspond with a missed raycast once as they're disabled for convenience.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a7a061a3f359c78a5b9a620",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-10T17:10:50.597Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69f1952b29cb5ab8b423e998",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a7a061a3f359c78a5b9a61f",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -142,8 +177,8 @@
   "pinnedComment": null,
   "score": 6,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-07-14T15:04:25.545Z",
+  "status": "available in future release",
+  "statusChanged": "2026-08-10T17:10:50.575Z",
   "subCategoryID": null,
   "title": "[VRC Raycast] Parameters stay \"true\"/\">0\" when Raycast Game Object is disabled",
   "trendingScore": 2951.381661177982,
