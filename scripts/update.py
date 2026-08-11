@@ -853,6 +853,8 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
     Scraped-at bookkeeping is written to `scraped_at` (scrape-state), not into
     the board JSON. Canny post fields `lastUpdated` / `updatedAt` are stripped on
     write so routine scrapes do not rewrite every file for timestamp-only churn.
+    `category.postCount` is stripped in board_store.write_post for the same
+    reason (category-wide counter churn unrelated to this post).
 
     Returns stats: {"added", "deleted", "refreshed", "moved"}.
     """

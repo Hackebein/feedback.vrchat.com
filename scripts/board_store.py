@@ -42,6 +42,9 @@ def write_post(board_slug: str, post: dict) -> Path:
     url = post.get("urlName")
     if not url or not isinstance(url, str):
         raise ValueError(f"post missing urlName: _id={post.get('_id')!r}")
+    cat = post.get("category")
+    if isinstance(cat, dict):
+        cat.pop("postCount", None)
     bdir = BOARD_DIR / board_slug
     bdir.mkdir(parents=True, exist_ok=True)
     path = bdir / f"{url}.json"
