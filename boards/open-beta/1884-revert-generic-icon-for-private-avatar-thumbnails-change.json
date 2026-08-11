@@ -1,10 +1,11 @@
 {
   "_id": "6a7ba87e232b9a9353cd0a65",
   "aiCategories": [
-    "loc.quick-menu",
-    "avatars"
+    "loc.pc-client",
+    "open-beta",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-11T22:58:15.551074Z",
+  "aiTaggedAt": "2026-08-11T23:13:18.584081Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60dd2a998871d03e7f3806ae",
@@ -41,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "This change really doesn't make any sense, what is the difference between public and private thumbnails? When you are in the same instance the avatar gets loaded either way, same with the avatar preview on the details page. Not to mention that the avatar thumbnail is still shown via the QM.\n\nAlso, if the private avatar has gallery images added to it, those are not hidden, even though they are one in the same as thumbnails. Where is the line drawn?",
+  "details": "This change really doesn't make any sense, what is the difference between public and private thumbnails? When you are in the same instance the avatar gets loaded either way, same with the avatar preview on the details page. Not to mention that the avatar thumbnail is still shown via the QM.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -65,7 +66,7 @@
   "subCategoryID": null,
   "title": "[1884] Revert generic icon for private avatar thumbnails change",
   "trendingScore": 2954.9495175341026,
-  "updatedBy": null,
+  "updatedBy": "60dd2a998871d03e7f3806ae",
   "urlName": "1884-revert-generic-icon-for-private-avatar-thumbnails-change",
   "viewerIsAuthor": false,
   "viewerVote": 0,
