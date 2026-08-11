@@ -2,10 +2,10 @@
   "_id": "6a790e24f0ef1ae408802ef8",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
-    "platforms.pc.desktop"
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-10T14:57:26.589740Z",
+  "aiTaggedAt": "2026-08-11T16:36:06.952549Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f67899159b0841fe0d3891b",
@@ -35,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a79e666d2a914af1e1d14f0",
@@ -81,6 +81,41 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a7b4bb26b2afaf276af9739",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-11T16:20:02.015Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a790e24f0ef1ae408802ef8",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a7b4bb16b2afaf276af9738",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -110,8 +145,8 @@
   "pinnedComment": null,
   "score": 3,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-08-10T14:55:34.473Z",
+  "status": "available in future release",
+  "statusChanged": "2026-08-11T16:20:01.902Z",
   "subCategoryID": null,
   "title": "[1882] Clicking outside profile's \"More Options\" doesn't close it",
   "trendingScore": 2954.9912328429596,
