@@ -1,0 +1,101 @@
+{
+  "_id": "6a7b3d462d2b0fd6d4570d75",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-08-11T15:21:45.081654Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f3287055bc2dc276e0f1630",
+    "alias": "Lemon Silverfish",
+    "aliasID": "65c289dced6eefce4cc219ab",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3bb813f7266f38a52aa4487dc2ea051e.png",
+    "created": "2020-08-11T11:54:45.784Z",
+    "name": "Reimajo",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f3287055bc2dc276e0f1630",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-11T15:18:30.712Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If an avatar of a remote user is muted by calling VRCPlayerApi.SetAvatarAudioFarRadius(0) during OnPlayerJoined(), you cannot restore that avatar audio later by calling VRCPlayerApi.SetAvatarAudioFarRadius(40) under certain conditions. The avatar audio stays muted for you. The remote user can even disable and enable the audio toggle again, but it will still not be audible to you.\n\nContrary to that, if the user joins and you don't call .SetAvatarAudioFarRadius(0) during OnPlayerJoined(), you can always toggle their audio on and off later without any issues.\n\nThe issue also depends on the avatar setup:\n\n- if the avatar audio is manually toggled via an animation after joining the world (e.g. a VRCFury toggle), the audio will never play, even if that animation is toggled again after unmuting the avatar.\n\n- if the avatar audio is always-on, the audio behaves as expected, there is no issue.\n\nAvatars for testing:\n\n(VRCFury toggle) -> Bug happens\n\nhttps://vrchat.com/home/avatar/avtr_8897aa55-4877-4aac-bac2-1e3280e950f4\n\n(OnLoad audio) -> Works fine\n\nhttps://vrchat.com/home/avatar/avtr_e77f5414-63b3-4d1b-aa7a-4b25cd299d48\n\nWorld for testing:\n\nhttps://vrchat.com/home/world/wrld_717f7988-3503-4616-90b5-9d492d043b87/info\n\nAttached is the only script that is in the world and a screenshot of the decompiled VRCFury toggle.\n\nHow to replicate:\n\n- Join the world https://vrchat.com/home/world/wrld_717f7988-3503-4616-90b5-9d492d043b87/info\n\n- Let a remote user with that avatar join (https://vrchat.com/home/avatar/avtr_8897aa55-4877-4aac-bac2-1e3280e950f4)\n\n- Let that user toggle their avatar audio on (via the expression menu)\n\n- confirm that you can toggle their audio on/off with the button in the world\n\n- toggle their avatar audio off with the button in the world\n\n- let them rejoin\n\n- let them toggle their avatar audio on (via the expression menu)\n\n- confirm that you cannot hear their audio if you click the button in the world\n\n- confirm that you cannot hear their audio, even if they toggle it off and on again (via the expression menu)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/369d319411f075bbd32dcc0aa8039a3c.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "AvatarMuteBug",
+      "url": "https://canny-assets.io/files/369d319411f075bbd32dcc0aa8039a3c.txt"
+    }
+  ],
+  "ideaID": "6a7b3d462d2b0fd6d4570d5a",
+  "imageURLs": [
+    "https://canny-assets.io/images/db8c71e9bbf9317723925fe4af0c94d5.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-11T15:18:30.712Z",
+  "subCategoryID": null,
+  "title": "Calling .SetAvatarAudioFarRadius(0) in OnPlayerJoined() cannot be restored later",
+  "trendingScore": 2954.498555111281,
+  "updatedBy": null,
+  "urlName": "calling-setavataraudiofarradius0-in-onplayerjoined-cannot-be-restored-later",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3287055bc2dc276e0f1630",
+      "alias": "Lemon Silverfish",
+      "aliasID": "65c289dced6eefce4cc219ab",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3bb813f7266f38a52aa4487dc2ea051e.png",
+      "companies": [],
+      "name": "Reimajo",
+      "urlName": null,
+      "voteID": "6a7b3d46c92bc8aa59d9f9f0"
+    }
+  ]
+}
