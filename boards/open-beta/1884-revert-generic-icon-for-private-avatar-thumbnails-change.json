@@ -1,0 +1,91 @@
+{
+  "_id": "6a7ba87e232b9a9353cd0a65",
+  "aiCategories": [
+    "loc.quick-menu",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-08-11T22:58:15.551074Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60dd2a998871d03e7f3806ae",
+    "alias": "Thoughtful Cobra",
+    "aliasID": "65c28339ed6eefce4cc2dd8f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/908853485b325f3bb8b54757da37eb8a.png",
+    "created": "2021-07-01T02:38:17.778Z",
+    "name": "~Pausbe",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60dd2a998871d03e7f3806ae",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-11T22:55:58.985Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This change really doesn't make any sense, what is the difference between public and private thumbnails? When you are in the same instance the avatar gets loaded either way, same with the avatar preview on the details page. Not to mention that the avatar thumbnail is still shown via the QM.\n\nAlso, if the private avatar has gallery images added to it, those are not hidden, even though they are one in the same as thumbnails. Where is the line drawn?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a7ba87e232b9a9353cd0a64",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-11T22:55:58.985Z",
+  "subCategoryID": null,
+  "title": "[1884] Revert generic icon for private avatar thumbnails change",
+  "trendingScore": 2954.543939056387,
+  "updatedBy": null,
+  "urlName": "1884-revert-generic-icon-for-private-avatar-thumbnails-change",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/908853485b325f3bb8b54757da37eb8a.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": null,
+      "voteID": "6a7ba87fc92bc8aa59ddee43"
+    }
+  ]
+}
