@@ -1,10 +1,11 @@
 {
   "_id": "6a74a7866ec3dfaba5b49821",
   "aiCategories": [
-    "loc.quick-menu",
-    "monetization.shop"
+    "loc.main-menu",
+    "monetization.shop",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-07T14:42:59.004751Z",
+  "aiTaggedAt": "2026-08-11T16:14:20.531912Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "631b2c0e038da3520fe0d047",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a75ec34d12c28bec0fc4533",
@@ -74,6 +75,41 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a7b482fa10a2dcbb6fa8596",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-11T16:05:03.391Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a74a7866ec3dfaba5b49821",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a7b482fa10a2dcbb6fa8595",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -100,8 +136,8 @@
   "pinnedComment": null,
   "score": 4,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-08-07T14:31:16.423Z",
+  "status": "available in future release",
+  "statusChanged": "2026-08-11T16:05:03.343Z",
   "subCategoryID": null,
   "title": "\"NEW\" notification on shop unclearable",
   "trendingScore": 2954.8847355200596,
