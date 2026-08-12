@@ -1,12 +1,12 @@
 {
   "_id": "69b6381045d9277c50941278",
   "aiCategories": [
+    "loc.website",
     "loc.in-world",
-    "groups.instances",
     "groups.roles",
-    "social.instances"
+    "groups.instances"
   ],
-  "aiTaggedAt": "2026-08-12T22:21:16.793888Z",
+  "aiTaggedAt": "2026-08-12T23:12:33.341155Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649520bdbec709090d4453cd",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "69b80fd9e3ad0f1c1d05e02f",
@@ -199,6 +199,41 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a7cfc2a20c6b54af37f4e91",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-12T23:05:14.958Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69b6381045d9277c50941278",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a7cfc2a20c6b54af37f4e90",
+      "statusChangeNewStatus": "complete",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -226,8 +261,8 @@
   "pinnedComment": null,
   "score": 36,
   "sourceFeatureExtractionItem": null,
-  "status": "available in future release",
-  "statusChanged": "2026-08-12T22:19:01.877Z",
+  "status": "complete",
+  "statusChanged": "2026-08-12T23:05:14.914Z",
   "subCategoryID": null,
   "title": "Missing permissions check on group public instance creation. Part 2.",
   "trendingScore": 2954.4503928988847,
