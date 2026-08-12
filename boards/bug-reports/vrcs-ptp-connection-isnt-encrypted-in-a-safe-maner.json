@@ -1,11 +1,9 @@
 {
   "_id": "6a798ea0ecc2c9c2328a4209",
   "aiCategories": [
-    "loc.in-world",
-    "social.friends",
-    "moderation.safety-system"
+    "vrchat-meta"
   ],
-  "aiTaggedAt": "2026-08-12T04:20:26.256226Z",
+  "aiTaggedAt": "2026-08-12T23:27:12.842503Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def306a43c56449f9e6fe8",
@@ -29,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a7bef306ce783606fb374c5",
@@ -72,6 +70,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Vrc doesnt even use p2p",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7d0045af19efc33eb5e0e9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f2d710dc1c881463f153789",
+        "alias": "Remarkable Grasshopper",
+        "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/566ff959e12c92253adcf1c80614239e.png",
+        "created": "2020-08-07T15:19:41.359Z",
+        "name": "Fusl",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-12T23:22:45.355Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a798ea0ecc2c9c2328a4209",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "VRChat's \"p2p\" is based on Photon using relay servers hosted in 4 different regions. There's no actual p2p involved so you can't \"dox\" people based on that.",
       "viewerReactions": null,
       "voteID": null
     }
