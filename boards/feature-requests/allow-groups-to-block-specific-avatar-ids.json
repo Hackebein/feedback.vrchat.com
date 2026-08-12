@@ -2,9 +2,11 @@
   "_id": "6a7cd2905b165e343264bc9d",
   "aiCategories": [
     "loc.in-world",
-    "groups.roles"
+    "groups.roles",
+    "groups.instances",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-12T20:48:15.412986Z",
+  "aiTaggedAt": "2026-08-12T22:11:17.966631Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66f5c3925bf17057c6ce7e38",
@@ -28,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a7cd8d25cb8bd35a1ac2e28",
@@ -131,6 +133,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{60bbf9cb4701af68ae65c329|full_name} I agree there would inevitably be some reuploads. However, that already happens with malicious and raid avatars regardless. If a new Avatar ID appears, groups could simply add that ID to their blocklist as well.\n\nCurrently, there's a new 'Knuckles' trend going on as well, the avatar itself is not malicious, but it's used in malicious ways to disturb people. This would prevent this from happening as well. \n\nThe goal istn to make it impossible for someone to ever reupload a malicious avatar, but to give communities a proactive tool against known malicious avatars. Over time, groups could build up a database of IDs they've encountered instead of having to deal with the exact same avatars repeatedly.\n\nReuploading also adds another step for the person causing trouble, while blocking a newly discovered ID would take moderators only a few seconds and it would be applied to anyone using that in the future once more.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7ceeb65cb8bd35a1af8e08",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69f133774a48bed189d0b81b",
+        "alias": "Spontaneous Hedgehog",
+        "aliasID": "69f133774a48bed189d0b81f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/04e869840133872c63ee7be34aa946fd.png",
+        "created": "2026-04-28T22:23:51.414Z",
+        "name": "Vince_Borzoi",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-12T22:07:50.142Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7cd2905b165e343264bc9d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Good idea but I worry that some groups could easily abuse the blacklist for discrimination purposes, blocking avatars simply because they don't like them.",
       "viewerReactions": null,
       "voteID": null
     }
