@@ -2,11 +2,10 @@
   "_id": "6a1b83a45e38208a9b262224",
   "aiCategories": [
     "loc.main-menu",
-    "loc.pc-client",
     "worlds.travel",
-    "localization"
+    "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-07-25T01:36:40.725233Z",
+  "aiTaggedAt": "2026-08-12T17:43:35.383584Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a1b830d86d7b8843b6fd958",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a564c8bacf992ad4a596e6e",
@@ -194,6 +193,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{64873f159cf028090ce2c2e2|full_name} To reproduce the issue, set the language to Japanese. It occurs in both Desktop and VR modes.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7cad402534a72b60f9eebd",
+      "aiGenerated": false,
+      "author": {
+        "_id": "61445ab0ca22cf3a0220afa5",
+        "alias": "Gold Salmon",
+        "aliasID": "660e932ae5d26962aae7b1c1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/db0eb76fb4994bb6aaadee4e80ce324e.png",
+        "created": "2021-09-17T09:06:56.974Z",
+        "name": "ろわぁﾙど",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-12T17:28:32.313Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1b83a45e38208a9b262224",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The same issue was confirmed on the iOS and Quest versions. Testing was conducted in English and Japanese for both versions.",
       "viewerReactions": null,
       "voteID": null
     }
