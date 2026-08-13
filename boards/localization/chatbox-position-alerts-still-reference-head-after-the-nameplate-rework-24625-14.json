@@ -1,0 +1,89 @@
+{
+  "_id": "6a7daf51e926a5010bec3c21",
+  "aiCategories": [
+    "loc.main-menu",
+    "localization",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-08-13T11:52:26.244663Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "633ebbffe660a144b77d4b1e",
+    "alias": "Legal Bobcat",
+    "aliasID": "6818f2758ccc1d8b3b48c149",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/83274ff1ea5a723f01e2d5d54429f117.png",
+    "created": "2022-10-06T11:29:03.540Z",
+    "name": "ΗARE",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "633ebbffe660a144b77d4b1e",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-13T11:49:37.452Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Chatbox position is nameplate-based now, and the setting labels were updated for it:\n\n144732 - \"Set chatbox to above nameplate position\"\n\n144736 - \"Set chatbox to below nameplate position\"\n\nBut the alerts that show up when you change the setting still use the old wording:\n\n24625 - \"Chatbox display position set to above head\"\n\n144730 - \"Chatbox display position set to below\"\n\n24625 says \"head\" while the setting says \"nameplate\", so the alert doesn't match the option you just picked.\n\n144730 is the bigger problem - below what? As a Korean translator I can't leave it as a bare \"below\", I have to write either below the head or below the nameplate, and there's no way to tell which one it means.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a7daf51e926a5010bec3c10",
+  "imageURLs": [
+    "https://canny-assets.io/images/bf4a1bd93e98ebe9d95d757d480fccd7.png",
+    "https://canny-assets.io/images/561c926914a71be048c539f53a652962.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-13T11:49:37.452Z",
+  "subCategoryID": null,
+  "title": "Chatbox position alerts still reference \"head\" after the nameplate rework (24625, 144730)",
+  "trendingScore": 2954.763546257941,
+  "updatedBy": null,
+  "urlName": "chatbox-position-alerts-still-reference-head-after-the-nameplate-rework-24625-14",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "633ebbffe660a144b77d4b1e",
+      "alias": "Legal Bobcat",
+      "aliasID": "6818f2758ccc1d8b3b48c149",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/83274ff1ea5a723f01e2d5d54429f117.png",
+      "companies": [],
+      "name": "ΗARE",
+      "urlName": null,
+      "voteID": "6a7daf51c92bc8aa59ec1f7f"
+    }
+  ]
+}
