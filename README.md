@@ -18,13 +18,13 @@ Scrape horizon: **2026-05-13 02:07 UTC (92d ago)**.
 | `creator-companion` | 289 / 289 (100.0%) |
 | `creator-economy` | 83 / 83 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 13,887 / 13,889 (99.99%) |
+| `feature-requests` | 13,887 / 13,890 (99.98%) |
 | `impostors` | 90 / 90 (100.0%) |
 | `ios-mobile-beta` | 260 / 260 (100.0%) |
 | `localization` | 635 / 635 (100.0%) |
 | `merch` | 36 / 36 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,086 / 3,085 (100.0%) |
+| `open-beta` | 3,086 / 3,086 (100.0%) |
 | `persistence` | 69 / 69 (100.0%) |
 | `sdk-bug-reports` | 1,405 / 1,405 (100.0%) |
 | `third-person-view` | 83 / 83 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-05-13 02:07 UTC (92d ago)**.
 | `vrchat-ik-20` | 285 / 285 (100.0%) |
 | `vrchat-plus-feature-ideas` | 125 / 125 (100.0%) |
 | `website` | 839 / 839 (100.0%) |
-| **Total** | **35,556** / **35,376** (100.0%) |
+| **Total** | **35,556** / **35,378** (99.99%) |
 
 ## OpenSearch
 
