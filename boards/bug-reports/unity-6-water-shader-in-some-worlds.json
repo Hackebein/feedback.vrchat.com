@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.layers"
   ],
-  "aiTaggedAt": "2026-08-13T03:13:17.953909Z",
+  "aiTaggedAt": "2026-08-13T03:46:54.026866Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6515e5c24cb54509383d8f86",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a7d35fe029e4610bcad0424",
@@ -75,7 +75,63 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "I am not seeing the water shaders on either Unity 2022 or Unity 6. I don't think this is Unity 6 specific.\n\nThe world image suggests there should be water shaders, but there aren't.",
+      "value": "I am not seeing the water shaders on either Unity 2022 or Unity 6. I don't think this is Unity 6 specific.\n\nThe world image suggests there should be water shaders, but there aren't.\n\n`Build 1885` on both branches.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7d3cf5424972e9445e523d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6515e5c24cb54509383d8f86",
+        "alias": "Peaceful Halibut",
+        "aliasID": "660d8faee5d26962aa4811dc",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5e9d7d930ccb393406df03c87574894f.png",
+        "created": "2023-09-28T20:44:50.575Z",
+        "name": "Mikun Hatsune",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T03:41:41.742Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7d35fe029e4610bcad0424",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7d2186424972e9445b7eb3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} oh it's actually in 2022 as well?\n\ni just remember water here myself a long time ago\n\nWorld didn't been updated from 2022, since then it was 2018 unity if i remember correctly...\n\nNow we do know that it's not Unity 6 exactly problem..\n\nBut then, how to figure out is it problem happens with world itself, or after migration from 2018 to 2022?\n\nSeems my Topic Name now to accurate, how should i renamed it then now?\n\nOr should i just close it?",
       "viewerReactions": null,
       "voteID": null
     }
