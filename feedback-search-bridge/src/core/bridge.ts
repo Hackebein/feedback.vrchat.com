@@ -21,6 +21,7 @@ import {
   loadBridgeSettings,
   setBridgeSettings,
 } from "./search-handler";
+import { installIndexWatch } from "./index-watch";
 import {
   primeFacets,
   readActiveSearchQuery,
@@ -126,6 +127,7 @@ export function installBridge(
   installCreateBoardSelect(target);
   installRoadmap(options, target);
   installAttribution(target);
+  installIndexWatch(options, target, () => runSearchRefresh(options, target));
 
   const bootUi = () => {
     void loadBridgeSettings(options.storage).then((current) => {

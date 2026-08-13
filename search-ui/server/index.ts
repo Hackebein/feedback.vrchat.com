@@ -1,6 +1,7 @@
 import API from "@searchkit/api";
 import express from "express";
 import type { MultipleQueriesQuery } from "searchkit";
+import { createIndexGenerationResolver } from "./index-generation";
 import {
   gatewayEnv,
   instantSearchLuceneQuery,
@@ -14,6 +15,12 @@ const { opensearchUrl, opensearchUser, opensearchPassword, bind, port } =
   gatewayEnv();
 
 const apiClient = API(searchkitConfig(opensearchUrl, opensearchUser, opensearchPassword));
+const resolveIndexGeneration = createIndexGenerationResolver({
+  opensearchUrl,
+  opensearchUser,
+  opensearchPassword,
+  alias: INDEX_NAME,
+});
 
 function parseMode(raw: unknown): string {
   const v =
@@ -84,10 +91,11 @@ function getDiscoveryJson() {
     endpoints: {
       POST: "/api/search",
       GET: "/api/search?q=terms&hitsPerPage=50&page=0",
+      index: "/api/index",
       openapi: "/openapi.json",
     },
     description:
-      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Optional query param mode=lucene uses OpenSearch query_string (Lucene) for params.query instead of strict multi_match. Contract: openapi.json.",
+      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Optional query param mode=lucene uses OpenSearch query_string (Lucene) for params.query instead of strict multi_match. GET /api/index returns the current OpenSearch backing index name so clients can refresh when ingest swaps the alias. Contract: openapi.json.",
   };
 }
 
@@ -96,6 +104,17 @@ app.use(express.json({ limit: "512kb" }));
 
 app.get("/health", (_req, res) => {
   res.type("text/plain").send("ok");
+});
+
+app.get("/api/index", async (_req, res) => {
+  try {
+    const index = await resolveIndexGeneration();
+    res.setHeader("Cache-Control", "no-store");
+    res.json({ index });
+  } catch (err) {
+    console.error("[search-gateway]", err);
+    res.status(500).json({ message: "index lookup failed" });
+  }
 });
 
 app.get("/api/search", async (req, res) => {

@@ -24,7 +24,7 @@
     },
     {
       "name": "Operations",
-      "description": "**`GET`** **`/healthz`**, **`GET`** **`/openapi.json`**; **`GET`** **`/api/search`** (**discovery**)."
+      "description": "**`GET`** **`/healthz`**, **`GET`** **`/openapi.json`**, **`GET`** **`/api/index`**; **`GET`** **`/api/search`** (**discovery**)."
     }
   ],
   "paths": {
@@ -237,9 +237,10 @@
                       "endpoints": {
                         "POST": "/api/search",
                         "GET": "/api/search?q=terms&hitsPerPage=50&page=0",
+                        "index": "/api/index",
                         "openapi": "/openapi.json"
                       },
-                      "description": "**`endpoints`** object: **`POST`**, **`GET`**, **`openapi`** paths (**`openapi.json`** is the contract)."
+                      "description": "**`endpoints`** object: **`POST`**, **`GET`**, **`index`**, **`openapi`** paths (**`openapi.json`** is the contract)."
                     }
                   }
                 }
@@ -285,6 +286,44 @@
         "responses": {
           "204": {
             "description": "**`No`** **`Content`**."
+          }
+        }
+      }
+    },
+    "/api/index": {
+      "get": {
+        "operationId": "indexGeneration",
+        "summary": "Current OpenSearch backing index name.",
+        "description": "Returns the backing index currently published behind the **`feedback-posts`** alias. The name changes after each ingest alias swap, so clients can poll this endpoint and re-run the current search when **`index`** changes. Response is not cached.",
+        "tags": [
+          "Operations"
+        ],
+        "responses": {
+          "200": {
+            "description": "Current backing index name.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexResponse"
+                },
+                "example": {
+                  "index": "feedback-posts-202608130112"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Backing index lookup failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "message": "index lookup failed"
+                }
+              }
+            }
           }
         }
       }
@@ -730,6 +769,20 @@
         },
         "additionalProperties": true
       },
+      "IndexResponse": {
+        "type": "object",
+        "description": "Backing index currently published behind the **`feedback-posts`** alias.",
+        "required": [
+          "index"
+        ],
+        "properties": {
+          "index": {
+            "type": "string",
+            "description": "OpenSearch backing index name (timestamped, e.g. **`feedback-posts-202608130112`**)."
+          }
+        },
+        "additionalProperties": false
+      },
       "DiscoveryResponse": {
         "type": "object",
         "description": "Discovery payload from **`GET /api/search`** when none of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`** are present; **`mode`** alone never performs a search.",
@@ -743,6 +796,7 @@
             "required": [
               "POST",
               "GET",
+              "index",
               "openapi"
             ],
             "properties": {
@@ -753,6 +807,10 @@
               "GET": {
                 "type": "string",
                 "description": "**`GET`** example (**`/api/search`** URL **`query`** string)."
+              },
+              "index": {
+                "type": "string",
+                "description": "**`GET`** **`/api/index`** URL (current backing index name)."
               },
               "openapi": {
                 "type": "string",

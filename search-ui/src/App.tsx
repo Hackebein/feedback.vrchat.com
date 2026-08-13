@@ -750,6 +750,70 @@ function LuceneAttributesPanel({ onClose }: { onClose: () => void }) {
   );
 }
 
+const INDEX_POLL_MS = 15000;
+
+/** Re-runs the current InstantSearch query when ingest swaps the backing index. */
+function IndexLiveRefresh() {
+  const { refresh } = useInstantSearch();
+
+  useEffect(() => {
+    let last: string | undefined;
+    let cancelled = false;
+
+    const poll = async () => {
+      if (cancelled || document.visibilityState === "hidden") {
+        return;
+      }
+      try {
+        const response = await fetch("/api/index", {
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) {
+          return;
+        }
+        const data: unknown = await response.json();
+        if (cancelled) {
+          return;
+        }
+        if (!data || typeof data !== "object" || Array.isArray(data)) {
+          return;
+        }
+        const index =
+          typeof (data as { index?: unknown }).index === "string"
+            ? (data as { index: string }).index
+            : "";
+        if (!index) {
+          return;
+        }
+        if (last !== undefined && last !== index) {
+          refresh();
+        }
+        last = index;
+      } catch {
+        /* transient poll errors; next interval retries */
+      }
+    };
+
+    const timer = window.setInterval(() => {
+      void poll();
+    }, INDEX_POLL_MS);
+    void poll();
+    const onVisibility = () => {
+      if (document.visibilityState === "visible") {
+        void poll();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
+  }, [refresh]);
+
+  return null;
+}
+
 function LuceneSearchError() {
   const { status, error } = useInstantSearch({ catchError: true });
 
@@ -1575,6 +1639,7 @@ export function App() {
       future={{ preserveSharedStateOnUnmount: true }}
     >
       <Configure hitsPerPage={50} maxValuesPerFacet={200} />
+      <IndexLiveRefresh />
       <main className="layout">
         <header className="top">
           <div className="top-heading">
