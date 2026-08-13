@@ -2,11 +2,10 @@
   "_id": "6a7d859f5b359d99231f724d",
   "aiCategories": [
     "loc.quick-menu",
-    "loc.login",
     "monetization.shop",
     "client.inventory"
   ],
-  "aiTaggedAt": "2026-08-13T09:08:45.452697Z",
+  "aiTaggedAt": "2026-08-13T09:14:31.357308Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -82,7 +81,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Launch VRChat 2026.2.3p3 `Build 1867`.\n\n2. Open the Quick Menu → Shop → any of the new profile decorations.\n\n3. Click any of the three preview pictures for each item in the bundle. Notice the infinite loading screen.\n\n4. Scroll down and click \"View Details\" on any of the three items from the bundle. The UI will be broken.\n\nExpected result: \"Update Required\" screen before/after login, or don't display the new shop items and Quick Menu promotional images for `Build 1867` users.\n\nActual result: `Build 1867` is allowed to connect and see the new shop items incorrectly, while the code doesn't exist to handle these new inventory types.\n\nAdditional info: To get `Build 1867` (Windows) from Steam, use the Steam Console (`steam://nav/console`) command `download_depot 438100 438101 905545213110036892`.",
+  "details": "1. Launch VRChat 2026.2.3p3 `Build 1867`.\n\n2. Open the Quick Menu → Shop → any of the new profile decorations.\n\n3. Click any of the three preview pictures for each item in the bundle. Notice the infinite loading screen.\n\n4. Scroll down and click \"View Details\" on any of the three items from the bundle. The UI will be broken.\n\nExpected result: \"Update Required\" screen before/after login, or don't display the new shop items and Quick Menu promotional images for `Build 1867` users.\n\nActual result: `Build 1867` is allowed to connect and see the new shop items incorrectly, while the code doesn't exist to handle these new inventory types.\n\nAdditional info: The current main branch live build is `Build 1885` as of writing this. To get the previous `Build 1867` (Windows) from Steam, use the Steam Console (`steam://nav/console`) command `download_depot 438100 438101 905545213110036892`.",
   "error": null,
   "eta": null,
   "etaPublic": true,
