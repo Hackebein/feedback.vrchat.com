@@ -1,10 +1,11 @@
 {
   "_id": "6a7d0e682f07f10fe35543e8",
   "aiCategories": [
-    "loc.pc-client",
-    "social.nameplates"
+    "loc.in-world",
+    "social.nameplates",
+    "avatars"
   ],
-  "aiTaggedAt": "2026-08-13T10:31:38.423281Z",
+  "aiTaggedAt": "2026-08-13T15:50:28.218919Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64c8c2d65162b70976f1034b",
@@ -34,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a7d429ca8651775fb267e01",
@@ -70,7 +71,9 @@
       "postDeleted": false,
       "postID": "6a7d0e682f07f10fe35543e8",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -160,7 +163,9 @@
       "postDeleted": false,
       "postID": "6a7d0e682f07f10fe35543e8",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -204,13 +209,59 @@
       "postDeleted": false,
       "postID": "6a7d0e682f07f10fe35543e8",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I also participate in a fencing group where Contacts are a core part of the gameplay. We can simply check each other’s icons instead of poking someone with a weapon to see whether they bleed.\n\nBy the way, detecting PhysBones or Contacts cannot 100% determine whether interactions are enabled, since these components also have their own settings for whether they can interact with others.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7de607f27952eafeee0f74",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69f42b864a48bed189ec5caf",
+        "alias": "Alabaster Galliform",
+        "aliasID": "69f42b864a48bed189ec5cb7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ac28332f5ed027e79b04e537d9b12876.png",
+        "created": "2026-05-01T04:26:46.542Z",
+        "name": "AtTheCafe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T15:43:03.439Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7d0e682f07f10fe35543e8",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "They removed features as \"Niche\" when I most certainly used it all the time. Nameplates are a convenience that they're turning into commodity and as well as making the nameplate functionality worse for nothing. What is this update? And we've all complained about this for the few weeks they had it removed. I really don't understand why we don't have this back yet. It was such a nice thing to have at a glance and now we have to click on EVERYONE in the instance if we need to know. It's such a pain to have to drop what you're doing to open a menu and it's SIGNIFICANTLY less fluid and smooth to make quick decisions in the moment where cannot interact with someone's avatar. \n\nAnd for a social game, embarrassing yourself because you didn't know someone's interactions were off when you were trying to have fun really ruins jokes. This update being pushed to live before they actually addressed complaints we've made well beforehand is just... crazy. Quite a few of us wanted this icon back.",
       "viewerReactions": null,
       "voteID": null
     }
