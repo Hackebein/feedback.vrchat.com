@@ -1,0 +1,92 @@
+{
+  "_id": "6a7d39425cb8bd35a1b9417c",
+  "aiCategories": [
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-08-13T03:27:51.503370Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5b7f976e561777408ec1cd56",
+    "alias": "Raffia Narwhal",
+    "aliasID": "65c2b02ded6eefce4c4d1bb6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3d1414f65aab4c44e0e769119893524c.png",
+    "created": "2018-08-24T05:28:14.682Z",
+    "name": "turtledude01",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5b7f976e561777408ec1cd56",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-13T03:25:54.775Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Open VRC (With mic disconnected / disabled)\n\n2. Connect / enable mic\n\n3. Expect mic to be available immediately/ set as default if windows sets the device as default on connect\n\nHot plugging a mic requires selecting a different mic, or switching worlds, where as in the live/ non U6, the mic is immediately detected and switched to active if you have 'default' selected and the mic is flipped to 'Default' in windows upon connecting. \n\nI have also experienced the mic sometimes *IS* detected, but does not function until I again select a different mic and switch back, or switch instances.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a7d39425cb8bd35a1b9415d",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-13T03:25:54.775Z",
+  "subCategoryID": null,
+  "title": "[Unity 6] Microphone hot plugging not working",
+  "trendingScore": 2954.713574964125,
+  "updatedBy": null,
+  "urlName": "unity-6-microphone-hot-plugging-not-working",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5b7f976e561777408ec1cd56",
+      "alias": "Raffia Narwhal",
+      "aliasID": "65c2b02ded6eefce4c4d1bb6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3d1414f65aab4c44e0e769119893524c.png",
+      "companies": [],
+      "name": "turtledude01",
+      "urlName": null,
+      "voteID": "6a7d3942c92bc8aa59e965e7"
+    }
+  ]
+}

@@ -2,12 +2,11 @@
   "_id": "6a7cd2905b165e343264bc9d",
   "aiCategories": [
     "loc.in-world",
-    "loc.loading-screen",
-    "avatars.upload-performance",
-    "groups.instances",
-    "groups.roles"
+    "groups",
+    "moderation.safety-system",
+    "avatars"
   ],
-  "aiTaggedAt": "2026-08-13T01:19:41.171685Z",
+  "aiTaggedAt": "2026-08-13T03:27:51.505332Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66f5c3925bf17057c6ce7e38",
@@ -31,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a7cd8d25cb8bd35a1ac2e28",
@@ -234,6 +233,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{69f133774a48bed189d0b81b|full_name}\n\nIn my opinion groups should be allowed to run their instances and communities as they see fit within VRChat's existing rules and Tos. Groups can already decide who is allowed in their instances, remove or ban individual users, establish dress/avatar rules, and enforce their own community rules in their instances. \n\nThis wouldnt give groups the ability to remove an avatar from VRChat or prevent someone from using it elsewhere. It would simply allow them to decide which avatars they want displayed within their own group instances.\n\nCould some groups use it foer reasons others disagree with? ofcourse. But the same can already be said for group bans and moderation decisions. ultimately, users are free to choose which communities and group instances they want to participate in.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7d37fd2b511306c0ba3c02",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69ba3c32ed082c9981d6fed6",
+        "alias": "Likely Orca",
+        "aliasID": "69ba3c32ed082c9981d70f86",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/88cff80e8f0ce3cf06779308e9e960a6.png",
+        "created": "2026-03-18T05:46:26.122Z",
+        "name": "Orео",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T03:20:29.272Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7cd2905b165e343264bc9d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I'm against forcibly changing a user's avatar without their explicit permission.\n\nVRChat protects personal expression, this is part of why it's against the Creator Guidelines to forcibly change a user's avatar in a world.\n\nIt's also inconsistent with how Avatar Performance Gating works for example, where the user wearing the disallowed avatar can still wear it locally, while everyone else will see their fallback.\n\nI think this idea would work a lot better if it followed that same logic, staying consistent with how Avatar Performance Gating works.",
       "viewerReactions": null,
       "voteID": null
     }
