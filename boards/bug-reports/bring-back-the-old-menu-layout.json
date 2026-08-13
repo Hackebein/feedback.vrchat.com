@@ -2,9 +2,10 @@
   "_id": "6a7d1227411ff385d5830211",
   "aiCategories": [
     "loc.main-menu",
-    "client.settings"
+    "loc.pc-client",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-08-13T00:43:37.563208Z",
+  "aiTaggedAt": "2026-08-13T02:46:10.309111Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a7d1227c92bc8aa59e87c45",
@@ -28,8 +29,65 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a7d2c32577c0fb419821ca1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T02:30:10.167Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a7d1227c92bc8aa59e87c45",
+          "alias": "Gorgeous Moose",
+          "aliasID": "6a7d1227c92bc8aa59e87c4a",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/116354bdf914612617ecdf179d4e4a04.png",
+          "created": "2026-08-13T00:39:03.567Z",
+          "name": "KBthewolf",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7d1227411ff385d5830211",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This doesn't read like a bug report; the description also doesn't address what's potentially wrong with the nameplates or what could be improved, which isn't very motivating to read or act upon.\n\nIf you feel so inclined @{6a7d1227c92bc8aa59e87c45|full_name}, you can make a feature request on the [Feature Requests](https://feedback.vrchat.com/feature-requests) board explaining what you'd like to see changed.\n\nYou may also be able to (temporarily) downgrade the VRChat client to `Build 1867` with `download_depot 438100 438101 905545213110036892` from the Steam Console (`steam://nav/console`).",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-13T00:39:03.953Z",
   "deleteID": null,
