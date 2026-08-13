@@ -8,7 +8,7 @@ const dist = join(__dirname, "dist");
 const userscriptBanner = `// ==UserScript==
 // @name         VRChat Feedback: gateway search
 // @namespace    https://github.com/hackebein/feedback.vrchat.com
-// @version      1.0.5
+// @version      1.0.6
 // @description  Replace feedback.vrchat.com search with vrchat-canny.hackebein.dev OpenSearch gateway
 // @author       feedback.vrchat.com
 // @homepageURL  https://github.com/hackebein/feedback.vrchat.com

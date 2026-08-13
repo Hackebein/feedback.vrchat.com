@@ -49,13 +49,16 @@ export function installIndexWatch(
       if (!index) {
         return;
       }
+      let refreshed = false;
       if (last !== undefined && last !== index) {
         const ok = await onUpdate();
         if (!ok) {
           return;
         }
+        refreshed = true;
       }
       last = index;
+      console.info("[vrcfb] index watch", index, refreshed ? "refresh" : "ok");
     } catch (error) {
       console.warn("[vrcfb] index watch failed", error);
     } finally {
