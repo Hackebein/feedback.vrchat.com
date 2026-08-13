@@ -2,10 +2,9 @@
   "_id": "6a7e04b3ebfb2fdd4908b02b",
   "aiCategories": [
     "loc.quick-menu",
-    "social.instances",
     "social.friends"
   ],
-  "aiTaggedAt": "2026-08-13T17:55:11.915772Z",
+  "aiTaggedAt": "2026-08-13T19:32:44.213079Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64d620b4742aad1326b05ef3",
@@ -36,7 +35,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Since the latest update (Build 1885), you can no longer send a Request Invite\n\nto a friend who is in a joinable instance (Friends / Friends+) — only \"Join\"\n\nis shown.\n\n## Steps to Reproduce\n\n1. Have a friend join a Friends or Friends+ instance (an instance you are able to join)\n\n2. Open their user detail page from the Social menu\n\n3. Look for the \"Request Invite\" option\n\n## Expected Behavior\n\n\"Request Invite\" is available alongside \"Join\", as in previous builds.\n\n## Actual Behavior\n\nOnly \"Join\" is available. There is no way to send a Request Invite.\n\n## Why this matters\n\nEven when an instance is technically joinable, many users send a Request\n\nInvite first to ask \"is now a good time to join?\" instead of jumping in\n\ndirectly. This usage is especially well-established in the Japanese community.\n\nThe friend may be in the middle of a conversation, an event, or taking\n\nphotos. There are many situations where you want to check whether it's okay\n\nto join right now — for example, to avoid running into someone you'd rather\n\nnot meet who happens to be in the same instance.\n\nPlease bring back the ability to send Request Invites in this situation.",
+  "details": "Since the latest update (Build 1885), you can no longer send a Request Invite to a friend who is in a joinable instance (Friends / Friends+) — only \"Join\" is shown.\n\n## Steps to Reproduce\n\n1. Have a friend join a Friends or Friends+ instance (an instance you are able to join)\n\n2. Open their user detail page from the Social menu\n\n3. Look for the \"Request Invite\" option\n\n## Expected Behavior\n\n\"Request Invite\" is available alongside \"Join\", as in previous builds.\n\n## Actual Behavior\n\nOnly \"Join\" is available. There is no way to send a Request Invite.\n\n## Why this matters\n\nEven when an instance is technically joinable, many users send a Request Invite first to ask \"is now a good time to join?\" instead of jumping in directly. This usage is especially well-established in the Japanese community.\n\nThe friend may be in the middle of a conversation, an event, or taking photos. There are many situations where you want to check whether it's okay to join right now — for example, to avoid running into someone you'd rather not meet who happens to be in the same instance.\n\nPlease bring back the ability to send Request Invites in this situation.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,7 +59,7 @@
   "subCategoryID": null,
   "title": "Can no longer send Request Invite to friends in joinable instances",
   "trendingScore": 2955.7161068197433,
-  "updatedBy": null,
+  "updatedBy": "64d620b4742aad1326b05ef3",
   "urlName": "can-no-longer-send-request-invite-to-friends-in-joinable-instances",
   "viewerIsAuthor": false,
   "viewerVote": 0,
