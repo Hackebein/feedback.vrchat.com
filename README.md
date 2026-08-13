@@ -13,7 +13,7 @@ Scrape horizon: **2026-05-15 10:38 UTC (90d ago)**.
 | `avatar-30` | 872 / 872 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 77 / 77 (100.0%) |
-| `bug-reports` | 10,870 / 10,869 (100.0%) |
+| `bug-reports` | 10,870 / 10,870 (100.0%) |
 | `client-bug-reporting` | 180 |
 | `creator-companion` | 289 / 289 (100.0%) |
 | `creator-economy` | 83 / 83 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-05-15 10:38 UTC (90d ago)**.
 | `vrchat-ik-20` | 285 / 285 (100.0%) |
 | `vrchat-plus-feature-ideas` | 125 / 125 (100.0%) |
 | `website` | 839 / 839 (100.0%) |
-| **Total** | **35,602** / **35,422** (100.0%) |
+| **Total** | **35,602** / **35,423** (99.997%) |
 
 ## OpenSearch
 
