@@ -1,11 +1,11 @@
 {
   "_id": "6a7d31ed0c452bcf78f1f018",
   "aiCategories": [
-    "loc.in-world",
+    "loc.pc-client",
     "platforms.pc.steam",
     "worlds.travel"
   ],
-  "aiTaggedAt": "2026-08-13T02:57:00.427622Z",
+  "aiTaggedAt": "2026-08-13T03:38:40.572639Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a7d31edc92bc8aa59e92ff7",
@@ -29,8 +29,65 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a7d39842b511306c0ba72d8",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T03:27:00.611Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a7d31edc92bc8aa59e92ff7",
+          "alias": "Lexical Koi",
+          "aliasID": "6a7d31edc92bc8aa59e92ffa",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2026-08-13T02:54:37.204Z",
+          "name": "centipedecrows",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7d31ed0c452bcf78f1f018",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a7d31edc92bc8aa59e92ff7|full_name} Your logs indicate success joining a world and I see no attempt to join Sunset Bar - DVC (`wrld_44f4a344-4489-4e11-a54a-86971f16f0e6`) or any other world in your logs.\n\n`2026.08.12 19:52:56 Debug      -  [Behaviour] Finished entering world.`",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-13T02:54:37.493Z",
   "deleteID": null,
