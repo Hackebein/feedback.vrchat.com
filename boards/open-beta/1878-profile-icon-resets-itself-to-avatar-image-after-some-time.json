@@ -2,10 +2,9 @@
   "_id": "6a63ace0073e7390a3f44294",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
-    "client.settings"
+    "web.profiles"
   ],
-  "aiTaggedAt": "2026-08-11T14:11:31.364056Z",
+  "aiTaggedAt": "2026-08-13T20:30:20.038343Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c872970a4264c0cacf21aaa",
@@ -35,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "_id": "6a63adf0e7f8d76777db99b9",
@@ -313,6 +312,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I'm not sure if this resets based on a random amount of time, but it absolutely does any time you touch anything in the profile - including simply setting your status.\n\nSo each time I start the game the pic has been reset, then each time I update my status.  Very annoying.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7e2903f27952eafefa7df7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "661f03a00baacc5de569a763",
+        "alias": "Deep taupe Moth",
+        "aliasID": "661f03a0e5d26962aa833ff5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/167a615d5d7566511f175edc7ac5efa2.png",
+        "created": "2024-04-16T23:02:56.480Z",
+        "name": "DRΑG",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T20:28:51.665Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "63e70d70f1684e450d14723f",
+          "alias": "Top Lizard",
+          "aliasID": "65c5aef0ed6eefce4cebd8a5",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/7292d9afe83467c7ad0a140b4f626f94.png",
+          "created": "2023-02-11T03:37:20.756Z",
+          "name": "kazin138",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7b26d837a3af52840e57dc",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a63ace0073e7390a3f44294",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{63e70d70f1684e450d14723f|full_name} Ive seen reset sometimes after long time in a instance but not everytime, but everytime I login it does reset, which then I have to reapply it.\n\nMay be only a issue for those without VRC+?",
       "viewerReactions": null,
       "voteID": null
     }
