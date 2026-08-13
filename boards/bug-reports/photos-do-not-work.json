@@ -1,11 +1,11 @@
 {
   "_id": "6a7d5d8820c6b54af38b39ce",
   "aiCategories": [
-    "loc.in-world",
-    "client.camera",
-    "platforms.standalone-vr.quest"
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "client.camera"
   ],
-  "aiTaggedAt": "2026-08-13T06:03:07.994678Z",
+  "aiTaggedAt": "2026-08-13T07:55:13.742668Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62e2da944a4fb344c3267cc3",
@@ -29,8 +29,65 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a7d778f6252f5d816a952a8",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T07:51:43.286Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62e2da944a4fb344c3267cc3",
+          "alias": "Minimum Koi",
+          "aliasID": "68d6ed124f674f1b1e47ee7a",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/de9d85142a0eb632b7d031132886f247.png",
+          "created": "2022-07-28T18:51:00.121Z",
+          "name": "Famic0m",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7d5d8820c6b54af38b39ce",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62e2da944a4fb344c3267cc3|full_name} Can you replicate the issue and provide full [output logs](https://help.vrchat.com/hc/en-us/articles/9521522810899-Where-do-I-find-my-Output-Logs-and-Crash-Dumps)?",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-13T06:00:40.336Z",
   "deleteID": null,
