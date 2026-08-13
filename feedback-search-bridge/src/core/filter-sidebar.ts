@@ -128,7 +128,6 @@ html.${ACTIVE_CLASS} .boardHeader { display: none !important; }
 html.${ACTIVE_CLASS} .roadmapView:not(#vrcfb-roadmap) { display: none !important; }
 /* On boards we do not cover, keep the bridge UI out of the way entirely. */
 html:not(.${ACTIVE_CLASS}) #${PANEL_ID},
-html:not(.${ACTIVE_CLASS}) #vrcfb-board-picker,
 html:not(.${ACTIVE_CLASS}) #vrcfb-attribution,
 html:not(.${ACTIVE_CLASS}) #vrcfb-control-root { display: none !important; }
 #${PANEL_ID} {

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "test": "tsx scripts/test-mapping.ts && tsx scripts/test-integration.ts",
+    "test": "tsx scripts/test-mapping.ts && tsx scripts/test-coverage.ts && tsx scripts/test-integration.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

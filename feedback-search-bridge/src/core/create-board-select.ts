@@ -1,22 +1,20 @@
 import { createCannyDropdown } from "./canny-dropdown";
-import { currentSlug, isLocationCovered, onRouteChange } from "./coverage";
+import {
+  currentSlug,
+  isCreatePage,
+  isCreatePickerLocation,
+  onRouteChange,
+} from "./coverage";
 
 const STYLE_ID = "vrcfb-board-picker-style";
 const PICKER_ID = "vrcfb-board-picker";
 const TOGGLE_ID = "vrcfb-create-toggle";
-const CREATE_FORM_SELECTOR = ".createPostFormV2";
+const CREATE_HOST_ID = "vrcfb-create-host";
 const NATIVE_BOARD_LINK_SELECTOR = "ul.boardListContainer a";
-const COLLAPSED_CLASS = "vrcfb-create-collapsed";
 
 // Reuse Canny's `.createPostFormSection` / `.descriptionLabel` wrappers; the board
 // picker uses the shared Canny-style searchable dropdown component.
 const PICKER_CSS = `
-html.${COLLAPSED_CLASS} .createPostFormV2 > *:not(#${TOGGLE_ID}) {
-  display: none !important;
-}
-html:not(.${COLLAPSED_CLASS}) #${TOGGLE_ID} {
-  display: none !important;
-}
 #${TOGGLE_ID} {
   display: block;
   width: 100%;
@@ -37,6 +35,12 @@ html:not(.${COLLAPSED_CLASS}) #${TOGGLE_ID} {
 #${TOGGLE_ID}:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
+}
+#${CREATE_HOST_ID} {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 16px;
 }
 #${PICKER_ID} {
   display: flex;
@@ -62,9 +66,6 @@ type BoardOption = { slug: string; name: string };
 /** Set before dropdown-driven router navigation; consumed by bridge preselect. */
 let suppressBoardPreselect = false;
 
-/** True once the user has opened the create form; preserved across dropdown board changes. */
-let createFormExpanded = false;
-
 /** Returns true once if the create-post dropdown just navigated boards. */
 export function consumeBoardPreselectSuppression(): boolean {
   if (!suppressBoardPreselect) {
@@ -89,7 +90,7 @@ function slugFromHref(href: string | null): string {
   if (!href) {
     return "";
   }
-  const match = /^\/([^/?#]+)$/.exec(href.trim());
+  const match = /^\/([^/?#]+)(?:\/create)?$/.exec(href.trim());
   return match ? match[1] : "";
 }
 
@@ -155,6 +156,30 @@ function isHistory(value: unknown): value is RouterHistory {
   );
 }
 
+function findCreateForm(doc: Document): HTMLElement | null {
+  return (
+    doc.querySelector<HTMLElement>(".createPostForm") ??
+    doc.querySelector<HTMLElement>(".subdomainCreatePost") ??
+    doc.querySelector<HTMLElement>(".createPostFormV2")
+  );
+}
+
+function isElementDisplayed(el: HTMLElement): boolean {
+  const view = el.ownerDocument.defaultView;
+  if (!view) {
+    return true;
+  }
+  return view.getComputedStyle(el).display !== "none";
+}
+
+function findListHost(doc: Document): HTMLElement | null {
+  const v2 = doc.querySelector<HTMLElement>(".createPostFormV2");
+  if (v2 && isElementDisplayed(v2)) {
+    return v2;
+  }
+  return doc.querySelector<HTMLElement>(".boardContent");
+}
+
 /**
  * Canny's board links navigate via react-router, which only responds to trusted
  * clicks — synthetic events don't switch boards (so the create form never
@@ -167,7 +192,7 @@ function getRouterHistory(target: Window & typeof globalThis): RouterHistory | n
   }
   const doc = target.document;
   const start =
-    doc.querySelector(".createPostFormV2") ??
+    findCreateForm(doc) ??
     doc.querySelector('a[href^="/"]') ??
     doc.body;
   let fiber = fiberOf(start);
@@ -194,17 +219,29 @@ function getRouterHistory(target: Window & typeof globalThis): RouterHistory | n
   return null;
 }
 
-function navigateToBoard(target: Window & typeof globalThis, slug: string): void {
-  // Drive react-router directly so the create form re-renders with that board's
-  // fields and the URL updates without a full reload (preserving filter state).
+function pushPath(target: Window & typeof globalThis, path: string): void {
   const history = getRouterHistory(target);
-  if (history) {
-    suppressBoardPreselect = true;
-    createFormExpanded = true;
-    history.push(`/${slug}`);
-  } else {
-    console.warn("[vrcfb] router history not found; cannot switch board");
+  if (!history) {
+    console.warn("[vrcfb] router history not found; cannot navigate");
+    return;
   }
+  suppressBoardPreselect = true;
+  history.push(path);
+}
+
+function navigateToBoard(target: Window & typeof globalThis, slug: string): void {
+  // On the create page, stay on /{slug}/create so Canny remounts that board's
+  // fields (Details, custom fields, …). On a board list, only change the URL.
+  const path = isCreatePage(target) ? `/${slug}/create` : `/${slug}`;
+  pushPath(target, path);
+}
+
+function navigateToCreate(target: Window & typeof globalThis): void {
+  const slug = currentSlug(target);
+  if (!slug) {
+    return;
+  }
+  pushPath(target, `/${slug}/create`);
 }
 
 function buildToggle(target: Window & typeof globalThis): HTMLButtonElement {
@@ -214,8 +251,7 @@ function buildToggle(target: Window & typeof globalThis): HTMLButtonElement {
   button.type = "button";
   button.textContent = "Create post";
   button.addEventListener("click", () => {
-    createFormExpanded = true;
-    target.document.documentElement.classList.remove(COLLAPSED_CLASS);
+    navigateToCreate(target);
   });
   return button;
 }
@@ -257,62 +293,90 @@ function buildPicker(target: Window & typeof globalThis): HTMLElement | null {
   return wrap;
 }
 
+function insertFirst(parent: HTMLElement, child: HTMLElement): void {
+  if (parent.firstChild) {
+    parent.insertBefore(child, parent.firstChild);
+  } else {
+    parent.appendChild(child);
+  }
+}
+
 export function installCreateBoardSelect(target: Window & typeof globalThis): void {
   ensureStyles(target);
 
   const removeExisting = (): void => {
     target.document.getElementById(PICKER_ID)?.remove();
     target.document.getElementById(TOGGLE_ID)?.remove();
+    target.document.getElementById(CREATE_HOST_ID)?.remove();
   };
+
+  const wantsToggle = (): boolean =>
+    !isCreatePage(target) && currentSlug(target).length > 0;
 
   const mount = (): void => {
     const doc = target.document;
-    if (!isLocationCovered(target)) {
+    if (!isCreatePickerLocation(target)) {
       removeExisting();
-      doc.documentElement.classList.remove(COLLAPSED_CLASS);
-      createFormExpanded = false;
       return;
     }
-    if (doc.getElementById(PICKER_ID) && doc.getElementById(TOGGLE_ID)) {
+    const pickerPresent = Boolean(doc.getElementById(PICKER_ID));
+    const togglePresent = Boolean(doc.getElementById(TOGGLE_ID));
+    if (pickerPresent && (!wantsToggle() || togglePresent)) {
       return;
     }
-    const form = doc.querySelector<HTMLElement>(CREATE_FORM_SELECTOR);
-    if (!form) {
+    const picker = pickerPresent ? null : buildPicker(target);
+    if (!picker && !pickerPresent) {
       return;
     }
-    const picker = buildPicker(target);
-    if (!picker) {
+
+    if (isCreatePage(target)) {
+      const form = findCreateForm(doc);
+      if (!form) {
+        return;
+      }
+      doc.getElementById(TOGGLE_ID)?.remove();
+      doc.getElementById(CREATE_HOST_ID)?.remove();
+      if (picker) {
+        insertFirst(form, picker);
+      }
       return;
     }
-    if (!doc.getElementById(TOGGLE_ID)) {
-      form.insertBefore(buildToggle(target), form.firstChild);
+
+    let host = doc.getElementById(CREATE_HOST_ID);
+    if (!host) {
+      const parent = findListHost(doc);
+      if (!parent) {
+        return;
+      }
+      host = doc.createElement("div");
+      host.id = CREATE_HOST_ID;
+      insertFirst(parent, host);
     }
-    if (!doc.getElementById(PICKER_ID)) {
+    if (wantsToggle() && !doc.getElementById(TOGGLE_ID)) {
+      insertFirst(host, buildToggle(target));
+    }
+    if (picker) {
       const toggle = doc.getElementById(TOGGLE_ID);
       if (toggle?.nextSibling) {
-        form.insertBefore(picker, toggle.nextSibling);
+        host.insertBefore(picker, toggle.nextSibling);
       } else {
-        form.appendChild(picker);
+        host.appendChild(picker);
       }
-    }
-    if (createFormExpanded) {
-      doc.documentElement.classList.remove(COLLAPSED_CLASS);
-    } else {
-      doc.documentElement.classList.add(COLLAPSED_CLASS);
     }
   };
 
   // On a direct load / reload Canny server-renders the create form and then
-  // React hydrates it (note the duplicated `createPostFormV2` class), which
-  // clobbers any child we inject mid-hydration. Defer the first mount and the
-  // observer until after `load` so we attach once hydration has settled. The
-  // SPA navigation path already runs post-hydration, so it works immediately.
+  // React hydrates it, which clobbers any child we inject mid-hydration. Defer
+  // the first mount and the observer until after `load` so we attach once
+  // hydration has settled. The SPA navigation path already runs post-hydration.
   const start = (): void => {
     mount();
 
     const observer = new MutationObserver(() => {
       const doc = target.document;
-      if (!doc.getElementById(PICKER_ID) || !doc.getElementById(TOGGLE_ID)) {
+      const pickerMissing = !doc.getElementById(PICKER_ID);
+      const toggleMissing = wantsToggle() && !doc.getElementById(TOGGLE_ID);
+      if (pickerMissing || toggleMissing) {
         mount();
       }
     });

@@ -69,8 +69,17 @@ export async function loadCoverage(options: BridgeOptions): Promise<void> {
   }
 }
 
+export function pathnameSegments(pathname: string): string[] {
+  return pathname.split("/").filter(Boolean);
+}
+
 export function currentSlug(target: Window & typeof globalThis): string {
-  return target.location.pathname.split("/").filter(Boolean)[0] ?? "";
+  return pathnameSegments(target.location.pathname)[0] ?? "";
+}
+
+/** Post detail pages look like `/{board}/p/{postSlug}`. */
+export function isPostDetailPath(pathname: string): boolean {
+  return pathnameSegments(pathname)[1] === "p";
 }
 
 /**
@@ -78,15 +87,52 @@ export function currentSlug(target: Window & typeof globalThis): string {
  * intercept, etc.) should stay off these so Canny renders the post normally.
  */
 export function isPostDetail(target: Window & typeof globalThis): boolean {
-  return target.location.pathname.split("/").filter(Boolean)[1] === "p";
+  return isPostDetailPath(target.location.pathname);
+}
+
+/** Dedicated create pages look like `/{board}/create`. */
+export function isCreatePagePath(pathname: string): boolean {
+  return pathnameSegments(pathname)[1] === "create";
+}
+
+export function isCreatePage(target: Window & typeof globalThis): boolean {
+  return isCreatePagePath(target.location.pathname);
 }
 
 /**
- * The home page and every indexed board count as covered. Until coverage has
- * loaded we optimistically treat everything as covered so covered boards never
+ * Home and indexed board list pages. Post detail and create pages are never
+ * covered — Canny must render those itself. Until coverage has loaded we
+ * optimistically treat remaining routes as covered so indexed boards never
  * flash the plain Canny UI; once loaded, genuinely unknown slugs are excluded.
  */
+export function isLocationCoveredPath(
+  pathname: string,
+  slugs: ReadonlySet<string> | null = null,
+): boolean {
+  if (isPostDetailPath(pathname) || isCreatePagePath(pathname)) {
+    return false;
+  }
+  const slug = pathnameSegments(pathname)[0] ?? "";
+  if (slug === "") {
+    return true;
+  }
+  if (!slugs) {
+    return true;
+  }
+  return slugs.has(slug);
+}
+
 export function isLocationCovered(target: Window & typeof globalThis): boolean {
+  return isLocationCoveredPath(target.location.pathname, coveredSlugs);
+}
+
+/**
+ * Home, indexed board lists, and `/{board}/create`. The create-post picker
+ * must stay available on create pages after the search bridge has turned off.
+ */
+export function isCreatePickerLocation(
+  target: Window & typeof globalThis,
+): boolean {
   if (isPostDetail(target)) {
     return false;
   }
