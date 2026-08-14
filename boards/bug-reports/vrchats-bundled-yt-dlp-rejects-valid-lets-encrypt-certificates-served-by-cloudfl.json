@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-14T13:34:37.038190Z",
+  "aiTaggedAt": "2026-08-14T13:38:45.870941Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6389256d477b8d0c8d64d809",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a7ee7a2e91fd42eac0a7092",
@@ -328,7 +328,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{68098a4626271974ef4d2775|full_name} If VRChat staff rquests more informations from me to do it i will, in the meantime you can easily reproduce the issue with the informations provided above :)",
+      "value": "@{68098a4626271974ef4d2775|full_name} As you said yourself, all the services you tested use GTS, so they don't apply to this Canny at all lol.\n\nIf VRChat staff requests more information from me, I'll happily provide it. In the meantime, the issue can be reproduced with the information already provided above :)\n\nVRChat explicitly asks users to report bugs through Canny unless staff requests additional information, so I'll stick to their process rather than whatever some random VRChatter tells me to do. I hope you understand that :)",
       "viewerReactions": null,
       "voteID": null
     },
@@ -352,10 +352,19 @@
       "created": "2026-08-14T13:33:19.446Z",
       "deleted": false,
       "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
+      "fileURLs": [
+        "https://canny-assets.io/files/d12f2a3fe174c6113a97e44dd141ba70.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-08-14_13-30-25",
+          "url": "https://canny-assets.io/files/d12f2a3fe174c6113a97e44dd141ba70.txt"
+        }
+      ],
       "imageURLs": [
-        "https://canny-assets.io/images/893438418a4181a5d2cf4d7ae2d921c0.png"
+        "https://canny-assets.io/images/893438418a4181a5d2cf4d7ae2d921c0.png",
+        "https://canny-assets.io/images/d3b785dacb4d444419f177a2eb8acb7b.png"
       ],
       "integrationSourceType": null,
       "internal": false,
@@ -375,6 +384,51 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I also tested litterbox.chatbox.moe video playback despite not being Cloudflare backed as reported in OP to be the issue, but serving a YE2 Let's Encrypt certificate. The issue was not with Let's Encrypt by itself.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7f19e1311b574e2f1ac312",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T13:36:33.241Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ee6fb6107c4a04731bfcc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a7f19e1311b574e2f1ac30e",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
       "viewerReactions": null,
       "voteID": null
     }
@@ -403,8 +457,8 @@
   "pinnedComment": null,
   "score": 11,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-08-14T09:59:23.300Z",
+  "status": "tracked",
+  "statusChanged": "2026-08-14T13:36:33.204Z",
   "subCategoryID": null,
   "title": "VRChat's bundled yt-dlp rejects valid Let's Encrypt certificates served by Cloudflare",
   "trendingScore": 2956.6939428194264,
