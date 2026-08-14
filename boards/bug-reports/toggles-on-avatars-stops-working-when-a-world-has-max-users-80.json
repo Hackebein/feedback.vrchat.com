@@ -2,11 +2,10 @@
   "_id": "6a7defed01ff60b58102e152",
   "aiCategories": [
     "loc.in-world",
-    "avatars.dynamics",
-    "avatars.tracking",
-    "platforms.cross-platform"
+    "avatars.expressions",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-14T07:45:20.204139Z",
+  "aiTaggedAt": "2026-08-14T08:14:38.327953Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6296efa7a664220b79452942",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "_id": "6a7e7519c95eb998e1c623d1",
@@ -334,6 +333,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Has to be mentioned, this issue did not occur in the earlier months before the mentioned period while being the same social event and through the same avatar(s).\n\nIt seems to affect any late joiners' avatar, so it is not related to one specifc avatar and is more of a broader issue. I just listed my own avatar to answer the question directly.\n\nEarly joiners who were present before the world was full/capped seems to be unaffected by this.\n\nA user joining late would also see early joiners fine but late joiners would be the ones affected.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7ec8e101ff60b581225303",
+      "aiGenerated": false,
+      "author": {
+        "_id": "667353ba8663454809d39116",
+        "alias": "Effective Lark",
+        "aliasID": "667353bbd5dd336a20ffb258",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2024-06-19T21:55:06.923Z",
+        "name": "euan",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T07:50:57.817Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6296efa7a664220b79452942",
+          "alias": "Oxblood Reindeer",
+          "aliasID": "65c4c885ed6eefce4cec747a",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/1ece82088d03205df4bb19aa206a6776.png",
+          "created": "2022-06-01T04:48:39.707Z",
+          "name": "Frajs",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7eb6b48fe8e65b1351a118",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7defed01ff60b58102e152",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6296efa7a664220b79452942|full_name}: For the information (especially date and time) I need exact details so I can cross reference things server side. Regarding the usage of the parameter compressor I would try uploading a version which does not use this, if you encounter the issue again try using that version and see if the issue persists. This would highlight the issue being the compressor or rule it out (which would be quite useful to know)",
       "viewerReactions": null,
       "voteID": null
     }
