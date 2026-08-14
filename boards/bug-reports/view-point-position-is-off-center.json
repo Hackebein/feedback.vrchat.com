@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "avatars.descriptor"
   ],
-  "aiTaggedAt": "2026-06-13T02:53:48.434847Z",
+  "aiTaggedAt": "2026-08-14T11:59:35.841991Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "626c315eb197e76b6cdd43a5",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6997320575c7443e71301563",
@@ -118,6 +118,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "This one has haunted me since the start of avatar 3.0.\n\nI believe this issue stems from the unity humanoid not being perfectly straight? You can preview the real viewball placement location by playing the default `proxy_tpose` animation on your avatar.\n\nI've been replacing the proxy animation and ever so slightly offsetting the RootT by x 0.006 for my avatar to compensate.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7de046f96232b530438080",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5d50b9a820a2156a6e75616b",
+        "alias": "Impressive Canidae",
+        "aliasID": "65c32406ed6eefce4c80e9fc",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0cc7b280779187bb8909c54ca290f26e.png",
+        "created": "2019-08-12T00:58:16.225Z",
+        "name": "SapphireSouls",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-13T15:18:30.380Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69964776eeb3d9fd4bef0cfa",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Duplicate of https://feedback.vrchat.com/bug-reports/p/my-head-is-constantly-offset-by-2cm-left-on-all-avatars",
       "viewerReactions": null,
       "voteID": null
     }
