@@ -2,10 +2,9 @@
   "_id": "6a7ecdf1544c595134b5b7ab",
   "aiCategories": [
     "loc.in-world",
-    "platforms.cross-platform",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-14T08:14:36.818713Z",
+  "aiTaggedAt": "2026-08-14T11:55:17.427973Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60ab0c642a15b87aed5a64f8",
@@ -29,8 +28,69 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a7f00c4cb1c2d7dded531c1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T11:49:24.151Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/4d34638eb58c099b7e875faf646b6307.png",
+        "https://canny-assets.io/images/19e43840067f60cf27c45fbaaa7d4c3e.png",
+        "https://canny-assets.io/images/2c93044e3c465c9a77a9b2bbe5408d32.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "60ab0c642a15b87aed5a64f8",
+          "alias": "Gentle Owl",
+          "aliasID": "6a7ecdf2c92bc8aa59f5102b",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2021-05-24T02:16:04.837Z",
+          "name": "NPC Zoey",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ecdf1544c595134b5b7ab",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I've reviewed this, there's no bug in VRChat.\n\n@{60ab0c642a15b87aed5a64f8|full_name} The log file you've attached speaks of a different story than what you're describing.\n\n1. At 2026.08.14 01:59:24, you played https://youtu.be/Pv6QAoxnopQ successfully.\n\n2. 2026.08.14 02:56:20, you played https://www.youtube.com/watch?v=yG7MPEQm1-w successfully.\n\n3. 2026.08.14 02:57:08: You played https://www.youtube.com/watch?v=xE_zD51o5rw successfully.\n\n4. 2026.08.14 02:58:40: https://www.youtube.com/watch?v=gnoSiIL-oSo was blocked by YouTube without login because the video is age-restricted. The video is not embeddable and thus is not extractable by yt-dlp's `web_embedded` client.\n\n5. 2026.08.14 02:58:50: Same as above (4).\n\n6. 2026.08.14 02:58:59: https://www.youtube.com/watch?v=RHgOXWBdRbA was blocked by YouTube without login because the video is age-restricted. The video is not embeddable and thus is not extractable by yt-dlp's `web_embedded` client.\n\n7. 2026.08.14 02:59:11: Same as above (6).\n\n8. 2026.08.14 02:59:30: https://www.youtube.com/watch?v=kSVYZuVt1pM was blocked by YouTube without login because the video is age-restricted. The video is not embeddable and thus is not extractable by yt-dlp's `web_embedded` client.\n\n9. 2026.08.14 02:59:39: Same as above (8).\n\n10. 2026.08.14 02:59:40: You started making an in-client bug report about this.\n\nTo clarify: You have not been blocked by YouTube, but you decided to try playing three age-restricted videos in a row.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-14T08:12:33.908Z",
   "deleteID": null,
