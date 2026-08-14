@@ -22,6 +22,14 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_TREE_PATH = ROOT / "feature_tree.json"
 DEFAULT_MINIMAX_CHAT_URL = "https://api.minimax.io/v1/chat/completions"
 
+try:
+    import in_client_report
+except ImportError:
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import in_client_report
+
 # Bump when taxonomy or classifier prompts change materially (forces re-tag).
 DEFAULT_TAXONOMY_VERSION = 3
 
@@ -708,6 +716,8 @@ def _fallback_categories(
     categories: list[str],
     tree: dict,
     board_slug: str,
+    *,
+    location_prior: str | None = None,
 ) -> list[str]:
     """Best-effort salvage when strict validation fails."""
     flat = tree["flat_ids"]
@@ -723,7 +733,7 @@ def _fallback_categories(
     feats = [c for c in cats if c in feature_ids]
 
     if not locs:
-        prior = BOARD_LOCATION_PRIORS.get(board_slug)
+        prior = location_prior or BOARD_LOCATION_PRIORS.get(board_slug)
         if prior and prior in location_ids:
             locs = [prior]
 
@@ -992,8 +1002,20 @@ def _attachment_note(post: dict) -> str:
     return f"Attachments: {', '.join(parts)} (UI details may only appear in images).\n"
 
 
-def _board_guidance(board_slug: str) -> str:
-    loc = BOARD_LOCATION_PRIORS.get(board_slug)
+def _location_prior_for_post(post: dict, board_slug: str) -> str | None:
+    details = post.get("details") if isinstance(post.get("details"), str) else ""
+    loc = in_client_report.client_location_prior(details)
+    if loc:
+        return loc
+    return BOARD_LOCATION_PRIORS.get(board_slug)
+
+
+def _board_guidance(board_slug: str, post: dict | None = None) -> str:
+    loc = (
+        _location_prior_for_post(post, board_slug)
+        if post is not None
+        else BOARD_LOCATION_PRIORS.get(board_slug)
+    )
     feat = BOARD_FEATURE_PRIORS.get(board_slug)
     if not loc and not feat:
         return ""
@@ -1031,7 +1053,7 @@ def _build_user_prompt(post: dict, board_slug: str) -> str:
         lines.append(f"Canny category: {category}")
     if status:
         lines.append(f"Status: {status}")
-    lines.append(_board_guidance(board_slug).rstrip())
+    lines.append(_board_guidance(board_slug, post).rstrip())
     lines.append(f"Title: {title}")
     lines.append("")
     lines.append("Details:")
@@ -1107,6 +1129,7 @@ def _run_classify(
     tree: dict,
     user_prompt: str,
     board_slug: str,
+    post: dict | None = None,
 ) -> tuple[list[str] | None, str | None]:
     """Single-pass classification against the full taxonomy.
 
@@ -1139,7 +1162,12 @@ def _run_classify(
             return ok, None
         last_err = verr or "validation failed"
         if last_cats:
-            fallback = _fallback_categories(last_cats, tree, board_slug)
+            location_prior = (
+                _location_prior_for_post(post, board_slug) if post is not None else None
+            )
+            fallback = _fallback_categories(
+                last_cats, tree, board_slug, location_prior=location_prior
+            )
             if fallback:
                 fok, _ = _validate_categories(fallback, tree, normalize=False)
                 if fok:
@@ -1180,7 +1208,7 @@ def tag_post(
         return {"aiCategories": [], "aiTaggedAt": tagged_at, "aiTaxonomyVersion": tax_ver}
 
     user_prompt = _build_user_prompt(post, board_slug)
-    cats, err = _run_classify(eff_key, tree, user_prompt, board_slug)
+    cats, err = _run_classify(eff_key, tree, user_prompt, board_slug, post)
     if err:
         print(f"[WARN] AI categorize failed for post {post.get('_id')}: {err}")
         return failed

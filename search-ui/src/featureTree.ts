@@ -25,6 +25,37 @@ function titleizeId(id: string): string {
     .join(" ");
 }
 
+const INCLIENT_FIELD_LABELS: Record<string, string> = {
+  "inclient.category": "Category",
+  "inclient.frequency": "Frequency",
+  "inclient.platform": "Platform",
+  "inclient.store": "Store",
+  "inclient.headset": "Headset",
+  "inclient.raw-platform": "Raw Platform",
+};
+
+function inclientCategoryName(id: string): string | undefined {
+  if (!id.startsWith("inclient.")) {
+    return undefined;
+  }
+  if (id === "inclient.report") {
+    return "In-Client Report";
+  }
+  if (id.startsWith("inclient.client-version.")) {
+    return `Client ${id.slice("inclient.client-version.".length)}`;
+  }
+  if (id.startsWith("inclient.unity-version.")) {
+    return `Unity ${id.slice("inclient.unity-version.".length)}`;
+  }
+  for (const [prefix, label] of Object.entries(INCLIENT_FIELD_LABELS)) {
+    const head = `${prefix}.`;
+    if (id.startsWith(head)) {
+      return `${label}: ${titleizeId(id.slice(head.length))}`;
+    }
+  }
+  return titleizeId(id.slice("inclient.".length));
+}
+
 function visitFeatures(node: FeatureNode, map: Map<string, { name: string; description: string }>) {
   const name =
     typeof node.name === "string" && node.name.trim()
@@ -88,7 +119,7 @@ export function aiCategoryName(id: string): string {
   if (!trimmed) return id;
   const row = lookup.get(trimmed);
   if (row) return row.name;
-  return titleizeId(trimmed);
+  return inclientCategoryName(trimmed) ?? titleizeId(trimmed);
 }
 
 export function aiCategoryDescription(id: string): string | undefined {

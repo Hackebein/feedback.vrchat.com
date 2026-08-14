@@ -17,19 +17,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Iterator
 
+import in_client_report
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 IN_CLIENT_BOARD_ID = "69f3e15229c8d0dea5379a7b"
 IN_CLIENT_BOARD_NAME = "In-Client Bug Reporting"
 BUG_REPORTS_URL_NAME = "bug-reports"
-
-_OUTPUT_LOG_NAME = r"output_log_\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}\.txt"
-_IN_CLIENT_LOG_FILE_FOOTER_RE = re.compile(
-    r"(?is)"
-    r"(?:\*\*)?Log file:(?:\*\*)?\s*"
-    r"(?:\[" + _OUTPUT_LOG_NAME + r"\]\([^)]*\)|" + _OUTPUT_LOG_NAME + r")"
-    r"\s*$"
-)
 
 
 def utc_backing_suffix() -> str:
@@ -121,15 +115,8 @@ def _scraper_user_id(repo_root: Path | None = None) -> str | None:
     return env or None
 
 
-def has_in_client_log_file_footer(details: Any) -> bool:
-    """True when details end with a client `Log file: output_log_....txt` footer."""
-    if not isinstance(details, str) or not details:
-        return False
-    return _IN_CLIENT_LOG_FILE_FOOTER_RE.search(details) is not None
-
-
 def apply_virtual_in_client_board(doc: dict[str, Any]) -> None:
-    """Present bug-reports log-file posts as In-Client Bug Reporting in search.
+    """Present bug-reports in-client template posts as In-Client Bug Reporting.
 
     Stored JSON stays on bug-reports. Permalinks keep `board.urlName` so
     `/{board.urlName}/p/{urlName}` still resolves on Canny.
@@ -139,11 +126,29 @@ def apply_virtual_in_client_board(doc: dict[str, Any]) -> None:
         return
     if board.get("urlName") != BUG_REPORTS_URL_NAME:
         return
-    if not has_in_client_log_file_footer(doc.get("details")):
+    if not in_client_report.is_in_client_report(doc.get("details")):
         return
     board["_id"] = IN_CLIENT_BOARD_ID
     board["name"] = IN_CLIENT_BOARD_NAME
     doc["boardID"] = IN_CLIENT_BOARD_ID
+
+
+def merge_in_client_search_tags(doc: dict[str, Any]) -> None:
+    """Add template location and inclient.* tags to indexed aiCategories."""
+    parsed = in_client_report.parse_in_client_template(doc.get("details"))
+    if parsed is None:
+        return
+    extra = in_client_report.client_location_tags(parsed)
+    extra.extend(in_client_report.in_client_search_tags(parsed))
+    cats = doc.get("aiCategories")
+    if not isinstance(cats, list):
+        cats = []
+    seen: set[str] = {c for c in cats if isinstance(c, str)}
+    for tag in extra:
+        if tag not in seen:
+            cats.append(tag)
+            seen.add(tag)
+    doc["aiCategories"] = cats
 
 
 def _filter_scraper_voter(doc: dict[str, Any], scraper_id: str | None) -> None:
@@ -186,6 +191,7 @@ def transform_post(line: dict[str, Any], *, scraper_id: str | None = None) -> di
     safe.pop("updatedAt", None)
 
     apply_virtual_in_client_board(safe)
+    merge_in_client_search_tags(safe)
 
     title = safe.get("title") or ""
     details = safe.get("details") or ""
