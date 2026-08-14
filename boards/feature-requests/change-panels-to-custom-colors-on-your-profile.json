@@ -4,7 +4,7 @@
     "loc.website",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-08-14T09:18:12.264125Z",
+  "aiTaggedAt": "2026-08-14T10:01:43.193671Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "657b2d2ffaa2f12ac31d1286",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a7edb3ae91fd42eac07f03a",
@@ -64,13 +64,71 @@
       "postDeleted": false,
       "postID": "6a7ec37cb09bffc1f7d53968",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "this is great and you should implement it.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7ee58183207a8950ca36f5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "657b2d2ffaa2f12ac31d1286",
+        "alias": "Prairie sand Tyrannosaurus",
+        "aliasID": "6a7a88e6c92bc8aa59d4f329",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3939918df217063382b1d07f95c57876.png",
+        "created": "2023-12-14T16:28:31.306Z",
+        "name": "scrybil",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T09:53:05.159Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "69d2da19a4b6d376adf72090",
+          "alias": "Statistical Lark",
+          "aliasID": "6a7edb1a58837e5c4826ab4b",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/d9a9d7a8e229641c2c8198e8810a01c5.png",
+          "created": "2026-04-05T21:54:33.526Z",
+          "name": "ZunfixTheWise",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7edb3ae91fd42eac07f03a",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ec37cb09bffc1f7d53968",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{69d2da19a4b6d376adf72090|full_name} w customization...",
       "viewerReactions": null,
       "voteID": null
     }
