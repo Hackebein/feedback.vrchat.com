@@ -1,10 +1,10 @@
 {
   "_id": "6a65ae76fabb501d7e38034c",
   "aiCategories": [
-    "loc.pc-client",
+    "loc.main-menu",
     "social.nameplates"
   ],
-  "aiTaggedAt": "2026-08-13T01:10:30.510218Z",
+  "aiTaggedAt": "2026-08-14T04:11:39.012633Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3df2f75af9f322b0f66e1b",
@@ -34,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a7d1688fda314539acc5556",
@@ -70,13 +70,59 @@
       "postDeleted": false,
       "postID": "6a65ae76fabb501d7e38034c",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I just want my friends to be yellow it's not that hard vrchat",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7e951d00965061b378035a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69f42b864a48bed189ec5caf",
+        "alias": "Alabaster Galliform",
+        "aliasID": "69f42b864a48bed189ec5cb7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ac28332f5ed027e79b04e537d9b12876.png",
+        "created": "2026-05-01T04:26:46.542Z",
+        "name": "AtTheCafe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T04:10:05.596Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a65ae76fabb501d7e38034c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I have to be real honest, I can't stand trying to look through my online friends when they're in private instances since the names and status are the same color I don't know how they messed this up but it's a nightmare on my eyes. The yellow made sense and looked good. Readability was a feature they did away with for... some reason?",
       "viewerReactions": null,
       "voteID": null
     }
@@ -96,20 +142,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 31,
+  "maxScore": 32,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a65ae76fabb501d7e38034c/1696712309.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 31,
+  "score": 32,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-26T06:51:34.021Z",
   "subCategoryID": null,
   "title": "[1879] Friends should be consistently represented in yellow for UI consistency.",
-  "trendingScore": 2956.0899677035313,
+  "trendingScore": 2956.2264463898705,
   "updatedBy": null,
   "urlName": "1879-friends-should-be-consistently-represented-in-yellow-for-ui-consistency",
   "viewerIsAuthor": false,
@@ -121,6 +167,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "69f42b864a48bed189ec5caf",
+      "alias": "Alabaster Galliform",
+      "aliasID": "69f42b864a48bed189ec5cb7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ac28332f5ed027e79b04e537d9b12876.png",
+      "companies": [],
+      "name": "AtTheCafe",
+      "urlName": null,
+      "voteID": "6a7e9479c92bc8aa59f42ea8"
+    },
     {
       "_id": "619a063448f41b631bae919f",
       "alias": "Competitive Bird",
