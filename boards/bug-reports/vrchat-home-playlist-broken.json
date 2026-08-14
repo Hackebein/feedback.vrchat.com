@@ -2,9 +2,10 @@
   "_id": "6a7d131d20c6b54af3826787",
   "aiCategories": [
     "loc.in-world",
-    "audio.voice"
+    "audio.voice",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-08-14T13:41:26.772979Z",
+  "aiTaggedAt": "2026-08-14T13:51:11.394566Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a7d131cc92bc8aa59e8805a",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a7d2d592f07f10fe3584cf1",
@@ -136,7 +137,63 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{68098a4626271974ef4d2775|full_name} Fresh reinstall on Windows, cleared all game caches, here's the log. Still no luck.\n\n**Log file:** [output_log_2026-08-14_09-31-30.txt](https://api.vrchat.cloud/api/1/file/file_07d9c1e9-4edb-42da-a7f8-cb6b2ac2d49f/1/file)",
+      "value": "@{68098a4626271974ef4d2775|full_name} Fresh reinstall on Windows, cleared all game caches, here's the log. Still no luck.\n\n**Log file:** [output_log_2026-08-14_09-31-30.txt](https://drive.proton.me/urls/FQ5R5NKR5G#gmHNxxtwd3cC)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7f1c11cb1c2d7ddedbc30c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T13:45:53.367Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a7d131cc92bc8aa59e8805a",
+          "alias": "Safflower Chinchilla",
+          "aliasID": "6a7d131cc92bc8aa59e8805d",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c414fd3ccbff42f26fc17b006458d53c.png",
+          "created": "2026-08-13T00:43:08.828Z",
+          "name": "Shyclone",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7d2d592f07f10fe3584cf1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7d131d20c6b54af3826787",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a7d131cc92bc8aa59e8805a|full_name} Does clearing persistence data from VRChat's servers in the world help?",
       "viewerReactions": null,
       "voteID": null
     }
