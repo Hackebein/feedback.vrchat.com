@@ -6,7 +6,9 @@ import {
   type FormEvent,
   type ReactNode,
   useEffect,
+  useLayoutEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import {
@@ -36,6 +38,11 @@ import { EmbeddedImageView } from "./EmbeddedImageView";
 import { aiCategoryDescription, aiCategoryName } from "./featureTree";
 import { MarkdownText } from "./MarkdownText";
 import { Notifications } from "./Notifications";
+import {
+  captureVisiblePost,
+  restoreVisiblePost,
+  type VisiblePostAnchor,
+} from "./preserveVisiblePost";
 import { setCurrentSearchParams } from "./searchFilterStore";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
@@ -751,10 +758,34 @@ function LuceneAttributesPanel({ onClose }: { onClose: () => void }) {
 }
 
 const INDEX_POLL_MS = 15000;
+const HIT_CARD_SELECTOR = ".hit-card[data-object-id]";
+
+function hitCardId(el: Element): string {
+  return el.getAttribute("data-object-id") ?? "";
+}
 
 /** Re-runs the current InstantSearch query when ingest swaps the backing index. */
 function IndexLiveRefresh() {
-  const { refresh } = useInstantSearch();
+  const { refresh, status, results } = useInstantSearch();
+  const pendingAnchor = useRef<VisiblePostAnchor | null>(null);
+  const sawLoading = useRef(false);
+
+  useLayoutEffect(() => {
+    const anchor = pendingAnchor.current;
+    if (!anchor) {
+      return;
+    }
+    if (status === "loading" || status === "stalled") {
+      sawLoading.current = true;
+      return;
+    }
+    if (!sawLoading.current) {
+      return;
+    }
+    restoreVisiblePost(document, HIT_CARD_SELECTOR, hitCardId, anchor);
+    pendingAnchor.current = null;
+    sawLoading.current = false;
+  }, [status, results]);
 
   useEffect(() => {
     let last: string | undefined;
@@ -786,6 +817,12 @@ function IndexLiveRefresh() {
           return;
         }
         if (last !== undefined && last !== index) {
+          pendingAnchor.current = captureVisiblePost(
+            document,
+            HIT_CARD_SELECTOR,
+            hitCardId,
+          );
+          sawLoading.current = false;
           refresh();
         }
         last = index;
@@ -1512,8 +1549,16 @@ function FeedbackHit({ hit }: { hit: Record<string, unknown> }) {
     );
   if (createdLabel) statsParts.push(<span key="created">Created {createdLabel}</span>);
 
+  const objectId =
+    typeof hit.objectID === "string" && hit.objectID
+      ? hit.objectID
+      : urlName ?? "";
+
   return (
-    <article className="hit-card">
+    <article
+      className="hit-card"
+      data-object-id={objectId || undefined}
+    >
       <header className="hit-title-row">
         <span className="hit-title">
           {postUrl ? (

@@ -1,5 +1,6 @@
 import { GATEWAY_ORIGIN, INDEX_API_PATH } from "./config";
 import { isLocationCovered } from "./coverage";
+import { withPreservedVisiblePost } from "./preserve-visible-post";
 import type { BridgeOptions } from "./types";
 
 const POLL_MS = 15000;
@@ -51,7 +52,7 @@ export function installIndexWatch(
       }
       let refreshed = false;
       if (last !== undefined && last !== index) {
-        const ok = await onUpdate();
+        const ok = await withPreservedVisiblePost(target, onUpdate);
         if (!ok) {
           return;
         }

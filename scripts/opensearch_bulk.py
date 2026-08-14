@@ -17,14 +17,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Iterator
 
-try:
-    from opensearchpy import OpenSearch
-    from opensearchpy.helpers import bulk
-except ImportError:
-    sys.stderr.write("Install deps: pip install -r scripts/requirements-ingest.txt\n")
-    raise
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
+
+IN_CLIENT_BOARD_ID = "69f3e15229c8d0dea5379a7b"
+IN_CLIENT_BOARD_NAME = "In-Client Bug Reporting"
+BUG_REPORTS_URL_NAME = "bug-reports"
+
+_OUTPUT_LOG_NAME = r"output_log_\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}\.txt"
+_IN_CLIENT_LOG_FILE_FOOTER_RE = re.compile(
+    r"(?is)"
+    r"(?:\*\*)?Log file:(?:\*\*)?\s*"
+    r"(?:\[" + _OUTPUT_LOG_NAME + r"\]\([^)]*\)|" + _OUTPUT_LOG_NAME + r")"
+    r"\s*$"
+)
 
 
 def utc_backing_suffix() -> str:
@@ -116,6 +121,31 @@ def _scraper_user_id(repo_root: Path | None = None) -> str | None:
     return env or None
 
 
+def has_in_client_log_file_footer(details: Any) -> bool:
+    """True when details end with a client `Log file: output_log_....txt` footer."""
+    if not isinstance(details, str) or not details:
+        return False
+    return _IN_CLIENT_LOG_FILE_FOOTER_RE.search(details) is not None
+
+
+def apply_virtual_in_client_board(doc: dict[str, Any]) -> None:
+    """Present bug-reports log-file posts as In-Client Bug Reporting in search.
+
+    Stored JSON stays on bug-reports. Permalinks keep `board.urlName` so
+    `/{board.urlName}/p/{urlName}` still resolves on Canny.
+    """
+    board = doc.get("board")
+    if not isinstance(board, dict):
+        return
+    if board.get("urlName") != BUG_REPORTS_URL_NAME:
+        return
+    if not has_in_client_log_file_footer(doc.get("details")):
+        return
+    board["_id"] = IN_CLIENT_BOARD_ID
+    board["name"] = IN_CLIENT_BOARD_NAME
+    doc["boardID"] = IN_CLIENT_BOARD_ID
+
+
 def _filter_scraper_voter(doc: dict[str, Any], scraper_id: str | None) -> None:
     """Drop the SSO scrape bot from voters and adjust score for index docs."""
     if not scraper_id:
@@ -154,6 +184,8 @@ def transform_post(line: dict[str, Any], *, scraper_id: str | None = None) -> di
     # Volatile Canny timestamps; do not index.
     safe.pop("lastUpdated", None)
     safe.pop("updatedAt", None)
+
+    apply_virtual_in_client_board(safe)
 
     title = safe.get("title") or ""
     details = safe.get("details") or ""
@@ -212,7 +244,7 @@ def backing_pat(alias: str) -> re.Pattern[str]:
     return re.compile("^" + re.escape(alias) + _BACKING_SUFFIX)
 
 
-def list_backing_indices_sorted(client: OpenSearch, alias: str, newest_first: bool = False) -> list[str]:
+def list_backing_indices_sorted(client: Any, alias: str, newest_first: bool = False) -> list[str]:
     try:
         r = client.indices.get(index=f"{alias}-*", params={"ignore": 404})
     except Exception:
@@ -230,7 +262,7 @@ def list_backing_indices_sorted(client: OpenSearch, alias: str, newest_first: bo
     return [t[1] for t in keyed]
 
 
-def atomic_alias_swap(client: OpenSearch, alias: str, new_index: str) -> None:
+def atomic_alias_swap(client: Any, alias: str, new_index: str) -> None:
     """Atomically point `alias` at `new_index`, removing it from any other backing index.
 
     We avoid `indices.get_alias` because the ingest role typically lacks
@@ -253,7 +285,7 @@ def atomic_alias_swap(client: OpenSearch, alias: str, new_index: str) -> None:
         sys.exit(f"alias swap rejected: {resp}")
 
 
-def delete_stale_backing(client: OpenSearch, alias: str, current_index: str, *, dry_run: bool, keep_prev: int) -> None:
+def delete_stale_backing(client: Any, alias: str, current_index: str, *, dry_run: bool, keep_prev: int) -> None:
     """Keep newest `(keep_prev + 1)` backing `{alias}-{YYYYMMDDHHMM}` indices; DELETE anything older."""
 
     newest_first = list_backing_indices_sorted(client, alias, newest_first=True)
@@ -275,7 +307,18 @@ def delete_stale_backing(client: OpenSearch, alias: str, current_index: str, *, 
         print(f"deleted stale index {ix}", file=sys.stderr)
 
 
-def build_client(host: str, port: int, use_ssl: bool, http_auth: tuple[str, str] | None) -> OpenSearch:
+def _import_opensearch() -> tuple[Any, Any]:
+    try:
+        from opensearchpy import OpenSearch
+        from opensearchpy.helpers import bulk
+    except ImportError:
+        sys.stderr.write("Install deps: pip install -r scripts/requirements-ingest.txt\n")
+        raise
+    return OpenSearch, bulk
+
+
+def build_client(host: str, port: int, use_ssl: bool, http_auth: tuple[str, str] | None) -> Any:
+    OpenSearch, _ = _import_opensearch()
     kwargs: dict[str, Any] = {
         "hosts": [{"host": host, "port": port}],
         "use_ssl": use_ssl,
@@ -398,6 +441,7 @@ def main() -> int:
         yield from iter_board_documents(boards_root, scraper_id=scraper_id)
 
     bulk_start = time.perf_counter()
+    _, bulk = _import_opensearch()
     n_ok, _ = bulk(
         client,
         gen_bulk(new_idx, docs()),
