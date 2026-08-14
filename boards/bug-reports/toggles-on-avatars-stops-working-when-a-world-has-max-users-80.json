@@ -2,9 +2,10 @@
   "_id": "6a7defed01ff60b58102e152",
   "aiCategories": [
     "loc.in-world",
-    "avatars.dynamics"
+    "avatars.expressions",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-08-14T06:36:08.183604Z",
+  "aiTaggedAt": "2026-08-14T07:30:24.451074Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6296efa7a664220b79452942",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a7e7519c95eb998e1c623d1",
@@ -232,6 +233,62 @@
       "statusChangeID": "6a7eb6b48fe8e65b1351a117",
       "statusChangeNewStatus": "needs more information",
       "value": "Information needed to investigate this:\n\n- What date + time the issue was observed (including timezone)\n\n- Who witnessed the issue\n\n- Who was wearing the avatar with the issue\n\n- What avatar was worn\n\n- (bonus in case some of the above is unknown) Did the avatar use any sort of parameter compression solution such as that found in VRCFury",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7ec18c227500f0d0d717c9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6296efa7a664220b79452942",
+        "alias": "Oxblood Reindeer",
+        "aliasID": "65c4c885ed6eefce4cec747a",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1ece82088d03205df4bb19aa206a6776.png",
+        "created": "2022-06-01T04:48:39.707Z",
+        "name": "Frajs",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T07:19:40.594Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "667353ba8663454809d39116",
+          "alias": "Effective Lark",
+          "aliasID": "667353bbd5dd336a20ffb258",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2024-06-19T21:55:06.923Z",
+          "name": "euan",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7eb6b48fe8e65b1351a118",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7defed01ff60b58102e152",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{667353ba8663454809d39116|full_name} Ill answer this point for point ^^\n\n- This has been happening systematically every sunday from about 7-8AM (CEST) from roughly the start of July or end of June I believe. This lasts until the world instance population is decreased significantly.\n\n- Anyone in the world could observe this affecting late joiners through the queue system.\n\n- This was affecting me and any other user joining late through the queue system.\n\n- In my own case avtr_f5de67ae-cede-40a7-a652-7eecec03d8d7\n\n- Yes, this is mostly due to me being a face tracking user.\n\nPoint of note is, this issue affects remote view of the users avatar. The users that are affected will see their own avatars in mirrors completely fine locally but remote users cannot see any changes that the user sees in local view.\n\nSo I could change my hair from white to black for example, I would see it myself locally but nobody else would be able to see it until hours later when instance population drops lower.\n\nIf a user were one of the early ones into the instance, their avatars would work fine, but if they were to leave by crashing or disconnecting and then rejoin later again through the queue system then their avatar would also be affected and be seen as \"default state\".",
       "viewerReactions": null,
       "voteID": null
     }
