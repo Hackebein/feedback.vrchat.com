@@ -2,10 +2,11 @@
   "_id": "6a7defed01ff60b58102e152",
   "aiCategories": [
     "loc.in-world",
+    "avatars.descriptor",
     "avatars.expressions",
-    "avatars.upload-performance"
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-08-14T08:14:38.327953Z",
+  "aiTaggedAt": "2026-08-14T08:48:47.799099Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6296efa7a664220b79452942",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a7e7519c95eb998e1c623d1",
@@ -389,6 +390,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6296efa7a664220b79452942|full_name}: For the information (especially date and time) I need exact details so I can cross reference things server side. Regarding the usage of the parameter compressor I would try uploading a version which does not use this, if you encounter the issue again try using that version and see if the issue persists. This would highlight the issue being the compressor or rule it out (which would be quite useful to know)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7ed2b3f27952eafe11dbe1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6296efa7a664220b79452942",
+        "alias": "Oxblood Reindeer",
+        "aliasID": "65c4c885ed6eefce4cec747a",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1ece82088d03205df4bb19aa206a6776.png",
+        "created": "2022-06-01T04:48:39.707Z",
+        "name": "Frajs",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T08:32:51.020Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "667353ba8663454809d39116",
+          "alias": "Effective Lark",
+          "aliasID": "667353bbd5dd336a20ffb258",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2024-06-19T21:55:06.923Z",
+          "name": "euan",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7eb6b48fe8e65b1351a118",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7defed01ff60b58102e152",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{667353ba8663454809d39116|full_name} To be sure you can check sunday august 9, 10AM CEST as that was the most recent. We were there for hours so anything around that timeframe is relevant.\n\nWorld: Just B Club 4.0 #59296\n\nOn the topic of parameter compressors I had to do a double check on my avatar and it appears it should not utilize the compressor component of vrcfury as the total parameter usage of the avatar should not exceed 256 (it only applies if parameters surpass that limit, had to do a little checkup on that) as my avatar is relatively simple with limited options.\n\nHowever, this still seems to affect avatars that also do utilize this feature though. Unless the user was present in the world before it was full",
       "viewerReactions": null,
       "voteID": null
     }
