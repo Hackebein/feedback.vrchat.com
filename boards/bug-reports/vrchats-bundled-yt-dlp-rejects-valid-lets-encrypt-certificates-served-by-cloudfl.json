@@ -210,7 +210,9 @@
       "postDeleted": false,
       "postID": "6a7ee6fb6107c4a04731bfcc",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -323,7 +325,7 @@
       "postID": "6a7ee6fb6107c4a04731bfcc",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -452,20 +454,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 23,
+  "maxScore": 24,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a7ee6fb6107c4a04731bfcc/1297945218.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 23,
+  "score": 24,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-08-14T13:36:33.204Z",
   "subCategoryID": null,
   "title": "VRChat's bundled yt-dlp rejects valid Let's Encrypt certificates served by Cloudflare",
-  "trendingScore": 2957.4077835193557,
+  "trendingScore": 2957.450787781881,
   "updatedBy": "6389256d477b8d0c8d64d809",
   "urlName": "vrchats-bundled-yt-dlp-rejects-valid-lets-encrypt-certificates-served-by-cloudfl",
   "viewerIsAuthor": false,
@@ -477,6 +479,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "62def061a02f6f44b0147a98",
+      "alias": "Eligible Antelope",
+      "aliasID": "65c3e659ed6eefce4cb8a992",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4eb99942706bb69c7a503ea9b5b21e9f.png",
+      "companies": [],
+      "name": "Como",
+      "urlName": null,
+      "voteID": "6a7fa55d523ad16133f799ac"
+    },
     {
       "_id": "6219f63f55639e536dc83162",
       "alias": "Imaginative Sloth",
