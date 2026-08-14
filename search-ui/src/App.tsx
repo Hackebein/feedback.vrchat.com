@@ -27,6 +27,7 @@ import {
   ToggleRefinement,
   useInstantSearch,
   useRange,
+  useRefinementList,
   useSearchBox,
 } from "react-instantsearch";
 import type { Hit, StateMapping, UiState } from "instantsearch.js/es/types";
@@ -35,6 +36,10 @@ import qs from "qs";
 import historyRouter from "instantsearch.js/es/lib/routers/history";
 import { AttachmentTextView } from "./AttachmentTextView";
 import { EmbeddedImageView } from "./EmbeddedImageView";
+import {
+  filterNestedBoardNodes,
+  nestBoardFacetEntries,
+} from "./boardHierarchy";
 import { aiCategoryDescription, aiCategoryName } from "./featureTree";
 import { MarkdownText } from "./MarkdownText";
 import { Notifications } from "./Notifications";
@@ -1459,6 +1464,95 @@ function readAiCategories(hit: Record<string, unknown>): string[] {
   return out;
 }
 
+const BOARD_FACET_COLLAPSED_LIMIT = 20;
+
+function BoardRefinement() {
+  const [q, setQ] = useState("");
+  const [showingMore, setShowingMore] = useState(false);
+  const { items, refine } = useRefinementList({
+    attribute: "board_name",
+    limit: 500,
+    showMore: false,
+  });
+  const byValue = useMemo(
+    () => new Map(items.map((item) => [item.value, item])),
+    [items],
+  );
+  const nodes = useMemo(() => {
+    const nested = nestBoardFacetEntries(
+      items.map((item) => ({ value: item.value, count: item.count })),
+    );
+    return filterNestedBoardNodes(nested, q);
+  }, [items, q]);
+  const visible = showingMore
+    ? nodes
+    : nodes.slice(0, BOARD_FACET_COLLAPSED_LIMIT);
+
+  const renderRow = (value: string, count: number, child: boolean) => {
+    const item = byValue.get(value);
+    const isRefined = item?.isRefined === true;
+    const itemClass = [
+      "ais-RefinementList-item",
+      isRefined ? "ais-RefinementList-item--selected" : "",
+      child ? "ais-RefinementList-item--child" : "",
+    ]
+      .filter(Boolean)
+      .join(" ");
+    return (
+      <li key={value} className={itemClass}>
+        <label className="ais-RefinementList-label">
+          <input
+            className="ais-RefinementList-checkbox"
+            type="checkbox"
+            checked={isRefined}
+            onChange={() => refine(value)}
+          />
+          <span className="ais-RefinementList-labelText">{value || "(empty)"}</span>
+          <span className="ais-RefinementList-count">
+            {count.toLocaleString()}
+          </span>
+        </label>
+      </li>
+    );
+  };
+
+  return (
+    <div className="ais-RefinementList">
+      <input
+        type="search"
+        className="ai-category-search"
+        placeholder="Filter boards…"
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        aria-label="Filter boards"
+      />
+      {nodes.length === 0 ? null : (
+        <ul className="ais-RefinementList-list">
+          {visible.map((node) => (
+            <Fragment key={node.value}>
+              {renderRow(node.value, node.count, false)}
+              {node.children.map((child) =>
+                renderRow(child.value, child.count, true),
+              )}
+            </Fragment>
+          ))}
+        </ul>
+      )}
+      {nodes.length > BOARD_FACET_COLLAPSED_LIMIT ? (
+        <button
+          type="button"
+          className="ais-RefinementList-showMore"
+          onClick={() => setShowingMore((open) => !open)}
+        >
+          {showingMore
+            ? "Show less"
+            : `Show ${nodes.length - BOARD_FACET_COLLAPSED_LIMIT} more`}
+        </button>
+      ) : null}
+    </div>
+  );
+}
+
 function AiCategoryRefinement() {
   const [q, setQ] = useState("");
   const needle = q.trim().toLowerCase();
@@ -1859,14 +1953,7 @@ export function App() {
                   />
                   <section className="facet-section">
                     <h2 className="facet-heading">Board</h2>
-                    <RefinementList
-                      attribute="board_name"
-                      searchable
-                      searchablePlaceholder="Filter boards…"
-                      showMore
-                      limit={20}
-                      showMoreLimit={500}
-                    />
+                    <BoardRefinement />
                   </section>
                   <section className="facet-section">
                     <h2 className="facet-heading">Status</h2>

@@ -18,6 +18,11 @@ import {
 import { onFacets } from "./search-handler";
 import { ACTIVE_CLASS, isLocationCovered } from "./coverage";
 import { aiCategoryName } from "./feature-tree";
+import {
+  filterNestedBoardNodes,
+  nestBoardFacetEntries,
+  type FacetEntry,
+} from "./board-hierarchy";
 import type { FacetStats, SearchFacets } from "./types";
 
 /** Display label for a facet value (AI categories map internal ids to names). */
@@ -215,6 +220,7 @@ html.${ACTIVE_CLASS}.${LUCENE_CLASS} .mainContainer { width: 100% !important; ma
   padding: 1px 0;
 }
 #${PANEL_ID} .vrcfb-row input { margin: 0; }
+#${PANEL_ID} .vrcfb-row-child { padding-left: 18px; }
 #${PANEL_ID} .vrcfb-row-label {
   flex: 1 1 auto;
   overflow: hidden;
@@ -360,6 +366,30 @@ function facetEntries(attr: string): { value: string; count: number }[] {
   return entries;
 }
 
+function renderFacetRow(
+  doc: Document,
+  container: HTMLElement,
+  attr: string,
+  entry: FacetEntry,
+  refresh: Refresher,
+  child: boolean,
+): void {
+  const row = el(doc, "label", child ? "vrcfb-row vrcfb-row-child" : "vrcfb-row");
+  const input = el(doc, "input");
+  input.type = "checkbox";
+  input.checked = isRefined(attr, entry.value);
+  input.addEventListener("change", () => {
+    toggleRefinement(attr, entry.value);
+    refresh();
+  });
+  const displayLabel = valueLabel(attr, entry.value);
+  const label = el(doc, "span", "vrcfb-row-label", displayLabel || "(empty)");
+  label.title = displayLabel;
+  const count = el(doc, "span", "vrcfb-count", formatCount(entry.count));
+  row.append(input, label, count);
+  container.appendChild(row);
+}
+
 function renderList(
   doc: Document,
   container: HTMLElement,
@@ -369,6 +399,39 @@ function renderList(
   container.replaceChildren();
   const search = (searchTextByAttr.get(attr) ?? "").toLowerCase();
   const expanded = expandedByAttr.get(attr) === true;
+
+  if (attr === "board_name") {
+    const nodes = filterNestedBoardNodes(
+      nestBoardFacetEntries(facetEntries(attr)),
+      search,
+    );
+    if (nodes.length === 0) {
+      container.appendChild(el(doc, "div", "vrcfb-empty", "No values"));
+      return;
+    }
+    const visible = expanded ? nodes : nodes.slice(0, COLLAPSED_LIMIT);
+    for (const node of visible) {
+      renderFacetRow(doc, container, attr, node, refresh, false);
+      for (const child of node.children) {
+        renderFacetRow(doc, container, attr, child, refresh, true);
+      }
+    }
+    if (nodes.length > COLLAPSED_LIMIT) {
+      const more = el(
+        doc,
+        "button",
+        "vrcfb-more",
+        expanded ? "Show less" : `Show ${nodes.length - COLLAPSED_LIMIT} more`,
+      );
+      more.type = "button";
+      more.addEventListener("click", () => {
+        expandedByAttr.set(attr, !expanded);
+        renderList(doc, container, attr, refresh);
+      });
+      container.appendChild(more);
+    }
+    return;
+  }
 
   let entries = facetEntries(attr);
   if (search) {
@@ -386,20 +449,7 @@ function renderList(
 
   const visible = expanded ? entries : entries.slice(0, COLLAPSED_LIMIT);
   for (const entry of visible) {
-    const row = el(doc, "label", "vrcfb-row");
-    const input = el(doc, "input");
-    input.type = "checkbox";
-    input.checked = isRefined(attr, entry.value);
-    input.addEventListener("change", () => {
-      toggleRefinement(attr, entry.value);
-      refresh();
-    });
-    const displayLabel = valueLabel(attr, entry.value);
-    const label = el(doc, "span", "vrcfb-row-label", displayLabel || "(empty)");
-    label.title = displayLabel;
-    const count = el(doc, "span", "vrcfb-count", formatCount(entry.count));
-    row.append(input, label, count);
-    container.appendChild(row);
+    renderFacetRow(doc, container, attr, entry, refresh, false);
   }
 
   if (entries.length > COLLAPSED_LIMIT) {
