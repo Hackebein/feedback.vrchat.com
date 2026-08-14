@@ -2,9 +2,10 @@
   "_id": "6a7defed01ff60b58102e152",
   "aiCategories": [
     "loc.in-world",
-    "avatars.dynamics"
+    "avatars.upload-performance",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-08-14T10:52:29.763752Z",
+  "aiTaggedAt": "2026-08-14T11:17:22.421607Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6296efa7a664220b79452942",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "comments": [
     {
       "_id": "6a7e7519c95eb998e1c623d1",
@@ -556,6 +557,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{667353ba8663454809d39116|full_name} hmm, interesting. That should not have been the case from the info I've been given but oki.\n\nBut as mentioned, this is happening across a large range of avatars and not just my own. This happening is fairly recent and the issue repeats every single week so there is definitely some kind of issue that has recently surfaced that was not present in the past before the summer.\n\nI can see I was there for a bit more than an hour but this was mostly cause these gatherings are frustrating to deal with due to so many users being negatively affected by this issue so people end up leaving.\n\nAs the problem appears to be systematically happening repeatedly so I would appreciate if this would be looked into as it is definitely having a very negative effect on social gatherings.\n\nNormally I can look past small things that arent noticeably affecting us, but this issue is causing people to become upset and frustrated to the point where they simply leave so I am making this report for a good reason.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7ef8938fe8e65b135e8d1e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "667353ba8663454809d39116",
+        "alias": "Effective Lark",
+        "aliasID": "667353bbd5dd336a20ffb258",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2024-06-19T21:55:06.923Z",
+        "name": "euan",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T11:14:27.232Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6296efa7a664220b79452942",
+          "alias": "Oxblood Reindeer",
+          "aliasID": "65c4c885ed6eefce4cec747a",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/1ece82088d03205df4bb19aa206a6776.png",
+          "created": "2022-06-01T04:48:39.707Z",
+          "name": "Frajs",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7eb6b48fe8e65b1351a118",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7defed01ff60b58102e152",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6296efa7a664220b79452942|full_name}: This issue has been looked into for some time, and was thought to be resolved some weeks ago as reports stopped coming in. The issue with solving this has been a lack of reports with actionable details, in order to investigate and resolve an issue like this various specific details are needed and optimally reliable reproduction steps. Although you and others have given reproduction steps we haven't been able to reproduce it, it seems there's more to the issue which has yet to be worked out.",
       "viewerReactions": null,
       "voteID": null
     }
