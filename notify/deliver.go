@@ -402,6 +402,53 @@ func urlBasename(u string) string {
 	return base
 }
 
+// webhookMimeExt maps MIME types to the filename extension Discord and similar
+// receivers use to decide how to preview an attachment.
+var webhookMimeExt = map[string]string{
+	"text/plain":       ".txt",
+	"text/csv":         ".csv",
+	"application/json": ".json",
+	"application/pdf":  ".pdf",
+	"video/mp4":        ".mp4",
+	"video/quicktime":  ".mov",
+	"video/avi":        ".avi",
+	"video/x-msvideo":  ".avi",
+	"video/webm":       ".webm",
+	"image/png":        ".png",
+	"image/jpeg":       ".jpg",
+	"image/gif":        ".gif",
+	"image/webp":       ".webp",
+}
+
+func mimeMediaType(mimeType string) string {
+	mimeType = strings.TrimSpace(strings.ToLower(mimeType))
+	if i := strings.IndexByte(mimeType, ';'); i >= 0 {
+		mimeType = strings.TrimSpace(mimeType[:i])
+	}
+	return mimeType
+}
+
+// filenameWithMimeExt ensures name has an extension that matches mimeType so
+// webhook receivers that preview by extension can render the file. When mimeType
+// is empty or unknown, the source URL's extension is used. The matching
+// extension is appended; an existing suffix is not replaced.
+func filenameWithMimeExt(name, mimeType, sourceURL string) string {
+	if name == "" {
+		name = urlBasename(sourceURL)
+	}
+	ext := webhookMimeExt[mimeMediaType(mimeType)]
+	if ext == "" {
+		ext = path.Ext(urlBasename(sourceURL))
+	}
+	if ext == "" {
+		return name
+	}
+	if strings.EqualFold(path.Ext(name), ext) {
+		return name
+	}
+	return name + ext
+}
+
 // ---------------------------------------------------------------------------
 // Discord webhook delivery
 // ---------------------------------------------------------------------------
@@ -804,7 +851,7 @@ func (d *Dispatcher) collectAttachments(ctx context.Context, events []Notificati
 				if name == "" {
 					name = urlBasename(f.URL)
 				}
-				refs = append(refs, ref{name, f.URL})
+				refs = append(refs, ref{filenameWithMimeExt(name, f.Mime, f.URL), f.URL})
 			}
 		}
 	}

@@ -375,3 +375,32 @@ func TestBuildDiscordWebhookPayloadOmitsEmptyFields(t *testing.T) {
 		t.Fatalf("fields len = %d, want 0 when board/author empty", len(parsed.Embeds[0].Fields))
 	}
 }
+
+func TestFilenameWithMimeExt(t *testing.T) {
+	const src = "https://canny-assets.io/files/abc123.txt"
+	cases := []struct {
+		name, mime, url, want string
+	}{
+		{"output_log_2025-06-30_23-43-00", "text/plain", src, "output_log_2025-06-30_23-43-00.txt"},
+		{"notes.TXT", "text/plain", src, "notes.TXT"},
+		{"notes.txt", "text/plain", src, "notes.txt"},
+		{"clip", "video/mp4", "https://canny-assets.io/files/abc.mp4", "clip.mp4"},
+		{"recording", "video/quicktime", "https://canny-assets.io/files/abc.mov", "recording.mov"},
+		{"ScreenRecording_2026.05.17-16.07.14", "video/mp4", "https://canny-assets.io/files/abc.mp4", "ScreenRecording_2026.05.17-16.07.14.mp4"},
+		{"doc", "application/pdf", "https://canny-assets.io/files/abc.pdf", "doc.pdf"},
+		{"data", "text/csv", "https://canny-assets.io/files/abc.csv", "data.csv"},
+		{"payload", "application/json", "https://canny-assets.io/files/abc.json", "payload.json"},
+		{"movie", "video/avi", "https://canny-assets.io/files/abc.avi", "movie.avi"},
+		{"log", "", src, "log.txt"},
+		{"log", "text/plain; charset=utf-8", src, "log.txt"},
+		{"weird", "application/x-unknown", "https://canny-assets.io/files/abc.bin", "weird.bin"},
+		{"plain", "application/x-unknown", "https://example.com/files/noext", "plain"},
+		{"", "text/plain", src, "abc123.txt"},
+	}
+	for _, tc := range cases {
+		got := filenameWithMimeExt(tc.name, tc.mime, tc.url)
+		if got != tc.want {
+			t.Errorf("filenameWithMimeExt(%q, %q, %q) = %q, want %q", tc.name, tc.mime, tc.url, got, tc.want)
+		}
+	}
+}
