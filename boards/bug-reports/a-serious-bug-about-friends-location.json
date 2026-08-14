@@ -2,9 +2,10 @@
   "_id": "6a7f10aecb1c2d7dded899a9",
   "aiCategories": [
     "loc.in-world",
+    "social.instances",
     "social.friends"
   ],
-  "aiTaggedAt": "2026-08-14T13:06:11.521251Z",
+  "aiTaggedAt": "2026-08-14T13:10:26.448503Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a7f106f523ad16133f2d32d",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a7f12079f72b73c9832ae9d",
@@ -71,6 +72,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate of: https://feedback.vrchat.com/bug-reports/p/0ded1b\n\n(and some other topics I think)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7f1391f27952eafe1f3db9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a7f106f523ad16133f2d32d",
+        "alias": "Qualified Deer",
+        "aliasID": "6a7f106f523ad16133f2d331",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b353532f2225fa913d2f06f31b60771c.png",
+        "created": "2026-08-14T12:56:15.176Z",
+        "name": "阿蘭アラン",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T13:09:37.098Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7f12079f72b73c9832ae9d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7f10aecb1c2d7dded899a9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}So it's fixing?",
       "viewerReactions": null,
       "voteID": null
     }
