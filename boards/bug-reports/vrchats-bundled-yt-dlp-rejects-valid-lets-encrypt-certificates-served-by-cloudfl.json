@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-14T13:30:00.199124Z",
+  "aiTaggedAt": "2026-08-14T13:34:37.038190Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6389256d477b8d0c8d64d809",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "_id": "6a7ee7a2e91fd42eac0a7092",
@@ -329,6 +329,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{68098a4626271974ef4d2775|full_name} If VRChat staff rquests more informations from me to do it i will, in the meantime you can easily reproduce the issue with the informations provided above :)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a7f191f6107c4a0473d1803",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-14T13:33:19.446Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/893438418a4181a5d2cf4d7ae2d921c0.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a7f0badf96232b530749833",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ee6fb6107c4a04731bfcc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I also tested litterbox.chatbox.moe video playback despite not being Cloudflare backed as reported in OP to be the issue, but serving a YE2 Let's Encrypt certificate. The issue was not with Let's Encrypt by itself.",
       "viewerReactions": null,
       "voteID": null
     }
