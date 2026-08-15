@@ -1,0 +1,91 @@
+{
+  "_id": "6a8017ffc349aa6718cbba03",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-08-15T07:46:24.077083Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63c2130366041430f307d07a",
+    "alias": "Current Coyote",
+    "aliasID": "65caf64fed6eefce4ccfa962",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/84577de47d3f7329e4e79c342bf5f134.png",
+    "created": "2023-01-14T02:27:15.075Z",
+    "name": "Misaka-L",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63c2130366041430f307d07a",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-15T07:40:47.559Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Same with: https://feedback.vrchat.com/udon/p/expose-staticbatchingutilitycombine\n\nOpen new one since last update was 2 years+ ago.\n\nExpose this API will also allow world creators who create a world with a floating origin system to optimize their world with static batching.\n\n(Which cannot be done in editor since StaticBatching in Editor won't allow move the batching object, but StaticBatchingUtility.Combine will allow move the batching root)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a8017ffc349aa6718cbba02",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-15T07:40:47.559Z",
+  "subCategoryID": null,
+  "title": "Expose StaticBatchingUtility.Combine",
+  "trendingScore": 2955.0245748773195,
+  "updatedBy": null,
+  "urlName": "expose-staticbatchingutilitycombine-1",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63c2130366041430f307d07a",
+      "alias": "Current Coyote",
+      "aliasID": "65caf64fed6eefce4ccfa962",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/84577de47d3f7329e4e79c342bf5f134.png",
+      "companies": [],
+      "name": "Misaka-L",
+      "urlName": null,
+      "voteID": "6a8017ff523ad1613329918f"
+    }
+  ]
+}
