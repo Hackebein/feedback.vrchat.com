@@ -1,11 +1,11 @@
 {
   "_id": "6a21229c0974148bcf8d0e73",
   "aiCategories": [
-    "loc.main-menu",
-    "client.settings",
-    "platforms.standalone-vr.quest"
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-15T10:11:37.358688Z",
+  "aiTaggedAt": "2026-08-15T10:21:33.500475Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a211e5486d7b8843b9588ef",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 13,
+  "commentCount": 14,
   "comments": [
     {
       "_id": "6a291b0f352fc5a9ab02602b",
@@ -131,37 +131,6 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
-    },
-    {
-      "_id": "6a2c1f673310dabeeb8cda93",
-      "author": {
-        "_id": "64873f159cf028090ce2c2e2",
-        "alias": "Papaya Python",
-        "aliasID": "65c26df7ed6eefce4c5bafd9",
-        "anonymized": false,
-        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
-        "created": "2023-06-12T15:51:49.320Z",
-        "name": "StormRel",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-06-12T15:01:59.728Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "internal": false,
-      "mergeID": "6a2c1f673310dabeeb8cda93",
-      "mergedPostDetails": "1. Open VRChat 2. Open your menu 3. Go to the worlds tab 4. Choose any world 5. Join or create any instance 6. Open your menu again upon loading in 7. Go to your home world using the home button 8. Open your menu 9. Go to your settings tab 10. Navigate to the debug category 11. Scroll to the bottom 12. Clear your content cache 13. Reboot your game 14. Repeat steps 8-11 15. See whether or not all the data (excluding the data that comes from your home world and the avatar you're already wearing) has been cleared\n\nAnd uhm, here's a better description of the issue: So like, whenever i load into any world, whether I press preload or not, it saves as if I preloaded it, but whenever I go to clear my content cache, after rebooting my game the world's data is still saved in my content cache and will only clear from it if I go to the worlds I previously visited and manually press the Clear Preload button, and there's 2gb of data in my content cache I cant get cleared because I cant find any more worlds to clear preloads for in my recently visited.",
-      "mergedPostTitle": "World preloads/content cache not clearing right",
-      "pinned": false,
-      "postID": "6a21229c0974148bcf8d0e73",
-      "private": false,
-      "spam": false,
-      "synthetic": true,
-      "value": ""
     },
     {
       "_id": "6a2c1f763b8128ca02e31cfa",
@@ -507,6 +476,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "External feedback: https://www.reddit.com/r/VRchat/comments/1vosibq/content_cache_not_clearing/",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a803abfe050a8c072d0dbfd",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e81482d97d1e18096a650c9ebc658b76.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-15T10:09:03.267Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a21229c0974148bcf8d0e73",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Recent duplicated bug reports of this issue (can be merged into this topic):\n\n- https://feedback.vrchat.com/bug-reports/p/clearing-content-cache-error\n\n- https://feedback.vrchat.com/bug-reports/p/cache-clearing-error\n\n- https://feedback.vrchat.com/bug-reports/p/cant-reset-my-cashe\n\n- https://feedback.vrchat.com/bug-reports/p/debug-issues\n\n- https://feedback.vrchat.com/bug-reports/p/clearing-cache\n\n- https://feedback.vrchat.com/bug-reports/p/clearing-cache-1\n\n- https://feedback.vrchat.com/bug-reports/p/clearing-cache-2\n\n- https://feedback.vrchat.com/bug-reports/p/content-cache-not-clearing",
       "viewerReactions": null,
       "voteID": null
     }
