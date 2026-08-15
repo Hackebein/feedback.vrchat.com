@@ -421,7 +421,9 @@
       "postDeleted": false,
       "postID": "6a63ace0073e7390a3f44294",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -549,20 +551,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 21,
+  "maxScore": 22,
   "mergeCount": 2,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a63ace0073e7390a3f44294/858674966.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 21,
+  "score": 22,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-07-27T15:29:39.127Z",
   "subCategoryID": null,
   "title": "[1878] Profile icon resets itself to Avatar image after some time",
-  "trendingScore": 2956.664371675368,
+  "trendingScore": 2956.7644902044126,
   "updatedBy": null,
   "urlName": "1878-profile-icon-resets-itself-to-avatar-image-after-some-time",
   "viewerIsAuthor": false,
@@ -574,6 +576,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "69cf0a4fbcda4ee63278596c",
+      "alias": "Shamrock Haddock",
+      "aliasID": "69cf0a50bcda4ee632786bee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4a17c8c3a29f1c0eed9011a5bae7f757.png",
+      "companies": [],
+      "name": "infuriated",
+      "urlName": null,
+      "voteID": "6a80d9c5523ad161332eb389"
+    },
     {
       "_id": "5fcd7ecceac7313746546b06",
       "alias": "Happy Tyrannosaurus",
