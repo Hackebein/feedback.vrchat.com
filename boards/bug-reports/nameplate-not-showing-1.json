@@ -2,12 +2,11 @@
   "_id": "6a803247e050a8c072d022e3",
   "aiCategories": [
     "loc.pc-client",
-    "loc.website",
     "platforms.pc.steam",
     "social.nameplates",
-    "web.profiles"
+    "monetization.shop"
   ],
-  "aiTaggedAt": "2026-08-15T14:19:55.254967Z",
+  "aiTaggedAt": "2026-08-15T16:22:26.789329Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a803246523ad161332c00f4",
@@ -173,7 +172,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nI bought thenneon pulse nameplate, but nobody else can see it when equipped. I can see it so I know its on, and others can see when i use other nameplates.\n\nReproduction Steps\n\nequipped the neo  pule nameplate, ask anyone if they can see it\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 6000.0.60f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-15_02-24-09.txt](https://api.vrchat.cloud/api/1/file/file_c213f827-b2fc-4dad-9491-b00a1876c160/1/file)",
+  "details": "Description\n\nI bought the Neon Pulse nameplate, but nobody else can see it when equipped. I can see it on my own nametag, so I know its on, and others can see when I use other nameplates, just not Neon Pulse.\n\nReproduction Steps\n\nEquipped the Neon Pulse nameplate, ask my friends if they can see it; they cannot. Looked up, I can see it fine.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 6000.0.60f1-DWR\n\nIn-Client Report",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -197,7 +196,7 @@
   "subCategoryID": null,
   "title": "Nameplate not showing",
   "trendingScore": 2955.7358812965704,
-  "updatedBy": null,
+  "updatedBy": "6a803246523ad161332c00f4",
   "urlName": "nameplate-not-showing-1",
   "viewerIsAuthor": false,
   "viewerVote": 0,
