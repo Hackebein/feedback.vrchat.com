@@ -1,0 +1,95 @@
+{
+  "_id": "6a824c9e7d9b4d2e651efd6a",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-08-16T23:54:21.211230Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/eb58024d3dc1b5e9f9080da8ed7e126f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-16T23:49:50.569Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Description\n\nThe navigation arrows to go to the next/previous user in \"Here\" mini-profile in Quick Menu disappear after clicking the clock to enter Change Clock Settings.\n\nReproduction Steps\n\n1. Join an instance with other users.\n\n2. Open the Quick Menu \"Here\" tab, click on another user to open their mini-profile in QM. Locate the arrows left/right next to the report.\n\n3. Click the clock.\n\n4. Go Back.\n\n5. Notice the arrows are now gone.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-16_23-41-17.txt](https://api.vrchat.cloud/api/1/file/file_c42f1d42-8a14-4fbb-8fc3-2cf4283d3ba8/1/file)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/0f9a658389c6a64b52332a390ebe4bf0.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-08-16 23-46-50",
+      "url": "https://canny-assets.io/files/0f9a658389c6a64b52332a390ebe4bf0.mp4"
+    }
+  ],
+  "ideaID": "6a824c9e7d9b4d2e651efd69",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-16T23:49:50.569Z",
+  "subCategoryID": null,
+  "title": "Quick Menu arrows left/right (previous/next user) disappear after clicking the Quick Menu clock",
+  "trendingScore": 2955.263567968424,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "quick-menu-arrows-left-right-previous-next-user-disappear-after-clicking-the-qui",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb58024d3dc1b5e9f9080da8ed7e126f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a824c9e523ad16133338e4e"
+    }
+  ]
+}
