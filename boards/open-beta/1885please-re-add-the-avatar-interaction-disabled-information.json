@@ -254,7 +254,9 @@
       "postDeleted": false,
       "postID": "6a7d0e682f07f10fe35543e8",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -301,7 +303,7 @@
       "postID": "6a7d0e682f07f10fe35543e8",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -328,20 +330,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 22,
+  "maxScore": 23,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a7d0e682f07f10fe35543e8/1261632000.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 22,
+  "score": 23,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-13T00:23:04.647Z",
   "subCategoryID": null,
   "title": "[1885]Please re-add the Avatar Interaction Disabled information",
-  "trendingScore": 2957.2727480601898,
+  "trendingScore": 2957.33360386229,
   "updatedBy": null,
   "urlName": "1885please-re-add-the-avatar-interaction-disabled-information",
   "viewerIsAuthor": false,
@@ -353,6 +355,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "61cea3c99954c41ea7b7a8d2",
+      "alias": "Violet Piranha",
+      "aliasID": "65e0d15ba6e3ea79dd7aa8ad",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/445c1fa8dfb9073e79120454465d2fbc.png",
+      "companies": [],
+      "name": "TrebleSketch",
+      "urlName": null,
+      "voteID": "6a81afe4523ad16133315795"
+    },
     {
       "_id": "5f2d586c7f57433511432c5a",
       "alias": "Binding Cricket",
