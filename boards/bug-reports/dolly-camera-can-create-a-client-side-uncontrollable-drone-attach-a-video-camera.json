@@ -1,0 +1,103 @@
+{
+  "_id": "6a811fa35ac5eb72336c6a80",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-08-16T02:28:14.848120Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "64db5fa7ab48431f25a4afe5",
+    "alias": "Viridian Sloth",
+    "aliasID": "65c2b1cbed6eefce4c8373a2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f96af3856a847a7c7f606a4fe050722f.png",
+    "created": "2023-08-15T11:21:11.110Z",
+    "name": "NotAChance",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "64db5fa7ab48431f25a4afe5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-16T02:25:39.181Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "So this is a 3 in 1 bug, since all 3 issues is the result of the same bug, they're documented in this one report.\n\n1. Dolly camera can create a client sided drone.\n\n- This drone is cannot be controlled and appears to be client-sided\n\n- If you're in VR, you can still interact with it but nobody else can see it\n\n- The main camera does not appear to be attached to the drone rendering it essentially useless for anything\n\n- VR mode ignores input and does not lock you in place to control the drone, treating it like regular camera mode\n\n- The wrong button UI layout is used at the bottom\n\n2. The dolly camera green camera model can get attached to the main camera view.\n\n- If you're in VR, the camera will be attached to your camera view, and will be where you last placed your camera view in the world. If you're on desktop, it will be attached to your face obstructing your view (see screenshot).\n\n- Does not appear to interfere with gameplay in significant ways, and can be easily be fixed by stopping the dolly camera\n\n3. Your drone shaders & audio go missing (VRRat probably took them)\n\n- Results in a grey drone and pink particles (if applicable, see screenshot)\n\n- No audio\n\n- Appears to be client-sided\n\n- Persist across world rejoins and requires a full game restart to fix the drone\n\n- First time attempting this bug can cause the drone to be invisible and use the fan sfx even if you use the trace drone\n\n    - While in this state, you can close your camera menu and pick up the drone like an item on Desktop\n\n**Reproduction steps**:\n\n1. Open the dolly camera view and setup a path, to make it infinite loop, use revolving and multi-cam (even with 1 camera).*\n\n2. Set the camera to anchor the world so it doesn't follow you\n\n3. Run the dolly loop\n\nNow with the bug setup, you can perform one of the following:\n\n- Uncontrollable drone:\n\n1. Exit out of the camera menu and open the drone\n\n2. You will notice the UI is incorrectly using the bottom buttons, reopen dolly and press play\n\n3. Observe the drone will become disjointed and cannot be controlled in any meaningful way, you can get rid of it by closing the camera menu\n\n- Attached green video camera model\n\n1. Repeat the steps of uncontrollable drone but ensure the animation is still playing\n\n2. Observe the video camera model get attached to the camera menu or in desktop's case, getting free real estate to your display.\n\n- Shader/audio-less drone\n\n1. When playing a dolly animation, go to your mask tab and turn on UI (idk why but this works, maybe it's a fluke?)\n\n2. Exit out of the camera menu and open the drone\n\n3. Feel free to close the camera menu\n\n4. Observe the drone is invisible and intractable on desktop\n\n5. Reopen the drone (even though it already exists)\n\n6. Yet again observe the drone, it should be in the weird broken state. (if not just redo the steps again)\n\nNOTE: it seems to be hard to reproduce as I could not get it to occur again after the first 5 times.\n\n*In the videos I did initially use 4 cameras but apparently 1 camera is sufficient\n\nMost optimal fix would be to ensure there's no pre-existing camera object before spawning the drone to prevent said drone from being desynced from literally everything else.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/6693ebd65b12ef0e204ea3d932e6a029.mp4",
+    "https://canny-assets.io/files/b7da766c8c9e4f340fa8192a06d43f74.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "brokendrone",
+      "url": "https://canny-assets.io/files/6693ebd65b12ef0e204ea3d932e6a029.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "green",
+      "url": "https://canny-assets.io/files/b7da766c8c9e4f340fa8192a06d43f74.mp4"
+    }
+  ],
+  "ideaID": "6a811fa25ac5eb72336c6a7f",
+  "imageURLs": [
+    "https://canny-assets.io/images/a6af51904c5cff5998df90a1a06aa35f.jpeg",
+    "https://canny-assets.io/images/99458fad0e59a34c7588f1aff1417048.jpeg",
+    "https://canny-assets.io/images/1a7809ceffa9ed2358abcbedf4bae302.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-16T02:25:39.181Z",
+  "subCategoryID": null,
+  "title": "Dolly camera can create a client-side (uncontrollable) drone, attach a video camera model to the camera view (obscures vision on desktop), and your drone model shaders & audio can be broken.",
+  "trendingScore": 2955.136168182544,
+  "updatedBy": null,
+  "urlName": "dolly-camera-can-create-a-client-side-uncontrollable-drone-attach-a-video-camera",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "64db5fa7ab48431f25a4afe5",
+      "alias": "Viridian Sloth",
+      "aliasID": "65c2b1cbed6eefce4c8373a2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f96af3856a847a7c7f606a4fe050722f.png",
+      "companies": [],
+      "name": "NotAChance",
+      "urlName": null,
+      "voteID": "6a811fa3523ad161332f6cd2"
+    }
+  ]
+}
