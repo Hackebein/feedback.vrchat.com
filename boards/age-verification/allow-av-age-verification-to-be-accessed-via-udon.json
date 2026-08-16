@@ -3,9 +3,10 @@
   "_id": "67c76e8815cae4f6024829ab",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon"
+    "sdk.udon",
+    "account.age-verification"
   ],
-  "aiTaggedAt": "2026-06-10T13:21:01.508234Z",
+  "aiTaggedAt": "2026-08-16T07:52:54.684304Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d4d6707356a5c421ebc616d",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "comments": [
     {
       "__v": 0,
@@ -399,7 +400,9 @@
       "postDeleted": false,
       "postID": "67c76e8815cae4f6024829ab",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -444,7 +447,7 @@
       "postID": "67c76e8815cae4f6024829ab",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -496,6 +499,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "https://feedback.vrchat.com/sdk-bug-reports/p/age-verified-accounts-udon",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a81692aed46b7348bef60f1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a8168f9523ad16133306afd",
+        "alias": "Inkwell Lungfish",
+        "aliasID": "6a8168f9523ad16133306b08",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b41e86ba161a9f48318f9ed12108243b.png",
+        "created": "2026-08-16T07:38:33.026Z",
+        "name": "ʞnʎᴚ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "674e1d3bd1a531fd71481978",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-16T07:39:22.883Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67c76e8815cae4f6024829ab",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Lol don't know how long this has been ignored by vrchat, welp. looks like quite a while",
       "viewerReactions": null,
       "voteID": null
     }
