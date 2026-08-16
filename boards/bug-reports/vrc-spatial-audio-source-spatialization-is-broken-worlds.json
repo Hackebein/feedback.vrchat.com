@@ -2,16 +2,16 @@
   "_id": "6a3da569059452aee85d0f48",
   "aiCategories": [
     "loc.in-world",
-    "audio.voice"
+    "audio.steam-audio"
   ],
-  "aiTaggedAt": "2026-06-26T16:08:58.083951Z",
+  "aiTaggedAt": "2026-08-16T13:26:36.915436Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "611a1502a166ce46bceaaf19",
     "alias": "Adorable Chickadee",
     "aliasID": "65d94e0b0129d7ae44ea9662",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/2700b0b3015de1b727d3923512c61cdf.png",
+    "avatarURL": "https://canny-assets.io/images/96482f11ea163533209a22d01daa5abf.png",
     "created": "2021-08-16T07:34:26.261Z",
     "name": "Ames~",
     "serviceAccount": false,
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a3ea0eaf9f8f9ffd4fb419a",
@@ -74,6 +74,58 @@
       "statusChangeID": "6a3ea0eaf9f8f9ffd4fb4199",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a81b9bc6308ea1f07f493ea",
+      "aiGenerated": false,
+      "author": {
+        "_id": "611a1502a166ce46bceaaf19",
+        "alias": "Adorable Chickadee",
+        "aliasID": "65d94e0b0129d7ae44ea9662",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/96482f11ea163533209a22d01daa5abf.png",
+        "created": "2021-08-16T07:34:26.261Z",
+        "name": "Ames~",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-16T13:23:08.687Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/659f23596be3d9837ac745fb2ae889bd.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "audiotester",
+          "url": "https://canny-assets.io/files/659f23596be3d9837ac745fb2ae889bd.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3da569059452aee85d0f48",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Leaving an update here for anyone who is struggling with this issue. \n\nToggling the AudioSource's gameObject off and back on immediately before calling Play() makes the spatialiaztion work properly. \n\nHere is an example workaround script:\n\n---------\n\nusing UdonSharp;\n\nusing UnityEngine;\n\nusing VRC.SDKBase;\n\nusing VRC.Udon;\n\npublic class audiotester : UdonSharpBehaviour\n\n{\n\n    [SerializeField] private AudioSource audioSource;\n\n    private void Update()\n\n    {\n\n        if (Input.GetKeyDown(KeyCode.F)) PlaySpatialized(audioSource);\n\n    }\n\n    private void PlaySpatialized(AudioSource source)\n\n    {\n\n        if (source == null) return;\n\n        source.gameObject.SetActive(false); //<--- this is the workaround\n\n        source.gameObject.SetActive(true);\n\n        source.Play();\n\n    }\n\n}\n\n--------\n\nUsing Stop() does not seem to work as a workaround, you have to turn off and on the game object.",
       "viewerReactions": null,
       "voteID": null
     }
