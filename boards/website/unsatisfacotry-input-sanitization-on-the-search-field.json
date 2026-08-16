@@ -1,0 +1,91 @@
+{
+  "_id": "6a823b7061f063f677fbf599",
+  "aiCategories": [
+    "loc.website",
+    "web.home"
+  ],
+  "aiTaggedAt": "2026-08-16T22:38:27.883730Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5fd10fd5ca7a697fb6db2c93",
+    "alias": "Gray Lizard",
+    "aliasID": "65c8dad9ed6eefce4c5da381",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2aa79263d6e559e9fd2db112f319e316.png",
+    "created": "2020-12-09T17:56:37.689Z",
+    "name": "Lenr",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5fd10fd5ca7a697fb6db2c93",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-16T22:36:32.686Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "vrchat.com/home/search\n\nSwitching tabs after searching (ie. from Users search to Worlds search) under the search bar lacks input sanitization, and just instantly updates the current URL by concatenating the user input to it.\n\nWhile not a security issue, as it can only redirect users to inside of the vrchat.com/home site, this has some annoying sideeffects that hamper the usability of the search function, or are just generally annoying.\n\nFor example:\n\nIf your search query contains the '%' character, you are likely to encounter an `URIError: URI malformed` error when switching tabs.\n\nIf your query contains a '/' character, you are likely to encounter a blank search pane with absolutely no feedback. (because it accidentally navigated you to a nonexistent page)\n\nIf your query contains a '?' character, it is likely that the characters following the question mark get cut off.\n\nThis is likely because of a missing encodeURIComponent(input) or something. \n\nAlso, by default (without even switching the search tabs) any characters following a '#' (Or the string \"Tag:\") up until a space are going to be ignored by the search. This is hardcoded in the client for some reason?\n\nThis results in users not being able to search for tags. I don't know if this is intended behaviour or not.\n\nAlso, by default if there is no '#' or \"Tag:\" present, there is no \"minimum string length\", but if one of them is present, then it requires at least 3 (non-ignored) characters.\n\nThere is some funny stuff you can do with the lacking input sanitization, try entering \"../../accountlink\" inside the search field, and then clicking on the worlds (or events) tab.\n\n(The \"../\" string inside of an URL allows you to navigate backwards from the current path.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a823b7061f063f677fbf598",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-16T22:36:32.686Z",
+  "subCategoryID": null,
+  "title": "Unsatisfacotry input sanitization on the search field.",
+  "trendingScore": 2955.2562962513275,
+  "updatedBy": null,
+  "urlName": "unsatisfacotry-input-sanitization-on-the-search-field",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5fd10fd5ca7a697fb6db2c93",
+      "alias": "Gray Lizard",
+      "aliasID": "65c8dad9ed6eefce4c5da381",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2aa79263d6e559e9fd2db112f319e316.png",
+      "companies": [],
+      "name": "Lenr",
+      "urlName": null,
+      "voteID": "6a823b70523ad16133335ba5"
+    }
+  ]
+}
