@@ -85,7 +85,13 @@ def _split_platform_line(line: str) -> tuple[str, str, str, str]:
 
 
 def parse_in_client_template(details: Any) -> InClientReport | None:
-    """Return structured template fields, or None if the Details block is absent."""
+    """Return structured template fields, or None if the Details block is absent.
+
+    Detection is the client template shape (Category, Frequency, platform,
+    rawPlatform, clientVersion, unityVersion). Label language does not matter.
+    English labels are canonicalized for search tags; any other wording still
+    counts as in-client with those tags omitted.
+    """
     if not isinstance(details, str) or not details.strip():
         return None
     fields = _last_fields(details)
@@ -105,20 +111,15 @@ def parse_in_client_template(details: Any) -> InClientReport | None:
     ):
         return None
 
-    category = CATEGORIES.get(_norm_key(category_raw))
-    frequency = FREQUENCIES.get(_norm_key(frequency_raw))
-    if category is None or frequency is None:
-        return None
-
     leading, inner_platform, store, headset = _split_platform_line(platform_line)
-    platform = slugify(leading)
+    platform = slugify(leading) or slugify(raw_platform)
     if not platform:
         return None
 
     return {
-        "category": category,
+        "category": CATEGORIES.get(_norm_key(category_raw), ""),
         "category_label": category_raw.strip(),
-        "frequency": frequency,
+        "frequency": FREQUENCIES.get(_norm_key(frequency_raw), ""),
         "frequency_label": frequency_raw.strip(),
         "platform": platform,
         "platform_line": platform_line,
@@ -173,14 +174,19 @@ def client_location_prior(details: Any) -> str | None:
 
 def in_client_search_tags(parsed: InClientReport) -> list[str]:
     """Index-only inclient.* tags for template fields."""
-    tags = [
-        f"inclient.category.{parsed['category']}",
-        f"inclient.frequency.{parsed['frequency']}",
-        f"inclient.platform.{parsed['platform']}",
-        f"inclient.raw-platform.{slugify(parsed['raw_platform'])}",
-        f"inclient.client-version.{parsed['client_version']}",
-        f"inclient.unity-version.{parsed['unity_version']}",
-    ]
+    tags: list[str] = []
+    if parsed["category"]:
+        tags.append(f"inclient.category.{parsed['category']}")
+    if parsed["frequency"]:
+        tags.append(f"inclient.frequency.{parsed['frequency']}")
+    tags.extend(
+        [
+            f"inclient.platform.{parsed['platform']}",
+            f"inclient.raw-platform.{slugify(parsed['raw_platform'])}",
+            f"inclient.client-version.{parsed['client_version']}",
+            f"inclient.unity-version.{parsed['unity_version']}",
+        ]
+    )
     store = slugify(parsed["store"])
     if store:
         tags.append(f"inclient.store.{store}")

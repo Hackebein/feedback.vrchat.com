@@ -111,6 +111,17 @@ class TransformVirtualInClientBoardTest(unittest.TestCase):
         self.assertEqual(doc["board"]["urlName"], "bug-reports")
         self.assertEqual(doc["aiCategories"], [])
 
+    def test_unmapped_localized_category_remaps(self) -> None:
+        details = TEMPLATE_NO_LOG.replace("User Interface", "유저 인터페이스")
+        doc = opensearch_bulk.transform_post(_post(details=details))
+        assert doc is not None
+        self.assertEqual(doc["board"]["name"], opensearch_bulk.IN_CLIENT_BOARD_NAME)
+        self.assertEqual(doc["boardID"], opensearch_bulk.IN_CLIENT_BOARD_ID)
+        cats = doc["aiCategories"]
+        self.assertFalse(any(c.startswith("inclient.category.") for c in cats))
+        self.assertIn("inclient.frequency.once", cats)
+        self.assertIn("inclient.report", cats)
+
 
 class TransformInClientTagsTest(unittest.TestCase):
     def test_merges_location_and_inclient_tags(self) -> None:

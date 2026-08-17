@@ -103,13 +103,46 @@ class ParseInClientTemplateTest(unittest.TestCase):
         details = "something broke\n\nIn-Client Report"
         self.assertIsNone(in_client_report.parse_in_client_template(details))
 
-    def test_rejects_unknown_category(self) -> None:
+    def test_unknown_category_still_parses(self) -> None:
         details = PC_NO_LOG.replace("User Interface", "Graphics")
-        self.assertIsNone(in_client_report.parse_in_client_template(details))
+        parsed = in_client_report.parse_in_client_template(details)
+        assert parsed is not None
+        self.assertEqual(parsed["category"], "")
+        self.assertEqual(parsed["category_label"], "Graphics")
+        tags = in_client_report.in_client_search_tags(parsed)
+        self.assertFalse(any(t.startswith("inclient.category.") for t in tags))
+        self.assertIn("inclient.frequency.once", tags)
 
-    def test_rejects_unknown_frequency(self) -> None:
+    def test_unknown_frequency_still_parses(self) -> None:
         details = PC_NO_LOG.replace("Once", "Rarely")
-        self.assertIsNone(in_client_report.parse_in_client_template(details))
+        parsed = in_client_report.parse_in_client_template(details)
+        assert parsed is not None
+        self.assertEqual(parsed["frequency"], "")
+        self.assertEqual(parsed["frequency_label"], "Rarely")
+        tags = in_client_report.in_client_search_tags(parsed)
+        self.assertFalse(any(t.startswith("inclient.frequency.") for t in tags))
+        self.assertIn("inclient.category.user-interface", tags)
+
+    def test_localized_category_still_parses(self) -> None:
+        details = PC_NO_LOG.replace("User Interface", "유저 인터페이스")
+        parsed = in_client_report.parse_in_client_template(details)
+        assert parsed is not None
+        self.assertEqual(parsed["category"], "")
+        self.assertEqual(parsed["category_label"], "유저 인터페이스")
+        self.assertTrue(parsed["has_in_client_report"])
+
+    def test_non_ascii_platform_uses_raw_platform(self) -> None:
+        details = PC_NO_LOG.replace(
+            "platform: PC (platform: Windows, store: Steam, headset: None)",
+            "platform: 피씨 (platform: Windows, store: Steam, headset: None)",
+        )
+        parsed = in_client_report.parse_in_client_template(details)
+        assert parsed is not None
+        self.assertEqual(parsed["platform"], "windowsplayer")
+        self.assertEqual(
+            in_client_report.client_location_tags(parsed),
+            ["loc.pc-client", "platforms.pc.steam"],
+        )
 
 
 class ClientLocationTagsTest(unittest.TestCase):
