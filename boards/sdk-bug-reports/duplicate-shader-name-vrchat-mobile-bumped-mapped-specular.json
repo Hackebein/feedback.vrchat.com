@@ -1,0 +1,93 @@
+{
+  "_id": "6a828b2dcbfa1e62cba52642",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-08-17T04:22:21.297596Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f4773dac246b672791386d7",
+    "alias": "Courageous Otter",
+    "aliasID": "65c28a67ed6eefce4cd6a88e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f4619b3e2e4b92253d91df123826b0a2.png",
+    "created": "2020-08-27T08:50:34.315Z",
+    "name": "whiteflare",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f4773dac246b672791386d7",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-17T04:16:45.038Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "There are duplicate shader names in the Mobile shaders.\n\nVRChat-Mobile-BumpedMappedSpecular.shader\n\nVRChat-Mobile-BumpedSpecular.shader\n\nBoth are named “VRChat/Mobile/Bumped Mapped Specular.”\n\nIs one of them deprecated? If not, I think it would be best to rename one of them.\n\nI'm using VRChat SDK - Base 3.10.4.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a828b2ccbfa1e62cba52641",
+  "imageURLs": [
+    "https://canny-assets.io/images/3f22472c5c2f9a04b500bf175136701c.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-17T04:16:45.038Z",
+  "subCategoryID": null,
+  "title": "Duplicate shader name \"VRChat/Mobile/Bumped Mapped Specular\"",
+  "trendingScore": 2955.2900469375045,
+  "updatedBy": null,
+  "urlName": "duplicate-shader-name-vrchat-mobile-bumped-mapped-specular",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f4773dac246b672791386d7",
+      "alias": "Courageous Otter",
+      "aliasID": "65c28a67ed6eefce4cd6a88e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f4619b3e2e4b92253d91df123826b0a2.png",
+      "companies": [],
+      "name": "whiteflare",
+      "urlName": null,
+      "voteID": "6a828b2d523ad16133346007"
+    }
+  ]
+}
