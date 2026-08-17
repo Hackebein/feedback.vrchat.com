@@ -1,10 +1,11 @@
 {
   "_id": "6a533b9881298c76291e1887",
   "aiCategories": [
-    "loc.in-world",
+    "loc.quick-menu",
+    "loc.main-menu",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-17T20:25:47.190297Z",
+  "aiTaggedAt": "2026-08-17T20:43:47.343667Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3df2f75af9f322b0f66e1b",
@@ -597,13 +598,23 @@
       "voteID": null
     },
     {
-      "_id": "6a836d4e5b9614dacb8a5feb",
+      "_id": "6a836d62a1df78cc50a1b3f2",
       "aiGenerated": false,
-      "author": null,
+      "author": {
+        "_id": "667353ba8663454809d39116",
+        "alias": "Effective Lark",
+        "aliasID": "667353bbd5dd336a20ffb258",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2024-06-19T21:55:06.923Z",
+        "name": "euan",
+        "serviceAccount": false,
+        "urlName": null
+      },
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-08-17T20:21:34.848Z",
+      "created": "2026-08-17T20:21:54.897Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -625,8 +636,8 @@
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
-      "statusChangeID": "6a836d4e5b9614dacb8a5fea",
-      "statusChangeNewStatus": "available in future release",
+      "statusChangeID": "6a836d62a1df78cc50a1b3f1",
+      "statusChangeNewStatus": "complete",
       "value": "",
       "viewerReactions": null,
       "voteID": null
@@ -656,8 +667,8 @@
   "pinnedComment": null,
   "score": 88,
   "sourceFeatureExtractionItem": null,
-  "status": "available in future release",
-  "statusChanged": "2026-08-17T20:21:34.817Z",
+  "status": "complete",
+  "statusChanged": "2026-08-17T20:21:54.882Z",
   "subCategoryID": null,
   "title": "Avatar changes sometimes revert back to the previously used avatar immediately after switching.",
   "trendingScore": 2955.303981697908,
