@@ -10,7 +10,7 @@ Scrape horizon: **2026-07-03 05:11 UTC (45d ago)**.
 |-------|------:|
 | `age-verification` | 207 / 207 (100.0%) |
 | `android` | 344 / 344 (100.0%) |
-| `avatar-30` | 873 / 872 (100.0%) |
+| `avatar-30` | 872 / 872 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 77 / 77 (100.0%) |
 | `bug-reports` | 11,104 / 11,103 (100.0%) |
@@ -18,7 +18,7 @@ Scrape horizon: **2026-07-03 05:11 UTC (45d ago)**.
 | `creator-companion` | 289 / 289 (100.0%) |
 | `creator-economy` | 84 / 84 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 13,943 / 13,946 (99.98%) |
+| `feature-requests` | 13,944 / 13,946 (99.99%) |
 | `impostors` | 90 / 90 (100.0%) |
 | `ios-mobile-beta` | 260 / 260 (100.0%) |
 | `localization` | 636 / 636 (100.0%) |
