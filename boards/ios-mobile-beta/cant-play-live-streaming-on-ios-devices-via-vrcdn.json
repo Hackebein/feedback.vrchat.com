@@ -2,12 +2,11 @@
   "__v": 0,
   "_id": "66bcb1fef28b2a888a5d4037",
   "aiCategories": [
-    "loc.in-world",
     "loc.mobile-app",
     "platforms.mobile.ios",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-06-10T15:52:56.495103Z",
+  "aiTaggedAt": "2026-08-17T19:27:22.679495Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ced02b4b82adf2ff390d00c",
@@ -37,7 +36,7 @@
     "urlName": "feedback"
   },
   "categoryID": "665799dd90a9d214cd2f9a4e",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a16d775fba07b4d535c4f41",
@@ -136,6 +135,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{64e5d78acd62f7097b3ce74f|full_name} https://wiki.vrchat.com/wiki/Video_players check out the support matrix",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a835edfd414b69da0245e08",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a82887b523ad16133345a7d",
+        "alias": "Flying Gibbon",
+        "aliasID": "6a82887b523ad16133345a82",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/9043ae333418613e34d74e229e1e50dc.png",
+        "created": "2026-08-17T04:05:15.169Z",
+        "name": "Tundra_Wolf",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "6657990efd693fc2ebdcd62c",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-17T19:19:59.185Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "66bcb1fef28b2a888a5d4037",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Possibly useful data point for this: I hit the same wall with VRCDN on iOS, then stood up my own HLS relay (MediaMTX, H.264/AAC, HTTPS) in the hopes of getting something to work. Result: plain live HLS gets further than VRCDN's endpoints, the video actually plays on iOS, but the audio track is silently dropped, even though the identical stream plays with full audio in Safari on the same device and static H.264/AAC files play fine in-client. Tested both muxed MPEG-TS and fMP4 variants, same result.\n\nSo at least part of what's blocking VRCDN on iOS looks like it lives in the client's live-stream audio path, not just the transport formats. For event worlds, a plain HLS relay at least gets iOS viewers the video today, audio is the remaining gap, which is what this tracked report covers: https://feedback.vrchat.com/bug-reports/p/live-hls-streams-play-video-but-no-audio-on-ios-h264-aac-plays-correctly-in-safa",
       "viewerReactions": null,
       "voteID": null
     }

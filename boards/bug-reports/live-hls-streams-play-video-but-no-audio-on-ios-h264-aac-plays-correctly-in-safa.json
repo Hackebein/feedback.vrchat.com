@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.in-world",
     "worlds.video",
-    "platforms.mobile.ios",
-    "audio.voice"
+    "audio.voice",
+    "platforms.mobile.ios"
   ],
-  "aiTaggedAt": "2026-08-17T15:34:23.142036Z",
+  "aiTaggedAt": "2026-08-17T19:27:22.678898Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a82887b523ad16133345a7d",
@@ -83,7 +83,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "On the iOS build, live HLS streams play video with no audio in AVPro-based video players. The identical stream plays with full audio in Safari on the same device, and static H.264/AAC files play with full audio in the same VRChat client — the failure is specific to live HLS audio.\n\nEnvironment:\n\nDevice: iPad Pro 12.9 inch 5th gen, iOS 26.6\n\nVRChat build: 1886\n\nWorld: VRChat video format playback tester (wrld_bcc3fb8b-6bbd-4ea8-991b-7f7da49c1a56)\n\nAllow Untrusted URLs: enabled; testing in my own instance\n\nStream details:\n\nStandard HLS over HTTPS (valid Let's Encrypt cert), served by MediaMTX behind Caddy\n\nVideo: H.264 (avc1.64001f), 720p, CBR, keyframe interval 1s, no B-frames\n\nAudio: AAC-LC (mp4a.40.2, \"MPEG-4 Audio\"), 44.1 kHz, stereo, CoreAudio encoder\n\nTested with BOTH HLS variants: muxed MPEG-TS segments (single rendition) and fMP4 (separate audio rendition) — same result: video plays, no audio\n\nSteps to reproduce:\n\nPublish an H.264/AAC live stream to an HLS server (MediaMTX defaults, mpegts variant)\n\nOn iOS, open a world with an AVPro video player, enter the HTTPS .m3u8 URL, play\n\nVideo renders; no audio\n\nExpected: audio plays, as it does for the same URL in Safari on the same device.\n\nControls performed:\n\nSame URL in Safari on the same iPad: video AND audio play correctly\n\nStatic H.264/AAC MP4 files in the same VRChat client/world: video AND audio play correctly\n\nServer logs confirm the client requests the playlist and reads segments; the AAC track is present (2 tracks: H264, MPEG-4 Audio)\n\nOBS sample rate 44.1 kHz, stereo confirmed; issue persists\n\nNotes: This appears related to (but distinct from) the existing report \"Can't play live streaming on iOS devices via VRCDN\" — in this case playback partially works (video), narrowing the failure to the audio path for live HLS.",
+  "details": "On the iOS build, live HLS streams play video with no audio in AVPro-based video players. The identical stream plays with full audio in Safari on the same device, and static H.264/AAC files play with full audio in the same VRChat client — the failure is specific to live HLS audio.\n\nEnvironment:\n\n* Device: iPad Pro 12.9 inch 5th gen, iOS 26.6\n\n* VRChat build: 1886\n\n* World: VRChat video format playback tester (wrld_bcc3fb8b-6bbd-4ea8-991b-7f7da49c1a56)\n\n* Allow Untrusted URLs: enabled; testing in my own instance\n\nStream details:\n\n* Standard HLS over HTTPS (valid Let's Encrypt cert), served by MediaMTX behind Caddy\n\n* Video: H.264 (avc1.64001f), 720p, CBR, keyframe interval 1s, no B-frames\n\n* Audio: AAC-LC (mp4a.40.2, \"MPEG-4 Audio\"), 44.1 kHz, stereo, CoreAudio encoder\n\nTested with BOTH HLS variants: muxed MPEG-TS segments (single rendition) and fMP4 (separate audio rendition) — same result: video plays, no audio\n\nSteps to reproduce:\n\n1. Publish an H.264/AAC live stream to an HLS server (MediaMTX defaults, mpegts variant)\n\n2. On iOS, open a world with an AVPro video player, enter the HTTPS .m3u8 URL, play (video buffers for maybe 30 seconds, but does eventually play)\n\n3. Video renders; no audio\n\nExpected: audio plays, as it does for the same URL in Safari on the same device.\n\nControls performed:\n\n1. Same URL in Safari on the same iPad: video AND audio play correctly\n\n2. Static H.264/AAC MP4 files in the same VRChat client/world: video AND audio play correctly\n\n3. Server logs confirm the client requests the playlist and reads segments; the AAC track is present (2 tracks: H264, MPEG-4 Audio)\n\n4. OBS sample rate 44.1 kHz, stereo confirmed; issue persists\n\nNotes: This appears related to (but distinct from) the existing report \"Can't play live streaming on iOS devices via VRCDN\" — in this case playback partially works (video), narrowing the failure to the audio path for live HLS.",
   "error": null,
   "eta": null,
   "etaPublic": true,
