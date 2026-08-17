@@ -6,7 +6,7 @@
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-08-16T23:54:21.211230Z",
+  "aiTaggedAt": "2026-08-17T00:07:54.504885Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -37,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nThe navigation arrows to go to the next/previous user in \"Here\" mini-profile in Quick Menu disappear after clicking the clock to enter Change Clock Settings.\n\nReproduction Steps\n\n1. Join an instance with other users.\n\n2. Open the Quick Menu \"Here\" tab, click on another user to open their mini-profile in QM. Locate the arrows left/right next to the report.\n\n3. Click the clock.\n\n4. Go Back.\n\n5. Notice the arrows are now gone.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-16_23-41-17.txt](https://api.vrchat.cloud/api/1/file/file_c42f1d42-8a14-4fbb-8fc3-2cf4283d3ba8/1/file)",
+  "details": "Description\n\nThe navigation arrows to go to the next/previous user in \"Here\" mini-profile in Quick Menu disappear after clicking the clock to enter Change Clock Settings.\n\nReproduction Steps\n\n1. Join an instance with other users.\n\n2. Open the Quick Menu \"Here\" tab, click on any user to open their mini-profile in QM. Locate the arrows left/right next to the report.\n\n3. Click the clock.\n\n4. Go Back.\n\n5. Notice the arrows are now gone.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-16_23-41-17.txt](https://api.vrchat.cloud/api/1/file/file_c42f1d42-8a14-4fbb-8fc3-2cf4283d3ba8/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
