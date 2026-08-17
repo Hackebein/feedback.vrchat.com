@@ -2,9 +2,10 @@
   "_id": "691230e175ec7edcf7ca363e",
   "aiCategories": [
     "loc.pc-client",
+    "platforms.pc.steam",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-07-27T20:18:40.021860Z",
+  "aiTaggedAt": "2026-08-17T12:16:21.794361Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2cba5631807b34c94a38e1",
@@ -34,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 9,
+  "commentCount": 10,
   "comments": [
     {
       "_id": "6914a64e35d1a2d798411a99",
@@ -486,6 +487,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Still occurs in live build. This also applies all other types of constraints, as I've used constraints directly on a Physbone chain, which in theory would function similarly to animating it, but it resulted in the physbone continuing to \"simulate\", despite the fact that it was rotation locked, affecting its colliders and physics.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a82fa46503e46c048fbf349",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-17T12:10:46.059Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5f2cba5631807b34c94a38e1",
+          "alias": "Yellowwood Ostrich",
+          "aliasID": "65c279a6ed6eefce4c459017",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/2f516b480fda774de0c22f804d379473.png",
+          "created": "2020-08-07T02:20:06.853Z",
+          "name": "Wunder Wulfe",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a67bb350d663382607e6a34",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "691230e175ec7edcf7ca363e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5f2cba5631807b34c94a38e1|full_name} Apologies for the delay with this issue.\n\nPhysbone visualizations in the client are not reflecting changes made by constraints along their chains. In your example images in the original report, the chain is following the arm, but the visualization is falling behind, representing where the chain would be if no constraint were affecting it. We are now working towards a solution for this so the visualization doesn't desync.\n\nPlease raise new reports if there are further separate issues, as we try to avoid tracking multiple issues per report.\n\nPlease also note that we generally recommend against moving physbone chain segments around using constraints, because each frame, the constraint runs after the physbone is simulated (not before, like animators do) which can result in undefined behavior as this report demonstrates. See https://creators.vrchat.com/common-components/physbones/#important-notes-usage-tips-etc",
       "viewerReactions": null,
       "voteID": null
     }
