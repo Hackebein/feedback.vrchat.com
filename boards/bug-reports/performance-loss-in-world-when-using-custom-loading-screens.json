@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.in-world",
     "loc.loading-screen",
-    "client.settings"
+    "worlds.layers"
   ],
-  "aiTaggedAt": "2026-08-17T01:40:32.678861Z",
+  "aiTaggedAt": "2026-08-17T05:13:17.278452Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64f8e8d313b550392ac6b63b",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I opened a world which relies on a lot of runtime optimizations when using the space custom loading screen and got about 15 fps, others (not using custom loading screens) did not have this issue. First, I tried clearing cache and restarting windows, but this had no impact on performance. But when I went back to the normal default loading screen, suddenly 75 fps and no issues.\n\nAlso, I did see an impact on two other worlds last night, although it was not as severe. The severity of the impact seems to go down with each subsequent world load.",
+  "details": "I opened a world which relies on a lot of runtime optimizations when using the space custom loading screen and got about 15 fps, others (not using custom loading screens) did not have this issue. First, I tried clearing cache and restarting windows, but this had no impact on performance. But when I went back to the normal default loading screen, suddenly 75 fps and no issues.\n\nAlso, I did see an impact on two other worlds last night, although it was not as severe. The severity of the impact seems to go down with each subsequent world load.\n\nThe issue didnt return when turning the custom loading screen back on afterwards. I originally turned this on early while on the beta, but it didnt work then, and started to recently, so maybe the way it was turned on messed it up?",
   "error": null,
   "eta": null,
   "etaPublic": true,
