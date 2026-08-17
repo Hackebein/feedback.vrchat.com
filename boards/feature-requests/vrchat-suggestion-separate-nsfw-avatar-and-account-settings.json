@@ -1,11 +1,9 @@
 {
   "_id": "6a81f075cbfa1e62cb94c33e",
   "aiCategories": [
-    "loc.website",
-    "account.age-verification",
-    "client.settings"
+    "vrchat-meta"
   ],
-  "aiTaggedAt": "2026-08-17T08:10:35.656614Z",
+  "aiTaggedAt": "2026-08-17T11:52:24.386028Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a81eb6e523ad1613332651d",
@@ -29,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a81f850cbfa1e62cb957efb",
@@ -116,6 +114,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "First, short concise tickets are going to go further than long, drawn out ones. Separate individual ideas and feature requests into separate tickets.   Please do not use ChatGPT to write your tickets.\n\nSecond, you cannot upload sexually explicit material onto vrchat's servers. Full stop.  There will not and will never be an nsfw tag.  There -is- a \"sexually suggestive\" tag which already exists and is already planned to be linked to content gating and (hopefully) tied into age verification. \n\nContent gating and age verification are -already- decoupled. You can literally do most of what you're asking for today.  Just go enable the content filters.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a82f2ce222000336cf3dc10",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a81eb6e523ad1613332651d",
+        "alias": "Cool Mastodon",
+        "aliasID": "6a81eb6e523ad16133326520",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/43032d47ddb3d4f1adf068b644674043.png",
+        "created": "2026-08-16T16:55:10.108Z",
+        "name": "Natasha Yar",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-17T11:38:54.570Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f5b86107dc999d601fb6ae",
+          "alias": "Sable Tuna",
+          "aliasID": "65f5b861a63714bcb384f488",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ba4d8f95cce486943330e58254ab528d.png",
+          "created": "2024-03-16T15:18:57.593Z",
+          "name": "Cyrus Arji",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a82c109cbfa1e62cbae7d3b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a81f075cbfa1e62cb94c33e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f5b86107dc999d601fb6ae|full_name}  that wasnt chatgpt eh, I'm a Teacher i write articles like routine , but yeah didnt know about the content gating going to be tied to age verification",
       "viewerReactions": null,
       "voteID": null
     }
