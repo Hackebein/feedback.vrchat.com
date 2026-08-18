@@ -64,7 +64,9 @@
       "postDeleted": false,
       "postID": "6a7e1782ebfb2fdd490c1676",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -109,7 +111,7 @@
       "postID": "6a7e1782ebfb2fdd490c1676",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -155,7 +157,7 @@
       "postID": "6a7e1782ebfb2fdd490c1676",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -240,20 +242,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 24,
+  "maxScore": 25,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a7e1782ebfb2fdd490c1676/1813453372.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 24,
+  "score": 25,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-13T19:14:10.571Z",
   "subCategoryID": null,
   "title": "Please Fix Nameplates",
-  "trendingScore": 2957.5119839297367,
+  "trendingScore": 2957.575228463618,
   "updatedBy": "62df013246e66844a84a8ef1",
   "urlName": "please-fix-nameplates",
   "viewerIsAuthor": false,
@@ -265,6 +267,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64888bce7cf7f509925263af",
+      "alias": "Corporate Pinniped",
+      "aliasID": "65c2c146ed6eefce4c85b1eb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/76847f7c897209839644e21dd9799f18.png",
+      "companies": [],
+      "name": "Tathurai （タスライ）",
+      "urlName": null,
+      "voteID": "6a8442e6523ad1613340b67f"
+    },
     {
       "_id": "6155f37ab33f566fa05f2524",
       "alias": "Dawn pink Rabbit",
