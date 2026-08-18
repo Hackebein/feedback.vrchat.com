@@ -1,0 +1,102 @@
+{
+  "_id": "6a84cda48d3a273ebe904a8d",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.main-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-08-18T21:28:25.430519Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-18T21:24:52.668Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "`Unexpected PushPage EventDetailsPage before SwitchToRootPage calls after menu Canvas_MainMenu(Clone) was reopened. Please navigate to a root page first!`\n\n1. Receive an event notification.\n\n2. Launch VRChat.\n\n3. Open the Quick Menu. Click the \"View event\" button from notifications.\n\n4. Press the \"Go back\" button in top left (arrow), next to the \"Event Details\" page.\n\nExpected result: Return to a default location in the Main Menu or the group page for that event, to have the UI do something useful.\n\nActual result: Empty, blank page after pressing \"Go back\".\n\nAdditional info: Not reproducible in VRChat 2026.2.3p3 `Build 1867`, because the \"View event\" button is missing from that build (attached screenshot). (This is an undocumented change in 2026.3.1.)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/481ff9fb3e7e93c1a40796e2d4f61cb5.mp4",
+    "https://canny-assets.io/files/6db2ac8bc87f02482888325a0fd69ad6.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-08-18 21-15-41",
+      "url": "https://canny-assets.io/files/481ff9fb3e7e93c1a40796e2d4f61cb5.mp4"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-08-18_21-13-34",
+      "url": "https://canny-assets.io/files/6db2ac8bc87f02482888325a0fd69ad6.txt"
+    }
+  ],
+  "ideaID": "6a84cda48d3a273ebe904a8c",
+  "imageURLs": [
+    "https://canny-assets.io/images/67b366652d991cb5cd6f6dad464f47a7.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-18T21:24:52.668Z",
+  "subCategoryID": null,
+  "title": "Empty page after Event Details view",
+  "trendingScore": 2955.5349008123394,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "empty-page-after-event-details-view",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a84cda4523ad1613347d580"
+    }
+  ]
+}
