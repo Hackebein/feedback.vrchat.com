@@ -2,9 +2,10 @@
   "_id": "6a8496e6088c628dfb47be19",
   "aiCategories": [
     "loc.website",
+    "web.profiles",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-18T17:36:51.129490Z",
+  "aiTaggedAt": "2026-08-18T17:53:42.347150Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -41,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I found an unusual public fallback avatar, which should be ineligible as a fallback avatar. Its performance ranking (Medium) exceeds the requirements on Android for a fallback avatar (required to be Good or better on all platforms). The \"Use as Fallback\" button also (incorrectly?) appears for this avatar while that avatar isn't mine.\n\nAffected avatar: [Ooka （Quest Compartable）](https://vrchat.com/home/avatar/avtr_01a7cb85-d839-4c13-ae86-33141358ad55) (`avtr_01a7cb85-d839-4c13-ae86-33141358ad55`) by Diṧconnect\n\nExpected result: Don't show me \"Use as Fallback\" if it's not my avatar or an official fallback avatar. This also shouldn't be a valid fallback avatar, because it's not Good rated on all \"supported\" platforms (Windows/Android).\n\nActual result: \"Use as Fallback\" is visible, although not functional. (\"This avatar isn't yours or an official fallback avatar․\") The button is shown for a custom fallback avatar with an ineligible performance ranking.\n\nAdditional info:  I'm ignoring the lack of iOS avatar here as a \"supported\" platform, because custom fallback avatars only require Windows/Android support anyway.\n\nThe likely result of actually using this avatar as a custom fallback avatar would likely result in a performance blocked robot when possible, anyway.",
+  "details": "I found a public fallback avatar with an unusual fallback avatar performance ranking (Good/Medium), while the \"Use as Fallback\" button also (incorrectly?) appears for this avatar while that avatar isn't mine.\n\nAffected avatar: [Ooka （Quest Compartable）](https://vrchat.com/home/avatar/avtr_01a7cb85-d839-4c13-ae86-33141358ad55) (`avtr_01a7cb85-d839-4c13-ae86-33141358ad55`) by Diṧconnect\n\nSteps to reproduce: Visit the above avatar hyperlink on the VRChat Home website, find the \"Use as Fallback\" button and click it. I don't know for sure how the avatar became eligible as a fallback over years of changes (since 2024).\n\nExpected result: Don't show me \"Use as Fallback\" if it's not my avatar or an official fallback avatar. This also shouldn't be a valid fallback avatar, because it's not Good rated on all \"supported\" platforms (Windows/Android).\n\nActual result: \"Use as Fallback\" is visible, although not functional. (\"This avatar isn't yours or an official fallback avatar․\") The button is shown for a custom fallback avatar with an ineligible performance ranking.\n\nAdditional info: I'm ignoring the lack of iOS avatar here as a \"supported\" platform, because custom fallback avatars only require Windows/Android support anyway.\n\nThe likely result of actually using this avatar as a custom fallback avatar would likely result in a performance blocked robot when possible, anyway.",
   "error": null,
   "eta": null,
   "etaPublic": true,
