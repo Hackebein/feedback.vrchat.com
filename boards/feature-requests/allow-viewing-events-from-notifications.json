@@ -1,10 +1,11 @@
 {
   "_id": "6938a8fb9a7cc38e69b1d86e",
   "aiCategories": [
-    "loc.main-menu",
-    "social.friends"
+    "loc.website",
+    "web.social",
+    "groups.calendar"
   ],
-  "aiTaggedAt": "2026-06-10T20:36:07.466903Z",
+  "aiTaggedAt": "2026-08-18T22:45:25.538582Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ca74f3fb98a820b3ffec9cf",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6939e8006895c31a72e146b5",
@@ -161,6 +162,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I do believe more group related notifications have the same issue, missing a way to open the group's page.\n\nFor example, when someone invites you to a group, you can't even open up the group to inspect it.\n\nSee: https://feedback.vrchat.com/feature-requests/p/add-view-group-button-to-group-invite-notifications",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a84d32204b1e9b9d3b6c73c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T21:48:18.954Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6938a8fb9a7cc38e69b1d86e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Added or reintroduced in VRChat 2026.3.1 `Build 1885` (undocumented change): https://feedback.vrchat.com/website/p/vrchat-202631-build-1885-changelog-missing-view-event-button-being-added-to-noti",
       "viewerReactions": null,
       "voteID": null
     }
