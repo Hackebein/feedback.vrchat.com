@@ -1,10 +1,11 @@
 {
   "_id": "6a8477f2b7932154f33dc66e",
   "aiCategories": [
-    "loc.main-menu",
-    "monetization.shop"
+    "loc.in-world",
+    "monetization.shop",
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-08-18T15:23:44.551365Z",
+  "aiTaggedAt": "2026-08-18T15:39:40.969672Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -35,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "If you gift a friend something from the shop, then unfriend that person, their purchase entry will bug out and either show a placeholder or the wrong information entirely.\n\nIt seems to fix itself once scrolling up/down the list after seeing it once, but it comes back with each restart of the game.",
+  "details": "If you gift a friend something from the shop, then unfriend them, their purchase entry will either show a placeholder or the wrong information entirely.\n\nIt seems to fix itself once scrolling up/down the list after seeing it once, but it comes back with each restart of the game.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,7 +62,7 @@
   "subCategoryID": null,
   "title": "[1886] Gifted purchase entries have buggy behavior if the recipient was unfriended",
   "trendingScore": 2955.904277396332,
-  "updatedBy": null,
+  "updatedBy": "69ba3c32ed082c9981d6fed6",
   "urlName": "1886-gifted-purchase-entries-have-buggy-behavior-if-the-recipient-was-unfriended",
   "viewerIsAuthor": false,
   "viewerVote": 0,
