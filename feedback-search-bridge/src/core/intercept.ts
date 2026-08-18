@@ -2,6 +2,8 @@ import type { BridgeOptions } from "./types";
 import { isCannySearchRequest } from "./mapping";
 import { handleCannySearch } from "./search-handler";
 import { isLocationCovered } from "./coverage";
+import { captureCannyVote, parseCannyVoteRequest } from "./canny-vote";
+import { hydrateViewerVotes } from "./viewer-votes";
 
 type FetchFn = typeof fetch;
 
@@ -30,6 +32,7 @@ export function installNetworkIntercept(
 ): void {
   patchFetch(options, target);
   patchXmlHttpRequest(options, target);
+  void hydrateViewerVotes(options.storage, target);
 }
 
 function patchFetch(
@@ -53,7 +56,14 @@ function patchFetch(
 
     const cannyBody = isCannySearchRequest(url, method, bodyText);
     if (!cannyBody || !isLocationCovered(target)) {
-      return originalFetch(input, init);
+      const vote = parseCannyVoteRequest(url, method, bodyText);
+      if (!vote) {
+        return originalFetch(input, init);
+      }
+      const response = await originalFetch(input, init);
+      const text = await response.clone().text();
+      captureCannyVote(vote.postID, vote.score, response.status, text);
+      return response;
     }
 
     try {
@@ -135,6 +145,17 @@ function patchXmlHttpRequest(
 
     const cannyBody = isCannySearchRequest(url, method, bodyText);
     if (!cannyBody || !isLocationCovered(target)) {
+      const vote = parseCannyVoteRequest(url, method, bodyText);
+      if (vote) {
+        this.addEventListener("load", () => {
+          captureCannyVote(
+            vote.postID,
+            vote.score,
+            this.status,
+            this.responseText,
+          );
+        });
+      }
       return originalSend.call(this, body ?? null);
     }
 

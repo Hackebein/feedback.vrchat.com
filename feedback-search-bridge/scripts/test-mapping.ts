@@ -109,6 +109,29 @@ const normalized = normalizeGatewayHit({
 assert.equal(normalized._id, "abc123");
 assert.equal(normalized.objectID, undefined);
 assert.deepEqual(normalized.tagIDs, []);
+assert.equal(normalized.viewerVote, 0);
+assert.equal(
+  (normalized.voteSettings as { votesHidden?: boolean }).votesHidden,
+  false,
+);
+
+const keptVote = normalizeGatewayHit({
+  objectID: "voted1",
+  viewerVote: 1,
+  voteSettings: { votesHidden: false, highEngagement: true },
+});
+assert.equal(keptVote.viewerVote, 1);
+assert.equal(
+  (keptVote.voteSettings as { highEngagement?: boolean }).highEngagement,
+  true,
+);
+
+const mappedVotes = normalizeGatewayHit(
+  { objectID: "from-map", score: 4 },
+  new Map([["from-map", 1]]),
+);
+assert.equal(mappedVotes.viewerVote, 1);
+assert.equal(mappedVotes._id, "from-map");
 
 const mapped = mapGatewayToCanny({
   results: [

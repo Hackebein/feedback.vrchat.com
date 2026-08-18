@@ -5,4 +5,5 @@ export const INDEX_API_PATH = "/api/index";
 
 export const STORAGE_KEYS = {
   luceneMode: "vrcfb.luceneMode",
+  viewerVotes: "vrcfb.viewerVotes",
 } as const;

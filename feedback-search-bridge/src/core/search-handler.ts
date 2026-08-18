@@ -1,6 +1,10 @@
 import { STORAGE_KEYS } from "./config";
 import { getFilterState } from "./filter-state";
-import { buildViewerVoteMap, viewerId } from "./viewer-votes";
+import {
+  buildViewerVoteMap,
+  hydrateViewerVotes,
+  viewerId,
+} from "./viewer-votes";
 import {
   mapCannyToGateway,
   mapGatewayToCanny,
@@ -287,6 +291,9 @@ export async function handleCannySearch(
     ...gatewayHits,
     ...local.matches.map((post) => post.payload),
   ];
+  if (target) {
+    await hydrateViewerVotes(options.storage, target);
+  }
   const viewerVotes = target
     ? buildViewerVoteMap(target, voteSource)
     : new Map<string, number>();

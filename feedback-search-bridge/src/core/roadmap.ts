@@ -1,7 +1,14 @@
 import { currentSlug, isLocationCovered, onRouteChange } from "./coverage";
 import { buildPostMeta, postMetaFromHit } from "./list-augment";
+import { getNativeFetch } from "./intercept";
+import { postIdFromHit, submitCannyVote } from "./canny-vote";
 import { fetchPresetPosts, type PresetQuery } from "./search-handler";
-import { hitVotedByViewer, viewerLoggedIn, viewerName } from "./viewer-votes";
+import {
+  hitDisplayScore,
+  hitVotedByViewer,
+  viewerLoggedIn,
+  viewerName,
+} from "./viewer-votes";
 import type { BridgeOptions } from "./types";
 
 const STYLE_ID = "vrcfb-roadmap-style";
@@ -110,6 +117,37 @@ function applyVotedTint(
   }
 }
 
+function clearVotedTint(button: HTMLElement): void {
+  button.classList.remove("highlight");
+  button.style.borderColor = "";
+  const background = button.querySelector<HTMLElement>(".background");
+  if (background) {
+    background.style.backgroundColor = "";
+  }
+  const chevron = button.querySelector<HTMLElement>(".chevron");
+  if (chevron) {
+    chevron.style.color = "";
+  }
+}
+
+function setVoteAppearance(
+  target: Window & typeof globalThis,
+  button: HTMLElement,
+  voted: boolean,
+  score: number,
+): void {
+  const scoreEl = button.querySelector(".score");
+  if (scoreEl) {
+    scoreEl.textContent = String(score);
+  }
+  button.setAttribute("aria-pressed", voted ? "true" : "false");
+  if (voted) {
+    applyVotedTint(target, button);
+  } else {
+    clearVotedTint(button);
+  }
+}
+
 function ensureStyles(target: Window & typeof globalThis): void {
   const doc = target.document;
   if (doc.getElementById(STYLE_ID)) {
@@ -160,6 +198,49 @@ function note(doc: Document, text: string): HTMLElement {
   return div;
 }
 
+function bindRoadmapVote(
+  target: Window & typeof globalThis,
+  button: HTMLButtonElement,
+  hit: Record<string, unknown>,
+): void {
+  const postId = postIdFromHit(hit);
+  const url = postUrl(hit);
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (!postId) {
+      return;
+    }
+    if (!viewerLoggedIn(target)) {
+      if (url) {
+        target.location.assign(url);
+      }
+      return;
+    }
+    if (button.disabled) {
+      return;
+    }
+    const voted = hitVotedByViewer(target, hit);
+    const next: 0 | 1 = voted ? 0 : 1;
+    const previousScore = hitDisplayScore(hit);
+    setVoteAppearance(target, button, next === 1, previousScore + (next === 1 ? 1 : -1));
+    button.disabled = true;
+    void submitCannyVote(target, postId, next, getNativeFetch(target))
+      .then((ok) => {
+        if (!ok) {
+          setVoteAppearance(target, button, voted, previousScore);
+        }
+      })
+      .catch((error) => {
+        console.warn("[vrcfb] roadmap vote failed", error);
+        setVoteAppearance(target, button, voted, previousScore);
+      })
+      .finally(() => {
+        button.disabled = false;
+      });
+  });
+}
+
 function renderItems(
   target: Window & typeof globalThis,
   posts: HTMLElement,
@@ -182,9 +263,12 @@ function renderItems(
     const votes = doc.createElement("button");
     votes.type = "button";
     votes.className = "postVotesV2";
-    const score = typeof hit.score === "number" ? hit.score : 0;
+    const voted = hitVotedByViewer(target, hit);
+    votes.setAttribute("aria-pressed", voted ? "true" : "false");
+    const score = hitDisplayScore(hit);
     votes.innerHTML = `<div class="background"></div>${CHEVRON_SVG}<span class="score">${score}</span>`;
     item.appendChild(votes);
+    bindRoadmapVote(target, votes, hit);
 
     const board = hit.board as { _id?: string; name?: string } | undefined;
 
@@ -192,8 +276,8 @@ function renderItems(
     // for real posts; we replicate exactly what its component does for the voted
     // state: add `highlight` (its CSS fades the .background) and inline the
     // company tint on the border, background, and chevron — leaving the score at
-    // its default colour. The voters list comes from the gateway hit.
-    if (hitVotedByViewer(target, hit)) {
+    // its default colour.
+    if (voted) {
       applyVotedTint(target, votes);
     }
 

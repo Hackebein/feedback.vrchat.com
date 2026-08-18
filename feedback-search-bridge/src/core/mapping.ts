@@ -14,6 +14,7 @@ import type {
   CannySearchResponse,
   GatewaySearchResponse,
 } from "./types";
+import { applyViewerVoteState } from "./viewer-votes";
 
 const SORT_TO_INDEX: Record<string, string> = {
   newest: INDEX_NAME,
@@ -173,11 +174,25 @@ function defaultCannyFields(): Record<string, unknown> {
   };
 }
 
+function ensureVoteSettings(post: Record<string, unknown>): void {
+  const settings = post.voteSettings;
+  if (!settings || typeof settings !== "object" || Array.isArray(settings)) {
+    post.voteSettings = { votesHidden: false };
+    return;
+  }
+  const record = settings as Record<string, unknown>;
+  if (typeof record.votesHidden !== "boolean") {
+    record.votesHidden = false;
+  }
+}
+
 export function normalizeGatewayHit(
   hit: Record<string, unknown>,
   viewerVotes?: Map<string, number>,
 ): Record<string, unknown> {
-  const post: Record<string, unknown> = { ...hit, ...defaultCannyFields() };
+  // Defaults first so Canny list payloads (private-board index) keep their own
+  // `viewerVote` / `etaPublic` instead of being reset to stubs.
+  const post: Record<string, unknown> = { ...defaultCannyFields(), ...hit };
 
   const id =
     readString(hit.objectID) ||
@@ -185,13 +200,9 @@ export function normalizeGatewayHit(
     readString(hit._id);
   if (id) {
     post._id = id;
-    // Restore the authenticated "you voted" state lost when replacing Canny's
-    // payload (the gateway index has no per-user vote data).
-    const vote = viewerVotes?.get(id);
-    if (typeof vote === "number") {
-      post.viewerVote = vote;
-    }
   }
+  applyViewerVoteState(post, viewerVotes);
+  ensureVoteSettings(post);
 
   delete post.objectID;
   delete post._index;
