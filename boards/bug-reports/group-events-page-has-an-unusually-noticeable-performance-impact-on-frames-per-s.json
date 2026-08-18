@@ -2,9 +2,9 @@
   "_id": "6a841c81503e46c04834eccf",
   "aiCategories": [
     "loc.main-menu",
-    "groups.calendar"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-18T08:51:05.528956Z",
+  "aiTaggedAt": "2026-08-18T14:37:37.803037Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -35,7 +35,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Scrolling or moving the mouse cursor in desktop mode in the Group Events page has an unusually noticeable performance impact on frames per second (FPS) that's not found elsewhere in the Main Menu.\n\nSteps to reproduce:\n\n1. Be a member in lots of VRChat groups with events? (I tested with membership in 137 groups.)\n\n2. (Optional?) Change into the default [Robot](https://vrchat.com/home/avatar/avtr_c38a1615-5bf5-42b4-84eb-a8b6c37cbd11) avatar by VRChat and launch into the [VRChat Home](https://vrchat.com/home/world/wrld_4432ea9b-729c-46e3-8eaf-846aa0a37fdd/info) world to reduce or eliminate performance impact/noise from user-generated content.\n\n3. Open Main Menu, navigate to Groups tab.\n\n4. Press `Right Shift + Tilde (~) + 2` to open the debug UI for an FPS counter.\n\n5. Try to move your cursor or drag the scroll bar around in Explore Groups page, this should be fine.\n\n6. Try to move your cursor or drag the scroll bar around in Group Activity page, this should be fine (most of the time).\n\n7. Try to move your cursor or drag the scroll bar around in Group Events page; you should see noticeable FPS drops compared to the previous two.\n\n8. (Optional) If you have a group with 60+ instances open in different worlds, try viewing that group's all instances too from Group Activity and scrolling/moving a mouse cursor there too; there should be no major noticeable performance difference.\n\n9. (Optional) Repeat in other UI places, such as friends, VRC+, Live Now, Worlds, Shop, etc. These should also be mostly fine on performance.\n\n10. Restart the client and try again the above again, the same thing should occur again.\n\nThis doesn't seem to be directly related to with the number of items listed/shown in general, but somehow an issue inherent to the Group Events page in general.\n\nAffects both VRChat 2026.2.3p3 `Build 1867` (Unity 2022.3.22f1) & VRChat 2026.3.1p1 `Build 1886` on Unity 6, so this isn't a recent UI performance regression. I've attached logs & videos from both.",
+  "details": "Scrolling or moving the mouse cursor in desktop mode in the Group Events page has an unusually noticeable performance impact on frames per second (FPS) that's not found elsewhere in the Main Menu.\n\nSteps to reproduce:\n\n1. Be a member in lots of VRChat groups with events? (I tested with membership in 137 groups.)\n\n2. (Optional?) Change into the default [Robot](https://vrchat.com/home/avatar/avtr_c38a1615-5bf5-42b4-84eb-a8b6c37cbd11) avatar by VRChat and launch into the [VRChat Home](https://vrchat.com/home/world/wrld_4432ea9b-729c-46e3-8eaf-846aa0a37fdd/info) world to reduce or eliminate performance impact/noise from user-generated content.\n\n3. Open Main Menu, navigate to Groups tab.\n\n4. Press `Right Shift + Tilde (~) + 2` (US keyboard layout) to open the debug UI for an FPS counter.\n\n5. Try to move your cursor or drag the scroll bar around in Explore Groups page, this should be fine.\n\n6. Try to move your cursor or drag the scroll bar around in Group Activity page, this should be fine (most of the time).\n\n7. Try to move your cursor or drag the scroll bar around in Group Events page; you should see noticeable FPS drops compared to the previous two.\n\n8. (Optional) If you have a group with 60+ instances open in different worlds, try viewing that group's all instances too from Group Activity and scrolling/moving a mouse cursor there too; there should be no major noticeable performance difference.\n\n9. (Optional) Repeat in other UI places, such as friends, VRC+, Live Now, Worlds, Shop, etc. These should also be mostly fine on performance.\n\n10. Restart the client and try again the above, the same experience should repeat.\n\nThis doesn't seem to be directly related to with the number of items listed/shown in general, but somehow an issue inherent to the Group Events page.\n\nAffects both VRChat 2026.2.3p3 `Build 1867` (Unity 2022.3.22f1) & VRChat 2026.3.1p1 `Build 1886` on Unity 6, so this isn't a recent UI performance regression. I've attached logs & videos from both.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -97,7 +97,7 @@
   "subCategoryID": null,
   "title": "Group Events page has an unusually noticeable performance impact on frames per second (FPS)",
   "trendingScore": 2956.161087547111,
-  "updatedBy": null,
+  "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "group-events-page-has-an-unusually-noticeable-performance-impact-on-frames-per-s",
   "viewerIsAuthor": false,
   "viewerVote": 0,
