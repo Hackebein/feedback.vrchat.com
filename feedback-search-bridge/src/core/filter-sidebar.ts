@@ -772,7 +772,14 @@ export function installFilterSidebar(
   });
 
   onFacets((facets: SearchFacets) => {
-    facetData = facets;
+    const boardName = facets.facets.board_name ?? facetData.facets.board_name;
+    facetData = {
+      stats: facets.stats,
+      facets: {
+        ...facets.facets,
+        ...(boardName ? { board_name: boardName } : {}),
+      },
+    };
     update?.();
   });
 

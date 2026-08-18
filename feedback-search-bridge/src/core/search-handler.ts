@@ -189,6 +189,37 @@ function extractFacets(gateway: GatewaySearchResponse): SearchFacets {
   };
 }
 
+/** Last unscoped `board_name` counts, held so the sidebar does not reshuffle
+ * while a board-filtered search's disjunctive follow-up is in flight. */
+let lastBoardNameFacet: Record<string, number> | undefined;
+
+function rememberBoardNameFacet(facets: SearchFacets): void {
+  const board = facets.facets.board_name;
+  if (board) {
+    lastBoardNameFacet = board;
+  }
+}
+
+function needsDisjunctiveBoardFacet(
+  body: CannySearchBody,
+  luceneMode: boolean,
+): boolean {
+  const boards = body.filters?.refinements?.board_name;
+  return !luceneMode && Array.isArray(boards) && boards.length > 0;
+}
+
+/** Paint previous (or omitted) board counts instead of the scoped collapse. */
+function withHeldBoardName(facets: SearchFacets): SearchFacets {
+  if (lastBoardNameFacet) {
+    return {
+      facets: { ...facets.facets, board_name: lastBoardNameFacet },
+      stats: facets.stats,
+    };
+  }
+  const { board_name: _ignored, ...rest } = facets.facets;
+  return { facets: rest, stats: facets.stats };
+}
+
 /** Clone of the body with the board filter dropped (for disjunctive counts). */
 function withoutBoardFilter(body: CannySearchBody): CannySearchBody {
   const filters = body.filters;
@@ -216,8 +247,7 @@ async function applyDisjunctiveBoardFacet(
   luceneMode: boolean,
   facets: SearchFacets,
 ): Promise<SearchFacets> {
-  const boards = body.filters?.refinements?.board_name;
-  if (luceneMode || !Array.isArray(boards) || boards.length === 0) {
+  if (!needsDisjunctiveBoardFacet(body, luceneMode)) {
     return facets;
   }
   try {
@@ -375,7 +405,13 @@ export async function handleCannySearch(
         ).board_name ?? {},
     };
   }
-  dispatchFacets(baseFacets);
+  const holdBoardName = needsDisjunctiveBoardFacet(body, current.luceneMode);
+  if (holdBoardName) {
+    dispatchFacets(withHeldBoardName(baseFacets));
+  } else {
+    dispatchFacets(baseFacets);
+    rememberBoardNameFacet(baseFacets);
+  }
   void applyDisjunctiveBoardFacet(
     options,
     body,
@@ -393,13 +429,15 @@ export async function handleCannySearch(
       { board_name: refined.facets.board_name ?? {} },
       { board_name: localBoard ?? {} },
     ).board_name;
-    dispatchFacets({
+    const next: SearchFacets = {
       facets: {
         ...baseFacets.facets,
         ...(board ? { board_name: board } : {}),
       },
       stats: baseFacets.stats,
-    });
+    };
+    rememberBoardNameFacet(next);
+    dispatchFacets(next);
   });
 
   return cannyResponse;
