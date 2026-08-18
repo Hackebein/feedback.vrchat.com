@@ -4,7 +4,7 @@
     "loc.in-world",
     "client.inventory"
   ],
-  "aiTaggedAt": "2026-08-18T19:11:32.194108Z",
+  "aiTaggedAt": "2026-08-18T19:23:50.056074Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a347c16363a2f2451087a63",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a84ac20ac8415e781c54d94",
@@ -117,6 +117,52 @@
       "value": "This isn't a new thing? It's been first reported since November 2025.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a84af4c1cf364ca48a3de1a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T19:15:24.721Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/a25aa055ffc349b258a74a125fb7fe49.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a849f645a11933c052c206e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This bug has only become disruptive since the introduction of VRC+ trampolines as a movement item.\n\nI don't think anyone anticipated a funny bug to spawn 20+ groan tubes would turn into something much more disruptive with movement items much later.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -134,20 +180,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": null,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a849f645a11933c052c206e/429178666.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-18T18:07:32.135Z",
   "subCategoryID": null,
   "title": "issue allowing client users to spawn 100+ items.",
-  "trendingScore": 2955.9209250994777,
+  "trendingScore": 2956.210268458884,
   "updatedBy": null,
   "urlName": "issue-allowing-client-users-to-spawn-100-items",
   "viewerIsAuthor": false,
@@ -159,6 +205,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a84af5f523ad161334697cc"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
