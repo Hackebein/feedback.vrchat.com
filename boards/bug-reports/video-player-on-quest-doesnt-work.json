@@ -1,12 +1,11 @@
 {
   "_id": "6a83b84c905c2d8586a7125f",
   "aiCategories": [
-    "loc.in-world",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-18T02:58:30.789917Z",
+  "aiTaggedAt": "2026-08-18T03:58:17.606998Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a83b84b523ad161333d8971",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a83c7d6913a752a0d58cdbd",
@@ -66,13 +65,71 @@
       "postDeleted": false,
       "postID": "6a83b84c905c2d8586a7125f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I'm assuming this is related to https://github.com/yt-dlp/yt-dlp/issues/17456 but I can't confirm since I can't open your logs. Can you please re-upload your logs?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a83d5bc3ba23d1f276a96c1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64db5fa7ab48431f25a4afe5",
+        "alias": "Viridian Sloth",
+        "aliasID": "65c2b1cbed6eefce4c8373a2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f96af3856a847a7c7f606a4fe050722f.png",
+        "created": "2023-08-15T11:21:11.110Z",
+        "name": "NotAChance",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T03:47:08.458Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5f2d710dc1c881463f153789",
+          "alias": "Remarkable Grasshopper",
+          "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/2a4662f03a54ef075accd7320d6c8e1b.png",
+          "created": "2020-08-07T15:19:41.359Z",
+          "name": "Fusl",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a83b84c905c2d8586a7125f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Done some testing and forwarded my debug logs to @{5f2d710dc1c881463f153789|full_name}, it looks like the 400/403 issue mentioned in the github issue.",
       "viewerReactions": null,
       "voteID": null
     }
