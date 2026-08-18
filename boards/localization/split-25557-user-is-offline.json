@@ -1,0 +1,94 @@
+{
+  "_id": "6a83edc3503e46c0482d1d30",
+  "aiCategories": [
+    "loc.main-menu",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-08-18T05:32:17.996738Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6163d2754d39c94e1e8f96dc",
+    "alias": "Main Giraffe",
+    "aliasID": "65c26de3ed6eefce4c583dee",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b42d9c85af04772f4892420754b87715.png",
+    "created": "2021-10-11T05:58:13.495Z",
+    "name": "nekochanfood",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6163d2754d39c94e1e8f96dc",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-18T05:29:39.010Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "As the title says. 25557 \"User is offline\" is defined as the reason text for world invitation/join failures and cannot be used in other contexts; it is used in the text when the user is offline on the user page. \n\nThis is a violation and please split it to protect scope and context. (please do not resolve it by changing the context)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a83edc2503e46c0482d1d28",
+  "imageURLs": [
+    "https://canny-assets.io/images/139df5583f8b5ddc7bf64daadc39db79.png",
+    "https://canny-assets.io/images/c0602c95101fc66d00381f276605e7fc.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-18T05:29:39.010Z",
+  "subCategoryID": null,
+  "title": "Split 25557 \"User is offline\"",
+  "trendingScore": 2955.4401361116115,
+  "updatedBy": "6163d2754d39c94e1e8f96dc",
+  "urlName": "split-25557-user-is-offline",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6163d2754d39c94e1e8f96dc",
+      "alias": "Main Giraffe",
+      "aliasID": "65c26de3ed6eefce4c583dee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b42d9c85af04772f4892420754b87715.png",
+      "companies": [],
+      "name": "nekochanfood",
+      "urlName": null,
+      "voteID": "6a83edc3523ad161333eb3b3"
+    }
+  ]
+}
