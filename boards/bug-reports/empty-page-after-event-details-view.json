@@ -1,11 +1,10 @@
 {
   "_id": "6a84cda48d3a273ebe904a8d",
   "aiCategories": [
-    "loc.quick-menu",
     "loc.main-menu",
-    "client.settings"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-08-18T21:28:25.430519Z",
+  "aiTaggedAt": "2026-08-18T22:21:01.931160Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -36,7 +35,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "`Unexpected PushPage EventDetailsPage before SwitchToRootPage calls after menu Canvas_MainMenu(Clone) was reopened. Please navigate to a root page first!`\n\n1. Receive an event notification.\n\n2. Launch VRChat.\n\n3. Open the Quick Menu. Click the \"View event\" button from notifications.\n\n4. Press the \"Go back\" button in top left (arrow), next to the \"Event Details\" page.\n\nExpected result: Return to a default location in the Main Menu or the group page for that event, to have the UI do something useful.\n\nActual result: Empty, blank page after pressing \"Go back\".\n\nAdditional info: Not reproducible in VRChat 2026.2.3p3 `Build 1867`, because the \"View event\" button is missing from that build (attached screenshot). (This is an undocumented change in 2026.3.1.)",
+  "details": "`Unexpected PushPage EventDetailsPage before SwitchToRootPage calls after menu Canvas_MainMenu(Clone) was reopened. Please navigate to a root page first!`\n\n1. Receive an event notification.\n\n2. Launch VRChat 2026.3.1 `Build 1885` or later.\n\n3. Open the Quick Menu. Click the \"View event\" button from notifications.\n\n4. Press the \"Go back\" button in top left (arrow), next to the \"Event Details\" page.\n\nExpected result: Return to a default location in the Main Menu or the group page for that event, to have the UI do something useful. Alternatively, don't show the \"Go back\" button if there's nothing to go back to.\n\nActual result: Empty, blank page after pressing \"Go back\".\n\nAdditional info: Not reproducible in VRChat 2026.2.3p3 `Build 1867`, because the \"View event\" button is missing from that build (attached screenshot). (This is an undocumented change in 2026.3.1.)",
   "error": null,
   "eta": null,
   "etaPublic": true,
