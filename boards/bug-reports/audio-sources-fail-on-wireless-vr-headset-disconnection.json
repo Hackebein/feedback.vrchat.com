@@ -2,10 +2,11 @@
   "_id": "6a8462a98d3a273ebe794af4",
   "aiCategories": [
     "loc.in-world",
+    "platforms.pc.steam",
     "worlds.video",
     "audio.voice"
   ],
-  "aiTaggedAt": "2026-08-18T13:55:29.250950Z",
+  "aiTaggedAt": "2026-08-18T14:11:30.448842Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e89d0822aedbc56a3155d12",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a8463565a11933c051ddfcf",
@@ -86,6 +87,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{5e89d0822aedbc56a3155d12|full_name} Is this exclusive to video players or are voices affected too?\n\nVideo players losing audio is not exclusive to wireless; it happens on a Valve Index too if the audio source becomes disconnected (due to a bad tether cable or other reasons), for example TTS Voice Wizard reports a lost audio recording device. Voices from users keep working.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a846663b7932154f337ce7e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "60e65f577ae9d0492b0f2a75",
+        "alias": "Just Wildcat",
+        "aliasID": "65c26de3ed6eefce4c583d87",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/94df1307e81751ac0e303e34ca8b4bc8.png",
+        "created": "2021-07-08T02:13:43.618Z",
+        "name": "Hackebein",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T14:04:19.384Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8462a98d3a273ebe794af4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I remember this issue from the early days of the wireless modul and exists in other games too. Newer VR HMDs have better driver handling for such. I doubt that this will get fixed anymore. I worked around it by using VB Matrix/Voicemeeter",
       "viewerReactions": null,
       "voteID": null
     }
