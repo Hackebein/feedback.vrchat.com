@@ -3,6 +3,7 @@ import {
   isCreatePagePath,
   isLocationCoveredPath,
   isPostDetailPath,
+  unionCoveredSlugs,
 } from "../src/core/coverage";
 
 assert.equal(isPostDetailPath("/feature-requests/p/some-post"), true);
@@ -29,5 +30,16 @@ assert.equal(isLocationCoveredPath("/bug-reports/create", indexed), false);
 assert.equal(isLocationCoveredPath("/feature-requests", null), true);
 assert.equal(isLocationCoveredPath("/feature-requests/create", null), false);
 assert.equal(isLocationCoveredPath("/feature-requests/p/some-post", null), false);
+
+const union = unionCoveredSlugs(
+  ["feature-requests", "bug-reports"],
+  ["internal", "avatar-marketplace-sellers"],
+);
+assert.equal(union.has("feature-requests"), true);
+assert.equal(union.has("internal"), true);
+assert.equal(isLocationCoveredPath("/internal", union), true);
+assert.equal(isLocationCoveredPath("/avatar-marketplace-sellers", union), true);
+assert.equal(isLocationCoveredPath("/internal/p/some-post", union), false);
+assert.equal(isLocationCoveredPath("/unknown-board", union), false);
 
 console.info("coverage tests passed");

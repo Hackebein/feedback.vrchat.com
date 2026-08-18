@@ -3,6 +3,18 @@ import { isCannySearchRequest } from "./mapping";
 import { handleCannySearch } from "./search-handler";
 import { isLocationCovered } from "./coverage";
 
+type FetchFn = typeof fetch;
+
+let nativeFetch: FetchFn | null = null;
+
+/** Unpatched `fetch`, for same-origin Canny calls the indexer must not intercept. */
+export function getNativeFetch(target: Window & typeof globalThis): FetchFn {
+  if (nativeFetch) {
+    return nativeFetch;
+  }
+  return target.fetch.bind(target);
+}
+
 function jsonResponse(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), {
     status,
@@ -24,7 +36,8 @@ function patchFetch(
   options: BridgeOptions,
   target: Window & typeof globalThis,
 ): void {
-  const originalFetch = target.fetch.bind(target);
+  nativeFetch = target.fetch.bind(target);
+  const originalFetch = nativeFetch;
   const patchedFetch = async (input: RequestInfo | URL, init?: RequestInit) => {
     const request = input instanceof Request ? input : new Request(input, init);
     const method = (init?.method ?? request.method).toUpperCase();

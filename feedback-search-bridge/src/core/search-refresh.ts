@@ -11,6 +11,7 @@ import {
   getCannyReduxStore,
   invalidateCannyPostQueries,
 } from "./canny-store";
+import { onRouteChange } from "./coverage";
 import { hasActiveFilters } from "./filter-state";
 import { handleCannySearch } from "./search-handler";
 import { stripSearchPostQueries } from "./ssr-hook";
@@ -22,6 +23,39 @@ let refreshGeneration = 0;
 let refreshInFlight = false;
 
 export { readActiveSearchQuery } from "./canny-query";
+
+/**
+ * True when the active text query went from non-empty to empty (sidebar and
+ * list must drop search-scoped facets / results).
+ */
+export function isSearchQueryCleared(previous: string, next: string): boolean {
+  return previous.trim().length > 0 && next.trim().length === 0;
+}
+
+export function installSearchQueryWatch(
+  target: Window & typeof globalThis,
+  onChange: (query: string, previous: string) => void,
+): () => void {
+  let last = readActiveSearchQuery(target);
+  const check = (): void => {
+    const query = readActiveSearchQuery(target);
+    if (query === last) {
+      return;
+    }
+    const previous = last;
+    last = query;
+    onChange(query, previous);
+  };
+
+  const onRoute = onRouteChange(target, check);
+  target.document.addEventListener("input", check, true);
+  target.document.addEventListener("change", check, true);
+  return () => {
+    onRoute();
+    target.document.removeEventListener("input", check, true);
+    target.document.removeEventListener("change", check, true);
+  };
+}
 
 export function stripCachedSearchQueries(
   target: Window & typeof globalThis,
@@ -61,7 +95,7 @@ export async function runSearchRefresh(
       if (queryParams) {
         try {
           const cannyBody = buildCannySearchBody(target, queryParams);
-          const cannyResponse = await handleCannySearch(options, cannyBody);
+          const cannyResponse = await handleCannySearch(options, cannyBody, target);
           applyCannySearchResults(store, queryParams, cannyResponse);
           return true;
         } catch (error) {
@@ -122,12 +156,16 @@ export function scheduleSearchRefresh(
 export async function primeFacets(
   options: BridgeOptions,
   target: Window & typeof globalThis,
+  overrides: { textSearch?: string } = {},
 ): Promise<void> {
   const store = getCannyReduxStore(target);
   const queryParams = buildPostQueryParams(target, store) ?? { textSearch: "" };
+  if (overrides.textSearch !== undefined) {
+    queryParams.textSearch = overrides.textSearch;
+  }
   try {
     const cannyBody = buildCannySearchBody(target, queryParams);
-    await handleCannySearch(options, cannyBody);
+    await handleCannySearch(options, cannyBody, target);
   } catch (error) {
     console.warn("[vrcfb] facet prime failed", error);
   }

@@ -48,7 +48,7 @@ function readSortIndex(body: CannySearchBody): string {
   return SORT_TO_INDEX[sort] ?? (hasSearch ? `${INDEX_NAME}_relevance_desc` : INDEX_NAME);
 }
 
-function readHitsPerPage(body: CannySearchBody): number {
+export function readHitsPerPage(body: CannySearchBody): number {
   const pages =
     typeof body.pages === "number" && Number.isFinite(body.pages)
       ? Math.trunc(body.pages)
@@ -56,7 +56,7 @@ function readHitsPerPage(body: CannySearchBody): number {
   return Math.min(Math.max(pages, 1) * 10, 500);
 }
 
-function readPageIndex(body: CannySearchBody): number {
+export function readPageIndex(body: CannySearchBody): number {
   const raw = body.page;
   if (typeof raw === "number" && Number.isFinite(raw) && raw >= 0) {
     return Math.trunc(raw);
@@ -118,12 +118,13 @@ function buildNumericFilters(body: CannySearchBody): string[] {
 export function mapCannyToGateway(
   body: CannySearchBody,
   luceneMode: boolean,
+  paging?: { hitsPerPage?: number; page?: number },
 ): { url: string; requestBody: unknown } {
   const query = readString(body.textSearch);
   const params: Record<string, unknown> = {
     query,
-    hitsPerPage: readHitsPerPage(body),
-    page: readPageIndex(body),
+    hitsPerPage: paging?.hitsPerPage ?? readHitsPerPage(body),
+    page: paging?.page ?? readPageIndex(body),
     facets: REQUESTED_FACETS,
     maxValuesPerFacet: 200,
   };

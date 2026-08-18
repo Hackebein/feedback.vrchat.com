@@ -181,4 +181,14 @@ assert.deepEqual(engagementParams.params.facetFilters, [
   ["vote_highEngagement:true"],
 ]);
 
+const pagedRequest = mapCannyToGateway(cannyBody, false, {
+  hitsPerPage: 40,
+  page: 0,
+});
+const pagedParams = (pagedRequest.requestBody as Array<{
+  params: Record<string, unknown>;
+}>)[0];
+assert.equal(pagedParams.params.hitsPerPage, 40);
+assert.equal(pagedParams.params.page, 0);
+
 console.info("mapping tests passed");

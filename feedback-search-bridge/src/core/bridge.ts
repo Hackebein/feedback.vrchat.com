@@ -22,7 +22,10 @@ import {
   setBridgeSettings,
 } from "./search-handler";
 import { installIndexWatch } from "./index-watch";
+import { startPrivateIndex } from "./private-index";
 import {
+  installSearchQueryWatch,
+  isSearchQueryCleared,
   primeFacets,
   readActiveSearchQuery,
   scheduleInitialSearchRefresh,
@@ -103,7 +106,11 @@ export function installBridge(
   applyActiveClass(target);
   onRouteChange(target, () => applyActiveClass(target));
   onCoverageChange(() => applyActiveClass(target));
-  void loadCoverage(options);
+  void loadCoverage(options).then(() => {
+    startPrivateIndex(target, () => {
+      void runSearchRefresh(options, target);
+    });
+  });
 
   const triggerRefresh = (): void => {
     void runSearchRefresh(options, target);
@@ -119,6 +126,16 @@ export function installBridge(
     if (preselectCurrentBoard(target)) {
       triggerRefresh();
     }
+  });
+
+  installSearchQueryWatch(target, (query, previous) => {
+    if (!isSearchQueryCleared(previous, query)) {
+      return;
+    }
+    // Clearing search often restores Canny's cached board list with no new
+    // /api/posts/get, so intercept never refreshes sidebar facet counts.
+    void primeFacets(options, target, { textSearch: "" });
+    triggerRefresh();
   });
 
   installFilterSidebar(target, triggerRefresh, () => {

@@ -11,6 +11,11 @@ import { LUCENE_HELP_INTRO, LUCENE_HELP_ROWS, SORT_HELP } from "./lucene-help";
 import { readActiveSearchQuery } from "./search-refresh";
 import type { BridgeSettings, BridgeStorage } from "./types";
 import { writeBridgeSettings } from "./state";
+import {
+  getPrivateIndexStatus,
+  onPrivateIndexStatus,
+  type PrivateIndexStatus,
+} from "./private-index";
 
 const STYLE_ID = "vrcfb-control-style";
 const CONTROL_ID = "vrcfb-control-root";
@@ -73,6 +78,16 @@ html.${LUCENE_CLASS} #${CONTROL_ID} .vrcfb-control-sort {
 #${CONTROL_ID} .vrcfb-help-btn[aria-expanded="true"] {
   color: #2563eb;
   border-color: rgba(37, 99, 235, 0.35);
+}
+#${CONTROL_ID} .vrcfb-private-status {
+  opacity: 0.75;
+  white-space: nowrap;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#${CONTROL_ID} .vrcfb-private-status[hidden] {
+  display: none;
 }
 #${HELP_ID} {
   position: fixed;
@@ -276,6 +291,31 @@ function createControlRoot(
   });
 
   root.append(luceneLabel, sortLabel, helpBtn);
+
+  const privateStatus = document.createElement("span");
+  privateStatus.className = "vrcfb-private-status";
+  privateStatus.hidden = true;
+  const renderPrivateStatus = (currentStatus: PrivateIndexStatus): void => {
+    let label = "";
+    if (currentStatus.phase === "listing") {
+      label =
+        currentStatus.postCount > 0
+          ? `Indexing… ${currentStatus.postCount}`
+          : "Indexing…";
+    } else if (currentStatus.phase === "comments") {
+      label = `Comments ${currentStatus.commentDone}/${currentStatus.commentTotal}`;
+    } else if (currentStatus.postCount > 0) {
+      label = `${currentStatus.postCount} private`;
+    }
+    privateStatus.textContent = label;
+    privateStatus.hidden = !label;
+    privateStatus.title = label
+      ? "Local index of private boards this account can see"
+      : "";
+  };
+  renderPrivateStatus(getPrivateIndexStatus());
+  onPrivateIndexStatus(renderPrivateStatus);
+  root.append(privateStatus);
 
   document.addEventListener("vrcfb-settings-changed", ((event: CustomEvent<BridgeSettings>) => {
     current = event.detail;

@@ -3,7 +3,49 @@ import type { BridgeOptions } from "./types";
 
 export const ACTIVE_CLASS = "vrcfb-active";
 
+let gatewaySlugs: Set<string> | null = null;
+let privateSlugs = new Set<string>();
 let coveredSlugs: Set<string> | null = null;
+
+export function unionCoveredSlugs(
+  gateway: Iterable<string>,
+  extra: Iterable<string>,
+): Set<string> {
+  return new Set([...gateway, ...extra]);
+}
+
+function rebuildCoveredSlugs(): void {
+  if (!gatewaySlugs) {
+    coveredSlugs = null;
+    return;
+  }
+  coveredSlugs = unionCoveredSlugs(gatewaySlugs, privateSlugs);
+}
+
+/** Board slugs the public gateway indexes. Null until coverage has loaded. */
+export function getGatewayCoveredSlugs(): ReadonlySet<string> | null {
+  return gatewaySlugs;
+}
+
+/**
+ * Extra slugs (private boards) the local index will serve. Unioned into
+ * coverage so those board pages activate the bridge.
+ */
+export function setPrivateCoveredSlugs(slugs: Iterable<string>): void {
+  const next = new Set<string>();
+  for (const slug of slugs) {
+    const trimmed = slug.trim();
+    if (trimmed) {
+      next.add(trimmed);
+    }
+  }
+  privateSlugs = next;
+  const hadGateway = gatewaySlugs !== null;
+  rebuildCoveredSlugs();
+  if (hadGateway) {
+    notifyCoverage();
+  }
+}
 
 const coverageListeners = new Set<() => void>();
 const routeListeners = new Set<() => void>();
@@ -61,7 +103,8 @@ export async function loadCoverage(options: BridgeOptions): Promise<void> {
     };
     const facet = data.results?.[0]?.facets?.board_slug;
     if (facet && typeof facet === "object") {
-      coveredSlugs = new Set(Object.keys(facet));
+      gatewaySlugs = new Set(Object.keys(facet));
+      rebuildCoveredSlugs();
       notifyCoverage();
     }
   } catch (error) {

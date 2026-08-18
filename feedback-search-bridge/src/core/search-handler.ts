@@ -1,7 +1,23 @@
 import { STORAGE_KEYS } from "./config";
 import { getFilterState } from "./filter-state";
-import { buildViewerVoteMap } from "./viewer-votes";
-import { mapCannyToGateway, mapGatewayToCanny } from "./mapping";
+import { buildViewerVoteMap, viewerId } from "./viewer-votes";
+import {
+  mapCannyToGateway,
+  mapGatewayToCanny,
+  normalizeGatewayHit,
+  readHitsPerPage,
+  readPageIndex,
+} from "./mapping";
+import {
+  facetsFromPosts,
+  filterPrivatePosts,
+  mergeFacetCounts,
+  mergeSearchFacets,
+  mergeSearchHits,
+  paginateMergedHits,
+  readSortKey,
+} from "./private-search";
+import { getAllPrivatePosts, type StoredPrivatePost } from "./private-store";
 import type {
   BridgeOptions,
   BridgeSettings,
@@ -43,8 +59,9 @@ async function performGatewaySearch(
   transport: BridgeOptions["transport"],
   cannyBody: CannySearchBody,
   luceneMode: boolean,
+  paging?: { hitsPerPage?: number; page?: number },
 ): Promise<GatewaySearchResponse> {
-  const { url, requestBody } = mapCannyToGateway(cannyBody, luceneMode);
+  const { url, requestBody } = mapCannyToGateway(cannyBody, luceneMode, paging);
   const response = await transport({
     url,
     method: "POST",
@@ -199,22 +216,116 @@ async function applyDisjunctiveBoardFacet(
   return facets;
 }
 
+let searchEpoch = 0;
+
+function emptyGateway(): GatewaySearchResponse {
+  return { results: [{ hits: [], facets: {}, page: 0, nbPages: 0, nbHits: 0 }] };
+}
+
+async function loadLocalPosts(
+  body: CannySearchBody,
+  luceneMode: boolean,
+  target?: Window & typeof globalThis,
+): Promise<{
+  matches: StoredPrivatePost[];
+  boardMatches: StoredPrivatePost[];
+}> {
+  if (!target) {
+    return { matches: [], boardMatches: [] };
+  }
+  const id = viewerId(target);
+  const all = await getAllPrivatePosts(id, target);
+  if (all.length === 0) {
+    return { matches: [], boardMatches: [] };
+  }
+  const matches = filterPrivatePosts(all, body, { luceneMode });
+  const boardMatches = luceneMode
+    ? matches
+    : filterPrivatePosts(all, body, { luceneMode, ignoreBoard: true });
+  return { matches, boardMatches };
+}
+
 export async function handleCannySearch(
   options: BridgeOptions,
   cannyBody: CannySearchBody,
   target?: Window & typeof globalThis,
 ): Promise<CannySearchResponse> {
+  const epoch = ++searchEpoch;
   const current = await ensureSettings(options.storage);
   const body: CannySearchBody = { ...cannyBody, filters: getFilterState() };
-  const gatewayResponse = await performGatewaySearch(
-    options.transport,
-    body,
-    current.luceneMode,
-  );
+  const local = await loadLocalPosts(body, current.luceneMode, target);
+  const pageSize = readHitsPerPage(body);
+  const page = readPageIndex(body);
+  const paging =
+    local.matches.length > 0
+      ? {
+          page: 0,
+          hitsPerPage: Math.min(500, Math.max(pageSize, (page + 1) * pageSize)),
+        }
+      : undefined;
+
+  let gatewayResponse: GatewaySearchResponse;
+  try {
+    gatewayResponse = await performGatewaySearch(
+      options.transport,
+      body,
+      current.luceneMode,
+      paging,
+    );
+  } catch (error) {
+    if (local.matches.length === 0) {
+      throw error;
+    }
+    console.warn("[vrcfb] gateway search failed; using private-board index", error);
+    gatewayResponse = emptyGateway();
+  }
+
+  const gatewayHits = Array.isArray(gatewayResponse.results?.[0]?.hits)
+    ? (gatewayResponse.results[0].hits as Record<string, unknown>[])
+    : [];
+  const voteSource = [
+    ...gatewayHits,
+    ...local.matches.map((post) => post.payload),
+  ];
   const viewerVotes = target
-    ? buildViewerVoteMap(target, gatewayResponse.results?.[0]?.hits)
+    ? buildViewerVoteMap(target, voteSource)
     : new Map<string, number>();
-  const cannyResponse = mapGatewayToCanny(gatewayResponse, viewerVotes);
+
+  let cannyResponse: CannySearchResponse;
+  if (local.matches.length === 0) {
+    cannyResponse = mapGatewayToCanny(gatewayResponse, viewerVotes);
+  } else {
+    const normalizedGateway = gatewayHits.map((hit) =>
+      normalizeGatewayHit(
+        hit && typeof hit === "object" && !Array.isArray(hit) ? hit : {},
+        viewerVotes,
+      ),
+    );
+    const normalizedLocal = local.matches.map((post) => ({
+      ...post,
+      payload: normalizeGatewayHit(post.payload, viewerVotes),
+    }));
+    const merged = mergeSearchHits(
+      normalizedGateway,
+      normalizedLocal,
+      readSortKey(body),
+      typeof body.textSearch === "string" ? body.textSearch : "",
+    );
+    const paged = paginateMergedHits(merged, page, pageSize);
+    cannyResponse = {
+      result: {
+        posts: paged.posts,
+        hasNextPage: paged.hasNextPage,
+      },
+    };
+  }
+
+  // A newer list/facet request (e.g. the user cleared search) owns the sidebar.
+  // Still return this payload so Canny's in-flight intercept is not left hanging.
+  if (epoch !== searchEpoch) {
+    return cannyResponse;
+  }
+
   const context: SearchContext = {
     cannyBody: body,
     gatewayResponse,
@@ -222,17 +333,46 @@ export async function handleCannySearch(
   };
   dispatchSearchContext(context);
 
-  // Dispatch the scoped facets right away so the list isn't blocked, then refine
-  // the board counts disjunctively in the background when boards are selected.
-  const baseFacets = extractFacets(gatewayResponse);
+  const gatewayFacets = extractFacets(gatewayResponse);
+  const localFacets = facetsFromPosts(local.matches);
+  const localBoardFacets = facetsFromPosts(local.boardMatches);
+  const baseFacets = mergeSearchFacets(gatewayFacets, localFacets);
+  if (localBoardFacets.facets.board_name) {
+    baseFacets.facets = {
+      ...baseFacets.facets,
+      board_name:
+        mergeFacetCounts(
+          { board_name: gatewayFacets.facets.board_name ?? {} },
+          { board_name: localBoardFacets.facets.board_name },
+        ).board_name ?? {},
+    };
+  }
   dispatchFacets(baseFacets);
-  void applyDisjunctiveBoardFacet(options, body, current.luceneMode, baseFacets).then(
-    (refined) => {
-      if (refined !== baseFacets) {
-        dispatchFacets(refined);
-      }
-    },
-  );
+  void applyDisjunctiveBoardFacet(
+    options,
+    body,
+    current.luceneMode,
+    gatewayFacets,
+  ).then((refined) => {
+    if (epoch !== searchEpoch) {
+      return;
+    }
+    const localBoard = localBoardFacets.facets.board_name;
+    if (!localBoard && refined === gatewayFacets) {
+      return;
+    }
+    const board = mergeFacetCounts(
+      { board_name: refined.facets.board_name ?? {} },
+      { board_name: localBoard ?? {} },
+    ).board_name;
+    dispatchFacets({
+      facets: {
+        ...baseFacets.facets,
+        ...(board ? { board_name: board } : {}),
+      },
+      stats: baseFacets.stats,
+    });
+  });
 
   return cannyResponse;
 }

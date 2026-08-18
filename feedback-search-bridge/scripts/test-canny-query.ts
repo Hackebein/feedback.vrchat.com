@@ -6,6 +6,7 @@ import {
 } from "../src/core/canny-query";
 import { findLiveSearchQueryParams } from "../src/core/canny-store";
 import { DEFAULT_SORT, setSort } from "../src/core/filter-state";
+import { isSearchQueryCleared } from "../src/core/search-refresh";
 
 assert.equal(cannyListSortKey("avatar", "score_desc"), CANNY_SEARCH_SORT);
 assert.equal(cannyListSortKey("avatar", "newest"), CANNY_SEARCH_SORT);
@@ -114,5 +115,11 @@ const otherSortStore = {
   }),
 };
 assert.deepEqual(findLiveSearchQueryParams(otherSortStore, "avatar"), rebuiltKey);
+
+assert.equal(isSearchQueryCleared("avatar", ""), true);
+assert.equal(isSearchQueryCleared("avatar", "  "), true);
+assert.equal(isSearchQueryCleared("avatar", "avatars"), false);
+assert.equal(isSearchQueryCleared("", ""), false);
+assert.equal(isSearchQueryCleared("", "avatar"), false);
 
 console.info("canny-query tests passed");
