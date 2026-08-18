@@ -7,6 +7,7 @@ import {
 } from "./canny-query";
 import {
   applyCannySearchResults,
+  findLiveSearchQueryParams,
   getCannyReduxStore,
   invalidateCannyPostQueries,
 } from "./canny-store";
@@ -54,7 +55,9 @@ export async function runSearchRefresh(
     // With an active text query we can inject results directly into the post
     // query Canny keys by, avoiding a flash of native results.
     if (query && store) {
-      const queryParams = buildPostQueryParams(target, store);
+      const queryParams =
+        findLiveSearchQueryParams(store, query) ??
+        buildPostQueryParams(target, store);
       if (queryParams) {
         try {
           const cannyBody = buildCannySearchBody(target, queryParams);

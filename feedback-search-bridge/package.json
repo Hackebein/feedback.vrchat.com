@@ -1,11 +1,11 @@
 {
   "name": "feedback-search-bridge",
   "private": true,
-  "version": "1.0.8",
+  "version": "1.0.9",
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "test": "tsx scripts/test-mapping.ts && tsx scripts/test-coverage.ts && tsx scripts/test-board-hierarchy.ts && tsx scripts/test-integration.ts",
+    "test": "tsx scripts/test-mapping.ts && tsx scripts/test-coverage.ts && tsx scripts/test-board-hierarchy.ts && tsx scripts/test-canny-query.ts && tsx scripts/test-integration.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

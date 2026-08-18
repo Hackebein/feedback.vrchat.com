@@ -96,6 +96,68 @@ export function invalidateCannyPostQueries(
   return true;
 }
 
+function parsePostQueryKey(key: string): Record<string, unknown> | null {
+  try {
+    const parsed = JSON.parse(key) as unknown;
+    if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+      return parsed as Record<string, unknown>;
+    }
+  } catch {
+    // Canny keys are JSON.stringify(queryParams); ignore anything else.
+  }
+  return null;
+}
+
+function readPostQueryMap(postQueries: unknown): Record<string, unknown> | null {
+  if (!postQueries || typeof postQueries !== "object" || Array.isArray(postQueries)) {
+    return null;
+  }
+  const record = postQueries as Record<string, unknown>;
+  const items = record.items;
+  if (items && typeof items === "object" && !Array.isArray(items)) {
+    return items as Record<string, unknown>;
+  }
+  return record;
+}
+
+/**
+ * Canny's list is bound to the postQueries entry created by its own search
+ * request (typically `sort: "relevance"`). Reuse that exact key so a sidebar
+ * sort/filter refresh updates the visible list instead of writing a miss.
+ */
+export function findLiveSearchQueryParams(
+  store: ReduxStore | null,
+  textSearch: string,
+): Record<string, unknown> | null {
+  const needle = textSearch.trim();
+  if (!store || !needle) {
+    return null;
+  }
+
+  const map = readPostQueryMap(store.getState().postQueries);
+  if (!map) {
+    return null;
+  }
+
+  let fallback: Record<string, unknown> | null = null;
+  for (const key of Object.keys(map)) {
+    const parsed = parsePostQueryKey(key);
+    if (!parsed) {
+      continue;
+    }
+    const keySearch =
+      typeof parsed.textSearch === "string" ? parsed.textSearch.trim() : "";
+    if (keySearch !== needle) {
+      continue;
+    }
+    if (parsed.sort === "relevance") {
+      return parsed;
+    }
+    fallback = parsed;
+  }
+  return fallback;
+}
+
 export function applyCannySearchResults(
   store: ReduxStore,
   queryParams: Record<string, unknown>,

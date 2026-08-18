@@ -1,14 +1,18 @@
 import * as esbuild from "esbuild";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "dist");
+const { version } = JSON.parse(
+  readFileSync(join(__dirname, "package.json"), "utf8"),
+);
 
 const userscriptBanner = `// ==UserScript==
 // @name         VRChat Feedback: gateway search
 // @namespace    https://github.com/hackebein/feedback.vrchat.com
-// @version      1.0.8
+// @version      ${version}
 // @description  Replace feedback.vrchat.com search with vrchat-canny.hackebein.dev OpenSearch gateway
 // @author       feedback.vrchat.com
 // @homepageURL  https://github.com/hackebein/feedback.vrchat.com
@@ -37,4 +41,5 @@ await esbuild.build({
 });
 
 console.info("Built feedback-search-bridge:");
+console.info(`  version ${version}`);
 console.info(`  ${join(dist, "feedback.vrchat.com.user.js")}`);

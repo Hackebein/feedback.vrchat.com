@@ -38,6 +38,24 @@ type ReduxStore = {
   getState: () => Record<string, unknown>;
 };
 
+/** Sort string Canny uses as the postQueries key while a text search is active. */
+export const CANNY_SEARCH_SORT = "relevance";
+
+/**
+ * Redux postQueries key sort: Canny's search list is always keyed by
+ * `relevance`, while board browsing uses the sidebar/URL sort.
+ */
+export function cannyListSortKey(
+  textSearch: string,
+  sidebarSort: string,
+  urlSort = "",
+): string {
+  if (textSearch.trim()) {
+    return CANNY_SEARCH_SORT;
+  }
+  return sidebarSort.trim() || urlSort.trim();
+}
+
 export function readActiveSearchQuery(
   target: Window & typeof globalThis,
 ): string {
@@ -95,7 +113,11 @@ export function buildPostQueryParams(
     params.currentBoard = board;
   }
 
-  const sort = getSort() || url.searchParams.get("sort") || "";
+  const sort = cannyListSortKey(
+    textSearch,
+    getSort(),
+    url.searchParams.get("sort") ?? "",
+  );
   if (sort) {
     params.sort = sort;
   }
