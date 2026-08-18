@@ -87,7 +87,7 @@ assert.deepEqual(filteredParams.params.facetFilters, [
   ["vote_highEngagement:true"],
 ]);
 assert.deepEqual(filteredParams.params.numericFilters, [
-  "score>=5",
+  "score>=4",
   "post_created<=1700000000000",
 ]);
 
@@ -132,6 +132,14 @@ const mappedVotes = normalizeGatewayHit(
 );
 assert.equal(mappedVotes.viewerVote, 1);
 assert.equal(mappedVotes._id, "from-map");
+assert.equal(mappedVotes.score, 5);
+
+const privateScore = normalizeGatewayHit(
+  { objectID: "local", score: 4 },
+  undefined,
+  { restoreScraperVote: false },
+);
+assert.equal(privateScore.score, 4);
 
 const mapped = mapGatewayToCanny({
   results: [

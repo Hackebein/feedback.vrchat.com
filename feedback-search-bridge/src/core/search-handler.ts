@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from "./config";
+import { STORAGE_KEYS, cannyScoreFromIndex } from "./config";
 import { getFilterState } from "./filter-state";
 import {
   buildViewerVoteMap,
@@ -31,6 +31,7 @@ import type {
   GatewaySearchResponse,
   SearchContext,
   SearchFacets,
+  FacetStats,
 } from "./types";
 
 let settings: BridgeSettings = {
@@ -162,11 +163,29 @@ function dispatchFacets(facets: SearchFacets): void {
   }
 }
 
+function restoreScoreStats(stats: FacetStats): FacetStats {
+  const score = stats.score;
+  if (!score) {
+    return stats;
+  }
+  const next = { ...score };
+  if (typeof next.min === "number" && Number.isFinite(next.min)) {
+    next.min = cannyScoreFromIndex(next.min);
+  }
+  if (typeof next.max === "number" && Number.isFinite(next.max)) {
+    next.max = cannyScoreFromIndex(next.max);
+  }
+  if (typeof next.avg === "number" && Number.isFinite(next.avg)) {
+    next.avg = cannyScoreFromIndex(next.avg);
+  }
+  return { ...stats, score: next };
+}
+
 function extractFacets(gateway: GatewaySearchResponse): SearchFacets {
   const bucket = gateway.results?.[0];
   return {
     facets: bucket?.facets ?? {},
-    stats: bucket?.facets_stats ?? {},
+    stats: restoreScoreStats(bucket?.facets_stats ?? {}),
   };
 }
 
@@ -310,7 +329,9 @@ export async function handleCannySearch(
     );
     const normalizedLocal = local.matches.map((post) => ({
       ...post,
-      payload: normalizeGatewayHit(post.payload, viewerVotes),
+      payload: normalizeGatewayHit(post.payload, viewerVotes, {
+        restoreScraperVote: false,
+      }),
     }));
     const merged = mergeSearchHits(
       normalizedGateway,

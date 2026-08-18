@@ -24,12 +24,12 @@ const hit = {
 };
 
 assert.equal(hitVotedByViewer(viewer, hit), false);
-assert.equal(hitDisplayScore(hit), 10);
+assert.equal(hitDisplayScore(hit), 11);
 
 recordViewerVote("post-1", 1);
 assert.equal(hitVotedByViewer(viewer, hit), true);
 assert.equal(viewerScoreDelta("post-1"), 1);
-assert.equal(hitDisplayScore(hit), 11);
+assert.equal(hitDisplayScore(hit), 12);
 
 const mapped = buildViewerVoteMap(viewer, [hit]);
 assert.equal(mapped.get("post-1"), 1);
@@ -41,7 +41,7 @@ assert.equal(post.score, 11);
 
 recordViewerVote("post-1", 0);
 assert.equal(hitVotedByViewer(viewer, hit), false);
-assert.equal(hitDisplayScore(hit), 10);
+assert.equal(hitDisplayScore(hit), 11);
 assert.equal(buildViewerVoteMap(viewer, [hit]).has("post-1"), false);
 
 resetVoteOverlay();
@@ -58,7 +58,7 @@ assert.equal(inferred.get("post-2"), 1);
 
 recordViewerVote("post-2", 0);
 assert.equal(hitVotedByViewer(viewer, alreadyVoted), false);
-assert.equal(hitDisplayScore(alreadyVoted), 4);
+assert.equal(hitDisplayScore(alreadyVoted), 5);
 const unvoted = { ...alreadyVoted };
 applyViewerVoteState(unvoted, buildViewerVoteMap(viewer, [alreadyVoted]));
 assert.equal(unvoted.viewerVote, 0);

@@ -1590,11 +1590,12 @@ function AiCategoryRefinement() {
 function readHitVoteCount(hit: Record<string, unknown>): number | undefined {
   const raw = hit.score;
   if (typeof raw === "number" && Number.isFinite(raw)) {
-    return Math.trunc(raw);
+    // Index omits the scrape bot from voters and decrements score by 1.
+    return Math.trunc(raw) + 1;
   }
   if (typeof raw === "string" && raw.trim()) {
     const n = Number(raw);
-    if (Number.isFinite(n)) return Math.trunc(n);
+    if (Number.isFinite(n)) return Math.trunc(n) + 1;
   }
   return undefined;
 }

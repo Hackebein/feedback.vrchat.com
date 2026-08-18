@@ -2,7 +2,10 @@ import {
   GATEWAY_ORIGIN,
   INDEX_NAME,
   SEARCH_API_PATH,
+  cannyScoreFromIndex,
+  indexScoreFromCanny,
 } from "./config";
+import { applyViewerVoteState } from "./viewer-votes";
 import {
   RANGE_ATTRS,
   REFINEMENT_ATTRS,
@@ -14,7 +17,6 @@ import type {
   CannySearchResponse,
   GatewaySearchResponse,
 } from "./types";
-import { applyViewerVoteState } from "./viewer-votes";
 
 const SORT_TO_INDEX: Record<string, string> = {
   newest: INDEX_NAME,
@@ -107,10 +109,12 @@ function buildNumericFilters(body: CannySearchBody): string[] {
       continue;
     }
     if (typeof range.min === "number" && Number.isFinite(range.min)) {
-      filters.push(`${attr}>=${range.min}`);
+      const min = attr === "score" ? indexScoreFromCanny(range.min) : range.min;
+      filters.push(`${attr}>=${min}`);
     }
     if (typeof range.max === "number" && Number.isFinite(range.max)) {
-      filters.push(`${attr}<=${range.max}`);
+      const max = attr === "score" ? indexScoreFromCanny(range.max) : range.max;
+      filters.push(`${attr}<=${max}`);
     }
   }
   return filters;
@@ -174,6 +178,12 @@ function defaultCannyFields(): Record<string, unknown> {
   };
 }
 
+function restoreScraperVoteCount(post: Record<string, unknown>): void {
+  if (typeof post.score === "number" && Number.isFinite(post.score)) {
+    post.score = cannyScoreFromIndex(post.score);
+  }
+}
+
 function ensureVoteSettings(post: Record<string, unknown>): void {
   const settings = post.voteSettings;
   if (!settings || typeof settings !== "object" || Array.isArray(settings)) {
@@ -189,6 +199,7 @@ function ensureVoteSettings(post: Record<string, unknown>): void {
 export function normalizeGatewayHit(
   hit: Record<string, unknown>,
   viewerVotes?: Map<string, number>,
+  options?: { restoreScraperVote?: boolean },
 ): Record<string, unknown> {
   // Defaults first so Canny list payloads (private-board index) keep their own
   // `viewerVote` / `etaPublic` instead of being reset to stubs.
@@ -202,6 +213,9 @@ export function normalizeGatewayHit(
     post._id = id;
   }
   applyViewerVoteState(post, viewerVotes);
+  if (options?.restoreScraperVote !== false) {
+    restoreScraperVoteCount(post);
+  }
   ensureVoteSettings(post);
 
   delete post.objectID;

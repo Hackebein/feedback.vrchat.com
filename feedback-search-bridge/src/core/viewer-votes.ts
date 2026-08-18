@@ -15,7 +15,7 @@
  * applied on every mapped hit until the index agrees.
  */
 
-import { STORAGE_KEYS } from "./config";
+import { STORAGE_KEYS, cannyScoreFromIndex } from "./config";
 import type { BridgeStorage } from "./types";
 
 type VoteOverlay = { vote: number; delta: number };
@@ -182,7 +182,7 @@ export function hitVotedByViewer(
 export function hitDisplayScore(hit: Record<string, unknown>): number {
   const score = typeof hit.score === "number" && Number.isFinite(hit.score) ? hit.score : 0;
   const postId = idOf(hit);
-  return score + (postId ? viewerScoreDelta(postId) : 0);
+  return cannyScoreFromIndex(score) + (postId ? viewerScoreDelta(postId) : 0);
 }
 
 /**
