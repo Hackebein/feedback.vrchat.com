@@ -2,9 +2,10 @@
   "_id": "6a8397d3ef4f0850fc115831",
   "aiCategories": [
     "loc.mobile-app",
-    "platforms.mobile.android"
+    "platforms.mobile.android",
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-08-17T23:25:47.327306Z",
+  "aiTaggedAt": "2026-08-18T07:42:55.091643Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a8392a3523ad161333cc54c",
@@ -34,8 +35,53 @@
     "urlName": "bug-report"
   },
   "categoryID": "649b325d67df6d7addaccd2f",
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a840b189f798f04d8a9bfc2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "6466ab9cd0071b0936f27dcd",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T07:34:48.427Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8397d3ef4f0850fc115831",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Duplicate of: https://feedback.vrchat.com/bug-reports/p/tutorial-wont-disappear",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-17T23:22:59.644Z",
   "deleteID": null,
