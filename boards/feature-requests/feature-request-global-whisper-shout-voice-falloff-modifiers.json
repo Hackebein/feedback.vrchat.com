@@ -2,10 +2,9 @@
   "_id": "6a723bc15495b04db5981f82",
   "aiCategories": [
     "loc.in-world",
-    "audio.voice",
-    "client.controls"
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-08-18T01:41:36.795560Z",
+  "aiTaggedAt": "2026-08-18T15:53:35.015272Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ba7e0881a53843243b76790",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a83b7733add00566e0cf8c3",
@@ -72,6 +71,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "ARMA type feature\n\nI dig\n\nI would make it bound to the Mute button so you can hold to mute (like opening wheel menu) and tap to cycle though talk shout and wisper",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a847e97966214f69ba676b2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ba7e0881a53843243b76790",
+        "alias": "Sunglow Shark",
+        "aliasID": "65c2a2c2ed6eefce4c7bc15b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/09ac41ff694b0cb96a62db67358fbfa1.png",
+        "created": "2018-09-23T18:50:48.627Z",
+        "name": "Entorix",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T15:47:35.891Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df06d982494544a256cd1b",
+          "alias": "Powerful Narwhal",
+          "aliasID": "65c26e00ed6eefce4c5d3075",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c92d0581cb85182038141ad0ac5046ff.png",
+          "created": "2022-07-25T21:10:49.978Z",
+          "name": "Camera-Guy",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a83b7733add00566e0cf8c3",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a723bc15495b04db5981f82",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df06d982494544a256cd1b|full_name} This could be a good option too! I just like the more immersive method because (to me at least) it feels like something that feels very natural and intuitive! Though a setting that can enable and disable it, or set it to an input (configurable in steamvr input settings) would be great too! (also for desktop users who don't have hands, etc)",
       "viewerReactions": null,
       "voteID": null
     }
