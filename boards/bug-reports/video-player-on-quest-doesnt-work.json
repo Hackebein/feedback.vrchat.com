@@ -1,11 +1,12 @@
 {
   "_id": "6a83b84c905c2d8586a7125f",
   "aiCategories": [
+    "loc.in-world",
     "loc.standalone-vr",
-    "platforms.standalone-vr.quest",
-    "worlds.video"
+    "worlds.video",
+    "platforms.standalone-vr.quest"
   ],
-  "aiTaggedAt": "2026-08-18T03:58:17.606998Z",
+  "aiTaggedAt": "2026-08-18T06:34:45.324377Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a83b84b523ad161333d8971",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a83c7d6913a752a0d58cdbd",
@@ -66,7 +67,7 @@
       "postID": "6a83b84c905c2d8586a7125f",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -130,6 +131,108 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Done some testing and forwarded my debug logs to @{5f2d710dc1c881463f153789|full_name}, it looks like the 400/403 issue mentioned in the github issue.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a83fb140c7397b38ffc83ce",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T06:26:28.704Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5f2d710dc1c881463f153789",
+          "alias": "Remarkable Grasshopper",
+          "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/2a4662f03a54ef075accd7320d6c8e1b.png",
+          "created": "2020-08-07T15:19:41.359Z",
+          "name": "Fusl",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a83c7d6913a752a0d58cdbd",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a83b84c905c2d8586a7125f",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5f2d710dc1c881463f153789|full_name} \n\n> I can't confirm since I can't open your logs.\n\nhttps://feedback.vrchat.com/bug-reports/p/publicly-attached-in-client-bug-reporting-output-log-files-are-403-forbidden",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a83fc109f798f04d8a6c267",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T06:30:40.276Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a83d5bc3ba23d1f276a96c1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a83b84c905c2d8586a7125f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It can also be this: https://github.com/yt-dlp/yt-dlp/issues/17427\n\nFirst mentioned in comments there: https://feedback.vrchat.com/bug-reports/p/vid-player",
       "viewerReactions": null,
       "voteID": null
     }
