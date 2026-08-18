@@ -1,11 +1,12 @@
 {
   "_id": "6a83fd299f798f04d8a6fb78",
   "aiCategories": [
+    "loc.in-world",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-18T06:38:28.835348Z",
+  "aiTaggedAt": "2026-08-18T07:02:11.128978Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a83fd29523ad161333eec08",
@@ -29,8 +30,65 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a84008e905c2d8586af8122",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T06:49:50.292Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a83fd29523ad161333eec08",
+          "alias": "Apparent Sturgeon",
+          "aliasID": "6a83fd29523ad161333eec0b",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2026-08-18T06:35:21.413Z",
+          "name": "Alexis2105",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a83fd299f798f04d8a6fb78",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a83fd29523ad161333eec08|full_name} Is this related to YouTube URLs? We're unable to open log files right now.\n\nCan you provide an affected URL or reupload your log file?\n\nI can assume this may be related to: https://github.com/yt-dlp/yt-dlp/issues/17456",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-18T06:35:21.714Z",
   "deleteID": null,
