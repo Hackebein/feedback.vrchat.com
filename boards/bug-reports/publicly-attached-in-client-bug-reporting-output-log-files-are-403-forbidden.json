@@ -1,10 +1,11 @@
 {
   "_id": "6a83f624503e46c0482e5a71",
   "aiCategories": [
-    "loc.website",
+    "loc.pc-client",
+    "platforms.pc.steam",
     "web.feedback"
   ],
-  "aiTaggedAt": "2026-08-18T06:18:27.263628Z",
+  "aiTaggedAt": "2026-08-18T06:20:45.171201Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -80,7 +81,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nSince last night, trying to open attached log files from in-client bug reports with log file links (`https://api.vrchat.cloud/1/file/{fileId}/1/file`) on VRChat Feedback fails with 403 Forbidden, even for log files you have submitted yourself.\n\nThis affects multiple people, while logged in to VRChat Home. `{\"error\":{\"message\":\"Forbidden\",\"status_code\":403}}`\n\nAn example where log files from in-client bug reporting were used to triage a bug (cannot be accessed anymore): https://feedback.vrchat.com/bug-reports/p/worlds-wont-work-or-avatars\n\nReproduction Steps\n\nVisit https://feedback.vrchat.com/bug-reports and find an in-client bug report. You're looking at one right now!\n\nTo create an in-client bug report:\n\n1. Launch VRChat 2026.3.1 `Build 1885` or later.\n\n2. Open the Quick Menu, press Report a Bug.\n\n3. Submit an in-client bug report with \"Include log file\" enabled.\n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 6000.0.60f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-18_05-56-23.txt](https://api.vrchat.cloud/api/1/file/file_ba084945-418a-4bcf-ba4c-3a5f7e91e0ab/1/file)",
+  "details": "Description\n\nSince last night, trying to open attached log files from in-client bug reports with log file links (`https://api.vrchat.cloud/1/file/{fileId}/1/file`) on VRChat Feedback fails with 403 Forbidden, even for log files you have submitted yourself.\n\nThis affects multiple people, while logged in to VRChat Home. `{\"error\":{\"message\":\"Forbidden\",\"status_code\":403}}`\n\nAn example where log files from in-client bug reporting were used to triage a bug (cannot be accessed anymore): https://feedback.vrchat.com/bug-reports/p/worlds-wont-work-or-avatars\n\nReproduction Steps\n\nVisit https://feedback.vrchat.com/bug-reports and find an in-client bug report with an included log file. You're looking at one right now!\n\nClick on an attached \"Log file:\" link.\n\nTo create an in-client bug report:\n\n1. Launch VRChat 2026.3.1 `Build 1885` or later.\n\n2. Open the Quick Menu, press Report a Bug.\n\n3. Submit an in-client bug report with \"Include log file\" enabled.\n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 6000.0.60f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-18_05-56-23.txt](https://api.vrchat.cloud/api/1/file/file_ba084945-418a-4bcf-ba4c-3a5f7e91e0ab/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
