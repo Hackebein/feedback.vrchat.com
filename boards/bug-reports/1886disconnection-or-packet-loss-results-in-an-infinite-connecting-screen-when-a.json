@@ -1,12 +1,11 @@
 {
   "_id": "6a7ec70ec95eb998e1d08553",
   "aiCategories": [
-    "loc.in-world",
     "loc.loading-screen",
-    "avatars.upload-performance",
-    "audio.voice"
+    "loc.in-world",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-17T14:31:16.903519Z",
+  "aiTaggedAt": "2026-08-19T04:08:37.837954Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a6d66e90bbd0c28a24ac834",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "comments": [
     {
       "_id": "6a7a2a70df126c15e90aa9f0",
@@ -388,6 +387,50 @@
       "statusChangeID": "6a831aabde4d9d8463745ced",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8528a31cf364ca48b4e85c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6676aacb97bd311235ba07da",
+        "alias": "Yarrow Coral",
+        "aliasID": "686d8c4489ac991689f96d9e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ecb1c1176f87a605f15674b61e22d674.png",
+        "created": "2024-06-22T10:43:23.200Z",
+        "name": "srna",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-19T03:53:07.528Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ec70ec95eb998e1d08553",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Having this issue as well, Weird thing for me is that if the world has some type of auto-start music player the music will play in the background with the loading screen still going",
       "viewerReactions": null,
       "voteID": null
     }
