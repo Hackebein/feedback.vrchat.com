@@ -1,0 +1,92 @@
+{
+  "_id": "6a85f49cec9ad1497b58c75c",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-08-19T18:26:28.304466Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6050972e03276b03f63ca0b8",
+    "alias": "Iced lavender Crow",
+    "aliasID": "65c28083ed6eefce4c570d77",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/82c370709f83fb4dd5fd220df49d5bed.png",
+    "created": "2021-03-16T11:31:58.052Z",
+    "name": "Tran Fox",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6050972e03276b03f63ca0b8",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-19T18:23:24.779Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Spawning and despawning the Multiple Companion Cube prop multiple times will eventually result in the player no longer being able to spawn items with `[VRCItems] Tried spawning a prop but user did not have enough free Dynamic view IDs` being put in the log when attempting to and the Item not spawning.\n\nReproduction Steps:\n\n1. Join a world\n\n2. Spawn and despawn the Multiple Companion Cube prop until it no longer spawns in\n\n3. The player is unable to spawn items anymore\n\n**Log file:** [output_log_2026-08-19_13-52-13.txt](https://api.vrchat.cloud/api/1/file/file_56ebe3c7-0475-4f61-bbae-1ccaffb43632/1/file)\n\n(remade this in the open beta board since the in-game one puts it on the normal bug reports one)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a85f49cec9ad1497b58c75b",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-19T18:23:24.779Z",
+  "subCategoryID": null,
+  "title": "[1896] Multiple Companion Cube can cause Items to stop spawning",
+  "trendingScore": 2955.6597557412415,
+  "updatedBy": null,
+  "urlName": "1896-multiple-companion-cube-can-cause-items-to-stop-spawning",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6050972e03276b03f63ca0b8",
+      "alias": "Iced lavender Crow",
+      "aliasID": "65c28083ed6eefce4c570d77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82c370709f83fb4dd5fd220df49d5bed.png",
+      "companies": [],
+      "name": "Tran Fox",
+      "urlName": null,
+      "voteID": "6a85f49d523ad16133515103"
+    }
+  ]
+}
