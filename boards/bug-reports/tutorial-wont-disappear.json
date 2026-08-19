@@ -1,11 +1,12 @@
 {
   "_id": "6a7fd466a56d776e3d8f5bf0",
   "aiCategories": [
+    "loc.in-world",
+    "loc.hud",
     "loc.mobile-app",
-    "platforms.mobile.ios",
-    "client.chatbox"
+    "platforms.mobile.ios"
   ],
-  "aiTaggedAt": "2026-08-18T07:42:55.092399Z",
+  "aiTaggedAt": "2026-08-19T13:53:33.983013Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6789936065f59d956d009726",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a8247395f08e0cb3226954a",
@@ -123,6 +124,54 @@
       "voteID": null
     },
     {
+      "_id": "6a840b189f798f04d8a9bfc2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-18T07:34:48.427Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": "6a85b4d704b1e9b9d3e12c3c",
+      "mergedPostDetails": "Device: AQUOS sense7 plus (Android)\n\nLanguage: Japanese\n\nThe mobile tutorial guidance (Tap a player to see detailed info and options) occupies the top 1/3 of the screen and never disappears.\n\n- It does not show up when I am alone in a world, but it appears as soon as someone is nearby.\n\n- Tapping a player successfully opens their profile page, but the guidance box remains on the screen.\n\n- Sometimes the text glitches/corrupts (文字化け) if the loading is incomplete.\n\n- Reinstalling the app, clearing cache, changing the in-game language to English, and using Android gaming settings did not fix the issue. \n\nIt seems like the tutorial completion flag is not being saved or triggered properly on the server side. It severely hinders gameplay as it covers a huge part of the screen. Please fix this bug.",
+      "mergedPostTitle": "Mobile: \"Tap player\" tutorial guidance stuck on screen and won't disappear",
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7fd466a56d776e3d8f5bf0",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Duplicate of: https://feedback.vrchat.com/bug-reports/p/tutorial-wont-disappear",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
       "_id": "6a840b844c2253a017a5458a",
       "aiGenerated": false,
       "author": {
@@ -183,7 +232,7 @@
   "linkedEntry": null,
   "loading": false,
   "maxScore": 5,
-  "mergeCount": 1,
+  "mergeCount": 2,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a7fd466a56d776e3d8f5bf0/167525295.jpeg",
