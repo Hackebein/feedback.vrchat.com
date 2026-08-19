@@ -3,10 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.settings",
-    "avatars.fbt"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-18T20:32:46.339124Z",
+  "aiTaggedAt": "2026-08-19T06:19:31.978937Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c735156f6188d313aeca661",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a84bc4eac8415e781c8951f",
@@ -160,7 +159,65 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "The real bug report should be that the tooltip text for the button calibrate FBT or switch between sit/stand doesn't change to when all trackers are off and freezing is enabled to let the user know the button is inactive because of the \"Freeze tracking on disconnect\" setting.\n\nThis is also similar to:\n\n- https://feedback.vrchat.com/bug-reports/p/freeze-tracking-on-disconnect-does-not-work-properly-after-fbt-is-toggled-off-an (July 14, 2023)\n\n- https://feedback.vrchat.com/bug-reports/p/freeze-tracker-on-disconnect-issue (May 30, 2024)\n\n- https://feedback.vrchat.com/bug-reports/p/turning-off-fbt-while-freeze-trackers-in-place-doesnt-work (November 7, 2024)\n\n- https://feedback.vrchat.com/bug-reports/p/1769-frozen-trackers-stays-frozen-after-disabling-fbt (January 1, 2026)\n\nI lost where I've previously responded on VRChat Feedback. But at least there: https://feedback.vrchat.com/bug-reports/p/allow-fullbody-tracking-fbt-is-missing-from-full-settings",
+      "value": "The real bug report should be that the tooltip text for the button calibrate FBT or switch between sit/stand doesn't change when all trackers are off and freezing is enabled to let the user know the button is inactive because of the \"Freeze tracking on disconnect\" setting.\n\nThis is also similar to:\n\n- https://feedback.vrchat.com/bug-reports/p/freeze-tracking-on-disconnect-does-not-work-properly-after-fbt-is-toggled-off-an (July 14, 2023)\n\n- https://feedback.vrchat.com/bug-reports/p/freeze-tracker-on-disconnect-issue (May 30, 2024)\n\n- https://feedback.vrchat.com/bug-reports/p/turning-off-fbt-while-freeze-trackers-in-place-doesnt-work (November 7, 2024)\n\n- https://feedback.vrchat.com/bug-reports/p/1769-frozen-trackers-stays-frozen-after-disabling-fbt (January 1, 2026)\n\nI lost where I've previously responded on VRChat Feedback. But at least there: https://feedback.vrchat.com/bug-reports/p/allow-fullbody-tracking-fbt-is-missing-from-full-settings",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a854a7992435bd0f463cb17",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5c735156f6188d313aeca661",
+        "alias": "Alternative Beetle",
+        "aliasID": "65c2a2d3ed6eefce4c7e37da",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/46cd71a44c3483539f0906ebaf1b672c.png",
+        "created": "2019-02-25T02:22:14.072Z",
+        "name": "venn02_ヴェン",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-19T06:17:29.162Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/e43475faf67ad6a880a4c496e33cf3a3.jpeg"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a84bf1892435bd0f44e8062",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a84bbac958f4ba13a172ea0",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}\n\nUnfortunately, that option is turned off, and I’ve never turned it on since it was implemented.\n\nThere are also no launch options listed.",
       "viewerReactions": null,
       "voteID": null
     }
