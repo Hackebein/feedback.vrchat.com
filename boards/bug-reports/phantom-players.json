@@ -2,11 +2,9 @@
   "_id": "6a8562f892435bd0f468cc08",
   "aiCategories": [
     "loc.in-world",
-    "platforms.pc.steam",
-    "platforms.standalone-vr.quest",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-19T08:04:55.245055Z",
+  "aiTaggedAt": "2026-08-19T08:19:29.937206Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fbb0f0420caee7ff079d0cf",
@@ -37,7 +35,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nWhen I have a lobby full of players and the room is going to auto close and restart. This event causes there to be player avatars to be stuck in the room loading when they aren't actually here anymore.\n\nReproduction Steps\n\nHave players, mainly on Quest, stay in a room as the room is going to restart due to it's age. I think the player may have to turn their headset off inbetween loading or leave somehow so their phantom shell stays behind in the room.\n\nDetails\n\n- Category: Networking\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report",
+  "details": "Description\n\nWhen you have a room full of players and the room is going to auto close and restart from being too old. This event causes there to be player avatars to be stuck in the room loading when they aren't actually here anymore.\n\nReproduction Steps\n\nHave players, mainly on Quest, stay in a room as the room is going to restart due to it's age. I think the player may have to turn their headset off inbetween loading or leave somehow so their avatar and profile stays behind in the room without the real player.\n\nDetails\n\n- Category: Networking\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,7 +59,7 @@
   "subCategoryID": null,
   "title": "Phantom players",
   "trendingScore": 2956.003705276421,
-  "updatedBy": null,
+  "updatedBy": "5fbb0f0420caee7ff079d0cf",
   "urlName": "phantom-players",
   "viewerIsAuthor": false,
   "viewerVote": 0,
