@@ -2,12 +2,10 @@
   "_id": "6a8518c91cf364ca48b2d131",
   "aiCategories": [
     "loc.quick-menu",
-    "loc.main-menu",
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.controls"
+    "open-beta",
+    "client.inventory"
   ],
-  "aiTaggedAt": "2026-08-19T02:47:23.464725Z",
+  "aiTaggedAt": "2026-08-19T06:58:34.876088Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -44,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When you're holding an item that has an activation effect, it will activate when clicking in the both the small and big menus.\n\nI haven't tested in VR, but this happens on desktop.",
+  "details": "When you're holding an item that has an activation effect, it will activate when clicking in both the small and big menus.\n\nI haven't tested in VR, but this happens on desktop.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -68,7 +66,7 @@
   "subCategoryID": null,
   "title": "[1896] Items activate while the menu is open",
   "trendingScore": 2955.9722745682375,
-  "updatedBy": null,
+  "updatedBy": "69ba3c32ed082c9981d6fed6",
   "urlName": "1896-items-activate-while-the-menu-is-open",
   "viewerIsAuthor": false,
   "viewerVote": 0,

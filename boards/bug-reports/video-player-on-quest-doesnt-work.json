@@ -1,12 +1,11 @@
 {
   "_id": "6a83b84c905c2d8586a7125f",
   "aiCategories": [
-    "loc.in-world",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-18T06:38:28.836533Z",
+  "aiTaggedAt": "2026-08-19T06:58:34.876937Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a83b84b523ad161333d8971",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a83c7d6913a752a0d58cdbd",
@@ -289,6 +288,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6a83b84b523ad161333d8971|full_name} Is this related to YouTube URLs? We're unable to open log files right now.\n\nCan you provide an affected URL or reupload your log file?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8553a15a11933c05471cad",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-19T06:56:33.032Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a83d5bc3ba23d1f276a96c1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a83b84c905c2d8586a7125f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The 403 issue will be worked around in the upcoming yt-dlp release by adding `web_embedded` to fallback clients (if `android_vr` fails), the last remaining client extractor with legacy format 18.\n\nhttps://github.com/yt-dlp/yt-dlp/pull/17462\n\nIt'll be prone to breakage, because it relies on a JS runtime to solve challenges.",
       "viewerReactions": null,
       "voteID": null
     }
