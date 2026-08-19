@@ -2,10 +2,11 @@
   "_id": "6a63ace0073e7390a3f44294",
   "aiCategories": [
     "loc.pc-client",
-    "client.camera",
-    "account.auth"
+    "open-beta",
+    "platforms.pc.steam",
+    "monetization.vrc-plus"
   ],
-  "aiTaggedAt": "2026-08-19T15:18:17.853819Z",
+  "aiTaggedAt": "2026-08-19T15:23:49.665499Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c872970a4264c0cacf21aaa",
@@ -574,7 +575,7 @@
       "voteID": null
     },
     {
-      "_id": "6a85c8f1fd0c77955d5ea53e",
+      "_id": "6a85c9249591d74995fb0c09",
       "aiGenerated": false,
       "author": {
         "_id": "678fd947b51d3c4f77851d07",
@@ -590,7 +591,7 @@
       "authorID": null,
       "boardID": "5b0746088fa72313783e3269",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-08-19T15:17:05.178Z",
+      "created": "2026-08-19T15:17:56.465Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -607,13 +608,15 @@
       "postDeleted": false,
       "postID": "6a63ace0073e7390a3f44294",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Mark the original post as complete too: https://feedback.vrchat.com/open-beta/p/1878-profile-icon-resets-itself-to-avatar-image-after-some-time",
+      "value": "Mark the original post as complete as well: https://feedback.vrchat.com/open-beta/p/taking-a-pfp-pic-in-game-reverts-it-to-the-avatar-pic-after-a-bit",
       "viewerReactions": null,
       "voteID": null
     }
