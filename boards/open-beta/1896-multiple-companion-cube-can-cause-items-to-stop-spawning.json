@@ -1,12 +1,10 @@
 {
   "_id": "6a85f49cec9ad1497b58c75c",
   "aiCategories": [
-    "loc.pc-client",
-    "open-beta",
-    "platforms.pc.steam",
-    "client.inventory"
+    "loc.in-world",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-08-19T19:41:14.810221Z",
+  "aiTaggedAt": "2026-08-19T19:45:25.069698Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6050972e03276b03f63ca0b8",
@@ -36,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a85fc37acabd419ac54d3f2",
@@ -166,13 +164,71 @@
       "postDeleted": false,
       "postID": "6a85f49cec9ad1497b58c75c",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Reproducible, looks like it gets stuck being invisible, despawning it does not work.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a86070dec9ad1497b5c055e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6050972e03276b03f63ca0b8",
+        "alias": "Iced lavender Crow",
+        "aliasID": "65c28083ed6eefce4c570d77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/82c370709f83fb4dd5fd220df49d5bed.png",
+        "created": "2021-03-16T11:31:58.052Z",
+        "name": "Tran Fox",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-19T19:42:05.913Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64db5fa7ab48431f25a4afe5",
+          "alias": "Viridian Sloth",
+          "aliasID": "65c2b1cbed6eefce4c8373a2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/f96af3856a847a7c7f606a4fe050722f.png",
+          "created": "2023-08-15T11:21:11.110Z",
+          "name": "NotAChance",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8605b0abe5e4581e420936",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a85f49cec9ad1497b58c75c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64db5fa7ab48431f25a4afe5|full_name} Didn't notice this till you pointed it out, can also confirm",
       "viewerReactions": null,
       "voteID": null
     }
