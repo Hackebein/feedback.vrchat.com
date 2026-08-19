@@ -1,10 +1,11 @@
 {
   "_id": "6a7e5ad7f27952eafe016f47",
   "aiCategories": [
-    "loc.website",
+    "loc.in-world",
+    "loc.quick-menu",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-08-17T15:02:51.224199Z",
+  "aiTaggedAt": "2026-08-19T08:48:02.131974Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c872970a4264c0cacf21aaa",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "comments": [
     {
       "_id": "6a7e93016107c4a047250dd4",
@@ -422,6 +423,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "The title is slightly inaccurate.\n\n\"View All\" generally takes to the previously viewed page (e.g. favorite worlds) instead of the user's badges.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a856cc3b3ddd36d62e51024",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-19T08:43:47.229Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7e5ad7f27952eafe016f47",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "[VRChat 2026.3.2 (OPEN BETA)](https://docs.vrchat.com/docs/vrchat-202632-open-beta) - August 18 - `Build 1896`:\n\n> Fixed an issue that caused the \"View All\" button on the Profile menu's Badges panel to sometimes not open the correct user's badges.",
       "viewerReactions": null,
       "voteID": null
     }
