@@ -5,7 +5,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-18T12:25:50.758928Z",
+  "aiTaggedAt": "2026-08-19T07:03:45.369748Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "619ae6731985c2678b94db5d",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 74,
+  "commentCount": 75,
   "comments": [
     {
       "_id": "69a6bbae3e26fea265b9c35e",
@@ -898,6 +898,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "`android_vr` is returning intermittent 403 Forbidden errors (yt-dlp `2026.07.04`):\n\n- https://github.com/yt-dlp/yt-dlp/issues/17427\n\n- https://github.com/yt-dlp/yt-dlp/issues/17456",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a85534f98211049cb06982f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-19T06:55:11.768Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a8402cc3ba23d1f27703ff9",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67f3aeefca658b02e385cd9c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The 403 issue will be worked around in the upcoming yt-dlp release by adding `web_embedded` to fallback clients (if `android_vr` fails), the last remaining client extractor with legacy format 18.\n\nhttps://github.com/yt-dlp/yt-dlp/pull/17462\n\nIt'll be prone to breakage, because it relies on a JS runtime to solve challenges.",
       "viewerReactions": null,
       "voteID": null
     }
