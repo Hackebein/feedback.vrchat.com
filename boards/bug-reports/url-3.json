@@ -5,7 +5,7 @@
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-18T22:33:52.112118Z",
+  "aiTaggedAt": "2026-08-19T07:38:42.815037Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a84d1dd523ad1613347eb1c",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a84d7885412983d9bfda003",
@@ -83,7 +83,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "I can't read the log file (403 Forbidden), but I assume this is a duplicate of: https://feedback.vrchat.com/bug-reports/p/video-player-on-quest-doesnt-work - if not a \"Sign-in to confirm you're not a bot\" error.\n\n@{6a84d1dd523ad1613347eb1c|full_name} This is not a VRChat issue for a bug report, it's a YouTube issue (or secondarily a yt-dlp issue).\n\nThe upstream yt-dlp issue is https://github.com/yt-dlp/yt-dlp/issues/17456. `visionos` formats are not usable in VRChat because we can only play legacy formats with audio+video in the same stream in VRChat video players, and those legacy formats are going away from YouTube (first `web_safari` 1080p videos were killed, and now the 360p `android_vr` format 18 is being killed off by YouTube).\n\nI don't expect YouTube playback to return to VRChat anytime soon (or ever) at this rate, with what YouTube is doing to change their platform to prevent unauthorized downloads (e.g. yt-dlp).",
+      "value": "I can't read the log file (403 Forbidden), but I assume this is a duplicate of: https://feedback.vrchat.com/bug-reports/p/video-player-on-quest-doesnt-work - if not a \"Sign-in to confirm you're not a bot\" error or an age-restricted YouTube video.\n\n@{6a84d1dd523ad1613347eb1c|full_name} This is not a VRChat issue for a bug report, it's a YouTube issue (or secondarily a yt-dlp issue).\n\nI assume the upstream yt-dlp issue is https://github.com/yt-dlp/yt-dlp/issues/17456. `visionos` formats are not usable in VRChat because we can only play legacy formats with audio+video in the same stream in VRChat video players, and those legacy formats are going away from YouTube (first `web_safari` 1080p videos were killed, and now the 360p `android_vr` format 18 is being killed off by YouTube).\n\nI don't expect YouTube playback to return to VRChat anytime soon (or ever) at this rate, with what YouTube is doing to change their platform to prevent unauthorized downloads (e.g. yt-dlp).",
       "viewerReactions": null,
       "voteID": null
     },
@@ -140,6 +140,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{68098a4626271974ef4d2775|full_name} ah okay, thank you!",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8558eab3ddd36d62e13adb",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e7af7e2333db1913baf3caf2f7ede609.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-19T07:19:06.525Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a84d1dd92435bd0f452bd8e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The 403 issue will be worked around in the upcoming yt-dlp release by adding `web_embedded` to fallback clients (if `android_vr` fails), the last remaining client extractor with legacy format 18 without login.\n\nhttps://github.com/yt-dlp/yt-dlp/pull/17462\n\nIt'll be prone to breakage, because it relies on a JS runtime to solve challenges.",
       "viewerReactions": null,
       "voteID": null
     }
