@@ -222,7 +222,9 @@
       "postDeleted": false,
       "postID": "6a85f49cec9ad1497b58c75c",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -248,20 +250,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 4,
+  "maxScore": 5,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 4,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-19T18:23:24.779Z",
   "subCategoryID": null,
   "title": "[1896] Multiple Companion Cube can cause Items to stop spawning",
-  "trendingScore": 2956.577557502826,
+  "trendingScore": 2956.7611298252577,
   "updatedBy": null,
   "urlName": "1896-multiple-companion-cube-can-cause-items-to-stop-spawning",
   "viewerIsAuthor": false,
@@ -273,6 +275,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64db5fa7ab48431f25a4afe5",
+      "alias": "Viridian Sloth",
+      "aliasID": "65c2b1cbed6eefce4c8373a2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f96af3856a847a7c7f606a4fe050722f.png",
+      "companies": [],
+      "name": "NotAChance",
+      "urlName": null,
+      "voteID": "6a8609db523ad161335215c8"
+    },
     {
       "_id": "60ee9e81572cc51ad4e847e6",
       "alias": "Vervain Falcon",
