@@ -1,0 +1,103 @@
+{
+  "_id": "6a878de8f7a34f71b0a32470",
+  "aiCategories": [
+    "loc.in-world",
+    "client.inventory",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-08-20T23:36:20.678627Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f2d710dc1c881463f153789",
+    "alias": "Remarkable Grasshopper",
+    "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2a4662f03a54ef075accd7320d6c8e1b.png",
+    "created": "2020-08-07T15:19:41.359Z",
+    "name": "Fusl",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f2d710dc1c881463f153789",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-20T23:29:44.372Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Severe case (all the items):\n\n1. Open the Players debug overlay\n\n2. Spawn a couple (dozen) items (NOT the Multiple Companion Cube)\n\n3. Watch the network \"Suffering\" indicator bounce around in single-digit range, sometimes reaching low multi-digit\n\n4. Spawn the Multiple Companion Cube item\n\n5. Watch the \"Suffering\" indicator skyrocket to >120\n\n6. Despawn the Multiple Companion Cube item\n\n7. Watch the \"Suffering\" indicator drop back down to 0 only very slowly\n\nWorst offender (just the Multiple Companion Cube item):\n\n1. Open the Players debug overlay\n\n2. Spawn only the Multiple Companion Cube item\n\n3. Watch the \"Suffering\" indicator slowly rise to ~100\n\n4. Despawn the Multiple Companion Cube item\n\n5. Watch the \"Suffering\" indicator drop back down to 0 immediately\n\nThis causes an issue where remote players that have multiple items spawned, especially the Multiple Companion Cube, will appear with a very large delay (\"Fnl D\" indicator in the player list) of ~4-5 seconds.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a878de7f7a34f71b0a3245f",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a878de8f7a34f71b0a32470/676400616.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-20T23:29:44.372Z",
+  "subCategoryID": null,
+  "title": "[1896] Items (especially Multiple Companion Cube) cause suffering",
+  "trendingScore": 2956.238526436813,
+  "updatedBy": null,
+  "urlName": "1896-items-especially-multiple-companion-cube-cause-suffering",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "695febfaf85d59c66d3d73c8",
+      "alias": "Ink Blackbird",
+      "aliasID": "695febfbf85d59c66d3d9492",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
+      "companies": [],
+      "name": "-Jade-",
+      "urlName": null,
+      "voteID": "6a878e53523ad161335e7d99"
+    },
+    {
+      "_id": "5f2d710dc1c881463f153789",
+      "alias": "Remarkable Grasshopper",
+      "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2a4662f03a54ef075accd7320d6c8e1b.png",
+      "companies": [],
+      "name": "Fusl",
+      "urlName": null,
+      "voteID": "6a878de8523ad161335e7a96"
+    }
+  ]
+}
