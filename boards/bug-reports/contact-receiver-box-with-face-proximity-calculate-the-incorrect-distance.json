@@ -2,9 +2,9 @@
   "_id": "6a4b82fd1bb21a5c0f70edca",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.dynamics"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-20T08:06:20.341103Z",
+  "aiTaggedAt": "2026-08-20T08:14:53.022670Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61ba21ab7b7f18766e50ad71",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a4b8f3a9f9bb472bbc7d473",
@@ -261,6 +261,50 @@
       "statusChangeID": "6a86b4f4c1e555d0a3e770b5",
       "statusChangeNewStatus": "available in future release",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a86b58713a2136cb5662431",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-20T08:06:31.255Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a86b4f4c1e555d0a3e770b6",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a4b82fd1bb21a5c0f70edca",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Due to release timings, it's currently expected that this correction will be available in 2026.3.3 and the SDK that releases after it. Thanks very much for your patience.",
       "viewerReactions": null,
       "voteID": null
     }
