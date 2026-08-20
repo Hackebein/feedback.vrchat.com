@@ -2,11 +2,11 @@
   "_id": "6a85487226bf9ada06f28699",
   "aiCategories": [
     "loc.pc-client",
-    "loc.loading-screen",
     "platforms.pc.steam",
+    "worlds.travel",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-19T06:38:53.394820Z",
+  "aiTaggedAt": "2026-08-20T06:37:45.838762Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6470a8fa88a58e115139016e",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a854bbc98211049cb04af41",
@@ -85,6 +85,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6470a8fa88a58e115139016e|full_name} I can't read the log file at the moment (403 Forbidden), but I see you're on Windows. Do you have an Intel Killer network interface in your hardware and the Intel Killer Network service task running on your operating system?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a869f4557314cd1e2adcafd",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6470a8fa88a58e115139016e",
+        "alias": "Subsequent Jellyfish",
+        "aliasID": "6a854871523ad161334b093e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3928e0348e1e784fd94af0c8df2b8242.png",
+        "created": "2023-05-26T12:41:30.593Z",
+        "name": "TsukihiFuura",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-20T06:31:33.393Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/25624ff2df2196424d1d4921eaf100d1.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a854bbc98211049cb04af41",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a85487226bf9ada06f28699",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}　yes.killernetworkservice is running on my operating system.\n\nand this is my screenshot. then i cant join worlds.if i try, it is reloading my home world and spawn.....",
       "viewerReactions": null,
       "voteID": null
     }
