@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-20T07:02:38.150883Z",
+  "aiTaggedAt": "2026-08-20T07:25:06.598847Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -52,7 +52,9 @@
       "deletedAt": null,
       "fileURLs": [],
       "files": [],
-      "imageURLs": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/3a2ffb7cf03fb6dd5b08fe20d68a3602.png"
+      ],
       "integrationSourceType": null,
       "internal": false,
       "itemSourceType": null,
@@ -70,7 +72,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "The current yt-dlp version in VRChat as of writing this:\n\n```\n\nPS C:\\Users\\linda.LINDALAP\\AppData\\LocalLow\\VRChat\\VRChat\\Tools> .\\yt-dlp.exe --version\n\n2026.07.04\n\n```\n\n`2026.07.04` in VRChat uses `android_vr` to fetch format 18 from YouTube at the moment, but all `android_vr` formats with client version 1.65.10 user-agent are returning `403 Forbidden`. Thus no YouTube playback in VRChat with this one.",
+      "value": "The current yt-dlp version in VRChat as of writing this:\n\n```\n\nPS C:\\Users\\linda.LINDALAP\\AppData\\LocalLow\\VRChat\\VRChat\\Tools> .\\yt-dlp.exe --version\n\n2026.07.04\n\n```\n\n`2026.07.04` in VRChat uses `android_vr` to fetch format 18 from YouTube at the moment, but all `android_vr` formats with client version 1.65.10 user-agent are returning `403 Forbidden` when downloaded. Thus no YouTube playback in VRChat with this one.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -80,7 +82,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Let's \"fix video players in VRChat\" 🤞 (you know what I mean).\n\n[yt-dlp 2026.08.19](https://github.com/yt-dlp/yt-dlp/releases/tag/2026.08.19), released on Aug 19, 2026, 23:48 UTC.\n\nFixes YouTube `403 Forbidden` errors from yt-dlp `android_vr` client by adding `web_embedded` as a client fallback ([#17462](https://github.com/yt-dlp/yt-dlp/issues/17462)) for format 18 (360p video with audio) when `android_vr` or `visionos` are unable to download the video. `android_vr` is broken and was also removed from the default list of clients.\n\nThe new default `visionos` extractor does not have compatible formats (f=18) with audio+video in the same format for VRChat, thus the download may fail and it should fallback to `web_embedded` which will serve format 18 from YouTube.\n\nI can also suggest changing the default client preferences to `youtube:player_client=visionos,android` or similar for format 18 for VRChat, in the event `web_embedded` breaks there will be another extractor in VRChat for YouTube's format 18.\n\nAdditional info:\n\n- https://ask.vrchat.com/t/video-players-completely-broken/48829/2\n\n- https://github.com/yt-dlp/yt-dlp/issues/17456\n\nTest URL: https://www.youtube.com/watch?v=kEAC8eeQWcg\n\nUpdating yt-dlp will resolve *many* in-client bug reports at VRChat Feedback bug reports board that are coming in daily about this issue about YouTube/TV/video players in VRChat.\n\nSee the yt-dlp `2026.08.19` release notes for additional changes.",
+  "details": "Let's \"*fix video players in VRChat*\" 🤞 (you know what I mean).\n\n[yt-dlp 2026.08.19](https://github.com/yt-dlp/yt-dlp/releases/tag/2026.08.19), released on Aug 19, 2026, 23:48 UTC.\n\nFixes YouTube `403 Forbidden` errors from yt-dlp `android_vr` client by adding `web_embedded` as a client fallback ([#17462](https://github.com/yt-dlp/yt-dlp/issues/17462)) for format 18 (360p video with audio) when `android_vr` or `visionos` are unable to download the video. `android_vr` is broken and was also removed from the default list of clients.\n\nThe new default `visionos` extractor does not have compatible formats (f=18) with audio+video in the same format for VRChat, thus the download may fail and it should fallback to `web_embedded` which will serve format 18 from YouTube.\n\nI can also suggest changing the default client preferences to `youtube:player_client=visionos,android` or similar for format 18 for VRChat, in the event `web_embedded` breaks there will be another extractor in VRChat for YouTube's format 18.\n\nAdditional info:\n\n- https://ask.vrchat.com/t/video-players-completely-broken/48829/2\n\n- https://github.com/yt-dlp/yt-dlp/issues/17456\n\nTest URL: https://www.youtube.com/watch?v=kEAC8eeQWcg\n\nUpdating yt-dlp will resolve *many* in-client bug reports at VRChat Feedback bug reports board that are coming in daily about this issue about YouTube/TV/video players in VRChat.\n\nSee the yt-dlp `2026.08.19` release notes for additional changes.",
   "error": null,
   "eta": null,
   "etaPublic": true,
