@@ -5,7 +5,7 @@
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-20T07:25:05.468579Z",
+  "aiTaggedAt": "2026-08-20T14:28:33.956939Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a83b84b523ad161333d8971",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a83c7d6913a752a0d58cdbd",
@@ -369,13 +369,73 @@
       "postDeleted": false,
       "postID": "6a83b84c905c2d8586a7125f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Feature request: [Update to yt-dlp 2026.08.19](https://feedback.vrchat.com/feature-requests/p/update-to-yt-dlp-20260819), which will resolve the latest playback issues.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a870e596692142e19e0c7fb",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64db5fa7ab48431f25a4afe5",
+        "alias": "Viridian Sloth",
+        "aliasID": "65c2b1cbed6eefce4c8373a2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f96af3856a847a7c7f606a4fe050722f.png",
+        "created": "2023-08-15T11:21:11.110Z",
+        "name": "NotAChance",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-20T14:25:29.650Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a83d5bc3ba23d1f276a96c1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a83b84c905c2d8586a7125f",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} Upvoted.",
       "viewerReactions": null,
       "voteID": null
     }
