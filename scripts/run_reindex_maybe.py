@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import os
+import re
 import subprocess
 import sys
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -84,20 +86,60 @@ def maintain_after_sync(repo_root: Path) -> None:
         print("[warn] git gc --auto failed; continuing", flush=True, file=sys.stderr)
 
 
-def git(args: list[str], *, quiet: bool = False) -> str:
-    p = subprocess.run(
-        ["git", "-C", str(REPO_ROOT), *args],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-        check=False,
-    )
-    if p.returncode != 0:
-        sys.stdout.write(p.stdout)
-        sys.exit(p.returncode)
-    if not quiet:
-        sys.stdout.write(p.stdout)
-    return p.stdout.strip()
+def _is_transient_git_error(returncode: int, output: str) -> bool:
+    """Check if a git error appears to be transient (network blip vs. permanent failure)."""
+    if returncode != 128:
+        return False
+    transient_patterns = [
+        r"Internal Server Error",
+        r"The requested URL returned error: 5\d{2}",
+        r"Connection timed out",
+        r"Could not resolve host",
+        r"Failed to connect",
+        r"Operation timed out",
+        r"Connection reset by peer",
+        r"The remote end hung up unexpectedly",
+        r"RPC failed.*result=\d+",
+    ]
+    return any(re.search(pattern, output, re.IGNORECASE) for pattern in transient_patterns)
+
+
+def git(args: list[str], *, quiet: bool = False, retry_transient: bool = False) -> str:
+    """Run git command. If retry_transient=True, retry on transient network errors."""
+    max_attempts = 5 if retry_transient else 1
+    backoff_seconds = [0, 4, 8, 16, 32]
+    
+    for attempt in range(max_attempts):
+        p = subprocess.run(
+            ["git", "-C", str(REPO_ROOT), *args],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            check=False,
+        )
+        
+        if p.returncode == 0:
+            if not quiet:
+                sys.stdout.write(p.stdout)
+            return p.stdout.strip()
+        
+        is_transient = _is_transient_git_error(p.returncode, p.stdout)
+        is_last_attempt = (attempt == max_attempts - 1)
+        
+        if not retry_transient or not is_transient or is_last_attempt:
+            sys.stdout.write(p.stdout)
+            sys.exit(p.returncode)
+        
+        wait = backoff_seconds[attempt + 1]
+        print(
+            f"[warn] git {args[0]} failed (exit {p.returncode}), "
+            f"retrying in {wait}s (attempt {attempt + 1}/{max_attempts})",
+            flush=True,
+            file=sys.stderr,
+        )
+        time.sleep(wait)
+    
+    return ""
 
 
 def read_state(path: Path) -> str:
@@ -126,7 +168,8 @@ def sync_to_remote() -> tuple[str, str]:
             "--prune",
             "--no-tags",
             "--quiet",
-        ]
+        ],
+        retry_transient=True,
     )
     cur = git(["rev-parse", "HEAD"]).splitlines()[0]
     merge = subprocess.run(
