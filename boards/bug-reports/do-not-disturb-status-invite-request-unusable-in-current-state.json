@@ -1,11 +1,11 @@
 {
   "_id": "6a834fa8b72b30bf5be35f48",
   "aiCategories": [
-    "loc.in-world",
+    "loc.main-menu",
     "social.friends",
     "social.instances"
   ],
-  "aiTaggedAt": "2026-08-20T04:38:35.586661Z",
+  "aiTaggedAt": "2026-08-20T10:38:33.570287Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def38c9e0ae944b12e2bb6",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a835441222000336c0b4bf3",
@@ -357,6 +357,73 @@
       "spam": false,
       "statusChangeID": null,
       "value": "StormRel Let me preface by saying that this behavior is inconsistent between logins. Some days I get expected behavior, other days I don't. Some days I get expected behavior for a few hours then the problematic behavior begins. This behavior tracks between use on different devices, accounts, and networking setups.\n\nExpected:\n\nUser 1 - Be on red status\n\nUser 1 - Request invite from User 2\n\nUser 2 - Receive request from User 1\n\nUser 2 - Accept request from User 1\n\nUser 1 - Receive return invite from User 2\n\n*User 1 stayed on red status the whole time*\n\nDuring problematic behavior:\n\nUser 1 - Be on red status\n\nUser 1 - Request invite from User 2\n\n*User 2 never receives any request notification*\n\nWorkaround:\n\nUser 1 - Switch from red to orange status\n\nUser 1 - Request invite from User 2\n\nUser 2 - Receive request from User 1\n\nUser 2 - Accept request from User 1\n\nUser 1 - Receive return invite from User 2\n\n*User 1 can switch back to red status once return invite has been received*\n\nProblem with workaround:\n\nUser 1 - Switch from red to orange status\n\nUser 1 - Request invite from User 2\n\nUser 2 - Receive request from User 1\n\n*Before User 2 accepts User 1 switches back to red status*\n\nUser 2 - Accept request from User 1\n\n*User 1 never receives return invite from User 2*\n\nSomething about red status is canceling/disallowing the notifications/invites/requests to actually get sent through. I haven't been able to figure out how to forcibly reproduce because it's login roulette on whether it happens. I've been encountering this issue for quite a while though so I'm sure I'll see it again. I'm not sure how many other people play exclusively from the red status to help diagnose this.\n\nI recorded a video detailing this behavior before I realized the upload limit was only 8mb. As of posting, tonight doesn't seem to be one where the issue is happening, but when I catch it again next I'll record the failure behavior and reply here.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a86d62c9de53fa5a7c16b77",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-20T10:25:48.842Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "60e65f577ae9d0492b0f2a75",
+          "alias": "Just Wildcat",
+          "aliasID": "65c26de3ed6eefce4c583d87",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/94df1307e81751ac0e303e34ca8b4bc8.png",
+          "created": "2021-07-08T02:13:43.618Z",
+          "name": "Hackebein",
+          "serviceAccount": false,
+          "urlName": null
+        },
+        {
+          "_id": "62def38c9e0ae944b12e2bb6",
+          "alias": "Convincing Stingray",
+          "aliasID": "65c2a2bced6eefce4c7aeaa2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/20d2747132aadba4dcb3701fc82b5e70.png",
+          "created": "2022-07-25T19:48:28.668Z",
+          "name": "Takkun the Cat",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a85cf8ec1e555d0a3bed7b1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a834fa8b72b30bf5be35f48",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{60e65f577ae9d0492b0f2a75|full_name}  @{62def38c9e0ae944b12e2bb6|full_name}\n\nWhen a user in Do Not Disturb sends an invite request, a two minute timer starts. If the other user does not reply with an invite within this two minute timer, the invite is not shown to the user in Do Not Disturb. To help us with diagnosis, do you know if this is the case you're seeing, where the other user is taking over two minutes to reply with an invite?\n\nThis timer does not apply when the invite request is declined with a message rather than accepted, which appears to be an oversight.",
       "viewerReactions": null,
       "voteID": null
     }
