@@ -1,0 +1,91 @@
+{
+  "_id": "6a88accedfd9132eab777940",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-08-21T19:56:36.986692Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63afaf4a4084023cccfd6f91",
+    "alias": "Quail Yak",
+    "aliasID": "6a3056b7363a2f2451c78781",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8da7794408872c243d4bf92c61f8e72e.png",
+    "created": "2022-12-31T03:40:58.211Z",
+    "name": "MooshPaw",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63afaf4a4084023cccfd6f91",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-21T19:53:50.164Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Having to work on 2 different animator layers is becoming a bit of a chore, for example, if i want to switch the material of an avatar, i need to have 2 different animations, 1 for PC and another for Mobile (Assuming PC uses a non VRC Shader which is 99% likely)\n\nMultiply this for the number of materials, make this more annoying by having atlases and different skin mesh renderers, and it becomes spaghetti very quickly\n\nThe “isMobile” parameter would be a boolean that is False when the avatar loads the PC Version, and is True when it loads a mobile version. Allows people to work on a single animator layer for both platforms",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a88accddfd9132eab77792f",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-21T19:53:50.164Z",
+  "subCategoryID": null,
+  "title": "Add an “isMobile” Parameter to the SDK",
+  "trendingScore": 2955.9544401625376,
+  "updatedBy": null,
+  "urlName": "add-an-ismobile-parameter-to-the-sdk",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63afaf4a4084023cccfd6f91",
+      "alias": "Quail Yak",
+      "aliasID": "6a3056b7363a2f2451c78781",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8da7794408872c243d4bf92c61f8e72e.png",
+      "companies": [],
+      "name": "MooshPaw",
+      "urlName": null,
+      "voteID": "6a88acce523ad1613366e929"
+    }
+  ]
+}
