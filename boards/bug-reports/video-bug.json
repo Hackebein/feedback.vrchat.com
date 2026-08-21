@@ -600,7 +600,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "(off-topic)\n\n@{6594a4877aad2c9b9067f665|full_name}  To answer how to report bugs effectively, see:\n\n- https://wiki.vrchat.com/wiki/Guides:How_to_write_efficient_bug_reports\n\n- https://help.vrchat.com/hc/en-us/articles/360062658413-I-found-a-bug-I-want-to-report-a-bug\n\nThe person who reads your bug report needs to understand what you're having an issue with, what you did (detailed step-by-step), what you expected to happen and what actually happened, with (sometimes optional) attachments (logs, videos, screenshots). It should be reproducible by yourself and other users.\n\nWhen users report \"video players and URLs working\", it can be often understood by a literal technical reader that the Unity Player or AVPro Video player is broken somehow, but that's most often not true and not what the reporter meant to say. Usually a bug reporter means to say (but omits to say) that YouTube playback support in yt-dlp has stopped working for a YouTube URL, which the reporter sees as \"Failed to load video\" errors on video players in VRChat.\n\nA good bug report also includes a video URL the reporter had issues with, and log files or the error message. I've seen a mix of invalid bug reports with \"Sign-in to confirm you're not a bot\" and age-restricted video playback errors too, but there's usually nothing to be done about it.\n\nIf the reporter used in-client bug reporting with an attached log file instead of attaching log files directly to the bug report topic as an attachment, then the issue may not be diagnosed or understood by community users/developers familiar with yt-dlp.\n\nThe  affected video URL is probably the most important thing to include in a bug report, and the yt-dlp error message from output logs comes second.\n\nFollow your reported bug reports and be ready to follow-up to requests for more information.",
+      "value": "(off-topic)\n\n@{6594a4877aad2c9b9067f665|full_name}  To answer how to report bugs effectively, see:\n\n- https://wiki.vrchat.com/wiki/Guides:How_to_write_efficient_bug_reports\n\n- https://help.vrchat.com/hc/en-us/articles/360062658413-I-found-a-bug-I-want-to-report-a-bug\n\nThe person who reads your bug report needs context to understand what you're having an issue with, what you did (detailed step-by-step), what you expected to happen and what actually happened, with (sometimes optional) attachments (logs, videos, screenshots). It should be reproducible by yourself and other users. If you skip this, your bug report may end up being skipped or ignored too (until someone makes a better bug report of the same issue).\n\nWhen users report \"video players and URLs working\", it can be often understood by a literal technical reader that the Unity Player or AVPro Video player is broken somehow, but that's most often not true and not what the reporter meant to say. Usually a bug reporter means to say (but omits to say) that YouTube playback support in yt-dlp has stopped working for a YouTube URL, which the reporter sees as \"Failed to load video\" errors on video players in VRChat.\n\nA good bug report also includes a video URL the reporter had issues with, and log files or the error message. I've seen a mix of invalid bug reports with \"Sign-in to confirm you're not a bot\" and age-restricted video playback errors too, but there's usually nothing to be done about it.\n\nIf the reporter used in-client bug reporting with an attached log file instead of attaching log files directly to the bug report topic as an attachment, then the issue may not be diagnosed or understood by community users/developers familiar with yt-dlp.\n\nThe  affected video URL is probably the most important thing to include in a bug report, and the yt-dlp error message from output logs comes second.\n\nFollow your reported bug reports and be ready to follow-up to requests for more information.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -620,20 +620,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 15,
+  "maxScore": 16,
   "mergeCount": 6,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a866ee626423667d97af4eb/1207309634.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 15,
+  "score": 16,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-20T03:05:10.349Z",
   "subCategoryID": null,
   "title": "Video bug",
-  "trendingScore": 2957.7887253736167,
+  "trendingScore": 2957.86630480138,
   "updatedBy": null,
   "urlName": "video-bug",
   "viewerIsAuthor": false,
@@ -645,6 +645,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5dd3ec8ca5639a3e843ef5e0",
+      "alias": "Curly Lark",
+      "aliasID": "6a7a2034c92bc8aa59c79314",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9e1a2298911071bb060e39508c8736b4.png",
+      "companies": [],
+      "name": "SilentEcho001",
+      "urlName": null,
+      "voteID": "6a88c47a523ad16133678e01"
+    },
     {
       "_id": "62bad42699a0240ba2e8bd6a",
       "alias": "Quintessential Clownfish",
