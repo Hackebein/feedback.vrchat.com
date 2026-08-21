@@ -1,11 +1,10 @@
 {
   "_id": "6a6183e0750608f77dacd384",
   "aiCategories": [
-    "loc.hud",
-    "social.nameplates",
-    "platforms.cross-platform"
+    "loc.in-world",
+    "social.nameplates"
   ],
-  "aiTaggedAt": "2026-08-13T01:51:30.591836Z",
+  "aiTaggedAt": "2026-08-21T10:54:24.995032Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c872970a4264c0cacf21aaa",
@@ -35,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "_id": "6a66f694fabb501d7e623b68",
@@ -72,7 +71,7 @@
       "postID": "6a6183e0750608f77dacd384",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -175,7 +174,7 @@
       "postID": "6a6183e0750608f77dacd384",
       "private": false,
       "reactions": {
-        "like": 6
+        "like": 10
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -194,7 +193,7 @@
         "alias": "Gradual Aardvark",
         "aliasID": "67a7a794afacf378f1ae500b",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/8020c09f0455c8d424e3c1147e7af264.png",
+        "avatarURL": "https://canny-assets.io/images/d2d32c5a727115e07c7abb1c5a588c5a.png",
         "created": "2025-02-08T18:51:00.309Z",
         "name": "BruceKnight",
         "serviceAccount": false,
@@ -233,7 +232,7 @@
       "postID": "6a6183e0750608f77dacd384",
       "private": false,
       "reactions": {
-        "like": 7
+        "like": 9
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -279,7 +278,7 @@
       "postID": "6a6183e0750608f77dacd384",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -337,7 +336,7 @@
       "postID": "6a6183e0750608f77dacd384",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -345,6 +344,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{5acad9ecc9dba010c9c3ec68|full_name} why? its one of the most common icons i use to help new players configure their settings. please stop removing features",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a87b12f180608cfd8403aad",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5e89d0822aedbc56a3155d12",
+        "alias": "Aegean Llama",
+        "aliasID": "65c2756eed6eefce4c9617c7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6c978cb431d0981c14cc1eb5202f0d8a.png",
+        "created": "2020-04-05T12:35:14.620Z",
+        "name": "Whaddageek",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-21T02:00:15.722Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5acad9ecc9dba010c9c3ec68",
+          "alias": "Evolutionary Vicuna",
+          "aliasID": "65ba088fed6eefce4ca8dc62",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/a96149971e91f0ceb638e9e86cef2b08.gif",
+          "created": "2018-04-09T03:11:40.225Z",
+          "name": "Tupper - VRChat Head of Community",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a73c68edf18f3d134b7070d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a6183e0750608f77dacd384",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5acad9ecc9dba010c9c3ec68|full_name} It's a very useful debugging tool for users, because one of the biggest questions I often see asked is \"Why can't I interact with your physbones?\" and has been since their implementation.  A good UI should convey information, not rescind it.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -364,20 +421,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 22,
+  "maxScore": 28,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6183e0750608f77dacd384/271177840.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 22,
+  "score": 28,
   "sourceFeatureExtractionItem": null,
   "status": "closed",
   "statusChanged": "2026-08-05T23:26:06.777Z",
   "subCategoryID": null,
   "title": "[1878] Avatar Interaction Disabled icon missing on new nameplates",
-  "trendingScore": 2955.9066498407424,
+  "trendingScore": 2957.2372229037505,
   "updatedBy": null,
   "urlName": "1878-avatar-interaction-disabled-icon-missing-on-new-nameplates",
   "viewerIsAuthor": false,
@@ -389,6 +446,72 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "64320355debe2a09d344abff",
+      "alias": "Contemporary Cod",
+      "aliasID": "65c2edb4ed6eefce4cc0e724",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d00d4067e76e943974b1fd64174213d3.png",
+      "companies": [],
+      "name": "peepymou",
+      "urlName": null,
+      "voteID": "6a880afa523ad16133611682"
+    },
+    {
+      "_id": "5f9820f66aa1df28780d536d",
+      "alias": "Permanent Viper",
+      "aliasID": "65c2a213ed6eefce4c61ed94",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d51471e9300d051c43212564f8ba472e.png",
+      "companies": [],
+      "name": "Zettai Ryouiki",
+      "urlName": null,
+      "voteID": "6a87dd30523ad161335fe131"
+    },
+    {
+      "_id": "62def07e0543f144ab6d5260",
+      "alias": "Gunmetal Warbler",
+      "aliasID": "65c28396ed6eefce4cd16d75",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6873a0d3375b49934ee184b67cf6911f.png",
+      "companies": [],
+      "name": "xamsamxamsam",
+      "urlName": null,
+      "voteID": "6a87ac22523ad161335f210a"
+    },
+    {
+      "_id": "635b0db63f2d764eb44bc162",
+      "alias": "Ruling Dove",
+      "aliasID": "65fd7368a63714bcb3a7e748",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b75236ba3fd7a6ea529d74b4201f13ba.png",
+      "companies": [],
+      "name": "DESTINYHAT",
+      "urlName": null,
+      "voteID": "6a874504523ad161335ba373"
+    },
+    {
+      "_id": "66a1ceeddf60707d409d40be",
+      "alias": "Elated Gorilla",
+      "aliasID": "66a1ceed318f0a325274e153",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5f4e72494b446088553d576ff6fd9b71.png",
+      "companies": [],
+      "name": "Smeev",
+      "urlName": null,
+      "voteID": "6a8741f2523ad161335b8203"
+    },
+    {
+      "_id": "65d74deccbf8d57ed92b5329",
+      "alias": "Systematic Woodpecker",
+      "aliasID": "65d74dec0129d7ae446e9312",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c9e4e81a4e8467e12f254fccf1928d24.png",
+      "companies": [],
+      "name": "Imdjd",
+      "urlName": null,
+      "voteID": "6a871aef523ad1613359a249"
+    },
     {
       "_id": "674414d25e7599ab848e8934",
       "alias": "Excellent Canid",
@@ -504,7 +627,7 @@
       "alias": "Gradual Aardvark",
       "aliasID": "67a7a794afacf378f1ae500b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/dd2ea2116524f9403fc5cc05fc6deffd.png",
+      "avatarURL": "https://canny-assets.io/images/d2d32c5a727115e07c7abb1c5a588c5a.png",
       "companies": [],
       "name": "BruceKnight",
       "urlName": null,
@@ -614,7 +737,7 @@
       "alias": "Rosewood Orca",
       "aliasID": "65c28396ed6eefce4cd16ac0",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a74e2afcc09340d6c2989c59934a0964.png",
+      "avatarURL": "https://canny-assets.io/images/ec3fe2a7ea826307ae889d3efbee5845.png",
       "companies": [],
       "name": "Purpzie",
       "urlName": null,
