@@ -1,10 +1,11 @@
 {
   "_id": "6a5820e53d695e3443694d86",
   "aiCategories": [
-    "loc.in-world",
-    "worlds.video"
+    "loc.unity-sdk",
+    "worlds.video",
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-08-21T17:06:17.502471Z",
+  "aiTaggedAt": "2026-08-21T17:26:09.950770Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b4cfe34e2f8bb53f6847f7b",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 56,
+  "commentCount": 57,
   "comments": [
     {
       "_id": "6a7a47a48a32e5bd9ec53968",
@@ -650,6 +651,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "To be clear once more, because I don't want to give anyone false expectations: This will _not_ make video players more reliable or stable. It will not allow more videos to be played. It will only help support some edge cases for streamed video or third-party tools.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8889583c701628d49f4c5e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65c156f8f33ca11b838d5da2",
+        "alias": "Wineberry Pony",
+        "aliasID": "65c281a2ed6eefce4c82ebb3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/139a10a67c296b6731d5c97d6fc0266d.png",
+        "created": "2024-02-05T21:45:28.656Z",
+        "name": "PowerNæp",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-21T17:22:32.015Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5f0e3b8be2a0cc450286b958",
+          "alias": "Better Unicorn",
+          "aliasID": "699bd033804d20e9704b5210",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/0313ea0e2f77ef5a21da4d163de30163.png",
+          "created": "2020-07-14T23:11:07.179Z",
+          "name": "Octo Kitty",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8330fb3ba23d1f27500131",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a5820e53d695e3443694d86",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5f0e3b8be2a0cc450286b958|full_name} I think you’re mixing up “I disagree with what VRChat prioritized” with “this technical explanation makes no sense.”\n\nThose are two different arguments.\n\nUpdating AVPro isn’t like opening a .exe, clicking “Update,” and being finished. It’s a dependency integrated into VRChat, with VRChat-specific safety and compatibility modifications on top of it. Those changes have to be migrated to the new version, then tested against different platform requirements and whatever regressions the upgrade introduces.\n\nThat’s exactly what Tau is explaining above.\n\nThe fact that VRChat also shipped a UI rework tells us essentially nothing about how much work this particular upgrade requires. Criticize their prioritization if that’s your point, but the existence of an unrelated UI update doesn’t invalidate the technical explanation.",
       "viewerReactions": null,
       "voteID": null
     }
