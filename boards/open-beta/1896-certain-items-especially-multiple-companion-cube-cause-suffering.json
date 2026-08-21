@@ -2,10 +2,11 @@
   "_id": "6a878de8f7a34f71b0a32470",
   "aiCategories": [
     "loc.in-world",
-    "client.inventory",
-    "platforms.cross-platform"
+    "client.camera",
+    "platforms.pc.steam",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-08-20T23:36:20.678627Z",
+  "aiTaggedAt": "2026-08-21T00:11:23.380288Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d710dc1c881463f153789",
@@ -42,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Severe case (all the items):\n\n1. Open the Players debug overlay\n\n2. Spawn a couple (dozen) items (NOT the Multiple Companion Cube)\n\n3. Watch the network \"Suffering\" indicator bounce around in single-digit range, sometimes reaching low multi-digit\n\n4. Spawn the Multiple Companion Cube item\n\n5. Watch the \"Suffering\" indicator skyrocket to >120\n\n6. Despawn the Multiple Companion Cube item\n\n7. Watch the \"Suffering\" indicator drop back down to 0 only very slowly\n\nWorst offender (just the Multiple Companion Cube item):\n\n1. Open the Players debug overlay\n\n2. Spawn only the Multiple Companion Cube item\n\n3. Watch the \"Suffering\" indicator slowly rise to ~100\n\n4. Despawn the Multiple Companion Cube item\n\n5. Watch the \"Suffering\" indicator drop back down to 0 immediately\n\nThis causes an issue where remote players that have multiple items spawned, especially the Multiple Companion Cube, will appear with a very large delay (\"Fnl D\" indicator in the player list) of ~4-5 seconds.",
+  "details": "Severe case (all the items):\n\n1. Open the Players debug overlay\n\n2. Spawn a couple (dozen) items (NOT the Multiple Companion Cube)\n\n3. Watch the network \"Suffering\" indicator bounce around in single-digit range, sometimes reaching low multi-digit\n\n4. Spawn the Multiple Companion Cube item\n\n5. Watch the \"Suffering\" indicator skyrocket to >120\n\n6. Despawn the Multiple Companion Cube item\n\n7. Watch the \"Suffering\" indicator drop back down to 0 only very slowly\n\nWorst offender (just the Multiple Companion Cube item):\n\n1. Open the Players debug overlay\n\n2. Spawn only the Multiple Companion Cube item\n\n3. Watch the \"Suffering\" indicator slowly climb to ~100\n\n4. Despawn the Multiple Companion Cube item\n\n5. Watch the \"Suffering\" indicator drop back down to 0 immediately\n\nThis causes an issue where remote players that have multiple items spawned, especially the Multiple Companion Cube, will appear with a very large delay (\"Fnl D\" indicator in the player list) of ~4-5 seconds.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -56,7 +57,7 @@
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a878de8f7a34f71b0a32470/676400616.jpeg",
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a878de8f7a34f71b0a32470/306990742.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 4,
@@ -64,10 +65,10 @@
   "status": "open",
   "statusChanged": "2026-08-20T23:29:44.372Z",
   "subCategoryID": null,
-  "title": "[1896] Items (especially Multiple Companion Cube) cause suffering",
+  "title": "[1896] Certain items (especially Multiple Companion Cube) cause suffering",
   "trendingScore": 2956.7498208275556,
-  "updatedBy": null,
-  "urlName": "1896-items-especially-multiple-companion-cube-cause-suffering",
+  "updatedBy": "5f2d710dc1c881463f153789",
+  "urlName": "1896-certain-items-especially-multiple-companion-cube-cause-suffering",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
