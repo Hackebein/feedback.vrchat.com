@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-20T07:25:06.598847Z",
+  "aiTaggedAt": "2026-08-21T15:46:39.312116Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a86a248863dfcb3c2935b74",
@@ -73,6 +73,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "The current yt-dlp version in VRChat as of writing this:\n\n```\n\nPS C:\\Users\\linda.LINDALAP\\AppData\\LocalLow\\VRChat\\VRChat\\Tools> .\\yt-dlp.exe --version\n\n2026.07.04\n\n```\n\n`2026.07.04` in VRChat uses `android_vr` to fetch format 18 from YouTube at the moment, but all `android_vr` formats with client version 1.65.10 user-agent are returning `403 Forbidden` when downloaded. Thus no YouTube playback in VRChat with this one.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8870b4d9f9897cdf01e0c4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-21T15:37:24.804Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a86a115c1e555d0a3e22b50",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "If yt-dlp `2026.08.19` plays only video [1] and no audio with this new version in VRChat in testing, then the default `visionos` client needs to be dropped. `youtube:player_client=android,web_embedded,-visionos`.\n\n[1]: As reported on X: https://x.com/neruneruhobby/status/2090681556625191254",
       "viewerReactions": null,
       "voteID": null
     }
