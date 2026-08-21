@@ -1,11 +1,12 @@
 {
   "_id": "6a866ee626423667d97af4eb",
   "aiCategories": [
+    "loc.in-world",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-20T19:48:40.638956Z",
+  "aiTaggedAt": "2026-08-21T15:21:26.316851Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a866ee5523ad1613354a959",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 15,
+  "commentCount": 16,
   "comments": [
     {
       "_id": "6a83fb140c7397b38ffc83ce",
@@ -544,6 +545,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Idk how to write out bug reports, but hopefully we can get more ppl to upvote the reports for video player and URLs not working, I’ve got plans tmr with a friend and we need video players.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a886c160975fbd79a039607",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-21T15:17:42.959Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6594a4877aad2c9b9067f665",
+          "alias": "Nutty Marsupial",
+          "aliasID": "6a875858523ad161335c6566",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ed8011d8ad3e3d6ad3f9d69579d90f3f.png",
+          "created": "2024-01-03T00:04:23.515Z",
+          "name": "༒к๏ггยקՇє๔༒",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8759057bd015036f0c7077",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a866ee626423667d97af4eb",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "(off-topic)\n\n@{6594a4877aad2c9b9067f665|full_name}  To answer how to report bugs effectively, see:\n\n- https://wiki.vrchat.com/wiki/Guides:How_to_write_efficient_bug_reports\n\n- https://help.vrchat.com/hc/en-us/articles/360062658413-I-found-a-bug-I-want-to-report-a-bug\n\nThe person who reads your bug report needs to understand what you're having an issue with, what you did (detailed step-by-step), what you expected to happen and what actually happened, with (sometimes optional) attachments (logs, videos, screenshots). It should be reproducible by yourself and other users.\n\nWhen users report \"video players and URLs working\", it can be often understood by a literal technical reader that the Unity Player or AVPro Video player is broken somehow, but that's most often not true and not what the reporter meant to say. Usually a bug reporter means to say (but omits to say) that YouTube playback support in yt-dlp has stopped working for a YouTube URL, which the reporter sees as \"Failed to load video\" errors on video players in VRChat.\n\nA good bug report also includes a video URL the reporter had issues with, and log files or the error message. I've seen a mix of invalid bug reports with \"Sign-in to confirm you're not a bot\" and age-restricted video playback errors too, but there's usually nothing to be done about it.\n\nIf the reporter used in-client bug reporting with an attached log file instead of attaching log files directly to the bug report topic as an attachment, then the issue may not be diagnosed or understood by community users/developers familiar with yt-dlp.\n\nThe  affected video URL is probably the most important thing to include in a bug report, and the yt-dlp error message from output logs comes second.\n\nFollow your reported bug reports and be ready to follow-up to requests for more information.",
       "viewerReactions": null,
       "voteID": null
     }
