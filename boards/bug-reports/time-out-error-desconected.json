@@ -5,7 +5,7 @@
     "loc.in-world",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-06-13T02:11:03.374212Z",
+  "aiTaggedAt": "2026-08-21T07:03:07.089312Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ee51c79a4d9f33301f6e3fd",
@@ -28,7 +28,7 @@
   "by": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "__v": 0,
@@ -65,7 +65,7 @@
       "postID": "5ee51c79a4d9f33301f6e400",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 2
       },
       "sourceLink": null,
       "spam": false,
@@ -119,7 +119,9 @@
       "postDeleted": false,
       "postID": "5ee51c79a4d9f33301f6e400",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
@@ -173,7 +175,7 @@
       "postID": "5ee51c79a4d9f33301f6e400",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 2
       },
       "sourceLink": null,
       "spam": false,
@@ -215,7 +217,9 @@
       "postDeleted": false,
       "postID": "5ee51c79a4d9f33301f6e400",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
@@ -256,7 +260,9 @@
       "postDeleted": false,
       "postID": "5ee51c79a4d9f33301f6e400",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
@@ -297,13 +303,59 @@
       "postDeleted": false,
       "postID": "5ee51c79a4d9f33301f6e400",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": "66e07384842a2cf09e10d30b",
       "statusChangeNewStatus": "closed",
       "value": "Please let us know if you're still experiencing issues!",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a878eae018342f5fcbad81a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a878e36523ad161335e7d11",
+        "alias": "Moderate Albatross",
+        "aliasID": "6a878e36523ad161335e7d1c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/20f04fe6fd7a46c7e3e51ee431cf7e91.png",
+        "created": "2026-08-20T23:31:02.443Z",
+        "name": "vαleriе",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-20T23:33:02.948Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5ee51c79a4d9f33301f6e400",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I’m having the same issue 😞",
       "viewerReactions": null,
       "voteID": null
     }
