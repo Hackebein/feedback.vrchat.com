@@ -631,7 +631,9 @@
       "postDeleted": false,
       "postID": "6045c21f30eaac39db24433e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -677,7 +679,7 @@
       "postID": "6045c21f30eaac39db24433e",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -722,7 +724,9 @@
       "postDeleted": false,
       "postID": "6045c21f30eaac39db24433e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -790,20 +794,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 65,
+  "maxScore": 67,
   "mergeCount": 2,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6045c21f30eaac39db24433e/1427664733.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 65,
+  "score": 67,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2021-03-08T06:20:15.862Z",
   "subCategoryID": null,
   "title": "Allow audio sources on Quest avatars",
-  "trendingScore": 2953.407592465017,
+  "trendingScore": 2956.0270705512025,
   "updatedBy": "63691297469f06772579fe6f",
   "urlName": "allow-audio-sources-on-quest-avatars",
   "viewerIsAuthor": false,
@@ -815,6 +819,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a88cb51523ad1613367aa14",
+      "alias": "Flax Bass",
+      "aliasID": "6a88cb51523ad1613367aa17",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/45f51c2671a291aa5bc817d41e2b3861.png",
+      "companies": [],
+      "name": "Cooldudeya",
+      "urlName": null,
+      "voteID": "6a88cb59523ad1613367aa1b"
+    },
+    {
+      "_id": "6a887f71523ad161336512eb",
+      "alias": "Continuous Pike",
+      "aliasID": "6a887f72523ad161336512ee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/71ef0105b4a34bc13f6caa99a55e4ba3.png",
+      "companies": [],
+      "name": "Afton Rabbit",
+      "urlName": null,
+      "voteID": "6a887f7a523ad16133651314"
+    },
     {
       "_id": "6982456f4e32484d294af90a",
       "alias": "Intelligent Raven",
@@ -1084,7 +1110,7 @@
       "alias": "Iced lavender Crow",
       "aliasID": "65c28083ed6eefce4c570d77",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a3e012df48a774adc74704443e3852b0.png",
+      "avatarURL": "https://canny-assets.io/images/82c370709f83fb4dd5fd220df49d5bed.png",
       "companies": [],
       "name": "Tran Fox",
       "urlName": null,
