@@ -1,0 +1,93 @@
+{
+  "_id": "6a89313ab20f778f97e400c3",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars"
+  ],
+  "aiTaggedAt": "2026-08-22T05:24:26.729958Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a8645ac523ad1613353d64a",
+    "alias": "Improved Pelican",
+    "aliasID": "6a8645ac523ad1613353d64e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7f6ff6aa57632405b31f67fa0f87b7f1.png",
+    "created": "2026-08-20T00:09:16.351Z",
+    "name": "Silvia-",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6a8645ac523ad1613353d64a",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-22T05:18:50.337Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If another player uses any avatar with custom locomotion and moves away, the game doesn’t check the current animation state, and an infinite loop of running/crouch walking occurs, even though the player is actually standing still and should have the corresponding animation. This will continue until I get close. It doesn’t matter whether all avatar feature displays are enabled in the settings, friend or not. This problem also affects any avatars include fallback that have custom locomotion. If the player is lying down or crawling, everything is displayed correctly",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/00fa80188a6bf09f82e5c5510678e6b1.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "Desktop 2026.08.22 - 09.16.28.03",
+      "url": "https://canny-assets.io/files/00fa80188a6bf09f82e5c5510678e6b1.mp4"
+    }
+  ],
+  "ideaID": "6a89313ab20f778f97e400c2",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-22T05:18:50.337Z",
+  "subCategoryID": null,
+  "title": "Incorrect display the state of any custom locomotions",
+  "trendingScore": 2956.01049212517,
+  "updatedBy": null,
+  "urlName": "incorrect-display-the-state-of-any-custom-locomotions",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a8645ac523ad1613353d64a",
+      "alias": "Improved Pelican",
+      "aliasID": "6a8645ac523ad1613353d64e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7f6ff6aa57632405b31f67fa0f87b7f1.png",
+      "companies": [],
+      "name": "Silvia-",
+      "urlName": null,
+      "voteID": "6a89313a523ad16133691e35"
+    }
+  ]
+}
