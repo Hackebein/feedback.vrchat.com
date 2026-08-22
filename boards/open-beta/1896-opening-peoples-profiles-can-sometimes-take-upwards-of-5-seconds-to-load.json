@@ -1,0 +1,91 @@
+{
+  "_id": "6a891e2ab0b7a32165790e1e",
+  "aiCategories": [
+    "loc.pc-client",
+    "web.profiles"
+  ],
+  "aiTaggedAt": "2026-08-22T03:58:14.193116Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62def3ad053b0a44a0fa904b",
+    "alias": "Vivid Locust",
+    "aliasID": "65d1231b0129d7ae44cb0bfa",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/96964455a1b23c6f4fa3eb3f6d4952f4.png",
+    "created": "2022-07-25T19:49:01.684Z",
+    "name": "1080p Cat",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62def3ad053b0a44a0fa904b",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-22T03:57:30.136Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "While im on the u6 beta, i was having this issue on live as well\n\nWith the new profile redesign, i've started to notice a *substantial* delay with opening, and actually being able to view the profile. \n\nI'm guessing this is due to the actual profile opening is stalling until all the content is downloaded\n\nIt's mostly effecting my own profile, taking >5 whole seconds to open, which is just an completely unacceptable amount of time for a profile to open.\n\nOn other peoples profiles, its not *as* bad, but still sometimes takes multiple seconds to load. It doesn't appear to be dependent on profile decorations, though the more there is the worse it seems, though with my own profile i only have the profile picture and banner, so im not completely sure.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a891e29b0b7a32165790e17",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-22T03:57:30.136Z",
+  "subCategoryID": null,
+  "title": "[1896] Opening peoples profiles can sometimes take upwards of 5 seconds to load",
+  "trendingScore": 2956.0024230866447,
+  "updatedBy": null,
+  "urlName": "1896-opening-peoples-profiles-can-sometimes-take-upwards-of-5-seconds-to-load",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62def3ad053b0a44a0fa904b",
+      "alias": "Vivid Locust",
+      "aliasID": "65d1231b0129d7ae44cb0bfa",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/96964455a1b23c6f4fa3eb3f6d4952f4.png",
+      "companies": [],
+      "name": "1080p Cat",
+      "urlName": null,
+      "voteID": "6a891e2a523ad1613368f764"
+    }
+  ]
+}
