@@ -1,0 +1,91 @@
+{
+  "_id": "6a89e9b09ef11da489712f47",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-08-22T18:27:34.315899Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60ee9e81572cc51ad4e847e6",
+    "alias": "Vervain Falcon",
+    "aliasID": "65c291bded6eefce4cf7d1c9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/83e02963b4f98b417c8670b892a41953.png",
+    "created": "2021-07-14T08:21:21.138Z",
+    "name": "BobyStar",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60ee9e81572cc51ad4e847e6",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-22T18:25:52.715Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Similar to other VRCTween extension methods, this would fill in the GameObject value of the `VRCTween.DelayedSetActive(GameObject target, ...)` value. Used like such:\n\n`gameObject.DelayedSetActive(false, 3.0f);`",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a89e9b09ef11da489712f46",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a89e9b09ef11da489712f47/1397479331.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-22T18:25:52.715Z",
+  "subCategoryID": null,
+  "title": "Add GameObject.DelayedSetActive Extension Method",
+  "trendingScore": 2956.0885714563537,
+  "updatedBy": null,
+  "urlName": "add-gameobjectdelayedsetactive-extension-method",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60ee9e81572cc51ad4e847e6",
+      "alias": "Vervain Falcon",
+      "aliasID": "65c291bded6eefce4cf7d1c9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/83e02963b4f98b417c8670b892a41953.png",
+      "companies": [],
+      "name": "BobyStar",
+      "urlName": null,
+      "voteID": "6a89e9b0523ad161339df107"
+    }
+  ]
+}
