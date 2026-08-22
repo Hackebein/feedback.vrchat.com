@@ -1,12 +1,11 @@
 {
   "_id": "6a89d5f33df000df3dcae7f4",
   "aiCategories": [
-    "loc.in-world",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-22T17:04:05.010798Z",
+  "aiTaggedAt": "2026-08-22T19:40:04.167232Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a89d5f2523ad161339d8cbd",
@@ -30,8 +29,65 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a89f90e5952ec02b10d9522",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-22T19:31:26.301Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a89d5f2523ad161339d8cbd",
+          "alias": "Flame Blackbird",
+          "aliasID": "6a89d5f2523ad161339d8cc0",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/6e69ed682cf569fbbf1411f7379bda52.png",
+          "created": "2026-08-22T17:01:38.738Z",
+          "name": "Ｏｔａｋｕ0_0",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a89d5f33df000df3dcae7f4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a89d5f2523ad161339d8cbd|full_name} Can you provide reproduction steps, including an affected video URL and output logs?",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-22T17:01:39.037Z",
   "deleteID": null,
