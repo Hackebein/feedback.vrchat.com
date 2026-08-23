@@ -1,0 +1,101 @@
+{
+  "_id": "6a8af21f6708ba998a35e4c3",
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.cross-platform",
+    "client.settings",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-08-23T13:19:54.386452Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6225948cbaa15338e5f5cefd",
+    "alias": "Crimson Meadowlark",
+    "aliasID": "65c3a0c1ed6eefce4cf638aa",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/08865438f2aec0f3685287392c57ea86.png",
+    "created": "2022-03-07T05:13:48.399Z",
+    "name": "WingmanDraws",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6225948cbaa15338e5f5cefd",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-23T13:14:07.243Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "It seems that certain particle buffer system's may be causing crashes for the local user invoking \"Object reference not set to an instance of an object\" within the logs.\n\nI cannot attach the text document, but I have linked the log via dropbox here:\n\n( https://www.dropbox.com/scl/fi/dsxksffc6uvahr9mk9367/Crash_Log.txt?rlkey=dyl42y5yawepbwnhkhg4mjc78&dl=0 )\n\nAvatar id that has the system: avtr_d405638e-7f88-42f3-9b03-f0a0636ae86c\n\nThe avi is not public, but to replicate: \n\n1) Load avatar\n\n2) Enable block building\n\n3) Right thumbs up\n\n4) Highlight and select a block with 'Right Fist'\n\n5) Either close the menu by walking away from it or hitting the X in the top right with 'Right Fist'\n\n6) Point hand anywhere and hit  'Right Fingerpoint'\n\n7) Hooray! You crash. \n\nAttached is an image of the particle system in question.  Each object below \"BlockBuffer\" is a sub-emitter that has emission toggled on and off dynamically and subsequently placed by the \"Block Buffer\". I have tested removing different sub-emitters at random and it seems rather arbitrary to when it suddenly decides to work. Perhaps it's more tied to the amount of them? \n\nDo note that this system works without crashes flawlessly on both the live build as well as the open-beta!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a8af21e6708ba998a35e4c2",
+  "imageURLs": [
+    "https://canny-assets.io/images/abe19f17d98c5c3c899edce10ee6449a.png",
+    "https://canny-assets.io/images/fa8a08abc7b8c4e5582b53f804e9bd80.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8af21f6708ba998a35e4c3/2036447443.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-23T13:14:07.243Z",
+  "subCategoryID": null,
+  "title": "(Unity6 1897) Buffer particle system causing crashes for local user",
+  "trendingScore": 2956.605979326459,
+  "updatedBy": null,
+  "urlName": "unity6-1897-buffer-particle-system-causing-crashes-for-local-user",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6212759acb3e347ce8b2199d",
+      "alias": "Western Puma",
+      "aliasID": "65c28339ed6eefce4cc2dca8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9215e350c4ce62e3b17349e560b22bef.png",
+      "companies": [],
+      "name": "TohruTheDragon",
+      "urlName": null,
+      "voteID": "6a8af238523ad16133a19bb8"
+    },
+    {
+      "_id": "6225948cbaa15338e5f5cefd",
+      "alias": "Crimson Meadowlark",
+      "aliasID": "65c3a0c1ed6eefce4cf638aa",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/08865438f2aec0f3685287392c57ea86.png",
+      "companies": [],
+      "name": "WingmanDraws",
+      "urlName": null,
+      "voteID": "6a8af21f523ad16133a19b72"
+    }
+  ]
+}
