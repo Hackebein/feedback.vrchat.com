@@ -2,10 +2,11 @@
   "_id": "6a8b5814acbf038a99978075",
   "aiCategories": [
     "loc.in-world",
-    "client.controls",
-    "platforms.pc.steam"
+    "client.inventory",
+    "platforms.pc.steam",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-08-23T20:36:29.102580Z",
+  "aiTaggedAt": "2026-08-23T21:19:45.284252Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e981239f5f6167505129fcb",
@@ -36,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nI cannot pump the water gun item, I have to use the trigger to pump\n\nReproduction Steps\n\nSpawn watergun, try to pump, it dose not work\n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2-1897-070362ad4d-Release\n\nunityVersion: 6000.0.60f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-23_21-32-48.txt](https://api.vrchat.cloud/api/1/file/file_fe259c58-4950-4920-aa9f-73f741814bff/1/file)",
+  "details": "Description\n\nI cannot pump the water gun item, I have to use the trigger to pump on the beta\n\nReproduction Steps\n\nSwitch to open beta (Unity6 in my case), spawn watergun, try to pump, it dose not work\n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2-1897-070362ad4d-Release\n\nunityVersion: 6000.0.60f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-23_21-32-48.txt](https://api.vrchat.cloud/api/1/file/file_fe259c58-4950-4920-aa9f-73f741814bff/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,7 +61,7 @@
   "subCategoryID": null,
   "title": "Water gun not pumping",
   "trendingScore": 2956.6494236957633,
-  "updatedBy": null,
+  "updatedBy": "5e981239f5f6167505129fcb",
   "urlName": "water-gun-not-pumping",
   "viewerIsAuthor": false,
   "viewerVote": 0,
