@@ -2,9 +2,10 @@
   "_id": "6a8aba51b0b7a321659ec10e",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-23T09:19:05.412600Z",
+  "aiTaggedAt": "2026-08-23T10:00:11.567965Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6142bc91c830f70736b61114",
@@ -41,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "This issue has been occurring for a while, and while there may already be existing reports, I am reporting this again since it has remained unresolved for so long.\n\nWhen there are multiple avatars in the same scene and you manage them by making them active only during modifying or uploading, the following steps can cause incorrectly recognized upload targets, resulting in the information for the wrong target being updated or an error occurring by internally attempting to build a non-active avatar.\n\n(“Selected Avatar” dropdown appears to be showing the correct avatar, but the avatar information and alerts displayed are for the previous avatar.)\n\n1. Make one avatar active.\n\n2. Open the Builder tab in the Control Panel and have the SDK recognize that avatar.\n\n3. Close the SDK Control Panel.\n\n4. With the Control Panel closed, make another avatar active and set the previous avatar to inactive.\n\n5. Open the Control Panel again.\n\n6. Incorrect information is displayed. If you try to upload the avatar or update the avatar’s information, it will lead to unintended results.\n\nNew users are also likely to encounter this issue, and since the problem doesn't occur if the Control Panel is kept open, other users may not know about the issue.\n\nTherefore, it can be difficult to identify the cause of these unintended results.\n\nTested Environment:\n\n- Unity: 2022.3.22f1\n\n- SDK 3.10.4, 3.10.5-beta.1",
+  "details": "This issue has been occurring for a while, and while there may already be existing reports, I am reporting this again since it has remained unresolved for so long.\n\nWhen there are multiple avatars in the same scene and you manage them by making them active only during modifying or uploading, the following steps can cause incorrectly recognized upload targets, resulting in the information for the wrong target being updated or an error occurring by internally attempting to build a non-active avatar.\n\n(“Selected Avatar” dropdown appears to be showing the correct avatar, but the avatar information and alerts displayed are for the previous avatar.)\n\n1. Make one avatar active.\n\n2. Open the Builder tab in the Control Panel and have the SDK recognize that avatar.\n\n3. Close the SDK Control Panel.\n\n4. With the Control Panel closed, make another avatar active and set the previous avatar to inactive.\n\n5. Open the Control Panel again.\n\n6. Incorrect information is displayed. If you try to upload the avatar or update the avatar’s information, it will lead to unintended results.\n\nNew users are also likely to encounter this issue, and since the problem doesn't occur if the Control Panel is kept open, other users may not know about the issue.\n\nTherefore, it can be difficult to identify the cause of these unintended results.\n\nTested Environment:\n\n- Unity: 2022.3.22f1\n\n- SDK: 3.10.4, 3.10.5-beta.1",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -65,7 +66,7 @@
   "subCategoryID": null,
   "title": "SDK recognizes the different avatar as the upload target under certain situations",
   "trendingScore": 2956.5824868798586,
-  "updatedBy": null,
+  "updatedBy": "6142bc91c830f70736b61114",
   "urlName": "sdk-recognizes-the-different-avatar-as-the-upload-target-under-certain-situation",
   "viewerIsAuthor": false,
   "viewerVote": 0,
