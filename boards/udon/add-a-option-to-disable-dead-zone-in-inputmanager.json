@@ -1,0 +1,91 @@
+{
+  "_id": "6a8b32fd44525dad8d810de7",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-08-23T17:55:01.222528Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63c2130366041430f307d07a",
+    "alias": "Current Coyote",
+    "aliasID": "65caf64fed6eefce4ccfa962",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4b02efd56135ab9237d980901850be86.png",
+    "created": "2023-01-14T02:27:15.075Z",
+    "name": "Misaka-L",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63c2130366041430f307d07a",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-23T17:50:53.041Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I'm making a flight simulator world and I would like to use Yoke and Throttle devices to control aircraft.\n\nI use `Joy{x} Axis{x}` and `Input.GetAxisRaw()` to get axis input from devices.\n\nBut currently VRChat force all Joystick devices dead zone to default `0.19`. Make it impossible to use throttle in VRChat world.\n\n(Half the axis will be force zero)\n\nIt will be great if there is an API to disable or override dead zone, or just disabled Axis (Joy{x} Axis{x}) dead zone in InputManager.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a8b32fc44525dad8d810da2",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-23T17:50:53.041Z",
+  "subCategoryID": null,
+  "title": "Add a option to disable dead zone in InputManager",
+  "trendingScore": 2956.2279567994424,
+  "updatedBy": null,
+  "urlName": "add-a-option-to-disable-dead-zone-in-inputmanager",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63c2130366041430f307d07a",
+      "alias": "Current Coyote",
+      "aliasID": "65caf64fed6eefce4ccfa962",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4b02efd56135ab9237d980901850be86.png",
+      "companies": [],
+      "name": "Misaka-L",
+      "urlName": null,
+      "voteID": "6a8b32fd523ad16133a2a095"
+    }
+  ]
+}
