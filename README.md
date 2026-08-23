@@ -1,6 +1,6 @@
 # VRChat Feedback Board Data
 
-Collected: **36,355** posts.<br>
+Collected: **36,356** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (32d ago)** to now.<br>
 Scrape horizon: **2026-08-15 17:03 UTC (7d ago)**.
 
@@ -18,7 +18,7 @@ Scrape horizon: **2026-08-15 17:03 UTC (7d ago)**.
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 84 / 84 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 13,986 / 13,988 (99.99%) |
+| `feature-requests` | 13,987 / 13,989 (99.99%) |
 | `impostors` | 90 / 90 (100.0%) |
 | `ios-mobile-beta` | 260 / 260 (100.0%) |
 | `localization` | 640 / 640 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-08-15 17:03 UTC (7d ago)**.
 | `vrchat-ik-20` | 285 / 285 (100.0%) |
 | `vrchat-plus-feature-ideas` | 127 / 127 (100.0%) |
 | `website` | 853 / 853 (100.0%) |
-| **Total** | **36,355** / **36,176** (100.0%) |
+| **Total** | **36,356** / **36,177** (100.0%) |
 
 ## OpenSearch
 
