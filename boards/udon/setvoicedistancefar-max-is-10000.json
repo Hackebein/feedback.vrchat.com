@@ -6,7 +6,7 @@
     "sdk.udon",
     "audio.voice"
   ],
-  "aiTaggedAt": "2026-06-14T03:09:46.598776Z",
+  "aiTaggedAt": "2026-08-23T18:04:23.603082Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b8059dd44451c40bfea25b3",
@@ -36,7 +36,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "__v": 0,
@@ -125,6 +125,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "From a numerical standpoint of aviation, the average aviation world in VRChat is approximately 40km x 40km in size (based on default prefab settings).\n\nTherefore, setting the SetVoiceDistanceFar value to only 10,000 meters (10km) limits the communication area to just a quarter of the entire world. \n\nThis restriction means that not only can players on the ground communicate with each other, but event organizers also struggle to communicate with participants (such as pilots) spread out across the world.\n\nIn such cases, we currently resort to using Discord or other communication tools. However, this requires everyone to join the server and run the software alongside VRChat, which is inconvenient for visitors of the event or worlds, VRChat beginners, and even for veteran users.\n\nAs a result, this issue has led to the loss of many opportunities for events, roleplay, and other activities within the VRChat client.\n\nI think this issue is common to any other game worlds with huge world sizes.\n\nThus, we require the maximum range to be as high as possible.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8b35697eeb658d46be392c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63c2130366041430f307d07a",
+        "alias": "Current Coyote",
+        "aliasID": "65caf64fed6eefce4ccfa962",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4b02efd56135ab9237d980901850be86.png",
+        "created": "2023-01-14T02:27:15.075Z",
+        "name": "Misaka-L",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-23T18:01:13.719Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "64ec49931d1ea5092c25c196",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This issues has been solved after SteamAudio update",
       "viewerReactions": null,
       "voteID": null
     }
