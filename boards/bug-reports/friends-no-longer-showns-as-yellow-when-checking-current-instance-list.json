@@ -1,11 +1,10 @@
 {
   "_id": "6a886dac95b1832e7ae8116e",
   "aiCategories": [
-    "loc.quick-menu",
-    "social.friends",
-    "social.nameplates"
+    "loc.main-menu",
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-08-21T16:41:11.090226Z",
+  "aiTaggedAt": "2026-08-24T14:21:21.192020Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "645f100119a798a09c4ac2b4",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a887e139493dfe465b52a65",
@@ -74,6 +73,51 @@
       "value": "Not sure if this is a bug, it may have been intended because friends in \"Here\" are listed under a separate dropdown list in 2026.3.1 and later. Maybe this would be a feature request?",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a8c52c996a294f4efa456c8",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-24T14:18:49.523Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a886dac95b1832e7ae8116e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a8c52c996a294f4efa456c7",
+      "statusChangeNewStatus": "closed",
+      "value": "This is an intended change as friend indication was replaced with separate categories and smaller icons. You can make a feature request to add it back, but at this time we don't have plans to revert this.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -100,8 +144,8 @@
   "pinnedComment": null,
   "score": 2,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-08-21T15:24:28.248Z",
+  "status": "closed",
+  "statusChanged": "2026-08-24T14:18:49.493Z",
   "subCategoryID": null,
   "title": "Friends no longer showns as 'yellow' when checking current instance list",
   "trendingScore": 2956.333382299807,

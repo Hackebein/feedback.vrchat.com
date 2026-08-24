@@ -1,11 +1,10 @@
 {
   "_id": "6a8af21f6708ba998a35e4c3",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.dynamics",
-    "client.settings"
+    "loc.unity-sdk",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-08-23T19:45:31.125167Z",
+  "aiTaggedAt": "2026-08-24T14:21:21.188919Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6225948cbaa15338e5f5cefd",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a8b4d0b843e83b5d28bc372",
@@ -66,7 +65,7 @@
       "postID": "6a8af21f6708ba998a35e4c3",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -74,6 +73,51 @@
       "spam": false,
       "statusChangeID": null,
       "value": "After some testing, this can crash other remote plahers who are also on the beta!",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8c532fd25f61593027567c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-24T14:20:31.075Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8af21f6708ba998a35e4c3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a8c532fd25f61593027567b",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
       "viewerReactions": null,
       "voteID": null
     }
@@ -105,8 +149,8 @@
   "pinnedComment": null,
   "score": 6,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-08-23T13:14:07.243Z",
+  "status": "tracked",
+  "statusChanged": "2026-08-24T14:20:31.040Z",
   "subCategoryID": null,
   "title": "(Unity6 1897) Buffer particle system causing crashes for local user",
   "trendingScore": 2957.464359570576,
@@ -126,9 +170,9 @@
       "alias": "Structural Sparrow",
       "aliasID": "65c26ed9ed6eefce4c854f1b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/bfd841faab70b9e9434d4d587650bf52.png",
+      "avatarURL": "https://canny-assets.io/images/dc2706eb55d0b855fd1f9cdf2d76c626.png",
       "companies": [],
-      "name": "＠SVoicesKarmaEX",
+      "name": "＠Kusticeエンペラーカル",
       "urlName": null,
       "voteID": "6a8b4489523ad16133a2d786"
     },
