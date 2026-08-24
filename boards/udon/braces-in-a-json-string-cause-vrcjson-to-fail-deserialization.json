@@ -5,7 +5,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-08-24T01:05:28.085347Z",
+  "aiTaggedAt": "2026-08-24T10:40:23.405636Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64a49e92bf1f4138ee18465d",
@@ -35,7 +35,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "__v": 0,
@@ -160,6 +160,63 @@
       "value": "It appears that this was listed as fixed in 3.10.5-beta.1 however it still appears to be broken. I ran my test case in a new worlds project with 3.10.5-beta.1 installed and the second test fails with:  Failed to deserialize JSON\n\nUnityEngine.Debug:LogError (object)\n\nVRC.Udon.Wrapper.Modules.ExternUnityEngineDebug:__LogError__SystemObject__SystemVoid (VRC.Udon.Common.Interfaces.IUdonHeap,System.Span`1<uint>)\n\nVRC.Udon.VM.UdonVM:Interpret ()\n\nVRC.Udon.UdonBehaviour:RunProgram (uint) (at ./Packages/com.vrchat.worlds/Runtime/Udon/UdonBehaviour.cs:1157)\n\nVRC.Udon.UdonBehaviour:RunEventAdvanced (string,bool) (at ./Packages/com.vrchat.worlds/Runtime/Udon/UdonBehaviour.cs:1373)\n\nVRC.Udon.UdonBehaviour:RunEvent (string) (at ./Packages/com.vrchat.worlds/Runtime/Udon/UdonBehaviour.cs:1331)\n\nVRC.Udon.UdonBehaviour:ManagedUpdate () (at ./Packages/com.vrchat.worlds/Runtime/Udon/UdonBehaviour.cs:593)\n\nVRC.Udon.UdonManager:Update () (at ./Packages/com.vrchat.worlds/Runtime/Udon/UdonManager.cs:409)",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a8c1f02acbf038a99b7ac64",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-24T10:37:54.519Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64a49e92bf1f4138ee18465d",
+          "alias": "Lime Gorilla",
+          "aliasID": "65c6d462ed6eefce4cc94460",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e89e2a765a81ad7ceba2033f6b6091bf.png",
+          "created": "2023-07-04T22:34:58.814Z",
+          "name": "TeaVirus",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "68af20ef7cc329cb41c8f71d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a8c1f02acbf038a99b7ac63",
+      "statusChangeNewStatus": "needs more information",
+      "value": "@{64a49e92bf1f4138ee18465d|full_name} Hi, unfortunately we cannot reproduce this issue in either `3.10.4` or in `3.10.5-beta.1`. In both of these SDK versions, deserialization seems to be succeeding for the JSON string `{\"data\":\"test{}\"}`.\n\nYour sample above is logging an error when `TryDeserializeFromJson()` returns true, not when it returns false - the if check seems to be the wrong way round. Assuming that's the sample you ran for your most recent check, can you please double check if `TryDeserializeFromJson()` is actually still returning false in `3.10.5-beta.1`?",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -185,8 +242,8 @@
   "pinnedComment": null,
   "score": 8,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2025-09-03T17:24:26.320Z",
+  "status": "needs more information",
+  "statusChanged": "2026-08-24T10:37:54.457Z",
   "subCategoryID": null,
   "title": "Braces in a JSON string cause VRCJson to fail deserialization",
   "trendingScore": 2951.1827498278913,
