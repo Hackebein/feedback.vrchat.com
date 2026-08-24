@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-21T16:03:37.671709Z",
+  "aiTaggedAt": "2026-08-24T10:11:11.669175Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a86a248863dfcb3c2935b74",
@@ -161,6 +161,54 @@
       "spam": false,
       "statusChangeID": null,
       "value": "For VRChat developers: If this change is needed at the source code level as a patch instead of as configuration to support this, in yt-dlp `2026.08.19` you can change the `_DEFAULT_CLIENTS` and `_DEFAULT_JSLESS_CLIENTS` in `yt_dlp/extractor/youtube/_video.py` lines 143-144, optionally updating `README.md`'s `player_client` documentation too.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8c160eacbf038a99b5c6a9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-24T09:59:42.510Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/a787a7d11b35983b92ab581e22b90dc8.png",
+        "https://canny-assets.io/images/bcbc7396cd03a835d17585197f3f4465.png",
+        "https://canny-assets.io/images/16d219bcb83e6c0154253f9db3820d96.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a8870b4d9f9897cdf01e0c4",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a86a115c1e555d0a3e22b50",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "YouTube livestreams will return separate audio+video formats (234+270) in MP4 container with `visionos`, which will not work in VRChat. `visionos` will need to be excluded as instructed above for VRChat.\n\n`android` and `web_embedded` return a pre-muxed 1080p format 96, which should work.",
       "viewerReactions": null,
       "voteID": null
     }
