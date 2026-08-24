@@ -3,10 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "monetization.vrc-plus",
-    "account.linking"
+    "monetization.vrc-plus"
   ],
-  "aiTaggedAt": "2026-08-24T14:12:33.510111Z",
+  "aiTaggedAt": "2026-08-24T15:01:19.674914Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a8c4fda523ad16133a84256",
@@ -37,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nVRChat failed to resubscribe VRChat+ to my credit card and I have to reentered credit card. Canceled out subscription and reentered subscription via Steam PC app. Got confirmed and successfully subscribed to VRChat+ but when I log in on VRChat it still locked out VRChat+ features.\n\nReproduction Steps\n\nNo idea\n\nDetails\n\n- Category: Other\n\n- Frequency: Once\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-24_09-58-27.txt](https://api.vrchat.cloud/api/1/file/file_9ae829be-120c-4aca-bdba-27b03bb0d62d/1/file)",
+  "details": "Description\n\nRecently this morning I got notified in my email that my VRChat+ subscription failed so I went on Steam PC app to look into my credit card to my surprised it vanished so I have to reentered my credit card in to get successfully verified. I go on VRChat to go on VRChat+ to click on it and noticed that it still processing to Steam error message. \n\nI decided to go on Steam PC app to canceled subscription and then resubscribed (Not on VRChat). Got email confirmation that I have successfully renewed the VRChat+ and I have recipes. Then I decided to go on VRChat to verify if it unlocked all features but to my surprise it's STILL LOCKED behind VRChat+ even I already got resubscribed to VRChat+. So I checked to VRChat+ and clicked on it and I received the same error message that it still processing to Steam.  \n\nReproduction Steps\n\nNo idea\n\nDetails\n\n- Category: Other\n\n- Frequency: Once\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.1-1886-a268441585-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-08-24_09-58-27.txt](https://api.vrchat.cloud/api/1/file/file_9ae829be-120c-4aca-bdba-27b03bb0d62d/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,7 +60,7 @@
   "subCategoryID": null,
   "title": "VRChat+ subscribed but still locked out feature",
   "trendingScore": 2956.754263000392,
-  "updatedBy": null,
+  "updatedBy": "6a8c4fda523ad16133a84256",
   "urlName": "vrchat-subscribed-but-still-locked-out-feature",
   "viewerIsAuthor": false,
   "viewerVote": 0,
