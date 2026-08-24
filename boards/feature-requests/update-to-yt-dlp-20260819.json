@@ -235,7 +235,9 @@
       "fileURLs": [],
       "files": [],
       "imageURLs": [
-        "https://canny-assets.io/images/4b7ce90389ada584c755b0948370b40e.png"
+        "https://canny-assets.io/images/4b7ce90389ada584c755b0948370b40e.png",
+        "https://canny-assets.io/images/83da6bb6244c5162ad186bde78fb6b96.png",
+        "https://canny-assets.io/images/b66b85ab928b04fadef94e426f76be71.png"
       ],
       "integrationSourceType": null,
       "internal": false,
@@ -254,7 +256,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "`visionos` may also return a YouTube Premium video format 616 without audio. An example URL: https://www.youtube.com/watch?v=VP9OH0O_V2Q. There's several issues with this:\n\n- Format 616 is VP9 in a HLS playlist stream (not legal for the MP4 container, this won't work in VRChat without ffmpeg: `Possible MPEG-TS in MP4 container or malformed AAC timestamps. Install ffmpeg to fix this automatically`).\n\n- Premium formats without login/PO tokens may also be prone to returning HTTP 403 Forbidden.\n\n- It's a video only format, so even if the format was fixed automatically with ffmpeg, there would be no audio downloaded in VRChat.\n\nSome video players fallback to format 399 with `visionos` after failure, but that's also a video only format.\n\nPlease use `youtube:player_client=android,web_embedded,-visionos`.\n\nSee: https://ask.vrchat.com/t/video-players-completely-broken/48829/15",
+      "value": "`visionos` may also return a YouTube Premium video format 616 without audio. An example URL: https://www.youtube.com/watch?v=VP9OH0O_V2Q. There's several issues with this:\n\n- Format 616 is VP9 in a HLS playlist stream (not legal for the MP4 container, this won't work in VRChat without ffmpeg: `Possible MPEG-TS in MP4 container or malformed AAC timestamps. Install ffmpeg to fix this automatically`). This is seen as a playback error in AVProVideo players.\n\n- Premium formats without login/PO tokens may also be prone to returning HTTP 403 Forbidden.\n\n- It's a video only format, so even if the format was fixed automatically with ffmpeg, there would be no audio downloaded in VRChat.\n\nSome video players fallback to format 399 with `visionos` after failure, but that's also a video only format and there's no premuxed formats available.\n\nPlease use `youtube:player_client=android,web_embedded,-visionos`.\n\nSee: https://ask.vrchat.com/t/video-players-completely-broken/48829/15",
       "viewerReactions": null,
       "voteID": null
     }
@@ -278,20 +280,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 24,
+  "maxScore": 25,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a86a115c1e555d0a3e22b50/651198513.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 24,
+  "score": 25,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-20T06:39:17.355Z",
   "subCategoryID": null,
   "title": "Update to yt-dlp 2026.08.19",
-  "trendingScore": 2958.544938642209,
+  "trendingScore": 2958.5987227423425,
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "update-to-yt-dlp-20260819",
   "viewerIsAuthor": false,
@@ -303,6 +305,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "688c9eb2076be5baa61930d5",
+      "alias": "Lovely Gopher",
+      "aliasID": "688c9eb2076be5baa61951e3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f6a73e2f8f9834f2000aa3737e1b9f81.png",
+      "companies": [],
+      "name": "ぬふあ！",
+      "urlName": null,
+      "voteID": "6a8c412c523ad16133a7c16b"
+    },
     {
       "_id": "5e77efb6d430414fec89bb86",
       "alias": "Blush Goose",
