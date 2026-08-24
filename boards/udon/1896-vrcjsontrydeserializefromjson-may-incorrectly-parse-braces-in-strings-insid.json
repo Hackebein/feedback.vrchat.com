@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-08-24T10:26:49.324983Z",
+  "aiTaggedAt": "2026-08-24T11:05:53.678410Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2cb35431807b34c94a2618",
@@ -34,7 +34,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a8c1b4f1059743368b0ad88",
@@ -68,6 +68,50 @@
       "statusChangeID": "6a8c1b4f1059743368b0ad87",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8c213db0b7a32165d35485",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-24T10:47:25.342Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a87352a045fec7af41462eb",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Thanks for your report. Your previous report was against JSON arrays specifically. We are now tracking a solution to this case with objects.",
       "viewerReactions": null,
       "voteID": null
     }
