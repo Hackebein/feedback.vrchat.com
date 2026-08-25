@@ -2,13 +2,10 @@
   "_id": "6a80bf8ed591eb239d0cea88",
   "aiCategories": [
     "loc.mobile-app",
-    "loc.main-menu",
-    "loc.hud",
-    "loc.loading-screen",
     "platforms.mobile.android",
-    "client.inventory"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-15T19:58:13.382761Z",
+  "aiTaggedAt": "2026-08-25T20:26:48.769143Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69591e58f85d59c66d5797bf",
@@ -32,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a80c3bf79dd7c5599ff91e3",
@@ -87,6 +84,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{69591e58f85d59c66d5797bf|full_name} Can you provide your device OS and Details?\n\nDuplicate of: https://feedback.vrchat.com/android/p/everythings-pink",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8d1d48486500a6601b45bc",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69591e58f85d59c66d5797bf",
+        "alias": "Similar Peacock",
+        "aliasID": "69591e58f85d59c66d57ada5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/728b8d1c677a3ab789b3ca9b916328f0.png",
+        "created": "2026-01-03T13:49:12.417Z",
+        "name": "Aᴡᴏᴏ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-25T04:42:48.171Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a80c3bf79dd7c5599ff91e3",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a80bf8ed591eb239d0cea88",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}  Ah, I see someone else has the issue! Feel free to merge this in, that's the exact UI pinkness I'm having.\n\nSpecs are as follows:\n\nMotorola Moto G Power 5G 2023, the 6GB RAM model with 256GB Storage. Android 14, Moto build # U1TOS34.1-157-5-25, which seems to be the latest for the phone with a security patch from February 2026.\n\nThe main SoC is a Mediatek Dimensity 930 with a IMG BXM-8-256 GPU core.\n\nI'm suspecting that this bug might instead be related to the phone being on Android 14 and some sort of incompatibility given there's three more major releases to current, which is 17.  This phone seems to meet the minimum requirements otherwise, I've been using it for the last year without major issues. I think this pink UI change started somewhere around late June, but I suspected it was part of the bug at the time with the yellow-colored UI elements and images as was the case for many. I waited a decent amount of time before reporting the bug in case it was also possibly related to backend changes for the new UI elements with nameplates and such but this seems to affect images on Unity layer 12 or 19 (likely 19) that are called to load in.\n\nThe obvious solution is to just switch to a newer phone or one with a newer OS, of which I do have a Pixel 6 I am hesitant to move to as it lacks a headphone jack which I do make use of regularly, and I lose all my extended storage a-la MicroSD slot.\n\nI do wonder if the other bug reporters have the same era phone or a newer one in the line, but I don't think the newer Power 5Gs share the same SoC but may be in the same family if I'm assuming correctly, so it may be an issue with that family of SoCs perhaps if it's not just an Android 14 *PLUS* that SOC issue.",
       "viewerReactions": null,
       "voteID": null
     }
