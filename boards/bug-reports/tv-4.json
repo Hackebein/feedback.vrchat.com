@@ -2,9 +2,10 @@
   "_id": "6a8de93cf8cea6694a97675e",
   "aiCategories": [
     "loc.standalone-vr",
-    "platforms.standalone-vr.quest"
+    "platforms.standalone-vr.quest",
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-08-25T19:15:09.535480Z",
+  "aiTaggedAt": "2026-08-25T20:37:36.916984Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a8de93b523ad16133bac50c",
@@ -28,8 +29,65 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a8dfc07abe5ed454b2cdcdd",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-25T20:33:11.528Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a8de93b523ad16133bac50c",
+          "alias": "Sole Mammal",
+          "aliasID": "6a8de93b523ad16133bac50f",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2026-08-25T19:12:59.898Z",
+          "name": "louise nicholl",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8de93cf8cea6694a97675e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a8de93b523ad16133bac50c|full_name} Please provide a better description of the issue and reproduction steps (including an URL).\n\nSee: https://help.vrchat.com/hc/en-us/articles/360062658413-I-found-a-bug-I-want-to-report-a-bug",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-25T19:13:00.325Z",
   "deleteID": null,
