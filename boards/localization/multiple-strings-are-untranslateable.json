@@ -1,0 +1,93 @@
+{
+  "_id": "6a8d2680dbac67eda6302e6e",
+  "aiCategories": [
+    "loc.main-menu",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-08-25T05:26:08.793707Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66bb06376ed44e5f823e1721",
+    "alias": "Mechanical Crocodile",
+    "aliasID": "66bb06373e088c8d6b1fb6d5",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8da56a470bcaaadef7e0e27dd34eba04.png",
+    "created": "2024-08-13T07:07:35.805Z",
+    "name": "FareyDonch",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66bb06376ed44e5f823e1721",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-25T05:22:08.063Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I noticed that many strings in this l-test build (1886) cannot be translated as they don't appear in Crowdin. For example, in the section about receiving item and accessory gifts from other people, the \"You received {0}!\" string\" and \"Don't forget to thank {0} for the gift\" are unable to be translated and can't be found in any other VRChat string files. I hope this could be fixed in the next l-test build.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a8d267fdbac67eda6302e07",
+  "imageURLs": [
+    "https://canny-assets.io/images/a478cb6d0430888c395802c79d5534db.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-25T05:22:08.063Z",
+  "subCategoryID": null,
+  "title": "Multiple strings are untranslateable",
+  "trendingScore": 2956.4393905403485,
+  "updatedBy": null,
+  "urlName": "multiple-strings-are-untranslateable",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "66bb06376ed44e5f823e1721",
+      "alias": "Mechanical Crocodile",
+      "aliasID": "66bb06373e088c8d6b1fb6d5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8da56a470bcaaadef7e0e27dd34eba04.png",
+      "companies": [],
+      "name": "FareyDonch",
+      "urlName": null,
+      "voteID": "6a8d2680523ad16133b43490"
+    }
+  ]
+}
