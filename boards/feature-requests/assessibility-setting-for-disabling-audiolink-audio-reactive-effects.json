@@ -64,7 +64,9 @@
       "postDeleted": false,
       "postID": "6a8cf51b486500a66015a1b9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -108,13 +110,15 @@
       "postDeleted": false,
       "postID": "6a8cf51b486500a66015a1b9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Audiolink contains some non audio-related metadata eg:SyncNetTime. For the purposes of this Accessibility feature targeting Reactive Effects Ideally metadata pixels are left intact",
+      "value": "Audiolink contains some non audio-related metadata eg:SyncNetTime. For the purposes of this Accessibility feature targeting Reactive Effects Ideally metadata pixels are left intact.\n\nCurrently photosensitive PC users can locally disable the audio reactive elements of Audiolink via a shader on their avatar. However Mobile users can't as custom avatar shaders are not supported for non-PC platforms. This feature request targets accessibility feature parity for all platforms.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -134,20 +138,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 10,
+  "maxScore": 12,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8cf51b486500a66015a1b9/1072534361.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 10,
+  "score": 12,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-25T01:51:23.339Z",
   "subCategoryID": null,
   "title": "Assessibility Setting for Disabling Audiolink / Audio Reactive Effects",
-  "trendingScore": 2958.124964682049,
+  "trendingScore": 2958.2998877097402,
   "updatedBy": "62b71d785422170bad71896f",
   "urlName": "assessibility-setting-for-disabling-audiolink-audio-reactive-effects",
   "viewerIsAuthor": false,
@@ -159,6 +163,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6495e2047bb85a0945b21fbf",
+      "alias": "Celestial blue Mammal",
+      "aliasID": "663d1640d36452c179619887",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/965b9aeefe4293aaef325995f54b7bc5.png",
+      "companies": [],
+      "name": "-- nikki --",
+      "urlName": null,
+      "voteID": "6a8d6fde523ad16133b62b88"
+    },
+    {
+      "_id": "5f4fff6d31ff5c15381f2501",
+      "alias": "Celestial blue Dolphin",
+      "aliasID": "65c27aa0ed6eefce4c6c3055",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8ab61104653da50e8753821abd9ba603.png",
+      "companies": [],
+      "name": "~EmberVR~",
+      "urlName": null,
+      "voteID": "6a8d6f23523ad16133b6294a"
+    },
     {
       "_id": "5b7efd0f2929584072ccb6ff",
       "alias": "Tangelo Ptarmigan",
