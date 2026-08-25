@@ -1,10 +1,10 @@
 {
-  "_id": "6a8d0496561bdc725ec3b863",
+  "_id": "6a8d0546d25f6159304cc77c",
   "aiCategories": [
     "loc.website",
-    "web.groups"
+    "groups.calendar"
   ],
-  "aiTaggedAt": "2026-08-25T03:00:13.008649Z",
+  "aiTaggedAt": "2026-08-25T03:03:30.717183Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa4c2804a7bf5087782b160",
@@ -31,23 +31,20 @@
   "commentCount": 0,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-08-25T02:57:26.572Z",
+  "created": "2026-08-25T03:00:22.025Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "All 4 of us are in the MondoCat Group, and all 4 of us arn't seeing the calendar properly. We all see different things.\n\nI dont know which events are actually there, which ones need remade, which ones have yeeted themselves off into space, or if theres some sort of memory bug preventing them from being displayed.\n\nIt looks like they may be appearing normally in game?\n\nPls fix, thank you~ <3\n\n(there is another bug with things appearing twice ill make another canny for that)",
+  "details": "I think this is happening because it is showing 1 (as the series) and 1 (as the event) but the series is showing up in the calendar on the website and in game.\n\nI cant swear thats the issue, but if it helps fix the issue, the more info i can provide the better.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a8d0496561bdc725ec3b848",
+  "ideaID": "6a8d0545d25f6159304cc77b",
   "imageURLs": [
-    "https://canny-assets.io/images/6623c0220cdfcd292fa0d663f9c990ed.png",
-    "https://canny-assets.io/images/dd9e7edbde51ecca8544c0c51dcf3d8c.png",
-    "https://canny-assets.io/images/7ba84e83e1ad6081221dafc1204575ad.png",
-    "https://canny-assets.io/images/a9a42b5da9d32396282a41df97edb182.png",
-    "https://canny-assets.io/images/e2cee90e693fb3accd5212f174c2a9d5.png"
+    "https://canny-assets.io/images/3de453243e919ade4908b826b59ba58f.png",
+    "https://canny-assets.io/images/845e82d47dd7bc8086efdcb0d66ba42e.png"
   ],
   "linkedEntry": null,
   "loading": false,
@@ -55,18 +52,18 @@
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8d0496561bdc725ec3b863/1626427016.jpeg",
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8d0546d25f6159304cc77c/1387464881.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 4,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-08-25T02:57:26.572Z",
+  "statusChanged": "2026-08-25T03:00:22.025Z",
   "subCategoryID": null,
-  "title": "VRChat Calendar is critically broken",
-  "trendingScore": 2957.3415093919316,
+  "title": "VRChat Calendar showing events twice",
+  "trendingScore": 2957.341660121796,
   "updatedBy": null,
-  "urlName": "vrchat-calendar-is-critically-broken",
+  "urlName": "vrchat-calendar-showing-events-twice",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
@@ -85,7 +82,7 @@
       "companies": [],
       "name": "DnutCfe-Obscura",
       "urlName": null,
-      "voteID": "6a8d0596523ad16133b3953a"
+      "voteID": "6a8d05a3523ad16133b39586"
     },
     {
       "_id": "62cb25ac25f5762880e53336",
@@ -96,7 +93,7 @@
       "companies": [],
       "name": "CrashCat",
       "urlName": null,
-      "voteID": "6a8d058f523ad16133b39536"
+      "voteID": "6a8d055e523ad16133b3931d"
     },
     {
       "_id": "6a20e7c486d7b8843b94a614",
@@ -107,7 +104,7 @@
       "companies": [],
       "name": "ProudtobeNerd",
       "urlName": null,
-      "voteID": "6a8d04c4523ad16133b38fd0"
+      "voteID": "6a8d0551523ad16133b39278"
     },
     {
       "_id": "5fa4c2804a7bf5087782b160",
@@ -118,7 +115,7 @@
       "companies": [],
       "name": "MondoCat",
       "urlName": null,
-      "voteID": "6a8d0496523ad16133b38ef3"
+      "voteID": "6a8d0546523ad16133b391df"
     }
   ]
 }
