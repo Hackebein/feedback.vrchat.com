@@ -18,7 +18,7 @@ Scrape horizon: **2026-08-16 22:42 UTC (8d ago)**.
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 85 / 85 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 13,993 / 13,995 (99.99%) |
+| `feature-requests` | 13,993 / 13,996 (99.98%) |
 | `impostors` | 90 / 90 (100.0%) |
 | `ios-mobile-beta` | 261 / 261 (100.0%) |
 | `localization` | 640 / 640 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-08-16 22:42 UTC (8d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 127 / 127 (100.0%) |
 | `website` | 851 / 851 (100.0%) |
-| **Total** | **36,443** / **36,263** (100.0%) |
+| **Total** | **36,443** / **36,264** (100.0%) |
 
 ## OpenSearch
 
