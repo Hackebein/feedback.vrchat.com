@@ -1,14 +1,12 @@
 {
   "_id": "6a8e27254eaf733c8285a8dc",
   "aiCategories": [
+    "loc.pc-client",
     "loc.quick-menu",
-    "loc.in-world",
-    "audio.voice",
-    "avatars.upload-performance",
     "platforms.pc.steam",
-    "platforms.pc.desktop"
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-08-26T00:12:03.518330Z",
+  "aiTaggedAt": "2026-08-26T00:25:21.422212Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d2e156b8b641f47af4b344a",
@@ -32,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a8e2850cca553fd473990d8",
@@ -132,13 +130,135 @@
       "postDeleted": false,
       "postID": "6a8e27254eaf733c8285a8dc",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "@{68098a4626271974ef4d2775|full_name} I don't have an overlay for the keyboard inputs, but i did fail to open my radial menu and set my mic active.  After the avatar loaded. \n\nI had to trim the last part where the keys worked after opening and closing the menu ESC.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8e2f9eabe5ed454b3857be",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T00:13:18.380Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5d2e156b8b641f47af4b344a",
+          "alias": "Bellflower Ptarmigan",
+          "aliasID": "65e119cba6e3ea79dd80df31",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/43ec156d0de2ba1e1328a85626fbb23c.png",
+          "created": "2019-07-16T18:20:27.101Z",
+          "name": "P4n24",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8e2850cca553fd473990d8",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8e27254eaf733c8285a8dc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5d2e156b8b641f47af4b344a|full_name} Are you able to reproduce this on the Live branch, VRChat 2026.3.1p1 `Build 1886`?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8e3225fc7825d9021f7f23",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5d2e156b8b641f47af4b344a",
+        "alias": "Bellflower Ptarmigan",
+        "aliasID": "65e119cba6e3ea79dd80df31",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/43ec156d0de2ba1e1328a85626fbb23c.png",
+        "created": "2019-07-16T18:20:27.101Z",
+        "name": "P4n24",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T00:24:05.788Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/effa5c75075aa817aa2f4065b3b8b67b.mp4"
+      ],
+      "files": [
+        {
+          "mimeType": "video/mp4",
+          "name": "20260826-0022-40.6586993",
+          "url": "https://canny-assets.io/files/effa5c75075aa817aa2f4065b3b8b67b.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8e2850cca553fd473990d8",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8e27254eaf733c8285a8dc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} Just did, took about 2 minutes to brake it.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -158,20 +278,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-25T23:37:09.372Z",
   "subCategoryID": null,
   "title": "Mic and radial menu buttons not work.",
-  "trendingScore": 2956.9536919292527,
+  "trendingScore": 2957.24225880678,
   "updatedBy": null,
   "urlName": "mic-and-radial-menu-buttons-not-work",
   "viewerIsAuthor": false,
@@ -183,6 +303,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a8e2ff9523ad16133be1cce"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
