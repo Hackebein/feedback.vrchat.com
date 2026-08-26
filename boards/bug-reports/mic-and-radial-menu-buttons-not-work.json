@@ -1,12 +1,14 @@
 {
   "_id": "6a8e27254eaf733c8285a8dc",
   "aiCategories": [
-    "loc.pc-client",
     "loc.quick-menu",
+    "loc.in-world",
+    "audio.voice",
+    "avatars.upload-performance",
     "platforms.pc.steam",
-    "audio.voice"
+    "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-08-25T23:44:09.812459Z",
+  "aiTaggedAt": "2026-08-26T00:12:03.518330Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d2e156b8b641f47af4b344a",
@@ -30,7 +32,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a8e2850cca553fd473990d8",
@@ -73,6 +75,70 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I'm unable to reproduce this on my end on the `2026.3.2-1898-626e35030c-Release` `unity-6` beta on Windows (Steam), desktop mode. Can you provide a video?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8e2dd1b1880c1460bf6460",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5d2e156b8b641f47af4b344a",
+        "alias": "Bellflower Ptarmigan",
+        "aliasID": "65e119cba6e3ea79dd80df31",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/43ec156d0de2ba1e1328a85626fbb23c.png",
+        "created": "2019-07-16T18:20:27.101Z",
+        "name": "P4n24",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T00:05:37.443Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/63189caffce76c3e46705dfe4043bd90.mp4"
+      ],
+      "files": [
+        {
+          "mimeType": "video/mp4",
+          "name": "Recording 2026-08-26 025630_2",
+          "url": "https://canny-assets.io/files/63189caffce76c3e46705dfe4043bd90.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8e2850cca553fd473990d8",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8e27254eaf733c8285a8dc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} I don't have an overlay for the keyboard inputs, but i did fail to open my radial menu and set my mic active.  After the avatar loaded. \n\nI had to trim the last part where the keys worked after opening and closing the menu ESC.",
       "viewerReactions": null,
       "voteID": null
     }
