@@ -2,9 +2,10 @@
   "_id": "6a77da574f2ca00b18110889",
   "aiCategories": [
     "loc.in-world",
+    "loc.quick-menu",
     "client.camera"
   ],
-  "aiTaggedAt": "2026-08-17T15:05:06.815584Z",
+  "aiTaggedAt": "2026-08-26T07:13:17.986472Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a77d2c7c92bc8aa59b66408",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a77daaa111a853ce3729586",
@@ -208,6 +209,50 @@
       "statusChangeID": "6a8321fa1c17a04e8270f29f",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8e909457ea29b4c10e1782",
+      "aiGenerated": false,
+      "author": {
+        "_id": "621b23eca80ba45565ddd31d",
+        "alias": "Neon carrot Ant",
+        "aliasID": "65c577beed6eefce4cc7c192",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d9b6ef167565857d2db92200853aa28b.png",
+        "created": "2022-02-27T07:10:36.289Z",
+        "name": "-Angela-",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T07:07:00.408Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a77da574f2ca00b18110889",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Experiencing the same issue.Additional test results:\n\nReproduced on a different PC as well\n\nOccurs on Live, Open Beta, and Unity 6 builds\n\nLowering mouse polling rate from 1000Hz to 125Hz makes it worse\n\nIncreasing VRChat mouse look sensitivity from 22 to 100 significantly improves it\n\nSetting Windows mouse pointer speed from 6 to 1 greatly reduces the jitter (but unusable for normal use)\n\nChanging mouse DPI did not noticeably affect the intensity of the jitter",
       "viewerReactions": null,
       "voteID": null
     }
