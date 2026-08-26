@@ -2,11 +2,10 @@
   "_id": "6a8e54ee0e8c4c8b0c111aeb",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
     "platforms.pc.steam",
-    "client.camera"
+    "client.third-person"
   ],
-  "aiTaggedAt": "2026-08-26T16:46:42.556353Z",
+  "aiTaggedAt": "2026-08-26T21:02:55.472208Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60fdac0c1f06e6320a9a4a9a",
@@ -36,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a8eff1a89b81f435509a308",
@@ -125,6 +124,62 @@
       "statusChangeID": "6a8f1768195a72971da83147",
       "statusChangeNewStatus": "needs more information",
       "value": "Is this specific to Unity 6 or does it occur on all builds? Any difference between live vs beta?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8f4d4a6b6d20a473f2f309",
+      "aiGenerated": false,
+      "author": {
+        "_id": "60fdac0c1f06e6320a9a4a9a",
+        "alias": "Gold Jaguar",
+        "aliasID": "65c4a9e4ed6eefce4cf8a778",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/84bc23906bb1955573cbdc654969d516.png",
+        "created": "2021-07-25T18:23:08.184Z",
+        "name": "X-90",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T20:32:10.530Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8f1768195a72971da83148",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8e54ee0e8c4c8b0c111aeb",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} Hi, looks like I am able to reproduce the issue on default public live build (1886) as well. I probably only initially noticed when moving to Unity 6. I am only using one launch option --no-steam. I also tried on the open-beta and it is exhibiting the issue there as well.",
       "viewerReactions": null,
       "voteID": null
     }
