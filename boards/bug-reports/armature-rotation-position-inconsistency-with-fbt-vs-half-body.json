@@ -1,0 +1,94 @@
+{
+  "_id": "6a8e5e04d910321acbe592d6",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-08-26T03:34:06.701562Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "658a176dcd6b7bee34c00ac5",
+    "alias": "Mere Kangaroo",
+    "aliasID": "65c3cc6fed6eefce4c2e49df",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8e051d3c6e0b51f93ec86c109b9ec1f0.png",
+    "created": "2023-12-25T23:59:41.281Z",
+    "name": "Nexal",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "658a176dcd6b7bee34c00ac5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-26T03:31:16.577Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Using an avatar: Attach any GameObject to the armature bone of an avatar, in this case, a cube.\n\nUse either half-body or FBT, and get different results.\n\nFBT: Object does not jitter, but does not follow head rotation, and only updates its rotation on movement input.\n\nHalf-Body: Object starts jittering in-place, causing violent twitching most cases if objects are placed here, but consistently follows head rotation. \n\n(NOTE: This is not an open-beta or otherwise build specific bug, This issue can be tested in live and receive the same result.)\n\nMy personal suggestion is that the Armature should not rotate and not jitter, being completely stationary no matter what input or scenario unless rotated in world via player controllers or seats.\n\n(Physbones also appear to be affected by armature jitter)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/8f4c254d5060288d01376542daf9ef48.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "VRCHAT - Armature FBTvsHalf-Body Inconsistency",
+      "url": "https://canny-assets.io/files/8f4c254d5060288d01376542daf9ef48.mp4"
+    }
+  ],
+  "ideaID": "6a8e5e04d910321acbe592cb",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-26T03:31:16.577Z",
+  "subCategoryID": null,
+  "title": "Armature Rotation/Position Inconsistency with FBT vs Half-body",
+  "trendingScore": 2956.571249799608,
+  "updatedBy": null,
+  "urlName": "armature-rotation-position-inconsistency-with-fbt-vs-half-body",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "658a176dcd6b7bee34c00ac5",
+      "alias": "Mere Kangaroo",
+      "aliasID": "65c3cc6fed6eefce4c2e49df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8e051d3c6e0b51f93ec86c109b9ec1f0.png",
+      "companies": [],
+      "name": "Nexal",
+      "urlName": null,
+      "voteID": "6a8e5e04523ad16133bf6f65"
+    }
+  ]
+}
