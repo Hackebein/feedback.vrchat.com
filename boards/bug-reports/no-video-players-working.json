@@ -5,7 +5,7 @@
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-26T09:36:57.390421Z",
+  "aiTaggedAt": "2026-08-26T09:48:24.650375Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69cfaca66c6843887a858a13",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a8eb1dc29bce5f97f7fc6b5",
@@ -258,6 +258,62 @@
       "value": "@{68098a4626271974ef4d2775|full_name} https://youtu.be/mNG9g1yUs0Y?is=tBF52NfTP7CZqeNp last I checked this was one",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a8eb3dbcb9a4b75d26ecebb",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T09:37:31.666Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "69cfaca66c6843887a858a13",
+          "alias": "Inkwell Possum",
+          "aliasID": "69cfaca76c6843887a85a428",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/955656a1fb6b2197069185a15a070af3.png",
+          "created": "2026-04-03T12:03:50.635Z",
+          "name": "۞gl̷i̶t̷c̷h̴۞",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8eb1dc29bce5f97f7fc6b5",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8eb094fc7825d90234d26e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{69cfaca66c6843887a858a13|full_name} I've reproduced this.\n\nAssuming there's no \"Sign-in to confirm you're not a bot\" error in the logs and you're not seeing that message in an incognito browser window when opening your YouTube URL, you're most likely affected by https://github.com/yt-dlp/yt-dlp/issues/17456, described in https://ask.vrchat.com/t/video-players-completely-broken/48829/2. VRChat can fix this with a yt-dlp update (with a patch to disable `visionos` in the new version).\n\nResolvable by: [Update to yt-dlp 2026.08.19](https://feedback.vrchat.com/feature-requests/p/update-to-yt-dlp-20260819) (feature request)\n\nDuplicate bug report of: https://feedback.vrchat.com/bug-reports/p/video-bug\n\nThank you for your bug report.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -275,20 +331,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-26T09:23:32.814Z",
   "subCategoryID": null,
   "title": "no video players working",
-  "trendingScore": 2957.0118219095766,
+  "trendingScore": 2957.2999582240227,
   "updatedBy": null,
   "urlName": "no-video-players-working",
   "viewerIsAuthor": false,
@@ -300,6 +356,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a8eb53f523ad16133c0f0f9"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
