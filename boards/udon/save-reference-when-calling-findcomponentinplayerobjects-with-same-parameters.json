@@ -1,0 +1,101 @@
+{
+  "_id": "6a8f703f176d3e359f20e79d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-08-26T23:04:16.215127Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60aad63b0d9d6417018ad4ae",
+    "alias": "Ink Marmot",
+    "aliasID": "65c7a24fed6eefce4c08ceff",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7afca098840fafbd34bc94e1b902c25d.png",
+    "created": "2021-05-23T22:24:59.795Z",
+    "name": "Solàzu",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60aad63b0d9d6417018ad4ae",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-26T23:01:19.859Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Allow FindComponentInPlayerObjects to have a \"Save references\" bool inside it.\n\nOR have internal logic which skips the request and gives the saved answer if both Player and component combination have been asked before.\n\nAttached is an example picture & example code using udongraph",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/185b0a374c6bc31443cf5404541fa27f.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "PO saving_ Udon Graph Program Asset",
+      "url": "https://canny-assets.io/files/185b0a374c6bc31443cf5404541fa27f.txt"
+    }
+  ],
+  "ideaID": "6a8f703f176d3e359f20e79c",
+  "imageURLs": [
+    "https://canny-assets.io/images/3aae6e41871fcc44ef34e935e314f3c0.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8f703f176d3e359f20e79d/774228247.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-26T23:01:19.859Z",
+  "subCategoryID": null,
+  "title": "Save reference when calling FindComponentInPlayerObjects with same parameters",
+  "trendingScore": 2956.6873267151173,
+  "updatedBy": null,
+  "urlName": "save-reference-when-calling-findcomponentinplayerobjects-with-same-parameters",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "60aad63b0d9d6417018ad4ae",
+      "alias": "Ink Marmot",
+      "aliasID": "65c7a24fed6eefce4c08ceff",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7afca098840fafbd34bc94e1b902c25d.png",
+      "companies": [],
+      "name": "Solàzu",
+      "urlName": null,
+      "voteID": "6a8f7040523ad16133c7c189"
+    }
+  ]
+}
