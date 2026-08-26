@@ -2,9 +2,10 @@
   "_id": "6a8637d98c092ddc7ff769a9",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "open-beta",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-26T02:55:18.744994Z",
+  "aiTaggedAt": "2026-08-26T04:27:42.059789Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "632189004cdd7244bce8f3cf",
@@ -34,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a87171baa610602753b3686",
@@ -235,6 +236,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{632189004cdd7244bce8f3cf|full_name}: For affecting the performance rank, that is correct. In the sense that there are, in fact, that many particles - so the performance rank should show that.\n\nAs for breaking existing content - that is true, which is why we haven't ruled out a fix. We're trying to understand the impact. Do you know how many avatars this would affect? I suspect, given how late in the unity-6 beta cycle it was reported, it wouldn't be that many.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8e69b50e8c4c8b0c143dc4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "632189004cdd7244bce8f3cf",
+        "alias": "Acid green Jay",
+        "aliasID": "65c3cf31ed6eefce4c85b0e3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8ed9cf14567ebbaf72dbabdafaa30d24.png",
+        "created": "2022-09-14T07:55:44.396Z",
+        "name": "dag-ed",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T04:21:09.789Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8de1860e8c4c8b0cf9e402",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8637d98c092ddc7ff769a9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} \n\nI understand your point regarding the performance rank. Since those particles are in fact active, it makes sense that the maximum particle count should reflect the actual number of particles that may exist at once.\n\nWith that in mind, I also understand that the Unity 6 behavior itself may be reasonable, especially if the behavior in Unity 2022.3 was unintended. I am not necessarily arguing that the old behavior should be preserved.\n\nMy main concern is compatibility with existing content. Unfortunately, as an individual user, I do not have any reliable way to estimate how many avatars make use of this behavior, so I cannot provide a meaningful number.\n\nI would also be cautious about using how late this was reported in the Unity 6 beta cycle as an indication that the impact is small. My impression is that the users most actively testing the Unity 6 open beta are likely to be world creators, since they have more immediate reasons to verify SDK and project compatibility. Avatar creators and general avatar users may be less likely to extensively test existing avatar gimmicks during the beta period, especially for avatars that were created some time ago and are no longer actively maintained.\n\nBecause of that, the timing of the report may not necessarily reflect how commonly this behavior is used in existing avatar content.\n\nMy intention in reporting this was mainly to make sure that the compatibility impact on existing content was considered. I can identify that some existing content may break, but I am not really in a position to judge how widespread the impact is or whether a client-side compatibility fix would be justified.\n\nIf the actual impact turns out to be very limited, I would understand a decision not to add special handling for it. I mainly wanted to make sure that this compatibility issue was known and taken into consideration.",
       "viewerReactions": null,
       "voteID": null
     }
