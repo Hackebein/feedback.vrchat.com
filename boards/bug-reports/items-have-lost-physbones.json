@@ -2,10 +2,9 @@
   "_id": "6a85116c8b73f373a1d82a78",
   "aiCategories": [
     "loc.in-world",
-    "avatars.dynamics",
-    "open-beta"
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-08-24T15:28:27.309566Z",
+  "aiTaggedAt": "2026-08-26T00:00:46.208221Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a7466e1210f3722d556b9ab",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "comments": [
     {
       "_id": "6a85c1ae9591d74995f909d8",
@@ -333,7 +332,9 @@
       "postDeleted": false,
       "postID": "6a85116c8b73f373a1d82a78",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -417,6 +418,70 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate of: https://feedback.vrchat.com/bug-reports/p/items-have-lost-physbones",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8e2ab1cca553fd473a269b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-25T23:52:17.309Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/f589b9cb0433d3a46108f7895efb16c4.mp4"
+      ],
+      "files": [
+        {
+          "mimeType": "video/mp4",
+          "name": "2026-08-25 23-49-52",
+          "url": "https://canny-assets.io/files/f589b9cb0433d3a46108f7895efb16c4.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a85116c8b73f373a1d82a78",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This can be marked as available in future release / complete.\n\nFixed in [VRChat 2026.3.2 (OPEN BETA)](https://docs.vrchat.com/docs/vrchat-202632-open-beta) - August 25, `Build 1898`:\n\n> Fixed PhysBones not working on Items.\n\nI've verified physbones seem to be working on a Reference Cube Companion once again (attached video).\n\n(ping: @{64873f159cf028090ce2c2e2|full_name})",
       "viewerReactions": null,
       "voteID": null
     }
