@@ -4,7 +4,7 @@
     "loc.in-world",
     "avatars.fbt"
   ],
-  "aiTaggedAt": "2026-08-24T18:10:26.050316Z",
+  "aiTaggedAt": "2026-08-26T00:50:56.540423Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5dbb0a6b74589a45d1477065",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a8c57120326644102f30bb0",
@@ -116,6 +116,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Hi! I think what's likely happening is that your idle animation has the legs lock-knee straight. But because the tracking control (managed by the VRC Tracking Control state behavior) is set to all tracking, IK will still be active for the legs in desktop and 3point VR. Because there is no tracking for the foot however (not FBT) the animation's leg bend direction is allowed to go through. Therefore when the legs can bend to keep the head etc aligned for desktop and 3point VR, the bend direction from the animation shows through.\n\nSome potential solutions are to make sure that your idle animation has a very slight knee bend direction in the direction you'd want it to bend, or also you could use tracking control on the feet setting them to animation (though this would disable keeping things nicely aligned in 3point VR and desktop) so I'd suggest trying to introduce a very slight bend in your idle animation knees first.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a8e3669abe5ed454b39aca9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5dbb0a6b74589a45d1477065",
+        "alias": "Mango Opossum",
+        "aliasID": "65c37848ed6eefce4cdd73a2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3b9219eaab5d7342f44a0e0e4de7a08f.png",
+        "created": "2019-10-31T16:23:07.710Z",
+        "name": "Voxian",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T00:42:17.117Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6161a61a2c0de966b4e43486",
+          "alias": "Razzmatazz Eagle",
+          "aliasID": "65c2b7efed6eefce4c4dceae",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/f9b909781ec10a9c42837d9eafdd9561.png",
+          "created": "2021-10-09T14:24:26.758Z",
+          "name": "Kung",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8c8620b0b7a32165eadb8c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8900475952ec02b1f8953f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6161a61a2c0de966b4e43486|full_name} Thank you for the feedback and ideas to try!\n\nI have modified the animation to make the legs more bent, and it does seem to help quite a bit. For my purposes, that'll prettymuch fix the issue for me, but I haven't fully tested it yet, so there might be other issues this work around causes.\n\nHopefully I'm the only one having issues like this, but if not, maybe they will run across this post.\n\nThank you!",
       "viewerReactions": null,
       "voteID": null
     }
