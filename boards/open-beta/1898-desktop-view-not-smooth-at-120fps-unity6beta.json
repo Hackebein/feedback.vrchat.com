@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "open-beta",
-    "platforms.pc.desktop",
-    "client.third-person"
+    "platforms.pc.steam",
+    "client.camera"
   ],
-  "aiTaggedAt": "2026-08-26T15:03:24.250701Z",
+  "aiTaggedAt": "2026-08-26T16:46:42.556353Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60fdac0c1f06e6320a9a4a9a",
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a8eff1a89b81f435509a308",
@@ -82,6 +82,51 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a8f1768195a72971da83148",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-26T16:42:16.413Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8e54ee0e8c4c8b0c111aeb",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6a8f1768195a72971da83147",
+      "statusChangeNewStatus": "needs more information",
+      "value": "Is this specific to Unity 6 or does it occur on all builds? Any difference between live vs beta?",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -116,8 +161,8 @@
   "pinnedComment": null,
   "score": 2,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-08-26T14:58:34.172Z",
+  "status": "needs more information",
+  "statusChanged": "2026-08-26T16:42:16.380Z",
   "subCategoryID": null,
   "title": "[1898] Desktop view not smooth at +120fps (Unity6beta)",
   "trendingScore": 2956.9730151934286,
