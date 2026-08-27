@@ -1,9 +1,11 @@
 {
   "_id": "6a8dfc82f8cea6694a9c214a",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.in-world",
+    "monetization.shop",
+    "avatars.accessories"
   ],
-  "aiTaggedAt": "2026-08-26T00:56:09.816018Z",
+  "aiTaggedAt": "2026-08-27T19:34:38.732621Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a8dfbd0523ad16133bbab49",
@@ -27,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a8e37d791afa48022d5f468",
@@ -72,6 +74,52 @@
       "value": "edible crayons, hmm",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a908ec8e0b170a858ca559a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f2d18db3e5e4b3102c24c54",
+        "alias": "Sable Mongoose",
+        "aliasID": "65c281e1ed6eefce4c8dcfe1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c6452b3767040318d21029d781ac933b.png",
+        "created": "2020-08-07T09:03:23.667Z",
+        "name": "Julian Astrum",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-27T19:23:52.184Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/bfc41708e408f5160ce183155abcb8a9.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8dfc82f8cea6694a9c214a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "there IS a tag for this in the SDK under contacts. They just have to use it and not make the item single use like they tried to do with the snow blower.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -89,20 +137,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-25T20:35:14.998Z",
   "subCategoryID": null,
   "title": "Edible items",
-  "trendingScore": 2956.9355776243874,
+  "trendingScore": 2957.3005670864627,
   "updatedBy": null,
   "urlName": "edible-items",
   "viewerIsAuthor": false,
@@ -114,6 +162,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f2d18db3e5e4b3102c24c54",
+      "alias": "Sable Mongoose",
+      "aliasID": "65c281e1ed6eefce4c8dcfe1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c6452b3767040318d21029d781ac933b.png",
+      "companies": [],
+      "name": "Julian Astrum",
+      "urlName": null,
+      "voteID": "6a908f69523ad16133cfc691"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
