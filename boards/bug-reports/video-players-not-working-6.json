@@ -6,7 +6,7 @@
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-27T15:19:15.325751Z",
+  "aiTaggedAt": "2026-08-27T18:33:09.934735Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a8f0214523ad16133c39450",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a8f361764037eb697b2a6a6",
@@ -190,6 +190,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I meant the youtube video player in worlds",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a907c4281cf01cc24c097e0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-27T18:04:50.640Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a8f0214523ad16133c39450",
+          "alias": "Rolling Puma",
+          "aliasID": "6a8f0214523ad16133c39453",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ce2845b193dca27a9768b98b6c079930.png",
+          "created": "2026-08-26T15:11:16.727Z",
+          "name": "포카리 마시는 중",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a90509358d14e14db91e143",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8f021522eb182f8ac11073",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a8f0214523ad16133c39450|full_name} The video player is not important, they all use AVPro Video or Unity Video behind the scenes and download from URLs with yt-dlp.\n\nWhat's actually important for reproduction is an URL. Can you provide an URL?",
       "viewerReactions": null,
       "voteID": null
     }
