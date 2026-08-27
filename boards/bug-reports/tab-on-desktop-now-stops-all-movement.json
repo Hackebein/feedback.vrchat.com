@@ -1,11 +1,12 @@
 {
   "_id": "6a853ed15412983d9b0c4356",
   "aiCategories": [
+    "loc.pc-client",
     "loc.quick-menu",
-    "client.controls",
-    "platforms.pc.steam"
+    "platforms.pc.steam",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-08-21T06:04:01.291957Z",
+  "aiTaggedAt": "2026-08-27T19:02:38.777960Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a853ed1523ad161334adf24",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a857fd487e890faed27faad",
@@ -261,6 +262,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Releasing Tab after using the free-mouse to grab an object also causes you to drop the object you just grabbed, even if you are holding down right click.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9088a3d169a8924c08c54f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-27T18:57:39.955Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a853ed15412983d9b0c4356",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Perplexing to see this issue tracked in another bug report without additional information asked: https://feedback.vrchat.com/open-beta/p/1898-tab-key-freezes-all-movement",
       "viewerReactions": null,
       "voteID": null
     }

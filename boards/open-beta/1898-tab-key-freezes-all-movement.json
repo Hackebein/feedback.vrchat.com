@@ -1,11 +1,11 @@
 {
   "_id": "6a8e7e6991afa48022df680b",
   "aiCategories": [
-    "loc.in-world",
-    "client.controls",
-    "platforms.pc.steam"
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-08-26T15:03:24.248446Z",
+  "aiTaggedAt": "2026-08-27T19:02:38.778598Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a5939c9b762306375220b91",
@@ -35,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a8efef9031eb1ff7cd3e745",
@@ -81,6 +81,50 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a9087f4e0b170a858c95975",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-27T18:54:44.074Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8e7e6991afa48022df680b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Duplicate of:\n\n- https://feedback.vrchat.com/bug-reports/p/controls-locking-up\n\n- https://feedback.vrchat.com/bug-reports/p/tab-on-desktop-now-stops-all-movement\n\n- https://feedback.vrchat.com/bug-reports/p/tab-free-mouse",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -98,20 +142,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 10,
+  "maxScore": 11,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8e7e6991afa48022df680b/1260806229.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 10,
+  "score": 11,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-08-26T14:58:01.809Z",
   "subCategoryID": null,
   "title": "[1898] Tab key freezes all movement",
-  "trendingScore": 2958.3159145135355,
+  "trendingScore": 2958.4206676005,
   "updatedBy": null,
   "urlName": "1898-tab-key-freezes-all-movement",
   "viewerIsAuthor": false,
@@ -123,6 +167,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a908803523ad16133cf8e4e"
+    },
     {
       "_id": "60dd2a998871d03e7f3806ae",
       "alias": "Thoughtful Cobra",
