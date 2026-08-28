@@ -1,10 +1,10 @@
 {
-  "_id": "6a91ccf6498c00c5b59ba90d",
+  "_id": "6a91cdbb8bcd80cd69fcfa87",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.descriptor"
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-08-28T18:04:33.366199Z",
+  "aiTaggedAt": "2026-08-28T18:07:34.459814Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63691297469f06772579fe6f",
@@ -31,7 +31,7 @@
   "commentCount": 1,
   "comments": [
     {
-      "_id": "6a91ccfe99e6c000220585fd",
+      "_id": "6a91cdbf6f1d8a605589ca0e",
       "aiGenerated": false,
       "author": {
         "_id": "63691297469f06772579fe6f",
@@ -47,7 +47,7 @@
       "authorID": null,
       "boardID": "58c62efae9868f3662e9d9a1",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-08-28T18:01:34.121Z",
+      "created": "2026-08-28T18:04:47.781Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -62,14 +62,14 @@
       "parentID": null,
       "pinned": false,
       "postDeleted": false,
-      "postID": "6a91ccf6498c00c5b59ba90d",
+      "postID": "6a91cdbb8bcd80cd69fcfa87",
       "private": false,
       "reactions": null,
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
-      "statusChangeID": "6a91ccfe99e6c000220585fc",
+      "statusChangeID": "6a91cdbf6f1d8a605589ca0d",
       "statusChangeNewStatus": "in progress",
       "value": "",
       "viewerReactions": null,
@@ -77,58 +77,53 @@
     }
   ],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-08-28T18:01:26.470Z",
+  "created": "2026-08-28T18:04:43.579Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When a contact receiver is hit by a contact sender with at least one matching tag, it can generate a “proximity” parameter for the avatar’s animator that indicates how close the sender is to the center of the receiver (or optionally to a face of the receiver if it’s a box).\n\nThese include:\n\n- A “sender type” parameter that identifies what kind of content the contact sender belongs to.\n\n- The local position of the middle point of the contact sender relative to the contact receiver.\n\n- The velocity and speed of the contact sender relative to the contact receiver.\n\n- The rate at which the proximity value is changing.\n\n- Up to sixteen Boolean parameters, one for each tag the receiver uses, to indicate which tags the sender has in common with this receiver.\n\n*Read our [Developer Update](https://ask.vrchat.com/t/developer-update-13-august-2026/48800#p-90393-advanced-contact-proximity-parameters-7) for additional details.*",
+  "details": "Allow contacts to write directly to shader properties.\n\nIf enabled on a receiver, you select up to four target MeshRenderer components that will then have the full world-space transform matrix of each of the receiver’s four nearest contacting senders written to their material properties, in addition to the transform of the receiver component itself.\n\nLearn more in our [Aug 27 Developer Update](https://ask.vrchat.com/t/developer-update-27-august-2026/48877#p-90617-material-contacts-6).",
   "error": null,
   "eta": null,
   "etaPublic": true,
-  "fileURLs": [],
-  "files": [],
-  "ideaID": "6a91ccf6498c00c5b59ba90b",
-  "imageURLs": [
-    "https://canny-assets.io/images/667b64c1a74e27e683346a48470f8fc3.png"
+  "fileURLs": [
+    "https://canny-assets.io/files/940d96a68bd9fc6c1b66f9ca69c2c193.mp4"
   ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "mat_contacts_example00228827",
+      "url": "https://canny-assets.io/files/940d96a68bd9fc6c1b66f9ca69c2c193.mp4"
+    }
+  ],
+  "ideaID": "6a91cdbb8bcd80cd69fcfa85",
+  "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "in progress",
-  "statusChanged": "2026-08-28T18:01:34.101Z",
+  "statusChanged": "2026-08-28T18:04:47.763Z",
   "subCategoryID": null,
-  "title": "Advanced Contact Proximity Parameters",
-  "trendingScore": 2957.3489357439034,
-  "updatedBy": "63691297469f06772579fe6f",
-  "urlName": "advanced-contact-proximity-parameters",
+  "title": "Material Contacts",
+  "trendingScore": 2956.9436158445815,
+  "updatedBy": null,
+  "urlName": "material-contacts",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/4ba77136a56d8c022ed529babe82b825.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a91ce3e78a781c458f5e366"
-    },
     {
       "_id": "63691297469f06772579fe6f",
       "alias": "Sage Meadowlark",
@@ -138,7 +133,7 @@
       "companies": [],
       "name": "Fax",
       "urlName": null,
-      "voteID": "6a91ccf678a781c458f5dc12"
+      "voteID": "6a91cdbb78a781c458f5e105"
     }
   ]
 }
