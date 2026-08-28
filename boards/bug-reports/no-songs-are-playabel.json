@@ -1,11 +1,12 @@
 {
   "_id": "6a90aa3f911f15e66a6c962a",
   "aiCategories": [
+    "loc.in-world",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-27T21:24:29.855528Z",
+  "aiTaggedAt": "2026-08-28T23:12:08.098639Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a90aa3e58d14e14dba24cdc",
@@ -29,8 +30,65 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 1,
+  "comments": [
+    {
+      "_id": "6a9214e159bd5211574da47f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-28T23:08:17.302Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a90aa3e58d14e14dba24cdc",
+          "alias": "Unexpected Deer",
+          "aliasID": "6a90aa3e523ad16133d08a76",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2026-08-27T21:21:02.718Z",
+          "name": "this․not․nev f68b",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a90aa3f911f15e66a6c962a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a90aa3e58d14e14dba24cdc|full_name} Please provide reproduction steps, including an URL.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-27T21:21:03.110Z",
   "deleteID": null,
