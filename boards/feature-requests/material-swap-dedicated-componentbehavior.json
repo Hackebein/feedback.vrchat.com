@@ -3,9 +3,10 @@
   "_id": "62f047600cac1444c297773d",
   "aiCategories": [
     "loc.unity-sdk",
+    "sdk.vrcsdk",
     "avatars.descriptor"
   ],
-  "aiTaggedAt": "2026-08-24T21:06:27.958930Z",
+  "aiTaggedAt": "2026-08-28T15:55:17.524516Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "605d4e07a844bd5b7b28bcbf",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "__v": 0,
@@ -198,6 +199,50 @@
       "statusChangeID": "6a8cb18b486500a66009f054",
       "statusChangeNewStatus": "in progress",
       "value": "Thanks for requesting this feature! We're working on something like this. We'll share more info in an upcoming creators roadmap update.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a91ac4d16d856d54e6d009a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63691297469f06772579fe6f",
+        "alias": "Sage Meadowlark",
+        "aliasID": "65c28116ed6eefce4c6d7d2d",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0958f7577d869b58b8a4407e6b9fddab.png",
+        "created": "2022-11-07T14:13:43.431Z",
+        "name": "Fax",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-28T15:42:05.462Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "62f047600cac1444c297773d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "We're working on this as part of action drivers. See our August 27 [Developer Update](https://ask.vrchat.com/t/developer-update-27-august-2026/48877#p-90617-action-drivers-7).",
       "viewerReactions": null,
       "voteID": null
     }
