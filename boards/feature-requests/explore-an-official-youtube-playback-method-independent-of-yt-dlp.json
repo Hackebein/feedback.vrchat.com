@@ -1,9 +1,10 @@
 {
   "_id": "6a90bc12e9dd4a9a3f258fa3",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.in-world",
+    "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-28T09:03:31.200272Z",
+  "aiTaggedAt": "2026-08-28T11:36:26.250256Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63fd80a5a5b389452715095e",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a9143bb8d29db12aea6a6c0",
@@ -72,6 +73,50 @@
       "value": "While I like the idea in principle I can already think of a whole bucket list of pitfalls that would make this a little bit hard to justify implementing:\n\n- Sync would be essentially impossible because without insight into the video stream there is no way to account for adverts and buffering speed\n\n- To be able to handle any of YouTube's official player implementations something akin to an entire browser would need to be run alongside VRChat, which would be slow on PC and potentially outright impossible on Quest\n\n- The intrinsically non-human behaviour of simply loading videos and not interacting with them is likely to trip bot detection anyway, requesting either a captcha or sign-in\n\n- If you give people a means to interact with the container to pass captchas or sign in then you open the door for inevitably being able to escape the sandbox\n\nDiscord has their \"watch together\" functionality, but that is the product of what I believe to be a private and quite expensive contract made directly with YouTube. Even so if you've used it you might have found, much as I have, that it's a relatively unpolished and unpleasant experience, almost always inferior to just screen sharing a browser with YouTube open.\n\nHaving yt-dlp break every so often feels like a QoL issue but I think this solution is too likely to spawn into several more potentially worse QoL issues. I think it's better for it to either work great or not work entirely than for it to *always* work with several caveats (and this is unlikely to always work).",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a916f89f4390f477048576f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63fd80a5a5b389452715095e",
+        "alias": "Razzmatazz Reptile",
+        "aliasID": "6a90b675523ad16133d0e68b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/29356e3b9d94630b7b515d599c19ed1e.png",
+        "created": "2023-02-28T04:18:45.257Z",
+        "name": "つっきー！",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-28T11:22:49.331Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a9143bb8d29db12aea6a6c0",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a90bc12e9dd4a9a3f258fa3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Thanks, this is genuinely useful pushback and I think you're right on most of it. To be clear, I wasn't picturing a full browser-parity official player — more something narrower, like a restricted/sandboxed embed just for playback (no interaction beyond play/pause/seek), similar in spirit to how a game console's YouTube app works rather than a full browser tab. But I take your point that even that minimal surface still runs into the same core issues:\n\nAd/buffer sync without stream visibility is a real blocker regardless of how thin the embed is\n\nAny container capable enough to pass a captcha or sign-in is capable enough to be a sandbox escape risk\n\nQuest feasibility alone probably kills it even if PC could handle it\n\nThe Discord Watch Together point is a good real-world data point too — if a company with an actual paid deal and dedicated engineering resources still ships something that feels worse than screen-sharing a browser, that's a strong signal this isn't just an implementation-effort problem, it's closer to a fundamental one.\n\nI think your closing point is the one that sticks with me most: \"work great or not work at all\" vs. \"always works but with caveats.\" Right now yt-dlp-based playback sits in an uncomfortable middle — it mostly works, but every YouTube-side change threatens to (temporarily) break it, and there's no way to fully control for that as a third party. I don't have a fix for that, I mostly just wanted the pitfalls to be visible in one place in case anyone with actual access ever revisits this. Appreciate you laying them out this clearly.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -89,20 +134,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 3,
+  "maxScore": 5,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a90bc12e9dd4a9a3f258fa3/156674598.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 3,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-27T22:37:06.347Z",
   "subCategoryID": null,
   "title": "Explore an official YouTube playback method independent of yt-dlp",
-  "trendingScore": 2957.5233679041094,
+  "trendingScore": 2957.9503120453537,
   "updatedBy": null,
   "urlName": "explore-an-official-youtube-playback-method-independent-of-yt-dlp",
   "viewerIsAuthor": false,
@@ -114,6 +159,28 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a73766e50134251b83a1abf",
+      "alias": "Olive Eagle",
+      "aliasID": "6a73766e50134251b83a1ac8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5ead86c02809e62fdf5295cf60820d46.png",
+      "companies": [],
+      "name": "kaede5_jp",
+      "urlName": null,
+      "voteID": "6a91596d78a781c458f0720d"
+    },
+    {
+      "_id": "5f2cbccedf24b23ec7d83fed",
+      "alias": "Normal Chameleon",
+      "aliasID": "65ce97410129d7ae441db5fa",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c7a2c3da9843a48636e98dcc9626216b.png",
+      "companies": [],
+      "name": "じんしり",
+      "urlName": null,
+      "voteID": "6a91546478a781c458f05aef"
+    },
     {
       "_id": "6a90d1a3523ad16133d1a90b",
       "alias": "Ultramarine Tapir",
