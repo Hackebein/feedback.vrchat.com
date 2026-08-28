@@ -6,7 +6,7 @@
     "platforms.pc.steam",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-08-19T21:01:52.406154Z",
+  "aiTaggedAt": "2026-08-28T19:41:54.512300Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66664ea6ec64b58c7fb8de9f",
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a854d355a11933c054651a8",
@@ -205,6 +205,54 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a86950ca98c83b223ff8492",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-20T05:47:56.724Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": "6a91e2981a2a96380c2e4b70",
+      "mergedPostDetails": "After rolling back the beta to the release version and back again, I confirmed that WASD controls, as well as opening the chat with Y in VR mode, are now missing. This was my most frequently used feature earlier. Please restore this feature. This situation has created an inconvenience, as now I have to open the circular menu each time and select “chatbox”. The most convenient method was using the keyboard, which also allows you to control the player in case of unforeseen circumstances, such as a sudden battery discharge in the controllers",
+      "mergedPostTitle": "[Unity 6 1896] Bring back keyboard control in VR mode",
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a854a57a471ce03d07db278",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This was reported as a bug too, and seems to be fixed in an upcoming release: https://feedback.vrchat.com/open-beta/p/1896keyboard-movement-no-longer-works-in-vr-mode\n\n(Duplicate.)",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -222,28 +270,28 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 4,
-  "mergeCount": 0,
+  "maxScore": 7,
+  "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a854a57a471ce03d07db278/650797591.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 4,
+  "score": 7,
   "sourceFeatureExtractionItem": null,
   "status": "available in future release",
   "statusChanged": "2026-08-19T20:57:45.513Z",
   "subCategoryID": null,
   "title": "[1896]Keyboard movement no longer works in VR mode.",
-  "trendingScore": 2956.8737484446433,
+  "trendingScore": 2957.2634732421675,
   "updatedBy": "66664ea6ec64b58c7fb8de9f",
   "urlName": "1896keyboard-movement-no-longer-works-in-vr-mode",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
-    "highEngagement": false,
+    "highEngagement": true,
     "lowEngagement": false,
-    "moderateEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
@@ -257,6 +305,39 @@
       "name": "Undertrash",
       "urlName": null,
       "voteID": "6a8ff810523ad16133cb37ad"
+    },
+    {
+      "_id": "6163a5d826913b34ddb9ab43",
+      "alias": "Physical Sloth",
+      "aliasID": "65c2c146ed6eefce4c85b1d6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ed5b86bc90d84b71ff2b37b34ac2029d.png",
+      "companies": [],
+      "name": "ふれんずtちくわ信者",
+      "urlName": null,
+      "voteID": "6a91e29f78a781c458f66e7b"
+    },
+    {
+      "_id": "6050972e03276b03f63ca0b8",
+      "alias": "Iced lavender Crow",
+      "aliasID": "65c28083ed6eefce4c570d77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/82c370709f83fb4dd5fd220df49d5bed.png",
+      "companies": [],
+      "name": "Tran Fox",
+      "urlName": null,
+      "voteID": "6a91e29f78a781c458f66e7c"
+    },
+    {
+      "_id": "6a8645ac523ad1613353d64a",
+      "alias": "Improved Pelican",
+      "aliasID": "6a8645ac523ad1613353d64e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7f6ff6aa57632405b31f67fa0f87b7f1.png",
+      "companies": [],
+      "name": "Silvia-",
+      "urlName": null,
+      "voteID": "6a91e29f78a781c458f66e7d"
     },
     {
       "_id": "6a85caaa523ad161334f33a9",
