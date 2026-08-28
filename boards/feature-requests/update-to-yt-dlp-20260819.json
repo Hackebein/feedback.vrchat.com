@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-24T12:35:31.413867Z",
+  "aiTaggedAt": "2026-08-28T23:46:07.518719Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "_id": "6a86a248863dfcb3c2935b74",
@@ -257,6 +257,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "`visionos` may also return a YouTube Premium video format 616 without audio. An example URL: https://www.youtube.com/watch?v=VP9OH0O_V2Q. There's several issues with this:\n\n- Format 616 is VP9 in a HLS playlist stream (not legal for the MP4 container, this won't work in VRChat without ffmpeg: `Possible MPEG-TS in MP4 container or malformed AAC timestamps. Install ffmpeg to fix this automatically`). This is seen as a playback error in AVProVideo players.\n\n- Premium formats without login/PO tokens may also be prone to returning HTTP 403 Forbidden.\n\n- It's a video only format, so even if the format was fixed automatically with ffmpeg, there would be no audio downloaded in VRChat.\n\nSome video players fallback to format 399 with `visionos` after failure, but that's also a video only format and there's no premuxed formats available.\n\nPlease use `youtube:player_client=android,web_embedded,-visionos`.\n\nSee: https://ask.vrchat.com/t/video-players-completely-broken/48829/15",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a921c068bcd80cd69045c22",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/848f826299fd8c8dde189024b89efd46.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-28T23:38:46.222Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a86a115c1e555d0a3e22b50",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Looks like there was a yt-dlp update today, mine's dated 21:43 (UTC):\n\n```\n\nPS C:\\Users\\linda.LINDALAP\\AppData\\LocalLow\\VRChat\\VRChat\\Tools> .\\yt-dlp.exe --version\n\n2026.08.19\n\n```",
       "viewerReactions": null,
       "voteID": null
     }
