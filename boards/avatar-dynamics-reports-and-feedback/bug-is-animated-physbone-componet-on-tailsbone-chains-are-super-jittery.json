@@ -1,0 +1,132 @@
+{
+  "__v": 0,
+  "_id": "62918af26991be1eed60fdd4",
+  "author": {
+    "_id": "5f0aaa52a413e235c149fe85",
+    "alias": "Structural Stork",
+    "aliasID": "65c4efe9ed6eefce4c4224f6",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/73e1eaeeffdf80c4c322090de88c7dad.png",
+    "created": "2020-07-12T06:14:42.795Z",
+    "name": "~N0N0~",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f0aaa52a413e235c149fe85",
+  "board": {
+    "_id": "61ae60302a0c8153e557fd42",
+    "name": "(Closed) Avatar Dynamics",
+    "urlName": "avatar-dynamics-reports-and-feedback"
+  },
+  "boardID": "61ae60302a0c8153e557fd42",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 1,
+  "comments": [
+    {
+      "__v": 0,
+      "_id": "6292867b0fa0af0b6d207387",
+      "author": {
+        "_id": "5fca5df4d58780532024a52b",
+        "alias": "Toffee Tortoise",
+        "aliasID": "65c26da3ed6eefce4c4d0863",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ea6d29f016f7e9414ca4dc827d8ed996.png",
+        "created": "2020-12-04T16:04:04.984Z",
+        "name": "DrBlackRat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "61ae60302a0c8153e557fd42",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2022-05-28T20:30:51.879Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny.io/images/558d552f552510701ac982f5f4f08a37.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "62918af26991be1eed60fdd4",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This is a know issue and was also mentioned in the change log from Friday. This will be fixed early next week.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2022-05-28T02:37:38.514Z",
+  "deletedAt": null,
+  "details": "If you animate the transforms on a chain IE a tail to move around while having Is animated checked on the physbone componet then tail/bone chain jitter around like no tomorrow but obviously if you uncheck Is Animated and try to animate postition/rotation, bones wont move. so right now the bones cannot be animated with Is Animated being checked with out it being jttering around and this is not a local either.\nVideo for reference:\nhttps://streamable.com/v9piwa",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "680bb8f6e4c3e90df1360f74",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 3,
+  "mergeCount": 0,
+  "notFound": false,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2022-05-28T02:37:38.515Z",
+  "subCategoryID": null,
+  "title": "[BUG] \"Is Animated\" Physbone componet on tails/Bone chains are super jittery",
+  "trendingScore": 2735.694024651708,
+  "urlName": "bug-is-animated-physbone-componet-on-tailsbone-chains-are-super-jittery",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2e3fe96cea4d12b305610f",
+      "alias": "Actual Python",
+      "aliasID": "65dba6020129d7ae44600ef5",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/ba601398251c24668653d5cb0be418ac.png",
+      "companies": [],
+      "name": "Angela ♡",
+      "urlName": null,
+      "voteID": "6291c4ae3e36fc1416ab7b2b"
+    },
+    {
+      "_id": "5f0aaa52a413e235c149fe85",
+      "alias": "Structural Stork",
+      "aliasID": "65c4efe9ed6eefce4c4224f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/73e1eaeeffdf80c4c322090de88c7dad.png",
+      "companies": [],
+      "name": "~N0N0~",
+      "urlName": null,
+      "voteID": "62918af26991be1eed60fdf2"
+    }
+  ]
+}

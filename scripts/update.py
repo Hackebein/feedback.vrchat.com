@@ -315,7 +315,9 @@ def fetch_boards():
 def fetch_board_posts(board_slug, sort="newest"):
     """Pull posts via /api/posts/get.
 
-    Returns (posts_list, ids_set, has_next_page).
+    Returns (posts_list, ids_set, has_next_page, forbidden_error).
+    `forbidden_error` is a Canny error string when this session cannot list
+    the board; otherwise None.
     """
     body = {
         "__canny_requestID": f"update-{board_slug}-{sort}",
@@ -328,12 +330,22 @@ def fetch_board_posts(board_slug, sort="newest"):
     }
     raw = _curl_post_json(API_URL, body, timeout=15)
     if not raw.strip():
-        return [], set(), None
+        return [], set(), None, None
     try:
         data = json.loads(raw)
     except Exception as e:
         print(f"[WARN] {board_slug}: failed to parse posts/get response: {e}")
-        return [], set(), None
+        return [], set(), None, None
+    err = data.get("error") if isinstance(data, dict) else None
+    if isinstance(err, str) and err.strip():
+        err_l = err.lower()
+        if (
+            "not authorized" in err_l
+            or "unauthorized" in err_l
+            or "forbidden" in err_l
+        ):
+            print(f"[WARN] {board_slug}: posts/get {err.strip()}")
+            return [], set(), None, err.strip()
     result = data.get("result") or {}
     raw_next = result.get("hasNextPage")
     has_next = None if raw_next is None else bool(raw_next)
@@ -345,7 +357,7 @@ def fetch_board_posts(board_slug, sort="newest"):
         if pid and pid not in seen:
             seen.add(pid)
             out.append(p)
-    return out, seen, has_next
+    return out, seen, has_next, None
 
 
 def _merge_payload_into_comment(comment, payload):
@@ -439,7 +451,7 @@ def fetch_post_page(board_slug, url_slug, retries=3):
     Returns (post_dict | None, comments_list, not_found, transient_error).
     - not_found is True when the HTTP status is 404 OR the parsed post says so.
     - transient_error is True when something went wrong but we shouldn't treat
-      it as a 404 (network error, 5xx, parse failure, etc.).
+      it as a 404 (network error, 5xx, parse failure, notAuthorized, etc.).
     """
     if not url_slug:
         return None, [], False, True
@@ -483,6 +495,8 @@ def fetch_post_page(board_slug, url_slug, retries=3):
                 break
         if not post:
             return None, [], True, False
+        if post.get("notAuthorized"):
+            return None, [], False, True
         if post.get("notFound") or post.get("deletedAt"):
             return None, [], True, False
 
@@ -593,17 +607,25 @@ def _post_last_activity_dt(post):
 def fetch_newest_all(boards):
     """Parallel newest sweep per board.
 
-    Returns (fresh_by_board, single_page_totals).
+    Returns (fresh_by_board, single_page_totals, denied_slugs). `denied_slugs`
+    are boards the current session cannot list (private/restricted); callers
+    must not treat stored posts on those boards as 404s.
     """
     fresh_by_board = {}
     single_page_totals = {}
+    denied_slugs = set()
     print(f"[UPDATE] Fetching newest from {len(boards)} board(s)...")
     with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
         futures = {ex.submit(fetch_board_posts, b, "newest"): b for b in boards}
         for fut in as_completed(futures):
             slug = futures[fut]
             try:
-                posts, _, has_next = fut.result()
+                posts, _, has_next, err = fut.result()
+                if err:
+                    denied_slugs.add(slug)
+                    fresh_by_board[slug] = []
+                    print(f"[UPDATE] {slug}: skipped ({err})")
+                    continue
                 fresh_by_board[slug] = posts
                 if has_next is False:
                     single_page_totals[slug] = len(posts)
@@ -611,7 +633,7 @@ def fetch_newest_all(boards):
             except Exception as e:
                 print(f"[ERROR] {slug} newest fetch failed: {e}")
                 fresh_by_board[slug] = []
-    return fresh_by_board, single_page_totals
+    return fresh_by_board, single_page_totals, denied_slugs
 
 
 def load_all_stored(boards):
@@ -1065,7 +1087,7 @@ def generate_readme(
     single_page = {}
     totals_h = None
     if needs_meta_fetch:
-        fresh_h, single_page = fetch_newest_all(jsonl_slugs)
+        fresh_h, single_page, _denied = fetch_newest_all(jsonl_slugs)
         totals_h = {
             b["urlName"]: b.get("postCount") or 0
             for b in fetch_boards() if b.get("urlName")
@@ -1567,7 +1589,18 @@ def main():
         if missing:
             print(f"[UPDATE] {missing} notification post(s) not in archive (skipped)")
     else:
-        fresh_by_board, single_page_totals = fetch_newest_all(boards)
+        fresh_by_board, single_page_totals, denied = fetch_newest_all(boards)
+        if denied:
+            print(
+                f"[UPDATE] {len(denied)} unauthorized board(s) kept on disk, "
+                f"not refreshed: {sorted(denied)}"
+            )
+            boards = [b for b in boards if b not in denied]
+            stored = {
+                pid: info
+                for pid, info in stored.items()
+                if info.get("board_slug") not in denied
+            }
         board_totals = {b["urlName"]: b.get("postCount") or 0
                         for b in fetch_boards() if b.get("urlName")}
         newest_scrape_horizon = compute_newest_scrape_horizon(fresh_by_board, board_totals)
