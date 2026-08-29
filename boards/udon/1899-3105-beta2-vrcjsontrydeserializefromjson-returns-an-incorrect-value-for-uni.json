@@ -1,0 +1,91 @@
+{
+  "_id": "6a9231b469271fabe7e7c278",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-08-29T01:14:19.515137Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f2cb35431807b34c94a2618",
+    "alias": "Mysterious Eagle",
+    "aliasID": "65c290c9ed6eefce4cd4009e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/47c39890c0871eb46ea11ae9c740af9d.png",
+    "created": "2020-08-07T01:50:12.453Z",
+    "name": "ureishi",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f2cb35431807b34c94a2618",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-29T01:11:16.970Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Tested with VRChat client build [1899].\n\nVRCJson.TryDeserializeFromJson returns an incorrect string when valid JSON contains a supplementary Unicode character encoded as a UTF-16 surrogate pair.\n\nReproduction code:\n\n```\n\nstring json = @\"{\"\"x\"\":\"\"\\uD83D\\uDE00\"\"}\";\n\nbool success = VRCJson.TryDeserializeFromJson(json, out DataToken root);\n\nDebug.Log(\"Success: \" + success);\n\nif (success)\n\n{\n\n    Debug.Log(\"Value: \" + root.DataDictionary[\"x\"].String);\n\n}\n\n```\n\nExpected output:\n\n```\n\nSuccess: True\n\nValue: 😀\n\n```\n\nActual output:\n\n```\n\nSuccess: True\n\nValue: \\uuDE00\n\n```\n\nThe JSON is valid. `\\uD83D\\uDE00` is the JSON surrogate-pair representation of U+1F600 (😀).\n\nDeserialization reports success, but the resulting string does not match the value represented by the JSON.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a9231b469271fabe7e7c277",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9231b469271fabe7e7c278/296159415.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-29T01:11:16.970Z",
+  "subCategoryID": null,
+  "title": "[1899, 3.10.5-beta.2] VRCJson.TryDeserializeFromJson returns an incorrect value for Unicode surrogate-pair escapes",
+  "trendingScore": 2956.9859329221276,
+  "updatedBy": "5f2cb35431807b34c94a2618",
+  "urlName": "1899-3105-beta2-vrcjsontrydeserializefromjson-returns-an-incorrect-value-for-uni",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2cb35431807b34c94a2618",
+      "alias": "Mysterious Eagle",
+      "aliasID": "65c290c9ed6eefce4cd4009e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/47c39890c0871eb46ea11ae9c740af9d.png",
+      "companies": [],
+      "name": "ureishi",
+      "urlName": null,
+      "voteID": "6a9231b578a781c458f7f11b"
+    }
+  ]
+}
