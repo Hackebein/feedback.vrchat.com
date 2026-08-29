@@ -1,4 +1,4 @@
-import { getSort, hasActiveFilters } from "./filter-state";
+import { getSort, needsListRefresh } from "./filter-state";
 import type { CannySearchBody } from "./types";
 
 function decodeSearchParam(raw: string): string {
@@ -56,19 +56,22 @@ export function cannyListSortKey(
   return sidebarSort.trim() || urlSort.trim();
 }
 
+/**
+ * Live query from the Search box when it is on the page (including empty,
+ * so a leftover `?search=` does not keep searching after the user clears).
+ * Falls back to the URL only before the input exists (first paint / load).
+ */
 export function readActiveSearchQuery(
   target: Window & typeof globalThis,
 ): string {
-  const url = new URL(target.location.href);
-  const fromUrl = readSearchParam(url.searchParams.get("search"));
-  if (fromUrl) {
-    return fromUrl;
-  }
-
   const input = target.document.querySelector<HTMLInputElement>(
     '.searchContainer input[placeholder="Search…"]',
   );
-  return input?.value.trim() ?? "";
+  if (input) {
+    return input.value.trim();
+  }
+  const url = new URL(target.location.href);
+  return readSearchParam(url.searchParams.get("search"));
 }
 
 export function readBoardSlugFromPage(
@@ -98,8 +101,9 @@ export function buildPostQueryParams(
   const boardSlug = readBoardSlugFromPage(target);
 
   // The bridge now drives every list view, so a refresh is meaningful whenever
-  // there is a text query, a board context, or any active sidebar filter.
-  if (!textSearch && !boardSlug && !hasActiveFilters()) {
+  // there is a text query, a board context, an active sidebar filter, or a
+  // non-default sort.
+  if (!textSearch && !boardSlug && !needsListRefresh()) {
     return null;
   }
 
@@ -180,6 +184,10 @@ export function triggerSearchViaHistory(
   target.setTimeout(() => navigate(encoded), 50);
 }
 
+/**
+ * Fill an empty Search box from a known query (boot). Never overwrite text
+ * the user has already typed or cleared.
+ */
 export function syncSearchInputValue(
   target: Window & typeof globalThis,
   query: string,
@@ -187,7 +195,7 @@ export function syncSearchInputValue(
   const input = target.document.querySelector<HTMLInputElement>(
     '.searchContainer input[placeholder="Search…"]',
   );
-  if (!input || input.value === query) {
+  if (!input || input.value.trim() === query || input.value.trim() !== "") {
     return;
   }
 

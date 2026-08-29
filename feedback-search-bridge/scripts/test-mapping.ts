@@ -1,11 +1,19 @@
 import assert from "node:assert/strict";
+import { INDEX_NAME } from "../src/core/config";
 import {
   isCannySearchRequest,
   mapCannyToGateway,
   mapGatewayToCanny,
   normalizeGatewayHit,
 } from "../src/core/mapping";
-import { REQUESTED_FACETS } from "../src/core/filter-state";
+import {
+  DEFAULT_SORT,
+  getEffectiveSort,
+  REQUESTED_FACETS,
+  resetFilterState,
+  SEARCH_DEFAULT_SORT,
+  setSort,
+} from "../src/core/filter-state";
 import { stripSearchPostQueries } from "../src/core/ssr-hook";
 
 const cannyBody = {
@@ -221,5 +229,68 @@ const pagedParams = (pagedRequest.requestBody as Array<{
 }>)[0];
 assert.equal(pagedParams.params.hitsPerPage, 40);
 assert.equal(pagedParams.params.page, 0);
+
+resetFilterState();
+const defaultSearchMapped = mapCannyToGateway(
+  {
+    textSearch: "avatar",
+    pages: 1,
+    filters: {
+      refinements: {},
+      ranges: {},
+      toggles: {},
+      sort: getEffectiveSort("avatar"),
+    },
+  },
+  false,
+);
+assert.equal(
+  (defaultSearchMapped.requestBody as Array<{ indexName: string }>)[0]
+    .indexName,
+  `${INDEX_NAME}_relevance_desc`,
+);
+assert.equal(getEffectiveSort("avatar"), SEARCH_DEFAULT_SORT);
+
+setSort("newest");
+const explicitNewestMapped = mapCannyToGateway(
+  {
+    textSearch: "avatar",
+    pages: 1,
+    filters: {
+      refinements: {},
+      ranges: {},
+      toggles: {},
+      sort: getEffectiveSort("avatar"),
+    },
+  },
+  false,
+);
+assert.equal(
+  (explicitNewestMapped.requestBody as Array<{ indexName: string }>)[0]
+    .indexName,
+  INDEX_NAME,
+);
+
+resetFilterState();
+const boardDefaultMapped = mapCannyToGateway(
+  {
+    textSearch: "",
+    pages: 1,
+    filters: {
+      refinements: {},
+      ranges: {},
+      toggles: {},
+      sort: getEffectiveSort(""),
+    },
+  },
+  false,
+);
+assert.equal(
+  (boardDefaultMapped.requestBody as Array<{ indexName: string }>)[0]
+    .indexName,
+  INDEX_NAME,
+);
+assert.equal(getEffectiveSort(""), DEFAULT_SORT);
+resetFilterState();
 
 console.info("mapping tests passed");

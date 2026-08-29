@@ -1,5 +1,5 @@
 import { STORAGE_KEYS, cannyScoreFromIndex } from "./config";
-import { getFilterState } from "./filter-state";
+import { getEffectiveSort, getFilterState } from "./filter-state";
 import {
   buildViewerVoteMap,
   hydrateViewerVotes,
@@ -305,7 +305,12 @@ export async function handleCannySearch(
 ): Promise<CannySearchResponse> {
   const epoch = ++searchEpoch;
   const current = await ensureSettings(options.storage);
-  const body: CannySearchBody = { ...cannyBody, filters: getFilterState() };
+  const textSearch =
+    typeof cannyBody.textSearch === "string" ? cannyBody.textSearch : "";
+  const body: CannySearchBody = {
+    ...cannyBody,
+    filters: { ...getFilterState(), sort: getEffectiveSort(textSearch) },
+  };
   const local = await loadLocalPosts(body, current.luceneMode, target);
   const pageSize = readHitsPerPage(body);
   const page = readPageIndex(body);
@@ -378,10 +383,11 @@ export async function handleCannySearch(
     };
   }
 
-  // A newer list/facet request (e.g. the user cleared search) owns the sidebar.
-  // Still return this payload so Canny's in-flight intercept is not left hanging.
+  // A newer list/facet request (e.g. the user cleared search) owns the sidebar
+  // and the visible list. Mark stale so intercepts abort instead of painting
+  // this payload, and so a direct Redux inject is skipped.
   if (epoch !== searchEpoch) {
-    return cannyResponse;
+    return { ...cannyResponse, stale: true };
   }
 
   const context: SearchContext = {

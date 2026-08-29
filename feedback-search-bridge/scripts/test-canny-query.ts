@@ -3,9 +3,21 @@ import {
   buildPostQueryParams,
   cannyListSortKey,
   CANNY_SEARCH_SORT,
+  readActiveSearchQuery,
+  syncSearchInputValue,
 } from "../src/core/canny-query";
-import { findLiveSearchQueryParams } from "../src/core/canny-store";
-import { DEFAULT_SORT, setSort } from "../src/core/filter-state";
+import {
+  applyCannySearchResults,
+  findLiveSearchQueryParams,
+} from "../src/core/canny-store";
+import {
+  DEFAULT_SORT,
+  getEffectiveSort,
+  needsListRefresh,
+  resetFilterState,
+  SEARCH_DEFAULT_SORT,
+  setSort,
+} from "../src/core/filter-state";
 import { isSearchQueryCleared } from "../src/core/search-refresh";
 
 assert.equal(cannyListSortKey("avatar", "score_desc"), CANNY_SEARCH_SORT);
@@ -19,18 +31,17 @@ assert.equal(cannyListSortKey("", "", ""), "");
 
 function mockTarget(
   href: string,
-  searchInput = "",
+  input?: string,
 ): Window & typeof globalThis {
-  const input = searchInput ? { value: searchInput } : null;
+  const inputEl = input === undefined ? null : { value: input };
   return {
     location: { href },
     document: {
-      querySelector: () => input,
+      querySelector: () => inputEl,
     },
   } as unknown as Window & typeof globalThis;
 }
 
-const previousSort = DEFAULT_SORT;
 try {
   setSort("score_desc");
   const searchParams = buildPostQueryParams(
@@ -62,7 +73,7 @@ try {
   assert.equal(boardOnly?.sort, "score_desc");
   assert.equal(boardOnly?.textSearch, "");
 } finally {
-  setSort(previousSort);
+  resetFilterState();
 }
 
 const liveKey = {
@@ -121,5 +132,69 @@ assert.equal(isSearchQueryCleared("avatar", "  "), true);
 assert.equal(isSearchQueryCleared("avatar", "avatars"), false);
 assert.equal(isSearchQueryCleared("", ""), false);
 assert.equal(isSearchQueryCleared("", "avatar"), false);
+
+assert.equal(
+  readActiveSearchQuery(
+    mockTarget("https://feedback.vrchat.com/?search=foo", "bar"),
+  ),
+  "bar",
+);
+assert.equal(
+  readActiveSearchQuery(
+    mockTarget("https://feedback.vrchat.com/?search=foo", ""),
+  ),
+  "",
+);
+assert.equal(
+  isSearchQueryCleared(
+    "foo",
+    readActiveSearchQuery(
+      mockTarget("https://feedback.vrchat.com/?search=foo", ""),
+    ),
+  ),
+  true,
+);
+assert.equal(
+  readActiveSearchQuery(mockTarget("https://feedback.vrchat.com/?search=foo")),
+  "foo",
+);
+
+const syncInput = { value: "bar" };
+const syncTarget = {
+  location: { href: "https://feedback.vrchat.com/?search=foo" },
+  document: { querySelector: () => syncInput },
+} as unknown as Window & typeof globalThis;
+syncSearchInputValue(syncTarget, "foo");
+assert.equal(syncInput.value, "bar");
+
+resetFilterState();
+assert.equal(getEffectiveSort(""), DEFAULT_SORT);
+assert.equal(getEffectiveSort("avatar"), SEARCH_DEFAULT_SORT);
+setSort("newest");
+assert.equal(getEffectiveSort("avatar"), "newest");
+resetFilterState();
+assert.equal(needsListRefresh(), false);
+setSort("score_desc");
+assert.equal(needsListRefresh(), true);
+resetFilterState();
+
+const emptyActions: unknown[] = [];
+applyCannySearchResults(
+  {
+    dispatch: (action: unknown) => {
+      emptyActions.push(action);
+    },
+    getState: () => ({}),
+  },
+  { textSearch: "avatar", sort: "relevance" },
+  { result: { posts: [], hasNextPage: false } },
+);
+assert.equal(emptyActions.length, 1);
+const emptyLoaded = emptyActions[0] as {
+  type: string;
+  result: { posts: unknown[] };
+};
+assert.equal(emptyLoaded.type, "canny/post_queries/query_loaded");
+assert.deepEqual(emptyLoaded.result.posts, []);
 
 console.info("canny-query tests passed");

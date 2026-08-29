@@ -49,11 +49,16 @@ export const REQUESTED_FACETS: string[] = [
 
 export const DEFAULT_SORT = "newest";
 
+/** Sort index used for text search until the user picks a different order. */
+export const SEARCH_DEFAULT_SORT = "relevance_desc";
+
 function emptyState(): FilterState {
   return { refinements: {}, ranges: {}, toggles: {}, sort: DEFAULT_SORT };
 }
 
 let state: FilterState = emptyState();
+/** True after the user picks a sort in the dropdown (including Newest). */
+let sortChosenByUser = false;
 
 const listeners = new Set<() => void>();
 
@@ -93,6 +98,22 @@ export function hasActiveFilters(value: FilterState = state): boolean {
     return true;
   }
   return false;
+}
+
+/** True when facets, ranges, toggles, or a non-default sort should refresh the list. */
+export function needsListRefresh(value: FilterState = state): boolean {
+  return hasActiveFilters(value) || value.sort !== DEFAULT_SORT;
+}
+
+/**
+ * Sort sent to the gateway. A text query with the untouched default (Newest)
+ * uses relevance; an explicit dropdown choice — including Newest — is honored.
+ */
+export function getEffectiveSort(textSearch = ""): string {
+  if (textSearch.trim() && !sortChosenByUser) {
+    return SEARCH_DEFAULT_SORT;
+  }
+  return state.sort;
 }
 
 export function getRefinementValues(attr: string): string[] {
@@ -155,6 +176,7 @@ export function getSort(): string {
 }
 
 export function setSort(sort: string): void {
+  sortChosenByUser = true;
   state = { ...state, sort };
   emit();
 }
@@ -162,5 +184,12 @@ export function setSort(sort: string): void {
 export function clearAllFilters(): void {
   const sort = state.sort;
   state = { ...emptyState(), sort };
+  emit();
+}
+
+/** Test helper: restore default filters and the untouched-sort flag. */
+export function resetFilterState(): void {
+  state = emptyState();
+  sortChosenByUser = false;
   emit();
 }

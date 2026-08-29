@@ -1,14 +1,14 @@
 import { createCannyDropdown } from "./canny-dropdown";
 import {
   DEFAULT_SORT,
-  getSort,
-  hasActiveFilters,
+  getEffectiveSort,
+  needsListRefresh,
   onFilterStateChange,
   setSort,
 } from "./filter-state";
 import { LUCENE_CLASS, SORT_OPTIONS } from "./filter-sidebar";
 import { LUCENE_HELP_INTRO, LUCENE_HELP_ROWS, SORT_HELP } from "./lucene-help";
-import { readActiveSearchQuery } from "./search-refresh";
+import { installSearchQueryWatch, readActiveSearchQuery } from "./search-refresh";
 import type { BridgeSettings, BridgeStorage } from "./types";
 import { writeBridgeSettings } from "./state";
 import {
@@ -248,7 +248,7 @@ function createControlRoot(
     current = { ...current, luceneMode: luceneInput.checked };
     void writeBridgeSettings(storage, current).then(() => {
       onChange(current);
-      if (readActiveSearchQuery(target) || hasActiveFilters()) {
+      if (readActiveSearchQuery(target) || needsListRefresh()) {
         onSearchRefresh();
       }
     });
@@ -261,7 +261,8 @@ function createControlRoot(
   const sortDropdown = createCannyDropdown({
     doc: document,
     options: SORT_OPTIONS,
-    value: getSort() || DEFAULT_SORT,
+    value:
+      getEffectiveSort(readActiveSearchQuery(target)) || DEFAULT_SORT,
     searchable: false,
     variant: "compact",
     onChange: (value) => {
@@ -269,9 +270,13 @@ function createControlRoot(
       onSearchRefresh();
     },
   });
-  onFilterStateChange(() => {
-    sortDropdown.setValue(getSort() || DEFAULT_SORT);
-  });
+  const syncSortDropdown = (): void => {
+    sortDropdown.setValue(
+      getEffectiveSort(readActiveSearchQuery(target)) || DEFAULT_SORT,
+    );
+  };
+  onFilterStateChange(syncSortDropdown);
+  installSearchQueryWatch(target, syncSortDropdown);
   sortLabel.appendChild(sortDropdown.root);
 
   const helpBtn = document.createElement("button");

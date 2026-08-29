@@ -5,7 +5,7 @@ import {
   clearAllFilters,
   getRange,
   getRefinementValues,
-  getSort,
+  getEffectiveSort,
   getToggle,
   hasActiveFilters,
   isRefined,
@@ -23,6 +23,7 @@ import {
   nestBoardFacetEntries,
   type FacetEntry,
 } from "./board-hierarchy";
+import { installSearchQueryWatch, readActiveSearchQuery } from "./search-refresh";
 import type { FacetStats, SearchFacets } from "./types";
 
 /** Display label for a facet value (AI categories map internal ids to names). */
@@ -603,6 +604,7 @@ function buildItem(
 
 function buildSort(
   doc: Document,
+  target: Window & typeof globalThis,
   refresh: Refresher,
   registerUpdate: (fn: () => void) => void,
 ): HTMLElement {
@@ -611,7 +613,8 @@ function buildSort(
   const dropdown = createCannyDropdown({
     doc,
     options: SORT_OPTIONS,
-    value: getSort() || DEFAULT_SORT,
+    value:
+      getEffectiveSort(readActiveSearchQuery(target)) || DEFAULT_SORT,
     searchable: false,
     onChange: (value) => {
       setSort(value);
@@ -619,7 +622,9 @@ function buildSort(
     },
   });
   registerUpdate(() => {
-    dropdown.setValue(getSort() || DEFAULT_SORT);
+    dropdown.setValue(
+      getEffectiveSort(readActiveSearchQuery(target)) || DEFAULT_SORT,
+    );
   });
   wrap.appendChild(dropdown.root);
   return wrap;
@@ -696,7 +701,7 @@ function buildPanel(
   let chips = buildChips(doc, refresh);
   panel.appendChild(chips);
 
-  panel.appendChild(buildSort(doc, refresh, registerUpdate));
+  panel.appendChild(buildSort(doc, target, refresh, registerUpdate));
 
   for (const section of SECTIONS) {
     if (section.kind === "group") {
@@ -784,6 +789,10 @@ export function installFilterSidebar(
   });
 
   onFilterStateChange(() => {
+    update?.();
+  });
+
+  installSearchQueryWatch(target, () => {
     update?.();
   });
 }

@@ -57,7 +57,13 @@ export function getCannyReduxStore(
     target.document.getElementById("content"),
     target.document.getElementById("details"),
     target.document.body,
-  ].filter((node): node is HTMLElement => node instanceof HTMLElement);
+  ].filter(
+    (node): node is HTMLElement =>
+      !!node &&
+      typeof node === "object" &&
+      "children" in node &&
+      typeof node.children.length === "number",
+  );
 
   for (const root of roots) {
     const stack: Element[] = [root];
@@ -165,6 +171,10 @@ export function applyCannySearchResults(
 ): void {
   const posts = cannyResponse.result?.posts ?? [];
   const timestamp = Date.now();
+  const result = {
+    posts,
+    hasNextPage: cannyResponse.result?.hasNextPage ?? false,
+  };
 
   if (posts.length > 0) {
     store.dispatch({
@@ -174,10 +184,12 @@ export function applyCannySearchResults(
     });
   }
 
+  // Always write the query slot, including an empty posts array, so a
+  // zero-hit filter combination clears the list instead of leaving stale rows.
   store.dispatch({
     type: QUERY_LOADED,
     queryParams,
-    result: cannyResponse.result ?? { posts: [], hasNextPage: false },
+    result,
     timestamp,
   });
 }

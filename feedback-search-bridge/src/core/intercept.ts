@@ -26,6 +26,20 @@ function jsonResponse(body: unknown, status = 200): Response {
   });
 }
 
+function cannyClientPayload(mapped: {
+  result?: unknown;
+  error?: string;
+}): Record<string, unknown> {
+  const payload: Record<string, unknown> = {};
+  if (mapped.result !== undefined) {
+    payload.result = mapped.result;
+  }
+  if (mapped.error !== undefined) {
+    payload.error = mapped.error;
+  }
+  return payload;
+}
+
 export function installNetworkIntercept(
   options: BridgeOptions,
   target: Window & typeof globalThis = window,
@@ -68,8 +82,14 @@ function patchFetch(
 
     try {
       const mapped = await handleCannySearch(options, cannyBody, target);
-      return jsonResponse(mapped);
+      if (mapped.stale) {
+        throw new DOMException("The search was superseded", "AbortError");
+      }
+      return jsonResponse(cannyClientPayload(mapped));
     } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") {
+        throw error;
+      }
       console.warn("[vrcfb] falling back to Canny search", error);
       return originalFetch(input, init);
     }
@@ -161,7 +181,24 @@ function patchXmlHttpRequest(
 
     void handleCannySearch(options, cannyBody, target)
       .then((mapped) => {
-        const payload = JSON.stringify(mapped);
+        if (mapped.stale) {
+          Object.defineProperty(this, "readyState", {
+            configurable: true,
+            get: () => 4,
+          });
+          Object.defineProperty(this, "status", {
+            configurable: true,
+            get: () => 0,
+          });
+          Object.defineProperty(this, "statusText", {
+            configurable: true,
+            get: () => "",
+          });
+          this.dispatchEvent(new Event("abort"));
+          this.dispatchEvent(new Event("loadend"));
+          return;
+        }
+        const payload = JSON.stringify(cannyClientPayload(mapped));
         Object.defineProperty(this, "readyState", {
           configurable: true,
           get: () => 4,

@@ -40,6 +40,11 @@ function readString(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
 }
 
+/**
+ * Gateway index for this list request. `filters.sort` is the effective sidebar
+ * sort: untouched Newest becomes relevance while a text query is active
+ * (`getEffectiveSort` in handleCannySearch). An explicit dropdown choice wins.
+ */
 function readSortIndex(body: CannySearchBody): string {
   const sort = readString(body.filters?.sort) || readString(body.sort);
   const hasSearch = readString(body.textSearch).length > 0;

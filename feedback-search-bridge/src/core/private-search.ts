@@ -577,6 +577,7 @@ export function mergeSearchFacets(left: SearchFacets, right: SearchFacets): Sear
   };
 }
 
+/** Effective sidebar sort from handleCannySearch (`filters.sort`), else Canny's `sort`. */
 export function readSortKey(body: CannySearchBody): string {
   return readString(body.filters?.sort) || readString(body.sort);
 }

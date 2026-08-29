@@ -12,7 +12,7 @@ import {
   invalidateCannyPostQueries,
 } from "./canny-store";
 import { onRouteChange } from "./coverage";
-import { hasActiveFilters } from "./filter-state";
+import { needsListRefresh } from "./filter-state";
 import { handleCannySearch } from "./search-handler";
 import { stripSearchPostQueries } from "./ssr-hook";
 import type { BridgeOptions } from "./types";
@@ -21,6 +21,8 @@ const BOOT_REFRESH_DELAYS_MS = [150, 500, 1200, 2500, 5000];
 
 let refreshGeneration = 0;
 let refreshInFlight = false;
+let refreshPending = false;
+let pendingForceHistory = false;
 
 export { readActiveSearchQuery } from "./canny-query";
 
@@ -66,57 +68,83 @@ export function stripCachedSearchQueries(
   }
 }
 
+/**
+ * Push the current sidebar filters, sort, and Search-box query into Canny's
+ * list. Overlapping calls coalesce: a refresh that arrives while one is in
+ * flight is remembered and replayed once with the latest state, so rapid
+ * filter + sort + search changes cannot drop the last combination.
+ */
 export async function runSearchRefresh(
   options: BridgeOptions,
   target: Window & typeof globalThis,
   refreshOptions: { forceHistory?: boolean } = {},
 ): Promise<boolean> {
-  const query = readActiveSearchQuery(target);
-
   if (refreshInFlight) {
+    refreshPending = true;
+    if (refreshOptions.forceHistory) {
+      pendingForceHistory = true;
+    }
     return false;
   }
 
   refreshInFlight = true;
+  let applied = false;
   try {
-    stripCachedSearchQueries(target);
-    if (query) {
-      syncSearchInputValue(target, query);
-    }
+    do {
+      refreshPending = false;
+      const forceHistory = refreshOptions.forceHistory || pendingForceHistory;
+      pendingForceHistory = false;
+      const query = readActiveSearchQuery(target);
 
-    const store = getCannyReduxStore(target);
+      stripCachedSearchQueries(target);
+      if (query) {
+        syncSearchInputValue(target, query);
+      }
 
-    // With an active text query we can inject results directly into the post
-    // query Canny keys by, avoiding a flash of native results.
-    if (query && store) {
-      const queryParams =
-        findLiveSearchQueryParams(store, query) ??
-        buildPostQueryParams(target, store);
-      if (queryParams) {
-        try {
-          const cannyBody = buildCannySearchBody(target, queryParams);
-          const cannyResponse = await handleCannySearch(options, cannyBody, target);
-          applyCannySearchResults(store, queryParams, cannyResponse);
-          return true;
-        } catch (error) {
-          console.warn("[vrcfb] direct search refresh failed", error);
+      const store = getCannyReduxStore(target);
+
+      // With an active text query we can inject results directly into the post
+      // query Canny keys by, avoiding a flash of native results.
+      if (query && store) {
+        const queryParams =
+          findLiveSearchQueryParams(store, query) ??
+          buildPostQueryParams(target, store);
+        if (queryParams) {
+          try {
+            const cannyBody = buildCannySearchBody(target, queryParams);
+            const cannyResponse = await handleCannySearch(
+              options,
+              cannyBody,
+              target,
+            );
+            if (!cannyResponse.stale && !refreshPending) {
+              applyCannySearchResults(store, queryParams, cannyResponse);
+            }
+            applied = true;
+            continue;
+          } catch (error) {
+            console.warn("[vrcfb] direct search refresh failed", error);
+          }
         }
       }
-    }
 
-    // Board browsing / filter-only changes: force Canny to refetch the list,
-    // which the network intercept serves from the gateway with the current
-    // filter state applied.
-    if (invalidateCannyPostQueries(target)) {
-      return true;
-    }
+      // Board browsing / filter-only changes: force Canny to refetch the list,
+      // which the network intercept serves from the gateway with the current
+      // filter state applied.
+      if (invalidateCannyPostQueries(target)) {
+        applied = true;
+        continue;
+      }
 
-    if (refreshOptions.forceHistory || !store) {
-      triggerSearchViaHistory(target, query);
-      return true;
-    }
+      if (forceHistory || !store) {
+        triggerSearchViaHistory(target, query);
+        applied = true;
+        continue;
+      }
 
-    return false;
+      applied = false;
+    } while (refreshPending);
+    return applied;
   } finally {
     refreshInFlight = false;
   }
@@ -134,7 +162,7 @@ export function scheduleSearchRefresh(
     if (generation !== refreshGeneration) {
       return;
     }
-    if (!readActiveSearchQuery(target) && !hasActiveFilters()) {
+    if (!readActiveSearchQuery(target) && !needsListRefresh()) {
       return;
     }
     void runSearchRefresh(options, target, refreshOptions);

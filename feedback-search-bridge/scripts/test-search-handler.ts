@@ -4,7 +4,7 @@ import {
   handleCannySearch,
   onFacets,
 } from "../src/core/search-handler";
-import { clearAllFilters, toggleRefinement } from "../src/core/filter-state";
+import { resetFilterState, toggleRefinement } from "../src/core/filter-state";
 import type {
   BridgeOptions,
   BridgeTransportRequest,
@@ -77,11 +77,13 @@ const stop = onFacets((facets: SearchFacets) => {
 const stale = handleCannySearch(options, { textSearch: "avatar", pages: 1 });
 const fresh = handleCannySearch(options, { textSearch: "", pages: 1 });
 
-await fresh;
+const freshResult = await fresh;
 slow.resolve(jsonResponse(gatewayWithOpenCount(1)));
-await stale;
+const staleResult = await stale;
 stop();
 
+assert.equal(staleResult.stale, true);
+assert.equal(freshResult.stale, undefined);
 assert.deepEqual(seen, [99]);
 
 function gatewayWithFacets(facets: Record<string, Record<string, number>>): unknown {
@@ -182,7 +184,7 @@ disjoint.resolve(
 await waitUntil(() => boardSeen.length >= 3);
 await withBoard;
 stopBoard();
-clearAllFilters();
+resetFilterState();
 
 assert.deepEqual(boardSeen, [unscopedBoards, unscopedBoards, disjointBoards]);
 

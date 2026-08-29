@@ -52,6 +52,8 @@ export type CannySearchResponse = {
     hasNextPage?: boolean;
   };
   error?: string;
+  /** True when a newer search superseded this one; do not paint the list. */
+  stale?: boolean;
 };
 
 export type FacetCounts = Record<string, Record<string, number>>;

@@ -104,8 +104,9 @@ export const LUCENE_HELP_INTRO = [
 ];
 
 export const SORT_HELP = [
-  "Pick a sort with the dropdown next to the search box.",
-  "Newest — most recently created posts first.",
+  "Pick a sort with the dropdown next to the search box or in the filter sidebar.",
+  "With a search query, Relevance is used until you pick another sort.",
+  "Newest — most recently created posts first (default when not searching).",
   "Oldest — earliest created posts first.",
   "Newest activity / Oldest activity — sort by last update.",
   "Most voters / Fewest voters — sort by vote count.",
