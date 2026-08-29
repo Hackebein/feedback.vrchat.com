@@ -82,14 +82,12 @@ function patchFetch(
 
     try {
       const mapped = await handleCannySearch(options, cannyBody, target);
-      if (mapped.stale) {
-        throw new DOMException("The search was superseded", "AbortError");
-      }
+      // Always complete with 200. Aborting a superseded list request makes
+      // Canny show "posts couldn't be loaded" on board pages, where boot
+      // refresh overlaps the first /api/posts/get. Facet/Redux inject still
+      // ignore `stale` payloads.
       return jsonResponse(cannyClientPayload(mapped));
     } catch (error) {
-      if (error instanceof DOMException && error.name === "AbortError") {
-        throw error;
-      }
       console.warn("[vrcfb] falling back to Canny search", error);
       return originalFetch(input, init);
     }
@@ -181,23 +179,6 @@ function patchXmlHttpRequest(
 
     void handleCannySearch(options, cannyBody, target)
       .then((mapped) => {
-        if (mapped.stale) {
-          Object.defineProperty(this, "readyState", {
-            configurable: true,
-            get: () => 4,
-          });
-          Object.defineProperty(this, "status", {
-            configurable: true,
-            get: () => 0,
-          });
-          Object.defineProperty(this, "statusText", {
-            configurable: true,
-            get: () => "",
-          });
-          this.dispatchEvent(new Event("abort"));
-          this.dispatchEvent(new Event("loadend"));
-          return;
-        }
         const payload = JSON.stringify(cannyClientPayload(mapped));
         Object.defineProperty(this, "readyState", {
           configurable: true,

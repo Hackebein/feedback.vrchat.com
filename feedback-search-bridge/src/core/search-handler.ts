@@ -384,8 +384,8 @@ export async function handleCannySearch(
   }
 
   // A newer list/facet request (e.g. the user cleared search) owns the sidebar
-  // and the visible list. Mark stale so intercepts abort instead of painting
-  // this payload, and so a direct Redux inject is skipped.
+  // and Redux inject. Still return this payload so Canny's in-flight intercept
+  // completes with 200 instead of aborting into "posts couldn't be loaded".
   if (epoch !== searchEpoch) {
     return { ...cannyResponse, stale: true };
   }
