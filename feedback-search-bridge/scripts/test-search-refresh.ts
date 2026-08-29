@@ -64,12 +64,16 @@ resetFilterState();
 const liveFirst = { textSearch: "first", sort: "relevance" };
 const liveSecond = { textSearch: "second", sort: "relevance" };
 const queryLoaded: Array<{ textSearch?: string; posts: string[] }> = [];
+const dispatchedTypes: string[] = [];
 const store = {
   dispatch: (action: {
     type?: string;
     queryParams?: { textSearch?: string };
     result?: { posts?: Array<{ _id?: string }> };
   }) => {
+    if (action.type) {
+      dispatchedTypes.push(action.type);
+    }
     if (action.type === "canny/post_queries/query_loaded") {
       queryLoaded.push({
         textSearch: action.queryParams?.textSearch,
@@ -142,6 +146,7 @@ assert.equal(transportCalls, 2);
 assert.deepEqual(queryLoaded, [
   { textSearch: "second", posts: ["second"] },
 ]);
+assert.ok(dispatchedTypes.includes("canny/post_queries/invalidate"));
 
 resetFilterState();
 assert.equal(needsListRefresh(), false);
@@ -183,6 +188,49 @@ const sortTarget = {
 scheduleSearchRefresh(options, sortTarget, 0);
 await Promise.resolve();
 assert.ok(invalidates.includes("canny/post_queries/invalidate"));
+
+resetFilterState();
+setSort("score_desc");
+const searchSortTypes: string[] = [];
+const searchSortStore = {
+  dispatch: (action: { type?: string }) => {
+    if (action.type) {
+      searchSortTypes.push(action.type);
+    }
+  },
+  getState: () => ({
+    postQueries: {
+      [JSON.stringify({ textSearch: "avatar", sort: "relevance" })]: {
+        result: { posts: [] },
+      },
+    },
+  }),
+};
+const searchSortContent = {
+  children: [] as unknown[],
+  __reactFiber$test: {
+    memoizedProps: { store: searchSortStore },
+    return: null,
+    stateNode: null,
+  },
+};
+const searchSortTarget = {
+  location: { href: "https://feedback.vrchat.com/feature-requests?search=avatar" },
+  document: {
+    querySelector: () => ({ value: "avatar" }),
+    getElementById: (id: string) => (id === "content" ? searchSortContent : null),
+    body: null,
+  },
+  history: { replaceState: () => undefined, state: null },
+  dispatchEvent: () => true,
+  setTimeout: (fn: () => void) => {
+    fn();
+    return 0;
+  },
+} as unknown as Window & typeof globalThis;
+
+assert.equal(await runSearchRefresh(options, searchSortTarget), true);
+assert.ok(searchSortTypes.includes("canny/post_queries/invalidate"));
 
 resetFilterState();
 console.info("search-refresh tests passed");

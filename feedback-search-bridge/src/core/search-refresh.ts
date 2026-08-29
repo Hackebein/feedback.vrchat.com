@@ -120,17 +120,16 @@ export async function runSearchRefresh(
             if (!cannyResponse.stale && !refreshPending) {
               applyCannySearchResults(store, queryParams, cannyResponse);
             }
-            applied = true;
-            continue;
           } catch (error) {
             console.warn("[vrcfb] direct search refresh failed", error);
           }
         }
       }
 
-      // Board browsing / filter-only changes: force Canny to refetch the list,
-      // which the network intercept serves from the gateway with the current
-      // filter state applied.
+      // Always invalidate after a sidebar-driven refresh. Canny keys an active
+      // text search by `sort: "relevance"`, so injecting into that same slot
+      // often does not re-render; a refetch lets the intercept supply the new
+      // gateway order (sort, filters) as a fresh list response.
       if (invalidateCannyPostQueries(target)) {
         applied = true;
         continue;
