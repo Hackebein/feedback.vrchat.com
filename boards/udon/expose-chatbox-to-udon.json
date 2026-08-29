@@ -2,17 +2,16 @@
   "_id": "6a8dfb10f5273512f943c632",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon",
-    "client.chatbox"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-08-29T01:50:26.393054Z",
+  "aiTaggedAt": "2026-08-29T06:35:50.554521Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67a0ed8d6e7354cc8f8c7acd",
     "alias": "Cautious Minnow",
     "aliasID": "67a0ed8eafacf378f12ca236",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/818674a2af8b3e700e3727d0c698f09d.png",
+    "avatarURL": "https://canny-assets.io/images/45e4b7114d110e65f12f4241f9712f99.png",
     "created": "2025-02-03T16:23:41.681Z",
     "name": "Uzer Tekton",
     "serviceAccount": false,
@@ -35,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a9239535a26bbae3c7f5d8c",
@@ -78,6 +77,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "As a mute player who uses the chatbox all the time, I don't think this is a good idea for a couple reasons:\n\nIt kind of interferes with an accessibility feature. If I'm trying to communicate to another player using the chatbox, the NPC in the world would also react. Both ideas can already be done with in-world text boxes, see worlds like Audience Anarchy and Who Said What.\n\nAnd then there's the privacy concerns with worlds having direct access to what you're typing. It could be potentially abused to log people's messages to an external url. It's the same reason why worlds shouldn't have direct access to what people are saying through voice chat.\n\nThe chatbox should be exclusively used for chatting with other players imo.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a927bd9abb533460aeab820",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67a0ed8d6e7354cc8f8c7acd",
+        "alias": "Cautious Minnow",
+        "aliasID": "67a0ed8eafacf378f12ca236",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/45e4b7114d110e65f12f4241f9712f99.png",
+        "created": "2025-02-03T16:23:41.681Z",
+        "name": "Uzer Tekton",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-29T06:27:37.193Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a9239535a26bbae3c7f5d8c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8dfb10f5273512f943c632",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It will actually grant new accessibility features. If you are doing a TED talk, you want to present to an audience, Udon can amplify your voice, but there is no equivalent function for a mute person using Chatbox. This will allow that.\n\nYou don't have to worry about privacy, worlds cannot dynamically create urls to load or otherwise upload data to any external server. (By the way, VRChat already logs your Chatbox messages)\n\nIf you are chatting with another player using Chatbox, some random player can also readily react to it, so there is no privacy concern. Having NPCs able to react to it is an accessibility feature allowing a NEW mechanism of interacting with the world with \"chat\". It does not replace the text boxes where you need to have a certain input like Audience Anarchy because those are a different use case where you want it to be private message.",
       "viewerReactions": null,
       "voteID": null
     }
