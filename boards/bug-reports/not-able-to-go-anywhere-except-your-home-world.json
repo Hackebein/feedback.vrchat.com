@@ -78,7 +78,9 @@
       "postDeleted": false,
       "postID": "6a9063f6e8983be904f2a2fc",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -111,7 +113,7 @@
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-27T16:21:10.461Z",
@@ -124,8 +126,8 @@
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false
   },
   "voters": [
