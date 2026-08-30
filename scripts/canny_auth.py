@@ -453,56 +453,98 @@ def _complete_2fa(
     raise CannyAuthError(f"VRChat login incomplete HTTP {code}: {raw[:300]}")
 
 
+def _vrchat_basic_auth(username: str, password: str) -> str:
+    """VRChat Basic token: base64(urlencode(username):urlencode(password)).
+
+    Raw ``user:pass`` is valid HTTP Basic, but the VRChat API documents (and
+    enforces) percent-encoding first. An email username therefore 401s until
+    ``@`` becomes ``%40``; the website login form does not use this scheme.
+    """
+    token = f"{urllib.parse.quote(username, safe='')}:{urllib.parse.quote(password, safe='')}"
+    return base64.b64encode(token.encode("utf-8")).decode("ascii")
+
+
+def _vrchat_email_registered(email: str) -> bool | None:
+    """True/False from GET /auth/exists, or None if the probe did not return a verdict."""
+    url = f"{VRCHAT_API}/auth/exists?" + urllib.parse.urlencode({"email": email})
+    code, body, _ = _curl(url, follow=False, timeout=15)
+    data = _parse_json(body)
+    if code != 200 or "userExists" not in data:
+        return None
+    return bool(data["userExists"])
+
+
+def _commit_login_jar(attempt: Path, dest: Path) -> None:
+    _copy_jar(attempt, dest)
+    _mirror_vrchat_web_cookies(dest)
+
+
+def _logged_in_label(user: dict[str, Any]) -> str:
+    return str(user.get("displayName") or user.get("username") or "ok")
+
+
 def _vrchat_login_basic_once(cookie_jar: Path) -> dict[str, Any]:
-    """One Basic+2FA login attempt. Raises CannyAuthError (including too-many-sessions)."""
+    """One Basic+2FA login attempt. Raises CannyAuthError (including too-many-sessions).
+
+    Uses a temp jar so a failed Basic attempt cannot wipe a still-valid auth cookie.
+    """
     password = _require_env("VRCHAT_PASSWORD")
     totp_secret = _require_env("VRCHAT_TOTP_SECRET")
 
     last_invalid = ""
     for username in _login_usernames():
-        basic = base64.b64encode(f"{username}:{password}".encode("utf-8")).decode("ascii")
-        # Fresh jar per username attempt (avoid mixing failed auth cookies).
-        cookie_jar.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
+        basic = _vrchat_basic_auth(username, password)
+        with tempfile.TemporaryDirectory(prefix="vrc-login-") as td:
+            attempt = Path(td) / "cookies.jar"
+            attempt.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
 
-        code, data, raw = _auth_user(cookie_jar, basic=basic)
-        if code == 200 and _auth_user_ok(data):
-            print(f"[auth] logged in as {username}")
-            _mirror_vrchat_web_cookies(cookie_jar)
-            return data
+            code, data, raw = _auth_user(attempt, basic=basic)
+            if code == 200 and _auth_user_ok(data):
+                _commit_login_jar(attempt, cookie_jar)
+                print(f"[auth] logged in as {_logged_in_label(data)}")
+                return data
 
-        if _is_too_many_sessions(code, data, raw):
+            if _is_too_many_sessions(code, data, raw):
+                raise CannyAuthError(f"VRChat login failed HTTP {code}: {raw[:300]}")
+
+            msg = _error_message(data, raw)
+            msg_l = msg.lower()
+            requires = data.get("requiresTwoFactorAuth") or []
+            if isinstance(requires, str):
+                requires = [requires]
+
+            if requires or "check your email" in msg_l or "somewhere new" in msg_l:
+                print("[auth] 2FA challenge")
+                user = _complete_2fa(
+                    attempt,
+                    basic=basic,
+                    totp_secret=totp_secret,
+                    code=code,
+                    data=data,
+                    raw=raw,
+                )
+                _commit_login_jar(attempt, cookie_jar)
+                print(f"[auth] logged in as {_logged_in_label(user)}")
+                return user
+
+            if code == 401 and "invalid username" in msg_l:
+                last_invalid = raw[:300]
+                print("[auth] login rejected for configured identifier; trying next if any")
+                if "@" in username and _vrchat_email_registered(username) is False:
+                    raise CannyAuthError(
+                        "VRCHAT_USERNAME is an email VRChat does not have as an account. "
+                        "Use the original username or the email shown on "
+                        "vrchat.com/home/profile — a mailbox that was never attached "
+                        "to the account will 401 even when the password is right."
+                    )
+                continue
+
             raise CannyAuthError(f"VRChat login failed HTTP {code}: {raw[:300]}")
 
-        msg = _error_message(data, raw)
-        msg_l = msg.lower()
-        requires = data.get("requiresTwoFactorAuth") or []
-        if isinstance(requires, str):
-            requires = [requires]
-
-        if requires or "check your email" in msg_l or "somewhere new" in msg_l:
-            print(f"[auth] 2FA challenge for {username}")
-            user = _complete_2fa(
-                cookie_jar,
-                basic=basic,
-                totp_secret=totp_secret,
-                code=code,
-                data=data,
-                raw=raw,
-            )
-            print(f"[auth] logged in as {username}")
-            _mirror_vrchat_web_cookies(cookie_jar)
-            return user
-
-        if code == 401 and "invalid username" in msg_l:
-            last_invalid = raw[:300]
-            print(f"[auth] login rejected for {username}; trying next identifier if any")
-            continue
-
-        raise CannyAuthError(f"VRChat login failed HTTP {code}: {raw[:300]}")
-
     raise CannyAuthError(
-        "VRChat login failed for all usernames (after email change, set "
-        "VRCHAT_USERNAME to the new login email). "
+        "VRChat login failed for all configured identifiers. "
+        "VRCHAT_USERNAME must be the account's current login username or the email "
+        "shown on vrchat.com/home/profile. "
         f"Last error: {last_invalid or 'unknown'}"
     )
 
@@ -753,7 +795,9 @@ def login_canny_session() -> CannySession:
         cleanup_temp = True
 
     try:
-        # Fast path: Canny cookies still valid — no VRChat login.
+        # Canny home follows redirects and may Set-Cookie; snapshot so a dead
+        # Canny session cannot clobber a still-valid VRChat auth cookie.
+        snapshot = working.read_bytes() if working.is_file() else None
         reused = _session_from_jar(working)
         if reused is not None:
             print("[auth] reusing Canny session from cookie jar")
@@ -761,6 +805,8 @@ def login_canny_session() -> CannySession:
                 print(f"[auth] Canny scraper user id: {reused.scraper_user_id}")
             _persist_cookie_jar(working)
             return reused
+        if snapshot is not None:
+            working.write_bytes(snapshot)
 
         # VRChat cookie reuse → SSO only (does not create a new API session).
         user = _try_reuse_vrchat(working)

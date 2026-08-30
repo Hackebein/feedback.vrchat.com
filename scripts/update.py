@@ -26,12 +26,14 @@ try:
     import board_store
     import scrape_state
     import canny_auth
+    import opensearch_bulk
 except ImportError:  # when run as script
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import categorize  # type: ignore
     import board_store  # type: ignore
     import scrape_state  # type: ignore
     import canny_auth  # type: ignore
+    import opensearch_bulk  # type: ignore
 
 # --------------------------------------------------------------------------
 # Config
@@ -1078,7 +1080,11 @@ def generate_readme(
     board_totals = get_board_totals(slug_to_urlname)
     scraped_at = scraped_at if scraped_at is not None else scrape_state.load_state().get("scrapedAt") or {}
 
-    jsonl_slugs = board_store.board_slugs()
+    jsonl_slugs = [
+        slug
+        for slug in board_store.board_slugs()
+        if not opensearch_bulk.is_restricted_board_slug(slug)
+    ]
 
     needs_meta_fetch = (
         newest_scrape_horizon is None or inferred_totals is None
@@ -1115,7 +1121,7 @@ def generate_readme(
     boards = []
     total_collected = 0
 
-    for slug in board_store.board_slugs():
+    for slug in jsonl_slugs:
         api_count = sum(1 for p in board_store.iter_board_posts(slug) if p.get("_id"))
         url_name = slug_to_urlname.get(slug, slug) if slug_to_urlname else slug
 

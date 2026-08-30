@@ -65,7 +65,12 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .vrchat-session/cookies.jar
-          key: vrchat-canny-session-v1
+          # Unique primary key so a refreshed jar is saved after every run.
+          # restore-keys still loads the newest v2 jar from a previous run.
+          key: vrchat-canny-session-v2-${{ github.run_id }}
+          restore-keys: |
+            vrchat-canny-session-v2-
+          save-always: true
 
       - name: Run update
         id: update
