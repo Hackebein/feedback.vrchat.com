@@ -1,0 +1,92 @@
+{
+  "_id": "6a9402a5d9cd5d6684f3a6d2",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-08-30T10:18:10.110671Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "615257058f0927541ab4cb90",
+    "alias": "Administrative Warbler",
+    "aliasID": "65c65b6fed6eefce4cf3d26a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/de47a8c791ab40c49f9f19486e78fc94.png",
+    "created": "2021-09-27T23:43:01.880Z",
+    "name": "Ariєl",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "615257058f0927541ab4cb90",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-30T10:15:01.845Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRCPhysBone works correctly on PC and in the Unity editor using Android/Quest build target.\n\nOn Meta Quest standalone, the PhysBone simulation itself works normally, but the user cannot grab the PhysBone.\n\nQuest users also cannot see the PhysBone being grabbed/moved by a PC user.\n\nPC users can grab and move the same PhysBone normally.\n\nTested with:\n\nSeparate PC and Android versions of the same avatar\n\nMatching hierarchy\n\nMatching Network IDs\n\nAllow Grabbing enabled\n\nAllow Posing enabled\n\nFinite Max Stretch\n\nMultiple avatars\n\nMultiple PCs/build environments\n\nMultiple testers\n\nIssue only occurs on the Quest/Android client.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a9402a5d9cd5d6684f3a6d1",
+  "imageURLs": [
+    "https://canny-assets.io/images/27a5295644438d2a6ea2807453634938.png",
+    "https://canny-assets.io/images/9292b22d07657a091e7762896857c7b8.png",
+    "https://canny-assets.io/images/e779887c89ad98bb3b06deb1b54b786b.png",
+    "https://canny-assets.io/images/7506620be622180852fd9e2daca8645b.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-30T10:15:01.845Z",
+  "subCategoryID": null,
+  "title": "Avatar PhysBone Grab/Pose does not work on Android/Quest while physics still works",
+  "trendingScore": 2957.1827333826104,
+  "updatedBy": null,
+  "urlName": "avatar-physbone-grab-pose-does-not-work-on-android-quest-while-physics-still-wor",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "615257058f0927541ab4cb90",
+      "alias": "Administrative Warbler",
+      "aliasID": "65c65b6fed6eefce4cf3d26a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/de47a8c791ab40c49f9f19486e78fc94.png",
+      "companies": [],
+      "name": "Ariєl",
+      "urlName": null,
+      "voteID": "6a9402a678a781c4583280aa"
+    }
+  ]
+}
