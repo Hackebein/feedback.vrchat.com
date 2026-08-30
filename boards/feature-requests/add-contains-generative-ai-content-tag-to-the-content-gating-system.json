@@ -870,7 +870,9 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1066,20 +1068,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 603,
+  "maxScore": 604,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a47f7ad48ab8093bddc0501/682972098.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 603,
+  "score": 604,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-03T17:55:57.677Z",
   "subCategoryID": null,
   "title": "Add \"Contains Generative AI Content\" tag to the Content Gating system",
-  "trendingScore": 2959.7597633512755,
+  "trendingScore": 2959.7955356284597,
   "updatedBy": null,
   "urlName": "add-contains-generative-ai-content-tag-to-the-content-gating-system",
   "viewerIsAuthor": false,
@@ -1091,6 +1093,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "622e83bceb079229d53abe8f",
+      "alias": "Dew Badger",
+      "aliasID": "65c297faed6eefce4ce763b1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ecdc2141f57dd3e42f43bfc0d64ef1df.png",
+      "companies": [],
+      "name": "xohorses",
+      "urlName": null,
+      "voteID": "6a939e5278a781c45831ec3c"
+    },
     {
       "_id": "62def1036509e344b6f1f73a",
       "alias": "Patient Turtle",
