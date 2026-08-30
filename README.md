@@ -1,8 +1,8 @@
 # VRChat Feedback Board Data
 
-Collected: **37,246** posts.<br>
+Collected: **37,247** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (39d ago)** to now.<br>
-Scrape horizon: **2026-08-19 13:05 UTC (10d ago)**.
+Scrape horizon: **2026-08-19 15:24 UTC (10d ago)**.
 
 Closed and restricted boards that are not on the public Canny homepage are stored as snapshots. The public scraper does not refresh them.
 
@@ -17,7 +17,7 @@ Closed and restricted boards that are not on the public Canny homepage are store
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-dynamics-reports-and-feedback` | 353 |
 | `avatar-marketplace` | 80 / 80 (100.0%) |
-| `bug-reports` | 11,711 / 11,710 (100.0%) |
+| `bug-reports` | 11,712 / 11,711 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `community-labs` | 27 |
 | `creator-companion` | 290 / 290 (100.0%) |
@@ -41,7 +41,7 @@ Closed and restricted boards that are not on the public Canny homepage are store
 | `vrchat-plus-feature-ideas` | 128 / 128 (100.0%) |
 | `vrchat-plus-feedback` | 78 |
 | `website` | 851 / 851 (100.0%) |
-| **Total** | **37,246** / **36,470** (100.0%) |
+| **Total** | **37,247** / **36,471** (100.0%) |
 
 ## OpenSearch
 
