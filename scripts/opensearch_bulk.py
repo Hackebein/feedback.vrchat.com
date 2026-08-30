@@ -25,6 +25,28 @@ IN_CLIENT_BOARD_ID = "69f3e15229c8d0dea5379a7b"
 IN_CLIENT_BOARD_NAME = "In-Client Bug Reporting"
 BUG_REPORTS_URL_NAME = "bug-reports"
 
+RESTRICTED_BOARD_SLUGS = frozenset(
+    {
+        "archived",
+        "avatar-dynamics-reports-and-feedback",
+        "avatar-marketplace-sellers",
+        "community-labs",
+        "creator-economy-sellers",
+        "face-tracking",
+        "groups",
+        "internal",
+        "quest-creators",
+        "trust-and-safety-system",
+        "unity-6",
+        "vrchat-community-testers",
+        "vrchat-plus-feedback",
+    }
+)
+
+
+def is_restricted_board_slug(slug: str) -> bool:
+    return slug in RESTRICTED_BOARD_SLUGS
+
 
 def utc_backing_suffix() -> str:
     return datetime.now(timezone.utc).strftime("%Y%m%d%H%M")
@@ -226,6 +248,8 @@ def iter_board_documents(
     for board_dir in sorted(boards_root.iterdir()):
         if not board_dir.is_dir() or board_dir.name.startswith("_"):
             continue
+        if is_restricted_board_slug(board_dir.name):
+            continue
         for path in sorted(board_dir.glob("*.json")):
             if path.name.endswith(".json.tmp"):
                 continue
@@ -410,6 +434,13 @@ def main() -> int:
     scraper_id = _scraper_user_id(args.repo_root)
     if scraper_id:
         sys.stderr.write(f"filtering scraper user {scraper_id} from voters/score\n")
+    skipped = sorted(
+        p.name
+        for p in boards_root.iterdir()
+        if p.is_dir() and not p.name.startswith("_") and is_restricted_board_slug(p.name)
+    )
+    if skipped:
+        sys.stderr.write(f"skipping restricted boards: {', '.join(skipped)}\n")
 
     map_path = args.mapping.resolve()
     if not map_path.is_file():

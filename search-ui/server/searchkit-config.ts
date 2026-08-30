@@ -32,6 +32,38 @@ function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
   );
 }
 
+/**
+ * Hidden from public search even if they are still in the backing index.
+ */
+export const RESTRICTED_BOARD_SLUGS = [
+  "archived",
+  "avatar-dynamics-reports-and-feedback",
+  "avatar-marketplace-sellers",
+  "community-labs",
+  "creator-economy-sellers",
+  "face-tracking",
+  "groups",
+  "internal",
+  "quest-creators",
+  "trust-and-safety-system",
+  "unity-6",
+  "vrchat-community-testers",
+  "vrchat-plus-feedback",
+] as const;
+
+/** Searchkit base filter so restricted boards never appear in hits or facets. */
+export function restrictedBoardBaseFilters(): ElasticsearchQuery[] {
+  return [
+    {
+      bool: {
+        must_not: [
+          { terms: { "board.urlName": [...RESTRICTED_BOARD_SLUGS] } },
+        ],
+      },
+    },
+  ];
+}
+
 export function instantSearchLuceneQuery(
   query: string,
   _searchAttributes: SearchAttribute[],
