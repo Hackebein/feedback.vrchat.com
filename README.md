@@ -1,7 +1,7 @@
 # VRChat Feedback Board Data
 
 Collected: **37,254** posts.<br>
-Freshness: From **2026-07-21 15:34 UTC (39d ago)** to now.<br>
+Freshness: From **2026-07-21 15:34 UTC (40d ago)** to now.<br>
 Scrape horizon: **2026-08-19 18:08 UTC (10d ago)**.
 
 Closed and restricted boards that are not on the public Canny homepage are stored as snapshots. The public scraper does not refresh them.
