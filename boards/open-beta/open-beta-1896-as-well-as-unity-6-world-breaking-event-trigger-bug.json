@@ -1,0 +1,91 @@
+{
+  "_id": "6a94b2a6b05715683bc741c4",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-08-30T22:48:36.048836Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f318f198b38ac71ff34f726",
+    "alias": "Fern Tyrannosaurus",
+    "aliasID": "65c2cff5ed6eefce4c44df50",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/de41b1bb7620fd716a81be864f69bce7.png",
+    "created": "2020-08-10T18:16:57.688Z",
+    "name": "Lhun",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f318f198b38ac71ff34f726",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-30T22:45:58.778Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently, in the edge of hi-law city (a vket world from a couple of years ago) a standard on-enter trigger is completely broken, preventing you from progressing without teleporting to another player, and even then, dialog events do not occur. \n\nI cannot imagine this doesn't affect a great deal of worlds that rely on this. \n\nhttps://vrchat.com/home/world/wrld_ec86c5f6-90b6-40d8-928a-d405809c3421/info\n\nhttps://vrchat.com/home/world/wrld_4c106750-ecb7-434e-8f87-97ef6f9294ae/info\n\nRepro: Simply enter the world and try to see the intro event with Niigo, music doesn't trigger, and dialog doesn't progress.\n\nIt works fine on the release build.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a94b2a6b05715683bc741c3",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a94b2a6b05715683bc741c4/299522624.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-30T22:45:58.778Z",
+  "subCategoryID": null,
+  "title": "Open Beta 1896 as well as unity-6 World breaking event trigger bug",
+  "trendingScore": 2957.257232345904,
+  "updatedBy": "5f318f198b38ac71ff34f726",
+  "urlName": "open-beta-1896-as-well-as-unity-6-world-breaking-event-trigger-bug",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f318f198b38ac71ff34f726",
+      "alias": "Fern Tyrannosaurus",
+      "aliasID": "65c2cff5ed6eefce4c44df50",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/de41b1bb7620fd716a81be864f69bce7.png",
+      "companies": [],
+      "name": "Lhun",
+      "urlName": null,
+      "voteID": "6a94b2a678a781c458343bef"
+    }
+  ]
+}
