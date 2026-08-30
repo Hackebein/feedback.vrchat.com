@@ -23,7 +23,7 @@ Closed and restricted boards that are not on the public Canny homepage are store
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 84 / 84 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,018 / 14,020 (99.99%) |
+| `feature-requests` | 14,018 / 14,021 (99.98%) |
 | `impostors` | 91 / 91 (100.0%) |
 | `internal` | 5 |
 | `ios-mobile-beta` | 261 / 261 (100.0%) |
@@ -41,7 +41,7 @@ Closed and restricted boards that are not on the public Canny homepage are store
 | `vrchat-plus-feature-ideas` | 128 / 128 (100.0%) |
 | `vrchat-plus-feedback` | 78 |
 | `website` | 851 / 851 (100.0%) |
-| **Total** | **37,267** / **36,491** (100.0%) |
+| **Total** | **37,267** / **36,492** (99.997%) |
 
 ## OpenSearch
 
