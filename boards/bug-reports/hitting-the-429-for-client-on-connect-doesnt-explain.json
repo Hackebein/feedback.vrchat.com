@@ -1,0 +1,88 @@
+{
+  "_id": "6a952d254164b749538adae5",
+  "aiCategories": [
+    "loc.login",
+    "client.settings",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-08-31T07:31:34.620245Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62e03f4e44af5544b2228fa5",
+    "alias": "Burnt sienna Landfowl",
+    "aliasID": "65c2c12eed6eefce4c82d31d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4ba86de606c86318aac06fdc93eeb7b8.png",
+    "created": "2022-07-26T19:23:58.425Z",
+    "name": "Comfy Chloe",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62e03f4e44af5544b2228fa5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-31T07:28:37.736Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When a user has hit an API Rate limit and attempts to connect/get on vrchat vai the user client it displays a visual error that doesn't match the coded reason alongside a code error.\n\n1: Hit rate limits of said connection endpoint (couldn't tell you which)\n\n2: Launch game get told failed to auth w/ real-time servers\n\n3: Reality is failure to connect due to rate limits, try again later.\n\nhttps://github.com/ComfyChloe/LogDrop/blob/main/VRC/Doughnuts/28-08-2026_05-11.log",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a952d254164b749538adae4",
+  "imageURLs": [
+    "https://canny-assets.io/images/b65767174d2cc892277dfbc38f4eeccd.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-31T07:28:37.736Z",
+  "subCategoryID": null,
+  "title": "Hitting the 429 For client on connect doesn't explain",
+  "trendingScore": 2957.309082395507,
+  "updatedBy": null,
+  "urlName": "hitting-the-429-for-client-on-connect-doesnt-explain",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62e03f4e44af5544b2228fa5",
+      "alias": "Burnt sienna Landfowl",
+      "aliasID": "65c2c12eed6eefce4c82d31d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4ba86de606c86318aac06fdc93eeb7b8.png",
+      "companies": [],
+      "name": "Comfy Chloe",
+      "urlName": null,
+      "voteID": "6a952d2578a781c458354d19"
+    }
+  ]
+}
