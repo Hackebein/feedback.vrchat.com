@@ -1,0 +1,96 @@
+{
+  "_id": "6a9605bb74ef734037be6e9b",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-08-31T22:59:14.717333Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6759faa8c51cd3906259cf04",
+    "alias": "Above Tortoise",
+    "aliasID": "6a5821db1e3b2bc758d46899",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/88c6dff29fcc051ae59b5b0a3d4afac6.png",
+    "created": "2024-12-11T20:48:40.191Z",
+    "name": "arch3r",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6759faa8c51cd3906259cf04",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-31T22:52:43.968Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This issue is hard to repeat because sometimes it does not happen but most times it does.\n\n1. Open VRChat in **VR MODE** on any beta build (Open Beta, Unity 6)\n\n2. Have your home world set to or just load into a world with a mirror directly in spawn render\n\nYou will likely get stuck on a Connecting Loop",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/4f3204a90769d9deea8835a524c54972.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "Snip-output_log_2026-08-31_00-07-09",
+      "url": "https://canny-assets.io/files/4f3204a90769d9deea8835a524c54972.txt"
+    }
+  ],
+  "ideaID": "6a9605bb74ef734037be6e9a",
+  "imageURLs": [
+    "https://canny-assets.io/images/7b904195cf808212078112638a831b1a.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9605bb74ef734037be6e9b/1160574868.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-31T22:52:43.968Z",
+  "subCategoryID": null,
+  "title": "Connection Loop due to Mirrors",
+  "trendingScore": 2957.400759404436,
+  "updatedBy": null,
+  "urlName": "connection-loop-due-to-mirrors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6759faa8c51cd3906259cf04",
+      "alias": "Above Tortoise",
+      "aliasID": "6a5821db1e3b2bc758d46899",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/88c6dff29fcc051ae59b5b0a3d4afac6.png",
+      "companies": [],
+      "name": "arch3r",
+      "urlName": null,
+      "voteID": "6a9605bc78a781c4583dcf9d"
+    }
+  ]
+}
