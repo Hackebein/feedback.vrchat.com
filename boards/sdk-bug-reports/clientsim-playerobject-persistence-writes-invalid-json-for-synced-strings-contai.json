@@ -1,0 +1,91 @@
+{
+  "_id": "6a9592909f84a4a6294eed88",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.clientsim"
+  ],
+  "aiTaggedAt": "2026-08-31T14:44:06.979973Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f3b366e8911d54a93a378bf",
+    "alias": "Satisfied Harrier",
+    "aliasID": "65c78b78ed6eefce4c35939a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/868ed80f758c0824d978fdae9a4588c7.png",
+    "created": "2020-08-18T02:01:18.817Z",
+    "name": "Wing_",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f3b366e8911d54a93a378bf",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-08-31T14:41:20.252Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Unity: 2022.3.22f1\n\nVRChat SDK - Worlds: 3.10.4\n\nTitle: ClientSim corrupts PlayerObject strings containing nested JSON\n\nEnvironment:\n\nUnity 2022.3.22f1\n\nWorlds SDK 3.10.4\n\nReproduction:\n\n1. Add an Udon-synced string to a PlayerObject.\n\n2. Store JSON containing another serialized JSON string:\n\n   {\"outerKey\":\"[\\\"innerValue\\\"]\"}\n\n3. Call RequestSerialization() and allow ClientSim to save the PlayerObject.\n\n4. Exit and enter Play Mode again.\n\n5. ClientSim fails while restoring the saved PlayerObject.\n\nClientSim saves:\n\n\"{\\\"outerKey\\\":\\\"[\\\\\"innerValue\\\\\"]\\\"}\"\n\nIt should save:\n\n\"{\\\"outerKey\\\":\\\"[\\\\\\\"innerValue\\\\\\\"]\\\"}\"\n\nThe backslash preceding each nested quote is not escaped for the additional ClientSim JSON storage layer. The malformed value is loaded as a DataToken.Error, but ClientSim then accesses it as a DataDictionary in ClientSimNetworkIdHolder.Decode() line 180\n\nAs a result, the PlayerObject is not restored and all persistence stored in it appears lost. ClientSim may subsequently overwrite the file with empty/default data.\n\nThe same nested JSON persistence seems to works correctly in the real VRChat client, so this appears to be specific to ClientSim’s local PlayerObject save/load implementation.\n\nTrace stack:\n\nInvalidOperationException: Attempted to access Error token as DataDictionary\n\nVRC.SDK3.Data.DataToken.get_DataDictionary () (at <8dae6d6858f2465fad961e5d8ef394cc>:0)\n\nVRC.SDK3.ClientSim.ClientSimNetworkIdHolder.Decode (VRC.SDK3.Data.DataList data) (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Networking/ClientSimNetworkIdHolder.cs:180)\n\nVRC.SDK3.ClientSim.ClientSimNetworkingView.Decode (VRC.SDK3.Data.DataList data) (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Networking/ClientSimNetworkingView.cs:95)\n\nVRC.SDK3.ClientSim.Persistence.ClientSimPlayerObjectStorage.Decode () (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Player/PlayerPersistence/ClientSimPlayerObjectStorage.cs:165)\n\nVRC.SDK3.ClientSim.Persistence.ClientSimPlayerObjectStorage.OnPlayerJoined (VRC.SDK3.ClientSim.ClientSimOnPlayerJoinedEvent payload) (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Player/PlayerPersistence/ClientSimPlayerObjectStorage.cs:102)\n\nVRC.SDK3.ClientSim.ClientSimEventDispatcher.SendEvent[T] (T clientSimEvent) (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Events/ClientSimEventDispatcher.cs:62)\n\nVRC.SDK3.ClientSim.ClientSimPlayerManager.DispatchPlayerJoinedEvent (VRC.SDKBase.VRCPlayerApi player) (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/System/ClientSimPlayerManager.cs:137)\n\nVRC.SDK3.ClientSim.ClientSimPlayerManager.OnClientSimReady () (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/System/ClientSimPlayerManager.cs:129)\n\nVRC.SDK3.ClientSim.ClientSimMain+<InitializeClientSim>d__45.MoveNext () (at ./Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/System/ClientSimMain.cs:399)\n\nUnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <cb81df0c49c643b1a04d9fc6ccca2433>:0)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a95928f9f84a4a6294eed87",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-08-31T14:41:20.252Z",
+  "subCategoryID": null,
+  "title": "ClientSim PlayerObject persistence writes invalid JSON for synced strings containing escaped quotes, causing DataToken.Error on the next Play Mode session",
+  "trendingScore": 2957.3520098855865,
+  "updatedBy": null,
+  "urlName": "clientsim-playerobject-persistence-writes-invalid-json-for-synced-strings-contai",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f3b366e8911d54a93a378bf",
+      "alias": "Satisfied Harrier",
+      "aliasID": "65c78b78ed6eefce4c35939a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/868ed80f758c0824d978fdae9a4588c7.png",
+      "companies": [],
+      "name": "Wing_",
+      "urlName": null,
+      "voteID": "6a95929078a781c458370be1"
+    }
+  ]
+}
