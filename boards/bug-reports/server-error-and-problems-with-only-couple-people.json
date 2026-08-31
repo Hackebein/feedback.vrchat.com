@@ -1,11 +1,11 @@
 {
   "_id": "6a95cfc04c51da0b9f886879",
   "aiCategories": [
+    "loc.in-world",
     "loc.pc-client",
-    "platforms.pc.steam",
-    "client.settings"
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-08-31T19:07:25.376777Z",
+  "aiTaggedAt": "2026-08-31T19:47:13.205656Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a95cfc078a781c4583a9e71",
@@ -29,8 +29,117 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
-  "comments": [],
+  "commentCount": 2,
+  "comments": [
+    {
+      "_id": "6a95d7c3f923b20c1e477fff",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ecfb0a7b8ccd5e3e3fbf3b7d198222f6.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-31T19:36:35.604Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/973147d6d2811b13d8bc66470c2fc89d.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-08-31_18-10-22",
+          "url": "https://canny-assets.io/files/973147d6d2811b13d8bc66470c2fc89d.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a95cfc04c51da0b9f886879",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "A repeat of yesterday's EU servers. https://feedback.vrchat.com/bug-reports/p/timeout-2\n\nI would see an user from another EU country get disconnected, and I would get disconnected some 9 seconds later very specifically in that order. This occurred 3-4 times in an EU realtime server. NA users seem to be unaffected.\n\nLook specifically for \"`OnPlayerLeft Zoralback`\" in the logs. (x3)\n\n```\n\n2026.08.31 18:36:08 Debug      -  [Behaviour] OnPlayerLeftRoom\n\n2026.08.31 18:36:08 Debug      -  [Behaviour] OnPlayerLeft Zoralback (usr_5b1431fe-2fc0-4e1b-af43-501ed7e7e2a1)\n\n2026.08.31 18:36:08 Debug      -  Updating player location statistics...\n\n2026.08.31 18:36:08 Debug      -  Updating Rooms\n\n2026.08.31 18:36:08 Debug      -  No Rooms\n\n2026.08.31 18:36:08 Debug      -  Removed player Zoralback\n\n2026.08.31 18:36:08 Debug      -  [Behaviour] Destroying Zoralback\n\n2026.08.31 18:36:17 Error      -  SendOperation failed. Not connected. Failed operation: 253 PeerState: Disconnecting\n\n2026.08.31 18:36:17 Error      -  [NetworkTransport] Failed to raise deferred operation of type 8.\n\n2026.08.31 18:36:17 Error      -  [NetworkTransport] Failed to raise deferred operation of type 8.\n\n2026.08.31 18:36:17 Debug      -  [Behaviour] No longer in room, cleaning up.\n\n[...]\n\n2026.08.31 18:36:17 Debug      -  Removed player WubTheCaptain\n\n2026.08.31 18:36:17 Debug      -  [Behaviour] OnDisconnected: ClientTimeout\n\n```\n\nSeems to have resolved itself again.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a95d90daeb6001896ba69c5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ecfb0a7b8ccd5e3e3fbf3b7d198222f6.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-31T19:42:05.356Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5c86c8611ff2ee01aa9e2cf9",
+          "alias": "Mathematical Sturgeon",
+          "aliasID": "65c3900ded6eefce4cdcec93",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/b0234306141cd151025eb89fc2c5dd57.png",
+          "created": "2019-03-11T20:43:13.674Z",
+          "name": "Zoralback",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a95d7c3f923b20c1e477fff",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a95cfc04c51da0b9f886879",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "cc: @{5c86c8611ff2ee01aa9e2cf9|full_name}",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-08-31T19:02:24.616Z",
   "deleteID": null,
