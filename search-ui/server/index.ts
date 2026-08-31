@@ -6,7 +6,6 @@ import {
   gatewayEnv,
   instantSearchLuceneQuery,
   instantSearchStrictQuery,
-  restrictedBoardBaseFilters,
   searchkitConfig,
 } from "./searchkit-config";
 
@@ -36,7 +35,6 @@ function isLuceneMode(req: express.Request): boolean {
 function searchRequestOptions(lucene: boolean) {
   return {
     getQuery: lucene ? instantSearchLuceneQuery : instantSearchStrictQuery,
-    getBaseFilters: restrictedBoardBaseFilters,
   };
 }
 

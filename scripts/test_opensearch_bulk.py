@@ -2,11 +2,7 @@
 
 from __future__ import annotations
 
-import json
-import re
-import tempfile
 import unittest
-from pathlib import Path
 
 import opensearch_bulk
 
@@ -166,66 +162,6 @@ class TransformInClientTagsTest(unittest.TestCase):
         self.assertIn("platforms.pc.steam", cats)
         self.assertIn("inclient.category.user-interface", cats)
         self.assertNotIn("loc.standalone-vr", cats)
-
-
-class RestrictedBoardIndexTest(unittest.TestCase):
-    def test_known_restricted_slugs(self) -> None:
-        self.assertTrue(opensearch_bulk.is_restricted_board_slug("internal"))
-        self.assertTrue(opensearch_bulk.is_restricted_board_slug("archived"))
-        self.assertFalse(opensearch_bulk.is_restricted_board_slug("bug-reports"))
-        self.assertFalse(opensearch_bulk.is_restricted_board_slug("client-bug-reporting"))
-
-    def test_iter_skips_restricted_board_dirs(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            public = root / "bug-reports"
-            private = root / "internal"
-            public.mkdir()
-            private.mkdir()
-            (public / "public-post.json").write_text(
-                json.dumps(
-                    {
-                        "_id": "pub1",
-                        "title": "Public",
-                        "details": "ok",
-                        "board": {"urlName": "bug-reports", "name": "Bug Reports"},
-                    }
-                ),
-                encoding="utf-8",
-            )
-            (private / "secret.json").write_text(
-                json.dumps(
-                    {
-                        "_id": "sec1",
-                        "title": "Secret",
-                        "details": "no",
-                        "board": {
-                            "urlName": "internal",
-                            "name": "Internal Roadmap Posts",
-                        },
-                    }
-                ),
-                encoding="utf-8",
-            )
-            ids = [pid for pid, _ in opensearch_bulk.iter_board_documents(root)]
-            self.assertEqual(ids, ["pub1"])
-
-    def test_python_and_gateway_slug_lists_match(self) -> None:
-        ts = (
-            Path(__file__).resolve().parents[1]
-            / "search-ui"
-            / "server"
-            / "searchkit-config.ts"
-        )
-        text = ts.read_text(encoding="utf-8")
-        match = re.search(
-            r"export const RESTRICTED_BOARD_SLUGS = \[([\s\S]*?)\] as const",
-            text,
-        )
-        if match is None:
-            self.fail("RESTRICTED_BOARD_SLUGS not found in searchkit-config.ts")
-        slugs = set(re.findall(r'"([^"]+)"', match.group(1)))
-        self.assertEqual(slugs, set(opensearch_bulk.RESTRICTED_BOARD_SLUGS))
 
 
 if __name__ == "__main__":

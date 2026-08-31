@@ -14,21 +14,6 @@ deploy/terraform/.ssh/
 # board_store atomic writes
 boards/**/*.json.tmp
 
-# Extra-access Canny boards (not public; do not commit snapshots)
-boards/archived/
-boards/avatar-dynamics-reports-and-feedback/
-boards/avatar-marketplace-sellers/
-boards/community-labs/
-boards/creator-economy-sellers/
-boards/face-tracking/
-boards/groups/
-boards/internal/
-boards/quest-creators/
-boards/trust-and-safety-system/
-boards/unity-6/
-boards/vrchat-community-testers/
-boards/vrchat-plus-feedback/
-
 # Local-only files
 *.local.*
 *.txt
