@@ -4,7 +4,7 @@
     "loc.in-world",
     "avatars.impostors"
   ],
-  "aiTaggedAt": "2026-08-31T13:55:37.334186Z",
+  "aiTaggedAt": "2026-08-31T21:06:31.488644Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62ab6dbe3d15a60ba81fdeac",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a953658c7795fb98c4d90a0",
@@ -119,6 +119,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I'd say a better, or maybe complimentary, idea is to have \"force show avatar\" as an option per user within a group/plus instance. Kind of like how (and for almost the same reasons that) some people can be allowed to bypass a performance limit in a group instance. It might be a bit more work on the part of a group moderator to whitelist a bunch of people, but it's far more dynamic in the case of an MC who wants to walk around outside of the stage while still being seen, or in the case with an event that does not have a set \"stage\" location.\n\nFor example, in Stage Flight, some users will fly around the entire stage with huge avatars providing fantastic ambience which may not be seen by people who have any level of distance based culling, due to the fact they're so far away in the sky. Having those users be force-shown for everyone regardless of where they are in the world would make that experience visible for everyone.\n\nFurthermore, again in a world like Stage Flight, the DJ often doesn't actually stay in the central podium area during the whole set. There are many times where, for various reasons, the DJ moves outside of that area to sit by a conjured fire pit, or to climb up on top of a tree that spontaneously appeared in the world.\n\nAnywhere at any time can be \"the stage\", so locking the force-show to one area in a world can get very limiting, especially when a group is using someone else's world and can't place the \"force show\" area themselves. There are some instances where a force show area may be preferred, like when you're calling truly random people up onto a stage for a demonstration of some kind, but having the ability to force show specific people in any world and then give those people the freedom to move around as they please would probably be preferred in most cases.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a95eb6097b08f19fbd8e694",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a296c7086d7b8843b163e3f",
+        "alias": "Definite Heron",
+        "aliasID": "6a296c7086d7b8843b163e47",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4047bc7cc40df8b62bb803d1acb1733c.png",
+        "created": "2026-06-10T13:53:52.585Z",
+        "name": "Meowy Eye",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-08-31T21:00:16.647Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a95349fc7795fb98c4d495a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "having to turn performer avatars on and off is such a massive endless pain, this would be amazing!  \n\nthough I feel it needs an \"needs role or whitelist to activate\" feature, as a troll gitching into it could crash the whole instance.\n\nalso needs a world toggle or menu toggle, as performer avatars can be be absolute performance disasters and I doubt event staff will sanity check every performer avatar. People with low end pc's would probably prefer to keep such an feature off on most events.",
       "viewerReactions": null,
       "voteID": null
     }
