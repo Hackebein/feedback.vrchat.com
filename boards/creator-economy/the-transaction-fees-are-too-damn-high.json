@@ -1,11 +1,5 @@
 {
   "_id": "6a96fcdc8aa5e1cd6239d295",
-  "aiCategories": [
-    "loc.website",
-    "monetization.creator-economy"
-  ],
-  "aiTaggedAt": "2026-09-01T16:51:31.440130Z",
-  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "674028fc731b75401702726e",
     "alias": "Eggplant Carp",
@@ -34,7 +28,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "655d1a0313739047764e9cb9",
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a9700e96c2ae5100c3d703d",
@@ -77,6 +71,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Thank you for the request!\n\nYou mention the following:\n\n> A better model would be to make creator-to-creator spending of earned Credits very cheap\n\nCreator-to-creator transactions aren't supported (yet). Do you think VRChat would have to introduce creator-to-creator (or user-to-user) transactions first? Or are you referring to something else?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a970aa5f037db5858b8730d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "674028fc731b75401702726e",
+        "alias": "Eggplant Carp",
+        "aliasID": "674028fdc66e81bbd493630f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/bace3b58b4ffbc514132024895449da1.png",
+        "created": "2024-11-22T06:47:24.960Z",
+        "name": "Technocrat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "655d1919c9834b935758c11f",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-01T17:25:57.915Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "63691297469f06772579fe6f",
+          "alias": "Sage Meadowlark",
+          "aliasID": "65c28116ed6eefce4c6d7d2d",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0958f7577d869b58b8a4407e6b9fddab.png",
+          "created": "2022-11-07T14:13:43.431Z",
+          "name": "Fax",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a9700e96c2ae5100c3d703d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a96fcdc8aa5e1cd6239d295",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{63691297469f06772579fe6f|full_name} Thanks for the quick response.\n\nIn theory, a universal reduction in the transaction rate would be equally beneficial. It would simply cost VRChat more near-term revenue, whereas preferential treatment for Earned Credits would be a more conservative way to test the circulation thesis.\n\nI’m also assuming that spending already-earned Credits internally does not incur the same payment-processing costs as purchasing Credits with fiat or cashing them out, since no external payment is occurring at that step. If that assumption is wrong, I’d be interested to know what costs are actually being covered by the ~15% fee.\n\nSo to answer your question directly: no, I don’t think direct creator-to-creator transfers would need to be introduced first. A sufficiently low transaction rate would already enable creator-to-creator commerce through the existing marketplace, since creators could spend their Earned Credits purchasing from each other’s markets with very little value lost at each step.",
       "viewerReactions": null,
       "voteID": null
     }
