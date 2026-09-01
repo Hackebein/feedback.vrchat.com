@@ -1,0 +1,99 @@
+{
+  "_id": "6a9701c0d5b3f13c8d9027b7",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-01T16:51:31.439319Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62e0eef69950e946552838e6",
+    "alias": "Damask Manatee",
+    "aliasID": "65cef51c0129d7ae4478d71f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/201305a868283cc74d6bef47337fd60a.png",
+    "created": "2022-07-27T07:53:26.520Z",
+    "name": "ジェームス",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62e0eef69950e946552838e6",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-01T16:48:00.648Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRChat’s AVPro video player supports live-stream protocols including HLS and RTSP/RTSPT. These protocols can provide absolute timing information:\n\n- HLS can carry programme time through EXT-X-PROGRAM-DATE-TIME.\n\n- RTSP can map RTP presentation timestamps to absolute NTP time through RTCP sender reports.\n\nAVPro Video already exposes some related information in its public Unity API, including GetProgramDateTime(), GetCurrentTime(), GetSeekableTimes(), and GetBufferedTimes(). However, VRChat does not currently expose enough of this information through BaseVRCVideoPlayer for Udon worlds to determine how far a listener is behind the live edge.\n\nThis is important for low-latency live-event worlds. Playback can continue successfully while gradually falling behind because of buffering, temporary performance problems, or network interruption. Without timing information, a world can only restart the player blindly or ask users to press a manual Resync button.\n\nRequested functionality:\n\nPlease expose read-only live-stream timing information to Udon that allows a world to:\n\n- Determine whether live timing is supported and currently valid.\n\n- Obtain the absolute programme timestamp currently being presented to the listener.\n\n- Obtain the current source live-edge timestamp.\n\n- Obtain the estimated distance from playback to the live edge.\n\n- Obtain buffered and seekable time ranges.\n\n- Identify when playback time has stopped advancing.\n\n- Distinguish unsupported, unavailable, buffering, and not-yet-ready states.\n\n- Use the same interface for audio-only streams as well as streams containing video.\n\nConceptual methods could include:\n\nHasAbsoluteProgramTime()\n\nGetPresentationProgramTime()\n\nGetLiveEdgeProgramTime()\n\nGetEstimatedLiveLatency()\n\nGetBufferedRange()\n\nGetSeekableRange()\n\nThe exact API design can follow VRChat’s existing conventions. The important requirement is that unsupported or unavailable timing returns an explicit status instead of an ambiguous zero.\n\nProtocol-specific sources:\n\nFor HLS and low-latency HLS, the player should expose timing derived from EXT-X-PROGRAM-DATE-TIME, together with the latest available playlist or seekable edge where supported.\n\nFor RTSP and RTSPT, the player should expose the NTP/RTP timestamp relationship supplied by RTCP sender reports where the underlying AVPro backend makes it available.\n\nIf a backend cannot provide absolute time, relative playback and live-window information would still be valuable, provided the capability and validity are reported clearly.\n\nUse cases:\n\nThis would allow live-event worlds to:\n\n- Detect persistent audience playback drift.\n\n- Display estimated live latency.\n\n- Distinguish a stalled player from a temporarily silent stream.\n\n- Perform a controlled local resync only when necessary.\n\n- Avoid disruptive periodic or blind stream restarts.\n\n- Provide useful playback diagnostics to audience members and event operators.\n\n- Compare HLS and RTSP delivery accurately when selecting the best low-latency transport.\n\nAutomatic recovery could require the latency threshold to remain exceeded for multiple checks before restarting playback. This would prevent momentary timestamp variation from interrupting a performance.\n\nCompatibility and safety:\n\n- Existing BaseVRCVideoPlayer.GetTime() behaviour should remain unchanged.\n\n- The information should be local and read-only.\n\n- It should not reveal media URLs, authentication tokens, stream keys, or other credentials.\n\n- Capability reporting should account for differences between PC and Android/Quest AVPro backends.\n\n- The feature should work with audio-only live streams, where a video texture timestamp is not available.\n\nTechnical references:\n\nAVPro IMediaControl documentation:\n\nhttps://www.renderheads.com/content/docs/_AVProVideo-v3/api/RenderHeads.Media.AVProVideo.IMediaControl.html\n\nAVPro GetProgramDateTime documentation:\n\nhttps://www.renderheads.com/content/docs/_AVProVideo-v3/api/RenderHeads.Media.AVProVideo.IMediaControl.GetProgramDateTime.html\n\nMediaMTX absolute timestamp documentation:\n\nhttps://github.com/bluenviron/mediamtx/blob/main/docs/2-features/15-absolute-timestamps.md",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a9701c0d5b3f13c8d9027a4",
+  "imageURLs": [
+    "https://canny-assets.io/images/7b0b5f2386acc995af1a9f508098ef84.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9701c0d5b3f13c8d9027b7/469943348.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-01T16:48:00.648Z",
+  "subCategoryID": null,
+  "title": "Expose live-stream presentation time, live-edge time, and buffer information to Udon for HLS and RTSP",
+  "trendingScore": 2957.9129117922553,
+  "updatedBy": null,
+  "urlName": "expose-live-stream-presentation-time-live-edge-time-and-buffer-information-to-ud",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6752b0b2b6263b041bd8f2bf",
+      "alias": "Competent Trout",
+      "aliasID": "6752b0b3a367fa63920db19c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f58adb4bf89fbff8192a26a8ce958631.png",
+      "companies": [],
+      "name": "Utalia",
+      "urlName": null,
+      "voteID": "6a9701d878a781c4584479f6"
+    },
+    {
+      "_id": "62e0eef69950e946552838e6",
+      "alias": "Damask Manatee",
+      "aliasID": "65cef51c0129d7ae4478d71f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/201305a868283cc74d6bef47337fd60a.png",
+      "companies": [],
+      "name": "ジェームス",
+      "urlName": null,
+      "voteID": "6a9701c078a781c45844798d"
+    }
+  ]
+}
