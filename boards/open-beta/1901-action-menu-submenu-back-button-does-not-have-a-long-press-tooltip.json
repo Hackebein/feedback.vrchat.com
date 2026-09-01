@@ -1,0 +1,91 @@
+{
+  "_id": "6a975af1e785a9c3e1bd33e4",
+  "aiCategories": [
+    "loc.action-menu",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-09-01T23:11:19.341492Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63180cda10858444c1b3cc5b",
+    "alias": "Fiscal Marsupial",
+    "aliasID": "65c2b40bed6eefce4ccc5135",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bf577f5e6d3930f6c783c47f25f2e0d1.png",
+    "created": "2022-09-07T03:15:38.469Z",
+    "name": "TapGhoul",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63180cda10858444c1b3cc5b",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-01T23:08:33.497Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Open the action menu\n\n2. Go at least 2 layers deep anywhere in it\n\n3. Long press the back button\n\nThe menu will go back to the root of it - but it is not documented as such with a tooltip like other long press actions",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a975af1e785a9c3e1bd33e3",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-01T23:08:33.497Z",
+  "subCategoryID": null,
+  "title": "[1901] Action menu submenu back button does not have a long press tooltip",
+  "trendingScore": 2957.5451865580403,
+  "updatedBy": null,
+  "urlName": "1901-action-menu-submenu-back-button-does-not-have-a-long-press-tooltip",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "63180cda10858444c1b3cc5b",
+      "alias": "Fiscal Marsupial",
+      "aliasID": "65c2b40bed6eefce4ccc5135",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bf577f5e6d3930f6c783c47f25f2e0d1.png",
+      "companies": [],
+      "name": "TapGhoul",
+      "urlName": null,
+      "voteID": "6a975af178a781c45849f975"
+    }
+  ]
+}
