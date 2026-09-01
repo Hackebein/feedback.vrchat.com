@@ -2,10 +2,10 @@
   "_id": "6a871836acabd419ac8cd2ce",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
-    "client.settings"
+    "loc.in-world",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-08-24T14:21:21.190080Z",
+  "aiTaggedAt": "2026-09-01T14:51:26.734747Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ce45f9bcda4ee632ed8f02",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "comments": [
     {
       "_id": "6a871a5ba98c83b2231d8235",
@@ -249,6 +249,70 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{69ce45f9bcda4ee632ed8f02|full_name} I'm not sure I see a VRChat issue in this one anymore. It appears that your anti-cheat failed to connect, and then the realtime network connection attempt simply failed twice. This might be down to your internet connection or routing being too unstable. I'd recommend trying Cloudflare Warp, or contacting user support at https://vrch.at/support.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a96e4ce6300f55e4f87951f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69ce45f9bcda4ee632ed8f02",
+        "alias": "Wine Deer",
+        "aliasID": "69ce45fabcda4ee632edba23",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6619ad4fc4f740dad272419089f771ad.png",
+        "created": "2026-04-02T10:33:29.169Z",
+        "name": "dekapu_debug",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-01T14:44:30.154Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/71c9c27c667be554323a5f74d5560d03.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-09-01_23-33-49",
+          "url": "https://canny-assets.io/files/71c9c27c667be554323a5f74d5560d03.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a88b16ef590e0201c95cddc",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a871836acabd419ac8cd2ce",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name}\n\ntau Thanks for looking, but I don't think anti-cheat is what failed — the 1897 log shows it succeeding.\n\n20:25:45  [EOSManager] Attempting to login to EOS.\n\n20:25:45  [Behaviour] Locating best region\n\n20:26:48  ... HttpStatus=[401], ErrorCode=[...auth.external.invalid_token]\n\n20:26:48  [EOSManager] EOS Login Failed. ResultCode: 7000\n\n20:26:49  [EOSManager] EOS Login Succeeded.\n\n20:26:49  [EOSManager] EOS LoginUser took '0.74'.\n\n20:26:52  [EOSManager] EOS LoginUser took '67.20'.\n\n20:26:53  [Behaviour] Switching to network region jp (current state: Disconnecting)\n\n20:26:53  [EOSManager] AntiCheat Session Begin: Success\n\nThe 401 is an EOSAuth TokenGrant failure, not anti-cheat, and it's transient: the retry succeeds in 0.74s and AntiCheat Session Begin: Success is logged at the moment of the switch. EOS Login Failed. ResultCode: 7000 is the only [EOSManager] error line in the file — EOS was fully logged in 4 seconds before the switch.\n\nOn \"the connection attempt failed twice\": neither attempt got that far. Connecting to realtime network never appears. Both start from the same state:\n\n20:26:53  Switching to network region jp (current state: Disconnecting)\n\n20:27:27  Failed to connect to region, status was: Disconnecting\n\n20:27:27  Resetting game flow because \"Failed to connect to network region\"\n\n20:27:29  Switching to network region jp (current state: Disconnecting)\n\nThe second is after a full flow reset and still begins from Disconnecting. Across all 21 failed sessions the state at the first switch is Disconnecting every time — never Disconnected, never a mix.\n\nAlso reproduced on 1899 (log attached), same machine class and launch URL:\n\n23:35:00  EOS Login Failed. ResultCode: 7000   (401, same code)\n\n23:35:02  EOS Login Succeeded / LoginUser took '0.59'\n\n23:35:04  EOS LoginUser took '67.50'\n\n23:35:04  Switching to network region jp (current state: Disconnecting)\n\n23:35:04  AntiCheat Session Begin: Success\n\n23:35:42  Failed to connect to region, status was: Disconnecting\n\n23:35:44  Switching to network region jp (current state: Disconnecting)\n\nBoth sessions: login-to-first-switch 68s, first EOS login 67.20s / 67.50s, retry 0.74s / 0.59s, anti-cheat Success, no Connecting to realtime network.\n\nHappy to run any build or capture anything else that helps.",
       "viewerReactions": null,
       "voteID": null
     }
