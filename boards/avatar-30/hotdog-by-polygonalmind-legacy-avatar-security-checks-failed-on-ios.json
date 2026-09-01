@@ -1,0 +1,94 @@
+{
+  "_id": "6a961fb94c51da0b9f950aaa",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.upload-performance",
+    "platforms.mobile.ios"
+  ],
+  "aiTaggedAt": "2026-09-01T00:46:12.049511Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ecfb0a7b8ccd5e3e3fbf3b7d198222f6.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-01T00:43:37.556Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Affected avatar: [avtr_8ee2b82e-1ecc-490e-a67a-ec91aaa12c9d](https://vrchat.com/home/avatar/avtr_8ee2b82e-1ecc-490e-a67a-ec91aaa12c9d) (HotDog by PolygonalMind)\n\nLegacy avatars don't appear in the Main Menu anymore, but it's a shame to see this fail security checks on iOS because it's one of the few public fallback avatars that can be used as a fallback (it's exempted from fallback avatar author/ownership checks).\n\nI don't know if the fallback avatar appears as an error robot or as an Android loaded avatar on iOS, but the expectation was that it would be seen on iOS.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a961fb94c51da0b9f950aa1",
+  "imageURLs": [
+    "https://canny-assets.io/images/081cc012a87c0c0b8b0bed66f1c70f29.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-01T00:43:37.556Z",
+  "subCategoryID": null,
+  "title": "HotDog by PolygonalMind (legacy avatar): Security Checks Failed on iOS",
+  "trendingScore": 2957.4117606428617,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "hotdog-by-polygonalmind-legacy-avatar-security-checks-failed-on-ios",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ecfb0a7b8ccd5e3e3fbf3b7d198222f6.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a961fb978a781c4583f2572"
+    }
+  ]
+}
