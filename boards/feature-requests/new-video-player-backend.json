@@ -70,7 +70,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Would definitely love to see some improvements to streaming. Long HLS sessions are woefully unstable and have a/v drift in VRC in my experience and is just generally challenging to make stable.\n\nFew thoughts:\n\nAV1/VP9 really needs decode support in HW. Obviously if the codec isn't supported in HW for decode, this could be computationally expensive for many user devices to do on CPU. Quest2 supports VP9, but not AV1. Unfortunately a lot of the industry kind of moved on from / skipped over VP9 hardware encoding. For example, even an RTX5000 generation NVENC does not have VP9. Real-time VP9/AV1 on CPU is very expensive. Even a RTX3000 series NVENC does not support AV1. I'm personally not familiar with AMD VCE on a dGPU, but on CPU AV1 performance in general (on Raphael gen at least) is not good. Things get even weirder when you start looking at iOS devices (although, I don't think external video works anyway on them..?).\n\nWebRTC will probably be superseded by MoQ (Media over QUIC). WebRTC video and CDNs do not generally play well together like MoQ can. WebRTC signaling layer is also a disaster and often varies from platform to platform or player to player implementation. WHIP/WHEP can address some issues, but I'm not sure it's worth it at the end of the day.\n\nI'd personally love to have all of these, but there is a risk of excluding users' on the platform in situations where these newer technologies might be the only option, and a user has no available fallback.\n\nAbsolutely would love to see LL-HLS or chunked CMAF based streaming, SRT, RTSP(T), or something come to VRC players. It could definitely be a big step forward while still utilizing codecs that are widely supported, like H264. WebVTT could be really cool, too!\n\nI work a lot with streaming video on the CDN side of things, so I see a lot of this first hand. Improvements are coming in this space in general, but is just slow moving, and even slower more recently with hardware costs for new gear constantly increasing to end users.",
+      "value": "Would definitely love to see some improvements to streaming. Long HLS sessions are woefully unstable and have a/v drift in VRC in my experience and is just generally challenging to make stable.\n\nFew thoughts:\n\nAV1/VP9 really needs decode support in HW. Obviously if the codec isn't supported in HW for decode, this could be computationally expensive for many user devices to do on CPU. Quest2/Quest Pro supports VP9, but not AV1. Unfortunately a lot of the industry kind of moved on from / skipped over VP9 hardware encoding. For example, even an RTX5000 generation NVENC does not have VP9, even a RTX3000 series NVENC does not support AV1. Real-time VP9/AV1 on CPU is very expensive. I'm personally not familiar with AMD VCE on a dGPU, but on CPU AV1 performance in general (on Raphael gen at least) is not good. Things get even weirder when you start looking at iOS devices (although, I don't think external video works anyway on them..?).\n\nWebRTC will probably be superseded by MoQ (Media over QUIC). WebRTC video and CDNs do not generally play well together like MoQ can. WebRTC signaling layer is also a disaster and often varies from platform to platform or player to player implementation. WHIP/WHEP can address some issues, but I'm not sure it's worth it at the end of the day.\n\nI'd personally love to have all of these, but there is a risk of excluding users on the platform in situations where these newer technologies might be the only option, and a user has no available fallback.\n\nAbsolutely would love to see LL-HLS or chunked CMAF based streaming, SRT, RTSP(T), or something come to VRC players. It could definitely be a big step forward while still utilizing codecs that are widely supported, like H264. Likely wouldn't see CDN support for SRT/RTSP, though. WebVTT could be really cool, too.\n\nI work a lot with streaming video on the CDN side of things, so I see a lot of this first hand. Improvements are coming in this space in general, but is just slow moving, and even slower more recently with hardware costs for new gear constantly increasing to end users.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -90,20 +90,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 9,
+  "maxScore": 10,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9744a36ddcc64ede19b62f/114286630.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 9,
+  "score": 10,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-01T21:33:23.296Z",
   "subCategoryID": null,
   "title": "New video-player backend",
-  "trendingScore": 2959.1487646603014,
+  "trendingScore": 2959.244726889812,
   "updatedBy": null,
   "urlName": "new-video-player-backend",
   "viewerIsAuthor": false,
@@ -115,6 +115,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5f6dae4087d989489b562e09",
+      "alias": "Abstract Canidae",
+      "aliasID": "65c2b0e2ed6eefce4c65c4e0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d94e354b89f51fc6e0fcbf6270e04768.png",
+      "companies": [],
+      "name": "virus_of_doom",
+      "urlName": null,
+      "voteID": "6a975dfd78a781c4584a260b"
+    },
     {
       "_id": "6708725cd391a727a42493a1",
       "alias": "Zesty Sheep",
