@@ -17,6 +17,17 @@ notification IDs or post IDs missing from on-disk `boards/`, it fires
 `repository_dispatch` `canny-wake` so Actions runs a light scrape
 (`--refresh-oldest 0 --refresh-newest 0 --vote-batch 0`).
 
+SSO failures back off for **15 minutes** (`CANNY_SSO_BACKOFF_SECS`) so a
+dead Canny session cannot hammer VRChat `/sso/canny` into HTTP 429. The
+cookie jar must not use `Domain=.vrchat.com` (that suffix matches
+`feedback.vrchat.com` and leaks VRChat `auth` into Canny). Curl cookie
+writes are merged so a Canny request does not wipe VRChat cookies.
+
+If Canny returns `{"error":"invalid token"}` after a successful VRChat
+login, the JWT from `GET /api/1/sso/canny` is being rejected (signature
+or payload). Public board scrape still runs; notifications and votes
+need Canny to accept that token again.
+
 Separately, every **65s** it upvotes up to **10** most-active unscored posts
 (skips the rest of that cycle on HTTP 429). Vote progress lives in
 `/var/lib/feedback-search/canny-wake-state.json` (`votedPostIds`).

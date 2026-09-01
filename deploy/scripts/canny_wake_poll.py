@@ -41,6 +41,8 @@ POLL_SECS = float(os.environ.get("CANNY_WAKE_POLL_SECS") or "30")
 VOTE_SECS = float(os.environ.get("CANNY_WAKE_VOTE_SECS") or "65")
 VOTE_BATCH = int(os.environ.get("CANNY_WAKE_VOTE_BATCH") or "10")
 VOTE_GAP_SECS = float(os.environ.get("CANNY_WAKE_VOTE_GAP_SECS") or "1")
+SSO_BACKOFF_SECS = float(os.environ.get("CANNY_SSO_BACKOFF_SECS") or "900")
+_sso_blocked_until = 0.0
 DEFAULT_REPO = "Hackebein/feedback.vrchat.com"
 CANNY_HOST = "feedback.vrchat.com"
 API_URL = f"https://{CANNY_HOST}/api/posts/get"
@@ -261,9 +263,18 @@ def _pending_vote_ids(voted: set[str], limit: int) -> list[str]:
 
 
 def ensure_session(session: canny_auth.CannySession | None) -> canny_auth.CannySession:
+    global _sso_blocked_until
     if session is not None:
         return session
-    return canny_auth.login_canny_session()
+    now = time.time()
+    if now < _sso_blocked_until:
+        remaining = int(_sso_blocked_until - now)
+        raise canny_auth.CannyAuthError(f"SSO backoff ({remaining}s remaining)")
+    try:
+        return canny_auth.login_canny_session()
+    except canny_auth.CannyAuthError:
+        _sso_blocked_until = time.time() + SSO_BACKOFF_SECS
+        raise
 
 
 def poll_once(state: dict[str, Any], session: canny_auth.CannySession | None) -> canny_auth.CannySession | None:

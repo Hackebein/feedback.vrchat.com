@@ -64,6 +64,70 @@ def _totp_code(secret: str) -> str:
     return pyotp.TOTP(secret).now()
 
 
+def _cookie_line_key(line: str) -> tuple[str, str, str] | None:
+    """Identity for a Netscape cookie row: (domain, path, name)."""
+    if line.startswith("#HttpOnly_"):
+        line = line[len("#HttpOnly_") :]
+    elif not line.strip() or line.startswith("#"):
+        return None
+    parts = line.split("\t")
+    if len(parts) < 7:
+        return None
+    domain, _, path, _, _, name, _ = parts[:7]
+    return (domain, path, name)
+
+
+def merge_netscape_jars(dest: Path, incoming: Path) -> None:
+    """Upsert cookies from incoming into dest.
+
+    curl ``-c`` rewrites the output file with only cookies from that request's
+    cookie engine (usually one domain). Merging keeps VRChat and Canny cookies
+    in the same jar.
+    """
+    rows: dict[tuple[str, str, str], str] = {}
+    for path in (dest, incoming):
+        if not path.is_file():
+            continue
+        for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+            key = _cookie_line_key(line)
+            if key is None:
+                continue
+            rows[key] = line
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    text = "# Netscape HTTP Cookie File\n" + "".join(f"{line}\n" for line in rows.values())
+    dest.write_text(text, encoding="utf-8")
+    try:
+        os.chmod(dest, 0o600)
+    except OSError:
+        pass
+
+
+def drop_vrchat_suffix_cookies(cookie_jar: Path) -> None:
+    """Remove Domain=.vrchat.com cookies.
+
+    ``feedback.vrchat.com`` is Canny. A ``.vrchat.com`` suffix cookie is sent
+    there and Canny treats the VRChat ``auth`` value as its own session.
+    """
+    if not cookie_jar.is_file():
+        return
+    kept: list[str] = []
+    dropped = False
+    for line in cookie_jar.read_text(encoding="utf-8", errors="replace").splitlines():
+        key = _cookie_line_key(line)
+        if key is None:
+            continue
+        if key[0] == ".vrchat.com":
+            dropped = True
+            continue
+        kept.append(line)
+    if not dropped:
+        return
+    cookie_jar.write_text(
+        "# Netscape HTTP Cookie File\n" + "".join(f"{line}\n" for line in kept),
+        encoding="utf-8",
+    )
+
+
 def _curl(
     url: str,
     *,
@@ -79,6 +143,7 @@ def _curl(
         body_path = Path(bf.name)
     with tempfile.NamedTemporaryFile(prefix="curl-hdr-", delete=False) as hf:
         hdr_path = Path(hf.name)
+    jar_out: Path | None = None
     try:
         cmd = [
             "curl", "-sS", "-X", method, url,
@@ -94,7 +159,11 @@ def _curl(
             cookie_jar.parent.mkdir(parents=True, exist_ok=True)
             if not cookie_jar.is_file():
                 cookie_jar.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
-            cmd.extend(["-c", str(cookie_jar), "-b", str(cookie_jar)])
+            fd, jar_out_name = tempfile.mkstemp(prefix="curl-jar-")
+            os.close(fd)
+            jar_out = Path(jar_out_name)
+            jar_out.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
+            cmd.extend(["-c", str(jar_out), "-b", str(cookie_jar)])
         for h in headers or []:
             cmd.extend(["-H", h])
         if data is not None:
@@ -110,6 +179,11 @@ def _curl(
         hdr = hdr_path.read_text(encoding="utf-8", errors="replace")
         return code, body, hdr
     finally:
+        if jar_out is not None and cookie_jar is not None:
+            try:
+                merge_netscape_jars(cookie_jar, jar_out)
+            finally:
+                jar_out.unlink(missing_ok=True)
         body_path.unlink(missing_ok=True)
         hdr_path.unlink(missing_ok=True)
 
@@ -144,25 +218,30 @@ def read_cookie(cookie_jar: Path, name: str, *, domain_substr: str | None = None
 
 
 def _mirror_vrchat_web_cookies(cookie_jar: Path) -> None:
-    """Copy api.vrchat.cloud auth cookies onto vrchat.com for the web SSO page."""
+    """Copy api.vrchat.cloud auth cookies onto host-only vrchat.com.
+
+    Do not use Domain=.vrchat.com: that suffix matches feedback.vrchat.com
+    (Canny) and leaks the VRChat auth cookie into Canny's session jar.
+    """
+    drop_vrchat_suffix_cookies(cookie_jar)
     auth = read_cookie(cookie_jar, "auth")
     tfa = read_cookie(cookie_jar, "twoFactorAuth")
     if not auth and not tfa:
         return
-    existing = cookie_jar.read_text(encoding="utf-8", errors="replace")
-    lines = []
-    if auth and f"\tauth\t{auth}" not in existing.replace("#HttpOnly_", ""):
-        pass
-    # Always append domain mirrors (curl merges/overwrites by domain+name).
-    with cookie_jar.open("a", encoding="utf-8") as f:
-        for domain, flag in ((".vrchat.com", "TRUE"), ("vrchat.com", "FALSE")):
-            if auth:
-                f.write(f"{domain}\t{flag}\t/\tTRUE\t0\tauth\t{auth}\n")
-            if tfa:
-                f.write(f"{domain}\t{flag}\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}\n")
-            lines.append(domain)
-    if lines:
-        print(f"[auth] mirrored VRChat cookies to {', '.join(lines)}")
+    fd, incoming_name = tempfile.mkstemp(prefix="vrc-mirror-")
+    os.close(fd)
+    incoming = Path(incoming_name)
+    try:
+        lines = ["# Netscape HTTP Cookie File"]
+        if auth:
+            lines.append(f"vrchat.com\tFALSE\t/\tTRUE\t0\tauth\t{auth}")
+        if tfa:
+            lines.append(f"vrchat.com\tFALSE\t/\tTRUE\t0\ttwoFactorAuth\t{tfa}")
+        incoming.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        merge_netscape_jars(cookie_jar, incoming)
+    finally:
+        incoming.unlink(missing_ok=True)
+    print("[auth] mirrored VRChat cookies to vrchat.com")
 
 
 def _cookie_jar_path() -> Path | None:
@@ -618,43 +697,87 @@ def _fetch_canny_sso_token(cookie_jar: Path) -> str:
 
 
 def sso_to_canny(cookie_jar: Path) -> dict[str, Any] | None:
-    """Exchange VRChat session for Canny cookies via SSO token redirect."""
+    """Exchange a VRChat session for Canny cookies.
+
+    VRChat's website does not POST the JWT to ``canny.io/api/redirects/sso``.
+    After Authorize it sets ``ssoToken`` on the board URL
+    (``https://feedback.vrchat.com/?ssoToken=...``). That is the primary path.
+    Official ``redirects/sso`` is a fallback. Canny HTTP uses a sidecar jar so
+    VRChat cookies are never sent to ``feedback.vrchat.com``.
+    """
+    drop_vrchat_suffix_cookies(cookie_jar)
     _mirror_vrchat_web_cookies(cookie_jar)
     token = _fetch_canny_sso_token(cookie_jar)
-    # Official Canny SSO redirect (see Canny SSO redirect docs).
-    sso_url = "https://canny.io/api/redirects/sso?" + urllib.parse.urlencode(
-        {
-            "companyID": COMPANY_ID,
-            "ssoToken": token,
-            "redirect": f"https://{CANNY_HOST}/",
-        }
-    )
-    code, html, _ = _curl(
-        sso_url,
-        cookie_jar=cookie_jar,
-        follow=True,
-        timeout=60,
-        headers=["Accept: text/html,application/xhtml+xml"],
-    )
-    if code != 200:
-        raise CannyAuthError(f"Canny SSO redirect failed HTTP {code}")
 
-    viewer = _parse_viewer(html)
+    with tempfile.TemporaryDirectory(prefix="canny-sso-") as td:
+        canny_jar = Path(td) / "cookies.jar"
+        canny_jar.write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
+        if cookie_jar.is_file():
+            kept = ["# Netscape HTTP Cookie File"]
+            for line in cookie_jar.read_text(encoding="utf-8", errors="replace").splitlines():
+                key = _cookie_line_key(line)
+                if key is None:
+                    continue
+                domain = key[0].lower()
+                if "canny" in domain or "feedback.vrchat" in domain:
+                    kept.append(line)
+            canny_jar.write_text("\n".join(kept) + "\n", encoding="utf-8")
+
+        last_err = ""
+        board_url = f"https://{CANNY_HOST}/?" + urllib.parse.urlencode({"ssoToken": token})
+        code, html, _ = _curl(
+            board_url,
+            cookie_jar=canny_jar,
+            follow=True,
+            timeout=60,
+            headers=["Accept: text/html,application/xhtml+xml"],
+        )
+        viewer = _parse_viewer(html) if code == 200 else None
+        if code != 200:
+            last_err = f"Canny board SSO HTTP {code}: {html[:300]}"
+
+        if not (extract_user_id(viewer) and extract_csrf_token(viewer)):
+            sso_url = "https://canny.io/api/redirects/sso?" + urllib.parse.urlencode(
+                {
+                    "companyID": COMPANY_ID,
+                    "ssoToken": token,
+                    "redirect": f"https://{CANNY_HOST}/",
+                }
+            )
+            code, html, _ = _curl(
+                sso_url,
+                cookie_jar=canny_jar,
+                follow=True,
+                timeout=60,
+                headers=["Accept: text/html,application/xhtml+xml"],
+            )
+            if code != 200:
+                last_err = f"Canny SSO redirect failed HTTP {code}: {html[:300]}"
+            else:
+                viewer = _parse_viewer(html)
+                if not (extract_user_id(viewer) and extract_csrf_token(viewer)):
+                    code2, html2, _ = _curl(
+                        f"https://{CANNY_HOST}/",
+                        cookie_jar=canny_jar,
+                        follow=True,
+                        timeout=30,
+                        headers=["Accept: text/html,application/xhtml+xml"],
+                    )
+                    if code2 != 200:
+                        last_err = f"Canny home after SSO HTTP {code2}"
+                    else:
+                        viewer = _parse_viewer(html2)
+
+        merge_netscape_jars(cookie_jar, canny_jar)
+
     if extract_user_id(viewer) and extract_csrf_token(viewer):
         return viewer
-
-    # SSR after redirect can briefly show loggedOut; cookies are already set —
-    # reload the board home to pick up viewer + csrfToken.
-    code2, html2, _ = _curl(
-        f"https://{CANNY_HOST}/",
-        cookie_jar=cookie_jar,
-        follow=True,
-        timeout=30,
-        headers=["Accept: text/html,application/xhtml+xml"],
+    if last_err:
+        raise CannyAuthError(last_err)
+    raise CannyAuthError(
+        "Canny SSO did not produce a logged-in viewer "
+        f"(loggedOut={bool(viewer and viewer.get('loggedOut'))})"
     )
-    if code2 != 200:
-        raise CannyAuthError(f"Canny home after SSO HTTP {code2}")
-    return _parse_viewer(html2)
 
 
 def _parse_viewer(html: str) -> dict[str, Any] | None:
@@ -795,6 +918,7 @@ def login_canny_session() -> CannySession:
         cleanup_temp = True
 
     try:
+        drop_vrchat_suffix_cookies(working)
         # Canny home follows redirects and may Set-Cookie; snapshot so a dead
         # Canny session cannot clobber a still-valid VRChat auth cookie.
         snapshot = working.read_bytes() if working.is_file() else None
