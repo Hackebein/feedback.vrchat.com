@@ -1,0 +1,88 @@
+{
+  "_id": "6a97b609e785a9c3e1c600a1",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-09-02T05:43:16.566353Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df09614a256544ac8f7327",
+    "alias": "Optimistic Stork",
+    "aliasID": "6a8ea951523ad16133c0aa4a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1eaf3b56929f2d21cf8f780b7864271c.png",
+    "created": "2022-07-25T21:21:37.971Z",
+    "name": "Midnight Spark",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df09614a256544ac8f7327",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-02T05:37:13.020Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Back then, I'd use the camera's \" Look at me \" feature to automatically have the camera follow my head and would combine that with \" Auto Level Roll \" & \" Auto Level Pitch \". I'd then combine those two features with \" Horizontal Offset \" set to some degree to get a 3rd Person Camera that moves when I move my head for any games involving movement. \n\nThis made it so I could seamlessly setup for streams or recordings relatively fast, just three buttons and a good angle. \n\nBut one of these past updates made it so the \" Horizontal Offset \" no longer functions when \" Auto Level Roll \" & \" Auto Level Pitch \" are active. I have to disable those two features and manually stabilize my camera to get the proper angle now. \n\n\" Horizontal Offset \" does NOT work when either one of the two behaviors are active. It just completely gives up!\n\n -- This means if I accidentally grab my camera, it flips the entire stream just by the flick of my wrist! --\n\nIt'd be great if this could be fixed so that \" Horizontal Offset \" worked the way it did before, please and thank you!!!!\n\nI've attached 2 screenshots below. \n\n- One of the flipped stream, (Happens even more when playing games that make you grab items {Weapons, Doors, etc. } since you can accidentally grab your camera) \n\n- One prior to the change",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a97b608e785a9c3e1c6009f",
+  "imageURLs": [
+    "https://canny-assets.io/images/96e3367e0297194b918b08b693168a93.png",
+    "https://canny-assets.io/images/01a0d61de0ea13abb5e57e27ad2412f8.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-02T05:37:13.020Z",
+  "subCategoryID": null,
+  "title": "Fix the \" Horizontal Offset \" when combined with camera behaviors, please!!!",
+  "trendingScore": 2957.5837437918367,
+  "updatedBy": "62df09614a256544ac8f7327",
+  "urlName": "fix-the-horizontal-offset-when-combined-with-camera-behaviors-please",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "62df09614a256544ac8f7327",
+      "alias": "Optimistic Stork",
+      "aliasID": "6a8ea951523ad16133c0aa4a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1eaf3b56929f2d21cf8f780b7864271c.png",
+      "companies": [],
+      "name": "Midnight Spark",
+      "urlName": null,
+      "voteID": "6a97b60978a781c4584fef11"
+    }
+  ]
+}
