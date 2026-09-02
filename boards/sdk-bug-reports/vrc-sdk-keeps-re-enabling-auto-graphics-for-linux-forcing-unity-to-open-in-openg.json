@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.unity-sdk",
     "sdk.vrcsdk",
-    "platforms.pc.desktop"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-19T01:23:55.248760Z",
+  "aiTaggedAt": "2026-09-02T00:05:12.270030Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a03c185cf565b8f740ae9b7",
@@ -35,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a8365c5eb612f9e4d9fb6e2",
@@ -169,6 +169,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I found the best way to force this to happen is via launch arguments.  Specifically, I use:\n\n-force-vulkan\n\n-force-gfx-direct\n\n-force-vulkan-layers\n\nI run via alcom, I just add these to the editor commandline therein.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a97672ce785a9c3e1be8187",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a03c185cf565b8f740ae9b7",
+        "alias": "Jasmine green Puffin",
+        "aliasID": "6a03c185cf565b8f740ae9bb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/06d33b098bcedb26a360f1b38234807a.png",
+        "created": "2026-05-13T00:10:45.635Z",
+        "name": "SpaceLilFox",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-02T00:00:44.496Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a03c1e754ddecad2ae494d1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Had forgotten about this thread but just to provide an update, using the flag\n\n-force-wayland\n\n-force-vulkan\n\ndid it for me on alcom, probably due to unity not supporting opengl on wayland, but still, it would be better not to have to rely on custom force flags due to vrchat sdk changing it for somereason",
       "viewerReactions": null,
       "voteID": null
     }
