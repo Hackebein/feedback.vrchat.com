@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-09-02T13:36:00.249146Z",
+  "aiTaggedAt": "2026-09-02T18:44:44.989436Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2cb35431807b34c94a2618",
@@ -41,7 +41,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Tested with VRChat client build [1901].\n\nI would like VRCJson.TryDeserializeFromJson to accept valid JSON containing\n\nwhitespace before the root object or array.\n\nReproduction code:\n\n```\n\nstring controlJson = @\"{\"\"x\"\":1}\";\n\nstring leadingSpaceJson = @\" {\"\"x\"\":1}\";\n\nbool controlSuccess =\n\n    VRCJson.TryDeserializeFromJson(\n\n        controlJson,\n\n        out DataToken controlResult);\n\nbool leadingSpaceSuccess =\n\n    VRCJson.TryDeserializeFromJson(\n\n        leadingSpaceJson,\n\n        out DataToken leadingSpaceResult);\n\nDebug.Log(\"Control: \" + controlSuccess);\n\nDebug.Log(\"Leading space: \" + leadingSpaceSuccess);\n\nDebug.Log(leadingSpaceResult.ToString());\n\n```\n\nExpected output:\n\n```\n\nControl: True\n\nLeading space: True\n\n```\n\nActual output:\n\n```\n\nControl: True\n\nLeading space: False\n\nUnableToParse: Unable to Deserialize from Json:\n\nFound unexpected type Object while looking for key\n\n```\n\nLeading whitespace is permitted in JSON. Users can currently work around this\n\nby calling Trim() before deserialization:\n\nVRCJson.TryDeserializeFromJson(json.Trim(), out DataToken result);\n\nHowever, accepting leading JSON whitespace directly would make the method more\n\ncompatible with valid JSON returned by external services.",
+  "details": "Tested with VRChat client build [1901].\n\nI would like VRCJson.TryDeserializeFromJson to accept valid JSON containing whitespace before the root object or array.\n\nReproduction code:\n\n```\n\nstring controlJson = @\"{\"\"x\"\":1}\";\n\nstring leadingSpaceJson = @\" {\"\"x\"\":1}\";\n\nbool controlSuccess =\n\n    VRCJson.TryDeserializeFromJson(\n\n        controlJson,\n\n        out DataToken controlResult);\n\nbool leadingSpaceSuccess =\n\n    VRCJson.TryDeserializeFromJson(\n\n        leadingSpaceJson,\n\n        out DataToken leadingSpaceResult);\n\nDebug.Log(\"Control: \" + controlSuccess);\n\nDebug.Log(\"Leading space: \" + leadingSpaceSuccess);\n\nDebug.Log(leadingSpaceResult.ToString());\n\n```\n\nExpected output:\n\n```\n\nControl: True\n\nLeading space: True\n\n```\n\nActual output:\n\n```\n\nControl: True\n\nLeading space: False\n\nUnableToParse: Unable to Deserialize from Json:\n\nFound unexpected type Object while looking for key\n\n```\n\nLeading whitespace is permitted in JSON. Users can currently work around this\n\nby calling Trim() before deserialization:\n\n```\n\nVRCJson.TryDeserializeFromJson(json.Trim(), out DataToken result);\n\n```\n\nHowever, accepting leading JSON whitespace directly would make the method more compatible with valid JSON returned by external services.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -65,7 +65,7 @@
   "subCategoryID": null,
   "title": "Allow VRCJson.TryDeserializeFromJson to accept leading JSON whitespace",
   "trendingScore": 2958.3272292847973,
-  "updatedBy": null,
+  "updatedBy": "5f2cb35431807b34c94a2618",
   "urlName": "allow-vrcjsontrydeserializefromjson-to-accept-leading-json-whitespace",
   "viewerIsAuthor": false,
   "viewerVote": 0,
