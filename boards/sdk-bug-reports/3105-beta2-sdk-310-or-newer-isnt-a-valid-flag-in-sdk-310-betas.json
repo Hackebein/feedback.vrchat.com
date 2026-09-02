@@ -1,0 +1,91 @@
+{
+  "_id": "6a981ddeb071efa77052c404",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-02T13:02:48.378767Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "616d28ea71db1372cabf74f6",
+    "alias": "Inevitable Rhinoceros",
+    "aliasID": "65c27b0eed6eefce4c7d1c16",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/470c5ee59e7182d3996add9780a7a880.png",
+    "created": "2021-10-18T07:57:30.280Z",
+    "name": "mjcox24",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "616d28ea71db1372cabf74f6",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-02T13:00:14.572Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Using \"#if SDK_310_OR_NEWER\" in either beta causes the code within it to be skipped.\n\nAccording to the change-log:\n\n\"UdonSharp scripts can now use Assembly Version Defines in their code.\n\nFor example, you can detect if the current VRC SDK is version 3.10 or newer by using 3.10 as the Version Define Expression in your Assembly Definition file. This then allows you to gate code with an #if condition like #if SDK_310_OR_NEWER at compile-time.\"\n\nI might be reading the change-log wrong, but I assumed \"SDK_310_OR_NEWER\" would be a pre-defined flag. That they would add one of these each update. so once 3.11 comes out you could use SDK_311_OR_NEWER for features exclusive to that.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a981ddeb071efa77052c3de",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a981ddeb071efa77052c404/639484121.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-02T13:00:14.572Z",
+  "subCategoryID": null,
+  "title": "[3.10.5-beta.2] SDK_310_OR_NEWER isnt a valid flag in SDK 3.10 betas",
+  "trendingScore": 2957.6276948764926,
+  "updatedBy": null,
+  "urlName": "3105-beta2-sdk-310-or-newer-isnt-a-valid-flag-in-sdk-310-betas",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "616d28ea71db1372cabf74f6",
+      "alias": "Inevitable Rhinoceros",
+      "aliasID": "65c27b0eed6eefce4c7d1c16",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/470c5ee59e7182d3996add9780a7a880.png",
+      "companies": [],
+      "name": "mjcox24",
+      "urlName": null,
+      "voteID": "6a981dde78a781c45857a4d7"
+    }
+  ]
+}
