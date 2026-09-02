@@ -3,10 +3,9 @@
   "_id": "649d3ad9138bed09328b0b8d",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon",
-    "client.osc"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-13T14:49:07.746460Z",
+  "aiTaggedAt": "2026-09-02T06:30:18.882438Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3287055bc2dc276e0f1630",
@@ -36,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
-  "commentCount": 5,
+  "commentCount": 6,
   "comments": [
     {
       "__v": 0,
@@ -278,6 +277,50 @@
       "value": "@{63c199d2c7d7907610c71afd|full_name} It could just only listen to specific prefix of entry point, so it would be seperated from avatar data and use same principles as MIDI support does in terms of dealing with multiplayer.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a97be49e785a9c3e1c6af29",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b83a527d4f5a75c66d47f6b",
+        "alias": "Zircon Cat",
+        "aliasID": "65c2b4a2ed6eefce4ce0c420",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2b61d95e783512d16a7e555e25738ecf.png",
+        "created": "2018-08-27T07:15:51.388Z",
+        "name": "kohack_v",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-02T06:12:25.906Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "649d3ad9138bed09328b0b8d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I’ve been waiting for this feature forever! Just the receiving feature, please! 🙏",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -294,20 +337,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 88,
+  "maxScore": 89,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/649d3ad9138bed09328b0b8d/372060935.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 88,
+  "score": 89,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2023-06-29T08:03:37.298Z",
   "subCategoryID": null,
   "title": "OSC for Worlds / Udon",
-  "trendingScore": 2956.9066484254745,
+  "trendingScore": 2957.5943168662543,
   "updatedBy": "5f3287055bc2dc276e0f1630",
   "urlName": "osc-for-worlds-udon",
   "viewerIsAuthor": false,
@@ -319,6 +362,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "5b839ec37e77612fcf57aecd",
+      "alias": "Zircon Whippet",
+      "aliasID": "65c3e659ed6eefce4cb8b05c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8624179e9071c6866c082b221b2ecc1f.png",
+      "companies": [],
+      "name": "skkn",
+      "urlName": null,
+      "voteID": "6a97c1ff78a781c4585088b6"
+    },
     {
       "_id": "5b83a527d4f5a75c66d47f6b",
       "alias": "Zircon Cat",
