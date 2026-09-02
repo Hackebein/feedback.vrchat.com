@@ -1,44 +1,39 @@
 {
-  "_id": "6a978c48e785a9c3e1c26c99",
+  "_id": "6a978a1dc76cc46f9558a330",
   "aiCategories": [
     "loc.pc-client",
-    "client.controls",
-    "open-beta"
+    "open-beta",
+    "platforms.pc.steam",
+    "social.instances"
   ],
-  "aiTaggedAt": "2026-09-02T03:44:42.211831Z",
+  "aiTaggedAt": "2026-09-02T03:44:42.212570Z",
   "aiTaxonomyVersion": 3,
   "author": {
-    "_id": "66664ea6ec64b58c7fb8de9f",
-    "alias": "Selected Mongoose",
-    "aliasID": "693945e94927a96e58be2b35",
+    "_id": "6a97869078a781c4584d429d",
+    "alias": "Night sky Chicken",
+    "aliasID": "6a97869178a781c4584d42a8",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/03d36a1f689310d6477dd878c0902b48.png",
-    "created": "2024-06-10T00:53:58.702Z",
-    "name": "ベーコン食べて",
+    "avatarURL": "https://canny-assets.io/images/e75f36c87873959e635a1e9369d0e871.png",
+    "created": "2026-09-02T02:14:40.766Z",
+    "name": "星辉辉影AuraElicase",
     "serviceAccount": false,
     "urlName": null
   },
-  "authorID": "66664ea6ec64b58c7fb8de9f",
+  "authorID": "6a97869078a781c4584d429d",
   "board": {
-    "_id": "5b0746088fa72313783e3269",
-    "name": "Open Beta",
-    "urlName": "open-beta"
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
   },
-  "boardID": "5b0746088fa72313783e3269",
+  "boardID": "58c62f2b3cf8f8367753b2f0",
   "by": null,
   "byID": null,
-  "category": {
-    "_id": "6317f3226fccd444a7af6064",
-    "created": "2022-09-07T01:25:54.001Z",
-    "name": "Bug Report",
-    "parentID": null,
-    "urlName": "bug-report"
-  },
-  "categoryID": "6317f3226fccd444a7af6064",
+  "category": null,
+  "categoryID": null,
   "commentCount": 1,
   "comments": [
     {
-      "_id": "6a9799fba06f698093bc6dce",
+      "_id": "6a979a37c27fb5235fdc2341",
       "aiGenerated": false,
       "author": {
         "_id": "68098a4626271974ef4d2775",
@@ -52,9 +47,9 @@
         "urlName": null
       },
       "authorID": null,
-      "boardID": "5b0746088fa72313783e3269",
+      "boardID": "58c62f2b3cf8f8367753b2f0",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-09-02T03:37:31.136Z",
+      "created": "2026-09-02T03:38:31.561Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -69,7 +64,7 @@
       "parentID": null,
       "pinned": false,
       "postDeleted": false,
-      "postID": "6a978c48e785a9c3e1c26c99",
+      "postID": "6a978a1dc76cc46f9558a330",
       "private": false,
       "reactions": null,
       "restoredAt": null,
@@ -77,23 +72,23 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Duplicate of:\n\n- https://feedback.vrchat.com/open-beta/p/1898-tab-key-freezes-all-movement\n\n- https://feedback.vrchat.com/bug-reports/p/controls-locking-up\n\n- https://feedback.vrchat.com/bug-reports/p/tab-on-desktop-now-stops-all-movement\n\n- https://feedback.vrchat.com/bug-reports/p/tab-free-mouse",
+      "value": "Duplicate of: https://feedback.vrchat.com/bug-reports/p/friends-friends-instance-type-bug",
       "viewerReactions": null,
       "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-02T02:39:04.933Z",
+  "created": "2026-09-02T02:29:49.316Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When in first-person view, pressing the Tab key completely disables WASD movement.",
+  "details": "1. open vrchat\n\n2. join one of friends instence.\n\n3. leave this instence.\n\n4. open social menu\n\n5. friends in your last join room is all in private instence.\n\n6. in website display the right instence, only in game is wrong.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a978c48e785a9c3e1c26c78",
+  "ideaID": "6a978a1cc76cc46f9558a32d",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
@@ -107,12 +102,12 @@
   "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-02T02:39:04.933Z",
+  "statusChanged": "2026-09-02T02:29:49.316Z",
   "subCategoryID": null,
-  "title": "[1901] WASD movement stops working while holding the Tab key",
-  "trendingScore": 2957.9717183224475,
-  "updatedBy": "66664ea6ec64b58c7fb8de9f",
-  "urlName": "1901-wasd-movement-stops-working-while-holding-the-tab-key",
+  "title": "[1901] After leaving the instence of a friend (like friends+/friends only/public),even if you are the owner, all the friends' positions in the newly entered instence are displayed as private instence, even though they are still in their original instence.",
+  "trendingScore": 2957.9708645837177,
+  "updatedBy": null,
+  "urlName": "1901-after-leaving-the-instence-of-a-friend-like-friends-friends-only-public-eve",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
@@ -131,18 +126,18 @@
       "companies": [],
       "name": "HackebeinsBot",
       "urlName": null,
-      "voteID": "6a978d9178a781c4584da035"
+      "voteID": "6a978bdc78a781c4584d9366"
     },
     {
-      "_id": "66664ea6ec64b58c7fb8de9f",
-      "alias": "Selected Mongoose",
-      "aliasID": "693945e94927a96e58be2b35",
+      "_id": "6a97869078a781c4584d429d",
+      "alias": "Night sky Chicken",
+      "aliasID": "6a97869178a781c4584d42a8",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/03d36a1f689310d6477dd878c0902b48.png",
+      "avatarURL": "https://canny-assets.io/images/e75f36c87873959e635a1e9369d0e871.png",
       "companies": [],
-      "name": "ベーコン食べて",
+      "name": "星辉辉影AuraElicase",
       "urlName": null,
-      "voteID": "6a978c4978a781c4584d9734"
+      "voteID": "6a978a1d78a781c4584d6985"
     }
   ]
 }
