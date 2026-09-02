@@ -1,0 +1,91 @@
+{
+  "_id": "6a982526f7024f2aa5d94803",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-02T13:36:00.249146Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f2cb35431807b34c94a2618",
+    "alias": "Mysterious Eagle",
+    "aliasID": "65c290c9ed6eefce4cd4009e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1f2a9fdb7e470f482648f922428b5e72.png",
+    "created": "2020-08-07T01:50:12.453Z",
+    "name": "ureishi",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f2cb35431807b34c94a2618",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-02T13:31:18.897Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Tested with VRChat client build [1901].\n\nI would like VRCJson.TryDeserializeFromJson to accept valid JSON containing\n\nwhitespace before the root object or array.\n\nReproduction code:\n\n```\n\nstring controlJson = @\"{\"\"x\"\":1}\";\n\nstring leadingSpaceJson = @\" {\"\"x\"\":1}\";\n\nbool controlSuccess =\n\n    VRCJson.TryDeserializeFromJson(\n\n        controlJson,\n\n        out DataToken controlResult);\n\nbool leadingSpaceSuccess =\n\n    VRCJson.TryDeserializeFromJson(\n\n        leadingSpaceJson,\n\n        out DataToken leadingSpaceResult);\n\nDebug.Log(\"Control: \" + controlSuccess);\n\nDebug.Log(\"Leading space: \" + leadingSpaceSuccess);\n\nDebug.Log(leadingSpaceResult.ToString());\n\n```\n\nExpected output:\n\n```\n\nControl: True\n\nLeading space: True\n\n```\n\nActual output:\n\n```\n\nControl: True\n\nLeading space: False\n\nUnableToParse: Unable to Deserialize from Json:\n\nFound unexpected type Object while looking for key\n\n```\n\nLeading whitespace is permitted in JSON. Users can currently work around this\n\nby calling Trim() before deserialization:\n\nVRCJson.TryDeserializeFromJson(json.Trim(), out DataToken result);\n\nHowever, accepting leading JSON whitespace directly would make the method more\n\ncompatible with valid JSON returned by external services.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a982526f7024f2aa5d94800",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-02T13:31:18.897Z",
+  "subCategoryID": null,
+  "title": "Allow VRCJson.TryDeserializeFromJson to accept leading JSON whitespace",
+  "trendingScore": 2957.6307774880997,
+  "updatedBy": null,
+  "urlName": "allow-vrcjsontrydeserializefromjson-to-accept-leading-json-whitespace",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "5f2cb35431807b34c94a2618",
+      "alias": "Mysterious Eagle",
+      "aliasID": "65c290c9ed6eefce4cd4009e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1f2a9fdb7e470f482648f922428b5e72.png",
+      "companies": [],
+      "name": "ureishi",
+      "urlName": null,
+      "voteID": "6a98252678a781c45858642e"
+    }
+  ]
+}
