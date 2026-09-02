@@ -1,0 +1,101 @@
+{
+  "_id": "6a97d716f7024f2aa5cd79fc",
+  "aiCategories": [
+    "loc.pc-client",
+    "loc.login",
+    "platforms.pc.steam",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-09-02T08:00:26.064104Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a97d6b178a781c45851dcf9",
+    "alias": "Pewter Marten",
+    "aliasID": "6a97d6b278a781c45851dd03",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/985bd10247b085a1eef1f0ea7de4692b.png",
+    "created": "2026-09-02T07:56:33.907Z",
+    "name": "TurnTechGodH34D",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6a97d6b178a781c45851dcf9",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-02T07:58:14.619Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Desktop-only install. Window is black from startup, audio plays (login music). Never get a visible login UI.\n\nPC: Beelink SER9 (AZW), AMD Ryzen 7 255 with Radeon 780M, 32 GB RAM, Windows 11 24H2 (10.0.26100)\n\nClient: Steam, first install. Reproduced on live and Open Beta. Both report build 2026.3.2-1901-4a7d603ee0-Release, Unity 2022.3.22f2-DWR.\n\nTried: --no-vr, -force-d3d11, -force-d3d12, windowed, prefs/registry wipe, file verify. GPU is correctly AMD Radeon 780M Graphics in the log.\n\nLog pattern every launch:\n\nActivating login loading screen\n\nCreated Stacked Camera : Cam_InternalUI\n\nNullReferenceException on the camera stack\n\nManual login failed. Will prompt again.\n\nOutput logs attached.\n\nNot for me, My friend is having issues even booting up the game, here are the logs for everything",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/b225133c58c292361d33f69c0826e981.txt",
+    "https://canny-assets.io/files/229697fe2e646924ab8ad7c62ea5f791.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-09-02_03-23-35",
+      "url": "https://canny-assets.io/files/b225133c58c292361d33f69c0826e981.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-09-02_03-46-26",
+      "url": "https://canny-assets.io/files/229697fe2e646924ab8ad7c62ea5f791.txt"
+    }
+  ],
+  "ideaID": "6a97d716f7024f2aa5cd79f9",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-02T07:58:14.619Z",
+  "subCategoryID": null,
+  "title": "Desktop black screen / login UI camera NRE on Radeon 780M (SER9), build 2026.3.2-1901",
+  "trendingScore": 2957.597734698748,
+  "updatedBy": null,
+  "urlName": "desktop-black-screen-login-ui-camera-nre-on-radeon-780m-ser9-build-202632-1901",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "6a97d6b178a781c45851dcf9",
+      "alias": "Pewter Marten",
+      "aliasID": "6a97d6b278a781c45851dd03",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/985bd10247b085a1eef1f0ea7de4692b.png",
+      "companies": [],
+      "name": "TurnTechGodH34D",
+      "urlName": null,
+      "voteID": "6a97d71678a781c45851e3df"
+    }
+  ]
+}
