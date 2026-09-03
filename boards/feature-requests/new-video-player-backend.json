@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-09-02T06:30:18.883601Z",
+  "aiTaggedAt": "2026-09-03T01:03:35.963070Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "604dc741b29af12c9c6a32c6",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a975848c76cc46f9552b2fe",
@@ -175,6 +175,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6708725cd391a727a42493a1|full_name} i think they're asking for vp9 mainly as its a codec seen on youtube\n\nPersonally I'd like to see something supported where a video can be encoded in advance in a few different codecs, like do h264 and h265(HEVC) and the client will get whichever it supports. I don't know if this would be an already existing tech, like HLS or DASH, or something new.\n\nRight now HEVC AV1 and VP9 support can be added to Windows Media Foundation via the windows store, HEVC is a paid app (1.99 USD?), and AV1/VP9 are free.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a98c4135ad31163d9476bc4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "604dc741b29af12c9c6a32c6",
+        "alias": "Violet Crane",
+        "aliasID": "65d911220129d7ae4403290e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/7bbf2b1c6f452c2ccc2503a611e54008.png",
+        "created": "2021-03-14T08:20:17.312Z",
+        "name": "ArtificialVR",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-03T00:49:23.726Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac759f619ab812afad57d8a884858906.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a975848c76cc46f9552b2fe",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9744a36ddcc64ede19b62f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name}  the HLS specification supports multiple codecs via the \"#EXT-X-STREAM-INF:\" tag (though I don't think its recommended), and I believe DASH also has something similar.",
       "viewerReactions": null,
       "voteID": null
     }
