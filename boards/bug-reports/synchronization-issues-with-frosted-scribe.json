@@ -2,9 +2,9 @@
   "_id": "6a92816ab376e63874c5690d",
   "aiCategories": [
     "loc.in-world",
-    "worlds.travel"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-03T19:22:33.833315Z",
+  "aiTaggedAt": "2026-09-03T19:42:09.798845Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6118891aa1f36424e889adc6",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "comments": [
     {
       "_id": "6a92b8339d324f93575fbc90",
@@ -367,6 +367,62 @@
       "statusChangeID": "6a99c650949530b6670bd005",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a99cc63d1532246fc8db6f5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62257650af76933036b8c3a2",
+        "alias": "Lichen Pheasant",
+        "aliasID": "65c2ef28ed6eefce4ce872a1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/86db260c450b10e450b43e4b2c646ade.png",
+        "created": "2022-03-07T03:04:48.914Z",
+        "name": "Matrices",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-03T19:37:07.743Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a98306ac27fb5235fef643b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a92816ab376e63874c5690d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} yes, sadly this is still occurring. Happens no matter the spawn method (via menu, radial, or wings) and happens across different visited worlds.",
       "viewerReactions": null,
       "voteID": null
     }
