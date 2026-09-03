@@ -4,7 +4,7 @@
     "loc.main-menu",
     "localization"
   ],
-  "aiTaggedAt": "2026-09-03T16:00:06.934615Z",
+  "aiTaggedAt": "2026-09-03T16:28:52.317072Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "651ee4c59bd9ae5010c127e1",
@@ -41,7 +41,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "- 145652 | VRChat+ is deprecated and should be VRC+\n\n- 145654 | Same as above\n\n- 145656 | Same as above\n\n- 145684 | The term \"Players\" is incorrect and should be \"Users\"\n\n- 145730 | VRCPlus should be VRC+",
+  "details": "The following strings are using deprecated/incorrect terms:\n\n- 145652 | VRChat+ is deprecated and should be VRC+\n\n- 145654 | Same as above\n\n- 145656 | Same as above\n\n- 145684 | The term \"Players\" is incorrect and should be \"Users\"\n\n- 145730 | VRCPlus should be VRC+\n\n- 145656 | \"Profile Icon\" should be used and not \"User Icon\" as per recent strings\n\nThe following are containing grammatical/other issues:\n\n- 145648 | Canceled should take two L to match other strings (\"Cancelled\")\n\n- 39928 | Same as above\n\n- 141139 | Same as above\n\n- 145712 | \"Text\" was probably forgotten and shouldn't be in the string",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -63,10 +63,10 @@
   "status": "open",
   "statusChanged": "2026-09-03T06:22:42.204Z",
   "subCategoryID": null,
-  "title": "Incorrect source strings using deprecated/incorrect terms",
+  "title": "Incorrect source strings using deprecated/incorrect terms or grammatical/other issues",
   "trendingScore": 2958.430308563141,
   "updatedBy": "651ee4c59bd9ae5010c127e1",
-  "urlName": "incorrect-source-strings-using-deprecated-incorrect-terms",
+  "urlName": "incorrect-source-strings-using-deprecated-incorrect-terms-or-grammatical-other-i",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
