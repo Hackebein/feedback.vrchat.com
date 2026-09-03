@@ -1,0 +1,90 @@
+{
+  "_id": "6a998f03706e2615da9fb9bc",
+  "aiCategories": [
+    "loc.pc-client",
+    "client.settings",
+    "web.feedback",
+    "web.auth",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-09-03T15:18:25.051509Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-03T15:15:15.824Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If the single sign-on (SSO) for VRChat Feedback is temporarily unavailable due to server side issues, the response code to an in-client bug report via bugReport API will be an unusual \"HTTP 429: Application error\". \n\nSteps to reproduce:\n\n1. As a pre-requisite, the single sign-on between VRChat and Canny must have an issue. (This is already resolved.) You should also have cookies enabled in your browser.\n\n2. Go to https://feedback.vrchat.com/, you should be signed out (even if you didn't sign out yourself).\n\n3. Click \"Login\" on the page.\n\n4. After logging in to VRChat Home and being prompted to share information with Canny for a single sign-on login, click \"Authorize\". Because of the error condition, you should be returned to VRChat Feedback but still be logged out with no indication of the login error. To verify, try using a different browser in an incognito window; step 1 should still be an issue.\n\n5. Try submitting an in-client bug report. This will fail, stating you are submitting bug reports too quickly.\n\nExpected result: Display \"Application error\" in the in-client bug reporting error message, or use a HTTP response code that's not HTTP 429 Too Many Requests. HTTP 503 Service Unavailable or HTTP 500 Internal Server Error would be the appropriate API responses here, indicating a server side issue rather than blaming the user incorrectly for submitting bug reports too quickly.\n\nActual result: The client interprets the outage with an incorrect HTTP 429 header with a message \"You're submitting bug reports too quickly. Please wait a minute and try again\". The actual reason \"Application error\" can only be found from the logs.\n\nSorry, I already lost the logs for this one. It was \"HTTP 429: Application error\" in the client logs.\n\nAdditional info: On September 1, 2026 at 11:21 AM, VRChat was experiencing a partial outage of single sign-on outage for > 9 hours, affecting both VRChat Help Desk and VRChat Feedback profiles. After clicking \"Login\" and seeing a prompt to authorize an SSO login to Canny, the \"Authorize\" button had no effect and the user staid signed out. It was briefly possible to create a new support ticket, but not to reply to an existing one (403 Forbidden). [Ticket #730237](https://help.vrchat.com/hc/en-us/requests/730237).\n\nVRChat Ask login with SSO was working at that time, but VRChat Support was having a partial outage fetching your profile details too and with support reasons/categories promptly gone missing. There was no status update at https://status.vrchat.com/.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a998f03706e2615da9fb97b",
+  "imageURLs": [
+    "https://canny-assets.io/images/3fa349f2596f3f5662f3c86299c2d546.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-03T15:15:15.824Z",
+  "subCategoryID": null,
+  "title": "Hitting the HTTP 429 for in-client bug reporting doesn't explain the actual error message (\"Application error\")",
+  "trendingScore": 2957.7839468482193,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "hitting-the-http-429-for-in-client-bug-reporting-doesnt-explain-the-actual-error",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6a998f0378a781c45864c3d8"
+    }
+  ]
+}
