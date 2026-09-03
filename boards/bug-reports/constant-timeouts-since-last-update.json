@@ -2,10 +2,10 @@
   "_id": "6a99aa0fa1bcaf3c8cd5cd09",
   "aiCategories": [
     "loc.in-world",
-    "audio.voice",
-    "platforms.cross-platform"
+    "platforms.cross-platform",
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-09-03T18:09:06.729530Z",
+  "aiTaggedAt": "2026-09-03T18:17:15.880890Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63197c5950a74f44b5892015",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a99b6205adcc5957a278df2",
@@ -71,7 +71,59 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Duplicate of:\n\n- https://feedback.vrchat.com/bug-reports/p/timeout-2\n\n- https://feedback.vrchat.com/bug-reports/p/server-error-and-problems-with-only-couple-people\n\nIt's ongoing again with EU servers right now, and seems to happen frequently around this time of the evening.\n\nVoices start cutting out, someone gets disconnected, 9 seconds later I get disconnected while hearing someone talk in real time. Only on EU servers. US/USE is fine.",
+      "value": "Duplicate of:\n\n- https://feedback.vrchat.com/bug-reports/p/timeout-2\n\n- https://feedback.vrchat.com/bug-reports/p/server-error-and-problems-with-only-couple-people\n\nIt's ongoing again with EU servers right now, and seems to happen frequently around this time of the evening.\n\nVoices start cutting out, someone gets disconnected, 9 seconds later I get disconnected while hearing someone talk in real time. Only on EU servers. US/USE is fine.\n\nI'm on AS1759, although this isn't specific to any ASN.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a99b7743bf44b86d053d3fe",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-03T18:07:48.746Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/158045e100539febe7e7b83439103cd5.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-09-03_16-30-39",
+          "url": "https://canny-assets.io/files/158045e100539febe7e7b83439103cd5.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a99b6205adcc5957a278df2",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a99aa0fa1bcaf3c8cd5cd09",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It affects several EU users.",
       "viewerReactions": null,
       "voteID": null
     }
