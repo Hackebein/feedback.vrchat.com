@@ -1,12 +1,13 @@
 {
   "_id": "6a9957dc0198a7c74bf91358",
   "aiCategories": [
-    "loc.quick-menu",
     "loc.pc-client",
+    "loc.quick-menu",
+    "platforms.pc.steam",
     "avatars.tracking",
-    "platforms.pc.steam"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-09-03T11:27:16.864076Z",
+  "aiTaggedAt": "2026-09-03T11:33:01.422125Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a99548e78a781c4586326f6",
@@ -37,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\niimm  uussiinngg  hhaanndd  ttrraacckkiinngg  aanndd  iitt  aallwwaayys  ddoouubbllee  ttaabb,,  eevveenn  tthhee  qquuiicckk  aaccttiioonn  mmeennuu  iiss  nnoott  wwoorrkkiinngg  ccoorreeccttllyy  bbeeccaauussee  oof  tthhiiss\n\nReproduction Steps\n\nppuulllliinngg  wwhhiillee  tttrggeerriinngg  tthee  qquuiicckk  aacciioonn  mmeennuu  mmaakkeess  ssmmaallll  bbuutt  aatt  lleeaasstt  uusseaabbllee\n\npc edit: i'm using quest 3 in steam vr, i dk why it says (headset:none).\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2-1901-4a7d603ee0-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-03_14-12-46.txt](https://api.vrchat.cloud/api/1/file/file_ce2d6e2e-0d93-4416-9ceb-8a78668f91a3/1/file)",
+  "details": "Description\n\niimm  uussiinngg  hhaanndd  ttrraacckkiinngg  aanndd  iitt  aallwwaayys  ddoouubbllee  ttaabb,,  eevveenn  tthhee  qquuiicckk  aaccttiioonn  mmeennuu  iiss  nnoott  wwoorrkkiinngg  ccoorreeccttllyy  bbeeccaauussee  oof  tthhiiss,, tthhee kkeeyybbooaarrdd aallssoo ttyyppeess eevveerryy kkeeyy ttwwoo oorr mmoorree ttiimmeess\n\nReproduction Steps\n\nppuulllliinngg  wwhhiillee  tttrggeerriinngg  tthee  qquuiicckk  aacciioonn  mmeennuu  mmaakkeess  ssmmaallll  bbuutt  aatt  lleeaasstt  uusseaabbllee\n\nPC edit: I'm using a Quest 3 through SteamVR. Not sure why the report shows headset: None\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2-1901-4a7d603ee0-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-03_14-12-46.txt](https://api.vrchat.cloud/api/1/file/file_ce2d6e2e-0d93-4416-9ceb-8a78668f91a3/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
