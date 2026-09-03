@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "loc.login",
-    "platforms.pc.steam"
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-02T17:20:26.773495Z",
+  "aiTaggedAt": "2026-09-03T05:40:45.340127Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a97d6b178a781c45851dcf9",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a98592e808aa6d2b01239da",
@@ -39,7 +40,7 @@
         "alias": "Lime Weasel",
         "aliasID": "6a98425978a781c4585b712b",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/398f3a59ecbaf664f2c43725cfcd9c5f.png",
+        "avatarURL": "https://canny-assets.io/images/ee73936601543405b1c8ff767b39367e.png",
         "created": "2023-07-16T10:31:13.623Z",
         "name": "_ANXE_",
         "serviceAccount": false,
@@ -65,13 +66,71 @@
       "postDeleted": false,
       "postID": "6a97d716f7024f2aa5cd79fc",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I have two PCs on the same VRChat build. One works normally, while the other had the exact same black screen with audio still working.\n\nOn the affected PC, the login UI was apparently still there even though it was invisible. I guessed where the \"Login with Steam\" button was and clicked it, waited a few seconds, and VRChat logged in and started working normally.\n\nMight be worth trying if you're still stuck on the black screen.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a99061980aedee70faef60e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a983aa778a781c4585ab2c3",
+        "alias": "Ginger Emu",
+        "aliasID": "6a983aa878a781c4585ab2cc",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/cccfc8229fbd168c3956bde79cce4e76.png",
+        "created": "2026-09-02T15:03:03.912Z",
+        "name": "chaintie",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-03T05:31:05.638Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64b3c6f17b0238098e803d40",
+          "alias": "Lime Weasel",
+          "aliasID": "6a98425978a781c4585b712b",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ee73936601543405b1c8ff767b39367e.png",
+          "created": "2023-07-16T10:31:13.623Z",
+          "name": "_ANXE_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a98592e808aa6d2b01239da",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a97d716f7024f2aa5cd79fc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64b3c6f17b0238098e803d40|full_name} \n\nAs _ANZE_ mentioned, I tried clicking where the UI should be on the completely black screen and used the sounds to navigate.\n\nBy doing this, I was able to enter my username, password, and complete the number verification. After that, the usual loading screen for my home world appeared, and VRChat finally became visible!\n\nIt seems the UI was actually there the whole time, but the screen itself was completely black.\n\nSo, if you're experiencing the same issue, it might still be possible to log in by navigating the invisible UI using the sounds as a guide. It's basically a memory game, but if you can clear it, you can get back into VRChat!\n\nThis is a huge relief for anyone who really can't live without VRChat. Thank you, _ANZE_!",
       "viewerReactions": null,
       "voteID": null
     }
@@ -135,7 +194,7 @@
       "alias": "Lime Weasel",
       "aliasID": "6a98425978a781c4585b712b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/398f3a59ecbaf664f2c43725cfcd9c5f.png",
+      "avatarURL": "https://canny-assets.io/images/ee73936601543405b1c8ff767b39367e.png",
       "companies": [],
       "name": "_ANXE_",
       "urlName": null,
