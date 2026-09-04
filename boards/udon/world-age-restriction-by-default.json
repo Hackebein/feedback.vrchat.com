@@ -413,7 +413,9 @@
       "postDeleted": false,
       "postID": "6a8b0cef1059743368886213",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 0
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -597,20 +599,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 63,
+  "maxScore": 64,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8b0cef1059743368886213/1886896301.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 63,
+  "score": 64,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-23T15:08:31.056Z",
   "subCategoryID": null,
   "title": "World - Age Restriction by Default",
-  "trendingScore": 2961.1857266344027,
+  "trendingScore": 2961.205190734375,
   "updatedBy": "5f6e61f03043eb78f8fa3b88",
   "urlName": "world-age-restriction-by-default",
   "viewerIsAuthor": false,
@@ -622,6 +624,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a9b15f6250b281ba8bcca6e",
+      "alias": "Quince Gerbil",
+      "aliasID": "6a9b15f6250b281ba8bcca72",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3ece5eb51d194a392775d3fe3acc8c3c.png",
+      "companies": [],
+      "name": "SleepyPineapple",
+      "urlName": null,
+      "voteID": "6a9b15fc250b281ba8bcca85"
+    },
     {
       "_id": "69f133774a48bed189d0b81b",
       "alias": "Spontaneous Hedgehog",
