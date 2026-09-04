@@ -1,0 +1,92 @@
+{
+  "_id": "6a9a92780e78fb65147191c4",
+  "aiCategories": [
+    "loc.website",
+    "web.profiles",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-09-04T09:45:28.271770Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "697bd0bc6cefe3c238d4a35e",
+    "alias": "Ruling Wildcat",
+    "aliasID": "697bd0bd6cefe3c238d4c90f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bbab650b5b47a537f7ac98ef29101d45.png",
+    "created": "2026-01-29T21:27:24.866Z",
+    "name": "Rulfam",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "697bd0bc6cefe3c238d4a35e",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-04T09:42:16.241Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The current name for Ukrainian in the user languages profile section is taken from an outside source. This is made apparent because the string starts with a lowercase character and, most importantly, includes a combining acute symbol above the stressed syllable, which is never used in normal text.\n\nFixing this is straightforward: replace the current language name [украї́нська] with a corrected one [Українська]. Exclude the square brackets.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a9a92770e78fb65147191c3",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9a92780e78fb65147191c4/1069333738.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-04T09:42:16.241Z",
+  "subCategoryID": null,
+  "title": "Incorrect Ukrainian language name formatting in user profiles",
+  "trendingScore": 2957.8937690844955,
+  "updatedBy": null,
+  "urlName": "incorrect-ukrainian-language-name-formatting-in-user-profiles",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false
+  },
+  "voters": [
+    {
+      "_id": "697bd0bc6cefe3c238d4a35e",
+      "alias": "Ruling Wildcat",
+      "aliasID": "697bd0bd6cefe3c238d4c90f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bbab650b5b47a537f7ac98ef29101d45.png",
+      "companies": [],
+      "name": "Rulfam",
+      "urlName": null,
+      "voteID": "6a9a9278250b281ba8b84941"
+    }
+  ]
+}
