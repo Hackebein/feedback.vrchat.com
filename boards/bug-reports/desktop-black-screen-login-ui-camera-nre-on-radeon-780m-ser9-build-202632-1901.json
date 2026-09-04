@@ -1,11 +1,12 @@
 {
   "_id": "6a97d716f7024f2aa5cd79fc",
   "aiCategories": [
+    "loc.login",
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.settings"
+    "client.camera"
   ],
-  "aiTaggedAt": "2026-09-03T14:55:30.384732Z",
+  "aiTaggedAt": "2026-09-04T04:50:53.353922Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a97d6b178a781c45851dcf9",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "comments": [
     {
       "_id": "6a98592e808aa6d2b01239da",
@@ -177,6 +178,70 @@
       "statusChangeID": "6a9989614fbec8dc60a1d25a",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9a4d313d8c4ed000ed737c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a999e2478a781c45865737d",
+        "alias": "Applicable Wildcat",
+        "aliasID": "6a999e2478a781c458657385",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1c343eb3a0f32ed9c10299a6d1c3f6bc.png",
+        "created": "2026-09-03T16:19:48.249Z",
+        "name": "午安今天午醒了吗",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-04T04:46:41.176Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/3332b51943d0bda930f424100fdbcb22.txt",
+        "https://canny-assets.io/files/3695935ad3df1f33ce511c3c1f636a2b.txt",
+        "https://canny-assets.io/files/701f15757dc9c20176627c98da195772.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-09-03_21-34-04",
+          "url": "https://canny-assets.io/files/3332b51943d0bda930f424100fdbcb22.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-09-03_22-33-50",
+          "url": "https://canny-assets.io/files/3695935ad3df1f33ce511c3c1f636a2b.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-09-03_23-09-02",
+          "url": "https://canny-assets.io/files/701f15757dc9c20176627c98da195772.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a97d716f7024f2aa5cd79fc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Yes, I encountered the same issue when trying to log into VRChat. I tried clearing the VRChat data and cache on my C: drive, reinstalling VRChat, and restarting my computer, but none of these fixed the problem. After launching the game, the screen is completely black, whether I use windowed mode or fullscreen. However, I can still hear the sounds from the login screen.\n\nI tried using the method mentioned in the comments, and it does allow me to log into the game, but it is really difficult and inconvenient to use. I really hope this issue can be fixed soon.",
       "viewerReactions": null,
       "voteID": null
     }
