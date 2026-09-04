@@ -1,11 +1,12 @@
 {
   "_id": "6a90905bc8a31c4ad589d96c",
   "aiCategories": [
+    "loc.in-world",
     "loc.mobile-app",
     "platforms.mobile.android",
-    "worlds.layers"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-09-04T18:09:37.844219Z",
+  "aiTaggedAt": "2026-09-04T18:30:29.761306Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c2581bf9a845e49819d160b",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "649b325d67df6d7addaccd2f",
-  "commentCount": 2,
+  "commentCount": 3,
   "comments": [
     {
       "_id": "6a959eeeaeb6001896b0adb6",
@@ -124,6 +125,62 @@
       "statusChangeID": "6a9b0745a28146799030cde6",
       "statusChangeNewStatus": "needs more information",
       "value": "Can you provide your device details and OS information?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9b097c0743943211447ce9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5c2581bf9a845e49819d160b",
+        "alias": "Lavender Tapir",
+        "aliasID": "65c494d7ed6eefce4c336096",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/68549e76f5fc7ddb01de21404519f09d.png",
+        "created": "2018-12-28T01:51:59.016Z",
+        "name": "ᵂᶤʳᵉᵈ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "6466ab9cd0071b0936f27dcd",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-04T18:10:04.142Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a9b0745a28146799030cdf3",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a90905bc8a31c4ad589d96c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} These were taken on a GalaxyS10+ with Android 12.",
       "viewerReactions": null,
       "voteID": null
     }
