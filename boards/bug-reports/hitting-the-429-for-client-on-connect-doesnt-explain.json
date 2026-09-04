@@ -1,11 +1,11 @@
 {
   "_id": "6a952d254164b749538adae5",
   "aiCategories": [
-    "loc.login",
-    "client.settings",
-    "account.auth"
+    "loc.pc-client",
+    "account.auth",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-03T14:58:10.571623Z",
+  "aiTaggedAt": "2026-09-04T08:12:40.981813Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62e03f4e44af5544b2228fa5",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "comments": [
     {
       "_id": "6a9989c3698a53ff37acb699",
@@ -73,6 +73,62 @@
       "statusChangeID": "6a9989c3698a53ff37acb698",
       "statusChangeNewStatus": "open",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9a7c15d933dd3df56f6651",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62e03f4e44af5544b2228fa5",
+        "alias": "Burnt sienna Landfowl",
+        "aliasID": "65c2c12eed6eefce4c82d31d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ed29faeb28d537201a96b1970826d852.png",
+        "created": "2022-07-26T19:23:58.425Z",
+        "name": "Comfy Chloe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-04T08:06:45.244Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a9989c3698a53ff37acb699",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a952d254164b749538adae5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name}This issue occurs when it occurs, I.e I hit the rate limit (Not sure which endpoint), I can only say to forcfully cause a 429 event and try to launch VRChat. Unless theres been a build change that adjusts this (since fb made) I'm unaware.",
       "viewerReactions": null,
       "voteID": null
     }
