@@ -1,10 +1,10 @@
 {
   "_id": "6a7ee6fb6107c4a04731bfcc",
   "aiCategories": [
-    "loc.in-world",
+    "loc.pc-client",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-09-05T01:00:05.505217Z",
+  "aiTaggedAt": "2026-09-05T05:24:20.740393Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6389256d477b8d0c8d64d809",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 9,
+  "commentCount": 10,
   "comments": [
     {
       "_id": "6a7ee7a2e91fd42eac0a7092",
@@ -481,6 +481,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "This is an interesting issue, on one hand, its a SSL warning, sounds scary, but like yt-dlp doesn't actually need to do anything here. When the yt-dlp process fails like this, the underlying video player just tries the same URL anyways. \n\nhttps://files.catbox.moe/ie49jp.mp4 is an upload of an animation called \"Polly Gone\" When I play it today, I get an error from the yt-dlp, but the video still plays. I wasn't able to specifically try uploading to litterbox, as it gave me an error today. \n\nBut yeah, asking the yt-dlp.exe that VRChat provides to do`yt-dlp.exe --no-cache-dir --rm-cache-dir -f \"(mp4/best)[height<=?480][height>=?64][width>=?64]\" --get-url https://files.catbox.moe/ie49jp.mp4` gets a nice error, but the video still plays in VRChat",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9ba565270f99039d8583b1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-05T05:15:17.879Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/cb3c31506c997b46ac7dfcf96f4f7872.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac759f619ab812afad57d8a884858906.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7f0badf96232b530749833",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ee6fb6107c4a04731bfcc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name} VRChat's yt-dlp uses `--no-check-certificate`.",
       "viewerReactions": null,
       "voteID": null
     }
