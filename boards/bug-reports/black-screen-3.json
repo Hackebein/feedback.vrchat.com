@@ -2,10 +2,10 @@
   "_id": "6a9b057923af84a8999ee3f9",
   "aiCategories": [
     "loc.pc-client",
-    "loc.in-world",
-    "platforms.pc.steam"
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-04T19:27:16.633509Z",
+  "aiTaggedAt": "2026-09-05T15:26:42.865766Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60bdaa3b80af9e6f1918d9c8",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +73,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I notice the VRChat login with Steam animation doesn't play at all (no sound, no animation) when this happens. In VR, it'll appear to skip directly to \"Connecting...\" and stay stuck there, while the desktop mode window appears black (sometimes with HUD elements, such as the text to press TAB key in Avatar Testing Chamber, when that world is set as a home world).\n\nThis is more common when SteamVR 2.16.7 is already opened before attempting to launch VRChat 2026.2.3p3 `Build 1867` as a non-Steam game using `launch.exe`, or when multiple VRChat clients are running at the same time. Example: I have VRChat 2026.3.2 `Build 1901` running in desktop mode first as a Steam \"game\", and I want to launch a second VRChat 2026.2.3p3 `Build 1867` client in VR as a non-Steam \"game\" directly from `launch.exe`.\n\nA reliable workaround is to close SteamVR, and use a launch URL and press \"Launch World\" from the website to start `Build 1867` successfully. An unreliable workaround is to keep restarting the VRChat client from desktop mode, or launch from SteamVR dashboard in VR sometimes. Seems like a race condition with SteamVR?\n\nOddly enough, the logs indicate that I would've logged in successfully nonetheless.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9c332b038e8f1d0e47e819",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-05T15:20:11.902Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9b057923af84a8999ee3f9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Possibly fixed in [VRChat 2026.3.2p1](https://docs.vrchat.com/docs/vrchat-202632p1) \"`Build 1892`\"? (In reality it's `Build 1902`, a documentation error.)\n\n> Fixed an issue that could leave you on a black screen after launching VRChat.",
       "viewerReactions": null,
       "voteID": null
     }
