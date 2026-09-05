@@ -1,10 +1,10 @@
 {
   "_id": "6a7ee6fb6107c4a04731bfcc",
   "aiCategories": [
-    "loc.pc-client",
+    "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-09-05T05:24:20.740393Z",
+  "aiTaggedAt": "2026-09-05T22:23:34.011160Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6389256d477b8d0c8d64d809",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "commentingDisabled": false,
   "comments": [
     {
@@ -540,6 +540,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{62df7cd83e007e467295c4e1|full_name} VRChat's yt-dlp uses `--no-check-certificate`.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9c92f3f2bdb618ad63349f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df7cd83e007e467295c4e1",
+        "alias": "Orchid bloom Marlin",
+        "aliasID": "65c26defed6eefce4c5a3685",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ac759f619ab812afad57d8a884858906.png",
+        "created": "2022-07-26T05:34:16.920Z",
+        "name": "Docteh",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-05T22:08:51.852Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/b427f39104d069f1680471464b6e027c.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a7f0badf96232b530749833",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ee6fb6107c4a04731bfcc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} Oddly enough that raises more questions, according to Process Monitor, VRChat did call yt-dlp with --no-check-certificates, and yet the SSL error shows up in my VRChat log...",
       "viewerReactions": null,
       "voteID": null
     }
