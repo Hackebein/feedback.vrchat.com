@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-09-04T23:59:27.608353Z",
+  "aiTaggedAt": "2026-09-05T00:11:53.430857Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -41,7 +41,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "https://feedback.vrchat.com/sdk-bug-reports/p/assets-create-u-script-fails-if-destination-file-is-outside-project-root was marked as fixed in sdk 3.10.5, but the fix was not correct.\n\nPackages added from disk during development (click \"Add package from disk\" in unity's Package Manager tab) are not inside the project root, and now result in \"UdonSharp scripts must be created inside the project's Assets or Packages folder\" which is not correct.\n\nUsing SaveFilePanelInProject alone should be sufficient for this. Unity makes the \"added-from-disk\" packages appear virtually within the Packages/ folder, there's no need to double-check the canonical path of the new script in addition to this. SaveFilePanelInProject handles all of the validation automatically, the sdk does not need to double-check if the output is in Assets or Pacakges, if it's not, SaveFilePanelInProject returns an empty string (as if the user cancelled).",
+  "details": "https://feedback.vrchat.com/sdk-bug-reports/p/assets-create-u-script-fails-if-destination-file-is-outside-project-root was marked as fixed in sdk 3.10.5, but the fix was not comprehensive.\n\nPackages added from disk during development (click \"Add package from disk\" in unity's Package Manager tab) are not inside the project root, and now result in \"UdonSharp scripts must be created inside the project's Assets or Packages folder\" which is not correct.",
   "error": null,
   "eta": null,
   "etaPublic": true,
