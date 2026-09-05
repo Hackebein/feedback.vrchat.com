@@ -30,6 +30,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 8,
+  "commentingDisabled": false,
   "comments": [
     {
       "__v": 0,
@@ -270,7 +271,7 @@
         "alias": "Fern green Puma",
         "aliasID": "693c5dba4927a96e585f7d09",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/2baff227bd836b0c9920bb96f3372be0.png",
+        "avatarURL": "https://canny-assets.io/images/8f21e3c21f933a441db49f1d26586d16.png",
         "created": "2025-12-12T18:23:53.579Z",
         "name": "Kitto Dev",
         "serviceAccount": false,
@@ -314,7 +315,7 @@
         "alias": "Huge Parrotfish",
         "aliasID": "66059b84d90e5057636d749d",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/1451286c49802f8682d10b9f7ea28577.png",
+        "avatarURL": "https://canny-assets.io/images/eb7dbe4a01ece153ebd2fd76623a115c.png",
         "created": "2022-07-25T19:57:05.796Z",
         "name": "Duskstar Shine",
         "serviceAccount": false,
@@ -433,7 +434,8 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
