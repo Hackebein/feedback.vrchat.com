@@ -1,18 +1,19 @@
 {
   "_id": "6a3b9055da06913a015ac55c",
   "aiCategories": [
+    "loc.in-world",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-06-26T14:20:31.215606Z",
+  "aiTaggedAt": "2026-09-05T21:22:34.825140Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a3b8c3df51f79a5dbf9e36f",
     "alias": "Marigold Fish",
     "aliasID": "6a3b8c3df51f79a5dbf9e373",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/792de7f0ba7dd77b6ffec2dcb9955b3d.png",
+    "avatarURL": "https://canny-assets.io/images/3491ba77a96d9dedf99fd7de35f8ca0a.png",
     "created": "2026-06-24T07:50:21.336Z",
     "name": "Dukes VR",
     "serviceAccount": false,
@@ -29,7 +30,8 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "6a3e852df9f8f9ffd4f55682",
@@ -39,7 +41,7 @@
         "alias": "Marigold Fish",
         "aliasID": "6a3b8c3df51f79a5dbf9e373",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/792de7f0ba7dd77b6ffec2dcb9955b3d.png",
+        "avatarURL": "https://canny-assets.io/images/3491ba77a96d9dedf99fd7de35f8ca0a.png",
         "created": "2026-06-24T07:50:21.336Z",
         "name": "Dukes VR",
         "serviceAccount": false,
@@ -72,6 +74,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Hello! I wanted to check in and see if this AVPro 3.3.6 video player issue on Quest 3 is currently on the team's radar, or if we should gather upvotes from the community to help prioritize it. Thanks!",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9c30084bd50869f2eafa10",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a3b8c3df51f79a5dbf9e36f",
+        "alias": "Marigold Fish",
+        "aliasID": "6a3b8c3df51f79a5dbf9e373",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3491ba77a96d9dedf99fd7de35f8ca0a.png",
+        "created": "2026-06-24T07:50:21.336Z",
+        "name": "Dukes VR",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-05T15:06:48.778Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3b9055da06913a015ac55c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It appears that build 1902 fixed the stuttering issues.  Asking my group to test.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -113,7 +159,8 @@
     "highEngagement": false,
     "lowEngagement": false,
     "moderateEngagement": true,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
@@ -132,7 +179,7 @@
       "alias": "Marigold Fish",
       "aliasID": "6a3b8c3df51f79a5dbf9e373",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/792de7f0ba7dd77b6ffec2dcb9955b3d.png",
+      "avatarURL": "https://canny-assets.io/images/3491ba77a96d9dedf99fd7de35f8ca0a.png",
       "companies": [],
       "name": "Dukes VR",
       "urlName": null,
