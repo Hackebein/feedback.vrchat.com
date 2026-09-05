@@ -30,6 +30,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 169,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "6969050872081cbccb44c3d8",
@@ -698,7 +699,7 @@
       "postID": "64594e5aeb9ee29aaee8fd24",
       "private": false,
       "reactions": {
-        "like": 8
+        "like": 9
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -836,7 +837,7 @@
       "postID": "64594e5aeb9ee29aaee8fd24",
       "private": false,
       "reactions": {
-        "like": 5
+        "like": 6
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -984,7 +985,8 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
