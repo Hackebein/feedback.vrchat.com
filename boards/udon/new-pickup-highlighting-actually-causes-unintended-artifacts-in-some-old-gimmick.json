@@ -1,0 +1,97 @@
+{
+  "_id": "6a9c596af2bdb618ad5b0cc3",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-05T18:07:47.939987Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5b0907a98fa72313783e4ba6",
+    "alias": "Supposed Parrotfish",
+    "aliasID": "65c2b4abed6eefce4ce1caf2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c802ed56ec9fc14a097db712c3d1e4c0.png",
+    "created": "2018-05-26T07:07:21.588Z",
+    "name": "phi16",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5b0907a98fa72313783e4ba6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-05T18:03:22.354Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Starting with Build 1878 (Open Beta) and Build 1885 (Live), there's a change to pickup highlighting which relates to VRC_Pickup with SkinnedMeshRenderer.\n\nIt is written that \"We feel that the amount of content this affects is extraordinarily small\", but I have some worlds which are affected by this change. Some of them are SDK2 worlds and it would be a lot of work for me to fix all of them.\n\nI guess that some world creators (including me) assumed that SkinnedMeshRenderers are completely ignored by pickup highlighting, and I used this property to control pickup highlighting:\n\n- Shader-based gimmicks often change the appearance of the mesh. In SDK2, use of SkinnedMeshRenderer is convenient for hiding its internal mesh shape and expanding mesh bounds.\n\n- To select the highlighting mesh of pickups containing multiple child renderers, sometimes I change some renderers to use SkinnedMeshRenderer.\n\n- Also, I preferred using the (fallback) collider outline for pickup highlighting.\n\nIn this SDK3 era, I basically agree with the changes because there's a correct way to fix the issues. But I guess some worlds may still use this old technique.\n\nI want to say:\n\n- Some world creators really care about the shape of pickup highlights. If the highlighting reveals the strange internal shape, players' immersion will be broken.\n\n- Please keep existing behaviour as it is. I feel component versioning (e.g. VRC_Pickup Ver 1.1) is a very good idea, and it should be used more!\n\nI propose increasing the VRC_Pickup version number and keeping the old highlighting algorithm for older versions.\n\nI'm really sorry for not checking or reporting during Open Beta.\n\nI've attached some screenshots of my worlds which show how the new highlighting unintentionally reveals the internal mesh.\n\n(To be honest, I might be the one who uses this bad trick the most, though...)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a9c5969f2bdb618ad5b0c9e",
+  "imageURLs": [
+    "https://canny-assets.io/images/bc25e3da9b9e37c9411b23391ff1708e.png",
+    "https://canny-assets.io/images/c846f00442967979a4b14f1de1de0062.png",
+    "https://canny-assets.io/images/745a5298f91c32db4c7d683c0afeff28.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-05T18:03:22.354Z",
+  "subCategoryID": null,
+  "title": "New pickup highlighting actually causes unintended artifacts in some old gimmick worlds",
+  "trendingScore": 2958.0863386438537,
+  "updatedBy": null,
+  "urlName": "new-pickup-highlighting-actually-causes-unintended-artifacts-in-some-old-gimmick",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5b0907a98fa72313783e4ba6",
+      "alias": "Supposed Parrotfish",
+      "aliasID": "65c2b4abed6eefce4ce1caf2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c802ed56ec9fc14a097db712c3d1e4c0.png",
+      "companies": [],
+      "name": "phi16",
+      "urlName": null,
+      "voteID": "6a9c596a250b281ba8f2c5fa"
+    }
+  ]
+}
