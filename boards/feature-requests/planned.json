@@ -27,6 +27,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 0,
+  "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
   "created": "2021-08-10T02:57:23.507Z",
@@ -61,7 +62,8 @@
     "highEngagement": false,
     "lowEngagement": false,
     "moderateEngagement": true,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
