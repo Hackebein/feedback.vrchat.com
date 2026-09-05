@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-08-14T13:38:45.870941Z",
+  "aiTaggedAt": "2026-09-05T01:00:05.505217Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6389256d477b8d0c8d64d809",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "comments": [
     {
       "_id": "6a7ee7a2e91fd42eac0a7092",
@@ -435,6 +435,52 @@
       "statusChangeID": "6a7f19e1311b574e2f1ac30e",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9b63b5f4bb956f632d6437",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df7cd83e007e467295c4e1",
+        "alias": "Orchid bloom Marlin",
+        "aliasID": "65c26defed6eefce4c5a3685",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ac759f619ab812afad57d8a884858906.png",
+        "created": "2022-07-26T05:34:16.920Z",
+        "name": "Docteh",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-05T00:35:01.464Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/5ca8388f7dc821bc9b6b62d349be088b.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a7f0badf96232b530749833",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a7ee6fb6107c4a04731bfcc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This is an interesting issue, on one hand, its a SSL warning, sounds scary, but like yt-dlp doesn't actually need to do anything here. When the yt-dlp process fails like this, the underlying video player just tries the same URL anyways. \n\nhttps://files.catbox.moe/ie49jp.mp4 is an upload of an animation called \"Polly Gone\" When I play it today, I get an error from the yt-dlp, but the video still plays. I wasn't able to specifically try uploading to litterbox, as it gave me an error today. \n\nBut yeah, asking the yt-dlp.exe that VRChat provides to do`yt-dlp.exe --no-cache-dir --rm-cache-dir -f \"(mp4/best)[height<=?480][height>=?64][width>=?64]\" --get-url https://files.catbox.moe/ie49jp.mp4` gets a nice error, but the video still plays in VRChat",
       "viewerReactions": null,
       "voteID": null
     }
