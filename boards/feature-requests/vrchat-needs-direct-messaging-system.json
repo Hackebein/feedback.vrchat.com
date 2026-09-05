@@ -30,6 +30,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 15,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "68d6b58e3f59e7202f372f26",
@@ -177,7 +178,7 @@
         "alias": "Papaya whip Echidna",
         "aliasID": "65c65be0ed6eefce4c038fc6",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/01ea1a42389fccbb19e6e433b65f161e.png",
+        "avatarURL": "https://canny-assets.io/images/12de5152793fa400ad1a273192c15ce2.png",
         "created": "2019-06-08T05:35:16.508Z",
         "name": "Ericbazinga",
         "serviceAccount": false,
@@ -248,7 +249,7 @@
           "alias": "Papaya whip Echidna",
           "aliasID": "65c65be0ed6eefce4c038fc6",
           "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/01ea1a42389fccbb19e6e433b65f161e.png",
+          "avatarURL": "https://canny-assets.io/images/12de5152793fa400ad1a273192c15ce2.png",
           "created": "2019-06-08T05:35:16.508Z",
           "name": "Ericbazinga",
           "serviceAccount": false,
@@ -584,7 +585,8 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
