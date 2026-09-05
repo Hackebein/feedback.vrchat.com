@@ -30,6 +30,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 12,
+  "commentingDisabled": false,
   "comments": [
     {
       "__v": 0,
@@ -424,7 +425,7 @@
         "alias": "Anonymous Octopus",
         "aliasID": "65c42a50ed6eefce4cdcc865",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/f0da5d0c142bfae58d3f05ffbdeb3abc.png",
+        "avatarURL": "https://canny-assets.io/images/9ede6adfc2e9b517fd7d5ee2660452c4.png",
         "created": "2020-12-21T17:22:10.705Z",
         "name": "TekCastPork",
         "serviceAccount": false,
@@ -640,7 +641,8 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
