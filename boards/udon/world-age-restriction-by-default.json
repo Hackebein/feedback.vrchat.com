@@ -460,7 +460,7 @@
       "postID": "6a8b0cef1059743368886213",
       "private": false,
       "reactions": {
-        "like": 0
+        "like": 1
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -673,7 +673,9 @@
       "postDeleted": false,
       "postID": "6a8b0cef1059743368886213",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -717,7 +719,9 @@
       "postDeleted": false,
       "postID": "6a8b0cef1059743368886213",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -743,20 +747,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 69,
+  "maxScore": 70,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a8b0cef1059743368886213/1886896301.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 69,
+  "score": 70,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-23T15:08:31.056Z",
   "subCategoryID": null,
   "title": "World - Age Restriction by Default",
-  "trendingScore": 2961.299657556492,
+  "trendingScore": 2961.3186410166145,
   "updatedBy": "5f6e61f03043eb78f8fa3b88",
   "urlName": "world-age-restriction-by-default",
   "viewerIsAuthor": false,
@@ -768,6 +772,17 @@
     "votesHidden": false
   },
   "voters": [
+    {
+      "_id": "6a99b5bb78a781c4586688e3",
+      "alias": "Mango Ox",
+      "aliasID": "6a99b5bb78a781c4586688e7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb563cef471d9e9adc5614345bb60be4.png",
+      "companies": [],
+      "name": "Quadriva",
+      "urlName": null,
+      "voteID": "6a9be782250b281ba8f1b27c"
+    },
     {
       "_id": "68bd1911ce2ca2b520d72aec",
       "alias": "Fresh Swordfish",
