@@ -30,6 +30,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 2,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "6a86988613a2136cb55f8644",
@@ -166,7 +167,8 @@
     "highEngagement": false,
     "lowEngagement": false,
     "moderateEngagement": true,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {

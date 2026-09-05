@@ -30,6 +30,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 6,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "6a953658c7795fb98c4d90a0",
@@ -223,7 +224,7 @@
         "alias": "Likely Orca",
         "aliasID": "69ba3c32ed082c9981d70f86",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/27d497879220c5b44d3cdabd212faa72.png",
+        "avatarURL": "https://canny-assets.io/images/53fa88c903bba789465469aae10c6d35.png",
         "created": "2026-03-18T05:46:26.122Z",
         "name": "Orео",
         "serviceAccount": false,
@@ -357,7 +358,8 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {

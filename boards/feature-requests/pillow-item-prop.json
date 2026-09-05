@@ -29,6 +29,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 1,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "6a7460d20c9535757c01eead",
@@ -112,7 +113,8 @@
     "highEngagement": false,
     "lowEngagement": false,
     "moderateEngagement": true,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
@@ -131,7 +133,7 @@
       "alias": "Likely Orca",
       "aliasID": "69ba3c32ed082c9981d70f86",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e5c1d08b7ec9596ed91e304d5350f2d3.png",
+      "avatarURL": "https://canny-assets.io/images/53fa88c903bba789465469aae10c6d35.png",
       "companies": [],
       "name": "Orео",
       "urlName": null,
