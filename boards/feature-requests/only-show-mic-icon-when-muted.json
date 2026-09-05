@@ -31,6 +31,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 0,
+  "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
   "created": "2022-09-10T23:05:31.230Z",
@@ -66,7 +67,8 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
@@ -151,7 +153,7 @@
       "alias": "Confident Albatross",
       "aliasID": "65c26da3ed6eefce4c4d0730",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6c78b75c7a2328a3db54cb878b166c29.png",
+      "avatarURL": "https://canny-assets.io/images/ca02c97d6f181bac9561b89db97e481c.png",
       "companies": [],
       "name": "lackofbindings",
       "urlName": null,
