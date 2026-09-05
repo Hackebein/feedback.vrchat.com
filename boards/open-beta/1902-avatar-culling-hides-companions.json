@@ -2,16 +2,17 @@
   "_id": "6a9bd754c409eb9357db753b",
   "aiCategories": [
     "loc.in-world",
-    "avatars.impostors"
+    "avatars.impostors",
+    "audio.boop"
   ],
-  "aiTaggedAt": "2026-09-05T15:45:43.204623Z",
+  "aiTaggedAt": "2026-09-05T15:48:25.178785Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
     "alias": "Likely Orca",
     "aliasID": "69ba3c32ed082c9981d70f86",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/53fa88c903bba789465469aae10c6d35.png",
+    "avatarURL": "https://canny-assets.io/images/390276869f237372d4649a53a2a33ea9.png",
     "created": "2026-03-18T05:46:26.122Z",
     "name": "Orео",
     "serviceAccount": false,
@@ -34,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -78,6 +79,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Is the expected result here to keep companions loaded or to mute the companion audio when culled?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9c3936c9a55e1080030518",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69ba3c32ed082c9981d6fed6",
+        "alias": "Likely Orca",
+        "aliasID": "69ba3c32ed082c9981d70f86",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/390276869f237372d4649a53a2a33ea9.png",
+        "created": "2026-03-18T05:46:26.122Z",
+        "name": "Orео",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-05T15:45:58.587Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a9c36fcb370614be619b2ac",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9bd754c409eb9357db753b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} I would expect it to behave like it did before, where companions would be shown even when avatar culling was enabled.\n\nIf this was an intentional change however, then it should at least be consistent with hiding them and mute or disable the audio as well.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -139,7 +196,7 @@
       "alias": "Likely Orca",
       "aliasID": "69ba3c32ed082c9981d70f86",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/53fa88c903bba789465469aae10c6d35.png",
+      "avatarURL": "https://canny-assets.io/images/390276869f237372d4649a53a2a33ea9.png",
       "companies": [],
       "name": "Orео",
       "urlName": null,
