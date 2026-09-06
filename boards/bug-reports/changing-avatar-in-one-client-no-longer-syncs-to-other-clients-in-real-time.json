@@ -2,10 +2,10 @@
   "_id": "6a9d7a3e0253de752bc297f0",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.desktop",
-    "avatars.upload-performance"
+    "avatars.upload-performance",
+    "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-09-06T14:39:09.258832Z",
+  "aiTaggedAt": "2026-09-06T14:56:30.472921Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -72,7 +72,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "This used to work before the change done there: https://feedback.vrchat.com/bug-reports/p/avatar-changes-sometimes-revert-back-to-the-previously-used-avatar-immediately-a",
+      "value": "This used to have the expected result before the change done there: https://feedback.vrchat.com/bug-reports/p/avatar-changes-sometimes-revert-back-to-the-previously-used-avatar-immediately-a",
       "viewerReactions": null,
       "voteID": null
     }
@@ -82,7 +82,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Navigate to VRChat install directory.\n\n2. Launch from `launch.exe` to start multiple VRChat clients in desktop mode.\n\n3. Once loaded in all clients, change your current avatar in one of the clients.\n\nExpected result: Your avatar changes in all clients in a few seconds.\n\nActual result: The currently worn avatar is updated on the VRChat Home website, but changed in one client only. Rejoining the instance is not guaranteed to update your current avatar. Several hours later, your avatar may change without input.\n\nAffects `Build 1867` and `Build 1902`, this is not a syncing issue between different versions.",
+  "details": "1. Navigate to VRChat install directory.\n\n2. Launch from `launch.exe` to start multiple VRChat clients in desktop mode.\n\n3. Once loaded in all clients, change your current avatar in one of the clients.\n\nExpected result: Your avatar changes in all clients in a few seconds.\n\nActual result: The currently worn avatar is updated on the VRChat Home website, but changed in one client only. Rejoining the instance is not guaranteed to update your current avatar. If all clients are left idle, several hours later your avatar may change without input.\n\nAffects `Build 1867` and `Build 1902`, this is not a syncing issue between different versions.",
   "error": null,
   "eta": null,
   "etaPublic": true,
