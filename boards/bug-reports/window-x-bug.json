@@ -1,10 +1,11 @@
 {
   "_id": "6a14e053859bb6c6c2ea5ee9",
   "aiCategories": [
-    "loc.in-world",
+    "loc.pc-client",
+    "platforms.cross-platform",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-06-11T02:07:23.115565Z",
+  "aiTaggedAt": "2026-09-06T20:33:21.437718Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62f7982ae9d14e44b23d5768",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "commentingDisabled": false,
   "comments": [
     {
@@ -405,6 +406,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{62f7982ae9d14e44b23d5768|full_name} Not at this time, no.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9dbff73ca0798fb11ea93c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-06T19:33:11.354Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "66a98ef5bf4acafa8f98e7db",
+          "alias": "Sable Reptile",
+          "aliasID": "66a98ef5318f0a3252e64cea",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ecc94c8e1fba91719de0a8ecfb90205a.png",
+          "created": "2024-07-31T01:10:13.437Z",
+          "name": "Mantibro",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a14e053859bb6c6c2ea5ee9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Funny (or unfortunate) how this bug completely trivializes [Ecliptica](https://vrchat.com/home/world/wrld_0fb88df3-2057-4c2f-8e06-e948864378fd/info) game mechanics and end game bosses in VRChat user-generated content, including defeating Jim C. Bringer with zero barrels spawned by freezing the boss in place for a minute - turning the boss fight from a 10-20 minute slog into done in < 2 minutes.\n\nAll damage dealt will be done/taken in one tick when the user targeted by a boss becomes unfrozen.\n\n@{66a98ef5bf4acafa8f98e7db|full_name} also intended bosses to be resistant to Paralyzed and Frozen status effects, so that bosses never become completely immobile. This bug also counters that game design.\n\nIt also skips boss phases and other intended boss mechanics.\n\nhttps://files.catbox.moe/h92bs6.mp4",
       "viewerReactions": null,
       "voteID": null
     }
