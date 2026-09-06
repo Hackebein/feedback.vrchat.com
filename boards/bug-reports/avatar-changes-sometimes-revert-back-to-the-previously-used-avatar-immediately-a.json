@@ -2,10 +2,9 @@
   "_id": "6a533b9881298c76291e1887",
   "aiCategories": [
     "loc.in-world",
-    "platforms.cross-platform",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-08-19T07:24:05.853802Z",
+  "aiTaggedAt": "2026-09-06T14:39:09.259958Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f3df2f75af9f322b0f66e1b",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 35,
+  "commentCount": 36,
   "commentingDisabled": false,
   "comments": [
     {
@@ -744,6 +743,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Unfortunate how the deeper fix broke \"Use as Fallback\" on the website, reported there: https://feedback.vrchat.com/bug-reports/p/use-as-fallback-from-vrchat-home-has-no-effect-in-vrchat-app-without-an-app-rest",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9d7abc21fe726bc792dd07",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-06T14:37:48.731Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a836d62a1df78cc50a1b3f2",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a533b9881298c76291e1887",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This probably also broke avatar syncing between multiple clients running simultaneously. https://feedback.vrchat.com/bug-reports/p/changing-avatar-in-one-client-no-longer-syncs-to-other-clients-in-real-time",
       "viewerReactions": null,
       "voteID": null
     }
