@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.travel"
   ],
-  "aiTaggedAt": "2026-09-06T15:33:28.863757Z",
+  "aiTaggedAt": "2026-09-06T15:39:15.407999Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d710dc1c881463f153789",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Instance IDs consist of randomly generated numbers. In extremely rare cases, a randomly generated instance ID can contain the sequence of digits \"1488\" which causes VRChat to fail in various ways. For example, trying to invite someone (including yourself) to an instance with a randomly generated ID of \"21488\" fails with \"'2dumb~[...]' is not a valid instanceId\".\n\n\"1488\" should be removed from the word filter, numeric instance IDs should be excluded from the word filter, or, a last resort, the random ID generator should re-roll a new instance ID when it contains this sequence of digits anywhere in the ID.",
+  "details": "Instance IDs consist of randomly generated numbers. In extremely rare cases, a randomly generated instance ID can contain the sequence of digits \"1488\" which causes VRChat to fail in various ways. For example, trying to invite someone (including yourself) to an instance with a randomly generated ID of \"21488\" fails with \"'2dumb~[...]' is not a valid instanceId\".\n\n\"1488\" should be removed from the word filter, numeric instance IDs should be excluded from the word filter, or, as a last resort, the random ID generator should re-roll a new instance ID when it contains this sequence of digits anywhere in the ID.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,7 +60,7 @@
   "subCategoryID": null,
   "title": "Instance creation fails in extremely rare cases due to word filter",
   "trendingScore": 2958.214072192961,
-  "updatedBy": null,
+  "updatedBy": "5f2d710dc1c881463f153789",
   "urlName": "instance-creation-fails-in-extremely-rare-cases-due-to-word-filter",
   "viewerIsAuthor": false,
   "viewerVote": 0,
