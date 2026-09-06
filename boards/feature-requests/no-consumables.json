@@ -30,6 +30,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 9,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "69379bb57e0d9bcf855deea9",
@@ -177,7 +178,7 @@
         "alias": "Huge Parrotfish",
         "aliasID": "66059b84d90e5057636d749d",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/1451286c49802f8682d10b9f7ea28577.png",
+        "avatarURL": "https://canny-assets.io/images/eb7dbe4a01ece153ebd2fd76623a115c.png",
         "created": "2022-07-25T19:57:05.796Z",
         "name": "Duskstar Shine",
         "serviceAccount": false,
@@ -505,7 +506,8 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
