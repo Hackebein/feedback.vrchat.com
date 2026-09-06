@@ -29,6 +29,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 1,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "692eb08cfa996bf81dd96882",
@@ -111,7 +112,8 @@
     "highEngagement": false,
     "lowEngagement": false,
     "moderateEngagement": true,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
     {
@@ -119,7 +121,7 @@
       "alias": "Intimate Otter",
       "aliasID": "6a5f9e9bd4058d953b392a73",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/086600da488bed3dd30ddd479aa6204a.png",
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
       "companies": [],
       "name": "HackebeinsBot",
       "urlName": null,
