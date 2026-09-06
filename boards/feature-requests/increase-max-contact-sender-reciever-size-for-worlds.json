@@ -29,6 +29,7 @@
   "category": null,
   "categoryID": null,
   "commentCount": 1,
+  "commentingDisabled": false,
   "comments": [
     {
       "_id": "69a2ddb3db4c0b10b877f9f2",
@@ -89,20 +90,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 7,
+  "maxScore": 8,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/699e70c83049e935ec4e4f8d/1436160973.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 7,
+  "score": 8,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-02-25T03:47:20.018Z",
   "subCategoryID": null,
   "title": "Increase Max Contact Sender/Reciever Size for Worlds",
-  "trendingScore": 2957.316452027555,
+  "trendingScore": 2958.042146826962,
   "updatedBy": null,
   "urlName": "increase-max-contact-sender-reciever-size-for-worlds",
   "viewerIsAuthor": false,
@@ -111,9 +112,21 @@
     "highEngagement": true,
     "lowEngagement": false,
     "moderateEngagement": false,
-    "votesHidden": false
+    "votesHidden": false,
+    "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5cdea371135e175781d9a260",
+      "alias": "Azure Swordfish",
+      "aliasID": "65c47b6fed6eefce4c6157dc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0bb7d64dbac5885a554a45c54d1d34ec.png",
+      "companies": [],
+      "name": "Pikapetey",
+      "urlName": null,
+      "voteID": "6a9c3b7b250b281ba8f2732e"
+    },
     {
       "_id": "63e70d70f1684e450d14723f",
       "alias": "Top Lizard",
@@ -130,7 +143,7 @@
       "alias": "Intimate Otter",
       "aliasID": "6a5f9e9bd4058d953b392a73",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/086600da488bed3dd30ddd479aa6204a.png",
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
       "companies": [],
       "name": "HackebeinsBot",
       "urlName": null,
