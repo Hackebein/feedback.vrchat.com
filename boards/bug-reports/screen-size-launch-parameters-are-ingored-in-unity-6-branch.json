@@ -2,10 +2,9 @@
   "_id": "6a4ae2309bd8ce543077bb01",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-07-28T19:12:41.434120Z",
+  "aiTaggedAt": "2026-09-07T17:25:08.906178Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "696539d3f85d59c66d3f3746",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -209,6 +208,50 @@
       "statusChangeID": "6a68f999a3fc595522779938",
       "statusChangeNewStatus": "closed",
       "value": "We are unable to reproduce this in any consistent way, and there is nothing on our side that would cause this issue as far as we can tell.\n\nWe have decided to close this issue for now, and will document that there may be behaviours changes with the Unity 6 upgrade related to these launch options.\n\nThis is a tricky one unfortunately...",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6a9e7cdccb1854e99dcd73ca",
+      "aiGenerated": false,
+      "author": {
+        "_id": "629fc21f2b0c690b785dab7f",
+        "alias": "Beautiful Chickadee",
+        "aliasID": "65c289f2ed6eefce4cc569eb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/363f93945eaf6dbd0d97599a1fe80279.png",
+        "created": "2022-06-07T21:24:47.156Z",
+        "name": "Buddy_DE",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-07T08:59:08.193Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a4ae2309bd8ce543077bb01",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Got that same issue since the very first Unity 6 beta.\n\nAdding -monitor 0, like Tran Fox suggested, makes it behave like in live again",
       "viewerReactions": null,
       "voteID": null
     }
