@@ -1,0 +1,106 @@
+{
+  "_id": "6a9ef060cb1854e99de2274d",
+  "aiCategories": [
+    "loc.main-menu",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-09-07T17:14:54.874072Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "65838d89ba55b2fc55f9bb30",
+    "alias": "Lovely Llama",
+    "aliasID": "67c98a44b324a96209df4e9c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/07d1f2160475245a7bc57088248cebe5.png",
+    "created": "2023-12-21T00:57:45.504Z",
+    "name": "Natsux",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "65838d89ba55b2fc55f9bb30",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-07T17:12:00.187Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "With the client language set to Spanish, the header of the profile\n\npanel in the Main Menu still displays \"My Profile\" in English,\n\nwhile every other element of that same panel is correctly\n\nlocalized.\n\nI searched the VRChat Application project on Crowdin (Spanish,\n\nAll Strings) for both \"My Profile\" and \"profile\". The string\n\n\"My Profile\" does not exist in the project, so translators\n\ncannot fix it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a9ef05fcb1854e99de2274c",
+  "imageURLs": [
+    "https://canny-assets.io/images/452a2ae77cf00b35fff2ac086e64bb3d.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-07T17:12:00.187Z",
+  "subCategoryID": null,
+  "title": "Main Menu profile panel header \"My Profile\" is not localized (string missing from Crowdin)",
+  "trendingScore": 2958.772429665271,
+  "updatedBy": null,
+  "urlName": "main-menu-profile-panel-header-my-profile-is-not-localized-string-missing-from-c",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "69fea9b1cf565b8f74b9ebab",
+      "alias": "Bittersweet Bobcat",
+      "aliasID": "69fea9b2cf565b8f74b9ebae",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5dea14eedd0dc859e4b23ea5dd8782e7.png",
+      "companies": [],
+      "name": "Blood Flower X",
+      "urlName": null,
+      "voteID": "6a9ef06e250b281ba8f9d72b"
+    },
+    {
+      "_id": "65838d89ba55b2fc55f9bb30",
+      "alias": "Lovely Llama",
+      "aliasID": "67c98a44b324a96209df4e9c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/07d1f2160475245a7bc57088248cebe5.png",
+      "companies": [],
+      "name": "Natsux",
+      "urlName": null,
+      "voteID": "6a9ef060250b281ba8f9d6a7"
+    }
+  ]
+}
