@@ -2,10 +2,9 @@
   "_id": "6a9ef261001c2d4efa5f5c3f",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon",
-    "sdk.vrcsdk"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-09-07T17:28:25.556187Z",
+  "aiTaggedAt": "2026-09-07T18:07:41.950483Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64906ecbeafb0909433eff5d",
@@ -43,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Any project prefab containing a UdonSharpBehaviour will be recreated after deletion.\n\nThe files will be recreated even after deleting the prefab from the file explorer.\n\nIt's also happening silently without any warning in the console.\n\nCreators unaware of this could run into serious issues.\n\nThis was not an issue under 3.10.4.\n\n# Environment\n\nWorld SDK 3.10.5\n\n# Reproduction\n\n- Create a project prefab with a UdonSharpBehaviour\n\n- Delete Prefab (it will be resurrected)",
+  "details": "Any project prefab containing a UdonSharpBehaviour will be recreated after deletion.\n\nThe files will be recreated even after deleting the prefab from the file explorer.\n\nIt's also happening silently without any warning in the console.\n\nCreators unaware of this could run into serious issues.\n\nThis was not an issue under 3.10.4.\n\n# Environment\n\nWorld SDK 3.10.5\n\n# Reproduction\n\n- Create a project prefab with a UdonSharpBehaviour\n\n- Delete that same Prefab from Unity",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -57,7 +56,7 @@
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": null,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9ef261001c2d4efa5f5c3f/1183842986.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 2,
