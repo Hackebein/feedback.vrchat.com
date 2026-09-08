@@ -1,9 +1,10 @@
 {
-  "_id": "6a9fc52f06010a60bf937066",
+  "_id": "6a9fc6a75fa80667c3d26d51",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.website",
+    "web.worlds"
   ],
-  "aiTaggedAt": "2026-09-08T08:23:17.598386Z",
+  "aiTaggedAt": "2026-09-08T08:29:23.333251Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a9fc23d250b281ba8fdb874",
@@ -31,57 +32,46 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-08T08:19:59.806Z",
+  "created": "2026-09-08T08:26:15.230Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Discovery on VRChat can be difficult for new players. Why not invite some of the VR-famous travellers, photographers and world builders to curate playlists for the world rows?\n\nEven better, create an interface that lets people select their favourite worlds and automatically populate a templated hub world, similar to the one we use for Venice Immersive. You could sell different hub templates, or make more elaborate ones available as a perk for VRC+ members.\n\nThese curated hubs could become jumping-off points for world hops, helping people discover new places through creators and communities they already trust.",
+  "details": "Often, worlds are created collaboratively by teams. For example, the now Emmy-winning Uncanny Alley was a collaboration between The Ferryman Collective, MetaRick and Screaming Color.\n\nHowever, if you look at the world page, only MetaRick is officially listed as the creator. This means that if I were searching for work by Screaming Color, Uncanny Alley wouldn’t appear.\n\nCredits are important in this community, both for recognising people’s contributions and for discovering their work. I’d suggest adding a secondary credits section to World pages, where everyone who contributed can be properly attributed and linked to their profile.\n\nThink of it a little like IMDb for VRChat worlds: a world has a primary creator, but also a full set of searchable credits showing everyone who helped make it.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6a9fc52f06010a60bf937041",
+  "ideaID": "6a9fc6a65fa80667c3d26d23",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-08T08:19:59.806Z",
+  "statusChanged": "2026-09-08T08:26:15.230Z",
   "subCategoryID": null,
-  "title": "Spotify style playlists for worlds",
-  "trendingScore": 2958.862679033963,
+  "title": "Additional Credits",
+  "trendingScore": 2958.457656322425,
   "updatedBy": null,
-  "urlName": "spotify-style-playlists-for-worlds",
+  "urlName": "additional-credits",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6a9fc673250b281ba8fdc81f"
-    },
     {
       "_id": "6a9fc23d250b281ba8fdb874",
       "alias": "Jonquil yellow Koi",
@@ -91,7 +81,7 @@
       "companies": [],
       "name": "Manglebird",
       "urlName": null,
-      "voteID": "6a9fc52f250b281ba8fdc22f"
+      "voteID": "6a9fc6a7250b281ba8fdcb39"
     }
   ]
 }
