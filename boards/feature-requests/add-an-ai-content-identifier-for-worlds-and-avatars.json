@@ -379,7 +379,7 @@
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -468,7 +468,9 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -494,20 +496,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 156,
+  "maxScore": 158,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9f8201838c205ecadc5dc4/737155304.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 156,
+  "score": 158,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-08T03:33:21.996Z",
   "subCategoryID": null,
   "title": "Add an AI content identifier for worlds and avatars",
-  "trendingScore": 2962.8476031377168,
+  "trendingScore": 2962.8607040117113,
   "updatedBy": null,
   "urlName": "add-an-ai-content-identifier-for-worlds-and-avatars",
   "viewerIsAuthor": false,
@@ -520,6 +522,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "618b328a8d51085a8cb7993d",
+      "alias": "Lime Planarian",
+      "aliasID": "65d8d7770129d7ae4404dab0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2c3d9311f9fb5365f22ca95be4555b73.png",
+      "companies": [],
+      "name": "Zarex Jaeger",
+      "urlName": null,
+      "voteID": "6aa057fe250b281ba801b24b"
+    },
+    {
+      "_id": "5fd008f8ad77c72ef30fabb9",
+      "alias": "Stuck Loon",
+      "aliasID": "68c4bba7004e8728236e6b81",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/02e8bb0b85e5fa08940a032dac92671c.png",
+      "companies": [],
+      "name": "Alephmon",
+      "urlName": null,
+      "voteID": "6aa0578e250b281ba801ab9c"
+    },
     {
       "_id": "60e620622f82054907b0cf73",
       "alias": "Nutmeg Marsupial",
