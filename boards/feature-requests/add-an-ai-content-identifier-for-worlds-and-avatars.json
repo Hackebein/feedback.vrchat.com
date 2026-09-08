@@ -427,7 +427,7 @@
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -530,7 +530,9 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -612,20 +614,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 181,
+  "maxScore": 185,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9f8201838c205ecadc5dc4/737155304.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 181,
+  "score": 185,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-08T03:33:21.996Z",
   "subCategoryID": null,
   "title": "Add an AI content identifier for worlds and avatars",
-  "trendingScore": 2963.0008465119813,
+  "trendingScore": 2963.0234499261283,
   "updatedBy": null,
   "urlName": "add-an-ai-content-identifier-for-worlds-and-avatars",
   "viewerIsAuthor": false,
@@ -638,6 +640,39 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "60c1601918eb225dec9b2fcd",
+      "alias": "Raisin Hedgehog",
+      "aliasID": "66314f69d36452c1790b5ec8",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/3d095de02f8e6ebe21cd4c2ce477bf0a.png",
+      "companies": [],
+      "name": "pixelplayer17",
+      "urlName": null,
+      "voteID": "6aa0713d250b281ba8026eb3"
+    },
+    {
+      "_id": "67c7780010a89072e7c0ad7f",
+      "alias": "Favourable Cheetah",
+      "aliasID": "67c77801b324a9620979d30f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/87cfadf5fa1e390781ce91656541acf3.png",
+      "companies": [],
+      "name": "Ciphenix",
+      "urlName": null,
+      "voteID": "6aa0701f250b281ba80266f7"
+    },
+    {
+      "_id": "6803db1e9fd01c0ccde96cf7",
+      "alias": "Miniature Chipmunk",
+      "aliasID": "6803db1f8ccc1d8b3b473335",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b38d9b644472a94c7080eab16b3eb69b.png",
+      "companies": [],
+      "name": "PWSmith1",
+      "urlName": null,
+      "voteID": "6aa06fff250b281ba80265a2"
+    },
     {
       "_id": "5ebf11b4af18d85abf1ed557",
       "alias": "Deep taupe Swordtail",
