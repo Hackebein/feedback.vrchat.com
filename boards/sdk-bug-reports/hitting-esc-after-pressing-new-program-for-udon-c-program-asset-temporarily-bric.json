@@ -1,0 +1,95 @@
+{
+  "_id": "6a9f55425fa80667c3bdfa4e",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-08T00:25:21.743029Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "61665e3e7448d57ed9eb49da",
+    "alias": "Olive Vole",
+    "aliasID": "65c26da3ed6eefce4c4d091c",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/80e00b0cc1a9469c5f118435fe36f34f.png",
+    "created": "2021-10-13T04:19:10.295Z",
+    "name": "4Bakers",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "61665e3e7448d57ed9eb49da",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-08T00:22:26.585Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "3.10.5\n\nCurrent Behaviour:\n\nIt creates a broken dummy U# Program Asset in Assets/{sceneName}_UdonProgramSources without telling the user, resulting in vague error messages, user has to manually remove corrupted file.\n\nExpected Behaviour:\n\n1. If U# asset creation is interrupted, it should NOT create any files.\n\n2. If buggy files are present, an Alert in the Builder panel should be created to inform the user.\n\n(there is an alert in the UdonBehaviour component, but if you Undo or delete the UdonBehaviour that created the buggy script, you're SOL, which is what happened to me)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6a9f55425fa80667c3bdfa4b",
+  "imageURLs": [
+    "https://canny-assets.io/images/d990964824458051878aa754df49158a.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9f55425fa80667c3bdfa4e/2111732688.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-08T00:22:26.585Z",
+  "subCategoryID": null,
+  "title": "Hitting Esc after pressing New Program for Udon C# Program Asset temporarily bricks project",
+  "trendingScore": 2958.409659197756,
+  "updatedBy": null,
+  "urlName": "hitting-esc-after-pressing-new-program-for-udon-c-program-asset-temporarily-bric",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "61665e3e7448d57ed9eb49da",
+      "alias": "Olive Vole",
+      "aliasID": "65c26da3ed6eefce4c4d091c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/80e00b0cc1a9469c5f118435fe36f34f.png",
+      "companies": [],
+      "name": "4Bakers",
+      "urlName": null,
+      "voteID": "6a9f5542250b281ba8fc2e57"
+    }
+  ]
+}
