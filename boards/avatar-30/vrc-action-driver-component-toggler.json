@@ -219,7 +219,9 @@
       "postDeleted": false,
       "postID": "6a91cc50451a6948161e62fe",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -291,20 +293,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 16,
+  "maxScore": 17,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a91cc50451a6948161e62fe/1071479748.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 16,
+  "score": 17,
   "sourceFeatureExtractionItem": null,
   "status": "in progress",
   "statusChanged": "2026-08-28T17:59:00.586Z",
   "subCategoryID": null,
   "title": "VRC Action Driver Component (Toggler)",
-  "trendingScore": 2959.6154110288576,
+  "trendingScore": 2959.7582209445404,
   "updatedBy": "63691297469f06772579fe6f",
   "urlName": "vrc-action-driver-component-toggler",
   "viewerIsAuthor": false,
@@ -317,6 +319,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6227bc1f4c691f5f50ea5902",
+      "alias": "Yolk Python",
+      "aliasID": "65c2c0eaed6eefce4c7a7fab",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5ba33d6f6389569e20d63ed16f7f2c73.png",
+      "companies": [],
+      "name": "Woofy_Wolf",
+      "urlName": null,
+      "voteID": "6a9f901d250b281ba8fd1cee"
+    },
     {
       "_id": "5f2e069f8fc2c972dd4a0430",
       "alias": "Electrical Swallow",
