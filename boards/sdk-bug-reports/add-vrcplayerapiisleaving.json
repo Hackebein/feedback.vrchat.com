@@ -2,9 +2,9 @@
   "_id": "696fb06a5ece64e706cd5b5e",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-06-14T13:54:25.855538Z",
+  "aiTaggedAt": "2026-09-08T19:47:14.267665Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fca5df4d58780532024a52b",
@@ -34,9 +34,54 @@
     "urlName": "feature-request"
   },
   "categoryID": "6616d2ceedd9a0e35fce972c",
-  "commentCount": 0,
+  "commentCount": 1,
   "commentingDisabled": false,
-  "comments": [],
+  "comments": [
+    {
+      "_id": "6aa0638778fce2344d9be6ec",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5fca5df4d58780532024a52b",
+        "alias": "Toffee Tortoise",
+        "aliasID": "65c26da3ed6eefce4c4d0863",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/7791ce5e81d234fd5863bb4ba6ca70ff.png",
+        "created": "2020-12-04T16:04:04.984Z",
+        "name": "DrBlackRat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-08T19:35:35.650Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "696fb06a5ece64e706cd5b5e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Just to add some clarification, this flag should be set to true *before* any `OnPlayerLeft` calls have been made.\n\nIdeally, I want this so that if one system is triggering some logic due to a player leaving, another system that hasn't received the `OnPlayerLeft` call yet can still know that said player is leaving. This would allow it to, for example, ignore them when making requests to get another player.\n\nRight now, I work around this by just passing a `playerToExclude` around, which is not ideal...",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-01-20T16:42:18.526Z",
   "deletedAt": null,
