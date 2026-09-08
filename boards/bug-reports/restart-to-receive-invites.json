@@ -3,11 +3,10 @@
   "_id": "61212167e8f0171af2ec70ab",
   "aiCategories": [
     "loc.pc-client",
-    "social.friends",
-    "social.instances",
-    "client.settings"
+    "platforms.pc.desktop",
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-08-21T11:48:41.389712Z",
+  "aiTaggedAt": "2026-09-08T01:02:58.699477Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6120756ee8f0171af2eaa1cd",
@@ -31,51 +30,9 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 73,
+  "commentCount": 75,
   "commentingDisabled": false,
   "comments": [
-    {
-      "__v": 0,
-      "_id": "658f7739d684d3fba0441f46",
-      "aiGenerated": false,
-      "author": {
-        "_id": "5cafb371ac3c2b014948f09c",
-        "alias": "Kelly green Platypus",
-        "aliasID": "65c29c1bed6eefce4c7daa3d",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/59c49cf75335390f3cb14b892967fc07.png",
-        "created": "2019-04-11T21:36:49.585Z",
-        "name": "Free hugs․․․",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2023-12-30T01:49:45.574Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "61212167e8f0171af2ec70ab",
-      "private": false,
-      "reactions": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "Actually it's much worse that anticipated. In my previous comment I said up to an hour. It seems that it's up to a minute. I tried multiple times and it seems that I get invites and requests only right after I start the game and then within the first minute it breaks.",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "__v": 0,
       "_id": "65c039c7502bc11c979d7546",
@@ -111,7 +68,7 @@
       "postID": "61212167e8f0171af2ec70ab",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "sourceLink": null,
       "spam": false,
@@ -478,6 +435,52 @@
       "value": "Happy birthday! This ticket is now 5 years old, and the issue still persists.\n\nThe game is essentially unplayable (friend list, notifications, invites etc are only fetched once at login, and just stay frozen like this after) without a third party tool, or the website open in a browser.\n\nDisabling IPv6 is not an acceptable workaround, as other services running on my machine make use of it.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6a9f2b68b652f81b350063fe",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a96149e78a781c4583ea7f5",
+        "alias": "Strange Shrew",
+        "aliasID": "6a96149f78a781c4583ea7f9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f02fa22a6558dac9b62cb019e90efc5a.png",
+        "created": "2026-08-31T23:56:14.760Z",
+        "name": "KenjiFox",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-07T21:23:52.729Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "61212167e8f0171af2ec70ab",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This MUST be fixed. It's been too long. It issue is that the client has no check to see if the web socket has gone stale. The unofficial tool VRCX using your same published APIs does it better than the actual game and NEVER has this issue on the same networks. This is embarrassing, fix it.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -493,7 +496,7 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 337,
+  "maxScore": 338,
   "mergeCount": 6,
   "notAuthorized": false,
   "notFound": false,
@@ -541,13 +544,13 @@
     "value": "We're actively investigating this issue and hope to have a proper fix implemented in a future update.\nIn the meantime, as a temporary workaround, you may want to consider disabling IPv6 which has resolved this issue for other users. You can do this by following the process on this site: https://contenthub.streamlabs.com/content-hub/post/how-to-solve-ipv6-issues\nIf you are using Oculus Quest in standalone you will need to look into disabling it in your router.",
     "viewerReactions": null
   },
-  "score": 337,
+  "score": 338,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2021-08-24T23:11:45.479Z",
   "subCategoryID": null,
   "title": "Restart to receive invites",
-  "trendingScore": 2957.7513352971023,
+  "trendingScore": 2958.4184779142583,
   "urlName": "restart-to-receive-invites",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -559,6 +562,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a96149e78a781c4583ea7f5",
+      "alias": "Strange Shrew",
+      "aliasID": "6a96149f78a781c4583ea7f9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f02fa22a6558dac9b62cb019e90efc5a.png",
+      "companies": [],
+      "name": "KenjiFox",
+      "urlName": null,
+      "voteID": "6a9f2b04250b281ba8fb3433"
+    },
     {
       "_id": "62df6e56b1e50b465a5049d4",
       "alias": "Sensible Wildfowl",
