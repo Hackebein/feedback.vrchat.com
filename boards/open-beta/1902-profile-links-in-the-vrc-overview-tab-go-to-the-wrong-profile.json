@@ -1,12 +1,11 @@
 {
-  "_id": "6aa14f63d8daf24e4e4c673d",
+  "_id": "6aa1512d4be4e0cc91d551db",
   "aiCategories": [
     "loc.main-menu",
-    "loc.pc-client",
-    "client.settings",
-    "platforms.pc.steam"
+    "monetization.vrc-plus",
+    "web.profiles"
   ],
-  "aiTaggedAt": "2026-09-09T12:25:09.367413Z",
+  "aiTaggedAt": "2026-09-09T12:32:21.197424Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba3c32ed082c9981d6fed6",
@@ -40,60 +39,46 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-09T12:21:55.128Z",
+  "created": "2026-09-09T12:29:33.409Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1.) Open the worlds tab and minimize it.\n\n2.) Switch to a different tab.\n\n3.) Switch back to the worlds tab, it will have overlapping UI in certain areas, notably the \"Search Worlds\" field and some parts above it. Expanding it back will similarly have overlapping UI.\n\nScreenshots attached showing both expanded and minimized.",
+  "details": "1.) Open the VRC+ \"Overview\" tab.\n\n2.) Click the name of any VRC+ gifter.\n\n3.) It goes to your own profile rather than theirs the first time you click it.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aa14f62d8daf24e4e4c673c",
-  "imageURLs": [
-    "https://canny-assets.io/images/5c4208df3571fbbe0764430745dab466.png",
-    "https://canny-assets.io/images/68e162388127666dcd21b119f5f0a76e.png"
-  ],
+  "ideaID": "6aa1512c4be4e0cc91d551da",
+  "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-09T12:21:55.128Z",
+  "statusChanged": "2026-09-09T12:29:33.409Z",
   "subCategoryID": null,
-  "title": "[1902] Overlapping UI in the worlds tab",
-  "trendingScore": 2959.029540796475,
+  "title": "[1902] Profile links in the VRC+ \"Overview\" tab go to the wrong profile",
+  "trendingScore": 2958.624650375005,
   "updatedBy": null,
-  "urlName": "1902-overlapping-ui-in-the-worlds-tab",
+  "urlName": "1902-profile-links-in-the-vrc-overview-tab-go-to-the-wrong-profile",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aa150ae250b281ba8061f64"
-    },
     {
       "_id": "69ba3c32ed082c9981d6fed6",
       "alias": "Likely Orca",
@@ -103,7 +88,7 @@
       "companies": [],
       "name": "Orео",
       "urlName": null,
-      "voteID": "6aa14f63250b281ba806192e"
+      "voteID": "6aa1512d250b281ba8062324"
     }
   ]
 }
