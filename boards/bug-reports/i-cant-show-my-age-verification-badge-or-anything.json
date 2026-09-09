@@ -1,11 +1,11 @@
 {
   "_id": "6aa0dfb201410bb21b3c061a",
   "aiCategories": [
-    "loc.in-world",
-    "account.age-verification",
-    "social.nameplates"
+    "loc.website",
+    "web.profiles",
+    "account.age-verification"
   ],
-  "aiTaggedAt": "2026-09-09T14:55:06.894668Z",
+  "aiTaggedAt": "2026-09-09T22:50:17.697742Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "644188d7cb8e211ebf180ee2",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +74,62 @@
       "statusChangeID": "6aa1727d043ee51f45457b6a",
       "statusChangeNewStatus": "needs more information",
       "value": "When you click Edit Profile, is there a toggle for showing age verification?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa1e233bc111e9cb1be21a1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "644188d7cb8e211ebf180ee2",
+        "alias": "Intensive Caribou",
+        "aliasID": "6aa0dc98250b281ba8044f18",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2023-04-20T18:47:51.456Z",
+        "name": "un-meşru",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-09T22:48:19.658Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa1727d043ee51f45457b6b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa0dfb201410bb21b3c061a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} it does show the age verification display toggle but when i turn it on and try to save it gives error",
       "viewerReactions": null,
       "voteID": null
     }
