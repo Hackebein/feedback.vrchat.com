@@ -427,7 +427,9 @@
       "postDeleted": false,
       "postID": "6836129ba478d14504f26450",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -471,7 +473,9 @@
       "postDeleted": false,
       "postID": "6836129ba478d14504f26450",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -496,20 +500,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 899,
+  "maxScore": 903,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6836129ba478d14504f26450/1222097147.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 899,
+  "score": 903,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2025-05-27T19:29:31.299Z",
   "subCategoryID": null,
   "title": "Require content using generative AI to declare it",
-  "trendingScore": 2962.7519324666164,
+  "trendingScore": 2962.781747042333,
   "updatedBy": null,
   "urlName": "require-content-using-generative-ai-to-declare-it",
   "viewerIsAuthor": false,
@@ -522,6 +526,39 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "69ec1e104a48bed1898102a1",
+      "alias": "Comprehensive Beetle",
+      "aliasID": "69ec1e104a48bed1898102a4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/abfe7cefb4c04e9d7f77ed95ed5eecc3.png",
+      "companies": [],
+      "name": "RoflLion",
+      "urlName": null,
+      "voteID": "6aa0bd26250b281ba803d781"
+    },
+    {
+      "_id": "664554ef11cb23091b131048",
+      "alias": "Wine Krill",
+      "aliasID": "664554efb9e8e8fe66548f95",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/575899a7a681a43ee0831d0428dc753e.png",
+      "companies": [],
+      "name": "MatrixFurry",
+      "urlName": null,
+      "voteID": "6aa0bc4a250b281ba803d423"
+    },
+    {
+      "_id": "6aa0bb45250b281ba803d023",
+      "alias": "Heliotrope purple Shark",
+      "aliasID": "6aa0bb45250b281ba803d027",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "CyberPhoeno",
+      "urlName": null,
+      "voteID": "6aa0bb4c250b281ba803d04a"
+    },
     {
       "_id": "62def7d2e6ed9255c19f1b2b",
       "alias": "Strong Narwhal",
