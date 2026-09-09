@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 80,
+  "commentCount": 81,
   "commentingDisabled": false,
   "comments": [
     {
@@ -385,7 +385,9 @@
       "postDeleted": false,
       "postID": "6836129ba478d14504f26450",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
