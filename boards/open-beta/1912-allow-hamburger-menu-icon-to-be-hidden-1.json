@@ -1,10 +1,12 @@
 {
   "_id": "6aa1f357dd7529f1058b28be",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.desktop"
+    "loc.in-world",
+    "loc.hud",
+    "loc.quick-menu",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-10T00:03:35.577143Z",
+  "aiTaggedAt": "2026-09-10T00:28:34.813869Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649520bdbec709090d4453cd",
@@ -42,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "It is extremely unintuitive to hold down tab and while holding it, drag your cursor over to the hamburger menu. I suspect that a lot of people will find this cumbersome versus pressing the escape key on your keyboard to summon a menu.\n\nThe alternative to this would be at the very least to show the microphone and invite/notification icons with the new desktop HUD disabled. Disabling the HUD is the only way to get rid of the hamburger menu. One can argue that a microphone icon is a HUD element. But, so is face mirror and that is de-coupled from the new HUD layout.",
+  "details": "It is extremely unintuitive to hold down tab and while holding it, drag your cursor over to the hamburger menu. I suspect that a lot of people will find this cumbersome versus pressing the escape key on your keyboard to summon a menu.\n\nThe alternative to this would be at the very least to show the microphone and invite/notification icons with the new desktop HUD disabled. Disabling the HUD is the only way to get rid of the hamburger menu. One can argue that a microphone icon is a HUD element. But, so is face mirror and that is de-coupled from the new HUD layout.\n\nThe current alternative without this implemented is going to be avatars using up more material slots, unique shaders, and animator layers to put your mute icon and other elements actually where you want them on the screen without the HUD enabled.",
   "error": null,
   "eta": null,
   "etaPublic": true,
