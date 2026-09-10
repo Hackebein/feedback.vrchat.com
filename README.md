@@ -9,7 +9,7 @@ Scrape horizon: **2026-08-22 16:47 UTC (18d ago)**.
 | Board | Posts |
 |-------|------:|
 | `age-verification` | 210 / 210 (100.0%) |
-| `android` | 350 / 350 (100.0%) |
+| `android` | 350 / 351 (99.7%) |
 | `avatar-30` | 878 / 878 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 82 / 82 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-08-22 16:47 UTC (18d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 129 / 129 (100.0%) |
 | `website` | 856 / 856 (100.0%) |
-| **Total** | **37,014** / **36,835** (100.0%) |
+| **Total** | **37,014** / **36,836** (99.997%) |
 
 ## OpenSearch
 
