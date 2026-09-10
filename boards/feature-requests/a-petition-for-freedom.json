@@ -1,9 +1,11 @@
 {
   "_id": "6aa25fb186edbd1d3c11e34d",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.website",
+    "web.profiles",
+    "account.auth"
   ],
-  "aiTaggedAt": "2026-09-10T15:10:36.682785Z",
+  "aiTaggedAt": "2026-09-10T18:50:42.061768Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6aa25e94250b281ba80c206b",
@@ -27,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -64,13 +66,71 @@
       "postDeleted": false,
       "postID": "6aa25fb186edbd1d3c11e34d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Can you provide the LLM prompt you've used to generate the text?\n\n> This isn’t about [X] — it’s about [Y]",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa2f93e5c73b051a914f41d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6aa25e94250b281ba80c206b",
+        "alias": "Tangerine yellow Bovid",
+        "aliasID": "6aa25e94250b281ba80c206f",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2026-09-10T07:39:00.540Z",
+        "name": "cоugh",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-10T18:38:54.759Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa2c73ac3d65c890d6bc530",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa25fb186edbd1d3c11e34d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} All arguments used in the text we're created by me, however the creation and construction of the paragraphs was AI built. Nevertheless do you think because it was AI, the point I have made is not valid?",
       "viewerReactions": null,
       "voteID": null
     }
