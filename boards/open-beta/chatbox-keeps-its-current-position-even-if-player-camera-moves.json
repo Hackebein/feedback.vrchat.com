@@ -2,11 +2,13 @@
   "_id": "6aa29c2b9dcd17f166ea421e",
   "aiCategories": [
     "loc.in-world",
+    "loc.pc-client",
     "client.chatbox",
     "client.third-person",
-    "platforms.cross-platform"
+    "platforms.pc.steam",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-10T12:05:17.580537Z",
+  "aiTaggedAt": "2026-09-10T12:11:55.869076Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5dab35051e14847e6f1cd15e",
@@ -44,7 +46,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "This is reporting two bugs that both have the same root issue.\n\nRelated to how the camera moves and the chatbox doesn't update its position on camera move.\n\nSteps to reproduce version A:\n\n1. Be in third person\n\n2. Scroll in or scroll out your view, or rotate the camera (after pressing tab)\n\n3. While the camera is still lerping (moving) open the chatbox.\n\n4. Watch as the chatbox remains where it is, but your camera keeps moving.\n\nSteps to reproduce version B:\n\n1. Be in third person\n\n2. Press tab and look to the right.\n\n3. Open chat\n\n4. With your mouse anywhere on your screen (even the chatbox ui itself)\n\n5. Watch as your camera snaps to the direction your player is looking and you see your chatbox remain where it is.\n\nA simple fix would be periodically update the chat position so that it remains within the same place.",
+  "details": "This is reporting two bugs that both have the same root issue.\n\nRelated to how the camera moves and the chatbox doesn't update its position on camera move.\n\nSteps to reproduce version A:\n\n1. Be in third person\n\n2. Scroll in or scroll out your view, or rotate the camera (after pressing tab)\n\n3. While the camera is still lerping (moving) open the chatbox.\n\n4. Watch as the chatbox remains where it is, but your camera keeps moving.\n\nSteps to reproduce version B:\n\n1. Be in third person\n\n2. Press tab and look to the right.\n\n3. Open chat\n\n4. With your mouse anywhere on your screen (even the chatbox ui itself)\n\n5. Watch as your camera snaps to the direction your player is looking and you see your chatbox remain where it is.\n\nA simple fix would be periodically update the chat position so that it remains within the same place relative to the player camera.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -71,7 +73,7 @@
   "subCategoryID": null,
   "title": "Chatbox keeps its current position, even if player camera moves.",
   "trendingScore": 2958.7647536297995,
-  "updatedBy": null,
+  "updatedBy": "5dab35051e14847e6f1cd15e",
   "urlName": "chatbox-keeps-its-current-position-even-if-player-camera-moves",
   "viewerIsAuthor": false,
   "viewerVote": 0,
