@@ -1,11 +1,10 @@
 {
-  "_id": "6aa22270c3d65c890d50decf",
+  "_id": "6aa2254ca026cebd781dbd81",
   "aiCategories": [
-    "loc.pc-client",
-    "client.controls",
-    "social.nameplates"
+    "loc.in-world",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-09-10T03:25:08.509926Z",
+  "aiTaggedAt": "2026-09-10T03:37:16.287565Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64663e632f173c09926ada3d",
@@ -28,68 +27,57 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6317f3226fccd444a7af6064",
-    "created": "2022-09-07T01:25:54.001Z",
-    "name": "Bug Report",
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
     "parentID": null,
-    "urlName": "bug-report"
+    "urlName": "feature-requests"
   },
-  "categoryID": "6317f3226fccd444a7af6064",
+  "categoryID": "6317ed8c023c7b5ec9566d28",
   "commentCount": 0,
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-10T03:22:24.388Z",
+  "created": "2026-09-10T03:34:36.306Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "CTRL-N only turns nameplates on and off, no longer cycles to icon mode.",
+  "details": "Yall added the warn option, why not add the ban option too?",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aa22270c3d65c890d50decc",
+  "ideaID": "6aa2254ba026cebd781dbd80",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-10T03:22:24.388Z",
+  "statusChanged": "2026-09-10T03:34:36.306Z",
   "subCategoryID": null,
-  "title": "[1912] the hotkey for toggling the nameplate visibility no longer cycles to the icon mode",
-  "trendingScore": 2959.1188592571657,
+  "title": "[1912] Add \"Ban User\" button to the More Options modal in the Profile menu for instance moderators.",
+  "trendingScore": 2958.7144371962677,
   "updatedBy": null,
-  "urlName": "1912-the-hotkey-for-toggling-the-nameplate-visibility-no-longer-cycles-to-the-ic",
+  "urlName": "1912-add-ban-user-button-to-the-more-options-modal-in-the-profile-menu-for-insta",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aa2239f250b281ba80b2268"
-    },
     {
       "_id": "64663e632f173c09926ada3d",
       "alias": "Unexpected Chipmunk",
@@ -99,7 +87,7 @@
       "companies": [],
       "name": "Decay",
       "urlName": null,
-      "voteID": "6aa22270250b281ba80b1801"
+      "voteID": "6aa2254c250b281ba80b2d8f"
     }
   ]
 }
