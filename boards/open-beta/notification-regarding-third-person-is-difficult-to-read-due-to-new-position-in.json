@@ -1,0 +1,99 @@
+{
+  "_id": "6aa290311ea7d453a920213e",
+  "aiCategories": [
+    "loc.hud",
+    "open-beta",
+    "client.third-person",
+    "client.settings",
+    "platforms.pc.desktop"
+  ],
+  "aiTaggedAt": "2026-09-10T11:13:33.080523Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "695febfaf85d59c66d3d73c8",
+    "alias": "Ink Blackbird",
+    "aliasID": "695febfbf85d59c66d3d9492",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
+    "created": "2026-01-08T17:40:10.770Z",
+    "name": "-Jade-",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "695febfaf85d59c66d3d73c8",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-10T11:10:41.760Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In Open Beta Build 1912, placing every notification at the top of the screen has made some notifications difficult to read. One notable notification is the one regarding third person views. If you're focused on yourself in desktop mode and you're going to switch from first person to third person, you're not going to be focused on looking at a notification at the top of the screen that quickly goes away. Not just that, but the notification seems smaller, and more difficult to read compared to how the notification was in build 1902.\n\nThis brings up another point, having all the notifications at the top can make them easier to miss compared to having them at the bottom. It would be great if there were an option that allows the notifications to be repositioned. In build 1902, we did have an anchor position for these in the form of \"Left, Right, Center\" for \"Notification Position\". Why not bring this back, along with the option to have notifications either displayed at the top or bottom of the screen?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa290311ea7d453a92020e4",
+  "imageURLs": [
+    "https://canny-assets.io/images/7e696b645d1755b0456bb20f7e15fe1f.png",
+    "https://canny-assets.io/images/16e79c93e7e781ccc3d8993395c2cdd0.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-10T11:10:41.760Z",
+  "subCategoryID": null,
+  "title": "Notification regarding third person is difficult to read due to new position in HUD.",
+  "trendingScore": 2958.759684011744,
+  "updatedBy": "695febfaf85d59c66d3d73c8",
+  "urlName": "notification-regarding-third-person-is-difficult-to-read-due-to-new-position-in",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "695febfaf85d59c66d3d73c8",
+      "alias": "Ink Blackbird",
+      "aliasID": "695febfbf85d59c66d3d9492",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
+      "companies": [],
+      "name": "-Jade-",
+      "urlName": null,
+      "voteID": "6aa29031250b281ba80d100a"
+    }
+  ]
+}
