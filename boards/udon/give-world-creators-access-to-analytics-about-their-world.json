@@ -5,7 +5,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-09-08T07:29:22.653211Z",
+  "aiTaggedAt": "2026-09-10T21:55:51.507105Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "58c62e995865713647a7115b",
@@ -27,7 +27,7 @@
   "boardID": "5df404cc2072644ac4b5e385",
   "by": null,
   "category": null,
-  "commentCount": 28,
+  "commentCount": 29,
   "commentingDisabled": false,
   "comments": [
     {
@@ -528,6 +528,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Since this is roadmapped, I want to tag on a suggested analytic that would greatly benefit creators, users, and VRChat: allow users to set their own personal rating for a given world.\n\nFrom the user's perspective, this would serve to help remind themselves of worlds they've been to before and liked, or if they haven't been there before then as motivation to check it out. With hundreds of thousands of worlds, many with no description, common names, and a single generic image, it's a pain to explore worlds that aren't brand new when many of them you've been to before and didn't like, but don't remember until after you download hundreds of megabytes to join it again. Since this is a personal rating that only the user sees (no total/average shown on the world to users, except to the creator and VRChat), it's not abusable via brigading.\n\nFrom the creator's perspective, being able to see how people are responding to their worlds serves as useful metric on whether or not people are enjoying their work. Favorites somewhat help with this at present, but with limited favorite slots it falls short of being truly useful.\n\nFrom VRChat's perspective, you all now get a lot of extra data on what worlds are being well received and how they compare to each other. It could also enable experimentation with different discovery algorithms based on that data (not just in a global sense, but in a per-user sense as \"similar worlds based on your interests\"), without the worry of abuse that comes with publicly visible world ratings.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa325500ed336c862a40a17",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64f8e8d313b550392ac6b63b",
+        "alias": "Daily Bear",
+        "aliasID": "65c29c85ed6eefce4c8cc730",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/44f87889dec3442fa9d440c83559744e.png",
+        "created": "2023-09-06T21:02:11.010Z",
+        "name": "hdorriker",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-10T21:46:56.651Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "63ac197b13d3c4455e9b6768",
+          "alias": "Electric violet Thrush",
+          "aliasID": "65c34de5ed6eefce4cf74218",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/1a9af2c39c7ea5d4ec273c9aa5e6f8b9.png",
+          "created": "2022-12-28T10:24:59.911Z",
+          "name": "Prismic247",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a9fb507c364c22dbf668892",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "58c6c736ff44e44ada7178ae",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{63ac197b13d3c4455e9b6768|full_name} This is the best proposal for world ratings I’ve seen yet. Keeping user’s ratings visible only to that user and to the author of a world via analytics solves most of the moderation and performance-relevancy issues that arise from a simple public rating system.",
       "viewerReactions": null,
       "voteID": null
     }
