@@ -4,7 +4,7 @@
     "loc.website",
     "web.worlds"
   ],
-  "aiTaggedAt": "2026-09-10T12:36:27.952600Z",
+  "aiTaggedAt": "2026-09-10T12:55:53.889057Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 9,
+  "commentCount": 10,
   "commentingDisabled": false,
   "comments": [
     {
@@ -214,7 +214,7 @@
       "postID": "6aa26f539dcd17f166e385e4",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -439,7 +439,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{630eeb363177d365b00a2620|full_name}\n\nI don't think we should conflate individual value judgments with the system itself. Providing more options benefits many users, and judgments about values and what is appropriate should be left to the individual.",
+      "value": "@{630eeb363177d365b00a2620|full_name}\n\nI don't think we should conflate individual value judgments with the system itself. Providing more options benefits many users, and judgments about what is appropriate and which parts they prefer should be left to the individual.",
       "viewerReactions": null,
       "voteID": null
     },
@@ -477,13 +477,71 @@
       "postDeleted": false,
       "postID": "6aa26f539dcd17f166e385e4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "- I basically agree with the idea of adding in-world screenshots to the world description, but I have some concerns about it.\n\n- First, I hope that world information is something the creator has full control over, and I don't want creators to be forced to prove their \"goodness\". A good design should not be about finding bad things, but about highlighting good things.\n\n- I like some low-effort but idea-based small worlds, which can be somewhat misleading but fun. Requiring a spawn-point screenshot may disrupt such worlds and narrow the possibilities of worlds (as another comment pointed out).\n\n- Also, the view from the spawn point varies by world genre. Some have caution messages, some are meant to surprise you, neither of which should be shown as a representative image of the world.\n\n- 360-degree captures are often presented at low resolution (due to file size), and I think this may distract users and make them lose interest.\n\nAdditional small idea: If world creators could attach additional in-world pictures taken with the default camera (and if users could verify that they were actually taken in the world), it would work as proof of content quality and also show how the world looks with people in it, prior to joining the world. It should be displayed separately from the custom preview image(s) proposed below, so that it can be trusted as a real view.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa2a71f14e25c8f15f7bf01",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b962056b037d80b53475262",
+        "alias": "Verdigris Nightingale",
+        "aliasID": "65c281e7ed6eefce4c8ec0f2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/798767edf58209deeeb93edaa481a917.png",
+        "created": "2018-09-10T07:42:14.630Z",
+        "name": "kurotori",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-10T12:48:31.401Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5b0907a98fa72313783e4ba6",
+          "alias": "Supposed Parrotfish",
+          "aliasID": "65c2b4abed6eefce4ce1caf2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c802ed56ec9fc14a097db712c3d1e4c0.png",
+          "created": "2018-05-26T07:07:21.588Z",
+          "name": "phi16",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa2a26614e25c8f15f6b397",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa26f539dcd17f166e385e4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5b0907a98fa72313783e4ba6|full_name} I really like your last idea. I think it could be a very good compromise.\n\nIf I understand your idea correctly, it could work something like this: creators take pictures using the standard VRChat camera, and those pictures can then be attached directly to the World Details page.\n\nBecause VRChat would know that the image was actually captured inside that world, it could be displayed separately from normal creator-uploaded preview images as a verified in-world photo.\n\nThat would preserve the creator's control over what they want to show, without requiring a mandatory spawn-point screenshot or potentially spoiling worlds that depend on surprises or specific introductions.\n\nAt the same time, users would still have some trustworthy in-world images they can look at before downloading and joining the world.\n\nI also like your point that this would allow creators to show what the world looks like when people are actually using it. That is something an automatic capture would have difficulty representing.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -503,20 +561,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 73,
+  "maxScore": 76,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa26f539dcd17f166e385e4/1196862785.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 73,
+  "score": 76,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-10T08:50:27.238Z",
   "subCategoryID": null,
   "title": "Automatically generated in-world previews on World Details",
-  "trendingScore": 2962.3650409140923,
+  "trendingScore": 2962.4053254788087,
   "updatedBy": null,
   "urlName": "automatically-generated-in-world-previews-on-world-details",
   "viewerIsAuthor": false,
