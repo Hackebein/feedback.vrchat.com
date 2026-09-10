@@ -1,10 +1,11 @@
 {
-  "_id": "6aa2f349864e7732322c266b",
+  "_id": "6aa2f54a3a2087f931353893",
   "aiCategories": [
+    "loc.pc-client",
     "loc.hud",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-10T18:17:24.975012Z",
+  "aiTaggedAt": "2026-09-10T18:25:20.379067Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61665e3e7448d57ed9eb49da",
@@ -38,57 +39,46 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-10T18:13:29.071Z",
+  "created": "2026-09-10T18:22:02.723Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "my theme is purple and The New HUD is black. I'm not certain that any of my existing colors on my UI Theme would work 1:1 on my HUD, so I think a new color is needed",
+  "details": "People in the Discord seem to be calling for a way to revert to the old UI. I understand why that isn't a super great option for the codebase or customization, so I suggest adding a few more customization features, that can also benefit other cases.\n\n1. Rescale UI Elements\n\nI'm not sure how VRChat handles very high/low DPI displays, but if it's not ideal, this will fix both with a manual UI Scale override, like many other games have\n\n2. Toggle Individual Elements\n\nDon't see yourself ever using the menu button? Are you a power user and find it patronizing to have all this stuff spelling out the keybinds to you? Do you have an OLED monitor, and worry about burnin? You should be able to toggle off the elements you don't need.\n\n3. Reposition Individual Elements\n\nDon't like having to look all the way to the top of your screen to see if you're muted? Move the HUD to the bottom left, the middle, wherever your heart desires.\n\n4. Don't like the new HUD at all?\n\nThis doesn't need a new setting, you can use the last 3 to hide the new elements, and put the mic icon back where it was.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aa2f344864e7732322c255c",
+  "ideaID": "6aa2f54a3a2087f931353866",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa2f349864e7732322c266b/2020213033.jpeg",
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa2f54a3a2087f931353893/2134604480.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-10T18:13:29.071Z",
+  "statusChanged": "2026-09-10T18:22:02.723Z",
   "subCategoryID": null,
-  "title": "[1912] Add new pallette swatch for HUD backgrounds",
-  "trendingScore": 2959.207313942483,
+  "title": "[1912] A way to replicate the old UI",
+  "trendingScore": 2958.8024767134634,
   "updatedBy": null,
-  "urlName": "1912-add-new-pallette-swatch-for-hud-backgrounds",
+  "urlName": "1912-a-way-to-replicate-the-old-ui",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aa2f4de250b281ba8106246"
-    },
     {
       "_id": "61665e3e7448d57ed9eb49da",
       "alias": "Olive Vole",
@@ -98,7 +88,7 @@
       "companies": [],
       "name": "4Bakers",
       "urlName": null,
-      "voteID": "6aa2f349250b281ba8104af9"
+      "voteID": "6aa2f54a250b281ba8106509"
     }
   ]
 }
