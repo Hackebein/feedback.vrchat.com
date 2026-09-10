@@ -1,0 +1,99 @@
+{
+  "_id": "6aa2c9bd946c9151c6b87be9",
+  "aiCategories": [
+    "loc.pc-client",
+    "open-beta",
+    "platforms.pc.steam",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-09-10T15:17:19.274041Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6206cb61f1cf0c7aeee7d576",
+    "alias": "Vermilion Macaw",
+    "aliasID": "65c26da3ed6eefce4c4d07b9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/219f830e7bbe2fc8f47464f0d4525682.png",
+    "created": "2022-02-11T20:47:29.564Z",
+    "name": "Dyslex1k",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6206cb61f1cf0c7aeee7d576",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-10T15:16:13.728Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When comparing the past keyboard to new keyboard the UI Colours play little to no role any more. This decision seems particularly strange after an update focused on bringing custom UI colours to the radial menu.\n\nThere are 2 main approaches you could take:\n\n1. Make the Input Text field similar to the new Keyboard\n\n2. Make the Keyboard more similarly coloured to the old text input field \n\nI would be more inclined with the second option as while the desktop UI looks coherent with the keyboard, in VR it sticks out like a sore thumb and looks strange when the entire UI is following your custom colour scheme Except the keyboard.\n\nUI Themes used:\n\n- Default\n\n- Grass\n\n- Embers\n\nSince this is affecting the keyboard I am also marking this as affecting quest and pico though if someone can test them on those platforms that would be great :)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa2c9bd946c9151c6b87be6",
+  "imageURLs": [
+    "https://canny-assets.io/images/61f806ede08df39550a8ad08d92b19ef.png",
+    "https://canny-assets.io/images/5ac94109d4589be61a9f18df941ac33c.png",
+    "https://canny-assets.io/images/72f29d09fc87690391293c477ce4ffd5.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-10T15:16:13.728Z",
+  "subCategoryID": null,
+  "title": "[1912] Keyboard barely follows custom UI color schemes anymore",
+  "trendingScore": 2958.7840427427295,
+  "updatedBy": null,
+  "urlName": "1912-keyboard-barely-follows-custom-ui-color-schemes-anymore",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6206cb61f1cf0c7aeee7d576",
+      "alias": "Vermilion Macaw",
+      "aliasID": "65c26da3ed6eefce4c4d07b9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/219f830e7bbe2fc8f47464f0d4525682.png",
+      "companies": [],
+      "name": "Dyslex1k",
+      "urlName": null,
+      "voteID": "6aa2c9bd250b281ba80ed15d"
+    }
+  ]
+}
