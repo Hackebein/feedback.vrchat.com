@@ -1,9 +1,11 @@
 {
   "_id": "6a9f8201838c205ecadc5dc4",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.in-world",
+    "loc.website",
+    "worlds.content-gating"
   ],
-  "aiTaggedAt": "2026-09-10T16:48:00.670321Z",
+  "aiTaggedAt": "2026-09-10T17:55:48.894293Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df1f0a67455d44a15a629a",
@@ -27,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 58,
+  "commentCount": 59,
   "commentingDisabled": false,
   "comments": [
     {
@@ -658,7 +660,9 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -702,7 +706,9 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -758,13 +764,71 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "@{5f2d1b08e078064277f0d3d9|full_name} Exactly why it's such a failure that VRChat never addressed this a long time ago. Every day that goes by without them doing something is a problem.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa2ec1b4baa2d2ebf4e9a74",
+      "aiGenerated": false,
+      "author": {
+        "_id": "646188f7110187092ed13bab",
+        "alias": "Verdigris green Limpet",
+        "aliasID": "67d637068bda4d8ce96d8791",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/62ae32ddc18914a1721e5497596afd0e.png",
+        "created": "2023-05-15T01:20:55.426Z",
+        "name": "-V I A-",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-10T17:42:51.018Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "645eeda6e453720915a7dc84",
+          "alias": "Dandelion Seahorse",
+          "aliasID": "6aa2359b250b281ba80b6114",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2023-05-13T01:53:42.301Z",
+          "name": "Treekicker",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa1abab3dad8ec837ddb420",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9f8201838c205ecadc5dc4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{645eeda6e453720915a7dc84|full_name} Rude... You straight up called my content slop. oh well. Your opinion doesnt matter to me :)",
       "viewerReactions": null,
       "voteID": null
     }
