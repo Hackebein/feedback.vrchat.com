@@ -1,11 +1,11 @@
 {
-  "_id": "6aa25d5e946c9151c6a5249a",
+  "_id": "6aa25f85c0babd9a8c860b8b",
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "avatars.upload-performance"
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-09-10T07:36:58.267905Z",
+  "aiTaggedAt": "2026-09-10T07:50:22.733058Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66c43969582b43369ede4640",
@@ -33,57 +33,46 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-10T07:33:50.911Z",
+  "created": "2026-09-10T07:43:01.793Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nWhen I try to switch to one of my avatars(favorited or uploaded), I would get the titled notification a few times before the game would allow me to switch.\n\nReproduction Steps\n\nOnly thing I did was switch avatars after logging in. Usually it would let me switch after 1 or 2 tries.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3-1912-2cf53b8d24-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-10_01-57-47.txt](https://api.vrchat.cloud/api/1/file/file_170b4ab0-9008-42e0-8bbd-4246d089053c/1/file)",
+  "details": "Description\n\nWhen I tried searching up a world, I noticed that the desktop keyboard opens up instead of the VR one.\n\nReproduction Steps\n\nOpening anything that requires text seems to be the only thing that opens up the PC keyboard. Other than switching back to public build, I don’t see any workarounds.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3-1912-2cf53b8d24-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-10_01-57-47.txt](https://api.vrchat.cloud/api/1/file/file_d7f1f63c-bcd2-4a21-80da-166481c4e547/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aa25d5e946c9151c6a52481",
+  "ideaID": "6aa25f85c0babd9a8c860b8a",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-10T07:33:50.911Z",
+  "statusChanged": "2026-09-10T07:43:01.793Z",
   "subCategoryID": null,
-  "title": "\"This user has cloning turned off\" when switching avis",
-  "trendingScore": 2959.1438370504297,
+  "title": "Desktop Keyboard in PCVR",
+  "trendingScore": 2958.7390825244756,
   "updatedBy": null,
-  "urlName": "this-user-has-cloning-turned-off-when-switching-avis",
+  "urlName": "desktop-keyboard-in-pcvr",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aa25eca250b281ba80c2187"
-    },
     {
       "_id": "66c43969582b43369ede4640",
       "alias": "Olive drab Camel",
@@ -93,7 +82,7 @@
       "companies": [],
       "name": "BIGBushido",
       "urlName": null,
-      "voteID": "6aa25d5f250b281ba80c1bb5"
+      "voteID": "6aa25f85250b281ba80c248c"
     }
   ]
 }
