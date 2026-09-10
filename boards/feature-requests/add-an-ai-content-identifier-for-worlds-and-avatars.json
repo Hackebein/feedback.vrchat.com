@@ -534,7 +534,9 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 0
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -590,7 +592,9 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -728,20 +732,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 318,
+  "maxScore": 320,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9f8201838c205ecadc5dc4/737155304.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 318,
+  "score": 320,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-08T03:33:21.996Z",
   "subCategoryID": null,
   "title": "Add an AI content identifier for worlds and avatars",
-  "trendingScore": 2963.6080596316124,
+  "trendingScore": 2963.615851961531,
   "updatedBy": null,
   "urlName": "add-an-ai-content-identifier-for-worlds-and-avatars",
   "viewerIsAuthor": false,
@@ -754,6 +758,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5f4656057cf5eb03a8ccd240",
+      "alias": "Nougat Platypus",
+      "aliasID": "65c2c107ed6eefce4c7e0621",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0c9e550fe99f6913ac636972034432f5.png",
+      "companies": [],
+      "name": "Susinopo",
+      "urlName": null,
+      "voteID": "6aa28ac5250b281ba80ced61"
+    },
+    {
+      "_id": "655cff29c42180388ae8d862",
+      "alias": "Obvious Lark",
+      "aliasID": "66be221f3e088c8d6b25ca36",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0b611131e1748757a138559a267e7f6f.png",
+      "companies": [],
+      "name": "花咲ももか",
+      "urlName": null,
+      "voteID": "6aa28a8d250b281ba80cec03"
+    },
     {
       "_id": "64888bce7cf7f509925263af",
       "alias": "Corporate Pinniped",
