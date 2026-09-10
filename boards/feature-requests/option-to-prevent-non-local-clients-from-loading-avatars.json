@@ -2,10 +2,9 @@
   "_id": "6aa31e938f7cda92720765d6",
   "aiCategories": [
     "loc.in-world",
-    "avatars.impostors",
-    "avatars.upload-performance"
+    "avatars.impostors"
   ],
-  "aiTaggedAt": "2026-09-10T21:55:51.506158Z",
+  "aiTaggedAt": "2026-09-10T22:32:59.115539Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62defff0409a3144a97638a9",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -66,13 +65,71 @@
       "postDeleted": false,
       "postID": "6aa31e938f7cda92720765d6",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "sounds like an interesting idea and I can see a bunch of people using this in public worlds or large gatherings. Maybe the avatar that loads in place could be the avatar's imposter?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa32f2d92958d29c7c75218",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62defff0409a3144a97638a9",
+        "alias": "Mechanical Lobster",
+        "aliasID": "67a28256afacf378f173fbf2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/14d2b697b9763cb846ae05821aa523f1.png",
+        "created": "2022-07-25T20:41:20.423Z",
+        "name": "Vox Maris",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-10T22:29:01.220Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5cb0e62414ddd360bbe1ac29",
+          "alias": "Elaborate Swordtail",
+          "aliasID": "65c26ed9ed6eefce4c854ff1",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/76d584a58bbb6a2eca29ddfc76815d46.png",
+          "created": "2019-04-12T19:25:24.024Z",
+          "name": "Jasper Raine",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa325e4864e773232339a7d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa31e938f7cda92720765d6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5cb0e62414ddd360bbe1ac29|full_name}\n\nIt could be the impostor, fallback, or it could straight up be the default robot.",
       "viewerReactions": null,
       "voteID": null
     }
