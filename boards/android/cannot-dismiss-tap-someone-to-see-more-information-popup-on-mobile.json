@@ -1,0 +1,95 @@
+{
+  "_id": "6aa293302fbbb7edd5264342",
+  "aiCategories": [
+    "loc.mobile-app",
+    "platforms.mobile.android"
+  ],
+  "aiTaggedAt": "2026-09-10T11:27:13.628873Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/ca02c97d6f181bac9561b89db97e481c.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "6466ab9cd0071b0936f27dcd",
+    "name": "Android",
+    "urlName": "android"
+  },
+  "boardID": "6466ab9cd0071b0936f27dcd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "649b325d67df6d7addaccd2f",
+    "created": "2023-06-27T19:02:53.242Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "649b325d67df6d7addaccd2f",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-10T11:23:28.611Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "A few seconds after joining a world with other players, a large message appears at the top of the screen : \"Tap someone to see more information and options. Give it a try!\". It is impossible to dismiss this overlay. Tapping on users opens their profile but has no effect on the popup. Changing worlds or rejoining will kill the popup temporarily, but it will come back after a few seconds. Extremely annoying and greatly affects usability, as it draws over everything and takes up a large portion of the top of the screen, likely to burn into oleds. \n\nPerhaps in the future when designing tutorial popups, add some kind of failsafe, like an X to dismiss them, in the event the intended logic fails like this.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa293302fbbb7edd5264341",
+  "imageURLs": [
+    "https://canny-assets.io/images/29b056a5a5574c69655812bfa2509de2.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-10T11:23:28.611Z",
+  "subCategoryID": null,
+  "title": "Cannot dismiss \"Tap someone to see more information\" popup on mobile",
+  "trendingScore": 2958.76095228886,
+  "updatedBy": "5f30ecee654cd4491456a82f",
+  "urlName": "cannot-dismiss-tap-someone-to-see-more-information-popup-on-mobile",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ca02c97d6f181bac9561b89db97e481c.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": null,
+      "voteID": "6aa29330250b281ba80d1d38"
+    }
+  ]
+}
