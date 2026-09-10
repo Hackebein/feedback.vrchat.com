@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.desktop",
-    "avatars.expressions"
+    "client.third-person"
   ],
-  "aiTaggedAt": "2026-08-24T16:59:11.041903Z",
+  "aiTaggedAt": "2026-09-10T22:57:03.713532Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "65cd41674fa0572e82e7e144",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +73,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Interpolation or not aside, I think what you actually want to ask for is an increased update rate for desktop users. For VR users the body data is updated at 10hz, and for desktop it's something less often. It might be 4hz, like four cycles per second, or '4 fps' but I can see the last term setting off some scientists \n\nRelated: https://feedback.vrchat.com/feature-requests/p/1601-increase-ik-refresh-rate-for-desktop-users-when-using-selfie-expression\n\nYeah looks like 4hz",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa332b025268c41fbd427a8",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65cd41674fa0572e82e7e144",
+        "alias": "Noble Swift",
+        "aliasID": "6a8a3a7b523ad161339f6887",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/35089a37baf21bf58b4aeaae7b7a3708.png",
+        "created": "2024-02-14T22:40:39.323Z",
+        "name": "thejohnnyflash",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-10T22:44:00.345Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac759f619ab812afad57d8a884858906.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8c73c47a7bf53fb1b1e270",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8a3a893df000df3dd39a8b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name} Yes, thank you for clarifying my issue. Didn't really know what to call it so I just assumed it was interpolation. Looks like there's others who have had a similar critique but from the date posted, it seems like VRChat hasn't looked into it.",
       "viewerReactions": null,
       "voteID": null
     }
