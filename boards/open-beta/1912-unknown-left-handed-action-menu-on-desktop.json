@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "loc.action-menu",
-    "open-beta",
+    "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-10T06:22:22.140318Z",
+  "aiTaggedAt": "2026-09-10T06:42:07.691554Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60ee9e81572cc51ad4e847e6",
@@ -44,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Launch the client and *do not do anything*, keep the window focused.\n\n2. Wait until loaded into an instance.\n\n3. Hold Tab and click the Action Menu button in the corner.\n\n4. Notice a left handed action menu appears.\n\nClicking in this menu does not do anything, the user can freely move around and even open the right handed action menu which is functional. Once closing the left handed action menu via Esc, it seems like the left handed action menu cannot be re-opened in the session.",
+  "details": "1. Launch the client and *do not do anything*, keep the window focused.\n\n2. Wait until loaded into an instance.\n\n3. Hold Tab and click the Action Menu button in the corner.\n\n4. Notice a left handed action menu appears.\n\nClicking in this menu does not do anything, the user can freely move around and even open the right handed action menu which is functional. Clicking or doing minute things will prevent the ability to spawn this menu in the session.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -56,20 +56,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa24beddd7529f10598024a/1650833243.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-10T06:19:25.841Z",
   "subCategoryID": null,
   "title": "[1912] Unknown Left Handed Action Menu on Desktop",
-  "trendingScore": 2959.136325931985,
+  "trendingScore": 2959.4241375776132,
   "updatedBy": "60ee9e81572cc51ad4e847e6",
   "urlName": "1912-unknown-left-handed-action-menu-on-desktop",
   "viewerIsAuthor": false,
@@ -82,6 +82,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6aa24d52250b281ba80be7e2"
+    },
     {
       "_id": "622893dc14e3795af3d9ed30",
       "alias": "Aquamarine Gayal",
