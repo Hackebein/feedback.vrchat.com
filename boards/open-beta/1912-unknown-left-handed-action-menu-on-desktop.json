@@ -1,0 +1,108 @@
+{
+  "_id": "6aa24beddd7529f10598024a",
+  "aiCategories": [
+    "loc.pc-client",
+    "loc.action-menu",
+    "open-beta",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-09-10T06:22:22.140318Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60ee9e81572cc51ad4e847e6",
+    "alias": "Vervain Falcon",
+    "aliasID": "65c291bded6eefce4cf7d1c9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f676d69583af8c2cddd6f37125d14763.png",
+    "created": "2021-07-14T08:21:21.138Z",
+    "name": "BobyStar",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60ee9e81572cc51ad4e847e6",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-10T06:19:25.841Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Launch the client and *do not do anything*, keep the window focused.\n\n2. Wait until loaded into an instance.\n\n3. Hold Tab and click the Action Menu button in the corner.\n\n4. Notice a left handed action menu appears.\n\nClicking in this menu does not do anything, the user can freely move around and even open the right handed action menu which is functional. Once closing the left handed action menu via Esc, it seems like the left handed action menu cannot be re-opened in the session.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa24beddd7529f105980249",
+  "imageURLs": [
+    "https://canny-assets.io/images/829d7d64834c97b2220605b6e12845bc.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa24beddd7529f10598024a/1650833243.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-10T06:19:25.841Z",
+  "subCategoryID": null,
+  "title": "[1912] Unknown Left Handed Action Menu on Desktop",
+  "trendingScore": 2959.136325931985,
+  "updatedBy": "60ee9e81572cc51ad4e847e6",
+  "urlName": "1912-unknown-left-handed-action-menu-on-desktop",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "622893dc14e3795af3d9ed30",
+      "alias": "Aquamarine Gayal",
+      "aliasID": "65c2ce8bed6eefce4c1e378a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/43ef1b8eb612ec9444f5cc0bcf1d5b0f.png",
+      "companies": [],
+      "name": "TheCreationKing",
+      "urlName": null,
+      "voteID": "6aa24c70250b281ba80be6bb"
+    },
+    {
+      "_id": "60ee9e81572cc51ad4e847e6",
+      "alias": "Vervain Falcon",
+      "aliasID": "65c291bded6eefce4cf7d1c9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f676d69583af8c2cddd6f37125d14763.png",
+      "companies": [],
+      "name": "BobyStar",
+      "urlName": null,
+      "voteID": "6aa24bed250b281ba80be59d"
+    }
+  ]
+}
