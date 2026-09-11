@@ -249,7 +249,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 11
+        "like": 12
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -491,7 +491,7 @@
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -854,7 +854,9 @@
       "postDeleted": false,
       "postID": "6a47f7ad48ab8093bddc0501",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -882,20 +884,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 670,
+  "maxScore": 671,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a47f7ad48ab8093bddc0501/682972098.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 670,
+  "score": 671,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-07-03T17:55:57.677Z",
   "subCategoryID": null,
   "title": "Add \"Contains Generative AI Content\" tag to the Content Gating system",
-  "trendingScore": 2962.0996807462643,
+  "trendingScore": 2962.119262099207,
   "updatedBy": null,
   "urlName": "add-contains-generative-ai-content-tag-to-the-content-gating-system",
   "viewerIsAuthor": false,
@@ -908,6 +910,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62df01296509e344b6fd0ebc",
+      "alias": "Vermilion Whitefish",
+      "aliasID": "69936bdda321fcd2a3489757",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8c9a2dcdec1721139556e6a246230c61.png",
+      "companies": [],
+      "name": "RidiculonSkull",
+      "urlName": null,
+      "voteID": "6aa39388250b281ba8141fcc"
+    },
     {
       "_id": "6903dae91f833c417ce8c92a",
       "alias": "Hibiscus Jellyfish",
