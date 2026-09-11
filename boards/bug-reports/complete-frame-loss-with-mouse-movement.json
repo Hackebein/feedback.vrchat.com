@@ -5,7 +5,7 @@
     "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-07-29T16:13:20.787395Z",
+  "aiTaggedAt": "2026-09-11T16:48:27.221986Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69704b2d6cefe3c23833ad8f",
@@ -29,69 +29,9 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 19,
+  "commentCount": 20,
   "commentingDisabled": false,
   "comments": [
-    {
-      "_id": "69862369ed8bcf56d3fa0127",
-      "aiGenerated": false,
-      "author": {
-        "_id": "608853cd6fc5fc4e64a93334",
-        "alias": "Domestic Silverfish",
-        "aliasID": "65c26e02ed6eefce4c5d9a20",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/05d1519bbddde960feee683e216a96ed.png",
-        "created": "2021-04-27T18:11:25.991Z",
-        "name": "Ronsterwars",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-02-06T17:22:49.958Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [
-        "https://canny-assets.io/files/2e1258ee57948f93cb08124e6f527a2f.mp4",
-        "https://canny-assets.io/files/83dc7d0056c97d9933bcbc0e41172222.txt"
-      ],
-      "files": [
-        {
-          "mimeType": "video/mp4",
-          "name": "Showcase Video",
-          "url": "https://canny-assets.io/files/2e1258ee57948f93cb08124e6f527a2f.mp4"
-        },
-        {
-          "mimeType": "text/plain",
-          "name": "output_log_2026-02-06_17-49-20",
-          "url": "https://canny-assets.io/files/83dc7d0056c97d9933bcbc0e41172222.txt"
-        }
-      ],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "69704c637a44b790cb268658",
-      "private": false,
-      "reactions": {
-        "like": 1
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "I can easily recreate this is issue by switching to another program and back to VRChat 20 times.\n\nEvery time VRChat is selected as the active application the performance gets slightly worse.\n\nI attached a video showing it.\n\nBut this issue does not happen on every PC.\n\nA friend has this issue too but only on his main PC. His other PCs are not affected by this issue.\n\nWe couldn't narrow down to what hardware or even software in combination with VRChat is causing this.\n\nHere are my PCs specs:\n\nWin 11 Version 24H2\n\nRyzen 9800X3D\n\nNvidia 5090 with driver version 581.57\n\n1440p 120Hz Monitor\n\nHere is also the log file from the session from the video.",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "698d0e046782611bfe2bc575",
       "aiGenerated": false,
@@ -495,6 +435,51 @@
       "value": "The issue doesn't seem to appear after the interface update in open beta. What would usually take just half an hour switching back and forth, and framedrops would be abysmal - now I'm sitting at 440 minutes, only single hitch while opening the menu is happening. Moving mouse would not bring it to 1fps minimum.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aa42fb41be1f61bee618859",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62b61f8ec938a62475e4cd14",
+        "alias": "Zircon Canidae",
+        "aliasID": "65c26e06ed6eefce4c5e475a",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-06-24T20:33:18.686Z",
+        "name": "_tau_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T16:43:32.817Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69704c637a44b790cb268658",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6aa42fb41be1f61bee618858",
+      "statusChangeNewStatus": "available in future release",
+      "value": "This should be addressed once we switch to our final build of Unity 6. I'm closing this now because there isn't anything else that is actionable in this report until then. Thanks for your patience!",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -520,8 +505,8 @@
   "pinnedComment": null,
   "score": 12,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-02-06T16:28:21.493Z",
+  "status": "available in future release",
+  "statusChanged": "2026-09-11T16:43:32.791Z",
   "subCategoryID": null,
   "title": "Complete frame loss with mouse movement.",
   "trendingScore": 2951.1914848291726,

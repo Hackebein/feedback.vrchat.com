@@ -125,7 +125,9 @@
       "postDeleted": false,
       "postID": "6aa25a9da026cebd78245c69",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -170,7 +172,7 @@
       "postID": "6aa25a9da026cebd78245c69",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -215,7 +217,9 @@
       "postDeleted": false,
       "postID": "6aa25a9da026cebd78245c69",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -241,20 +245,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 32,
+  "maxScore": 33,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa25a9da026cebd78245c69/2041937828.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 32,
+  "score": 33,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-10T07:22:05.721Z",
   "subCategoryID": null,
   "title": "[1912] Separate keyboard and input field is annoying.",
-  "trendingScore": 2961.6498553398555,
+  "trendingScore": 2961.6824367916647,
   "updatedBy": null,
   "urlName": "1912-separate-keyboard-and-input-field-is-annoying",
   "viewerIsAuthor": false,
@@ -267,6 +271,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "65564de989aa2b9e7ba85d17",
+      "alias": "Integral Wolf",
+      "aliasID": "65cecee20129d7ae44daee58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c8996f05f64a3a0666116901fe0ee68b.png",
+      "companies": [],
+      "name": "Ner0kun",
+      "urlName": null,
+      "voteID": "6aa42f25b4e14901d07f535f"
+    },
     {
       "_id": "5be30e967f5f1e3396732b2f",
       "alias": "Arctic lime Zebra",
