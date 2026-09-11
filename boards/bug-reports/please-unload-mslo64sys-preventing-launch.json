@@ -1,0 +1,90 @@
+{
+  "_id": "6aa3645c54d4526966b95e60",
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-09-11T02:18:33.852933Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6aa36355250b281ba8133a09",
+    "alias": "Specified Raven",
+    "aliasID": "6aa36355250b281ba8133a0d",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2026-09-11T02:11:33.698Z",
+    "name": "Jackson_Boof",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6aa36355250b281ba8133a09",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-11T02:15:56.049Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Began receiving this error today. Work around found with going to System32 drivers folder and renaming/removing Mslo64.sys (renamed to Mslo64.sys.old).\n\nSearches are showing that this file is associated with certain RGB lighting software. This appears to be a false flag by EAC.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa3645b54d4526966b95e5f",
+  "imageURLs": [
+    "https://canny-assets.io/images/888b5e28faee3f35bd3f6b109f416654.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-11T02:15:56.049Z",
+  "subCategoryID": null,
+  "title": "Please unload Mslo64.sys preventing launch",
+  "trendingScore": 2958.849489835157,
+  "updatedBy": null,
+  "urlName": "please-unload-mslo64sys-preventing-launch",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6aa36355250b281ba8133a09",
+      "alias": "Specified Raven",
+      "aliasID": "6aa36355250b281ba8133a0d",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Jackson_Boof",
+      "urlName": null,
+      "voteID": "6aa3645c250b281ba8133f16"
+    }
+  ]
+}
