@@ -1,11 +1,12 @@
 {
   "_id": "6aa3f37637919cd166e68159",
   "aiCategories": [
-    "loc.in-world",
+    "loc.pc-client",
+    "open-beta",
     "client.chatbox",
-    "open-beta"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-09-11T12:30:20.779827Z",
+  "aiTaggedAt": "2026-09-11T12:37:09.548489Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61a9b6eceb3f05239323dbc5",
@@ -43,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The VR keyboard is perfectly fine as it is in the base game; stop changing things that are not broken. I currently can not type with this keyboard while lying down, and overall it is extremely clunky and hard to type on properly, especially while using the chatbox!\n\nThe old keyboard works completely fine; do not change it.",
+  "details": "The VR keyboard is perfectly fine as it is in the base game; stop changing things that are not broken. I currently can not type with this keyboard while lying down, and overall it is extremely clunky and hard to type on properly, especially while using the chatbox!\n\nThe new keyboard is worse than the old keyboard layout; it's the old keyboard layout but requires extra steps for typing numbers, symbols, and letters.\n\nThe old keyboard works completely fine; do not change it.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -53,32 +54,43 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-11T12:26:30.380Z",
   "subCategoryID": null,
   "title": "Revert keyboard changes in the beta, please for the love of god. Do NOT change it!",
-  "trendingScore": 2958.910062364092,
+  "trendingScore": 2959.31572019231,
   "updatedBy": "61a9b6eceb3f05239323dbc5",
   "urlName": "revert-keyboard-changes-in-the-beta-please-for-the-love-of-god-do-not-change-it",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6aa3f4d3b4e14901d07da862"
+    },
     {
       "_id": "61a9b6eceb3f05239323dbc5",
       "alias": "Lime Newt",
