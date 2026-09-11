@@ -10,7 +10,7 @@ Scrape horizon: **2026-08-23 01:05 UTC (19d ago)**.
 |-------|------:|
 | `age-verification` | 210 / 210 (100.0%) |
 | `android` | 350 / 350 (100.0%) |
-| `avatar-30` | 878 / 878 (100.0%) |
+| `avatar-30` | 878 / 879 (99.9%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 82 / 82 (100.0%) |
 | `bug-reports` | 11,964 / 11,963 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-08-23 01:05 UTC (19d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 129 / 129 (100.0%) |
 | `website` | 856 / 856 (100.0%) |
-| **Total** | **37,065** / **36,886** (100.0%) |
+| **Total** | **37,065** / **36,887** (99.997%) |
 
 ## OpenSearch
 
