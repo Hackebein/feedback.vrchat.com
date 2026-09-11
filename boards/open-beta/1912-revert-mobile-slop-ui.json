@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.hud",
     "loc.pc-client",
-    "platforms.pc.steam"
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-11T04:04:20.741178Z",
+  "aiTaggedAt": "2026-09-11T09:29:01.641752Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ee130bc2060245739f33976",
@@ -110,10 +110,10 @@
   "status": "open",
   "statusChanged": "2026-09-10T05:31:58.802Z",
   "subCategoryID": null,
-  "title": "[1912] Mobile slop UI",
-  "trendingScore": 2959.6607289767835,
-  "updatedBy": null,
-  "urlName": "1912-mobile-slop-ui",
+  "title": "[1912] Revert mobile slop UI",
+  "trendingScore": 2959.869120145766,
+  "updatedBy": "5ee130bc2060245739f33976",
+  "urlName": "1912-revert-mobile-slop-ui",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
@@ -124,6 +124,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62df0029a3b0fa44be0b518a",
+      "alias": "Bronze Sheep",
+      "aliasID": "65d8e8480129d7ae445f1deb",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0642f6e6a8e1984f59f07030768a4cec.png",
+      "companies": [],
+      "name": "Livvydoodlez",
+      "urlName": null,
+      "voteID": "6aa3c7b5250b281ba8152a51"
+    },
     {
       "_id": "5f2e069f8fc2c972dd4a0430",
       "alias": "Electrical Swallow",
@@ -156,17 +167,6 @@
       "name": "HackebeinsBot",
       "urlName": null,
       "voteID": "6aa241f4250b281ba80b88f3"
-    },
-    {
-      "_id": "5ee130bc2060245739f33976",
-      "alias": "Aegean Jellyfish",
-      "aliasID": "65fdc1b5a63714bcb338528f",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8652975922abb87aecc1d9dc7e047f3a.png",
-      "companies": [],
-      "name": "Soggy_Pancake",
-      "urlName": null,
-      "voteID": "6aa240ce250b281ba80b8787"
     }
   ]
 }
