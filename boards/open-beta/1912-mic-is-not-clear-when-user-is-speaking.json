@@ -2,9 +2,11 @@
   "_id": "6aa275c69dcd17f166e46ded",
   "aiCategories": [
     "loc.pc-client",
+    "platforms.pc.desktop",
+    "client.settings",
     "audio.voice"
   ],
-  "aiTaggedAt": "2026-09-11T07:29:17.707789Z",
+  "aiTaggedAt": "2026-09-11T19:32:51.905428Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6206cb61f1cf0c7aeee7d576",
@@ -34,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -72,7 +74,7 @@
       "postID": "6aa275c69dcd17f166e46ded",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -182,6 +184,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "маму таппера ебал чё за изменения",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa455fd4a73dd5fb1ce9beb",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66c7c9d10509f4082987bbce",
+        "alias": "Broad Haddock",
+        "aliasID": "66c7c9d13e088c8d6b68b1a6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5cafc86aa8ce48fb9c47b34c139c423c.png",
+        "created": "2024-08-22T23:29:21.181Z",
+        "name": "Kodfod",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T19:26:53.891Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df3a55f6fa434679f836fa",
+          "alias": "Patient Marlin",
+          "aliasID": "65c279afed6eefce4c4712f2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+          "created": "2022-07-26T00:50:29.183Z",
+          "name": "｜KitKat｜",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa28b840fe8cb3cebfcc582",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa275c69dcd17f166e46ded",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df3a55f6fa434679f836fa|full_name}All these UI changes have forsaken colorblind people. Such a sad state; even after asking them to keep it in mind and they agreed to.",
       "viewerReactions": null,
       "voteID": null
     }
