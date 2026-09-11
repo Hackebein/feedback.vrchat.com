@@ -3,11 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "loc.loading-screen",
-    "open-beta",
     "platforms.pc.steam",
-    "client.settings"
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-11T18:08:31.709466Z",
+  "aiTaggedAt": "2026-09-11T18:20:31.621470Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "692adfdb4927a96e58e1ec53",
@@ -37,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 38,
+  "commentCount": 40,
   "commentingDisabled": false,
   "comments": [
     {
@@ -491,7 +490,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "did a lot more digging today and launched vrc hundreds of time and narrowed the issues, and concluded its not a VRCX issue but a feature that VRCX uses. let me explain\n\nit seems to be when vrchat is getting launched alongside others steam app at the same time so for me, using the auto launch feature in VRCX launch multiples other apps along vrchat at the same time. This will make vrc hang at the first world loading screen. \n\nI tried leaving the auto launch feature of VRCX on and removed all the different app from the auto launch folder and VRchat then launch fine every single time.\n\nAs soon as i add the multiple app back into the vrcx launch folder, it hangs again. In my case i was trying to run vrcvideocacher, vrcfacetracking and babbalonia.\n\nThen if all the app are removed from the auto launch folder of VRCX and I instead manually launch these app quickly while vrchat is getting launched at the same time then the same issue happen again. \n\nSo the issue seems to be when multiple apps get started/launched at the same time as VRC in VR mode that is causing the issue.\n\nif you individually run these applications before you launch VRC (for example if you make all your apps launch with SteamVR first) then launch VRchat by itself afterward, then the issue does not happen.\n\nYes is seems to be a bug from the new SteamVR since using the \"Previous\" branch of SteamVR fix all those issues stated above, but since the Beta branch AND stable release branch version of SteamVR are the same version now, these both have the issue.",
+      "value": "Did a whole lot more digging today and launched vrc hundreds of time and narrowed the issues, and concluded its not a VRCX issue but a feature that VRCX uses. let me explain below.\n\nif you are using the new SteamVR 2.17.4 version the issue happen when vrchat is getting launched in VR mode alongside others steam apps getting launched at the same time.\n\nthis is why for me, using the auto launch feature in VRCX makes me have issues because it launches multiples other apps along vrchat at the same time. This will make vrchat hang in the world loading screen. \n\nI tried leaving the auto launch feature of VRCX on and removed all the different apps from the auto launch folder and VRchat then launch just fine every single time.\n\nAs soon as i add the multiples apps back into the vrcx launch folder, it hangs again. In my case i was trying to run these: vrcvideocacher, vrcfacetracking and babbalonia. (others app getting launched alongside VRC may cause the same issue as well)\n\nThen if all the apps are removed from the auto launch folder of VRCX and I instead manually launch these apps quickly from steam while vrchat is in the process of getting launched at the same time then the same issue happen.\n\nSo the issue seems to be when one or multiple others steam apps get started/launched at the same time as VRC in VR mode that is causing the issue.\n\nif you individually run and start these applications before you launch VRC (for example if you make these apps launch with SteamVR first) then launch VRchat by itself afterward, then the issue does not happen.\n\nYes is seems to be a bug from the new SteamVR since using the \"Previous\" branch of SteamVR fix all those issues stated above, but since the Beta branch AND stable release branch version of SteamVR are the same version now, these both have the issue.",
       "viewerReactions": null,
       "voteID": null
     },
@@ -604,6 +603,118 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{68ca0aad004e8728233a3f45|full_name} check my latest reply in this thread im pretty sure i narrowed down the problem",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa4443318de744407a32718",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65aaaf02eb6f7428be4aaeda",
+        "alias": "Practical Hedgehog",
+        "aliasID": "65cfcaae0129d7ae44332aa1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/98ac846c694041bdf22b4adc93669eac.png",
+        "created": "2024-01-19T17:18:58.366Z",
+        "name": "dorpomi",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T18:10:59.396Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62def3737ff46044b6a435f7",
+          "alias": "Periwinkle Carp",
+          "aliasID": "668c68086b10505b943b84e7",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-07-25T19:48:03.858Z",
+          "name": "KaaneWolf",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa43f7338a9cb3f645f925b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a46bac3bf5eb991cbfb75aa",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62def3737ff46044b6a435f7|full_name} IMO it doesn't make much sense, because no matter how you look at it, it's __VRC__ that's refuses to start, not any other app. So the bug may be caused by external tools, but the issue is still within VRC. If not, I'll be very curious to hear how an external tool can interrupt VRC's startup and not considered a bug",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa44623ee5a4e2ce471d1a8",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65aaaf02eb6f7428be4aaeda",
+        "alias": "Practical Hedgehog",
+        "aliasID": "65cfcaae0129d7ae44332aa1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/98ac846c694041bdf22b4adc93669eac.png",
+        "created": "2024-01-19T17:18:58.366Z",
+        "name": "dorpomi",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T18:19:15.096Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68ca0aad004e8728233a3f45",
+          "alias": "Verdigris Hare",
+          "aliasID": "68ca0aae004e8728233a643c",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ed6675955f5081745a78dc345b3f7e3f.png",
+          "created": "2025-09-17T01:11:09.661Z",
+          "name": "Flux_Knot",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa42f2e216c923cb18e2f13",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a46bac3bf5eb991cbfb75aa",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68ca0aad004e8728233a3f45|full_name} I made a report about this, pretty sure it's VRC being uncapped and just maxing out the frames for no reason, but it just got closed: https://feedback.vrchat.com/bug-reports/p/uncapped-100-gpu-usage-during-connecting-or-joining-screens",
       "viewerReactions": null,
       "voteID": null
     }
