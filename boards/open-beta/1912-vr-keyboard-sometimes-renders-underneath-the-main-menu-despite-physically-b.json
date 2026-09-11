@@ -1,12 +1,12 @@
 {
   "_id": "6aa4232a94edfd01a1a577cc",
   "aiCategories": [
+    "loc.in-world",
     "loc.main-menu",
-    "client.settings",
-    "platforms.pc.steam",
+    "client.chatbox",
     "open-beta"
   ],
-  "aiTaggedAt": "2026-09-11T17:49:06.554532Z",
+  "aiTaggedAt": "2026-09-11T23:14:43.488262Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63882dc1f272550ad4b6b553",
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -82,6 +82,62 @@
       "value": "Just as a technical comment, Unity is using the center of the objects to determine draw order, so good luck VRChat devs. 💭🙏",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aa48a019712777c883ef9c6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df3a55f6fa434679f836fa",
+        "alias": "Patient Marlin",
+        "aliasID": "65c279afed6eefce4c4712f2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+        "created": "2022-07-26T00:50:29.183Z",
+        "name": "｜KitKat｜",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T23:08:49.574Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac759f619ab812afad57d8a884858906.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa43cb7a3adaaa9a1fc4bb5",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa4232a94edfd01a1a577cc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name} Canvas draw order can be configured.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -107,20 +163,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 7,
+  "maxScore": 8,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa4232a94edfd01a1a577cc/971466652.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 7,
+  "score": 8,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-11T15:50:02.374Z",
   "subCategoryID": null,
   "title": "[1912] VR Keyboard sometimes renders underneath the Main Menu despite physically being above it",
-  "trendingScore": 2960.330924109115,
+  "trendingScore": 2960.451979400058,
   "updatedBy": null,
   "urlName": "1912-vr-keyboard-sometimes-renders-underneath-the-main-menu-despite-physically-b",
   "viewerIsAuthor": false,
@@ -133,6 +189,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": null,
+      "voteID": "6aa489cfb4e14901d0822af8"
+    },
     {
       "_id": "654bd3f7a07d99ca813e2bd7",
       "alias": "Relevant Shark",

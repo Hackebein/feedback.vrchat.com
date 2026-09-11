@@ -2,10 +2,9 @@
   "_id": "6a8690a3a98c83b223ff119b",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon",
-    "avatars.dynamics"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-09-11T17:52:28.764273Z",
+  "aiTaggedAt": "2026-09-11T23:14:43.490235Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63ec9430d19f4344f2992df7",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -145,7 +144,9 @@
       "postDeleted": false,
       "postID": "6a8690a3a98c83b223ff119b",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -190,13 +191,71 @@
       "postDeleted": false,
       "postID": "6a8690a3a98c83b223ff119b",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "The `Sources` list will change from a struct type to a class type, to address issues with modifications to data structures from Udon.\n\nA series of helper methods (`AddSource()`, `RemoveSource()`, etc.) will be added to mimic the interface Unity constraints use.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa4895956ecbdfc2a314aa6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df3a55f6fa434679f836fa",
+        "alias": "Patient Marlin",
+        "aliasID": "65c279afed6eefce4c4712f2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+        "created": "2022-07-26T00:50:29.183Z",
+        "name": "｜KitKat｜",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T23:06:01.249Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa43c8c740be5d8c6006056",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8690a3a98c83b223ff119b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name} Thank you so much!",
       "viewerReactions": null,
       "voteID": null
     }
