@@ -121,7 +121,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Since that new vrc update or steamvr update today (September 10th 2026) when launching vrc in steam vr mode (im using unity 6 beta if that change anything) i get hung at the world loading screen with a blackscreen when looking at the desktop view and in my headset view i get the loading world screen forever and it stays hung there forever, as soon as i launch vrc in desktop mode, its totally fine and work, then you get back in vr mode and you get the same issues again, noticed that clearing the cache fully (aka wipe all your vr setting and the such) fix the issue but as soon as you recustomize your stuff and close vrc and relauch it you are right back at the same problem again, did some diggin and found a quick and temporary workaround until the issue get fixed by vrc and its to add \"--clear-cache\" without the quotes to the vrchat launch options in steam and it works everytime, it only clear worlds and avatar cache so if you have a fast internet connection to redownload stuff quick it work as a temporary fix for now.\n\nvrchat please fix this asap.",
+      "value": "Since that new vrc update or steamvr update today (September 10th 2026) when launching vrc in steam vr mode (im using unity 6 beta if that change anything) i get hung at the world loading screen with a blackscreen when looking at the desktop view and in my headset view i get the loading world screen forever and it stays hung there forever, as soon as i launch vrc in desktop mode, its totally fine and work, then you get back in vr mode and you get the same issues again, noticed that clearing the cache fully (aka wipe all your vr setting and the such) fix the issue but as soon as you recustomize your stuff and close vrc and relauch it you are right back at the same problem again, did some diggin and found a quick and temporary workaround until the issue get fixed by vrc and its to add \"--clear-cache\" without the quotes to the vrchat launch options in steam and it works everytime, it only clear worlds and avatar cache so if you have a fast internet connection to redownload stuff quick it work as a temporary fix for now.\n\nvrchat please fix this asap.\n\nEDIT: the cache launch option doesnt work for me anymore apparently but the bug come from somewhere else, if you are running VRCX (the 3rd party application tool) closing it before launching VRC also fix the issues, as soon as vrchat run you can relaunch VRCX and its all good, i think VRCX need to update their app or something perhaps",
       "viewerReactions": null,
       "voteID": null
     }
@@ -141,20 +141,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 24,
+  "maxScore": 25,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa336ea5cf494ad528a8b0f/2079180269.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 24,
+  "score": 25,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-10T23:02:02.616Z",
   "subCategoryID": null,
   "title": "vrchat stuck on connecting since new steamvr update",
-  "trendingScore": 2961.36387397994,
+  "trendingScore": 2961.4038819510265,
   "updatedBy": null,
   "urlName": "vrchat-stuck-on-connecting-since-new-steamvr-update",
   "viewerIsAuthor": false,
@@ -167,6 +167,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62defb60335fab44af41b15f",
+      "alias": "Distant Woodpecker",
+      "aliasID": "6605d3afd90e505763ad1c5b",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Xarnak",
+      "urlName": null,
+      "voteID": "6aa37a33250b281ba813c1c3"
+    },
+    {
+      "_id": "6591c725910c4a117fd0eff5",
+      "alias": "Kobi Duck",
+      "aliasID": "65c36f8ded6eefce4c95a6e7",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Shaytheena",
+      "urlName": null,
+      "voteID": "6aa37972250b281ba813bcd8"
+    },
     {
       "_id": "6064d4f4d5492933751c5037",
       "alias": "Serenity blue Roadrunner",
