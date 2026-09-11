@@ -1,9 +1,11 @@
 {
   "_id": "695714b3f881462d05112045",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-08-27T16:52:19.917678Z",
+  "aiTaggedAt": "2026-09-11T04:42:26.884455Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "646b46f5e67dc809215ad295",
@@ -27,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -200,13 +202,71 @@
       "postDeleted": false,
       "postID": "695714b3f881462d05112045",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Setting aside whether it's technically possible, I'd like VRChat to support both SteamVR and OpenXR.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa315ca5c73b051a91a0dc5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "646b46f5e67dc809215ad295",
+        "alias": "Stable Dolphin",
+        "aliasID": "6957138af85d59c66d7fbbf5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/00658eb2a2421d4d861e8e3c55ac7b47.png",
+        "created": "2023-05-22T10:41:57.422Z",
+        "name": "Okatsumo",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-10T20:40:42.881Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "693521344927a96e5855656b",
+          "alias": "Acid green Cheetah",
+          "aliasID": "693521354927a96e58558773",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e47fc2e49c5eea18d6a62d05f055ec71.png",
+          "created": "2025-12-07T06:39:48.675Z",
+          "name": "Tsuikyu",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a8f886a6b6d20a473fc71e4",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "695714b3f881462d05112045",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{693521344927a96e5855656b|full_name} The funniest thing is that VRChat on the Meta Store for PC (formerly the Oculus Store) runs through Meta OpenXR. Yes, it's proprietary and incompatible with standard OpenXR, but the mere fact that it exists shows that adding OpenXR support isn't really a significant problem",
       "viewerReactions": null,
       "voteID": null
     }
