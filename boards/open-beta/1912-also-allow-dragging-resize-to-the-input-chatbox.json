@@ -1,0 +1,95 @@
+{
+  "_id": "6aa37f93b6007cd3f82f2a58",
+  "aiCategories": [
+    "loc.hud",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-09-11T04:14:18.028957Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66c7f83ba2fca0a622090327",
+    "alias": "Right Hoverfly",
+    "aliasID": "66c7f83b3e088c8d6b0e1c00",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+    "created": "2024-08-23T02:47:23.348Z",
+    "name": "Usemame",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66c7f83ba2fca0a622090327",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-11T04:12:03.356Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "There are two chatbox(one is keyboard) in the open beta, they blocked the 10%~25% of the view by default, even with the new feature to resize, it still meaning there are two UI elements on the view which will block the sight prettywell. The keyboard can be drag around, but the old input chatbox is still the original UI, which can't be move or resize.\n\nI'm suggesting upgrading the old chatbox to the design of the new UI(better have options in case people just like it pop on the predictable location), like you can choose to remember location, size, and draggable.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa37f92b6007cd3f82f2a51",
+  "imageURLs": [
+    "https://canny-assets.io/images/997acc4bdc13596fba63c9a3e78f3ff2.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-11T04:12:03.356Z",
+  "subCategoryID": null,
+  "title": "[1912] Also allow dragging/resize to the input chatbox",
+  "trendingScore": 2958.8610096615457,
+  "updatedBy": null,
+  "urlName": "1912-also-allow-dragging-resize-to-the-input-chatbox",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6aa37f93250b281ba813d39c"
+    }
+  ]
+}
