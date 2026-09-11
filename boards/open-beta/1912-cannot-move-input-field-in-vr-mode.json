@@ -2,10 +2,10 @@
   "_id": "6aa33932e18f4e0eac2268cb",
   "aiCategories": [
     "loc.pc-client",
-    "client.controls",
-    "platforms.pc.steam"
+    "platforms.pc.steam",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-09-11T14:38:26.496562Z",
+  "aiTaggedAt": "2026-09-11T19:26:12.798956Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6227d8b67918945ea3c934b1",
@@ -35,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -170,6 +170,73 @@
       "statusChangeID": "6aa411c1eae719f1cae6928a",
       "statusChangeNewStatus": "closed",
       "value": "This was an intentional design, if you feel strongly, I would encourage you to make a feature request/feedback post.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa4548174eae5d0c2dbb9a7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "60ee9e81572cc51ad4e847e6",
+        "alias": "Vervain Falcon",
+        "aliasID": "65c291bded6eefce4cf7d1c9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f676d69583af8c2cddd6f37125d14763.png",
+        "created": "2021-07-14T08:21:21.138Z",
+        "name": "BobyStar",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T19:20:33.739Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6227d8b67918945ea3c934b1",
+          "alias": "Mammoth Jay",
+          "aliasID": "65ce55570129d7ae44c39a2e",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/0564cebf816aadbc5b79619c9ee9b7db.png",
+          "created": "2022-03-08T22:29:10.070Z",
+          "name": "aoiyu_",
+          "serviceAccount": false,
+          "urlName": null
+        },
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa411c1eae719f1cae6928b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa33932e18f4e0eac2268cb",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} @{6227d8b67918945ea3c934b1|full_name} Made into feature request: https://feedback.vrchat.com/open-beta/p/1912-attach-or-move-input-field-with-keyboard",
       "viewerReactions": null,
       "voteID": null
     }
