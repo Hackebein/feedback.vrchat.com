@@ -1,0 +1,97 @@
+{
+  "_id": "6aa3bd2231904cb136ff8e81",
+  "aiCategories": [
+    "loc.pc-client",
+    "loc.hud",
+    "open-beta",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-09-11T08:38:26.192088Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a4b9013f51f79a5dbe6f872",
+    "alias": "Surprising Gibbon",
+    "aliasID": "6a4b9014f51f79a5dbe6f875",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b2c1d8851972009941c10101247a4b89.png",
+    "created": "2026-07-06T11:22:59.667Z",
+    "name": "Shinу",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6a4b9013f51f79a5dbe6f872",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-11T08:34:42.260Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "With the new Chatbox/Desktop HUD UI update, we have the same issue we had before with the radial menus. Before this continues happening again, please do it correctly from the beginning and use the appropriate user-defined theme color instead of hardcoded green icons.\n\nPlease don't break existing functionality. Unity already allows these colors to be changed easily, just like with the radial menu.\n\nFor the sake of consistent design, please color the icons using the color set in the user's settings and do not force or hardcode any specific colors.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa3bd2131904cb136ff8e5c",
+  "imageURLs": [
+    "https://canny-assets.io/images/3376fa8522a5da90bdfd630621d6942e.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa3bd2231904cb136ff8e81/1780589910.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-11T08:34:42.260Z",
+  "subCategoryID": null,
+  "title": "[1916] New UI elements aren't using the theme colors, which breaks the consistent design.",
+  "trendingScore": 2958.887066077716,
+  "updatedBy": null,
+  "urlName": "1916-new-ui-elements-arent-using-the-theme-colors-which-breaks-the-consistent-de",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6a4b9013f51f79a5dbe6f872",
+      "alias": "Surprising Gibbon",
+      "aliasID": "6a4b9014f51f79a5dbe6f875",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b2c1d8851972009941c10101247a4b89.png",
+      "companies": [],
+      "name": "Shinу",
+      "urlName": null,
+      "voteID": "6aa3bd22250b281ba814ee03"
+    }
+  ]
+}
