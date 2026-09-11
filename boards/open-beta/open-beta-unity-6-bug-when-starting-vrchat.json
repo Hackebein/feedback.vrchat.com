@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "loc.loading-screen",
-    "platforms.pc.steam"
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-11T21:32:22.381925Z",
+  "aiTaggedAt": "2026-09-11T22:40:52.127749Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "692adfdb4927a96e58e1ec53",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 45,
+  "commentCount": 46,
   "commentingDisabled": false,
   "comments": [
     {
@@ -975,6 +976,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{692adfdb4927a96e58e1ec53|full_name} strange because a couple of my friends have that hanging issue and doing my fix seems to all have fixed their issues, are you sure there is no 3rd party app set to launch along vrc like vrcvideocacher for example",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa482756bff73440bc9bb4f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "692adfdb4927a96e58e1ec53",
+        "alias": "Probable Krill",
+        "aliasID": "692adfdb4927a96e58e20da8",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/9376893a154f3c30f4f93163ffd90cc2.png",
+        "created": "2025-11-29T11:58:19.258Z",
+        "name": "Illucio",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T22:36:37.234Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62def3737ff46044b6a435f7",
+          "alias": "Periwinkle Carp",
+          "aliasID": "668c68086b10505b943b84e7",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-07-25T19:48:03.858Z",
+          "name": "KaaneWolf",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa43f7338a9cb3f645f925b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a46bac3bf5eb991cbfb75aa",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62def3737ff46044b6a435f7|full_name} I manually remove VRCVideocacher via console after downloading it for a few days. I can ensure you, that's not it.\n\nI do have 3rd party steam apps for VRChat, but again, they are also on disable. Sometimes I launch Steam and it will say \"It's disabled apps at launch\" when Steam initially crashes at launch, but they were already disabled.\n\nThis sounds like a problem other people are experiencing on startup, but it doesn't sound like the problem I am experiencing.",
       "viewerReactions": null,
       "voteID": null
     }
