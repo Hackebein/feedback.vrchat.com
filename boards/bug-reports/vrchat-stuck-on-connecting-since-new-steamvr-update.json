@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.controls"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-11T13:27:57.822905Z",
+  "aiTaggedAt": "2026-09-11T13:56:53.891408Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "621977f970781570a49950a2",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -211,6 +211,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I'm also in the same boat. Haven't tried again myself yet with the stable release, but I thought maybe Valve might somehow address the issue once it came out of beta. Sounds like they haven't... oh dear.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa4076deaabb9fb3bfc62a7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68f293bb93e7781657423003",
+        "alias": "Distinct Vicuna",
+        "aliasID": "68f293bc93e7781657424b61",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4508858ca24844ec05b977aea7096dbf.png",
+        "created": "2025-10-17T19:06:35.739Z",
+        "name": "mdogwoop",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T13:51:41.978Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa336ea5cf494ad528a8b0f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This bug originates from Valve and has remained unfixed since version 2.17.4 beta. This is the bug report thread I opened on the Steam Community. Please leave comments on the thread so that Valve will pay more attention to this issue:\n\nhttps://steamcommunity.com/app/250820/discussions/3/576047946418632921/",
       "viewerReactions": null,
       "voteID": null
     }
