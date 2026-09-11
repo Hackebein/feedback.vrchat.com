@@ -2,9 +2,10 @@
   "_id": "6a8690a3a98c83b223ff119b",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon"
+    "sdk.udon",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-09-11T17:42:21.205701Z",
+  "aiTaggedAt": "2026-09-11T17:52:28.764273Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63ec9430d19f4344f2992df7",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -152,6 +153,50 @@
       "statusChangeID": "6aa43c8c740be5d8c6006055",
       "statusChangeNewStatus": "available in future release",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa43e05740be5d8c600b098",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-11T17:44:37.976Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6aa43c8c740be5d8c6006056",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a8690a3a98c83b223ff119b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The `Sources` list will change from a struct type to a class type, to address issues with modifications to data structures from Udon.\n\nA series of helper methods (`AddSource()`, `RemoveSource()`, etc.) will be added to mimic the interface Unity constraints use.",
       "viewerReactions": null,
       "voteID": null
     }
