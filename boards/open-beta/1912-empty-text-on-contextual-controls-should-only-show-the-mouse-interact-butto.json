@@ -1,0 +1,96 @@
+{
+  "_id": "6aa56baa9712777c8854f9f6",
+  "aiCategories": [
+    "loc.pc-client",
+    "open-beta",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-09-12T15:12:18.607380Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df3a55f6fa434679f836fa",
+    "alias": "Patient Marlin",
+    "aliasID": "65c279afed6eefce4c4712f2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+    "created": "2022-07-26T00:50:29.183Z",
+    "name": "｜KitKat｜",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df3a55f6fa434679f836fa",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-12T15:11:38.087Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Look at a pickup or interactable with no text or whitespace set as the interaction text. You'll see a very wide empty text area next to the icon.\n\nUse `String.IsNullOrWhiteSpace` to check the tooltip text and correct the width of the interaction tooltip accordingly.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa56ba99712777c8854f9dd",
+  "imageURLs": [
+    "https://canny-assets.io/images/5dddb840f895973a00b1e840554be616.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-12T15:11:38.087Z",
+  "subCategoryID": null,
+  "title": "[1912] Empty text on Contextual Controls should only show the mouse / interact button icon",
+  "trendingScore": 2959.069301413365,
+  "updatedBy": null,
+  "urlName": "1912-empty-text-on-contextual-controls-should-only-show-the-mouse-interact-butto",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": null,
+      "voteID": "6aa56baab4e14901d0b6f181"
+    }
+  ]
+}
