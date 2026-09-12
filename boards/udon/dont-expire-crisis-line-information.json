@@ -175,7 +175,9 @@
       "postDeleted": false,
       "postID": "6aa46d7bff6d64729702f12e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -232,7 +234,7 @@
       "postID": "6aa46d7bff6d64729702f12e",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -259,20 +261,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 23,
+  "maxScore": 24,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa46d7bff6d64729702f12e/73051061.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 23,
+  "score": 24,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-11T21:07:07.279Z",
   "subCategoryID": null,
   "title": "Don't expire crisis line information",
-  "trendingScore": 2961.470846436464,
+  "trendingScore": 2961.5156617426715,
   "updatedBy": null,
   "urlName": "dont-expire-crisis-line-information",
   "viewerIsAuthor": false,
@@ -285,6 +287,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5e981239f5f6167505129fcb",
+      "alias": "Tan Dragon",
+      "aliasID": "65ce97410129d7ae441db621",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1469557322c9aee1d9add3defc9d1a40.png",
+      "companies": [],
+      "name": "Mati1060",
+      "urlName": null,
+      "voteID": "6aa587f6b4e14901d0b769fc"
+    },
     {
       "_id": "60dd2e1f050eff14d30be2b1",
       "alias": "Raisin Jaguar",
