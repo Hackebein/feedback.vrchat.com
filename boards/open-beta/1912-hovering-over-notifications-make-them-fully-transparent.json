@@ -2,10 +2,10 @@
   "_id": "6aa54b2f56ecbdfc2a443c81",
   "aiCategories": [
     "loc.pc-client",
-    "loc.hud",
+    "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-12T16:25:31.449131Z",
+  "aiTaggedAt": "2026-09-12T22:47:22.988934Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66b233a72f5b55a89c628a61",
@@ -35,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -79,6 +79,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Update: Issue went away after restart. Weird.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa5d3fa16c21abf52256f1e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "611e1d3b36812306f84a1b6c",
+        "alias": "Significant Peacock",
+        "aliasID": "65c28a12ed6eefce4cca5937",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/7c2efb219a7210f208e86fc4e9bda168.png",
+        "created": "2021-08-19T08:58:35.182Z",
+        "name": "DragonTamerWes",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-12T22:36:42.282Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa54b2f56ecbdfc2a443c81",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "it got fixed after restart for me too",
       "viewerReactions": null,
       "voteID": null
     }
