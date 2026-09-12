@@ -1,0 +1,113 @@
+{
+  "_id": "6aa563319712777c8853eaa1",
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-09-12T14:38:30.971419Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df3a55f6fa434679f836fa",
+    "alias": "Patient Marlin",
+    "aliasID": "65c279afed6eefce4c4712f2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+    "created": "2022-07-26T00:50:29.183Z",
+    "name": "｜KitKat｜",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df3a55f6fa434679f836fa",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-12T14:35:29.549Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When you immediately go from looking at a pickup to looking at an interactable (or vice-versa) both tooltips are visible for what looks like one frame.\n\nThis does not happen when you go from looking at one pickup to another, or one interactable to another. I suspect this is because you have two separate UI tooltip objects, one for pickup tooltips and one for interact tooltips.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/1a961ac10a6cf158bc1f9fbc87f89d7d.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "VRChat_SzFHVbXpB8",
+      "url": "https://canny-assets.io/files/1a961ac10a6cf158bc1f9fbc87f89d7d.mp4"
+    }
+  ],
+  "ideaID": "6aa563319712777c8853ea78",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa563319712777c8853eaa1/1475312825.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-12T14:35:29.549Z",
+  "subCategoryID": null,
+  "title": "[1912] Contextual Controls Desktop UI update issue",
+  "trendingScore": 2959.471243377785,
+  "updatedBy": null,
+  "urlName": "1912-contextual-controls-desktop-ui-update-issue",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6206cb61f1cf0c7aeee7d576",
+      "alias": "Vermilion Macaw",
+      "aliasID": "65c26da3ed6eefce4c4d07b9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/219f830e7bbe2fc8f47464f0d4525682.png",
+      "companies": [],
+      "name": "Dyslex1k",
+      "urlName": null,
+      "voteID": "6aa563a2b4e14901d0b6dcef"
+    },
+    {
+      "_id": "62df3a55f6fa434679f836fa",
+      "alias": "Patient Marlin",
+      "aliasID": "65c279afed6eefce4c4712f2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e6bc610368688146d9274fa3004b5012.png",
+      "companies": [],
+      "name": "｜KitKat｜",
+      "urlName": null,
+      "voteID": "6aa56331b4e14901d0b6d965"
+    }
+  ]
+}
