@@ -1,10 +1,12 @@
 {
   "_id": "6aa52cc916c21abf521497f3",
   "aiCategories": [
-    "loc.main-menu",
-    "client.settings"
+    "loc.pc-client",
+    "loc.hud",
+    "platforms.pc.steam",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-12T10:48:25.027792Z",
+  "aiTaggedAt": "2026-09-12T11:56:30.885207Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60c87a5d16d979790d8309cf",
@@ -42,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I was messing around in the menus when I suddenly realized that my icon was cut off. Swapping away from minimal and then back again solved the problem. Have not been able to replicate it so far.\n\nCould be the same cause as this one. https://feedback.vrchat.com/open-beta/p/1916-ui-breaks-in-compact-mode",
+  "details": "When opening the game on the U6 beta with the UI set to minimal. My microphone is cut off. Swapping to another hud style and then back makes it look OK again. This is consistently happening for me. \n\nCould be the same cause as this one. But this seems a bit different.  https://feedback.vrchat.com/open-beta/p/1916-ui-breaks-in-compact-mode",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -68,7 +70,7 @@
   "subCategoryID": null,
   "title": "[1912] Mic can end up being clipped off",
   "trendingScore": 2959.4483971565073,
-  "updatedBy": null,
+  "updatedBy": "60c87a5d16d979790d8309cf",
   "urlName": "1912-mic-can-end-up-being-clipped-off",
   "viewerIsAuthor": false,
   "viewerVote": 0,
