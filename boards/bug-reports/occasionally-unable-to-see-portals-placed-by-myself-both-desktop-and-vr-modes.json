@@ -1,0 +1,96 @@
+{
+  "_id": "6aa4cf751232df77545c374c",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.travel",
+    "platforms.pc.desktop"
+  ],
+  "aiTaggedAt": "2026-09-12T04:09:54.856224Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "641a5246ed94dc3e69e001ff",
+    "alias": "Kelp Basilisk",
+    "aliasID": "6aa4ce6cb4e14901d0835cec",
+    "anonymized": false,
+    "avatarURL": null,
+    "created": "2023-03-22T00:56:38.312Z",
+    "name": "沐风Morph",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "641a5246ed94dc3e69e001ff",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-12T04:05:09.786Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Issue Summary:\n\nWhen I open or drop a portal to an instance, there is a chance that the portal does not render or appear visible on my end, even though the portal is successfully spawned and other players in the instance can see/interact with it normally.\n\nThis issue occurs intermittently in both Desktop mode and VR mode.\n\nFrequency:\n\nIntermittent (occurs occasionally).\n\nSteps to Reproduce:\n\nJoin an instance (in either Desktop or VR mode).\n\nOpen the menu and select a world/instance to drop a portal.\n\nConfirm portal placement.\n\nObserved Result: The portal spawns and is usable by others, but it remains completely invisible on my screen.\n\nExpected Result: The portal should be visible to me immediately after being placed.\n\nAdditional Details & Evidence:\n\nI have recorded a video showing this behavior: https://youtu.be/ie1gKYYDdzc\n\nPlatform: PC (Reproducible in both Desktop mode and PCVR)\n\nThank you for your time and help looking into this!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/a27d0b517de81721f062edb227efdf96.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-09-11_20-16-32",
+      "url": "https://canny-assets.io/files/a27d0b517de81721f062edb227efdf96.txt"
+    }
+  ],
+  "ideaID": "6aa4cf751232df77545c3712",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-12T04:05:09.786Z",
+  "subCategoryID": null,
+  "title": "Occasionally unable to see portals placed by myself (both Desktop and VR modes)",
+  "trendingScore": 2959.003183061843,
+  "updatedBy": null,
+  "urlName": "occasionally-unable-to-see-portals-placed-by-myself-both-desktop-and-vr-modes",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "641a5246ed94dc3e69e001ff",
+      "alias": "Kelp Basilisk",
+      "aliasID": "6aa4ce6cb4e14901d0835cec",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "沐风Morph",
+      "urlName": null,
+      "voteID": "6aa4cf76b4e14901d0835f10"
+    }
+  ]
+}
