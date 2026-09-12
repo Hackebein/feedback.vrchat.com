@@ -1,0 +1,95 @@
+{
+  "_id": "6aa5c1b55bcaa02544a0c624",
+  "aiCategories": [
+    "loc.creator-companion",
+    "worlds.travel"
+  ],
+  "aiTaggedAt": "2026-09-12T21:21:09.796890Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6337331af5134153aec4a839",
+    "alias": "Voluntary Panther",
+    "aliasID": "65c5372eed6eefce4cd430bd",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/dc10ca9d37c93e25ea2fd49fad66f384.png",
+    "created": "2022-09-30T18:19:06.949Z",
+    "name": "Twilight Studio",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6337331af5134153aec4a839",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-12T21:18:45.668Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I had a client who uploaded their world and we swapped to android build of the same world it bugged out while uploading and we deleted that world from the server. But after we created 3 fresh new vrchat projects all of them failed with the same error found in the message txt file. We worked hard on finding a fix we cleared the blueprint ID and cleared the Scene ID's cleared the VRChat World gameobject and components the error continued to stay the same. Just failed to upload. I dove deep into what I thought the issue would be and figured it was a corrupted network packet and we restarted their local network router and modem and the issue was fixed. The issue was is that a bad packet was stuck inside their routers ram and the same bad data was being uploaded then rejected causing the build to fail however the actual project itself completely compiled fully it just failed the endpoint server post. Again the issue was data stuck in the routers ram card There is no stack trace to fix it because it was inside the router itself the data wasn't being overwritten or refreshed and that same corrupted data kept being used until their network router and modem was turned off and on again.\n\nSummarization: vrchat has stuck corrupted network packets inside their own modems ram cards",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/300bdb1a09cba879fb6a32d9f73d4830.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "message",
+      "url": "https://canny-assets.io/files/300bdb1a09cba879fb6a32d9f73d4830.txt"
+    }
+  ],
+  "ideaID": "6aa5c1b45bcaa02544a0c623",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-12T21:18:45.668Z",
+  "subCategoryID": null,
+  "title": "VRChat Worlds 3.10.3+",
+  "trendingScore": 2959.10572185814,
+  "updatedBy": null,
+  "urlName": "vrchat-worlds-3103",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6337331af5134153aec4a839",
+      "alias": "Voluntary Panther",
+      "aliasID": "65c5372eed6eefce4cd430bd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dc10ca9d37c93e25ea2fd49fad66f384.png",
+      "companies": [],
+      "name": "Twilight Studio",
+      "urlName": null,
+      "voteID": "6aa5c1b5b4e14901d0b846d5"
+    }
+  ]
+}
