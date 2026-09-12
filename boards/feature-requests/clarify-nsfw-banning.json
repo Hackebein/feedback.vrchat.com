@@ -1,12 +1,5 @@
 {
   "_id": "696319e9e45271b8ebb46b7d",
-  "aiCategories": [
-    "loc.unity-sdk",
-    "avatars.descriptor",
-    "moderation.bans"
-  ],
-  "aiTaggedAt": "2026-06-13T20:26:19.005188Z",
-  "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa4c2804a7bf5087782b160",
     "alias": "Tricky Hamster",
@@ -29,7 +22,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -121,6 +114,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Additional clarification:\n\n- If you remove the mesh but keep the textures, world shaders can still reveal the texture (picture 1 for demonstration, the texture of an avatar is dumped on a cube located in the world).\n\n- If your avatar is public and there's no expression menu for a feature (or you have \"security PIN\" for false, non-effective security in the expressions menu), but there's an expression parameter for it, the parameter and animator layer logic will get toggled with OSC disregarding any expression menus or lack of an expressions menu (picture 2).\n\n- Alternatively if a public avatar is \"locked\" by default, it can be unlocked by anyone editing a file in `%UserProfile%\\AppData\\LocalLow\\VRChat\\VRChat\\LocalAvatarData`.\n\n- If you still have layers of clothes but no toggles, some avatars / world shaders can remove meshes with a higher render queue number (picture 3, using an avatar with a custom shader in the VRChat Home world to render some meshes invisible).\n\n- lilToon's 2nd & 3rd texture slots are still loaded into video memory, even if in toggled off state. You can verify this in offline mode with RenderDoc. I think creators should remove unused texture files (they count towards texture memory utilization) or utilize material swaps.\n\n- If an avatar is set to public, users can change into that avatar, even if that user's cloning is off. (Hint: Debug logs and/or avatar indexes/search worlds.)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa4e06556ecbdfc2a39998c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-12T05:17:25.070Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "696319e9e45271b8ebb46b7d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "For Creator Economy content (avatars on the marketplace), some guidance is provided on the VRChat Creation website: https://creators.vrchat.com/economy/guidelines/#avatar-content-guidelines",
       "viewerReactions": null,
       "voteID": null
     }
