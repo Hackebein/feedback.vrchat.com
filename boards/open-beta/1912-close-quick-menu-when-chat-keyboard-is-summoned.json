@@ -1,0 +1,104 @@
+{
+  "_id": "6aa507799712777c884a6d66",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.hud",
+    "platforms.pc.steam",
+    "client.chatbox",
+    "client.controls"
+  ],
+  "aiTaggedAt": "2026-09-12T08:08:24.224278Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f465dd8d9b7356021eb6b52",
+    "alias": "Brief Walrus",
+    "aliasID": "65c2a1fced6eefce4c5e894b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f25fd5bf6200b368cb65dddbc64868e4.png",
+    "created": "2020-08-26T13:04:24.130Z",
+    "name": "Spectral Owl",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f465dd8d9b7356021eb6b52",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-12T08:04:09.947Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I rely on the chat keyboard in VR as my primary means of communication. While it needs some polish, and a great number of its changes like word suggestions and proper dual laser typing are useful - one minor annoying issue I am facing is that opening the menu with a SteamVR chord that is also a button that summons the quick menu (Both B buttons on Index in my case, which themselves independently open the quickmenu/radial) causes the quick menu to linger in the hand, blocking the view of the keyboard. Sometimes this also immediately closes the chatbox if you accidentally interact in any way with the quick menu. (Such as the opposite hands laser hovering over anything)\n\nWhile sure, this can be avoided by changing the chord input type, or avoiding a button that summons the quick menu, I think this behavior of the quickmenu lingering with a chatbox open is annoying in general and this can even occur if you open the chatbox organically inside your radial menu whilst just having the quickmenu open in the other hand. (In my case, holding the B buttons down for slightly longer sometimes gives more consistent results. But at lower FPS, refuses to work reliably...)\n\nPreviously, the behavior of pressing both B buttons with my setup WOULD briefly open the quick menu, but the chat keyboard being summoned would immediately close itself, avoiding it ever blocking view of the keyboard. \n\n**Tldr summoning the chatbox should close/temporarily minimize any open window to avoid those windows from blocking view of the chatbox.**\n\nIncluded file is my exported bindings. Pressing/tapping both B buttons should summon the chatbox. Try it several times over and occasionally the quickmenu will remain in the hand and disrupt typing.\n\nPS, please give me additional and expanded keyboard layouts..........................",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/7235e39ddcf921422d15d981ca99ef0c.json"
+  ],
+  "files": [
+    {
+      "mimeType": "application/json",
+      "name": "export_steam_app_438100_knuckles_Spec Owl - Vive Style Index 1_3",
+      "url": "https://canny-assets.io/files/7235e39ddcf921422d15d981ca99ef0c.json"
+    }
+  ],
+  "ideaID": "6aa507799712777c884a6d65",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-12T08:04:09.947Z",
+  "subCategoryID": null,
+  "title": "[1912] Close quick menu when chat keyboard is summoned",
+  "trendingScore": 2959.026893643027,
+  "updatedBy": null,
+  "urlName": "1912-close-quick-menu-when-chat-keyboard-is-summoned",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f465dd8d9b7356021eb6b52",
+      "alias": "Brief Walrus",
+      "aliasID": "65c2a1fced6eefce4c5e894b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f25fd5bf6200b368cb65dddbc64868e4.png",
+      "companies": [],
+      "name": "Spectral Owl",
+      "urlName": null,
+      "voteID": "6aa5077ab4e14901d0b5f653"
+    }
+  ]
+}
