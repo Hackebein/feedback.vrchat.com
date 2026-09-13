@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.travel"
   ],
-  "aiTaggedAt": "2026-09-13T15:39:36.631197Z",
+  "aiTaggedAt": "2026-09-13T16:47:38.266858Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64fcb1c5251d9309bd9692fe",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -66,7 +66,7 @@
       "postID": "6a949e8d4164b749537768b2",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -111,13 +111,59 @@
       "postDeleted": false,
       "postID": "6a949e8d4164b749537768b2",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I agree! This would be a great feature for anyone hosting events that require switching instances like games or world hopping.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa6d17ed1ec8a7e8d2d2bae",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6225255e744ea97a9e0c0cba",
+        "alias": "Silver Mole",
+        "aliasID": "65c3bf1ced6eefce4c3baf35",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/327cbe4618e9d959f44c624743aba853.png",
+        "created": "2022-03-06T21:19:26.961Z",
+        "name": "Reiko Aldrakar",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-13T16:38:22.612Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a949e8d4164b749537768b2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Definitely a great idea, would make protals less of a hassle with bigger groups",
       "viewerReactions": null,
       "voteID": null
     }
@@ -137,20 +183,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 23,
+  "maxScore": 24,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a949e8d4164b749537768b2/561489382.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 23,
+  "score": 24,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-08-30T21:20:13.220Z",
   "subCategoryID": null,
   "title": "Portal joining delay",
-  "trendingScore": 2961.305160006297,
+  "trendingScore": 2961.365491172779,
   "updatedBy": null,
   "urlName": "portal-joining-delay",
   "viewerIsAuthor": false,
@@ -163,6 +209,39 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6aa6d31ab4e14901d0bb924d",
+      "alias": "Persimmon Alpaca",
+      "aliasID": "6aa6d31ab4e14901d0bb9250",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Theodoric",
+      "urlName": null,
+      "voteID": "6aa6d320b4e14901d0bb925e"
+    },
+    {
+      "_id": "6aa6d2d0b4e14901d0bb8f5f",
+      "alias": "Known Wildebeest",
+      "aliasID": "6aa6d2d0b4e14901d0bb8f62",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Aggy",
+      "urlName": null,
+      "voteID": "6aa6d2edb4e14901d0bb8fa6"
+    },
+    {
+      "_id": "6225255e744ea97a9e0c0cba",
+      "alias": "Silver Mole",
+      "aliasID": "65c3bf1ced6eefce4c3baf35",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/327cbe4618e9d959f44c624743aba853.png",
+      "companies": [],
+      "name": "Reiko Aldrakar",
+      "urlName": null,
+      "voteID": "6aa6d162b4e14901d0bb87fd"
+    },
     {
       "_id": "6497144a5737de092f6917a6",
       "alias": "Electric lime Puffin",
