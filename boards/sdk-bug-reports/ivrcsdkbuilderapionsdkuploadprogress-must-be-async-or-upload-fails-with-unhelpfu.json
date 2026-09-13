@@ -2,10 +2,9 @@
   "_id": "6aa638cb9957a312c2b48ad0",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "avatars.upload-performance"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-09-13T05:49:12.641224Z",
+  "aiTaggedAt": "2026-09-13T05:52:20.287871Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649b83fd8ca61609383735ec",
@@ -43,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "SDK Version: 3.10.5\n\nI have a script trying to listen to `IVRCSdkBuilderApi.OnSdkUploadProgress`, but the upload fails with an unhelpful message (just \"upload failed\" or something) unless the listener is async. Either it should handle sync listeners, or it should give a more helpful error.",
+  "details": "SDK Version: 3.10.5\n\nI have a script trying to listen to `IVRCSdkBuilderApi.OnSdkUploadProgress`, but the upload fails with an unhelpful message (just \"upload failed\" or something, with a vague stacktrace) unless the listener is async. Either it should handle sync listeners, or it should give a more helpful error.",
   "error": null,
   "eta": null,
   "etaPublic": true,
