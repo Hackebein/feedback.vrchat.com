@@ -1,0 +1,97 @@
+{
+  "_id": "6aa704db1dcf56d3746f295a",
+  "aiCategories": [
+    "loc.hud",
+    "open-beta",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-09-13T20:20:31.819263Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "695febfaf85d59c66d3d73c8",
+    "alias": "Ink Blackbird",
+    "aliasID": "695febfbf85d59c66d3d9492",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
+    "created": "2026-01-08T17:40:10.770Z",
+    "name": "-Jade-",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "695febfaf85d59c66d3d73c8",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-13T20:17:31.056Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "On the new HUD, Invite Request notifications persist on the top left of the HUD even after they have expired and no longer valid invites from the quick menu. They will persist as invite icons until replaced with another type of notification.\n\nHow to reproduce:\n\n- Have a friend send you an invite request, or invite to join notification\n\n- Let that invite request/join expire (Don't view it from the quick menu while it is \"active\"\n\n- Once it's expired, it will disappear as normal from the quick menu invalidating the invite as normal, but the icon will still persist in the top left corner of the new HUD.\n\nScreenshots provided showing active invite, vs when invite has expired, and icon still persist in top left corner of HUD as comparison.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa704da1dcf56d3746f2959",
+  "imageURLs": [
+    "https://canny-assets.io/images/9660ca13d62d2367f0581d06c352e40d.png",
+    "https://canny-assets.io/images/8f8ef5f5073a67f4d5bd5f02b100f631.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa704db1dcf56d3746f295a/422264066.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-13T20:17:31.056Z",
+  "subCategoryID": null,
+  "title": "[Open Beta 1912] Top Left Invite Notification Persists even after Expiration",
+  "trendingScore": 2959.242503908404,
+  "updatedBy": null,
+  "urlName": "open-beta-1912-top-left-invite-notification-persists-even-after-expiration",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "695febfaf85d59c66d3d73c8",
+      "alias": "Ink Blackbird",
+      "aliasID": "695febfbf85d59c66d3d9492",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
+      "companies": [],
+      "name": "-Jade-",
+      "urlName": null,
+      "voteID": "6aa704dbb4e14901d0bc492d"
+    }
+  ]
+}
