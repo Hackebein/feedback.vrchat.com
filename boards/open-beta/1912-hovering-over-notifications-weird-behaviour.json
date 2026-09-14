@@ -1,12 +1,10 @@
 {
   "_id": "6aa54b2f56ecbdfc2a443c81",
   "aiCategories": [
-    "loc.pc-client",
     "loc.main-menu",
-    "loc.quick-menu",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-14T11:11:10.264640Z",
+  "aiTaggedAt": "2026-09-14T11:15:32.134655Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66b233a72f5b55a89c628a61",
@@ -269,7 +267,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Hovering over notifications (friend requests. invites, moderation, etc.) with a mouse makes them fade away and visually disappear until you hover away.",
+  "details": "Hovering over notifications (friend requests. invites, moderation, etc.) with a mouse can make them have visual artifacts like completely disappearing or getting shorter. This happens in both the small and the big menu.\n\nNo reproduction steps that I'm aware of yet.\n\nEdit: Adjusted with the new information.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -291,10 +289,10 @@
   "status": "open",
   "statusChanged": "2026-09-12T12:53:03.858Z",
   "subCategoryID": null,
-  "title": "[1912] Hovering over notifications make them fully transparent",
+  "title": "[1912] Hovering over notifications weird behaviour",
   "trendingScore": 2959.461250608266,
-  "updatedBy": null,
-  "urlName": "1912-hovering-over-notifications-make-them-fully-transparent",
+  "updatedBy": "66b233a72f5b55a89c628a61",
+  "urlName": "1912-hovering-over-notifications-weird-behaviour",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
