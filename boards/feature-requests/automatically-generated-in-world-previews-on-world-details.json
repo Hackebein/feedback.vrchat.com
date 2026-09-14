@@ -2,11 +2,10 @@
   "_id": "6aa26f539dcd17f166e385e4",
   "aiCategories": [
     "loc.website",
-    "loc.in-world",
-    "loc.unity-sdk",
-    "worlds.travel"
+    "worlds.travel",
+    "sdk.world-building"
   ],
-  "aiTaggedAt": "2026-09-11T04:50:33.764318Z",
+  "aiTaggedAt": "2026-09-14T04:51:12.316673Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 12,
+  "commentCount": 13,
   "commentingDisabled": false,
   "comments": [
     {
@@ -636,6 +635,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "It might also be a good idea to give only world creators permission to take screenshots from an avatar’s point of view inside the world using VRChat, and allow them to upload those screenshots.\n\nI think it would be easier to understand what the world actually looks like if the previews showed it from the same perspective users would see in VRChat.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa77bf61953434ec0cdc9f1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ae4f9f6801fa451b10edafc",
+        "alias": "Jasper Whippet",
+        "aliasID": "65ba0a43ed6eefce4cd6588b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c94cc74ab9b22acdf6bfc8b9982d92eb.png",
+        "created": "2018-04-28T22:47:18.692Z",
+        "name": "Shadowriver",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-14T04:45:42.328Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5fa3e1c3d35f8d48ac388c26",
+          "alias": "Definite Leopard",
+          "aliasID": "65c5973fed6eefce4cd00cb1",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/92e00f2de2f5c683846f4631eb6846c4.png",
+          "created": "2020-11-05T11:28:03.570Z",
+          "name": "あおなん（ aonan ）",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa386c5bf54eb43bfd14601",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa26f539dcd17f166e385e4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5fa3e1c3d35f8d48ac388c26|full_name}This is what LittleBigPlanet was doing for example, but they did have screenshot upload system. VRChat technically already has system that could be used for this, which is prints, and its already moderated. They just need to allow to view those on user profile and tagged world, photographers may love this feature.",
       "viewerReactions": null,
       "voteID": null
     }
