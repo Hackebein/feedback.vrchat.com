@@ -1,0 +1,93 @@
+{
+  "_id": "6aa87b20b4b064328b07155d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-14T23:00:27.443537Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60ddcbb6e920e2339db9698a",
+    "alias": "Verdigris Gazelle",
+    "aliasID": "65c2bfd4ed6eefce4c5aa70f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4920a36bd40b996ec78a297c247516ad.png",
+    "created": "2021-07-01T14:05:42.086Z",
+    "name": "Reava_レイ",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60ddcbb6e920e2339db9698a",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-14T22:54:24.211Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If I want to pass a parameter when sending custom events with delay, and i want to be able to send many of them with varying results without having to add 200 specific events or variables attached.\n\nI think it will be useful and user friendly if parameter passing can be written directly in sender side SendCustomEvent node and receiver side CustomEvent node as a kind of syntax sugar.\n\nI copied part of the previous canny about this, as only the Networked event was covered and left us completely unable to make this sort of thing happen entirely locally despite the canny being marked as complete",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa87b1fb4b064328b071555",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa87b20b4b064328b07155d/786918790.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-14T22:54:24.211Z",
+  "subCategoryID": null,
+  "title": "Add an optional parameter to SendCustomDelayedEvent",
+  "trendingScore": 2959.400925020342,
+  "updatedBy": null,
+  "urlName": "add-an-optional-parameter-to-sendcustomdelayedevent",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "60ddcbb6e920e2339db9698a",
+      "alias": "Verdigris Gazelle",
+      "aliasID": "65c2bfd4ed6eefce4c5aa70f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4920a36bd40b996ec78a297c247516ad.png",
+      "companies": [],
+      "name": "Reava_レイ",
+      "urlName": null,
+      "voteID": "6aa87b20b4e14901d0c54bcd"
+    }
+  ]
+}
