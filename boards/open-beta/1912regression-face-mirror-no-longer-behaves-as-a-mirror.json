@@ -388,7 +388,9 @@
       "postDeleted": false,
       "postID": "6aa2608d0fe8cb3cebf71fb9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -415,20 +417,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 30,
+  "maxScore": 31,
   "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa2608d0fe8cb3cebf71fb9/1399360559.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 30,
+  "score": 31,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-09-11T15:49:39.650Z",
   "subCategoryID": null,
   "title": "[1912]Regression: Face Mirror No Longer Behaves as a Mirror",
-  "trendingScore": 2961.768189579192,
+  "trendingScore": 2961.8128847452385,
   "updatedBy": null,
   "urlName": "1912regression-face-mirror-no-longer-behaves-as-a-mirror",
   "viewerIsAuthor": false,
@@ -441,6 +443,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "610d538d5303a82960a415b4",
+      "alias": "Solar Coral",
+      "aliasID": "65c26df1ed6eefce4c5aac21",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fe96fc268af68b13b8255713fdd44c24.png",
+      "companies": [],
+      "name": "Deantwo",
+      "urlName": null,
+      "voteID": "6aa83ff3b4e14901d0c2f46c"
+    },
     {
       "_id": "64d349f4ccbfca096d0a605c",
       "alias": "Vertical Swallow",
