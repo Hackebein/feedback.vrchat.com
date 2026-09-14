@@ -2,9 +2,10 @@
   "_id": "6a1e364cec4cc3e215c99ac5",
   "aiCategories": [
     "loc.pc-client",
+    "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-14T09:59:31.772463Z",
+  "aiTaggedAt": "2026-09-14T10:48:48.860228Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5da73c95c8133a48b8a0b711",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -328,6 +329,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "My computer stopped receiving system updates since September last year, and after the game update last week, it displayed a white screen and reported a GC memory collection error",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa7cf2fba94dc8cb57a00d6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62e04e97eea34044b94f17ec",
+        "alias": "Chief Horse",
+        "aliasID": "6aa7cda7b4e14901d0bf761b",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2022-07-26T20:29:11.945Z",
+        "name": "Arin Hjorulfr",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-14T10:40:47.298Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1e364cec4cc3e215c99ac5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I had this exact same error (\"Fatal error in GC: SuspendThread loop failed\" on launch). Fix that worked for me: disabling Windows \"Memory Integrity\" (HVCI) under Windows Security > Device Security > Core Isolation. Restarted the PC and VRChat launched fine right away.\n\nMy guess is this is a conflict between Easy Anti-Cheat and HVCI - and since Microsoft is starting to auto-enable Memory Integrity on more Windows 11 PCs via quality updates from October 2026 (announced Sept 1, 2026), more players will likely run into this going forward.\n\nGPU: RTX 5070 Ti, Windows 11.",
       "viewerReactions": null,
       "voteID": null
     }
