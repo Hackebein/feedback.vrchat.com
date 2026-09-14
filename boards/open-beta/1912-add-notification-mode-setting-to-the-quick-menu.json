@@ -1,12 +1,10 @@
 {
-  "_id": "6aa7d4622aaaf467ef24696f",
+  "_id": "6aa7d4dc257b91146630ba95",
   "aiCategories": [
-    "loc.hud",
-    "loc.standalone-vr",
-    "client.settings",
-    "platforms.standalone-vr.quest"
+    "loc.quick-menu",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-14T11:08:43.880654Z",
+  "aiTaggedAt": "2026-09-14T11:11:10.262715Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6142bc91c830f70736b61114",
@@ -40,57 +38,46 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-14T11:02:58.967Z",
+  "created": "2026-09-14T11:05:00.768Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Currently, there are only four options: All On (Full), Icons Only (Compact), Main Menu Icon and Mute Icon Only (Minimal), and All Off (Hide HUD).\n\nSince the HUD elements users need vary, I request that each element be individually toggleable.\n\nAdditionally, if this is implemented, I'd like the face mirror to be hidden as well when Hide HUD is enabled.\n\nIn the previous UI (Live), the face mirror was hidden when the HUD was hidden, but currently, it is inconvenient to have to toggle the face mirror and HUD separately to hide everything.",
+  "details": "As the title says.\n\nIn the previous UI, hiding the HUD also hide notifications, but in the current UI, this seems to be controlled by the Notification Mode setting.\n\nTherefore, please add this setting to Quick Menu's settings page as well.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aa7d4622aaaf467ef246956",
+  "ideaID": "6aa7d4dc257b91146630ba94",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-14T11:02:58.967Z",
+  "statusChanged": "2026-09-14T11:05:00.768Z",
   "subCategoryID": null,
-  "title": "[1912] Allow HUD elements to be turned on/off individually",
-  "trendingScore": 2959.7360594295324,
+  "title": "[1912] Add Notification Mode setting to the Quick Menu",
+  "trendingScore": 2959.3305490522534,
   "updatedBy": null,
-  "urlName": "1912-allow-hud-elements-to-be-turned-on-off-individually",
+  "urlName": "1912-add-notification-mode-setting-to-the-quick-menu",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aa7d622b4e14901d0bfb7a9"
-    },
     {
       "_id": "6142bc91c830f70736b61114",
       "alias": "Secondary Swordtail",
@@ -100,7 +87,7 @@
       "companies": [],
       "name": "Sayamame",
       "urlName": null,
-      "voteID": "6aa7d463b4e14901d0bfa593"
+      "voteID": "6aa7d4dcb4e14901d0bfa980"
     }
   ]
 }
