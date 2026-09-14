@@ -12,13 +12,13 @@ Scrape horizon: **2026-08-24 04:40 UTC (21d ago)**.
 | `android` | 351 / 351 (100.0%) |
 | `avatar-30` | 880 / 880 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
-| `avatar-marketplace` | 82 / 81 (100.0%) |
+| `avatar-marketplace` | 81 / 80 (100.0%) |
 | `bug-reports` | 12,034 / 12,033 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,109 / 14,112 (99.98%) |
+| `feature-requests` | 14,110 / 14,113 (99.98%) |
 | `impostors` | 91 / 91 (100.0%) |
 | `ios-mobile-beta` | 262 / 262 (100.0%) |
 | `localization` | 648 / 648 (100.0%) |
