@@ -2,10 +2,9 @@
   "_id": "6aa7b1611953434ec0d56785",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
-    "client.settings"
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-09-14T17:07:50.332354Z",
+  "aiTaggedAt": "2026-09-14T20:37:32.616504Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6aa7b161b4e14901d0bedf47",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +72,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate, can be merged with: https://feedback.vrchat.com/bug-reports/p/fatal-error-in-gc-suspendthread-loop-failed",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa859a0e1839bfb478a6703",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68ca0aad004e8728233a3f45",
+        "alias": "Verdigris Hare",
+        "aliasID": "68ca0aae004e8728233a643c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ed6675955f5081745a78dc345b3f7e3f.png",
+        "created": "2025-09-17T01:11:09.661Z",
+        "name": "Flux_Knot",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-14T20:31:28.292Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa7b1611953434ec0d56785",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "If you haven't done it already, try reverting SteamVR to the \"previous\" version in Game Versions and Betas in your Installed Files settings in Steam. SteamVR had an update a few days ago that broke VRChat for me as well until I reverted to that previous version.",
       "viewerReactions": null,
       "voteID": null
     }
