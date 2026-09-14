@@ -1,0 +1,96 @@
+{
+  "_id": "6aa7f603d6dfc723686afd9b",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.impostors",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-09-14T13:31:12.135069Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "688cc7f6076be5baa685a488",
+    "alias": "Aegean Prawn",
+    "aliasID": "68fe24fd1f833c417c50ed8d",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/cea7a983484dd42559d6f32e2a5cf3b1.png",
+    "created": "2025-08-01T13:58:14.186Z",
+    "name": "SynaBytez",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "688cc7f6076be5baa685a488",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-14T13:26:27.661Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I have an avatar that uses rotation constraints on twist bones for the elbows and forearms so that the elbow joints have correct rotation, but for some reason, specifically with the imposter, the forearms are dislocated. I assume this is because of those constraints.\n\nThe avatar works just fine otherwise.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa7f603d6dfc723686afd77",
+  "imageURLs": [
+    "https://canny-assets.io/images/77b3a405cf1764c52bf15fa38206dd49.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-14T13:26:27.661Z",
+  "subCategoryID": null,
+  "title": "Avatar bones with VRC Rotation Constraints are dislocated on imposter",
+  "trendingScore": 2959.344581470408,
+  "updatedBy": "688cc7f6076be5baa685a488",
+  "urlName": "avatar-bones-with-vrc-rotation-constraints-are-dislocated-on-imposter",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "688cc7f6076be5baa685a488",
+      "alias": "Aegean Prawn",
+      "aliasID": "68fe24fd1f833c417c50ed8d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cea7a983484dd42559d6f32e2a5cf3b1.png",
+      "companies": [],
+      "name": "SynaBytez",
+      "urlName": null,
+      "voteID": "6aa7f603b4e14901d0c073e8"
+    }
+  ]
+}
