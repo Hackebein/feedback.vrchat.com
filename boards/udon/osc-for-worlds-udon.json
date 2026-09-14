@@ -126,7 +126,9 @@
       "postDeleted": false,
       "postID": "649d3ad9138bed09328b0b8d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
@@ -212,7 +214,7 @@
       "postID": "649d3ad9138bed09328b0b8d",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -269,7 +271,9 @@
       "postDeleted": false,
       "postID": "649d3ad9138bed09328b0b8d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -338,20 +342,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 135,
+  "maxScore": 136,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/649d3ad9138bed09328b0b8d/372060935.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 135,
+  "score": 136,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2023-06-29T08:03:37.298Z",
   "subCategoryID": null,
   "title": "OSC for Worlds / Udon",
-  "trendingScore": 2960.832605886002,
+  "trendingScore": 2960.940440497641,
   "updatedBy": "5f3287055bc2dc276e0f1630",
   "urlName": "osc-for-worlds-udon",
   "viewerIsAuthor": false,
@@ -364,6 +368,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5d30f3b50d404b67f6775842",
+      "alias": "Raisin Manatee",
+      "aliasID": "65c2a212ed6eefce4c61ba05",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/43eab490f259e7836f21a124ea22e1a7.png",
+      "companies": [],
+      "name": "Starkstruck",
+      "urlName": null,
+      "voteID": "6aa809e5b4e14901d0c0f39b"
+    },
     {
       "_id": "619ee708b4a7eb64ce6e3a7f",
       "alias": "Yellow sunshine Puma",
@@ -1667,7 +1682,7 @@
       "alias": "Jasper Whippet",
       "aliasID": "65ba0a43ed6eefce4cd6588b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/f3bc086c39fe4eb4e5460686c437c9fe.png",
+      "avatarURL": "https://canny-assets.io/images/c94cc74ab9b22acdf6bfc8b9982d92eb.png",
       "companies": [],
       "name": "Shadowriver",
       "urlName": null,
