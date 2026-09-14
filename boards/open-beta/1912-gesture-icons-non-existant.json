@@ -2,11 +2,10 @@
   "_id": "6aa3f00424b0ac5527ebe477",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
-    "open-beta",
+    "loc.hud",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-14T14:51:44.859058Z",
+  "aiTaggedAt": "2026-09-14T15:31:35.873338Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6d672c4bfdee1ca51adcab",
@@ -73,7 +72,9 @@
       "postDeleted": false,
       "postID": "6aa3f00424b0ac5527ebe477",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -83,6 +84,37 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aa8121e9c06b98de7bd6789",
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-14T15:26:22.658Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6aa8121e9c06b98de7bd6789",
+      "mergedPostDetails": "The gesture icon is no longer displayed on the desktop. This represents a regression in usability.",
+      "mergedPostTitle": "[1912]Gesture Icon No Longer Displayed on Desktop",
+      "pinned": false,
+      "postID": "6aa3f00424b0ac5527ebe477",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -100,20 +132,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 19,
-  "mergeCount": 0,
+  "maxScore": 21,
+  "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa3f00424b0ac5527ebe477/1613382535.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 19,
+  "score": 21,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-09-14T14:48:45.596Z",
   "subCategoryID": null,
   "title": "[1912] Gesture Icons non-existant",
-  "trendingScore": 2961.407504483979,
+  "trendingScore": 2961.4906017106,
   "updatedBy": null,
   "urlName": "1912-gesture-icons-non-existant",
   "viewerIsAuthor": false,
@@ -259,6 +291,17 @@
       "voteID": "6aa565f9b4e14901d0b6e52e"
     },
     {
+      "_id": "5be30e967f5f1e3396732b2f",
+      "alias": "Arctic lime Zebra",
+      "aliasID": "65c279aded6eefce4c46a77a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1bff0f33b3e51705f56bb7ead7837451.png",
+      "companies": [],
+      "name": "Fizzytaco",
+      "urlName": null,
+      "voteID": "6aa8121eb4e14901d0c134fe"
+    },
+    {
       "_id": "640bda39a2437e452ed23b4f",
       "alias": "Amaranth Bison",
       "aliasID": "65f5d063a63714bcb33de77b",
@@ -279,6 +322,17 @@
       "name": "Nyakoᵃ",
       "urlName": null,
       "voteID": "6aa428c0b4e14901d07f266b"
+    },
+    {
+      "_id": "69ba46c9ed082c9981cdcc0f",
+      "alias": "Mantis Vole",
+      "aliasID": "69ba46caed082c9981cde1a9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a250525f809095e645ba10ff77be9c3d.png",
+      "companies": [],
+      "name": "Guff-ppp",
+      "urlName": null,
+      "voteID": "6aa8121eb4e14901d0c134ff"
     },
     {
       "_id": "62df03ca6d6050449f8e5cda",
