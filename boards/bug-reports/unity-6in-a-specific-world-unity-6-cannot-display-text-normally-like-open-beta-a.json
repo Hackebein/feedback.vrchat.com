@@ -2,9 +2,9 @@
   "_id": "6aa0e56e3653639f78c956cc",
   "aiCategories": [
     "loc.in-world",
-    "open-beta"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-09-09T15:03:22.997213Z",
+  "aiTaggedAt": "2026-09-14T17:24:49.717115Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68f293bb93e7781657423003",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +73,50 @@
       "statusChangeID": "6aa17492711fc009b96f089a",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa82ad4733fc58eb6e16e34",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6aa1b486250b281ba808ec6f",
+        "alias": "Golden poppy Stoat",
+        "aliasID": "6aa1b486250b281ba808ec73",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2026-09-09T19:33:26.877Z",
+        "name": "萝北来信",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-14T17:11:48.888Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa0e56e3653639f78c956cc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Thanks for filing this. I am the creator of this world, and I can independently reproduce the same result in this world on PCVR.\n\nI compared the same test path on these clients:\n\n- Unity 6: `VRChat Build: 2026.3.3-1912-ad3bf7dafa-Release`, Steam beta branch `unity-6`\n\n- Stable: `VRChat Build: 2026.3.2p1-1902-20253ca7ae-Release`, branch `default`\n\nAfter accepting the Content Warning and approaching the numbered stones:\n\n- Stable shows the stone body text, the `1/2` page indicator, the favorite symbol, and the page-control symbol.\n\n- Unity 6 still shows the stone number, but the body text and related controls disappear.\n\nThe Unity 6 output log contains 219 occurrences of:\n\n```\n\nFunction '__get_renderer__UnityEngineRenderer' is not implemented yet\n\n```\n\nEach occurrence is followed by an Udon execution halt. The Content Warning itself reaches unlocked=True, so the failure occurs after the acceptance event rather than in the content-warning gate.\n\nThe Stable control log contains zero occurrences of this renderer error and zero Udon execution exceptions.\n\nIn our world, Udon scripts use TextMeshPro.renderer to toggle the TMP MeshRenderer when text alpha reaches zero. The same code path works in Stable, but the Unity 6 runtime reports that the TMP renderer getter is not implemented.\n\nThis strongly suggests a Unity 6 Udon/TMP compatibility regression or missing wrapper implementation, rather than missing world data.\n\nCould the VRChat team please correlate this with the existing tracked report and confirm:\n\nWhether TextMeshPro.renderer is intentionally unsupported in the Unity 6 Udon runtime or is a regression;\n\nWhether there is a supported alternative for accessing a TMP MeshRenderer;\n\nWhether this report should be merged or linked with another existing issue.\n\nI can provide redacted Unity 6 and Stable output logs and additional reproduction details if needed.",
       "viewerReactions": null,
       "voteID": null
     }
