@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-09-14T03:34:56.835654Z",
+  "aiTaggedAt": "2026-09-14T09:01:00.437213Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63691297469f06772579fe6f",
@@ -34,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "650db8783d561e5922d89ac4",
-  "commentCount": 7,
+  "commentCount": 8,
   "commentingDisabled": false,
   "comments": [
     {
@@ -219,7 +219,7 @@
       "postID": "6a91cc50451a6948161e62fe",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -321,7 +321,7 @@
       "postID": "6a91cc50451a6948161e62fe",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -387,6 +387,50 @@
       "value": "@{64524e889511692a74619c99|full_name} Native code components like physbones and others alike (as it suppose to be since very beginning, vrc simply was wierd with this), thats whole point of them as animations are really just a hack. Animation are not for logic, logic is for animator for logic driven animations only, it not meant to drive scripting.\n\nAnimations need to check all it states every frame, like like tuning code on Update(), while you could just run code only when you got user input or network message that sync data updated, executing only if it needed. So this will give more performance to avatars\n\nThis will also fix issues with MMD/seat animations worlds which need to pierce thru heavy avatar animations setups to work properly to control avatar.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aa7b5991953434ec0d64530",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67a7a794c9467977e8b07090",
+        "alias": "Gradual Aardvark",
+        "aliasID": "67a7a794afacf378f1ae500b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f1cdc72024e2b6ee5b5018cad1a28900.png",
+        "created": "2025-02-08T18:51:00.309Z",
+        "name": "BruceKnight",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-14T08:51:37.440Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a91cc50451a6948161e62fe",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I absolutely love this feature! I've been wanting something like this.\n\nWhat would make it extremely useful for me is if the component could add its own menu toggle, icon, parameter etc, just like the VRCFury toggle.\n\nDealing with the Menu assets is my least favorite part of VRChat avatar development. I love seeing my menus visually in the hierarchy and being able to edit them quickly, so I use an empty VRCFury Toggle components just to create the toggles for me.\n\nI love that you can specify up to 8 conditions, In situations where I'd be forced to use the animator, now I wouldn't have to! If the Action Driver can replicate all of VRCFury Toggle components' features, I would probably like to switch to using it for pretty much everything as long as the UX is similarly straightforward and simple. (Please replicate adding the menu asset)\n\nI think this component is a good step in the right direction, it gives the creators a simpler / quicker / more comfortable alternative to using the animator for most things. I could even see this replacing the animator logic entirely for simpler avatars",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -406,20 +450,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 22,
+  "maxScore": 23,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a91cc50451a6948161e62fe/1071479748.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 22,
+  "score": 23,
   "sourceFeatureExtractionItem": null,
   "status": "in progress",
   "statusChanged": "2026-08-28T17:59:00.586Z",
   "subCategoryID": null,
   "title": "VRC Action Driver Component (Toggler)",
-  "trendingScore": 2960.5270410798057,
+  "trendingScore": 2960.6660580313905,
   "updatedBy": "63691297469f06772579fe6f",
   "urlName": "vrc-action-driver-component-toggler",
   "viewerIsAuthor": false,
@@ -432,6 +476,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "67a7a794c9467977e8b07090",
+      "alias": "Gradual Aardvark",
+      "aliasID": "67a7a794afacf378f1ae500b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f1cdc72024e2b6ee5b5018cad1a28900.png",
+      "companies": [],
+      "name": "BruceKnight",
+      "urlName": null,
+      "voteID": "6aa7b5a9b4e14901d0beff10"
+    },
     {
       "_id": "5ae4f9f6801fa451b10edafc",
       "alias": "Jasper Whippet",
