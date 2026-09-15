@@ -1,0 +1,96 @@
+{
+  "_id": "6aa8b7daeb494e364d057da2",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-09-15T03:16:29.813922Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "61cea3c99954c41ea7b7a8d2",
+    "alias": "Violet Piranha",
+    "aliasID": "65e0d15ba6e3ea79dd7aa8ad",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2a4756758916df4e60abc765400bd418.png",
+    "created": "2021-12-31T06:31:37.762Z",
+    "name": "TrebleSketch",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "61cea3c99954c41ea7b7a8d2",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-15T03:13:30.795Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Within VRCSDK > Sample Assets > Prototyping > Models > \"prototype_wall_8x8x1.FBX\"\n\n2. Place it within Unity\n\n3. Actual dimensions are 6 x 6 x 1 (Confirmed within Blender to be 6 x 6 x 1)\n\nThe \"prototype_coin_01x01x01.fbx\" also isn't 1 x 1 x 1 but instead 2 x 2 x 0.278 as checked within Blender.\n\nIt would be good to see this object likely get renamed to \"6x6x1\" to not break compatibility for anyone who has already used this within their projects but instead add a new FBX for 8x8x1.\n\n8x8x1 is ideal as it can cleanly split up into 4s, 2s, and single metre walls vs 6x6x1 which requires infinite fractions as dividing it to try to reach 4m is unwieldy.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aa8b7daeb494e364d057d83",
+  "imageURLs": [
+    "https://canny-assets.io/images/558e3fdd426d210a35d5a362fa4aa9fb.png",
+    "https://canny-assets.io/images/fbb83ca093126f9382f380c8c68f30c4.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa8b7daeb494e364d057da2/1769749904.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-15T03:13:30.795Z",
+  "subCategoryID": null,
+  "title": "[VRCSDK] Incorrect Prototyping Wall Dimension",
+  "trendingScore": 2959.426630503973,
+  "updatedBy": null,
+  "urlName": "vrcsdk-incorrect-prototyping-wall-dimension",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "61cea3c99954c41ea7b7a8d2",
+      "alias": "Violet Piranha",
+      "aliasID": "65e0d15ba6e3ea79dd7aa8ad",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2a4756758916df4e60abc765400bd418.png",
+      "companies": [],
+      "name": "TrebleSketch",
+      "urlName": null,
+      "voteID": "6aa8b7dab4e14901d0c665c8"
+    }
+  ]
+}
