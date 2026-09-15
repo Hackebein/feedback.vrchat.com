@@ -2,10 +2,9 @@
   "_id": "6a1e364cec4cc3e215c99ac5",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-14T19:00:10.809009Z",
+  "aiTaggedAt": "2026-09-15T00:59:37.178357Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5da73c95c8133a48b8a0b711",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 15,
+  "commentCount": 16,
   "commentingDisabled": false,
   "comments": [
     {
@@ -781,6 +780,62 @@
       "value": "i went through the dmp file with WinDbg of a friend that is currently encountering this error. I'm far from knowledgeable in dump file analysis but looking up the stuff that looks interesting, I found that the reported error (at least in 2 samples I looked at) is invalid pointer/error c0000005 where the unity engine dll is trying to read address 0xFFFFFFFFFFFFFFFF.\n\n(Note: this is different from someone else's report. So honestly this whole comment might not be of any value if I accidentally captured the wrong thing... See note in next paragraph)\n\nAmong others, from the dump file:\n\n`FAILURE_BUCKET_ID: INVALID_POINTER_READ_c0000005_UnityPlayer.dll!Unknown`\n\nHowever, although I can't be sure at all, this doesn't seem to be related to SuspendThread that the error actually shows the user, and c0000005 might just be how Unity is exiting when it encounters that actual bug that I'm not seeing (other than memory issue but seems weird given everyone else's conflicting reports and resolutions). \n\nAlso ran `lm` and no weird DLLs are present in the dump file just to confirm that it doesn't look like this issue is from anything external.\n\nHope this is of some use to someone maybe, otherwise uh idk. We are in the witchcraft stage of this bug where everyone seems to be saying something different, hopefully it gets narrowed down on.\n\nAlso again, for the record, the friend in question tried quite literally everything you could even remotely think of for troubleshooting including some more advanced stuff. At one time, running `sfc /scannow` let them keep the game running and join a populated instance but they still crashed shortly after in a completely empty instance of the vrchat homeworld.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aa893f2b02aa421247db745",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6aa7c3ccb4e14901d0bf3c33",
+        "alias": "Electric Wildebeest",
+        "aliasID": "6aa7c3ccb4e14901d0bf3c37",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2026-09-14T09:52:12.310Z",
+        "name": "是依惜鸭QwQ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-15T00:40:18.948Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6a8c654d523ad16133a92327",
+          "alias": "Equal Partridge",
+          "aliasID": "6a8c654d523ad16133a9232b",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/fd209c020864802dae92cf7e2b6a5a81.png",
+          "created": "2026-08-24T15:37:49.468Z",
+          "name": "LUMI∗るみ∗",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa7bb022aaaf467ef1fc1dd",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1e364cec4cc3e215c99ac5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6a8c654d523ad16133a92327|full_name}II don't have this patch",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -800,20 +855,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 24,
+  "maxScore": 26,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a1e364cec4cc3e215c99ac5/653713688.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 24,
+  "score": 26,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-09-14T16:16:44.021Z",
   "subCategoryID": null,
   "title": "Fatal Error in GC (SuspendThread Loop failed)",
-  "trendingScore": 2961.5415074465673,
+  "trendingScore": 2961.6538545360454,
   "updatedBy": null,
   "urlName": "fatal-error-in-gc-suspendthread-loop-failed",
   "viewerIsAuthor": false,
@@ -826,6 +881,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6aa895ebb4e14901d0c5bf41",
+      "alias": "Hilarious Bird",
+      "aliasID": "6aa895ebb4e14901d0c5bf45",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "Alakazooble",
+      "urlName": null,
+      "voteID": "6aa895edb4e14901d0c5bf47"
+    },
+    {
+      "_id": "65fcc28ecd4191dbf53cb99c",
+      "alias": "Content Finch",
+      "aliasID": "65fcc28ea63714bcb331b16c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e987f79c40ebc113c7d71566183b9701.png",
+      "companies": [],
+      "name": "mentalescape",
+      "urlName": null,
+      "voteID": "6aa894dcb4e14901d0c5bcbc"
+    },
     {
       "_id": "68cec3bfa8ab97d7d9724b62",
       "alias": "Nuclear Woodpecker",
