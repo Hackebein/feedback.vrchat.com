@@ -351,7 +351,7 @@
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
       "reactions": {
-        "like": 8
+        "like": 9
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -821,7 +821,7 @@
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -878,7 +878,9 @@
       "postDeleted": false,
       "postID": "6a9f8201838c205ecadc5dc4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -904,20 +906,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 398,
+  "maxScore": 399,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9f8201838c205ecadc5dc4/737155304.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 398,
+  "score": 399,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-08T03:33:21.996Z",
   "subCategoryID": null,
   "title": "Add an AI content identifier for worlds and avatars",
-  "trendingScore": 2963.9694657740533,
+  "trendingScore": 2963.9754410753044,
   "updatedBy": null,
   "urlName": "add-an-ai-content-identifier-for-worlds-and-avatars",
   "viewerIsAuthor": false,
@@ -930,6 +932,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62dfb929b1e50b465a8e80df",
+      "alias": "Vocational Bobcat",
+      "aliasID": "65e0d15aa6e3ea79dd7a79ac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d7962abdacdf7b4dfa0fe571dd4d5a73.png",
+      "companies": [],
+      "name": "PollenTomorrow",
+      "urlName": null,
+      "voteID": "6aa9d0a3b4e14901d0cd79e0"
+    },
     {
       "_id": "62df0ab5098f5a44aaa015fc",
       "alias": "Increased Spoonbill",
