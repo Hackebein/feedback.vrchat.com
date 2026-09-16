@@ -169,7 +169,9 @@
       "postDeleted": false,
       "postID": "6aa9ec909cb11a5a330460ed",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -273,20 +275,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 51,
+  "maxScore": 53,
   "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa9ec909cb11a5a330460ed/146109869.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 51,
+  "score": 53,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-09-16T15:30:08.433Z",
   "subCategoryID": null,
   "title": "[1913] Pressing Y re-closes chatbox input while typing",
-  "trendingScore": 2962.8644208393794,
+  "trendingScore": 2962.9051010115754,
   "updatedBy": null,
   "urlName": "1913-pressing-y-re-closes-chatbox-input-while-typing",
   "viewerIsAuthor": false,
@@ -299,6 +301,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "620d23eaf3ff79676adf151c",
+      "alias": "Purring Catshark",
+      "aliasID": "67e344c25388f556dbccd744",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/15e6d7a8440dc44a129e507e10f95838.png",
+      "companies": [],
+      "name": "ScottDevlin",
+      "urlName": null,
+      "voteID": "6aab1546b4e14901d0d5a33b"
+    },
+    {
+      "_id": "68ca0aad004e8728233a3f45",
+      "alias": "Verdigris Hare",
+      "aliasID": "68ca0aae004e8728233a643c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/ed6675955f5081745a78dc345b3f7e3f.png",
+      "companies": [],
+      "name": "Flux_Knot",
+      "urlName": null,
+      "voteID": "6aab14e8b4e14901d0d5a0d7"
+    },
     {
       "_id": "675a123a8de75dc94e1708ad",
       "alias": "Sleepy Lemming",
