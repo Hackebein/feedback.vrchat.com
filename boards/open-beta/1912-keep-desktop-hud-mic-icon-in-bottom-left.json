@@ -1,11 +1,12 @@
 {
   "_id": "6aa27b7d14e25c8f15ef79c6",
   "aiCategories": [
+    "loc.pc-client",
     "loc.hud",
-    "client.settings",
-    "platforms.pc.desktop"
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-15T03:31:37.981150Z",
+  "aiTaggedAt": "2026-09-16T02:10:09.361979Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66cda7261ec168f0bdef34fa",
@@ -35,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -79,6 +80,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Yeah not having a mic icon with the HUD off has caused me to stare at people. Menacingly.... Because I'm muted. I'm mentally juggling whether that last time I hit \"V\" was the mute or unmute state.\n\nTo be fair, I do stare at people, so this isn't abnormal behavior. Which means nobody says \"hey, are you muted?\". Nope, they just assume the green alien cat has some alien cat reasons for this.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aa9f89f2233f384552c2252",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65d54028598d756cc0b39f6d",
+        "alias": "Zircon blue Wolf",
+        "aliasID": "65d540280129d7ae446ecd30",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/eafa8fce4678cbf8f9ca390aafbbe8a2.png",
+        "created": "2024-02-21T00:13:28.605Z",
+        "name": "puppyfoxx",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-16T02:02:07.151Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa27b7d14e25c8f15ef79c6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I think it's fine if it's wanted to have it default where it is but we need to be able to move it like we can with the face mirror. top right is just too far away to see quickly. It also just doesnt make sense with existing mic icon activity modes",
       "viewerReactions": null,
       "voteID": null
     }

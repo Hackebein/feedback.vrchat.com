@@ -2,10 +2,10 @@
   "_id": "6aa9f2ed173735c22c19b5b0",
   "aiCategories": [
     "loc.in-world",
-    "open-beta",
-    "client.settings"
+    "social.nameplates",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-09-16T01:43:37.558196Z",
+  "aiTaggedAt": "2026-09-16T02:10:09.361310Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -37,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "For about a week now, the profile icon in `Build 1867` keeps resetting locally to a default icon. Live branch `Build 1903` users still see an icon on my nameplate, but sometimes mine disappears from the Quick Menu, profile and nameplate on `Build 1867`.\n\nI am subscribed to VRC+ and either way the profile icon was made before it became a feature available for all.\n\nI believe firmly this is a bug of backwards incompatibility created by recent server side changes, while the server still allows `Build 1867` to connect.\n\nThis is not related to: https://feedback.vrchat.com/open-beta/p/1878-profile-icon-resets-itself-to-avatar-image-after-some-time - when people were reporting that issue, `Build 1867` was unaffected, it's only started doing this in the past week.\n\nI also noticed today updating the icon from `Build 1867` no longer updates the icon on the VRChat Home website in my profile.",
+  "details": "For about a week now, the profile icon in `Build 1867` keeps resetting locally to a default icon. Live branch `Build 1903` users still see an icon on my nameplate, but sometimes mine disappears from the Quick Menu, profile and nameplate on `Build 1867` locally.\n\nI am subscribed to VRC+ and either way the profile icon was made before it became a feature available for all.\n\nI believe firmly this is a bug of backwards incompatibility created by recent server side changes, while the server still allows `Build 1867` to connect.\n\nThis is not related to: https://feedback.vrchat.com/open-beta/p/1878-profile-icon-resets-itself-to-avatar-image-after-some-time - when people were reporting that issue, `Build 1867` was unaffected, it's only started doing this in the past week.\n\nI also noticed today updating the icon from `Build 1867` no longer updates the icon on the VRChat Home website in my profile.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -81,7 +81,7 @@
   "subCategoryID": null,
   "title": "[1867] Profile icon keeps resetting itself to avatar / default locally after some time (again), cannot be updated anymore",
   "trendingScore": 2959.9657458780916,
-  "updatedBy": null,
+  "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "1867-profile-icon-keeps-resetting-itself-to-avatar-default-locally-after-some-ti",
   "viewerIsAuthor": false,
   "viewerVote": 0,
