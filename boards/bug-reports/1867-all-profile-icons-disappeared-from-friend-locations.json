@@ -1,10 +1,11 @@
 {
   "_id": "6aa9fe5682d01a8bcac8c3d2",
   "aiCategories": [
-    "loc.main-menu",
-    "social.friends"
+    "loc.website",
+    "web.profiles",
+    "web.social"
   ],
-  "aiTaggedAt": "2026-09-16T02:32:21.655057Z",
+  "aiTaggedAt": "2026-09-16T02:38:10.113666Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -36,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "As of ~30 minutes ago (correlated with the release of OPEN BETA `Build 1913`), icons have disappeared from Friends Locations and winglets on `Build 1867`.\n\n`Build 1913` is unaffected, but is experiencing a different buggy behavior with lazy loading (to be reported separately).\n\nI've only redacted names and custom statuses with red in the attached screenshot.",
+  "details": "As of ~30 minutes ago (correlated with the release of OPEN BETA `Build 1913`), icons have disappeared from Friends Locations and winglets on `Build 1867`.\n\n`Build 1913` is unaffected, but is experiencing a different buggy behavior with lazy loading (to be reported separately).\n\nI've only redacted friends' names and custom statuses with red in the attached screenshot.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -57,32 +58,43 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-16T02:26:30.579Z",
   "subCategoryID": null,
   "title": "[1867] All profile icons disappeared from Friend Locations",
-  "trendingScore": 2959.5648245028156,
+  "trendingScore": 2959.9704946543297,
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "1867-all-profile-icons-disappeared-from-friend-locations",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6aa9ffcab4e14901d0ce496b"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
