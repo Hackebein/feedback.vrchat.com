@@ -1,10 +1,10 @@
 {
   "_id": "6aaabb86626206504cdb35d9",
   "aiCategories": [
-    "loc.external",
+    "loc.pc-client",
     "web.api"
   ],
-  "aiTaggedAt": "2026-09-16T18:35:33.974578Z",
+  "aiTaggedAt": "2026-09-16T18:43:23.433857Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a4b9013f51f79a5dbe6f872",
@@ -34,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -171,7 +171,9 @@
       "postDeleted": false,
       "postID": "6aaabb86626206504cdb35d9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -179,6 +181,62 @@
       "statusChangeID": "6aaae0072f1539dc3c814211",
       "statusChangeNewStatus": "closed",
       "value": "With the recent profile system update, biographies are now intended to only be loaded when someone views someone else's profile on our applications or website.\n\nWe were previously broadcasting bio updates to all friends every time it updated, even though none of the receiving VRChat clients actually used that data. This was wasting a lot of resources, especially for large biographies and/or large friends lists. To reduce resource wastage and improve performance, our API was adjusted.\n\nAs our policies have stated since their creation, our API is meant to serve our applications and platforms. It is made accessible as-is for third-party tools, and its behavior may change unannounced.\n\nThis item is closed as 'intentional change' and 'will not fix'.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aaae19dec4cad6b0fb29639",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6483438874a8f316a848c026",
+        "alias": "Sharp Nightingale",
+        "aliasID": "65cb1958ed6eefce4c0144c8",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/32a015932bb460e10c6957e121cabec7.png",
+        "created": "2023-06-09T15:21:44.600Z",
+        "name": "Stiggimy",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-16T18:36:13.898Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5acad9ecc9dba010c9c3ec68",
+          "alias": "Evolutionary Vicuna",
+          "aliasID": "65ba088fed6eefce4ca8dc62",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/a96149971e91f0ceb638e9e86cef2b08.gif",
+          "created": "2018-04-09T03:11:40.225Z",
+          "name": "Tupper - VRChat",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aaae0072f1539dc3c814218",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aaabb86626206504cdb35d9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5acad9ecc9dba010c9c3ec68|full_name}\n\nUse me as a respectful downvote button.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -237,7 +295,9 @@
     "pinned": true,
     "postDeleted": false,
     "postID": "6aaabb86626206504cdb35d9",
-    "reactions": null,
+    "reactions": {
+      "like": 1
+    },
     "restoredAt": null,
     "sourceFeatureExtractionItemID": null,
     "sourceLink": null,
