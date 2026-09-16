@@ -1,0 +1,89 @@
+{
+  "_id": "6aaa2cc682d01a8bcace4944",
+  "aiCategories": [
+    "loc.quick-menu",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-09-16T05:49:26.193748Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-16T05:44:38.540Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Follow-up to: https://feedback.vrchat.com/bug-reports/p/publicly-attached-in-client-bug-reporting-output-log-files-are-403-forbidden\n\nIn-client bug report log files have not been public since August 17-18, 2026 (currently 403 Forbidden as intended), but the in-client bug reporting UI still says they would be public.\n\n1. Open Quick Menu, scroll down.\n\n2. Press \"Report a bug\".\n\n3. Scroll down, read the label about log files under \"Include log file\".\n\nExpected result: \"Logs will be publicly visible.\" label omitted.\n\nActual result: \"Logs will be publicly visible.\" label is shown in the dialog.\n\nAffects `Build 1903` and `Build 1913`.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aaa2cc682d01a8bcace4943",
+  "imageURLs": [
+    "https://canny-assets.io/images/fe82525db9dac2e6d8453c5f353c2bd2.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-16T05:44:38.540Z",
+  "subCategoryID": null,
+  "title": "In-client bug reporting still says incorrectly \"Logs will be publicly visible.\"",
+  "trendingScore": 2959.5844806023524,
+  "updatedBy": null,
+  "urlName": "in-client-bug-reporting-still-says-incorrectly-logs-will-be-publicly-visible",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6aaa2cc6b4e14901d0cf205d"
+    }
+  ]
+}
