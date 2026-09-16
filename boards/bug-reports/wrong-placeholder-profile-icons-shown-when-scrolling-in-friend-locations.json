@@ -1,0 +1,101 @@
+{
+  "_id": "6aaa045998ff6f08fbdbb79b",
+  "aiCategories": [
+    "loc.quick-menu",
+    "social.friends"
+  ],
+  "aiTaggedAt": "2026-09-16T02:56:55.839669Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-16T02:52:09.478Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Clear content cache, texture cache from Debug options.\n\n2. Restart the VRChat client.\n\n3. Open Quick Menu, navigate to Friend Locations with many, many friend locations.\n\n4. Scroll down quickly/slowly in Friend Locations.\n\nExpected behavior: Show a hourglass icon when icons are pending to be loaded when scrolling down in Friend Locations, for everyone.\n\nActual result: The icons shown are sometimes for wrong users, including previously loaded icons, before updating to the correct icons after a few seconds. Not everyone has a hourglass icon.\n\nAffects `Build 1903` and `Build 1913`.\n\nA video showcasing the issue is available privately in [Ticket #XXX](). (I don't want to put out my whole friends list out here in public.) (to be edited)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/83a02d0e00034feabc16c9836c193633.txt",
+    "https://canny-assets.io/files/f4bdedd774ab343cc7595bf925c6eef3.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-09-16_02-44-28",
+      "url": "https://canny-assets.io/files/83a02d0e00034feabc16c9836c193633.txt"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-09-16_02-37-26",
+      "url": "https://canny-assets.io/files/f4bdedd774ab343cc7595bf925c6eef3.txt"
+    }
+  ],
+  "ideaID": "6aaa045998ff6f08fbdbb794",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-16T02:52:09.478Z",
+  "subCategoryID": null,
+  "title": "Wrong placeholder profile icons shown when scrolling in Friend Locations",
+  "trendingScore": 2959.567368990249,
+  "updatedBy": null,
+  "urlName": "wrong-placeholder-profile-icons-shown-when-scrolling-in-friend-locations",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6aaa0459b4e14901d0ce5b04"
+    }
+  ]
+}
