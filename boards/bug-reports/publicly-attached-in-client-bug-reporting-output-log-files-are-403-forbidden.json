@@ -1,10 +1,11 @@
 {
   "_id": "6a83f624503e46c0482e5a71",
   "aiCategories": [
-    "loc.pc-client",
+    "loc.website",
+    "web.feedback",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-08-19T18:59:37.984960Z",
+  "aiTaggedAt": "2026-09-16T15:48:47.908750Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -173,6 +174,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{64873f159cf028090ce2c2e2|full_name} `Build 1896` client still says \"Logs will be publicly visible.\" in the in-client bug reporting UI, so I assume this will be changed soon. I can create a new bug report if needed.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aaa2cf34088cec118560bae",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-16T05:45:23.303Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6a85b68887e890faed3589c9",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a83f624503e46c0482e5a71",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I made a new bug report just now: [In-client bug reporting still says incorrectly \"Logs will be publicly visible.\"](https://feedback.vrchat.com/bug-reports/p/in-client-bug-reporting-still-says-incorrectly-logs-will-be-publicly-visible)",
       "viewerReactions": null,
       "voteID": null
     }
