@@ -1,12 +1,11 @@
 {
   "_id": "6aaa0b8022f4757e0ae8e940",
   "aiCategories": [
-    "loc.action-menu",
     "loc.standalone-vr",
-    "avatars.expressions",
-    "platforms.standalone-vr.quest"
+    "platforms.standalone-vr.quest",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-09-16T03:43:33.025223Z",
+  "aiTaggedAt": "2026-09-16T05:15:20.238974Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a85d124523ad161334f6984",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +73,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "from my testing, parameters do not sync between live and the latest beta 1913",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aaa2566e808dd506ff755e4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-16T05:13:10.376Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aaa0b8022f4757e0ae8e940",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Duplicate, can be merged with: https://feedback.vrchat.com/open-beta/p/toggles-not-syncing-across-versions",
       "viewerReactions": null,
       "voteID": null
     }
