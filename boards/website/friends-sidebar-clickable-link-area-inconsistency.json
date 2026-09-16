@@ -1,10 +1,10 @@
 {
-  "_id": "6aa9fe07a5054c642f1e73e0",
+  "_id": "6aa9ff3754cc399d43934f44",
   "aiCategories": [
     "loc.website",
-    "web.groups"
+    "web.social"
   ],
-  "aiTaggedAt": "2026-09-16T02:29:20.770239Z",
+  "aiTaggedAt": "2026-09-16T02:32:21.654345Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d710dc1c881463f153789",
@@ -27,81 +27,60 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6307c3580b3d9b44b26d3fbf",
-    "created": "2022-08-25T18:45:44.822Z",
-    "name": "Bug Report",
+    "_id": "6307c36bc22b1844b7e1425c",
+    "created": "2022-08-25T18:46:03.389Z",
+    "name": "General Feedback",
     "parentID": null,
-    "urlName": "bug-report"
+    "urlName": "general-feedback"
   },
-  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "categoryID": "6307c36bc22b1844b7e1425c",
   "commentCount": 0,
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-16T02:25:11.954Z",
+  "created": "2026-09-16T02:30:15.252Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "",
+  "details": "Size of the user link covering user picture, display name, and status vs size of the instance link covering only the world name when it should also cover the instance type and user count.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aa9fe07a5054c642f1e73df",
+  "ideaID": "6aa9ff3654cc399d43934f33",
   "imageURLs": [
-    "https://canny-assets.io/images/2f204869a7870bea4ab8bbf8daa3748b.png"
+    "https://canny-assets.io/images/ca18873543c8f17e6cecf2183bcfe872.png",
+    "https://canny-assets.io/images/5879de3f969c45f14dbdf7bd19484f72.png"
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 3,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa9fe07a5054c642f1e73e0/283057357.jpeg",
+  "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 3,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-16T02:25:11.954Z",
+  "statusChanged": "2026-09-16T02:30:15.252Z",
   "subCategoryID": null,
-  "title": "Group banned users list no longer shows user picture",
-  "trendingScore": 2960.258077960547,
+  "title": "Friends sidebar clickable link area inconsistency",
+  "trendingScore": 2959.565195998351,
   "updatedBy": null,
-  "urlName": "group-banned-users-list-no-longer-shows-user-picture",
+  "urlName": "friends-sidebar-clickable-link-area-inconsistency",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aa9ff77b4e14901d0ce4895"
-    },
-    {
-      "_id": "695febfaf85d59c66d3d73c8",
-      "alias": "Ink Blackbird",
-      "aliasID": "695febfbf85d59c66d3d9492",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
-      "companies": [],
-      "name": "-Jade-",
-      "urlName": null,
-      "voteID": "6aa9fed3b4e14901d0ce45fe"
-    },
     {
       "_id": "5f2d710dc1c881463f153789",
       "alias": "Remarkable Grasshopper",
@@ -111,7 +90,7 @@
       "companies": [],
       "name": "Fusl",
       "urlName": null,
-      "voteID": "6aa9fe08b4e14901d0ce43bd"
+      "voteID": "6aa9ff37b4e14901d0ce47e5"
     }
   ]
 }
