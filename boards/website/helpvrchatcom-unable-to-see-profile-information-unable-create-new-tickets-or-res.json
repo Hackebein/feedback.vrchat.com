@@ -1,0 +1,96 @@
+{
+  "_id": "6aaac8bd9e29dba0f9043e99",
+  "aiCategories": [
+    "loc.website",
+    "web.docs"
+  ],
+  "aiTaggedAt": "2026-09-16T16:58:09.431590Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-16T16:50:05.478Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "It seems like VRChat Help Desk is experiencing issues again, I can't access my VRChat Help Desk profile information from the dropdown menu in the top right (the link does not exist). This also makes it impossible to respond to existing tickets (403 Forbidden), or to submit new ones.\n\nI can login and view my existing tickets, but that's about it.\n\nThe previous time this occurred with the same symptoms was 15 days ago (September 1, 2026) due to [ticket #730237](https://help.vrchat.com/hc/en-us/requests/730237), an SSO outage affecting both VRChat Feedback and VRChat Help Desk.\n\nI suspect this latest breakage is related to the changes done to VRChat's server side changes with profile icons breakage, coinciding with VRChat 2026.3.3 (OPEN BETA) `Build 1913` release, noted there:\n\n- https://feedback.vrchat.com/bug-reports/p/1867-all-profile-icons-disappeared-from-friend-locations\n\n- https://feedback.vrchat.com/website/p/group-banned-users-and-invites-lists-no-longer-show-user-pictures",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aaac8bd9e29dba0f9043e98",
+  "imageURLs": [
+    "https://canny-assets.io/images/f8e64e538b84aa47bccc97efe5859eab.png",
+    "https://canny-assets.io/images/d3b5b4244e0e5bfcf747ca78588ec8ab.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-16T16:50:05.478Z",
+  "subCategoryID": null,
+  "title": "help.vrchat.com: Unable to see profile information, unable create new tickets or respond to existing ones",
+  "trendingScore": 2959.650497274806,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "helpvrchatcom-unable-to-see-profile-information-unable-create-new-tickets-or-res",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6aaac8bdb4e14901d0d37b9d"
+    }
+  ]
+}
