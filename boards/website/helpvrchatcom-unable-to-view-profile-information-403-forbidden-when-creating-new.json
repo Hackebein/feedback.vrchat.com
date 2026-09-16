@@ -4,7 +4,7 @@
     "loc.website",
     "web.docs"
   ],
-  "aiTaggedAt": "2026-09-16T16:58:09.431590Z",
+  "aiTaggedAt": "2026-09-16T17:08:00.839930Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -42,12 +42,20 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "It seems like VRChat Help Desk is experiencing issues again, I can't access my VRChat Help Desk profile information from the dropdown menu in the top right (the link does not exist). This also makes it impossible to respond to existing tickets (403 Forbidden), or to submit new ones.\n\nI can login and view my existing tickets, but that's about it.\n\nThe previous time this occurred with the same symptoms was 15 days ago (September 1, 2026) due to [ticket #730237](https://help.vrchat.com/hc/en-us/requests/730237), an SSO outage affecting both VRChat Feedback and VRChat Help Desk.\n\nI suspect this latest breakage is related to the changes done to VRChat's server side changes with profile icons breakage, coinciding with VRChat 2026.3.3 (OPEN BETA) `Build 1913` release, noted there:\n\n- https://feedback.vrchat.com/bug-reports/p/1867-all-profile-icons-disappeared-from-friend-locations\n\n- https://feedback.vrchat.com/website/p/group-banned-users-and-invites-lists-no-longer-show-user-pictures",
+  "details": "It seems like VRChat Help Desk is experiencing issues again, I can't access my VRChat Help Desk profile information from the dropdown menu in the top right (the link does not exist). This also makes it impossible to respond to existing tickets (403 Forbidden), or to submit new ones.\n\nI can login and view my existing tickets, but that's about it.\n\nThe previous time this occurred with the same symptoms was 15 days ago (September 1, 2026) due to [ticket #730237](https://help.vrchat.com/hc/en-us/requests/730237), a single sign-on (SSO) outage affecting both VRChat Feedback and VRChat Help Desk.\n\nI suspect this latest breakage is related to the changes done to VRChat's server side changes with profile icons breakage, coinciding with VRChat 2026.3.3 (OPEN BETA) `Build 1913` release, noted there:\n\n- https://feedback.vrchat.com/bug-reports/p/1867-all-profile-icons-disappeared-from-friend-locations\n\n- https://feedback.vrchat.com/website/p/group-banned-users-and-invites-lists-no-longer-show-user-pictures",
   "error": null,
   "eta": null,
   "etaPublic": true,
-  "fileURLs": [],
-  "files": [],
+  "fileURLs": [
+    "https://canny-assets.io/files/095d2162376c562cfb1d7169563cca81.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "trace",
+      "url": "https://canny-assets.io/files/095d2162376c562cfb1d7169563cca81.txt"
+    }
+  ],
   "ideaID": "6aaac8bd9e29dba0f9043e98",
   "imageURLs": [
     "https://canny-assets.io/images/f8e64e538b84aa47bccc97efe5859eab.png",
@@ -55,32 +63,43 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-16T16:50:05.478Z",
   "subCategoryID": null,
-  "title": "help.vrchat.com: Unable to see profile information, unable create new tickets or respond to existing ones",
-  "trendingScore": 2959.650497274806,
+  "title": "help.vrchat.com: Unable to view profile information, 403 Forbidden when creating new tickets or responding to existing ones",
+  "trendingScore": 2960.0562513177683,
   "updatedBy": "68098a4626271974ef4d2775",
-  "urlName": "helpvrchatcom-unable-to-see-profile-information-unable-create-new-tickets-or-res",
+  "urlName": "helpvrchatcom-unable-to-view-profile-information-403-forbidden-when-creating-new",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6aaacac9b4e14901d0d39b86"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
