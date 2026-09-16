@@ -24,6 +24,7 @@ import {
   type FacetEntry,
 } from "./board-hierarchy";
 import { installSearchQueryWatch, readActiveSearchQuery } from "./search-refresh";
+import { viewerLoggedIn, viewerName } from "./viewer-votes";
 import type { FacetStats, SearchFacets } from "./types";
 
 /** Display label for a facet value (AI categories map internal ids to names). */
@@ -364,6 +365,27 @@ function facetEntries(attr: string): { value: string; count: number }[] {
     }
   }
   entries.sort((a, b) => b.count - a.count || a.value.localeCompare(b.value));
+  // Pin the logged-in viewer to the top of name lists so they can filter to
+  // themselves without searching. Insert with count 0 if the current facet
+  // response omitted them (same as selected-value seeding).
+  if (
+    (attr === "author_name" ||
+      attr === "voter_name" ||
+      attr === "comment_author_name") &&
+    bridgeWindow &&
+    viewerLoggedIn(bridgeWindow)
+  ) {
+    const name = viewerName(bridgeWindow);
+    if (name) {
+      const index = entries.findIndex((entry) => entry.value === name);
+      if (index > 0) {
+        const [viewer] = entries.splice(index, 1);
+        entries.unshift(viewer);
+      } else if (index < 0) {
+        entries.unshift({ value: name, count: 0 });
+      }
+    }
+  }
   return entries;
 }
 
