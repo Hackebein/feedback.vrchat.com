@@ -1,11 +1,12 @@
 {
   "_id": "6aaab070ca2a35370057bdc8",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.chatbox"
+    "loc.in-world",
+    "client.chatbox",
+    "open-beta",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-09-16T19:11:16.475769Z",
+  "aiTaggedAt": "2026-09-16T21:37:47.479117Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6aaab070b4e14901d0d23288",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -185,6 +186,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6983c87e4e32484d2928a00d|full_name} It only affects the opt-in open-beta branch `Build 1913`, which is for testing. The main branch `Build 1903` is the default branch and remains unaffected.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aab08bcceacc060fd11e0cf",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6983c87e4e32484d2928a00d",
+        "alias": "Harlequin Mouse",
+        "aliasID": "6983c87e4e32484d2928c31f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3eb7c5f472bb3570fc488300779e7b07.png",
+        "created": "2026-02-04T22:30:22.461Z",
+        "name": "sober__chan",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-16T21:23:08.923Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aaab82d70bd812efe681a70",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aaab070ca2a35370057bdc8",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} I guarantee you, I never once opted in for a testing branch.",
       "viewerReactions": null,
       "voteID": null
     }
