@@ -273,8 +273,22 @@
       "created": "2026-09-16T16:01:19.217Z",
       "deleted": false,
       "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
+      "fileURLs": [
+        "https://canny-assets.io/files/dc294a162d19ac4a0bca3f3bd75f3b96.txt",
+        "https://canny-assets.io/files/535f1ebf94fe8b6872fbddab99f9c225.txt"
+      ],
+      "files": [
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-09-16_15-47-53",
+          "url": "https://canny-assets.io/files/dc294a162d19ac4a0bca3f3bd75f3b96.txt"
+        },
+        {
+          "mimeType": "text/plain",
+          "name": "output_log_2026-09-16_16-05-50",
+          "url": "https://canny-assets.io/files/535f1ebf94fe8b6872fbddab99f9c225.txt"
+        }
+      ],
       "imageURLs": [
         "https://canny-assets.io/images/c3efe50a89bcf3326683288c2e70e26f.png"
       ],
@@ -307,7 +321,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{62b61f8ec938a62475e4cd14|full_name} I see you've bumped `minSupportedClientBuildNumber` in https://api.vrchat.cloud/api/1/config to 1902 just now in the past 10 minutes, as a response to these bug reports.\n\nThe minimum was previously 1865 on 2026.09.16 15:47:54 (UTC) - four minutes before your post.",
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} I see you've bumped `minSupportedClientBuildNumber` in https://api.vrchat.cloud/api/1/config to 1902 just now in the past 10 minutes, as a response to these bug reports.\n\nThe minimum supported client build number was previously 1865 on 2026.09.16 15:47:54 (UTC) - four minutes before your post.",
       "viewerReactions": null,
       "voteID": null
     }
