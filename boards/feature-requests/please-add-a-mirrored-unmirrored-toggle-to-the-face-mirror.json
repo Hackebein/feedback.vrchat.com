@@ -2,10 +2,9 @@
   "_id": "6aaa866e6cce283735d3915e",
   "aiCategories": [
     "loc.in-world",
-    "avatars.tracking",
-    "client.camera"
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-09-16T12:13:11.036387Z",
+  "aiTaggedAt": "2026-09-16T12:38:01.318020Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6aaa8532b4e14901d0d0ab94",
@@ -37,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Please consider adding an option to toggle the Face Mirror between Mirrored and Unmirrored views.\n\nThe Face Mirror now behaves like a real mirror and horizontally flips the avatar. While this makes sense for users who want an actual mirror, the previous unmirrored view was also very useful, especially for avatar creators and users with asymmetrical avatars.\n\nAn unmirrored view preserves the avatar's actual left/right orientation as seen by other players, and also matches the appearance we are familiar with when working on the avatar in Unity.\n\nFor avatars with asymmetrical hairstyles, accessories, clothing, facial details, or other left/right differences, horizontal mirroring can significantly change the visual impression of the avatar.\n\nRather than replacing the current mirrored behavior, I would like to suggest adding a simple option such as:\n\nMirrored — behaves like a real mirror\n\nUnmirrored / Camera View — shows the avatar without horizontal flipping\n\nThis would allow users to choose whichever view best fits their use case, while keeping the current mirror behavior available for people who prefer it.\n\nThank you for considering it!",
+  "details": "Please consider adding an option to toggle the Face Mirror between Mirrored and Unmirrored views.\n\nThe Face Mirror now behaves like a real mirror and horizontally flips the avatar. While this makes sense for users who want an actual mirror, the previous unmirrored view was also very useful, especially for avatar creators and users with asymmetrical avatars.\n\nAn unmirrored view preserves the avatar's actual left/right orientation as seen by other players, and also matches the appearance we are familiar with when working on the avatar in Unity.\n\nFor avatars with asymmetrical hairstyles, accessories, clothing, facial details, or other left/right differences, horizontal mirroring can significantly change the visual impression of the avatar.\n\nRather than replacing the current mirrored behavior, I would like to suggest adding a simple option such as:\n\nMirrored — behaves like a real mirror\n\nUnmirrored / Camera View — shows the avatar without horizontal flipping\n\nThis would allow users to choose whichever view best fits their use case, while keeping the current mirror behavior available for people who prefer it.\n\nThe in-game camera is not a complete substitute for this, since camera distance, field of view, and zoom can significantly affect how the avatar's face appears. The Face Mirror provides a much more consistent view for checking an avatar's appearance.\n\nThank you for considering it!",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,7 +60,7 @@
   "subCategoryID": null,
   "title": "Please add a Mirrored / Unmirrored toggle to the Face Mirror",
   "trendingScore": 2960.0281321068296,
-  "updatedBy": null,
+  "updatedBy": "6aaa8532b4e14901d0d0ab94",
   "urlName": "please-add-a-mirrored-unmirrored-toggle-to-the-face-mirror",
   "viewerIsAuthor": false,
   "viewerVote": 0,
