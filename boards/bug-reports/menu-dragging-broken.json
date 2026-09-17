@@ -6,7 +6,7 @@
     "platforms.pc.steam",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-09-17T16:27:36.035907Z",
+  "aiTaggedAt": "2026-09-17T20:27:27.192066Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6aac13fcb4e14901d0db35b2",
@@ -38,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nCan no longer reposition menus by grabbing and dragging with trigger. This behavior was useful and now is gone and with no obvious replacement for moving the menu. Personally it'd be even better if the menu spawned at whatever angle you're looking in the first place\n\nReproduction Steps\n\nNo workaround, hold trigger on top bar of menu and move controller, nothing happens. idk why this has to be 100 chars it really is that simple\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2p2-1903-5de5614b49-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report",
+  "details": "Description\n\nCan no longer reposition menus by dragging with the trigger. This behavior was useful and now is gone and with no clear replacement for moving the menu. Personally I think it'd be even better if the menu spawned at whatever angle you're looking at in the first place.\n\nReproduction Steps\n\nHold trigger on the top bar of the menu and move controller as if to drag the menu, and nothing will happen(whereas it previously did). There is no workaround I am aware of.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2p2-1903-5de5614b49-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -62,7 +62,7 @@
   "subCategoryID": null,
   "title": "Menu dragging broken",
   "trendingScore": 2960.1963687134157,
-  "updatedBy": null,
+  "updatedBy": "6aac13fcb4e14901d0db35b2",
   "urlName": "menu-dragging-broken",
   "viewerIsAuthor": false,
   "viewerVote": 0,
