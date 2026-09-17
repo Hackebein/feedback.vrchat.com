@@ -2,7 +2,7 @@
 
 Collected: **37,328** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (57d ago)** to now.<br>
-Scrape horizon: **2026-08-25 22:26 UTC (22d ago)**.
+Scrape horizon: **2026-08-25 12:53 UTC (23d ago)**.
 
 ## Boards
 
@@ -13,12 +13,12 @@ Scrape horizon: **2026-08-25 22:26 UTC (22d ago)**.
 | `avatar-30` | 881 / 881 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 80 / 80 (100.0%) |
-| `bug-reports` | 12,098 / 12,090 (100.0%) |
+| `bug-reports` | 12,097 / 12,090 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,127 / 14,130 (99.98%) |
+| `feature-requests` | 14,128 / 14,130 (99.99%) |
 | `impostors` | 91 / 91 (100.0%) |
 | `ios-mobile-beta` | 262 / 262 (100.0%) |
 | `localization` | 649 / 649 (100.0%) |
