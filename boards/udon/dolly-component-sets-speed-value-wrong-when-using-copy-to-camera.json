@@ -1,0 +1,93 @@
+{
+  "_id": "6aac5d8b8d57f4988976df39",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-17T21:42:31.061952Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60dd2a998871d03e7f3806ae",
+    "alias": "Thoughtful Cobra",
+    "aliasID": "65c28339ed6eefce4cc2dd8f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6fbc19b0e88e53eee0f4c9d3a62c0bfe.png",
+    "created": "2021-07-01T02:38:17.778Z",
+    "name": "~Pausbe",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60dd2a998871d03e7f3806ae",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-17T21:37:15.406Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "After importing a dolly via Udon, the \"Speed\" value set in VRC Camera Dolly Point does not get translated correctly when the \"Copy to Camera\" button on the point gets used in-client.\n\nAnything set with speeds 1 or greater gets applied as 15.0 in-game (clamped limit) and 0.1 gets applied as 0.2 (clamped limit). \n\nEditor values tried:\n\n0.15 editor -> 0.4 client\n\n0.2 editor -> 0.5 client\n\n0.25 editor -> 0.8 client\n\n0.4 editor -> 3.0 client\n\n0.6 editor -> 5.1 client\n\n0.9 editor -> 11.5 client",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aac5d8b8d57f4988976df38",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-17T21:37:15.406Z",
+  "subCategoryID": null,
+  "title": "Dolly component sets \"Speed\" value wrong when using \"Copy to Camera\"",
+  "trendingScore": 2959.821843107313,
+  "updatedBy": null,
+  "urlName": "dolly-component-sets-speed-value-wrong-when-using-copy-to-camera",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6fbc19b0e88e53eee0f4c9d3a62c0bfe.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": null,
+      "voteID": "6aac5d8bb4e14901d0dd9387"
+    }
+  ]
+}
