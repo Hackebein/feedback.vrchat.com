@@ -7,6 +7,9 @@ Usage:
     python3 update.py bug-reports         # update a single board
     python3 update.py --refresh-oldest 10 # limit oldest-refresh to 10 posts
     python3 update.py --refresh-newest 10 # limit newest-activity refresh to 10 posts
+
+After each scan, posts whose complete voter list is only the scrape bot are
+unvoted on Canny so a leftover bot upvote does not stay as score 1.
 """
 
 import argparse
@@ -1367,6 +1370,86 @@ def _vote_batch_limit() -> int:
     return 50
 
 
+def is_sole_scraper_vote(post, scraper_id) -> bool:
+    """True when the complete voter list is only the scrape bot."""
+    if not isinstance(scraper_id, str) or not scraper_id or not isinstance(post, dict):
+        return False
+    score = post.get("score") or 0
+    if isinstance(score, float):
+        score = int(score)
+    if not isinstance(score, int) or score < 1:
+        return False
+    voters = post.get("voters")
+    if not isinstance(voters, list) or score != len(voters):
+        return False
+    ids = []
+    for v in voters:
+        if not isinstance(v, dict):
+            return False
+        uid = v.get("_id") or v.get("id")
+        if not isinstance(uid, str) or not uid:
+            return False
+        ids.append(uid)
+    return all(uid == scraper_id for uid in ids)
+
+
+def _unvote_sole_scraper_votes(session, results, state) -> int:
+    """Remove the scrape bot's leftover sole upvote on just-scanned posts."""
+    scraper_id = session.scraper_user_id or state.get("scraperUserId")
+    if not isinstance(scraper_id, str) or not scraper_id:
+        print("[unvote] skipped (no scraper user id)")
+        return 0
+
+    voted = set(state.get("votedPostIds") or [])
+    candidates = []
+    for pid, (post, _comments, not_found, transient) in results.items():
+        if transient or not_found or not isinstance(post, dict):
+            continue
+        if not is_sole_scraper_vote(post, scraper_id):
+            continue
+        candidates.append((pid, post))
+
+    ok = 0
+    stopped_rate_limit = False
+    for pid, post in candidates:
+        result = canny_auth.vote_post(session, pid, score=0)
+        if result.ok:
+            voted.add(pid)
+            ok += 1
+            voters = post.get("voters") or []
+            post["voters"] = [
+                v
+                for v in voters
+                if not (
+                    isinstance(v, dict)
+                    and (v.get("_id") or v.get("id")) == scraper_id
+                )
+            ]
+            score = post.get("score")
+            if isinstance(score, int) and score > 0:
+                post["score"] = score - 1
+            elif isinstance(score, float) and score > 0:
+                post["score"] = int(score) - 1
+            if "viewerVote" in post:
+                post["viewerVote"] = 0
+            board_slug = (post.get("board") or {}).get("urlName")
+            if isinstance(board_slug, str) and board_slug:
+                board_store.write_post(board_slug, post)
+        elif result.rate_limited:
+            stopped_rate_limit = True
+            break
+        time.sleep(1.0)
+    state["votedPostIds"] = sorted(voted)
+    notes = []
+    if stopped_rate_limit:
+        notes.append("stopped early (rate-limited)")
+    note = f"; {'; '.join(notes)}" if notes else ""
+    print(
+        f"[unvote] removed {ok}/{len(candidates)} sole scrape-bot vote(s){note}"
+    )
+    return ok
+
+
 def _upvote_backlog(session, stored, state) -> int:
     """Upvote posts not yet in votedPostIds; returns number newly voted this run.
 
@@ -1656,6 +1739,12 @@ def main():
 
     state["scrapedAt"] = scraped_at
     scrape_state.save_state(state)
+
+    # Unvote leftover sole scrape-bot upvotes on this scan, independent of
+    # --vote-batch (CI sets that to 0; the host still owns the upvote backlog).
+    if session is not None:
+        _unvote_sole_scraper_votes(session, results, state)
+        scrape_state.save_state(state)
 
     # Vote after scrape so pacing does not delay board refreshes. Newly added
     # posts are already in `stored`, so the backlog covers them.

@@ -32,6 +32,11 @@ Separately, every **65s** it upvotes up to **10** most-active unscored posts
 (skips the rest of that cycle on HTTP 429). Vote progress lives in
 `/var/lib/feedback-search/canny-wake-state.json` (`votedPostIds`).
 
+Scan (`scripts/update.py`) then removes that leftover upvote when a refreshed
+post’s complete voter list is only the scrape bot (`POST /api/posts/vote`
+`score: 0`). Canny keeps the post at score 0. This cleanup runs even when
+`--vote-batch 0`; the host still owns the upvote backlog.
+
 1. On the host, fill `/etc/feedback-search/canny.env` with the same
    `VRCHAT_USERNAME` / `VRCHAT_PASSWORD` / `VRCHAT_TOTP_SECRET` used by
    Actions. Install creates an empty skeleton.
