@@ -1,11 +1,11 @@
 {
   "_id": "6aaa1f3522f4757e0aeb6226",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.chatbox"
+    "loc.in-world",
+    "client.chatbox",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-09-17T15:02:38.919430Z",
+  "aiTaggedAt": "2026-09-17T18:54:32.106122Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6aaa1f34b4e14901d0ced8ab",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -118,6 +118,62 @@
       "statusChangeID": "6aabffd684346b7036b3db0a",
       "statusChangeNewStatus": "closed",
       "value": "Please make bug posts in English",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aac372b750bf9950e9373a7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-17T18:53:31.809Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aabffd684346b7036b3db0b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aaa1f3522f4757e0aeb6226",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} Have my downvote, for what appears to be laziness. There's nothing in the bug report board header at the top to suggest submitting bug reports in English only. Japanese is an official supported language in the VRChat client for in-client bug reporting.\n\nA Bug That Forces the Chat Box to Close\n\nDescription\n\nWhen you press the Y key while chatting, the chat box closes before you can type anything. This makes it impossible to enter text. Since there’s nothing else to explain, meeting the 100-character requirement is really difficult. Today’s lunch was cup yakisoba.\n\nReproduction Steps\n\nOpen the chat box and press the Y key to start typing. The chat box will definitely close. It’s really hard to write more than 100 characters about something this simple. Last night’s dinner was a bowl of kamage shirasu rice topped with simmered eggplant.\n\nDetails\n\nCategory: User Interface\n\nFrequency: Always\n\nTranslated with DeepL.com (free version)\n\nhttps://www.deepl.com/en/translator",
       "viewerReactions": null,
       "voteID": null
     }
