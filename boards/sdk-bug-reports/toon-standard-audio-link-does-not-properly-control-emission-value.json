@@ -1,0 +1,93 @@
+{
+  "_id": "6aab712d944bb30b3dcf5eee",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-09-17T04:53:32.473939Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "674163b31461829c27244c08",
+    "alias": "Nutty Swift",
+    "aliasID": "674163b3c66e81bbd493955b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b58f4ede12c545d53f875677f29be6a8.png",
+    "created": "2024-11-23T05:10:11.206Z",
+    "name": "LunnaBug",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "674163b31461829c27244c08",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-17T04:48:45.987Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "On most PC shaders, when Audio Link is set to control the emission, the emission is set to off when Audio Link is not in a world. for Toon Standard, the emission is set to full when audio link is not in a world. The emission should be overridden to off when audio link is not present in a world and audio link has been set to use the emission mask. This could also be an option in the shader, like a check box, so as to not break current logic that already gets around this issue.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aab712d944bb30b3dcf5eed",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aab712d944bb30b3dcf5eee/2349500.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-17T04:48:45.987Z",
+  "subCategoryID": null,
+  "title": "Toon Standard Audio link does not properly control Emission value.",
+  "trendingScore": 2959.7217943358182,
+  "updatedBy": null,
+  "urlName": "toon-standard-audio-link-does-not-properly-control-emission-value",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "674163b31461829c27244c08",
+      "alias": "Nutty Swift",
+      "aliasID": "674163b3c66e81bbd493955b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b58f4ede12c545d53f875677f29be6a8.png",
+      "companies": [],
+      "name": "LunnaBug",
+      "urlName": null,
+      "voteID": "6aab712eb4e14901d0d75975"
+    }
+  ]
+}
