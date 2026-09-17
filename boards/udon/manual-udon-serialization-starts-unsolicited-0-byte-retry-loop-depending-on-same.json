@@ -1,0 +1,93 @@
+{
+  "_id": "6aac0af6916ed8affbb3d81c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-17T15:49:33.961679Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66c5f02916d5a7375128be08",
+    "alias": "Supposed Hornet",
+    "aliasID": "66c5f0293e088c8d6b961757",
+    "anonymized": false,
+    "avatarURL": "https://canny.io/images/4b45782ef1694f798d6c98e31507af55.png",
+    "created": "2024-08-21T13:48:25.098Z",
+    "name": "ZYNX_404",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66c5f02916d5a7375128be08",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-17T15:44:54.475Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Summary\n\nI found a reproducible Udon networking issue where a Manual-sync\n\nUdonBehaviour begins serialization without any user-code call to\n\nRequestSerialization().\n\nThe behaviour repeatedly receives:\n\nOnPreSerialization()\n\nOnPostSerialization(success = false, byteCount = 0)\n\nwhile the RequestSerialization call count remains 0.\n\nThe issue depends on the composition/cardinality of UdonBehaviours attached\n\nto the same GameObject.\n\nMoving the additional UdonBehaviours to separate GameObjects prevents the\n\nissue in my isolated tests.\n\nObserved Behaviour\n\nWith a Manual-sync Authority UdonBehaviour and certain additional\n\nUdonBehaviours on the same GameObject:\n\n- RequestSerialization calls: 0\n\n- OnPreSerialization: repeatedly called\n\n- OnPostSerialization: repeatedly called\n\n- SerializationResult.success: false\n\n- SerializationResult.byteCount: 0\n\nI instrumented the first unsolicited serialization attempt.\n\nAt FIRST OnPreSerialization:\n\n- RequestSerialization count = 0\n\n- Networking.IsClogged = false\n\n- Networking.IsNetworkSettled = true\n\n- Networking.IsObjectReady = true\n\n- local player is owner\n\n- Authority SyncMethod = Manual\n\nTherefore the first observed serialization attempt was not preceded by an\n\ninstrumented RequestSerialization call and did not begin while IsClogged was\n\ntrue.\n\nMinimal Cardinality Reproduction\n\nUsing the same Authority behaviour and repeated copies of the SAME additional\n\nProgramAsset on the SAME GameObject produced this pattern:\n\nAdditional sibling UdonBehaviours:\n\n0 -> QUIET\n\n1 -> QUIET\n\n2 -> unsolicited serialization loop\n\n3 -> QUIET\n\n4 -> unsolicited serialization loop\n\n5 -> QUIET\n\n6 -> unsolicited serialization loop\n\n7 -> QUIET\n\nThe positive cases repeatedly produced:\n\nReq = 0\n\nPre > 0\n\nPost > 0\n\nsuccess = false\n\nbyteCount = 0\n\nThis was not specific to one ProgramAsset.\n\nI reproduced the same cardinality pattern with another Udon ProgramAsset:\n\n1 -> QUIET\n\n2 -> unsolicited serialization loop\n\n3 -> QUIET\n\n4 -> unsolicited serialization loop\n\nI also reproduced it using distinct sibling ProgramAssets:\n\n1 sibling  -> QUIET\n\n2 siblings -> unsolicited serialization loop\n\n3 siblings -> QUIET\n\n4 siblings -> unsolicited serialization loop\n\nI am NOT claiming that all even numbers of UdonBehaviours are generally\n\nbroken. This is only the reproducible pattern observed under this isolated\n\nfixture configuration.\n\nSame-GameObject Isolation\n\nI then tested the registration/layout layer.\n\nSame GameObject:\n\nAuthority + two relevant siblings\n\n-> unsolicited serialization loop\n\nSplit GameObjects:\n\nAuthority on GO-A\n\nSibling 1 on GO-B\n\nSibling 2 on GO-C\n\n-> QUIET\n\nPartial split:\n\nAuthority + one sibling on GO-A\n\nsecond sibling on GO-B\n\n-> QUIET\n\nThis suggests that same-GameObject Udon registration/composition is involved.\n\nAdditional Cause-Layer Tests\n\nThe problem was NOT reproduced simply by creating arbitrary zero-field\n\nbehaviours.\n\nControlled variants using inert zero-field Manual / Continuous behaviours\n\nremained QUIET in my tests.\n\nChanging between zero and one synced field also did not independently\n\nreproduce the issue.\n\nTherefore I currently classify this as a multifactor same-GameObject\n\nregistration/composition issue rather than a bug in one specific script,\n\nNoVariableSync alone, synced-field count alone, or Manual sync alone.\n\nExpected Behaviour\n\nFor a Manual-sync UdonBehaviour:\n\nIf user code never calls RequestSerialization(), the owner should not enter a\n\ncontinuous OnPreSerialization / OnPostSerialization failure loop.\n\nIn particular, I would not expect the addition/removal or placement of sibling\n\nUdonBehaviours on the same GameObject to cause unsolicited Manual serialization.\n\nActual Behaviour\n\nUnder the affected same-GameObject composition:\n\nRequestSerialization count remains 0, but serialization begins anyway.\n\nThe first observed attempt occurs while:\n\nIsClogged = false\n\nIsNetworkSettled = true\n\nIsObjectReady = true\n\nIt then repeatedly calls:\n\nOnPreSerialization()\n\nOnPostSerialization(false, 0)\n\nImportant distinction\n\nVRChat documentation states that failed Manual serialization may be cached\n\nand retried when networking is clogged.\n\nThat could explain repeated attempts AFTER a failed serialization event.\n\nHowever, in this reproduction the FIRST observed serialization attempt occurs\n\nwith:\n\nRequestSerialization count = 0\n\nIsClogged = false\n\nSo the unresolved issue is what creates the initial Manual serialization event.\n\nPossible Related Existing Reports\n\nhttps://feedback.vrchat.com/persistence/p/persistence-does-not-restore-synced-variables-in-udon-components-other-than-the\n\nhttps://feedback.vrchat.com/bug-reports/p/pickup-events-may-not-be-called-when-multiple-udon-components-are-attached\n\nThere are existing tracked reports involving multiple Udon components on the\n\nsame GameObject, including:\n\n- Persistence only restoring synced variables from the first Udon component\n\n- Pickup events not reliably reaching multiple Udon components\n\nThose reports may or may not share the same underlying cause.\n\nThis report describes a different failure mode involving the Manual\n\nserialization lifecycle.\n\nImpact\n\nThis is particularly difficult to diagnose because:\n\n- gameplay code does not call RequestSerialization\n\n- the affected behaviour is Manual sync\n\n- the behaviour may work or fail depending on same-GameObject composition\n\n- changing hierarchy/component composition can make the issue disappear\n\n- the resulting failed serialization loop can continue at a high rate\n\nIn a modular Udon system, adding/removing otherwise unrelated sibling\n\nUdonBehaviours can therefore change networking behaviour unexpectedly.\n\nWorkaround\n\nSeparating the networking Authority UdonBehaviour and the additional\n\nUdonBehaviours onto different GameObjects prevents the reproduction in my\n\nisolated test.\n\nI consider this a workaround, not an explanation of the underlying behaviour.\n\nReproduction Evidence\n\nI have retained:\n\n- isolated minimal fixtures\n\n- cardinality matrices\n\n- ProgramAsset identities\n\n- runtime SyncMethod fingerprints\n\n- first-unsolicited-event instrumentation\n\n- prefab/scene hashes for tested builds\n\n- repeated runtime observations\n\nI can provide a stripped minimal Unity/VRChat reproduction project if useful.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aac0af5916ed8affbb3d7f4",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-17T15:44:54.475Z",
+  "subCategoryID": null,
+  "title": "Manual Udon serialization starts unsolicited 0-byte retry loop depending on same-GameObject UdonBehaviour composition/cardinality",
+  "trendingScore": 2959.7868876542707,
+  "updatedBy": null,
+  "urlName": "manual-udon-serialization-starts-unsolicited-0-byte-retry-loop-depending-on-same",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "66c5f02916d5a7375128be08",
+      "alias": "Supposed Hornet",
+      "aliasID": "66c5f0293e088c8d6b961757",
+      "anonymized": false,
+      "avatarURL": "https://canny.io/images/4b45782ef1694f798d6c98e31507af55.png",
+      "companies": [],
+      "name": "ZYNX_404",
+      "urlName": null,
+      "voteID": "6aac0af6b4e14901d0dae4bf"
+    }
+  ]
+}
