@@ -1,0 +1,96 @@
+{
+  "_id": "6aac4e78750bf9950e97db53",
+  "aiCategories": [
+    "loc.action-menu",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-09-17T20:40:00.721930Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "60dd2a998871d03e7f3806ae",
+    "alias": "Thoughtful Cobra",
+    "aliasID": "65c28339ed6eefce4cc2dd8f",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6fbc19b0e88e53eee0f4c9d3a62c0bfe.png",
+    "created": "2021-07-01T02:38:17.778Z",
+    "name": "~Pausbe",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "60dd2a998871d03e7f3806ae",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-17T20:32:56.300Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The Action Menu UI's shows an \"Add\" button despite being maxed out. Clicking the \"Add\" button does nothing when in \"Manage Action Menu\" modal and in other places brings you to the modal.\n\nThis is a regression from previous behaviour where it did not show when maxed out.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aac4e77750bf9950e97db3b",
+  "imageURLs": [
+    "https://canny-assets.io/images/56ea6b68c0019682ce358e73a3a5dd66.png",
+    "https://canny-assets.io/images/2ced048f6bfd0b62f4c57b4e3824a61a.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-17T20:32:56.300Z",
+  "subCategoryID": null,
+  "title": "[1912+] Action Menu shows an \"Add\" button despite being full",
+  "trendingScore": 2959.815462343424,
+  "updatedBy": null,
+  "urlName": "1912-action-menu-shows-an-add-button-despite-being-full",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "60dd2a998871d03e7f3806ae",
+      "alias": "Thoughtful Cobra",
+      "aliasID": "65c28339ed6eefce4cc2dd8f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6fbc19b0e88e53eee0f4c9d3a62c0bfe.png",
+      "companies": [],
+      "name": "~Pausbe",
+      "urlName": null,
+      "voteID": "6aac4e78b4e14901d0dd3aee"
+    }
+  ]
+}
