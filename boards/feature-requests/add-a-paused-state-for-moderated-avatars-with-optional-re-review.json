@@ -2,10 +2,10 @@
   "_id": "6aab1fb4a5bf719b6a3ac8bf",
   "aiCategories": [
     "loc.website",
-    "moderation.safety-system",
-    "avatars.upload-performance"
+    "web.profiles",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-09-16T23:23:33.345614Z",
+  "aiTaggedAt": "2026-09-17T05:58:28.992531Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69f0c9304a48bed189cc90b6",
@@ -29,9 +29,57 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 0,
+  "commentCount": 1,
   "commentingDisabled": false,
-  "comments": [],
+  "comments": [
+    {
+      "_id": "6aab805fbd87581012513126",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-17T05:53:35.847Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/25bf8937f3bb9c93f129cf60fb167974.png",
+        "https://canny-assets.io/images/4302cfb9fa5272bc8309d5d755c1e40b.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aab1fb4a5bf719b6a3ac8bf",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Can you share the LLM prompt you've used to generate the text if applicable, to better understand the intent behind your feature request?",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-09-16T23:01:08.704Z",
   "deleteID": null,
