@@ -2,10 +2,10 @@
   "_id": "6aa7f603d6dfc723686afd9b",
   "aiCategories": [
     "loc.in-world",
-    "avatars.dynamics",
-    "avatars.impostors"
+    "avatars.impostors",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-09-14T17:32:22.897633Z",
+  "aiTaggedAt": "2026-09-17T03:28:38.029463Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "688cc7f6076be5baa685a488",
@@ -35,7 +35,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "650db8715336b321c3150440",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -79,6 +79,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Providing an avatar ID may be useful information for testing.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aab592f6a768a74e0b2a488",
+      "aiGenerated": false,
+      "author": {
+        "_id": "688cc7f6076be5baa685a488",
+        "alias": "Aegean Prawn",
+        "aliasID": "68fe24fd1f833c417c50ed8d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/cea7a983484dd42559d6f32e2a5cf3b1.png",
+        "created": "2025-08-01T13:58:14.186Z",
+        "name": "SynaBytez",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-17T03:06:23.792Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa82eaa501fbe57f302c429",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa7f603d6dfc723686afd9b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} The avatar in the screenshots is avtr_54e776bc-bfd1-46ed-b88a-5016e1c62866",
       "viewerReactions": null,
       "voteID": null
     }
