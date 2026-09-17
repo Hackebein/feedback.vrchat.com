@@ -1,10 +1,10 @@
 {
-  "_id": "6aac594f8aecbff0a5953bcd",
+  "_id": "6aac5a8636e614f334259119",
   "aiCategories": [
-    "loc.pc-client",
-    "web.profiles"
+    "loc.action-menu",
+    "client.inventory"
   ],
-  "aiTaggedAt": "2026-09-17T21:22:16.495660Z",
+  "aiTaggedAt": "2026-09-17T21:25:35.454406Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60e65f577ae9d0492b0f2a75",
@@ -26,69 +26,60 @@
   "boardID": "5b0746088fa72313783e3269",
   "by": null,
   "byID": null,
-  "category": {
-    "_id": "6317f3226fccd444a7af6064",
-    "created": "2022-09-07T01:25:54.001Z",
-    "name": "Bug Report",
-    "parentID": null,
-    "urlName": "bug-report"
-  },
-  "categoryID": "6317f3226fccd444a7af6064",
+  "category": null,
+  "categoryID": null,
   "commentCount": 0,
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-17T21:19:11.476Z",
+  "created": "2026-09-17T21:24:22.646Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "* my profile\n\n* clicking edit profile\n\n* editing my profile, then a save button appears\n\nThe save button has no hover.",
+  "details": "1. action menu\n\n2. add new item\n\nthe items there have the 3 hover buttons, the archive button works, but doesn't show it in this view. the spawn and despawn button are working too. (pretty annoying to press it by accident in VR). and the asign button open/closes the previous popup in the background",
   "error": null,
   "eta": null,
   "etaPublic": true,
-  "fileURLs": [],
-  "files": [],
-  "ideaID": "6aac594f8aecbff0a5953bcc",
+  "fileURLs": [
+    "https://canny-assets.io/files/c05ea4042bd5b9b66883897dcc0bbe91.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-09-17 23-21-46",
+      "url": "https://canny-assets.io/files/c05ea4042bd5b9b66883897dcc0bbe91.mp4"
+    }
+  ],
+  "ideaID": "6aac5a8636e614f334259118",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aac594f8aecbff0a5953bcd/314135858.jpeg",
+  "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-17T21:19:11.476Z",
+  "statusChanged": "2026-09-17T21:24:22.646Z",
   "subCategoryID": null,
-  "title": "[1913] Hover save button missing",
-  "trendingScore": 2960.225667441127,
+  "title": "[1913]",
+  "trendingScore": 2959.820565447756,
   "updatedBy": null,
-  "urlName": "1913-hover-save-button-missing",
+  "urlName": "1913",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aac5a62b4e14901d0dd8376"
-    },
     {
       "_id": "60e65f577ae9d0492b0f2a75",
       "alias": "Just Wildcat",
@@ -98,7 +89,7 @@
       "companies": [],
       "name": "Hackebein",
       "urlName": null,
-      "voteID": "6aac594fb4e14901d0dd7ec4"
+      "voteID": "6aac5a86b4e14901d0dd83cf"
     }
   ]
 }
