@@ -1,11 +1,10 @@
 {
-  "_id": "6aad531da32bed82afb3eb38",
+  "_id": "6aad53ef10ca1a5f7fde4f55",
   "aiCategories": [
-    "loc.in-world",
-    "client.chatbox",
-    "platforms.pc.steam"
+    "loc.pc-client",
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-09-18T15:08:29.261024Z",
+  "aiTaggedAt": "2026-09-18T15:11:30.618054Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63882dc1f272550ad4b6b553",
@@ -28,68 +27,57 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6317f3226fccd444a7af6064",
-    "created": "2022-09-07T01:25:54.001Z",
-    "name": "Bug Report",
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
     "parentID": null,
-    "urlName": "bug-report"
+    "urlName": "feature-requests"
   },
-  "categoryID": "6317f3226fccd444a7af6064",
+  "categoryID": "6317ed8c023c7b5ec9566d28",
   "commentCount": 0,
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-18T15:05:01.204Z",
+  "created": "2026-09-18T15:08:31.776Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "# Steps to reproduce\n\n1. Open the chatbox\n\n2. Type a word\n\n3. Press the \"Shift\" key\n\n4. Press the \"Enter\" key while the \"Shift\" key is enabled\n\n# Observed result\n\nThe chatbox message is sent instead of creating a new line.\n\n# Notes\n\n- Multi-line chatbox support works in desktop mode, just not in VR.\n\n- Both desktop and VR should be able to send multi-line messages.",
+  "details": "The ability to move the chatbox input field has been reimplemented in 1914, but I really wish I didn't have to aim at the input field to move them together.\n\nPlease give us the ability to \"lock\" the keyboard to the input field so that grabbing either the input field OR the keyboard results in moving both at the same time. This would honestly be helpful in the main menu as well. Once the keyboard has been positioned in a comfortable place I don't really want to move it or resize it.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aad531ca32bed82afb3eb37",
+  "ideaID": "6aad53ef10ca1a5f7fde4f54",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aad531da32bed82afb3eb38/712218334.jpeg",
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aad53ef10ca1a5f7fde4f55/2024266325.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-18T15:05:01.204Z",
+  "statusChanged": "2026-09-18T15:08:31.776Z",
   "subCategoryID": null,
-  "title": "[1914] Multi-line chatbox support does not work in VR",
-  "trendingScore": 2960.33142688348,
+  "title": "[1914] Allow 'locking' the keyboard to the chatbox input field so they can be moved as one unit",
+  "trendingScore": 2959.9261361099584,
   "updatedBy": null,
-  "urlName": "1914-multi-line-chatbox-support-does-not-work-in-vr",
+  "urlName": "1914-allow-locking-the-keyboard-to-the-chatbox-input-field-so-they-can-be-moved",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aad54585a0588e09cd48de6"
-    },
     {
       "_id": "63882dc1f272550ad4b6b553",
       "alias": "Nautical blue Horse",
@@ -99,7 +87,7 @@
       "companies": [],
       "name": "B1G․",
       "urlName": null,
-      "voteID": "6aad531d5a0588e09cd48417"
+      "voteID": "6aad53ef5a0588e09cd48b64"
     }
   ]
 }
