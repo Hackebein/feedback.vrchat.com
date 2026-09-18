@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "social.friends",
-    "worlds.travel"
+    "social.nameplates",
+    "social.instances"
   ],
-  "aiTaggedAt": "2026-09-18T00:11:42.070438Z",
+  "aiTaggedAt": "2026-09-18T01:02:32.740769Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -38,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nInstead of seeing the name of a world and \"Request invite\" button, I saw \"World name\" and \"Button Text\" placeholder text in its place. See the attached screenshots.\n\nReproduction Steps\n\n1. I joined a Friends+ instance (Seclusion) at 2026.09.17 23:11:14 (UTC), met another user (usr_b6ca76fc-8944-45d2-9bdc-4324cf4badbe, from here on referred to as \"user\").\n\n2. My friend left the instance.\n\n3. Non-friend user left the instance.\n\n4. I sent a friend request to the user.\n\n5. I left the instance to my home world (Avatar Testing Chamber) at 2026.09.17 23:41:43 (UTC).\n\n6. I checked Recently Seen, spotted the user had accepted my friend request. Their name was last in the recently seen \"Friends\" list, instead of the first in the list as expected.\n\n7. See \"World location\" and \"Button text\" as placeholder.\n\n8. Go back.\n\n9. Click their profile again. It now showed a joinable instance with a world location and a Join button with correct text.\n\n10. Wait. User left the joinable instance to a private instance. \"Private instance\" and \"Button text\" placeholder text is seen.\n\nFrequency to reproduce: Unknown. I don't know if or how this may be reproducible.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Once\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2p2-1903-5de5614b49-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-17_22-56-11.txt](https://api.vrchat.cloud/api/1/file/file_0c0b9934-76ad-4999-a41a-0f83aee6192a/1/file)",
+  "details": "Description\n\nInstead of seeing the name of a world and \"Request invite\" button, I saw \"World name\" and \"Button Text\" placeholder text in its place. See the attached screenshots.\n\nReproduction Steps\n\n1. I joined a Friends+ instance (Seclusion) at 2026.09.17 23:11:14 (UTC), met another user (usr_b6ca76fc-8944-45d2-9bdc-4324cf4badbe, from here on referred to as \"user\"). I checked this user's profile several times.\n\n2. My friend left the instance.\n\n3. Non-friend user left the instance.\n\n4. I sent a friend request to the user.\n\n5. I left the instance to my home world (Avatar Testing Chamber) at 2026.09.17 23:41:43 (UTC).\n\n6. I checked Recently Seen, spotted the user had accepted my friend request. Their name was last in the recently seen \"Friends\" list, instead of the first in the list as expected. I clicked their name (last in the list) to open their profile.\n\n7. See \"World location\" and \"Button text\" as placeholder.\n\n8. Go back.\n\n9. Click their profile again from \"Recently Seen\" friends (still in the last spot in the list). It now showed a joinable instance with a world location and a Join button with correct text.\n\n10. Wait. User left the joinable instance to a private instance. \"Private instance\" and \"Button text\" placeholder text is seen.\n\nFrequency to reproduce: Unknown. I don't know if or how this may be reproducible.\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Once\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.2p2-1903-5de5614b49-Release\n\nunityVersion: 2022.3.22f2-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-17_22-56-11.txt](https://api.vrchat.cloud/api/1/file/file_0c0b9934-76ad-4999-a41a-0f83aee6192a/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,

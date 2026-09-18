@@ -1,11 +1,12 @@
 {
   "_id": "6aa25a9da026cebd78245c69",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.chatbox"
+    "loc.in-world",
+    "client.chatbox",
+    "client.controls",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-17T01:25:57.703247Z",
+  "aiTaggedAt": "2026-09-18T01:02:32.742023Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60c87a5d16d979790d8309cf",
@@ -35,63 +36,9 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 10,
+  "commentCount": 11,
   "commentingDisabled": false,
   "comments": [
-    {
-      "_id": "6aa268f986edbd1d3c133a05",
-      "aiGenerated": false,
-      "author": {
-        "_id": "60c87a5d16d979790d8309cf",
-        "alias": "Tawny Raven",
-        "aliasID": "65c2821bed6eefce4c970ba0",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/b33ad3dabb3e451bb2801657b040c6c7.png",
-        "created": "2021-06-15T10:01:01.067Z",
-        "name": "TummyTime",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "5b0746088fa72313783e3269",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-09-10T08:23:21.944Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [
-        "https://canny-assets.io/files/bcae43a83069eaefa3a7f9e8c42d92ba.mp4"
-      ],
-      "files": [
-        {
-          "mimeType": "video/mp4",
-          "name": "2026-09-10_10-20-20_8mblocal_e012b670",
-          "url": "https://canny-assets.io/files/bcae43a83069eaefa3a7f9e8c42d92ba.mp4"
-        }
-      ],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6aa25a9da026cebd78245c69",
-      "private": false,
-      "reactions": {
-        "like": 3
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "Playing it up a bit here. But there has been may times where I just want the keyboard a bit further away. And the input window doesn't let me have it where I want it.",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "6aa2e6894baa2d2ebf4d80cb",
       "aiGenerated": false,
@@ -403,7 +350,7 @@
       "postID": "6aa25a9da026cebd78245c69",
       "private": false,
       "reactions": {
-        "like": 5
+        "like": 6
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -503,6 +450,50 @@
       "value": "the state of the textbox is definitely not a \"new feature bad\" type of issue. it's missing several core features that the old one had, and functionally works completely differently now. \n\nignoring the feature regression and accessibilities issues, new feature bad, feels like the textbox input was directly ported from the desktop version without any accomdation for vr use, and the on screen keyboard feels like a placeholder ui element. it doesnt match the style of all other menu elements and i thought it was the quest keyboard when i first saw it",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aac8a3b750bf9950e9fef94",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5e8b24c1d87cbd0b05f6f967",
+        "alias": "Jasper Dragonfly",
+        "aliasID": "6605e0efd90e505763b7a4d2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a16e7fe79af1ba344c9b7b6687c13c31.png",
+        "created": "2020-04-06T12:46:57.362Z",
+        "name": "R﮼ye",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-18T00:47:55.213Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa25a9da026cebd78245c69",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "my quick menu stays up when editing an invite decline reply, and then i can only type and click things with one hand. bad bad bad.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -520,20 +511,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 97,
+  "maxScore": 98,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa25a9da026cebd78245c69/2041937828.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 97,
+  "score": 98,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-10T07:22:05.721Z",
   "subCategoryID": null,
   "title": "[1912] Separate keyboard and input field is annoying.",
-  "trendingScore": 2963.0822196106105,
+  "trendingScore": 2963.101583000728,
   "updatedBy": null,
   "urlName": "1912-separate-keyboard-and-input-field-is-annoying",
   "viewerIsAuthor": false,
@@ -546,6 +537,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5e8b24c1d87cbd0b05f6f967",
+      "alias": "Jasper Dragonfly",
+      "aliasID": "6605e0efd90e505763b7a4d2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a16e7fe79af1ba344c9b7b6687c13c31.png",
+      "companies": [],
+      "name": "R﮼ye",
+      "urlName": null,
+      "voteID": "6aac8a13b4e14901d0de8e21"
+    },
     {
       "_id": "62df03ca6d6050449f8e5cda",
       "alias": "Corporate Frog",
