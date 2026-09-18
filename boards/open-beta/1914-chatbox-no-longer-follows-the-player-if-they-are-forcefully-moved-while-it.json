@@ -1,0 +1,101 @@
+{
+  "_id": "6aad937818dec4548561d594",
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-09-18T19:42:46.280803Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63882dc1f272550ad4b6b553",
+    "alias": "Nautical blue Horse",
+    "aliasID": "65c26de3ed6eefce4c583e46",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3d837ede8c3de0d9df9412f052819088.png",
+    "created": "2022-12-01T04:29:53.950Z",
+    "name": "B1G․",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63882dc1f272550ad4b6b553",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-18T19:39:36.748Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The chatbox no longer follows the player when the player is moved by a world using teleportation (as well as stations, but this seems like a separate issue due to behaving slightly differently. See notes for more information).\n\n# Steps to reproduce\n\n1. Visit a world that teleports the player.\n\n2. Open the chatbox while being teleported.\n\n# Observed result\n\nThe chatbox input field is locked to the position it is spawned in relative to the world, not the player.\n\n# Notes\n\n- See attachments for more information.\n\n- I'm unsure if this happens in desktop mode, I've only tried in VR.\n\n- Teleporting can be tested in Super VR Ball https://vrchat.com/home/world/wrld_ff8b4a6e-4268-4783-bc16-3103067a4be6/info\n\n- A similar issue also newly occurs when in moving stations, except only with the keyboard. It appears to lag behind the input field significantly when in a moving station.\n\n- Stations can be tested in Test Pilots https://vrchat.com/home/world/wrld_e4908cea-023b-4749-9ad7-a898",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/9b1e90d9528c99df6e6327f7886a4f8d.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "chatbox positioning during movement issue",
+      "url": "https://canny-assets.io/files/9b1e90d9528c99df6e6327f7886a4f8d.mp4"
+    }
+  ],
+  "ideaID": "6aad937818dec4548561d593",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aad937818dec4548561d594/1935317782.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-18T19:39:36.748Z",
+  "subCategoryID": null,
+  "title": "[1914] Chatbox no longer follows the player if they are forcefully moved while it is open",
+  "trendingScore": 2959.9530290332386,
+  "updatedBy": "63882dc1f272550ad4b6b553",
+  "urlName": "1914-chatbox-no-longer-follows-the-player-if-they-are-forcefully-moved-while-it",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "63882dc1f272550ad4b6b553",
+      "alias": "Nautical blue Horse",
+      "aliasID": "65c26de3ed6eefce4c583e46",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3d837ede8c3de0d9df9412f052819088.png",
+      "companies": [],
+      "name": "B1G․",
+      "urlName": null,
+      "voteID": "6aad93785a0588e09cd61e71"
+    }
+  ]
+}
