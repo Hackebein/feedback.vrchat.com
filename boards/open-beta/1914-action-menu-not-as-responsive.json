@@ -1,12 +1,12 @@
 {
   "_id": "6aad4d2f58839405bc0442a7",
   "aiCategories": [
+    "loc.pc-client",
     "loc.action-menu",
-    "loc.hud",
     "platforms.pc.desktop",
     "open-beta"
   ],
-  "aiTaggedAt": "2026-09-18T14:42:21.999887Z",
+  "aiTaggedAt": "2026-09-18T14:48:08.001439Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c880a3cf3ce1e53f626e464",
@@ -44,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Ever since the new Desktop HUD came out, the Action Menu has become less responsive (at least on desktop), potentially even less responsive in instances with heavier performance. Trying to quickly click through different menus often causes mouse clicks not to register. I don't think I've encountered this in the live branch.",
+  "details": "Ever since the new Desktop HUD came out, the Action Menu has become less responsive (at least on desktop), even less responsive in instances with heavier performance, or if you lock your FPS to a low number. Trying to quickly click through different menus often causes mouse clicks not to register. I don't think I've encountered this in the live branch.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -68,7 +68,7 @@
   "subCategoryID": null,
   "title": "[1914] Action Menu not as responsive",
   "trendingScore": 2960.328877182616,
-  "updatedBy": null,
+  "updatedBy": "5c880a3cf3ce1e53f626e464",
   "urlName": "1914-action-menu-not-as-responsive",
   "viewerIsAuthor": false,
   "viewerVote": 0,
