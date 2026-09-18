@@ -1,11 +1,11 @@
 {
   "_id": "6aad531da32bed82afb3eb38",
   "aiCategories": [
-    "loc.in-world",
-    "client.chatbox",
-    "platforms.pc.steam"
+    "loc.pc-client",
+    "open-beta",
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-09-18T15:08:29.261024Z",
+  "aiTaggedAt": "2026-09-18T17:32:02.250618Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63882dc1f272550ad4b6b553",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "# Steps to reproduce\n\n1. Open the chatbox\n\n2. Type a word\n\n3. Press the \"Shift\" key\n\n4. Press the \"Enter\" key while the \"Shift\" key is enabled\n\n# Observed result\n\nThe chatbox message is sent instead of creating a new line.\n\n# Notes\n\n- Multi-line chatbox support works in desktop mode, just not in VR.\n\n- Both desktop and VR should be able to send multi-line messages.",
+  "details": "The newly-introduced ability to create multiple lines of text in the chatbox does not work in VR mode.\n\n# Steps to reproduce\n\n1. Open the chatbox\n\n2. Type a word\n\n3. Press the \"Shift\" key\n\n4. Press the \"Enter\" key while the \"Shift\" key is enabled\n\n# Observed result\n\nThe chatbox message is sent instead of creating a new line.\n\n# Notes\n\n- Multi-line chatbox support works in desktop mode, just not in VR.\n\n- Both desktop and VR should be able to send multi-line messages.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -67,7 +67,7 @@
   "subCategoryID": null,
   "title": "[1914] Multi-line chatbox support does not work in VR",
   "trendingScore": 2961.028343462464,
-  "updatedBy": null,
+  "updatedBy": "63882dc1f272550ad4b6b553",
   "urlName": "1914-multi-line-chatbox-support-does-not-work-in-vr",
   "viewerIsAuthor": false,
   "viewerVote": 0,
