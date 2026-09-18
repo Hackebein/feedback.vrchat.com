@@ -2,9 +2,11 @@
   "_id": "6aad937818dec4548561d594",
   "aiCategories": [
     "loc.in-world",
-    "client.chatbox"
+    "loc.hud",
+    "client.chatbox",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-18T19:56:54.058290Z",
+  "aiTaggedAt": "2026-09-18T20:08:19.364622Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63882dc1f272550ad4b6b553",
@@ -71,13 +73,15 @@
       "postDeleted": false,
       "postID": "6aad937818dec4548561d594",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Also happens in Desktop mode",
+      "value": "Also happens in Desktop mode (with teleporting)\n\nBehavior mostly matches Live with Stations",
       "viewerReactions": null,
       "voteID": null
     }
@@ -87,7 +91,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The chatbox no longer follows the player when the player is moved by a world using teleportation (as well as stations, but this seems like a separate issue due to behaving slightly differently. See notes for more information).\n\n# Steps to reproduce\n\n1. Visit a world that teleports the player.\n\n2. Open the chatbox while being teleported.\n\n# Observed result\n\nThe chatbox input field is locked to the position it is spawned in relative to the world, not the player.\n\n# Notes\n\n- See attachments for more information.\n\n- This issue occurs both in VR and desktop mode\n\n- Teleporting can be tested in Super VR Ball https://vrchat.com/home/world/wrld_ff8b4a6e-4268-4783-bc16-3103067a4be6/info\n\n- A similar issue also newly occurs when in moving stations, except only with the keyboard. It appears to lag behind the input field significantly when in a moving station.\n\n- Stations can be tested in Test Pilots https://vrchat.com/home/world/wrld_e4908cea-023b-4749-9ad7-a898\n\n- This issue does not occur when moved by momentum, such as opening the chatbox while falling or being launched.",
+  "details": "The chatbox no longer follows the player when the player is moved by a world using teleportation (as well as stations, but this seems like a separate issue due to behaving slightly differently. See notes for more information).\n\n# Steps to reproduce\n\n1. Visit a world that teleports the player.\n\n2. Open the chatbox while being teleported.\n\n# Observed result\n\nThe chatbox input field is locked to the position it is spawned in relative to the world, not the player.\n\n# Notes\n\n- See attachments for more information.\n\n- This issue occurs both in VR and desktop mode\n\n- Teleporting can be tested in Super VR Ball https://vrchat.com/home/world/wrld_ff8b4a6e-4268-4783-bc16-3103067a4be6/info\n\n- A similar issue also newly occurs (only in VR) when in moving stations, except only with the keyboard. It appears to lag behind the input field significantly when in a moving station.\n\n- Stations can be tested in Test Pilots https://vrchat.com/home/world/wrld_e4908cea-023b-4749-9ad7-a898\n\n- This issue does not occur when moved by momentum, such as opening the chatbox while falling or being launched.",
   "error": null,
   "eta": null,
   "etaPublic": true,
