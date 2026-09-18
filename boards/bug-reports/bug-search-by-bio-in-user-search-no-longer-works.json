@@ -65,7 +65,9 @@
       "postDeleted": false,
       "postID": "6aac9f2236054aec58898034",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -91,20 +93,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 4,
+  "maxScore": 5,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 4,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-18T02:17:06.177Z",
   "subCategoryID": null,
   "title": "[Bug] \"Search by Bio\" in User Search no longer works",
-  "trendingScore": 2960.767111974328,
+  "trendingScore": 2960.95186409371,
   "updatedBy": null,
   "urlName": "bug-search-by-bio-in-user-search-no-longer-works",
   "viewerIsAuthor": false,
@@ -117,6 +119,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "643a163c4841a3092345f4a3",
+      "alias": "Tangerine Warbler",
+      "aliasID": "65c28339ed6eefce4cc2dd86",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fdd04b3396582653663332348d64be37.png",
+      "companies": [],
+      "name": "DnutCfe-Obscura",
+      "urlName": null,
+      "voteID": "6aacc440b4e14901d0df90d1"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
