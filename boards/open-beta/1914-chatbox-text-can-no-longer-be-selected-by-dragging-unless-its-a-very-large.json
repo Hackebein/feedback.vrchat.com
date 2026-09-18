@@ -2,11 +2,10 @@
   "_id": "6aad59b5295f94ec54fd142c",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
-    "platforms.pc.steam",
-    "client.chatbox"
+    "client.chatbox",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-18T15:37:53.309449Z",
+  "aiTaggedAt": "2026-09-18T15:40:12.979201Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63882dc1f272550ad4b6b553",
@@ -44,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "# Steps to reproduce\n\n1. Open the chatbox\n\n2. Type a sentence that is at least ~40 characters long\n\n3. Attempt to drag over text to select characters\n\n4. Continue dragging for a very long distance\n\n# Observed result\n\nText in the input field cannot be selected unless dragged a significant distance.\n\n# Notes\n\n- See attachments for more information\n\n-",
+  "details": "# Steps to reproduce\n\n1. Open the chatbox\n\n2. Type a sentence that is at least ~40 characters long\n\n3. Attempt to drag over text to select characters\n\n4. Continue dragging for a very long distance\n\n# Observed result\n\nText in the input field cannot be selected unless dragged a significant distance.\n\n# Notes\n\n- See attachments for more information",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -76,7 +75,7 @@
   "subCategoryID": null,
   "title": "[1914] Chatbox text can no longer be selected by dragging unless it's a very large distance",
   "trendingScore": 2959.9285793019226,
-  "updatedBy": null,
+  "updatedBy": "63882dc1f272550ad4b6b553",
   "urlName": "1914-chatbox-text-can-no-longer-be-selected-by-dragging-unless-its-a-very-large",
   "viewerIsAuthor": false,
   "viewerVote": 0,
