@@ -5,7 +5,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-13T09:10:11.087875Z",
+  "aiTaggedAt": "2026-09-18T03:53:30.541164Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e7fc59ec4c8917c6442302b",
@@ -35,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
-  "commentCount": 10,
+  "commentCount": 11,
   "commentingDisabled": false,
   "comments": [
     {
@@ -504,6 +504,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Currently, the ActivateInputField() method of TMP_InputField is not exposed to Udon, and attempting to use it results in the following error:\n\nMethod is not exposed to Udon: '_inputField.ActivateInputField()'\n\nBecause of this, it is not possible to activate the input field from a script, which can be inconvenient in certain situations.\n\nIt would be very helpful if ActivateInputField() could also be made available from Udon.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aabef5776e4e1fe7d5c74df",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ae51ece906bfd12e600d6f6",
+        "alias": "Quaint Turtle",
+        "aliasID": "65c28068ed6eefce4c52fc2a",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5edb3e58e1f61a7d2801630a03948f8e.png",
+        "created": "2018-04-29T01:24:30.124Z",
+        "name": "chiugame",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-17T13:47:03.818Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "628525fc7b9f0c0b69426728",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I have summarized the remaining TextMeshPro APIs and functionality that are still unavailable from Udon in a separate Canny post:\n\nhttps://feedback.vrchat.com/feature-requests/p/many-textmeshpro-apis-are-still-not-exposed-to-udon",
       "viewerReactions": null,
       "voteID": null
     }
