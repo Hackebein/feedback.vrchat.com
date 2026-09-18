@@ -2,10 +2,12 @@
   "_id": "6aad6a35727bcf908690b88e",
   "aiCategories": [
     "loc.hud",
-    "open-beta",
-    "client.settings"
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "client.settings",
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-09-18T17:00:54.837615Z",
+  "aiTaggedAt": "2026-09-18T18:08:39.958104Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ba54f21e3c8761e8c3080d8",
@@ -29,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -66,13 +68,61 @@
       "postDeleted": false,
       "postID": "6aad6a35727bcf908690b88e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "People look at the center of the screen when talking, the mics should be within peripheral vision. The mic icon does visibly look farther to the left for some reason.\n\nI'm not if mentioned already by others, but maybe VRC should consider making the new desktop UI dynamic, like we can hold down shift or some combo of keys and move any element anywhere on the screen, this would be the easiest fix this would avoid the need for additional toggles for older features.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aad7b7155fb71df80f3a286",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5c872970a4264c0cacf21aaa",
+        "alias": "Attractive Newt",
+        "aliasID": "65c28ff3ed6eefce4cb36752",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/27cc69f694cb656f75c0a081300a658d.png",
+        "created": "2019-03-12T03:37:20.287Z",
+        "name": "14anthony7095",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-18T17:57:05.824Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/6ab5a06c4858dcf7e4e4be0e9b5190de.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aad6a35727bcf908690b88e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Live / Beta overlay comparison",
       "viewerReactions": null,
       "voteID": null
     }
