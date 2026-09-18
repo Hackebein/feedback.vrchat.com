@@ -1,10 +1,10 @@
 {
-  "_id": "6aad5a99295f94ec54fd4b2e",
+  "_id": "6aad5bd069127ebd7f7e20c5",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.desktop"
+    "loc.in-world",
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-09-18T15:40:12.978451Z",
+  "aiTaggedAt": "2026-09-18T15:48:27.728008Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69ba46c9ed082c9981cdcc0f",
@@ -38,59 +38,48 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-18T15:36:57.972Z",
+  "created": "2026-09-18T15:42:08.575Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "A lock button for grabbing and moving objects in VR is displayed unnecessarily while in desktop mode.",
+  "details": "When repeatedly entering line breaks after typing text in the chat input field, the black background does not expand properly to match the increasing input area. As a result, the text area extends beyond the visible background, causing a visual display issue.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6aad5a99295f94ec54fd4b1d",
+  "ideaID": "6aad5bd069127ebd7f7e20b7",
   "imageURLs": [
-    "https://canny-assets.io/images/411f9f9de1ca8a4ed901dfa53ededbee.png"
+    "https://canny-assets.io/images/a6bf4f997940d736c326d8179fe45585.png"
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-18T15:36:57.972Z",
+  "statusChanged": "2026-09-18T15:42:08.575Z",
   "subCategoryID": null,
-  "title": "[1914]VR Grab/Move Lock Button Is Displayed in Desktop Mode",
-  "trendingScore": 2960.334572613283,
+  "title": "[1914]Chat Input Background Does Not Expand Properly with Multiple Line Breaks",
+  "trendingScore": 2959.929470724707,
   "updatedBy": null,
-  "urlName": "1914vr-grab-move-lock-button-is-displayed-in-desktop-mode",
+  "urlName": "1914chat-input-background-does-not-expand-properly-with-multiple-line-breaks",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aad5baa5a0588e09cd4be12"
-    },
     {
       "_id": "69ba46c9ed082c9981cdcc0f",
       "alias": "Mantis Vole",
@@ -100,7 +89,7 @@
       "companies": [],
       "name": "Guff-ppp",
       "urlName": null,
-      "voteID": "6aad5a9a5a0588e09cd4b88c"
+      "voteID": "6aad5bd05a0588e09cd4bea1"
     }
   ]
 }
