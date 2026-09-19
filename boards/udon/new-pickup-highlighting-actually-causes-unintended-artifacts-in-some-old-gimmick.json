@@ -1,10 +1,11 @@
 {
   "_id": "6a9c596af2bdb618ad5b0cc3",
   "aiCategories": [
-    "loc.in-world",
-    "sdk.udon"
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "worlds.layers"
   ],
-  "aiTaggedAt": "2026-09-18T18:08:39.959898Z",
+  "aiTaggedAt": "2026-09-19T01:42:48.571258Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b0907a98fa72313783e4ba6",
@@ -34,7 +35,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -319,6 +320,55 @@
       "spam": false,
       "statusChangeID": null,
       "value": "To assist with validation, please provide the ID of any of the worlds from your screenshots demonstrating this issue and steps to reproduce the issue there.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aade5361b199062334948de",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b0907a98fa72313783e4ba6",
+        "alias": "Supposed Parrotfish",
+        "aliasID": "65c2b4abed6eefce4ce1caf2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c802ed56ec9fc14a097db712c3d1e4c0.png",
+        "created": "2018-05-26T07:07:21.588Z",
+        "name": "phi16",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-19T01:28:22.368Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/c1dfb9e0fe1b1b24e2c819bfbc5a7cc7.png",
+        "https://canny-assets.io/images/81886238f3d5f6ab6d1b47b1ddcdd23f.png",
+        "https://canny-assets.io/images/d5035827dc3ab075b24d7aecd297916f.png",
+        "https://canny-assets.io/images/52999e94254661f6c7bad3b53b1aa643.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9c596af2bdb618ad5b0cc3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "- Updated (fixed) version of the first screenshot: https://vrchat.com/home/world/wrld_4e8f3e44-dca9-4ae7-9580-954bb4b2cbc4/info\n\n- Its old version: https://vrchat.com/home/world/wrld_b7416a34-536c-4e59-85da-ce580b6ab0b2/info\n\n- Location: The bucket near the bottom of the pipe on the wall to your right when you enter the room\n\n- Object Hierarchy:\n\n- _____ `Bucket` has a VRC_Pickup\n\n- _____ `Visual` `JointMesh` `JointMesh/HandleMesh` has a MeshRenderer, which is intended to show as the highlight of this pickup\n\n- _____ `Water` has a SkinnedMeshRenderer and I don't want this to be highlighted",
       "viewerReactions": null,
       "voteID": null
     }

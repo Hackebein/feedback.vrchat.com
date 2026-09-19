@@ -441,7 +441,9 @@
       "postDeleted": false,
       "postID": "6aa25a9da026cebd78245c69",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -511,20 +513,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 101,
+  "maxScore": 102,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa25a9da026cebd78245c69/2041937828.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 101,
+  "score": 102,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-10T07:22:05.721Z",
   "subCategoryID": null,
   "title": "[1912] Separate keyboard and input field is annoying.",
-  "trendingScore": 2963.1600550108665,
+  "trendingScore": 2963.1808004064833,
   "updatedBy": null,
   "urlName": "1912-separate-keyboard-and-input-field-is-annoying",
   "viewerIsAuthor": false,
@@ -537,6 +539,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "652e6dcb2bea07f43b97d9dc",
+      "alias": "Gray Peacock",
+      "aliasID": "65fd7368a63714bcb3a7e688",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/db2c47d3e30384f28e453ef317c08cb2.png",
+      "companies": [],
+      "name": "Ninsei Chiba",
+      "urlName": null,
+      "voteID": "6aade6785a0588e09cd77b21"
+    },
     {
       "_id": "5c2581bf9a845e49819d160b",
       "alias": "Lavender Tapir",
