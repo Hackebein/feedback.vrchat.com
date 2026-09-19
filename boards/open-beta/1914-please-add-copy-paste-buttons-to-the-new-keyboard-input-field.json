@@ -1,0 +1,97 @@
+{
+  "_id": "6aadd078935d6a4257b83937",
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-09-19T00:03:29.089101Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "69c4ddadbcda4ee6327c039c",
+    "alias": "Rosé pink Tortoise",
+    "aliasID": "69c4ddadbcda4ee6327c2332",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b4ac8e63571c3e76e5da54d7b2d4e765.png",
+    "created": "2026-03-26T07:18:05.546Z",
+    "name": "にに！！",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "69c4ddadbcda4ee6327c039c",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-18T23:59:52.410Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Could you add copy and paste buttons to the new keyboard input field design introduced in build 1914?\n\nThe current UI only shows an input field and a send button on desktop (attached image 1), and on VR it also shows a keyboard alongside the input field and send button (attached image 2). Neither gives any consideration to copy/paste, which leaves room for improvement in usability.\n\nThe input field is mainly used to handle URLs, for cases such as:\n\n・ Fetching videos or images\n\n・ Sending URLs generated dynamically within the world\n\n・ Placing links to external sites (e.g. portfolio sites)\n\nSince URLs are long and complex, users rarely type them by hand — they're almost always copied and pasted. That makes copy/paste one of the most frequently used actions within the input field, so it shouldn't be hidden or treated the same as any other character key; it should be placed prominently and be easy to tap.\n\nThat's true that desktop users can rely on keyboard shortcuts, but copying requires two separate actions — \"select all\" and \"copy\" — and assumes the user already knows those shortcuts exist in the first place. That's not friendly to first-time users.\n\nOn VR, copy and paste buttons do exist in the bottom-left of the default keyboard, but they're the same size and laid out the same way as the other character keys, making it hard for unfamiliar users to notice and use them right away. As a result, on both desktop and VR, this important action isn't being communicated to users effectively.\n\nCopy and paste is one of the most important use cases for the input field. We'd appreciate it if you could consider adding copy and paste buttons to the new design, similar to the old design (attached image 3).\n\n-----------------------------\n\nビルド番号1914で追加された新デザインの input field に、コピーボタンとペーストボタンを追加していただけないでしょうか。\n\n現在の新UIは、デスクトップは入力欄と送信ボタンのみ(添付画像1枚目)、VRは入力欄・送信ボタンに加えキーボードが表示される構成(添付画像2枚目)で、いずれもコピー・ペーストへの配慮がなく、ユーザビリティに改善の余地があります。\n\nInput field は主に以下のようなURLを扱う用途で使われています。\n\n・ 動画や画像の取得\n\n・ ワールド内で動的に生成されたURLの送信\n\n・ 外部サイト(ポートフォリオサイトなど)へのリンク配置\n\nURLは長く複雑なため手入力される機会は少なく、大半はコピー・ペーストで扱われます。つまりコピー・ペーストは input field 内で最も使用頻度の高い操作であり、隠したり他の文字キーと同列に扱うのではなく、目立つ位置に大きく配置すべきです。\n\n確かに、デスクトップならショートカットキーでコピー・ペーストに対応することはできます。ですがコピーには「全選択」と「コピー」の2操作が必要な上、そもそもショートカットが使用可能であると認知していることが前提となり、初めて使うユーザーには不親切です。\n\nVRでもキーボード左下にコピー・ペーストボタンはありますが、他の文字キーと同じ大きさ・並びのため、不慣れなユーザーが瞬時に気づいて使うのは困難です。結果として、デスクトップ・VRいずれもこの重要な操作が十分にユーザーへ伝わっていません。\n\nコピー・ペーストは input filed において最も重要なユースケースのうちの一つです。新デザインにも、旧デザイン(添付画像3枚目)のようなコピー・ペーストボタンの追加をご検討いただけますでしょうか。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aadd078935d6a4257b83936",
+  "imageURLs": [
+    "https://canny-assets.io/images/fb7a3aa3de606498400c86efd31c3ffb.jpeg",
+    "https://canny-assets.io/images/beb6c4c6791351000b64d810dadcf984.png",
+    "https://canny-assets.io/images/dbbfe96fe8ce3c024c4ebcb0caab8754.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aadd078935d6a4257b83937/663565860.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-18T23:59:52.410Z",
+  "subCategoryID": null,
+  "title": "[1914] Please add copy/paste buttons to the new keyboard input field",
+  "trendingScore": 2959.978848919978,
+  "updatedBy": null,
+  "urlName": "1914-please-add-copy-paste-buttons-to-the-new-keyboard-input-field",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "69c4ddadbcda4ee6327c039c",
+      "alias": "Rosé pink Tortoise",
+      "aliasID": "69c4ddadbcda4ee6327c2332",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b4ac8e63571c3e76e5da54d7b2d4e765.png",
+      "companies": [],
+      "name": "にに！！",
+      "urlName": null,
+      "voteID": "6aadd0785a0588e09cd737a3"
+    }
+  ]
+}
