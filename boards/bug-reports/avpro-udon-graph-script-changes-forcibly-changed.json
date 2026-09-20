@@ -161,7 +161,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "I don't think this is a bug? If you make changes to an Unity package from the Packages directory (in this case from VRChat SDK packages imported from VCC or ALCOM), and then update or reinstall said package with VCC or ALCOM instead of a local copy of a modified package, of course it'll revert to upstream code.\n\nAny modified forks would need to be in the Assets directly or independent of the Unity package manager / VCC, under a different namespace, without dependencies to upstream.\n\nI've understood this to read more like user error.",
+      "value": "I don't think this is a bug? If you make changes to an upstream Unity package from the Packages directory (in this case from VRChat SDK packages imported from VCC or ALCOM), and then update or reinstall said package with VCC or ALCOM instead of a local copy of a modified package, of course it'll revert to upstream code.\n\nAny modified forks would need to be in the Assets directly or independent of the Unity package manager / VCC, under a different namespace, without dependencies to upstream.\n\nI've understood this to read more like user error.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -181,20 +181,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 7,
+  "maxScore": 8,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab0246183aecb0b9c014d9f/688994953.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 7,
+  "score": 8,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-20T18:22:25.557Z",
   "subCategoryID": null,
   "title": "AVPro Udon Graph Script Changes Forcibly Changed",
-  "trendingScore": 2961.62140320028,
+  "trendingScore": 2961.7409196202184,
   "updatedBy": null,
   "urlName": "avpro-udon-graph-script-changes-forcibly-changed",
   "viewerIsAuthor": false,
@@ -207,6 +207,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6ab0527a5a0588e09c0fa7da",
+      "alias": "Kiwi Cod",
+      "aliasID": "6ab0527a5a0588e09c0fa7de",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "matshades",
+      "urlName": null,
+      "voteID": "6ab0527c5a0588e09c0fa7ea"
+    },
     {
       "_id": "612ea6a7f4aca00a10286465",
       "alias": "Jasper Viper",
