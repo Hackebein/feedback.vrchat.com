@@ -14,7 +14,10 @@ import type { StoredPrivatePost } from "./private-store";
 
 export type LocalSearchOptions = {
   luceneMode: boolean;
+  /** Skip the board checkbox when counting the other boards. */
   ignoreBoard?: boolean;
+  /** Skip one checkbox facet. Used for additional-hit (`+N`) counts. */
+  ignoreRefinement?: string;
 };
 
 function readString(value: unknown): string {
@@ -309,13 +312,13 @@ function toggleMatches(payload: Record<string, unknown>, attr: string): boolean 
 function matchesFilters(
   post: StoredPrivatePost,
   filters: FilterState | undefined,
-  ignoreBoard: boolean,
+  skipAttr: string | undefined,
 ): boolean {
   if (!filters) {
     return true;
   }
   for (const attr of REFINEMENT_ATTRS) {
-    if (ignoreBoard && attr === "board_name") {
+    if (attr === skipAttr) {
       continue;
     }
     const selected = filters.refinements[attr];
@@ -364,13 +367,58 @@ export function filterPrivatePosts(
 ): StoredPrivatePost[] {
   const tokens = queryTokens(readString(body.textSearch));
   const filters = options.luceneMode ? undefined : body.filters;
-  const ignoreBoard = options.ignoreBoard === true;
+  const skipAttr =
+    options.ignoreRefinement ?? (options.ignoreBoard ? "board_name" : undefined);
   return posts.filter((post) => {
     if (!matchesQuery(post.combinedText, tokens)) {
       return false;
     }
-    return matchesFilters(post, filters, ignoreBoard);
+    return matchesFilters(post, filters, skipAttr);
   });
+}
+
+/**
+ * Counts for unchecked values of each selected enum facet: posts that match
+ * every other filter and do not already match a checked value of that facet.
+ */
+export function additionalFacetCounts(
+  posts: StoredPrivatePost[],
+  body: CannySearchBody,
+  luceneMode: boolean,
+): FacetCounts {
+  if (luceneMode || !body.filters) {
+    return {};
+  }
+  const out: FacetCounts = {};
+  for (const attr of REFINEMENT_ATTRS) {
+    const selected = body.filters.refinements[attr];
+    if (!Array.isArray(selected) || selected.length === 0) {
+      continue;
+    }
+    const selectedSet = new Set(selected);
+    const bucket: Record<string, number> = {};
+    for (const post of filterPrivatePosts(posts, body, {
+      luceneMode: false,
+      ignoreRefinement: attr,
+    })) {
+      const values = refinementValues(post.payload, attr);
+      if (values.some((value) => selectedSet.has(value))) {
+        continue;
+      }
+      const seen = new Set<string>();
+      for (const value of values) {
+        if (!value || seen.has(value)) {
+          continue;
+        }
+        seen.add(value);
+        bucket[value] = (bucket[value] ?? 0) + 1;
+      }
+    }
+    if (Object.keys(bucket).length > 0) {
+      out[attr] = bucket;
+    }
+  }
+  return out;
 }
 
 function sortKey(

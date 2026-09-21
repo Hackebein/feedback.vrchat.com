@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import {
+  additionalFacetCounts,
   buildCombinedText,
   facetsFromPosts,
   filterPrivatePosts,
@@ -176,5 +177,29 @@ assert.deepEqual(
   ).board_name,
   { "Feature Requests": 11, "Internal Roadmap Posts": 2 },
 );
+
+const votedByBoth = stored({
+  _id: "ab",
+  voters: [{ name: "Alice" }, { name: "Bob" }],
+});
+const votedByBob = stored({
+  _id: "bo",
+  voters: [{ name: "Bob" }],
+});
+const voterAdditional = additionalFacetCounts(
+  [votedByBoth, votedByBob],
+  {
+    textSearch: "",
+    filters: {
+      refinements: { voter_name: ["Alice"] },
+      ranges: {},
+      toggles: {},
+      sort: "newest",
+    },
+  },
+  false,
+);
+assert.equal(voterAdditional.voter_name?.Bob, 1);
+assert.equal(voterAdditional.voter_name?.Alice, undefined);
 
 console.info("private-search tests passed");

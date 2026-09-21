@@ -1,8 +1,9 @@
-export type FacetEntry = { value: string; count: number };
+export type FacetEntry = { value: string; count: number; additional?: boolean };
 
 export type NestedBoardNode = {
   value: string;
   count: number;
+  additional?: boolean;
   children: FacetEntry[];
 };
 
@@ -40,9 +41,16 @@ export function nestBoardFacetEntries(entries: FacetEntry[]): NestedBoardNode[] 
     nodes.push({
       value: entry.value,
       count: entry.count,
-      children: childNamesOf(entry.value).map(
-        (name) => byValue.get(name) ?? { value: name, count: 0 },
-      ),
+      ...(entry.additional ? { additional: true } : {}),
+      children: childNamesOf(entry.value).map((name) => {
+        const child = byValue.get(name);
+        if (child) {
+          return child;
+        }
+        return entry.additional
+          ? { value: name, count: 0, additional: true }
+          : { value: name, count: 0 };
+      }),
     });
   }
 
@@ -56,9 +64,11 @@ export function nestBoardFacetEntries(entries: FacetEntry[]): NestedBoardNode[] 
     if (attached.length === 0) {
       continue;
     }
+    const parentEntry = byValue.get(parent);
     nodes.push({
       value: parent,
-      count: byValue.get(parent)?.count ?? 0,
+      count: parentEntry?.count ?? 0,
+      ...(parentEntry?.additional ? { additional: true } : {}),
       children: attached,
     });
   }

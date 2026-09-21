@@ -466,6 +466,23 @@
                 "type": "string",
                 "description": "Algolia **`filters`** (**`string`** expression)."
               },
+              "excludeFacet": {
+                "type": "object",
+                "description": "Exclude posts that already match any listed value of this facet before aggregating. Sidebar additional-hit queries (`+N`) send this with the facet's own **`facetFilters`** omitted and **`hitsPerPage`** `0`. Nested voter and comment attributes exclude a matching nested document.",
+                "required": ["attribute", "values"],
+                "properties": {
+                  "attribute": {
+                    "type": "string",
+                    "description": "Facet attribute name, such as **`status`** or **`voter_name`**."
+                  },
+                  "values": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "minItems": 1,
+                    "description": "Checked values. A post matching any of them is left out of this query."
+                  }
+                }
+              },
               "maxValuesPerFacet": {
                 "type": "integer",
                 "minimum": 1,

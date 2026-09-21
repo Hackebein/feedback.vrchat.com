@@ -100,16 +100,30 @@ function gatewayWithFacets(facets: Record<string, Record<string, number>>): unkn
   };
 }
 
-function requestHasBoardFilter(request: BridgeTransportRequest): boolean {
+type QueryParams = {
+  facetFilters?: unknown;
+  excludeFacet?: { attribute?: string; values?: string[] };
+  hitsPerPage?: number;
+};
+
+function queryParamsOf(request: BridgeTransportRequest): QueryParams[] {
   if (!request.body) {
-    return false;
+    return [];
   }
   const parsed: unknown = JSON.parse(request.body);
-  const first = Array.isArray(parsed) ? parsed[0] : undefined;
-  const params =
-    first && typeof first === "object" && first !== null && "params" in first
-      ? (first as { params?: { facetFilters?: unknown } }).params
-      : undefined;
+  if (!Array.isArray(parsed)) {
+    return [];
+  }
+  return parsed.map((entry) => {
+    if (!entry || typeof entry !== "object" || !("params" in entry)) {
+      return {};
+    }
+    const params = (entry as { params?: QueryParams }).params;
+    return params ?? {};
+  });
+}
+
+function hasFacet(params: QueryParams | undefined, prefix: string): boolean {
   const filters = params?.facetFilters;
   if (!Array.isArray(filters)) {
     return false;
@@ -117,7 +131,7 @@ function requestHasBoardFilter(request: BridgeTransportRequest): boolean {
   return filters.some(
     (group) =>
       Array.isArray(group) &&
-      group.some((entry) => String(entry).startsWith("board_name:")),
+      group.some((entry) => String(entry).startsWith(prefix)),
   );
 }
 
@@ -126,26 +140,14 @@ const unscopedBoards = {
   "Feature Requests": 80,
 };
 const scopedBoards = { "Bug Reports": 100 };
-const disjointBoards = {
-  "Bug Reports": 100,
-  "Feature Requests": 80,
-  Android: 10,
-};
 
 const disjoint = deferred<BridgeTransportResponse>();
-let boardPhase: "prime" | "selected" = "prime";
+let selectedBoardQueries: QueryParams[] | undefined;
 const boardOptions: BridgeOptions = {
   storage: createMemoryStorage({ luceneMode: false }),
   transport: async (request) => {
-    if (requestHasBoardFilter(request)) {
-      return jsonResponse(
-        gatewayWithFacets({
-          board_name: scopedBoards,
-          status: { open: 20 },
-        }),
-      );
-    }
-    if (boardPhase === "prime") {
+    const queries = queryParamsOf(request);
+    if (!hasFacet(queries[0], "board_name:")) {
       return jsonResponse(
         gatewayWithFacets({
           board_name: unscopedBoards,
@@ -153,39 +155,108 @@ const boardOptions: BridgeOptions = {
         }),
       );
     }
+    selectedBoardQueries = queries;
     return disjoint.promise;
   },
 };
 
-const boardSeen: Array<Record<string, number> | undefined> = [];
+const boardSeen: SearchFacets[] = [];
 const stopBoard = onFacets((facets: SearchFacets) => {
-  boardSeen.push(facets.facets.board_name);
+  boardSeen.push(facets);
 });
 
 await handleCannySearch(boardOptions, { textSearch: "", pages: 1 });
-assert.deepEqual(boardSeen, [unscopedBoards]);
+assert.deepEqual(boardSeen.map((facets) => facets.facets.board_name), [unscopedBoards]);
+assert.deepEqual(boardSeen[0]?.additional, {});
 
 toggleRefinement("board_name", "Bug Reports");
-boardPhase = "selected";
 const withBoard = handleCannySearch(boardOptions, { textSearch: "", pages: 1 });
+await waitUntil(() => selectedBoardQueries !== undefined);
+assert.equal(boardSeen.length, 1);
+assert.deepEqual(selectedBoardQueries?.[1]?.excludeFacet, {
+  attribute: "board_name",
+  values: ["Bug Reports"],
+});
+assert.equal(selectedBoardQueries?.[1]?.hitsPerPage, 0);
+assert.equal(hasFacet(selectedBoardQueries?.[1], "board_name:"), false);
 
-await waitUntil(() => boardSeen.length >= 2);
-assert.deepEqual(boardSeen, [unscopedBoards, unscopedBoards]);
-assert.notDeepEqual(boardSeen[1], scopedBoards);
-
+const additionalBoards = {
+  "Feature Requests": 80,
+  Android: 10,
+};
 disjoint.resolve(
-  jsonResponse(
-    gatewayWithFacets({
-      board_name: disjointBoards,
-      status: { open: 50 },
-    }),
-  ),
+  jsonResponse({
+    results: [
+      {
+        hits: [],
+        page: 0,
+        nbPages: 0,
+        facets: { board_name: scopedBoards, status: { open: 20 } },
+        facets_stats: {},
+      },
+      {
+        hits: [],
+        page: 0,
+        nbPages: 0,
+        facets: { board_name: additionalBoards },
+        facets_stats: {},
+      },
+    ],
+  }),
 );
-await waitUntil(() => boardSeen.length >= 3);
 await withBoard;
 stopBoard();
 resetFilterState();
 
-assert.deepEqual(boardSeen, [unscopedBoards, unscopedBoards, disjointBoards]);
+assert.equal(boardSeen.length, 2);
+assert.deepEqual(boardSeen[1]?.facets.board_name, scopedBoards);
+assert.deepEqual(boardSeen[1]?.additional?.board_name, additionalBoards);
+
+resetFilterState();
+toggleRefinement("status", "open");
+let statusQueries: QueryParams[] = [];
+const statusSeen: SearchFacets[] = [];
+const stopStatus = onFacets((facets: SearchFacets) => {
+  statusSeen.push(facets);
+});
+await handleCannySearch(
+  {
+    storage: createMemoryStorage({ luceneMode: false }),
+    transport: async (request) => {
+      statusQueries = queryParamsOf(request);
+      return jsonResponse({
+        results: [
+          {
+            hits: [],
+            page: 0,
+            nbPages: 0,
+            facets: { status: { open: 12 } },
+            facets_stats: {},
+          },
+          {
+            hits: [],
+            page: 0,
+            nbPages: 0,
+            facets: { status: { planned: 4, closed: 7 } },
+            facets_stats: {},
+          },
+        ],
+      });
+    },
+  },
+  { textSearch: "", pages: 1 },
+);
+stopStatus();
+resetFilterState();
+
+assert.equal(statusQueries.length, 2);
+assert.equal(hasFacet(statusQueries[0], "status:"), true);
+assert.deepEqual(statusQueries[1]?.excludeFacet, {
+  attribute: "status",
+  values: ["open"],
+});
+assert.equal(statusQueries[1]?.hitsPerPage, 0);
+assert.equal(statusSeen.at(-1)?.facets.status?.open, 12);
+assert.deepEqual(statusSeen.at(-1)?.additional?.status, { planned: 4, closed: 7 });
 
 console.info("search-handler tests passed");

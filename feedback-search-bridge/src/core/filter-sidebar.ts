@@ -254,7 +254,7 @@ html.${ACTIVE_CLASS}.${LUCENE_CLASS} .mainContainer { width: 100% !important; ma
 #${PANEL_ID} .vrcfb-toggle { display: flex; align-items: center; gap: 6px; cursor: pointer; }
 `;
 
-let facetData: SearchFacets = { facets: {}, stats: {} };
+let facetData: SearchFacets = { facets: {}, additional: {}, stats: {} };
 let bridgeWindow: (Window & typeof globalThis) | null = null;
 const searchTextByAttr = new Map<string, string>();
 const expandedByAttr = new Map<string, boolean>();
@@ -339,29 +339,58 @@ function dateInputToEpoch(value: string, endOfDay: boolean): number | undefined 
   return endOfDay ? ms + 86_399_999 : ms;
 }
 
-function formatCount(count: number): string {
-  return new Intl.NumberFormat().format(count);
+function formatCount(count: number, additional = false): string {
+  const formatted = new Intl.NumberFormat().format(count);
+  return additional ? `+${formatted}` : formatted;
 }
 
-function facetEntries(attr: string): { value: string; count: number }[] {
+function facetEntries(attr: string): FacetEntry[] {
+  const selected = getRefinementValues(attr);
+  const selectedSet = new Set(selected);
+  const hasSelection = selectedSet.size > 0;
   const counts = facetData.facets[attr] ?? {};
-  const entries = Object.entries(counts).map(([value, count]) => ({
-    value,
-    count: Number(count) || 0,
-  }));
+  const extras = facetData.additional?.[attr];
+  const entries: FacetEntry[] = [];
+
+  if (!hasSelection) {
+    for (const [value, count] of Object.entries(counts)) {
+      entries.push({ value, count: Number(count) || 0 });
+    }
+  } else if (extras) {
+    for (const value of selected) {
+      entries.push({ value, count: Number(counts[value]) || 0 });
+    }
+    for (const [value, count] of Object.entries(extras)) {
+      if (selectedSet.has(value)) {
+        continue;
+      }
+      entries.push({ value, count: Number(count) || 0, additional: true });
+    }
+  } else {
+    // Exclusion counts have not arrived yet. Keep the previous buckets and
+    // mark the unchecked ones as additional so the list does not collapse.
+    for (const [value, count] of Object.entries(counts)) {
+      entries.push({
+        value,
+        count: Number(count) || 0,
+        additional: !selectedSet.has(value),
+      });
+    }
+  }
+
   // Always show every board so multiple boards stay selectable even after the
   // board filter scopes the facet response down to the chosen board(s).
   if (attr === "board_name") {
     for (const name of readAllBoardNames()) {
       if (!entries.some((entry) => entry.value === name)) {
-        entries.push({ value: name, count: 0 });
+        entries.push({ value: name, count: 0, additional: hasSelection });
       }
     }
   }
   // Keep selected values visible even if absent from the latest facet response.
-  for (const selected of getRefinementValues(attr)) {
-    if (!entries.some((entry) => entry.value === selected)) {
-      entries.push({ value: selected, count: 0 });
+  for (const value of selected) {
+    if (!entries.some((entry) => entry.value === value)) {
+      entries.push({ value, count: 0 });
     }
   }
   entries.sort((a, b) => b.count - a.count || a.value.localeCompare(b.value));
@@ -382,7 +411,11 @@ function facetEntries(attr: string): { value: string; count: number }[] {
         const [viewer] = entries.splice(index, 1);
         entries.unshift(viewer);
       } else if (index < 0) {
-        entries.unshift({ value: name, count: 0 });
+        entries.unshift({
+          value: name,
+          count: 0,
+          additional: hasSelection && !selectedSet.has(name),
+        });
       }
     }
   }
@@ -408,7 +441,12 @@ function renderFacetRow(
   const displayLabel = valueLabel(attr, entry.value);
   const label = el(doc, "span", "vrcfb-row-label", displayLabel || "(empty)");
   label.title = displayLabel;
-  const count = el(doc, "span", "vrcfb-count", formatCount(entry.count));
+  const count = el(
+    doc,
+    "span",
+    "vrcfb-count",
+    formatCount(entry.count, entry.additional === true),
+  );
   row.append(input, label, count);
   container.appendChild(row);
 }
@@ -802,6 +840,7 @@ export function installFilterSidebar(
     const boardName = facets.facets.board_name ?? facetData.facets.board_name;
     facetData = {
       stats: facets.stats,
+      additional: facets.additional ?? {},
       facets: {
         ...facets.facets,
         ...(boardName ? { board_name: boardName } : {}),

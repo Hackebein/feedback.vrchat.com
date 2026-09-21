@@ -1,5 +1,5 @@
 import { STORAGE_KEYS, cannyScoreFromIndex } from "./config";
-import { getEffectiveSort, getFilterState } from "./filter-state";
+import { REFINEMENT_ATTRS, getEffectiveSort, getFilterState } from "./filter-state";
 import {
   buildViewerVoteMap,
   hydrateViewerVotes,
@@ -13,6 +13,7 @@ import {
   readPageIndex,
 } from "./mapping";
 import {
+  additionalFacetCounts,
   facetsFromPosts,
   filterPrivatePosts,
   mergeFacetCounts,
@@ -28,6 +29,7 @@ import type {
   BridgeStorage,
   CannySearchBody,
   CannySearchResponse,
+  FacetCounts,
   GatewaySearchResponse,
   SearchContext,
   SearchFacets,
@@ -60,13 +62,29 @@ async function ensureSettings(storage: BridgeStorage): Promise<BridgeSettings> {
   return settings;
 }
 
-async function performGatewaySearch(
+type GatewayQuery = {
+  indexName: string;
+  params: Record<string, unknown>;
+};
+
+function gatewayQueries(body: unknown): GatewayQuery[] {
+  if (!Array.isArray(body)) {
+    return [];
+  }
+  return body.filter((entry): entry is GatewayQuery => {
+    if (!entry || typeof entry !== "object") {
+      return false;
+    }
+    const query = entry as GatewayQuery;
+    return typeof query.indexName === "string" && !!query.params && typeof query.params === "object";
+  });
+}
+
+async function postGateway(
   transport: BridgeOptions["transport"],
-  cannyBody: CannySearchBody,
-  luceneMode: boolean,
-  paging?: { hitsPerPage?: number; page?: number },
+  url: string,
+  requestBody: unknown,
 ): Promise<GatewaySearchResponse> {
-  const { url, requestBody } = mapCannyToGateway(cannyBody, luceneMode, paging);
   const response = await transport({
     url,
     method: "POST",
@@ -88,6 +106,67 @@ async function performGatewaySearch(
   } catch {
     throw new Error("Gateway search returned invalid JSON");
   }
+}
+
+async function performGatewaySearch(
+  transport: BridgeOptions["transport"],
+  cannyBody: CannySearchBody,
+  luceneMode: boolean,
+  paging?: { hitsPerPage?: number; page?: number },
+): Promise<GatewaySearchResponse> {
+  const { url, requestBody } = mapCannyToGateway(cannyBody, luceneMode, paging);
+  return postGateway(transport, url, requestBody);
+}
+
+function selectedEnumFacets(
+  body: CannySearchBody,
+): { attribute: string; values: string[] }[] {
+  const refinements = body.filters?.refinements;
+  if (!refinements) {
+    return [];
+  }
+  const selected: { attribute: string; values: string[] }[] = [];
+  for (const attribute of REFINEMENT_ATTRS) {
+    const values = refinements[attribute];
+    if (Array.isArray(values) && values.length > 0) {
+      selected.push({ attribute, values });
+    }
+  }
+  return selected;
+}
+
+/**
+ * Main query plus one hits-free query per checked enum facet. Each extra query
+ * drops that facet's filter and sets `excludeFacet` so the gateway counts
+ * posts that value would add.
+ */
+async function performEnumSearch(
+  transport: BridgeOptions["transport"],
+  body: CannySearchBody,
+  luceneMode: boolean,
+  paging?: { hitsPerPage?: number; page?: number },
+): Promise<GatewaySearchResponse> {
+  const main = mapCannyToGateway(body, luceneMode, paging);
+  const queries = gatewayQueries(main.requestBody);
+  if (!luceneMode) {
+    for (const facet of selectedEnumFacets(body)) {
+      const filters = body.filters;
+      const refinements = { ...filters?.refinements };
+      delete refinements[facet.attribute];
+      const extra = mapCannyToGateway(
+        filters ? { ...body, filters: { ...filters, refinements } } : body,
+        false,
+        { hitsPerPage: 0, page: 0 },
+      );
+      for (const query of gatewayQueries(extra.requestBody)) {
+        query.params.excludeFacet = facet;
+        query.params.hitsPerPage = 0;
+        query.params.page = 0;
+        queries.push(query);
+      }
+    }
+  }
+  return postGateway(transport, main.url, queries);
 }
 
 export type PresetQuery = {
@@ -189,84 +268,51 @@ function extractFacets(gateway: GatewaySearchResponse): SearchFacets {
   };
 }
 
-/** Last unscoped `board_name` counts, held so the sidebar does not reshuffle
- * while a board-filtered search's disjunctive follow-up is in flight. */
-let lastBoardNameFacet: Record<string, number> | undefined;
+/** Additional-hit buckets from the last completed search. */
+let lastAdditional: FacetCounts = {};
+/** In-result facet counts from the last completed search. */
+let lastShownFacets: FacetCounts = {};
 
-function rememberBoardNameFacet(facets: SearchFacets): void {
-  const board = facets.facets.board_name;
-  if (board) {
-    lastBoardNameFacet = board;
-  }
-}
-
-function needsDisjunctiveBoardFacet(
-  body: CannySearchBody,
-  luceneMode: boolean,
-): boolean {
-  const boards = body.filters?.refinements?.board_name;
-  return !luceneMode && Array.isArray(boards) && boards.length > 0;
-}
-
-/** Paint previous (or omitted) board counts instead of the scoped collapse. */
-function withHeldBoardName(facets: SearchFacets): SearchFacets {
-  if (lastBoardNameFacet) {
-    return {
-      facets: { ...facets.facets, board_name: lastBoardNameFacet },
-      stats: facets.stats,
-    };
-  }
-  const { board_name: _ignored, ...rest } = facets.facets;
-  return { facets: rest, stats: facets.stats };
-}
-
-/** Clone of the body with the board filter dropped (for disjunctive counts). */
-function withoutBoardFilter(body: CannySearchBody): CannySearchBody {
-  const filters = body.filters;
-  if (!filters) {
-    return body;
-  }
-  const refinements = { ...filters.refinements };
-  delete refinements.board_name;
-  return {
-    ...body,
-    pages: 1,
-    filters: { ...filters, refinements },
-  };
-}
-
-/**
- * The gateway scopes the `board_name` facet to the active board filter, so
- * selected-out boards report a count of 0. Re-run the query without the board
- * filter (other filters intact) to get true per-board counts so multi-select
- * stays meaningful.
- */
-async function applyDisjunctiveBoardFacet(
-  options: BridgeOptions,
-  body: CannySearchBody,
-  luceneMode: boolean,
-  facets: SearchFacets,
-): Promise<SearchFacets> {
-  if (!needsDisjunctiveBoardFacet(body, luceneMode)) {
-    return facets;
-  }
-  try {
-    const disjoint = await performGatewaySearch(
-      options.transport,
-      withoutBoardFilter(body),
-      luceneMode,
-    );
-    const boardFacet = extractFacets(disjoint).facets.board_name;
-    if (boardFacet) {
-      return {
-        ...facets,
-        facets: { ...facets.facets, board_name: boardFacet },
-      };
+function gatewayAdditional(
+  response: GatewaySearchResponse,
+  selected: { attribute: string }[],
+): { counts: FacetCounts; seen: Set<string> } {
+  const counts: FacetCounts = {};
+  const seen = new Set<string>();
+  selected.forEach((facet, index) => {
+    const result = response.results?.[index + 1];
+    if (!result) {
+      return;
     }
-  } catch (error) {
-    console.warn("[vrcfb] disjunctive board facet failed", error);
+    seen.add(facet.attribute);
+    counts[facet.attribute] = result.facets?.[facet.attribute] ?? {};
+  });
+  return { counts, seen };
+}
+
+function combineAdditional(
+  selected: { attribute: string }[],
+  gatewayCounts: FacetCounts,
+  seen: Set<string>,
+  localCounts: FacetCounts,
+): FacetCounts {
+  const held: FacetCounts = {};
+  for (const facet of selected) {
+    const attr = facet.attribute;
+    if (seen.has(attr)) {
+      held[attr] = gatewayCounts[attr] ?? {};
+    } else if (lastAdditional[attr]) {
+      held[attr] = lastAdditional[attr];
+    } else if (lastShownFacets[attr]) {
+      held[attr] = lastShownFacets[attr];
+    }
   }
-  return facets;
+  const merged = mergeFacetCounts(held, localCounts);
+  const out: FacetCounts = {};
+  for (const facet of selected) {
+    out[facet.attribute] = merged[facet.attribute] ?? held[facet.attribute] ?? {};
+  }
+  return out;
 }
 
 let searchEpoch = 0;
@@ -276,26 +322,12 @@ function emptyGateway(): GatewaySearchResponse {
 }
 
 async function loadLocalPosts(
-  body: CannySearchBody,
-  luceneMode: boolean,
   target?: Window & typeof globalThis,
-): Promise<{
-  matches: StoredPrivatePost[];
-  boardMatches: StoredPrivatePost[];
-}> {
+): Promise<StoredPrivatePost[]> {
   if (!target) {
-    return { matches: [], boardMatches: [] };
+    return [];
   }
-  const id = viewerId(target);
-  const all = await getAllPrivatePosts(id, target);
-  if (all.length === 0) {
-    return { matches: [], boardMatches: [] };
-  }
-  const matches = filterPrivatePosts(all, body, { luceneMode });
-  const boardMatches = luceneMode
-    ? matches
-    : filterPrivatePosts(all, body, { luceneMode, ignoreBoard: true });
-  return { matches, boardMatches };
+  return getAllPrivatePosts(viewerId(target), target);
 }
 
 export async function handleCannySearch(
@@ -311,11 +343,12 @@ export async function handleCannySearch(
     ...cannyBody,
     filters: { ...getFilterState(), sort: getEffectiveSort(textSearch) },
   };
-  const local = await loadLocalPosts(body, current.luceneMode, target);
+  const allLocal = await loadLocalPosts(target);
+  const matches = filterPrivatePosts(allLocal, body, { luceneMode: current.luceneMode });
   const pageSize = readHitsPerPage(body);
   const page = readPageIndex(body);
   const paging =
-    local.matches.length > 0
+    matches.length > 0
       ? {
           page: 0,
           hitsPerPage: Math.min(500, Math.max(pageSize, (page + 1) * pageSize)),
@@ -324,14 +357,14 @@ export async function handleCannySearch(
 
   let gatewayResponse: GatewaySearchResponse;
   try {
-    gatewayResponse = await performGatewaySearch(
+    gatewayResponse = await performEnumSearch(
       options.transport,
       body,
       current.luceneMode,
       paging,
     );
   } catch (error) {
-    if (local.matches.length === 0) {
+    if (matches.length === 0) {
       throw error;
     }
     console.warn("[vrcfb] gateway search failed; using private-board index", error);
@@ -343,7 +376,7 @@ export async function handleCannySearch(
     : [];
   const voteSource = [
     ...gatewayHits,
-    ...local.matches.map((post) => post.payload),
+    ...matches.map((post) => post.payload),
   ];
   if (target) {
     await hydrateViewerVotes(options.storage, target);
@@ -353,7 +386,7 @@ export async function handleCannySearch(
     : new Map<string, number>();
 
   let cannyResponse: CannySearchResponse;
-  if (local.matches.length === 0) {
+  if (matches.length === 0) {
     cannyResponse = mapGatewayToCanny(gatewayResponse, viewerVotes);
   } else {
     const normalizedGateway = gatewayHits.map((hit) =>
@@ -362,7 +395,7 @@ export async function handleCannySearch(
         viewerVotes,
       ),
     );
-    const normalizedLocal = local.matches.map((post) => ({
+    const normalizedLocal = matches.map((post) => ({
       ...post,
       payload: normalizeGatewayHit(post.payload, viewerVotes, {
         restoreScraperVote: false,
@@ -398,53 +431,26 @@ export async function handleCannySearch(
   dispatchSearchContext(context);
 
   const gatewayFacets = extractFacets(gatewayResponse);
-  const localFacets = facetsFromPosts(local.matches);
-  const localBoardFacets = facetsFromPosts(local.boardMatches);
-  const baseFacets = mergeSearchFacets(gatewayFacets, localFacets);
-  if (localBoardFacets.facets.board_name) {
-    baseFacets.facets = {
-      ...baseFacets.facets,
-      board_name:
-        mergeFacetCounts(
-          { board_name: gatewayFacets.facets.board_name ?? {} },
-          { board_name: localBoardFacets.facets.board_name },
-        ).board_name ?? {},
-    };
-  }
-  const holdBoardName = needsDisjunctiveBoardFacet(body, current.luceneMode);
-  if (holdBoardName) {
-    dispatchFacets(withHeldBoardName(baseFacets));
-  } else {
-    dispatchFacets(baseFacets);
-    rememberBoardNameFacet(baseFacets);
-  }
-  void applyDisjunctiveBoardFacet(
-    options,
-    body,
-    current.luceneMode,
-    gatewayFacets,
-  ).then((refined) => {
-    if (epoch !== searchEpoch) {
-      return;
-    }
-    const localBoard = localBoardFacets.facets.board_name;
-    if (!localBoard && refined === gatewayFacets) {
-      return;
-    }
-    const board = mergeFacetCounts(
-      { board_name: refined.facets.board_name ?? {} },
-      { board_name: localBoard ?? {} },
-    ).board_name;
-    const next: SearchFacets = {
-      facets: {
-        ...baseFacets.facets,
-        ...(board ? { board_name: board } : {}),
-      },
-      stats: baseFacets.stats,
-    };
-    rememberBoardNameFacet(next);
-    dispatchFacets(next);
-  });
+  const baseFacets = mergeSearchFacets(gatewayFacets, facetsFromPosts(matches));
+  const selected = current.luceneMode ? [] : selectedEnumFacets(body);
+  const fromGateway = gatewayAdditional(gatewayResponse, selected);
+  const additional =
+    selected.length === 0
+      ? {}
+      : combineAdditional(
+          selected,
+          fromGateway.counts,
+          fromGateway.seen,
+          additionalFacetCounts(allLocal, body, current.luceneMode),
+        );
+  const nextFacets: SearchFacets = {
+    facets: baseFacets.facets,
+    additional,
+    stats: baseFacets.stats,
+  };
+  lastShownFacets = nextFacets.facets;
+  lastAdditional = additional;
+  dispatchFacets(nextFacets);
 
   return cannyResponse;
 }

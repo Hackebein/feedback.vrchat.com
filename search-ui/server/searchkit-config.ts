@@ -120,6 +120,88 @@ export function gatewayEnv(): {
   return { opensearchUrl, opensearchUser, opensearchPassword, bind, port };
 }
 
+export const facetAttributes = [
+  {
+    attribute: "board_slug",
+    field: "board.urlName",
+    type: "string" as const,
+    facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: "board_name",
+    field: "board.name.keyword",
+    type: "string" as const,
+    facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: "status",
+    field: "status",
+    type: "string" as const,
+    facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: "category_name",
+    field: "category.name.keyword",
+    type: "string" as const,
+    facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: "author_name",
+    field: "author.name.keyword",
+    type: "string" as const,
+    facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: "aiCategories",
+    field: "aiCategories.keyword",
+    type: "string" as const,
+    facetQuery: slugSafeFacetQuery,
+  },
+  { attribute: "vote_highEngagement", field: "voteSettings.highEngagement", type: "string" as const },
+  { attribute: "vote_lowEngagement", field: "voteSettings.lowEngagement", type: "string" as const },
+  { attribute: "vote_moderateEngagement", field: "voteSettings.moderateEngagement", type: "string" as const },
+  { attribute: "score", field: "score", type: "numeric" as const },
+  { attribute: "maxScore", field: "maxScore", type: "numeric" as const },
+  { attribute: "commentCount", field: "commentCount", type: "numeric" as const },
+  { attribute: "mergeCount", field: "mergeCount", type: "numeric" as const },
+  { attribute: "trendingScore", field: "trendingScore", type: "numeric" as const },
+  { attribute: "post_created", field: "created", type: "numeric" as const },
+  { attribute: "post_updated", field: "updatedAt", type: "numeric" as const },
+  { attribute: "post_statusChanged", field: "statusChanged", type: "numeric" as const },
+  {
+    attribute: "voter_name",
+    field: "name.keyword",
+    type: "string" as const,
+    nestedPath: "voters",
+    facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: "comment_author_name",
+    field: "author.name.keyword",
+    type: "string" as const,
+    nestedPath: "comments",
+    facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: "comment_pinned",
+    field: "pinned",
+    type: "string" as const,
+    nestedPath: "comments",
+  },
+  {
+    attribute: "comment_likeCount",
+    field: "likeCount",
+    type: "numeric" as const,
+    nestedPath: "comments",
+  },
+  {
+    attribute: "comment_created",
+    field: "created",
+    type: "numeric" as const,
+    nestedPath: "comments",
+  },
+];
+
 export function searchkitConfig(host: string, username: string, password: string) {
   return {
     connection: {
@@ -194,87 +276,7 @@ export function searchkitConfig(host: string, username: string, password: string
       ],
       highlight_attributes: ["title", "details", "author.name"],
       snippet_attributes: ["details:200"],
-      facet_attributes: [
-        {
-          attribute: "board_slug",
-          field: "board.urlName",
-          type: "string",
-          facetQuery: slugSafeFacetQuery,
-        },
-        {
-          attribute: "board_name",
-          field: "board.name.keyword",
-          type: "string",
-          facetQuery: slugSafeFacetQuery,
-        },
-        {
-          attribute: "status",
-          field: "status",
-          type: "string",
-          facetQuery: slugSafeFacetQuery,
-        },
-        {
-          attribute: "category_name",
-          field: "category.name.keyword",
-          type: "string",
-          facetQuery: slugSafeFacetQuery,
-        },
-        {
-          attribute: "author_name",
-          field: "author.name.keyword",
-          type: "string",
-          facetQuery: slugSafeFacetQuery,
-        },
-        {
-          attribute: "aiCategories",
-          field: "aiCategories.keyword",
-          type: "string",
-          facetQuery: slugSafeFacetQuery,
-        },
-        { attribute: "vote_highEngagement", field: "voteSettings.highEngagement", type: "string" },
-        { attribute: "vote_lowEngagement", field: "voteSettings.lowEngagement", type: "string" },
-        { attribute: "vote_moderateEngagement", field: "voteSettings.moderateEngagement", type: "string" },
-        { attribute: "score", field: "score", type: "numeric" },
-        { attribute: "maxScore", field: "maxScore", type: "numeric" },
-        { attribute: "commentCount", field: "commentCount", type: "numeric" },
-        { attribute: "mergeCount", field: "mergeCount", type: "numeric" },
-        { attribute: "trendingScore", field: "trendingScore", type: "numeric" },
-        { attribute: "post_created", field: "created", type: "numeric" },
-        { attribute: "post_updated", field: "updatedAt", type: "numeric" },
-        { attribute: "post_statusChanged", field: "statusChanged", type: "numeric" },
-        {
-          attribute: "voter_name",
-          field: "name.keyword",
-          type: "string",
-          nestedPath: "voters",
-          facetQuery: slugSafeFacetQuery,
-        },
-        {
-          attribute: "comment_author_name",
-          field: "author.name.keyword",
-          type: "string",
-          nestedPath: "comments",
-          facetQuery: slugSafeFacetQuery,
-        },
-        {
-          attribute: "comment_pinned",
-          field: "pinned",
-          type: "string",
-          nestedPath: "comments",
-        },
-        {
-          attribute: "comment_likeCount",
-          field: "likeCount",
-          type: "numeric",
-          nestedPath: "comments",
-        },
-        {
-          attribute: "comment_created",
-          field: "created",
-          type: "numeric",
-          nestedPath: "comments",
-        },
-      ],
+      facet_attributes: facetAttributes,
       sorting: {
         // Default (unsuffixed index name) sorts newest-first.
         default: {

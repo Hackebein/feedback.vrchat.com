@@ -79,6 +79,11 @@ export type GatewaySearchResponse = {
 
 export type SearchFacets = {
   facets: FacetCounts;
+  /**
+   * Unchecked enum values: how many posts that value would add. Present only
+   * for facets that have a selection. Sidebar renders these as `+N`.
+   */
+  additional?: FacetCounts;
   stats: FacetStats;
 };
 

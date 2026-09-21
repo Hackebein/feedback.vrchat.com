@@ -1,6 +1,7 @@
 import API from "@searchkit/api";
 import express from "express";
-import type { MultipleQueriesQuery } from "searchkit";
+import type { MultipleQueriesQuery, SearchRequest } from "searchkit";
+import { applyExcludeFacets } from "./facet-exclusion";
 import { createIndexGenerationResolver } from "./index-generation";
 import {
   gatewayEnv,
@@ -35,6 +36,9 @@ function isLuceneMode(req: express.Request): boolean {
 function searchRequestOptions(lucene: boolean) {
   return {
     getQuery: lucene ? instantSearchLuceneQuery : instantSearchStrictQuery,
+    hooks: {
+      beforeSearch: async (requests: SearchRequest[]) => applyExcludeFacets(requests),
+    },
   };
 }
 
