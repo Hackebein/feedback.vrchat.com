@@ -74,7 +74,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "I've had some success by artificially putting all CPU cores under 50% or more load with a PowerShell script during VRChat's startup. The idea is to start this script, then immediately click Play in Steam. The script will run for 30 seconds, which is hopefully enough to make VRChat/EAC/Unity get past whatever it is that apparently causes this crash under low CPU load.\n\nHere's the script (copy and paste into PowerShell): $n=[Environment]::ProcessorCount; 1..$n|%{Start-Job{ $e=[DateTime]::UtcNow.AddSeconds(30);while([DateTime]::UtcNow-lt$e){[Math]::Sqrt(123456.789)>$null }} };Start-Sleep 31",
+      "value": "I've had some success by artificially putting all CPU cores under 50% or more load with a PowerShell script during VRChat's startup. The idea is to start this script, wait a few seconds, then click Play in Steam. The script will run for 30 seconds, which is hopefully enough to make VRChat/EAC/Unity get past whatever it is that apparently causes this crash under low CPU load.\n\nHere's the script (copy and paste into PowerShell): $n=[Environment]::ProcessorCount; 1..$n|%{Start-Job{ $e=[DateTime]::UtcNow.AddSeconds(30);while([DateTime]::UtcNow-lt$e){[Math]::Sqrt(123456.789)>$null }} };Start-Sleep 31",
       "viewerReactions": null,
       "voteID": null
     },
