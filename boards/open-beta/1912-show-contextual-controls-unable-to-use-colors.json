@@ -1,11 +1,10 @@
 {
   "_id": "6aa2b12c9dcd17f166eda788",
   "aiCategories": [
-    "loc.pc-client",
-    "open-beta",
-    "platforms.pc.steam"
+    "loc.hud",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-10T15:38:31.289540Z",
+  "aiTaggedAt": "2026-09-21T14:30:11.620662Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "651ee4c59bd9ae5010c127e1",
@@ -82,6 +81,37 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ab13c49820a2d36e7725153",
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-21T14:16:41.932Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6ab13c49820a2d36e7725153",
+      "mergedPostDetails": "Rich text is not working in the new HUD. The in world tooltips respect rich text so the HUD should too.",
+      "mergedPostTitle": "[1915] Rich text is not working in the new HUD",
+      "pinned": false,
+      "postID": "6aa2b12c9dcd17f166eda788",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -101,20 +131,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 7,
-  "mergeCount": 0,
+  "maxScore": 15,
+  "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa2b12c9dcd17f166eda788/1563743927.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 7,
+  "score": 15,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-09-10T15:36:16.978Z",
   "subCategoryID": null,
   "title": "[1912] Show Contextual Controls unable to use colors.",
-  "trendingScore": 2960.2058024153393,
+  "trendingScore": 2961.845113452016,
   "updatedBy": "651ee4c59bd9ae5010c127e1",
   "urlName": "1912-show-contextual-controls-unable-to-use-colors",
   "viewerIsAuthor": false,
@@ -127,6 +157,94 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5f2d710dc1c881463f153789",
+      "alias": "Remarkable Grasshopper",
+      "aliasID": "65c4ab08ed6eefce4c1d7d7b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bc2f9f6d7202a7992d3e3ad7f6bfdf27.png",
+      "companies": [],
+      "name": "Fusl",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324b4"
+    },
+    {
+      "_id": "5c872970a4264c0cacf21aaa",
+      "alias": "Attractive Newt",
+      "aliasID": "65c28ff3ed6eefce4cb36752",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/27cc69f694cb656f75c0a081300a658d.png",
+      "companies": [],
+      "name": "14anthony7095",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324b5"
+    },
+    {
+      "_id": "610d538d5303a82960a415b4",
+      "alias": "Solar Coral",
+      "aliasID": "65c26df1ed6eefce4c5aac21",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fe96fc268af68b13b8255713fdd44c24.png",
+      "companies": [],
+      "name": "Deantwo",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324b6"
+    },
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324b7"
+    },
+    {
+      "_id": "6050972e03276b03f63ca0b8",
+      "alias": "Iced lavender Crow",
+      "aliasID": "65c28083ed6eefce4c570d77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b0fd764ef2c438a49dacbec8ba7fb164.png",
+      "companies": [],
+      "name": "Tran Fox",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324b8"
+    },
+    {
+      "_id": "5f363d5bfabaeb1c5ff1aa28",
+      "alias": "Positive Piranha",
+      "aliasID": "65c28348ed6eefce4cc53ebc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/befc1ec2f5ed1576fd5a4181f5033156.png",
+      "companies": [],
+      "name": "Yuiko",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324b9"
+    },
+    {
+      "_id": "69ba46c9ed082c9981cdcc0f",
+      "alias": "Mantis Vole",
+      "aliasID": "69ba46caed082c9981cde1a9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a250525f809095e645ba10ff77be9c3d.png",
+      "companies": [],
+      "name": "Guff-ppp",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324ba"
+    },
+    {
+      "_id": "5f2f166d14baad564641603d",
+      "alias": "Raspberry rose Bovid",
+      "aliasID": "65c28d76ed6eefce4c4e5494",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/48f1e963075947a2ac5747756dae5b79.png",
+      "companies": [],
+      "name": "z3y",
+      "urlName": null,
+      "voteID": "6ab13c495a0588e09c1324bb"
+    },
     {
       "_id": "62df3a55f6fa434679f836fa",
       "alias": "Patient Marlin",
@@ -148,61 +266,6 @@
       "name": "Dyslex1k",
       "urlName": null,
       "voteID": "6aa2eaf5250b281ba8100ab8"
-    },
-    {
-      "_id": "60dd2a998871d03e7f3806ae",
-      "alias": "Thoughtful Cobra",
-      "aliasID": "65c28339ed6eefce4cc2dd8f",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6fbc19b0e88e53eee0f4c9d3a62c0bfe.png",
-      "companies": [],
-      "name": "~Pausbe",
-      "urlName": null,
-      "voteID": "6aa2bde8250b281ba80e4ae7"
-    },
-    {
-      "_id": "5dab35051e14847e6f1cd15e",
-      "alias": "Accurate Lizard",
-      "aliasID": "665a1499b9e8e8fe669c82db",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2fe44a3df688c2e8c3304c4f1cce4912.png",
-      "companies": [],
-      "name": "Star Light 6136",
-      "urlName": null,
-      "voteID": "6aa2bda7250b281ba80e49bd"
-    },
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6aa2b2da250b281ba80de4eb"
-    },
-    {
-      "_id": "62deec4f4d073344a45f1b9c",
-      "alias": "Considerable Minnow",
-      "aliasID": "65c28ff3ed6eefce4cb35e1c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/9fa4bb5268f50ebd9b367dd7f66e84de.png",
-      "companies": [],
-      "name": "xCommando",
-      "urlName": null,
-      "voteID": "6aa2b13c250b281ba80dd3be"
-    },
-    {
-      "_id": "651ee4c59bd9ae5010c127e1",
-      "alias": "Rose Seahorse",
-      "aliasID": "65c6799fed6eefce4c011ce3",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/bb8f3e158f8191ed78c565a5622e2bdd.png",
-      "companies": [],
-      "name": "French Fox",
-      "urlName": null,
-      "voteID": "6aa2b12c250b281ba80dd320"
     }
   ]
 }
