@@ -2,10 +2,10 @@
   "_id": "6a9c596af2bdb618ad5b0cc3",
   "aiCategories": [
     "loc.in-world",
-    "sdk.udon",
-    "worlds.persistence"
+    "worlds.persistence",
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-09-21T11:07:36.272121Z",
+  "aiTaggedAt": "2026-09-21T12:36:29.566612Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b0907a98fa72313783e4ba6",
@@ -35,7 +35,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 9,
+  "commentCount": 10,
   "commentingDisabled": false,
   "comments": [
     {
@@ -465,13 +465,73 @@
       "postDeleted": false,
       "postID": "6a9c596af2bdb618ad5b0cc3",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "@{5b0907a98fa72313783e4ba6|full_name} Thanks very much. It was intended that creators update their worlds to specify which renderers are valid for outlining. We've never defined how skinned mesh renderers behave under pickups in our documentation before, so it's technically undefined behavior. Regardless, we are now working towards ignoring skinned meshes when the array is empty for the sake of compatibility in cases where the creator is no longer around to fix things.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab120c28bc06deedd990aa6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5b0907a98fa72313783e4ba6",
+        "alias": "Supposed Parrotfish",
+        "aliasID": "65c2b4abed6eefce4ce1caf2",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c802ed56ec9fc14a097db712c3d1e4c0.png",
+        "created": "2018-05-26T07:07:21.588Z",
+        "name": "phi16",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-21T12:19:14.874Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aade88b1dc7214fb6583d68",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9c596af2bdb618ad5b0cc3",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name} Really thank you! I understand current situation (but without documents, people tend to exploit unspecified behaviour!), and I really welcome the new outline selection option.",
       "viewerReactions": null,
       "voteID": null
     }
