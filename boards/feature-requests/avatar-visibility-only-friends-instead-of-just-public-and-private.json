@@ -393,7 +393,9 @@
       "postDeleted": false,
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -419,20 +421,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 44,
+  "maxScore": 49,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab18e38d9fbe5f7510c81b7/851890501.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 44,
+  "score": 49,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-21T20:06:16.599Z",
   "subCategoryID": null,
   "title": "Avatar Visibility \"Only Friends\" instead of just \"Public\" and \"Private\"",
-  "trendingScore": 2963.5001910612004,
+  "trendingScore": 2963.606095378281,
   "updatedBy": null,
   "urlName": "avatar-visibility-only-friends-instead-of-just-public-and-private",
   "viewerIsAuthor": false,
@@ -445,6 +447,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "65bcae97e785ece63744ee15",
+      "alias": "Aggregate Pinniped",
+      "aliasID": "65d0e05e0129d7ae44d4583a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/402ff562f70e1581a8fcc257c16aed53.png",
+      "companies": [],
+      "name": "Are_",
+      "urlName": null,
+      "voteID": "6ab1a1685a0588e09c1741af"
+    },
+    {
+      "_id": "6ab1a1215a0588e09c174085",
+      "alias": "Pink Dragon",
+      "aliasID": "6ab1a1215a0588e09c174088",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "SuperFoxyFluff",
+      "urlName": null,
+      "voteID": "6ab1a13d5a0588e09c17412f"
+    },
     {
       "_id": "693a05c54927a96e58312f47",
       "alias": "Rosewood Chicken",
