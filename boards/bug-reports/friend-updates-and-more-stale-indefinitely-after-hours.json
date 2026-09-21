@@ -1,12 +1,11 @@
 {
   "_id": "6aa3e96889c357ed3b201660",
   "aiCategories": [
-    "loc.quick-menu",
+    "loc.main-menu",
     "social.friends",
-    "platforms.cross-platform",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-17T00:42:04.843454Z",
+  "aiTaggedAt": "2026-09-21T20:26:37.248559Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6089fcc94344ad275b8554ca",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "commentingDisabled": false,
   "comments": [
     {
@@ -510,6 +509,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "vrc support advised me to disable ipv6 to mitigate the issue, but it didn't seem to help. sometimes i go for days without the issue, while other times it can happen as soon as i log on. most of the time its within a few hours of gameplay\n\nfor me, parts of the game that break are specifically\n\n- unable to recieve notifications at all, including friend invites and requests\n\n- incorrect friend status states, friends could go offline and be seen as online, and vice versa, this extends to user nameplates in world as well (offline status nameplates are an interesting sight). most of the time the menu just shows the friend incorrectly being shown as in a private instance, but i also sometimes see them in 0 player instances, giving a 403 error upon trying to join\n\n- incorrect group instance states, including 0 player 403 error instances, or the same group instance duplicating and appearing multiple times. if i were to suspect anything to be breaking this, please check here, because duplicating ghost group instances is the ONLY thing that actually continues to compound and duplicate while in this bugged state, everything else just doesnt try to update at all.\n\nthe issue seems to be entirely a client based issue that mostly affects the social tab (and notifications). i've never observed any public instance in the world tab being incorrect or outdated, but it doesnt list non-public instances that you should have access to join. friends never have issues joining onto my instance, or seeing my status even if my client is bugged (unless they are unforunate enough to also be affected by this bug of course)\n\nusing the website always works as a reliable fallback for seeing friend states & seeing notifications, it never breaks like how the ingame menus do. you do have to restart vrchat to actually join though, as self inviting through the website also does not work.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab1919af148ea27538420e0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6089fcc94344ad275b8554ca",
+        "alias": "Papaya whip Nightingale",
+        "aliasID": "65d94e0b0129d7ae44ea9737",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/839080fea56665b1d279008ffc113b8d.png",
+        "created": "2021-04-29T00:24:41.861Z",
+        "name": "maki",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-21T20:20:42.373Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa3e96889c357ed3b201660",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I disabled ipv6 system-wide and that seemed to fix the issue for me. May be of note",
       "viewerReactions": null,
       "voteID": null
     }
