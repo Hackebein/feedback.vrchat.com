@@ -1,11 +1,11 @@
 {
   "_id": "6ab27e0219b80e21e1970826",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "avatars.upload-performance"
+    "loc.in-world",
+    "avatars.upload-performance",
+    "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-09-22T13:12:09.146460Z",
+  "aiTaggedAt": "2026-09-22T13:40:20.536148Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66cc22e3ffd3188e160034ea",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I am trying to create a cross platform avatar that is a variant of another prefab. I used VQT (https://github.com/kurotu/VRCQuestTools) to automatically convert the materials, but forgot to delete an unnecessary prefab ABT (https://booth.pm/en/items/6113734). Then, when I tried to test this avatar 2 week ago, it crashed my client.\n\nEven if others have blocked my custom shaders, loading this avatar will still cause the crash.",
+  "details": "I am trying to create a cross platform avatar that is a variant of another prefab. I used VQT (https://github.com/kurotu/VRCQuestTools) to automatically convert the materials, but forgot to delete an unnecessary prefab ABT (https://booth.pm/en/items/6113734). Then, when I tried to test this avatar 2 week ago, it crashed my client.\n\nEven if others have blocked my custom shaders, loading this avatar will still cause the crash.\n\nAvatar id: avtr_2330fda4-dbe0-45c8-9c25-c21a3c2a8108\n\nI intended to disclose this responsibly, but the VRChat Help Desk insisted that I post it to Canny.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -53,21 +53,21 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 3,
+  "maxScore": 4,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab27e0219b80e21e1970826/306024359.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 3,
+  "score": 4,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-22T13:09:22.242Z",
   "subCategoryID": null,
   "title": "Accidentally created an avatar that causes VRChat to crash whenever it is loaded",
-  "trendingScore": 2961.1790365612164,
-  "updatedBy": null,
+  "trendingScore": 2961.402519226348,
+  "updatedBy": "66cc22e3ffd3188e160034ea",
   "urlName": "accidentally-created-an-avatar-that-causes-vrchat-to-crash-whenever-it-is-loaded",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -79,6 +79,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6736c8c8ba2fc17e2baaf263",
+      "alias": "Sure Orangutan",
+      "aliasID": "6736c8c8c66e81bbd4d94de2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b52a1fcdedc7fee7ff9988d2121cd029.png",
+      "companies": [],
+      "name": "小川 糸",
+      "urlName": null,
+      "voteID": "6ab2825b5a0588e09c1aef85"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
