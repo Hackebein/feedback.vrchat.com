@@ -1043,7 +1043,9 @@
       "postDeleted": false,
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1125,20 +1127,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 111,
+  "maxScore": 112,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab18e38d9fbe5f7510c81b7/851890501.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 111,
+  "score": 112,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-21T20:06:16.599Z",
   "subCategoryID": null,
   "title": "Avatar Visibility \"Only Friends\" instead of just \"Public\" and \"Private\"",
-  "trendingScore": 2964.4372797962487,
+  "trendingScore": 2964.4474629984984,
   "updatedBy": null,
   "urlName": "avatar-visibility-only-friends-instead-of-just-public-and-private",
   "viewerIsAuthor": false,
@@ -1151,6 +1153,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6063b381450d1c3e4462c17c",
+      "alias": "Recent Cheetah",
+      "aliasID": "69388e974927a96e58bfe383",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3406b063c807741bcf3137d967abd8e1.png",
+      "companies": [],
+      "name": "batwolves",
+      "urlName": null,
+      "voteID": "6ab312495a0588e09c1f12c3"
+    },
     {
       "_id": "621b18e1e65a007c091cca46",
       "alias": "Sunglow Turtle",
