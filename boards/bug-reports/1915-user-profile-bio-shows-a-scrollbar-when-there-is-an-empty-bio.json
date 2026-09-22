@@ -1,0 +1,89 @@
+{
+  "_id": "6ab2ee09704517e0a210a323",
+  "aiCategories": [
+    "loc.website",
+    "web.profiles"
+  ],
+  "aiTaggedAt": "2026-09-22T21:12:17.821769Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "695febfaf85d59c66d3d73c8",
+    "alias": "Ink Blackbird",
+    "aliasID": "695febfbf85d59c66d3d9492",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
+    "created": "2026-01-08T17:40:10.770Z",
+    "name": "-Jade-",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "695febfaf85d59c66d3d73c8",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-22T21:07:21.282Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When viewing a user profile that contains an empty bio, it shows a scrollbar that rapidly appears and disappears as you scroll through the profile, as if it is expecting more to the profile bio, when in reality it is empty.\n\nSteps to reproduce\n\n- Find a user profile bio that is empty\n\n- Scroll through it while watching for a scrollbar to appear\n\n- one will appear either halfway down/near the bottom of a profile\n\nFrom that point it will rapidly flash in and out of existence, wondering what it's purpose is, what is there to be seen, yet unseen, why there there are no contents to move while it continues to panic trying to find a purpose.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ab2ee09704517e0a210a312",
+  "imageURLs": [
+    "https://canny-assets.io/images/14e13ba67eb0397161fa445588e6fa4a.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab2ee09704517e0a210a323/680559186.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-22T21:07:21.282Z",
+  "subCategoryID": null,
+  "title": "[1915] User profile bio shows a scrollbar when there is an empty bio",
+  "trendingScore": 2960.533162386413,
+  "updatedBy": null,
+  "urlName": "1915-user-profile-bio-shows-a-scrollbar-when-there-is-an-empty-bio",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "695febfaf85d59c66d3d73c8",
+      "alias": "Ink Blackbird",
+      "aliasID": "695febfbf85d59c66d3d9492",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/555cf698094c4a12b1a14514eefea9bc.png",
+      "companies": [],
+      "name": "-Jade-",
+      "urlName": null,
+      "voteID": "6ab2ee095a0588e09c1e5996"
+    }
+  ]
+}
