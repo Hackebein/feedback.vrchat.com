@@ -1,0 +1,112 @@
+{
+  "_id": "6ab2d15b01c2ff3bb347bc6c",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.pc-client",
+    "open-beta",
+    "moderation.safety-system",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-09-22T19:12:23.261498Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5dab35051e14847e6f1cd15e",
+    "alias": "Accurate Lizard",
+    "aliasID": "665a1499b9e8e8fe669c82db",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2fe44a3df688c2e8c3304c4f1cce4912.png",
+    "created": "2019-10-19T16:08:37.575Z",
+    "name": "Star Light 6136",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5dab35051e14847e6f1cd15e",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-22T19:04:59.038Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When in the reporting text entry and you press a shift key it closes the menu. It seems like the text entry is not taking the focus of these shift keys and allowing it to affect the menu.\n\nThis can then cause another bug, like what I previously reporting with text entry and third person cameras. (https://feedback.vrchat.com/open-beta/p/chatbox-keeps-its-current-position-even-if-player-camera-moves). \n\nAs I stated in that canny, the fix should be to periodically move the text entry to match the camera position. Blocking each way of doing this to me seems hacky and there will be many ways that a UGC game will find ways to break this. See https://feedback.vrchat.com/open-beta/p/1914-chatbox-no-longer-follows-the-player-if-they-are-forcefully-moved-while-it\n\nPeriodically updating the text entry position fixes all of these gracefully and elegantly.\n\nHow to reproduce:\n\n1) Be in third person with camera free rotating\n\n2) Go through a report to the point where it asks for details\n\n3) Open the textbox and press right or left shirt, see how the menu behind your focused text entry hides.\n\n4) Rotate your camera and see how the text entry still remains off to the side.\n\nDuring me exploring this bug I have now found another bug related to this.\n\nAnother bug that can be done with this is closing the menu and gaining the ability to move around while having the text entry open. \n\nAs the reporting menu changed how it worked with the text entry. Before when you opened the text entry it expanded the menu into full size and blocked inputs to the menu (You can see this in the fourth image).\n\nNow it allows full ui interaction, which can be used in many ways to create unintended behaviors.\n\n1) Open the text entry\n\n2) Double click on camera\n\n3) use the \"Hold to move self\" button and move the camera to the side\n\n4) Close the camera\n\n5) You can now move freely\n\nThis can also be done by rotating the camera to the side and then clicking.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ab2d15a01c2ff3bb347bc5b",
+  "imageURLs": [
+    "https://canny-assets.io/images/f16a5d70efefd9ba784ddd3e022d11cb.png",
+    "https://canny-assets.io/images/afa3577ca3bb286e455265f81641c944.png",
+    "https://canny-assets.io/images/31b34d47db953d433937c6f110caaf2f.png",
+    "https://canny-assets.io/images/810a635bf0952c6f136ca94337644288.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab2d15b01c2ff3bb347bc6c/165041115.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-22T19:04:59.038Z",
+  "subCategoryID": null,
+  "title": "[1914] Reporting Menu text entry allows inputs to be recieved by the menu below it",
+  "trendingScore": 2960.9265439954465,
+  "updatedBy": null,
+  "urlName": "1914-reporting-menu-text-entry-allows-inputs-to-be-recieved-by-the-menu-below-it",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "609a1fc2eeec070e82894e8d",
+      "alias": "Running Swordfish",
+      "aliasID": "65c65c51ed6eefce4c13bee6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dddc14e2df8ec98bbfff4ded8a41aabc.png",
+      "companies": [],
+      "name": "JustJaime",
+      "urlName": null,
+      "voteID": "6ab2d1c15a0588e09c1d60a5"
+    },
+    {
+      "_id": "5dab35051e14847e6f1cd15e",
+      "alias": "Accurate Lizard",
+      "aliasID": "665a1499b9e8e8fe669c82db",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2fe44a3df688c2e8c3304c4f1cce4912.png",
+      "companies": [],
+      "name": "Star Light 6136",
+      "urlName": null,
+      "voteID": "6ab2d15b5a0588e09c1d5e9f"
+    }
+  ]
+}
