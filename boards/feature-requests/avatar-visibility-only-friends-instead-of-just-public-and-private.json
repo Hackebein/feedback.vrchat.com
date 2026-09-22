@@ -1,10 +1,10 @@
 {
   "_id": "6ab18e38d9fbe5f7510c81b7",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.upload-performance"
+    "loc.main-menu",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-22T02:36:09.029043Z",
+  "aiTaggedAt": "2026-09-22T02:54:42.710726Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "675b6c8a6eeeb08c94d5d510",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 22,
+  "commentCount": 23,
   "commentingDisabled": false,
   "comments": [
     {
@@ -830,7 +830,7 @@
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -931,13 +931,71 @@
       "postDeleted": false,
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I feel like rather than \"friends only\" a simpler system would be \"Cloneable only from the creator or a pedestal owned by them.\" It gets rid of any messy friend management issues while allowing a creator to have a \"Semi public\" avatar that they can share with specific people without it showing up in search worlds.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab1ea9e29b3f55f3e149e6d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "643a163c4841a3092345f4a3",
+        "alias": "Tangerine Warbler",
+        "aliasID": "65c28339ed6eefce4cc2dd86",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/fdd04b3396582653663332348d64be37.png",
+        "created": "2023-04-15T03:13:00.932Z",
+        "name": "DnutCfe-Obscura",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-22T02:40:30.606Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "61a2db97efc45a02a5369fb5",
+          "alias": "Sepia Anglerfish",
+          "aliasID": "65c2b614ed6eefce4c111267",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ef1235ce6f18ae926a02a650d0ca808b.png",
+          "created": "2021-11-28T01:29:59.821Z",
+          "name": "Elocin_Anagram",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ab1dfceb1ec24e95f6e2626",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab18e38d9fbe5f7510c81b7",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{61a2db97efc45a02a5369fb5|full_name} I completely agree with that.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -957,20 +1015,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 85,
+  "maxScore": 89,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab18e38d9fbe5f7510c81b7/851890501.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 85,
+  "score": 89,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-21T20:06:16.599Z",
   "subCategoryID": null,
   "title": "Avatar Visibility \"Only Friends\" instead of just \"Public\" and \"Private\"",
-  "trendingScore": 2964.155280466441,
+  "trendingScore": 2964.202080898932,
   "updatedBy": null,
   "urlName": "avatar-visibility-only-friends-instead-of-just-public-and-private",
   "viewerIsAuthor": false,
@@ -983,6 +1041,50 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6332c4aa1bf4ef44cb52566e",
+      "alias": "Neon carrot Guppy",
+      "aliasID": "688bac5d076be5baa64e3b3e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/190379897345768f64bf9f7f04487473.png",
+      "companies": [],
+      "name": "ibCheechy",
+      "urlName": null,
+      "voteID": "6ab1eca65a0588e09c187f8c"
+    },
+    {
+      "_id": "63e70d70f1684e450d14723f",
+      "alias": "Top Lizard",
+      "aliasID": "65c5aef0ed6eefce4cebd8a5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a7fcb9878699ff82473f37abb6e24fc1.png",
+      "companies": [],
+      "name": "kazin138",
+      "urlName": null,
+      "voteID": "6ab1ec165a0588e09c187e7f"
+    },
+    {
+      "_id": "69f3f4064a48bed189eb447c",
+      "alias": "Sparkling Marsupial",
+      "aliasID": "69f3f4064a48bed189eb447f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2af2e8583b963bbb925a567a11ef3e79.png",
+      "companies": [],
+      "name": "nikidash",
+      "urlName": null,
+      "voteID": "6ab1eb635a0588e09c187d37"
+    },
+    {
+      "_id": "6aadf06c5a0588e09cd79758",
+      "alias": "Remarkable Pony",
+      "aliasID": "6aadf06c5a0588e09cd7975b",
+      "anonymized": false,
+      "avatarURL": null,
+      "companies": [],
+      "name": "deimos？",
+      "urlName": null,
+      "voteID": "6ab1ea2e5a0588e09c187b06"
+    },
     {
       "_id": "606b60e136d9a564540294aa",
       "alias": "Acid green Salmon",
