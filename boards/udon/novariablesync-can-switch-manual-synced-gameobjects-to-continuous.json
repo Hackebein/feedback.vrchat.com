@@ -1,0 +1,93 @@
+{
+  "_id": "6ab404d4b122840c7d7e9dbb",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-23T17:03:29.676308Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "643e1abdc58cac090aef3b15",
+    "alias": "Adorable Peacock",
+    "aliasID": "6629e764d36452c179fdbd0a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8d45afb626f17beaf0cde39b656e7635.png",
+    "created": "2023-04-18T04:21:17.529Z",
+    "name": "スーハー",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "643e1abdc58cac090aef3b15",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-23T16:56:52.154Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In VRChat SDK 3.10.5, a `NoVariableSync` UdonSharp behaviour appears to cause other behaviours on the same GameObject to switch from Manual to Continuous synchronization.\n\nWe encountered this issue in our world, “すーはー式ごいた”.\n\nThe issue is now resolved in our world by explicitly setting all affected behaviours to Manual. This is a world-side workaround; we have not confirmed a fix in the SDK itself. The current version of our world therefore no longer reproduces the original issue.\n\nAffected setup\n\nEach game piece had three UdonSharp behaviours on the same GameObject:\n\n- `KomaScript`: Manual\n\n- `ManualSync_suuhar`: Manual\n\n- `UdonImageOwnerSpriteRenderer`: NoVariableSync\n\nWe observed piece object positions rolling back and a drop in FPS due to excessively frequent 'OnDeserialization()' calls.\n\nDiagnostic findings\n\nDuring approximately four minutes of testing, our logs recorded:\n\n- Over 40,000 deserialization callbacks, including identical to the previous reception.\n\n- Increasing send timestamps on all duplicate receptions.\n\n- 62 explicit `RequestSerialization()` calls, but 1,856 `OnPreSerialization()` callbacks and 1,856 successful `OnPostSerialization()` callbacks.\n\nFor one piece, two explicit serialization requests resulted in 58 serialization callbacks over approximately 14 seconds, with a median interval of 0.239 seconds.\n\nChanging `UdonImageOwnerSpriteRenderer` from `NoVariableSync` to `Manual`, so that all three behaviours explicitly use Manual, resolved the reported issue in our testing.\n\nSuggested reproduction\n\n1. Add a Manual-synced UdonSharp behaviour with synced variables to a GameObject.\n\n2. Add another UdonSharp behaviour marked `NoVariableSync`.\n\nA `NoVariableSync` behaviour should remain compatible with Manual behaviours on the same GameObject without switching them to Continuous. \n\nEnvironment\n\n- World: すーはー式ごいた ( https://vrchat.com/home/world/wrld_a68a2924-fb2c-4860-adef-d687853e4b79/info )\n\n- Unity: 2022.3.22f1\n\n- VRChat Worlds SDK: 3.10.5\n\n- VRChat Build Number 1903\n\nCurrently, resolved in the world using SyncMode.Any",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ab404d3b122840c7d7e9db9",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-23T16:56:52.154Z",
+  "subCategoryID": null,
+  "title": "NoVariableSync can switch Manual-synced GameObjects to Continuous",
+  "trendingScore": 2960.651169789687,
+  "updatedBy": null,
+  "urlName": "novariablesync-can-switch-manual-synced-gameobjects-to-continuous",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "643e1abdc58cac090aef3b15",
+      "alias": "Adorable Peacock",
+      "aliasID": "6629e764d36452c179fdbd0a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8d45afb626f17beaf0cde39b656e7635.png",
+      "companies": [],
+      "name": "スーハー",
+      "urlName": null,
+      "voteID": "6ab404d45a0588e09c246a52"
+    }
+  ]
+}
