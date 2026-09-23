@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.in-world",
     "client.chatbox",
-    "client.settings"
+    "platforms.cross-platform",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-23T16:31:25.655994Z",
+  "aiTaggedAt": "2026-09-23T22:07:41.161923Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60c87a5d16d979790d8309cf",
@@ -35,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 14,
+  "commentCount": 15,
   "commentingDisabled": false,
   "comments": [
     {
@@ -550,6 +551,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{62b61f8ec938a62475e4cd14|full_name} i personally don't think they should have changed the keyboard to begin with. There weren't any complaints originally with it. \n\nMaybe have an option to choose if you want a separate or connected keyboard?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab44b25ba589e2eb69b1344",
+      "aiGenerated": false,
+      "author": {
+        "_id": "654bd3f7a07d99ca813e2bd7",
+        "alias": "Relevant Shark",
+        "aliasID": "65c77324ed6eefce4c155a63",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/88b4075684b6889e8b2b7959fb3a059e.png",
+        "created": "2023-11-08T18:31:19.296Z",
+        "name": "poulut",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-23T21:56:53.218Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ab3e6e7a22514789846712b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa25a9da026cebd78245c69",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} there is still the issue that you cant move the whole thing by grabbing the keyboard so its still annoying to move it around as you have to grab the relatively small (and often blocked by the keyboard) text field",
       "viewerReactions": null,
       "voteID": null
     }
