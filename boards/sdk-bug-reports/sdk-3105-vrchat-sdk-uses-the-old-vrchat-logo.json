@@ -83,7 +83,9 @@
       "postDeleted": false,
       "postID": "6ab3f4ca5a01b31737eed1cd",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -113,20 +115,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-23T15:48:26.991Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.5] VRChat SDK uses the old VRChat logo",
-  "trendingScore": 2961.0502264529805,
+  "trendingScore": 2961.34126729656,
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "sdk-3105-vrchat-sdk-uses-the-old-vrchat-logo",
   "viewerIsAuthor": false,
@@ -139,6 +141,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5f67899159b0841fe0d3891b",
+      "alias": "Amaranth Llama",
+      "aliasID": "65c26da3ed6eefce4c4d09df",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/869c13776776cafc75422df7e7cbbce7.png",
+      "companies": [],
+      "name": "Patroll",
+      "urlName": null,
+      "voteID": "6ab415455a0588e09c24e8bf"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
