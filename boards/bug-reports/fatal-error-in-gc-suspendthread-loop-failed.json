@@ -2,10 +2,9 @@
   "_id": "6a1e364cec4cc3e215c99ac5",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-09-19T22:57:05.255176Z",
+  "aiTaggedAt": "2026-09-23T06:42:56.660604Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5da73c95c8133a48b8a0b711",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 45,
+  "commentCount": 46,
   "commentingDisabled": false,
   "comments": [
     {
@@ -699,6 +698,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I've solved the issue for myself with 100% reproducibility. If this solves it for anyone else, let me know.\n\nIn Windows' \"Virus & threat protections settings\" you must enable \"Real-time protection.\" Wait 30 seconds (or reboot) and try launch the game again. That's all.\n\nWith this setting off, I can't launch VRChat under any circumstance. This was a big headache to solve, so this is also on a completely fresh install of Windows. \n\nSome further details: I've tried all other solutions listed here with no success. The memory integrity setting also has no effect for me.\n\nI'm fairly sure this is related to some conflict with EAC: launching the game via VRChat.exe will always succeed. Using launch.exe (with EAC) did not.\n\nI tried disassembling the crash dump and debugging, and came to a few conclusions that another user also mentioned:\n\nThe crash routine was matched to BDWGC GC_suspend() in win32_threads.c. The failing branch is repeated failure of GetThreadContext() after a successful SuspendThread(). The identical routine was live-debugged with VRChat.exe, where GetThreadContext() consistently returned TRUE (EAX=1, Win32 LastError 0). In the normal EAC launch, it exhausts MAX_SUSPEND_THREAD_RETRIES (1,000,000) and executes the fatal int 3. \n\nTo a developer: if you could instrument/log GetLastError() immediately after failed GetThreadContext(), the target TID/handle, and the handle’s granted access mask under the protected launch, that might yield some answers.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab371384534fc20dbecbb3b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62e0f5fc26e6cc44b0805010",
+        "alias": "Perfect Capybara",
+        "aliasID": "65ceb77a0129d7ae4487d0d0",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/de2640ecf8df7ba70cc0b169fe7bad96.png",
+        "created": "2022-07-27T08:23:24.331Z",
+        "name": "Kroung",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-23T06:27:04.171Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5d458c2bce0d0218577b8c24",
+          "alias": "Relaxed Anteater",
+          "aliasID": "65c281e7ed6eefce4c8eb136",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/eb463e55f45cca7afdf1bb36a7bb52a3.png",
+          "created": "2019-08-03T13:29:15.993Z",
+          "name": "Skairu",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aaf10ab3400accab27e5c9b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1e364cec4cc3e215c99ac5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5d458c2bce0d0218577b8c24|full_name} I had real time protection on, but still got the issue. Updating my GPU driver and re-enrolling in the open beta made the issue go away for me.",
       "viewerReactions": null,
       "voteID": null
     }

@@ -2,10 +2,9 @@
   "_id": "6aa3e96889c357ed3b201660",
   "aiCategories": [
     "loc.main-menu",
-    "social.friends",
-    "client.settings"
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-09-21T20:26:37.248559Z",
+  "aiTaggedAt": "2026-09-23T06:42:56.659482Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6089fcc94344ad275b8554ca",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 11,
+  "commentCount": 12,
   "commentingDisabled": false,
   "comments": [
     {
@@ -270,7 +269,7 @@
       "postID": "6aa3e96889c357ed3b201660",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -546,13 +545,59 @@
       "postDeleted": false,
       "postID": "6aa3e96889c357ed3b201660",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I disabled ipv6 system-wide and that seems to sometimes fix the issue",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab36d53c0422f5e97f4acb3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62e0f5fc26e6cc44b0805010",
+        "alias": "Perfect Capybara",
+        "aliasID": "65ceb77a0129d7ae4487d0d0",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/de2640ecf8df7ba70cc0b169fe7bad96.png",
+        "created": "2022-07-27T08:23:24.331Z",
+        "name": "Kroung",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-23T06:10:27.482Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa3e96889c357ed3b201660",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I have noticed this issue particularly when making a new instance of a private unlisted group. If I make a group+ instance of a private group I moderate; it can take upwards of 20+ minutes before any of my friends or other peoples friends to see the instance or see people in the world. It's gotten particularly bad recently.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -572,20 +617,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 32,
+  "maxScore": 33,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa3e96889c357ed3b201660/1860785192.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 32,
+  "score": 33,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-09-15T15:36:15.427Z",
   "subCategoryID": null,
   "title": "Friend updates (and more) stale indefinitely after hours",
-  "trendingScore": 2962.2872828283307,
+  "trendingScore": 2962.3746555615935,
   "updatedBy": null,
   "urlName": "friend-updates-and-more-stale-indefinitely-after-hours",
   "viewerIsAuthor": false,
@@ -598,6 +643,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62e0f5fc26e6cc44b0805010",
+      "alias": "Perfect Capybara",
+      "aliasID": "65ceb77a0129d7ae4487d0d0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/de2640ecf8df7ba70cc0b169fe7bad96.png",
+      "companies": [],
+      "name": "Kroung",
+      "urlName": null,
+      "voteID": "6ab36ce65a0588e09c2089cc"
+    },
     {
       "_id": "6aa1604f250b281ba8068703",
       "alias": "Silver Toucan",
