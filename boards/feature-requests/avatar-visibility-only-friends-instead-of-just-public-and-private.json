@@ -944,7 +944,7 @@
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -1101,7 +1101,9 @@
       "postDeleted": false,
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1127,20 +1129,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 129,
+  "maxScore": 131,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab18e38d9fbe5f7510c81b7/851890501.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 129,
+  "score": 131,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-21T20:06:16.599Z",
   "subCategoryID": null,
   "title": "Avatar Visibility \"Only Friends\" instead of just \"Public\" and \"Private\"",
-  "trendingScore": 2964.6512674151963,
+  "trendingScore": 2964.6723440270885,
   "updatedBy": null,
   "urlName": "avatar-visibility-only-friends-instead-of-just-public-and-private",
   "viewerIsAuthor": false,
@@ -1153,6 +1155,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "63486d98f74cb168093206ac",
+      "alias": "Walnut Dingo",
+      "aliasID": "65c270b7ed6eefce4cd26155",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/67a724b38e6a0589a25ffe5941932e48.png",
+      "companies": [],
+      "name": "u-Kotovsky",
+      "urlName": null,
+      "voteID": "6ab56b225a0588e09c2d4079"
+    },
+    {
+      "_id": "62def0e91c77eb5da6967ecf",
+      "alias": "Zaffre Unicorn",
+      "aliasID": "660b24cee5d26962aaba20ea",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c7e79e6a8c10f6d4dc6a476648906368.png",
+      "companies": [],
+      "name": "Meowphine",
+      "urlName": null,
+      "voteID": "6ab5684b5a0588e09c2d175a"
+    },
     {
       "_id": "697bd0bc6cefe3c238d4a35e",
       "alias": "Ruling Wildcat",
