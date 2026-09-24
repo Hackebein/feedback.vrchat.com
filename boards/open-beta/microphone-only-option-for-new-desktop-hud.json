@@ -170,7 +170,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "I don't want to see useless hamburger menu in the corner of the screen that I will never use. I will never use it, it's like decoration that I don't want. I need my mic icon visible somehow because I am now constantly missing talking to my friends because I am muted. It's happened multiple times now, and I don't want to clutter my screen with useless icons. I need to use push to talk because my house is noisy and sometimes I hot-mic. I can't mentally keep track of whether I'm muted just by the noise of mute/un-mute. \n\nTo keep my mic indicator visible, which is a tool I actively use during every conversation I have on VRChat, I have to enable other HUD elements which I will never use. I have never had to deal with this since I started playing VRChat, 5 years ago. There has been in the past feedback from users regarding the mic icon that resulted in real improvements to its function as a tool. The current functionality of the mic icon seems like a regression on those improvements.",
+      "value": "I don't want to see useless hamburger menu in the corner of the screen that I will never use. I will never use it, it's like decoration that I don't want. I need my mic icon visible somehow because I am now constantly missing talking to my friends because I am muted. It's happened multiple times now, and I don't want to clutter my screen with useless icons. I need to use push to talk because my house is noisy and sometimes I hot-mic. I can't mentally keep track of whether I'm muted just by the noise of mute/un-mute. \n\nTo keep my mic indicator visible, which is a tool I actively use during every conversation I have on VRChat, I have to enable other HUD elements which I will never use. I have never had to deal with this since I started playing VRChat, 5 years ago. There has been in the past feedback from users regarding the mic icon that resulted in real improvements to its function as a tool. The current functionality of the mic icon seems like a regression on those improvements.\n\nEdit: I want to be a bit more thorough about how I rely on the mic icon. When I'm muted, it flashes red for a moment. Otherwise, it isn't displayed. The setting is Mic Icon Visibility - When Muted. This catches me right away so that I can unmute.\n\nEdit Edit: I discovered, thanks to help from open beta folks, that (as of writing this) you can enable hud>set transparency to 0>enable mic icon in audio settings to be in bottom left position> set its transparency to something visible - this will let you have bottom left mic icon with no other hud elements. Somebody mentioned this does not fix the notifications issue though.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -190,20 +190,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 14,
+  "maxScore": 15,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aae84a977d9f6c15d56da4c/522338318.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 14,
+  "score": 15,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-19T12:48:41.950Z",
   "subCategoryID": null,
   "title": "Microphone only option for new desktop HUD",
-  "trendingScore": 2962.2291580315423,
+  "trendingScore": 2962.3399596679915,
   "updatedBy": null,
   "urlName": "microphone-only-option-for-new-desktop-hud",
   "viewerIsAuthor": false,
@@ -216,6 +216,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62dfb929b1e50b465a8e80df",
+      "alias": "Vocational Bobcat",
+      "aliasID": "65e0d15aa6e3ea79dd7a79ac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d7962abdacdf7b4dfa0fe571dd4d5a73.png",
+      "companies": [],
+      "name": "PollenTomorrow",
+      "urlName": null,
+      "voteID": "6ab530f25a0588e09c2b3496"
+    },
     {
       "_id": "61be113a35e8fe11ca942794",
       "alias": "Arctic lime Vicuna",
