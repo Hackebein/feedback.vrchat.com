@@ -1,12 +1,11 @@
 {
   "_id": "6aad525f4d5bcebed8b6ca81",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.chatbox",
-    "open-beta"
+    "loc.in-world",
+    "open-beta",
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-09-22T23:48:15.116140Z",
+  "aiTaggedAt": "2026-09-24T22:00:26.171454Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63882dc1f272550ad4b6b553",
@@ -36,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -125,6 +124,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Noting that this issue still occurs in open beta build 1916",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab59c692ac3c6877f1274c1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63882dc1f272550ad4b6b553",
+        "alias": "Nautical blue Horse",
+        "aliasID": "65c26de3ed6eefce4c583e46",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3d837ede8c3de0d9df9412f052819088.png",
+        "created": "2022-12-01T04:29:53.950Z",
+        "name": "B1G․",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-24T21:55:53.142Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aad525f4d5bcebed8b6ca81",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This issue still occurs in 1917. The keyboard no longer snaps back to an un-centered position, but still snaps back to a position not set by the player nonetheless.",
       "viewerReactions": null,
       "voteID": null
     }
