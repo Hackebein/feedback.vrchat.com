@@ -8,31 +8,31 @@ Scrape horizon: **2026-08-29 22:56 UTC (25d ago)**.
 
 | Board | Posts |
 |-------|------:|
-| `age-verification` | 212 / 212 (100.0%) |
-| `android` | 352 / 352 (100.0%) |
-| `avatar-30` | 882 / 882 (100.0%) |
+| `age-verification` | 212 / 205 (100.0%) |
+| `android` | 352 / 219 (100.0%) |
+| `avatar-30` | 882 |
 | `avatar-accessories` | 12 / 12 (100.0%) |
-| `avatar-marketplace` | 80 / 80 (100.0%) |
-| `bug-reports` | 12,222 / 12,221 (100.0%) |
+| `avatar-marketplace` | 80 / 59 (100.0%) |
+| `bug-reports` | 12,222 |
 | `client-bug-reporting` | 179 |
-| `creator-companion` | 290 / 290 (100.0%) |
-| `creator-economy` | 86 / 86 (100.0%) |
-| `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,159 / 14,161 (99.99%) |
-| `impostors` | 91 / 91 (100.0%) |
-| `ios-mobile-beta` | 263 / 263 (100.0%) |
-| `localization` | 653 / 653 (100.0%) |
-| `merch` | 37 / 37 (100.0%) |
+| `creator-companion` | 290 / 124 (100.0%) |
+| `creator-economy` | 86 / 58 (100.0%) |
+| `example-central` | 7 / 6 (100.0%) |
+| `feature-requests` | 14,159 |
+| `impostors` | 91 / 39 (100.0%) |
+| `ios-mobile-beta` | 263 / 177 (100.0%) |
+| `localization` | 653 / 292 (100.0%) |
+| `merch` | 37 / 36 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,273 / 3,272 (100.0%) |
-| `persistence` | 73 / 73 (100.0%) |
-| `sdk-bug-reports` | 1,426 / 1,426 (100.0%) |
-| `third-person-view` | 83 / 83 (100.0%) |
-| `udon` | 1,874 / 1,874 (100.0%) |
-| `vrchat-ik-20` | 286 / 286 (100.0%) |
-| `vrchat-plus-feature-ideas` | 130 / 130 (100.0%) |
-| `website` | 870 / 870 (100.0%) |
-| **Total** | **37,546** / **37,367** (100.0%) |
+| `open-beta` | 3,273 |
+| `persistence` | 73 / 53 (100.0%) |
+| `sdk-bug-reports` | 1,426 |
+| `third-person-view` | 83 / 62 (100.0%) |
+| `udon` | 1,874 |
+| `vrchat-ik-20` | 286 / 206 (100.0%) |
+| `vrchat-plus-feature-ideas` | 130 / 129 (100.0%) |
+| `website` | 870 |
+| **Total** | **37,546** / **1,683** (100.0%) |
 
 ## OpenSearch
 
