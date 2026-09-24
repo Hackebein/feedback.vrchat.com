@@ -2,10 +2,12 @@
   "_id": "6ab038a556bef16c5e7614c7",
   "aiCategories": [
     "loc.pc-client",
+    "loc.hud",
+    "audio.voice",
     "platforms.pc.desktop",
-    "client.settings"
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-22T14:59:51.791612Z",
+  "aiTaggedAt": "2026-09-24T15:41:58.932003Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d1a0924735547e299a84f",
@@ -82,6 +84,37 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ab543b630ad74dcbd3d339c",
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-24T15:37:26.461Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6ab543b630ad74dcbd3d339c",
+      "mergedPostDetails": "The open beta patch notes said:\n\n```\n\nDesktop HUD users can opt-in to show the classic mic indicator in the bottom-left of the screen. \n\n- You can find the option under the Main Menu Settings→Audio & Voice→Mic Icon Position. \n\n  - Your options here will be \"Bottom Left,\" \"Top Right,\" and \"Both.\"\n\n    - If the bottom-left indicator is enabled, it is excluded from the overall HUD opacity multiplier. \n\n```\n\nHowever, when I turn off the desktop HUD and set the mic icon to bottom left, it's still hidden, despite the claim that it's excluded from the HUD opacity multiplier.",
+      "mergedPostTitle": "[1916] Classic mic icon can't be enabled when the desktop HUD is hidden",
+      "pinned": false,
+      "postID": "6ab038a556bef16c5e7614c7",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -99,20 +132,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 8,
-  "mergeCount": 0,
+  "maxScore": 12,
+  "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab038a556bef16c5e7614c7/1433133520.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 8,
+  "score": 12,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-09-22T14:54:16.534Z",
   "subCategoryID": null,
   "title": "[1915] Can't show Mic while HUD hidden",
-  "trendingScore": 2961.8891740632434,
+  "trendingScore": 2962.3804275032658,
   "updatedBy": null,
   "urlName": "1915-cant-show-mic-while-hud-hidden",
   "viewerIsAuthor": false,
@@ -125,6 +158,50 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62dfb929b1e50b465a8e80df",
+      "alias": "Vocational Bobcat",
+      "aliasID": "65e0d15aa6e3ea79dd7a79ac",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d7962abdacdf7b4dfa0fe571dd4d5a73.png",
+      "companies": [],
+      "name": "PollenTomorrow",
+      "urlName": null,
+      "voteID": "6ab543b65a0588e09c2bded8"
+    },
+    {
+      "_id": "61be113a35e8fe11ca942794",
+      "alias": "Arctic lime Vicuna",
+      "aliasID": "65c27a3aed6eefce4c5cc811",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/26a79872c36a5b7442a922d7272c27f6.png",
+      "companies": [],
+      "name": "Rusty Beans",
+      "urlName": null,
+      "voteID": "6ab543b65a0588e09c2bded9"
+    },
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ab543b65a0588e09c2bdeda"
+    },
+    {
+      "_id": "5c1475afb7ce126e9e0e3a39",
+      "alias": "Wineberry Leopard",
+      "aliasID": "65c26da3ed6eefce4c4d098e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/648ba30b7ed9dffcc9c41436c281d84b.png",
+      "companies": [],
+      "name": "bd_",
+      "urlName": null,
+      "voteID": "6ab543b65a0588e09c2bdedb"
+    },
     {
       "_id": "6223f0c92be3ce678c825d27",
       "alias": "Khaki Impala",
@@ -190,28 +267,6 @@
       "name": "14anthony7095",
       "urlName": null,
       "voteID": "6ab09d175a0588e09c106b1a"
-    },
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6ab039d95a0588e09c0f6f7a"
-    },
-    {
-      "_id": "5f2d1a0924735547e299a84f",
-      "alias": "Incredible Limpet",
-      "aliasID": "65c28349ed6eefce4cc54fa4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ee3924c5f13f0664513835bf10f98aba.png",
-      "companies": [],
-      "name": "MissingNO123",
-      "urlName": null,
-      "voteID": "6ab038a55a0588e09c0f6d69"
     }
   ]
 }
