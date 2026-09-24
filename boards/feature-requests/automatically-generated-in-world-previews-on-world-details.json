@@ -2,10 +2,11 @@
   "_id": "6aa26f539dcd17f166e385e4",
   "aiCategories": [
     "loc.website",
-    "worlds.travel",
-    "sdk.world-building"
+    "loc.unity-sdk",
+    "web.worlds",
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-09-14T04:51:12.316673Z",
+  "aiTaggedAt": "2026-09-24T05:56:28.639550Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 13,
+  "commentCount": 14,
   "commentingDisabled": false,
   "comments": [
     {
@@ -631,7 +632,7 @@
       "postID": "6aa26f539dcd17f166e385e4",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -689,7 +690,7 @@
       "postID": "6aa26f539dcd17f166e385e4",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -697,6 +698,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{5fa3e1c3d35f8d48ac388c26|full_name}This is what LittleBigPlanet was doing for example, but they did have screenshot upload system. VRChat technically already has system that could be used for this, which is prints, and its already moderated. They just need to allow to view those on user profile and tagged world, photographers may love this feature.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab4bab3d9a02512fe40b15e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df013246e66844a84a8ef1",
+        "alias": "Conceptual Harrier",
+        "aliasID": "65c26ed9ed6eefce4c854f77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4c44ef8342e8cd565692d5a596d025b8.png",
+        "created": "2022-07-25T20:46:42.667Z",
+        "name": "DarkSwordsman",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-24T05:52:51.018Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5b0907a98fa72313783e4ba6",
+          "alias": "Supposed Parrotfish",
+          "aliasID": "65c2b4abed6eefce4ce1caf2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c802ed56ec9fc14a097db712c3d1e4c0.png",
+          "created": "2018-05-26T07:07:21.588Z",
+          "name": "phi16",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aa2a26614e25c8f15f6b397",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa26f539dcd17f166e385e4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5b0907a98fa72313783e4ba6|full_name} For the 360 captures: ChilloutVR already solved this, at least with portals, and how it uses a shader with a cubemap that you can see through the portal or even if you stick your head in. VRChat could allow you to view this preview using some physical mechanism, and the preview of it when you initially open the menu could be rotating the map so you can at least casually see it.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -716,20 +773,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 251,
+  "maxScore": 252,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aa26f539dcd17f166e385e4/1196862785.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 251,
+  "score": 252,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-10T08:50:27.238Z",
   "subCategoryID": null,
   "title": "Automatically generated in-world previews on World Details",
-  "trendingScore": 2964.1110885897997,
+  "trendingScore": 2964.1279152593406,
   "updatedBy": null,
   "urlName": "automatically-generated-in-world-previews-on-world-details",
   "viewerIsAuthor": false,
@@ -742,6 +799,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62df013246e66844a84a8ef1",
+      "alias": "Conceptual Harrier",
+      "aliasID": "65c26ed9ed6eefce4c854f77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4c44ef8342e8cd565692d5a596d025b8.png",
+      "companies": [],
+      "name": "DarkSwordsman",
+      "urlName": null,
+      "voteID": "6ab4ba085a0588e09c28ed96"
+    },
     {
       "_id": "648d44474e40600b883123d1",
       "alias": "Curved Peacock",
