@@ -1,0 +1,109 @@
+{
+  "_id": "6ab5ae4313070576e09f80e4",
+  "aiCategories": [
+    "loc.pc-client",
+    "open-beta",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-09-24T23:16:35.609983Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63882dc1f272550ad4b6b553",
+    "alias": "Nautical blue Horse",
+    "aliasID": "65c26de3ed6eefce4c583e46",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3d837ede8c3de0d9df9412f052819088.png",
+    "created": "2022-12-01T04:29:53.950Z",
+    "name": "B1G․",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63882dc1f272550ad4b6b553",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-24T23:12:03.095Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The new location of the chatbox input field makes it virtually impossible to place the keyboard in a comfortable location.\n\nThe following change was made in open beta 1917 that makes the chatbox and its keyboard practically unusable in VR:\n\n- In VR, the Chat/Input popups now appear lower by default. (Near the bottom of where the Main Menu would appear, rather than the middle.)\n\nPlease see the attached images for more information, it was the simplest way I could communicate what feels wrong about this change at the moment. The third image is a proposed solution that successfully \"lowers\" the chatbox and its docked keyboard without making it uncomfortable to type on or adjust.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ab5ae4213070576e09f80d3",
+  "imageURLs": [
+    "https://canny-assets.io/images/f5e6228fd49a1890ee861832e0262e02.png",
+    "https://canny-assets.io/images/443f4b72939e082db5249b0778bed470.png",
+    "https://canny-assets.io/images/00deb4607a1f72987437826f5dc31935.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab5ae4313070576e09f80e4/1623414639.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-24T23:12:03.095Z",
+  "subCategoryID": null,
+  "title": "[1917] The position of the chatbox input field in VR makes the keyboard very uncomfortable to use",
+  "trendingScore": 2961.236731918134,
+  "updatedBy": "63882dc1f272550ad4b6b553",
+  "urlName": "1917-the-position-of-the-chatbox-input-field-in-vr-makes-the-keyboard-very-uncom",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "60613bdbb493c31833f5119f",
+      "alias": "Linear Ladybug",
+      "aliasID": "6605001da63714bcb3b3d1bd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c466b3e452e70a33879c83efd328f549.png",
+      "companies": [],
+      "name": "Airishayn",
+      "urlName": null,
+      "voteID": "6ab5ae665a0588e09c2f1ec8"
+    },
+    {
+      "_id": "63882dc1f272550ad4b6b553",
+      "alias": "Nautical blue Horse",
+      "aliasID": "65c26de3ed6eefce4c583e46",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3d837ede8c3de0d9df9412f052819088.png",
+      "companies": [],
+      "name": "B1G․",
+      "urlName": null,
+      "voteID": "6ab5ae435a0588e09c2f1dcf"
+    }
+  ]
+}
