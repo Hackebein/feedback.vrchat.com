@@ -2,10 +2,9 @@
   "_id": "6ab3e5f5b122840c7d783b8c",
   "aiCategories": [
     "loc.website",
-    "web.docs",
-    "open-beta"
+    "web.creators-portal"
   ],
-  "aiTaggedAt": "2026-09-25T02:45:09.146518Z",
+  "aiTaggedAt": "2026-09-25T03:12:25.749283Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -35,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -126,6 +125,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "- \"The canonical source for changelogs is Discord.\"\n\nCanonical change log is on Discord rather than the official website? That is counter-intuitive and completely opposite of common sense.\n\n- \"I would kindly ask to pose requests such as these on Discord, or simply give us some time to update our websites. Canny is not the place.\"\n\nGenerally, whenever feedback are posted in Discord they get a \"post on Canny otherwise they won't get followed up, Discord is not the place\", can you please clarify what should go where?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab5e4f77be9033b4428c5a2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-25T03:05:27.875Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/492314fef38c6a9a543628e887f696bd.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ab53c05db131a23d9e67b7d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab3e5f5b122840c7d783b8c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} The post in OP is an idea to make VRChat better, or a description of something that was causing me an issue and follows the guidance from the VRChat client's help page.\n\nI would personally consider missing release notes to be release blocking bug professionally, but you can notice from the category this is a \"feature request\".\n\nNotably, I'm still waiting for:\n\n- `Build 1712` release notes (https://feedback.vrchat.com/website/p/missing-vrchat-202533p1-release-notes) - 11 months and counting\n\n- `Build 1899` release notes (https://feedback.vrchat.com/open-beta/p/1899-missing-vrchat-202632-open-beta-build-1899-release-notes) - 4 weeks and counting\n\nThese things will get forgotten without a feature request topic on Canny to track.\n\nThe beauty of Canny is that someone else can also come in and post the release notes in comments, without a walled garden of information lost to scrolling up.\n\n---\n\nIn any case, I will extend the wait period from ~16 hours to 24-48 hours next time.",
       "viewerReactions": null,
       "voteID": null
     }
