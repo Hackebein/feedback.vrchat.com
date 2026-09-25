@@ -2,10 +2,12 @@
   "__v": 0,
   "_id": "64550c0d633aab08fe7f9ea6",
   "aiCategories": [
-    "loc.in-world",
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "platforms.standalone-vr.pico",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-09-24T12:38:51.576549Z",
+  "aiTaggedAt": "2026-09-25T17:35:58.021867Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "645509b4d90a840923f1856f",
@@ -29,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 109,
+  "commentCount": 110,
   "commentingDisabled": false,
   "comments": [
     {
@@ -745,6 +747,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6a803246523ad161332c00f4|full_name} i F****** Hate this....... if i stop moving for 0,0000001 seconds, the hands go to defaut.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab6afb7fba2bc67bb7d8608",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a803246523ad161332c00f4",
+        "alias": "Venetian yellow Lizard",
+        "aliasID": "6a803246523ad161332c00f7",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e110e21f942c2ec4368d6e778937cb47.png",
+        "created": "2026-08-15T09:32:54.700Z",
+        "name": "Ceri C Chocomin",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-25T17:30:31.721Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6ab46cb35a0588e09c279edb",
+          "alias": "Marginal Lynx",
+          "aliasID": "6ab46cb35a0588e09c279edf",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2026-09-24T00:20:03.228Z",
+          "name": "FemBonnie",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a912f1d9c0d8592824d8e8b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "64550c0d633aab08fe7f9ea6",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6ab46cb35a0588e09c279edb|full_name} A shitty workaround I've found for now is that they won't sleep as long as at least one is sending an input; either holding the grip if you don't mind making a fist, or like, tapping then holding the mute button to mute then hold unmute yourself.. it's annoying and sucks and I pray to god they fix this, but at very least this works for now.",
       "viewerReactions": null,
       "voteID": null
     }
