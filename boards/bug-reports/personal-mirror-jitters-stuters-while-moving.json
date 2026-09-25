@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.third-person"
+    "client.camera"
   ],
-  "aiTaggedAt": "2026-09-25T23:04:18.687605Z",
+  "aiTaggedAt": "2026-09-25T23:25:27.955026Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d2e156b8b641f47af4b344a",
@@ -37,18 +37,24 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nThe personal mirror stuters/jitters while moving and or rotating your view on desktop.\n\nThis was not as pronounced in erlier versions.\n\nReproduction Steps\n\n1. Join a moderated big instance of 20 players.\n\n2. Turn on your personal mirror. (mine was set at 20 opassity, showing other players). \n\n3. ---> The mirror stuters and jitters while moving/rotating.\n\nP.s. might be related to Frame rate, but that was not as pronounced in erlier builds. \n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3-1917-ee11595942-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-26_01-24-37.txt](https://api.vrchat.cloud/api/1/file/file_473ed0f1-ff0b-40f1-90eb-ed8dd289f9a5/1/file)",
+  "details": "Description\n\nThe personal mirror stuters/jitters while moving and or rotating your view on desktop.\n\nThis was not as pronounced in erlier versions.\n\nReproduction Steps\n\n1. Join any world.\n\n2. Turn on your personal mirror. (mine was set at 20 opassity, showing other players). \n\n3. ---> The mirror stuters and jitters while moving/rotating.\n\nP.s. was not as pronounced in erlier builds. \n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3-1917-ee11595942-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-09-26_01-24-37.txt](https://api.vrchat.cloud/api/1/file/file_473ed0f1-ff0b-40f1-90eb-ed8dd289f9a5/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [
-    "https://canny-assets.io/files/cfad6b36d1cd4937b1762168104d783c.mp4"
+    "https://canny-assets.io/files/cfad6b36d1cd4937b1762168104d783c.mp4",
+    "https://canny-assets.io/files/c820a746ccf5a43129ae044eee3e8b42.mp4"
   ],
   "files": [
     {
       "mimeType": "video/mp4",
       "name": "Screen Recording 2026-09-26 015143",
       "url": "https://canny-assets.io/files/cfad6b36d1cd4937b1762168104d783c.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "20260925-2317-03.7108073",
+      "url": "https://canny-assets.io/files/c820a746ccf5a43129ae044eee3e8b42.mp4"
     }
   ],
   "ideaID": "6ab6fd14e73c746107fc1dce",
