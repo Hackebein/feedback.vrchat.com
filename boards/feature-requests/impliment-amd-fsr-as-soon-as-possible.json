@@ -3,10 +3,10 @@
   "_id": "60d1f399d697e2303faf7fbd",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.cross-platform",
+    "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-06-15T05:54:55.005697Z",
+  "aiTaggedAt": "2026-09-25T13:50:28.354467Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c5a130fac29ec3d15ccbb95",
@@ -29,7 +29,7 @@
   "by": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 64,
+  "commentCount": 65,
   "commentingDisabled": false,
   "comments": [
     {
@@ -523,7 +523,7 @@
       "postID": "60d1f399d697e2303faf7fbd",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -922,7 +922,7 @@
       "postID": "60d1f399d697e2303faf7fbd",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -988,6 +988,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{627e94e69bf04e1ede28a21b|full_name} Any news on this?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab5c1d019be5797aad747c4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df013246e66844a84a8ef1",
+        "alias": "Conceptual Harrier",
+        "aliasID": "65c26ed9ed6eefce4c854f77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4c44ef8342e8cd565692d5a596d025b8.png",
+        "created": "2022-07-25T20:46:42.667Z",
+        "name": "DarkSwordsman",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-25T00:35:28.165Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "60c0e22718009c104862d5bc",
+          "alias": "Chemical Deer",
+          "aliasID": "65c28349ed6eefce4cc54fb4",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c30a68ae2238456105ebdc8cedea5b4a.png",
+          "created": "2021-06-09T15:45:43.306Z",
+          "name": "Fairplex",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6777c9e9867c5204efae06d4",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "60d1f399d697e2303faf7fbd",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{60c0e22718009c104862d5bc|full_name} While I understand your perspective (also a 5700X3D user), there are a lot of scenarios where I run into GPU bottlenecks, even with a 3080. FSR would be another option for people to at least *try to solve* solve performance issues. It also has the chance to allow users to enable certain GPU/shader features that they wouldn't be able to otherwise, since they can reduce some GPU load and use FSR to re-sharpen it.",
       "viewerReactions": null,
       "voteID": null
     }
