@@ -2,10 +2,10 @@
   "_id": "6ab43fafba589e2eb6999bf9",
   "aiCategories": [
     "loc.in-world",
-    "groups.instances",
+    "groups.roles",
     "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-09-24T17:25:38.157039Z",
+  "aiTaggedAt": "2026-09-25T01:01:58.045320Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6015a8dedd548068697b6112",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -130,7 +130,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{6ab54e845a0588e09c2c2e0c|full_name} I'm sorry but that has nothing to do with what i explained above. what i explained above only pertains to group safety and the players willing to keep there groups safe.\n\nPlease don't freak out over my comment there is nothing we as the player base can do about other players using them.",
+      "value": "@{6ab54e845a0588e09c2c2e0c|full_name} I understand your worry about modified clients but right now that isnt a worry for the above feature.",
       "viewerReactions": null,
       "voteID": null
     },
@@ -347,6 +347,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6ab5512e5a0588e09c2c42c1|full_name}that is exactly why i asked for the above features.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab5c06b2c33702dbd9f478c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df013246e66844a84a8ef1",
+        "alias": "Conceptual Harrier",
+        "aliasID": "65c26ed9ed6eefce4c854f77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4c44ef8342e8cd565692d5a596d025b8.png",
+        "created": "2022-07-25T20:46:42.667Z",
+        "name": "DarkSwordsman",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-25T00:29:31.403Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab43fafba589e2eb6999bf9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I am not sure if the risk of abuse of this feature would outweigh the benefits of it. Also, what do you do about groups that people have set to only friends or private?\n\nI do think I know the motivation behind this feature. All I can really say is that if you are worried about this, there may be an opportunity to write some external software (akin to VRCX, or even integrating with VRCX) to check a user's available group list (upon joining your group) and each group can handle that on their own.",
       "viewerReactions": null,
       "voteID": null
     }
