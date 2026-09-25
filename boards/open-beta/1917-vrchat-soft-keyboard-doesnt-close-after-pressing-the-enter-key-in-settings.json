@@ -1,10 +1,12 @@
 {
-  "_id": "6ab5d0c532863d2f1e899231",
+  "_id": "6ab5d20332863d2f1e89b1cd",
   "aiCategories": [
-    "loc.pc-client",
-    "client.settings"
+    "loc.main-menu",
+    "client.settings",
+    "platforms.pc.desktop",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-25T01:47:35.782583Z",
+  "aiTaggedAt": "2026-09-25T01:47:35.781654Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -38,65 +40,54 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-09-25T01:39:17.701Z",
+  "created": "2026-09-25T01:44:35.373Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Open Settings from Main Menu in desktop mode.\n\n2. Make sure \"Always Show VRChat Soft Keyboard\" is enabled in User Interface → General UI Settings.\n\n3. Search for \"soft\".\n\nExpected result: The soft keyboard is centered to the window.\n\nActual result: The keyboard is docked to left of the inner settings panel and overflows the window (1024x768 resolution).",
+  "details": "1. Open Settings from Main Menu in desktop mode.\n\n2. Make sure \"Always Show VRChat Soft Keyboard\" is enabled in User Interface → General UI Settings.\n\n3. Search for \"soft\".\n\nExpected result: The VRChat Soft Keyboard closes on Enter key press/release, so that the settings can be seen.\n\nActual result: The search goes through, but the VRChat Soft Keyboard stays on top obscuring all settings. Clicking with a mouse cursor off the keyboard doesn't close the soft keyboard either in most cases, and the \"X\" button is off-screen (in the default 1024x768 desktop mode window resolution).",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [
-    "https://canny-assets.io/files/5d375bf953abb5ca927b515493d255a2.mp4"
+    "https://canny-assets.io/files/536a1b6262832ccc7c6ded25fa200f54.mp4"
   ],
   "files": [
     {
       "mimeType": "video/mp4",
       "name": "2026-09-25 01-35-37",
-      "url": "https://canny-assets.io/files/5d375bf953abb5ca927b515493d255a2.mp4"
+      "url": "https://canny-assets.io/files/536a1b6262832ccc7c6ded25fa200f54.mp4"
     }
   ],
-  "ideaID": "6ab5d0c532863d2f1e899230",
+  "ideaID": "6ab5d20332863d2f1e89b1cc",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-09-25T01:39:17.701Z",
+  "statusChanged": "2026-09-25T01:44:35.373Z",
   "subCategoryID": null,
-  "title": "[1917] VRChat Soft Keyboard is off-centered when searching in settings",
-  "trendingScore": 2961.251551946681,
-  "updatedBy": "68098a4626271974ef4d2775",
-  "urlName": "1917-vrchat-soft-keyboard-is-off-centered-when-searching-in-settings",
+  "title": "[1917] VRChat Soft Keyboard doesn't close after pressing the Enter key in settings search",
+  "trendingScore": 2960.846380155097,
+  "updatedBy": null,
+  "urlName": "1917-vrchat-soft-keyboard-doesnt-close-after-pressing-the-enter-key-in-settings",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6ab5d26a5a0588e09c2fbbcf"
-    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
@@ -106,7 +97,7 @@
       "companies": [],
       "name": "WubTheCaptain",
       "urlName": null,
-      "voteID": "6ab5d0c55a0588e09c2fb7a2"
+      "voteID": "6ab5d2035a0588e09c2fba7a"
     }
   ]
 }
