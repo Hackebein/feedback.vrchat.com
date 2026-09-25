@@ -941,14 +941,14 @@
       "postID": "6834c4fea824a28c8ab16563",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "I'll add a +1 for a Native Linux Build, BUT having skimmed over a lot of the comments, I Have to laugh about a lot of it because so many comments are completely misunderstanding the complexity of what was already state by Tupper. Better linux support and considerations is already more than we can ask for. (Selfie cam fix when?) \n\nTL;DR Getting VRChat to run fully under proton is actually the better long term solution, DXVK Under Proton already does an amazing job of translating DX12 shaders to Vulkan and while A Native client would be amazing, the complexity of it does track. \n\n___ Rant ___\n\nYou can't \"Just shim DXVK\" in to the unity engine.\n\nThe shaders are compiled to binary form for Windows, \n\n- Mobile versions of the avatars use pre-defined potato shaders, that's why Mobile avis always have this hard limit on materials. \n\nRunning VRChat under Proton works just fine, if you can't follow a simple guide on how to extract proton-GE-x-rtsp in to your steam's compatabilitytools.d folder then that's your skill issue. I'm sorry, but moving a file from folder A to folder B is one of the most basic of computer skills, there's no excuse if a guide tells you exactly where to place it.\n\nIF you're using a broken compositor that can't render/pace frames properly, that's also a you problem - use software that doesn't suck (I'm calling out the ALVR and Steam VR combo for this one, it sucks right now i'm Sorry.)",
+      "value": "I'll add a +1 for a Native Linux Build, BUT having skimmed over a lot of the comments, I Have to laugh about a lot of it because so many comments are completely misunderstanding the complexity of what was already state by Tupper. Better linux support and considerations is already more than we can ask for. (Selfie cam fix when?) \n\nTL;DR Getting VRChat to run fully under proton is actually the better long term solution, DXVK Under Proton already does an amazing job of translating DX12 shaders to Vulkan and while A Native client would be amazing, the complexity of it does track. \n\n___ Rant ___\n\nYou can't \"Just shim DXVK\" in to the unity engine.\n\nThe shaders are compiled to binary form for Windows, \n\n- Mobile versions of the avatars use pre-defined potato shaders, that's why Mobile avis always have this hard limit on materials. \n\nRunning VRChat under Proton works just fine, if you can't follow a simple guide on how to extract proton-GE-x-rtsp in to your steam's compatabilitytools.d folder then that's your skill issue. I'm sorry, but moving a file from folder A to folder B is one of the most basic of computer skills, there's no excuse if a guide tells you exactly where to place it.\n\nIF you're using a broken compositor that can't render/pace frames properly, that's also a you problem - use software that doesn't suck (I'm calling out the ALVR and Steam VR combo for this one, it sucks right now i'm Sorry.)\n\nEdit: I'm going to add this with a second comment. If you are going to reply just to throw shade and play the indignation card at me then don't waste your time, I've turned off notifications from this thread. If the above statement hurts your feelings, then be an adult and learn to agree to disagree or identify why you feel hurt and ask yourself if some introspection might also be valid because I don't want to hear about it.",
       "viewerReactions": null,
       "voteID": null
     },
@@ -1057,7 +1057,7 @@
       "postID": "6834c4fea824a28c8ab16563",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -1282,7 +1282,9 @@
       "postDeleted": false,
       "postID": "6834c4fea824a28c8ab16563",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1382,13 +1384,15 @@
       "postDeleted": false,
       "postID": "6834c4fea824a28c8ab16563",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "DarkSwordsman I'm just calling out peoples bullshit. Unzipping and moving a folder to a specified location is the same difficulty on every platform, and is something you are taught to do in school. saying otherwise is misinformation.\n\nIf people can't follow simple 1-3 step processes when the steps are given to them in plain terms, that's a skill issue. \n\nExpecting other people to move a mountain for you because you refuse to put one foot in front of the other is an attitude problem.  \n\nA native Linux build of vrchat is actually not feasible, would take up twice as much space server side and add more complexity to the already encumbered avatar and world build process. Making vrc play nice in proton is genuinely the best option without majorly overhauling the unity engine itself which is the core issue here.\n\nps, a 5 to 10% market share jump in one quarter says otherwise. Linux is doing fine, the minority of people complaining for the sake of complaining or sending passive aggressive replies to people calling out horse sh1t on the internet are not a factor.  ;)",
+      "value": "DarkSwordsman I'm just calling out peoples bullshit. Unzipping and moving a folder to a specified location is the same difficulty on every platform, and is something you are taught to do in school. saying otherwise is misinformation.\n\nIf people can't follow simple 1-3 step processes when the steps are given to them in plain terms, that's a skill issue. \n\nExpecting other people to move a mountain for you because you refuse to put one foot in front of the other is an attitude problem.  \n\nA native Linux build of vrchat is actually not feasible, would take up twice as much space server side and add more complexity to the already encumbered avatar and world build process. Making vrc play nice in proton is genuinely the best option without majorly overhauling the unity engine itself which is the core issue here.\n\nps, a 5 to 10% market share jump in one quarter says otherwise. Linux is doing fine, the minority of people complaining for the sake of complaining or sending passive aggressive replies to people calling out horse shit on the internet are not a factor.  ;)",
       "viewerReactions": null,
       "voteID": null
     }
