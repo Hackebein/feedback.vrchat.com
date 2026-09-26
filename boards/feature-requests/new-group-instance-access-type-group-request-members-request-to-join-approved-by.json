@@ -1,13 +1,11 @@
 {
   "_id": "6ab7f6ed0658a8f1f5eec074",
   "aiCategories": [
-    "loc.website",
-    "web.groups",
-    "groups.creation",
+    "loc.in-world",
     "groups.instances",
     "groups.roles"
   ],
-  "aiTaggedAt": "2026-09-26T16:51:14.075775Z",
+  "aiTaggedAt": "2026-09-26T17:56:53.756740Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "602d8fd1ed0cbf3933eb2a63",
@@ -39,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I searched Canny for this request but couldn't find an existing post, so I'm creating one.\n\n**The request**\n\nAdd a new Group instance access type, e.g. \"Group Request\". In this instance type, regular group members can't join directly. Instead, they send a request to join, which must be accepted before they can enter. Members with specific roles can still join normally, like in a regular Group instance.\n\n**Proposed behavior**\n\n- New instance type \"Group Request\": Selectable when creating a Group instance, alongside the existing Group access types.\n\n- Role permission to bypass requests: Roles with this permission (e.g. \"Join Group Request instances directly\") can join the instance without requesting, same as today.\n\n- Role permission to receive and handle requests: Only roles with this permission (e.g. \"Receive/Accept join requests\") are notified of and can accept or deny incoming requests. This keeps requests from being sent to every member of the group, which would be spam for large groups.\n\n- Everyone else in the group: Can see the instance and send a join request, but can only enter once someone with the permission accepts it.\n\n**Why**\n\nThis mirrors what's already possible with a user-owned instance (e.g. a \"host account\" creating an Invite+ instance and only letting in people whose requests are accepted), but within a Group context. That means groups get it with the benefits of Group instances: role-based permissions, group moderation tools, and no dependency on a single host account being online and handling every request.\n\n**Example use cases**\n\n- Events or clubs that need a door check or a capacity limit, while staff and trusted roles can enter freely.\n\n- Groups that want visibility of their instances to all members, but controlled entry.\n\n- Replacing the common workaround of using a dedicated host account, which ties the instance to one person.",
+  "details": "I searched Canny for this request but couldn't find an existing post, so I'm creating one.\n\n**The request**\n\nAdd a new Group instance access type, e.g. \"Group Request\". In this instance type, regular group members can't join directly. Instead, they send a request to join, which must be accepted before they can enter. Members with specific roles can still join normally, like in a regular Group instance.\n\n**Proposed behavior**\n\n- New instance type \"Group Request\": Selectable when creating a Group instance, alongside the existing Group access types.\n\n- Role permission to bypass requests: Roles with this permission (e.g. \"Join Group Request instances directly\") can join the instance without requesting, same as today.\n\n- Role permission to receive and handle requests: Only roles with this permission (e.g. \"Receive/Accept join requests\") are notified of and can accept or deny incoming requests. This keeps requests from being sent to every member of the group, which would be spam for large groups.\n\n- Everyone else in the group: Can see the instance and send a join request, but can only enter once someone with the permission accepts it.\n\n**Why**\n\nThis mirrors what's already possible with a user-owned instance (e.g. a \"host account\" creating an Invite instance and only letting in people whose requests are accepted), but within a Group context. That means groups get it with the benefits of Group instances: role-based permissions, group moderation tools, and no dependency on a single host account being online and handling every request.\n\n**Example use cases**\n\n- Events or clubs that need a door check or a capacity limit, while staff and trusted roles can enter freely.\n\n- Groups that want visibility of their instances to all members, but controlled entry.\n\n- Replacing the common workaround of using a dedicated host account, which ties the instance to one person.",
   "error": null,
   "eta": null,
   "etaPublic": true,
