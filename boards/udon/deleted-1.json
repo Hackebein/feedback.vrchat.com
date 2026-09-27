@@ -1,10 +1,7 @@
 {
   "_id": "6ab7cb53419042543c12eed9",
-  "aiCategories": [
-    "loc.unity-sdk",
-    "sdk.udon"
-  ],
-  "aiTaggedAt": "2026-09-26T20:08:37.194990Z",
+  "aiCategories": [],
+  "aiTaggedAt": "2026-09-27T12:36:52.393276Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67a0ed8d6e7354cc8f8c7acd",
@@ -59,9 +56,7 @@
       "deletedAt": null,
       "fileURLs": [],
       "files": [],
-      "imageURLs": [
-        "https://canny-assets.io/images/d583ca4268b371899f78d2531c8f10eb.png"
-      ],
+      "imageURLs": [],
       "integrationSourceType": null,
       "internal": false,
       "itemSourceType": null,
@@ -79,7 +74,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "",
+      "value": "deleted",
       "viewerReactions": null,
       "voteID": null
     },
@@ -123,7 +118,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "I should add you need to have a continuous update loop to observe the deserialization(in fixed time) fired later then the Update() it is supposed to precede",
+      "value": "deleted",
       "viewerReactions": null,
       "voteID": null
     }
@@ -133,7 +128,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "This undocumented behaviour is counter-intuitive and causes expected behaviour.\n\nWhen calling `SendCustomEventDelayedFrames()` inside `OnDeserialization()`, your event will run in the same frame as the `OnDeserialization()` (as reported by `Time.frameCount`) as opposed to the expected behaviour of being in the next Update().\n\nThis effectively causes a \"time travel\" back in time because the `FixedUpdate()` can be at a later point in real time than the `Update()`, but the `SendCustomEventDelayedFrames()` is \"delaying\" you back to the frame of `Update()` which was fired in the past.\n\nFor testing, put below `WhyDeserializationInFixedUpdate` script onto a cube, click it to trigger a manual sync, and check the logs on the non-owner side.\n\n```\n\nusing UdonSharp;\n\nusing UnityEngine;\n\nusing VRC.SDKBase;\n\n[UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]\n\npublic class WhyDeserializationInFixedUpdate : UdonSharpBehaviour\n\n{\n\n    private int _checkingFrameIndex = 1;\n\n    private bool isInFixedUpdate => Time.deltaTime == Time.fixedDeltaTime;\n\n    [UdonSynced]\n\n    private int _syncedInt;\n\n    public override void Interact()\n\n    {\n\n        if (!Networking.IsOwner(gameObject)) Networking.SetOwner(Networking.LocalPlayer, gameObject);\n\n        _syncedInt++;\n\n        RequestSerialization();\n\n    }\n\n    public override void OnDeserialization()\n\n    {\n\n        Debug.Log($\"OnDeserialization, isInFixedUpdate={isInFixedUpdate}\");\n\n        CheckFrameTimeFor10Frames();\n\n    }\n\n    public void CheckFrameTimeFor10Frames()\n\n    {\n\n        Debug.Log($\"[TEST] This is a new frame\");\n\n        Debug.Log(\n\n            $\"[TEST] F#{_checkingFrameIndex} fCount={Time.frameCount} unscaledTime={Time.unscaledTimeAsDouble:F12} fixedUnscaledTime={Time.fixedUnscaledTimeAsDouble:F12} realtime={Time.realtimeSinceStartupAsDouble:F12}  _syncedInt={_syncedInt} isInFixedUpdate={isInFixedUpdate}\");\n\n        Debug.Log(\"----------\");\n\n        _checkingFrameIndex++;\n\n        if (_checkingFrameIndex > 10)\n\n        {\n\n            _checkingFrameIndex = 1;\n\n            return;\n\n        }\n\n        SendCustomEventDelayedFrames(nameof(CheckFrameTimeFor10Frames), 1);\n\n    }\n\n}\n\n```",
+  "details": "deleted",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -155,10 +150,10 @@
   "status": "open",
   "statusChanged": "2026-09-26T13:40:35.837Z",
   "subCategoryID": null,
-  "title": "OnDeserialization fires in FixedUpdate() rather than Update() and causes time travel",
+  "title": "deleted",
   "trendingScore": 2961.753983104973,
-  "updatedBy": null,
-  "urlName": "ondeserialization-fires-in-fixedupdate-rather-than-update-and-causes-time-travel",
+  "updatedBy": "67a0ed8d6e7354cc8f8c7acd",
+  "urlName": "deleted-1",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
