@@ -1,0 +1,95 @@
+{
+  "_id": "6ab903651c711e57a8404ad5",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-09-27T11:57:38.788592Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "67a0ed8d6e7354cc8f8c7acd",
+    "alias": "Cautious Minnow",
+    "aliasID": "67a0ed8eafacf378f12ca236",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a04bf3ae080d62e1ab0d5eefdc864c26.png",
+    "created": "2025-02-03T16:23:41.681Z",
+    "name": "Uzer Tekton",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "67a0ed8d6e7354cc8f8c7acd",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-27T11:52:05.507Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In OnDeserialization, sending a delayed 1 frame events (default timing) will go to Post-PostLateUpdate rather than around Update of the same frame.\n\nShouldn't it fire before the LateUpdate?\n\nI expected ALL events scheduled in Update timing to fire first, and then LateUpdate, and then PostLateUpdate. So this is unexpected behaviour.\n\nTo reproduce, save as `WhyDeserializationInFixedUpdate1` and put it on a cube:\n\n```\n\nusing UdonSharp;\n\nusing UnityEngine;\n\nusing VRC.SDKBase;\n\nusing VRC.Udon.Common.Enums;\n\nusing VRC.Udon.Common.Interfaces;\n\n[UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]\n\npublic class WhyDeserializationInFixedUpdate1 : UdonSharpBehaviour\n\n{\n\n    private static bool IsInFixedUpdate =>\n\n        Mathf.Approximately(Time.deltaTime, Time.fixedDeltaTime);\n\n    private double RealTimeSinceUpdate =>\n\n        Time.realtimeSinceStartupAsDouble - Time.unscaledTimeAsDouble;\n\n    private int _lastShowedFrameCount;\n\n    private double _lastShowedRealTimeSinceUpdate;\n\n    private int _frameCount;\n\n    private void Start()\n\n    {\n\n        if (!Networking.IsOwner(gameObject)) return;\n\n        //Camera.onPostRender += OnPostRenderCallback;\n\n    }\n\n    void OnDestroy()\n\n    {\n\n        if (_frameCount == 0) return;\n\n        //Camera.onPostRender -= OnPostRenderCallback;\n\n    }\n\n    //private void OnPostRenderCallback(Camera cam) => _frameCount++;\n\n    private string IsInFixedUpdateString => $\"{(IsInFixedUpdate ? \"<color=green> IsInFixedUpdate</color>\" : \" NotInFixedUpdate\")}\";\n\n    [UdonSynced] private int _syncedInt;\n\n    private double _lastShownUnscaledTime;\n\n    public override void Interact()\n\n    {\n\n        if (!Networking.IsOwner(gameObject))\n\n            Networking.SetOwner(Networking.LocalPlayer, gameObject);\n\n        _syncedInt++;\n\n        SendCustomNetworkEvent(NetworkEventTarget.Others,\n\n            nameof(StartLoggingFor2Seconds));\n\n        SendCustomEventDelayedSeconds(nameof(RequestSerializationPlease), 1);\n\n    }\n\n    public void RequestSerializationPlease()\n\n    {\n\n        RequestSerialization();\n\n    }\n\n    private double _startLoggingTime;\n\n    public void StartLoggingFor2Seconds()\n\n    {\n\n        _startLoggingTime = Time.realtimeSinceStartupAsDouble;\n\n        SendCustomEventDelayedFrames(nameof(LogUpdate), 1);\n\n        SendCustomEventDelayedFrames(nameof(LogLateUpdate), 1, EventTiming.LateUpdate);\n\n        SendCustomEventDelayedFrames(nameof(LogPostLateUpdate), 1, EventTiming.PostLateUpdate);\n\n    }\n\n    public void LogUpdate()\n\n    {\n\n        if (Time.realtimeSinceStartupAsDouble - _startLoggingTime > 2.0) return;\n\n        Log(\"Update() (delayed frame event EventTiming.Update)\");\n\n        SendCustomEventDelayedFrames(nameof(LogUpdate), 1);\n\n    }\n\n    public void LogLateUpdate()\n\n    {\n\n        if (Time.realtimeSinceStartupAsDouble - _startLoggingTime > 2.0) return;\n\n        Log(\"LateUpdate (delayed frame event EventTiming.LateUpdate)\");\n\n        SendCustomEventDelayedFrames(nameof(LogLateUpdate), 1);\n\n    }\n\n    public void LogPostLateUpdate()\n\n    {\n\n        if (Time.realtimeSinceStartupAsDouble - _startLoggingTime > 2.0) return;\n\n        Log(\"PostLateUpdate (delayed frame event EventTiming.PostLateUpdate)\");\n\n        SendCustomEventDelayedFrames(nameof(LogPostLateUpdate), 1);\n\n    }\n\n    public void Log(string message)\n\n    {\n\n        int currentFrameCount = Time.frameCount;\n\n        double currentRealTimeSinceUpdate = RealTimeSinceUpdate;\n\n        Debug.Log(\n\n            $\"<color=grey>[F{currentFrameCount}+{currentRealTimeSinceUpdate * 1000.0:F3}ms{(currentFrameCount == _lastShowedFrameCount ? $\" (Δ {(currentRealTimeSinceUpdate - _lastShowedRealTimeSinceUpdate) * 1000.0:F3} ms)\" : \"\")} unscaledTime={Time.unscaledTimeAsDouble:F6}{IsInFixedUpdateString}]</color> {message}\");\n\n        _lastShownUnscaledTime = Time.unscaledTimeAsDouble;\n\n        _lastShowedFrameCount = currentFrameCount;\n\n        _lastShowedRealTimeSinceUpdate = currentRealTimeSinceUpdate;\n\n    }\n\n    public override void OnDeserialization()\n\n    {\n\n        Log(\"OnDeserialization(), sending delayed frame...\");\n\n        SendCustomEventDelayedFrames(nameof(Delayedlog), 1);\n\n    }\n\n    public void Delayedlog()\n\n    {\n\n        Log(\"...Delayed 1 frame from OnDeserialization())\");\n\n    }\n\n}\n\n```",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ab903651c711e57a8404ad4",
+  "imageURLs": [
+    "https://canny-assets.io/images/0f35eefd5acdd67715227a0a59359a32.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-27T11:52:05.507Z",
+  "subCategoryID": null,
+  "title": "OnDeserialization sends delayed frame events to Post-PostLateUpdate rather than Update",
+  "trendingScore": 2961.1923624599913,
+  "updatedBy": null,
+  "urlName": "ondeserialization-sends-delayed-frame-events-to-post-postlateupdate-rather-than",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "67a0ed8d6e7354cc8f8c7acd",
+      "alias": "Cautious Minnow",
+      "aliasID": "67a0ed8eafacf378f12ca236",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a04bf3ae080d62e1ab0d5eefdc864c26.png",
+      "companies": [],
+      "name": "Uzer Tekton",
+      "urlName": null,
+      "voteID": "6ab903655a0588e09c6de4a8"
+    }
+  ]
+}
