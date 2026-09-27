@@ -2,10 +2,11 @@
   "_id": "6ab8584a8d7793cb5e2d15a2",
   "aiCategories": [
     "loc.website",
-    "loc.in-world",
-    "web.profiles"
+    "loc.main-menu",
+    "web.profiles",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-09-27T04:59:36.082609Z",
+  "aiTaggedAt": "2026-09-27T06:11:04.230076Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ab855bd5a0588e09c6c3000",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -181,6 +182,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "It still on going, and to clarify, I have another account where I can change the UI Theme on my profile without a problem, but it's only affected by this account somehow",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ab8b12ecf659e208af53161",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-27T06:01:18.156Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/50315ed4ac06dc79d8543bd254223b0c.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6ab855bd5a0588e09c6c3000",
+          "alias": "Goldenrod Camel",
+          "aliasID": "6ab855be5a0588e09c6c3004",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2026-09-26T23:31:09.954Z",
+          "name": "｡˚Stella˚｡",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ab8a0ed288ece7a0755e745",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab8584a8d7793cb5e2d15a2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6ab855bd5a0588e09c6c3000|full_name} It sounds like an isolated issue. Have you created a ticket at https://vrch.at/support?",
       "viewerReactions": null,
       "voteID": null
     }
