@@ -2,7 +2,7 @@
 
 Collected: **37,651** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (68d ago)** to now.<br>
-Scrape horizon: **2026-09-02 02:30 UTC (25d ago)**.
+Scrape horizon: **2026-09-02 02:30 UTC (26d ago)**.
 
 ## Boards
 
@@ -13,7 +13,7 @@ Scrape horizon: **2026-09-02 02:30 UTC (25d ago)**.
 | `avatar-30` | 883 / 883 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 80 / 80 (100.0%) |
-| `bug-reports` | 12,293 / 12,292 (100.0%) |
+| `bug-reports` | 12,293 / 12,293 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-09-02 02:30 UTC (25d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 130 / 130 (100.0%) |
 | `website` | 875 / 875 (100.0%) |
-| **Total** | **37,651** / **37,472** (100.0%) |
+| **Total** | **37,651** / **37,473** (99.997%) |
 
 ## OpenSearch
 
