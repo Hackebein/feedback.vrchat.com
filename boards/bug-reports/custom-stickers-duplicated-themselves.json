@@ -2,9 +2,10 @@
   "_id": "6ab99d2e4ccda6c78173212e",
   "aiCategories": [
     "loc.website",
-    "web.profiles"
+    "loc.in-world",
+    "monetization.shop"
   ],
-  "aiTaggedAt": "2026-09-28T14:46:17.704652Z",
+  "aiTaggedAt": "2026-09-28T17:58:13.811667Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5bbb0849cae3760ccb818297",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -118,6 +119,62 @@
       "statusChangeID": "6aba7d5b5fc9033f16a16bbe",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6abaa93fe28b268f29886c52",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5bbb0849cae3760ccb818297",
+        "alias": "Graceful Manatee",
+        "aliasID": "65e0d15ba6e3ea79dd7a874c",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2018-10-08T07:33:29.034Z",
+        "name": "Jerrystash",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-28T17:51:59.944Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aba7d595fc9033f16a16b7c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab99d2e4ccda6c78173212e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} no account merging has happened at all recently",
       "viewerReactions": null,
       "voteID": null
     }
