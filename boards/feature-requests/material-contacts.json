@@ -1,9 +1,10 @@
 {
   "_id": "6a91cdbb8bcd80cd69fcfa87",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.unity-sdk",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-09-27T03:43:33.075347Z",
+  "aiTaggedAt": "2026-09-28T19:25:22.661706Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63691297469f06772579fe6f",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -160,6 +161,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "The thing I'd honestly ask is if there'd be more mesh slots, as I feel 4 is a tad restrictive (unless there's a chance to get the `_Self` function to be a dedicated component)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ababda81a847ba3d6b4049c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6489c4a6bd29af092d620ab9",
+        "alias": "Kelp Lemming",
+        "aliasID": "67b7821bb324a962093c5ae4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/fb72ab8ae9949b7904e5a1f47ad23076.png",
+        "created": "2023-06-14T13:46:14.094Z",
+        "name": "Aonodensetsu",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-28T19:19:04.716Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a91cdbb8bcd80cd69fcfa87",
+      "private": false,
+      "reactions": {
+        "like": 0
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Please also allow sending a bit of additional data along with the transform, could even be packed into the last row of the transform matrix if there's a technical limitation against otherwise.\n\nWhile position allows for proximity based effects (and workarounds), it leaves a gap for contact 'property' based animatable effects. The tag system will likely be abused for workarounds regarding this, but I think allowing even just a few floats along with the position will lead to significantly more possibilities and less abuse of other properties of existing systems.",
       "viewerReactions": null,
       "voteID": null
     }
