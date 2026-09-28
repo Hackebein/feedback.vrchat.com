@@ -2,9 +2,9 @@
   "_id": "6ab58c66fb641c8328c79205",
   "aiCategories": [
     "loc.in-world",
-    "worlds.content-gating"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-09-27T19:32:25.425777Z",
+  "aiTaggedAt": "2026-09-28T14:43:31.506011Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ab58c295a0588e09c2e69e6",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +74,51 @@
       "value": "This issue has gone far beyond mere rumors; many players in Mafia games now use the values ​​in the \"Group\" column to identify who the Mafia members are. Numerous games—specifically those relying on player interaction during the night phase—have been ruined as a result.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aba7c565fc9033f16a12e3d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-28T14:40:22.467Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab58c66fb641c8328c79205",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6aba7c565fc9033f16a12e3a",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -102,8 +147,8 @@
   "pinnedComment": null,
   "score": 15,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-09-24T20:47:34.328Z",
+  "status": "tracked",
+  "statusChanged": "2026-09-28T14:40:22.432Z",
   "subCategoryID": null,
   "title": "Debug UI exposes player proximity with World Debugging disabled, undermining fair play",
   "trendingScore": 2963.0677312120833,
