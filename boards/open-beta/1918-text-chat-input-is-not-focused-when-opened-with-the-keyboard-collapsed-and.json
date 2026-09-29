@@ -1,0 +1,103 @@
+{
+  "_id": "6abc3e96663b17057249b4d7",
+  "aiCategories": [
+    "loc.pc-client",
+    "open-beta",
+    "client.chatbox",
+    "platforms.pc.steam"
+  ],
+  "aiTaggedAt": "2026-09-29T22:44:24.175728Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5ae51ece906bfd12e600d6f6",
+    "alias": "Quaint Turtle",
+    "aliasID": "65c28068ed6eefce4c52fc2a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5edb3e58e1f61a7d2801630a03948f8e.png",
+    "created": "2018-04-29T01:24:30.124Z",
+    "name": "chiugame",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5ae51ece906bfd12e600d6f6",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-29T22:41:26.254Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "If the client is started while the keyboard is collapsed and the text chat is then opened, the input field is not automatically focused and does not accept keyboard input.\n\nEven after clicking the input field to focus it, entering text, closing the text chat, and opening it again, the same issue occurs.\n\nOnce the keyboard is expanded, the input field starts being focused automatically whenever the text chat is opened. However, the input field is then displayed too high on the screen.\n\nEven after collapsing the keyboard again, the input field appears to remain fixed at the position used while the keyboard is expanded.\n\nI have attached a video showing this behavior.\n\nIt would be helpful if the input field could be focused correctly when opening the text chat even while the keyboard is collapsed, and if its position could be updated appropriately depending on whether the keyboard is expanded or collapsed.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/1fce694adb9f1da614bf62e214030c48.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "TextChatBug",
+      "url": "https://canny-assets.io/files/1fce694adb9f1da614bf62e214030c48.mp4"
+    }
+  ],
+  "ideaID": "6abc3e95663b17057249b4d6",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6abc3e96663b17057249b4d7/1598233398.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-29T22:41:26.254Z",
+  "subCategoryID": null,
+  "title": "[1918] Text chat input is not focused when opened with the keyboard collapsed, and its position is incorrect after expanding the keyboard",
+  "trendingScore": 2961.54249592808,
+  "updatedBy": null,
+  "urlName": "1918-text-chat-input-is-not-focused-when-opened-with-the-keyboard-collapsed-and",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5ae51ece906bfd12e600d6f6",
+      "alias": "Quaint Turtle",
+      "aliasID": "65c28068ed6eefce4c52fc2a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5edb3e58e1f61a7d2801630a03948f8e.png",
+      "companies": [],
+      "name": "chiugame",
+      "urlName": null,
+      "voteID": "6abc3e965a0588e09c7f3ae0"
+    }
+  ]
+}
