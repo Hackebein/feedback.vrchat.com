@@ -1,11 +1,12 @@
 {
   "_id": "6a82d236cbfa1e62cbb30c67",
   "aiCategories": [
-    "loc.quick-menu",
+    "loc.pc-client",
+    "platforms.pc.steam",
     "social.friends",
     "social.instances"
   ],
-  "aiTaggedAt": "2026-09-18T14:29:46.790988Z",
+  "aiTaggedAt": "2026-09-29T18:34:54.676476Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a82d236523ad16133356969",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 16,
+  "commentCount": 17,
   "commentingDisabled": false,
   "comments": [
     {
@@ -461,6 +462,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Apparantly the same issue that I just reported: https://feedback.vrchat.com/bug-reports/p/after-leaving-available-visible-instance-it-turns-into-a-private-one\n\nAs of build 1903, the issue is still present on both Windows PC and Android smartphone.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6abc01200972c8d142c279f6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ce09c4ff1ef661188867ab5",
+        "alias": "Probable Elk",
+        "aliasID": "65c2756eed6eefce4c9639c6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d648d8f5b1bb88f28673005cf286483f.png",
+        "created": "2019-05-18T23:59:11.468Z",
+        "name": "Tony_Lewis",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-29T18:19:12.076Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a9b426a23af84a899a81306",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a82d236cbfa1e62cbb30c67",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} I see issue randomly popup still so isn't this \"Tracked\" than \"Available in Future Release\" ?",
       "viewerReactions": null,
       "voteID": null
     }
