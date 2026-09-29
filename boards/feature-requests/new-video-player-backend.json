@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-09-29T19:13:39.418110Z",
+  "aiTaggedAt": "2026-09-29T19:50:28.703325Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "604dc741b29af12c9c6a32c6",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -339,13 +339,71 @@
       "postDeleted": false,
       "postID": "6a9744a36ddcc64ede19b62f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "@{62df013246e66844a84a8ef1|full_name} For H265 I'm not really clear on why the windows codec doesn't just have a version that relies on the GPU, like aren't the GPU makers licensing things already?\n\nOne observation I've made recently is that, at least on WIndows 10, H265 doesn't work in HLS. Worked fine on my Quest 3S though.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6abc13c36eae8d474a0e9ebb",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df013246e66844a84a8ef1",
+        "alias": "Conceptual Harrier",
+        "aliasID": "65c26ed9ed6eefce4c854f77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4c44ef8342e8cd565692d5a596d025b8.png",
+        "created": "2022-07-25T20:46:42.667Z",
+        "name": "DarkSwordsman",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-09-29T19:38:43.680Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62df7cd83e007e467295c4e1",
+          "alias": "Orchid bloom Marlin",
+          "aliasID": "65c26defed6eefce4c5a3685",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac759f619ab812afad57d8a884858906.png",
+          "created": "2022-07-26T05:34:16.920Z",
+          "name": "Docteh",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a975848c76cc46f9552b2fe",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9744a36ddcc64ede19b62f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62df7cd83e007e467295c4e1|full_name} Access Advance's license terms around H265 mean that they can charge at the hardware, software, and distribution stages. They must get paid to include the encoder and decoder in hardware, to have the encoder and decoder included in software packages, and for the codec to be distributed online or by physical media. \n\nThis is why using open source codecs like VP9 and AV1 is really important. :)\n\nIt is funny though, it appears that ffmpeg is able to get around this because libx265 is an open-source GPL library, and that uncompiled source code is treated differently than compiled binaries. So I guess it would make sense that there should be *some* way to make a free plugin for HEVC on Windows, but whether that is worth the effort, who knows, since for example, MPV, VLC, etc. already come with HEVC decoding support.\n\nIt's more so: HEVC's licensing is very, very strict, but whether or not they actually go after anyone depends on how much money is being made and how distributed it is. I imagine that because of the way ffmpeg set itself up and how it is the backbone of the entire world's video infrastructure, if Access Advance were to go after them, they would be crushed by social pressure and lose any legitimacy as a codec, losing them money.",
       "viewerReactions": null,
       "voteID": null
     }
