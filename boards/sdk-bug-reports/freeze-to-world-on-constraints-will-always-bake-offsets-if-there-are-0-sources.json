@@ -2,9 +2,9 @@
   "_id": "6abae5db5ca4be36ca7b2cd9",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.dynamics"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-09-29T15:17:33.754344Z",
+  "aiTaggedAt": "2026-09-29T19:13:39.419175Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
@@ -88,7 +88,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When setting up a (parent) constraint that is only meant to freeze an object to the world and otherwise return it to it's original location (i.e. back to the hand), doing so with 0 sources (as there's really no need for any sources) will cause the object to be offset instead of snap back, this behavior is gone if any source is added, even if the source/constraint weight is 0.\n\nRepro:\n\n1. Add a parent constraint to an object that's placed on the hand, leave it with 0 sources\n\n2. Activate \"Freeze to world\"\n\n3. Move away from the object\n\n4. Disable \"Freeze to world\"\n\n5. Observe the object being unfrozen, but offset\n\nAdding any source (with a transform) fixes this, regardless of weights.\n\nUpdate: It appears to work in editor, but in game offsets are almost always still baked, which makes this even weirder.",
+  "details": "When setting up a (parent) constraint that is only meant to freeze an object to the world and otherwise return it to it's original location (i.e. back to the hand), doing so with 0 sources (as there's really no need for any sources) will cause the object to be offset instead of snap back, this behavior is gone if any source is added, even if the source/constraint weight is 0.\n\nRepro:\n\n1. Add a parent constraint to an object that's placed on the hand, leave it with 0 sources\n\n2. Activate \"Freeze to world\"\n\n3. Move away from the object\n\n4. Disable \"Freeze to world\"\n\n5. Observe the object being unfrozen, but offset\n\nAdding any source (with a transform) fixes this, regardless of weights.\n\nUpdate: It appears to work in editor, but in game offsets are almost always still baked, which makes this even weirder.\n\nUpdate 2: It works in game too, but if the object containing the constraint is off, and by a toggle it is turned on and at the same time turns \"Freeze to world\" off, but 1 frame later turns it on (2 keyframes), it seems not to function for some reason, but extending the animation so it's not 1 frame long and is instead 2 frames, with the 2nd keyframe duplicated (keyframe 0 = object on, freeze off, keyframe 1 and 2 = object on, freeze on) makes it work, I'm very confused as to why that makes a difference, it does not work if \"keyframe 1\" (the \"middle\" keyframe) is removed.",
   "error": null,
   "eta": null,
   "etaPublic": true,
