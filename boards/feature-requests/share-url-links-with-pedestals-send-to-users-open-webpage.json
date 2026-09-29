@@ -2,9 +2,9 @@
   "_id": "6abb285d0f27ba2854f1bbad",
   "aiCategories": [
     "loc.in-world",
-    "client.chatbox"
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-09-29T03:15:27.918464Z",
+  "aiTaggedAt": "2026-09-29T03:23:26.575692Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -115,7 +115,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Proposal: URL links in chatbox should be disabled for untrusted URLs by default but enabled for allowlisted domains. Untrusted URLs become clickable after allowing untrusted URLs or a separate setting for shared untrusted URLs.\n\nUntrusted URLs should not be shareable in public instances, similar to video URL allowlist restrictions.",
+      "value": "Proposal: Untrusted URLs should not be shareable / clickable publicly in public instances, similar to video URL allowlist restrictions. This may or may not be gated behind \"Allow Untrusted URLs\" setting or similar, and/or it may come with an additional waiting period and a UI warning before allowing to open the untrusted URL in a web browser.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -125,7 +125,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Opening URLs in VR mode shared by other users is unnecessarily difficult.\n\nThe current workarounds are (ab)using social links in profile for clickable links, asking a person to repeat that URL in the chatbox several times until it's manually typed by the receiver, taking a photo of the chatbox using a camera with the UI shown, or driving users to an external social platform off from VRChat (\"can you add me on Discord?\").\n\nThis is a proposal to share URLs on droppable pedestals, or send to users an URL link in the instance as a delivered notification.\n\nURLs on pedestals would follow the same as any other pedestals: 90 seconds or until I leave the instance, shared publicly, with friends or with members of a group.\n\nSend to Users would follow the recipient's settings for receiving notifications about shared URLs (defaults to Friends).\n\nThe pop-up prompt asking to open an external link in a web browser should be shown either way.\n\nThis has security considerations up for debate regarding untrusted URLs and public instances.\n\nRelated: https://feedback.vrchat.com/feature-requests/p/1222-share-url-links-with-chatbox-open-webpage",
+  "details": "Opening URLs in VR mode shared by other users is unnecessarily difficult.\n\nThe current workarounds are (ab)using social links in profile for clickable links, asking a person to repeat that URL in the chatbox several times until it's manually typed by the receiver, taking a photo of the chatbox using a camera with the UI shown, or driving users to an external social platform off from VRChat (\"can you add me on Discord?\").\n\nThis is a proposal to share URLs on droppable pedestals, or send to users an URL link in the instance as a delivered notification.\n\nURLs on pedestals would follow the same as any other pedestals: 90 seconds or until I leave the instance, shared publicly, with friends or with members of a group. The visibility uses Allow Pedestal Sharing (enabled by default?) and View Pedestals From settings (defaults to Friends).\n\nSend to Users would follow the recipient's settings for receiving notifications about shared URLs. The visibility uses Allow Direct Sharing (enabled by default?) and Accept Sharing From settings (defaults to Friends).\n\nThe pop-up prompt asking to open an external link in a web browser should be shown either way.\n\nThis has security considerations up for debate regarding untrusted URLs and public instances.\n\nRelated: https://feedback.vrchat.com/feature-requests/p/1222-share-url-links-with-chatbox-open-webpage",
   "error": null,
   "eta": null,
   "etaPublic": true,
