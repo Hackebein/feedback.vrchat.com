@@ -1,0 +1,89 @@
+{
+  "_id": "6abb23fda39d758d2a021f7e",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-09-29T02:39:28.065390Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6abb1efa5a0588e09c784685",
+    "alias": "Comprehensive Cardinal",
+    "aliasID": "6abb1efa5a0588e09c784689",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7b627a5a6df58a7694524d0adfd8a7a0.png",
+    "created": "2026-09-29T02:14:18.520Z",
+    "name": "Zaduor",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6abb1efa5a0588e09c784685",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-09-29T02:35:41.162Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I would like to request an optional toggle in the VRChat Photo and Stream Camera settings to enable environment collisions.\n\nThe Problem:\n\nRight now, when using the camera in tight spaces, narrow hallways, or close to walls, the camera freely clips through the map's geometry. This breaks visual immersion, makes it frustrating for content creators (streamers/photographers) to get clean shots in indoor worlds, and allows players to unintentionally (or intentionally) see through walls.\n\nProposed Solution:\n\nIntroduce a new setting in the camera menu, such as \"Enable Camera Collisions.\" \n\n* When ON: The camera (or drone) respects the map's colliders. Instead of passing through a wall, it would slide along it or pull closer to the player, similar to standard third-person game cameras. \n\n* When OFF: The camera behaves exactly as it does now, allowing free movement for those who need it.\n\nMaking this feature optional ensures that players who enjoy the current free-floating drone mechanics won't have their workflow disrupted, while giving streamers and photographers a much-needed tool for indoor environments. Thank you for considering this quality-of-life update!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6abb23fca39d758d2a021f7d",
+  "imageURLs": [
+    "https://canny-assets.io/images/22a5aaf048741b4c2ebfeec6fdee12f6.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-09-29T02:35:41.162Z",
+  "subCategoryID": null,
+  "title": "Add an optional collision toggle to the Photo/Stream Camera to prevent wall clipping",
+  "trendingScore": 2961.4228776129344,
+  "updatedBy": null,
+  "urlName": "add-an-optional-collision-toggle-to-the-photo-stream-camera-to-prevent-wall-clip",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6abb1efa5a0588e09c784685",
+      "alias": "Comprehensive Cardinal",
+      "aliasID": "6abb1efa5a0588e09c784689",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7b627a5a6df58a7694524d0adfd8a7a0.png",
+      "companies": [],
+      "name": "Zaduor",
+      "urlName": null,
+      "voteID": "6abb23fd5a0588e09c78549e"
+    }
+  ]
+}
