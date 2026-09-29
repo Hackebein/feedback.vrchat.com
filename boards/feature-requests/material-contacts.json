@@ -154,7 +154,9 @@
       "postDeleted": false,
       "postID": "6a91cdbb8bcd80cd69fcfa87",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -206,7 +208,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Please also allow sending a bit of additional data along with the transform, could even be packed into the last row of the transform matrix if there's a technical limitation against otherwise.\n\nWhile position allows for proximity based effects (and workarounds), it leaves a gap for contact 'property' based animatable effects. The tag system will likely be abused for workarounds regarding this, but I think allowing even just a few floats along with the position will lead to significantly more possibilities and less abuse of other properties of existing systems.",
+      "value": "Please also allow sending a little additional data along with the transform, could even be packed into the last row of the transform matrix if there's a technical limitation against otherwise.\n\nWhile position allows for proximity based effects (and workarounds), it leaves a gap for contact 'property' based animatable effects. The tag system will likely be abused for workarounds regarding this, but I think allowing even just a few floats along with the position will lead to significantly more possibilities and less abuse of other properties of existing systems.",
       "viewerReactions": null,
       "voteID": null
     }
