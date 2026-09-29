@@ -2,9 +2,9 @@
   "_id": "6abae5db5ca4be36ca7b2cd9",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-09-28T22:18:25.624051Z",
+  "aiTaggedAt": "2026-09-29T10:53:54.329350Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
@@ -42,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When setting up a (parent) constraint that is only meant to freeze an object to the world and otherwise return it to it's original location (i.e. back to the hand), doing so with 0 sources (as there's really no need for any sources) will cause the object to be offset instead of snap back, this behavior is gone if any source is added, even if the source/constraint weight is 0.\n\nRepro:\n\n1. Add a parent constraint to an object that's placed on the hand, leave it with 0 sources\n\n2. Activate \"Freeze to world\"\n\n3. Move away from the object\n\n4. Disable \"Freeze to world\"\n\n5. Observe the object being unfrozen, but offset\n\nAdding any source (with a transform) fixes this, regardless of weights.",
+  "details": "When setting up a (parent) constraint that is only meant to freeze an object to the world and otherwise return it to it's original location (i.e. back to the hand), doing so with 0 sources (as there's really no need for any sources) will cause the object to be offset instead of snap back, this behavior is gone if any source is added, even if the source/constraint weight is 0.\n\nRepro:\n\n1. Add a parent constraint to an object that's placed on the hand, leave it with 0 sources\n\n2. Activate \"Freeze to world\"\n\n3. Move away from the object\n\n4. Disable \"Freeze to world\"\n\n5. Observe the object being unfrozen, but offset\n\nAdding any source (with a transform) fixes this, regardless of weights.\n\nUpdate: It appears to work in editor, but in game offsets are almost always still baked, which makes this even weirder.",
   "error": null,
   "eta": null,
   "etaPublic": true,
