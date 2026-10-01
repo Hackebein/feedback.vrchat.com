@@ -2,9 +2,9 @@
   "_id": "6abc344f663b170572478f7a",
   "aiCategories": [
     "loc.in-world",
-    "avatars.tracking"
+    "avatars.impostors"
   ],
-  "aiTaggedAt": "2026-09-30T03:41:38.124604Z",
+  "aiTaggedAt": "2026-10-01T14:53:39.973362Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "611592fefb15af250e68b0df",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -122,6 +122,51 @@
       "value": "Your test avatar does not have an impostor. Could you generate one? I suspect this behavior in OP may have to stay this way, so that the impostor can generate properly.\n\nThe avatar in this attached screenshot uses Poiyomi Toon 9.3.64 with \"Force Opaque\" enabled. Without forcing the material to opaque, the impostor would be entirely blank without outlines. I meant to say I can make the avatar look the same in all mirrors and Companion Cube readjustment in the manner OP wants it to be, but that'd break the impostor generation.\n\nhttps://feedback.vrchat.com/open-beta/p/1863-companion-repositioning-avatar-copy-does-not-apply-custom-blending-ops-on-t",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6abe737ad2589bda04db3f8c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-01T14:51:38.054Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6abc344f663b170572478f7a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6abe737ad2589bda04db3f8b",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -151,8 +196,8 @@
   "pinnedComment": null,
   "score": 9,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-09-29T21:57:35.646Z",
+  "status": "tracked",
+  "statusChanged": "2026-10-01T14:51:38.029Z",
   "subCategoryID": null,
   "title": "Personal Mirror Rendering Transparencies too Dark",
   "trendingScore": 2963.163291446721,
