@@ -2,10 +2,9 @@
   "_id": "6abdb6c069235f7a249e2638",
   "aiCategories": [
     "loc.in-world",
-    "worlds.persistence",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-10-01T01:30:33.252912Z",
+  "aiTaggedAt": "2026-10-01T02:54:21.339485Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61665e3e7448d57ed9eb49da",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +72,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Can you provide an affected world ID for testing?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6abdc9b0dd8fef3e1c67523d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "61665e3e7448d57ed9eb49da",
+        "alias": "Olive Vole",
+        "aliasID": "65c26da3ed6eefce4c4d091c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/80e00b0cc1a9469c5f118435fe36f34f.png",
+        "created": "2021-10-13T04:19:10.295Z",
+        "name": "4Bakers",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-01T02:47:12.352Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6abdb6e08171da34ab50f8a8",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6abdb6c069235f7a249e2638",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} any world with trigger-based music transitions is an easy peasy test case.\n\n1. find map with triggers in them (most maps)\n\n2. get on chair (ie: GoGoLoco flight stations)\n\n3. have person with chair go through\n\nif you need an example world https://vrchat.com/home/world/wrld_4fb6805e-54f5-49c0-a792-09b9f4e05e6d/info is a good one. like many VRChat maps is locally changes music on an OnPlayerTriggerEnter event, unless you're in a chair in which case the event never fires",
       "viewerReactions": null,
       "voteID": null
     }
