@@ -2,11 +2,10 @@
   "_id": "6ab27e0219b80e21e1970826",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
-    "avatars.upload-performance",
-    "platforms.cross-platform"
+    "platforms.pc.steam",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-09-23T00:59:40.729628Z",
+  "aiTaggedAt": "2026-10-01T18:32:06.011000Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66cc22e3ffd3188e160034ea",
@@ -36,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -183,6 +182,43 @@
       "value": "@{68098a4626271974ef4d2775|full_name}It was deleted, but not by me :(\n\nThe good(bad?) news is that I can still upload new ones.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6abea4a4c59bf76d0ed992e3",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-01T18:21:24.590Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab27e0219b80e21e1970826",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6abea4a4c59bf76d0ed992e2",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -209,8 +245,8 @@
   "pinnedComment": null,
   "score": 5,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-09-22T14:55:53.197Z",
+  "status": "available in future release",
+  "statusChanged": "2026-10-01T18:21:24.572Z",
   "subCategoryID": null,
   "title": "Accidentally created an avatar that causes VRChat to crash whenever it is loaded",
   "trendingScore": 2961.590532771245,
