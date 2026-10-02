@@ -1,7 +1,17 @@
 import API from "@searchkit/api";
 import express from "express";
 import type { MultipleQueriesQuery, SearchRequest } from "searchkit";
+import {
+  buildAgentPostBody,
+  buildAgentSearchBody,
+  mapAgentPost,
+  mapAgentSearchResponse,
+  parseAgentSearchQuery,
+  queryOpenSearch,
+  SERVICE_LINK,
+} from "./agent-api";
 import { applyExcludeFacets } from "./facet-exclusion";
+import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
 import { createIndexGenerationResolver } from "./index-generation";
 import {
   gatewayEnv,
@@ -70,41 +80,34 @@ function extractElasticsearchBadRequestDetail(err: unknown): string | undefined 
   return undefined;
 }
 
-function parseNonNegativeInt(
-  raw: unknown,
-  fallback: number,
-  max: number,
-): number {
-  const n =
-    typeof raw === "string" || typeof raw === "number"
-      ? Number.parseInt(String(raw), 10)
-      : Number.NaN;
-  if (!Number.isFinite(n) || n < 0) {
-    return fallback;
-  }
-  return Math.min(n, max);
-}
-
-function parsePositiveInt(raw: unknown, fallback: number, max: number): number {
-  const n = parseNonNegativeInt(raw, fallback, max);
-  return n <= 0 ? fallback : Math.min(n, max);
-}
-
 function getDiscoveryJson() {
   return {
     endpoints: {
       POST: "/api/search",
       GET: "/api/search?q=terms&hitsPerPage=50&page=0",
+      agentSearch: "/api/agent/search?q=terms&limit=10&page=0",
+      agentPost: "/api/agent/posts/{board}/{urlName}",
       index: "/api/index",
       openapi: "/openapi.json",
     },
     description:
-      "POST: JSON array of InstantSearch multiple-queries (see /openapi.json). GET: discovery when no search params; otherwise one-query search (q/query, hitsPerPage, page) — subset of POST. Optional query param mode=lucene uses OpenSearch query_string (Lucene) for params.query instead of strict multi_match. GET /api/index returns the current OpenSearch backing index name so clients can refresh when ingest swaps the alias. Contract: openapi.json.",
+      "Agents: GET /api/agent/search (short hits) and GET /api/agent/posts/{board}/{urlName} (one post, truncated). UI: POST JSON array of InstantSearch multiple-queries, or GET /api/search?q=&hitsPerPage=&page= (see /openapi.json). GET with no search params returns this document. Optional mode=lucene on /api/search uses OpenSearch query_string. GET /api/index returns the current OpenSearch backing index name. Contract: openapi.json.",
   };
 }
 
 const app = express();
 app.use(express.json({ limit: "512kb" }));
+app.use((_req, res, next) => {
+  res.setHeader("Link", SERVICE_LINK);
+  next();
+});
+
+const openSearchTarget = {
+  opensearchUrl,
+  opensearchUser,
+  opensearchPassword,
+  index: INDEX_NAME,
+};
 
 app.get("/health", (_req, res) => {
   res.type("text/plain").send("ok");
@@ -190,6 +193,72 @@ app.post("/api/search", async (req, res) => {
       res.status(400).json({ message: "Invalid search query", detail });
       return;
     }
+    console.error("[search-gateway]", err);
+    res.status(500).json({ message: "search failed" });
+  }
+});
+
+function sendAgentQueryError(
+  res: express.Response,
+  result: { httpStatus: 400 | 500; message: string; detail?: string },
+): void {
+  if (result.httpStatus === 500) {
+    console.error("[search-gateway]", result.detail ?? result.message);
+    res.status(500).json({ message: "search failed" });
+    return;
+  }
+  res.status(400).json(
+    result.detail
+      ? { message: result.message, detail: result.detail }
+      : { message: result.message },
+  );
+}
+
+app.get("/api/agent/search", async (req, res) => {
+  const parsed = parseAgentSearchQuery(req.query as Record<string, unknown>);
+  if (!parsed.ok) {
+    res.status(400).json({ message: parsed.message });
+    return;
+  }
+  try {
+    const result = await queryOpenSearch(
+      openSearchTarget,
+      buildAgentSearchBody(parsed.params),
+    );
+    if (!result.ok) {
+      sendAgentQueryError(res, result);
+      return;
+    }
+    res.json(mapAgentSearchResponse(result.body, parsed.params));
+  } catch (err) {
+    console.error("[search-gateway]", err);
+    res.status(500).json({ message: "search failed" });
+  }
+});
+
+app.get("/api/agent/posts/:board/:urlName", async (req, res) => {
+  const board = req.params.board.trim();
+  const urlName = req.params.urlName.trim();
+  if (!board || !urlName) {
+    res.status(404).json({ message: "post not found" });
+    return;
+  }
+  try {
+    const result = await queryOpenSearch(
+      openSearchTarget,
+      buildAgentPostBody(board, urlName),
+    );
+    if (!result.ok) {
+      sendAgentQueryError(res, result);
+      return;
+    }
+    const post = mapAgentPost(result.body);
+    if (!post) {
+      res.status(404).json({ message: "post not found" });
+      return;
+    }
+    res.json(post);
+  } catch (err) {
     console.error("[search-gateway]", err);
     res.status(500).json({ message: "search failed" });
   }

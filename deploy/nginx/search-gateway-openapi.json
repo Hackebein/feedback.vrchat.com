@@ -2,9 +2,9 @@
   "openapi": "3.1.0",
   "info": {
     "title": "VRChat Feedback Search Gateway",
-    "version": "1.0.0",
-    "summary": "Public search API with Algolia-compatible InstantSearch requests and responses.",
-    "description": "## Overview\n\nUse this gateway to query indexed VRChat Feedback posts using the same JSON request and response shape as **Algolia** **InstantSearch**.\n\n## Query modes\n\n- **Default**: Free-text searches match searchable post attributes, including combined text, title, body (**`details`**), author name, and related fields. Whitespace-only or empty **`params.query`** does not restrict by text.\n- **Lucene syntax** (**`?mode=lucene`** on **POST** or **GET** **`/api/search`**): Interprets **`params.query`** with Lucene query syntax. Grammar and operators follow OpenSearch; see **[query_string query](https://opensearch.org/docs/latest/query-dsl/full-text/query-string/)**.\n\nOn **GET** **`/api/search`**, Lucene mode does not execute a search by itself—you must also supply at least one of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**.\n\n## Lucene field reference\n\n| **`Field`** | **`Kind`** | **`Example`** |\n| ----- | ----- | ------- |\n| **`aiCategories`** | **`text`** | **`aiCategories:groups`** |\n| **`aiCategories.keyword`** | **`keyword`** | **`aiCategories.keyword:\"groups.calendar\"`** |\n| **`aiTaggedAt`** | **`date`** | **`aiTaggedAt:[\"2025-01-01\" TO *]`** |\n| **`author.name`** | **`text`** | **`author.name:Alice`** |\n| **`author.name.keyword`** | **`keyword`** | **`author.name.keyword:\"Jane Doe\"`** |\n| **`board.name`** | **`text`** | **`board.name:bug`** |\n| **`board.name.keyword`** | **`keyword`** | **`board.name.keyword:\"Feature Requests\"`** |\n| **`board.urlName`** | **`keyword`** | **`board.urlName:bug-reports`** |\n| **`category.name`** | **`text`** | **`category.name:sdk`** |\n| **`category.name.keyword`** | **`keyword`** | **`category.name.keyword:SDK`** |\n| **`combined_text`** | **`text`** | **`combined_text:performance`** |\n| **`commentCount`** | **`numeric`** | **`commentCount:[1 TO 50]`** |\n| **`comments.author.name`** | **`text`** | **`comments.author.name:Alice`** |\n| **`comments.author.name.keyword`** | **`keyword`** | **`comments.author.name.keyword:\"Jane Doe\"`** |\n| **`comments.created`** | **`date`** | **`comments.created:[\"2025-01-01\" TO *]`** |\n| **`comments.likeCount`** | **`numeric`** | **`comments.likeCount:[1 TO *]`** |\n| **`comments.pinned`** | **`keyword`** | **`comments.pinned:true`** |\n| **`comments.value`** | **`text`** | **`comments.value:\"network lag\"`** |\n| **`created`** | **`date`** | **`created:[\"2025-01-01\" TO \"2026-01-01\"]`** |\n| **`details`** | **`text`** | **`details:\"network lag\"`** |\n| **`maxScore`** | **`numeric`** | **`maxScore:[100 TO *]`** |\n| **`mergeCount`** | **`numeric`** | **`mergeCount:[1 TO *]`** |\n| **`score`** | **`numeric`** | **`score:[10 TO *]`** |\n| **`status`** | **`keyword`** | **`status:open`** |\n| **`statusChanged`** | **`date`** | **`statusChanged:[\"2025-01-01\" TO *]`** |\n| **`title`** | **`text`** | **`title:avatar`** |\n| **`trendingScore`** | **`numeric`** | **`trendingScore:[500 TO *]`** |\n| **`updatedAt`** | **`date`** | **`updatedAt:[\"2025-01-01\" TO *]`** |\n| **`voteSettings.highEngagement`** | **`keyword / bool-like`** | **`voteSettings.highEngagement:true`** |\n| **`voteSettings.lowEngagement`** | **`keyword / bool-like`** | **`voteSettings.lowEngagement:true`** |\n| **`voteSettings.moderateEngagement`** | **`keyword / bool-like`** | **`voteSettings.moderateEngagement:true`** |\n\n**`Kind`** values (**`text`**, **`keyword`**, **`numeric`**, **`date`**, …) mirror index behavior; each **`Example`** uses Lucene syntax for the adjoining **`Field`**."
+    "version": "1.1.0",
+    "summary": "Public search API. Agents use the short /api/agent routes; the website uses Algolia-compatible InstantSearch.",
+    "description": "## Overview\n\nAgents should call **`GET /api/agent/search`** and **`GET /api/agent/posts/{board}/{urlName}`**. Those routes return short JSON: a snippet per hit, and one post with truncated **`details`** plus a few truncated comments. Cite each post **`url`** (`https://feedback.vrchat.com/{board}/p/{urlName}`). Responses include a **`Link`** header to this document.\n\nThe website uses the same JSON request and response shape as **Algolia** **InstantSearch**.\n\n## Query modes\n\n- **Default**: Free-text searches match searchable post attributes, including combined text, title, body (**`details`**), author name, and related fields. Whitespace-only or empty **`params.query`** does not restrict by text.\n- **Lucene syntax** (**`?mode=lucene`** on **POST** or **GET** **`/api/search`**): Interprets **`params.query`** with Lucene query syntax. Grammar and operators follow OpenSearch; see **[query_string query](https://opensearch.org/docs/latest/query-dsl/full-text/query-string/)**.\n\nOn **GET** **`/api/search`**, Lucene mode does not execute a search by itself—you must also supply at least one of **`q`**, **`query`**, **`hitsPerPage`**, or **`page`**.\n\n## Lucene field reference\n\n| **`Field`** | **`Kind`** | **`Example`** |\n| ----- | ----- | ------- |\n| **`aiCategories`** | **`text`** | **`aiCategories:groups`** |\n| **`aiCategories.keyword`** | **`keyword`** | **`aiCategories.keyword:\"groups.calendar\"`** |\n| **`aiTaggedAt`** | **`date`** | **`aiTaggedAt:[\"2025-01-01\" TO *]`** |\n| **`author.name`** | **`text`** | **`author.name:Alice`** |\n| **`author.name.keyword`** | **`keyword`** | **`author.name.keyword:\"Jane Doe\"`** |\n| **`board.name`** | **`text`** | **`board.name:bug`** |\n| **`board.name.keyword`** | **`keyword`** | **`board.name.keyword:\"Feature Requests\"`** |\n| **`board.urlName`** | **`keyword`** | **`board.urlName:bug-reports`** |\n| **`category.name`** | **`text`** | **`category.name:sdk`** |\n| **`category.name.keyword`** | **`keyword`** | **`category.name.keyword:SDK`** |\n| **`combined_text`** | **`text`** | **`combined_text:performance`** |\n| **`commentCount`** | **`numeric`** | **`commentCount:[1 TO 50]`** |\n| **`comments.author.name`** | **`text`** | **`comments.author.name:Alice`** |\n| **`comments.author.name.keyword`** | **`keyword`** | **`comments.author.name.keyword:\"Jane Doe\"`** |\n| **`comments.created`** | **`date`** | **`comments.created:[\"2025-01-01\" TO *]`** |\n| **`comments.likeCount`** | **`numeric`** | **`comments.likeCount:[1 TO *]`** |\n| **`comments.pinned`** | **`keyword`** | **`comments.pinned:true`** |\n| **`comments.value`** | **`text`** | **`comments.value:\"network lag\"`** |\n| **`created`** | **`date`** | **`created:[\"2025-01-01\" TO \"2026-01-01\"]`** |\n| **`details`** | **`text`** | **`details:\"network lag\"`** |\n| **`maxScore`** | **`numeric`** | **`maxScore:[100 TO *]`** |\n| **`mergeCount`** | **`numeric`** | **`mergeCount:[1 TO *]`** |\n| **`score`** | **`numeric`** | **`score:[10 TO *]`** |\n| **`status`** | **`keyword`** | **`status:open`** |\n| **`statusChanged`** | **`date`** | **`statusChanged:[\"2025-01-01\" TO *]`** |\n| **`title`** | **`text`** | **`title:avatar`** |\n| **`trendingScore`** | **`numeric`** | **`trendingScore:[500 TO *]`** |\n| **`updatedAt`** | **`date`** | **`updatedAt:[\"2025-01-01\" TO *]`** |\n| **`voteSettings.highEngagement`** | **`keyword / bool-like`** | **`voteSettings.highEngagement:true`** |\n| **`voteSettings.lowEngagement`** | **`keyword / bool-like`** | **`voteSettings.lowEngagement:true`** |\n| **`voteSettings.moderateEngagement`** | **`keyword / bool-like`** | **`voteSettings.moderateEngagement:true`** |\n\n**`Kind`** values (**`text`**, **`keyword`**, **`numeric`**, **`date`**, …) mirror index behavior; each **`Example`** uses Lucene syntax for the adjoining **`Field`**."
   },
   "externalDocs": {
     "description": "**InstantSearch** client integration (**Algolia**-compatible request and response formats).",
@@ -18,6 +18,10 @@
   ],
   "security": [],
   "tags": [
+    {
+      "name": "Agent",
+      "description": "**`GET /api/agent/search`** and **`GET /api/agent/posts/{board}/{urlName}`**: short read-only JSON for agents."
+    },
     {
       "name": "Search",
       "description": "**`POST`**/**`GET`** **`/api/search`** (**Algolia**/**InstantSearch** request and response shapes)."
@@ -218,6 +222,11 @@
         "responses": {
           "200": {
             "description": "Either search results (**`SearchResponse`**) when search parameters were included, or a discovery document (**`DiscoveryResponse`**).",
+            "headers": {
+              "Link": {
+                "$ref": "#/components/headers/ServiceLink"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -237,10 +246,12 @@
                       "endpoints": {
                         "POST": "/api/search",
                         "GET": "/api/search?q=terms&hitsPerPage=50&page=0",
+                        "agentSearch": "/api/agent/search?q=terms&limit=10&page=0",
+                        "agentPost": "/api/agent/posts/{board}/{urlName}",
                         "index": "/api/index",
                         "openapi": "/openapi.json"
                       },
-                      "description": "**`endpoints`** object: **`POST`**, **`GET`**, **`index`**, **`openapi`** paths (**`openapi.json`** is the contract)."
+                      "description": "Agents: **`GET /api/agent/search`** and **`GET /api/agent/posts/{board}/{urlName}`**. UI: **`POST`**/**`GET /api/search`**. Contract: **`openapi.json`**."
                     }
                   }
                 }
@@ -328,6 +339,226 @@
         }
       }
     },
+    "/api/agent/search": {
+      "get": {
+        "operationId": "agentSearch",
+        "summary": "Search posts for an agent.",
+        "description": "Short read-only search. Each hit is a title, canonical post **`url`**, board, status, score, comment count, created time, and a **`details`** snippet of at most **200** characters. **`_source`** omits voters, comments, and the full body.\n\n**`q`** uses the same strict text match as the website default (not Lucene). A non-empty **`q`** orders hits by relevance, then newest **`created`**. An empty or omitted **`q`** lists newest posts. **`board`** and **`status`** are exact filters on **`board.urlName`** and **`status`**.\n\n**`limit`** defaults to **10** and is clamped to **`[1, 20]`**; invalid input uses **10**. **`page`** is zero-based and defaults to **0**; invalid input uses **0**. **`page * limit`** must be below **50000**.",
+        "tags": [
+          "Agent"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search text. Omit or send an empty string to list newest posts."
+          },
+          {
+            "name": "board",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact **`board.urlName`**, for example **`feature-requests`**."
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact post **`status`**, for example **`open`**."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            },
+            "description": "Page size. Defaults to **10**. Values above **20** are clamped to **20**. Invalid or non-positive input uses **10**."
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "description": "Zero-based page index. Defaults to **0**."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Short hit list.",
+            "headers": {
+              "Link": {
+                "$ref": "#/components/headers/ServiceLink"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentSearchResponse"
+                },
+                "example": {
+                  "q": "avatar performance",
+                  "board": "feature-requests",
+                  "status": "open",
+                  "page": 0,
+                  "limit": 10,
+                  "nbHits": 1,
+                  "hits": [
+                    {
+                      "post_id": "5aff34492d6f472658e02dfa",
+                      "title": "Support for VRM",
+                      "url": "https://feedback.vrchat.com/feature-requests/p/support-for-vrm",
+                      "board": "feature-requests",
+                      "status": "open",
+                      "score": 40,
+                      "commentCount": 3,
+                      "created": "2018-05-19T00:00:00.000Z",
+                      "snippet": "Quest avatar limits…"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter, or **`page`** is past the result window.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "message": "invalid board"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Search failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "message": "search failed"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent/posts/{board}/{urlName}": {
+      "get": {
+        "operationId": "agentPost",
+        "summary": "Fetch one post for an agent.",
+        "description": "One post identified by exact **`board.urlName`** and **`urlName`**. **`details`** is truncated to **4000** characters (**`detailsTruncated`**). **`comments`** keeps at most **8** public comments, pinned first and then newest, each **`value`** truncated to **500** characters. Deleted, internal, private, spam, and blank comments are omitted. Voters are omitted.",
+        "tags": [
+          "Agent"
+        ],
+        "parameters": [
+          {
+            "name": "board",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact **`board.urlName`**."
+          },
+          {
+            "name": "urlName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact post **`urlName`**."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The post, truncated for an agent context window.",
+            "headers": {
+              "Link": {
+                "$ref": "#/components/headers/ServiceLink"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentPost"
+                },
+                "example": {
+                  "post_id": "5aff34492d6f472658e02dfa",
+                  "title": "Support for VRM",
+                  "url": "https://feedback.vrchat.com/feature-requests/p/support-for-vrm",
+                  "board": "feature-requests",
+                  "status": "open",
+                  "score": 40,
+                  "commentCount": 12,
+                  "created": "2018-05-19T00:00:00.000Z",
+                  "details": "Please add VRM import.",
+                  "detailsTruncated": false,
+                  "comments": [
+                    {
+                      "author": "Ada",
+                      "created": "2020-01-01T00:00:00.000Z",
+                      "pinned": true,
+                      "value": "Staff note.",
+                      "valueTruncated": false
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No indexed post matches that board and url name.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "message": "post not found"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Lookup failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "message": "search failed"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/healthz": {
       "get": {
         "operationId": "health",
@@ -378,6 +609,15 @@
     }
   },
   "components": {
+    "headers": {
+      "ServiceLink": {
+        "description": "Machine contract (**`rel=service-desc`**) and human API reference (**`rel=service-doc`**).",
+        "schema": {
+          "type": "string",
+          "example": "</openapi.json>; rel=\"service-desc\"; type=\"application/openapi+json\", </openapi.html>; rel=\"service-doc\""
+        }
+      }
+    },
     "schemas": {
       "MultiQueryRequest": {
         "type": "array",
@@ -813,6 +1053,8 @@
             "required": [
               "POST",
               "GET",
+              "agentSearch",
+              "agentPost",
               "index",
               "openapi"
             ],
@@ -824,6 +1066,14 @@
               "GET": {
                 "type": "string",
                 "description": "**`GET`** example (**`/api/search`** URL **`query`** string)."
+              },
+              "agentSearch": {
+                "type": "string",
+                "description": "**`GET /api/agent/search`** URL."
+              },
+              "agentPost": {
+                "type": "string",
+                "description": "**`GET /api/agent/posts/{board}/{urlName}`** URL."
               },
               "index": {
                 "type": "string",
@@ -839,6 +1089,170 @@
           "description": {
             "type": "string",
             "description": "Synthesized **`discovery`** narration (**Markdown** tolerated)."
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgentHit": {
+        "type": "object",
+        "description": "One search hit. Fields that are missing on the indexed post are omitted.",
+        "required": [
+          "snippet"
+        ],
+        "properties": {
+          "post_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "description": "Canonical post URL: **`https://feedback.vrchat.com/{board}/p/{urlName}`**.",
+            "examples": [
+              "https://feedback.vrchat.com/feature-requests/p/support-for-vrm"
+            ]
+          },
+          "board": {
+            "type": "string",
+            "description": "**`board.urlName`**."
+          },
+          "status": {
+            "type": "string"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "commentCount": {
+            "type": "integer"
+          },
+          "created": {
+            "type": "string",
+            "description": "Post **`created`** timestamp as stored in the index."
+          },
+          "snippet": {
+            "type": "string",
+            "description": "Plain-text **`details`** fragment, at most **200** characters. Empty when the post has no **`details`** text."
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgentSearchResponse": {
+        "type": "object",
+        "required": [
+          "q",
+          "page",
+          "limit",
+          "nbHits",
+          "hits"
+        ],
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "board": {
+            "type": "string",
+            "description": "Present when the request filtered by **`board`**."
+          },
+          "status": {
+            "type": "string",
+            "description": "Present when the request filtered by **`status`**."
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "nbHits": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "hits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AgentHit"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgentComment": {
+        "type": "object",
+        "required": [
+          "pinned",
+          "value",
+          "valueTruncated"
+        ],
+        "properties": {
+          "author": {
+            "type": "string"
+          },
+          "created": {
+            "type": "string"
+          },
+          "pinned": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "string",
+            "description": "Comment text, at most **500** characters."
+          },
+          "valueTruncated": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgentPost": {
+        "type": "object",
+        "description": "One post. **`comments`** contains at most **8** comments.",
+        "required": [
+          "comments"
+        ],
+        "properties": {
+          "post_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "description": "Canonical post URL: **`https://feedback.vrchat.com/{board}/p/{urlName}`**."
+          },
+          "board": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "commentCount": {
+            "type": "integer",
+            "description": "Full comment count on the post, which can be larger than **`comments.length`**."
+          },
+          "created": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string",
+            "description": "Post body, at most **4000** characters."
+          },
+          "detailsTruncated": {
+            "type": "boolean"
+          },
+          "comments": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "$ref": "#/components/schemas/AgentComment"
+            }
           }
         },
         "additionalProperties": false

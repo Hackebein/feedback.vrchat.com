@@ -40,10 +40,17 @@ export function instantSearchLuceneQuery(
   return buildLuceneQueryBody(query.trim());
 }
 
+export const textSearchAttributes: SearchAttribute[] = [
+  { field: "combined_text", weight: 3 },
+  { field: "title", weight: 2 },
+  { field: "author.name", weight: 1 },
+  "details",
+];
+
 export function instantSearchStrictQuery(
   query: string,
   searchAttributes: SearchAttribute[],
-  _config: SearchSettingsConfig,
+  _config?: SearchSettingsConfig,
 ): ElasticsearchQuery {
   const q = query.trim();
   if (!q) {
@@ -212,12 +219,7 @@ export function searchkitConfig(host: string, username: string, password: string
       },
     },
     search_settings: {
-      search_attributes: [
-        { field: "combined_text", weight: 3 },
-        { field: "title", weight: 2 },
-        { field: "author.name", weight: 1 },
-        "details",
-      ],
+      search_attributes: textSearchAttributes,
       // Explicit list of every top-level field we want to return so that the
       // gateway-side _source filter does not accidentally drop nested objects
       // (comments, board, author, ...). Keep this in sync with index_mappings.json.

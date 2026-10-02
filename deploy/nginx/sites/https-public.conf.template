@@ -85,6 +85,7 @@ server {
     location = / {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
         include /etc/nginx/conf.d/feedback-search-static-cache-short.inc;
+        include /etc/nginx/conf.d/feedback-search-service-link.inc;
         root /var/www/feedback-search;
         try_files /index.html =404;
     }
@@ -92,6 +93,7 @@ server {
     location / {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
         include /etc/nginx/conf.d/feedback-search-static-cache-short.inc;
+        include /etc/nginx/conf.d/feedback-search-service-link.inc;
         root /var/www/feedback-search;
         try_files $uri $uri/ /index.html;
     }
