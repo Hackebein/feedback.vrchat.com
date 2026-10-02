@@ -37,10 +37,3 @@ Scrape horizon: **2026-09-02 23:38 UTC (29d ago)**.
 ## OpenSearch
 
 Query the scraped corpus via [vrchat-canny.hackebein.dev](https://vrchat-canny.hackebein.dev).
-
-Agents should use the short read API:
-
-- `GET /api/agent/search?q=terms&board=feature-requests&status=open&limit=10&page=0`
-- `GET /api/agent/posts/{board}/{urlName}`
-
-The machine contract is [`/openapi.json`](https://vrchat-canny.hackebein.dev/openapi.json). Agent instructions are in [`SKILL.md`](SKILL.md). The site HTML `<head>` points at that contract (`rel="service-desc"`) and the human API reference (`rel="service-doc"`).
