@@ -2,12 +2,12 @@
   "_id": "6ac039d2ca2b5dab3c5ebfe4",
   "aiCategories": [
     "loc.hud",
-    "loc.quick-menu",
     "loc.main-menu",
+    "loc.quick-menu",
     "client.settings",
     "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-10-03T09:08:29.043298Z",
+  "aiTaggedAt": "2026-10-03T11:49:08.958278Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62defbfc6bc855559c0a671c",
@@ -31,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -68,7 +68,9 @@
       "postDeleted": false,
       "postID": "6ac039d2ca2b5dab3c5ebfe4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -112,13 +114,71 @@
       "postDeleted": false,
       "postID": "6ac039d2ca2b5dab3c5ebfe4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "That new UI makes sense on mobile phones or tablets, but has zero sense for desktop, where old HUD worked just fine",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac0eaaba8e67ffbb45276c2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62defbfc6bc855559c0a671c",
+        "alias": "Sunglow Duck",
+        "aliasID": "684339e25cd9b29f830581b9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0ee4c043419af3204679c448c7158603.png",
+        "created": "2022-07-25T20:24:28.545Z",
+        "name": "Darranis",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-03T11:44:43.151Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62defaba6d6050449f891661",
+          "alias": "Senior Bear",
+          "aliasID": "6a93bf3e78a781c458321800",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/b576b90cc5e5ef09a54785067ad0c430.png",
+          "created": "2022-07-25T20:19:06.079Z",
+          "name": "Kuroichi Neko",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac0c432255535c0b8c2875d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac039d2ca2b5dab3c5ebfe4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62defaba6d6050449f891661|full_name} i agree completely first the social menu and now this",
       "viewerReactions": null,
       "voteID": null
     }
