@@ -1,9 +1,10 @@
 {
   "_id": "6abaca71e28b268f298e9b63",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest"
   ],
-  "aiTaggedAt": "2026-10-03T02:29:12.895238Z",
+  "aiTaggedAt": "2026-10-03T22:38:40.133727Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "699e32a7804d20e970d8e8b1",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -64,7 +65,9 @@
       "postDeleted": false,
       "postID": "6abaca71e28b268f298e9b63",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -108,7 +111,9 @@
       "postDeleted": false,
       "postID": "6abaca71e28b268f298e9b63",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -152,13 +157,59 @@
       "postDeleted": false,
       "postID": "6abaca71e28b268f298e9b63",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "+1\n\nThe android version they put out is super unfinished and has many issues like not being able to apply vrc+ backgrounds to your menu, not being able to purchase vrchat credits at all, pasting anything causing an instant crash, no finger or eye tracking, avatar audio is a viewable option but it’s locked at 0%, and when going to the controller section in settings it shows “unsupported controller” meaning no rebinding the controllers.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac1823470786cf7198b3389",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62dfa618235b724689f4033f",
+        "alias": "Yarrow Amphibian",
+        "aliasID": "65c2828ded6eefce4ca8c284",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d7df979e6112439dde7f54781bcb2f57.png",
+        "created": "2022-07-26T08:30:16.975Z",
+        "name": "Crοw",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-03T22:31:16.208Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6abaca71e28b268f298e9b63",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Absolutely. Even if they make it a hard-to-access opt-in, it should still be an option. Who's to say we don't jail break the Quest 4 to run Steam OS and try to get it to run on better hardware.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -178,20 +229,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 15,
+  "maxScore": 16,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6abaca71e28b268f298e9b63/1093085845.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 15,
+  "score": 16,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-28T20:13:37.778Z",
   "subCategoryID": null,
   "title": "Option for Steam Frame to run the PC Version of VRChat",
-  "trendingScore": 2963.891438390148,
+  "trendingScore": 2963.9724850018265,
   "updatedBy": null,
   "urlName": "option-for-steam-frame-to-run-the-pc-version-of-vrchat",
   "viewerIsAuthor": false,
@@ -204,6 +255,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62dfa618235b724689f4033f",
+      "alias": "Yarrow Amphibian",
+      "aliasID": "65c2828ded6eefce4ca8c284",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d7df979e6112439dde7f54781bcb2f57.png",
+      "companies": [],
+      "name": "Crοw",
+      "urlName": null,
+      "voteID": "6ac18194b987445a69c7c8fe"
+    },
     {
       "_id": "62e13819862db044a5ce4d7d",
       "alias": "Umber Wolf",
