@@ -1,0 +1,93 @@
+{
+  "_id": "6ac17362255535c0b8d6f9e4",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-10-03T21:31:08.468653Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "685749db16069571f69d9c0c",
+    "alias": "Secure Warbler",
+    "aliasID": "69ddbe9cda2ea486f4cc2e90",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/78efe816e07e7b6f3d2d1fda3fef348c.png",
+    "created": "2025-06-22T00:10:03.226Z",
+    "name": "Lupis Young",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "685749db16069571f69d9c0c",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-03T21:28:02.771Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When invoking VRCAnimatorPlayAudio, the last played audio track is not cleared from the AudioSource when it's done playing, leading to the audio being played again when refreshing the avatar, e.g. by changing the height.\n\nI am unsure if this is actually unintended behavior or if my setup is just misconfigured, but I'm scratching my head on how to fix this.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ac17362255535c0b8d6f9dc",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-03T21:28:02.771Z",
+  "subCategoryID": null,
+  "title": "VRCAnimatorPlayAudio doesn't clear AudioSource after playback",
+  "trendingScore": 2962.106643675269,
+  "updatedBy": null,
+  "urlName": "vrcanimatorplayaudio-doesnt-clear-audiosource-after-playback",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "685749db16069571f69d9c0c",
+      "alias": "Secure Warbler",
+      "aliasID": "69ddbe9cda2ea486f4cc2e90",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/78efe816e07e7b6f3d2d1fda3fef348c.png",
+      "companies": [],
+      "name": "Lupis Young",
+      "urlName": null,
+      "voteID": "6ac17362b987445a69c7a8bb"
+    }
+  ]
+}
