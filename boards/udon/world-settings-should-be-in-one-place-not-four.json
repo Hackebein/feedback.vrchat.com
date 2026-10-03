@@ -1,0 +1,95 @@
+{
+  "_id": "6ac0c888ca2b5dab3c6a8657",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-10-03T09:22:24.361741Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "67a0ed8d6e7354cc8f8c7acd",
+    "alias": "Cautious Minnow",
+    "aliasID": "67a0ed8eafacf378f12ca236",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8664294b1bd1bbbfdaec9c14af971d50.png",
+    "created": "2025-02-03T16:23:41.681Z",
+    "name": "Uzer Tekton",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "67a0ed8d6e7354cc8f8c7acd",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-03T09:19:04.473Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Things from the SDK build window, and on the VRChat website, the `VRC Scene Descriptor`, the `Pipeline Manager`, should all be combined into a new inspector panel \"VRC World Settings\" or something.\n\nEnd all this Kafkaesque hoop jumping just to be able to make your own World.\n\nIf nothing else, all the default values should be controllable within the editor. You can allow override on the website if you want. (But make build and upload window only do build and upload and nothing else)\n\nE.g. World Name, capacity, tags, avatar scaling enabled (it is already in an Udon script so why is it another toggle on the website), allow prints, allow props, allow flying brooms... these are all integral to how the world is designed to be experienced. Just put them all in one place so I don't have to do so many steps just to say no to flying brooms when I have to control the walking speeds with an actual Udon script.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ac0c888ca2b5dab3c6a8650",
+  "imageURLs": [
+    "https://canny-assets.io/images/f12510b4cdcbc9237fb56e7857b01b26.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-03T09:19:04.473Z",
+  "subCategoryID": null,
+  "title": "World Settings should be in one place, not four",
+  "trendingScore": 2962.0343250591977,
+  "updatedBy": null,
+  "urlName": "world-settings-should-be-in-one-place-not-four",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "67a0ed8d6e7354cc8f8c7acd",
+      "alias": "Cautious Minnow",
+      "aliasID": "67a0ed8eafacf378f12ca236",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8664294b1bd1bbbfdaec9c14af971d50.png",
+      "companies": [],
+      "name": "Uzer Tekton",
+      "urlName": null,
+      "voteID": "6ac0c888b987445a69c5d7db"
+    }
+  ]
+}
