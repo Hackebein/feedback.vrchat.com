@@ -2,18 +2,17 @@
   "_id": "6ac0d4e2b3c1c4eff56597b1",
   "aiCategories": [
     "loc.in-world",
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.chatbox"
+    "client.chatbox",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-10-03T10:23:30.335905Z",
+  "aiTaggedAt": "2026-10-03T10:35:19.590008Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62644bcd8a3ea0529575e91f",
     "alias": "Chemical Dove",
     "aliasID": "6ac0d170b987445a69c5e406",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/260c64fdea1709abf5f24603fd2cd837.png",
+    "avatarURL": "https://canny-assets.io/images/f31572ab63dc28466177c66761d7b3a0.png",
     "created": "2022-04-23T18:56:13.382Z",
     "name": "siya-",
     "serviceAccount": false,
@@ -38,20 +37,12 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Since the update, after some time has passed (typically around 5–10 minutes), opening the chatbox dialog causes most keyboard inputs and mouse clicks to stop responding.\n\nOnce the issue occurs, only movement controls, the ESC key, and VRChat shortcuts continue to work. Text input in the chatbox dialog is also completely unresponsive. Alt+F4 also does not work.\n\nMouse input is completely unresponsive. I cannot click on anything, including the VRChat window itself to restore Windows focus. The only way to switch focus back to VRChat is by using Alt+Tab.\n\nThe issue appears to consistently occur after the application has been running for approximately 5–10 minutes and is triggered when opening the chatbox dialog. Once the chatbox dialog has been opened, the issue persists until the application is closed.\n\nI have also attached the log files. The issue occurred at approximately 2026.10.03 19:07:42\n\n---\n\n    Platform: PC (platform: Windows, store: Steam, headset: None)\n\n    VRChat Build: 2026.3.3-1919-27c41b24d2-Release\n\n    Unity Version: 6000.0.67f1-DWR",
+  "details": "Since the update, after some time has passed (typically around 5–10 minutes), opening the chatbox dialog causes most keyboard inputs and mouse clicks to stop responding.\n\nOnce the issue occurs, only movement controls, the ESC key, and VRChat shortcuts continue to work. Text input in the chatbox dialog is also completely unresponsive. Alt+F4 also does not work.\n\nMouse input is completely unresponsive. I cannot click on anything, including the VRChat window itself to restore Windows focus. The only way to switch focus back to VRChat is by using Alt+Tab.\n\nThe issue appears to consistently occur after the application has been running for approximately 5–10 minutes and is triggered when opening the chatbox dialog. Once the chatbox dialog has been opened, the issue persists until the application is closed.\n\n---\n\n    Platform: PC (platform: Windows, store: Steam, headset: None)\n\n    VRChat Build: 2026.3.3-1919-27c41b24d2-Release\n\n    Unity Version: 6000.0.67f1-DWR",
   "error": null,
   "eta": null,
   "etaPublic": true,
-  "fileURLs": [
-    "https://canny-assets.io/files/1a7cdb15b5d7dbd7b25f73a92dcd45c1.txt"
-  ],
-  "files": [
-    {
-      "mimeType": "text/plain",
-      "name": "output_log_2026-10-03_19-00-00",
-      "url": "https://canny-assets.io/files/1a7cdb15b5d7dbd7b25f73a92dcd45c1.txt"
-    }
-  ],
+  "fileURLs": [],
+  "files": [],
   "ideaID": "6ac0d4e2b3c1c4eff565979e",
   "imageURLs": [],
   "linkedEntry": null,
@@ -98,7 +89,7 @@
       "alias": "Chemical Dove",
       "aliasID": "6ac0d170b987445a69c5e406",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/260c64fdea1709abf5f24603fd2cd837.png",
+      "avatarURL": "https://canny-assets.io/images/f31572ab63dc28466177c66761d7b3a0.png",
       "companies": [],
       "name": "siya-",
       "urlName": null,
