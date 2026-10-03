@@ -1,11 +1,11 @@
 {
   "_id": "6ac077a1f708c850f9be8e6b",
   "aiCategories": [
-    "loc.in-world",
+    "loc.hud",
     "client.chatbox",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-10-03T03:37:36.606151Z",
+  "aiTaggedAt": "2026-10-03T04:05:04.059304Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "648a1eacdfc7c51dfd1c4576",
@@ -37,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Update 2026.3.3 introduced a new overhaul for the Chatbox and Keyboard, however I believe it has some major issues for experienced typers. Notable problem I could point out:\n\n- The Keyboard spawns too low in some cases.\n\n- The Buttons are a tad too thin compared to the former keyboard.\n\n- The First Row of the keyboard (qwertyuiop) is shifted by one to the left which causes people that had learned to use the keyboard for so long to re-learn.\n\n- The Shift lock button sometimes stays lit up green despite not doing what its shown.\n\n- The Separation between the keyboard and the typing area might be not a great idea if you'd like to quickly reposition the whole thing all at once\n\nWhen it comes to VR typing, I believe that convenience and clarity is better than parity with physical keyboards, we do not need to have it to look like one, and desktop users doesn't need to see the keyboard either.",
+  "details": "Update 2026.3.3 introduced a new overhaul for the Chatbox and Keyboard, however I believe it has some major issues for experienced typers. Notable problem I could point out:\n\n- The Keyboard spawns too low, it may be due to it being positioned relative to the text area. The keyboard should be centered first!\n\n- The Buttons are a tad too thin compared to the former keyboard.\n\n- The First Row of the keyboard (qwertyuiop) is shifted by one to the left which causes people that had learned to use the keyboard for so long to re-learn, WASD is no longer WASD it's EASD!\n\n- The Shift lock button sometimes stays lit up green despite not doing what its shown.\n\n- The Separation between the keyboard and the text area might be not a great idea if you'd like to quickly reposition the whole thing all at once.\n\n- The Keyboard takes some times to spawn and despawn, it lags behind.\n\nWhen it comes to VR typing, I believe that convenience and clarity is better than parity with physical keyboards, we do not need to have it to look like one, and desktop users doesn't need to see the keyboard either.",
   "error": null,
   "eta": null,
   "etaPublic": true,
