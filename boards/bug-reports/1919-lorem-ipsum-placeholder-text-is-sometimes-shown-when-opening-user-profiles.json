@@ -1,0 +1,95 @@
+{
+  "_id": "6ac130530959d7d1738465e4",
+  "aiCategories": [
+    "loc.website",
+    "web.profiles"
+  ],
+  "aiTaggedAt": "2026-10-03T16:46:18.613239Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5eae36318b39a05c07a0d6cd",
+    "alias": "Adorable Pony",
+    "aliasID": "65c2823fed6eefce4c9cb418",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9461699e003e8414911c0d5b66b45e2d.png",
+    "created": "2020-05-03T03:10:41.298Z",
+    "name": "Shiguri",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5eae36318b39a05c07a0d6cd",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-03T16:41:55.222Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Sometimes when you open VRChat profiles, the placeholder lorem ipsum text is loaded instead of the actual contents of the user's bio. I figured y'all probably already know about this but without a reliable way to reproduce it it's not really useful for me to report it. Well today I just happened to stumble on a way to reliably reproduce it.\n\n1.) Fill your bio with text, this seems to not be as easy to reproduce when the bio is short. In my case I just filled it with 512 characters of random hex.\n\n2.) From somewhere other than on your profile itself (ie: viewing your minimal profile from the \"here\" tab), toggle your shown trust level, then quickly open your profile.\n\nVideo example is attached\n\nI have privacy mode active in the video but it works without it too.\n\nThis should pretty much always trigger the lorem ipsum text showing.\n\nThis leads me to believe that the issue has something to do with the trust system.\n\nThanks.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/a4387bd48d3de9a3cb42865a43b945a4.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-10-03 12-39-54",
+      "url": "https://canny-assets.io/files/a4387bd48d3de9a3cb42865a43b945a4.mp4"
+    }
+  ],
+  "ideaID": "6ac130520959d7d1738465e3",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-03T16:41:55.222Z",
+  "subCategoryID": null,
+  "title": "[1919] \"Lorem ipsum\" placeholder text is sometimes shown when opening user profiles, here is how to reliably trigger it.",
+  "trendingScore": 2962.0782581428616,
+  "updatedBy": null,
+  "urlName": "1919-lorem-ipsum-placeholder-text-is-sometimes-shown-when-opening-user-profiles",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5eae36318b39a05c07a0d6cd",
+      "alias": "Adorable Pony",
+      "aliasID": "65c2823fed6eefce4c9cb418",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9461699e003e8414911c0d5b66b45e2d.png",
+      "companies": [],
+      "name": "Shiguri",
+      "urlName": null,
+      "voteID": "6ac13053b987445a69c6e9cf"
+    }
+  ]
+}
