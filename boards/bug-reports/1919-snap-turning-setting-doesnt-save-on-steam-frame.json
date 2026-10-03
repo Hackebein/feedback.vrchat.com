@@ -1,12 +1,10 @@
 {
-  "_id": "6ac115aa0959d7d173818f0b",
+  "_id": "6ac116b670786cf7197e7ceb",
   "aiCategories": [
-    "loc.main-menu",
     "loc.standalone-vr",
-    "client.controls",
-    "platforms.standalone-vr.quest"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-10-03T14:52:29.167683Z",
+  "aiTaggedAt": "2026-10-03T14:56:50.594525Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "608c3912f10152388b7ad184",
@@ -34,36 +32,36 @@
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-10-03T14:48:10.064Z",
+  "created": "2026-10-03T14:52:38.354Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "After last night’s update (1919), using the triggers to interact with anything (UI, world objects, etc.) on Steam Frame Standalone requires an excessively hard pull of the trigger. This was not the case before the most recent update and makes doing literally anything much harder. To make matters worse, going to controller settings in the in-game menu simply displays a screen that you’re using an unrecognized controller with no options to fix it.\n\nThis issue only applies to the standalone build of VRChat on Frame. Frame controller trigger sensitivity remains consistent with prior builds when streaming from a PC.",
+  "details": "On the Steam Frame standalone build of VRChat, the menu setting for snap turning does not save upon restarting the app. Smooth turning makes me incredibly nauseous and having to re-enable snap turning every single time I launch VRChat is extraordinarily irritating.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6ac115a90959d7d173818efa",
+  "ideaID": "6ac116b570786cf7197e7cd2",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 4,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ac115aa0959d7d173818f0b/52885864.jpeg",
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ac116b670786cf7197e7ceb/1725903375.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 4,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-10-03T14:48:10.064Z",
+  "statusChanged": "2026-10-03T14:52:38.354Z",
   "subCategoryID": null,
-  "title": "[1919] Trigger Sensitivity broken on Steam Frame standalone",
-  "trendingScore": 2962.9834425171152,
+  "title": "[1919] Snap Turning setting doesn’t save on Steam Frame",
+  "trendingScore": 2962.472950625636,
   "updatedBy": null,
-  "urlName": "1919-trigger-sensitivity-broken-on-steam-frame-standalone",
+  "urlName": "1919-snap-turning-setting-doesnt-save-on-steam-frame",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
@@ -75,28 +73,6 @@
   },
   "voters": [
     {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6ac11727b987445a69c6aad5"
-    },
-    {
-      "_id": "6537b54060e77de3c42ac1e5",
-      "alias": "Legislative Starfish",
-      "aliasID": "65e69f26a6e3ea79ddc2dc11",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7b388891b2266e8fcd8f5ce842c8f002.png",
-      "companies": [],
-      "name": "scepkight",
-      "urlName": null,
-      "voteID": "6ac11613b987445a69c6a866"
-    },
-    {
       "_id": "66ecf3d37a8fb22ab887a81d",
       "alias": "Zephyr Kite",
       "aliasID": "66ecf3d37d32abb6caf1e52b",
@@ -105,7 +81,7 @@
       "companies": [],
       "name": "lavulpa",
       "urlName": null,
-      "voteID": "6ac115dfb987445a69c6a7d8"
+      "voteID": "6ac11733b987445a69c6aae2"
     },
     {
       "_id": "608c3912f10152388b7ad184",
@@ -116,7 +92,7 @@
       "companies": [],
       "name": "Davilos",
       "urlName": null,
-      "voteID": "6ac115aab987445a69c6a736"
+      "voteID": "6ac116b6b987445a69c6a9e4"
     }
   ]
 }
