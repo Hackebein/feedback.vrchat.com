@@ -2,11 +2,12 @@
   "_id": "6ac039d2ca2b5dab3c5ebfe4",
   "aiCategories": [
     "loc.hud",
-    "loc.pc-client",
+    "loc.quick-menu",
+    "loc.main-menu",
     "client.settings",
     "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-10-03T13:27:15.823192Z",
+  "aiTaggedAt": "2026-10-04T00:12:32.501449Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62defbfc6bc855559c0a671c",
@@ -30,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -215,13 +216,71 @@
       "postDeleted": false,
       "postID": "6ac039d2ca2b5dab3c5ebfe4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I support this Canny.\n\nThe developers may assume that desktop users are new players, but many people who have played VRChat for a long time deliberately play on desktop without a VR headset so they can do other work at the same time, such as working in Unity or Blender. This is especially common among us Japanese users. For these players, unnecessary on-screen messages like this are very stressful and distracting. They are an unwelcome intrusion and genuinely unpleasant.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac195a8a8e67ffbb46726d4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62defbfc6bc855559c0a671c",
+        "alias": "Sunglow Duck",
+        "aliasID": "684339e25cd9b29f830581b9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0ee4c043419af3204679c448c7158603.png",
+        "created": "2022-07-25T20:24:28.545Z",
+        "name": "Darranis",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-03T23:54:16.424Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "63e8a105409794450417c1f0",
+          "alias": "Safe Ocelot",
+          "aliasID": "6630e8cad36452c17997ee8e",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c19c757e6d5a0ac825320427a89720bb.png",
+          "created": "2023-02-12T08:19:17.166Z",
+          "name": "スクラ Scura",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac100c8f708c850f9cb4943",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac039d2ca2b5dab3c5ebfe4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{63e8a105409794450417c1f0|full_name} a creator myself i agree with this wholeheartedly",
       "viewerReactions": null,
       "voteID": null
     }
