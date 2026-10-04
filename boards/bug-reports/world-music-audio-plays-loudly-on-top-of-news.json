@@ -1,0 +1,102 @@
+{
+  "_id": "6ac21bacb8c732c71d0b2654",
+  "aiCategories": [
+    "loc.quick-menu",
+    "audio.voice",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-10-04T09:30:23.074405Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-04T09:26:04.942Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The video content delivered in news is not accessible when there is background audio from the world or instance.\n\n1. Set the VRChat Home world as your home world.\n\n2. Set the music volume to 100%.\n\n3. Close the VRChat client.\n\n4. Delete the registry key starting with `NEWS_STATE` from `HKEY_CURRENT_USER\\Software\\VRChat\\VRChat`.\n\n5. Start the VRChat client. Once the VRChat client has started, notice the pop-up of news delivery. Open up your Quick Menu.\n\n6. Click \"Play\" on the video. Notice the world music plays loudly on top of the video.\n\n7. Try to go adjust your music volume settings.\n\nExpected result: Temporarily reduce the background volume by a significant amount (suggested -20 dB) when the News video is playing.\n\nActual result: Both the background audio and VRChat news video audio plays at the same time, and trying to adjust the world audio manually down closes the news pop-up. The news item disappears semi-permanently and you can't view the news anymore on this VRChat account or computer without registry hacks from step 4.\n\nhttps://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/3b1b8b317698d7a558fd4c2dd18075eb.mp4",
+    "https://canny-assets.io/files/4f904b4fe9aa95333f82a94d8fc5a7f2.txt"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-10-04 09-24-43",
+      "url": "https://canny-assets.io/files/3b1b8b317698d7a558fd4c2dd18075eb.mp4"
+    },
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-10-04_09-24-27",
+      "url": "https://canny-assets.io/files/4f904b4fe9aa95333f82a94d8fc5a7f2.txt"
+    }
+  ],
+  "ideaID": "6ac21bacb8c732c71d0b2651",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-04T09:26:04.942Z",
+  "subCategoryID": null,
+  "title": "World music/audio plays loudly on top of News",
+  "trendingScore": 2962.1778773128353,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "world-music-audio-plays-loudly-on-top-of-news",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ac21badb987445a69c905d7"
+    }
+  ]
+}
