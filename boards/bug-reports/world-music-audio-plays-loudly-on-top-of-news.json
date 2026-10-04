@@ -1,11 +1,10 @@
 {
   "_id": "6ac21bacb8c732c71d0b2654",
   "aiCategories": [
-    "loc.quick-menu",
-    "audio.voice",
-    "client.settings"
+    "loc.in-world",
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-10-04T09:30:23.074405Z",
+  "aiTaggedAt": "2026-10-04T10:01:18.604615Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -37,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The video content delivered in news is not accessible when there is background audio from the world or instance.\n\n1. Set the VRChat Home world as your home world.\n\n2. Set the music volume to 100%.\n\n3. Close the VRChat client.\n\n4. Delete the registry key starting with `NEWS_STATE` from `HKEY_CURRENT_USER\\Software\\VRChat\\VRChat`.\n\n5. Start the VRChat client. Once the VRChat client has started, notice the pop-up of news delivery. Open up your Quick Menu.\n\n6. Click \"Play\" on the video. Notice the world music plays loudly on top of the video.\n\n7. Try to go adjust your music volume settings.\n\nExpected result: Temporarily reduce the background volume by a significant amount (suggested -20 dB) when the News video is playing.\n\nActual result: Both the background audio and VRChat news video audio plays at the same time, and trying to adjust the world audio manually down closes the news pop-up. The news item disappears semi-permanently and you can't view the news anymore on this VRChat account or computer without registry hacks from step 4.\n\nhttps://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html",
+  "details": "The video content delivered in news is not accessible when there is background audio from the world or instance.\n\nSteps to reproduce:\n\n1. Set the VRChat Home world as your home world.\n\n2. Set the music volume to 100%.\n\n3. Close the VRChat client.\n\n4. Open the Windows Registry Editor (`regedit`). Delete the registry key starting with `NEWS_STATE` from `HKEY_CURRENT_USER\\Software\\VRChat\\VRChat` (mine is named `NEWS_STATE_usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c_h1515679244`). \n\n5. Start the VRChat client. Once the VRChat client has started, notice the pop-up of news delivery. Open up your Quick Menu.\n\n6. Click \"Play\" on the video. Notice the world music plays loudly on top of the video.\n\n7. Try to go adjust your music volume settings.\n\nExpected result: Temporarily reduce the background volume by a significant amount (suggested -20 dB) or disable it when the News video is playing.\n\nActual result: Both the background audio and VRChat news video audio plays at the same time, and trying to adjust the world audio manually down closes the news pop-up. The news item disappears semi-permanently and you can't view the news anymore on this VRChat account or computer without registry hacks from step 4.\n\nThe video attached should perfectly illustrate the user frustration of trying to cope with the situation.\n\nhttps://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,32 +60,43 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-04T09:26:04.942Z",
   "subCategoryID": null,
   "title": "World music/audio plays loudly on top of News",
-  "trendingScore": 2962.1778773128353,
+  "trendingScore": 2962.583564856315,
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "world-music-audio-plays-loudly-on-top-of-news",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6ac21d40b987445a69c90828"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
