@@ -1,0 +1,97 @@
+{
+  "_id": "6ac2b032fd7b5de500352fbc",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-10-04T20:04:36.202824Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-04T19:59:46.288Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Unity supports the four most common module file formats on audio sources, namely Impulse Tracker (.it), Scream Tracker (.s3m), Extended Module File Format (.xm), and the original Module File Format (.mod).\n\nVRChat supports only the Extended Module File Format (.xm) in worlds only, anything else fails security checks because the formats may have security ramifications.\n\nA note about Tracker Module audio file (in)compatibility in avatars/worlds was promised to be looked at by euan in August 2025, but hasn't been implemented yet in Creator documentation a year later yet.\n\nI also tested in VRChat SDK - Avatars 3.10.5 and found that an audio source with a .xm file on an avatar does not show any build alerts in the SDK builder that this is unsupported and that the tracker module audio will be removed.\n\nCan a builder alert be added to the VRChat SDK when an unsupported module tracker file extension is found on an audio source, please?\n\nRelated: https://feedback.vrchat.com/bug-reports/p/tracker-modules-audio-files-mod-it-xm-s3m-triggers-security-checks",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ac2b032fd7b5de500352fa0",
+  "imageURLs": [
+    "https://canny-assets.io/images/827a6cdd69d25b77ad193cd4d3421673.png",
+    "https://canny-assets.io/images/d23d3a13ca0a409f3c3a92a47e5a506f.png",
+    "https://canny-assets.io/images/393f504f1741f45bfdac45068eaeb0d8.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-04T19:59:46.288Z",
+  "subCategoryID": null,
+  "title": "Add an SDK builder alert when unsupported Tracker Module audio files are found on an avatar/in world",
+  "trendingScore": 2962.240743404105,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "add-an-sdk-builder-alert-when-unsupported-tracker-module-audio-files-are-found-o",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ac2b032b987445a69ca6501"
+    }
+  ]
+}
