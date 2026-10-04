@@ -1,0 +1,89 @@
+{
+  "_id": "6ac218b5cb94a475850f85ae",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-10-04T09:17:46.204115Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66c7f83ba2fca0a622090327",
+    "alias": "Right Hoverfly",
+    "aliasID": "66c7f83b3e088c8d6b0e1c00",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+    "created": "2024-08-23T02:47:23.348Z",
+    "name": "Usemame",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66c7f83ba2fca0a622090327",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-04T09:13:25.900Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Yesterday my friends told me my tails are on the weird position on their view(global only) after I toggled the Raycast off due to the world collider, after some tests, it seems like due to the issue of the sync timing(or so), when I toggled the component it was snapped to higher position than what I saw in the local.\n\nI always think the transform will back to the stats when the transform is no longer controlled by the Raycast component, but guess I was wrong. Anyway, I think it will be much convenience if there's a toggle like the Physbones which will reset things back to the original stats",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ac218b5cb94a475850f85ad",
+  "imageURLs": [
+    "https://canny-assets.io/images/f668381a2786bf46dbe3ed71f3e37885.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-04T09:13:25.900Z",
+  "subCategoryID": null,
+  "title": "Add toggle 'Reset When Disabled' when Raycast component is off like the PB",
+  "trendingScore": 2962.1766222442175,
+  "updatedBy": null,
+  "urlName": "add-toggle-reset-when-disabled-when-raycast-component-is-off-like-the-pb",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6ac218b5b987445a69c90160"
+    }
+  ]
+}
