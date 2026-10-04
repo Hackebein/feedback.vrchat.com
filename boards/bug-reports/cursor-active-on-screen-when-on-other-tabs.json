@@ -1,11 +1,11 @@
 {
   "_id": "6ac194d8a8e67ffbb467169b",
   "aiCategories": [
-    "loc.hud",
-    "client.settings",
-    "platforms.pc.desktop"
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-10-04T10:40:23.285887Z",
+  "aiTaggedAt": "2026-10-04T17:55:25.110133Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6458a5a2143b8d70afe9fbc0",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -119,6 +119,50 @@
       "value": "I wouldn't be surprised if the issue described in OP is related to fixing the following bugs which had game-breaking exploits in user-generated content:\n\n- https://feedback.vrchat.com/bug-reports/p/window-x-bug\n\n- https://feedback.vrchat.com/open-beta/p/1913-dragging-the-vrchat-window-rotates-the-avatars-head-in-desktop-mode",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ac29051b8c732c71d17a80d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5fcd676570b59138e6ef0271",
+        "alias": "Unlikely Emu",
+        "aliasID": "65c282bbed6eefce4caf92a4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/89711696e2b573a62aea01cebfa51e8a.png",
+        "created": "2020-12-06T23:21:09.190Z",
+        "name": "Smash-ter",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-04T17:43:45.727Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac194d8a8e67ffbb467169b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This has been a thing for quite some time with having multiple monitors",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -136,20 +180,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 52,
+  "maxScore": 53,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ac194d8a8e67ffbb467169b/523203605.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 52,
+  "score": 53,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-03T23:50:48.572Z",
   "subCategoryID": null,
   "title": "Cursor active on screen when on other tabs",
-  "trendingScore": 2965.423245929903,
+  "trendingScore": 2965.443500454641,
   "updatedBy": "6458a5a2143b8d70afe9fbc0",
   "urlName": "cursor-active-on-screen-when-on-other-tabs",
   "viewerIsAuthor": false,
@@ -162,6 +206,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5fcd676570b59138e6ef0271",
+      "alias": "Unlikely Emu",
+      "aliasID": "65c282bbed6eefce4caf92a4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/89711696e2b573a62aea01cebfa51e8a.png",
+      "companies": [],
+      "name": "Smash-ter",
+      "urlName": null,
+      "voteID": "6ac2901bb987445a69ca1210"
+    },
     {
       "_id": "60514e1a0073353bfda2680c",
       "alias": "Subsequent Gayal",
