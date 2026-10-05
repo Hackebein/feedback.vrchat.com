@@ -289,7 +289,7 @@
       "postID": "6a1e364cec4cc3e215c99ac5",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -346,7 +346,9 @@
       "postDeleted": false,
       "postID": "6a1e364cec4cc3e215c99ac5",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -598,7 +600,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{5ba8889cfa86f032d1596de2|full_name} This inspired me to check if NTSync is enabled. NTSync is the newer in-kernel replacement for ESync/FSync. It wasn't enabled.\n\nTo check: `ls -l /dev/ntsync` (if this file exists it's enabled)\n\nTo enable it: `sudo modprobe ntsync`\n\nTo enable it on future reboots: `echo ntsync | sudo tee /etc/modules-load.d/ntsync.conf`\n\nWith this, I could play a good 15 minutes in different worlds before I needed to leave for work.",
+      "value": "@{5ba8889cfa86f032d1596de2|full_name} This inspired me to check if NTSync is enabled. NTSync is the newer in-kernel replacement for ESync/FSync. It wasn't enabled.\n\nTo check: `ls -l /dev/ntsync` (if this file exists it's enabled)\n\nTo enable it: `sudo modprobe ntsync`\n\nTo enable it on future reboots: `echo ntsync | sudo tee /etc/modules-load.d/ntsync.conf`\n\nWith this, I could play for over an hour without issues.",
       "viewerReactions": null,
       "voteID": null
     },
