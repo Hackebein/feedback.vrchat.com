@@ -5,7 +5,7 @@
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-05T06:49:16.191120Z",
+  "aiTaggedAt": "2026-10-05T08:12:38.101207Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5da73c95c8133a48b8a0b711",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 71,
+  "commentCount": 72,
   "commentingDisabled": false,
   "comments": [
     {
@@ -543,6 +543,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{5ba8889cfa86f032d1596de2|full_name} This allowed me to use VRChat long enough to go to other worlds and muck around a bit at least. Will give longer test later. Many thanks if this is the silver bullet!",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac3578eca25edd4ddf1a686",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5c1844433da10a3ddac48f3b",
+        "alias": "Single Butterfly",
+        "aliasID": "65c28775ed6eefce4c64e1cb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e085bdbe960e8c33ea8c931fbaf54281.png",
+        "created": "2018-12-18T00:50:11.931Z",
+        "name": "Ｆｅｌｌ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T07:53:50.819Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5ba8889cfa86f032d1596de2",
+          "alias": "Hollow Bobolink",
+          "aliasID": "65ca76f4ed6eefce4ceacbdd",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac09f0b3631116ab2abaa9d014132232.png",
+          "created": "2018-09-24T06:47:56.728Z",
+          "name": "DerpyEagle",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac32eeb5c31286c61645e99",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1e364cec4cc3e215c99ac5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5ba8889cfa86f032d1596de2|full_name} This inspired me to check if NTSync is enabled. NTSync is the newer in-kernel replacement for ESync/FSync. It wasn't enabled.\n\nTo check: `ls -l /dev/ntsync` (if this file exists it's enabled)\n\nTo enable it: `sudo modprobe ntsync`\n\nTo enable it on future reboots: `echo ntsync | sudo tee /etc/modules-load.d/ntsync.conf`\n\nWith this, I could play a good 15 minutes in different worlds before I needed to leave for work.",
       "viewerReactions": null,
       "voteID": null
     }
