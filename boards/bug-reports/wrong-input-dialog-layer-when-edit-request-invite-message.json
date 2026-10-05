@@ -2,10 +2,10 @@
   "_id": "6ac2b0e4fd7b5de5003552c2",
   "aiCategories": [
     "loc.quick-menu",
-    "client.chatbox",
+    "client.settings",
     "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-10-05T01:19:19.848834Z",
+  "aiTaggedAt": "2026-10-05T07:15:50.149941Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "612887d54e42a641c9792881",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +73,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Is this a high FOV (100 FOV) bug?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac34de4e7b60012c6d6605b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "612887d54e42a641c9792881",
+        "alias": "Mechanical Bobolink",
+        "aliasID": "6724d235c66e81bbd4e36c90",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1e63de474d52a31171dcbf2fa59b5f2d.png",
+        "created": "2021-08-27T06:36:05.363Z",
+        "name": "akronman1²",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T07:12:36.217Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac2fac212ea41ecddd501a5",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac2b0e4fd7b5de5003552c2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} no. My FOV is 75",
       "viewerReactions": null,
       "voteID": null
     }
