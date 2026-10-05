@@ -1,10 +1,11 @@
 {
   "_id": "6ac23f4efd7b5de500289e53",
   "aiCategories": [
-    "loc.in-world",
-    "client.chatbox"
+    "loc.pc-client",
+    "client.chatbox",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-10-04T12:19:34.555203Z",
+  "aiTaggedAt": "2026-10-05T15:56:35.560979Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6075a4524f898e247f11cdbd",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +75,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I'm unable to reproduce this in desktop mode with reproduction steps from OP, but I've seen many bug reports about this issue affecting multiple users.\n\n- https://feedback.vrchat.com/bug-reports/p/68987e\n\n- https://feedback.vrchat.com/bug-reports/p/y-vr\n\n- https://feedback.vrchat.com/bug-reports/p/chatbox-not-showing-up\n\n- https://feedback.vrchat.com/bug-reports/p/keyboard-and-mouse-input-stop-responding-after-opening-the-chatbox\n\n- https://feedback.vrchat.com/bug-reports/p/ui-freeze-unexpectly",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac3c75bc8c47b4759725afe",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6075a4524f898e247f11cdbd",
+        "alias": "Sanguine brown Gopher",
+        "aliasID": "65d0a4a70129d7ae4405e6af",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2558bc20116eedf50442335c5675dc29.png",
+        "created": "2021-04-13T14:01:54.004Z",
+        "name": "おしゃべりデイジー",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T15:50:51.929Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac23f4efd7b5de500289e53",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The same phenomenon occurred when pressing the copy and paste buttons.",
       "viewerReactions": null,
       "voteID": null
     }

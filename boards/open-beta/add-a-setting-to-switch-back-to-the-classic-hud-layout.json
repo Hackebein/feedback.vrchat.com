@@ -2,11 +2,11 @@
   "_id": "6aa2cca7342bc586b113b06c",
   "aiCategories": [
     "loc.hud",
-    "loc.pc-client",
-    "platforms.pc.desktop",
-    "client.settings"
+    "client.settings",
+    "platforms.pc.steam",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-09-21T21:50:30.386562Z",
+  "aiTaggedAt": "2026-10-05T15:56:35.562129Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "65838d89ba55b2fc55f9bb30",
@@ -36,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,7 +74,7 @@
       "postID": "6aa2cca7342bc586b113b06c",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -290,6 +290,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{69f42b864a48bed189ec5caf|full_name} I recommended they make the HUD dynamic so we can place the items where ever we want by like holding a hot key or something.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac3c786e052403019f8070a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66e9a8e105b3f0c467fe6266",
+        "alias": "Endless Mongoose",
+        "aliasID": "66e9a8e27d32abb6ca5eae18",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/520873d1c1c20ec114df0be6afba0071.png",
+        "created": "2024-09-17T16:05:53.767Z",
+        "name": "tapafon",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T15:51:34.189Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa2cca7342bc586b113b06c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "We have a minimal HUD, but it leves mic and menu in top corners, instead of just mic like it used to be. We also have key combo to hide HUD entirely, but that hides mic icon where it used to be as well.",
       "viewerReactions": null,
       "voteID": null
     }
