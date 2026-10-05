@@ -5,7 +5,7 @@
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-05T05:01:19.159174Z",
+  "aiTaggedAt": "2026-10-05T06:49:16.191120Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5da73c95c8133a48b8a0b711",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 70,
+  "commentCount": 71,
   "commentingDisabled": false,
   "comments": [
     {
@@ -478,13 +478,71 @@
       "postDeleted": false,
       "postID": "6a1e364cec4cc3e215c99ac5",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Was suffering this issue bad today on a 9950X3D2 with Arch, native Steam, latest kernel & drivers, with any versions of Proton. Couldn't consistently change worlds, open menus, or stay in a world for too long before getting the SuspendThread crash.\n\nDisabling Esync and Fsync seemed to fix it for me. Set your VRC launch options to:\n\nPROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 %command%\n\nThis will likely cause a performance hit but I had no crashes in 3 hours after setting this when previously I would crash within minutes. Hoping it helps someone else. Also hoping we get whatever release this fix is coming to soon...",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac347d0e7b60012c6d5726c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6574cb438fb1b71b0ae636a1",
+        "alias": "Classic Newt",
+        "aliasID": "66188ad1e5d26962aacfd2d9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/9d1a100bda98cb63ba5eef63b85fc3e6.png",
+        "created": "2023-12-09T20:17:07.950Z",
+        "name": "arxmodeus",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T06:46:40.640Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5ba8889cfa86f032d1596de2",
+          "alias": "Hollow Bobolink",
+          "aliasID": "65ca76f4ed6eefce4ceacbdd",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac09f0b3631116ab2abaa9d014132232.png",
+          "created": "2018-09-24T06:47:56.728Z",
+          "name": "DerpyEagle",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac32eeb5c31286c61645e99",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1e364cec4cc3e215c99ac5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5ba8889cfa86f032d1596de2|full_name} This allowed me to use VRChat long enough to go to other worlds and muck around a bit at least. Will give longer test later. Many thanks if this is the silver bullet!",
       "viewerReactions": null,
       "voteID": null
     }
