@@ -3,12 +3,11 @@
   "aiCategories": [
     "loc.action-menu",
     "loc.quick-menu",
-    "loc.pc-client",
-    "platforms.pc.steam",
-    "client.controls",
-    "open-beta"
+    "open-beta",
+    "platforms.pc",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-10-05T14:39:38.011689Z",
+  "aiTaggedAt": "2026-10-05T14:49:28.775762Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a853ed1523ad161334adf24",
@@ -38,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 9,
+  "commentCount": 10,
   "commentingDisabled": false,
   "comments": [
     {
@@ -493,7 +492,63 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{62b61f8ec938a62475e4cd14|full_name}\n\n> What mouse are you using, and at what polling rate? \n\nBenQ Zowie FK1, 1000 Hz.\n\n> How high are your FPS when this is happening?\n\nTypically I cap at 138 FPS on a 144 Hz monitor when this occurs, but this also occurs when uncapped around 400 FPS on this setup.\n\nI don't remember if this occurs in VR.\n\n> Do you have double-click issues in any other application?\n\nNo, VRChat only since Build `1919`. Not experienced in Build `1902` and `1903`. Occurs particularly in desktop mode.\n\n> Do you hold your mouse buttons briefly or perform a very short click usually?\n\nShort.\n\n> Does it fail only in the Action Menu, or across the whole UI?\n\nUnknown. Action Menu is the most susceptible to this.\n\n---\n\nYou can hear double clicks on the attached video. It's not dependent on the margin between \"Back\" and \"Chatbox\".\n\nI've also recorded on Build 1902 where this is not experienced, to demonstrate the issue is with the latest VRChat update.",
+      "value": "@{62b61f8ec938a62475e4cd14|full_name}\n\n> What mouse are you using, and at what polling rate? \n\nBenQ Zowie FK1, 1000 Hz.\n\n> How high are your FPS when this is happening?\n\nTypically I cap at 138 FPS on a 144 Hz monitor when this occurs, but this also occurs when uncapped around 400 FPS on this setup.\n\nI don't remember if this occurs in VR.\n\n> Do you have double-click issues in any other application?\n\nNo, VRChat only since Build `1919`. Not experienced in Build `1902` and `1903`. Easily reproducible in desktop mode.\n\n> Do you hold your mouse buttons briefly or perform a very short click usually?\n\nShort.\n\n> Does it fail only in the Action Menu, or across the whole UI?\n\nUnknown. Action Menu is the most susceptible to this.\n\n---\n\nYou can hear double clicks on the attached video. It's not dependent on the margin between \"Back\" and \"Chatbox\".\n\nI've also recorded on Build 1902 where this is not experienced, to demonstrate the issue is with the latest VRChat update.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac3b86570e33ba47d9c9369",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T14:47:01.594Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "62b61f8ec938a62475e4cd14",
+          "alias": "Zircon Canidae",
+          "aliasID": "65c26e06ed6eefce4c5e475a",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2022-06-24T20:33:18.686Z",
+          "name": "_tau_",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac3af4e14df85585ef702e1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab873d8b29f3e20b93aded1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{62b61f8ec938a62475e4cd14|full_name} I also want to be clear: This was was not experienced in VRChat 2026.2.3 Build `1860` up until VRChat 2026.2.3p3 Build `1867` on unity-6 beta, and not in main branch (\"live\") VRChat 2026.3.2p2 Build `1903` on Unity 2022.",
       "viewerReactions": null,
       "voteID": null
     }
