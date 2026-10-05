@@ -1,0 +1,96 @@
+{
+  "_id": "6ac3d79b9beaf3cb2e53b0f9",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera",
+    "worlds.layers"
+  ],
+  "aiTaggedAt": "2026-10-05T17:04:28.379395Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6ac1a673b987445a69c845d5",
+    "alias": "Plum Landfowl",
+    "aliasID": "6ac1a673b987445a69c845d8",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/7450d77036e7b146752ad506d63a99a4.png",
+    "created": "2026-10-04T01:05:55.609Z",
+    "name": "Douic",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6ac1a673b987445a69c845d5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-05T17:00:11.917Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "## Summary\n\nOn AMD Radeon RX 6000 series hardware, the planar reflection on water surfaces is offset\n\nfrom the real scene, producing a visible seam / mismatch along the waterline. It only\n\nappears while the viewing camera is moving.\n\n## Defining conditions\n\n- **Only while the camera is moving.** With the camera perfectly still, the reflection lines\n\n  up exactly and there is no artifact.\n\n- **Independent of movement speed.** Rotating the view slowly or quickly produces the same\n\n  amount of misalignment.\n\n- **The amplitude varies a lot between worlds, and can be very large.** In\n\n  \"Nights Edge · 宵の果て\" it is very pronounced — a large, obvious offset with strong\n\n  jitter along the waterline while turning the view. In other worlds the same artifact is\n\n  present but noticeably milder.\n\n- **It is inside the rendered frame, not display tearing.** The seam is visible in a screen\n\n  recording of the game, so it is not a monitor / scanout artifact.\n\n- **Main view vs in-game camera.** With both views on screen at once, whichever view is moving\n\n  shows the artifact and the stationary one is clean. This holds in both directions (camera\n\n  moving / main view still, and main view moving / camera still).\n\n- **VRChat's built-in mirror shows no artifact.** Note that a world mirror does not render the\n\n  water's own planar reflection, so the water is absent from the mirror image entirely.\n\nNot affected by: in-game graphics quality, anti-aliasing setting, D3D feature level, shader\n\ncache, or graphics driver version.\n\n## Environment\n\n- GPU: AMD Radeon RX 6650 XT (RDNA2 / Navi 23)\n\n- Driver: AMD Software Adrenalin Edition 26.9.2, driver 32.0.21045.11001\n\n- VRChat: 2026.3.3-1919-27c41b24d2-Release\n\n- Unity: 6000.0.67f1-DWR\n\n- Graphics API: Direct3D 11.0 [level 11.1]\n\n- OS: Windows 11 25H2, build 26200.9445\n\n- Display: 1920x1080 @ 180 Hz\n\n- CPU: AMD Ryzen 5 5600\n\n## Worlds where it reproduces\n\nMost pronounced:\n\n- `wrld_5f56dc7f-9786-401a-8996-1b61c785d90f` — \"Nights Edge · 宵の果て\"\n\nAlso present (milder):\n\n- `wrld_2dfd7562-8127-4091-856b-f34a2947b22b` — \"【公式】仮想空間＜ツクヨミ＞【超かぐや姫！】\"\n\n(closed; same symptom reported on RX 6600 and RX 5700 XT, and one user reports it\n\ndisappears completely on NVIDIA hardware)\n\n## Attachment\n\nScreen recording (14 s, captured with AMD ReLive while rotating the view):\n\n[insert URL]",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/c74a2d3e32389d3bb94e7a2274319f68.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "video/mp4",
+      "name": "Vrchat 2026.10.06-00.51",
+      "url": "https://canny-assets.io/files/c74a2d3e32389d3bb94e7a2274319f68.mp4"
+    }
+  ],
+  "ideaID": "6ac3d79b9beaf3cb2e53b0f8",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-05T17:00:11.917Z",
+  "subCategoryID": null,
+  "title": "Water reflection seam appears only while the camera moves — AMD Radeon RX 6650 XT",
+  "trendingScore": 2962.3657857817507,
+  "updatedBy": "6ac1a673b987445a69c845d5",
+  "urlName": "water-reflection-seam-appears-only-while-the-camera-moves-amd-radeon-rx-6650-xt",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6ac1a673b987445a69c845d5",
+      "alias": "Plum Landfowl",
+      "aliasID": "6ac1a673b987445a69c845d8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7450d77036e7b146752ad506d63a99a4.png",
+      "companies": [],
+      "name": "Douic",
+      "urlName": null,
+      "voteID": "6ac3d79cb987445a69cf24a0"
+    }
+  ]
+}
