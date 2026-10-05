@@ -2,10 +2,10 @@
   "_id": "6ac2d9780942028c0e6bbd0c",
   "aiCategories": [
     "loc.in-world",
-    "worlds.persistence",
+    "avatars.accessories",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-10-05T02:05:30.692614Z",
+  "aiTaggedAt": "2026-10-05T13:41:25.521068Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5a9b3ad0f5e0532e3ea468be",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -67,7 +67,7 @@
       "postID": "6ac2d9780942028c0e6bbd0c",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -75,6 +75,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I get frustrated when the \"fly forward\" is on both right trigger and left thumbstick up in VR mode.\n\nI wish the thumbstick up/down would control elevation, and the trigger to control forward movement?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac3a6b2864de6e7db673735",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5a9b3ad0f5e0532e3ea468be",
+        "alias": "Nutmeg Toucan",
+        "aliasID": "65ba04d4ed6eefce4c4747f4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3f99299bad2d811bc38d9c0add900d19.png",
+        "created": "2018-03-04T00:16:16.560Z",
+        "name": "MisutaaAsriel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T13:31:30.915Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac3021c7495c7215f49e451",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac2d9780942028c0e6bbd0c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} There definitely needs to be different \"modes\".\n\n➜ \"Tilt Steering\" — Sit on broom, tilt/turn to steer, lean/look up/down for altitude, Trigger/Use is forward momentum\n\n➜ \"Tank Controls\" — Hold/Sit-on broom, Left stick/WASD is altitude, right stick/Mouse is direction, trigger for forward movement (similar to current)\n\n➜ \"Directional\" — Hold broom, point in the direction you want to go, Use is movement in that direction (similar to current)",
       "viewerReactions": null,
       "voteID": null
     }
