@@ -2,9 +2,11 @@
   "_id": "6ac05dec0959d7d17370e69d",
   "aiCategories": [
     "loc.quick-menu",
-    "client.controls"
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-05T14:36:22.508047Z",
+  "aiTaggedAt": "2026-10-05T14:59:18.367142Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68e21f0f4f674f1b1ea08ac0",
@@ -121,6 +123,37 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ac3ba1807a7240bf4eeb2a6",
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-05T14:54:16.927Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6ac3ba1807a7240bf4eeb2a6",
+      "mergedPostDetails": "Description\n\nwhen in the small menu while using hand tracking the right hand's pointer is missing\n\nthe left hand's okay tho\n\nReproduction Steps\n\nopen the small menu with handtracking and that's it\n\nDetails\n\n- Category: Interfaz de usuario\n\n- Frequency: Siempre\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3-1919-27c41b24d2-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-02_21-32-12.txt](https://api.vrchat.cloud/api/1/file/file_b8a25744-5374-4584-959e-59283c2b7134/1/file)",
+      "mergedPostTitle": "right hand pointer bug",
+      "pinned": false,
+      "postID": "6ac05dec0959d7d17370e69d",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -146,20 +179,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 9,
-  "mergeCount": 0,
+  "maxScore": 11,
+  "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ac05dec0959d7d17370e69d/1607225059.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 9,
+  "score": 11,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-10-05T14:34:41.346Z",
   "subCategoryID": null,
   "title": "Hand Tracking Not Working Properly With Quick Menu. (Right Hand Not Interacting)",
-  "trendingScore": 2963.704534616669,
+  "trendingScore": 2963.8897035922805,
   "updatedBy": "68e21f0f4f674f1b1ea08ac0",
   "urlName": "hand-tracking-not-working-properly-with-quick-menu-right-hand-not-interacting",
   "viewerIsAuthor": false,
@@ -193,6 +226,17 @@
       "name": "Cody Jones",
       "urlName": null,
       "voteID": "6ac26efbb987445a69c9ab73"
+    },
+    {
+      "_id": "606b537b36d9a56454020c32",
+      "alias": "Rosewood Cod",
+      "aliasID": "6ac26caab987445a69c9a67f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/368ff31d0d713d28803d6e3a41fb3fac.png",
+      "companies": [],
+      "name": "〘N0A〙",
+      "urlName": null,
+      "voteID": "6ac3ba18b987445a69ce2889"
     },
     {
       "_id": "6ac24614b987445a69c9541d",
@@ -250,6 +294,17 @@
       "voteID": "6ac08548b987445a69931d62"
     },
     {
+      "_id": "62e0baaf51568d5cda391102",
+      "alias": "Kind Catshark",
+      "aliasID": "661a5ecfe5d26962aa503956",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/726462f81fb616316f9c3e985f99ef2e.png",
+      "companies": [],
+      "name": "Ávi Xochimisto༄",
+      "urlName": null,
+      "voteID": "6ac3ba18b987445a69ce288a"
+    },
+    {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
       "aliasID": "6a5f9e9bd4058d953b392a73",
@@ -259,17 +314,6 @@
       "name": "HackebeinsBot",
       "urlName": null,
       "voteID": "6ac05efcb987445a6992c658"
-    },
-    {
-      "_id": "68e21f0f4f674f1b1ea08ac0",
-      "alias": "Past Rooster",
-      "aliasID": "68e21f0f4f674f1b1ea0a55c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6de9aed9e3d5ba1cf70e6d1c4f03bb2e.png",
-      "companies": [],
-      "name": "JackCracker004",
-      "urlName": null,
-      "voteID": "6ac05decb987445a6992c4ed"
     }
   ]
 }
