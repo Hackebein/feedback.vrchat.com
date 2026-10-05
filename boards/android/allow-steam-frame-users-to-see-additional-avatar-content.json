@@ -1,0 +1,92 @@
+{
+  "_id": "6ac30b683c4d1978cf4aa600",
+  "aiCategories": [
+    "vrchat-meta"
+  ],
+  "aiTaggedAt": "2026-10-05T02:32:08.760374Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6ac30a22b987445a69cb32de",
+    "alias": "Better Cuckoo",
+    "aliasID": "6ac30a22b987445a69cb32e2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/754e7bf8450105274f486ea75ec3d1cb.png",
+    "created": "2026-10-05T02:23:30.290Z",
+    "name": "ψ『Ｐ ｉ ｒ ａ ｔ ａ』ψ",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6ac30a22b987445a69cb32de",
+  "board": {
+    "_id": "6466ab9cd0071b0936f27dcd",
+    "name": "Android",
+    "urlName": "android"
+  },
+  "boardID": "6466ab9cd0071b0936f27dcd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "649b325d67df6d7addaccd2f",
+    "created": "2023-06-27T19:02:53.242Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "649b325d67df6d7addaccd2f",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-05T02:28:56.201Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I would like to propose a feature specifically for Steam Frame in VRChat.\n\nCurrently, Steam Frame standalone uses the Android version of VRChat. However, Steam Frame has considerably more capable hardware than some other Android/Quest devices, so it would be interesting to take advantage of that capability without turning Steam Frame into the PC version of VRChat.\n\nMy proposal is to create an additional category or platform within the avatar system specifically for Steam Frame standalone.\n\nFor example:\n\n* PC: full version of the avatar.\n\n* Quest/Android: optimized version for Quest and other Android devices.\n\n* Steam Frame: an Android version with additional content specifically allowed for Steam Frame.\n\nThe most important part would be that Steam Frame-exclusive content would not need to be loaded on Quest devices.\n\nFor example, a creator could add an animated plushie, an extra piece of clothing, an accessory, a higher-resolution texture, or another heavier element and mark it as:\n\n“Visible only to Steam Frame.”\n\nA person using Steam Frame would be able to see and use that object normally.\n\nA person using Quest 2, Quest 3, or Quest 3S would simply not load that object. It would not appear pixelated, replaced with a low-quality texture, or turned into a strange-looking object. It would simply be invisible because that part of the avatar would not be available on that platform.\n\nThis way, the same avatar could keep its Android-compatible version for Quest while Steam Frame would have the ability to use its more powerful hardware to display additional content.\n\nI am not proposing removing Android optimizations or allowing all avatars to become heavier. I am proposing a Steam Frame-specific option that would allow creators to take advantage of its capabilities without negatively affecting Quest users.\n\nI think this could be a great way to give creators more freedom while still protecting the performance of Quest devices.\n\nIt would be especially useful for avatars with animated accessories, additional clothing, higher-quality textures, and other details that currently have to be removed in order to meet Android limitations.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ac30b673c4d1978cf4aa5f9",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-05T02:28:56.201Z",
+  "subCategoryID": null,
+  "title": "Allow Steam Frame Users to See Additional Avatar Content",
+  "trendingScore": 2962.279350971069,
+  "updatedBy": null,
+  "urlName": "allow-steam-frame-users-to-see-additional-avatar-content",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6ac30a22b987445a69cb32de",
+      "alias": "Better Cuckoo",
+      "aliasID": "6ac30a22b987445a69cb32e2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/754e7bf8450105274f486ea75ec3d1cb.png",
+      "companies": [],
+      "name": "ψ『Ｐ ｉ ｒ ａ ｔ ａ』ψ",
+      "urlName": null,
+      "voteID": "6ac30b68b987445a69cb3bd8"
+    }
+  ]
+}
