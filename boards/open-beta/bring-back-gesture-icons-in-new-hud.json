@@ -4,7 +4,7 @@
     "loc.hud",
     "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-10-05T07:40:20.409293Z",
+  "aiTaggedAt": "2026-10-06T05:03:30.648091Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "640e33f2f05ce2451ef85769",
@@ -34,7 +34,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -71,13 +71,73 @@
       "postDeleted": false,
       "postID": "6ac3477ae7b60012c6d562fe",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate of bug reports:\n\n- https://feedback.vrchat.com/open-beta/p/1912-gesture-icons-non-existant (Tracked)\n\n- https://feedback.vrchat.com/bug-reports/p/gesture-icon-is-missing-in-hud",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac47e8b96ed403af41e93a3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "640e33f2f05ce2451ef85769",
+        "alias": "Lichen Shrimp",
+        "aliasID": "6aa33470250b281ba81236a4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d4590ed27e041c1c8c98dbc3a60b8df9.png",
+        "created": "2023-03-12T20:20:02.333Z",
+        "name": "Vérα",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T04:52:27.584Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac34f705c31286c61688f4e",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac3477ae7b60012c6d562fe",
+      "private": false,
+      "reactions": {
+        "like": 0
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}thx",
       "viewerReactions": null,
       "voteID": null
     }
