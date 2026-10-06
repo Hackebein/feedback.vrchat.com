@@ -1,11 +1,11 @@
 {
   "_id": "6ac45ad607debaacdcf46e40",
   "aiCategories": [
+    "loc.in-world",
     "loc.mobile-app",
-    "platforms.mobile.ios",
-    "social.nameplates"
+    "platforms.mobile.ios"
   ],
-  "aiTaggedAt": "2026-10-06T02:51:24.841367Z",
+  "aiTaggedAt": "2026-10-06T11:41:41.830108Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ac45ad5b987445a69d35d30",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -85,6 +85,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6ac45ad5b987445a69d35d30|full_name} Did you mean to submit a user support request to https://vrch.at/support instead?\n\nSee how to report a bug, your report is missing key details on expected result, actual result and steps to reproduce: https://help.vrchat.com/hc/en-us/articles/360062658413-I-found-a-bug-I-want-to-report-a-bug",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac4dc2f7814e1798027b4c7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69fef162cf565b8f74ed04f7",
+        "alias": "Instant Firefly",
+        "aliasID": "69fef163cf565b8f74ed04fd",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6616da90ec4d3b475c43cf7405242ddc.png",
+        "created": "2026-05-09T08:33:38.707Z",
+        "name": "Mewster92",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T11:31:59.756Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac45fdfc3df958c9d209b1e",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac45ad607debaacdcf46e40",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}\n\nI want to chime in to add some details that could help.\n\nI'm on Android; a few versions ago (I think 2026.3.1) touching the avatar of someone would open their menu.\n\nWith the 2026.3.3 version, this functionality has been disabled, and to see a profile one has to open the vrchat menu first, then click on the avatar.\n\nI think it's a bug since there was no mention in the changelog, and I couldn't find any related option on the vrchat menu",
       "viewerReactions": null,
       "voteID": null
     }
