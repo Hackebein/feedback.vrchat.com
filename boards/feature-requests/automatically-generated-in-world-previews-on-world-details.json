@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.website",
     "web.worlds",
-    "worlds.travel"
+    "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-10-06T10:42:37.881377Z",
+  "aiTaggedAt": "2026-10-06T12:14:31.782582Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 17,
+  "commentCount": 18,
   "commentingDisabled": false,
   "comments": [
     {
@@ -925,6 +925,50 @@
       "value": "@{5b0907a98fa72313783e4ba6|full_name} That's a good idea. After all, the real issue is “finding out what the scenery in that world actually looks like”; users aren't interested in knowing the layout of the world. Using the default camera solves that problem.\n\nWhile shaders that utilize cube maps are also a good idea, we'll need to consider support for platforms other than PCs as well.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ac4e4f626a824e9b275952d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f3df2f75af9f322b0f66e1b",
+        "alias": "Eggplant Swordfish",
+        "aliasID": "65c27264ed6eefce4c180a06",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/72831d842128428cc1508b45b904ade7.png",
+        "created": "2020-08-20T03:50:15.808Z",
+        "name": "narazaka",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T12:09:26.282Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa26f539dcd17f166e385e4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It would still create more hassle, so speaking from my own self-interested position as a world creator, I would also prefer that this not be adopted.\n\nI question whether saving users the few minutes it takes to enter a world with a misleading thumbnail, realize they have been duped, and leave is really worth increasing the amount of work required to make a legitimate world.\n\n面倒が増えることには変わりないので、ワールド作者のポジショントークとしてはこれも別に採用されないことが望ましいとも思う。\n\n詐欺サムネワールドに入ってひっくり返る数分のコストの軽減は、まともなワールドを作るための労力を増加させるに値するのかが疑問であるからして。",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -955,7 +999,7 @@
   "statusChanged": "2026-09-10T08:50:27.238Z",
   "subCategoryID": null,
   "title": "Automatically generated in-world previews on World Details",
-  "trendingScore": 2966.9534845083263,
+  "trendingScore": 2966.959170445894,
   "updatedBy": null,
   "urlName": "automatically-generated-in-world-previews-on-world-details",
   "viewerIsAuthor": false,
