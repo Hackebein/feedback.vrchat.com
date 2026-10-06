@@ -1,11 +1,9 @@
 {
   "_id": "6a9f8201838c205ecadc5dc4",
   "aiCategories": [
-    "loc.website",
-    "web.worlds",
-    "worlds.content-gating"
+    "vrchat-meta"
   ],
-  "aiTaggedAt": "2026-10-06T03:47:35.112523Z",
+  "aiTaggedAt": "2026-10-06T04:07:37.413650Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df1f0a67455d44a15a629a",
@@ -29,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 81,
+  "commentCount": 82,
   "commentingDisabled": false,
   "comments": [
     {
@@ -487,6 +485,62 @@
       "value": "明確に反対する。いずれAIによる創作と人間による創作はまだら模様のように分かちがたくなってゆく。現時点でラベリングをしたとして、数年後には9割がラベルを張るという結果になるだろう。そのような仕組みに意味はない。\n\nそれよりは、手作り側を認証したほうがまだ実用的であるように思う。\n\n--\n\nI strongly disagree.\n\nOver time, AI-assisted creation and human creation will become increasingly intertwined, to the point where drawing a clear line between the two will be nearly impossible. Even if we introduce labeling now, in a few years we may simply end up in a situation where 90% of content carries some kind of AI label. At that point, such a system would have very little practical value.\n\nIf anything, I think it would be more useful to certify or identify content that is genuinely handmade instead.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ac473a54f593a7faeac3cb3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5cb0e62414ddd360bbe1ac29",
+        "alias": "Elaborate Swordtail",
+        "aliasID": "65c26ed9ed6eefce4c854ff1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/76d584a58bbb6a2eca29ddfc76815d46.png",
+        "created": "2019-04-12T19:25:24.024Z",
+        "name": "Jasper Raine",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T04:05:57.843Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5a9b3ad0f5e0532e3ea468be",
+          "alias": "Nutmeg Toucan",
+          "aliasID": "65ba04d4ed6eefce4c4747f4",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/3f99299bad2d811bc38d9c0add900d19.png",
+          "created": "2018-03-04T00:16:16.560Z",
+          "name": "MisutaaAsriel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac2db880942028c0e6bfae6",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a9f8201838c205ecadc5dc4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5a9b3ad0f5e0532e3ea468be|full_name} This is probably the best addition to this idea.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -504,20 +558,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 865,
+  "maxScore": 866,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a9f8201838c205ecadc5dc4/737155304.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 865,
+  "score": 866,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-08T03:33:21.996Z",
   "subCategoryID": null,
   "title": "Add an AI content identifier for worlds and avatars",
-  "trendingScore": 2967.3327200138447,
+  "trendingScore": 2967.3364319489287,
   "updatedBy": null,
   "urlName": "add-an-ai-content-identifier-for-worlds-and-avatars",
   "viewerIsAuthor": false,
@@ -530,6 +584,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "67d7d50729babadeddd2c2db",
+      "alias": "Dusk blue Carp",
+      "aliasID": "67d7d5088bda4d8ce960e30d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bdaf32c938d66d30767c3c62099db47d.png",
+      "companies": [],
+      "name": "YMMALOli",
+      "urlName": null,
+      "voteID": "6ac472e8b987445a69d3c026"
+    },
     {
       "_id": "619c4dc4d7812675d12431ac",
       "alias": "Beige Puma",
@@ -546,7 +611,7 @@
       "alias": "Charming Raven",
       "aliasID": "65c3900ded6eefce4cdcf00a",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/59f9d2f113837149bcf2bc38342a867b.png",
+      "avatarURL": "https://canny-assets.io/images/bae7b7ab9940c3de6f5b164aba187e36.png",
       "companies": [],
       "name": "wunkolo",
       "urlName": null,
@@ -6398,7 +6463,7 @@
       "alias": "Hibiscus Jellyfish",
       "aliasID": "6903dae91f833c417ce8e55c",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/61fa1e5be58e2965b8b5973261c15d6b.png",
+      "avatarURL": "https://canny-assets.io/images/273bf70ea84b47e71c41000ae2fb0156.png",
       "companies": [],
       "name": "Skoll_TheRoo",
       "urlName": null,
