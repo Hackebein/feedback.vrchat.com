@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-10-06T09:25:34.889110Z",
+  "aiTaggedAt": "2026-10-06T09:59:57.628320Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "632b57fd1ad5e044cbdde5d9",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Please add Udon/UdonSharp API for controlling and reading the mouse cursor in Desktop Mode\n\nCurrently, interacting with a custom world UI requires holding **TAB** to free the cursor. This is inconvenient for long interactions such as crafting, waiting for processes to finish, or using an inventory.\n\nIdeally, Udon should be able to:\n\nRelease the mouse cursor from script.\n\nRead the cursor position (x, y) while it is being used by the world.\n\nFor privacy, cursor position could automatically become unavailable whenever the user interacts with a VRChat-owned UI/menu. In that state, Udon would receive no cursor-position data. Once the user returns to the world, access could be restored.\n\nThis would allow custom desktop UIs to work more like normal game interfaces without requiring the user to hold TAB for the entire duration of an interaction.",
+  "details": "Please add Udon/UdonSharp API for controlling and reading the mouse cursor in Desktop Mode\n\nCurrently, interacting with a custom world UI requires holding **TAB** to free the cursor. This is inconvenient for long interactions such as crafting, waiting for processes to finish, or using an inventory.\n\nIdeally, Udon should be able to:\n\nRelease the mouse cursor from script.\n\nRead the cursor position (x, y) while it is being used by the world.\n\nFor privacy, cursor position could automatically become unavailable whenever the user interacts with a VRChat-owned UI/menu. In that state, Udon would receive no cursor-position data. Once the user returns to the world, access could be restored.\n\nThis would allow custom desktop UIs to work more like normal game interfaces without requiring the user to hold TAB for the entire duration of an interaction.\n\nReceiving the cursor position would also be useful for visualizing drag-and-drop interactions. For example, a world could display an item being dragged by the cursor, show where it will be placed, or provide visual feedback while moving UI elements.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,7 +60,7 @@
   "subCategoryID": null,
   "title": "Cursor API for Desktop Mode",
   "trendingScore": 2962.868782633634,
-  "updatedBy": null,
+  "updatedBy": "632b57fd1ad5e044cbdde5d9",
   "urlName": "cursor-api-for-desktop-mode",
   "viewerIsAuthor": false,
   "viewerVote": 0,
