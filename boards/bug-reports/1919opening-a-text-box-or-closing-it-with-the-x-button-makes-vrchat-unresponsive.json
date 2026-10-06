@@ -2,9 +2,10 @@
   "_id": "6ac23f4efd7b5de500289e53",
   "aiCategories": [
     "loc.in-world",
-    "client.chatbox"
+    "client.chatbox",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-10-06T13:56:54.848731Z",
+  "aiTaggedAt": "2026-10-06T14:19:36.502332Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6075a4524f898e247f11cdbd",
@@ -164,6 +165,37 @@
       "value": "I have added the output log.\n\nThe issue occurred when I launched VRChat and immediately opened the text box to copy-paste or type something.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ac5028226a824e9b27d0750",
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T14:15:30.880Z",
+      "deleted": false,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "internal": false,
+      "mergeID": "6ac5028226a824e9b27d0750",
+      "mergedPostDetails": "Since the update, after some time has passed (typically around 5–10 minutes), opening the chatbox dialog causes most keyboard inputs and mouse clicks to stop responding.\n\nOnce the issue occurs, only movement controls, the ESC key, and VRChat shortcuts continue to work. Text input in the chatbox dialog is also completely unresponsive. Alt+F4 also does not work.\n\nMouse input is completely unresponsive. I cannot click on anything, including the VRChat window itself to restore Windows focus. The only way to switch focus back to VRChat is by using Alt+Tab.\n\nThe issue appears to consistently occur after the application has been running for approximately 5–10 minutes and is triggered when opening the chatbox dialog. Once the chatbox dialog has been opened, the issue persists until the application is closed.\n\n---\n\n    Platform: PC (platform: Windows, store: Steam, headset: None)\n\n    VRChat Build: 2026.3.3-1919-27c41b24d2-Release\n\n    Unity Version: 6000.0.67f1-DWR",
+      "mergedPostTitle": "Keyboard and mouse input stop responding after opening the chatbox",
+      "pinned": false,
+      "postID": "6ac23f4efd7b5de500289e53",
+      "private": false,
+      "spam": false,
+      "synthetic": true,
+      "value": ""
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -189,20 +221,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 4,
-  "mergeCount": 0,
+  "maxScore": 5,
+  "mergeCount": 1,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ac23f4efd7b5de500289e53/649992437.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 4,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-04T11:58:06.304Z",
   "subCategoryID": null,
   "title": "[1919]Opening a text box or closing it with the \"X\" button makes VRChat unresponsive to controls.",
-  "trendingScore": 2963.118625525865,
+  "trendingScore": 2963.275591324575,
   "updatedBy": "6075a4524f898e247f11cdbd",
   "urlName": "1919opening-a-text-box-or-closing-it-with-the-x-button-makes-vrchat-unresponsive",
   "viewerIsAuthor": false,
@@ -258,6 +290,17 @@
       "name": "おしゃべりデイジー",
       "urlName": null,
       "voteID": "6ac23f4eb987445a69c9476e"
+    },
+    {
+      "_id": "62644bcd8a3ea0529575e91f",
+      "alias": "Chemical Dove",
+      "aliasID": "6ac0d170b987445a69c5e406",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8634f3c4d3c4a90ec741080805f30df9.png",
+      "companies": [],
+      "name": "siya-",
+      "urlName": null,
+      "voteID": "6ac50282b987445a69d6757b"
     }
   ]
 }
