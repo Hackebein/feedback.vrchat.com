@@ -1,10 +1,10 @@
 {
   "_id": "6aa26f539dcd17f166e385e4",
   "aiCategories": [
-    "loc.website",
+    "loc.unity-sdk",
     "web.worlds"
   ],
-  "aiTaggedAt": "2026-10-06T23:27:20.686907Z",
+  "aiTaggedAt": "2026-10-06T23:41:33.968333Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 20,
+  "commentCount": 21,
   "commentingDisabled": false,
   "comments": [
     {
@@ -1080,6 +1080,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{622303ad13e8f032580529a0|full_name}  The other platform's GPUs support Cubamaps as well I'm pretty sure. What one doesn't?\n\nVRC simply restricts what shaders we are allowed to use on those platforms for performance reasons. But VRC would be controlling the use of this 360 preview, avoiding issues like that.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac5854fd2ebf25d86c59e24",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65fa77b9ab14b46952dc1993",
+        "alias": "Immediate Marlin",
+        "aliasID": "65fa77b9a63714bcb3e1eab1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b30533afe69642b45d701aeeaa862e87.png",
+        "created": "2024-03-20T05:44:25.092Z",
+        "name": "Invertex",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T23:33:35.920Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa26f539dcd17f166e385e4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This is definitely a good idea, though I imagine the type of people who like to grift with AI will just end up downloading an addon that hooks into the upload process to block this in some way or overwrite with their own image.\n\nAny world creator is already comfortable with installing addons and it would end up becoming the norm for these people.\n\nBut if VRC can prevent hooking into that part of the process, that'd be great, though very hard due to how open to modification/interception the C# based structure of Unity is. (having them do it server side would be nice, but I understand they want to avoid the processing costs of that)\n\nRegardless, I'd still rather have this system than not since even beyond fighting the AI slop, it's just nice quality of life to be able to see actual screenshots. Just like looking at a game cover and flipping it over to see what are usually in-game images on the back.\n\n-------------------\n\nMore ideally I think we need a proper world ranking/voting system with weighting based on account trust level and other factors. But that's a case for a different request.",
       "viewerReactions": null,
       "voteID": null
     }
