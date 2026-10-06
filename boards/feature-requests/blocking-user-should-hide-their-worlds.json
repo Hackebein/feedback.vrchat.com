@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.website",
     "loc.in-world",
-    "web.worlds",
+    "worlds.travel",
     "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-10-01T23:24:34.714935Z",
+  "aiTaggedAt": "2026-10-06T08:27:10.362571Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f67899159b0841fe0d3891b",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -166,6 +166,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "The ability to block worlds should absolutely exist",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac4ae464f593a7faeb43255",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5a4f061ba3192e49202db0a1",
+        "alias": "Thick Thrush",
+        "aliasID": "65ba01d8ed6eefce4cfc72d9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a71c9098516fec8893142f289f87616e.png",
+        "created": "2018-01-05T04:59:07.040Z",
+        "name": "Nolfinkol",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T08:16:06.969Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/1af2c5651418623f854b8812a2db8243.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "69f133774a48bed189d0b81b",
+          "alias": "Spontaneous Hedgehog",
+          "aliasID": "69f133774a48bed189d0b81f",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c40655e8dba068de458a21d3db6f6bf8.png",
+          "created": "2026-04-28T22:23:51.414Z",
+          "name": "Vince_Borzoi",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ab6a04efead18d4908029b3",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab5be072c33702dbd9f173b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{69f133774a48bed189d0b81b|full_name} We can technically hide worlds via the content gating tags like hiding worlds that are tagged with \"Excessive Gore\" and \"Sexually Suggestive\" for example.",
       "viewerReactions": null,
       "voteID": null
     }
