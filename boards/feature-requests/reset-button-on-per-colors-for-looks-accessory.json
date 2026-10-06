@@ -2,10 +2,9 @@
   "_id": "6ac3b2f814df85585ef810bb",
   "aiCategories": [
     "loc.main-menu",
-    "avatars.accessories",
-    "client.settings"
+    "avatars.accessories"
   ],
-  "aiTaggedAt": "2026-10-06T03:47:35.111506Z",
+  "aiTaggedAt": "2026-10-06T07:12:58.123820Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66c7f83ba2fca0a622090327",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -66,13 +65,71 @@
       "postDeleted": false,
       "postID": "6ac3b2f814df85585ef810bb",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 0
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Related (which resets every color and setting): https://feedback.vrchat.com/open-beta/p/1919-reset-accessory-button-wont-reset-colors",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac499c576b69c55833b2359",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66c7f83ba2fca0a622090327",
+        "alias": "Right Hoverfly",
+        "aliasID": "66c7f83b3e088c8d6b0e1c00",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+        "created": "2024-08-23T02:47:23.348Z",
+        "name": "Usemame",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T06:48:37.023Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac46b057814e17980165a41",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac3b2f814df85585ef810bb",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} It's not related, that one was a bug report, This one was a feedback, which suggests to allow each colors to be reset back to the stocks. Since the reset button on the bottom left will reset the whole thing(not the color since that bug though), which most people won't think about it when all they want is the colors.\n\nAllowing colors to roll back will be more future proof since the following the growth to the accessory system and the hardware/software, the accessory will be more complex by the time. And clearly there will be more collaboration in the future, being able to reset colors have it's benefits(sometime). Although TBH this whole editor should be like most modern editors(or like the Unity for at least), features copy&paste/reset/lock/random/export&import on everything, just unlike colors, most things are needed to be adjusted anyway due to the avatar differences, that's the reason I only suggested the colors, and the copy&paste, someone already suggested it(https://feedback.vrchat.com/feature-requests/p/copy-accessory-settings-or-looks-between-avatars).",
       "viewerReactions": null,
       "voteID": null
     }
