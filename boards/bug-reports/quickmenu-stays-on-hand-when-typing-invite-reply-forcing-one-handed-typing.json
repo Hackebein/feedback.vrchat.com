@@ -2,10 +2,9 @@
   "_id": "6ac44c1634566f8101ac974d",
   "aiCategories": [
     "loc.quick-menu",
-    "loc.in-world",
-    "social.friends"
+    "client.chatbox"
   ],
-  "aiTaggedAt": "2026-10-07T14:28:53.277836Z",
+  "aiTaggedAt": "2026-10-07T21:29:52.603871Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e8b24c1d87cbd0b05f6f967",
@@ -112,7 +111,9 @@
       "postDeleted": false,
       "postID": "6ac44c1634566f8101ac974d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -129,7 +130,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "unable to type/edit invite reply with hand quickmenu is stuck to.",
+  "details": "unable to type/edit invite reply with hand quickmenu is stuck to. can only type with other hand, while having to weirdly hold my right hand out of the way. it also behaves weirdly when saving/confirming.\n\nEdit: this has been around since the keyboard beta launched lol, I imagine myself and many others fell into the deceptively comfy state of \"surely someone else already posted this on canny.\"",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -155,7 +156,7 @@
   "subCategoryID": null,
   "title": "quickmenu stays on hand when typing invite reply, forcing one handed typing",
   "trendingScore": 2963.3579106616653,
-  "updatedBy": null,
+  "updatedBy": "5e8b24c1d87cbd0b05f6f967",
   "urlName": "quickmenu-stays-on-hand-when-typing-invite-reply-forcing-one-handed-typing",
   "viewerIsAuthor": false,
   "viewerVote": 0,
