@@ -4,7 +4,7 @@
     "loc.website",
     "web.worlds"
   ],
-  "aiTaggedAt": "2026-10-06T23:50:32.722255Z",
+  "aiTaggedAt": "2026-10-07T01:35:26.865863Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 22,
+  "commentCount": 23,
   "commentingDisabled": false,
   "comments": [
     {
@@ -39,7 +39,7 @@
         "alias": "Circular Piranha",
         "aliasID": "69dcbfec35a0fd856496e66a",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/12755385ebd2bda838cffef90c9a2148.png",
+        "avatarURL": "https://canny-assets.io/images/984ce5e4eea441f15d2040ea5b650b0f.png",
         "created": "2026-04-13T10:05:32.000Z",
         "name": "とらの＋",
         "serviceAccount": false,
@@ -108,7 +108,7 @@
           "alias": "Circular Piranha",
           "aliasID": "69dcbfec35a0fd856496e66a",
           "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/12755385ebd2bda838cffef90c9a2148.png",
+          "avatarURL": "https://canny-assets.io/images/984ce5e4eea441f15d2040ea5b650b0f.png",
           "created": "2026-04-13T10:05:32.000Z",
           "name": "とらの＋",
           "serviceAccount": false,
@@ -1017,7 +1017,9 @@
       "postDeleted": false,
       "postID": "6aa26f539dcd17f166e385e4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1117,7 +1119,9 @@
       "postDeleted": false,
       "postID": "6aa26f539dcd17f166e385e4",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1180,6 +1184,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{65fa77b9ab14b46952dc1993|full_name} A couple minutes of work, you say? Sure, sometimes it might only take a couple minutes, but it’s not hard to imagine cases where it doesn’t. The time spent doing the actual task isn’t the only cost involved.\n\nI can’t agree with the idea that the cost of dealing with worlds that use deceptive thumbnails should be borne by all the other legitimate world creators.\n\nI understand that potentially thousands of users may have a bad experience because of them, but please don’t turn that into some kind of collective responsibility and deliberately impose it on those of us who, individually, are providing enjoyment to tens of thousands of users.\n\nWhen using the number of users who visit a world as an argument, please keep in mind that world creators are in an extremely unfair position. Most of the time there is only one creator, so we effectively get pitted against public opinion at a ratio of 10,000 to 1. You should seriously consider what piling even more miscellaneous demands from tens of thousands of users onto creators does to their motivation. And since we are not the ones pushing deceptive thumbnails on people in the first place, I don’t think it follows at all that we should obviously be the ones to bear that burden.\n\nIf you’re going to introduce something like the ability to upload additional images, I think it should be a feature that lets creators say, “There are other cool things about this world that you can’t see from the thumbnail,” rather than, “Here’s proof that this isn’t slop.”\n\nThis Canny proposal in particular comes at a time when controversy over AI-generated content is raging, so it’s not hard to imagine dogmatic anti-AI people using any excuse they can find to make unreasonable accusations. I’d like whatever measures are taken to avoid spreading that hassle to people who have nothing to do with AI slop.\n\nFor example, I think making it easier to report worlds with deceptive thumbnails would be a more direct and healthier approach. (And apparently the ToS has already been changed along those lines, from what I’ve heard.)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac59f6ed94892836f0d46c4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f5234246af565623cdac488",
+        "alias": "Ruby Wildcat",
+        "aliasID": "65c358cbed6eefce4c821be5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0377f86b4b00a835f897991a22fd703e.png",
+        "created": "2020-09-04T12:33:40.003Z",
+        "name": "はい",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-07T01:25:02.698Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa26f539dcd17f166e385e4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I think it could be useful if, every time a world is uploaded, VRChat automatically detects areas that are likely to contain content—such as places with UI, chairs, or clusters of interactive objects—and takes multiple screenshots.\n\nAfter the upload, or through the website, the creator could choose around three screenshots from that upload to be shown on the World Details page, with displaying them being mandatory.\n\nFor worlds such as puzzle or horror worlds, where showing the content in advance could itself be a spoiler, creators could mark the entire world as a Spoiler. In that case, the automatically captured screenshots would not be shown publicly at all.\n\nHowever, the screenshots could still be kept on the server for moderation purposes and used as one of the references when a world is reported.\n\nIf the Spoiler option is intentionally abused to hide the actual quality or contents of a world, I also think there should be a relatively strong penalty for that.",
       "viewerReactions": null,
       "voteID": null
     }
