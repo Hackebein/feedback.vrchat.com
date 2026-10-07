@@ -2,9 +2,9 @@
   "_id": "6ac62d2bd94892836f1ff03f",
   "aiCategories": [
     "loc.in-world",
-    "sdk.udon"
+    "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-10-07T11:38:09.951965Z",
+  "aiTaggedAt": "2026-10-07T12:43:14.847611Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68079290265c015d223143d8",
@@ -42,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "In any world that has a chair that you are able to pick up when another player is sitting on it, it is laggy and out of sync, it used to always be perfectly synced between every player, but is now broken after maybe the unity 6 update?\n\nThe following attached video is what it looks like",
+  "details": "In any world that has a chair that you are able to pick up when another player is sitting on it, it is laggy and out of sync, it used to always be perfectly synced between every player, but is now broken after maybe the unity 6 update? (edit: it is any VRC station)\n\nThe following attached video is what it looks like\n\nEdit: Big apologies I was not aware multiple people have already reported this already, since i was looking in the wrong places",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -72,10 +72,10 @@
   "status": "open",
   "statusChanged": "2026-10-07T11:29:47.093Z",
   "subCategoryID": null,
-  "title": "Pickup Chairs are broken after recent VRC update",
+  "title": "Pickup Chairs (VRC Stations) are broken after recent VRC update",
   "trendingScore": 2963.31217799265,
   "updatedBy": "68079290265c015d223143d8",
-  "urlName": "pickup-chairs-are-broken-after-recent-vrc-update",
+  "urlName": "pickup-chairs-vrc-stations-are-broken-after-recent-vrc-update",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
