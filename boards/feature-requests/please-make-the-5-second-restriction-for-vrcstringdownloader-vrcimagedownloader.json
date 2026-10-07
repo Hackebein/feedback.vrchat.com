@@ -1,11 +1,10 @@
 {
   "_id": "690081852e5801264fd35ec1",
   "aiCategories": [
-    "loc.in-world",
-    "worlds.content-gating",
-    "worlds.video"
+    "loc.unity-sdk",
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-10-07T10:55:42.335181Z",
+  "aiTaggedAt": "2026-10-07T13:57:38.919021Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ae51ece906bfd12e600d6f6",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 13,
+  "commentCount": 14,
   "commentingDisabled": false,
   "comments": [
     {
@@ -675,6 +674,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6262d19417c3c26b15a9a40a|full_name} Was this response AI generated or do you just have a lot of misconceptions? The structure and speech feel especially odd.\n\nRegardless, many of your complaints stem from a misunderstanding of how these Downloaders even work... It's not a request that runs through VRC's server and then out to the requested website. The website is seeing a request come from the player's IP, so there's no concern about VRC becoming blocked as a whole.\n\nFrom what I've heard, the limit was primarily set to avoid data harvesting. But we already can't record voice, text chat or account info, and systems for uploading usernames are already commonplace, as we've seen from the abundance of global leaderboard systems and ban lists. So there isn't really anything else that could be harvested that is meaningful.\n\nThat doesn't mean there should be no request cooldown, as that would allow turning players into bot-nets in a way. But a 500-1000ms cooldown would at least be a lot more reasonable.\n\n-----------------------------------------\n\nYour example about an art world not showing off more than X images is not really fair, because the reason they are like that in the first place is because it's the only option. You're seeing a symptom of this very restriction limiting what a world can do. If this restriction weren't in place, you'd see art worlds with much bigger galleries where art is being downloaded and maybe changing over time.\n\nAlso the option to allow users to customize their world, this limit impacts. VRCUrl can be saved in persistence data. But when you rejoin, the world is going to have to redownload whatever that content is, for each place you've put a URL into that you want the content loaded from. This greatly hampers what kinds of interesting player-customizable worlds we can make.\n\n-----------------------------------------\n\nAs for resource usage, yes it's a valid concern, but one that should be handled in tandem with resolving this issue. When images are downloaded for example, Unity already converts them into a native-format for use on your GPU so it can display them.\n\nAll that needs to happen is for this native file to be written to a world local data cache so it can be used as part of the texture streaming system like any other texture.\n\nAnd the concerns about server requests and user bandwidth could be further mitigated if my caching request in the comment below these ones is adopted.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac64e4fb8decdc06286f581",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6262d19417c3c26b15a9a40a",
+        "alias": "Violet Cattle",
+        "aliasID": "66096f4ce5d26962aa391b71",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/599af092ebe2d4d560b5dffea4d1ff5d.png",
+        "created": "2022-04-22T16:02:28.026Z",
+        "name": "Jarnefeldt",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-07T13:51:11.031Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65fa77b9ab14b46952dc1993",
+          "alias": "Immediate Marlin",
+          "aliasID": "65fa77b9a63714bcb3e1eab1",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/b30533afe69642b45d701aeeaa862e87.png",
+          "created": "2024-03-20T05:44:25.092Z",
+          "name": "Invertex",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6938623ab21d9966cc2fe76a",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "690081852e5801264fd35ec1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65fa77b9ab14b46952dc1993|full_name}\n\nI actually laughed. But no I wrote it myself. It's how I write my reports and documents in general. Very interesting way to to start the conversation but i digress. \n\nI wrote it because VRChat has a specific way they want to receive feedback. \n\nThe security concerns and other issues came up in discussion which is why we shared it. \n\nChiugame and another friend were asking certain concerns, i put this here for other people to read. \n\nSince its a Question, Yes, i don't know how it works and i only have second hand information. I've heard both sides and out of respect haven't shared the reason for these concerns but i have a rough idea of why this wants to be implemented. The people that are against this implementation have their concerns and the people who are for have their interests. \n\nI read the way they currently bypass it which is why i listed these concerns.",
       "viewerReactions": null,
       "voteID": null
     }
