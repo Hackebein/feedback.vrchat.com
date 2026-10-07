@@ -1,0 +1,93 @@
+{
+  "_id": "6ac60c9c291726739787bdda",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.impostors"
+  ],
+  "aiTaggedAt": "2026-10-07T09:15:09.451850Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "67114f74fb43558c4795ab40",
+    "alias": "Quinacridone magenta Amphibian",
+    "aliasID": "67114f750f7e723d6eff2aa8",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/8a070515b1e045d974de715952040cbf.png",
+    "created": "2024-10-17T17:55:00.970Z",
+    "name": "橘花【きつか】",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "67114f74fb43558c4795ab40",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8783d561e5922d89ac4",
+    "created": "2023-09-22T15:53:28.541Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "650db8783d561e5922d89ac4",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-07T09:10:52.530Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Currently, avatar performance ranks tell creators whether an avatar is expensive, but provide very little feedback about the practical consequence of that performance rank.\n\nIf other users hide Poor/Very Poor avatars, or otherwise do not download the full avatar, the avatar author generally has no way of knowing. From their perspective, their avatar works and looks correct.\n\nThis removes an important incentive to optimize.\n\nIf we somehow had access to aggregate avatar visibility statistics to the avatar's statistics/performance information. For example:\n\nLast 7 days\n\nFull avatar downloads: 8,412\n\nImpostor downloads: 3,105\n\nEstimated visibility: 73%\n\nWhere an approximate visibility metric could initially be calculated as:\n\nFull avatar downloads / (Full avatar downloads + impostor downloads)\n\nIf VRChat already tracks cache comparisons or avatar/impostor selection separately from actual CDN transfers, those would be preferable to literal downloads. The objective is to measure how often the full avatar is selected compared with its impostor, while using aggregate data VRChat already collects or can collect cheaply.\n\nThis creates a direct incentive to optimize. Instead of performance optimization only changing an SDK rating from Very Poor to Poor or Medium, creators can see that optimization resulted in more people actually seeing their avatar.\n\nPerformance optimization currently benefits everybody except, visibly, the person doing the optimization. Users whose clients struggle can hide expensive avatars, use safety settings, or rely on impostors. The avatar wearer may never know this happened.\n\nAggregate visibility statistics would close that feedback loop without identifying individual users or exposing anybody's personal safety settings.\n\nThese statistics should be aggregate only.\n\nThe avatar author should not be able to determine which users downloaded the full avatar, received an impostor, manually hid them, or otherwise chose not to render them.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ac60c9c291726739787bdd9",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-07T09:10:52.530Z",
+  "subCategoryID": null,
+  "title": "Show avatar visibility statistics to incentivize optimization",
+  "trendingScore": 2962.6049403138272,
+  "updatedBy": null,
+  "urlName": "show-avatar-visibility-statistics-to-incentivize-optimization",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "67114f74fb43558c4795ab40",
+      "alias": "Quinacridone magenta Amphibian",
+      "aliasID": "67114f750f7e723d6eff2aa8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/8a070515b1e045d974de715952040cbf.png",
+      "companies": [],
+      "name": "橘花【きつか】",
+      "urlName": null,
+      "voteID": "6ac60c9cb987445a69dcedf4"
+    }
+  ]
+}

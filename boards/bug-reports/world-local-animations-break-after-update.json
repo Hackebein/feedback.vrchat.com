@@ -2,10 +2,10 @@
   "_id": "6ac556a985013beb68e90208",
   "aiCategories": [
     "loc.in-world",
-    "avatars.expressions",
-    "worlds.persistence"
+    "avatars.dynamics",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-06T22:28:53.986827Z",
+  "aiTaggedAt": "2026-10-07T09:15:09.452723Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6e61f03043eb78f8fa3b88",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +73,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Guess editing an existing thread is not a thing.\n\nI need to make a correction.\n\nThe World Animation breaks while the local animation does not.\n\nI had it reversed",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac60cd2291726739787ca51",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65564de989aa2b9e7ba85d17",
+        "alias": "Integral Wolf",
+        "aliasID": "65cecee20129d7ae44daee58",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2c1ffc5d0cf65e5d9e495a204aa96668.png",
+        "created": "2023-11-16T17:14:17.380Z",
+        "name": "Ner0kun",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-07T09:11:46.924Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac556a985013beb68e90208",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "It seems that any avatar/animator parameter change will trigger it. So while dancing avoid using avatar toggles and you also might want to disable avatar interactions (if a contact receiver activates something it will trigger the bug)",
       "viewerReactions": null,
       "voteID": null
     }
