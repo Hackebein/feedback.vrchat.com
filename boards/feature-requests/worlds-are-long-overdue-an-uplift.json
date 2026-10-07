@@ -476,7 +476,9 @@
       "postDeleted": false,
       "postID": "6ac4746f96d07049b435e644",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -502,20 +504,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 149,
+  "maxScore": 150,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ac4746f96d07049b435e644/541341229.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 149,
+  "score": 150,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-06T04:09:19.661Z",
   "subCategoryID": null,
   "title": "Worlds are long overdue an uplift",
-  "trendingScore": 2966.8056092040893,
+  "trendingScore": 2966.812692401108,
   "updatedBy": "63ac197b13d3c4455e9b6768",
   "urlName": "worlds-are-long-overdue-an-uplift",
   "viewerIsAuthor": false,
@@ -528,6 +530,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6251e0efbd42d33382835984",
+      "alias": "Digital Parrotfish",
+      "aliasID": "65c297a5ed6eefce4cdb0026",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9ebb1a4ef09d430d283bbb87393b48a3.png",
+      "companies": [],
+      "name": "Kaycie Shchi",
+      "urlName": null,
+      "voteID": "6ac5902db987445a69db26a5"
+    },
     {
       "_id": "628167e9c17619470639bfb3",
       "alias": "Personal Mastodon",
