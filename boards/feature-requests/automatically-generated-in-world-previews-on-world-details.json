@@ -4,7 +4,7 @@
     "loc.website",
     "web.worlds"
   ],
-  "aiTaggedAt": "2026-10-07T01:53:16.376135Z",
+  "aiTaggedAt": "2026-10-07T18:43:55.534289Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b962056b037d80b53475262",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 24,
+  "commentCount": 25,
   "commentingDisabled": false,
   "comments": [
     {
@@ -1226,7 +1226,7 @@
       "postID": "6aa26f539dcd17f166e385e4",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -1290,6 +1290,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{5f3df2f75af9f322b0f66e1b|full_name}　I think your concern is fair, especially the point that legitimate creators should not be put in a position where they are expected to prove that their world is \"good\" or \"not slop.\"\n\nThat was not really what I wanted this proposal to become.\n\nIn the original automatic-capture idea, the required spawn image was intended to be generated entirely by VRChat, without the creator having to place or configure anything. The additional capture points were meant to be optional.\n\nThat said, I agree that even an automatic system can create indirect pressure on creators — for example, affecting how spawn areas are designed, spoiling introductions, or creating an expectation that creators must present their worlds in a particular way.\n\nAfter reading the discussion here, I think the simpler optional approach I mentioned above may actually be a better first step: allow creators to attach multiple in-world preview images, possibly including images that VRChat can verify were actually taken inside that world.\n\nI also don't see multiple preview images as being useful only for preventing misleading thumbnails. They could simply be another way for creators to show off their worlds. A single thumbnail is often not enough to communicate the scale, atmosphere, different areas, or activities a world contains, so having several preview images could be useful even for worlds where misleading thumbnails are not an issue at all.\n\nImportantly, I would not want the absence of those images to be treated as suspicious, lower a world's ranking, or imply that the creator has something to prove.\n\nFor me, this is also somewhat separate from AI moderation. The broader problem I want to solve is that World Details currently gives users almost no way to see what a world actually looks like beyond a single promotional thumbnail.\n\nImproved reporting for deliberately misleading thumbnails would be useful too, but that is mostly a reactive measure against bad actors. In-world previews could also be a general discovery and presentation feature that benefits ordinary world creators.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac68f99d2ebf25d86f6204a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f7013bebee34021c9e9cbe3",
+        "alias": "Financial Haddock",
+        "aliasID": "65c69918ed6eefce4c5d2c5f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ef67a0d4d1b68b5c22dd56333b027ce1.png",
+        "created": "2020-09-27T04:23:26.304Z",
+        "name": "POP✩STEP",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-07T18:29:45.488Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa26f539dcd17f166e385e4",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This seem useless. The world would have to be loaded/played in some way, every single world, and screenshots taken of what? spawn? Many worlds have nothing in particular at spawn or start in a separate area before the entering the full map. Anyone looking to deceive or craft a particular preview image would just learn the preview image pattern (when and where in the world the image is taken) and account for that. Good world creators would suffer and now have to make sure there map looks enticing in these preview images. The preview images would do a bad job of showcasing a world. Its not like the preview can show anything beyond the starting state of the world anyway. For many maps nothing much is revealed or learned this way.",
       "viewerReactions": null,
       "voteID": null
     }
