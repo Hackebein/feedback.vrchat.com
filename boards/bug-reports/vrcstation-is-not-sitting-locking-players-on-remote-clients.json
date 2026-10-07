@@ -4,7 +4,7 @@
     "loc.in-world",
     "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-10-07T14:39:57.315748Z",
+  "aiTaggedAt": "2026-10-07T14:49:16.642101Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b40c40c2353645d955d3c39",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -295,7 +295,9 @@
       "postDeleted": false,
       "postID": "6ac5842d25f7b6e35b5c7186",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -303,6 +305,62 @@
       "statusChangeID": "6ac6589cdf3e19d7418f0a30",
       "statusChangeNewStatus": "complete",
       "value": "Got a reliable repro still (thanks @{5b40c40c2353645d955d3c39|full_name}) as such have fully rolled back the changes. I've discovered the root cause and have a fix but it'll need to wait for another client update. Until then (and hopefully still after) things should be working again properly",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac659fb25f7b6e35b7fb6cb",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f6e61f03043eb78f8fa3b88",
+        "alias": "Sable Giraffe",
+        "aliasID": "65c27af3ed6eefce4c78ca32",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1498258716d451a4a5d13449428beaed.png",
+        "created": "2020-09-25T21:32:32.684Z",
+        "name": "DragonAsh",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-07T14:40:59.069Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "667353ba8663454809d39116",
+          "alias": "Effective Lark",
+          "aliasID": "667353bbd5dd336a20ffb258",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2024-06-19T21:55:06.923Z",
+          "name": "euan",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac64d464f187df51a5c1aa0",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac5842d25f7b6e35b5c7186",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{667353ba8663454809d39116|full_name} This seems to have fixed the issue",
       "viewerReactions": null,
       "voteID": null
     }
@@ -330,20 +388,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 50,
+  "maxScore": 51,
   "mergeCount": 3,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ac5842d25f7b6e35b5c7186/1179360248.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 50,
+  "score": 51,
   "sourceFeatureExtractionItem": null,
   "status": "complete",
   "statusChanged": "2026-10-07T14:35:08.589Z",
   "subCategoryID": null,
   "title": "VRCStation is not sitting/locking players on remote clients.",
-  "trendingScore": 2965.8043466706017,
+  "trendingScore": 2965.8251945178245,
   "updatedBy": null,
   "urlName": "vrcstation-is-not-sitting-locking-players-on-remote-clients",
   "viewerIsAuthor": false,
@@ -356,6 +414,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ac6595fb987445a69de8f73"
+    },
     {
       "_id": "63c2130366041430f307d07a",
       "alias": "Current Coyote",
