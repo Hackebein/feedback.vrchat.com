@@ -4,7 +4,7 @@
   "aiCategories": [
     "vrchat-meta"
   ],
-  "aiTaggedAt": "2026-08-08T23:56:57.575085Z",
+  "aiTaggedAt": "2026-10-07T03:47:36.445269Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68886fe1076be5baa6b5d6ef",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -180,7 +180,9 @@
       "postDeleted": false,
       "postID": "6888713006b971301377a934",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -226,7 +228,7 @@
       "postID": "6888713006b971301377a934",
       "private": false,
       "reactions": {
-        "like": 5
+        "like": 6
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -272,7 +274,7 @@
       "postID": "6888713006b971301377a934",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -280,6 +282,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "No, never.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac5601b4f187df51a3643cd",
+      "aiGenerated": false,
+      "author": {
+        "_id": "61665e3e7448d57ed9eb49da",
+        "alias": "Olive Vole",
+        "aliasID": "65c26da3ed6eefce4c4d091c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/017df8e6ae4567afbc647784175ca43d.png",
+        "created": "2021-10-13T04:19:10.295Z",
+        "name": "4Bakers",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-06T20:54:51.295Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6888713006b971301377a934",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "ABSOLUTELY NOT",
       "viewerReactions": null,
       "voteID": null
     }
