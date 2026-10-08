@@ -109,7 +109,9 @@
       "postDeleted": false,
       "postID": "62fc6d153e274644c9266ffd",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 0
+      },
       "sourceLink": null,
       "spam": false,
       "statusChangeID": "65ba6cb0fc8a7e63c8ef60ad",
@@ -340,7 +342,7 @@
       "postID": "62fc6d153e274644c9266ffd",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -422,20 +424,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 102,
+  "maxScore": 103,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/62fc6d153e274644c9266ffd/1546786442.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 102,
+  "score": 103,
   "sourceFeatureExtractionItem": null,
   "status": "interested",
   "statusChanged": "2026-08-24T11:41:46.264Z",
   "subCategoryID": null,
   "title": "Expose \"allow portals\" to udon",
-  "trendingScore": 2963.9821676065576,
+  "trendingScore": 2964.1198577034997,
   "urlName": "expose-allow-portals-to-udon",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -447,6 +449,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6ac77d1cb987445a69f52fb8",
+      "alias": "Experienced Reptile",
+      "aliasID": "6ac77d1db987445a69f52fbc",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b22c3a9c3e0ab369a5f25abc0ef1e9c5.png",
+      "companies": [],
+      "name": "artur_119_vr",
+      "urlName": null,
+      "voteID": "6ac78023b987445a69f54106"
+    },
     {
       "_id": "65fa77b9ab14b46952dc1993",
       "alias": "Immediate Marlin",
