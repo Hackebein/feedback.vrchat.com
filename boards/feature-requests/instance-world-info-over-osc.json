@@ -2,9 +2,10 @@
   "_id": "6ac68b74329105dbb419229f",
   "aiCategories": [
     "loc.in-world",
-    "client.osc"
+    "client.osc",
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-10-08T00:05:09.717335Z",
+  "aiTaggedAt": "2026-10-08T09:00:30.995561Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66b233a72f5b55a89c628a61",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -72,6 +73,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "What is the use case?\n\nYou can read any arbitrary file from your filesystem and send it over the network too.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac758beb6c4cad2bf8b1db1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66b233a72f5b55a89c628a61",
+        "alias": "Spontaneous Manatee",
+        "aliasID": "66b233a7f66f1f693aed4c8e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/181be6f0cc5cc2e98f1c2e818fb8ebe3.png",
+        "created": "2024-08-06T14:31:03.093Z",
+        "name": "KutayX7",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-08T08:47:58.566Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac6dd7e8df0241b2d71c9ae",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac68b74329105dbb419229f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} What if the user's use case is running VRChat on Meta Quest and run the OSC tool on another device? Installing an extra app on Quest is not simple unless you upload the app to Meta Store. Also, running another app (that at least has to track file changes, and either process them or send them over the network, or both) would consume resources and Quest is very limited in that matter. And also, there's no guarantee that the log format or API won't change.\n\nBtw I'm working on an OSC avatar scaling tool and having these over OSC would be very convenient to implement some (niche) features. I think other OSC tool creators could find some uses too.",
       "viewerReactions": null,
       "voteID": null
     }
