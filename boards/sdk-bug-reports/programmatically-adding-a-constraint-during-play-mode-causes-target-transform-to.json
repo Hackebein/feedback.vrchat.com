@@ -235,7 +235,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{63c9760ef519ef0b8ce99165|full_name} Sorry but I'm still a little confused, wouldn't an editor tool like this only need to run in edit mode? Entering play mode causes changes to the scene to be lost once you exit play mode.\n\nIf by \"play mode build\" you're referring to making builds of avatars from play mode like how it worked in older SDKs, please note that this approach is now deprecated and no longer officially supported. Users are expected to make avatar builds via the SDK control panel in edit mode instead.",
+      "value": "@{63c9760ef519ef0b8ce99165|full_name} Sorry but I'm still a little confused, wouldn't an editor tool like this only need to run in edit mode? Entering play mode causes changes to the scene to be lost once you exit play mode.\n\nIf by \"play mode build\" you're referring to making builds of avatars from play mode like how it worked in older SDKs, please note that this approach is now deprecated and no longer officially supported. Users are expected to make avatar builds via the SDK control panel in edit mode instead.\n\nYou can implement the `IVRCSDKPreprocessAvatarCallback` interface if you want to inject your own logic into the build process of an avatar. This interface receives the avatar that is being prepared for upload, not the original instance of it in the scene, which supports making non-destructive changes.",
       "viewerReactions": null,
       "voteID": null
     }
