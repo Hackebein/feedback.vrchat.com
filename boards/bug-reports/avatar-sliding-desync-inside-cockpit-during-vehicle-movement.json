@@ -2,11 +2,10 @@
   "_id": "6969b584fc0ddf742560ac15",
   "aiCategories": [
     "loc.in-world",
-    "loc.pc-client",
-    "platforms.pc.desktop",
-    "avatars.fbt"
+    "worlds.travel",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-06-10T15:34:12.892588Z",
+  "aiTaggedAt": "2026-10-08T21:28:21.548588Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69699a23f85d59c66df3fa2a",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -162,6 +161,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I've noticed this too and it's driving me nuts! It's been an issue since December of last year as far as I can tell.\n\nI don't expect them to do anything about the jitter but the whole head moving around thing is very obnoxious and it gets so bad sometimes that my head either goes into the front of the cockpit, out the side of the plane, or into the seat.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac807de2d5ff873b6a47519",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6ac8073cb987445a69f9051e",
+        "alias": "Dahlia Jaguar",
+        "aliasID": "6ac8073cb987445a69f90523",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a445caf5baeaacf56ecdd0ec72f8d906.png",
+        "created": "2026-10-08T21:12:28.190Z",
+        "name": "Steph1965",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-08T21:15:10.212Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "698172d4b278627ca73bd9e9",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6969b584fc0ddf742560ac15",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I'm seeing the same issue, but with horses instead of vehicles.\n\nMy worlds have rideable horses: the player sits in a VRC Station that is moved by an Udon script as the horse walks and runs. Until recently this worked fine. Now, the longer the horse travels, the further BEHIND the horse the seated player appears. At the moment of sitting the position is normal; the offset grows with the distance travelled. My friends see the same thing when they ride.\n\nWhat makes me think this is on VRChat's side and not in my worlds:\n\n- It happens in several of my own worlds that I have not modified since they worked correctly.\n\n- It also happens in another creator's world with rideable horses that was working well before.\n\n- The station setup is simple: VRC Station, Seated checked, Player Mobility set to Immobilize For Vehicle, and a Station Enter Player Location transform.\n\nThis looks like the same behaviour described in this report (seated avatar drifting out of position while the station moves away from its starting point), so I'm adding horses as another affected case.\n\nPC (desktop and VR). Happy to provide a world link or test it with the team if that helps.\n\nThanks!",
       "viewerReactions": null,
       "voteID": null
     }
