@@ -3,10 +3,10 @@
   "_id": "6623dc94826e3c85e9d4208a",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.cross-platform",
+    "platforms.pc.desktop",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-08T15:56:27.326619Z",
+  "aiTaggedAt": "2026-10-08T21:15:16.753921Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "608bb58ed6b3fa1a4b34528b",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -319,6 +319,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name}\n\nI apologize for the concern caused.\n\nI just tested it and found an issue with the file path specified in the `config.json` file I created.\n\nBecause I was unaware of the formatting rules, I had copy-pasted the standard Windows path—specifying it as `D:\\VRCcache`—which caused the cache folder change to be ineffective.\n\n(This text was translated using Google Translate.)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac80744cb427515840aa209",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5ce09c4ff1ef661188867ab5",
+        "alias": "Probable Elk",
+        "aliasID": "65c2756eed6eefce4c9639c6",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d648d8f5b1bb88f28673005cf286483f.png",
+        "created": "2019-05-18T23:59:11.468Z",
+        "name": "Tony_Lewis",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-08T21:12:36.940Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6a74cea77f799470a2c2d508",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6623dc94826e3c85e9d4208a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name}As requested, open new canny for you.\n\n(more likely got missed but still)\n\nhttps://feedback.vrchat.com/bug-reports/p/1920-cache-directory-does-not-store-texturediskcache-windowsplayer-to-the-config",
       "viewerReactions": null,
       "voteID": null
     }
