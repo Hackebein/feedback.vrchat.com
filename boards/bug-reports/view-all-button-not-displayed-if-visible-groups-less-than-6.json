@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "groups",
-    "client.settings"
+    "client.settings",
+    "groups"
   ],
-  "aiTaggedAt": "2026-10-08T11:34:33.867222Z",
+  "aiTaggedAt": "2026-10-08T11:47:29.366053Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "612887d54e42a641c9792881",
@@ -38,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nHidden groups are not displayed in own profile in VRChat client. I verified it by checking my profile on the VRChat website.\n\nReproduction Steps\n\n1. Open Quick Menu\n\n2. Open own profile\n\n3. Select any group\n\n4. Open group settings\n\n5. Change visibility to Hidden\n\n6. Open own profile\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3p1-1920-5a72154dad-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-08_16-04-14.txt](https://api.vrchat.cloud/api/1/file/file_7194f92f-5101-42dd-9cbd-9ee789818152/1/file)",
+  "details": "Description\n\n\"View All\" button in Groups block in own Profile will be not displayed if hide all groups and keep visible less than 6\n\nReproduction Steps\n\n1. Open Quick Menu\n\n2. Open own profile\n\n3. Select any group\n\n4. Open group settings\n\n5. Change visibility to Hidden\n\n6. Repeat steps 2 to 5 until fewer than 6 visible groups remain\n\n7. Open own profile\n\nDetails\n\n- Category: User Interface\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3p1-1920-5a72154dad-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-08_16-04-14.txt](https://api.vrchat.cloud/api/1/file/file_7194f92f-5101-42dd-9cbd-9ee789818152/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,10 +60,10 @@
   "status": "open",
   "statusChanged": "2026-10-08T11:28:26.199Z",
   "subCategoryID": null,
-  "title": "Hidden groups doesn't shows in own profile",
+  "title": "\"View All\" button not displayed if visible groups less than 6",
   "trendingScore": 2963.1671305855034,
-  "updatedBy": null,
-  "urlName": "hidden-groups-doesnt-shows-in-own-profile",
+  "updatedBy": "612887d54e42a641c9792881",
+  "urlName": "view-all-button-not-displayed-if-visible-groups-less-than-6",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
