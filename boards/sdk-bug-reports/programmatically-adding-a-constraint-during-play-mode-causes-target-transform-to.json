@@ -2,9 +2,9 @@
   "_id": "6abae6adc7256c2e7ed018b1",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.dynamics"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-10-08T02:39:33.100575Z",
+  "aiTaggedAt": "2026-10-08T11:21:27.302767Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
@@ -34,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -180,6 +180,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name} It's for an editor tool, adding constraints non-destructively, doing so when a \"play mode build\" is created requires you to workaround the `Awake` target transform latch (if there's a target transform being set) by turning off the object the constraint is added to, adding the constraint and configuring it, then turning it back on, my expectation is that the latching wouldn't happen until the active bool is set (directly or via the activate/zero methods), and/or update the latched target transform under similar conditions or when the `ApplyConfigurationChanges` method is called.\n\nClearer documentation regarding the transform being latched should probably be added too, this tripped me up for a few hours before I figured it out.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac77c0db6c4cad2bf90e6eb",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-08T11:18:37.314Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "63c9760ef519ef0b8ce99165",
+          "alias": "Quince Pike",
+          "aliasID": "65c2bff3ed6eefce4c5e37e4",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/9d9537b5884cfc585578ad7cbde1cb59.png",
+          "created": "2023-01-19T16:55:42.346Z",
+          "name": "Dor․",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac614ba25f7b6e35b70446a",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6abae6adc7256c2e7ed018b1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{63c9760ef519ef0b8ce99165|full_name} Sorry but I'm still a little confused, wouldn't an editor tool like this only need to run in edit mode? Entering play mode causes changes to the scene to be lost once you exit play mode.\n\nIf by \"play mode build\" you're referring to making builds of avatars from play mode like how it worked in older SDKs, please note that this approach is now deprecated and no longer officially supported. Users are expected to make avatar builds via the SDK control panel in edit mode instead.",
       "viewerReactions": null,
       "voteID": null
     }
