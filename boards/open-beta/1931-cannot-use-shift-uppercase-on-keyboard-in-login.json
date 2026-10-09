@@ -1,10 +1,10 @@
 {
-  "_id": "6ac95d739f71f867ac0200a9",
+  "_id": "6ac95e08b2a68ea84418a15f",
   "aiCategories": [
     "loc.login",
-    "account.auth"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-10-09T21:33:08.706084Z",
+  "aiTaggedAt": "2026-10-09T21:36:42.450503Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60ee9e81572cc51ad4e847e6",
@@ -27,68 +27,57 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6317ed8c023c7b5ec9566d28",
-    "created": "2022-09-07T01:02:04.302Z",
-    "name": "Feature Requests",
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
     "parentID": null,
-    "urlName": "feature-requests"
+    "urlName": "bug-report"
   },
-  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "categoryID": "6317f3226fccd444a7af6064",
   "commentCount": 0,
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-10-09T21:32:35.640Z",
+  "created": "2026-10-09T21:35:04.772Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Currently the OTP code input on the login screen just uses the regular keyboard when a numeric keypad exists already.",
+  "details": "0. Log out of VRChat if not already.\n\n1. Launch VRChat in VR.\n\n2. Use Login with Email/Password option.\n\n3. Notice that shift/uppercase cannot be used on the keyboard. The keyboard re-plays the show animation and resets the caps state.\n\nThis makes it currently impossible to type most passwords in VR for login.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6ac95d739f71f867ac02008f",
+  "ideaID": "6ac95e08b2a68ea84418a15e",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-10-09T21:32:35.640Z",
+  "statusChanged": "2026-10-09T21:35:04.772Z",
   "subCategoryID": null,
-  "title": "[1931] OTP Code Should Use Numeric Input Keypad",
-  "trendingScore": 2963.3697449491697,
-  "updatedBy": null,
-  "urlName": "1931-otp-code-should-use-numeric-input-keypad",
+  "title": "[1931] Cannot use Shift/Uppercase on Keyboard in Login",
+  "trendingScore": 2962.96448431763,
+  "updatedBy": "60ee9e81572cc51ad4e847e6",
+  "urlName": "1931-cannot-use-shift-uppercase-on-keyboard-in-login",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
-    {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6ac95dbf6fe99c84f2676d89"
-    },
     {
       "_id": "60ee9e81572cc51ad4e847e6",
       "alias": "Vervain Falcon",
@@ -98,7 +87,7 @@
       "companies": [],
       "name": "BobyStar",
       "urlName": null,
-      "voteID": "6ac95d736fe99c84f2676c9f"
+      "voteID": "6ac95e086fe99c84f2676e2e"
     }
   ]
 }
