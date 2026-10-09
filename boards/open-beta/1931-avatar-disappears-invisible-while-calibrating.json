@@ -1,0 +1,93 @@
+{
+  "_id": "6ac95f9491193806244c72f2",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.fbt"
+  ],
+  "aiTaggedAt": "2026-10-09T21:46:24.128545Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df2c865968ab44bca883ce",
+    "alias": "Whisper pink Fish",
+    "aliasID": "65c2c0bced6eefce4c74c766",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/19215e00f8b7b750761224f0dec38afd.png",
+    "created": "2022-07-25T23:51:34.230Z",
+    "name": "RuneFox237",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df2c865968ab44bca883ce",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-09T21:41:40.100Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "repro steps:\n\n1. While in VR w/ FBT, open menu and hit the Calibrate button\n\n2. Notice that avatar is invisible/unloaded while in calibration state.\n\n3. Avatar returns when calibration is completed.\n\nI tested with many different avatars and they all exhibit this behavior when calibrating.\n\nMy best guess is that this is likely a side effect of the nameplate height fix in this update as that seems to be one of the only avatar specific changes this update and it states that an avatar will remain hidden until initialized and tracking.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ac95f9391193806244c72ef",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-09T21:41:40.100Z",
+  "subCategoryID": null,
+  "title": "[1931] Avatar disappears/invisible while calibrating.",
+  "trendingScore": 2962.9651380362147,
+  "updatedBy": null,
+  "urlName": "1931-avatar-disappears-invisible-while-calibrating",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "62df2c865968ab44bca883ce",
+      "alias": "Whisper pink Fish",
+      "aliasID": "65c2c0bced6eefce4c74c766",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/19215e00f8b7b750761224f0dec38afd.png",
+      "companies": [],
+      "name": "RuneFox237",
+      "urlName": null,
+      "voteID": "6ac95f946fe99c84f2677307"
+    }
+  ]
+}
