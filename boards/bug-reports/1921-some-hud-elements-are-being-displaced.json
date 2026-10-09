@@ -4,7 +4,7 @@
     "loc.hud",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-09T18:07:20.210648Z",
+  "aiTaggedAt": "2026-10-09T18:40:09.739042Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a77d2c7c92bc8aa59b66408",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -86,6 +86,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Steps to reproduce:\n\n1. Enable the large face mirror in the top right corner with F4 key.\n\n2. Press the Esc key to open the main menu, and close it with Esc key again.\n\n3. Switch to the smaller face menu by pressing the F4 key once.\n\n4. Press the Esc key to open the main menu.\n\nIt will stay stuck in the incorrect position after, regardless of the face mirror state.\n\nThis is a new bug in Build `1921`, indeed. Not found in Build `1920`?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac9346287983e7372d50c98",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T18:37:22.836Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6ac92c5f87983e7372d33cf2",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac92716d42f5edf9da5d025",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "`Build 1920` is also affected.",
       "viewerReactions": null,
       "voteID": null
     }
