@@ -1,11 +1,11 @@
 {
   "_id": "6a35d44a4e814b646469d8b1",
   "aiCategories": [
-    "loc.mobile-app",
-    "platforms.mobile.ios",
-    "social.friends"
+    "loc.main-menu",
+    "social.friends",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-06-21T22:37:26.283983Z",
+  "aiTaggedAt": "2026-10-09T16:40:17.963544Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a35be6bf51f79a5dba7c0ab",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -117,6 +117,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Is there more problems popping up about this because I'm also having this problem",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac88523fec869949c4b00ec",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df34e7de46027f957fe34a",
+        "alias": "Chartreuse Bobcat",
+        "aliasID": "6ac88423b987445a690acbf5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/ce4f5ce57dbe542a0a9465a89e914a24.png",
+        "created": "2022-07-26T00:27:19.091Z",
+        "name": "CerbTheTridog",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T06:09:39.555Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a35d44a4e814b646469d8b1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I've had this problem alot. I've actually gone as far as running tcpdump on my computer while sending the request. \n\nWith VRChat debug logging enabled (--enable-sdk-log-levels --enable-debug-gui -log), I can observe an outgoing HTTP POST, but I don't consistently see a corresponding HTTP response status.\n\nDuring troubleshooting, I captured traffic using Wireshark on my Windows 11 PC. The capture showed numerous TCP RST/ACK packets involving HTTPS connections. \n\nSo I saw, in the debug console, the request would go out, but the response returning would be inconsistent, and much of the time the TCP connection would be immediately RST/ack'ed",
       "viewerReactions": null,
       "voteID": null
     }
