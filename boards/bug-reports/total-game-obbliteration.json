@@ -1,24 +1,24 @@
 {
-  "_id": "6ac9712ee6d0c6f03cc6cd6f",
+  "_id": "6ac971a5b2a68ea8441bf1f0",
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "worlds.travel"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-10-09T23:06:30.243866Z",
+  "aiTaggedAt": "2026-10-09T23:06:29.058886Z",
   "aiTaxonomyVersion": 3,
   "author": {
-    "_id": "690fc24314923d0794e535b1",
-    "alias": "Careful Cheetah",
-    "aliasID": "690fc24414923d0794e5493a",
+    "_id": "6ac971a46fe99c84f267bc30",
+    "alias": "Unexpected Woodpecker",
+    "aliasID": "6ac971a46fe99c84f267bc33",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/9917792924da9a62f096da41963bfe4e.png",
-    "created": "2025-11-08T22:20:51.829Z",
-    "name": "Catoklysm",
+    "avatarURL": "https://canny-assets.io/images/b35acfe79b963b1338629cf715a794f4.png",
+    "created": "2026-10-09T22:58:44.708Z",
+    "name": "breezycomet",
     "serviceAccount": false,
     "urlName": null
   },
-  "authorID": "690fc24314923d0794e535b1",
+  "authorID": "6ac971a46fe99c84f267bc30",
   "board": {
     "_id": "58c62f2b3cf8f8367753b2f0",
     "name": "Bug Reports",
@@ -33,7 +33,7 @@
   "commentingDisabled": false,
   "comments": [
     {
-      "_id": "6ac971958430a760539df5dd",
+      "_id": "6ac97209e6d0c6f03cc6f572",
       "aiGenerated": false,
       "author": {
         "_id": "68098a4626271974ef4d2775",
@@ -49,13 +49,13 @@
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-10-09T22:58:29.195Z",
+      "created": "2026-10-09T23:00:25.037Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
       "files": [],
       "imageURLs": [
-        "https://canny-assets.io/images/2bd9788c7d6d385c4bd8597bffed2bcd.png"
+        "https://canny-assets.io/images/d38c2c2e1dcf316d070e2eb74684a2f8.png"
       ],
       "integrationSourceType": null,
       "internal": false,
@@ -66,7 +66,7 @@
       "parentID": null,
       "pinned": false,
       "postDeleted": false,
-      "postID": "6ac9712ee6d0c6f03cc6cd6f",
+      "postID": "6ac971a5b2a68ea8441bf1f0",
       "private": false,
       "reactions": null,
       "restoredAt": null,
@@ -80,67 +80,56 @@
     }
   ],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-10-09T22:56:46.241Z",
+  "created": "2026-10-09T22:58:45.137Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\ni am getting disconnected, sent to the error world and having to restart not just rejoin in any world.\n\nReproduction Steps\n\nplay for a while, why would i need 100 characters, that is simply way too many for this report, ok thanks\n\nDetails\n\n- Category: Performance\n\n- Frequency: Often\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3p2-1921-fd13ba9fec-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-10_00-35-04.txt](https://api.vrchat.cloud/api/1/file/file_b9e44152-990d-463d-aa1f-eb2680a3ff13/1/file)",
+  "details": "Description\n\nso what i did is i cleared all the cashes in debug so local avitar data and when i tryed to boot back up the game it just wouldent load so i try again and it boots but then it gets worse from there none of my freinds in my freinds list would load my ios app freinds wouldent load and my fps was crappy so one hour passes of my restarting my computer openning my game back up it not working my uninstalling the game and reinstalling the game and then after restarting my computer again and reloading vrchat it finally started working again but its still laggy rn and yeah someting teribbly went wrong\n\nReproduction Steps\n\ni dont know how to reproduce this bug and honestly i dont even want to try beacuse i dont want to spend another hour fixing it\n\nDetails\n\n- Category: Other\n\n- Frequency: Once\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3p2-1921-fd13ba9fec-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-09_17-46-05.txt](https://api.vrchat.cloud/api/1/file/file_46656757-cb98-45ec-b01d-b43644c80b49/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6ac9712de6d0c6f03cc6cd54",
+  "ideaID": "6ac971a4b2a68ea8441bf1ef",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-10-09T22:56:46.241Z",
+  "statusChanged": "2026-10-09T22:58:45.137Z",
   "subCategoryID": null,
-  "title": "vrchat, your vibe code is showing",
-  "trendingScore": 2963.3783066802425,
+  "title": "Total game obbliteration",
+  "trendingScore": 2962.972785143523,
   "updatedBy": null,
-  "urlName": "vrchat-your-vibe-code-is-showing",
+  "urlName": "total-game-obbliteration",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
     {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "_id": "6ac971a46fe99c84f267bc30",
+      "alias": "Unexpected Woodpecker",
+      "aliasID": "6ac971a46fe99c84f267bc33",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "avatarURL": "https://canny-assets.io/images/b35acfe79b963b1338629cf715a794f4.png",
       "companies": [],
-      "name": "HackebeinsBot",
+      "name": "breezycomet",
       "urlName": null,
-      "voteID": "6ac972f96fe99c84f267c1a4"
-    },
-    {
-      "_id": "690fc24314923d0794e535b1",
-      "alias": "Careful Cheetah",
-      "aliasID": "690fc24414923d0794e5493a",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/9917792924da9a62f096da41963bfe4e.png",
-      "companies": [],
-      "name": "Catoklysm",
-      "urlName": null,
-      "voteID": "6ac9712e6fe99c84f267ba99"
+      "voteID": "6ac971a56fe99c84f267bc39"
     }
   ]
 }
