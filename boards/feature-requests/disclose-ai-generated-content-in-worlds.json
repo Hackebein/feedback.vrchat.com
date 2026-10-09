@@ -2,9 +2,11 @@
   "__v": 0,
   "_id": "67ceec5467b5627467863f23",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.in-world",
+    "loc.unity-sdk",
+    "worlds.content-gating"
   ],
-  "aiTaggedAt": "2026-10-07T06:02:29.454325Z",
+  "aiTaggedAt": "2026-10-09T01:11:49.984515Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6564cf66a469bf1855a615fa",
@@ -28,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +76,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "To rehash my idea from the contents of another feedback post:\n\nI think there should be an AI Disclosure Checklist (Effectively, a \"Nutrition Label\"), that developers can check when they upload or update a world.\n\nIt'd have categories like:\n\n- Thumbnail\n\n- Artwork (Non-model assets; GFX, photos, etc.)\n\n- Textures (Model assets)\n\n- Models\n\n- Sound\n\n- Code\n\n- Layout (Object positioning & world structure)\n\n- Assets (Non-image assets; UI assets; etc.)\n\nThis would allow developers to disclose which elements involved AI at a basic level.\n\nThe UI for user in VRChat would then have an \"AI Facts\" section in world listings that would list each checked item.\n\nThe idea is that developers who only use AI to *assist* in world creation are not totally penalized by flagging their entire world as AI, and so developers can be encouraged to be forthcoming with what parts they did use AI for.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac8379e7661f77cbcb8b507",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f67899159b0841fe0d3891b",
+        "alias": "Amaranth Llama",
+        "aliasID": "65c26da3ed6eefce4c4d09df",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/869c13776776cafc75422df7e7cbbce7.png",
+        "created": "2020-09-20T16:55:45.186Z",
+        "name": "Patroll",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T00:38:54.504Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67ceec5467b5627467863f23",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "VRChat's response. Read and fill out the survey!\n\nhttps://ask.vrchat.com/t/regarding-ai-usage-on-vrchat/49058",
       "viewerReactions": null,
       "voteID": null
     }
