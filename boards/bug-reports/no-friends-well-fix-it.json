@@ -1,23 +1,24 @@
 {
-  "_id": "6ac96ab01e5ae3d184b258a1",
+  "_id": "6ac96cfd9f71f867ac05002d",
   "aiCategories": [
     "loc.standalone-vr",
-    "platforms.standalone-vr.quest"
+    "platforms.standalone-vr.quest",
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-10-09T22:37:18.164992Z",
+  "aiTaggedAt": "2026-10-09T22:43:35.581730Z",
   "aiTaxonomyVersion": 3,
   "author": {
-    "_id": "6ac96ab06fe99c84f267a0f1",
-    "alias": "Opposite Shark",
-    "aliasID": "6ac96ab06fe99c84f267a0f4",
+    "_id": "6ac96cfd6fe99c84f267ab32",
+    "alias": "Spontaneous Swordfish",
+    "aliasID": "6ac96cfd6fe99c84f267ab35",
     "anonymized": false,
     "avatarURL": null,
-    "created": "2026-10-09T22:29:04.244Z",
-    "name": "༒_spade_༒",
+    "created": "2026-10-09T22:38:53.210Z",
+    "name": "cuts_goibert",
     "serviceAccount": false,
     "urlName": null
   },
-  "authorID": "6ac96ab06fe99c84f267a0f1",
+  "authorID": "6ac96cfd6fe99c84f267ab32",
   "board": {
     "_id": "58c62f2b3cf8f8367753b2f0",
     "name": "Bug Reports",
@@ -32,7 +33,7 @@
   "commentingDisabled": false,
   "comments": [
     {
-      "_id": "6ac96c758c758efec39add07",
+      "_id": "6ac96d139f71f867ac05038d",
       "aiGenerated": false,
       "author": {
         "_id": "68098a4626271974ef4d2775",
@@ -48,13 +49,13 @@
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-10-09T22:36:37.933Z",
+      "created": "2026-10-09T22:39:15.600Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
       "files": [],
       "imageURLs": [
-        "https://canny-assets.io/images/5e984df6b7c5e6c28ad95c5a272bc42f.png"
+        "https://canny-assets.io/images/a355200e4d9aae53d5e59987b2c51ea3.png"
       ],
       "integrationSourceType": null,
       "internal": false,
@@ -65,7 +66,7 @@
       "parentID": null,
       "pinned": false,
       "postDeleted": false,
-      "postID": "6ac96ab01e5ae3d184b258a1",
+      "postID": "6ac96cfd9f71f867ac05002d",
       "private": false,
       "reactions": null,
       "restoredAt": null,
@@ -79,67 +80,56 @@
     }
   ],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-10-09T22:29:04.639Z",
+  "created": "2026-10-09T22:38:53.574Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\ni cant load in all the way and all of my friends are gone and i cant change at all and its just being weird\n\nReproduction Steps\n\nidk really what's wrong with it it just look's like the game crashed and i cant do anything but sit here......\n\nDetails\n\n- Category: Performance\n\n- Frequency: Once\n\n---\n\nplatform: Quest (platform: Android - Quest, store: Oculus, headset: Oculus Quest 2)\n\nrawPlatform: Android\n\nclientVersion: 2026.3.3p2-1921-fd13ba9fec-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report",
+  "details": "Description\n\ni cant see my friends at all except for my discord friends and it happened out nowhere so im confused\n\nReproduction Steps\n\neither useijg the game allot or just not celearing there data for a while and not having enought storage in your headset or pc\n\nDetails\n\n- Category: Other\n\n- Frequency: Once\n\n---\n\nplatform: Quest (platform: Android - Quest, store: Oculus, headset: None)\n\nrawPlatform: Android\n\nclientVersion: 2026.3.3p2-1921-fd13ba9fec-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-09_18-33-26.txt](https://api.vrchat.cloud/api/1/file/file_41b396cb-2bfd-485b-97bb-cb5811a39474/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6ac96ab01e5ae3d184b258a0",
+  "ideaID": "6ac96cfd9f71f867ac05002c",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 1,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 1,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-10-09T22:29:04.639Z",
+  "statusChanged": "2026-10-09T22:38:53.574Z",
   "subCategoryID": null,
-  "title": "i think my vrchat is down...",
-  "trendingScore": 2963.375573805823,
+  "title": "no friends? well fix it",
+  "trendingScore": 2962.970814996367,
   "updatedBy": null,
-  "urlName": "i-think-my-vrchat-is-down",
+  "urlName": "no-friends-well-fix-it",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": false,
-    "moderateEngagement": true,
+    "lowEngagement": true,
+    "moderateEngagement": false,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
     {
-      "_id": "6a5f9e9bd4058d953b392a6f",
-      "alias": "Intimate Otter",
-      "aliasID": "6a5f9e9bd4058d953b392a73",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
-      "companies": [],
-      "name": "HackebeinsBot",
-      "urlName": null,
-      "voteID": "6ac96c956fe99c84f267a77c"
-    },
-    {
-      "_id": "6ac96ab06fe99c84f267a0f1",
-      "alias": "Opposite Shark",
-      "aliasID": "6ac96ab06fe99c84f267a0f4",
+      "_id": "6ac96cfd6fe99c84f267ab32",
+      "alias": "Spontaneous Swordfish",
+      "aliasID": "6ac96cfd6fe99c84f267ab35",
       "anonymized": false,
       "avatarURL": null,
       "companies": [],
-      "name": "༒_spade_༒",
+      "name": "cuts_goibert",
       "urlName": null,
-      "voteID": "6ac96ab06fe99c84f267a0f8"
+      "voteID": "6ac96cfd6fe99c84f267ab3c"
     }
   ]
 }
