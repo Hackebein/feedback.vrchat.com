@@ -4,11 +4,9 @@
     "loc.pc-client",
     "loc.action-menu",
     "loc.quick-menu",
-    "open-beta",
-    "platforms.pc.desktop",
-    "client.controls"
+    "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-10-09T17:50:30.992766Z",
+  "aiTaggedAt": "2026-10-09T23:27:41.434788Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a853ed1523ad161334adf24",
@@ -38,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 19,
+  "commentCount": 20,
   "commentingDisabled": false,
   "comments": [
     {
@@ -841,6 +839,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "[VRChat 2026.3.3p2](https://docs.vrchat.com/docs/vrchat-202633p2), October95 (sic!) - Build 1921 - Live:\n\n> Fixed an issue with mouse clicks being doubled up on some systems.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac974921e5ae3d184b39a5d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a6393c412d9cf97626b6130",
+        "alias": "Worthy Goose",
+        "aliasID": "6a6393c412d9cf97626b6133",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6cce624093767eec0be939bceb779900.png",
+        "created": "2026-07-24T16:33:08.121Z",
+        "name": "Dragomir_03",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T23:11:14.269Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6ac6850fe6b5481bf6e81501",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab873d8b29f3e20b93aded1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I would like to state that, as of the current build -that being 1921 as of writing this- the bug which I described is currently still present for me. I do not believe that it is related to the double-clicking bug that this new patch has fixed.",
       "viewerReactions": null,
       "voteID": null
     }
