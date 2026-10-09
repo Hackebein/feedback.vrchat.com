@@ -2,11 +2,10 @@
   "_id": "68e5d6aede29d7f242949dc0",
   "aiCategories": [
     "loc.unity-sdk",
-    "loc.website",
     "sdk.vrcsdk",
-    "web.worlds"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-06-13T17:39:03.124794Z",
+  "aiTaggedAt": "2026-10-09T04:49:53.261112Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61665e3e7448d57ed9eb49da",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -208,6 +207,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "This template on the wiki is the kind of safe zone overlay that'd be helpful. https://wiki.vrchat.com/wiki/Guides:World_thumbnails#World_Thumbnail_template",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac831454fa76a62c8212b75",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67a0ed8d6e7354cc8f8c7acd",
+        "alias": "Cautious Minnow",
+        "aliasID": "67a0ed8eafacf378f12ca236",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/07de2fe8faeb1b2a92314be3d653e970.png",
+        "created": "2025-02-03T16:23:41.681Z",
+        "name": "Uzer Tekton",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T00:11:49.047Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "68e5d6aede29d7f242949dc0",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I agree, it is just poor design / art direction to force one image to fit so many different aspect ratios. Make them all the same! Semiotically they all do the same thing, they should all be the same.\n\n\"Thumbnails\" \"portals\" having shapes of \"4:3\" \"tall oval shape\" are all just lazy designs, literally they are the most generic archetypal shapes for each of the uses, but they are clearly decided separately and in isolation and without considering how they work altogether. There is seemingly a lack of consideration of creating a coherent visual language or user experience.\n\nRedesign the whole system from ground up. E.g. make the oval shape a distinct symbol for \"Worlds\", and then use the same shape as portals, thumbnails, loading image, all sharing the same shape and same visual language.\n\nMaybe make them all square shaped.",
       "viewerReactions": null,
       "voteID": null
     }
