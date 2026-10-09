@@ -4,7 +4,7 @@
     "loc.in-world",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-10-09T08:00:38.360881Z",
+  "aiTaggedAt": "2026-10-09T08:12:38.369498Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60f98aa7307d0128939e1cc2",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "commentingDisabled": false,
   "comments": [
     {
@@ -420,6 +420,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name} Does that mean to collide with players and the world, you'd need two vrcraycasts? My main concern is users turning on \"collide with triggers\" to \"fix\" it colliding with players, and inadvertently making it collide with random triggers in worlds they didn't test with.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac8a004fec869949c4e3a9a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T08:04:20.711Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5fa08ddb2644fb4c5a3dfe75",
+          "alias": "Toffee Coyote",
+          "aliasID": "65c2824ced6eefce4c9ed424",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/5c8cf7e14be4a40152eaccd5b0521080.png",
+          "created": "2020-11-02T22:53:15.373Z",
+          "name": "SenkyDragon",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac68c93d2ebf25d86f56e42",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69e50504b4845c5785748995",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5fa08ddb2644fb4c5a3dfe75|full_name} If you don't want to hit triggers in the world, then yes, you would need two components. Again, this is due to player colliders being triggers, which must remain the case for compatibility reasons, and creators will have the freedom to choose not to hit triggers.\n\nIf you're implying we should fire two separate rays from the same component to deal with the Player layer specifically, we're avoiding doing that because it would invisibly increase the cost of the component when this layer is enabled in the collision mask. Having two components makes the increased performance cost visible to the avatar creator.",
       "viewerReactions": null,
       "voteID": null
     }
