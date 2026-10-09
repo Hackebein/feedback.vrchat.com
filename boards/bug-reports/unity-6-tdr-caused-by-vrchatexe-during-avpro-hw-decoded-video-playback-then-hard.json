@@ -3,10 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.desktop",
-    "worlds.video",
-    "client.camera"
+    "client.settings",
+    "worlds.video"
   ],
-  "aiTaggedAt": "2026-10-07T05:02:46.997606Z",
+  "aiTaggedAt": "2026-10-09T23:40:49.762549Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67d26e42936ec52899fc31e1",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -118,6 +118,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Troubleshooting already done (to save a round-trip):\n\nHardware / system\n\n- No overclock (GPU/CPU/RAM at stock), GPU temps < 70°C under load\n\n- OCCT VRAM test: 0 errors\n\n- Windows WHEA errors: 0\n\n- No BSODs related to this issue\n\nDrivers\n\n- Reproduced on NVIDIA 610.74 and 610.88 (clean install with DDU)\n\n- 616.92 caused additional TDRs in other apps, so I rolled back to 610.88\n\n- TdrDelay is at the Windows default (I briefly tested 10 s; the TDR still occurred, so the GPU work was genuinely hung, not just slow)\n\nIsolation\n\n- Happens in both VR (Quest 3 via Virtual Desktop) and desktop (--no-vr)\n\n- Different worlds, different own avatars, different instance members each time\n\n- Crypto miner / other GPU-heavy apps were NOT running in the VRChat-attributed cases (confirmed from the GPU process list in the WATCHDOG dumps)\n\n- Other D3D apps (osu!lazer) only failed as collateral when VRChat caused the TDR\n\n- No VRChat-attributed TDR during the Unity 6000.0.60 era of the unity-6 branch (June to early September)\n\nIn progress\n\n- Running with --disable-hw-video-decoding since <10/04>. No TDR/crash so far, but playtime has been limited, so this is not conclusive yet. Will update.\n\nHappy to run any specific test or provide more dumps.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac97997fec869949c7ac285",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67d26e42936ec52899fc31e1",
+        "alias": "Joyous Eagle",
+        "aliasID": "67d26e42b324a96209300338",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b1c46bda4fdc6dbafe35a0d2e427dc20.png",
+        "created": "2025-03-13T05:33:54.192Z",
+        "name": "fuku_2019",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T23:32:39.322Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6ac198f570786cf7198d5c00",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac0ed67846ce930177e1793",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Update (2026-10-10)\n\n- OCCT 3D Adaptive (Variable and Switch modes) and OCCT VRAM test: 0 errors. No WHEA errors. Hardware failure seems unlikely.\n\n- TDR severity depends on whether VRChat is running:\n\n  - 10/09 TDR (guilty: msedgewebview2), VRChat NOT running: single reset, everything recovered.\n\n  - 10/10 TDR (guilty: msedgewebview2), VRChat running: 11 consecutive TDR events including \"Restarting TDR\"; VRChat crashed and dwm.exe crashed.\n\n  So when VRChat (Unity 6) is running, device-removed recovery escalates instead of completing.\n\n- Next: testing NVIDIA 596.49 (pre-R610) to see whether TDR frequency changes.",
       "viewerReactions": null,
       "voteID": null
     }
