@@ -4,7 +4,7 @@
     "loc.standalone-vr",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-10-07T06:22:47.170337Z",
+  "aiTaggedAt": "2026-10-09T10:31:48.229194Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "608c3912f10152388b7ad184",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -179,6 +179,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{608c3912f10152388b7ad184|full_name} It was previously possible to change this in the controller configurations within Steam itself, but this no longer works since the update that changed the trigger sensitivity.\n\nI was already thinking it was just a me problem with the trigger xD",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ac8bf23b2a68ea844f55cc5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "641bc32cdfe80f45f42210ee",
+        "alias": "Lime Butterfly",
+        "aliasID": "6608e5e9e5d26962aaf47db9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c8e860b05eb00933e0795dc4cf65b050.png",
+        "created": "2023-03-23T03:10:36.134Z",
+        "name": "Shiftle",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-09T10:17:07.963Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac115aa0959d7d173818f0b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "A solution to this issue I found out was to go to vr controller settings and changed triggerpressed setting from click to default.",
       "viewerReactions": null,
       "voteID": null
     }
