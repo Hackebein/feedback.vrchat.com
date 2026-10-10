@@ -2,9 +2,9 @@
   "_id": "6aca0ae7c3c7c14b45a13f18",
   "aiCategories": [
     "loc.creator-companion",
-    "client.settings"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-10-10T10:50:53.415016Z",
+  "aiTaggedAt": "2026-10-10T11:09:02.968211Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ae243864dc68c67fe796424",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When starting a project with VCC, the \"Open Project\"  button is replaced with \"Bring To Front\".\n\nThis function is there to activate an already running project, but whenever unity has an issue starting the project (like its opening \"unity hub\" instead), ot it crashes for some reasons, it will keep displaying \"Bring to Front\" even though theres nothing there.\n\nIt would be nice to have a option to force open a project (maybe clicking the 3 dots, or rightclicking the bring to front button?) \n\nAt the moment the only work-around is to kill VCC and start it again, which we shouldn't have to.",
+  "details": "When starting a project with VCC, the \"Open Project\"  button is replaced with \"Opening...\" or \"Bring To Front\".\n\nThis function is there to activate an already running project, but whenever unity has an issue starting the project (like its opening \"unity hub\" instead), ot it crashes for some reasons, it will keep displaying \"Bring to Front\" even though theres nothing there.\n\nIt would be nice to have a option to force open a project (maybe clicking the 3 dots, or rightclicking the bring to front button?) \n\nAt the moment the only work-around is to kill VCC and start it again, which we shouldn't have to.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -44,7 +44,8 @@
   "files": [],
   "ideaID": "6aca0ae7c3c7c14b45a13f17",
   "imageURLs": [
-    "https://canny-assets.io/images/feb3d83d1543db320b5986ff2abb215b.png"
+    "https://canny-assets.io/images/feb3d83d1543db320b5986ff2abb215b.png",
+    "https://canny-assets.io/images/a0937d41691fe09faa2d1c54e3ba87d7.png"
   ],
   "linkedEntry": null,
   "loading": false,

@@ -1,11 +1,11 @@
 {
   "_id": "6aca1a124f0d7a0329fd732b",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.upload-performance",
-    "web.profiles"
+    "loc.quick-menu",
+    "loc.hud",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-10-10T11:02:25.126767Z",
+  "aiTaggedAt": "2026-10-10T11:09:02.967045Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -37,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "In the attached videos (which I had to split into two due to Canny's 8 MB filesize limitation), I switch my profile's `bannerType` to `avatarBanner` and switch avatar immediately after. Sometimes this causes the avatar to revert back to the previous avatar immediately.\n\nThe videos first had two failed attempts, then a successful bug replication on the third attempt in the second video where the notification to change avatars happens twice.\n\nSteps to reproduce:\n\n1. Go to your profile, Edit Profile, Change Banner, set to a solid color, apply, save.\n\n2. Edit Profile, Change Banner, switch avatar banner, and in quick succession select an avatar from the right wing menu and press the Esc key.\n\nThis is not reproducible very consistently, but this should be relatively easy to reproduce with a few attempts.\n\nExpected result: Changing the profile banner should not revert the avatar worn.\n\nActual result: Sometimes changing the banner type reverts to the previous avatar worn, immediately after switching avatars. Sometimes you'll see your avatar change to the new avatar for a brief moment, before it reverts back to your previous one. Sometimes it'll just give a notification that your avatar was changed twice and you won't see a change.",
+  "details": "In the attached videos (which I had to split into two due to Canny's 8 MB filesize limitation), I switch my profile's `bannerType` to `avatarBanner` and switch avatar immediately after. Sometimes this causes the avatar to revert back to the previous avatar immediately.\n\nThe videos first had two failed attempts, then a successful bug replication on the third attempt in the second video where the notification to change avatars happens twice.\n\nSteps to reproduce:\n\n1. Go to your profile, Edit Profile, Change Banner, set to a solid color, apply, save.\n\n2. Edit Profile, Change Banner, switch avatar banner, and in quick succession select another avatar from a wing menu and press the Esc key.\n\nThis is not reproducible very consistently, but this should be relatively easy to reproduce with a few attempts.\n\nExpected result: Changing the profile banner should not revert the avatar worn.\n\nActual result: Sometimes changing the banner type reverts to the previous avatar worn, immediately after switching avatars. Sometimes you'll see your avatar change to the new avatar for a brief moment, before it reverts back to your previous one. Sometimes it'll just give a notification that your avatar was changed twice and you won't see a change.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -67,32 +67,43 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-10T10:57:22.166Z",
   "subCategoryID": null,
   "title": "Changing profile bannerType can cause avatar changes to sometimes revert back to the previously used avatar immediately after switching",
-  "trendingScore": 2963.044076638232,
+  "trendingScore": 2963.449753869142,
   "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "changing-profile-bannertype-can-cause-avatar-changes-to-sometimes-revert-back-to",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6aca1b926fe99c84f29b3b63"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
