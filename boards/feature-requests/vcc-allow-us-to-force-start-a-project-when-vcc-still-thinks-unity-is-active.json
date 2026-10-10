@@ -4,7 +4,7 @@
     "loc.creator-companion",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-10T09:57:34.104790Z",
+  "aiTaggedAt": "2026-10-10T10:50:53.415016Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ae243864dc68c67fe796424",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When starting a project with VCC, the Open Project\"  button is replaced with \"Bring To Front\".\n\nThis function is there to activate an already running project, but whenever unity has an issue starting the project (like its opening \"unity hub\" instead), ot it crashes for some reasons, it will keep displaying \"Bring to Front\" even though theres nothing there.\n\nIt would be nice to have a option to force open a project (maybe clicking the 3 dots, or rightclicking the bring to front button?) \n\nAt the moment the only work-around is to kill VCC and start it again, which we shouldn't have to.",
+  "details": "When starting a project with VCC, the \"Open Project\"  button is replaced with \"Bring To Front\".\n\nThis function is there to activate an already running project, but whenever unity has an issue starting the project (like its opening \"unity hub\" instead), ot it crashes for some reasons, it will keep displaying \"Bring to Front\" even though theres nothing there.\n\nIt would be nice to have a option to force open a project (maybe clicking the 3 dots, or rightclicking the bring to front button?) \n\nAt the moment the only work-around is to kill VCC and start it again, which we shouldn't have to.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -62,7 +62,7 @@
   "subCategoryID": null,
   "title": "VCC: Allow us to force start a project when VCC still thinks unity is active.",
   "trendingScore": 2963.73100453758,
-  "updatedBy": null,
+  "updatedBy": "5ae243864dc68c67fe796424",
   "urlName": "vcc-allow-us-to-force-start-a-project-when-vcc-still-thinks-unity-is-active",
   "viewerIsAuthor": false,
   "viewerVote": 0,
