@@ -1,0 +1,108 @@
+{
+  "_id": "6aca1a124f0d7a0329fd732b",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.upload-performance",
+    "web.profiles"
+  ],
+  "aiTaggedAt": "2026-10-10T11:02:25.126767Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-10T10:57:22.166Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In the attached videos (which I had to split into two due to Canny's 8 MB filesize limitation), I switch my profile's `bannerType` to `avatarBanner` and switch avatar immediately after. Sometimes this causes the avatar to revert back to the previous avatar immediately.\n\nThe videos first had two failed attempts, then a successful bug replication on the third attempt in the second video where the notification to change avatars happens twice.\n\nSteps to reproduce:\n\n1. Go to your profile, Edit Profile, Change Banner, set to a solid color, apply, save.\n\n2. Edit Profile, Change Banner, switch avatar banner, and in quick succession select an avatar from the right wing menu and press the Esc key.\n\nThis is not reproducible very consistently, but this should be relatively easy to reproduce with a few attempts.\n\nExpected result: Changing the profile banner should not revert the avatar worn.\n\nActual result: Sometimes changing the banner type reverts to the previous avatar worn, immediately after switching avatars. Sometimes you'll see your avatar change to the new avatar for a brief moment, before it reverts back to your previous one. Sometimes it'll just give a notification that your avatar was changed twice and you won't see a change.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/710c337c9a61eb67c09c017c3dd59bdf.txt",
+    "https://canny-assets.io/files/cd0fae818ce0b7b8e9f4870754161a55.mp4",
+    "https://canny-assets.io/files/df4c395084d7dfb58854952c0d19858f.mp4"
+  ],
+  "files": [
+    {
+      "mimeType": "text/plain",
+      "name": "output_log_2026-10-10_10-37-48",
+      "url": "https://canny-assets.io/files/710c337c9a61eb67c09c017c3dd59bdf.txt"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-10-10 10-40-59 (1)-001",
+      "url": "https://canny-assets.io/files/cd0fae818ce0b7b8e9f4870754161a55.mp4"
+    },
+    {
+      "mimeType": "video/mp4",
+      "name": "2026-10-10 10-40-59 (1)-002",
+      "url": "https://canny-assets.io/files/df4c395084d7dfb58854952c0d19858f.mp4"
+    }
+  ],
+  "ideaID": "6aca1a114f0d7a0329fd732a",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-10T10:57:22.166Z",
+  "subCategoryID": null,
+  "title": "Changing profile bannerType can cause avatar changes to sometimes revert back to the previously used avatar immediately after switching",
+  "trendingScore": 2963.044076638232,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "changing-profile-bannertype-can-cause-avatar-changes-to-sometimes-revert-back-to",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6aca1a126fe99c84f29b38b9"
+    }
+  ]
+}
