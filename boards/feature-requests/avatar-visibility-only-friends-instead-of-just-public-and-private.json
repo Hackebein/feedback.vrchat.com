@@ -852,7 +852,7 @@
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -1057,7 +1057,9 @@
       "postDeleted": false,
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -1102,7 +1104,7 @@
       "postID": "6ab18e38d9fbe5f7510c81b7",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -1129,20 +1131,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 255,
+  "maxScore": 256,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ab18e38d9fbe5f7510c81b7/851890501.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 255,
+  "score": 256,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-09-21T20:06:16.599Z",
   "subCategoryID": null,
   "title": "Avatar Visibility \"Only Friends\" instead of just \"Public\" and \"Private\"",
-  "trendingScore": 2966.564841065145,
+  "trendingScore": 2966.5808470614015,
   "updatedBy": null,
   "urlName": "avatar-visibility-only-friends-instead-of-just-public-and-private",
   "viewerIsAuthor": false,
@@ -1155,6 +1157,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "61ae355ee36f8769df4cfbdf",
+      "alias": "Thistle Gerbil",
+      "aliasID": "6a88eaa7523ad161336846a7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d7a074607c389ef39cc9444a3b446bc1.png",
+      "companies": [],
+      "name": "vdsap",
+      "urlName": null,
+      "voteID": "6acae7ec6fe99c84f29ce174"
+    },
     {
       "_id": "61a8fd0da69365248fa16053",
       "alias": "Zesty Loon",
@@ -1336,7 +1349,7 @@
       "alias": "Welcome Tuna",
       "aliasID": "695d958bf85d59c66d2420fe",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2d8e2e5e4b54dfaea3df4de0484e9719.png",
+      "avatarURL": "https://canny-assets.io/images/8e54959f8fae254ab013257de3c6063e.png",
       "companies": [],
       "name": "MochaDrain",
       "urlName": null,
@@ -1501,7 +1514,7 @@
       "alias": "Biological Parrot",
       "aliasID": "6967064af85d59c66da35926",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/188995919319b9b7f0be8f70866def0e.png",
+      "avatarURL": "https://canny-assets.io/images/1b641bbba2d54a73e7ded34a811ad71b.png",
       "companies": [],
       "name": "AnaG0at",
       "urlName": null,
@@ -1693,17 +1706,6 @@
       "name": "IvyBnnuy",
       "urlName": null,
       "voteID": "6ac41e72b987445a69d20aa0"
-    },
-    {
-      "_id": "64ec87b70625ee097d88f97d",
-      "alias": "Deep Cuckoo",
-      "aliasID": "660b4b80e5d26962aa531cda",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7634596c04b21eb77f9cc0e2ebad6b58.png",
-      "companies": [],
-      "name": "Lilith Serene",
-      "urlName": null,
-      "voteID": "6ac41d7eb987445a69d2060c"
     }
   ]
 }
