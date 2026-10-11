@@ -1,10 +1,11 @@
 {
   "_id": "6ac115aa0959d7d173818f0b",
   "aiCategories": [
-    "loc.standalone-vr",
+    "loc.in-world",
+    "loc.quick-menu",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-10-09T10:31:48.229194Z",
+  "aiTaggedAt": "2026-10-11T17:52:03.466576Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "608c3912f10152388b7ad184",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -225,6 +226,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "A solution to this issue I found out was to go to vr controller settings and changed triggerpressed setting from click to default.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6acbcb5b049d0df368464863",
+      "aiGenerated": false,
+      "author": {
+        "_id": "608c3912f10152388b7ad184",
+        "alias": "International orange Rabbit",
+        "aliasID": "65c2c0eaed6eefce4c7a7ec5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f88127fe8d64df707ec177a8a8eb7809.png",
+        "created": "2021-04-30T17:06:26.677Z",
+        "name": "Davilos",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-11T17:46:03.115Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "641bc32cdfe80f45f42210ee",
+          "alias": "Lime Butterfly",
+          "aliasID": "6608e5e9e5d26962aaf47db9",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c8e860b05eb00933e0795dc4cf65b050.png",
+          "created": "2023-03-23T03:10:36.134Z",
+          "name": "Shiftle",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac8bf23b2a68ea844f55cc5",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac115aa0959d7d173818f0b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{641bc32cdfe80f45f42210ee|full_name} The VR controller bindings screen is so abysmal I literally cannot even figure out how to do this",
       "viewerReactions": null,
       "voteID": null
     }
