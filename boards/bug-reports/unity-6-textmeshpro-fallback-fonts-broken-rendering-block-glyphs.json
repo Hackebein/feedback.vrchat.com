@@ -1,0 +1,91 @@
+{
+  "_id": "6acb6174049d0df3683b01f9",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-10-11T10:18:22.432050Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5fb993d6b1ffed6d11673170",
+    "alias": "Precious Firefly",
+    "aliasID": "65c65c73ed6eefce4c190654",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/562c59927392590a285a98f357fd61ff.png",
+    "created": "2020-11-21T22:25:26.204Z",
+    "name": "RiskyKen",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5fb993d6b1ffed6d11673170",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-11T10:14:12.668Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When using a custom Font Asset after the Unity 6 update, missing glyphs (such as Korean characters) no longer correctly utilise fallback fonts. Instead, they render as missing block characters. If the built-in default LiberationSans SDF is used, the fallback mechanism works as intended.\n\nI have tested multiple fallback configurations, none of which resolved the issue:\n\n• Linking LiberationSans SDF explicitly as a fallback inside the custom Font Asset.\n\n• Linking it in the TextMeshPro Project Settings.\n\n• Leaving all fallback fields empty to let VRChat's system handle the fallback behaviour.\n\nAttached Files:\n\n• Image 1 & 2: Expected behaviour before the Unity 6 update (English and Korean glyphs rendering properly).\n\n• Image 3: Current broken behaviour after the update (All non-ASCII text converted into blocks).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6acb6174049d0df3683b01f8",
+  "imageURLs": [
+    "https://canny-assets.io/images/47351ab667bd2a29fe2f149b251b32cc.png",
+    "https://canny-assets.io/images/92795f5125efa7e03c2a69a0079f7521.png",
+    "https://canny-assets.io/images/857a726cbf6a9b1e0bf64e93d6f8491d.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6acb6174049d0df3683b01f9/483044593.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-11T10:14:12.668Z",
+  "subCategoryID": null,
+  "title": "[Unity 6] TextMeshPro Fallback Fonts Broken / Rendering Block Glyphs",
+  "trendingScore": 2963.1826520342306,
+  "updatedBy": null,
+  "urlName": "unity-6-textmeshpro-fallback-fonts-broken-rendering-block-glyphs",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5fb993d6b1ffed6d11673170",
+      "alias": "Precious Firefly",
+      "aliasID": "65c65c73ed6eefce4c190654",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/562c59927392590a285a98f357fd61ff.png",
+      "companies": [],
+      "name": "RiskyKen",
+      "urlName": null,
+      "voteID": "6acb61746fe99c84f29dd457"
+    }
+  ]
+}
