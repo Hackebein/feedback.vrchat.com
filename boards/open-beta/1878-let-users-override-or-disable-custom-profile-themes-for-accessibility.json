@@ -177,7 +177,7 @@
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -239,7 +239,7 @@
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -493,7 +493,7 @@
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -585,7 +585,7 @@
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -630,7 +630,9 @@
       "postDeleted": false,
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -677,7 +679,7 @@
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -725,7 +727,7 @@
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -773,7 +775,7 @@
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -800,20 +802,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 257,
+  "maxScore": 261,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6155c9d586a21e1a176e96/527822014.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 257,
+  "score": 261,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-08-05T22:59:29.493Z",
   "subCategoryID": null,
   "title": "[1878] Let users override or disable custom profile themes for accessibility",
-  "trendingScore": 2962.852267642396,
+  "trendingScore": 2964.344957738697,
   "updatedBy": null,
   "urlName": "1878-let-users-override-or-disable-custom-profile-themes-for-accessibility",
   "viewerIsAuthor": false,
@@ -826,6 +828,50 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "60ee9e81572cc51ad4e847e6",
+      "alias": "Vervain Falcon",
+      "aliasID": "65c291bded6eefce4cf7d1c9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7e1b9afe8615a024e90b3525d7c382eb.png",
+      "companies": [],
+      "name": "BobyStar",
+      "urlName": null,
+      "voteID": "6acd5cf86fe99c84f2a67a3e"
+    },
+    {
+      "_id": "62df356535ad1046aadcffda",
+      "alias": "Psychological Panther",
+      "aliasID": "65f8b723a63714bcb3a8762c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2476737f4f2c5a10f01c86a665ea81e7.png",
+      "companies": [],
+      "name": "Spineblade",
+      "urlName": null,
+      "voteID": "6acd5cb26fe99c84f2a67931"
+    },
+    {
+      "_id": "6401227386828711012caf99",
+      "alias": "Evolutionary Herring",
+      "aliasID": "697fbcb14e32484d29fbb341",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5e8b98d25df37c949fda9b07d6b0cb81.png",
+      "companies": [],
+      "name": "WorkdayPlatypus",
+      "urlName": null,
+      "voteID": "6acd5bf46fe99c84f2a671f1"
+    },
+    {
+      "_id": "619ee7d8b4a7eb64ce6e3fac",
+      "alias": "Olive drab Minnow",
+      "aliasID": "65e0d15ba6e3ea79dd7aaa64",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6663ee3f74ce68419867def9225f1cb9.png",
+      "companies": [],
+      "name": "ChrisFratz",
+      "urlName": null,
+      "voteID": "6acd5bd96fe99c84f2a6717c"
+    },
     {
       "_id": "6219f63f55639e536dc83162",
       "alias": "Imaginative Sloth",
@@ -1331,50 +1377,6 @@
       "name": "Caeoron",
       "urlName": null,
       "voteID": "6a7ddeeac92bc8aa59ee0fc3"
-    },
-    {
-      "_id": "6a7da692c92bc8aa59ebf224",
-      "alias": "Instant Loon",
-      "aliasID": "6a7da692c92bc8aa59ebf228",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2198867bc38209319dd348e15adabf2a.png",
-      "companies": [],
-      "name": "shouyu0627",
-      "urlName": null,
-      "voteID": "6a7da6e2c92bc8aa59ebf3ab"
-    },
-    {
-      "_id": "65ce8b2847b6486f3c597b38",
-      "alias": "Teal Toad",
-      "aliasID": "65ce8b280129d7ae44cb2d7e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d651b230eac624a4a73fe23c57b9dcce.png",
-      "companies": [],
-      "name": "Uploader",
-      "urlName": null,
-      "voteID": "6a7d9022c92bc8aa59eb19c7"
-    },
-    {
-      "_id": "690cf33d4f8511f380042943",
-      "alias": "Cognitive Swallow",
-      "aliasID": "690cf33d4f8511f3800453a5",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/f4ed9a0aef8acf61d539a8b54dead450.png",
-      "companies": [],
-      "name": "․․․Red․․․",
-      "urlName": null,
-      "voteID": "6a7d15e9c92bc8aa59e8993f"
-    },
-    {
-      "_id": "6222d54d302ebc3ca8e3cccf",
-      "alias": "Respectable Llama",
-      "aliasID": "65c2b5a8ed6eefce4c040eee",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d9febd94a7d327bbb674c49397d66e1c.png",
-      "companies": [],
-      "name": "Star-Max",
-      "urlName": null,
-      "voteID": "6a7a70dbc92bc8aa59d450c9"
     }
   ]
 }
