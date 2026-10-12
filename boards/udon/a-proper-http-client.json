@@ -1,0 +1,93 @@
+{
+  "_id": "6acc22f8843e3fd3056358df",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-10-12T00:02:16.387781Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62e0a01e862db044a54664bb",
+    "alias": "Misty rose Koala",
+    "aliasID": "6643b812b9e8e8fe66b576f4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/714b9c6d665719271b1af931e39d5fd2.png",
+    "created": "2022-07-27T02:17:02.556Z",
+    "name": "KitsuneLunae",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62e0a01e862db044a54664bb",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-11T23:59:52.803Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "VRChat is more than a social game. We've been shown that many times, and even more with the recent(ish) launch and popularity explosion of FISH!. This is a community that welcomes dynamic games and activities.\n\nWe already have access to `DownloadString` in Udon, which is a undeniably a great tool for creating Dynamic Experiences. Combined with \"Allow Untrusted URLs\", it has powered popular experiences like \"Geolocator\", among others, for quite a while now.\n\nI believe that API should be extended, providing a proper HTTP Client (including URL interpolation). Being able to dynamically craft URLs and issue POST Requests (with content bodies) would enable creators & technical developers to easily connect to their own backends. This would allow for creator-driven experiences such as global leaderboards, dynamic content, and much more, without creating any extra strain in the VRChat Infrastructure. Furthermore, potentially adding WebSocket capabilities to the client would allow for realtime-intensive games to propagate their information using external infrastructure, reducing or completely removing the strain that they create.\n\nSome may argue that in the sense of content/world moderation, such an API would add an extra attack surface for \"badly intended\" users, however, I would like to state that any I cannot see any form in which this would be riskier than the current API we have. Information like User IP address can already be gathered via DownloadString, and any potentially dangerous hosts can be dynamically blocked via a global blocklist (combine that with a Roslyn analyzer, and creators could even be warned at build-time).",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6acc22f8843e3fd3056358c8",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6acc22f8843e3fd3056358df/1062060113.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-11T23:59:52.804Z",
+  "subCategoryID": null,
+  "title": "A Proper HTTP Client",
+  "trendingScore": 2963.2645636835364,
+  "updatedBy": null,
+  "urlName": "a-proper-http-client",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "62e0a01e862db044a54664bb",
+      "alias": "Misty rose Koala",
+      "aliasID": "6643b812b9e8e8fe66b576f4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/714b9c6d665719271b1af931e39d5fd2.png",
+      "companies": [],
+      "name": "KitsuneLunae",
+      "urlName": null,
+      "voteID": "6acc22f86fe99c84f29f8e52"
+    }
+  ]
+}
