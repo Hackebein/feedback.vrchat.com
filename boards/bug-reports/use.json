@@ -1,11 +1,15 @@
 {
   "_id": "6acc48b44f03e82fcbda4905",
   "aiCategories": [
-    "loc.pc-client",
+    "loc.in-world",
+    "loc.quick-menu",
+    "loc.main-menu",
     "platforms.pc.steam",
-    "avatars.tracking"
+    "platforms.standalone-vr.quest",
+    "open-beta",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-10-12T03:06:17.530929Z",
+  "aiTaggedAt": "2026-10-12T10:36:36.532863Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66f40630062d1c34d9081687",
@@ -29,7 +33,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -66,13 +70,59 @@
       "postDeleted": false,
       "postID": "6acc48b44f03e82fcbda4905",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "(Translate)\n\nDescription\n\nOperating Environment\n\nOpen Beta\n\nQuest 3\n\nVia Virtual Desktop – Wireless connection\n\nSituation\n\nApproximately 20 hours\n\nPreviously, my right hand would not move at all,\n\nso I was unable to open menus etc. using the ‘USE’ gesture,\n\nwhich meant I had to rely on hand tracking or one-handed operation.\n\nQuest behaviour: SteamVR screen? It is possible to display the Quest screen.\n\nIn that state, I have confirmed that the controller is functioning normally.\n\nSteps to Reproduce\n\nWorkaround\n\nNone\n\nSteps to Reproduce\n\nQuest 3\n\n→ Virtual Desktop\n\n→ Wireless connection\n\n→ Launch SteamVR\n\n→ Launch VRChat\n\n→ Play as normal\n\n→ Allow approximately 20 hours to elapse\n\n→ One of the hands becomes locked in the ‘USE’ pose of its own accord\n\nDetails\n\nCategory: Other\n\nFrequency: Occasionally",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6accb286fad15728192c34a4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-12T10:12:22.584Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acc48b44f03e82fcbda4905",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Duplicate of the right hand raycast being missing in general:\n\n- https://feedback.vrchat.com/bug-reports/p/pointer-is-not-showing\n\n- https://feedback.vrchat.com/bug-reports/p/hud-ui-problems-on-quest\n\n- https://feedback.vrchat.com/bug-reports/p/mini-menu-laser-missing\n\n- https://feedback.vrchat.com/bug-reports/p/i-noticed-a-bug-in-my-mini-menu\n\n- https://feedback.vrchat.com/bug-reports/p/qm-raycast-missing-in-one-handed-mode\n\n- https://feedback.vrchat.com/bug-reports/p/right-hand-pointer-bug\n\n- https://feedback.vrchat.com/bug-reports/p/hand-tracking-not-working-properly-with-quick-menu-right-hand-not-interacting\n\n- https://feedback.vrchat.com/bug-reports/p/right-hand-laser-missin-in-menu-with-finger-tracking\n\n- https://feedback.vrchat.com/bug-reports/p/hand-in-the-minimenu\n\n- https://feedback.vrchat.com/bug-reports/p/vrchat-18\n\n- https://feedback.vrchat.com/bug-reports/p/the-launchpad-laser-is-invisible\n\n- https://feedback.vrchat.com/feature-requests/p/forced-to-be-left-handed-when-using-menu-with-fingertracking\n\n- https://feedback.vrchat.com/bug-reports/p/no-pointer-one-handed\n\n- https://feedback.vrchat.com/bug-reports/p/the-no-blue-laser-bug\n\n- https://feedback.vrchat.com/bug-reports/p/no-pointer-in-vrc-menu-one-handed-movement\n\n- https://feedback.vrchat.com/bug-reports/p/mini-menu-invisible-cursor-bug",
       "viewerReactions": null,
       "voteID": null
     }
