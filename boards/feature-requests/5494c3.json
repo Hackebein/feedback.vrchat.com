@@ -66,7 +66,9 @@
       "postDeleted": false,
       "postID": "6acc404f70875364d4d74fb1",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 0
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -92,20 +94,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 154,
+  "maxScore": 160,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 154,
+  "score": 160,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-12T02:05:03.274Z",
   "subCategoryID": null,
   "title": "グループインスタンス内にて投票キックの対象に出来ない権限をロールに付与できる機能の実装",
-  "trendingScore": 2967.6502108449204,
+  "trendingScore": 2967.689066170283,
   "updatedBy": null,
   "urlName": "5494c3",
   "viewerIsAuthor": false,
@@ -118,6 +120,50 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6accb16b6fe99c84f2a154c5",
+      "alias": "Elegant Bear",
+      "aliasID": "6accb16b6fe99c84f2a154cf",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d327cc150167ebc57ffecb7e903688df.png",
+      "companies": [],
+      "name": "ほんのむし",
+      "urlName": null,
+      "voteID": "6accb16f6fe99c84f2a154d4"
+    },
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6accaede6fe99c84f2a14a31"
+    },
+    {
+      "_id": "6accadb66fe99c84f2a1436e",
+      "alias": "Jacinth Sailfish",
+      "aliasID": "6accadb66fe99c84f2a14372",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/16f1a72a4e8d2e24af18d6d22e16ca8d.png",
+      "companies": [],
+      "name": "まゆさき",
+      "urlName": null,
+      "voteID": "6accae576fe99c84f2a14736"
+    },
+    {
+      "_id": "5d0b138fdfdd0a716ff408d7",
+      "alias": "Pink Parrot",
+      "aliasID": "65efbee8a6e3ea79dda67350",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/42bb5e4a3873725d9c4e18521a383afb.png",
+      "companies": [],
+      "name": "p_bright",
+      "urlName": null,
+      "voteID": "6accae3e6fe99c84f2a14665"
+    },
     {
       "_id": "5fa23e498b31a757e0072df7",
       "alias": "Fandango Crocodile",
@@ -623,50 +669,6 @@
       "name": "Kakino_Sora",
       "urlName": null,
       "voteID": "6acc85646fe99c84f2a0a0b0"
-    },
-    {
-      "_id": "6acc84a16fe99c84f2a09f5b",
-      "alias": "Walnut Wombat",
-      "aliasID": "6acc84a16fe99c84f2a09f5f",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/1a4328f07c1e37e4ad5e448bad9e552f.png",
-      "companies": [],
-      "name": "なんじゃろ",
-      "urlName": null,
-      "voteID": "6acc84a56fe99c84f2a09f69"
-    },
-    {
-      "_id": "6512e141fe1dd609a4987a5d",
-      "alias": "Flame Coral",
-      "aliasID": "667576f5d5dd336a20ce1028",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/19dbc8a62f01d7f5f2bb70e384d1a929.png",
-      "companies": [],
-      "name": "Jaguar_kawaii",
-      "urlName": null,
-      "voteID": "6acc83f76fe99c84f2a09ddf"
-    },
-    {
-      "_id": "6117c0bea166ce46bce4ad02",
-      "alias": "Outstanding Reptile",
-      "aliasID": "65cce595ed6eefce4c3e099e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/45fdce993ecf940a24119858b1ab8062.png",
-      "companies": [],
-      "name": "てみいぃ",
-      "urlName": null,
-      "voteID": "6acc83446fe99c84f2a09795"
-    },
-    {
-      "_id": "64d6cad805de745cee21fd77",
-      "alias": "Immediate Basilisk",
-      "aliasID": "66cd91378c4bf668c56b5212",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/23fb0f5ea759d0302c57ebcd692fa871.png",
-      "companies": [],
-      "name": "ばいんど（BIND）",
-      "urlName": null,
-      "voteID": "6acc82206fe99c84f2a08edd"
     }
   ]
 }
