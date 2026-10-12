@@ -66,13 +66,15 @@
       "postDeleted": false,
       "postID": "6acc3fe2fad15728191d020f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "荒らし行為への対策が必要なことは理解していますが、今回の機能追加には少し疑問があります。\n\nまず、VRChatには既に「Users Blocking You」という機能が存在します。グループインスタンスのモデレーション権限を持つユーザーは、Quick Menuの「Here」から自分をブロックしているユーザーを確認でき、該当ユーザーに対してキックなどのモデレーション操作を行うことができます。\n\nつまり、スタッフをブロックしただけで運営側から完全に対処できなくなるわけではありません。グループBANを利用すれば、そのグループが作成するインスタンスへの再参加も防げます。\n\nまた、ブロック機能は荒らし対策だけでなく、ハラスメントや個人的なトラブルから自分を守るための重要な機能でもあります。\n\n例えば、過去にトラブルがあった相手が、たまたま大規模なグループのモデレーターロールを持っていた場合、その人をブロックしているだけでグループのイベント全体に参加できなくなるのでしょうか。\n\n提案の文面どおりであれば、当日そのモデレーターがインスタンスにいなくても、参加制限の対象になる可能性があります。\n\nまた、モデレーターの人数が多いグループほど、意図せず参加できなくなるユーザーも増えると考えられます。\n\n個人の安全を守るためにブロックした相手を、イベントに参加するために解除しなければならない仕組みは、別の問題を生むのではないでしょうか。\n\n既存のモデレーション機能では具体的に何が不足していたのか、まずそこを明確にする必要があると思います。\n\n荒らし行為を防ぐ目的には賛成ですが、個人のブロック機能にまで影響するような制限の追加には慎重であるべきだと考えます。",
+      "value": "荒らし行為への対策が必要なことは理解していますが、既存のモデレーション機能では具体的に何が不足しており、今回の機能追加が必要なのか疑問に思います。\n\nまず、VRChatには既に「あなたをブロックしているユーザー / Users Blocking You」という機能が存在します。グループインスタンスのモデレーション権限を持つユーザーは、Quick Menuの「現在地 / Here」から自分をブロックしているユーザーを確認でき、該当ユーザーに対してキックなどのモデレーション操作を行うことができます。\n\nつまり、スタッフをブロックしただけで運営側から完全に対処できなくなるわけではありません。グループBANを利用すれば、そのグループが作成するインスタンスへの再参加も防げます。\n\nまた、ブロック機能は荒らし対策だけでなく、ハラスメントや個人的なトラブルから自分を守るための重要な機能でもあります。\n\n例えば、過去にトラブルがあった相手が、たまたま大規模なグループのモデレーターロールを持っていた場合、その人をブロックしているだけでグループのイベント全体に参加できなくなるのでしょうか。\n\n提案の文面どおりであれば、当日そのモデレーターがインスタンスにいなくても、参加制限の対象になる可能性があります。\n\n個人の安全を守るためにブロックした相手を、イベントに参加するために解除しなければならない仕組みは、別の問題を生むのではないでしょうか。\n\n荒らし行為を防ぐ目的には賛成ですが、個人のブロック機能にまで影響するような制限の追加には慎重であるべき",
       "viewerReactions": null,
       "voteID": null
     }
@@ -92,20 +94,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 148,
+  "maxScore": 153,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 148,
+  "score": 153,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-12T02:03:14.250Z",
   "subCategoryID": null,
   "title": "モデレーター級のロールを持っている人をブロックしてる場合、該当Groupのインスタンスに入れなくなる機能の実装",
-  "trendingScore": 2967.6159525220723,
+  "trendingScore": 2967.64948207588,
   "updatedBy": null,
   "urlName": "group",
   "viewerIsAuthor": false,
@@ -118,6 +120,83 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5fa23e498b31a757e0072df7",
+      "alias": "Fandango Crocodile",
+      "aliasID": "65d3a0df0129d7ae4493fe78",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d2632eb45aa839347b854c2251be47bd.png",
+      "companies": [],
+      "name": "ナヱジ・ナインG",
+      "urlName": null,
+      "voteID": "6accaca56fe99c84f2a13a30"
+    },
+    {
+      "_id": "5b7e91cbdd7bc8572034ff2d",
+      "alias": "Saffron Impala",
+      "aliasID": "65c2a2d3ed6eefce4c7e37c8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/db979e30058bcb726632adb16718fa55.png",
+      "companies": [],
+      "name": "OOMIYA",
+      "urlName": null,
+      "voteID": "6accac3e6fe99c84f2a1360b"
+    },
+    {
+      "_id": "6accaa8f6fe99c84f2a12c4c",
+      "alias": "Ultramarine Possum",
+      "aliasID": "6accaa8f6fe99c84f2a12c50",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5ada42fcc311c279f04ba02fe0e753bf.png",
+      "companies": [],
+      "name": "もっち子",
+      "urlName": null,
+      "voteID": "6accaa986fe99c84f2a12c62"
+    },
+    {
+      "_id": "69de2510da2ea486f4ced318",
+      "alias": "Shiny Hawk",
+      "aliasID": "69de2510da2ea486f4ced31c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3c9fc135b9d9c5961901871bc1c7789c.png",
+      "companies": [],
+      "name": "yullshul_ユルシュル",
+      "urlName": null,
+      "voteID": "6accaa2b6fe99c84f2a12b08"
+    },
+    {
+      "_id": "65d018994d3f558f84ac318f",
+      "alias": "Olive Mongoose",
+      "aliasID": "65d018990129d7ae4412d39b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4cc3494be060cb003902e1d896d50a22.png",
+      "companies": [],
+      "name": "aruma_98524",
+      "urlName": null,
+      "voteID": "6acca8d56fe99c84f2a1271e"
+    },
+    {
+      "_id": "5f98c86df4451a4eed062c76",
+      "alias": "Charcoal Bee",
+      "aliasID": "65c3e659ed6eefce4cb8adb6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9cd0cc47db0b30d323b8cd8e46f1c536.png",
+      "companies": [],
+      "name": "ほいっぷあいす",
+      "urlName": null,
+      "voteID": "6acca75e6fe99c84f2a12061"
+    },
+    {
+      "_id": "625788372f43056aa6de5988",
+      "alias": "Sepia Bird",
+      "aliasID": "660b246de5d26962aaab2e6c",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb32549472d067619712cdd14aa1caa9.png",
+      "companies": [],
+      "name": "UncleHeavyGear",
+      "urlName": null,
+      "voteID": "6acca6426fe99c84f2a11bb4"
+    },
     {
       "_id": "6acca4026fe99c84f2a114cc",
       "alias": "Busy Swordfish",
@@ -590,83 +669,6 @@
       "name": "わがつまだっち",
       "urlName": null,
       "voteID": "6acc7f996fe99c84f2a08551"
-    },
-    {
-      "_id": "62ecfd9399e0ce68b3a4da13",
-      "alias": "Golden Ladybug",
-      "aliasID": "65c28115ed6eefce4c6d4a92",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/973d80c978375ce35507a5b009aebbba.png",
-      "companies": [],
-      "name": "まかべちゃん",
-      "urlName": null,
-      "voteID": "6acc7f5e6fe99c84f2a0847a"
-    },
-    {
-      "_id": "62e153b4cfa49b44a3addd19",
-      "alias": "Electric violet Jay",
-      "aliasID": "65dd58c00129d7ae440c2b05",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/8b7a1293d55466f640168a143a63667e.png",
-      "companies": [],
-      "name": "Tukumomi",
-      "urlName": null,
-      "voteID": "6acc7de06fe99c84f2a07ffd"
-    },
-    {
-      "_id": "6518e30a8cb0570949efe111",
-      "alias": "Extensive Wolf",
-      "aliasID": "6a0eff455a52cb2df0436ec4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/9084277c48274a521319eb78e17289bb.png",
-      "companies": [],
-      "name": "ら っ し ー",
-      "urlName": null,
-      "voteID": "6acc7dbd6fe99c84f2a07fd9"
-    },
-    {
-      "_id": "6acc7cf76fe99c84f2a07dd5",
-      "alias": "Nursing Chickadee",
-      "aliasID": "6acc7cf76fe99c84f2a07dd9",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/851cf9d79c691433774fccf5925364d9.png",
-      "companies": [],
-      "name": "ハゴロモさん",
-      "urlName": null,
-      "voteID": "6acc7d086fe99c84f2a07e3d"
-    },
-    {
-      "_id": "6acc79df6fe99c84f2a07244",
-      "alias": "Brass Camel",
-      "aliasID": "6acc79df6fe99c84f2a07248",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/9df8bca007cfea619ae64a9413f0dea4.png",
-      "companies": [],
-      "name": "zen96307",
-      "urlName": null,
-      "voteID": "6acc79e66fe99c84f2a0724c"
-    },
-    {
-      "_id": "5d099d8060196d4b4d84a0f3",
-      "alias": "Cheerful Horse",
-      "aliasID": "65d10fab0129d7ae444be507",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e0e4978efc07954ecf7e926078f6d3ca.png",
-      "companies": [],
-      "name": "8morikazuto／やも",
-      "urlName": null,
-      "voteID": "6acc79816fe99c84f2a07198"
-    },
-    {
-      "_id": "64d620b4742aad1326b05ef3",
-      "alias": "Deep taupe Orangutan",
-      "aliasID": "65c26ed9ed6eefce4c85511e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/7498ed2630e40f111583634e9354a1fb.png",
-      "companies": [],
-      "name": "＃かなたん",
-      "urlName": null,
-      "voteID": "6acc785f6fe99c84f2a06f7c"
     }
   ]
 }
