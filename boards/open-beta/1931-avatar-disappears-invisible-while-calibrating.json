@@ -1,12 +1,11 @@
 {
   "_id": "6ac95f9491193806244c72f2",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
+    "loc.in-world",
     "avatars.fbt",
     "open-beta"
   ],
-  "aiTaggedAt": "2026-10-12T08:16:33.318885Z",
+  "aiTaggedAt": "2026-10-13T08:22:58.345648Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df2c865968ab44bca883ce",
@@ -36,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -262,6 +261,41 @@
       "value": "was just wondering if i had messed something up with my vrc again\n\n\"...an avatar will remain hidden until initialized and tracking.\"\n\ni guess that \"and\" was very literal in the coding lmao",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6acde956c3ec685475df6894",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-13T08:18:30.691Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac95f9491193806244c72f2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6acde956c3ec685475df6893",
+      "statusChangeNewStatus": "tracked",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -288,8 +322,8 @@
   "pinnedComment": null,
   "score": 61,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-10-09T21:41:40.100Z",
+  "status": "tracked",
+  "statusChanged": "2026-10-13T08:18:30.611Z",
   "subCategoryID": null,
   "title": "[1931] Avatar disappears/invisible while calibrating.",
   "trendingScore": 2966.564937353808,
