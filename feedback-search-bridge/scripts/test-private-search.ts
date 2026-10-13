@@ -9,6 +9,7 @@ import {
   paginateMergedHits,
   queryTokens,
   relevanceScore,
+  sortHits,
   toStoredPost,
 } from "../src/core/private-search";
 import type { StoredPrivatePost } from "../src/core/private-store";
@@ -201,5 +202,88 @@ const voterAdditional = additionalFacetCounts(
 );
 assert.equal(voterAdditional.voter_name?.Bob, 1);
 assert.equal(voterAdditional.voter_name?.Alice, undefined);
+
+const groupIdsPost = stored({
+  _id: "group-ids",
+  title: "Expose groupIds",
+  details: "The groupIds field is missing from the response",
+  status: "open",
+});
+const groupWordsPost = stored({
+  _id: "group-words",
+  title: "Group lobbies",
+  details: "Filter the lobby by group rank",
+  status: "open",
+});
+const groupIdWordsPost = stored({
+  _id: "group-id-words",
+  title: "Show the group ids",
+  details: "Print group ids on the profile card",
+  status: "open",
+});
+const gropIdsPost = stored({
+  _id: "grop-ids",
+  title: "gropIds typo",
+  details: "Someone wrote gropIds in the notes",
+  status: "open",
+});
+const fullBodyPost = stored({
+  _id: "full-body",
+  title: "Add full body tracking",
+  details: "full body tracking for avatars",
+  status: "open",
+});
+const reversedBodyPost = stored({
+  _id: "reversed-body",
+  title: "Tracking body is full",
+  details: "the body comes before full here",
+  status: "closed",
+});
+const closedPost = stored({
+  _id: "closed-avatar",
+  title: "Closed avatar idea",
+  details: "avatar idea that shipped",
+  status: "closed",
+});
+
+const identifierPosts = [
+  groupIdsPost,
+  groupWordsPost,
+  groupIdWordsPost,
+  gropIdsPost,
+  fullBodyPost,
+  reversedBodyPost,
+  closedPost,
+];
+
+function idsFor(textSearch: string, luceneMode: boolean): string[] {
+  return filterPrivatePosts(identifierPosts, { textSearch }, { luceneMode }).map(
+    (post) => post._id,
+  );
+}
+
+assert.deepEqual(idsFor("groupIds", false).sort(), ["grop-ids", "group-id-words", "group-ids"]);
+assert.equal(idsFor("groupIds", false).includes("group-words"), false);
+const groupIdsRanked = sortHits(
+  [groupWordsPost.payload, gropIdsPost.payload, groupIdWordsPost.payload, groupIdsPost.payload],
+  "relevance",
+  "groupIds",
+);
+assert.equal(groupIdsRanked[0]?._id, "group-ids");
+assert.deepEqual(idsFor("gropIds", false).sort(), ["grop-ids", "group-ids"]);
+assert.deepEqual(idsFor('"full body"', false), ["full-body"]);
+assert.deepEqual(idsFor("status:Open", true), ["group-ids", "group-words", "group-id-words", "grop-ids", "full-body"]);
+assert.deepEqual(idsFor("status:closed", true).sort(), ["closed-avatar", "reversed-body"]);
+assert.deepEqual(idsFor('title:"full body"', true), ["full-body"]);
+assert.deepEqual(idsFor("status:open AND NOT status:closed", true).includes("closed-avatar"), false);
+assert.deepEqual(idsFor("board.urlName:Internal", true).length > 0, true);
+
+const ranked = sortHits(
+  [groupWordsPost.payload, gropIdsPost.payload, groupIdsPost.payload],
+  "relevance",
+  "gropIds",
+);
+assert.equal(ranked[0]?._id, "grop-ids");
+assert.equal(ranked[1]?._id, "group-ids");
 
 console.info("private-search tests passed");

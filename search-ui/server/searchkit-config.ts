@@ -47,6 +47,113 @@ export const textSearchAttributes: SearchAttribute[] = [
   "details",
 ];
 
+/**
+ * Exact identifier hits sit on a constant-score band above every fuzzy hit.
+ * Fuzzy edit distance is 1 only for terms of length >= 5 (`AUTO:5,100` is 0
+ * below 5, 1 until 100) and only against the unstemmed `.exact` subfield.
+ * `AUTO` after the English stemmer is what made `groupIds` (stem `groupid`)
+ * match every post whose stem is `group`.
+ */
+const EXACT_BAND_BOOST = 1000;
+const FUZZY_BAND_BOOST = 5;
+
+function exactFields(attrs: SearchAttribute[]): string[] {
+  return attrs.map((attribute) =>
+    typeof attribute === "string" ? `${attribute}.exact` : `${attribute.field}.exact`,
+  );
+}
+
+/** Pull `"..."` phrases out so plain search can require them in order. */
+export function partitionPlainQuery(query: string): { phrases: string[]; terms: string } {
+  const phrases: string[] = [];
+  let terms = "";
+  let index = 0;
+  while (index < query.length) {
+    const char = query[index] ?? "";
+    if (char !== '"') {
+      terms += char;
+      index += 1;
+      continue;
+    }
+    const end = query.indexOf('"', index + 1);
+    const phrase = (end === -1 ? query.slice(index + 1) : query.slice(index + 1, end)).trim();
+    if (phrase) {
+      phrases.push(phrase);
+    }
+    terms += " ";
+    index = end === -1 ? query.length : end + 1;
+  }
+  return { phrases, terms: terms.replace(/\s+/g, " ").trim() };
+}
+
+function longestTerm(terms: string): number {
+  let longest = 0;
+  for (const term of terms.split(/\s+/)) {
+    if (term.length > longest) {
+      longest = term.length;
+    }
+  }
+  return longest;
+}
+
+function bestFields(
+  query: string,
+  fields: string[],
+  fuzziness: 0 | "AUTO:5,100",
+): ElasticsearchQuery {
+  return {
+    multi_match: {
+      query,
+      fields,
+      type: "best_fields",
+      operator: "and",
+      fuzziness,
+      auto_generate_synonyms_phrase_query: false,
+      ...(fuzziness === 0
+        ? {}
+        : { prefix_length: 1, max_expansions: 50, fuzzy_transpositions: true }),
+    },
+  };
+}
+
+function scoreBand(
+  query: string,
+  fields: string[],
+  fuzziness: 0 | "AUTO:5,100",
+  boost: number,
+): ElasticsearchQuery {
+  return {
+    constant_score: {
+      boost,
+      filter: bestFields(query, fields, fuzziness),
+    },
+  };
+}
+
+function phraseQuery(phrase: string, fields: string[]): ElasticsearchQuery {
+  return {
+    multi_match: {
+      query: phrase,
+      type: "phrase",
+      fields,
+    },
+  };
+}
+
+function termShoulds(terms: string, searchAttributes: SearchAttribute[]): ElasticsearchQuery[] {
+  const primary = fieldsWithBoost(searchAttributes, 1);
+  const phrase = fieldsWithBoost(searchAttributes, 2);
+  const should: ElasticsearchQuery[] = [
+    scoreBand(terms, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
+    phraseQuery(terms, phrase),
+    bestFields(terms, primary, 0),
+  ];
+  if (longestTerm(terms) >= 5) {
+    should.push(scoreBand(terms, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
+  }
+  return should;
+}
+
 export function instantSearchStrictQuery(
   query: string,
   searchAttributes: SearchAttribute[],
@@ -56,49 +163,25 @@ export function instantSearchStrictQuery(
   if (!q) {
     return { match_all: {} };
   }
-  // For very short queries (1 character) we keep behavior conservative: require
-  // the *entire* analyzed query to appear as a phrase so that typing "G" while
-  // searching for "Group" doesn't sweep in every document that happens to
-  // contain a stray bare letter token.
-  const primary = fieldsWithBoost(searchAttributes, 1);
-  const phrase = fieldsWithBoost(searchAttributes, 2);
-  const should: ElasticsearchQuery[] = [
-    {
-      multi_match: {
-        query: q,
-        fields: primary,
-        type: "best_fields",
-        operator: "and",
-        fuzziness: 0,
-        auto_generate_synonyms_phrase_query: false,
-      },
-    },
-    {
-      multi_match: {
-        query: q,
-        type: "phrase",
-        fields: phrase,
-      },
-    },
-  ];
-  if (q.length > 2) {
-    should.push({
-      multi_match: {
-        query: q,
-        fields: fieldsWithBoost(searchAttributes, 0.5),
-        type: "best_fields",
-        operator: "and",
-        fuzziness: "AUTO",
-        prefix_length: 1,
-        max_expansions: 50,
-        auto_generate_synonyms_phrase_query: false,
-      },
-    });
+  const { phrases, terms } = partitionPlainQuery(q);
+  const phraseFields = fieldsWithBoost(searchAttributes, 2);
+  const must: ElasticsearchQuery[] = phrases.map((phrase) => phraseQuery(phrase, phraseFields));
+  const should: ElasticsearchQuery[] = [];
+  if (terms) {
+    const ranked = termShoulds(terms, searchAttributes);
+    if (phrases.length > 0) {
+      must.push({ bool: { should: ranked, minimum_should_match: 1 } });
+    } else {
+      should.push(...ranked);
+    }
+  }
+  if (must.length === 0 && should.length === 0) {
+    return { match_all: {} };
   }
   return {
     bool: {
-      should,
-      minimum_should_match: 1,
+      ...(must.length > 0 ? { must } : {}),
+      ...(should.length > 0 ? { should } : {}),
     },
   };
 }

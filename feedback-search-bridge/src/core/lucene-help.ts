@@ -102,6 +102,7 @@ export const LUCENE_HELP_INTRO = [
   "comments.* and voters.* match if any nested comment/voter satisfies the clause.",
   "Repeating an enum field (status, author, voted by, board, category) ORs those values.",
   "Bare terms search combined title, body, and author name.",
+  "status, board.urlName, and the boolean fields ignore case. +, #, and URLs are matched as written.",
 ];
 
 export const SORT_HELP = [

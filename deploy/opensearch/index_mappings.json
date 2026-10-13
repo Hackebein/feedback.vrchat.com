@@ -7,6 +7,16 @@
     "index.max_result_window": 50000,
     "analysis": {
       "char_filter": {
+        "cplusplus_normalizer": {
+          "type": "pattern_replace",
+          "pattern": "(?i)(?<![A-Za-z0-9_])c\\+\\+",
+          "replacement": "cplusplus"
+        },
+        "csharp_normalizer": {
+          "type": "pattern_replace",
+          "pattern": "(?i)(?<![A-Za-z0-9_])c#",
+          "replacement": "csharp"
+        },
         "vrc_plus_normalizer": {
           "type": "pattern_replace",
           "pattern": "(?i)\\bvrc(hat)?\\s*\\+",
@@ -25,6 +35,17 @@
         "english_stemmer": {
           "type": "stemmer",
           "language": "english"
+        },
+        "identifier_delimiter": {
+          "type": "word_delimiter_graph",
+          "split_on_case_change": true,
+          "split_on_numerics": true,
+          "preserve_original": true,
+          "catenate_words": true,
+          "catenate_numbers": true,
+          "generate_word_parts": true,
+          "generate_number_parts": true,
+          "stem_english_possessive": false
         },
         "feedback_synonyms": {
           "type": "synonym_graph",
@@ -60,14 +81,24 @@
       },
       "analyzer": {
         "text_index": {
-          "char_filter": ["vrc_plus_normalizer"],
+          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
           "tokenizer": "standard",
-          "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "english_stemmer"]
+          "filter": ["identifier_delimiter", "flatten_graph", "lowercase", "english_possessive_stemmer", "english_stop", "english_stemmer"]
         },
         "text_search": {
-          "char_filter": ["vrc_plus_normalizer"],
+          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
           "tokenizer": "standard",
           "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "feedback_synonyms", "english_stemmer"]
+        },
+        "text_exact_index": {
+          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
+          "tokenizer": "standard",
+          "filter": ["identifier_delimiter", "flatten_graph", "lowercase"]
+        },
+        "text_exact_search": {
+          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
+          "tokenizer": "standard",
+          "filter": ["lowercase"]
         }
       }
     }
@@ -79,7 +110,14 @@
       "combined_text": {
         "type": "text",
         "analyzer": "text_index",
-        "search_analyzer": "text_search"
+        "search_analyzer": "text_search",
+        "fields": {
+          "exact": {
+            "type": "text",
+            "analyzer": "text_exact_index",
+            "search_analyzer": "text_exact_search"
+          }
+        }
       },
 
       "aiCategories": {
@@ -100,13 +138,27 @@
         "type": "text",
         "analyzer": "text_index",
         "search_analyzer": "text_search",
-        "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+        "fields": {
+          "keyword": { "type": "keyword", "ignore_above": 512 },
+          "exact": {
+            "type": "text",
+            "analyzer": "text_exact_index",
+            "search_analyzer": "text_exact_search"
+          }
+        }
       },
       "details": {
         "type": "text",
         "analyzer": "text_index",
         "search_analyzer": "text_search",
-        "index_options": "offsets"
+        "index_options": "offsets",
+        "fields": {
+          "exact": {
+            "type": "text",
+            "analyzer": "text_exact_index",
+            "search_analyzer": "text_exact_search"
+          }
+        }
       },
       "urlName": { "type": "keyword", "ignore_above": 512 },
 
@@ -200,7 +252,14 @@
             "type": "text",
             "analyzer": "text_index",
             "search_analyzer": "text_search",
-            "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } }
+            "fields": {
+              "keyword": { "type": "keyword", "ignore_above": 512 },
+              "exact": {
+                "type": "text",
+                "analyzer": "text_exact_index",
+                "search_analyzer": "text_exact_search"
+              }
+            }
           },
           "serviceAccount": { "type": "boolean" },
           "urlName": { "type": "keyword", "ignore_above": 512 }
@@ -317,12 +376,26 @@
           "mergedPostTitle": {
             "type": "text",
             "analyzer": "text_index",
-            "search_analyzer": "text_search"
+            "search_analyzer": "text_search",
+            "fields": {
+              "exact": {
+                "type": "text",
+                "analyzer": "text_exact_index",
+                "search_analyzer": "text_exact_search"
+              }
+            }
           },
           "mergedPostDetails": {
             "type": "text",
             "analyzer": "text_index",
-            "search_analyzer": "text_search"
+            "search_analyzer": "text_search",
+            "fields": {
+              "exact": {
+                "type": "text",
+                "analyzer": "text_exact_index",
+                "search_analyzer": "text_exact_search"
+              }
+            }
           },
           "sourceFeatureExtractionItemID": { "type": "keyword" },
           "sourceLink": { "type": "keyword", "ignore_above": 2048 },
@@ -332,7 +405,14 @@
             "type": "text",
             "analyzer": "text_index",
             "search_analyzer": "text_search",
-            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+            "fields": {
+              "keyword": { "type": "keyword", "ignore_above": 256 },
+              "exact": {
+                "type": "text",
+                "analyzer": "text_exact_index",
+                "search_analyzer": "text_exact_search"
+              }
+            }
           },
           "created": {
             "type": "date",

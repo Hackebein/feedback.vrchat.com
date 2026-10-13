@@ -35,6 +35,7 @@ import type { RefinementListItem } from "instantsearch.js/es/connectors/refineme
 import qs from "qs";
 import historyRouter from "instantsearch.js/es/lib/routers/history";
 import { AttachmentTextView } from "./AttachmentTextView";
+import { FEEDBACK_INDEX, routeParamToSortBy, sortByToRouteParam } from "./searchRoute";
 import { EmbeddedImageView } from "./EmbeddedImageView";
 import {
   filterNestedBoardNodes,
@@ -345,20 +346,7 @@ function AutoNumericRangeInput({ attribute }: { attribute: string }) {
   );
 }
 
-const indexName = "feedback-posts";
-
-const SORT_INDEX_TO_PARAM: Record<string, string> = {
-  [`${indexName}_created_asc`]: "created_asc",
-  [`${indexName}_activity_desc`]: "activity_desc",
-  [`${indexName}_activity_asc`]: "activity_asc",
-  [`${indexName}_score_desc`]: "score_desc",
-  [`${indexName}_score_asc`]: "score_asc",
-  [`${indexName}_relevance_desc`]: "relevance_desc",
-};
-
-const SORT_PARAM_TO_INDEX: Record<string, string> = Object.fromEntries(
-  Object.entries(SORT_INDEX_TO_PARAM).map(([idx, param]) => [param, idx]),
-);
+const indexName = FEEDBACK_INDEX;
 
 type AttrEntry = { urlKey: string; attr: string };
 
@@ -411,9 +399,8 @@ function makeFeedbackStateMapping(
       const route: RouteState = {};
       if (idx.query) route.q = idx.query;
       if (typeof idx.page === "number" && idx.page > 1) route.page = idx.page;
-      if (idx.sortBy && SORT_INDEX_TO_PARAM[idx.sortBy]) {
-        route.sort = SORT_INDEX_TO_PARAM[idx.sortBy];
-      }
+      const sortParam = sortByToRouteParam(idx.sortBy, Boolean(idx.query));
+      if (sortParam) route.sort = sortParam;
       if (luceneMode) {
         return route;
       }
@@ -440,7 +427,8 @@ function makeFeedbackStateMapping(
       const tg: Record<string, boolean> = {};
       type IndexSlice = Record<string, unknown>;
       const idx: IndexSlice = {};
-      if (typeof route.q === "string" && route.q) idx.query = route.q;
+      const hasQuery = typeof route.q === "string" && route.q.length > 0;
+      if (hasQuery) idx.query = route.q;
       const pageRaw = route.page;
       const page =
         typeof pageRaw === "number"
@@ -449,10 +437,11 @@ function makeFeedbackStateMapping(
             ? Number.parseInt(pageRaw, 10)
             : NaN;
       if (Number.isFinite(page) && page > 1) idx.page = page;
-      if (typeof route.sort === "string") {
-        const mapped = SORT_PARAM_TO_INDEX[route.sort];
-        if (mapped) idx.sortBy = mapped;
-      }
+      const sortBy = routeParamToSortBy(
+        typeof route.sort === "string" ? route.sort : undefined,
+        hasQuery,
+      );
+      if (sortBy) idx.sortBy = sortBy;
       if (luceneMode) {
         return { [indexName]: idx };
       }

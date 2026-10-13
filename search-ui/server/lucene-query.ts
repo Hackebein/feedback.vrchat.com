@@ -579,10 +579,92 @@ function groupEnumEqualities(children: QueryNode[]): QueryNode {
   return joinNodes("and", next);
 }
 
+/**
+ * Keyword and boolean fields are stored case-sensitively. Fold the values
+ * people actually type (`status:Open`, `comments.pinned:True`) so Lucene
+ * matches the indexed term instead of returning nothing.
+ */
+const CASEFOLD_FIELDS: ReadonlySet<string> = new Set([
+  "status",
+  "board.urlName",
+  "comments.pinned",
+  "voteSettings.highEngagement",
+  "voteSettings.lowEngagement",
+  "voteSettings.moderateEngagement",
+]);
+
+const LUCENE_ESCAPES = /[+\-=&|><!(){}\[\]^"~:\\\/]/g;
+
+/** Keep a trailing fuzzy (`~` / `~1`) or boost (`^2`) suffix, escape the rest. */
+function splitFuzzyBoost(value: string): { core: string; suffix: string } {
+  const match = /^(.*?)((?:~\d*(?:\.\d+)?)?(?:\^\d+(?:\.\d+)?)?)$/.exec(value);
+  if (!match) {
+    return { core: value, suffix: "" };
+  }
+  return { core: match[1] ?? "", suffix: match[2] ?? "" };
+}
+
+function escapeLuceneCore(core: string): string {
+  return core.replace(LUCENE_ESCAPES, (char) => `\\${char}`);
+}
+
+function casefoldQuoted(value: string): string {
+  const quote = value[0] ?? "";
+  if ((quote !== '"' && quote !== "'") || value.length < 2 || !value.endsWith(quote)) {
+    return value.toLowerCase();
+  }
+  return `${quote}${value.slice(1, -1).toLowerCase()}${quote}`;
+}
+
+/**
+ * Escape Lucene operators that appear inside a term (`vrc+`, `C++`, URLs)
+ * without touching ranges, `field:(…)` groups, wildcards, or fuzzy/boost suffixes.
+ */
+function normalizeLuceneValue(value: string, casefold: boolean): string {
+  if (!value || value.startsWith("[") || value.startsWith("{") || value.startsWith("(")) {
+    return value;
+  }
+  if (value.startsWith('"') || value.startsWith("'")) {
+    return casefold ? casefoldQuoted(value) : value;
+  }
+  const split = splitFuzzyBoost(value);
+  const core = casefold ? split.core.toLowerCase() : split.core;
+  return escapeLuceneCore(core) + split.suffix;
+}
+
+function normalizeLuceneBody(body: string): string {
+  if (/^https?:\/\//i.test(body)) {
+    return normalizeLuceneValue(body, false);
+  }
+  const field = /^([A-Za-z_][\w.]*)\s*:(.*)$/s.exec(body);
+  if (!field) {
+    return normalizeLuceneValue(body, false);
+  }
+  const name = field[1] ?? "";
+  const raw = field[2] ?? "";
+  if (raw.startsWith("/")) {
+    return normalizeLuceneValue(body, false);
+  }
+  return `${name}:${normalizeLuceneValue(raw, CASEFOLD_FIELDS.has(name))}`;
+}
+
+function normalizeLuceneAtom(text: string): string {
+  if (!text) {
+    return text;
+  }
+  const prefixMatch = /^([+\-!]*)([\s\S]*)$/.exec(text);
+  const prefix = prefixMatch?.[1] ?? "";
+  const body = prefixMatch?.[2] ?? "";
+  if (!body) {
+    return text;
+  }
+  return prefix + normalizeLuceneBody(body);
+}
+
 function printNode(node: QueryNode): string {
   switch (node.kind) {
     case "atom":
-      return node.text;
+      return normalizeLuceneAtom(node.text);
     case "not": {
       const inner = printNode(node.child);
       const wrapped =

@@ -99,4 +99,34 @@ assert.deepEqual(mixed, {
   },
 });
 
+assert.equal(
+  rewriteEnumOr("status:Open status:planned"),
+  "status:open OR status:planned",
+);
+assert.equal(rewriteEnumOr("status:OPEN"), "status:open");
+assert.equal(rewriteEnumOr("board.urlName:Bug-Reports"), "board.urlName:bug\\-reports");
+assert.equal(rewriteEnumOr("comments.pinned:True"), "comments.pinned:true");
+assert.equal(
+  rewriteEnumOr("voteSettings.highEngagement:True"),
+  "voteSettings.highEngagement:true",
+);
+assert.equal(rewriteEnumOr("vrc+"), "vrc\\+");
+assert.equal(rewriteEnumOr("C++"), "C\\+\\+");
+assert.equal(rewriteEnumOr("C#"), "C#");
+assert.equal(rewriteEnumOr("http://example.com"), "http\\:\\/\\/example.com");
+assert.equal(rewriteEnumOr("title:http://example.com/docs"), "title:http\\:\\/\\/example.com\\/docs");
+assert.equal(rewriteEnumOr("groupIds~1"), "groupIds~1");
+assert.equal(rewriteEnumOr("groupIds~"), "groupIds~");
+assert.equal(rewriteEnumOr("title:avatar^2"), "title:avatar^2");
+assert.equal(rewriteEnumOr("+groupIds"), "+groupIds");
+assert.equal(rewriteEnumOr("status:(open OR planned)"), "status:(open OR planned)");
+assert.equal(rewriteEnumOr("score:[10 TO *]"), "score:[10 TO *]");
+assert.equal(rewriteEnumOr("(groupIds"), "groupIds");
+
+const escaped = buildLuceneQueryBody("status:Open");
+assert.equal(
+  (escaped as { query_string: { query: string } }).query_string.query,
+  "status:open",
+);
+
 console.info("lucene-query tests passed");

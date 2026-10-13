@@ -145,6 +145,11 @@ html:not(.${ACTIVE_CLASS}) #vrcfb-control-root { display: none !important; }
   font: 13px/1.4 system-ui, -apple-system, Segoe UI, sans-serif;
   color: inherit;
 }
+html.${ACTIVE_CLASS} .sidebarContainerWrapper { align-self: flex-start !important; }
+html.${ACTIVE_CLASS} .sidebarContainer {
+  max-height: none !important;
+  overflow: visible !important;
+}
 html.${ACTIVE_CLASS}.${LUCENE_CLASS} .sidebarContainerWrapper { display: none !important; }
 html.${ACTIVE_CLASS}.${LUCENE_CLASS} .mainContainer { width: 100% !important; max-width: none !important; }
 #${PANEL_ID} .vrcfb-panel-head {
