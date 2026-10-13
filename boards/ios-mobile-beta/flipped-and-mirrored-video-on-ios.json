@@ -1,12 +1,11 @@
 {
   "_id": "6acbd208c54e0d72fbf50718",
   "aiCategories": [
-    "loc.in-world",
     "loc.mobile-app",
     "platforms.mobile.ios",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-10-11T18:33:38.459499Z",
+  "aiTaggedAt": "2026-10-13T15:48:34.002388Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6acbcfb16fe99c84f29eb730",
@@ -36,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "665799d6fd693fc2ebdda125",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -82,6 +81,51 @@
       "value": "iPhone 17 iOS 26.6.2 (23G90)",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ace52645175c925c764d137",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64873f159cf028090ce2c2e2",
+        "alias": "Papaya Python",
+        "aliasID": "65c26df7ed6eefce4c5bafd9",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+        "created": "2023-06-12T15:51:49.320Z",
+        "name": "StormRel",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "6657990efd693fc2ebdcd62c",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-13T15:46:44.912Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acbd208c54e0d72fbf50718",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6ace52645175c925c764d136",
+      "statusChangeNewStatus": "needs more information",
+      "value": "Can you provide your device and OS details?",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -110,8 +154,8 @@
   "pinnedComment": null,
   "score": 2,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-10-11T18:14:32.237Z",
+  "status": "needs more information",
+  "statusChanged": "2026-10-13T15:46:44.865Z",
   "subCategoryID": null,
   "title": "Flipped and Mirrored Video on iOS",
   "trendingScore": 2963.6359815569135,
