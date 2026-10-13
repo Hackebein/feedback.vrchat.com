@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.in-world",
     "social.instances",
-    "moderation.safety-system"
+    "moderation.safety-system",
+    "groups.roles"
   ],
-  "aiTaggedAt": "2026-10-12T09:15:41.848756Z",
+  "aiTaggedAt": "2026-10-13T04:04:27.771376Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ac46c27b987445a69d3ab00",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -75,6 +76,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "荒らし行為への対策が必要なことは理解していますが、既存のモデレーション機能では具体的に何が不足しており、今回の機能追加が必要なのか疑問に思います。\n\nまず、VRChatには既に「あなたをブロックしているユーザー / Users Blocking You」という機能が存在します。グループインスタンスのモデレーション権限を持つユーザーは、Quick Menuの「現在地 / Here」から自分をブロックしているユーザーを確認でき、該当ユーザーに対してキックなどのモデレーション操作を行うことができます。\n\nつまり、スタッフをブロックしただけで運営側から完全に対処できなくなるわけではありません。グループBANを利用すれば、そのグループが作成するインスタンスへの再参加も防げます。\n\nまた、ブロック機能は荒らし対策だけでなく、ハラスメントや個人的なトラブルから自分を守るための重要な機能でもあります。\n\n例えば、過去にトラブルがあった相手が、たまたま大規模なグループのモデレーターロールを持っていた場合、その人をブロックしているだけでグループのイベント全体に参加できなくなるのでしょうか。\n\n提案の文面どおりであれば、当日そのモデレーターがインスタンスにいなくても、参加制限の対象になる可能性があります。\n\n個人の安全を守るためにブロックした相手を、イベントに参加するために解除しなければならない仕組みは、別の問題を生むのではないでしょうか。\n\n荒らし行為を防ぐ目的には賛成ですが、個人のブロック機能にまで影響するような制限の追加には慎重であるべき",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6acdaa2205ec001bf93799a4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6acd6eff6fe99c84f2a6d451",
+        "alias": "Yellow ochre Mandrill",
+        "aliasID": "6acd6eff6fe99c84f2a6d456",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/fe9a8f7889ad2c49c273952bce90d269.png",
+        "created": "2026-10-12T23:36:31.599Z",
+        "name": "トータ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-13T03:48:50.836Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6acca369fde660706d21a3de",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acc3fe2fad15728191d020f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "始めに、大神さんのご意見も大事な意見であり否定する意思はありません。\n\nその上で、現状の仕組みでは対処できないので本Cannyがあります。\n\n実装するかどうかは運営の判断次第です。\n\n本Cannyで議論するつもりはございませんが、本件の相談を受けた一人として記載します、参考まで。\n\n・前提の相違について\n\n　初めに「Quick Menuの「現在地 / Here」から自分をブロックしているユーザーを確認でき、該当ユーザーに対してキックなどのモデレーション操作を行うことができます」とありますが、イベント参加後にブロック関係となった場合は如何でしょうか。\n\n　何をしているのか見えませんし「現在地」にブロックユーザがいることをいつ認識できるのでしょうか。（つまり、ブロックしてる人が居るかどうかわからない&目視で荒らし行為をしているかどうか判別不可能）\n\n　しいて言うならば、インスタンス内にいるモデレーター級のロールを持っている人をブロックしているorブロックした場合、該当groupインスタンスに入れないor強制退場、とした方が良いかもしれませんね。\n\n・ハラスメントに対する心理的安全性の確保について\n\n　次に「ブロック機能は荒らし対策だけでなく、ハラスメントや個人的なトラブルから自分を守るための重要な機能」でもあるならば、そもそも、ブロックしている人がインスタンスに来る可能性がある、というスタッフの心理的安全性を脅かす要因を減らす観点でも本Cannyは合理的と考えます。\n\n　一方、参加者はブロックされれば参加出来なくなる、というデメリットも生じます。その上でどう運用するかはイベント運営とスタッフによる判断に委ねることで、本デメリットも容認か回避か選べるのがより良いと考えます。",
       "viewerReactions": null,
       "voteID": null
     }
