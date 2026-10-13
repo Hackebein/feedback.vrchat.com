@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.in-world",
     "avatars.fbt",
-    "open-beta"
+    "open-beta",
+    "platforms.pc.steam"
   ],
-  "aiTaggedAt": "2026-10-13T08:22:58.345648Z",
+  "aiTaggedAt": "2026-10-13T10:33:21.372774Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df2c865968ab44bca883ce",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -120,7 +121,9 @@
       "postDeleted": false,
       "postID": "6ac95f9491193806244c72f2",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -208,7 +211,9 @@
       "postDeleted": false,
       "postID": "6ac95f9491193806244c72f2",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -252,7 +257,9 @@
       "postDeleted": false,
       "postID": "6ac95f9491193806244c72f2",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -286,7 +293,9 @@
       "postDeleted": false,
       "postID": "6ac95f9491193806244c72f2",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -294,6 +303,62 @@
       "statusChangeID": "6acde956c3ec685475df6893",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ace033c57d7e3ae67ec8b38",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6360562f78e43673641fa1a3",
+        "alias": "Quixotic Lark",
+        "aliasID": "68e8ec213410c31abd8ccaea",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8bc3fb58c239bdd7894e9ccdce613fcd.png",
+        "created": "2022-10-31T23:11:43.798Z",
+        "name": "Yukunᴏ",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-13T10:09:00.537Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "66e4dcc76641e407586ebc94",
+          "alias": "Glacier Quail",
+          "aliasID": "66e4dcc77d32abb6ca52833e",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/76b6cfeca0508ac1f6596b3f063edd2c.png",
+          "created": "2024-09-14T00:45:59.049Z",
+          "name": "Ｅｎｄｒａｎｃｅ",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6acc6610ec93768bd3cfba07",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac95f9491193806244c72f2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{66e4dcc76641e407586ebc94|full_name} yes this is only happening on the beta.",
       "viewerReactions": null,
       "voteID": null
     }
