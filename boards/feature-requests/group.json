@@ -113,7 +113,9 @@
       "postDeleted": false,
       "postID": "6acc3fe2fad15728191d020f",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -139,20 +141,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 230,
+  "maxScore": 231,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 230,
+  "score": 231,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-12T02:03:14.250Z",
   "subCategoryID": null,
   "title": "モデレーター級のロールを持っている人をブロックしてる場合、該当Groupのインスタンスに入れなくなる機能の実装",
-  "trendingScore": 2968.079265471721,
+  "trendingScore": 2968.0840575149086,
   "updatedBy": null,
   "urlName": "group",
   "viewerIsAuthor": false,
@@ -165,6 +167,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5f40bc07ffd148269ff40908",
+      "alias": "Excellent Pheasant",
+      "aliasID": "65c36feeed6eefce4ca3af2b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/025c4aaf42d324011e62f493d847729e.png",
+      "companies": [],
+      "name": "みかにゃ",
+      "urlName": null,
+      "voteID": "6acdb4316fe99c84f2a7f623"
+    },
+    {
+      "_id": "619defdb189f7e3e9ad6360b",
+      "alias": "Friendly Ant",
+      "aliasID": "660b246de5d26962aaab36e9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51118fac6ee2e56865f2172dee237418.png",
+      "companies": [],
+      "name": "水城 ⁄ m1ZkI_0576",
+      "urlName": null,
+      "voteID": "6acdb34a6fe99c84f2a7f41d"
+    },
     {
       "_id": "5f99fab038af604fd06f0319",
       "alias": "Mauve Perch",
@@ -692,28 +716,6 @@
       "name": "ジョナ․",
       "urlName": null,
       "voteID": "6accd0286fe99c84f2a1f271"
-    },
-    {
-      "_id": "69ce478ebcda4ee6322dd1f1",
-      "alias": "Extensive Dragonfly",
-      "aliasID": "69ce478ebcda4ee6322de343",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/fabda99439a546c41a53b426bd457e2f.png",
-      "companies": [],
-      "name": "八雲火花／hibana",
-      "urlName": null,
-      "voteID": "6accc6ee6fe99c84f2a1cfc3"
-    },
-    {
-      "_id": "5f2f8ebee4df5767fb1e0ede",
-      "alias": "Ethical Carp",
-      "aliasID": "65fcb17ba63714bcb38cc7c3",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/76473dd7a5fa37277ead16c31a521862.png",
-      "companies": [],
-      "name": "Koyomi - こよみ",
-      "urlName": null,
-      "voteID": "6accc6166fe99c84f2a1cc49"
     }
   ]
 }
