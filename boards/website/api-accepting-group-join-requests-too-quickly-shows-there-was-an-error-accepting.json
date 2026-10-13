@@ -105,7 +105,9 @@
       "deletedAt": null,
       "fileURLs": [],
       "files": [],
-      "imageURLs": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/2f246fc56ca4f9144cec78cab75aa2c8.png"
+      ],
       "integrationSourceType": null,
       "internal": false,
       "itemSourceType": null,
@@ -129,13 +131,15 @@
       "postDeleted": false,
       "postID": "6acd52e105ec001bf92a38dd",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{68098a4626271974ef4d2775|full_name} I'm proposing the error message be replaced with something more descriptive than something generic.",
+      "value": "@{68098a4626271974ef4d2775|full_name} I'm proposing the error message be replaced with something more descriptive than something generic.\n\nFor example, this is the generic 429 error message that I implemented at the WAF layer and despite it being a generic error message, it's still more descriptive than showing a generic \"There was an error\" message.",
       "viewerReactions": null,
       "voteID": null
     }
