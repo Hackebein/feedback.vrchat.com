@@ -7,6 +7,7 @@ import {
   mergeFacetCounts,
   mergeSearchHits,
   paginateMergedHits,
+  privateMatchScore,
   queryTokens,
   relevanceScore,
   sortHits,
@@ -285,5 +286,55 @@ const ranked = sortHits(
 );
 assert.equal(ranked[0]?._id, "grop-ids");
 assert.equal(ranked[1]?._id, "group-ids");
+
+function rankPrivate(posts: StoredPrivatePost[], query: string): string[] {
+  return posts
+    .map((post) => ({ id: post._id, score: privateMatchScore(post.payload, query) }))
+    .filter((row) => row.score > 0)
+    .sort((left, right) => right.score - left.score || left.id.localeCompare(right.id))
+    .map((row) => `${row.id}@${row.score}`);
+}
+
+function assertSamePrivate(label: string, queries: string[]): void {
+  const ranks = queries.map((query) => rankPrivate(identifierPosts, query));
+  assert.ok(ranks[0] && ranks[0].length > 0, `${label}: expected hits`);
+  for (const rank of ranks.slice(1)) {
+    assert.deepEqual(rank, ranks[0], label);
+  }
+}
+
+assertSamePrivate("terms", ["group ids", "ids group"]);
+assertSamePrivate("fields", ["status:open board.urlName:internal", "board.urlName:internal status:open"]);
+assertSamePrivate("and", ["status:open AND title:group", "title:group AND status:open"]);
+assertSamePrivate("or", ["status:open OR status:closed", "status:closed OR status:open"]);
+assertSamePrivate("precedence", [
+  "title:avatar AND status:open OR status:closed",
+  "status:closed OR status:open AND title:avatar",
+]);
+assertSamePrivate("not", ["avatar NOT status:closed", "NOT status:closed AND avatar"]);
+assertSamePrivate("mixed phrase", ['avatar "full body"', '"full body" avatar']);
+const quotedPrivate = rankPrivate(identifierPosts, '"full body"');
+const quotedPrivateReverse = rankPrivate(identifierPosts, '"body full"');
+assert.notDeepEqual(quotedPrivate, quotedPrivateReverse);
+assert.equal(quotedPrivate.some((row) => row.startsWith("full-body@")), true);
+assert.equal(quotedPrivateReverse.some((row) => row.startsWith("full-body@")), false);
+
+function filteredIds(refinements: Record<string, string[]>): string[] {
+  return filterPrivatePosts(
+    identifierPosts,
+    {
+      textSearch: "group",
+      filters: { refinements, ranges: {}, toggles: {}, sort: "relevance" },
+    },
+    { luceneMode: false },
+  )
+    .map((post) => `${post._id}@${privateMatchScore(post.payload, "group")}`)
+    .sort();
+}
+
+assert.deepEqual(
+  filteredIds({ status: ["open", "closed"], board_name: ["Internal Roadmap Posts"] }),
+  filteredIds({ board_name: ["Internal Roadmap Posts"], status: ["closed", "open"] }),
+);
 
 console.info("private-search tests passed");

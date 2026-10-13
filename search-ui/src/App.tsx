@@ -35,7 +35,17 @@ import type { RefinementListItem } from "instantsearch.js/es/connectors/refineme
 import qs from "qs";
 import historyRouter from "instantsearch.js/es/lib/routers/history";
 import { AttachmentTextView } from "./AttachmentTextView";
-import { FEEDBACK_INDEX, routeParamToSortBy, sortByToRouteParam } from "./searchRoute";
+import {
+  FEEDBACK_INDEX,
+  RANGE_ATTRS,
+  REFINEMENT_LIST_ATTRS,
+  TOGGLE_ATTRS,
+  rangesFromRoute,
+  refinementListsFromRoute,
+  routeParamToSortBy,
+  sortByToRouteParam,
+  togglesFromRoute,
+} from "./searchRoute";
 import { EmbeddedImageView } from "./EmbeddedImageView";
 import {
   filterNestedBoardNodes,
@@ -348,38 +358,6 @@ function AutoNumericRangeInput({ attribute }: { attribute: string }) {
 
 const indexName = FEEDBACK_INDEX;
 
-type AttrEntry = { urlKey: string; attr: string };
-
-const REFINEMENT_LIST_ATTRS: AttrEntry[] = [
-  { urlKey: "board.name", attr: "board_name" },
-  { urlKey: "status", attr: "status" },
-  { urlKey: "category.name", attr: "category_name" },
-  { urlKey: "aiCategories", attr: "aiCategories" },
-  { urlKey: "author.name", attr: "author_name" },
-  { urlKey: "voters.name", attr: "voter_name" },
-  { urlKey: "comments.author.name", attr: "comment_author_name" },
-];
-
-const RANGE_ATTRS: AttrEntry[] = [
-  { urlKey: "score", attr: "score" },
-  { urlKey: "maxScore", attr: "maxScore" },
-  { urlKey: "commentCount", attr: "commentCount" },
-  { urlKey: "mergeCount", attr: "mergeCount" },
-  { urlKey: "trendingScore", attr: "trendingScore" },
-  { urlKey: "comments.likeCount", attr: "comment_likeCount" },
-  { urlKey: "created", attr: "post_created" },
-  { urlKey: "updatedAt", attr: "post_updated" },
-  { urlKey: "statusChanged", attr: "post_statusChanged" },
-  { urlKey: "comments.created", attr: "comment_created" },
-];
-
-const TOGGLE_ATTRS: AttrEntry[] = [
-  { urlKey: "voteSettings.highEngagement", attr: "vote_highEngagement" },
-  { urlKey: "voteSettings.moderateEngagement", attr: "vote_moderateEngagement" },
-  { urlKey: "voteSettings.lowEngagement", attr: "vote_lowEngagement" },
-  { urlKey: "comments.pinned", attr: "comment_pinned" },
-];
-
 type RouteState = Record<string, unknown>;
 
 /** Lucene-style field names shown in chips (maps InstantSearch facet `attribute` strings). */
@@ -422,9 +400,6 @@ function makeFeedbackStateMapping(
     },
     routeToState(routeParam: RouteState = {}): UiState {
       const route = routeParam;
-      const rl: Record<string, string[]> = {};
-      const rg: Record<string, string> = {};
-      const tg: Record<string, boolean> = {};
       type IndexSlice = Record<string, unknown>;
       const idx: IndexSlice = {};
       const hasQuery = typeof route.q === "string" && route.q.length > 0;
@@ -445,25 +420,11 @@ function makeFeedbackStateMapping(
       if (luceneMode) {
         return { [indexName]: idx };
       }
-      for (const { urlKey, attr } of REFINEMENT_LIST_ATTRS) {
-        const raw = route[urlKey];
-        if (Array.isArray(raw)) {
-          const list = raw.map(String).filter(Boolean);
-          if (list.length > 0) rl[attr] = list;
-        } else if (typeof raw === "string" && raw) {
-          rl[attr] = [raw];
-        }
-      }
+      const rl = refinementListsFromRoute(route, REFINEMENT_LIST_ATTRS);
+      const rg = rangesFromRoute(route, RANGE_ATTRS);
+      const tg = togglesFromRoute(route, TOGGLE_ATTRS);
       if (Object.keys(rl).length > 0) idx.refinementList = rl;
-      for (const { urlKey, attr } of RANGE_ATTRS) {
-        const raw = route[urlKey];
-        if (typeof raw === "string" && raw) rg[attr] = raw;
-      }
       if (Object.keys(rg).length > 0) idx.range = rg;
-      for (const { urlKey, attr } of TOGGLE_ATTRS) {
-        const raw = route[urlKey];
-        if (raw === "1" || raw === "true" || raw === true) tg[attr] = true;
-      }
       if (Object.keys(tg).length > 0) idx.toggle = tg;
       return { [indexName]: idx };
     },

@@ -3,6 +3,7 @@ import type {
   SearchAttribute,
   SearchSettingsConfig,
 } from "searchkit";
+import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
 import { buildLuceneQueryBody } from "./lucene-query";
 
 /** OpenSearch `terms.include` is anchored to the full bucket string. Searchkit's default regex prepends `([a-zA-Z]+ )+?` for queries longer than 2 chars, which never matches slug-like tokens without spaces. */
@@ -53,9 +54,89 @@ export const textSearchAttributes: SearchAttribute[] = [
  * below 5, 1 until 100) and only against the unstemmed `.exact` subfield.
  * `AUTO` after the English stemmer is what made `groupIds` (stem `groupid`)
  * match every post whose stem is `group`.
+ *
+ * Unquoted text is scored as a bag of single terms. A phrase clause on the
+ * whole string changed scores with word order (`full body` ranked the in-order
+ * post above `body full`). `synonym_graph` only expands a multi-word synonym
+ * in the listed order, so `full body tracking` matched an `fbt` post and
+ * `tracking body full` did not. Quoted phrases stay ordered.
  */
 const EXACT_BAND_BOOST = 1000;
 const FUZZY_BAND_BOOST = 5;
+
+type SynonymGroup = { singles: string[]; phrases: string[][] };
+
+function readSynonymLines(mapping: unknown): string[] {
+  if (!mapping || typeof mapping !== "object") {
+    throw new Error("index mapping is missing feedback_synonyms");
+  }
+  const lines = (
+    mapping as {
+      settings?: {
+        analysis?: { filter?: { feedback_synonyms?: { synonyms?: unknown } } };
+      };
+    }
+  ).settings?.analysis?.filter?.feedback_synonyms?.synonyms;
+  if (!Array.isArray(lines) || lines.some((line) => typeof line !== "string")) {
+    throw new Error("index mapping is missing feedback_synonyms");
+  }
+  return lines;
+}
+
+function synonymGroupsFromLines(lines: readonly string[]): SynonymGroup[] {
+  const groups: SynonymGroup[] = [];
+  for (const line of lines) {
+    const singles: string[] = [];
+    const phrases: string[][] = [];
+    for (const part of line.split(",")) {
+      const tokens = part
+        .trim()
+        .toLowerCase()
+        .split(/\s+/)
+        .filter((token) => token.length > 0);
+      if (tokens.length === 1) {
+        singles.push(tokens[0]!);
+      } else if (tokens.length > 1) {
+        phrases.push(tokens);
+      }
+    }
+    if (singles.length > 0 && phrases.length > 0) {
+      groups.push({ singles, phrases });
+    }
+  }
+  return groups;
+}
+
+const SYNONYM_GROUPS = synonymGroupsFromLines(readSynonymLines(indexMappings));
+
+function tokenCounts(tokens: readonly string[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const token of tokens) {
+    counts.set(token, (counts.get(token) ?? 0) + 1);
+  }
+  return counts;
+}
+
+function covers(available: ReadonlyMap<string, number>, tokens: readonly string[]): boolean {
+  const need = tokenCounts(tokens);
+  for (const [token, count] of need) {
+    if ((available.get(token) ?? 0) < count) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function consume(available: Map<string, number>, tokens: readonly string[]): void {
+  for (const token of tokens) {
+    const left = (available.get(token) ?? 0) - 1;
+    if (left <= 0) {
+      available.delete(token);
+    } else {
+      available.set(token, left);
+    }
+  }
+}
 
 function exactFields(attrs: SearchAttribute[]): string[] {
   return attrs.map((attribute) =>
@@ -84,16 +165,6 @@ export function partitionPlainQuery(query: string): { phrases: string[]; terms: 
     index = end === -1 ? query.length : end + 1;
   }
   return { phrases, terms: terms.replace(/\s+/g, " ").trim() };
-}
-
-function longestTerm(terms: string): number {
-  let longest = 0;
-  for (const term of terms.split(/\s+/)) {
-    if (term.length > longest) {
-      longest = term.length;
-    }
-  }
-  return longest;
 }
 
 function bestFields(
@@ -140,18 +211,106 @@ function phraseQuery(phrase: string, fields: string[]): ElasticsearchQuery {
   };
 }
 
-function termShoulds(terms: string, searchAttributes: SearchAttribute[]): ElasticsearchQuery[] {
-  const primary = fieldsWithBoost(searchAttributes, 1);
-  const phrase = fieldsWithBoost(searchAttributes, 2);
+function termClause(term: string, searchAttributes: SearchAttribute[]): ElasticsearchQuery {
   const should: ElasticsearchQuery[] = [
-    scoreBand(terms, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
-    phraseQuery(terms, phrase),
-    bestFields(terms, primary, 0),
+    scoreBand(term, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
+    bestFields(term, fieldsWithBoost(searchAttributes, 1), 0),
   ];
-  if (longestTerm(terms) >= 5) {
-    should.push(scoreBand(terms, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
+  if (term.length >= 5) {
+    should.push(scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
   }
-  return should;
+  return { bool: { should, minimum_should_match: 1 } };
+}
+
+type TermPlan =
+  | { kind: "synonym"; words: string[]; singles: string[] }
+  | { kind: "term"; term: string };
+
+/**
+ * Multi-word synonym phrases are taken from the token bag in any order.
+ * Leftover copies of that group's single-token synonyms join the same OR,
+ * so `fbt full body tracking` still matches a post that only has one form.
+ */
+function planUnquotedTerms(terms: string): TermPlan[] {
+  const available = tokenCounts(
+    terms
+      .toLowerCase()
+      .split(/\s+/)
+      .filter((token) => token.length > 0),
+  );
+  const candidates: Array<{ words: string[]; singles: string[] }> = [];
+  for (const group of SYNONYM_GROUPS) {
+    for (const phrase of group.phrases) {
+      if (covers(available, phrase)) {
+        candidates.push({ words: phrase, singles: group.singles });
+      }
+    }
+  }
+  candidates.sort((left, right) => {
+    if (right.words.length !== left.words.length) {
+      return right.words.length - left.words.length;
+    }
+    const leftText = left.words.join(" ");
+    const rightText = right.words.join(" ");
+    if (leftText < rightText) return -1;
+    if (leftText > rightText) return 1;
+    return 0;
+  });
+  const selected: Array<{ words: string[]; singles: string[] }> = [];
+  for (const candidate of candidates) {
+    if (!covers(available, candidate.words)) {
+      continue;
+    }
+    consume(available, candidate.words);
+    for (const single of candidate.singles) {
+      available.delete(single);
+    }
+    selected.push(candidate);
+  }
+  selected.sort((left, right) => {
+    const leftText = left.words.join(" ");
+    const rightText = right.words.join(" ");
+    if (leftText < rightText) return -1;
+    if (leftText > rightText) return 1;
+    return 0;
+  });
+  const plans: TermPlan[] = selected.map((group) => ({
+    kind: "synonym",
+    words: group.words,
+    singles: group.singles,
+  }));
+  for (const term of [...available.keys()].sort()) {
+    const count = available.get(term) ?? 0;
+    for (let index = 0; index < count; index += 1) {
+      plans.push({ kind: "term", term });
+    }
+  }
+  return plans;
+}
+
+function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): ElasticsearchQuery {
+  switch (plan.kind) {
+    case "term":
+      return termClause(plan.term, searchAttributes);
+    case "synonym":
+      return {
+        bool: {
+          should: [
+            {
+              bool: {
+                must: plan.words.map((word) => termClause(word, searchAttributes)),
+              },
+            },
+            ...plan.singles.map((single) => termClause(single, searchAttributes)),
+          ],
+          minimum_should_match: 1,
+        },
+      };
+    default: {
+      const unreachable: never = plan;
+      return unreachable;
+    }
+  }
 }
 
 export function instantSearchStrictQuery(
@@ -166,24 +325,15 @@ export function instantSearchStrictQuery(
   const { phrases, terms } = partitionPlainQuery(q);
   const phraseFields = fieldsWithBoost(searchAttributes, 2);
   const must: ElasticsearchQuery[] = phrases.map((phrase) => phraseQuery(phrase, phraseFields));
-  const should: ElasticsearchQuery[] = [];
   if (terms) {
-    const ranked = termShoulds(terms, searchAttributes);
-    if (phrases.length > 0) {
-      must.push({ bool: { should: ranked, minimum_should_match: 1 } });
-    } else {
-      should.push(...ranked);
+    for (const plan of planUnquotedTerms(terms)) {
+      must.push(planClause(plan, searchAttributes));
     }
   }
-  if (must.length === 0 && should.length === 0) {
+  if (must.length === 0) {
     return { match_all: {} };
   }
-  return {
-    bool: {
-      ...(must.length > 0 ? { must } : {}),
-      ...(should.length > 0 ? { should } : {}),
-    },
-  };
+  return { bool: { must } };
 }
 
 export function gatewayEnv(): {

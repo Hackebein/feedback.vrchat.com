@@ -2,9 +2,15 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import API from "@searchkit/api";
+import {
+  buildAgentSearchBody,
+  parseAgentSearchQuery,
+} from "../server/agent-api";
 import { buildLuceneQueryBody } from "../server/lucene-query";
 import {
   instantSearchStrictQuery,
+  searchkitConfig,
   textSearchAttributes,
 } from "../server/searchkit-config";
 
@@ -76,6 +82,8 @@ type Fixture = {
   title: string;
   details: string;
   status?: string;
+  score?: number;
+  commentCount?: number;
   created: string;
   board?: { name: string; urlName: string };
   author?: { name: string };
@@ -89,6 +97,8 @@ const docs: Fixture[] = [
     title: "Add groupIds to the API",
     details: "The groupIds field is required on the request",
     status: "open",
+    score: 12,
+    commentCount: 2,
     created: "2019-01-01T00:00:00.000Z",
     board: { name: "Bug Reports", urlName: "bug-reports" },
     author: { name: "Ada" },
@@ -106,6 +116,8 @@ const docs: Fixture[] = [
     title: "Group lobbies",
     details: "Filter by group rank and group name in Group lobbies",
     status: "open",
+    score: 3,
+    commentCount: 1,
     created: "2024-12-01T00:00:00.000Z",
     board: { name: "Bug Reports", urlName: "bug-reports" },
   },
@@ -114,6 +126,8 @@ const docs: Fixture[] = [
     title: "Show the group id",
     details: "Display group id on the profile",
     status: "open",
+    score: 8,
+    commentCount: 4,
     created: "2024-11-01T00:00:00.000Z",
     board: { name: "Bug Reports", urlName: "bug-reports" },
   },
@@ -173,6 +187,13 @@ const docs: Fixture[] = [
     details: "the body comes before full here",
     status: "open",
     created: "2024-04-01T00:00:00.000Z",
+  },
+  {
+    post_id: "fbt-only",
+    title: "FBT calibration",
+    details: "Calibrate fbt before play",
+    status: "open",
+    created: "2018-04-01T00:00:00.000Z",
   },
   {
     post_id: "performance",
@@ -300,23 +321,56 @@ async function os(method: string, path: string, body?: unknown): Promise<unknown
 }
 
 function hitIds(payload: unknown): string[] {
+  return hitRanks(payload).map((rank) => rank.slice(0, rank.lastIndexOf("@")));
+}
+
+function hitRanks(payload: unknown): string[] {
   const hits = (
     payload as {
-      hits?: { hits?: Array<{ _source?: { post_id?: string } }> };
+      hits?: { hits?: Array<{ _score?: number; _source?: { post_id?: string } }> };
     }
   ).hits?.hits;
-  return (hits ?? []).map((hit) => hit._source?.post_id ?? "");
+  return (hits ?? []).map((hit) => `${hit._source?.post_id ?? ""}@${hit._score ?? 0}`);
 }
 
 async function search(query: unknown): Promise<string[]> {
-  const payload = await os("POST", `/${index}/_search`, {
+  return hitIds(await searchPayload(query));
+}
+
+async function searchPayload(query: unknown): Promise<unknown> {
+  return os("POST", `/${index}/_search`, {
     size: 30,
     track_total_hits: true,
     _source: ["post_id"],
     query,
     sort: [{ _score: "desc" }, { created: "desc" }],
   });
-  return hitIds(payload);
+}
+
+function hasPhraseType(query: unknown): boolean {
+  if (Array.isArray(query)) return query.some((item) => hasPhraseType(item));
+  if (!query || typeof query !== "object") return false;
+  for (const [key, child] of Object.entries(query as Record<string, unknown>)) {
+    if (key === "type" && child === "phrase") return true;
+    if (hasPhraseType(child)) return true;
+  }
+  return false;
+}
+
+async function assertSameRanks(label: string, queries: unknown[]): Promise<void> {
+  const ranks: string[][] = [];
+  for (const query of queries) {
+    ranks.push(hitRanks(await searchPayload(query)));
+  }
+  const first = ranks[0] ?? [];
+  assert.ok(first.length > 0, `${label}: expected hits`);
+  for (let index = 1; index < ranks.length; index += 1) {
+    assert.deepEqual(
+      ranks[index],
+      first,
+      `${label}:\n${first.join(" ")}\n${(ranks[index] ?? []).join(" ")}`,
+    );
+  }
 }
 
 function assertFirst(ids: string[], id: string, label: string): void {
@@ -541,6 +595,132 @@ async function main(): Promise<void> {
 
   const luceneRole = await lucene("title:roleIds");
   assert.deepEqual(luceneRole, ["camel-role"]);
+
+  const plainQuery = (q: string) => instantSearchStrictQuery(q, textSearchAttributes);
+  assert.equal(hasPhraseType(plainQuery("group ids")), false);
+  assert.equal(hasPhraseType(plainQuery('"full body"')), true);
+  for (const [left, right] of [
+    ["group ids", "ids group"],
+    ["Group IDs", "ids group"],
+    ["avatar performance", "performance avatar"],
+    ["full body", "body full"],
+    ["full body tracking", "tracking body full"],
+    ["sdk 3", "3 sdk"],
+    ["vrchat plus", "plus vrchat"],
+    ['avatar "full body"', '"full body" avatar'],
+  ] as const) {
+    assert.deepEqual(plainQuery(left), plainQuery(right), `${left} vs ${right}`);
+    await assertSameRanks(left, [plainQuery(left), plainQuery(right)]);
+  }
+
+  const tracking = await plain("full body tracking");
+  assertHas(tracking, "fbt-only", "full body tracking synonym");
+  assertHas(tracking, "full-body", "full body tracking");
+  assert.deepEqual(await plain("tracking body full"), tracking);
+  const unquotedBody = await plain("full body");
+  assertLacks(unquotedBody, "fbt-only", "full body is not the fbt phrase");
+  assert.deepEqual(await plain("body full"), unquotedBody);
+
+  const quotedForward = await plain('"full body"');
+  const quotedReverse = await plain('"body full"');
+  assert.notDeepEqual(quotedForward, quotedReverse);
+  assertHas(quotedForward, "full-body", "quoted phrase order");
+  assertLacks(quotedReverse, "full-body", "quoted phrase order");
+  const mixedForward = await plain('avatar "full body"');
+  const mixedReversePhrase = await plain('avatar "body full"');
+  assert.deepEqual(mixedForward, await plain('"full body" avatar'));
+  assert.notDeepEqual(mixedForward, mixedReversePhrase);
+
+  await assertSameRanks("lucene fields", [
+    buildLuceneQueryBody("status:open board.urlName:bug-reports"),
+    buildLuceneQueryBody("board.urlName:bug-reports status:open"),
+  ]);
+  await assertSameRanks("lucene and", [
+    buildLuceneQueryBody("status:open AND title:avatar"),
+    buildLuceneQueryBody("title:avatar AND status:open"),
+  ]);
+  await assertSameRanks("lucene or", [
+    buildLuceneQueryBody("status:open OR status:closed"),
+    buildLuceneQueryBody("status:closed OR status:open"),
+  ]);
+  await assertSameRanks("lucene precedence", [
+    buildLuceneQueryBody("title:avatar AND status:open OR status:closed"),
+    buildLuceneQueryBody("status:closed OR status:open AND title:avatar"),
+  ]);
+  await assertSameRanks("lucene not", [
+    buildLuceneQueryBody("avatar NOT status:closed"),
+    buildLuceneQueryBody("NOT status:closed AND avatar"),
+  ]);
+  const luceneQuoted = await lucene('"full body"');
+  const luceneQuotedReverse = await lucene('"body full"');
+  assert.notDeepEqual(luceneQuoted, luceneQuotedReverse);
+  assertHas(luceneQuoted, "full-body", "lucene quoted order");
+  assertLacks(luceneQuotedReverse, "full-body", "lucene quoted order");
+
+  const agentForward = parseAgentSearchQuery({
+    q: "group",
+    board: "bug-reports",
+    status: "open",
+  });
+  const agentReverse = parseAgentSearchQuery({
+    status: "open",
+    q: "group",
+    board: "bug-reports",
+  });
+  assert.deepEqual(agentForward, agentReverse);
+  assert.equal(agentForward.ok, true);
+  if (!agentForward.ok) {
+    throw new Error("expected agent query to parse");
+  }
+  const agentBody = buildAgentSearchBody(agentForward.params);
+  const agentQuery = agentBody.query;
+  const swappedAgent = {
+    bool: {
+      must: (agentQuery as { bool: { must: unknown[] } }).bool.must,
+      filter: [...((agentQuery as { bool: { filter: unknown[] } }).bool.filter ?? [])].reverse(),
+    },
+  };
+  await assertSameRanks("agent filters", [agentQuery, swappedAgent]);
+
+  const gateway = API(searchkitConfig(opensearchUrl, "admin", "admin"));
+  async function uiRanks(
+    facetFilters: unknown,
+    numericFilters?: string[],
+  ): Promise<string[]> {
+    const response = await gateway.handleRequest(
+      [
+        {
+          indexName: `${index}_relevance_desc`,
+          params: {
+            query: "group",
+            hitsPerPage: 30,
+            facetFilters,
+            ...(numericFilters ? { numericFilters } : {}),
+          },
+        },
+      ],
+      { getQuery: instantSearchStrictQuery },
+    );
+    const result = response.results[0];
+    if (!result || !("hits" in result)) {
+      throw new Error("website search returned no hits");
+    }
+    return result.hits.map((hit) => `${hit.objectID}@${hit._score ?? 0}`);
+  }
+  const facetsForward = await uiRanks([["status:open"], ["board_slug:bug-reports"]]);
+  const facetsReverse = await uiRanks([["board_slug:bug-reports"], ["status:open"]]);
+  assert.ok(facetsForward.length > 1, facetsForward.join(" "));
+  assert.deepEqual(facetsReverse, facetsForward);
+  const valuesForward = await uiRanks([["status:open", "status:closed"]]);
+  const valuesReverse = await uiRanks([["status:closed", "status:open"]]);
+  assert.ok(valuesForward.length > 1, valuesForward.join(" "));
+  assert.deepEqual(valuesReverse, valuesForward);
+  const numericForward = await uiRanks(undefined, ["score>=5", "commentCount>=2"]);
+  const numericReverse = await uiRanks(undefined, ["commentCount>=2", "score>=5"]);
+  assert.ok(numericForward.length > 1, numericForward.join(" "));
+  assert.deepEqual(numericReverse, numericForward);
+  assert.equal(numericForward.some((hit) => hit.startsWith("exact-groupids@")), true);
+  assert.equal(numericForward.some((hit) => hit.startsWith("group-words@")), false);
 
   console.info("search ranking tests passed");
 }

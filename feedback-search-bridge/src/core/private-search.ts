@@ -625,6 +625,10 @@ function scoreNode(post: Record<string, unknown>, node: PrivateNode, combinedTex
   }
 }
 
+export function privateMatchScore(post: Record<string, unknown>, query: string): number {
+  return scorePrivate(post, query, buildCombinedText(post));
+}
+
 function scorePrivate(post: Record<string, unknown>, query: string, combinedText: string): number {
   const trimmed = query.trim();
   if (!trimmed) {
