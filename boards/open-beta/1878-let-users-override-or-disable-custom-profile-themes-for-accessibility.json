@@ -774,7 +774,9 @@
       "postDeleted": false,
       "postID": "6a6155c9d586a21e1a176e96",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 2
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -800,20 +802,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 273,
+  "maxScore": 278,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a6155c9d586a21e1a176e96/527822014.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 273,
+  "score": 278,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-08-05T22:59:29.493Z",
   "subCategoryID": null,
   "title": "[1878] Let users override or disable custom profile themes for accessibility",
-  "trendingScore": 2965.5576360023165,
+  "trendingScore": 2965.821792261112,
   "updatedBy": null,
   "urlName": "1878-let-users-override-or-disable-custom-profile-themes-for-accessibility",
   "viewerIsAuthor": false,
@@ -826,6 +828,50 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62033faecf0a30626751480c",
+      "alias": "Emerald Viper",
+      "aliasID": "65c52c2bed6eefce4c2a8a09",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e620084604224922fb68f888e7426ca5.png",
+      "companies": [],
+      "name": "Vampurica",
+      "urlName": null,
+      "voteID": "6acdd0496fe99c84f2a85697"
+    },
+    {
+      "_id": "694a83c9f85d59c66d6f8b66",
+      "alias": "Alert Wolf",
+      "aliasID": "694a83c9f85d59c66d6faf35",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/76b710f777622d8af4d1b399e08304cf.png",
+      "companies": [],
+      "name": "Տergaz",
+      "urlName": null,
+      "voteID": "6acdcfcb6fe99c84f2a85598"
+    },
+    {
+      "_id": "60ae506a37f0ef1bde06faf7",
+      "alias": "Curly Beetle",
+      "aliasID": "660b23f4e5d26962aa96e798",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d7bf2459efa6d2e7860b20fb312a228e.png",
+      "companies": [],
+      "name": "Amadillo",
+      "urlName": null,
+      "voteID": "6acdccf46fe99c84f2a8491d"
+    },
+    {
+      "_id": "66931e10feb62b2c7064b530",
+      "alias": "Orchid bloom Lobster",
+      "aliasID": "66931e106b10505b94a1f147",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a0dda051640ef4ac6fd24cdf5b509cc7.png",
+      "companies": [],
+      "name": "Puzzlella",
+      "urlName": null,
+      "voteID": "6acdccab6fe99c84f2a84800"
+    },
     {
       "_id": "5fb816a1b3c7963dfa6f5386",
       "alias": "Tangerine yellow Mastodon",
@@ -1331,50 +1377,6 @@
       "name": "1080p Cat",
       "urlName": null,
       "voteID": "6a7fc829523ad16133f80a5d"
-    },
-    {
-      "_id": "63ef6ef681355c44f83391b3",
-      "alias": "Lava Bandicoot",
-      "aliasID": "66301ba9d36452c179978984",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/44e8106e85874845a63abeb4f7868648.png",
-      "companies": [],
-      "name": "SheeChwan",
-      "urlName": null,
-      "voteID": "6a7fbc14523ad16133f7e6ef"
-    },
-    {
-      "_id": "6a7fb919523ad16133f7d57e",
-      "alias": "Resonant Shrew",
-      "aliasID": "6a7fb919523ad16133f7d584",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/aebc8c655496071c030b4b86002af6de.png",
-      "companies": [],
-      "name": "Thane_Valkarian",
-      "urlName": null,
-      "voteID": "6a7fb91e523ad16133f7d67f"
-    },
-    {
-      "_id": "62e1970a7a21bd44b64cbd8e",
-      "alias": "Horizon blue Rooster",
-      "aliasID": "65e10f9ba6e3ea79dd45362c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/5ac8246f8fc8f65ef8e46466da921ced.png",
-      "companies": [],
-      "name": "Riry",
-      "urlName": null,
-      "voteID": "6a7fa908523ad16133f7a507"
-    },
-    {
-      "_id": "5f4d95a78604926406e34a06",
-      "alias": "Romantic Peacock",
-      "aliasID": "65c67d4bed6eefce4c7e5f46",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/656f3346f3115ab3dc66db12335a02a8.png",
-      "companies": [],
-      "name": "Kudalyn",
-      "urlName": null,
-      "voteID": "6a7fa005523ad16133f78821"
     }
   ]
 }
