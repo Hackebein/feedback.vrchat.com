@@ -2,9 +2,10 @@
   "_id": "6acc404f70875364d4d74fb1",
   "aiCategories": [
     "loc.in-world",
-    "groups.roles"
+    "groups.roles",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-10-13T03:42:33.441507Z",
+  "aiTaggedAt": "2026-10-13T12:44:50.154915Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ac46c27b987445a69d3ab00",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -122,6 +123,62 @@
       "value": "始めに、大神さんのご意見も大事な意見であり否定する意思はありません。\n\nその上で、現状の仕組みでは対処できないので本Cannyがあります。\n\n実装するかどうかは運営の判断次第です。\n\n本Cannyで議論するつもりはございませんが、本件の相談を受けた一人として記載します、参考まで。\n\n・グループの参加申請を慎重に審査する基準\n\n　不審なアカウントであるかどうか、荒らし行為を目的としているかどうか、どのように判断してるのか是非知見を頂きたいです。尚、荒らし行為を目的としている場合、捨てアカウント作成による回避もありえますね。プロフィールや画像も捏造されれば判断は困難を極めます。結論として、慎重に審査して受け入れることでの回避は現実的ではない認識です。\n\n　また、その上で、申請を許可するコストをどのようにお考えでしょうか。人力で許可する場合、イベント運営側にどのようなタスクとコストが生じるか、勘案するとより現実的ではないと判断しています。\n\n・過半数の賛成が必要の前提違い\n\n　Cannyにある通り「大人数の嵐の仲間の一斉大量参加によるキック投票の実施」とあることから、スタッフ人数＜荒らしユーザ人数、となった瞬間に大神さんに記載いただいた案は破綻します。また、スタッフの人数を増やす対応も破綻します。スタッフコスト増大だけでなく、一般の参加者の参加可能人数を減らすことに繋がり、本来提供したいイベントの規模を狭めかねません。",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ace1f2257d7e3ae67f10634",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f55bca5f514682edcce9d03",
+        "alias": "Steep Grasshopper",
+        "aliasID": "66090d4fe5d26962aa1994a0",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e1032c39f62be7e7459c612f37a2a6b1.png",
+        "created": "2020-09-07T04:52:53.034Z",
+        "name": "大神／オオガミ（kero）",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-13T12:08:02.417Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6acd6eff6fe99c84f2a6d451",
+          "alias": "Yellow ochre Mandrill",
+          "aliasID": "6acd6eff6fe99c84f2a6d456",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/fe9a8f7889ad2c49c273952bce90d269.png",
+          "created": "2026-10-12T23:36:31.599Z",
+          "name": "トータ",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6acca56a70875364d4e5795c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acc404f70875364d4d74fb1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6acd6eff6fe99c84f2a6d451|full_name}さん、\n\nご丁寧にご返信いただき、ありがとうございます。また、実際にご相談を受けた立場からご意見を共有していただいたことにも感謝いたします。\n\nまず、一点補足させてください。\n\n私が「過半数」と記載したのは、VRChat公式Wikiにある「If a majority of users in the instance vote 'yes'」という説明に基づいています。\n\n投票キックはスタッフだけでなく一般参加者も含めたインスタンス内のユーザーによって判断されるため、「スタッフ人数＜荒らしユーザー人数」になっただけで成立するわけではありません。また、私はスタッフの増員を提案したわけでもございません。\n\n加入審査については、ご指摘のとおり、悪意のあるユーザーを完全に見抜くことは困難ですし、運営側の負担も理解しています。私も審査だけで全て防げるとは考えておらず、あくまで既存の機能を活用してリスクを軽減する方法の一つとして挙げました。\n\nまた、あくまで私個人の経験ですが、これまで参加したりスタッフとして関わったりしたイベントで、スタッフが投票キックによって実際に排除されたという話は聞いたことがありません。\n\nもちろん、今回の被害を軽視するつもりは全くありません。ただ、どの程度発生している問題なのか、また、当時どのインスタンスタイプを利用し、既存の機能では具体的に何が不足していたのかを知りたいというのが私の考えです。\n\n新たな機能の必要性を判断する上でも、そうした情報を共有していただければ、より建設的な検討につながるのではないでしょうか。\n\n長文失礼いたしました。貴重なご意見をありがとうございます。",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -139,20 +196,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 255,
+  "maxScore": 256,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 255,
+  "score": 256,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-12T02:05:03.274Z",
   "subCategoryID": null,
   "title": "グループインスタンス内にて投票キックの対象に出来ない権限をロールに付与できる機能の実装",
-  "trendingScore": 2968.187880923912,
+  "trendingScore": 2968.1923875946945,
   "updatedBy": null,
   "urlName": "5494c3",
   "viewerIsAuthor": false,
@@ -165,6 +222,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "604d235b5d9de87cea510fb0",
+      "alias": "Modest Bobcat",
+      "aliasID": "66cda4a58c4bf668c5777fb5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d216cdece3ad535cbeffddee996a1861.png",
+      "companies": [],
+      "name": "ポリゴン",
+      "urlName": null,
+      "voteID": "6ace22816fe99c84f2a9ed9a"
+    },
     {
       "_id": "6ace12926fe99c84f2a98f9c",
       "alias": "Fern green Boa",
@@ -703,17 +771,6 @@
       "name": "鍋塚みとん",
       "urlName": null,
       "voteID": "6acd25b66fe99c84f2a46a9e"
-    },
-    {
-      "_id": "66cda0b5a8447b5a4021b659",
-      "alias": "Separate Prawn",
-      "aliasID": "66cda0b68c4bf668c5a833a4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c06140c6d765967ce2fd53f6edc6992d.png",
-      "companies": [],
-      "name": "45106-H",
-      "urlName": null,
-      "voteID": "6acd1ea76fe99c84f2a406b2"
     }
   ]
 }
