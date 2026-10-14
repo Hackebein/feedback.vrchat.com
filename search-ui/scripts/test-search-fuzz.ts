@@ -24,11 +24,14 @@ import {
   analyzeTokens,
   bulkIndex,
   deleteIndex,
+  fieldSaturatedDocs,
   recreateIndex,
+  rewrittenClauseCount,
   saturatedCorpus,
   searchQuery,
   searchUrl,
 } from "./opensearch-harness";
+import { identifierPiles, camelIdentifiers, stopWordIdentifiers } from "./search-stress-cases";
 
 const seed = Number(process.env.SEARCH_FUZZ_SEED ?? "20261014");
 const pureRuns = Number(process.env.SEARCH_FUZZ_RUNS ?? "60");
@@ -143,7 +146,32 @@ const queryArb = fc.oneof(
   ).map((parts) => parts.join(" ")),
 );
 
+const generatedPiles = identifierPiles().map((pile) => pile.tokens.join(" "));
+for (const query of generatedPiles) {
+  plain(query);
+}
+
+const mixedPileArb = fc
+  .record({
+    stops: fc.integer({ min: 0, max: 24 }),
+    three: fc.integer({ min: 0, max: 40 }),
+    four: fc.integer({ min: 0, max: 40 }),
+    eight: fc.integer({ min: 0, max: 20 }),
+  })
+  .map((counts) =>
+    [
+      ...stopWordIdentifiers(counts.stops),
+      ...camelIdentifiers(3, counts.three),
+      ...camelIdentifiers(4, counts.four),
+      ...camelIdentifiers(8, counts.eight),
+    ].join(" "),
+  );
+
 await fc.assert(fc.property(queryArb, (query) => buildBoth(query)), {
+  numRuns: pureRuns,
+  seed,
+});
+await fc.assert(fc.property(mixedPileArb, (query) => plain(query)), {
   numRuns: pureRuns,
   seed,
 });
@@ -212,7 +240,8 @@ async function main(): Promise<void> {
       created: post.payload.created,
       combined_text: post.combinedText,
     }));
-    await bulkIndex(index, [...semanticDocs, ...rich]);
+    const pileTokens = [...new Set(identifierPiles().flatMap((pile) => pile.tokens))];
+    await bulkIndex(index, [...semanticDocs, ...rich, ...fieldSaturatedDocs(pileTokens, "ident")]);
 
     const stable: string[] = [];
     for (const word of ["alpha", "widget", "zebra", "stable", "menu"]) {
@@ -256,11 +285,19 @@ async function main(): Promise<void> {
       `${"(".repeat(2000)}groupIds`,
       "C++ C# SDK3 endOfLine",
       "http://example.com/a?b=1&c=2",
+      ...generatedPiles,
       ...nasty,
     ]) {
-      const result = await searchQuery(index, instantSearchStrictQuery(query, textSearchAttributes), 5);
+      const built = instantSearchStrictQuery(query, textSearchAttributes);
+      const result = await searchQuery(index, built, 5);
       assert.equal(result.status, 200, `${JSON.stringify(query).slice(0, 80)} ${result.error}`);
-      assert.ok(plainQueryClauseEstimate(query) <= PLAIN_CLAUSE_BUDGET);
+      const estimate = plainQueryClauseEstimate(query);
+      assert.ok(estimate <= PLAIN_CLAUSE_BUDGET);
+      if (generatedPiles.includes(query)) {
+        const actual = await rewrittenClauseCount(index, built);
+        assert.ok(actual > 0, query.slice(0, 40));
+        assert.ok(estimate >= actual, `${query.slice(0, 40)} estimate ${estimate} actual ${actual}`);
+      }
     }
 
     await fc.assert(

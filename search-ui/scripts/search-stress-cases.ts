@@ -13,6 +13,54 @@ export type StressCase = {
 /** OpenSearch `took` budget for one search on the fixture index. */
 export const SEARCH_LATENCY_BUDGET_MS = 250;
 
+const CAMEL_CHUNKS = ["aa", "Bb", "Cc", "Dd", "Ee", "Ff", "Gg", "Hh"];
+const STOP_LETTERS = "bcdfghjklmnpqrstvwxyz";
+const SUFFIX_LETTERS = "abcdefghijklmnopqrstuvwxyz";
+
+export type IdentifierPile = { label: string; tokens: string[] };
+
+/** `bOfD` shape: a stop word between two content parts, too short for fuzzy. */
+export function stopWordIdentifiers(count: number): string[] {
+  const tokens: string[] = [];
+  for (let index = 0; index < count; index += 1) {
+    const first = STOP_LETTERS[index % STOP_LETTERS.length] ?? "b";
+    const second = STOP_LETTERS[Math.floor(index / STOP_LETTERS.length) % STOP_LETTERS.length] ?? "b";
+    tokens.push(`${first}Of${second.toUpperCase()}`);
+  }
+  return tokens;
+}
+
+/** Camel identifiers with a stable part count. The suffix stays inside the last part. */
+export function camelIdentifiers(parts: number, count: number): string[] {
+  const body = CAMEL_CHUNKS.slice(0, parts).join("");
+  const tokens: string[] = [];
+  for (let index = 0; index < count; index += 1) {
+    const first = SUFFIX_LETTERS[Math.floor(index / SUFFIX_LETTERS.length)] ?? "a";
+    const second = SUFFIX_LETTERS[index % SUFFIX_LETTERS.length] ?? "a";
+    const suffix = `${first}${second}`;
+    tokens.push(`${body.slice(0, -1)}${suffix}${body.slice(-1)}`);
+  }
+  return tokens;
+}
+
+export function identifierPiles(): IdentifierPile[] {
+  return [
+    { label: "stop-word identifiers", tokens: stopWordIdentifiers(24) },
+    { label: "three-part identifiers", tokens: camelIdentifiers(3, 40) },
+    { label: "four-part identifiers", tokens: camelIdentifiers(4, 40) },
+    { label: "eight-part identifiers", tokens: camelIdentifiers(8, 20) },
+    {
+      label: "mixed identifiers",
+      tokens: [
+        ...stopWordIdentifiers(8),
+        ...camelIdentifiers(3, 8),
+        ...camelIdentifiers(4, 8),
+        ...camelIdentifiers(8, 4),
+      ],
+    },
+  ];
+}
+
 const SYNONYMS =
   "full body tracking fbt face tracking ft frame rate fps vrchat plus avatar performance creator companion open sound control two factor authentication role play";
 

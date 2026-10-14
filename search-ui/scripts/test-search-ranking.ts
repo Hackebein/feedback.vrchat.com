@@ -17,13 +17,18 @@ import {
 import {
   FUZZY_CLAUSE_BUDGET,
   PLAIN_CLAUSE_BUDGET,
+  degradedPlainQuery,
   fuzzyExpansionLimit,
   instantSearchStrictQuery,
+  isTooManyNestedClauses,
+  plainQueryClauseEstimate,
   plainQueryLimit,
+  retryWithoutNestedClauses,
   searchkitConfig,
   textSearchAttributes,
   withOmittedTerms,
 } from "../server/searchkit-config";
+import { identifierPiles } from "./search-stress-cases";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const mappingPath = join(here, "../../deploy/opensearch/index_mappings.json");
@@ -242,6 +247,42 @@ for (const term of ["zz10", "zz50", "zz89"]) {
   assert.equal(hundredLimit.omittedTerms.includes(term), false, term);
 }
 assert.ok(hundredLimit.clauses <= PLAIN_CLAUSE_BUDGET);
+assert.ok(plainQueryClauseEstimate("bOfD") >= 44);
+assert.ok(plainQueryClauseEstimate("bCdE") >= 28);
+assert.ok(plainQueryClauseEstimate("b1c2") >= 36);
+for (const pile of identifierPiles()) {
+  const limit = plainQueryLimit(pile.tokens.join(" "));
+  assert.ok(limit.clauses <= PLAIN_CLAUSE_BUDGET, `${pile.label} ${limit.clauses}`);
+  assert.equal(limit.omittedTerms.length, 0, pile.label);
+}
+const degradedGroup = degradedPlainQuery("groupIds", textSearchAttributes);
+assert.equal(fuzzinessValues(degradedGroup).includes("AUTO:5,100"), false);
+assert.equal(proximityGroups(degradedGroup).length * 2, groupIdsProximity.length);
+assert.equal(isTooManyNestedClauses({ error: { root_cause: [{ type: "too_many_nested_clauses" }] } }), true);
+assert.equal(isTooManyNestedClauses(new Error("too_many_nested_clauses")), true);
+assert.equal(isTooManyNestedClauses("search failed"), false);
+let nestedRetries = 0;
+assert.equal(
+  await retryWithoutNestedClauses(false, async (degraded) => {
+    nestedRetries += 1;
+    if (!degraded) {
+      throw new Error("too_many_nested_clauses");
+    }
+    return "kept";
+  }),
+  "kept",
+);
+assert.equal(nestedRetries, 2);
+await assert.rejects(
+  retryWithoutNestedClauses(true, async () => {
+    throw new Error("too_many_nested_clauses");
+  }),
+);
+await assert.rejects(
+  retryWithoutNestedClauses(false, async () => {
+    throw new Error("search failed");
+  }),
+);
 const stamped = withOmittedTerms({ results: [{ hits: [] }] }, [hundredTerms.join(" ")], false) as {
   results: Array<{ omittedTerms: string[] }>;
 };

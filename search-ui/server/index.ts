@@ -16,8 +16,12 @@ import { createIndexGenerationResolver } from "./index-generation";
 import { buildLuceneQueryBody } from "./lucene-query";
 import { type PhraseMode, withPhraseFallback, withPhraseResultFallback } from "./phrase-mode";
 import {
+  degradedPlainQuery,
   gatewayEnv,
   instantSearchStrictQuery,
+  isTooManyNestedClauses,
+  rejectTooManyNestedClauses,
+  retryWithoutNestedClauses,
   searchkitConfig,
   withOmittedTerms,
 } from "./searchkit-config";
@@ -58,16 +62,34 @@ function queryTexts(requests: MultipleQueriesQuery[]): string[] {
   });
 }
 
-function searchRequestOptions(lucene: boolean, mode: PhraseMode) {
+function searchRequestOptions(lucene: boolean, mode: PhraseMode, degraded: boolean) {
   return {
     getQuery: lucene
       ? (query: string) => buildLuceneQueryBody(query.trim(), mode)
       : (query: string, attributes: SearchAttribute[]) =>
-          instantSearchStrictQuery(query, attributes, undefined, mode),
+          degraded
+            ? degradedPlainQuery(query, attributes, mode)
+            : instantSearchStrictQuery(query, attributes, undefined, mode),
     hooks: {
       beforeSearch: async (requests: SearchRequest[]) => applyExcludeFacets(requests),
+      afterSearch: async (_requests, responses) => rejectTooManyNestedClauses(responses),
     },
   };
+}
+
+async function searchWithRecovery(
+  lucene: boolean,
+  requests: MultipleQueriesQuery[],
+): Promise<{ body: unknown; degraded: boolean }> {
+  let degraded = false;
+  const body = await retryWithoutNestedClauses(lucene, (nextDegraded) => {
+    degraded = nextDegraded;
+    return withPhraseFallback(
+      (mode) => apiClient.handleRequest(requests, searchRequestOptions(lucene, mode, nextDegraded)),
+      extractElasticsearchBadRequestDetail,
+    );
+  });
+  return { body, degraded };
 }
 
 function extractElasticsearchBadRequestDetail(err: unknown): string | undefined {
@@ -172,15 +194,9 @@ app.get("/api/search", async (req, res) => {
       },
     ];
 
-    const results = await withPhraseFallback(
-      (mode) =>
-        apiClient.handleRequest(
-          instantsearchRequests,
-          searchRequestOptions(isLuceneMode(req), mode),
-        ),
-      extractElasticsearchBadRequestDetail,
-    );
-    res.json(withOmittedTerms(results, queryTexts(instantsearchRequests), isLuceneMode(req)));
+    const lucene = isLuceneMode(req);
+    const results = await searchWithRecovery(lucene, instantsearchRequests);
+    res.json(withOmittedTerms(results.body, queryTexts(instantsearchRequests), lucene, results.degraded));
   } catch (err) {
     const detail = extractElasticsearchBadRequestDetail(err);
     if (detail !== undefined) {
@@ -203,17 +219,10 @@ app.post("/api/search", async (req, res) => {
         });
       return;
     }
-    const results = await withPhraseFallback(
-      (mode) =>
-        apiClient.handleRequest(
-          req.body as MultipleQueriesQuery[],
-          searchRequestOptions(isLuceneMode(req), mode),
-        ),
-      extractElasticsearchBadRequestDetail,
-    );
-    res.json(
-      withOmittedTerms(results, queryTexts(req.body as MultipleQueriesQuery[]), isLuceneMode(req)),
-    );
+    const lucene = isLuceneMode(req);
+    const requests = req.body as MultipleQueriesQuery[];
+    const results = await searchWithRecovery(lucene, requests);
+    res.json(withOmittedTerms(results.body, queryTexts(requests), lucene, results.degraded));
   } catch (err) {
     const detail = extractElasticsearchBadRequestDetail(err);
     if (detail !== undefined) {
@@ -248,14 +257,21 @@ app.get("/api/agent/search", async (req, res) => {
     return;
   }
   try {
-    const result = await withPhraseResultFallback((mode) =>
+    let usedDegraded = false;
+    let result = await withPhraseResultFallback((mode) =>
       queryOpenSearch(openSearchTarget, buildAgentSearchBody(parsed.params, mode)),
     );
+    if (!result.ok && isTooManyNestedClauses(result.detail)) {
+      usedDegraded = true;
+      result = await withPhraseResultFallback((mode) =>
+        queryOpenSearch(openSearchTarget, buildAgentSearchBody(parsed.params, mode, true)),
+      );
+    }
     if (!result.ok) {
       sendAgentQueryError(res, result);
       return;
     }
-    res.json(mapAgentSearchResponse(result.body, parsed.params));
+    res.json(mapAgentSearchResponse(result.body, parsed.params, usedDegraded));
   } catch (err) {
     console.error("[search-gateway]", err);
     res.status(500).json({ message: "search failed" });
