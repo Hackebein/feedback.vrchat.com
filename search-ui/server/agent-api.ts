@@ -2,6 +2,7 @@ import type { ElasticsearchQuery } from "searchkit";
 import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
 import type { PhraseMode } from "./phrase-mode";
 import {
+  degradedPlainQuery,
   instantSearchStrictQuery,
   plainQueryLimit,
   textSearchAttributes,
@@ -260,8 +261,11 @@ export function parseAgentSearchQuery(
 export function buildAgentSearchBody(
   params: AgentSearchParams,
   mode: PhraseMode = "strict",
+  degraded = false,
 ): Record<string, unknown> {
-  const text = instantSearchStrictQuery(params.q, textSearchAttributes, undefined, mode);
+  const text = degraded
+    ? degradedPlainQuery(params.q, textSearchAttributes, mode)
+    : instantSearchStrictQuery(params.q, textSearchAttributes, undefined, mode);
   const filter: ElasticsearchQuery[] = [];
   if (params.board) {
     filter.push({ term: { "board.urlName": params.board } });
@@ -314,6 +318,7 @@ export function buildAgentPostBody(board: string, urlName: string): Record<strin
 export function mapAgentSearchResponse(
   body: unknown,
   params: AgentSearchParams,
+  degraded = false,
 ): AgentSearchResponse {
   const parsed = readSearchHits(body);
   const hits = parsed.hits.map((hit) => {
@@ -333,7 +338,7 @@ export function mapAgentSearchResponse(
     limit: params.limit,
     nbHits: parsed.total,
     hits,
-    omittedTerms: plainQueryLimit(params.q).omittedTerms,
+    omittedTerms: plainQueryLimit(params.q, textSearchAttributes, degraded).omittedTerms,
   };
 }
 
