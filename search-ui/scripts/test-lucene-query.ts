@@ -371,6 +371,16 @@ assert.equal(
   limitLuceneExpansions("a~1 OR b~1 OR c~1 OR d~1 OR e~1 OR f*"),
   "a~1 OR b~1 OR c~1 OR d~1 OR e OR f",
 );
+assert.equal(limitLuceneExpansions("score:[10 TO *]"), "score:[10 TO *]");
+assert.equal(limitLuceneExpansions("score:[* TO 10]"), "score:[* TO 10]");
+assert.equal(limitLuceneExpansions("score:{10 TO *}"), "score:{10 TO *}");
+assert.equal(
+  limitLuceneExpansions("a* OR b* OR c* OR d* OR score:[10 TO *] OR e*"),
+  "a* OR b* OR c* OR d* OR score:[10 TO *] OR e",
+);
+const rangeBody = JSON.stringify(buildLuceneQueryBody("score:[10 TO *]"));
+assert.equal(rangeBody.includes("[10 TO *]"), true, rangeBody);
+assert.equal(rangeBody.includes("[10 TO ]"), false, rangeBody);
 
 buildLuceneQueryBody(`${"(".repeat(5000)}status:open${")".repeat(5000)}`);
 buildLuceneQueryBody(`${"NOT ".repeat(5000)}status:open`);

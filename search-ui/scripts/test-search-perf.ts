@@ -6,9 +6,10 @@ import assert from "node:assert/strict";
 import { performance } from "node:perf_hooks";
 import { buildLuceneQueryBody } from "../server/lucene-query";
 import {
+  EXPANSION_SLOT_BUDGET,
   PLAIN_CLAUSE_BUDGET,
   instantSearchStrictQuery,
-  plainQueryClauseEstimate,
+  plainQueryLimit,
   textSearchAttributes,
 } from "../server/searchkit-config";
 import {
@@ -40,17 +41,23 @@ async function main(): Promise<void> {
           : buildLuceneQueryBody(item.query);
       const buildMs = performance.now() - started;
       if (item.kind === "plain") {
-        const clauses = plainQueryClauseEstimate(item.query);
+        const limit = plainQueryLimit(item.query);
         assert.ok(
-          clauses <= PLAIN_CLAUSE_BUDGET,
-          `${item.label} clauses ${clauses} over ${PLAIN_CLAUSE_BUDGET}`,
+          limit.clauses <= PLAIN_CLAUSE_BUDGET,
+          `${item.label} clauses ${limit.clauses} over ${PLAIN_CLAUSE_BUDGET}`,
         );
+        assert.ok(
+          limit.expansionSlots <= EXPANSION_SLOT_BUDGET,
+          `${item.label} expansions ${limit.expansionSlots}`,
+        );
+        assert.deepEqual(limit.omittedTerms, [], item.label);
       }
       const result = await searchQuery(index, query, 5);
       assert.equal(result.status, 200, `${item.label} ${result.error}`);
       assert.ok(result.took !== null && result.took <= SEARCH_LATENCY_BUDGET_MS, `${item.label} took ${result.took}ms`);
       assert.ok(buildMs < SEARCH_LATENCY_BUDGET_MS, `${item.label} build ${buildMs.toFixed(1)}ms`);
-      console.info(`${item.label}\tclauses=${item.kind === "plain" ? plainQueryClauseEstimate(item.query) : "-"}\ttook=${result.took}ms\tbuild=${buildMs.toFixed(1)}ms`);
+      const clauses = item.kind === "plain" ? plainQueryLimit(item.query).clauses : "-";
+      console.info(`${item.label}\tclauses=${clauses}\ttook=${result.took}ms\tbuild=${buildMs.toFixed(1)}ms`);
     }
   } finally {
     await deleteIndex(index);

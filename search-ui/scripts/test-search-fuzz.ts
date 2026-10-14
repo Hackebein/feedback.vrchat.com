@@ -54,6 +54,17 @@ const semantic = [
   { post_id: "end-foo-line", title: "end foo line", details: "a different hole" },
   { post_id: "ab-c", title: "ab c together", details: "adjacent split" },
   { post_id: "a-bc", title: "a bc together", details: "other split" },
+  { post_id: "group-of-ids", title: "group of ids", details: "stop word in the hole" },
+  { post_id: "group-the-ids", title: "group the ids", details: "different stop word" },
+  { post_id: "end-the-line", title: "end the line", details: "different stop word" },
+  { post_id: "xml-ident", title: "XMLHttpRequest", details: "one identifier" },
+  { post_id: "xml-pair", title: "XMLHttp Request", details: "index split" },
+  { post_id: "xml-spaced", title: "XML Http Request", details: "acronym split" },
+  { post_id: "http-ident", title: "HTTPResponse", details: "no camel boundary" },
+  { post_id: "http-spaced", title: "HTTP Response", details: "two words" },
+  { post_id: "simple-ident", title: "simpleXMLParser", details: "acronym in the middle" },
+  { post_id: "simple-pair", title: "simple xmlparser", details: "index split" },
+  { post_id: "simple-spaced", title: "simple XML parser", details: "three words" },
 ];
 
 const stored: StoredPrivatePost[] = semantic.map((doc, index) =>
@@ -213,9 +224,19 @@ async function main(): Promise<void> {
     assert.ok(stable.length >= 4, stable.join(","));
 
     await assertAgree("groupIds", ["grop-ids", "group-ids-spaced", "groupids"]);
-    await assertAgree("group ids", ["grop-ids", "group-far", "group-ids-spaced", "groupids"]);
+    await assertAgree("group ids", [
+      "grop-ids",
+      "group-far",
+      "group-ids-spaced",
+      "group-of-ids",
+      "group-the-ids",
+      "groupids",
+    ]);
     await assertAgree("endOfLine", ["end-line", "end-of-line"]);
-    await assertAgree("end of line", ["end-foo-line", "end-line", "end-of-line"]);
+    await assertAgree("end of line", ["end-foo-line", "end-line", "end-of-line", "end-the-line"]);
+    await assertAgree("XMLHttpRequest", ["xml-ident", "xml-pair"]);
+    await assertAgree("HTTPResponse", ["http-ident"]);
+    await assertAgree("simpleXMLParser", ["simple-ident", "simple-pair"]);
     await assertAgree("the menu", ["menu", "quiet"]);
     await assertAgree("the", [...semanticIds].sort());
     await assertAgree("C#", ["csharp"]);

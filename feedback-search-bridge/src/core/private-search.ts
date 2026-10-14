@@ -1,4 +1,5 @@
 import { ENGLISH_STOP } from "../../../shared/english-stop";
+import { splitSearchIdentifier } from "../../../shared/identifier-split";
 import {
   RANGE_ATTRS,
   REFINEMENT_ATTRS,
@@ -164,34 +165,14 @@ export function matchesQuery(text: string, tokens: string[]): boolean {
  * Private-board matching. Exact substrings outrank an adjacent camelCase
  * split, which outranks a single edit on words of length >= 5. Unquoted
  * English stop words are dropped, matching the gateway. Identifier parts
- * have to sit next to each other in either order. A stop word inside the
- * identifier may fill that hole (`endOfLine` matches "end of line" and
- * "end line", not "end foo line"). Lucene mode understands AND/OR/NOT,
- * quotes, and the fields the sidebar actually stores.
+ * have to sit next to each other in either order, and a stop word in the
+ * post still occupies that slot (`groupIds` matches "group ids", not
+ * "group of ids"). A stop word inside the identifier may fill that hole
+ * (`endOfLine` matches "end of line" and "end line", not "end the line").
+ * Splits follow the index analyzer (`XMLHttpRequest` is `XMLHttp` +
+ * `Request`, and `HTTPResponse` stays one token). Lucene mode understands
+ * AND/OR/NOT, quotes, and the fields the sidebar actually stores.
  */
-function splitPrivateIdentifier(raw: string): { parts: string[]; phraseParts: string[] } {
-  const pieces = raw
-    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
-    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
-    .replace(/([A-Za-z])([0-9])/g, "$1 $2")
-    .replace(/([0-9])([A-Za-z])/g, "$1 $2")
-    .split(/[^A-Za-z0-9]+/)
-    .map((part) => part.toLowerCase())
-    .filter((part) => part.length > 0);
-  const contentAt: number[] = [];
-  for (let index = 0; index < pieces.length; index += 1) {
-    if (!ENGLISH_STOP.has(pieces[index] ?? "")) {
-      contentAt.push(index);
-    }
-  }
-  const parts = contentAt.map((index) => pieces[index] ?? "");
-  if (contentAt.length < 2) {
-    return { parts, phraseParts: [] };
-  }
-  const span = pieces.slice(contentAt[0], contentAt[contentAt.length - 1]! + 1);
-  const phraseParts = span.some((part) => ENGLISH_STOP.has(part)) ? span : [];
-  return { parts, phraseParts };
-}
 
 function sameBag(left: readonly string[], right: readonly string[]): boolean {
   if (left.length !== right.length) {
@@ -279,7 +260,7 @@ function editDistanceAtMost1(left: string, right: string): boolean {
   return true;
 }
 
-/** Whole tokens plus camelCase pieces, so `group` can typo-match the `grop` in `gropIds`. */
+/** Whole tokens plus index-analyzer pieces, so `group` can typo-match the `grop` in `gropIds`. */
 function expandedWords(text: string): string[] {
   const words: string[] = [];
   for (const chunk of text.split(/[^A-Za-z0-9]+/)) {
@@ -288,15 +269,12 @@ function expandedWords(text: string): string[] {
     }
     const lower = chunk.toLowerCase();
     words.push(lower);
-    const pieces = chunk
-      .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
-      .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
-      .replace(/([A-Za-z])([0-9])/g, "$1 $2")
-      .replace(/([0-9])([A-Za-z])/g, "$1 $2")
-      .toLowerCase()
-      .split(/\s+/)
-      .filter((part) => part.length > 0 && part !== lower);
-    words.push(...pieces);
+    for (const part of splitSearchIdentifier(chunk).parts) {
+      const piece = part.toLowerCase();
+      if (piece !== lower) {
+        words.push(piece);
+      }
+    }
   }
   return words;
 }
@@ -344,12 +322,13 @@ function scoreToken(text: string, raw: string): number {
   if (exact > 0) {
     return 100 + exact;
   }
-  const split = splitPrivateIdentifier(raw);
+  const split = splitSearchIdentifier(raw);
   const words = hay.split(/[^a-z0-9]+/).filter((word) => word.length > 0);
-  const content = words.filter((word) => !ENGLISH_STOP.has(word));
+  const parts = split.parts.map((part) => part.toLowerCase());
+  const phraseParts = split.phraseParts.map((part) => part.toLowerCase());
   if (
-    (split.parts.length >= 2 && adjacentParts(content, split.parts)) ||
-    (split.phraseParts.length >= 2 && adjacentParts(words, split.phraseParts))
+    (parts.length >= 2 && adjacentParts(words, parts)) ||
+    (phraseParts.length >= 2 && adjacentParts(words, phraseParts))
   ) {
     return 40;
   }

@@ -419,6 +419,7 @@
                   "page": 0,
                   "limit": 10,
                   "nbHits": 1,
+                  "omittedTerms": [],
                   "hits": [
                     {
                       "post_id": "5aff34492d6f472658e02dfa",
@@ -788,6 +789,11 @@
             "type": "string",
             "description": "Echo of **`params.query`** (or mapped **`GET`** **`q`**/**`query`**)."
           },
+          "omittedTerms": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Plain-query terms removed so the rewrite stays under OpenSearch's clause limit. Empty when every distinct term is searched. Lucene queries are not trimmed this way."
+          },
           "facets": {
             "type": "object",
             "description": "**`facets`**: each **`facetName`** maps (**`facetValue`** → **`count`**).",
@@ -1144,7 +1150,8 @@
           "page",
           "limit",
           "nbHits",
-          "hits"
+          "hits",
+          "omittedTerms"
         ],
         "properties": {
           "q": {
@@ -1170,6 +1177,11 @@
           "nbHits": {
             "type": "integer",
             "minimum": 0
+          },
+          "omittedTerms": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Distinct terms removed so the query stays under OpenSearch's clause limit. Empty when every distinct term is searched."
           },
           "hits": {
             "type": "array",

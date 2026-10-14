@@ -407,6 +407,41 @@ const endFooPost = stored({ _id: "end-foo", title: "end foo line", details: "hol
 assert.ok(privateMatchScore(endLinePost.payload, "endOfLine") > 0);
 assert.ok(privateMatchScore(endOfPost.payload, "endOfLine") > 0);
 assert.equal(privateMatchScore(endFooPost.payload, "endOfLine"), 0);
+assert.equal(
+  privateMatchScore(stored({ _id: "group-of", title: "group of ids", details: "gap" }).payload, "groupIds"),
+  0,
+);
+assert.equal(
+  privateMatchScore(stored({ _id: "end-the", title: "end the line", details: "other stop" }).payload, "endOfLine"),
+  0,
+);
+assert.ok(
+  privateMatchScore(stored({ _id: "xml-pair", title: "XMLHttp Request", details: "pair" }).payload, "XMLHttpRequest") > 0,
+);
+assert.equal(
+  privateMatchScore(
+    stored({ _id: "xml-spaced", title: "XML Http Request", details: "spaced" }).payload,
+    "XMLHttpRequest",
+  ),
+  0,
+);
+assert.equal(
+  privateMatchScore(stored({ _id: "http-spaced", title: "HTTP Response", details: "spaced" }).payload, "HTTPResponse"),
+  0,
+);
+assert.ok(
+  privateMatchScore(
+    stored({ _id: "simple-pair", title: "simple xmlparser", details: "pair" }).payload,
+    "simpleXMLParser",
+  ) > 0,
+);
+assert.equal(
+  privateMatchScore(
+    stored({ _id: "simple-spaced", title: "simple XML parser", details: "spaced" }).payload,
+    "simpleXMLParser",
+  ),
+  0,
+);
 assert.ok(privateMatchScore(endFooPost.payload, "end of line") > 0);
 
 const menuPost = stored({

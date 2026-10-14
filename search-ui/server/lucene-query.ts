@@ -1089,7 +1089,8 @@ export function rewriteEnumOr(query: string): string {
  * A fuzzy or wildcard term rewrites to one clause per expansion, and a camelCase
  * term is fanned out across the `.exact` fields first. OpenSearch 2.19.5 rejects
  * that once it passes `max_clause_count`. Keep the first few and search the rest
- * as plain terms.
+ * as plain terms. `*` and `?` inside a range (`score:[10 TO *]`) are bounds, not
+ * wildcards, and stay in the query.
  */
 const MAX_LUCENE_EXPANSIONS = 4;
 
@@ -1098,6 +1099,7 @@ export function limitLuceneExpansions(query: string, max = MAX_LUCENE_EXPANSIONS
   let out = "";
   let index = 0;
   let quote: string | undefined;
+  let ranges = 0;
   while (index < query.length) {
     const char = query[index] ?? "";
     if (quote) {
@@ -1115,6 +1117,20 @@ export function limitLuceneExpansions(query: string, max = MAX_LUCENE_EXPANSIONS
     }
     if (char === '"' || char === "'") {
       quote = char;
+      out += char;
+      index += 1;
+      continue;
+    }
+    if (char === "[" || char === "{") {
+      ranges += 1;
+      out += char;
+      index += 1;
+      continue;
+    }
+    if (ranges > 0) {
+      if (char === "]" || char === "}") {
+        ranges -= 1;
+      }
       out += char;
       index += 1;
       continue;

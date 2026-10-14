@@ -52,5 +52,10 @@ export function stressCases(bases: readonly string[]): StressCase[] {
       kind: "lucene",
       query: `${"(".repeat(5000)}status:open${")".repeat(5000)}`,
     },
+    {
+      label: "lucene unbounded range",
+      kind: "lucene",
+      query: "score:[10 TO *] OR score:[* TO 10]",
+    },
   ];
 }
