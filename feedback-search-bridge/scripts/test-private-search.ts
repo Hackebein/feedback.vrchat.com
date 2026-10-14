@@ -287,32 +287,88 @@ const ranked = sortHits(
 assert.equal(ranked[0]?._id, "grop-ids");
 assert.equal(ranked[1]?._id, "group-ids");
 
-function rankPrivate(posts: StoredPrivatePost[], query: string): string[] {
+function rankPrivate(
+  posts: StoredPrivatePost[],
+  query: string,
+  luceneMode = false,
+): string[] {
   return posts
-    .map((post) => ({ id: post._id, score: privateMatchScore(post.payload, query) }))
+    .map((post) => ({ id: post._id, score: privateMatchScore(post.payload, query, luceneMode) }))
     .filter((row) => row.score > 0)
     .sort((left, right) => right.score - left.score || left.id.localeCompare(right.id))
     .map((row) => `${row.id}@${row.score}`);
 }
 
-function assertSamePrivate(label: string, queries: string[]): void {
-  const ranks = queries.map((query) => rankPrivate(identifierPosts, query));
+function assertSamePrivate(label: string, queries: string[], luceneMode = false): void {
+  const ranks = queries.map((query) => rankPrivate(identifierPosts, query, luceneMode));
   assert.ok(ranks[0] && ranks[0].length > 0, `${label}: expected hits`);
   for (const rank of ranks.slice(1)) {
     assert.deepEqual(rank, ranks[0], label);
   }
 }
 
+assert.equal(privateMatchScore(groupIdWordsPost.payload, "groupIds"), 40);
 assertSamePrivate("terms", ["group ids", "ids group"]);
-assertSamePrivate("fields", ["status:open board.urlName:internal", "board.urlName:internal status:open"]);
-assertSamePrivate("and", ["status:open AND title:group", "title:group AND status:open"]);
-assertSamePrivate("or", ["status:open OR status:closed", "status:closed OR status:open"]);
-assertSamePrivate("precedence", [
-  "title:avatar AND status:open OR status:closed",
-  "status:closed OR status:open AND title:avatar",
-]);
-assertSamePrivate("not", ["avatar NOT status:closed", "NOT status:closed AND avatar"]);
+assert.deepEqual(rankPrivate(identifierPosts, "status:open AND title:group"), []);
+assertSamePrivate(
+  "fields",
+  ["status:open board.urlName:internal", "board.urlName:internal status:open"],
+  true,
+);
+assertSamePrivate("and", ["status:open AND title:group", "title:group AND status:open"], true);
+assertSamePrivate(
+  "lowercase and",
+  ["status:open and title:group", "title:group AND status:open"],
+  true,
+);
+assertSamePrivate("or", ["status:open OR status:closed", "status:closed OR status:open"], true);
+assertSamePrivate(
+  "precedence",
+  ["title:avatar AND status:open OR status:closed", "status:closed OR status:open AND title:avatar"],
+  true,
+);
+assertSamePrivate("not", ["avatar NOT status:closed", "NOT status:closed AND avatar"], true);
 assertSamePrivate("mixed phrase", ['avatar "full body"', '"full body" avatar']);
+
+const notePost = stored({
+  _id: "note",
+  title: "See note: the bug is here",
+  details: "func() crashes when opened",
+  status: "open",
+});
+const workingPost = stored({
+  _id: "working",
+  title: "Menu does not load",
+  details: "not working",
+  status: "open",
+});
+const quietPost = stored({
+  _id: "quiet",
+  title: "Avatar loads",
+  details: "nothing about the menu",
+  status: "open",
+});
+assert.ok(privateMatchScore(notePost.payload, "note: bug") > 0);
+assert.ok(privateMatchScore(notePost.payload, "func()") > 0);
+assert.ok(privateMatchScore(workingPost.payload, "NOT working") > 0);
+assert.ok(privateMatchScore(workingPost.payload, "not working") > 0);
+assert.equal(privateMatchScore(workingPost.payload, "NOT working", true), 0);
+assert.ok(privateMatchScore(quietPost.payload, "NOT working", true) > 0);
+const plainNot = sortHits(
+  [quietPost.payload, workingPost.payload],
+  "relevance",
+  "NOT working",
+);
+assert.equal(plainNot[0]?._id, "working");
+assert.ok(privateMatchScore(workingPost.payload, "NOT working") > 0);
+const luceneNot = sortHits(
+  [workingPost.payload, quietPost.payload],
+  "relevance",
+  "NOT working",
+  undefined,
+  true,
+);
+assert.equal(luceneNot[0]?._id, "quiet");
 const quotedPrivate = rankPrivate(identifierPosts, '"full body"');
 const quotedPrivateReverse = rankPrivate(identifierPosts, '"body full"');
 assert.notDeepEqual(quotedPrivate, quotedPrivateReverse);

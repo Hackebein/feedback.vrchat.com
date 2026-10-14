@@ -616,20 +616,211 @@ function casefoldQuoted(value: string): string {
   return `${quote}${value.slice(1, -1).toLowerCase()}${quote}`;
 }
 
+/** Boolean words inside a grouped value keep their spelling. Other words fold. */
+const GROUP_OPERATORS: ReadonlySet<string> = new Set(["and", "or", "not", "to"]);
+
+const BARE_PHRASE_FIELDS = ["combined_text^3", "title^2", "details", "author.name"] as const;
+
+/**
+ * Quoted phrases on these fields must not run `synonym_graph`. `query_string`
+ * would, so `"full body tracking"` matched an `fbt` post.
+ */
+function postPhraseFields(field: string): readonly string[] | undefined {
+  switch (field) {
+    case "title":
+      return ["title^2"];
+    case "details":
+      return ["details"];
+    case "combined_text":
+      return ["combined_text^3"];
+    case "author.name":
+      return ["author.name"];
+    default:
+      return undefined;
+  }
+}
+
+const COMMENT_PHRASE_FIELDS: ReadonlySet<string> = new Set([
+  "comments.value",
+  "comments.mergedPostTitle",
+  "comments.mergedPostDetails",
+]);
+
+function unquotePhrase(value: string): string | undefined {
+  const match = /^(["'])([\s\S]*)\1$/.exec(value);
+  if (!match) {
+    return undefined;
+  }
+  const inner = (match[2] ?? "").trim();
+  const quote = match[1] ?? "";
+  if (!inner || inner.includes(quote)) {
+    return undefined;
+  }
+  return inner;
+}
+
+function readPhraseClause(clause: string): { phrase: string; field: string } | undefined {
+  const trimmed = clause.trim();
+  const bare = unquotePhrase(trimmed);
+  if (bare) {
+    return { phrase: bare, field: "" };
+  }
+  const split = /^([A-Za-z_][\w.]*)\s*:(.*)$/s.exec(trimmed);
+  if (!split) {
+    return undefined;
+  }
+  const phrase = unquotePhrase((split[2] ?? "").trim());
+  if (!phrase) {
+    return undefined;
+  }
+  return { phrase, field: split[1] ?? "" };
+}
+
+function phraseMultiMatch(phrase: string, fields: readonly string[]): ElasticsearchQuery {
+  return {
+    multi_match: {
+      query: phrase,
+      type: "phrase",
+      fields: [...fields],
+      analyzer: "text_phrase",
+    },
+  };
+}
+
+/**
+ * A chunk that is only `"phrase"` or `textField:"phrase"` is a phrase query
+ * on `text_phrase` (stem, no synonyms). Keyword quotes stay in `query_string`.
+ */
+function postPhraseQuery(clause: string): ElasticsearchQuery | undefined {
+  const read = readPhraseClause(clause);
+  if (!read) {
+    return undefined;
+  }
+  const fields = read.field ? postPhraseFields(read.field) : BARE_PHRASE_FIELDS;
+  if (!fields) {
+    return undefined;
+  }
+  return phraseMultiMatch(read.phrase, fields);
+}
+
+function postTextQuery(chunks: string[]): ElasticsearchQuery {
+  const strings: string[] = [];
+  const phrases: ElasticsearchQuery[] = [];
+  for (const chunk of chunks) {
+    const phrase = postPhraseQuery(chunk);
+    if (phrase) {
+      phrases.push(phrase);
+      continue;
+    }
+    strings.push(chunk);
+  }
+  const parts: ElasticsearchQuery[] = [];
+  if (strings.length === 1) {
+    parts.push(postQueryString(strings[0]!));
+  } else if (strings.length > 1) {
+    parts.push(postQueryString(strings.join(" AND ")));
+  }
+  parts.push(...phrases);
+  if (parts.length === 0) {
+    return { match_all: {} };
+  }
+  if (parts.length === 1) {
+    return parts[0]!;
+  }
+  return { bool: { must: parts } };
+}
+
+function commentsClauseQuery(clause: string): ElasticsearchQuery {
+  const read = readPhraseClause(clause);
+  if (read && COMMENT_PHRASE_FIELDS.has(read.field)) {
+    return {
+      nested: {
+        path: COMMENTS_PATH,
+        query: phraseMultiMatch(read.phrase, [read.field]),
+      },
+    };
+  }
+  return commentsNested(clause);
+}
+
+/** Lowercase letter-words inside `()`, `[]`, or `{}`. Operators stay as written. */
+function casefoldGroup(value: string): string {
+  let out = "";
+  let index = 0;
+  while (index < value.length) {
+    const char = value[index] ?? "";
+    if (char === '"' || char === "'") {
+      const end = value.indexOf(char, index + 1);
+      const stop = end === -1 ? value.length : end;
+      out += char + value.slice(index + 1, stop).toLowerCase();
+      if (end !== -1) {
+        out += char;
+      }
+      index = end === -1 ? value.length : end + 1;
+      continue;
+    }
+    if (/[A-Za-z]/.test(char)) {
+      let end = index + 1;
+      while (end < value.length && /[A-Za-z]/.test(value[end] ?? "")) {
+        end += 1;
+      }
+      const word = value.slice(index, end);
+      out += GROUP_OPERATORS.has(word.toLowerCase()) ? word : word.toLowerCase();
+      index = end;
+      continue;
+    }
+    out += char;
+    index += 1;
+  }
+  return out;
+}
+
 /**
  * Escape Lucene operators that appear inside a term (`vrc+`, `C++`, URLs)
- * without touching ranges, `field:(…)` groups, wildcards, or fuzzy/boost suffixes.
+ * without touching wildcards or fuzzy/boost suffixes. Grouped values on
+ * case-sensitive fields are folded in place (`status:(Open OR Closed)`).
  */
 function normalizeLuceneValue(value: string, casefold: boolean): string {
-  if (!value || value.startsWith("[") || value.startsWith("{") || value.startsWith("(")) {
+  const trimmed = value.trim();
+  if (!trimmed) {
     return value;
   }
-  if (value.startsWith('"') || value.startsWith("'")) {
-    return casefold ? casefoldQuoted(value) : value;
+  if (trimmed.startsWith("[") || trimmed.startsWith("{") || trimmed.startsWith("(")) {
+    return casefold ? casefoldGroup(trimmed) : trimmed;
   }
-  const split = splitFuzzyBoost(value);
+  if (trimmed.startsWith('"') || trimmed.startsWith("'")) {
+    return casefold ? casefoldQuoted(trimmed) : trimmed;
+  }
+  const split = splitFuzzyBoost(trimmed);
   const core = casefold ? split.core.toLowerCase() : split.core;
   return escapeLuceneCore(core) + split.suffix;
+}
+
+const EXACT_SUBFIELDS = ["combined_text", "title", "details", "author.name"] as const;
+
+/**
+ * A fuzzy or wildcard identifier is analyzed before `~` / `*` applies. The
+ * search analyzer splits `groupIds` into `group` and `id`, so `groupIds~1`
+ * matches nothing. `.exact` lowercases the whole token and keeps edit distance.
+ */
+function camelFuzzyTerm(value: string): string | undefined {
+  const trimmed = value.trim();
+  if (
+    !trimmed ||
+    trimmed.startsWith("(") ||
+    trimmed.startsWith("[") ||
+    trimmed.startsWith("{") ||
+    trimmed.startsWith('"') ||
+    trimmed.startsWith("'")
+  ) {
+    return undefined;
+  }
+  const split = splitFuzzyBoost(trimmed);
+  const hasFuzzy = split.suffix.includes("~") || /[*?]/.test(split.core);
+  if (!hasFuzzy || !/[a-z][A-Z]|[A-Za-z]\d|\d[A-Za-z]/.test(split.core)) {
+    return undefined;
+  }
+  return escapeLuceneCore(split.core) + split.suffix;
 }
 
 function normalizeLuceneBody(body: string): string {
@@ -638,12 +829,20 @@ function normalizeLuceneBody(body: string): string {
   }
   const field = /^([A-Za-z_][\w.]*)\s*:(.*)$/s.exec(body);
   if (!field) {
+    const fuzzy = camelFuzzyTerm(body);
+    if (fuzzy) {
+      return EXACT_SUBFIELDS.map((name) => `${name}.exact:${fuzzy}`).join(" OR ");
+    }
     return normalizeLuceneValue(body, false);
   }
   const name = field[1] ?? "";
   const raw = field[2] ?? "";
   if (raw.startsWith("/")) {
     return normalizeLuceneValue(body, false);
+  }
+  const fuzzy = camelFuzzyTerm(raw);
+  if (fuzzy && (EXACT_SUBFIELDS as readonly string[]).includes(name)) {
+    return `${name}.exact:${fuzzy}`;
   }
   return `${name}:${normalizeLuceneValue(raw, CASEFOLD_FIELDS.has(name))}`;
 }
@@ -767,32 +966,18 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
       postNegative.length >
     0;
 
-  if (
-    !usesNestedOrNegativeRouting &&
-    postPositive.length === 1
-  ) {
-    return postQueryString(postPositive[0]!);
-  }
-
-  if (
-    !usesNestedOrNegativeRouting &&
-    postPositive.length > 1
-  ) {
-    return postQueryString(postPositive.join(" AND "));
+  if (!usesNestedOrNegativeRouting && postPositive.length > 0) {
+    return postTextQuery(postPositive);
   }
 
   const must: ElasticsearchQuery[] = [];
 
   if (postPositive.length > 0) {
-    must.push(
-      postQueryString(
-        postPositive.length === 1 ? postPositive[0]! : postPositive.join(" AND "),
-      ),
-    );
+    must.push(postTextQuery(postPositive));
   }
 
   for (const c of commentsPositive) {
-    must.push(commentsNested(c));
+    must.push(commentsClauseQuery(c));
   }
 
   for (const c of votersPositive) {
@@ -802,11 +987,11 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
   const must_not: ElasticsearchQuery[] = [];
 
   for (const c of postNegative) {
-    must_not.push(postQueryString(c));
+    must_not.push(postTextQuery([c]));
   }
 
   for (const c of commentsNegative) {
-    must_not.push(commentsNested(c));
+    must_not.push(commentsClauseQuery(c));
   }
 
   for (const c of votersNegative) {

@@ -21,6 +21,21 @@
           "type": "pattern_replace",
           "pattern": "(?i)\\bvrc(hat)?\\s*\\+",
           "replacement": "vrcplus"
+        },
+        "camel_boundary": {
+          "type": "pattern_replace",
+          "pattern": "(?<=\\p{Ll})(?=\\p{Lu})",
+          "replacement": " "
+        },
+        "letter_digit_boundary": {
+          "type": "pattern_replace",
+          "pattern": "(?<=\\p{L})(?=\\p{N})",
+          "replacement": " "
+        },
+        "digit_letter_boundary": {
+          "type": "pattern_replace",
+          "pattern": "(?<=\\p{N})(?=\\p{L})",
+          "replacement": " "
         }
       },
       "filter": {
@@ -86,9 +101,14 @@
           "filter": ["identifier_delimiter", "flatten_graph", "lowercase", "english_possessive_stemmer", "english_stop", "english_stemmer"]
         },
         "text_search": {
-          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
+          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer", "camel_boundary", "letter_digit_boundary", "digit_letter_boundary"],
           "tokenizer": "standard",
           "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "feedback_synonyms", "english_stemmer"]
+        },
+        "text_phrase": {
+          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
+          "tokenizer": "standard",
+          "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "english_stemmer"]
         },
         "text_exact_index": {
           "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],

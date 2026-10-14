@@ -115,11 +115,27 @@ assert.equal(rewriteEnumOr("C++"), "C\\+\\+");
 assert.equal(rewriteEnumOr("C#"), "C#");
 assert.equal(rewriteEnumOr("http://example.com"), "http\\:\\/\\/example.com");
 assert.equal(rewriteEnumOr("title:http://example.com/docs"), "title:http\\:\\/\\/example.com\\/docs");
-assert.equal(rewriteEnumOr("groupIds~1"), "groupIds~1");
-assert.equal(rewriteEnumOr("groupIds~"), "groupIds~");
+assert.equal(
+  rewriteEnumOr("groupIds~1"),
+  "combined_text.exact:groupIds~1 OR title.exact:groupIds~1 OR details.exact:groupIds~1 OR author.name.exact:groupIds~1",
+);
+assert.equal(rewriteEnumOr("title:groupIds~1"), "title.exact:groupIds~1");
+assert.equal(
+  rewriteEnumOr("groupIds~"),
+  "combined_text.exact:groupIds~ OR title.exact:groupIds~ OR details.exact:groupIds~ OR author.name.exact:groupIds~",
+);
 assert.equal(rewriteEnumOr("title:avatar^2"), "title:avatar^2");
 assert.equal(rewriteEnumOr("+groupIds"), "+groupIds");
 assert.equal(rewriteEnumOr("status:(open OR planned)"), "status:(open OR planned)");
+assert.equal(rewriteEnumOr("status:(Open OR Closed)"), "status:(open OR closed)");
+assert.equal(rewriteEnumOr("status:[Open TO Closed]"), "status:[open TO closed]");
+assert.equal(
+  rewriteEnumOr("comments.pinned:(True OR False)"),
+  "comments.pinned:(true OR false)",
+);
+assert.equal(rewriteEnumOr('status:("Open" OR "Closed")'), 'status:("open" OR "closed")');
+assert.equal(rewriteEnumOr("title:(C++)"), "title:(C++)");
+assert.equal(rewriteEnumOr("title:(vrc+)"), "title:(vrc+)");
 assert.equal(rewriteEnumOr("score:[10 TO *]"), "score:[10 TO *]");
 assert.equal(rewriteEnumOr("(groupIds"), "groupIds");
 
@@ -127,6 +143,38 @@ const escaped = buildLuceneQueryBody("status:Open");
 assert.equal(
   (escaped as { query_string: { query: string } }).query_string.query,
   "status:open",
+);
+
+const joined = buildLuceneQueryBody("status:open AND title:avatar");
+assert.equal(
+  (joined as { query_string: { query: string } }).query_string.query,
+  "status:open AND title:avatar",
+);
+
+const quotedPhrase = buildLuceneQueryBody('"full body tracking"');
+assert.deepEqual(quotedPhrase, {
+  multi_match: {
+    query: "full body tracking",
+    type: "phrase",
+    fields: ["combined_text^3", "title^2", "details", "author.name"],
+    analyzer: "text_phrase",
+  },
+});
+
+const titlePhrase = buildLuceneQueryBody('title:"full body tracking"');
+assert.deepEqual(titlePhrase, {
+  multi_match: {
+    query: "full body tracking",
+    type: "phrase",
+    fields: ["title^2"],
+    analyzer: "text_phrase",
+  },
+});
+
+const keywordQuote = buildLuceneQueryBody('status:"Open"');
+assert.equal(
+  (keywordQuote as { query_string: { query: string } }).query_string.query,
+  'status:"open"',
 );
 
 console.info("lucene-query tests passed");

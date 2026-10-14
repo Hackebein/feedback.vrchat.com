@@ -440,9 +440,21 @@ body {
 }
 
 .facets {
-  /* Not a scrollport. A sticky max-height column swallowed the wheel while the
-     page padding to its left still scrolled the results. */
+  /* Sticky, but not a scrollport. max-height plus overflow swallowed the wheel
+     while the page padding to the left still scrolled the results. */
+  position: sticky;
+  top: 1rem;
+  align-self: start;
   min-width: 0;
+}
+
+@media (min-width: 821px) {
+  .facets-toolbar {
+    position: sticky;
+    top: 1rem;
+    z-index: 5;
+    background: #0f1218;
+  }
 }
 
 .mobile-filter-toggle,

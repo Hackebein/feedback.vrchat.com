@@ -59,10 +59,54 @@ export const textSearchAttributes: SearchAttribute[] = [
  * whole string changed scores with word order (`full body` ranked the in-order
  * post above `body full`). `synonym_graph` only expands a multi-word synonym
  * in the listed order, so `full body tracking` matched an `fbt` post and
- * `tracking body full` did not. Quoted phrases stay ordered.
+ * `tracking body full` did not. Quoted phrases stay ordered and use the
+ * `text_phrase` analyzer, which stems without expanding synonyms. English
+ * stop words are dropped before a term is required.
  */
 const EXACT_BAND_BOOST = 1000;
 const FUZZY_BAND_BOOST = 5;
+
+/** Same set as the `english_stop` filter (`_english_`). These tokens are deleted by the search analyzer, so they must not become required clauses. */
+const ENGLISH_STOP: ReadonlySet<string> = new Set([
+  "a",
+  "an",
+  "and",
+  "are",
+  "as",
+  "at",
+  "be",
+  "but",
+  "by",
+  "for",
+  "if",
+  "in",
+  "into",
+  "is",
+  "it",
+  "no",
+  "not",
+  "of",
+  "on",
+  "or",
+  "such",
+  "that",
+  "the",
+  "their",
+  "then",
+  "there",
+  "these",
+  "they",
+  "this",
+  "to",
+  "was",
+  "will",
+  "with",
+]);
+
+/** CamelCase and letter/number boundaries have to reach the search analyzer intact. Lowercasing first hides the split. */
+function preservesCase(token: string): boolean {
+  return /[a-z][A-Z]/.test(token) || /[A-Za-z]\d|\d[A-Za-z]/.test(token);
+}
 
 type SynonymGroup = { singles: string[]; phrases: string[][] };
 
@@ -207,6 +251,7 @@ function phraseQuery(phrase: string, fields: string[]): ElasticsearchQuery {
       query: phrase,
       type: "phrase",
       fields,
+      analyzer: "text_phrase",
     },
   };
 }
@@ -232,12 +277,22 @@ type TermPlan =
  * so `fbt full body tracking` still matches a post that only has one form.
  */
 function planUnquotedTerms(terms: string): TermPlan[] {
-  const available = tokenCounts(
-    terms
-      .toLowerCase()
-      .split(/\s+/)
-      .filter((token) => token.length > 0),
-  );
+  const spellings = new Map<string, string>();
+  const tokens: string[] = [];
+  for (const token of terms.split(/\s+/)) {
+    if (!token) {
+      continue;
+    }
+    const key = token.toLowerCase();
+    if (ENGLISH_STOP.has(key)) {
+      continue;
+    }
+    tokens.push(key);
+    if (!spellings.has(key) || preservesCase(token)) {
+      spellings.set(key, preservesCase(token) ? token : key);
+    }
+  }
+  const available = tokenCounts(tokens);
   const candidates: Array<{ words: string[]; singles: string[] }> = [];
   for (const group of SYNONYM_GROUPS) {
     for (const phrase of group.phrases) {
@@ -281,8 +336,9 @@ function planUnquotedTerms(terms: string): TermPlan[] {
   }));
   for (const term of [...available.keys()].sort()) {
     const count = available.get(term) ?? 0;
+    const text = spellings.get(term) ?? term;
     for (let index = 0; index < count; index += 1) {
-      plans.push({ kind: "term", term });
+      plans.push({ kind: "term", term: text });
     }
   }
   return plans;

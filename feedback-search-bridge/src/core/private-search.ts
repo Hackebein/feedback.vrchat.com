@@ -625,23 +625,32 @@ function scoreNode(post: Record<string, unknown>, node: PrivateNode, combinedTex
   }
 }
 
-export function privateMatchScore(post: Record<string, unknown>, query: string): number {
-  return scorePrivate(post, query, buildCombinedText(post));
+export function privateMatchScore(
+  post: Record<string, unknown>,
+  query: string,
+  luceneMode = false,
+): number {
+  return scorePrivate(post, query, buildCombinedText(post), luceneMode);
 }
 
-function scorePrivate(post: Record<string, unknown>, query: string, combinedText: string): number {
+function scorePrivate(
+  post: Record<string, unknown>,
+  query: string,
+  combinedText: string,
+  luceneMode: boolean,
+): number {
   const trimmed = query.trim();
   if (!trimmed) {
     return 0;
   }
-  if (/[:"()]|\b(?:AND|OR|NOT)\b/.test(trimmed)) {
-    const node = parsePrivateLucene(trimmed);
-    if (!node) {
-      return 0;
-    }
-    return scoreNode(post, node, combinedText);
+  if (!luceneMode) {
+    return scorePlain(combinedText, trimmed);
   }
-  return scorePlain(combinedText, trimmed);
+  const node = parsePrivateLucene(trimmed);
+  if (!node) {
+    return 0;
+  }
+  return scoreNode(post, node, combinedText);
 }
 
 export function relevanceScore(text: string, tokens: string[]): number {
@@ -918,6 +927,7 @@ function sortKey(
   sort: string,
   query: string,
   combinedText: string,
+  luceneMode: boolean,
 ): number {
   switch (sort) {
     case "oldest":
@@ -941,7 +951,7 @@ function sortKey(
       return toEpoch(post.statusChanged) ?? 0;
     case "relevance":
     case "relevance_desc":
-      return scorePrivate(post, query, combinedText);
+      return scorePrivate(post, query, combinedText, luceneMode);
     default:
       return toEpoch(post.created) ?? 0;
   }
@@ -962,6 +972,7 @@ export function sortHits(
   sort: string,
   query: string,
   combinedTextOf?: (hit: Record<string, unknown>) => string,
+  luceneMode = false,
 ): Record<string, unknown>[] {
   const hasQuery = query.trim().length > 0;
   const resolved = sort.trim() || (hasQuery ? "relevance" : "newest");
@@ -974,6 +985,7 @@ export function sortHits(
       resolved,
       query,
       combinedTextOf ? combinedTextOf(hit) : buildCombinedText(hit),
+      luceneMode,
     ),
   }));
   decorated.sort((a, b) => {
@@ -991,6 +1003,7 @@ export function mergeSearchHits(
   localPosts: StoredPrivatePost[],
   sort: string,
   query: string,
+  luceneMode = false,
 ): Record<string, unknown>[] {
   const byId = new Map<string, Record<string, unknown>>();
   const textById = new Map<string, string>();
@@ -1009,10 +1022,16 @@ export function mergeSearchHits(
     byId.set(post._id, post.payload);
     textById.set(post._id, post.combinedText);
   }
-  return sortHits([...byId.values()], sort, query, (hit) => {
-    const id = readString(hit._id);
-    return (id && textById.get(id)) || buildCombinedText(hit);
-  });
+  return sortHits(
+    [...byId.values()],
+    sort,
+    query,
+    (hit) => {
+      const id = readString(hit._id);
+      return (id && textById.get(id)) || buildCombinedText(hit);
+    },
+    luceneMode,
+  );
 }
 
 export function paginateMergedHits(

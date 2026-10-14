@@ -259,6 +259,41 @@ const docs: Fixture[] = [
     created: "2020-09-02T00:00:00.000Z",
   },
   {
+    post_id: "sdk-prose",
+    title: "Upload with sdk 3",
+    details: "The sdk 3 package fails",
+    status: "open",
+    created: "2020-09-03T00:00:00.000Z",
+  },
+  {
+    post_id: "menu-bare",
+    title: "Menu overlap",
+    details: "Menu overlaps nameplate",
+    status: "open",
+    created: "2025-01-01T00:00:00.000Z",
+  },
+  {
+    post_id: "menu-bug",
+    title: "Fix the menu",
+    details: "the menu covers the nameplate",
+    status: "open",
+    created: "2025-01-02T00:00:00.000Z",
+  },
+  {
+    post_id: "menu-only",
+    title: "Open the menu",
+    details: "the menu is missing a label",
+    status: "open",
+    created: "2025-01-03T00:00:00.000Z",
+  },
+  {
+    post_id: "working-only",
+    title: "It is working",
+    details: "The feature is working again",
+    status: "open",
+    created: "2024-07-01T00:00:00.000Z",
+  },
+  {
     post_id: "optimization",
     title: "Avatar optimization",
     details: "Run an optimization pass",
@@ -339,7 +374,7 @@ async function search(query: unknown): Promise<string[]> {
 
 async function searchPayload(query: unknown): Promise<unknown> {
   return os("POST", `/${index}/_search`, {
-    size: 30,
+    size: 50,
     track_total_hits: true,
     _source: ["post_id"],
     query,
@@ -410,7 +445,13 @@ async function main(): Promise<void> {
   assert.ok(indexedGroupIds.includes("groupid"), indexedGroupIds.join(","));
   assert.ok(indexedGroupIds.includes("group"), indexedGroupIds.join(","));
   assert.ok(indexedGroupIds.includes("id"), indexedGroupIds.join(","));
-  assert.deepEqual(await tokens("text_search", "groupIds"), ["groupid"]);
+  assert.deepEqual(await tokens("text_search", "groupIds"), ["group", "id"]);
+  const sdkQueryTokens = await tokens("text_search", "SDK3");
+  assert.equal(sdkQueryTokens.includes("sdk"), true, sdkQueryTokens.join(","));
+  assert.equal(sdkQueryTokens.includes("3"), true, sdkQueryTokens.join(","));
+  const phraseTokens = await tokens("text_phrase", "full body tracking");
+  assert.equal(phraseTokens.includes("fbt"), false, phraseTokens.join(","));
+  assert.equal(phraseTokens.includes("full"), true, phraseTokens.join(","));
   const exactGroupIds = await tokens("text_exact_index", "groupIds");
   assert.ok(exactGroupIds.includes("groupids"), exactGroupIds.join(","));
   assert.ok(exactGroupIds.includes("group"), exactGroupIds.join(","));
@@ -446,11 +487,12 @@ async function main(): Promise<void> {
   assertHas(groupIds, "camel-role", "groupIds groupId stem");
   assertHas(groupIds, "url-doc", "groupIds inside a url");
   assertLacks(groupIds, "group-words", "groupIds");
-  assertLacks(groupIds, "group-id-words", "groupIds");
+  assertHas(groupIds, "group-id-words", "groupIds finds spaced group ids");
   assertLacks(groupIds, "merch", "groupIds");
 
   const groupIdsCase = await plain("GroupIDs");
   assertFirst(groupIdsCase, "exact-groupids", "GroupIDs");
+  assertHas(groupIdsCase, "group-id-words", "GroupIDs");
   assertLacks(groupIdsCase, "group-words", "GroupIDs");
 
   const groupWords = await plain("group ids");
@@ -481,9 +523,11 @@ async function main(): Promise<void> {
 
   const sdk3 = await plain("SDK3");
   assertFirst(sdk3, "sdk3", "SDK3");
+  assertHas(sdk3, "sdk-prose", "SDK3 finds sdk 3");
   assertLacks(sdk3, "sdk-word", "SDK3");
   const sdkAnd3 = await plain("sdk 3");
   assertHas(sdkAnd3, "sdk3", "sdk 3");
+  assertHas(sdkAnd3, "sdk-prose", "sdk 3");
   assertLacks(sdkAnd3, "sdk-word", "sdk 3");
 
   const avatr = await plain("avatr");
@@ -531,7 +575,7 @@ async function main(): Promise<void> {
   assertHas(luceneGroupIds, "exact-groupids", "lucene groupIds");
   assertHas(luceneGroupIds, "camel-role", "lucene groupIds");
   assertLacks(luceneGroupIds, "group-words", "lucene groupIds");
-  assertLacks(luceneGroupIds, "group-id-words", "lucene groupIds");
+  assertHas(luceneGroupIds, "group-id-words", "lucene groupIds");
 
   const luceneStatus = await lucene("status:Open");
   assertHas(luceneStatus, "status-open", "status:Open");
@@ -606,6 +650,7 @@ async function main(): Promise<void> {
     ["full body", "body full"],
     ["full body tracking", "tracking body full"],
     ["sdk 3", "3 sdk"],
+    ["the menu", "menu the"],
     ["vrchat plus", "plus vrchat"],
     ['avatar "full body"', '"full body" avatar'],
   ] as const) {
@@ -656,6 +701,64 @@ async function main(): Promise<void> {
   assert.notDeepEqual(luceneQuoted, luceneQuotedReverse);
   assertHas(luceneQuoted, "full-body", "lucene quoted order");
   assertLacks(luceneQuotedReverse, "full-body", "lucene quoted order");
+
+  assert.deepEqual(plainQuery("the"), { match_all: {} });
+  assert.deepEqual(plainQuery("the a an"), { match_all: {} });
+  assert.deepEqual(plainQuery("the menu"), plainQuery("menu"));
+  assert.deepEqual(plainQuery("not working"), plainQuery("working"));
+  assert.deepEqual(plainQuery("there menu"), plainQuery("menu"));
+  const theMenu = await plain("the menu");
+  assertHas(theMenu, "menu-bare", "the menu");
+  assertHas(theMenu, "menu-bug", "the menu");
+  assertHas(theMenu, "menu-only", "the menu");
+  const theOnly = hitRanks(await searchPayload(plainQuery("the")));
+  assert.equal(
+    theOnly.some((rank) => rank.startsWith("menu-bare@")),
+    true,
+    theOnly.join(" "),
+  );
+  assert.equal(
+    theOnly.every((rank) => rank.endsWith("@1")),
+    true,
+    theOnly.join(" "),
+  );
+  const notWorking = await plain("not working");
+  assertHas(notWorking, "working-only", "not working");
+  assertLacks(notWorking, "merch", "not working");
+
+  const quotedTracking = await plain('"full body tracking"');
+  assertHas(quotedTracking, "full-body", "quoted full body tracking");
+  assertLacks(quotedTracking, "fbt-only", "quoted full body tracking");
+  assertLacks(quotedTracking, "reversed-body", "quoted full body tracking");
+  const fbt = await plain("fbt");
+  assertHas(fbt, "fbt-only", "fbt synonym");
+  assertHas(fbt, "full-body", "fbt synonym");
+
+  const luceneTracking = await lucene('"full body tracking"');
+  assertHas(luceneTracking, "full-body", "lucene quoted tracking");
+  assertLacks(luceneTracking, "fbt-only", "lucene quoted tracking");
+  assertLacks(luceneTracking, "reversed-body", "lucene quoted tracking");
+  const luceneTitleTracking = await lucene('title:"full body tracking"');
+  assert.deepEqual(luceneTitleTracking, ["full-body"]);
+
+  const statusGroup = await lucene("status:(Open OR Closed)");
+  assertHas(statusGroup, "status-open", "status group case");
+  assertHas(statusGroup, "status-closed", "status group case");
+  assertHas(statusGroup, "merch", "status group case");
+  await assertSameRanks("status group case", [
+    buildLuceneQueryBody("status:(Open OR Closed)"),
+    buildLuceneQueryBody("status:(open OR closed)"),
+  ]);
+  const statusRange = await lucene("status:[Closed TO Open]");
+  assertHas(statusRange, "status-open", "status range case");
+  assertHas(statusRange, "status-closed", "status range case");
+  await assertSameRanks("status range case", [
+    buildLuceneQueryBody("status:[Closed TO Open]"),
+    buildLuceneQueryBody("status:[closed TO open]"),
+  ]);
+  const pinnedGroup = await lucene("comments.pinned:(True)");
+  assertHas(pinnedGroup, "status-open", "pinned group case");
+  assertLacks(pinnedGroup, "status-closed", "pinned group case");
 
   const agentForward = parseAgentSearchQuery({
     q: "group",
