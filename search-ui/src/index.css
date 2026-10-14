@@ -440,8 +440,6 @@ body {
 }
 
 .facets {
-  /* Sticky, but not a scrollport. max-height plus overflow swallowed the wheel
-     while the page padding to the left still scrolled the results. */
   position: sticky;
   top: 1rem;
   align-self: start;
@@ -449,9 +447,20 @@ body {
 }
 
 @media (min-width: 821px) {
+  .facets {
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    margin-left: -1rem;
+    width: calc(100% + 1rem);
+    padding-left: 1rem;
+    padding-inline-end: 0.75rem;
+  }
+
   .facets-toolbar {
     position: sticky;
-    top: 1rem;
+    top: 0;
     z-index: 5;
     background: #0f1218;
   }

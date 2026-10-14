@@ -145,12 +145,31 @@ html:not(.${ACTIVE_CLASS}) #vrcfb-control-root { display: none !important; }
   font: 13px/1.4 system-ui, -apple-system, Segoe UI, sans-serif;
   color: inherit;
 }
-/* Desktop: one page scrollbar. Mobile keeps Canny's own sidebar scrollport. */
 @media (min-width: 821px) {
-  html.${ACTIVE_CLASS} .sidebarContainerWrapper { align-self: flex-start !important; }
+  html.${ACTIVE_CLASS} .sidebarContainerWrapper {
+    align-self: flex-start !important;
+    max-height: calc(100vh - 32px) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    scrollbar-width: thin;
+  }
+  html.${ACTIVE_CLASS} .sidebarContainerWrapper > .boardDetails {
+    max-height: none !important;
+    overflow: visible !important;
+  }
   html.${ACTIVE_CLASS} .sidebarContainer {
     max-height: none !important;
     overflow: visible !important;
+  }
+}
+@media (min-width: 821px) and (max-width: 1020px) {
+  html.${ACTIVE_CLASS} .sidebarContainerWrapper {
+    box-sizing: border-box !important;
+    margin-left: -32px !important;
+    padding-left: 32px !important;
+    width: calc(300px + 32px) !important;
+    min-width: calc(300px + 32px) !important;
+    max-width: calc(300px + 32px) !important;
   }
 }
 html.${ACTIVE_CLASS}.${LUCENE_CLASS} .sidebarContainerWrapper { display: none !important; }
