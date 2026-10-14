@@ -1,11 +1,3 @@
-# CI for pull requests into main and for pushes to main.
-#
-# Renovate PRs are included. They only trigger this workflow when Renovate
-# authenticates with a personal access token or GitHub App token
-# (secrets.RENOVATE_TOKEN in renovate.yml). Pull requests created with the
-# workflow GITHUB_TOKEN, including the current github-actions[bot] Renovate
-# PRs, do not emit pull_request or push events, so GitHub will not start this
-# workflow for them.
 name: CI
 
 on:
@@ -54,9 +46,6 @@ jobs:
       - name: Prepare OpenSearch
         run: |
           set -euo pipefail
-          # Hosted runners often boot below OpenSearch's map-count check, and
-          # service containers start before steps can change it. Raise the
-          # limit, then start the container if that check stopped it.
           sudo sysctl -w vm.max_map_count=262144
           if ! curl -fsS "$OPENSEARCH_URL" >/dev/null 2>&1; then
             docker start "${{ job.services.opensearch.id }}"

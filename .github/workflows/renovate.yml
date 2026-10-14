@@ -1,14 +1,5 @@
 name: Renovate
 
-# Authenticate Renovate with secrets.RENOVATE_TOKEN, a classic PAT or a
-# GitHub App token. It needs contents and pull-requests write, plus the
-# workflow scope so Renovate can update Actions files.
-#
-# Do not pass the workflow GITHUB_TOKEN. GitHub does not start pull_request
-# or push workflows for events that token creates, so CI would never run on
-# those Renovate PRs (they show up as github-actions[bot]). A PAT or App
-# token opens the PRs as that identity and CI runs.
-
 on:
   schedule:
     - cron: "0 6 * * *"

@@ -532,9 +532,6 @@ func discordColor(eventType string) int {
 	}
 }
 
-// discordTypeLabel is the Discord embed footer: Post, Comment, Vote, Status,
-// or Deleted. Vote events report any score change, including removed votes.
-// Embed titles already say "Votes changed" and "Status changed".
 func discordTypeLabel(eventType string) string {
 	switch eventType {
 	case EventComment:
