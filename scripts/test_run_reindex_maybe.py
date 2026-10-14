@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Unit tests for run_reindex_maybe.py retry logic."""
 import unittest
-from run_reindex_maybe import _is_transient_git_error
+from run_reindex_maybe import _is_transient_git_error, action_order
 
 
 class TestTransientErrorDetection(unittest.TestCase):
@@ -42,6 +42,22 @@ class TestTransientErrorDetection(unittest.TestCase):
         output = "remote: Internal Server Error"
         self.assertFalse(_is_transient_git_error(1, output))
         self.assertFalse(_is_transient_git_error(0, output))
+
+
+class TestActionOrder(unittest.TestCase):
+    """Ingest swaps the alias before the gateway restarts."""
+
+    def test_ingest_before_deploy(self):
+        self.assertEqual(action_order(True, True), ["ingest", "deploy"])
+
+    def test_deploy_only(self):
+        self.assertEqual(action_order(True, False), ["deploy"])
+
+    def test_ingest_only(self):
+        self.assertEqual(action_order(False, True), ["ingest"])
+
+    def test_neither(self):
+        self.assertEqual(action_order(False, False), [])
 
 
 if __name__ == "__main__":

@@ -7,8 +7,10 @@ import {
   mergeFacetCounts,
   mergeSearchHits,
   paginateMergedHits,
+  privateMatchScore,
   queryTokens,
   relevanceScore,
+  sortHits,
   toStoredPost,
 } from "../src/core/private-search";
 import type { StoredPrivatePost } from "../src/core/private-store";
@@ -201,5 +203,194 @@ const voterAdditional = additionalFacetCounts(
 );
 assert.equal(voterAdditional.voter_name?.Bob, 1);
 assert.equal(voterAdditional.voter_name?.Alice, undefined);
+
+const groupIdsPost = stored({
+  _id: "group-ids",
+  title: "Expose groupIds",
+  details: "The groupIds field is missing from the response",
+  status: "open",
+});
+const groupWordsPost = stored({
+  _id: "group-words",
+  title: "Group lobbies",
+  details: "Filter the lobby by group rank",
+  status: "open",
+});
+const groupIdWordsPost = stored({
+  _id: "group-id-words",
+  title: "Show the group ids",
+  details: "Print group ids on the profile card",
+  status: "open",
+});
+const gropIdsPost = stored({
+  _id: "grop-ids",
+  title: "gropIds typo",
+  details: "Someone wrote gropIds in the notes",
+  status: "open",
+});
+const fullBodyPost = stored({
+  _id: "full-body",
+  title: "Add full body tracking",
+  details: "full body tracking for avatars",
+  status: "open",
+});
+const reversedBodyPost = stored({
+  _id: "reversed-body",
+  title: "Tracking body is full",
+  details: "the body comes before full here",
+  status: "closed",
+});
+const closedPost = stored({
+  _id: "closed-avatar",
+  title: "Closed avatar idea",
+  details: "avatar idea that shipped",
+  status: "closed",
+});
+
+const identifierPosts = [
+  groupIdsPost,
+  groupWordsPost,
+  groupIdWordsPost,
+  gropIdsPost,
+  fullBodyPost,
+  reversedBodyPost,
+  closedPost,
+];
+
+function idsFor(textSearch: string, luceneMode: boolean): string[] {
+  return filterPrivatePosts(identifierPosts, { textSearch }, { luceneMode }).map(
+    (post) => post._id,
+  );
+}
+
+assert.deepEqual(idsFor("groupIds", false).sort(), ["grop-ids", "group-id-words", "group-ids"]);
+assert.equal(idsFor("groupIds", false).includes("group-words"), false);
+const groupIdsRanked = sortHits(
+  [groupWordsPost.payload, gropIdsPost.payload, groupIdWordsPost.payload, groupIdsPost.payload],
+  "relevance",
+  "groupIds",
+);
+assert.equal(groupIdsRanked[0]?._id, "group-ids");
+assert.deepEqual(idsFor("gropIds", false).sort(), ["grop-ids", "group-ids"]);
+assert.deepEqual(idsFor('"full body"', false), ["full-body"]);
+assert.deepEqual(idsFor("status:Open", true), ["group-ids", "group-words", "group-id-words", "grop-ids", "full-body"]);
+assert.deepEqual(idsFor("status:closed", true).sort(), ["closed-avatar", "reversed-body"]);
+assert.deepEqual(idsFor('title:"full body"', true), ["full-body"]);
+assert.deepEqual(idsFor("status:open AND NOT status:closed", true).includes("closed-avatar"), false);
+assert.deepEqual(idsFor("board.urlName:Internal", true).length > 0, true);
+
+const ranked = sortHits(
+  [groupWordsPost.payload, gropIdsPost.payload, groupIdsPost.payload],
+  "relevance",
+  "gropIds",
+);
+assert.equal(ranked[0]?._id, "grop-ids");
+assert.equal(ranked[1]?._id, "group-ids");
+
+function rankPrivate(
+  posts: StoredPrivatePost[],
+  query: string,
+  luceneMode = false,
+): string[] {
+  return posts
+    .map((post) => ({ id: post._id, score: privateMatchScore(post.payload, query, luceneMode) }))
+    .filter((row) => row.score > 0)
+    .sort((left, right) => right.score - left.score || left.id.localeCompare(right.id))
+    .map((row) => `${row.id}@${row.score}`);
+}
+
+function assertSamePrivate(label: string, queries: string[], luceneMode = false): void {
+  const ranks = queries.map((query) => rankPrivate(identifierPosts, query, luceneMode));
+  assert.ok(ranks[0] && ranks[0].length > 0, `${label}: expected hits`);
+  for (const rank of ranks.slice(1)) {
+    assert.deepEqual(rank, ranks[0], label);
+  }
+}
+
+assert.equal(privateMatchScore(groupIdWordsPost.payload, "groupIds"), 40);
+assertSamePrivate("terms", ["group ids", "ids group"]);
+assert.deepEqual(rankPrivate(identifierPosts, "status:open AND title:group"), []);
+assertSamePrivate(
+  "fields",
+  ["status:open board.urlName:internal", "board.urlName:internal status:open"],
+  true,
+);
+assertSamePrivate("and", ["status:open AND title:group", "title:group AND status:open"], true);
+assertSamePrivate(
+  "lowercase and",
+  ["status:open and title:group", "title:group AND status:open"],
+  true,
+);
+assertSamePrivate("or", ["status:open OR status:closed", "status:closed OR status:open"], true);
+assertSamePrivate(
+  "precedence",
+  ["title:avatar AND status:open OR status:closed", "status:closed OR status:open AND title:avatar"],
+  true,
+);
+assertSamePrivate("not", ["avatar NOT status:closed", "NOT status:closed AND avatar"], true);
+assertSamePrivate("mixed phrase", ['avatar "full body"', '"full body" avatar']);
+
+const notePost = stored({
+  _id: "note",
+  title: "See note: the bug is here",
+  details: "func() crashes when opened",
+  status: "open",
+});
+const workingPost = stored({
+  _id: "working",
+  title: "Menu does not load",
+  details: "not working",
+  status: "open",
+});
+const quietPost = stored({
+  _id: "quiet",
+  title: "Avatar loads",
+  details: "nothing about the menu",
+  status: "open",
+});
+assert.ok(privateMatchScore(notePost.payload, "note: bug") > 0);
+assert.ok(privateMatchScore(notePost.payload, "func()") > 0);
+assert.ok(privateMatchScore(workingPost.payload, "NOT working") > 0);
+assert.ok(privateMatchScore(workingPost.payload, "not working") > 0);
+assert.equal(privateMatchScore(workingPost.payload, "NOT working", true), 0);
+assert.ok(privateMatchScore(quietPost.payload, "NOT working", true) > 0);
+const plainNot = sortHits(
+  [quietPost.payload, workingPost.payload],
+  "relevance",
+  "NOT working",
+);
+assert.equal(plainNot[0]?._id, "working");
+assert.ok(privateMatchScore(workingPost.payload, "NOT working") > 0);
+const luceneNot = sortHits(
+  [workingPost.payload, quietPost.payload],
+  "relevance",
+  "NOT working",
+  undefined,
+  true,
+);
+assert.equal(luceneNot[0]?._id, "quiet");
+const quotedPrivate = rankPrivate(identifierPosts, '"full body"');
+const quotedPrivateReverse = rankPrivate(identifierPosts, '"body full"');
+assert.notDeepEqual(quotedPrivate, quotedPrivateReverse);
+assert.equal(quotedPrivate.some((row) => row.startsWith("full-body@")), true);
+assert.equal(quotedPrivateReverse.some((row) => row.startsWith("full-body@")), false);
+
+function filteredIds(refinements: Record<string, string[]>): string[] {
+  return filterPrivatePosts(
+    identifierPosts,
+    {
+      textSearch: "group",
+      filters: { refinements, ranges: {}, toggles: {}, sort: "relevance" },
+    },
+    { luceneMode: false },
+  )
+    .map((post) => `${post._id}@${privateMatchScore(post.payload, "group")}`)
+    .sort();
+}
+
+assert.deepEqual(
+  filteredIds({ status: ["open", "closed"], board_name: ["Internal Roadmap Posts"] }),
+  filteredIds({ board_name: ["Internal Roadmap Posts"], status: ["closed", "open"] }),
+);
 
 console.info("private-search tests passed");

@@ -268,32 +268,58 @@ def run_ingest(head_sha: str) -> int:
     return rc
 
 
+def action_order(want_deploy: bool, want_ingest: bool) -> list[str]:
+    """Ingest and alias-swap before the gateway restart.
+
+    Quoted search names the ``text_phrase`` analyzer. Restarting the gateway
+    first makes those queries 400 against the previous mapping. That request
+    retries once on ``text_index`` and the next request tries ``text_phrase``
+    again. This order is the steady state.
+    """
+    steps: list[str] = []
+    if want_ingest:
+        steps.append("ingest")
+    if want_deploy:
+        steps.append("deploy")
+    return steps
+
+
 def main() -> int:
     _cur, new = sync_to_remote()
     want_deploy = needs_deploy(new)
     want_ingest = needs_ingest(new)
+    steps = action_order(want_deploy, want_ingest)
 
-    if not want_deploy and not want_ingest:
+    if not steps:
         print(f"Already deployed+ingested @{new[:12]}; skipping.", flush=True)
         return 0
 
-    if want_deploy:
-        print(f"Deploy runtime stack (@{new[:12]})", flush=True)
-        try:
-            apply_runtime_stack(REPO_ROOT)
-            write_state(LAST_DEPLOYED, new)
-        except subprocess.CalledProcessError as e:
-            print(
-                f"[warn] apply_runtime_stack failed (exit {e.returncode}); proceeding with ingest",
-                flush=True,
-                file=sys.stderr,
-            )
-            open_build_failure_issue(e, new)
+    ingest_rc = 0
+    for step in steps:
+        if step == "ingest":
+            ingest_rc = run_ingest(new)
+            if ingest_rc != 0:
+                print(
+                    f"[warn] ingest failed (exit {ingest_rc}); deploying so the gateway can fall back",
+                    flush=True,
+                    file=sys.stderr,
+                )
+        elif step == "deploy":
+            print(f"Deploy runtime stack (@{new[:12]})", flush=True)
+            try:
+                apply_runtime_stack(REPO_ROOT)
+                write_state(LAST_DEPLOYED, new)
+            except subprocess.CalledProcessError as e:
+                print(
+                    f"[warn] apply_runtime_stack failed (exit {e.returncode}); quoted search falls back until the next deploy",
+                    flush=True,
+                    file=sys.stderr,
+                )
+                open_build_failure_issue(e, new)
+        else:
+            raise RuntimeError(f"unknown reindex action {step}")
 
-    if not want_ingest:
-        return 0
-
-    return run_ingest(new)
+    return ingest_rc
 
 
 if __name__ == "__main__":

@@ -440,12 +440,21 @@ body {
 }
 
 .facets {
+  /* Sticky, but not a scrollport. max-height plus overflow swallowed the wheel
+     while the page padding to the left still scrolled the results. */
   position: sticky;
   top: 1rem;
-  max-height: calc(100vh - 2rem);
-  overflow: auto;
-  padding-inline-end: 0.75rem;
-  scrollbar-gutter: stable;
+  align-self: start;
+  min-width: 0;
+}
+
+@media (min-width: 821px) {
+  .facets-toolbar {
+    position: sticky;
+    top: 1rem;
+    z-index: 5;
+    background: #0f1218;
+  }
 }
 
 .mobile-filter-toggle,
@@ -502,9 +511,6 @@ body {
 
   .facets {
     position: static;
-    max-height: none;
-    overflow: visible;
-    padding-inline-end: 0;
   }
 
   .facets-toolbar {

@@ -1,5 +1,6 @@
 import type { ElasticsearchQuery } from "searchkit";
 import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
+import type { PhraseMode } from "./phrase-mode";
 import {
   instantSearchStrictQuery,
   textSearchAttributes,
@@ -253,8 +254,11 @@ export function parseAgentSearchQuery(
   };
 }
 
-export function buildAgentSearchBody(params: AgentSearchParams): Record<string, unknown> {
-  const text = instantSearchStrictQuery(params.q, textSearchAttributes);
+export function buildAgentSearchBody(
+  params: AgentSearchParams,
+  mode: PhraseMode = "strict",
+): Record<string, unknown> {
+  const text = instantSearchStrictQuery(params.q, textSearchAttributes, undefined, mode);
   const filter: ElasticsearchQuery[] = [];
   if (params.board) {
     filter.push({ term: { "board.urlName": params.board } });

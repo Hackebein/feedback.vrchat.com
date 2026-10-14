@@ -6,7 +6,7 @@
     "build": "vite build && node scripts/bundle-server.mjs",
     "dev": "concurrently \"vite\" \"tsx watch server/index.ts\"",
     "preview": "vite preview",
-    "test": "tsx scripts/test-lucene-query.ts && tsx scripts/test-facet-exclusion.ts && tsx scripts/test-agent-api.ts"
+    "test": "tsx scripts/test-lucene-query.ts && tsx scripts/test-facet-exclusion.ts && tsx scripts/test-agent-api.ts && tsx scripts/test-search-route.ts && tsx scripts/test-layout-css.ts && tsx scripts/test-search-ranking.ts"
   },
   "dependencies": {
     "@scalar/api-reference-react": "^0.9.38",

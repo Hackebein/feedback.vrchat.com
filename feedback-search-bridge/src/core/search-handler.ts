@@ -406,6 +406,7 @@ export async function handleCannySearch(
       normalizedLocal,
       readSortKey(body),
       typeof body.textSearch === "string" ? body.textSearch : "",
+      current.luceneMode,
     );
     const paged = paginateMergedHits(merged, page, pageSize);
     cannyResponse = {
