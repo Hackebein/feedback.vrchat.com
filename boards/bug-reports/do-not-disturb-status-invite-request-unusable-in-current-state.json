@@ -1,12 +1,10 @@
 {
   "_id": "6a834fa8b72b30bf5be35f48",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.cross-platform",
-    "social.instances",
-    "social.friends"
+    "loc.in-world",
+    "social.instances"
   ],
-  "aiTaggedAt": "2026-10-13T19:49:56.930041Z",
+  "aiTaggedAt": "2026-10-14T21:45:46.202408Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def38c9e0ae944b12e2bb6",
@@ -30,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 11,
+  "commentCount": 12,
   "commentingDisabled": false,
   "comments": [
     {
@@ -589,6 +587,62 @@
       "statusChangeID": "6ace89a5cf98cb1e6ed20d7c",
       "statusChangeNewStatus": "needs more information",
       "value": "Is this still occurring in the latest build?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6acff63ae9b7093bc1353eda",
+      "aiGenerated": false,
+      "author": {
+        "_id": "60e65f577ae9d0492b0f2a75",
+        "alias": "Just Wildcat",
+        "aliasID": "65c26de3ed6eefce4c583d87",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0ad322a67ea8874dadfbd596f0dfc4f1.png",
+        "created": "2021-07-08T02:13:43.618Z",
+        "name": "Hackebein",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-14T21:38:02.747Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ace89a5cf98cb1e6ed20d7f",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a834fa8b72b30bf5be35f48",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} it's now fixed",
       "viewerReactions": null,
       "voteID": null
     }
