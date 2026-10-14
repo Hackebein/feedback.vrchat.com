@@ -74,8 +74,8 @@ func TestEventToEmbedTypeFooter(t *testing.T) {
 	}{
 		{EventPost, "Post"},
 		{EventComment, "Comment"},
-		{EventVotes, "Upvote"},
-		{EventStatus, "Status change"},
+		{EventVotes, "Vote"},
+		{EventStatus, "Status"},
 		{EventDeleted, "Deleted"},
 	}
 	for _, tc := range cases {

@@ -25,10 +25,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Require Renovate token
+        env:
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${RENOVATE_TOKEN}" ]]; then
+            echo "Set repository secret RENOVATE_TOKEN to a PAT or GitHub App token with contents, pull-requests, and workflow scopes." >&2
+            echo "The workflow GITHUB_TOKEN cannot be used: pull requests it opens do not trigger CI." >&2
+            exit 1
+          fi
+
       - name: Run Renovate
         uses: renovatebot/github-action@v46.1.14
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RENOVATE_TOKEN }}
           configurationFile: renovate.json
         env:
           RENOVATE_REPOSITORIES: ${{ github.repository }}

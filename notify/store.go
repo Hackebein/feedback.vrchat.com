@@ -95,8 +95,8 @@ type Subscription struct {
 	Lucene             bool
 	FilterJSON         string
 	Label              string
-	WatermarkMS        int64 // watermark for new posts (post.created)
-	CommentWatermarkMS int64 // watermark for new comments (comment.created)
+	WatermarkMS        int64         // watermark for new posts (post.created)
+	CommentWatermarkMS int64         // watermark for new comments (comment.created)
 	SeededMS           sql.NullInt64 // set after the first complete snapshot seed
 	ErrorSinceMS       sql.NullInt64
 	CreatedAtMS        int64
