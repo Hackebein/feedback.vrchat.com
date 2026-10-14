@@ -7,6 +7,7 @@
  */
 
 import type { ElasticsearchQuery } from "searchkit";
+import { phraseAnalyzer, phraseSearchFields } from "./phrase-mode";
 
 const POST_QUERY_STRING_FIELDS = [
   "combined_text^3",
@@ -25,8 +26,29 @@ const QUERY_STRING_COMMON = {
 const COMMENTS_PATH = "comments";
 const VOTERS_PATH = "voters";
 
-/** Split on whitespace-delimited AND at paren-depth 0, outside quotes. */
-export function splitTopLevelAnd(query: string): string[] {
+type BooleanWord = "AND" | "OR";
+
+/** Length from pos over a top-level ` AND ` / ` OR ` boundary (requires spaces). */
+function booleanSeparatorLen(q: string, pos: number, word: BooleanWord): number {
+  let pattern: RegExp;
+  switch (word) {
+    case "AND":
+      pattern = /^\s+AND\s+/i;
+      break;
+    case "OR":
+      pattern = /^\s+OR\s+/i;
+      break;
+    default: {
+      const unreachable: never = word;
+      return unreachable;
+    }
+  }
+  const match = q.slice(pos).match(pattern);
+  return match?.[0].length ?? 0;
+}
+
+/** Split on a whitespace-delimited boolean word at paren-depth 0, outside quotes. */
+function splitTopLevel(query: string, word: BooleanWord): string[] {
   const q = query.trim();
   if (!q) return [];
 
@@ -69,7 +91,7 @@ export function splitTopLevelAnd(query: string): string[] {
     }
 
     if (depth === 0) {
-      const sep = andSeparatorLen(q, i);
+      const sep = booleanSeparatorLen(q, i, word);
       if (sep > 0) {
         const seg = buf.trim();
         if (seg) parts.push(seg);
@@ -87,10 +109,13 @@ export function splitTopLevelAnd(query: string): string[] {
   return parts;
 }
 
-/** Length from pos over a top-level ` AND ` boundary (requires spaces, avoids `fooANDbar`). */
-function andSeparatorLen(q: string, pos: number): number {
-  const m = q.slice(pos).match(/^\s+AND\s+/i);
-  return m?.[0].length ?? 0;
+/** Split on whitespace-delimited AND at paren-depth 0, outside quotes. */
+export function splitTopLevelAnd(query: string): string[] {
+  return splitTopLevel(query, "AND");
+}
+
+function splitTopLevelOr(query: string): string[] {
+  return splitTopLevel(query, "OR");
 }
 
 /** Strip successive NOT prefixes (toggle negation for each). */
@@ -681,8 +706,8 @@ function phraseMultiMatch(phrase: string, fields: readonly string[]): Elasticsea
     multi_match: {
       query: phrase,
       type: "phrase",
-      fields: [...fields],
-      analyzer: "text_phrase",
+      fields: phraseSearchFields(fields),
+      analyzer: phraseAnalyzer(),
     },
   };
 }
@@ -703,24 +728,119 @@ function postPhraseQuery(clause: string): ElasticsearchQuery | undefined {
   return phraseMultiMatch(read.phrase, fields);
 }
 
+const EXACT_SUBFIELDS = ["combined_text", "title", "details", "author.name"] as const;
+
+/**
+ * `groupIds~1` is rewritten to an OR of `.exact` fields. Compiling that OR as
+ * its own bool clause keeps `status:open AND groupIds~1` from matching every
+ * open post (Lucene binds AND tighter than OR inside one query_string).
+ */
+function exactFuzzyDisjunction(clause: string): ElasticsearchQuery | undefined {
+  const parts = splitTopLevelOr(stripOuterParens(clause));
+  if (parts.length !== EXACT_SUBFIELDS.length) {
+    return undefined;
+  }
+  const terms: string[] = [];
+  for (let index = 0; index < parts.length; index += 1) {
+    const match = /^([A-Za-z_][\w.]*)\.exact:(.+)$/s.exec(parts[index] ?? "");
+    if (!match || match[1] !== EXACT_SUBFIELDS[index]) {
+      return undefined;
+    }
+    terms.push((match[2] ?? "").trim());
+  }
+  const term = terms[0] ?? "";
+  if (!term || terms.some((value) => value !== term) || !/[~*?]/.test(term)) {
+    return undefined;
+  }
+  return {
+    bool: {
+      should: EXACT_SUBFIELDS.map((name) => postQueryString(`${name}.exact:${term}`)),
+      minimum_should_match: 1,
+    },
+  };
+}
+
+function containsTextPhrase(clause: string): boolean {
+  const text = stripOuterParens(clause.trim());
+  if (!text) {
+    return false;
+  }
+  if (postPhraseQuery(text)) {
+    return true;
+  }
+  const orParts = splitTopLevelOr(text);
+  if (orParts.length > 1) {
+    return orParts.some((part) => containsTextPhrase(part));
+  }
+  const andParts = splitTopLevelAnd(text);
+  if (andParts.length > 1) {
+    return andParts.some((part) => containsTextPhrase(part));
+  }
+  return false;
+}
+
+function compileSpecial(clause: string): ElasticsearchQuery | undefined {
+  const text = stripOuterParens(clause);
+  const phrase = postPhraseQuery(text);
+  if (phrase) {
+    return phrase;
+  }
+  const fuzzy = exactFuzzyDisjunction(text);
+  if (fuzzy) {
+    return fuzzy;
+  }
+  const orParts = splitTopLevelOr(text);
+  if (orParts.length > 1 && orParts.some((part) => containsTextPhrase(part))) {
+    return {
+      bool: {
+        should: orParts.map(
+          (part) => compileSpecial(part) ?? postQueryString(stripOuterParens(part)),
+        ),
+        minimum_should_match: 1,
+      },
+    };
+  }
+  const andParts = splitTopLevelAnd(text);
+  if (
+    andParts.length > 1 &&
+    andParts.some(
+      (part) => containsTextPhrase(part) || exactFuzzyDisjunction(stripOuterParens(part)),
+    )
+  ) {
+    return postTextQuery(andParts);
+  }
+  return undefined;
+}
+
 function postTextQuery(chunks: string[]): ElasticsearchQuery {
+  const parts: ElasticsearchQuery[] = [];
   const strings: string[] = [];
-  const phrases: ElasticsearchQuery[] = [];
+  const flush = (): void => {
+    if (strings.length === 0) {
+      return;
+    }
+    const text =
+      strings.length === 1
+        ? strings[0]!
+        : strings
+            .map((chunk) => {
+              const clause = stripOuterParens(chunk);
+              return splitTopLevelOr(clause).length > 1 ? `(${clause})` : clause;
+            })
+            .join(" AND ");
+    parts.push(postQueryString(text));
+    strings.length = 0;
+  };
   for (const chunk of chunks) {
-    const phrase = postPhraseQuery(chunk);
-    if (phrase) {
-      phrases.push(phrase);
+    const special = compileSpecial(chunk);
+    if (special) {
+      flush();
+      parts.push(special);
       continue;
     }
     strings.push(chunk);
   }
-  const parts: ElasticsearchQuery[] = [];
-  if (strings.length === 1) {
-    parts.push(postQueryString(strings[0]!));
-  } else if (strings.length > 1) {
-    parts.push(postQueryString(strings.join(" AND ")));
-  }
-  parts.push(...phrases);
+  flush();
   if (parts.length === 0) {
     return { match_all: {} };
   }
@@ -796,12 +916,11 @@ function normalizeLuceneValue(value: string, casefold: boolean): string {
   return escapeLuceneCore(core) + split.suffix;
 }
 
-const EXACT_SUBFIELDS = ["combined_text", "title", "details", "author.name"] as const;
-
 /**
  * A fuzzy or wildcard identifier is analyzed before `~` / `*` applies. The
  * search analyzer splits `groupIds` into `group` and `id`, so `groupIds~1`
  * matches nothing. `.exact` lowercases the whole token and keeps edit distance.
+ * The OR is parenthesized so it stays one clause when joined with AND.
  */
 function camelFuzzyTerm(value: string): string | undefined {
   const trimmed = value.trim();
@@ -831,7 +950,8 @@ function normalizeLuceneBody(body: string): string {
   if (!field) {
     const fuzzy = camelFuzzyTerm(body);
     if (fuzzy) {
-      return EXACT_SUBFIELDS.map((name) => `${name}.exact:${fuzzy}`).join(" OR ");
+      const clause = EXACT_SUBFIELDS.map((name) => `${name}.exact:${fuzzy}`).join(" OR ");
+      return `(${clause})`;
     }
     return normalizeLuceneValue(body, false);
   }

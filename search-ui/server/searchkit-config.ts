@@ -5,6 +5,7 @@ import type {
 } from "searchkit";
 import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
 import { buildLuceneQueryBody } from "./lucene-query";
+import { phraseAnalyzer, phraseSearchFields } from "./phrase-mode";
 
 /** OpenSearch `terms.include` is anchored to the full bucket string. Searchkit's default regex prepends `([a-zA-Z]+ )+?` for queries longer than 2 chars, which never matches slug-like tokens without spaces. */
 function slugSafeFacetQuery(
@@ -60,8 +61,11 @@ export const textSearchAttributes: SearchAttribute[] = [
  * post above `body full`). `synonym_graph` only expands a multi-word synonym
  * in the listed order, so `full body tracking` matched an `fbt` post and
  * `tracking body full` did not. Quoted phrases stay ordered and use the
- * `text_phrase` analyzer, which stems without expanding synonyms. English
- * stop words are dropped before a term is required.
+ * `text_phrase` analyzer on `.phrase` (stem, keep stop words, no synonyms).
+ * English stop words are dropped before an unquoted term is required. A query
+ * that is only stop words is `match_all`: nothing remains to rank. Unquoted
+ * `groupIds` is the tokens `group` and `id`, so those words in different
+ * sentences still match, under an exact identifier hit.
  */
 const EXACT_BAND_BOOST = 1000;
 const FUZZY_BAND_BOOST = 5;
@@ -250,8 +254,8 @@ function phraseQuery(phrase: string, fields: string[]): ElasticsearchQuery {
     multi_match: {
       query: phrase,
       type: "phrase",
-      fields,
-      analyzer: "text_phrase",
+      fields: phraseSearchFields(fields),
+      analyzer: phraseAnalyzer(),
     },
   };
 }

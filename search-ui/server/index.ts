@@ -13,6 +13,7 @@ import {
 import { applyExcludeFacets } from "./facet-exclusion";
 import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
 import { createIndexGenerationResolver } from "./index-generation";
+import { withPhraseFallback, withPhraseResultFallback } from "./phrase-mode";
 import {
   gatewayEnv,
   instantSearchLuceneQuery,
@@ -156,7 +157,10 @@ app.get("/api/search", async (req, res) => {
 
     const opts = searchRequestOptions(isLuceneMode(req));
 
-    const results = await apiClient.handleRequest(instantsearchRequests, opts);
+    const results = await withPhraseFallback(
+      () => apiClient.handleRequest(instantsearchRequests, opts),
+      extractElasticsearchBadRequestDetail,
+    );
     res.json(results);
   } catch (err) {
     const detail = extractElasticsearchBadRequestDetail(err);
@@ -182,9 +186,9 @@ app.post("/api/search", async (req, res) => {
     }
     const opts = searchRequestOptions(isLuceneMode(req));
 
-    const results = await apiClient.handleRequest(
-      req.body as MultipleQueriesQuery[],
-      opts,
+    const results = await withPhraseFallback(
+      () => apiClient.handleRequest(req.body as MultipleQueriesQuery[], opts),
+      extractElasticsearchBadRequestDetail,
     );
     res.json(results);
   } catch (err) {
@@ -221,9 +225,8 @@ app.get("/api/agent/search", async (req, res) => {
     return;
   }
   try {
-    const result = await queryOpenSearch(
-      openSearchTarget,
-      buildAgentSearchBody(parsed.params),
+    const result = await withPhraseResultFallback(() =>
+      queryOpenSearch(openSearchTarget, buildAgentSearchBody(parsed.params)),
     );
     if (!result.ok) {
       sendAgentQueryError(res, result);

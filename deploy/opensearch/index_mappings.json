@@ -106,9 +106,9 @@
           "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "feedback_synonyms", "english_stemmer"]
         },
         "text_phrase": {
-          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
+          "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer", "camel_boundary", "letter_digit_boundary", "digit_letter_boundary"],
           "tokenizer": "standard",
-          "filter": ["lowercase", "english_possessive_stemmer", "english_stop", "english_stemmer"]
+          "filter": ["lowercase", "english_possessive_stemmer", "english_stemmer"]
         },
         "text_exact_index": {
           "char_filter": ["cplusplus_normalizer", "csharp_normalizer", "vrc_plus_normalizer"],
@@ -136,7 +136,8 @@
             "type": "text",
             "analyzer": "text_exact_index",
             "search_analyzer": "text_exact_search"
-          }
+          },
+          "phrase": { "type": "text", "analyzer": "text_phrase" }
         }
       },
 
@@ -164,7 +165,8 @@
             "type": "text",
             "analyzer": "text_exact_index",
             "search_analyzer": "text_exact_search"
-          }
+          },
+          "phrase": { "type": "text", "analyzer": "text_phrase" }
         }
       },
       "details": {
@@ -177,7 +179,8 @@
             "type": "text",
             "analyzer": "text_exact_index",
             "search_analyzer": "text_exact_search"
-          }
+          },
+          "phrase": { "type": "text", "analyzer": "text_phrase" }
         }
       },
       "urlName": { "type": "keyword", "ignore_above": 512 },
@@ -278,7 +281,8 @@
                 "type": "text",
                 "analyzer": "text_exact_index",
                 "search_analyzer": "text_exact_search"
-              }
+              },
+              "phrase": { "type": "text", "analyzer": "text_phrase" }
             }
           },
           "serviceAccount": { "type": "boolean" },
@@ -402,7 +406,8 @@
                 "type": "text",
                 "analyzer": "text_exact_index",
                 "search_analyzer": "text_exact_search"
-              }
+              },
+              "phrase": { "type": "text", "analyzer": "text_phrase" }
             }
           },
           "mergedPostDetails": {
@@ -414,7 +419,8 @@
                 "type": "text",
                 "analyzer": "text_exact_index",
                 "search_analyzer": "text_exact_search"
-              }
+              },
+              "phrase": { "type": "text", "analyzer": "text_phrase" }
             }
           },
           "sourceFeatureExtractionItemID": { "type": "keyword" },
@@ -431,7 +437,8 @@
                 "type": "text",
                 "analyzer": "text_exact_index",
                 "search_analyzer": "text_exact_search"
-              }
+              },
+              "phrase": { "type": "text", "analyzer": "text_phrase" }
             }
           },
           "created": {

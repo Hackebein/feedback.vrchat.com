@@ -132,6 +132,21 @@ const docs: Fixture[] = [
     board: { name: "Bug Reports", urlName: "bug-reports" },
   },
   {
+    post_id: "group-sentence",
+    title: "The group is ready",
+    details: "An id is shown later",
+    status: "open",
+    created: "2021-02-01T00:00:00.000Z",
+  },
+  {
+    post_id: "closed-groupids",
+    title: "Retired request",
+    details:
+      "The old payload included groupIds but this request is finished and kept only for history",
+    status: "closed",
+    created: "2017-01-01T00:00:00.000Z",
+  },
+  {
     post_id: "grop-ids",
     title: "gropIds typo",
     details: "The notes say gropIds instead of the real field",
@@ -285,6 +300,13 @@ const docs: Fixture[] = [
     details: "the menu is missing a label",
     status: "open",
     created: "2025-01-03T00:00:00.000Z",
+  },
+  {
+    post_id: "menu-load",
+    title: "Menu does not load",
+    details: "The button does nothing",
+    status: "open",
+    created: "2025-01-04T00:00:00.000Z",
   },
   {
     post_id: "working-only",
@@ -452,6 +474,12 @@ async function main(): Promise<void> {
   const phraseTokens = await tokens("text_phrase", "full body tracking");
   assert.equal(phraseTokens.includes("fbt"), false, phraseTokens.join(","));
   assert.equal(phraseTokens.includes("full"), true, phraseTokens.join(","));
+  const menuPhraseTokens = await tokens("text_phrase", "the menu");
+  assert.equal(menuPhraseTokens.includes("the"), true, menuPhraseTokens.join(","));
+  assert.equal(menuPhraseTokens.includes("menu"), true, menuPhraseTokens.join(","));
+  const groupPhraseTokens = await tokens("text_phrase", "groupIds");
+  assert.equal(groupPhraseTokens.includes("group"), true, groupPhraseTokens.join(","));
+  assert.equal(groupPhraseTokens.includes("id"), true, groupPhraseTokens.join(","));
   const exactGroupIds = await tokens("text_exact_index", "groupIds");
   assert.ok(exactGroupIds.includes("groupids"), exactGroupIds.join(","));
   assert.ok(exactGroupIds.includes("group"), exactGroupIds.join(","));
@@ -488,6 +516,8 @@ async function main(): Promise<void> {
   assertHas(groupIds, "url-doc", "groupIds inside a url");
   assertLacks(groupIds, "group-words", "groupIds");
   assertHas(groupIds, "group-id-words", "groupIds finds spaced group ids");
+  assertHas(groupIds, "group-sentence", "groupIds matches group and id in different sentences");
+  assertBefore(groupIds, "exact-groupids", "group-sentence", "groupIds");
   assertLacks(groupIds, "merch", "groupIds");
 
   const groupIdsCase = await plain("GroupIDs");
@@ -631,7 +661,31 @@ async function main(): Promise<void> {
 
   const luceneFuzzy = await lucene("groupIds~1");
   assertHas(luceneFuzzy, "exact-groupids", "groupIds~1");
+  assertHas(luceneFuzzy, "closed-groupids", "groupIds~1");
   assertLacks(luceneFuzzy, "group-words", "groupIds~1");
+  assertLacks(luceneFuzzy, "menu-bare", "groupIds~1");
+
+  const luceneFuzzyAnd = await lucene("status:open AND groupIds~1");
+  assertHas(luceneFuzzyAnd, "exact-groupids", "status and fuzzy");
+  assertLacks(luceneFuzzyAnd, "menu-bare", "status and fuzzy");
+  assertLacks(luceneFuzzyAnd, "group-words", "status and fuzzy");
+  assertLacks(luceneFuzzyAnd, "closed-groupids", "status and fuzzy");
+  await assertSameRanks("fuzzy and order", [
+    buildLuceneQueryBody("status:open AND groupIds~1"),
+    buildLuceneQueryBody("groupIds~1 AND status:open"),
+  ]);
+  const luceneWildAnd = await lucene("status:open AND groupIds*");
+  assertHas(luceneWildAnd, "exact-groupids", "status and wildcard");
+  assertLacks(luceneWildAnd, "menu-bare", "status and wildcard");
+  assertLacks(luceneWildAnd, "group-words", "status and wildcard");
+  assertLacks(luceneWildAnd, "closed-groupids", "status and wildcard");
+  await assertSameRanks("wildcard and order", [
+    buildLuceneQueryBody("status:open AND groupIds*"),
+    buildLuceneQueryBody("groupIds* AND status:open"),
+  ]);
+  const luceneNotFuzzy = await lucene("NOT groupIds~1");
+  assertLacks(luceneNotFuzzy, "exact-groupids", "not fuzzy");
+  assertHas(luceneNotFuzzy, "menu-bare", "not fuzzy");
 
   const luceneParen = await lucene("(groupIds");
   assertHas(luceneParen, "exact-groupids", "(groupIds");
@@ -711,6 +765,7 @@ async function main(): Promise<void> {
   assertHas(theMenu, "menu-bare", "the menu");
   assertHas(theMenu, "menu-bug", "the menu");
   assertHas(theMenu, "menu-only", "the menu");
+  assertHas(theMenu, "menu-load", "the menu");
   const theOnly = hitRanks(await searchPayload(plainQuery("the")));
   assert.equal(
     theOnly.some((rank) => rank.startsWith("menu-bare@")),
@@ -740,6 +795,21 @@ async function main(): Promise<void> {
   assertLacks(luceneTracking, "reversed-body", "lucene quoted tracking");
   const luceneTitleTracking = await lucene('title:"full body tracking"');
   assert.deepEqual(luceneTitleTracking, ["full-body"]);
+  const luceneOrPhrase = await lucene('status:closed OR title:"full body tracking"');
+  assertHas(luceneOrPhrase, "full-body", "or phrase");
+  assertHas(luceneOrPhrase, "merch", "or phrase");
+  assertHas(luceneOrPhrase, "status-closed", "or phrase");
+  assertLacks(luceneOrPhrase, "fbt-only", "or phrase");
+  const quotedMenu = await plain('"the menu"');
+  assertHas(quotedMenu, "menu-bug", "quoted the menu");
+  assertHas(quotedMenu, "menu-only", "quoted the menu");
+  assertLacks(quotedMenu, "menu-bare", "quoted the menu");
+  assertLacks(quotedMenu, "menu-load", "quoted the menu");
+  const quotedGroup = await plain('"group ids"');
+  assertHas(quotedGroup, "exact-groupids", "quoted group ids");
+  assertHas(quotedGroup, "group-id-words", "quoted group ids");
+  assertLacks(quotedGroup, "group-sentence", "quoted group ids");
+  assertLacks(quotedGroup, "group-words", "quoted group ids");
 
   const statusGroup = await lucene("status:(Open OR Closed)");
   assertHas(statusGroup, "status-open", "status group case");
@@ -824,6 +894,61 @@ async function main(): Promise<void> {
   assert.deepEqual(numericReverse, numericForward);
   assert.equal(numericForward.some((hit) => hit.startsWith("exact-groupids@")), true);
   assert.equal(numericForward.some((hit) => hit.startsWith("group-words@")), false);
+
+  const oldIndex = `${index}-oldmap`;
+  await fetch(`${opensearchUrl}/${oldIndex}`, { method: "DELETE" });
+  const created = await fetch(`${opensearchUrl}/${oldIndex}`, {
+    method: "PUT",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      settings: {
+        number_of_shards: 1,
+        number_of_replicas: 0,
+        analysis: {
+          analyzer: {
+            text_index: { tokenizer: "standard", filter: ["lowercase"] },
+          },
+        },
+      },
+      mappings: { properties: { title: { type: "text", analyzer: "text_index" } } },
+    }),
+  });
+  if (!created.ok) {
+    throw new Error(`old mapping create failed ${created.status} ${await created.text()}`);
+  }
+  const missingAnalyzer = await fetch(`${opensearchUrl}/${oldIndex}/_search`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      query: {
+        multi_match: {
+          query: "full body",
+          type: "phrase",
+          fields: ["title.phrase"],
+          analyzer: "text_phrase",
+        },
+      },
+    }),
+  });
+  const missingDetail = await missingAnalyzer.text();
+  assert.equal(missingAnalyzer.status, 400, missingDetail);
+  assert.equal(missingDetail.includes("analyzer [text_phrase]"), true, missingDetail);
+  const compatible = await fetch(`${opensearchUrl}/${oldIndex}/_search`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      query: {
+        multi_match: {
+          query: "full body",
+          type: "phrase",
+          fields: ["title"],
+          analyzer: "text_index",
+        },
+      },
+    }),
+  });
+  assert.equal(compatible.status, 200, await compatible.text());
+  await fetch(`${opensearchUrl}/${oldIndex}`, { method: "DELETE" });
 
   console.info("search ranking tests passed");
 }
