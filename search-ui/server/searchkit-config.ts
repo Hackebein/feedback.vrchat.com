@@ -62,7 +62,9 @@ export const textSearchAttributes: SearchAttribute[] = [
  * and a different word in that hole (“end foo line”) does not. Adjacent
  * content parts (“end line”) still match. If the split
  * parts are a `feedback_synonyms` phrase in any order, the single-token
- * synonyms match too (`fullBodyTracking` matches `fbt`). Quoted phrases stay
+ * synonyms match too (`fullBodyTracking` matches `fbt`) on the adjacent band.
+ * That expansion does not take the exact band, so a literal `fbt` post stays
+ * below the adjacent phrase. Quoted phrases stay
  * ordered and use the `text_phrase` analyzer on `.phrase` (stem, keep stop
  * words, no synonyms). English stop words are dropped before an unquoted term
  * is required. A query that is only stop words is `match_all`: nothing remains
@@ -330,6 +332,27 @@ function termClause(term: string, searchAttributes: SearchAttribute[]): Elastics
   return { bool: { should, minimum_should_match: 1 } };
 }
 
+/**
+ * A synonym single reached by expanding one identifier (`fullBodyTracking` or
+ * `trackingBodyFull` → `fbt`) shares the adjacent band. `termClause` would put
+ * the literal synonym on the exact band and above the adjacent phrase.
+ */
+function identifierSynonymClause(
+  term: string,
+  searchAttributes: SearchAttribute[],
+): ElasticsearchQuery {
+  const fields = fieldsWithBoost(searchAttributes, 1);
+  return {
+    bool: {
+      should: [
+        scoreBand(term, fields, 0, ADJACENT_BAND_BOOST),
+        bestFields(term, fields, 0),
+      ],
+      minimum_should_match: 1,
+    },
+  };
+}
+
 function attributeField(attribute: SearchAttribute): { field: string; weight: number } {
   if (typeof attribute === "string") {
     return { field: attribute, weight: 1 };
@@ -517,7 +540,7 @@ function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): Elasti
         bool: {
           should: [
             identifier,
-            ...plan.singles.map((single) => termClause(single, searchAttributes)),
+            ...plan.singles.map((single) => identifierSynonymClause(single, searchAttributes)),
           ],
           minimum_should_match: 1,
         },
@@ -766,10 +789,11 @@ export function searchkitConfig(host: string, username: string, password: string
           field: "score",
           order: "asc" as const,
         },
-        _relevance_desc: {
-          field: "_score",
-          order: "desc" as const,
-        },
+        // Score first, then newer posts when two hits share a score.
+        _relevance_desc: [
+          { field: "_score", order: "desc" as const },
+          { field: "created", order: "desc" as const },
+        ],
         _activity_desc: {
           field: "lastActivityAt",
           order: "desc" as const,

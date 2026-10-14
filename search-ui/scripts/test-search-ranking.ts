@@ -65,6 +65,40 @@ function constantBoosts(query: unknown): number[] {
   return found;
 }
 
+function queryMentions(value: unknown, text: string): boolean {
+  if (Array.isArray(value)) return value.some((item) => queryMentions(item, text));
+  if (!value || typeof value !== "object") return false;
+  const record = value as Record<string, unknown>;
+  const multi = record.multi_match;
+  if (multi && typeof multi === "object" && (multi as { query?: unknown }).query === text) {
+    return true;
+  }
+  return Object.values(record).some((child) => queryMentions(child, text));
+}
+
+/** Constant boosts whose filter is a match for this query string. */
+function constantBoostsForMatch(query: unknown, text: string): number[] {
+  const found: number[] = [];
+  const walk = (value: unknown): void => {
+    if (Array.isArray(value)) {
+      for (const item of value) walk(item);
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    const record = value as Record<string, unknown>;
+    const constant = record.constant_score;
+    if (constant && typeof constant === "object") {
+      const body = constant as { boost?: unknown; filter?: unknown };
+      if (typeof body.boost === "number" && queryMentions(body.filter, text)) {
+        found.push(body.boost);
+      }
+    }
+    for (const child of Object.values(record)) walk(child);
+  };
+  walk(query);
+  return found;
+}
+
 function proximityGroups(query: unknown): Array<{
   field: string;
   ordered: unknown;
@@ -166,6 +200,34 @@ const camelSynonym = instantSearchStrictQuery("fullBodyTracking", textSearchAttr
 assert.equal(JSON.stringify(camelSynonym).includes('"fbt"'), true);
 assert.ok(
   proximityGroups(camelSynonym).some((group) => partKey(group) === "full body tracking"),
+);
+const camelFbtBoosts = constantBoostsForMatch(camelSynonym, "fbt");
+assert.ok(camelFbtBoosts.length > 0, "fullBodyTracking should score the fbt synonym");
+assert.deepEqual(
+  camelFbtBoosts,
+  camelFbtBoosts.map(() => 50),
+  `identifier synonym fbt should use the adjacent band, got ${camelFbtBoosts.join(",")}`,
+);
+const reverseCamelSynonym = instantSearchStrictQuery("trackingBodyFull", textSearchAttributes);
+const reverseFbtBoosts = constantBoostsForMatch(reverseCamelSynonym, "fbt");
+assert.ok(reverseFbtBoosts.length > 0, "trackingBodyFull should score the fbt synonym");
+assert.deepEqual(
+  reverseFbtBoosts,
+  reverseFbtBoosts.map(() => 50),
+  `identifier synonym fbt should use the adjacent band, got ${reverseFbtBoosts.join(",")}`,
+);
+assert.ok(
+  constantBoostsForMatch(instantSearchStrictQuery("fbt", textSearchAttributes), "fbt").includes(
+    1000,
+  ),
+  "a typed fbt term keeps the exact band",
+);
+assert.ok(
+  constantBoostsForMatch(
+    instantSearchStrictQuery("full body tracking", textSearchAttributes),
+    "fbt",
+  ).includes(1000),
+  "a typed full body tracking synonym keeps the exact band on fbt",
 );
 const boosts = constantBoosts(groupIdsQuery);
 const bands = [...new Set(boosts)].sort((left, right) => left - right);
@@ -971,10 +1033,24 @@ async function main(): Promise<void> {
   assertHas(camelTracking, "fbt-only", "fullBodyTracking synonym");
   assertHas(camelTracking, "full-body", "fullBodyTracking adjacent phrase");
   assertBefore(camelTracking, "full-body-camel", "fbt-only", "fullBodyTracking");
+  assertBefore(camelTracking, "full-body", "fbt-only", "fullBodyTracking adjacent before synonym");
   assertHas(camelTracking, "reversed-body", "fullBodyTracking synonym");
   const trackingCamelReverse = await plain("trackingBodyFull");
   assertHas(trackingCamelReverse, "fbt-only", "trackingBodyFull synonym");
   assertHas(trackingCamelReverse, "full-body", "trackingBodyFull");
+  assertHas(trackingCamelReverse, "full-body-camel", "trackingBodyFull");
+  assertBefore(
+    trackingCamelReverse,
+    "full-body",
+    "fbt-only",
+    "trackingBodyFull adjacent before synonym",
+  );
+  assertBefore(
+    trackingCamelReverse,
+    "full-body-camel",
+    "fbt-only",
+    "trackingBodyFull camel before synonym",
+  );
   const endOfLine = await plain("endOfLine");
   assertFirst(endOfLine, "end-of-line-camel", "endOfLine");
   assertHas(endOfLine, "end-of-line", "endOfLine matches end of line");
@@ -1084,6 +1160,46 @@ async function main(): Promise<void> {
     }
     return result.hits.map((hit) => `${hit.objectID}@${hit._score ?? 0}`);
   }
+  const relevanceTied = await gateway.handleRequest(
+    [
+      {
+        indexName: `${index}_relevance_desc`,
+        params: { query: "the", hitsPerPage: 100 },
+      },
+    ],
+    { getQuery: instantSearchStrictQuery },
+  );
+  const relevanceResult = relevanceTied.results[0];
+  if (!relevanceResult || !("hits" in relevanceResult)) {
+    throw new Error("relevance tiebreak search returned no hits");
+  }
+  const tiedHits = relevanceResult.hits.map((hit) => {
+    const row = hit as { post_id?: string; created?: string; _score?: number };
+    return {
+      id: row.post_id ?? "",
+      created: row.created ?? "",
+      score: row._score ?? 0,
+    };
+  });
+  assert.ok(tiedHits.length > 1, "relevance tiebreak expected more than one hit");
+  assert.equal(
+    tiedHits.every((hit) => hit.score === tiedHits[0]?.score),
+    true,
+    tiedHits.map((hit) => `${hit.id}@${hit.score}`).join(" "),
+  );
+  for (let hitIndex = 1; hitIndex < tiedHits.length; hitIndex += 1) {
+    const previous = tiedHits[hitIndex - 1];
+    const current = tiedHits[hitIndex];
+    assert.ok(
+      previous && current && previous.created >= current.created,
+      `relevance tiebreak: ${previous?.id} ${previous?.created} before ${current?.id} ${current?.created}`,
+    );
+  }
+  assert.deepEqual(
+    tiedHits.filter((hit) => hit.id.startsWith("menu-")).map((hit) => hit.id),
+    ["menu-load", "menu-only", "menu-bug", "menu-bare"],
+  );
+
   const facetsForward = await uiRanks([["status:open"], ["board_slug:bug-reports"]]);
   const facetsReverse = await uiRanks([["board_slug:bug-reports"], ["status:open"]]);
   assert.ok(facetsForward.length > 1, facetsForward.join(" "));
