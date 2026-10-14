@@ -1,9 +1,10 @@
 {
   "_id": "6acfc2d6e62a468248bc2ca2",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.pc-client",
+    "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-10-14T19:57:54.049079Z",
+  "aiTaggedAt": "2026-10-14T23:22:22.720716Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df117d465d5152bc5d38a8",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -110,13 +111,59 @@
       "postDeleted": false,
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Requirements like this and a lack of control over my own system are why I use an alternative to my Windows installation more and more.\n\nIf VRC requires this on Linux, I will also use an alternative to VRC.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad00e198deb8b42ab3efbaf",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df117d465d5152bc5d38a8",
+        "alias": "Continuing Parrot",
+        "aliasID": "65c319eaed6eefce4c72e532",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d67580c6399fefba16acb2281374d7db.png",
+        "created": "2022-07-25T21:56:13.300Z",
+        "name": "digitalf0x",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-14T23:19:53.080Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acfc2d6e62a468248bc2ca2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I forgot to mention - EasyAntiCheat is *incredibly* hostile to figuring out what went wrong even when you're trying very hard to be an obedient user.\n\nWith the current EAC userspace module approach, late 2022/early 2023, I tried to help a friend who was plagued with \"Unexpected error. (#1)\", with no other useful diagnostic logs.  VRChat support did not offer help (as Linux other than Steam Deck is not officially supported).\n\nSo, I signed up as a \"developer\" to Epic Online Services, created my own *entire EasyAntiCheat project*, and recreated the launch error issue just so I could get support from Epic Games directly.  Even then, EOS support wasn't able to figure out the issue!  It turns out their switch from 32-bit to 64-bit Windows bootstrapper just so happened to work around the launch crash.  Later, VRChat blocked updating \"start_protected_game.exe\", after which I found a Proton issue thread mentioning 32-bit bootstrapper EAC can have issues with too many cores - more than 40 threads, apparently.  There's a Wine CPU topology hiding flag.\n\nWhen EOS' fancy new anti-cheat that hooks into multiple levels of the system stumbles on something and breaks, what do we do to get support then?  Buying/building a second high-spec computer just for VR is exorbitantly expensive right now.",
       "viewerReactions": null,
       "voteID": null
     }
