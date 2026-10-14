@@ -15,8 +15,9 @@ import {
   type PhraseMode,
 } from "../server/phrase-mode";
 import {
-  EXPANSION_SLOT_BUDGET,
+  FUZZY_CLAUSE_BUDGET,
   PLAIN_CLAUSE_BUDGET,
+  fuzzyExpansionLimit,
   instantSearchStrictQuery,
   plainQueryLimit,
   searchkitConfig,
@@ -195,21 +196,34 @@ assert.deepEqual(
   instantSearchStrictQuery("AbC aBc", textSearchAttributes),
 );
 const fiveWords = ["avatar", "widget", "zebra", "stable", "polygon"];
-const fiveFuzzy = new Set(fuzzyMatches(instantSearchStrictQuery(fiveWords.join(" "), textSearchAttributes)).map((item) => item.text));
+const fiveBuilt = instantSearchStrictQuery(fiveWords.join(" "), textSearchAttributes);
+const fiveFuzzy = fuzzyMatches(fiveBuilt);
+const fiveExpansions = fuzzyExpansionLimit(fiveWords.length);
+assert.ok(fiveExpansions >= 1, "a 5-word query keeps a fuzzy band");
+assert.equal(new Set(fiveFuzzy.map((item) => item.text)).size, fiveWords.length);
 for (const word of fiveWords) {
-  assert.ok(fiveFuzzy.has(word), `${word} keeps typo tolerance`);
+  assert.ok(fiveFuzzy.some((item) => item.text === word), `${word} keeps typo tolerance`);
 }
+assert.ok(fiveFuzzy.every((item) => item.expansions === fiveExpansions));
+assert.ok(plainQueryLimit(fiveWords.join(" ")).clauses <= FUZZY_CLAUSE_BUDGET);
+assert.equal(plainQueryLimit(fiveWords.join(" ")).omittedTerms.length, 0);
+const extraFields = [...textSearchAttributes, "notes"];
 assert.ok(
-  fuzzyMatches(instantSearchStrictQuery(fiveWords.join(" "), textSearchAttributes)).every(
-    (item) => item.expansions === 50,
-  ),
+  fuzzyExpansionLimit(fiveWords.length, extraFields) < fiveExpansions,
+  "another searched field shrinks max_expansions",
 );
+const extraFuzzy = fuzzyMatches(instantSearchStrictQuery(fiveWords.join(" "), extraFields));
+assert.ok(extraFuzzy.every((item) => item.expansions === fuzzyExpansionLimit(fiveWords.length, extraFields)));
 const tenWords = [...fiveWords, "desktop", "microphone", "performance", "tracking", "companion"];
 const tenBuilt = instantSearchStrictQuery(tenWords.join(" "), textSearchAttributes);
-const tenFuzzy = new Set(fuzzyMatches(tenBuilt).map((item) => item.text));
+const tenFuzzy = fuzzyMatches(tenBuilt);
+const tenExpansions = fuzzyExpansionLimit(tenWords.length);
+assert.ok(tenExpansions >= 1, "a 10-word query keeps a fuzzy band");
 for (const word of tenWords) {
-  assert.ok(tenFuzzy.has(word), `${word} keeps typo tolerance`);
+  assert.ok(tenFuzzy.some((item) => item.text === word), `${word} keeps typo tolerance`);
 }
+assert.ok(tenFuzzy.every((item) => item.expansions === tenExpansions));
+assert.ok(plainQueryLimit(tenWords.join(" ")).clauses <= FUZZY_CLAUSE_BUDGET);
 assert.equal(plainQueryLimit(tenWords.join(" ")).omittedTerms.length, 0);
 const fortyTerms = Array.from({ length: 40 }, (_, index) => `zz${index}`);
 assert.deepEqual(plainQueryLimit(fortyTerms.join(" ")).omittedTerms, []);
@@ -228,7 +242,6 @@ for (const term of ["zz10", "zz50", "zz89"]) {
   assert.equal(hundredLimit.omittedTerms.includes(term), false, term);
 }
 assert.ok(hundredLimit.clauses <= PLAIN_CLAUSE_BUDGET);
-assert.ok(hundredLimit.expansionSlots <= EXPANSION_SLOT_BUDGET);
 const stamped = withOmittedTerms({ results: [{ hits: [] }] }, [hundredTerms.join(" ")], false) as {
   results: Array<{ omittedTerms: string[] }>;
 };

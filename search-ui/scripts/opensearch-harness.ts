@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { performance } from "node:perf_hooks";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { textSearchAttributes } from "../server/searchkit-config";
 
 const mappingPath = join(dirname(fileURLToPath(import.meta.url)), "../../deploy/opensearch/index_mappings.json");
 
@@ -103,7 +104,30 @@ export async function analyzeTokens(name: string, analyzer: string, text: string
   return (json.tokens ?? []).map((token) => token.token);
 }
 
-/** Words that fill a fuzzy expansion on this index, plus one-edit neighbors. */
+function searchedField(attribute: (typeof textSearchAttributes)[number]): string {
+  return typeof attribute === "string" ? attribute : attribute.field;
+}
+
+function assignField(doc: Record<string, unknown>, path: string, value: string): void {
+  const parts = path.split(".");
+  let cursor = doc;
+  for (let index = 0; index < parts.length - 1; index += 1) {
+    const key = parts[index] ?? "";
+    const next = cursor[key];
+    if (!next || typeof next !== "object") {
+      cursor[key] = {};
+    }
+    cursor = cursor[key] as Record<string, unknown>;
+  }
+  cursor[parts[parts.length - 1] ?? ""] = value;
+}
+
+/**
+ * Words that fill a fuzzy expansion on this index, plus one-edit neighbors.
+ * Every field in {@link textSearchAttributes} gets the same token, including
+ * nested `author.name`. An empty field does not spend `max_expansions`, so a
+ * budget measured on a partial document undercounts the rewrite.
+ */
 export function saturatedCorpus(): { bases: string[]; docs: Array<Record<string, unknown> & { post_id: string }> } {
   const alphabet = "abcdefghijklmnop";
   const bases = [...alphabet].map((letter) => `base${letter}token`);
@@ -119,13 +143,16 @@ export function saturatedCorpus(): { bases: string[]; docs: Array<Record<string,
       }
     }
   }
-  const docs = titles.map((title, index) => ({
-    post_id: `rich-${index}`,
-    title,
-    details: title,
-    combined_text: title,
-    status: "open",
-    created: "2020-01-01T00:00:00.000Z",
-  }));
+  const docs = titles.map((title, index) => {
+    const doc: Record<string, unknown> & { post_id: string } = {
+      post_id: `rich-${index}`,
+      status: "open",
+      created: "2020-01-01T00:00:00.000Z",
+    };
+    for (const attribute of textSearchAttributes) {
+      assignField(doc, searchedField(attribute), title);
+    }
+    return doc;
+  });
   return { bases, docs };
 }

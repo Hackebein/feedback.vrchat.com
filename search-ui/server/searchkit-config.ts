@@ -77,11 +77,16 @@ export const textSearchAttributes: SearchAttribute[] = [
  * unquoted terms cannot change the identifier that is searched.
  *
  * Rewritten clause count stays under OpenSearch's default `max_clause_count`
- * of 1024. On 2.19.5, 6 fuzzy terms at `max_expansions` 50 succeed and 7 fail,
- * so fuzzy words share {@link EXPANSION_SLOT_BUDGET} slots instead of each
- * being priced as a saturated term. A normal 5–10 word query keeps typo
- * tolerance on every eligible word; `max_expansions` shrinks before any fuzzy
- * band is removed. Above 40 identifiers the scoring proximity copy is dropped.
+ * of 1024. A fuzzy term rewrites to one clause per expansion on every searched
+ * `.exact` field, plus one exact-band clause and one analyzed clause per
+ * searched field: `fieldCount * (max_expansions + 2)`. The field list is
+ * {@link textSearchAttributes}. With all four fields saturated, 5 terms at
+ * `max_expansions` 50 are 1040 clauses and return 500; 4 terms at 50 are 832
+ * and return 200. Fuzzy words share {@link FUZZY_CLAUSE_BUDGET}, 256 under
+ * 1024, so adding a searched field shrinks `max_expansions` on its own. A
+ * normal 5–10 word query keeps a fuzzy band on every eligible word;
+ * `max_expansions` shrinks before any fuzzy band is removed. Above 40
+ * identifiers the scoring proximity copy is dropped.
  * Adjacent parts share a budget of 160: 80 two-part identifiers succeed, and
  * 68 three-part identifiers do not. Distinct terms the user typed are
  * kept. Repeated copies collapse to one AND clause. Terms are removed only
@@ -95,12 +100,19 @@ const ADJACENT_BAND_BOOST = 50;
 const FUZZY_BAND_BOOST = 5;
 
 const MAX_FUZZY_EXPANSIONS = 50;
-/** Below this, a fuzzy band is not worth the clauses and is turned off. 16 saturated terms at 8 expansions still return 200. */
+/** Below this, a fuzzy band is turned off and the remaining words keep the clauses. */
 const MIN_FUZZY_EXPANSIONS = 8;
-/** 5 terms at the full 50 expansions. 6 * 50 also returns 200; 7 * 50 returns 500. */
-export const EXPANSION_SLOT_BUDGET = 250;
-const FUZZY_CLAUSE_COST = 160;
-const TERM_CLAUSE_COST = 8;
+/** OpenSearch `indices.query.bool.max_clause_count`. */
+export const OPENSEARCH_MAX_CLAUSE_COUNT = 1024;
+/**
+ * Headroom under {@link OPENSEARCH_MAX_CLAUSE_COUNT}. Five saturated terms at
+ * 50 expansions already sit at about 1040 once every `.exact` field is filled.
+ */
+export const FUZZY_CLAUSE_MARGIN = 256;
+/** Shared by every fuzzy word. Cost is `exactFieldCount * (max_expansions + 2)`. */
+export const FUZZY_CLAUSE_BUDGET = OPENSEARCH_MAX_CLAUSE_COUNT - FUZZY_CLAUSE_MARGIN;
+/** Exact band and analyzed best_fields band, one clause per searched field. */
+const BANDS_PER_FIELD = 2;
 const PHRASE_CLAUSE_COST = 8;
 /** Added to the term cost. 40 full identifier clauses stay under 1024; 52 do not. */
 const IDENTIFIER_FULL_EXTRA = 12;
@@ -699,11 +711,24 @@ function fuzzyWordCount(planned: readonly BudgetTerm[]): number {
   return words;
 }
 
-function expansionFor(words: number): number {
-  if (words <= 0) {
+function expansionFor(words: number, fieldCount: number): number {
+  if (words <= 0 || fieldCount <= 0) {
     return 0;
   }
-  return Math.min(MAX_FUZZY_EXPANSIONS, Math.floor(EXPANSION_SLOT_BUDGET / words));
+  const perWord = Math.floor(FUZZY_CLAUSE_BUDGET / words);
+  const expansions = Math.floor(perWord / fieldCount) - BANDS_PER_FIELD;
+  if (expansions <= 0) {
+    return 0;
+  }
+  return Math.min(MAX_FUZZY_EXPANSIONS, expansions);
+}
+
+/** `max_expansions` for `words` fuzzy terms on `searchAttributes`, before any band is removed. */
+export function fuzzyExpansionLimit(
+  words: number,
+  searchAttributes: SearchAttribute[] = textSearchAttributes,
+): number {
+  return expansionFor(words, exactFields(searchAttributes).length);
 }
 
 function proximityCount(planned: readonly BudgetTerm[]): number {
@@ -729,14 +754,19 @@ function unitCount(planned: readonly BudgetTerm[]): number {
   return planned.reduce((sum, item) => sum + termUnits(item.plan), 0);
 }
 
-function clauseCost(planned: readonly BudgetTerm[], phrases: number, maxExpansions: number): number {
-  const fuzzyCost =
-    maxExpansions > 0 ? Math.ceil((FUZZY_CLAUSE_COST * maxExpansions) / MAX_FUZZY_EXPANSIONS) : 0;
+function clauseCost(
+  planned: readonly BudgetTerm[],
+  phrases: number,
+  maxExpansions: number,
+  fieldCount: number,
+): number {
+  const termCost = fieldCount * BANDS_PER_FIELD;
+  const expansionCost = maxExpansions > 0 ? maxExpansions * fieldCount : 0;
   let clauses = phrases * PHRASE_CLAUSE_COST;
   for (const item of planned) {
     const terms = termUnits(item.plan);
     const fuzzy = Math.min(item.fuzzyWords, fuzzyUnits(item.plan));
-    clauses += fuzzy * fuzzyCost + (terms - fuzzy) * TERM_CLAUSE_COST;
+    clauses += terms * termCost + fuzzy * expansionCost;
     if (hasProximity(item.plan)) {
       clauses += item.scoreProximity ? IDENTIFIER_FULL_EXTRA : IDENTIFIER_BAND_EXTRA;
     }
@@ -781,6 +811,7 @@ function shedFuzzy(planned: BudgetTerm[]): boolean {
 function trimPlain(
   plans: readonly TermPlan[],
   phraseList: readonly string[],
+  fieldCount: number,
 ): { planned: BudgetTerm[]; phrases: string[]; omittedTerms: string[]; maxExpansions: number } {
   let planned: BudgetTerm[] = collapsePlans(plans).map((plan) => ({
     plan,
@@ -818,9 +849,9 @@ function trimPlain(
   }
 
   planned = planned.map((item) => ({ ...item, fuzzyWords: fuzzyUnits(item.plan) }));
-  let maxExpansions = expansionFor(fuzzyWordCount(planned));
+  let maxExpansions = expansionFor(fuzzyWordCount(planned), fieldCount);
   while (maxExpansions < MIN_FUZZY_EXPANSIONS && shedFuzzy(planned)) {
-    maxExpansions = expansionFor(fuzzyWordCount(planned));
+    maxExpansions = expansionFor(fuzzyWordCount(planned), fieldCount);
   }
   if (maxExpansions < MIN_FUZZY_EXPANSIONS) {
     maxExpansions = 0;
@@ -831,14 +862,17 @@ function trimPlain(
   for (const phrase of phraseList.slice(MAX_PHRASES)) {
     omitted.push(`"${phrase}"`);
   }
-  while (clauseCost(planned, phrases.length, maxExpansions) > PLAIN_CLAUSE_BUDGET && planned.length > 1) {
+  while (
+    clauseCost(planned, phrases.length, maxExpansions, fieldCount) > PLAIN_CLAUSE_BUDGET &&
+    planned.length > 1
+  ) {
     if (planned.some((item) => item.scoreProximity && hasProximity(item.plan))) {
       planned = planned.map((item) => ({ ...item, scoreProximity: false }));
       continue;
     }
     if (fuzzyWordCount(planned) > 0) {
       shedFuzzy(planned);
-      maxExpansions = expansionFor(fuzzyWordCount(planned));
+      maxExpansions = expansionFor(fuzzyWordCount(planned), fieldCount);
       if (maxExpansions < MIN_FUZZY_EXPANSIONS) {
         maxExpansions = 0;
         planned = planned.map((item) => ({ ...item, fuzzyWords: 0 }));
@@ -851,7 +885,10 @@ function trimPlain(
     }
     omitAt(index);
   }
-  while (clauseCost(planned, phrases.length, maxExpansions) > PLAIN_CLAUSE_BUDGET && phrases.length > 0) {
+  while (
+    clauseCost(planned, phrases.length, maxExpansions, fieldCount) > PLAIN_CLAUSE_BUDGET &&
+    phrases.length > 0
+  ) {
     const phrase = phrases[phrases.length - 1];
     phrases = phrases.slice(0, -1);
     if (phrase) {
@@ -878,7 +915,8 @@ function compilePlainQuery(
     return { query: { match_all: {} }, clauses: 1, omittedTerms: [], expansionSlots: 0 };
   }
   const { phrases, terms } = partitionPlainQuery(q);
-  const trimmed = trimPlain(terms ? planUnquotedTerms(terms) : [], phrases);
+  const fieldCount = exactFields(searchAttributes).length;
+  const trimmed = trimPlain(terms ? planUnquotedTerms(terms) : [], phrases, fieldCount);
   const phraseFields = fieldsWithBoost(searchAttributes, 2);
   const must: ElasticsearchQuery[] = trimmed.phrases.map((phrase) =>
     phraseQuery(phrase, phraseFields, mode),
@@ -895,7 +933,12 @@ function compilePlainQuery(
     );
   }
   const expansionSlots = fuzzyWordCount(trimmed.planned) * trimmed.maxExpansions;
-  const clauses = clauseCost(trimmed.planned, trimmed.phrases.length, trimmed.maxExpansions);
+  const clauses = clauseCost(
+    trimmed.planned,
+    trimmed.phrases.length,
+    trimmed.maxExpansions,
+    fieldCount,
+  );
   if (must.length === 0) {
     return { query: { match_all: {} }, clauses: 1, omittedTerms: trimmed.omittedTerms, expansionSlots };
   }
