@@ -42,7 +42,9 @@ export const textSearchAttributes: SearchAttribute[] = [
 ];
 
 /**
- * Exact identifier hits sit on a constant-score band above every fuzzy hit.
+ * Exact identifier hits sit on a constant-score band above every other hit.
+ * Adjacent split parts sit on a lower constant-score band, still above the
+ * fuzzy band, so prose “group id” outranks a one-edit typo such as `gropIds`.
  * Fuzzy edit distance is 1 only for terms of length >= 5 (`AUTO:5,100` is 0
  * below 5, 1 until 100) and only against the unstemmed `.exact` subfield.
  * `AUTO` after the English stemmer is what made `groupIds` (stem `groupid`)
@@ -55,13 +57,19 @@ export const textSearchAttributes: SearchAttribute[] = [
  * camelCase or letter/number token (`groupIds`, `SDK3`) stays one identifier:
  * the whole token matches on `.exact`, and the split parts have to be adjacent
  * in either order. That identifier does not match the same words in different
- * sentences. Separate words such as `group ids` still do. Quoted phrases stay
+ * sentences. Separate words such as `group ids` still do. A stop word inside
+ * the identifier (`endOfLine`) is kept on `.phrase`, so “end of line” matches
+ * and a different word in that hole (“end foo line”) does not. Adjacent
+ * content parts (“end line”) still match. If the split
+ * parts are a `feedback_synonyms` phrase in any order, the single-token
+ * synonyms match too (`fullBodyTracking` matches `fbt`). Quoted phrases stay
  * ordered and use the `text_phrase` analyzer on `.phrase` (stem, keep stop
  * words, no synonyms). English stop words are dropped before an unquoted term
  * is required. A query that is only stop words is `match_all`: nothing remains
  * to rank.
  */
 const EXACT_BAND_BOOST = 1000;
+const ADJACENT_BAND_BOOST = 50;
 const FUZZY_BAND_BOOST = 5;
 
 /** Same set as the `english_stop` filter (`_english_`). These tokens are deleted by the search analyzer, so they must not become required clauses. */
@@ -106,20 +114,31 @@ function preservesCase(token: string): boolean {
   return /[a-z][A-Z]/.test(token) || /[A-Za-z]\d|\d[A-Za-z]/.test(token);
 }
 
-/** Same boundaries as the `text_search` char filters. Stop-word pieces are deleted at index time. */
-function identifierParts(token: string): string[] {
-  const spaced = token
+/**
+ * Same boundaries as the `text_search` char filters. Content parts drop stop
+ * words. `phraseParts` keeps a stop word that sits between content parts so
+ * `.phrase` can match “end of line” without treating that hole as free slop.
+ */
+function splitIdentifier(token: string): { parts: string[]; phraseParts: string[] } {
+  const raw = token
     .replace(/(?<=\p{Ll})(?=\p{Lu})/gu, " ")
     .replace(/(?<=\p{L})(?=\p{N})/gu, " ")
-    .replace(/(?<=\p{N})(?=\p{L})/gu, " ");
-  const parts: string[] = [];
-  for (const part of spaced.split(/\s+/)) {
-    if (!part || ENGLISH_STOP.has(part.toLowerCase())) {
-      continue;
+    .replace(/(?<=\p{N})(?=\p{L})/gu, " ")
+    .split(/\s+/)
+    .filter((part) => part.length > 0);
+  const contentAt: number[] = [];
+  for (let index = 0; index < raw.length; index += 1) {
+    if (!ENGLISH_STOP.has((raw[index] ?? "").toLowerCase())) {
+      contentAt.push(index);
     }
-    parts.push(part);
   }
-  return parts;
+  const parts = contentAt.map((index) => raw[index] ?? "");
+  if (contentAt.length < 2) {
+    return { parts, phraseParts: [] };
+  }
+  const span = raw.slice(contentAt[0], contentAt[contentAt.length - 1]! + 1);
+  const phraseParts = span.some((part) => ENGLISH_STOP.has(part.toLowerCase())) ? span : [];
+  return { parts, phraseParts };
 }
 
 type SynonymGroup = { singles: string[]; phrases: string[][] };
@@ -166,6 +185,32 @@ function synonymGroupsFromLines(lines: readonly string[]): SynonymGroup[] {
 }
 
 const SYNONYM_GROUPS = synonymGroupsFromLines(readSynonymLines(indexMappings));
+
+function sameTokens(left: readonly string[], right: readonly string[]): boolean {
+  if (left.length !== right.length || left.length === 0) {
+    return false;
+  }
+  const a = left.map((token) => token.toLowerCase()).sort();
+  const b = right.map((token) => token.toLowerCase()).sort();
+  return a.every((token, index) => token === b[index]);
+}
+
+/** Split parts that are a synonym phrase, in any order, expand to that group's single tokens. */
+function synonymSingles(parts: readonly string[]): string[] {
+  if (parts.length < 2) {
+    return [];
+  }
+  const singles = new Set<string>();
+  for (const group of SYNONYM_GROUPS) {
+    if (!group.phrases.some((phrase) => sameTokens(phrase, parts))) {
+      continue;
+    }
+    for (const single of group.singles) {
+      singles.add(single);
+    }
+  }
+  return [...singles].sort();
+}
 
 function tokenCounts(tokens: readonly string[]): Map<string, number> {
   const counts = new Map<string, number>();
@@ -285,41 +330,77 @@ function termClause(term: string, searchAttributes: SearchAttribute[]): Elastics
   return { bool: { should, minimum_should_match: 1 } };
 }
 
+function attributeField(attribute: SearchAttribute): { field: string; weight: number } {
+  if (typeof attribute === "string") {
+    return { field: attribute, weight: 1 };
+  }
+  return { field: attribute.field, weight: attribute.weight ?? 1 };
+}
+
+function intervalGroup(
+  field: string,
+  parts: readonly string[],
+  weight: number,
+): ElasticsearchQuery {
+  return {
+    intervals: {
+      [field]: {
+        all_of: {
+          ordered: false,
+          max_gaps: 0,
+          intervals: parts.map((part) => ({ match: { query: part } })),
+        },
+        boost: weight,
+      },
+    },
+  } as ElasticsearchQuery;
+}
+
 /**
- * The whole identifier keeps the exact and fuzzy bands. Split parts match
- * only as one unordered adjacent group, so `group` and `id` from `groupIds`
+ * Content parts are adjacent on the search field (`max_gaps` 0). Stop words
+ * inside the identifier are matched on `.phrase`, which still indexes them,
+ * so the hole they leave is that word and not an extra token.
+ */
+function proximityQuery(
+  parts: readonly string[],
+  phraseParts: readonly string[],
+  searchAttributes: SearchAttribute[],
+): ElasticsearchQuery {
+  const should: ElasticsearchQuery[] = [];
+  for (const attribute of searchAttributes) {
+    const { field, weight } = attributeField(attribute);
+    if (parts.length >= 2) {
+      should.push(intervalGroup(field, parts, weight));
+    }
+    if (phraseParts.length >= 2) {
+      should.push(intervalGroup(`${field}.phrase`, phraseParts, weight));
+    }
+  }
+  return { bool: { should, minimum_should_match: 1 } };
+}
+
+/**
+ * Exact band, then the adjacent-split band, then the fuzzy band. Split parts
  * cannot come from different sentences.
  */
 function identifierClause(
   term: string,
   parts: readonly string[],
+  phraseParts: readonly string[],
   searchAttributes: SearchAttribute[],
 ): ElasticsearchQuery {
   const should: ElasticsearchQuery[] = [
     scoreBand(term, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
   ];
-  if (parts.length >= 2) {
+  if (parts.length >= 2 || phraseParts.length >= 2) {
+    const proximity = proximityQuery(parts, phraseParts, searchAttributes);
     should.push({
-      bool: {
-        should: searchAttributes.map((attribute) => {
-          const field = typeof attribute === "string" ? attribute : attribute.field;
-          const weight = typeof attribute === "string" ? 1 : (attribute.weight ?? 1);
-          return {
-            intervals: {
-              [field]: {
-                all_of: {
-                  ordered: false,
-                  max_gaps: 0,
-                  intervals: parts.map((part) => ({ match: { query: part } })),
-                },
-                boost: weight,
-              },
-            },
-          };
-        }),
-        minimum_should_match: 1,
+      constant_score: {
+        boost: ADJACENT_BAND_BOOST,
+        filter: proximity,
       },
-    } as ElasticsearchQuery);
+    });
+    should.push(proximity);
   } else if (parts.length === 1) {
     should.push(bestFields(parts[0]!, fieldsWithBoost(searchAttributes, 1), 0));
   }
@@ -332,7 +413,7 @@ function identifierClause(
 type TermPlan =
   | { kind: "synonym"; words: string[]; singles: string[] }
   | { kind: "term"; term: string }
-  | { kind: "identifier"; term: string; parts: string[] };
+  | { kind: "identifier"; term: string; parts: string[]; phraseParts: string[]; singles: string[] };
 
 /**
  * Multi-word synonym phrases are taken from the token bag in any order.
@@ -402,7 +483,14 @@ function planUnquotedTerms(terms: string): TermPlan[] {
     const text = spellings.get(term) ?? term;
     for (let index = 0; index < count; index += 1) {
       if (preservesCase(text)) {
-        plans.push({ kind: "identifier", term: text, parts: identifierParts(text) });
+        const split = splitIdentifier(text);
+        plans.push({
+          kind: "identifier",
+          term: text,
+          parts: split.parts,
+          phraseParts: split.phraseParts,
+          singles: synonymSingles(split.parts),
+        });
       } else {
         plans.push({ kind: "term", term: text });
       }
@@ -415,8 +503,26 @@ function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): Elasti
   switch (plan.kind) {
     case "term":
       return termClause(plan.term, searchAttributes);
-    case "identifier":
-      return identifierClause(plan.term, plan.parts, searchAttributes);
+    case "identifier": {
+      const identifier = identifierClause(
+        plan.term,
+        plan.parts,
+        plan.phraseParts,
+        searchAttributes,
+      );
+      if (plan.singles.length === 0) {
+        return identifier;
+      }
+      return {
+        bool: {
+          should: [
+            identifier,
+            ...plan.singles.map((single) => termClause(single, searchAttributes)),
+          ],
+          minimum_should_match: 1,
+        },
+      };
+    }
     case "synonym":
       return {
         bool: {

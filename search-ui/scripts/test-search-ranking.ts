@@ -65,10 +65,13 @@ function constantBoosts(query: unknown): number[] {
   return found;
 }
 
-function proximityGroups(
-  query: unknown,
-): Array<{ ordered: unknown; maxGaps: unknown; queries: string[] }> {
-  const found: Array<{ ordered: unknown; maxGaps: unknown; queries: string[] }> = [];
+function proximityGroups(query: unknown): Array<{
+  field: string;
+  ordered: unknown;
+  maxGaps: unknown;
+  queries: string[];
+}> {
+  const found: Array<{ field: string; ordered: unknown; maxGaps: unknown; queries: string[] }> = [];
   const walk = (value: unknown): void => {
     if (Array.isArray(value)) {
       for (const item of value) walk(item);
@@ -76,23 +79,33 @@ function proximityGroups(
     }
     if (!value || typeof value !== "object") return;
     const record = value as Record<string, unknown>;
-    const allOf = record.all_of;
-    if (allOf && typeof allOf === "object") {
-      const spec = allOf as {
-        ordered?: unknown;
-        max_gaps?: unknown;
-        intervals?: Array<{ match?: { query?: unknown } }>;
-      };
-      found.push({
-        ordered: spec.ordered,
-        maxGaps: spec.max_gaps,
-        queries: (spec.intervals ?? []).map((item) => String(item.match?.query ?? "")),
-      });
+    const intervals = record.intervals;
+    if (intervals && typeof intervals === "object" && !Array.isArray(intervals)) {
+      for (const [field, spec] of Object.entries(intervals as Record<string, unknown>)) {
+        if (!spec || typeof spec !== "object") continue;
+        const allOf = (spec as { all_of?: unknown }).all_of;
+        if (!allOf || typeof allOf !== "object") continue;
+        const body = allOf as {
+          ordered?: unknown;
+          max_gaps?: unknown;
+          intervals?: Array<{ match?: { query?: unknown } }>;
+        };
+        found.push({
+          field,
+          ordered: body.ordered,
+          maxGaps: body.max_gaps,
+          queries: (body.intervals ?? []).map((item) => String(item.match?.query ?? "")),
+        });
+      }
     }
     for (const child of Object.values(record)) walk(child);
   };
   walk(query);
   return found;
+}
+
+function partKey(group: { queries: string[] }): string {
+  return group.queries.map((part) => part.toLowerCase()).join(" ");
 }
 
 const groupIdsQuery = instantSearchStrictQuery("groupIds", textSearchAttributes);
@@ -131,11 +144,42 @@ assert.deepEqual(
   `fuzzy clause should be edit-distance 1 for normal identifier lengths, got ${fuzziness.join(",")}`,
 );
 assert.equal(fuzziness.includes("AUTO"), false);
+assert.equal(
+  groupIdsProximity.some((group) => group.field.endsWith(".phrase")),
+  false,
+  "groupIds has no internal stop word",
+);
+const endOfLineQuery = instantSearchStrictQuery("endOfLine", textSearchAttributes);
+const endOfLineProximity = proximityGroups(endOfLineQuery);
+assert.ok(endOfLineProximity.some((group) => partKey(group) === "end line"));
+assert.ok(
+  endOfLineProximity.some(
+    (group) => group.field.endsWith(".phrase") && partKey(group) === "end of line",
+  ),
+  "endOfLine keeps the stop word on .phrase",
+);
+for (const group of endOfLineProximity) {
+  assert.equal(group.ordered, false);
+  assert.equal(group.maxGaps, 0);
+}
+const camelSynonym = instantSearchStrictQuery("fullBodyTracking", textSearchAttributes);
+assert.equal(JSON.stringify(camelSynonym).includes('"fbt"'), true);
+assert.ok(
+  proximityGroups(camelSynonym).some((group) => partKey(group) === "full body tracking"),
+);
 const boosts = constantBoosts(groupIdsQuery);
-assert.ok(boosts.length >= 2, `expected exact and fuzzy score bands, got ${boosts.join(",")}`);
-assert.ok(Math.max(...boosts) >= 100);
-assert.ok(Math.min(...boosts) <= 10);
-assert.ok(Math.max(...boosts) > Math.min(...boosts) * 10);
+const bands = [...new Set(boosts)].sort((left, right) => left - right);
+assert.ok(
+  bands.length >= 3,
+  `expected exact, adjacent, and fuzzy score bands, got ${bands.join(",")}`,
+);
+assert.ok(bands[0]! <= 10, `fuzzy band should stay at or below 10, got ${bands.join(",")}`);
+assert.ok(bands[bands.length - 1]! >= 100);
+assert.ok(bands[bands.length - 1]! > bands[0]! * 10);
+assert.ok(
+  bands.some((band) => band > bands[0]! && band < bands[bands.length - 1]!),
+  `adjacent band should sit between fuzzy and exact, got ${bands.join(",")}`,
+);
 
 const quoted = instantSearchStrictQuery('"full body"', textSearchAttributes);
 const quotedBool = quoted as { bool?: { must?: unknown } };
@@ -288,6 +332,48 @@ const docs: Fixture[] = [
     details: "Calibrate fbt before play",
     status: "open",
     created: "2018-04-01T00:00:00.000Z",
+  },
+  {
+    post_id: "full-body-camel",
+    title: "fullBodyTracking option",
+    details: "Expose fullBodyTracking in the menu",
+    status: "open",
+    created: "2019-04-01T00:00:00.000Z",
+  },
+  {
+    post_id: "end-of-line-camel",
+    title: "endOfLine handling",
+    details: "Honor endOfLine in the file",
+    status: "open",
+    created: "2019-02-01T00:00:00.000Z",
+  },
+  {
+    post_id: "end-of-line",
+    title: "Wrap end of line",
+    details: "Break at the end of line in the editor",
+    status: "open",
+    created: "2020-02-01T00:00:00.000Z",
+  },
+  {
+    post_id: "end-line",
+    title: "Marker",
+    details: "The label says end line with nothing between",
+    status: "open",
+    created: "2016-02-01T00:00:00.000Z",
+  },
+  {
+    post_id: "end-foo-line",
+    title: "Spacing",
+    details: "The label says end foo line with a word between",
+    status: "open",
+    created: "2020-02-02T00:00:00.000Z",
+  },
+  {
+    post_id: "end-sentence",
+    title: "The end is ready",
+    details: "A line is shown later",
+    status: "open",
+    created: "2021-02-02T00:00:00.000Z",
   },
   {
     post_id: "performance",
@@ -596,6 +682,10 @@ async function main(): Promise<void> {
   assertLacks(groupIds, "group-words", "groupIds");
   assertHas(groupIds, "group-id-words", "groupIds finds spaced group ids");
   assertHas(groupIds, "ids-group", "groupIds finds adjacent ids group");
+  assertHas(groupIds, "grop-ids", "groupIds fuzzy typo");
+  assertBefore(groupIds, "exact-groupids", "group-id-words", "exact identifier outranks adjacent split");
+  assertBefore(groupIds, "group-id-words", "grop-ids", "adjacent split outranks fuzzy typo");
+  assertBefore(groupIds, "ids-group", "grop-ids", "reversed adjacent split outranks fuzzy typo");
   assertLacks(groupIds, "group-sentence", "groupIds");
   assertLacks(groupIds, "group-has-id", "groupIds");
   assertLacks(groupIds, "merch", "groupIds");
@@ -876,13 +966,37 @@ async function main(): Promise<void> {
   const fbt = await plain("fbt");
   assertHas(fbt, "fbt-only", "fbt synonym");
   assertHas(fbt, "full-body", "fbt synonym");
+  const camelTracking = await plain("fullBodyTracking");
+  assertFirst(camelTracking, "full-body-camel", "fullBodyTracking");
+  assertHas(camelTracking, "fbt-only", "fullBodyTracking synonym");
+  assertHas(camelTracking, "full-body", "fullBodyTracking adjacent phrase");
+  assertBefore(camelTracking, "full-body-camel", "fbt-only", "fullBodyTracking");
+  assertHas(camelTracking, "reversed-body", "fullBodyTracking synonym");
+  const trackingCamelReverse = await plain("trackingBodyFull");
+  assertHas(trackingCamelReverse, "fbt-only", "trackingBodyFull synonym");
+  assertHas(trackingCamelReverse, "full-body", "trackingBodyFull");
+  const endOfLine = await plain("endOfLine");
+  assertFirst(endOfLine, "end-of-line-camel", "endOfLine");
+  assertHas(endOfLine, "end-of-line", "endOfLine matches end of line");
+  assertHas(endOfLine, "end-line", "endOfLine matches adjacent end line");
+  assertLacks(endOfLine, "end-foo-line", "endOfLine");
+  assertLacks(endOfLine, "end-sentence", "endOfLine");
+  const endLine = await plain("end line");
+  assertHas(endLine, "end-of-line", "end line bag");
+  assertHas(endLine, "end-foo-line", "end line bag");
+  assertHas(endLine, "end-sentence", "end line bag");
+  const quotedEnd = await plain('"end of line"');
+  assertHas(quotedEnd, "end-of-line", "quoted end of line");
+  assertHas(quotedEnd, "end-of-line-camel", "quoted end of line");
+  assertLacks(quotedEnd, "end-line", "quoted end of line");
+  assertLacks(quotedEnd, "end-foo-line", "quoted end of line");
 
   const luceneTracking = await lucene('"full body tracking"');
   assertHas(luceneTracking, "full-body", "lucene quoted tracking");
   assertLacks(luceneTracking, "fbt-only", "lucene quoted tracking");
   assertLacks(luceneTracking, "reversed-body", "lucene quoted tracking");
   const luceneTitleTracking = await lucene('title:"full body tracking"');
-  assert.deepEqual(luceneTitleTracking, ["full-body"]);
+  assert.deepEqual(luceneTitleTracking, ["full-body", "full-body-camel"]);
   const luceneOrPhrase = await lucene('status:closed OR title:"full body tracking"');
   assertHas(luceneOrPhrase, "full-body", "or phrase");
   assertHas(luceneOrPhrase, "merch", "or phrase");
