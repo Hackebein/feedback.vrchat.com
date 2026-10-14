@@ -1,32 +1,19 @@
 /**
  * Quoted phrases prefer the `text_phrase` analyzer on `.phrase` subfields.
- * That analyzer is absent until the alias swap, and the gateway can restart
- * first. A query that names it then returns HTTP 400. Compatible mode uses
+ * That analyzer is absent until the alias swap. Compatible mode uses
  * `text_index`, which both mappings define and which does not expand synonyms.
+ * A missing analyzer retries that one request. The next request tries
+ * `text_phrase` again.
  */
 
 export type PhraseMode = "strict" | "compatible";
-
-let mode: PhraseMode = "strict";
-
-export function phraseMode(): PhraseMode {
-  return mode;
-}
-
-export function useCompatiblePhrases(): void {
-  mode = "compatible";
-}
-
-export function resetPhraseMode(): void {
-  mode = "strict";
-}
 
 /** OpenSearch: `[multi_match] analyzer [text_phrase] not found`. */
 export function phraseAnalyzerMissing(detail: string | undefined): boolean {
   return typeof detail === "string" && detail.includes("analyzer [text_phrase]");
 }
 
-export function phraseAnalyzer(): string {
+export function phraseAnalyzer(mode: PhraseMode = "strict"): string {
   switch (mode) {
     case "strict":
       return "text_phrase";
@@ -41,7 +28,10 @@ export function phraseAnalyzer(): string {
 
 const FIELD_BOOST = /^(.*?)(\^[0-9]+(?:\.[0-9]+)?)?$/;
 
-export function phraseSearchFields(fields: readonly string[]): string[] {
+export function phraseSearchFields(
+  fields: readonly string[],
+  mode: PhraseMode = "strict",
+): string[] {
   switch (mode) {
     case "strict":
       return fields.map((field) => {
@@ -60,21 +50,20 @@ export function phraseSearchFields(fields: readonly string[]): string[] {
 }
 
 /**
- * Run a search once. If OpenSearch rejects `text_phrase`, switch to
- * compatible mode and run again so the rebuilt query omits that analyzer.
+ * Try strict phrases. If OpenSearch rejects `text_phrase`, run the same
+ * request once in compatible mode. Nothing is remembered for the next request.
  */
 export async function withPhraseFallback<T>(
-  run: () => Promise<T>,
+  run: (mode: PhraseMode) => Promise<T>,
   detailOf: (error: unknown) => string | undefined,
 ): Promise<T> {
   try {
-    return await run();
+    return await run("strict");
   } catch (error) {
-    if (phraseMode() !== "strict" || !phraseAnalyzerMissing(detailOf(error))) {
+    if (!phraseAnalyzerMissing(detailOf(error))) {
       throw error;
     }
-    useCompatiblePhrases();
-    return run();
+    return run("compatible");
   }
 }
 
@@ -86,17 +75,11 @@ type PhraseRetryResult = {
 
 /** Same retry as `withPhraseFallback` for callers that return a 400 result. */
 export async function withPhraseResultFallback<T extends PhraseRetryResult>(
-  run: () => Promise<T>,
+  run: (mode: PhraseMode) => Promise<T>,
 ): Promise<T> {
-  const first = await run();
-  if (
-    first.ok ||
-    first.httpStatus !== 400 ||
-    phraseMode() !== "strict" ||
-    !phraseAnalyzerMissing(first.detail)
-  ) {
+  const first = await run("strict");
+  if (first.ok || first.httpStatus !== 400 || !phraseAnalyzerMissing(first.detail)) {
     return first;
   }
-  useCompatiblePhrases();
-  return run();
+  return run("compatible");
 }

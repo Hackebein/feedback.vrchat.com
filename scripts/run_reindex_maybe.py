@@ -272,8 +272,9 @@ def action_order(want_deploy: bool, want_ingest: bool) -> list[str]:
     """Ingest and alias-swap before the gateway restart.
 
     Quoted search names the ``text_phrase`` analyzer. Restarting the gateway
-    first makes those queries 400 against the previous mapping. The gateway
-    also falls back if it still starts first; this order is the steady state.
+    first makes those queries 400 against the previous mapping. That request
+    retries once on ``text_index`` and the next request tries ``text_phrase``
+    again. This order is the steady state.
     """
     steps: list[str] = []
     if want_ingest:

@@ -7,7 +7,7 @@
  */
 
 import type { ElasticsearchQuery } from "searchkit";
-import { phraseAnalyzer, phraseSearchFields } from "./phrase-mode";
+import { phraseAnalyzer, phraseSearchFields, type PhraseMode } from "./phrase-mode";
 
 const POST_QUERY_STRING_FIELDS = [
   "combined_text^3",
@@ -701,13 +701,17 @@ function readPhraseClause(clause: string): { phrase: string; field: string } | u
   return { phrase, field: split[1] ?? "" };
 }
 
-function phraseMultiMatch(phrase: string, fields: readonly string[]): ElasticsearchQuery {
+function phraseMultiMatch(
+  phrase: string,
+  fields: readonly string[],
+  mode: PhraseMode = "strict",
+): ElasticsearchQuery {
   return {
     multi_match: {
       query: phrase,
       type: "phrase",
-      fields: phraseSearchFields(fields),
-      analyzer: phraseAnalyzer(),
+      fields: phraseSearchFields(fields, mode),
+      analyzer: phraseAnalyzer(mode),
     },
   };
 }
@@ -716,7 +720,10 @@ function phraseMultiMatch(phrase: string, fields: readonly string[]): Elasticsea
  * A chunk that is only `"phrase"` or `textField:"phrase"` is a phrase query
  * on `text_phrase` (stem, no synonyms). Keyword quotes stay in `query_string`.
  */
-function postPhraseQuery(clause: string): ElasticsearchQuery | undefined {
+function postPhraseQuery(
+  clause: string,
+  mode: PhraseMode = "strict",
+): ElasticsearchQuery | undefined {
   const read = readPhraseClause(clause);
   if (!read) {
     return undefined;
@@ -725,7 +732,7 @@ function postPhraseQuery(clause: string): ElasticsearchQuery | undefined {
   if (!fields) {
     return undefined;
   }
-  return phraseMultiMatch(read.phrase, fields);
+  return phraseMultiMatch(read.phrase, fields, mode);
 }
 
 const EXACT_SUBFIELDS = ["combined_text", "title", "details", "author.name"] as const;
@@ -779,9 +786,12 @@ function containsTextPhrase(clause: string): boolean {
   return false;
 }
 
-function compileSpecial(clause: string): ElasticsearchQuery | undefined {
+function compileSpecial(
+  clause: string,
+  mode: PhraseMode = "strict",
+): ElasticsearchQuery | undefined {
   const text = stripOuterParens(clause);
-  const phrase = postPhraseQuery(text);
+  const phrase = postPhraseQuery(text, mode);
   if (phrase) {
     return phrase;
   }
@@ -794,7 +804,7 @@ function compileSpecial(clause: string): ElasticsearchQuery | undefined {
     return {
       bool: {
         should: orParts.map(
-          (part) => compileSpecial(part) ?? postQueryString(stripOuterParens(part)),
+          (part) => compileSpecial(part, mode) ?? postQueryString(stripOuterParens(part)),
         ),
         minimum_should_match: 1,
       },
@@ -807,12 +817,12 @@ function compileSpecial(clause: string): ElasticsearchQuery | undefined {
       (part) => containsTextPhrase(part) || exactFuzzyDisjunction(stripOuterParens(part)),
     )
   ) {
-    return postTextQuery(andParts);
+    return postTextQuery(andParts, mode);
   }
   return undefined;
 }
 
-function postTextQuery(chunks: string[]): ElasticsearchQuery {
+function postTextQuery(chunks: string[], mode: PhraseMode = "strict"): ElasticsearchQuery {
   const parts: ElasticsearchQuery[] = [];
   const strings: string[] = [];
   const flush = (): void => {
@@ -832,7 +842,7 @@ function postTextQuery(chunks: string[]): ElasticsearchQuery {
     strings.length = 0;
   };
   for (const chunk of chunks) {
-    const special = compileSpecial(chunk);
+    const special = compileSpecial(chunk, mode);
     if (special) {
       flush();
       parts.push(special);
@@ -850,13 +860,13 @@ function postTextQuery(chunks: string[]): ElasticsearchQuery {
   return { bool: { must: parts } };
 }
 
-function commentsClauseQuery(clause: string): ElasticsearchQuery {
+function commentsClauseQuery(clause: string, mode: PhraseMode = "strict"): ElasticsearchQuery {
   const read = readPhraseClause(clause);
   if (read && COMMENT_PHRASE_FIELDS.has(read.field)) {
     return {
       nested: {
         path: COMMENTS_PATH,
-        query: phraseMultiMatch(read.phrase, [read.field]),
+        query: phraseMultiMatch(read.phrase, [read.field], mode),
       },
     };
   }
@@ -1028,7 +1038,10 @@ export function rewriteEnumOr(query: string): string {
 /**
  * Parses the full user Lucene string into post-level query_string segments and nested comment segments.
  */
-export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
+export function buildLuceneQueryBody(
+  trimmedQuery: string,
+  mode: PhraseMode = "strict",
+): ElasticsearchQuery {
   if (!trimmedQuery) {
     return { match_all: {} };
   }
@@ -1087,17 +1100,17 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
     0;
 
   if (!usesNestedOrNegativeRouting && postPositive.length > 0) {
-    return postTextQuery(postPositive);
+    return postTextQuery(postPositive, mode);
   }
 
   const must: ElasticsearchQuery[] = [];
 
   if (postPositive.length > 0) {
-    must.push(postTextQuery(postPositive));
+    must.push(postTextQuery(postPositive, mode));
   }
 
   for (const c of commentsPositive) {
-    must.push(commentsClauseQuery(c));
+    must.push(commentsClauseQuery(c, mode));
   }
 
   for (const c of votersPositive) {
@@ -1107,11 +1120,11 @@ export function buildLuceneQueryBody(trimmedQuery: string): ElasticsearchQuery {
   const must_not: ElasticsearchQuery[] = [];
 
   for (const c of postNegative) {
-    must_not.push(postTextQuery([c]));
+    must_not.push(postTextQuery([c], mode));
   }
 
   for (const c of commentsNegative) {
-    must_not.push(commentsClauseQuery(c));
+    must_not.push(commentsClauseQuery(c, mode));
   }
 
   for (const c of votersNegative) {

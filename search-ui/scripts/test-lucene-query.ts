@@ -2,9 +2,6 @@ import assert from "node:assert/strict";
 import { buildLuceneQueryBody, rewriteEnumOr } from "../server/lucene-query";
 import {
   phraseAnalyzerMissing,
-  phraseMode,
-  resetPhraseMode,
-  useCompatiblePhrases,
   withPhraseFallback,
   withPhraseResultFallback,
 } from "../server/phrase-mode";
@@ -266,10 +263,8 @@ assert.deepEqual(
   },
 );
 
-useCompatiblePhrases();
-assert.equal(phraseMode(), "compatible");
 assert.deepEqual(
-  buildLuceneQueryBody('"full body tracking"'),
+  buildLuceneQueryBody('"full body tracking"', "compatible"),
   phrase(
     "full body tracking",
     ["combined_text^3", "title^2", "details", "author.name"],
@@ -277,11 +272,9 @@ assert.deepEqual(
   ),
 );
 assert.deepEqual(
-  buildLuceneQueryBody('title:"full body tracking"'),
+  buildLuceneQueryBody('title:"full body tracking"', "compatible"),
   phrase("full body tracking", ["title^2"], "text_index"),
 );
-resetPhraseMode();
-assert.equal(phraseMode(), "strict");
 assert.equal(
   phraseAnalyzerMissing("[multi_match] analyzer [text_phrase] not found"),
   true,
@@ -289,22 +282,27 @@ assert.equal(
 assert.equal(phraseAnalyzerMissing("failed to parse"), false);
 assert.equal(phraseAnalyzerMissing(undefined), false);
 
-let fallbackCalls = 0;
-const fallback = await withPhraseFallback(async () => {
-  fallbackCalls += 1;
-  if (phraseMode() === "strict") {
+const fallbackModes: string[] = [];
+const fallback = await withPhraseFallback(async (mode) => {
+  fallbackModes.push(mode);
+  if (mode === "strict") {
     throw new Error('{"error":"[multi_match] analyzer [text_phrase] not found"}');
   }
-  return buildLuceneQueryBody('"full body tracking"');
+  return buildLuceneQueryBody('"full body tracking"', mode);
 }, (error) => (error instanceof Error ? error.message : undefined));
-assert.equal(fallbackCalls, 2);
-assert.equal(phraseMode(), "compatible");
+assert.deepEqual(fallbackModes, ["strict", "compatible"]);
 assert.equal(
   (fallback as { multi_match: { analyzer: string } }).multi_match.analyzer,
   "text_index",
 );
 
-resetPhraseMode();
+const againModes: string[] = [];
+await withPhraseFallback(async (mode) => {
+  againModes.push(mode);
+  return buildLuceneQueryBody('"full body tracking"', mode);
+}, () => undefined);
+assert.deepEqual(againModes, ["strict"]);
+
 let rejectedCalls = 0;
 await assert.rejects(
   () =>
@@ -315,12 +313,13 @@ await assert.rejects(
   /parse failure/,
 );
 assert.equal(rejectedCalls, 1);
-assert.equal(phraseMode(), "strict");
 
 let resultCalls = 0;
-const retried = await withPhraseResultFallback(async () => {
+const resultModes: string[] = [];
+const retried = await withPhraseResultFallback(async (mode) => {
   resultCalls += 1;
-  if (resultCalls === 1) {
+  resultModes.push(mode);
+  if (mode === "strict") {
     return {
       ok: false as const,
       httpStatus: 400 as const,
@@ -332,9 +331,16 @@ const retried = await withPhraseResultFallback(async () => {
 });
 assert.equal(retried.ok, true);
 assert.equal(resultCalls, 2);
-assert.equal(phraseMode(), "compatible");
+assert.deepEqual(resultModes, ["strict", "compatible"]);
 
-resetPhraseMode();
+const afterResultModes: string[] = [];
+const afterResult = await withPhraseResultFallback(async (mode) => {
+  afterResultModes.push(mode);
+  return { ok: true as const, body: { hit: 2 } };
+});
+assert.equal(afterResult.ok, true);
+assert.deepEqual(afterResultModes, ["strict"]);
+
 const unrelated = await withPhraseResultFallback(async () => ({
   ok: false as const,
   httpStatus: 400 as const,
@@ -342,6 +348,5 @@ const unrelated = await withPhraseResultFallback(async () => ({
   detail: "failed to parse",
 }));
 assert.equal(unrelated.ok, false);
-assert.equal(phraseMode(), "strict");
 
 console.info("lucene-query tests passed");

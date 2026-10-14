@@ -9,6 +9,12 @@ import {
 } from "../server/agent-api";
 import { buildLuceneQueryBody } from "../server/lucene-query";
 import {
+  phraseAnalyzer,
+  phraseSearchFields,
+  withPhraseFallback,
+  type PhraseMode,
+} from "../server/phrase-mode";
+import {
   instantSearchStrictQuery,
   searchkitConfig,
   textSearchAttributes,
@@ -59,7 +65,65 @@ function constantBoosts(query: unknown): number[] {
   return found;
 }
 
+function proximityGroups(
+  query: unknown,
+): Array<{ ordered: unknown; maxGaps: unknown; queries: string[] }> {
+  const found: Array<{ ordered: unknown; maxGaps: unknown; queries: string[] }> = [];
+  const walk = (value: unknown): void => {
+    if (Array.isArray(value)) {
+      for (const item of value) walk(item);
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    const record = value as Record<string, unknown>;
+    const allOf = record.all_of;
+    if (allOf && typeof allOf === "object") {
+      const spec = allOf as {
+        ordered?: unknown;
+        max_gaps?: unknown;
+        intervals?: Array<{ match?: { query?: unknown } }>;
+      };
+      found.push({
+        ordered: spec.ordered,
+        maxGaps: spec.max_gaps,
+        queries: (spec.intervals ?? []).map((item) => String(item.match?.query ?? "")),
+      });
+    }
+    for (const child of Object.values(record)) walk(child);
+  };
+  walk(query);
+  return found;
+}
+
 const groupIdsQuery = instantSearchStrictQuery("groupIds", textSearchAttributes);
+const groupIdsProximity = proximityGroups(groupIdsQuery);
+assert.ok(groupIdsProximity.length > 0, "groupIds should require its split parts to be adjacent");
+for (const group of groupIdsProximity) {
+  assert.equal(group.ordered, false);
+  assert.equal(group.maxGaps, 0);
+  assert.deepEqual(
+    group.queries.map((part) => part.toLowerCase()),
+    ["group", "ids"],
+  );
+}
+assert.equal(
+  proximityGroups(instantSearchStrictQuery("group ids", textSearchAttributes)).length,
+  0,
+);
+assert.equal(
+  proximityGroups(instantSearchStrictQuery("ids group", textSearchAttributes)).length,
+  0,
+);
+const sdkProximity = proximityGroups(instantSearchStrictQuery("SDK3", textSearchAttributes));
+assert.ok(sdkProximity.length > 0, "SDK3 should require its split parts to be adjacent");
+for (const group of sdkProximity) {
+  assert.equal(group.ordered, false);
+  assert.equal(group.maxGaps, 0);
+  assert.deepEqual(
+    group.queries.map((part) => part.toLowerCase()),
+    ["sdk", "3"],
+  );
+}
 const fuzziness = fuzzinessValues(groupIdsQuery);
 assert.deepEqual(
   fuzziness.filter((value) => value !== "0"),
@@ -137,6 +201,21 @@ const docs: Fixture[] = [
     details: "An id is shown later",
     status: "open",
     created: "2021-02-01T00:00:00.000Z",
+  },
+  {
+    post_id: "group-has-id",
+    title: "The group has an id",
+    details: "A group has an id field in the form",
+    status: "open",
+    created: "2021-04-01T00:00:00.000Z",
+  },
+  {
+    post_id: "ids-group",
+    title: "Label placement",
+    details:
+      "The panel says ids group in that order and then repeats a lot of unrelated words about layout padding and windows so this is not a short field",
+    status: "open",
+    created: "2016-06-01T00:00:00.000Z",
   },
   {
     post_id: "closed-groupids",
@@ -516,19 +595,26 @@ async function main(): Promise<void> {
   assertHas(groupIds, "url-doc", "groupIds inside a url");
   assertLacks(groupIds, "group-words", "groupIds");
   assertHas(groupIds, "group-id-words", "groupIds finds spaced group ids");
-  assertHas(groupIds, "group-sentence", "groupIds matches group and id in different sentences");
-  assertBefore(groupIds, "exact-groupids", "group-sentence", "groupIds");
+  assertHas(groupIds, "ids-group", "groupIds finds adjacent ids group");
+  assertLacks(groupIds, "group-sentence", "groupIds");
+  assertLacks(groupIds, "group-has-id", "groupIds");
   assertLacks(groupIds, "merch", "groupIds");
 
   const groupIdsCase = await plain("GroupIDs");
   assertFirst(groupIdsCase, "exact-groupids", "GroupIDs");
   assertHas(groupIdsCase, "group-id-words", "GroupIDs");
+  assertHas(groupIdsCase, "ids-group", "GroupIDs");
   assertLacks(groupIdsCase, "group-words", "GroupIDs");
+  assertLacks(groupIdsCase, "group-sentence", "GroupIDs");
+  assertLacks(groupIdsCase, "group-has-id", "GroupIDs");
 
   const groupWords = await plain("group ids");
   assertFirst(groupWords, "exact-groupids", "group ids");
   assertHas(groupWords, "group-id-words", "group ids");
   assertHas(groupWords, "camel-role", "group ids");
+  assertHas(groupWords, "ids-group", "group ids");
+  assertHas(groupWords, "group-sentence", "group ids across sentences");
+  assertHas(groupWords, "group-has-id", "group ids");
   assertLacks(groupWords, "group-words", "group ids");
 
   const gropIds = await plain("gropIds");
@@ -606,6 +692,8 @@ async function main(): Promise<void> {
   assertHas(luceneGroupIds, "camel-role", "lucene groupIds");
   assertLacks(luceneGroupIds, "group-words", "lucene groupIds");
   assertHas(luceneGroupIds, "group-id-words", "lucene groupIds");
+  assertHas(luceneGroupIds, "group-sentence", "lucene groupIds");
+  assertHas(luceneGroupIds, "group-has-id", "lucene groupIds");
 
   const luceneStatus = await lucene("status:Open");
   assertHas(luceneStatus, "status-open", "status:Open");
@@ -809,6 +897,8 @@ async function main(): Promise<void> {
   assertHas(quotedGroup, "exact-groupids", "quoted group ids");
   assertHas(quotedGroup, "group-id-words", "quoted group ids");
   assertLacks(quotedGroup, "group-sentence", "quoted group ids");
+  assertLacks(quotedGroup, "group-has-id", "quoted group ids");
+  assertLacks(quotedGroup, "ids-group", "quoted group ids");
   assertLacks(quotedGroup, "group-words", "quoted group ids");
 
   const statusGroup = await lucene("status:(Open OR Closed)");
@@ -916,39 +1006,56 @@ async function main(): Promise<void> {
   if (!created.ok) {
     throw new Error(`old mapping create failed ${created.status} ${await created.text()}`);
   }
-  const missingAnalyzer = await fetch(`${opensearchUrl}/${oldIndex}/_search`, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({
-      query: {
-        multi_match: {
-          query: "full body",
-          type: "phrase",
-          fields: ["title.phrase"],
-          analyzer: "text_phrase",
+  async function phraseStatus(indexName: string, mode: PhraseMode): Promise<{ status: number; body: string }> {
+    const response = await fetch(`${opensearchUrl}/${indexName}/_search`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        query: {
+          multi_match: {
+            query: "full body",
+            type: "phrase",
+            fields: phraseSearchFields(["title"], mode),
+            analyzer: phraseAnalyzer(mode),
+          },
         },
-      },
-    }),
-  });
-  const missingDetail = await missingAnalyzer.text();
-  assert.equal(missingAnalyzer.status, 400, missingDetail);
-  assert.equal(missingDetail.includes("analyzer [text_phrase]"), true, missingDetail);
-  const compatible = await fetch(`${opensearchUrl}/${oldIndex}/_search`, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({
-      query: {
-        multi_match: {
-          query: "full body",
-          type: "phrase",
-          fields: ["title"],
-          analyzer: "text_index",
-        },
-      },
-    }),
-  });
-  assert.equal(compatible.status, 200, await compatible.text());
-  await fetch(`${opensearchUrl}/${oldIndex}`, { method: "DELETE" });
+      }),
+    });
+    return { status: response.status, body: await response.text() };
+  }
+  try {
+    const oldModes: PhraseMode[] = [];
+    const recovered = await withPhraseFallback(async (mode) => {
+      oldModes.push(mode);
+      const result = await phraseStatus(oldIndex, mode);
+      if (result.status === 400) {
+        throw new Error(result.body);
+      }
+      if (result.status !== 200) {
+        throw new Error(result.body);
+      }
+      return result;
+    }, (error) => (error instanceof Error ? error.message : undefined));
+    assert.deepEqual(oldModes, ["strict", "compatible"]);
+    assert.equal(recovered.status, 200, recovered.body);
+
+    const swappedModes: PhraseMode[] = [];
+    const swapped = await withPhraseFallback(async (mode) => {
+      swappedModes.push(mode);
+      const result = await phraseStatus(index, mode);
+      if (result.status === 400) {
+        throw new Error(result.body);
+      }
+      if (result.status !== 200) {
+        throw new Error(result.body);
+      }
+      return result;
+    }, (error) => (error instanceof Error ? error.message : undefined));
+    assert.deepEqual(swappedModes, ["strict"]);
+    assert.equal(swapped.status, 200, swapped.body);
+  } finally {
+    await fetch(`${opensearchUrl}/${oldIndex}`, { method: "DELETE" });
+  }
 
   console.info("search ranking tests passed");
 }

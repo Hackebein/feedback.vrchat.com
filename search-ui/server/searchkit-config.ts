@@ -5,7 +5,7 @@ import type {
 } from "searchkit";
 import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
 import { buildLuceneQueryBody } from "./lucene-query";
-import { phraseAnalyzer, phraseSearchFields } from "./phrase-mode";
+import { phraseAnalyzer, phraseSearchFields, type PhraseMode } from "./phrase-mode";
 
 /** OpenSearch `terms.include` is anchored to the full bucket string. Searchkit's default regex prepends `([a-zA-Z]+ )+?` for queries longer than 2 chars, which never matches slug-like tokens without spaces. */
 function slugSafeFacetQuery(
@@ -34,14 +34,6 @@ function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
   );
 }
 
-export function instantSearchLuceneQuery(
-  query: string,
-  _searchAttributes: SearchAttribute[],
-  _config: SearchSettingsConfig,
-): ElasticsearchQuery {
-  return buildLuceneQueryBody(query.trim());
-}
-
 export const textSearchAttributes: SearchAttribute[] = [
   { field: "combined_text", weight: 3 },
   { field: "title", weight: 2 },
@@ -56,16 +48,18 @@ export const textSearchAttributes: SearchAttribute[] = [
  * `AUTO` after the English stemmer is what made `groupIds` (stem `groupid`)
  * match every post whose stem is `group`.
  *
- * Unquoted text is scored as a bag of single terms. A phrase clause on the
+ * Unquoted words the user typed are a bag of single terms. A phrase on the
  * whole string changed scores with word order (`full body` ranked the in-order
  * post above `body full`). `synonym_graph` only expands a multi-word synonym
- * in the listed order, so `full body tracking` matched an `fbt` post and
- * `tracking body full` did not. Quoted phrases stay ordered and use the
- * `text_phrase` analyzer on `.phrase` (stem, keep stop words, no synonyms).
- * English stop words are dropped before an unquoted term is required. A query
- * that is only stop words is `match_all`: nothing remains to rank. Unquoted
- * `groupIds` is the tokens `group` and `id`, so those words in different
- * sentences still match, under an exact identifier hit.
+ * in the listed order, so those phrases are planned as the same bag. One
+ * camelCase or letter/number token (`groupIds`, `SDK3`) stays one identifier:
+ * the whole token matches on `.exact`, and the split parts have to be adjacent
+ * in either order. That identifier does not match the same words in different
+ * sentences. Separate words such as `group ids` still do. Quoted phrases stay
+ * ordered and use the `text_phrase` analyzer on `.phrase` (stem, keep stop
+ * words, no synonyms). English stop words are dropped before an unquoted term
+ * is required. A query that is only stop words is `match_all`: nothing remains
+ * to rank.
  */
 const EXACT_BAND_BOOST = 1000;
 const FUZZY_BAND_BOOST = 5;
@@ -110,6 +104,22 @@ const ENGLISH_STOP: ReadonlySet<string> = new Set([
 /** CamelCase and letter/number boundaries have to reach the search analyzer intact. Lowercasing first hides the split. */
 function preservesCase(token: string): boolean {
   return /[a-z][A-Z]/.test(token) || /[A-Za-z]\d|\d[A-Za-z]/.test(token);
+}
+
+/** Same boundaries as the `text_search` char filters. Stop-word pieces are deleted at index time. */
+function identifierParts(token: string): string[] {
+  const spaced = token
+    .replace(/(?<=\p{Ll})(?=\p{Lu})/gu, " ")
+    .replace(/(?<=\p{L})(?=\p{N})/gu, " ")
+    .replace(/(?<=\p{N})(?=\p{L})/gu, " ");
+  const parts: string[] = [];
+  for (const part of spaced.split(/\s+/)) {
+    if (!part || ENGLISH_STOP.has(part.toLowerCase())) {
+      continue;
+    }
+    parts.push(part);
+  }
+  return parts;
 }
 
 type SynonymGroup = { singles: string[]; phrases: string[][] };
@@ -249,13 +259,17 @@ function scoreBand(
   };
 }
 
-function phraseQuery(phrase: string, fields: string[]): ElasticsearchQuery {
+function phraseQuery(
+  phrase: string,
+  fields: string[],
+  mode: PhraseMode,
+): ElasticsearchQuery {
   return {
     multi_match: {
       query: phrase,
       type: "phrase",
-      fields: phraseSearchFields(fields),
-      analyzer: phraseAnalyzer(),
+      fields: phraseSearchFields(fields, mode),
+      analyzer: phraseAnalyzer(mode),
     },
   };
 }
@@ -271,9 +285,54 @@ function termClause(term: string, searchAttributes: SearchAttribute[]): Elastics
   return { bool: { should, minimum_should_match: 1 } };
 }
 
+/**
+ * The whole identifier keeps the exact and fuzzy bands. Split parts match
+ * only as one unordered adjacent group, so `group` and `id` from `groupIds`
+ * cannot come from different sentences.
+ */
+function identifierClause(
+  term: string,
+  parts: readonly string[],
+  searchAttributes: SearchAttribute[],
+): ElasticsearchQuery {
+  const should: ElasticsearchQuery[] = [
+    scoreBand(term, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
+  ];
+  if (parts.length >= 2) {
+    should.push({
+      bool: {
+        should: searchAttributes.map((attribute) => {
+          const field = typeof attribute === "string" ? attribute : attribute.field;
+          const weight = typeof attribute === "string" ? 1 : (attribute.weight ?? 1);
+          return {
+            intervals: {
+              [field]: {
+                all_of: {
+                  ordered: false,
+                  max_gaps: 0,
+                  intervals: parts.map((part) => ({ match: { query: part } })),
+                },
+                boost: weight,
+              },
+            },
+          };
+        }),
+        minimum_should_match: 1,
+      },
+    } as ElasticsearchQuery);
+  } else if (parts.length === 1) {
+    should.push(bestFields(parts[0]!, fieldsWithBoost(searchAttributes, 1), 0));
+  }
+  if (term.length >= 5) {
+    should.push(scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
+  }
+  return { bool: { should, minimum_should_match: 1 } };
+}
+
 type TermPlan =
   | { kind: "synonym"; words: string[]; singles: string[] }
-  | { kind: "term"; term: string };
+  | { kind: "term"; term: string }
+  | { kind: "identifier"; term: string; parts: string[] };
 
 /**
  * Multi-word synonym phrases are taken from the token bag in any order.
@@ -342,7 +401,11 @@ function planUnquotedTerms(terms: string): TermPlan[] {
     const count = available.get(term) ?? 0;
     const text = spellings.get(term) ?? term;
     for (let index = 0; index < count; index += 1) {
-      plans.push({ kind: "term", term: text });
+      if (preservesCase(text)) {
+        plans.push({ kind: "identifier", term: text, parts: identifierParts(text) });
+      } else {
+        plans.push({ kind: "term", term: text });
+      }
     }
   }
   return plans;
@@ -352,6 +415,8 @@ function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): Elasti
   switch (plan.kind) {
     case "term":
       return termClause(plan.term, searchAttributes);
+    case "identifier":
+      return identifierClause(plan.term, plan.parts, searchAttributes);
     case "synonym":
       return {
         bool: {
@@ -377,6 +442,7 @@ export function instantSearchStrictQuery(
   query: string,
   searchAttributes: SearchAttribute[],
   _config?: SearchSettingsConfig,
+  mode: PhraseMode = "strict",
 ): ElasticsearchQuery {
   const q = query.trim();
   if (!q) {
@@ -384,7 +450,9 @@ export function instantSearchStrictQuery(
   }
   const { phrases, terms } = partitionPlainQuery(q);
   const phraseFields = fieldsWithBoost(searchAttributes, 2);
-  const must: ElasticsearchQuery[] = phrases.map((phrase) => phraseQuery(phrase, phraseFields));
+  const must: ElasticsearchQuery[] = phrases.map((phrase) =>
+    phraseQuery(phrase, phraseFields, mode),
+  );
   if (terms) {
     for (const plan of planUnquotedTerms(terms)) {
       must.push(planClause(plan, searchAttributes));

@@ -1,6 +1,6 @@
 import API from "@searchkit/api";
 import express from "express";
-import type { MultipleQueriesQuery, SearchRequest } from "searchkit";
+import type { MultipleQueriesQuery, SearchAttribute, SearchRequest } from "searchkit";
 import {
   buildAgentPostBody,
   buildAgentSearchBody,
@@ -13,10 +13,10 @@ import {
 import { applyExcludeFacets } from "./facet-exclusion";
 import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
 import { createIndexGenerationResolver } from "./index-generation";
-import { withPhraseFallback, withPhraseResultFallback } from "./phrase-mode";
+import { buildLuceneQueryBody } from "./lucene-query";
+import { type PhraseMode, withPhraseFallback, withPhraseResultFallback } from "./phrase-mode";
 import {
   gatewayEnv,
-  instantSearchLuceneQuery,
   instantSearchStrictQuery,
   searchkitConfig,
 } from "./searchkit-config";
@@ -44,9 +44,12 @@ function isLuceneMode(req: express.Request): boolean {
   return parseMode(req.query.mode) === "lucene";
 }
 
-function searchRequestOptions(lucene: boolean) {
+function searchRequestOptions(lucene: boolean, mode: PhraseMode) {
   return {
-    getQuery: lucene ? instantSearchLuceneQuery : instantSearchStrictQuery,
+    getQuery: lucene
+      ? (query: string) => buildLuceneQueryBody(query.trim(), mode)
+      : (query: string, attributes: SearchAttribute[]) =>
+          instantSearchStrictQuery(query, attributes, undefined, mode),
     hooks: {
       beforeSearch: async (requests: SearchRequest[]) => applyExcludeFacets(requests),
     },
@@ -155,10 +158,12 @@ app.get("/api/search", async (req, res) => {
       },
     ];
 
-    const opts = searchRequestOptions(isLuceneMode(req));
-
     const results = await withPhraseFallback(
-      () => apiClient.handleRequest(instantsearchRequests, opts),
+      (mode) =>
+        apiClient.handleRequest(
+          instantsearchRequests,
+          searchRequestOptions(isLuceneMode(req), mode),
+        ),
       extractElasticsearchBadRequestDetail,
     );
     res.json(results);
@@ -184,10 +189,12 @@ app.post("/api/search", async (req, res) => {
         });
       return;
     }
-    const opts = searchRequestOptions(isLuceneMode(req));
-
     const results = await withPhraseFallback(
-      () => apiClient.handleRequest(req.body as MultipleQueriesQuery[], opts),
+      (mode) =>
+        apiClient.handleRequest(
+          req.body as MultipleQueriesQuery[],
+          searchRequestOptions(isLuceneMode(req), mode),
+        ),
       extractElasticsearchBadRequestDetail,
     );
     res.json(results);
@@ -225,8 +232,8 @@ app.get("/api/agent/search", async (req, res) => {
     return;
   }
   try {
-    const result = await withPhraseResultFallback(() =>
-      queryOpenSearch(openSearchTarget, buildAgentSearchBody(parsed.params)),
+    const result = await withPhraseResultFallback((mode) =>
+      queryOpenSearch(openSearchTarget, buildAgentSearchBody(parsed.params, mode)),
     );
     if (!result.ok) {
       sendAgentQueryError(res, result);
