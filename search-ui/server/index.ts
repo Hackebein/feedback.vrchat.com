@@ -19,6 +19,7 @@ import {
   gatewayEnv,
   instantSearchStrictQuery,
   searchkitConfig,
+  withOmittedTerms,
 } from "./searchkit-config";
 
 const INDEX_NAME = "feedback-posts";
@@ -42,6 +43,19 @@ function parseMode(raw: unknown): string {
 
 function isLuceneMode(req: express.Request): boolean {
   return parseMode(req.query.mode) === "lucene";
+}
+
+function queryTexts(requests: MultipleQueriesQuery[]): string[] {
+  return requests.map((request) => {
+    const params = request.params;
+    if (typeof params === "string") {
+      return new URLSearchParams(params).get("query") ?? "";
+    }
+    if (params && typeof params === "object" && "query" in params && typeof params.query === "string") {
+      return params.query;
+    }
+    return "";
+  });
 }
 
 function searchRequestOptions(lucene: boolean, mode: PhraseMode) {
@@ -166,7 +180,7 @@ app.get("/api/search", async (req, res) => {
         ),
       extractElasticsearchBadRequestDetail,
     );
-    res.json(results);
+    res.json(withOmittedTerms(results, queryTexts(instantsearchRequests), isLuceneMode(req)));
   } catch (err) {
     const detail = extractElasticsearchBadRequestDetail(err);
     if (detail !== undefined) {
@@ -197,7 +211,9 @@ app.post("/api/search", async (req, res) => {
         ),
       extractElasticsearchBadRequestDetail,
     );
-    res.json(results);
+    res.json(
+      withOmittedTerms(results, queryTexts(req.body as MultipleQueriesQuery[]), isLuceneMode(req)),
+    );
   } catch (err) {
     const detail = extractElasticsearchBadRequestDetail(err);
     if (detail !== undefined) {

@@ -168,8 +168,14 @@ export function stripOneBalancedParenPair(s: string): string {
     }
     if (c === ")") {
       depth--;
-      if (depth === 0 && i === t.length - 1) {
-        return t.slice(1, -1).trim();
+      if (depth === 0) {
+        // `(a) OR (b)` also ends on `)`, but the first `(` already closed.
+        // Unwrapping only when depth stays positive until the last character
+        // keeps that OR's parentheses intact.
+        if (i === t.length - 1) {
+          return t.slice(1, -1).trim();
+        }
+        return t;
       }
       continue;
     }
@@ -462,6 +468,9 @@ function isSimpleEnumValue(value: string): boolean {
   return /^[^\s()[\]]+$/.test(value);
 }
 
+/** Past this, extra parentheses and NOT layers flatten. Real queries are far shallower, and 4000 parens overflow the stack. */
+const MAX_PARSE_DEPTH = 32;
+
 function parseQuery(tokens: Token[]): QueryNode {
   let index = 0;
 
@@ -469,17 +478,49 @@ function parseQuery(tokens: Token[]): QueryNode {
     return tokens[index];
   }
 
-  function parseOr(): QueryNode {
-    const children = [parseAnd()];
+  function flattenNested(): QueryNode {
+    const children: QueryNode[] = [];
+    let nested = 1;
+    while (index < tokens.length && nested > 0) {
+      const next = tokens[index];
+      if (!next) {
+        break;
+      }
+      if (next.kind === "lparen") {
+        nested += 1;
+        index += 1;
+        continue;
+      }
+      if (next.kind === "rparen") {
+        nested -= 1;
+        index += 1;
+        continue;
+      }
+      index += 1;
+      if (next.kind === "atom" && next.text) {
+        children.push({ kind: "atom", text: next.text });
+      }
+    }
+    if (children.length === 0) {
+      return { kind: "atom", text: "" };
+    }
+    if (children.length === 1) {
+      return children[0]!;
+    }
+    return { kind: "and", children };
+  }
+
+  function parseOr(depth: number): QueryNode {
+    const children = [parseAnd(depth)];
     while (peek()?.kind === "or") {
       index += 1;
-      children.push(parseAnd());
+      children.push(parseAnd(depth));
     }
     return children.length === 1 ? children[0]! : { kind: "or", children };
   }
 
-  function parseAnd(): QueryNode {
-    const children = [parseNot()];
+  function parseAnd(depth: number): QueryNode {
+    const children = [parseNot(depth)];
     while (true) {
       const next = peek();
       if (!next || next.kind === "or" || next.kind === "rparen") {
@@ -487,11 +528,11 @@ function parseQuery(tokens: Token[]): QueryNode {
       }
       if (next.kind === "and") {
         index += 1;
-        children.push(parseNot());
+        children.push(parseNot(depth));
         continue;
       }
       if (next.kind === "atom" || next.kind === "not" || next.kind === "lparen") {
-        children.push(parseNot());
+        children.push(parseNot(depth));
         continue;
       }
       break;
@@ -503,22 +544,28 @@ function parseQuery(tokens: Token[]): QueryNode {
     return present.length === 1 ? present[0]! : { kind: "and", children: present };
   }
 
-  function parseNot(): QueryNode {
+  function parseNot(depth: number): QueryNode {
     if (peek()?.kind === "not") {
       index += 1;
-      return { kind: "not", child: parseNot() };
+      if (depth >= MAX_PARSE_DEPTH) {
+        return parsePrimary(depth);
+      }
+      return { kind: "not", child: parseNot(depth + 1) };
     }
-    return parsePrimary();
+    return parsePrimary(depth);
   }
 
-  function parsePrimary(): QueryNode {
+  function parsePrimary(depth: number): QueryNode {
     const token = peek();
     if (!token) {
       return { kind: "atom", text: "" };
     }
     if (token.kind === "lparen") {
       index += 1;
-      const inner = parseOr();
+      if (depth >= MAX_PARSE_DEPTH) {
+        return flattenNested();
+      }
+      const inner = parseOr(depth + 1);
       if (peek()?.kind === "rparen") {
         index += 1;
       }
@@ -532,7 +579,7 @@ function parseQuery(tokens: Token[]): QueryNode {
     return { kind: "atom", text: "" };
   }
 
-  return parseOr();
+  return parseOr(0);
 }
 
 function foldEnums(node: QueryNode): QueryNode {
@@ -1038,6 +1085,82 @@ export function rewriteEnumOr(query: string): string {
 /**
  * Parses the full user Lucene string into post-level query_string segments and nested comment segments.
  */
+/**
+ * A fuzzy or wildcard term rewrites to one clause per expansion, and a camelCase
+ * term is fanned out across the `.exact` fields first. OpenSearch 2.19.5 rejects
+ * that once it passes `max_clause_count`. Keep the first few and search the rest
+ * as plain terms. `*` and `?` inside a range (`score:[10 TO *]`) are bounds, not
+ * wildcards, and stay in the query.
+ */
+const MAX_LUCENE_EXPANSIONS = 4;
+
+export function limitLuceneExpansions(query: string, max = MAX_LUCENE_EXPANSIONS): string {
+  let kept = 0;
+  let out = "";
+  let index = 0;
+  let quote: string | undefined;
+  let ranges = 0;
+  while (index < query.length) {
+    const char = query[index] ?? "";
+    if (quote) {
+      out += char;
+      if (char === "\\" && index + 1 < query.length) {
+        out += query[index + 1] ?? "";
+        index += 2;
+        continue;
+      }
+      if (char === quote) {
+        quote = undefined;
+      }
+      index += 1;
+      continue;
+    }
+    if (char === '"' || char === "'") {
+      quote = char;
+      out += char;
+      index += 1;
+      continue;
+    }
+    if (char === "[" || char === "{") {
+      ranges += 1;
+      out += char;
+      index += 1;
+      continue;
+    }
+    if (ranges > 0) {
+      if (char === "]" || char === "}") {
+        ranges -= 1;
+      }
+      out += char;
+      index += 1;
+      continue;
+    }
+    if (char === "*" || char === "?") {
+      if (kept < max) {
+        kept += 1;
+        out += char;
+      }
+      index += 1;
+      continue;
+    }
+    if (char === "~") {
+      let end = index + 1;
+      while (end < query.length && /[0-9.]/.test(query[end] ?? "")) {
+        end += 1;
+      }
+      if (kept < max) {
+        kept += 1;
+        out += query.slice(index, end);
+      }
+      index = end;
+      continue;
+    }
+    out += char;
+    index += 1;
+  }
+  return out;
+}
+
 export function buildLuceneQueryBody(
   trimmedQuery: string,
   mode: PhraseMode = "strict",
@@ -1046,7 +1169,7 @@ export function buildLuceneQueryBody(
     return { match_all: {} };
   }
 
-  const chunks = splitTopLevelAnd(rewriteEnumOr(trimmedQuery));
+  const chunks = splitTopLevelAnd(rewriteEnumOr(limitLuceneExpansions(trimmedQuery)));
   if (chunks.length === 0) {
     return { match_all: {} };
   }

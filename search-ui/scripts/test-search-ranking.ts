@@ -15,9 +15,14 @@ import {
   type PhraseMode,
 } from "../server/phrase-mode";
 import {
+  FUZZY_CLAUSE_BUDGET,
+  PLAIN_CLAUSE_BUDGET,
+  fuzzyExpansionLimit,
   instantSearchStrictQuery,
+  plainQueryLimit,
   searchkitConfig,
   textSearchAttributes,
+  withOmittedTerms,
 } from "../server/searchkit-config";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -142,6 +147,31 @@ function partKey(group: { queries: string[] }): string {
   return group.queries.map((part) => part.toLowerCase()).join(" ");
 }
 
+function fuzzyMatches(query: unknown): Array<{ text: string; expansions: number }> {
+  const found: Array<{ text: string; expansions: number }> = [];
+  const walk = (value: unknown): void => {
+    if (Array.isArray(value)) {
+      for (const item of value) walk(item);
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    const multi = (value as { multi_match?: unknown }).multi_match;
+    if (multi && typeof multi === "object") {
+      const body = multi as { query?: unknown; fuzziness?: unknown; max_expansions?: unknown };
+      if (
+        body.fuzziness === "AUTO:5,100" &&
+        typeof body.query === "string" &&
+        typeof body.max_expansions === "number"
+      ) {
+        found.push({ text: body.query, expansions: body.max_expansions });
+      }
+    }
+    for (const child of Object.values(value as Record<string, unknown>)) walk(child);
+  };
+  walk(query);
+  return found;
+}
+
 const groupIdsQuery = instantSearchStrictQuery("groupIds", textSearchAttributes);
 const groupIdsProximity = proximityGroups(groupIdsQuery);
 assert.ok(groupIdsProximity.length > 0, "groupIds should require its split parts to be adjacent");
@@ -157,6 +187,69 @@ assert.equal(
   proximityGroups(instantSearchStrictQuery("group ids", textSearchAttributes)).length,
   0,
 );
+assert.deepEqual(
+  instantSearchStrictQuery("widget alpha", textSearchAttributes),
+  instantSearchStrictQuery("alpha widget", textSearchAttributes),
+);
+assert.deepEqual(
+  instantSearchStrictQuery("aBc AbC", textSearchAttributes),
+  instantSearchStrictQuery("AbC aBc", textSearchAttributes),
+);
+const fiveWords = ["avatar", "widget", "zebra", "stable", "polygon"];
+const fiveBuilt = instantSearchStrictQuery(fiveWords.join(" "), textSearchAttributes);
+const fiveFuzzy = fuzzyMatches(fiveBuilt);
+const fiveExpansions = fuzzyExpansionLimit(fiveWords.length);
+assert.ok(fiveExpansions >= 1, "a 5-word query keeps a fuzzy band");
+assert.equal(new Set(fiveFuzzy.map((item) => item.text)).size, fiveWords.length);
+for (const word of fiveWords) {
+  assert.ok(fiveFuzzy.some((item) => item.text === word), `${word} keeps typo tolerance`);
+}
+assert.ok(fiveFuzzy.every((item) => item.expansions === fiveExpansions));
+assert.ok(plainQueryLimit(fiveWords.join(" ")).clauses <= FUZZY_CLAUSE_BUDGET);
+assert.equal(plainQueryLimit(fiveWords.join(" ")).omittedTerms.length, 0);
+const extraFields = [...textSearchAttributes, "notes"];
+assert.ok(
+  fuzzyExpansionLimit(fiveWords.length, extraFields) < fiveExpansions,
+  "another searched field shrinks max_expansions",
+);
+const extraFuzzy = fuzzyMatches(instantSearchStrictQuery(fiveWords.join(" "), extraFields));
+assert.ok(extraFuzzy.every((item) => item.expansions === fuzzyExpansionLimit(fiveWords.length, extraFields)));
+const tenWords = [...fiveWords, "desktop", "microphone", "performance", "tracking", "companion"];
+const tenBuilt = instantSearchStrictQuery(tenWords.join(" "), textSearchAttributes);
+const tenFuzzy = fuzzyMatches(tenBuilt);
+const tenExpansions = fuzzyExpansionLimit(tenWords.length);
+assert.ok(tenExpansions >= 1, "a 10-word query keeps a fuzzy band");
+for (const word of tenWords) {
+  assert.ok(tenFuzzy.some((item) => item.text === word), `${word} keeps typo tolerance`);
+}
+assert.ok(tenFuzzy.every((item) => item.expansions === tenExpansions));
+assert.ok(plainQueryLimit(tenWords.join(" ")).clauses <= FUZZY_CLAUSE_BUDGET);
+assert.equal(plainQueryLimit(tenWords.join(" ")).omittedTerms.length, 0);
+const fortyTerms = Array.from({ length: 40 }, (_, index) => `zz${index}`);
+assert.deepEqual(plainQueryLimit(fortyTerms.join(" ")).omittedTerms, []);
+const fortyQuery = JSON.stringify(instantSearchStrictQuery(fortyTerms.join(" "), textSearchAttributes));
+for (const term of fortyTerms) {
+  assert.equal(fortyQuery.includes(`"${term}"`), true, term);
+}
+const hundredTerms = Array.from({ length: 100 }, (_, index) => `zz${index}`);
+const hundredLimit = plainQueryLimit(hundredTerms.join(" "));
+assert.equal(hundredLimit.omittedTerms.length, 20);
+assert.equal(hundredLimit.omittedTerms[0], "zz9");
+for (const term of ["zz0", "zz9", "zz90", "zz99"]) {
+  assert.equal(hundredLimit.omittedTerms.includes(term), true, term);
+}
+for (const term of ["zz10", "zz50", "zz89"]) {
+  assert.equal(hundredLimit.omittedTerms.includes(term), false, term);
+}
+assert.ok(hundredLimit.clauses <= PLAIN_CLAUSE_BUDGET);
+const stamped = withOmittedTerms({ results: [{ hits: [] }] }, [hundredTerms.join(" ")], false) as {
+  results: Array<{ omittedTerms: string[] }>;
+};
+assert.deepEqual(stamped.results[0]?.omittedTerms, hundredLimit.omittedTerms);
+const luceneStamped = withOmittedTerms({ results: [{ hits: [] }] }, ["score:[10 TO *]"], true) as {
+  results: Array<{ omittedTerms: string[] }>;
+};
+assert.deepEqual(luceneStamped.results[0]?.omittedTerms, []);
 assert.equal(
   proximityGroups(instantSearchStrictQuery("ids group", textSearchAttributes)).length,
   0,

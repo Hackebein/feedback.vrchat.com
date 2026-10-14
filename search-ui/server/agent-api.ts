@@ -3,6 +3,7 @@ import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
 import type { PhraseMode } from "./phrase-mode";
 import {
   instantSearchStrictQuery,
+  plainQueryLimit,
   textSearchAttributes,
 } from "./searchkit-config";
 
@@ -90,6 +91,8 @@ export type AgentSearchResponse = {
   limit: number;
   nbHits: number;
   hits: AgentHit[];
+  /** Distinct terms removed so the query stays under OpenSearch's clause limit. Empty when every term is kept. */
+  omittedTerms: string[];
 };
 
 export type OpenSearchTarget = {
@@ -330,6 +333,7 @@ export function mapAgentSearchResponse(
     limit: params.limit,
     nbHits: parsed.total,
     hits,
+    omittedTerms: plainQueryLimit(params.q).omittedTerms,
   };
 }
 

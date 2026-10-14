@@ -1,3 +1,5 @@
+import { ENGLISH_STOP } from "../../../shared/english-stop";
+import { splitSearchIdentifier } from "../../../shared/identifier-split";
 import {
   RANGE_ATTRS,
   REFINEMENT_ATTRS,
@@ -160,20 +162,47 @@ export function matchesQuery(text: string, tokens: string[]): boolean {
 }
 
 /**
- * Private-board matching. Exact substrings outrank camelCase splits, which
- * outrank a single edit on words of length >= 5. Lucene mode understands
+ * Private-board matching. Exact substrings outrank an adjacent camelCase
+ * split, which outranks a single edit on words of length >= 5. Unquoted
+ * English stop words are dropped, matching the gateway. Identifier parts
+ * have to sit next to each other in either order, and a stop word in the
+ * post still occupies that slot (`groupIds` matches "group ids", not
+ * "group of ids"). A stop word inside the identifier may fill that hole
+ * (`endOfLine` matches "end of line" and "end line", not "end the line").
+ * Splits follow the index analyzer (`XMLHttpRequest` is `XMLHttp` +
+ * `Request`, and `HTTPResponse` stays one token). Lucene mode understands
  * AND/OR/NOT, quotes, and the fields the sidebar actually stores.
  */
-function identifierParts(raw: string): string[] {
-  const parts = raw
-    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
-    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
-    .replace(/([A-Za-z])([0-9])/g, "$1 $2")
-    .replace(/([0-9])([A-Za-z])/g, "$1 $2")
-    .split(/[^A-Za-z0-9]+/)
-    .map((part) => part.toLowerCase())
-    .filter((part) => part.length > 0);
-  return parts.length > 1 ? parts : [];
+
+function sameBag(left: readonly string[], right: readonly string[]): boolean {
+  if (left.length !== right.length) {
+    return false;
+  }
+  const counts = new Map<string, number>();
+  for (const token of left) {
+    counts.set(token, (counts.get(token) ?? 0) + 1);
+  }
+  for (const token of right) {
+    const remaining = counts.get(token) ?? 0;
+    if (remaining === 0) {
+      return false;
+    }
+    counts.set(token, remaining - 1);
+  }
+  return true;
+}
+
+function adjacentParts(words: readonly string[], parts: readonly string[]): boolean {
+  if (parts.length < 2 || words.length < parts.length) {
+    return false;
+  }
+  const width = parts.length;
+  for (let index = 0; index <= words.length - width; index += 1) {
+    if (sameBag(words.slice(index, index + width), parts)) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function editDistanceAtMost1(left: string, right: string): boolean {
@@ -231,12 +260,31 @@ function editDistanceAtMost1(left: string, right: string): boolean {
   return true;
 }
 
-function fuzzyWord(hay: string, token: string): boolean {
+/** Whole tokens plus index-analyzer pieces, so `group` can typo-match the `grop` in `gropIds`. */
+function expandedWords(text: string): string[] {
+  const words: string[] = [];
+  for (const chunk of text.split(/[^A-Za-z0-9]+/)) {
+    if (!chunk) {
+      continue;
+    }
+    const lower = chunk.toLowerCase();
+    words.push(lower);
+    for (const part of splitSearchIdentifier(chunk).parts) {
+      const piece = part.toLowerCase();
+      if (piece !== lower) {
+        words.push(piece);
+      }
+    }
+  }
+  return words;
+}
+
+function fuzzyWord(text: string, token: string): boolean {
   if (token.length < 5) {
     return false;
   }
-  for (const word of hay.split(/[^a-z0-9]+/)) {
-    if (word.length < 5 || word[0] !== token[0]) {
+  for (const word of expandedWords(text)) {
+    if (word[0] !== token[0]) {
       continue;
     }
     if (Math.abs(word.length - token.length) > 1) {
@@ -263,8 +311,9 @@ function countToken(hay: string, token: string): number {
   return score;
 }
 
-/** Exact substring outranks a camelCase split, which outranks one edit. */
-function scoreToken(hay: string, raw: string): number {
+/** Exact substring outranks an adjacent camelCase split, which outranks one edit. */
+function scoreToken(text: string, raw: string): number {
+  const hay = text.toLowerCase();
   const token = raw.toLowerCase();
   if (!token) {
     return 0;
@@ -273,14 +322,31 @@ function scoreToken(hay: string, raw: string): number {
   if (exact > 0) {
     return 100 + exact;
   }
-  const parts = identifierParts(raw);
-  if (parts.length > 1 && parts.every((part) => hay.includes(part))) {
+  const split = splitSearchIdentifier(raw);
+  const words = hay.split(/[^a-z0-9]+/).filter((word) => word.length > 0);
+  const parts = split.parts.map((part) => part.toLowerCase());
+  const phraseParts = split.phraseParts.map((part) => part.toLowerCase());
+  if (
+    (parts.length >= 2 && adjacentParts(words, parts)) ||
+    (phraseParts.length >= 2 && adjacentParts(words, phraseParts))
+  ) {
     return 40;
   }
-  if (fuzzyWord(hay, token)) {
+  if (fuzzyWord(text, token)) {
     return 5;
   }
   return 0;
+}
+
+function contentTokens(terms: string): string[] {
+  const tokens: string[] = [];
+  for (const raw of terms.split(/\s+/)) {
+    if (!raw || ENGLISH_STOP.has(raw.toLowerCase())) {
+      continue;
+    }
+    tokens.push(raw);
+  }
+  return tokens;
 }
 
 function phraseMatches(hay: string, phrase: string): boolean {
@@ -331,11 +397,8 @@ function scorePlain(text: string, query: string): number {
     }
     score += hay.includes(phrase.toLowerCase()) ? 120 : 40;
   }
-  for (const raw of terms.split(/\s+/)) {
-    if (!raw) {
-      continue;
-    }
-    const part = scoreToken(hay, raw);
+  for (const raw of contentTokens(terms)) {
+    const part = scoreToken(text, raw);
     if (part <= 0) {
       return 0;
     }
@@ -346,6 +409,10 @@ function scorePlain(text: string, query: string): number {
 
 function matchesPlainQuery(text: string, query: string): boolean {
   if (!query.trim()) {
+    return true;
+  }
+  const { phrases, terms } = partitionQuotes(query);
+  if (phrases.length === 0 && contentTokens(terms).length === 0) {
     return true;
   }
   return scorePlain(text, query) > 0;
@@ -472,6 +539,9 @@ function tokenizePrivate(input: string): PrivateTok[] {
   return tokens;
 }
 
+/** Same depth cap as the gateway Lucene parser. Thousands of parentheses overflow the stack. */
+const MAX_PRIVATE_DEPTH = 32;
+
 function parsePrivateLucene(query: string): PrivateNode | undefined {
   const tokens = tokenizePrivate(query.trim());
   if (tokens.length === 0) {
@@ -481,16 +551,47 @@ function parsePrivateLucene(query: string): PrivateNode | undefined {
   function peek(): PrivateTok | undefined {
     return tokens[index];
   }
-  function parseOr(): PrivateNode {
-    const children = [parseAnd()];
+  function flattenNested(): PrivateNode {
+    const children: PrivateNode[] = [];
+    let nested = 1;
+    while (index < tokens.length && nested > 0) {
+      const next = tokens[index];
+      if (!next) {
+        break;
+      }
+      if (next.k === "lparen") {
+        nested += 1;
+        index += 1;
+        continue;
+      }
+      if (next.k === "rparen") {
+        nested -= 1;
+        index += 1;
+        continue;
+      }
+      index += 1;
+      if (next.k === "term" && next.value) {
+        children.push({ op: "term", field: next.field, value: next.value, phrase: next.phrase });
+      }
+    }
+    if (children.length === 0) {
+      return { op: "term", field: "", value: "", phrase: false };
+    }
+    if (children.length === 1) {
+      return children[0]!;
+    }
+    return { op: "and", children };
+  }
+  function parseOr(depth: number): PrivateNode {
+    const children = [parseAnd(depth)];
     while (peek()?.k === "or") {
       index += 1;
-      children.push(parseAnd());
+      children.push(parseAnd(depth));
     }
     return children.length === 1 ? children[0]! : { op: "or", children };
   }
-  function parseAnd(): PrivateNode {
-    const children = [parseNot()];
+  function parseAnd(depth: number): PrivateNode {
+    const children = [parseNot(depth)];
     while (true) {
       const next = peek();
       if (!next || next.k === "or" || next.k === "rparen") {
@@ -500,28 +601,34 @@ function parsePrivateLucene(query: string): PrivateNode | undefined {
         index += 1;
       }
       if (next.k === "and" || next.k === "term" || next.k === "not" || next.k === "lparen") {
-        children.push(parseNot());
+        children.push(parseNot(depth));
         continue;
       }
       break;
     }
     return children.length === 1 ? children[0]! : { op: "and", children };
   }
-  function parseNot(): PrivateNode {
+  function parseNot(depth: number): PrivateNode {
     if (peek()?.k === "not") {
       index += 1;
-      return { op: "not", child: parseNot() };
+      if (depth >= MAX_PRIVATE_DEPTH) {
+        return parsePrimary(depth);
+      }
+      return { op: "not", child: parseNot(depth + 1) };
     }
-    return parsePrimary();
+    return parsePrimary(depth);
   }
-  function parsePrimary(): PrivateNode {
+  function parsePrimary(depth: number): PrivateNode {
     const token = peek();
     if (!token) {
       return { op: "term", field: "", value: "", phrase: false };
     }
     if (token.k === "lparen") {
       index += 1;
-      const inner = parseOr();
+      if (depth >= MAX_PRIVATE_DEPTH) {
+        return flattenNested();
+      }
+      const inner = parseOr(depth + 1);
       if (peek()?.k === "rparen") {
         index += 1;
       }
@@ -534,7 +641,7 @@ function parsePrivateLucene(query: string): PrivateNode | undefined {
     index += 1;
     return { op: "term", field: "", value: "", phrase: false };
   }
-  return parseOr();
+  return parseOr(0);
 }
 
 function termMatches(

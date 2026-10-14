@@ -6,7 +6,8 @@
     "build": "vite build && node scripts/bundle-server.mjs",
     "dev": "concurrently \"vite\" \"tsx watch server/index.ts\"",
     "preview": "vite preview",
-    "test": "tsx scripts/test-lucene-query.ts && tsx scripts/test-facet-exclusion.ts && tsx scripts/test-agent-api.ts && tsx scripts/test-search-route.ts && tsx scripts/test-layout-css.ts && tsx scripts/test-search-ranking.ts"
+    "test": "tsx scripts/test-lucene-query.ts && tsx scripts/test-facet-exclusion.ts && tsx scripts/test-agent-api.ts && tsx scripts/test-search-route.ts && tsx scripts/test-layout-css.ts && tsx scripts/test-search-ranking.ts && tsx scripts/test-search-fuzz.ts && tsx scripts/test-search-perf.ts",
+    "bench:search": "tsx scripts/bench-search-query.ts"
   },
   "dependencies": {
     "@scalar/api-reference-react": "^0.9.38",
@@ -29,6 +30,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "concurrently": "^9.1.0",
     "esbuild": "^0.28.0",
+    "fast-check": "^4.10.2",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "vite": "^5.4.11"

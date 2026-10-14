@@ -130,6 +130,7 @@ const mapped = mapAgentSearchResponse(
   parsed.params,
 );
 assert.equal(mapped.nbHits, 2);
+assert.deepEqual(mapped.omittedTerms, []);
 assert.equal(mapped.hits.length, 1);
 assert.equal(
   mapped.hits[0]?.url,

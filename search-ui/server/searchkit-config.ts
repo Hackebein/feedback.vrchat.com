@@ -4,6 +4,8 @@ import type {
   SearchSettingsConfig,
 } from "searchkit";
 import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
+import { ENGLISH_STOP } from "../../shared/english-stop";
+import { splitSearchIdentifier } from "../../shared/identifier-split";
 import { buildLuceneQueryBody } from "./lucene-query";
 import { phraseAnalyzer, phraseSearchFields, type PhraseMode } from "./phrase-mode";
 
@@ -69,78 +71,86 @@ export const textSearchAttributes: SearchAttribute[] = [
  * words, no synonyms). English stop words are dropped before an unquoted term
  * is required. A query that is only stop words is `match_all`: nothing remains
  * to rank.
+ *
+ * Several casings of one word can preserve case (`aBc` and `AbC` split
+ * differently). The lexicographically smallest casing wins, so swapping
+ * unquoted terms cannot change the identifier that is searched.
+ *
+ * Rewritten clause count stays under OpenSearch's default `max_clause_count`
+ * of 1024. A fuzzy term rewrites to one clause per expansion on every searched
+ * `.exact` field, plus one exact-band clause and one analyzed clause per
+ * searched field: `fieldCount * (max_expansions + 2)`. The field list is
+ * {@link textSearchAttributes}. With all four fields saturated, 5 terms at
+ * `max_expansions` 50 are 1040 clauses and return 500; 4 terms at 50 are 832
+ * and return 200. Fuzzy words share {@link FUZZY_CLAUSE_BUDGET}, 256 under
+ * 1024, so adding a searched field shrinks `max_expansions` on its own. A
+ * normal 5–10 word query keeps a fuzzy band on every eligible word;
+ * `max_expansions` shrinks before any fuzzy band is removed. Above 40
+ * identifiers the scoring proximity copy is dropped.
+ * Adjacent parts share a budget of 160: 80 two-part identifiers succeed, and
+ * 68 three-part identifiers do not. Distinct terms the user typed are
+ * kept. Repeated copies collapse to one AND clause. Terms are removed only
+ * after fuzzy and that extra band are already degraded, shortest first, and
+ * the removed terms are returned as `omittedTerms`. An identifier with more
+ * than 8 parts is one token, so a long camelCase string cannot build a giant
+ * intervals query.
  */
 const EXACT_BAND_BOOST = 1000;
 const ADJACENT_BAND_BOOST = 50;
 const FUZZY_BAND_BOOST = 5;
 
-/** Same set as the `english_stop` filter (`_english_`). These tokens are deleted by the search analyzer, so they must not become required clauses. */
-const ENGLISH_STOP: ReadonlySet<string> = new Set([
-  "a",
-  "an",
-  "and",
-  "are",
-  "as",
-  "at",
-  "be",
-  "but",
-  "by",
-  "for",
-  "if",
-  "in",
-  "into",
-  "is",
-  "it",
-  "no",
-  "not",
-  "of",
-  "on",
-  "or",
-  "such",
-  "that",
-  "the",
-  "their",
-  "then",
-  "there",
-  "these",
-  "they",
-  "this",
-  "to",
-  "was",
-  "will",
-  "with",
-]);
+const MAX_FUZZY_EXPANSIONS = 50;
+/** Below this, a fuzzy band is turned off and the remaining words keep the clauses. */
+const MIN_FUZZY_EXPANSIONS = 8;
+/** OpenSearch `indices.query.bool.max_clause_count`. */
+export const OPENSEARCH_MAX_CLAUSE_COUNT = 1024;
+/**
+ * Headroom under {@link OPENSEARCH_MAX_CLAUSE_COUNT}. Five saturated terms at
+ * 50 expansions already sit at about 1040 once every `.exact` field is filled.
+ */
+export const FUZZY_CLAUSE_MARGIN = 256;
+/** Shared by every fuzzy word. Cost is `exactFieldCount * (max_expansions + 2)`. */
+export const FUZZY_CLAUSE_BUDGET = OPENSEARCH_MAX_CLAUSE_COUNT - FUZZY_CLAUSE_MARGIN;
+/** Exact band and analyzed best_fields band, one clause per searched field. */
+const BANDS_PER_FIELD = 2;
+const PHRASE_CLAUSE_COST = 8;
+/** Added to the term cost. 40 full identifier clauses stay under 1024; 52 do not. */
+const IDENTIFIER_FULL_EXTRA = 12;
+/** Added when the scoring proximity copy is omitted. */
+const IDENTIFIER_BAND_EXTRA = 4;
+const FULL_IDENTIFIER_BUDGET = 40;
+/**
+ * Sum of adjacent parts across identifiers. 80 two-part identifiers (160)
+ * return 200. 64 three-part identifiers return 200 and 68 return 500.
+ */
+const PROXIMITY_PART_BUDGET = 160;
+const PLAIN_TERM_BUDGET = 100;
+const MAX_PHRASES = 16;
+const MAX_IDENTIFIER_PARTS = 8;
+
+/** `AUTO:5,100` is edit distance 2 at length >= 100, which is the expensive automaton. */
+function fuzzyEligible(term: string): boolean {
+  return term.length >= 5 && term.length < 100;
+}
+
+/** Plain-query rewrite budget, under OpenSearch's 1024 clause limit. */
+export const PLAIN_CLAUSE_BUDGET = 960;
 
 /** CamelCase and letter/number boundaries have to reach the search analyzer intact. Lowercasing first hides the split. */
 function preservesCase(token: string): boolean {
   return /[a-z][A-Z]/.test(token) || /[A-Za-z]\d|\d[A-Za-z]/.test(token);
 }
 
-/**
- * Same boundaries as the `text_search` char filters. Content parts drop stop
- * words. `phraseParts` keeps a stop word that sits between content parts so
- * `.phrase` can match “end of line” without treating that hole as free slop.
- */
-function splitIdentifier(token: string): { parts: string[]; phraseParts: string[] } {
-  const raw = token
-    .replace(/(?<=\p{Ll})(?=\p{Lu})/gu, " ")
-    .replace(/(?<=\p{L})(?=\p{N})/gu, " ")
-    .replace(/(?<=\p{N})(?=\p{L})/gu, " ")
-    .split(/\s+/)
-    .filter((part) => part.length > 0);
-  const contentAt: number[] = [];
-  for (let index = 0; index < raw.length; index += 1) {
-    if (!ENGLISH_STOP.has((raw[index] ?? "").toLowerCase())) {
-      contentAt.push(index);
-    }
+/** Smallest case-preserving spelling wins so input order cannot change the split. */
+function preferredSpelling(current: string | undefined, token: string): string {
+  const folded = token.toLowerCase();
+  if (!preservesCase(token)) {
+    return current ?? folded;
   }
-  const parts = contentAt.map((index) => raw[index] ?? "");
-  if (contentAt.length < 2) {
-    return { parts, phraseParts: [] };
+  if (!current || !preservesCase(current) || token < current) {
+    return token;
   }
-  const span = raw.slice(contentAt[0], contentAt[contentAt.length - 1]! + 1);
-  const phraseParts = span.some((part) => ENGLISH_STOP.has(part.toLowerCase())) ? span : [];
-  return { parts, phraseParts };
+  return current;
 }
 
 type SynonymGroup = { singles: string[]; phrases: string[][] };
@@ -276,6 +286,7 @@ function bestFields(
   query: string,
   fields: string[],
   fuzziness: 0 | "AUTO:5,100",
+  maxExpansions = MAX_FUZZY_EXPANSIONS,
 ): ElasticsearchQuery {
   return {
     multi_match: {
@@ -287,7 +298,7 @@ function bestFields(
       auto_generate_synonyms_phrase_query: false,
       ...(fuzziness === 0
         ? {}
-        : { prefix_length: 1, max_expansions: 50, fuzzy_transpositions: true }),
+        : { prefix_length: 1, max_expansions: maxExpansions, fuzzy_transpositions: true }),
     },
   };
 }
@@ -297,11 +308,12 @@ function scoreBand(
   fields: string[],
   fuzziness: 0 | "AUTO:5,100",
   boost: number,
+  maxExpansions = MAX_FUZZY_EXPANSIONS,
 ): ElasticsearchQuery {
   return {
     constant_score: {
       boost,
-      filter: bestFields(query, fields, fuzziness),
+      filter: bestFields(query, fields, fuzziness, maxExpansions),
     },
   };
 }
@@ -321,13 +333,19 @@ function phraseQuery(
   };
 }
 
-function termClause(term: string, searchAttributes: SearchAttribute[]): ElasticsearchQuery {
+function termClause(
+  term: string,
+  searchAttributes: SearchAttribute[],
+  maxExpansions: number,
+): ElasticsearchQuery {
   const should: ElasticsearchQuery[] = [
     scoreBand(term, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
     bestFields(term, fieldsWithBoost(searchAttributes, 1), 0),
   ];
-  if (term.length >= 5) {
-    should.push(scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
+  if (maxExpansions > 0 && fuzzyEligible(term)) {
+    should.push(
+      scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST, maxExpansions),
+    );
   }
   return { bool: { should, minimum_should_match: 1 } };
 }
@@ -411,6 +429,8 @@ function identifierClause(
   parts: readonly string[],
   phraseParts: readonly string[],
   searchAttributes: SearchAttribute[],
+  maxExpansions: number,
+  scoreProximity: boolean,
 ): ElasticsearchQuery {
   const should: ElasticsearchQuery[] = [
     scoreBand(term, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
@@ -423,12 +443,16 @@ function identifierClause(
         filter: proximity,
       },
     });
-    should.push(proximity);
+    if (scoreProximity) {
+      should.push(proximity);
+    }
   } else if (parts.length === 1) {
     should.push(bestFields(parts[0]!, fieldsWithBoost(searchAttributes, 1), 0));
   }
-  if (term.length >= 5) {
-    should.push(scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
+  if (maxExpansions > 0 && fuzzyEligible(term)) {
+    should.push(
+      scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST, maxExpansions),
+    );
   }
   return { bool: { should, minimum_should_match: 1 } };
 }
@@ -455,9 +479,7 @@ function planUnquotedTerms(terms: string): TermPlan[] {
       continue;
     }
     tokens.push(key);
-    if (!spellings.has(key) || preservesCase(token)) {
-      spellings.set(key, preservesCase(token) ? token : key);
-    }
+    spellings.set(key, preferredSpelling(spellings.get(key), token));
   }
   const available = tokenCounts(tokens);
   const candidates: Array<{ words: string[]; singles: string[] }> = [];
@@ -506,14 +528,21 @@ function planUnquotedTerms(terms: string): TermPlan[] {
     const text = spellings.get(term) ?? term;
     for (let index = 0; index < count; index += 1) {
       if (preservesCase(text)) {
-        const split = splitIdentifier(text);
-        plans.push({
-          kind: "identifier",
-          term: text,
-          parts: split.parts,
-          phraseParts: split.phraseParts,
-          singles: synonymSingles(split.parts),
-        });
+        const split = splitSearchIdentifier(text);
+        if (
+          split.parts.length > MAX_IDENTIFIER_PARTS ||
+          split.phraseParts.length > MAX_IDENTIFIER_PARTS
+        ) {
+          plans.push({ kind: "term", term: text });
+        } else {
+          plans.push({
+            kind: "identifier",
+            term: text,
+            parts: split.parts,
+            phraseParts: split.phraseParts,
+            singles: synonymSingles(split.parts),
+          });
+        }
       } else {
         plans.push({ kind: "term", term: text });
       }
@@ -522,16 +551,24 @@ function planUnquotedTerms(terms: string): TermPlan[] {
   return plans;
 }
 
-function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): ElasticsearchQuery {
+function planClause(
+  plan: TermPlan,
+  searchAttributes: SearchAttribute[],
+  fuzzyWords: number,
+  maxExpansions: number,
+  scoreProximity: boolean,
+): ElasticsearchQuery {
   switch (plan.kind) {
     case "term":
-      return termClause(plan.term, searchAttributes);
+      return termClause(plan.term, searchAttributes, fuzzyWords > 0 ? maxExpansions : 0);
     case "identifier": {
       const identifier = identifierClause(
         plan.term,
         plan.parts,
         plan.phraseParts,
         searchAttributes,
+        fuzzyWords > 0 ? maxExpansions : 0,
+        scoreProximity,
       );
       if (plan.singles.length === 0) {
         return identifier;
@@ -546,25 +583,366 @@ function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): Elasti
         },
       };
     }
-    case "synonym":
+    case "synonym": {
+      const eligible = [...plan.words, ...plan.singles]
+        .filter((word) => fuzzyEligible(word))
+        .sort((left, right) => right.length - left.length || (left < right ? -1 : left > right ? 1 : 0));
+      const fuzzySet = new Set(eligible.slice(0, fuzzyWords));
+      const clauseFor = (word: string): ElasticsearchQuery =>
+        termClause(word, searchAttributes, fuzzySet.has(word) ? maxExpansions : 0);
       return {
         bool: {
           should: [
-            {
-              bool: {
-                must: plan.words.map((word) => termClause(word, searchAttributes)),
-              },
-            },
-            ...plan.singles.map((single) => termClause(single, searchAttributes)),
+            { bool: { must: plan.words.map((word) => clauseFor(word)) } },
+            ...plan.singles.map((single) => clauseFor(single)),
           ],
           minimum_should_match: 1,
         },
       };
+    }
     default: {
       const unreachable: never = plan;
       return unreachable;
     }
   }
+}
+
+function termUnits(plan: TermPlan): number {
+  switch (plan.kind) {
+    case "term":
+      return 1;
+    case "identifier":
+      return 1 + plan.singles.length;
+    case "synonym":
+      return plan.words.length + plan.singles.length;
+    default: {
+      const unreachable: never = plan;
+      return unreachable;
+    }
+  }
+}
+
+function fuzzyUnits(plan: TermPlan): number {
+  switch (plan.kind) {
+    case "term":
+      return fuzzyEligible(plan.term) ? 1 : 0;
+    case "identifier":
+      return fuzzyEligible(plan.term) ? 1 : 0;
+    case "synonym":
+      return [...plan.words, ...plan.singles].filter((word) => fuzzyEligible(word)).length;
+    default: {
+      const unreachable: never = plan;
+      return unreachable;
+    }
+  }
+}
+
+function hasProximity(plan: TermPlan): boolean {
+  return plan.kind === "identifier" && (plan.parts.length >= 2 || plan.phraseParts.length >= 2);
+}
+
+function planKey(plan: TermPlan): string {
+  switch (plan.kind) {
+    case "term":
+      return `term:${plan.term.toLowerCase()}`;
+    case "identifier":
+      return `id:${plan.term.toLowerCase()}`;
+    case "synonym":
+      return `syn:${plan.words.join(" ")}:${plan.singles.join(" ")}`;
+    default: {
+      const unreachable: never = plan;
+      return unreachable;
+    }
+  }
+}
+
+function collapsePlans(plans: readonly TermPlan[]): TermPlan[] {
+  const seen = new Set<string>();
+  const kept: TermPlan[] = [];
+  for (const plan of plans) {
+    const key = planKey(plan);
+    if (seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    kept.push(plan);
+  }
+  return kept;
+}
+
+function planTerms(plan: TermPlan): string[] {
+  switch (plan.kind) {
+    case "term":
+    case "identifier":
+      return [plan.term];
+    case "synonym":
+      return [...plan.words, ...plan.singles];
+    default: {
+      const unreachable: never = plan;
+      return unreachable;
+    }
+  }
+}
+
+function representative(plan: TermPlan): string {
+  return (planTerms(plan)[0] ?? "").toLowerCase();
+}
+
+/** Shortest terms go first. Equal length drops the higher trailing number, then the later spelling. */
+function dropBefore(left: string, right: string): boolean {
+  if (left.length !== right.length) {
+    return left.length < right.length;
+  }
+  const leftNumber = /(\d+)$/.exec(left);
+  const rightNumber = /(\d+)$/.exec(right);
+  if (leftNumber && rightNumber && leftNumber[1] !== rightNumber[1]) {
+    return Number(leftNumber[1]) > Number(rightNumber[1]);
+  }
+  return left > right;
+}
+
+type BudgetTerm = { plan: TermPlan; fuzzyWords: number; scoreProximity: boolean };
+
+function fuzzyWordCount(planned: readonly BudgetTerm[]): number {
+  let words = 0;
+  for (const item of planned) {
+    words += Math.min(item.fuzzyWords, fuzzyUnits(item.plan));
+  }
+  return words;
+}
+
+function expansionFor(words: number, fieldCount: number): number {
+  if (words <= 0 || fieldCount <= 0) {
+    return 0;
+  }
+  const perWord = Math.floor(FUZZY_CLAUSE_BUDGET / words);
+  const expansions = Math.floor(perWord / fieldCount) - BANDS_PER_FIELD;
+  if (expansions <= 0) {
+    return 0;
+  }
+  return Math.min(MAX_FUZZY_EXPANSIONS, expansions);
+}
+
+/** `max_expansions` for `words` fuzzy terms on `searchAttributes`, before any band is removed. */
+export function fuzzyExpansionLimit(
+  words: number,
+  searchAttributes: SearchAttribute[] = textSearchAttributes,
+): number {
+  return expansionFor(words, exactFields(searchAttributes).length);
+}
+
+function proximityCount(planned: readonly BudgetTerm[]): number {
+  return planned.filter((item) => hasProximity(item.plan)).length;
+}
+
+function proximityWeight(plan: TermPlan): number {
+  if (plan.kind !== "identifier") {
+    return 0;
+  }
+  let weight = plan.parts.length >= 2 ? plan.parts.length : 0;
+  if (plan.phraseParts.length >= 2) {
+    weight += plan.phraseParts.length;
+  }
+  return weight;
+}
+
+function proximityLoad(planned: readonly BudgetTerm[]): number {
+  return planned.reduce((sum, item) => sum + proximityWeight(item.plan), 0);
+}
+
+function unitCount(planned: readonly BudgetTerm[]): number {
+  return planned.reduce((sum, item) => sum + termUnits(item.plan), 0);
+}
+
+function clauseCost(
+  planned: readonly BudgetTerm[],
+  phrases: number,
+  maxExpansions: number,
+  fieldCount: number,
+): number {
+  const termCost = fieldCount * BANDS_PER_FIELD;
+  const expansionCost = maxExpansions > 0 ? maxExpansions * fieldCount : 0;
+  let clauses = phrases * PHRASE_CLAUSE_COST;
+  for (const item of planned) {
+    const terms = termUnits(item.plan);
+    const fuzzy = Math.min(item.fuzzyWords, fuzzyUnits(item.plan));
+    clauses += terms * termCost + fuzzy * expansionCost;
+    if (hasProximity(item.plan)) {
+      clauses += item.scoreProximity ? IDENTIFIER_FULL_EXTRA : IDENTIFIER_BAND_EXTRA;
+    }
+  }
+  return clauses;
+}
+
+function dropIndex(planned: readonly BudgetTerm[], onlyProximity: boolean): number {
+  let index = -1;
+  for (let cursor = 0; cursor < planned.length; cursor += 1) {
+    const item = planned[cursor];
+    if (!item || (onlyProximity && !hasProximity(item.plan))) {
+      continue;
+    }
+    if (index < 0 || dropBefore(representative(item.plan), representative(planned[index]!.plan))) {
+      index = cursor;
+    }
+  }
+  return index;
+}
+
+function shedFuzzy(planned: BudgetTerm[]): boolean {
+  const index = dropIndex(
+    planned.filter((item) => item.fuzzyWords > 0),
+    false,
+  );
+  if (index < 0) {
+    return false;
+  }
+  const victim = planned.filter((item) => item.fuzzyWords > 0)[index];
+  if (!victim) {
+    return false;
+  }
+  const at = planned.indexOf(victim);
+  if (at < 0) {
+    return false;
+  }
+  planned[at] = { ...victim, fuzzyWords: victim.fuzzyWords - 1 };
+  return true;
+}
+
+function trimPlain(
+  plans: readonly TermPlan[],
+  phraseList: readonly string[],
+  fieldCount: number,
+): { planned: BudgetTerm[]; phrases: string[]; omittedTerms: string[]; maxExpansions: number } {
+  let planned: BudgetTerm[] = collapsePlans(plans).map((plan) => ({
+    plan,
+    fuzzyWords: 0,
+    scoreProximity: hasProximity(plan),
+  }));
+  const omitted: string[] = [];
+  const omitAt = (index: number): void => {
+    const item = planned[index];
+    if (!item) {
+      return;
+    }
+    omitted.push(...planTerms(item.plan));
+    planned = planned.filter((_, itemIndex) => itemIndex !== index);
+  };
+
+  if (proximityCount(planned) > FULL_IDENTIFIER_BUDGET) {
+    planned = planned.map((item) =>
+      hasProximity(item.plan) ? { ...item, scoreProximity: false } : item,
+    );
+  }
+  while (proximityLoad(planned) > PROXIMITY_PART_BUDGET) {
+    const index = dropIndex(planned, true);
+    if (index < 0) {
+      break;
+    }
+    omitAt(index);
+  }
+  while (unitCount(planned) > PLAIN_TERM_BUDGET) {
+    const index = dropIndex(planned, false);
+    if (index < 0) {
+      break;
+    }
+    omitAt(index);
+  }
+
+  planned = planned.map((item) => ({ ...item, fuzzyWords: fuzzyUnits(item.plan) }));
+  let maxExpansions = expansionFor(fuzzyWordCount(planned), fieldCount);
+  while (maxExpansions < MIN_FUZZY_EXPANSIONS && shedFuzzy(planned)) {
+    maxExpansions = expansionFor(fuzzyWordCount(planned), fieldCount);
+  }
+  if (maxExpansions < MIN_FUZZY_EXPANSIONS) {
+    maxExpansions = 0;
+    planned = planned.map((item) => ({ ...item, fuzzyWords: 0 }));
+  }
+
+  let phrases = phraseList.slice(0, MAX_PHRASES);
+  for (const phrase of phraseList.slice(MAX_PHRASES)) {
+    omitted.push(`"${phrase}"`);
+  }
+  while (
+    clauseCost(planned, phrases.length, maxExpansions, fieldCount) > PLAIN_CLAUSE_BUDGET &&
+    planned.length > 1
+  ) {
+    if (planned.some((item) => item.scoreProximity && hasProximity(item.plan))) {
+      planned = planned.map((item) => ({ ...item, scoreProximity: false }));
+      continue;
+    }
+    if (fuzzyWordCount(planned) > 0) {
+      shedFuzzy(planned);
+      maxExpansions = expansionFor(fuzzyWordCount(planned), fieldCount);
+      if (maxExpansions < MIN_FUZZY_EXPANSIONS) {
+        maxExpansions = 0;
+        planned = planned.map((item) => ({ ...item, fuzzyWords: 0 }));
+      }
+      continue;
+    }
+    const index = dropIndex(planned, false);
+    if (index < 0) {
+      break;
+    }
+    omitAt(index);
+  }
+  while (
+    clauseCost(planned, phrases.length, maxExpansions, fieldCount) > PLAIN_CLAUSE_BUDGET &&
+    phrases.length > 0
+  ) {
+    const phrase = phrases[phrases.length - 1];
+    phrases = phrases.slice(0, -1);
+    if (phrase) {
+      omitted.push(`"${phrase}"`);
+    }
+  }
+  return { planned, phrases, omittedTerms: omitted, maxExpansions };
+}
+
+type CompiledPlainQuery = {
+  query: ElasticsearchQuery;
+  clauses: number;
+  omittedTerms: string[];
+  expansionSlots: number;
+};
+
+function compilePlainQuery(
+  query: string,
+  searchAttributes: SearchAttribute[],
+  mode: PhraseMode,
+): CompiledPlainQuery {
+  const q = query.trim();
+  if (!q) {
+    return { query: { match_all: {} }, clauses: 1, omittedTerms: [], expansionSlots: 0 };
+  }
+  const { phrases, terms } = partitionPlainQuery(q);
+  const fieldCount = exactFields(searchAttributes).length;
+  const trimmed = trimPlain(terms ? planUnquotedTerms(terms) : [], phrases, fieldCount);
+  const phraseFields = fieldsWithBoost(searchAttributes, 2);
+  const must: ElasticsearchQuery[] = trimmed.phrases.map((phrase) =>
+    phraseQuery(phrase, phraseFields, mode),
+  );
+  for (const item of trimmed.planned) {
+    must.push(
+      planClause(
+        item.plan,
+        searchAttributes,
+        item.fuzzyWords,
+        trimmed.maxExpansions,
+        item.scoreProximity,
+      ),
+    );
+  }
+  const expansionSlots = fuzzyWordCount(trimmed.planned) * trimmed.maxExpansions;
+  const clauses = clauseCost(
+    trimmed.planned,
+    trimmed.phrases.length,
+    trimmed.maxExpansions,
+    fieldCount,
+  );
+  if (must.length === 0) {
+    return { query: { match_all: {} }, clauses: 1, omittedTerms: trimmed.omittedTerms, expansionSlots };
+  }
+  return { query: { bool: { must } }, clauses, omittedTerms: trimmed.omittedTerms, expansionSlots };
 }
 
 export function instantSearchStrictQuery(
@@ -573,24 +951,57 @@ export function instantSearchStrictQuery(
   _config?: SearchSettingsConfig,
   mode: PhraseMode = "strict",
 ): ElasticsearchQuery {
-  const q = query.trim();
-  if (!q) {
-    return { match_all: {} };
+  return compilePlainQuery(query, searchAttributes, mode).query;
+}
+
+/** Rewritten clause estimate for a plain query, after the budget trim. */
+export function plainQueryClauseEstimate(
+  query: string,
+  searchAttributes: SearchAttribute[] = textSearchAttributes,
+): number {
+  return compilePlainQuery(query, searchAttributes, "strict").clauses;
+}
+
+export type PlainQueryLimit = {
+  /** Terms removed so the rewrite stays under the clause budget. Empty when every distinct term is kept. */
+  omittedTerms: string[];
+  clauses: number;
+  expansionSlots: number;
+};
+
+/** What the plain-query budget did to `query`, including terms that could not be kept. */
+export function plainQueryLimit(
+  query: string,
+  searchAttributes: SearchAttribute[] = textSearchAttributes,
+): PlainQueryLimit {
+  const compiled = compilePlainQuery(query, searchAttributes, "strict");
+  return {
+    omittedTerms: compiled.omittedTerms,
+    clauses: compiled.clauses,
+    expansionSlots: compiled.expansionSlots,
+  };
+}
+
+/** Stamp `omittedTerms` onto each InstantSearch result. Lucene queries are not trimmed this way. */
+export function withOmittedTerms(
+  body: unknown,
+  queries: readonly string[],
+  lucene: boolean,
+): unknown {
+  if (!body || typeof body !== "object" || !Array.isArray((body as { results?: unknown }).results)) {
+    return body;
   }
-  const { phrases, terms } = partitionPlainQuery(q);
-  const phraseFields = fieldsWithBoost(searchAttributes, 2);
-  const must: ElasticsearchQuery[] = phrases.map((phrase) =>
-    phraseQuery(phrase, phraseFields, mode),
-  );
-  if (terms) {
-    for (const plan of planUnquotedTerms(terms)) {
-      must.push(planClause(plan, searchAttributes));
-    }
-  }
-  if (must.length === 0) {
-    return { match_all: {} };
-  }
-  return { bool: { must } };
+  const record = body as { results: unknown[] };
+  return {
+    ...record,
+    results: record.results.map((result, index) => {
+      if (!result || typeof result !== "object") {
+        return result;
+      }
+      const omittedTerms = lucene ? [] : plainQueryLimit(queries[index] ?? "").omittedTerms;
+      return { ...(result as Record<string, unknown>), omittedTerms };
+    }),
+  };
 }
 
 export function gatewayEnv(): {

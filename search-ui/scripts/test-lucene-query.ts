@@ -1,5 +1,10 @@
 import assert from "node:assert/strict";
-import { buildLuceneQueryBody, rewriteEnumOr } from "../server/lucene-query";
+import {
+  buildLuceneQueryBody,
+  limitLuceneExpansions,
+  rewriteEnumOr,
+  stripOuterParens,
+} from "../server/lucene-query";
 import {
   phraseAnalyzerMissing,
   withPhraseFallback,
@@ -348,5 +353,36 @@ const unrelated = await withPhraseResultFallback(async () => ({
   detail: "failed to parse",
 }));
 assert.equal(unrelated.ok, false);
+
+assert.equal(stripOuterParens("(a) OR (b)"), "(a) OR (b)");
+assert.equal(stripOuterParens("((a))"), "a");
+assert.equal(stripOuterParens("(a OR b)"), "a OR b");
+assert.equal(stripOuterParens("(a) OR (b) OR (c)"), "(a) OR (b) OR (c)");
+
+const camelOr = buildLuceneQueryBody("tokEn0* OR tokEn1*") as {
+  query_string?: { query: string };
+};
+const camelOrText = camelOr.query_string?.query ?? "";
+assert.equal(camelOrText.startsWith("("), true, camelOrText);
+assert.equal(camelOrText.endsWith(")"), true, camelOrText);
+assert.equal((camelOrText.match(/\(/g) ?? []).length, (camelOrText.match(/\)/g) ?? []).length);
+
+assert.equal(
+  limitLuceneExpansions("a~1 OR b~1 OR c~1 OR d~1 OR e~1 OR f*"),
+  "a~1 OR b~1 OR c~1 OR d~1 OR e OR f",
+);
+assert.equal(limitLuceneExpansions("score:[10 TO *]"), "score:[10 TO *]");
+assert.equal(limitLuceneExpansions("score:[* TO 10]"), "score:[* TO 10]");
+assert.equal(limitLuceneExpansions("score:{10 TO *}"), "score:{10 TO *}");
+assert.equal(
+  limitLuceneExpansions("a* OR b* OR c* OR d* OR score:[10 TO *] OR e*"),
+  "a* OR b* OR c* OR d* OR score:[10 TO *] OR e",
+);
+const rangeBody = JSON.stringify(buildLuceneQueryBody("score:[10 TO *]"));
+assert.equal(rangeBody.includes("[10 TO *]"), true, rangeBody);
+assert.equal(rangeBody.includes("[10 TO ]"), false, rangeBody);
+
+buildLuceneQueryBody(`${"(".repeat(5000)}status:open${")".repeat(5000)}`);
+buildLuceneQueryBody(`${"NOT ".repeat(5000)}status:open`);
 
 console.info("lucene-query tests passed");
