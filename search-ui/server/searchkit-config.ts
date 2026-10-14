@@ -4,6 +4,7 @@ import type {
   SearchSettingsConfig,
 } from "searchkit";
 import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
+import { ENGLISH_STOP } from "../../shared/english-stop";
 import { buildLuceneQueryBody } from "./lucene-query";
 import { phraseAnalyzer, phraseSearchFields, type PhraseMode } from "./phrase-mode";
 
@@ -69,51 +70,57 @@ export const textSearchAttributes: SearchAttribute[] = [
  * words, no synonyms). English stop words are dropped before an unquoted term
  * is required. A query that is only stop words is `match_all`: nothing remains
  * to rank.
+ *
+ * Several casings of one word can preserve case (`aBc` and `AbC` split
+ * differently). The lexicographically smallest casing wins, so swapping
+ * unquoted terms cannot change the identifier that is searched.
+ *
+ * Rewritten clause count stays at or under {@link PLAIN_CLAUSE_BUDGET}, well
+ * under OpenSearch's default `max_clause_count` of 1024. On 2.19.5, 7 fuzzy
+ * terms whose expansions fill `max_expansions` fail, and 54 non-fuzzy terms
+ * fail. Fuzzy bands are removed first, then extra terms, then extra phrases.
+ * An identifier with more than 8 parts is one token, so a long camelCase
+ * string cannot build a giant intervals query.
  */
 const EXACT_BAND_BOOST = 1000;
 const ADJACENT_BAND_BOOST = 50;
 const FUZZY_BAND_BOOST = 5;
 
-/** Same set as the `english_stop` filter (`_english_`). These tokens are deleted by the search analyzer, so they must not become required clauses. */
-const ENGLISH_STOP: ReadonlySet<string> = new Set([
-  "a",
-  "an",
-  "and",
-  "are",
-  "as",
-  "at",
-  "be",
-  "but",
-  "by",
-  "for",
-  "if",
-  "in",
-  "into",
-  "is",
-  "it",
-  "no",
-  "not",
-  "of",
-  "on",
-  "or",
-  "such",
-  "that",
-  "the",
-  "their",
-  "then",
-  "there",
-  "these",
-  "they",
-  "this",
-  "to",
-  "was",
-  "will",
-  "with",
-]);
+/**
+ * Half-plus of OpenSearch's 1024 clause limit. Calibrated on 2.19.5: a fuzzy
+ * term that fills `max_expansions` costs about 160 rewritten clauses (6 succeed,
+ * 7 fail) and a non-fuzzy term costs about 20 (50 succeed, 54 fail).
+ */
+const FUZZY_CLAUSE_COST = 160;
+const TERM_CLAUSE_COST = 20;
+const PHRASE_CLAUSE_COST = 8;
+const IDENTIFIER_CLAUSE_COST = 40;
+const MAX_PHRASES = 16;
+const MAX_IDENTIFIER_PARTS = 8;
+
+/** `AUTO:5,100` is edit distance 2 at length >= 100, which is the expensive automaton. */
+function fuzzyEligible(term: string): boolean {
+  return term.length >= 5 && term.length < 100;
+}
+
+/** Plain-query rewrite budget. Worst case is 4 saturated fuzzy terms (640). */
+export const PLAIN_CLAUSE_BUDGET = 640;
 
 /** CamelCase and letter/number boundaries have to reach the search analyzer intact. Lowercasing first hides the split. */
 function preservesCase(token: string): boolean {
   return /[a-z][A-Z]/.test(token) || /[A-Za-z]\d|\d[A-Za-z]/.test(token);
+}
+
+/** Smallest case-preserving spelling wins so input order cannot change the split. */
+function preferredSpelling(current: string | undefined, token: string): string {
+  const folded = token.toLowerCase();
+  if (!preservesCase(token)) {
+    return current ?? folded;
+  }
+  if (!current || !preservesCase(current) || token < current) {
+    return token;
+  }
+  return current;
 }
 
 /**
@@ -321,12 +328,16 @@ function phraseQuery(
   };
 }
 
-function termClause(term: string, searchAttributes: SearchAttribute[]): ElasticsearchQuery {
+function termClause(
+  term: string,
+  searchAttributes: SearchAttribute[],
+  fuzzy: boolean,
+): ElasticsearchQuery {
   const should: ElasticsearchQuery[] = [
     scoreBand(term, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
     bestFields(term, fieldsWithBoost(searchAttributes, 1), 0),
   ];
-  if (term.length >= 5) {
+  if (fuzzy && fuzzyEligible(term)) {
     should.push(scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
   }
   return { bool: { should, minimum_should_match: 1 } };
@@ -411,6 +422,7 @@ function identifierClause(
   parts: readonly string[],
   phraseParts: readonly string[],
   searchAttributes: SearchAttribute[],
+  fuzzy: boolean,
 ): ElasticsearchQuery {
   const should: ElasticsearchQuery[] = [
     scoreBand(term, exactFields(searchAttributes), 0, EXACT_BAND_BOOST),
@@ -427,7 +439,7 @@ function identifierClause(
   } else if (parts.length === 1) {
     should.push(bestFields(parts[0]!, fieldsWithBoost(searchAttributes, 1), 0));
   }
-  if (term.length >= 5) {
+  if (fuzzy && fuzzyEligible(term)) {
     should.push(scoreBand(term, exactFields(searchAttributes), "AUTO:5,100", FUZZY_BAND_BOOST));
   }
   return { bool: { should, minimum_should_match: 1 } };
@@ -455,9 +467,7 @@ function planUnquotedTerms(terms: string): TermPlan[] {
       continue;
     }
     tokens.push(key);
-    if (!spellings.has(key) || preservesCase(token)) {
-      spellings.set(key, preservesCase(token) ? token : key);
-    }
+    spellings.set(key, preferredSpelling(spellings.get(key), token));
   }
   const available = tokenCounts(tokens);
   const candidates: Array<{ words: string[]; singles: string[] }> = [];
@@ -507,13 +517,20 @@ function planUnquotedTerms(terms: string): TermPlan[] {
     for (let index = 0; index < count; index += 1) {
       if (preservesCase(text)) {
         const split = splitIdentifier(text);
-        plans.push({
-          kind: "identifier",
-          term: text,
-          parts: split.parts,
-          phraseParts: split.phraseParts,
-          singles: synonymSingles(split.parts),
-        });
+        if (
+          split.parts.length > MAX_IDENTIFIER_PARTS ||
+          split.phraseParts.length > MAX_IDENTIFIER_PARTS
+        ) {
+          plans.push({ kind: "term", term: text });
+        } else {
+          plans.push({
+            kind: "identifier",
+            term: text,
+            parts: split.parts,
+            phraseParts: split.phraseParts,
+            singles: synonymSingles(split.parts),
+          });
+        }
       } else {
         plans.push({ kind: "term", term: text });
       }
@@ -522,16 +539,21 @@ function planUnquotedTerms(terms: string): TermPlan[] {
   return plans;
 }
 
-function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): ElasticsearchQuery {
+function planClause(
+  plan: TermPlan,
+  searchAttributes: SearchAttribute[],
+  fuzzyWords: number,
+): ElasticsearchQuery {
   switch (plan.kind) {
     case "term":
-      return termClause(plan.term, searchAttributes);
+      return termClause(plan.term, searchAttributes, fuzzyWords > 0 && fuzzyEligible(plan.term));
     case "identifier": {
       const identifier = identifierClause(
         plan.term,
         plan.parts,
         plan.phraseParts,
         searchAttributes,
+        fuzzyWords > 0 && fuzzyEligible(plan.term),
       );
       if (plan.singles.length === 0) {
         return identifier;
@@ -546,25 +568,132 @@ function planClause(plan: TermPlan, searchAttributes: SearchAttribute[]): Elasti
         },
       };
     }
-    case "synonym":
+    case "synonym": {
+      let remaining = fuzzyWords;
+      const clauseFor = (word: string): ElasticsearchQuery => {
+        const fuzzy = remaining > 0 && fuzzyEligible(word);
+        if (fuzzy) {
+          remaining -= 1;
+        }
+        return termClause(word, searchAttributes, fuzzy);
+      };
       return {
         bool: {
           should: [
-            {
-              bool: {
-                must: plan.words.map((word) => termClause(word, searchAttributes)),
-              },
-            },
-            ...plan.singles.map((single) => termClause(single, searchAttributes)),
+            { bool: { must: plan.words.map((word) => clauseFor(word)) } },
+            ...plan.singles.map((single) => clauseFor(single)),
           ],
           minimum_should_match: 1,
         },
       };
+    }
     default: {
       const unreachable: never = plan;
       return unreachable;
     }
   }
+}
+
+function termUnits(plan: TermPlan): number {
+  switch (plan.kind) {
+    case "term":
+      return 1;
+    case "identifier":
+      return 1 + plan.singles.length;
+    case "synonym":
+      return plan.words.length + plan.singles.length;
+    default: {
+      const unreachable: never = plan;
+      return unreachable;
+    }
+  }
+}
+
+function fuzzyUnits(plan: TermPlan): number {
+  switch (plan.kind) {
+    case "term":
+      return fuzzyEligible(plan.term) ? 1 : 0;
+    case "identifier":
+      return fuzzyEligible(plan.term) ? 1 : 0;
+    case "synonym":
+      return [...plan.words, ...plan.singles].filter((word) => fuzzyEligible(word)).length;
+    default: {
+      const unreachable: never = plan;
+      return unreachable;
+    }
+  }
+}
+
+function identifierExtra(plan: TermPlan): number {
+  if (plan.kind !== "identifier") {
+    return 0;
+  }
+  return (plan.parts.length >= 2 ? IDENTIFIER_CLAUSE_COST : 0) +
+    (plan.phraseParts.length >= 2 ? IDENTIFIER_CLAUSE_COST / 2 : 0);
+}
+
+type PlannedTerm = { plan: TermPlan; fuzzyWords: number };
+
+function clauseCost(planned: readonly PlannedTerm[], phrases: number): number {
+  let clauses = phrases * PHRASE_CLAUSE_COST;
+  for (const item of planned) {
+    const terms = termUnits(item.plan);
+    const fuzzy = Math.min(item.fuzzyWords, fuzzyUnits(item.plan));
+    clauses += fuzzy * FUZZY_CLAUSE_COST + (terms - fuzzy) * TERM_CLAUSE_COST + identifierExtra(item.plan);
+  }
+  return clauses;
+}
+
+function trimPlain(plans: readonly TermPlan[], phraseCount: number): { planned: PlannedTerm[]; phrases: number } {
+  let planned: PlannedTerm[] = plans.map((plan) => ({ plan, fuzzyWords: fuzzyUnits(plan) }));
+  let phrases = Math.min(phraseCount, MAX_PHRASES);
+  while (clauseCost(planned, phrases) > PLAIN_CLAUSE_BUDGET && planned.some((item) => item.fuzzyWords > 0)) {
+    let index = -1;
+    for (let cursor = planned.length - 1; cursor >= 0; cursor -= 1) {
+      if ((planned[cursor]?.fuzzyWords ?? 0) > 0) {
+        index = cursor;
+        break;
+      }
+    }
+    if (index < 0) {
+      break;
+    }
+    planned = planned.map((item, itemIndex) =>
+      itemIndex === index ? { plan: item.plan, fuzzyWords: item.fuzzyWords - 1 } : item,
+    );
+  }
+  while (clauseCost(planned, phrases) > PLAIN_CLAUSE_BUDGET && planned.length > 0) {
+    planned = planned.slice(0, -1);
+  }
+  while (clauseCost(planned, phrases) > PLAIN_CLAUSE_BUDGET && phrases > 0) {
+    phrases -= 1;
+  }
+  return { planned, phrases };
+}
+
+function compilePlainQuery(
+  query: string,
+  searchAttributes: SearchAttribute[],
+  mode: PhraseMode,
+): { query: ElasticsearchQuery; clauses: number } {
+  const q = query.trim();
+  if (!q) {
+    return { query: { match_all: {} }, clauses: 1 };
+  }
+  const { phrases, terms } = partitionPlainQuery(q);
+  const trimmed = trimPlain(terms ? planUnquotedTerms(terms) : [], phrases.length);
+  const keptPhrases = phrases.slice(0, trimmed.phrases);
+  const phraseFields = fieldsWithBoost(searchAttributes, 2);
+  const must: ElasticsearchQuery[] = keptPhrases.map((phrase) =>
+    phraseQuery(phrase, phraseFields, mode),
+  );
+  for (const item of trimmed.planned) {
+    must.push(planClause(item.plan, searchAttributes, item.fuzzyWords));
+  }
+  if (must.length === 0) {
+    return { query: { match_all: {} }, clauses: 1 };
+  }
+  return { query: { bool: { must } }, clauses: clauseCost(trimmed.planned, keptPhrases.length) };
 }
 
 export function instantSearchStrictQuery(
@@ -573,24 +702,15 @@ export function instantSearchStrictQuery(
   _config?: SearchSettingsConfig,
   mode: PhraseMode = "strict",
 ): ElasticsearchQuery {
-  const q = query.trim();
-  if (!q) {
-    return { match_all: {} };
-  }
-  const { phrases, terms } = partitionPlainQuery(q);
-  const phraseFields = fieldsWithBoost(searchAttributes, 2);
-  const must: ElasticsearchQuery[] = phrases.map((phrase) =>
-    phraseQuery(phrase, phraseFields, mode),
-  );
-  if (terms) {
-    for (const plan of planUnquotedTerms(terms)) {
-      must.push(planClause(plan, searchAttributes));
-    }
-  }
-  if (must.length === 0) {
-    return { match_all: {} };
-  }
-  return { bool: { must } };
+  return compilePlainQuery(query, searchAttributes, mode).query;
+}
+
+/** Rewritten clause estimate for a plain query, after the budget trim. */
+export function plainQueryClauseEstimate(
+  query: string,
+  searchAttributes: SearchAttribute[] = textSearchAttributes,
+): number {
+  return compilePlainQuery(query, searchAttributes, "strict").clauses;
 }
 
 export function gatewayEnv(): {

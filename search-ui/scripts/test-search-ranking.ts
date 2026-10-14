@@ -157,6 +157,14 @@ assert.equal(
   proximityGroups(instantSearchStrictQuery("group ids", textSearchAttributes)).length,
   0,
 );
+assert.deepEqual(
+  instantSearchStrictQuery("widget alpha", textSearchAttributes),
+  instantSearchStrictQuery("alpha widget", textSearchAttributes),
+);
+assert.deepEqual(
+  instantSearchStrictQuery("aBc AbC", textSearchAttributes),
+  instantSearchStrictQuery("AbC aBc", textSearchAttributes),
+);
 assert.equal(
   proximityGroups(instantSearchStrictQuery("ids group", textSearchAttributes)).length,
   0,

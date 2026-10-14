@@ -393,4 +393,40 @@ assert.deepEqual(
   filteredIds({ board_name: ["Internal Roadmap Posts"], status: ["closed", "open"] }),
 );
 
+const farPost = stored({
+  _id: "group-far",
+  title: "group",
+  details: "sentence two has ids",
+});
+assert.equal(privateMatchScore(farPost.payload, "groupIds"), 0);
+assert.ok(privateMatchScore(farPost.payload, "group ids") > 0);
+
+const endLinePost = stored({ _id: "end-line", title: "end line", details: "wrapped" });
+const endOfPost = stored({ _id: "end-of", title: "end of line", details: "wrapped" });
+const endFooPost = stored({ _id: "end-foo", title: "end foo line", details: "hole" });
+assert.ok(privateMatchScore(endLinePost.payload, "endOfLine") > 0);
+assert.ok(privateMatchScore(endOfPost.payload, "endOfLine") > 0);
+assert.equal(privateMatchScore(endFooPost.payload, "endOfLine"), 0);
+assert.ok(privateMatchScore(endFooPost.payload, "end of line") > 0);
+
+const menuPost = stored({
+  _id: "menu",
+  title: "Menu does not load",
+  details: "not working",
+});
+const zebraPost = stored({ _id: "zebra", title: "Zebra stable", details: "unrelated" });
+assert.ok(privateMatchScore(menuPost.payload, "the menu") > 0);
+assert.equal(privateMatchScore(zebraPost.payload, "the menu"), 0);
+assert.deepEqual(
+  filterPrivatePosts([menuPost, zebraPost], { textSearch: "the" }, { luceneMode: false })
+    .map((post) => post._id)
+    .sort(),
+  ["menu", "zebra"],
+);
+privateMatchScore(menuPost.payload, `${"(".repeat(5000)}menu`, true);
+assert.equal(
+  privateMatchScore(menuPost.payload, "menu the"),
+  privateMatchScore(menuPost.payload, "the menu"),
+);
+
 console.info("private-search tests passed");

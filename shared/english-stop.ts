@@ -1,0 +1,40 @@
+/**
+ * Lucene `_english_` stop words. The gateway drops these before an unquoted
+ * term is required, and the private-board matcher uses the same set so the
+ * two agree on stop-word queries.
+ */
+export const ENGLISH_STOP: ReadonlySet<string> = new Set([
+  "a",
+  "an",
+  "and",
+  "are",
+  "as",
+  "at",
+  "be",
+  "but",
+  "by",
+  "for",
+  "if",
+  "in",
+  "into",
+  "is",
+  "it",
+  "no",
+  "not",
+  "of",
+  "on",
+  "or",
+  "such",
+  "that",
+  "the",
+  "their",
+  "then",
+  "there",
+  "these",
+  "they",
+  "this",
+  "to",
+  "was",
+  "will",
+  "with",
+]);
