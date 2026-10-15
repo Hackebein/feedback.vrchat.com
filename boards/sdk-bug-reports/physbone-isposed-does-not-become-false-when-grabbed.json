@@ -1,0 +1,93 @@
+{
+  "_id": "6ad15beb1ddfa4abbfedb22d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-10-15T23:08:25.631536Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-15T23:04:11.066Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When you grab a physbone, IsGrabbed becomes true. Then when you pose it, IsGrabbed becomes false and IsPosed becomes true. However if you grab it while posed, IsGrabbed becomes true but IsPosed also remains true at the same time, until you let go of the bone. \n\nThis seems unintentional, and adds and extra layer of complexity to designing logic that needs to check for IsPosed, since you must also check to see if IsGrabbed and IsPosed are true at the same time, which means it is grabbed. \n\nIsGrabbed = grabbed\n\nIsPosed && IsGrabbed = grabbed\n\nIsPosed && !IsGrabbed = posed\n\nIsPosed = maybe grabbed, maybe posed",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad15bea1ddfa4abbfedb22a",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad15beb1ddfa4abbfedb22d/95112837.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-15T23:04:11.066Z",
+  "subCategoryID": null,
+  "title": "Physbone IsPosed does not become false when grabbed",
+  "trendingScore": 2963.830466947425,
+  "updatedBy": null,
+  "urlName": "physbone-isposed-does-not-become-false-when-grabbed",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": null,
+      "voteID": "6ad15beb5265ae61613796ea"
+    }
+  ]
+}
