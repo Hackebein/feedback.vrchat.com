@@ -2,9 +2,9 @@
   "_id": "6ac00d12b6c0c0bda8210aae",
   "aiCategories": [
     "loc.unity-sdk",
-    "worlds.persistence"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-10-08T23:29:10.046569Z",
+  "aiTaggedAt": "2026-10-15T17:22:42.377682Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61665e3e7448d57ed9eb49da",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -118,6 +118,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Maybe that would also address the obnoxious issues with my HEAD MOVING OUT OF ALIGNMENT with my body in flight worlds or large driving worlds",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad109c3ebc46194c04db65a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64f8e8d313b550392ac6b63b",
+        "alias": "Daily Bear",
+        "aliasID": "65c29c85ed6eefce4c8cc730",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/44f87889dec3442fa9d440c83559744e.png",
+        "created": "2023-09-06T21:02:11.010Z",
+        "name": "hdorriker",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-15T17:13:39.638Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac00d12b6c0c0bda8210aae",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The key to solving this is to COMPLETELY separate the functions of pinning a player to an object and writing to an avatar animator. These two things should be separate components because their actions are fundamentally unrelated. The avatar animation-writing component should have an option to skip if the player is detected to be in full-body, and the player-parenter component should not have rotation or position synced, but provide an option for marking it as intentionally having different positions for different players in order to prevent downstream optimization from destroying intended functionality that requires the same station to be in different places for different players (This is extremely critical for flight worlds and origin-point shifting)",
       "viewerReactions": null,
       "voteID": null
     }
