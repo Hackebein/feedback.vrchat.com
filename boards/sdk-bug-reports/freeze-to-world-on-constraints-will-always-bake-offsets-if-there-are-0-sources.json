@@ -2,9 +2,10 @@
   "_id": "6abae5db5ca4be36ca7b2cd9",
   "aiCategories": [
     "loc.unity-sdk",
+    "sdk.vrcsdk",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-10-14T09:32:10.942663Z",
+  "aiTaggedAt": "2026-10-15T08:40:31.794219Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
@@ -34,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -348,6 +349,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{63c9760ef519ef0b8ce99165|full_name} Thanks for the info, however we can't track issues out of replies to existing Canny reports. Please make a new one, ideally including an example avatar demonstrating the problem. Thanks very much.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad090f408103c7708cd0d68",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63c9760ef519ef0b8ce99165",
+        "alias": "Quince Pike",
+        "aliasID": "65c2bff3ed6eefce4c5e37e4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/9d9537b5884cfc585578ad7cbde1cb59.png",
+        "created": "2023-01-19T16:55:42.346Z",
+        "name": "Dor․",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-15T08:38:12.900Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac61c6325f7b6e35b71a1da",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6abae5db5ca4be36ca7b2cd9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name} Opened canny https://feedback.vrchat.com/sdk-bug-reports/p/freeze-to-world-on-constraints-wont-turn-off-and-on-again-correctly-if-the-const\n\nHope it's clear enough (when referring to a specific keyframe I refer to it by index, not to be confused when I refer to the keyframe count)",
       "viewerReactions": null,
       "voteID": null
     }
