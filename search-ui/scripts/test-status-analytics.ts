@@ -30,6 +30,19 @@ assert.equal(report.transitions[1]?.tickets, 1, "three February changes affect o
 assert.deepEqual(report.cohorts, [{ year: 2020, total: 2, counts: { complete: 1, tracked: 1 } }]);
 assert.equal(report.trackedAge[1]?.count, 1);
 
+const legacyTracked: HistoryPost = { ...complete, comments: [event("legacy", "2020-01-11", " Tracked Bug "), event("done", "2020-02-20", "complete")] };
+const legacyHistory = normalizeHistory(legacyTracked, now);
+assert.equal(legacyHistory.firstTracked, Date.parse(at("2020-01-11")), "legacy Tracked Bug events recover the full timestamp");
+const legacyReport = buildAnalytics([legacyTracked], now, "test");
+assert.deepEqual(legacyReport.cohorts, [{ year: 2020, total: 1, counts: { complete: 1 } }]);
+assert.equal(legacyReport.completion.meanDays, 40);
+assert.equal(legacyReport.dwell.some(row => row.status === "tracked bug"), false, "legacy and current Tracked intervals share one status");
+const earlierLegacy = normalizeHistory({ ...complete, comments: [event("legacy", "2020-01-02", "tracked bug"), ...complete.comments!] }, now);
+assert.equal(earlierLegacy.firstTracked, Date.parse(at("2020-01-02")), "legacy events can predate the first modern Tracked event");
+const noTrackedEvidence = { ...complete, comments: [{ created: at("2020-01-11"), value: "Any update? Is someone tracking this?" }, event("done", "2020-02-20", "complete")] };
+assert.equal(normalizeHistory(noTrackedEvidence, now).firstTracked, null, "creation and ordinary replies do not imply a Tracked transition");
+assert.equal(normalizeHistory({ ...legacyTracked, comments: [{ ...event("hidden", "2020-01-11", "tracked bug"), private: true }] }, now).firstTracked, null, "legacy recovery still requires public evidence");
+
 const reopened = { ...complete, status: "tracked", statusChanged: at("2020-02-25"), comments: [...complete.comments!, event("5", "2020-02-25", "tracked")] };
 const reopenedReport = buildAnalytics([reopened], now, "test");
 assert.equal(reopenedReport.oldestTracked[0]?.days, 5, "current age starts at the latest entry");

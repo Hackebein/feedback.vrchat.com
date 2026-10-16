@@ -23,7 +23,11 @@ export type AnalyticsReport = {
   oldestTracked: Array<{ id: string; title: string; url: string; since: string; days: number }>;
 };
 
-const statusName = (value: unknown): string => typeof value === "string" && value.trim() ? value.trim().toLowerCase() : "unknown";
+function statusName(value: unknown): string {
+  const name = typeof value === "string" && value.trim() ? value.trim().toLowerCase() : "unknown";
+  // Older public status events used this label for Tracked.
+  return name === "tracked bug" ? "tracked" : name;
+}
 function timestamp(value: unknown): number | null {
   if (typeof value !== "string" || !/^\d{4}-\d\d-\d\dT.*(?:Z|[+-]\d\d:\d\d)$/i.test(value)) return null;
   const time = Date.parse(value);
