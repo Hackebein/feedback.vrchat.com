@@ -12,8 +12,8 @@ function color(status: string): string {
   return COLORS[status] ?? palette[[...status].reduce((sum, c) => sum + c.charCodeAt(0), 0) % palette.length]!;
 }
 
-function Card({ title, note, children }: { title: string; note: string; children: ReactNode }) {
-  return <section className="analytics-card"><h3>{title}</h3><p className="analytics-note">{note}</p>{children}</section>;
+function Card({ title, note, children }: { title: string; note?: string; children: ReactNode }) {
+  return <section className="analytics-card"><header className="analytics-card-heading"><h3>{title}</h3>{note && <p className="analytics-note">{note}</p>}</header>{children}</section>;
 }
 
 function Bars({ rows, unit = "tickets" }: { rows: Array<{ label: string; value: number; status?: string }>; unit?: string }) {
@@ -53,7 +53,7 @@ function Cohorts({ rows }: { rows: AnalyticsReport["cohorts"] }) {
   return <>
     {rows.map((row) => <div className="analytics-cohort" key={row.year}><strong>{row.year}</strong><div className="analytics-cohort-stack" role="img" aria-label={`${row.year}: ${row.total} tickets; ${statuses.map((status) => `${label(status)} ${row.counts[status] ?? 0}`).join(", ")}`}>{statuses.map((status) => <span key={status} style={{ width: `${100 * (row.counts[status] ?? 0) / row.total}%`, background: color(status) }} title={`${label(status)}: ${row.counts[status] ?? 0}`} />)}</div><span>{number(row.total)} tickets</span></div>)}
     <div className="analytics-legend">{statuses.map((status) => <span key={status}><i style={{ background: color(status) }} />{label(status)}</span>)}</div>
-    <div className="analytics-table-scroll"><table><caption>Current outcomes by first recorded Tracked year</caption><thead><tr><th scope="col">Year</th><th scope="col">Tickets</th><th scope="col">Completed</th><th scope="col">Closed</th><th scope="col">Other current statuses</th><th scope="col">Completed share</th></tr></thead><tbody>{rows.map((row) => <tr key={row.year}><th scope="row">{row.year}</th><td>{number(row.total)}</td><td>{number(row.counts.complete ?? 0)}</td><td>{number(row.counts.closed ?? 0)}</td><td>{number(row.total - (row.counts.complete ?? 0) - (row.counts.closed ?? 0))}</td><td>{number(100 * (row.counts.complete ?? 0) / row.total)}%</td></tr>)}</tbody></table></div>
+    <details className="analytics-data"><summary>View yearly data</summary><div className="analytics-table-scroll"><table><caption>Outcomes by first recorded Tracked year</caption><thead><tr><th scope="col">Year</th><th scope="col">Tickets</th><th scope="col">Completed</th><th scope="col">Closed</th><th scope="col">Other</th><th scope="col">Completed share</th></tr></thead><tbody>{rows.map((row) => <tr key={row.year}><th scope="row">{row.year}</th><td>{number(row.total)}</td><td>{number(row.counts.complete ?? 0)}</td><td>{number(row.counts.closed ?? 0)}</td><td>{number(row.total - (row.counts.complete ?? 0) - (row.counts.closed ?? 0))}</td><td>{number(100 * (row.counts.complete ?? 0) / row.total)}%</td></tr>)}</tbody></table></div></details>
   </>;
 }
 
@@ -84,51 +84,50 @@ export function Analytics({ luceneMode }: { luceneMode: boolean }) {
   const key = useSyncExternalStore(subscribeCurrentSearchParams, getCurrentSearchFilterKey);
   const { results } = useInstantSearch();
   const [report, setReport] = useState<AnalyticsReport | null>(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [refresh, setRefresh] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    setReport(null); setError("");
+    setLoading(true); setError("");
     const timer = setTimeout(async () => {
       try {
         const response = await fetch(luceneMode ? "/api/analytics?mode=lucene" : "/api/analytics", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ params: JSON.parse(key) }), signal: controller.signal });
         const body = await response.json().catch(() => null);
         if (!response.ok || !body) throw new Error(body?.message ?? "Analytics unavailable; please retry");
-        if (!controller.signal.aborted) setReport(body as AnalyticsReport);
+        if (!controller.signal.aborted) { setReport(body as AnalyticsReport); setLoading(false); }
       } catch (error) {
-        if (!controller.signal.aborted) setError(error instanceof Error ? error.message : "Analytics failed");
+        if (!controller.signal.aborted) { setError(error instanceof Error ? error.message : "Analytics failed"); setLoading(false); }
       }
     }, 350);
     return () => { clearTimeout(timer); controller.abort(); };
   }, [key, luceneMode, results, refresh]);
 
-  if (error) return <div className="analytics-message" role="alert"><p>{error}</p><button type="button" onClick={() => setRefresh((value) => value + 1)}>Retry analytics</button></div>;
-  if (!report) return <div className="analytics-message" role="status">Calculating analytics for the current filter…</div>;
-  const count = (status: string) => report.current.find((row) => row.status === status)?.count ?? 0;
-  return <div className="analytics">
-    <div className="analytics-heading"><div><h2>Ticket movement</h2><p>{number(report.total)} tickets matching your current search and filters</p></div><button type="button" onClick={() => downloadCsv(report)}>Download CSV</button></div>
-    <p className="analytics-scope">All charts follow the current filter. Historical charts show the past of tickets matching <strong>now</strong>, using their current board, status, and other metadata. Post and comment date filters select tickets; they do not trim those tickets’ histories. Deleted or unavailable tickets are absent.</p>
-    <div className="analytics-summary">{[["Tracked now", number(count("tracked"))], ["Completed now", number(count("complete"))], ["Closed now", number(count("closed"))], ["Median Tracked → Completed", days(report.completion.medianDays)]].map(([title, value]) => <div key={title}><span>{title}</span><strong>{value}</strong></div>)}</div>
-    <p className="analytics-coverage">As of {new Date(report.asOf).toLocaleString()} · {number(report.coverage.withEvents)} tickets have public status events · {number(report.coverage.unknownHistory)} have unknown historical periods · {number(report.coverage.invalidEvents)} invalid or unresolved events. Unknown periods are shown explicitly and excluded from known status durations. {number(report.coverage.undatedTickets)} tickets have no valid creation date and are excluded from historical populations and durations.</p>
-    {report.total === 0 ? <p className="analytics-message">No tickets match this filter. Change the search or filters to explore their history.</p> : <>
+  if (!report) return error
+    ? <div className="analytics-message" role="alert"><p>{error}</p><button type="button" onClick={() => setRefresh((value) => value + 1)}>Retry analytics</button></div>
+    : <div className="analytics-message" role="status">Loading analytics…</div>;
+  return <div className="analytics" aria-busy={loading}>
+    <div className="analytics-heading"><div><h2>Ticket movement</h2><p title={`Updated ${new Date(report.asOf).toLocaleString()}`}>{number(report.total)} tickets · current filters{loading && <span className="analytics-refresh" role="status"> · Updating…</span>}</p></div><button type="button" onClick={() => downloadCsv(report)}>Download CSV</button></div>
+    {error && <div className="analytics-refresh-error" role="alert"><span>{error}</span><button type="button" onClick={() => setRefresh((value) => value + 1)}>Retry analytics</button></div>}
+    {report.total === 0 ? <p className="analytics-message">No tickets match this filter.</p> : <>
       <div className="analytics-grid">
-        <Card title="Current statuses" note="One current status per matching ticket."><Bars rows={report.current.map((row) => ({ label: label(row.status), value: row.count, status: row.status }))} /></Card>
-        <Card title="How long in Tracked?" note="Time since the latest entry into Tracked for currently Tracked tickets. A month is 30 days; a year is 365 days. Unknown starts stay separate."><Bars rows={report.trackedAge.map((row) => ({ label: row.label, value: row.count }))} /></Card>
+        <Card title="Current statuses"><Bars rows={report.current.map((row) => ({ label: label(row.status), value: row.count, status: row.status }))} /></Card>
+        <Card title="How long in Tracked?" note="Time in the current Tracked period."><Bars rows={report.trackedAge.map((row) => ({ label: row.label, value: row.count }))} /></Card>
       </div>
-      <Card title="Status populations over time" note="Month-end state of the current matching cohort (UTC); the final month shows the current snapshot. Unknown means no reliable state is recorded for that period. This is a reconstruction, not a census of all tickets that existed then."><Timeline rows={report.population} description="Reconstructed month-end status populations" unit="tickets" /></Card>
-      <Card title="Recorded status changes" note="Public events entering each status per month (UTC). A ticket can change more than once. Snapshot-only dates and synthetic merge rows are excluded."><Timeline rows={report.transitions} description="Recorded status changes by month" unit="changes" /></Card>
+      <Card title="Status populations over time" note="These tickets’ estimated month-end statuses. Missing history is Unknown."><Timeline rows={report.population} description="Reconstructed month-end status populations" unit="tickets" /></Card>
+      <Card title="Recorded status changes" note="Public status changes each month."><Timeline rows={report.transitions} description="Recorded status changes by month" unit="changes" /></Card>
       <div className="analytics-grid">
-        <Card title="Tracked → Completed" note={`Elapsed time from the first recorded Tracked date to the first subsequent Completed date. Includes intervening statuses and tickets later reopened. ${number(report.completion.count)} eligible tickets; unresolved tickets are excluded.`}>
+        <Card title="Tracked → Completed" note={`First recorded Tracked to first completion · ${number(report.completion.count)} tickets.`}>
           <dl className="analytics-stat-list"><div><dt>Mean</dt><dd>{days(report.completion.meanDays)}</dd></div><div><dt>Median</dt><dd>{days(report.completion.medianDays)}</dd></div><div><dt>90th percentile</dt><dd>{days(report.completion.p90Days)}</dd></div></dl>
           <Bars rows={report.completion.buckets.map((row) => ({ label: row.label, value: row.count, status: "complete" }))} />
         </Card>
-        <Card title="Total time in each status" note="Recorded ticket-days, including ongoing intervals up to the snapshot. Separate visits to a status are added together. Unobserved time stays Unknown; it is not assigned to Open or Tracked.">
+        <Card title="Total time in each status" note="Days added across tickets, including repeat visits.">
           <Bars rows={report.dwell.map((row) => ({ label: label(row.status), value: row.days, status: row.status }))} unit="days" />
           <details className="analytics-data"><summary>View duration data</summary><table><caption>Recorded time by status</caption><thead><tr><th scope="col">Status</th><th scope="col">Ticket-days</th><th scope="col">Tickets with time recorded</th></tr></thead><tbody>{report.dwell.map((row) => <tr key={row.status}><th scope="row">{label(row.status)}</th><td>{number(row.days)}</td><td>{number(row.tickets)}</td></tr>)}</tbody></table></details>
         </Card>
       </div>
-      <Card title="Outcomes by Tracked year" note={`Grouped by the first recorded Tracked year, with each ticket’s current outcome. The first recorded date may be later than its first-ever tracking date. ${number(report.total - report.cohorts.reduce((sum, row) => sum + row.total, 0))} tickets have no known Tracked date and are excluded. Recent cohorts have had less time to reach Completed.`}>{report.cohorts.length ? <Cohorts rows={report.cohorts} /> : <p>No recorded Tracked dates in this selection.</p>}</Card>
-      <Card title="Longest currently in Tracked" note={`${number(report.coverage.unknownCurrentAge)} currently Tracked tickets have no known start date and are excluded. Showing up to 20 tickets.`}><div className="analytics-table-scroll"><table><caption>Tickets with the longest current Tracked interval</caption><thead><tr><th scope="col">Ticket</th><th scope="col">Tracked since (UTC)</th><th scope="col">Days</th></tr></thead><tbody>{report.oldestTracked.map((row) => <tr key={row.id}><th scope="row"><a href={row.url} target="_blank" rel="noreferrer">{row.title}</a></th><td>{row.since.slice(0, 10)}</td><td>{number(row.days)}</td></tr>)}</tbody></table></div></Card>
+      <Card title="Outcomes by Tracked year" note="Current outcomes, grouped by first recorded Tracked year.">{report.cohorts.length ? <Cohorts rows={report.cohorts} /> : <p>No recorded Tracked dates.</p>}</Card>
+      <Card title="Longest currently in Tracked" note="Up to 20 tickets with a known Tracked start date."><div className="analytics-table-scroll"><table><thead><tr><th scope="col">Ticket</th><th scope="col">Tracked since (UTC)</th><th scope="col">Days</th></tr></thead><tbody>{report.oldestTracked.map((row) => <tr key={row.id}><th scope="row"><a href={row.url} target="_blank" rel="noreferrer">{row.title}</a></th><td>{row.since.slice(0, 10)}</td><td>{number(row.days)}</td></tr>)}</tbody></table></div></Card>
     </>}
   </div>;
 }

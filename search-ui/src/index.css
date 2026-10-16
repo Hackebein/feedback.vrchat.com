@@ -23,15 +23,13 @@
 .analytics h2, .analytics h3, .analytics p { margin: 0; }
 .analytics h2 { font-size: 1.6rem; }
 .analytics h3 { font-size: 1.12rem; }
-.analytics-heading p, .analytics-note, .analytics-coverage, .analytics-scope { color: #abb6cc; font-size: .9rem; }
-.analytics-scope { padding: .85rem 1rem; border-left: 3px solid #74b9ff; background: #141c29; border-radius: 4px; }
-.analytics-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
-.analytics-summary > div { display: grid; gap: .35rem; background: #192231; border: 1px solid #334159; border-radius: 10px; padding: 1rem; }
-.analytics-summary span { color: #aab7ce; font-size: .85rem; }
-.analytics-summary strong { font-size: clamp(1.15rem, 2.4vw, 1.7rem); font-variant-numeric: tabular-nums; }
+.analytics-heading p, .analytics-note { color: #abb6cc; font-size: .9rem; }
+.analytics-refresh { color: #9ccaff; }
+.analytics-refresh-error { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; color: #f39aaf; font-size: .9rem; }
 .analytics-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .analytics-card { min-width: 0; background: #141b27; border: 1px solid #2d384c; border-radius: 12px; padding: 1.1rem; }
-.analytics-card .analytics-note { margin: .4rem 0 1.1rem; line-height: 1.5; }
+.analytics-card-heading { margin-bottom: 1rem; }
+.analytics-card .analytics-note { margin-top: .35rem; line-height: 1.4; }
 .analytics-bars { display: grid; gap: .65rem; }
 .analytics-bar-row { display: grid; grid-template-columns: minmax(7rem, 1fr) minmax(2rem, 1.5fr) auto; gap: .65rem; align-items: center; font-size: .86rem; }
 .analytics-bar-track { height: .7rem; background: #263144; border-radius: 3px; overflow: hidden; }
@@ -59,7 +57,7 @@
 .analytics-stat-list dt { font-size: .8rem; color: #aab7ce; }
 .analytics-stat-list dd { margin: 0; font-weight: 650; font-size: 1.1rem; }
 .analytics-message { padding: 1.5rem; border: 1px solid #334159; border-radius: 10px; color: #c8d0e5; }
-@media (max-width: 1200px) { .analytics-grid { grid-template-columns: minmax(0, 1fr); } .analytics-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 1200px) { .analytics-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 540px) { .analytics-card { padding: .8rem; } .analytics-bar-row { grid-template-columns: 7rem minmax(1rem, 1fr) auto; gap: .4rem; font-size: .78rem; } .analytics-bar-value small { display: none; } }
 
 * {
