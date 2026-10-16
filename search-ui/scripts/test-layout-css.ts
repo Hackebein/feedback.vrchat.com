@@ -11,11 +11,14 @@ const css = readFileSync(
 const facets = /\.facets\s*\{([^}]*)\}/.exec(css);
 assert.ok(facets, "missing .facets rule");
 const facetsBody = facets[1] ?? "";
-assert.match(facetsBody, /position:\s*sticky/);
-assert.match(facetsBody, /top:\s*1rem/);
-assert.match(facetsBody, /align-self:\s*start/);
-assert.doesNotMatch(facetsBody, /overflow\s*:/);
-assert.doesNotMatch(facetsBody, /max-height\s*:/);
+assert.match(facetsBody, /min-width:\s*0/);
+assert.match(css, /\.search-layout\s*\{[^}]*height:\s*100dvh/);
+assert.match(css, /\.search-layout\s*>\s*\.panels\s*\{[^}]*min-height:\s*0/);
+for (const pane of ["facets", "results"]) {
+  assert.match(css, new RegExp(`\\.search-layout \\.${pane}\\s*\\{[^}]*overflow-y:\\s*auto`));
+  assert.match(css, new RegExp(`\\.search-layout \\.${pane}\\s*\\{[^}]*overscroll-behavior-y:\\s*contain`));
+}
+assert.match(css, /\.search-layout \.facets\s*\{[^}]*margin-left:\s*calc\(-1 \* var\(--layout-edge\)\)/);
 
 assert.match(
   css,

@@ -1733,7 +1733,7 @@ export function App() {
     >
       <Configure hitsPerPage={50} maxValuesPerFacet={200} />
       <IndexLiveRefresh />
-      <main className="layout">
+      <main className="layout search-layout">
         <header className="top">
           <div className="top-heading">
             <h1>

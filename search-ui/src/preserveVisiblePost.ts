@@ -4,6 +4,14 @@ function viewportHeight(doc: Document): number {
   return doc.defaultView?.innerHeight ?? 0;
 }
 
+function scrollContainer(el: Element): HTMLElement | null {
+  for (let parent = el.parentElement; parent; parent = parent.parentElement) {
+    const overflow = parent.ownerDocument.defaultView?.getComputedStyle(parent).overflowY;
+    if (overflow === "auto" || overflow === "scroll") return parent;
+  }
+  return null;
+}
+
 export function captureVisiblePost(
   doc: Document,
   selector: string,
@@ -17,7 +25,10 @@ export function captureVisiblePost(
       continue;
     }
     const rect = el.getBoundingClientRect();
-    if (rect.bottom > 0 && rect.top < viewH) {
+    const container = scrollContainer(el)?.getBoundingClientRect();
+    const top = Math.max(0, container?.top ?? 0);
+    const bottom = Math.min(viewH, container?.bottom ?? viewH);
+    if (rect.bottom > top && rect.top < bottom) {
       return { id, top: rect.top };
     }
   }
@@ -41,7 +52,7 @@ export function restoreVisiblePost(
     }
     const delta = el.getBoundingClientRect().top - anchor.top;
     if (Math.abs(delta) >= 1) {
-      win.scrollBy(0, delta);
+      (scrollContainer(el) ?? win).scrollBy(0, delta);
     }
     return;
   }

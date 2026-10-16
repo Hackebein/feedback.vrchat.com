@@ -465,39 +465,80 @@ body {
 }
 
 .panels {
+  --panel-gap: 1.5rem;
   display: grid;
   grid-template-columns: minmax(288px, 360px) minmax(0, 1fr);
-  gap: 1.5rem;
+  gap: var(--panel-gap);
   align-items: start;
 }
 
 @media (min-width: 1920px) {
   .panels {
     grid-template-columns: minmax(312px, 400px) minmax(0, 1fr);
-    gap: 1.75rem;
+    --panel-gap: 1.75rem;
   }
 }
 
 @media (min-width: 2560px) {
   .panels {
     grid-template-columns: minmax(336px, min(440px, 24vw)) minmax(0, 1fr);
-    gap: 2rem;
+    --panel-gap: 2rem;
   }
 }
 
 .facets {
-  /* Sticky, but not a scrollport. max-height plus overflow swallowed the wheel
-     while the page padding to the left still scrolled the results. */
-  position: sticky;
-  top: 1rem;
-  align-self: start;
   min-width: 0;
 }
 
 @media (min-width: 821px) {
+  .search-layout {
+    --layout-edge: max(2rem, calc((100vw - 3400px) / 2 + 1rem));
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    max-width: none;
+    margin: 0;
+    padding-inline: var(--layout-edge);
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  .search-layout > .top {
+    flex-shrink: 0;
+  }
+
+  .search-layout > .panels {
+    flex: 1;
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .search-layout .facets {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scrollbar-gutter: stable;
+    /* Include the outer left margin and the gap beside the results. */
+    margin-left: calc(-1 * var(--layout-edge));
+    margin-right: calc(-1 * var(--panel-gap));
+    padding-left: var(--layout-edge);
+    padding-right: var(--panel-gap);
+    padding-bottom: 2rem;
+  }
+
+  .search-layout .results {
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scrollbar-gutter: stable;
+    padding-right: .5rem;
+    padding-bottom: 3rem;
+  }
+
   .facets-toolbar {
     position: sticky;
-    top: 1rem;
+    top: 0;
     z-index: 5;
     background: #0f1218;
   }
@@ -626,6 +667,7 @@ body {
     border-right: 1px solid #2a3142;
     z-index: 40;
     overflow-y: auto;
+    overscroll-behavior-y: contain;
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     scrollbar-gutter: stable;
