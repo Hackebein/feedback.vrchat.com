@@ -1,12 +1,11 @@
 {
   "_id": "6ad293a51d00d6bbda2e4b56",
   "aiCategories": [
-    "loc.in-world",
-    "loc.pc-client",
-    "platforms.pc.steam",
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-16T21:18:31.772292Z",
+  "aiTaggedAt": "2026-10-16T21:42:41.296480Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ad293a5169b5b9033a95753",
@@ -38,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nIn lightweight world,I VR sleeping in Steam Frame standalone using lightweight avatar,VRC has  crashing every morning. :(\n\nReproduction Steps\n\nJust Sleeping it,\n\nVRC has been crashed,I can't avoid this issue.                                     \n\nDetails\n\n- Category: ワールド\n\n- Frequency: いつも\n\n---\n\nplatform: SteamFrame (platform: Android - SteamFrame, store: Steam, headset: None)\n\nrawPlatform: Android\n\nclientVersion: 2026.3.3-1919-cc121c45ee-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-16_20-50-21.txt](https://api.vrchat.cloud/api/1/file/file_6ece3ab1-dc0b-4343-9cb3-05593cbe49c1/1/file)",
+  "details": "Description\n\nI use a translation tool.\n\nWhen I sleep in VR using Steam Frame Standalone, VRC crashing every time.\n\nReproduction Steps\n\nJust sleeping.\n\nEven though I'm using lightweight avatars and worlds, I still can't avoid this problem.\n\nDetails\n\n- Category: ワールド\n\n- Frequency: いつも\n\n---\n\nplatform: SteamFrame (platform: Android - SteamFrame, store: Steam, headset: None)\n\nrawPlatform: Android\n\nclientVersion: 2026.3.3-1919-cc121c45ee-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-16_20-50-21.txt](https://api.vrchat.cloud/api/1/file/file_6ece3ab1-dc0b-4343-9cb3-05593cbe49c1/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -52,7 +51,7 @@
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": null,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad293a51d00d6bbda2e4b56/1750851777.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 2,
@@ -60,10 +59,10 @@
   "status": "open",
   "statusChanged": "2026-10-16T21:14:13.692Z",
   "subCategoryID": null,
-  "title": "game crashing in Steam Frame",
+  "title": "game crashing in Steam Frame Standalone",
   "trendingScore": 2964.3681012239704,
-  "updatedBy": null,
-  "urlName": "game-crashing-in-steam-frame",
+  "updatedBy": "6ad293a5169b5b9033a95753",
+  "urlName": "game-crashing-in-steam-frame-standalone",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
