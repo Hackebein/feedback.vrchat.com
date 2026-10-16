@@ -24,10 +24,20 @@ const query = { nested: { path: "comments", inner_hits: {}, query: { term: { "co
 const calls: Array<{ url: string; method: string; body: any }> = [];
 let total = 602;
 let failPage = false;
+let repeatPage = false;
+let incompletePage = false;
 globalThis.fetch = async (url, init) => {
   const call = { url: String(url), method: init?.method ?? "GET", body: JSON.parse(String(init?.body)) };
   calls.push(call);
-  const data = call.method === "DELETE" ? {} : call.url.includes("?scroll") ? { _scroll_id: "first", hits: { total: { value: total, relation: "eq" }, hits: Array.from({ length: Math.min(500, total) }, (_, i) => ({ _source: { post_id: String(i), created: "2020-01-01T00:00:00Z", status: "tracked" } })) } } : failPage ? { _scroll_id: "second", timed_out: true } : { _scroll_id: "second", hits: { hits: Array.from({ length: total - 500 }, (_, i) => ({ _source: { post_id: String(i + 500), status: "open" } })) } };
+  const second = Boolean(call.body.search_after);
+  const start = second && !repeatPage ? Number(call.body.search_after[0]) + 1 : 0;
+  const data = second && failPage ? { timed_out: true } : { hits: {
+    ...(second ? {} : { total: { value: total, relation: "eq" } }),
+    hits: Array.from({ length: second && incompletePage ? 0 : Math.max(0, Math.min(500, total - start)) }, (_, i) => {
+      const id = String(i + start).padStart(4, "0");
+      return { _source: { post_id: id, created: "2020-01-01T00:00:00Z", status: "tracked" }, sort: [id] };
+    }),
+  } };
   return new Response(JSON.stringify(data), { status: 200, headers: { "Content-Type": "application/json" } });
 };
 try {
@@ -37,13 +47,19 @@ try {
   assert.equal(calls[0]!.body.query.nested.inner_hits, undefined);
   assert.equal(calls[0]!.body.query.nested.query.term["comments.pinned"], true);
   assert.equal(calls[0]!.body._source.some((field: string) => /author|voter|value|details/.test(field)), false);
-  assert.deepEqual(calls.at(-1)?.body, { scroll_id: ["second"] });
+  assert.deepEqual(calls[0]!.body.sort, [{ post_id: "asc" }]);
+  assert.deepEqual(calls[1]!.body.search_after, ["0499"]);
+  assert.equal(calls[1]!.body.track_total_hits, false, "count the cohort only on the first page");
+  assert.equal(calls.every(call => call.method === "POST" && call.url.endsWith("/_search") && !call.url.includes("scroll")), true, "scan uses ordinary searches without scroll contexts");
   failPage = true; calls.length = 0;
   await assert.rejects(scanAnalyticsPosts(target, query), /incomplete/);
-  assert.equal(calls.at(-1)?.method, "DELETE", "failed scans also release their scroll");
-  failPage = false; total = 100_001; calls.length = 0;
+  failPage = false; repeatPage = true;
+  await assert.rejects(scanAnalyticsPosts(target, query), /repeated/);
+  repeatPage = false; incompletePage = true;
+  await assert.rejects(scanAnalyticsPosts(target, query), /incomplete/);
+  incompletePage = false; total = 100_001; calls.length = 0;
   await assert.rejects(scanAnalyticsPosts(target, query), (error: unknown) => error instanceof AnalyticsError && error.status === 422);
-  assert.equal(calls.at(-1)?.method, "DELETE");
+  assert.equal(calls.length, 1);
   total = 0; calls.length = 0;
   assert.deepEqual(await scanAnalyticsPosts(target, query), []);
 
@@ -60,4 +76,4 @@ try {
   assert.equal(next.index, "generation-b"); assert.equal(compiled, 2, "alias changes invalidate cache");
   await service({}, true); assert.equal(compiled, 3, "Lucene and plain filters have separate caches");
 } finally { globalThis.fetch = originalFetch; }
-console.info("analytics API, paging, cleanup, cache, and filter-store tests passed");
+console.info("analytics API, stateless paging, cache, and filter-store tests passed");

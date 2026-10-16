@@ -14,6 +14,53 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  analytics-security:
+    name: analytics-security
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      opensearch:
+        image: opensearchproject/opensearch:latest
+        env:
+          discovery.type: single-node
+          OPENSEARCH_INITIAL_ADMIN_PASSWORD: Analytics_CI_Only_9!mQ2
+          OPENSEARCH_JAVA_OPTS: "-Xms768m -Xmx768m"
+          plugins.security.ssl.http.enabled: "false"
+          script.allowed_types: none
+        ports:
+          - 127.0.0.1:9200:9200
+    env:
+      OPENSEARCH_URL: http://127.0.0.1:9200
+      OPENSEARCH_INITIAL_ADMIN_PASSWORD: Analytics_CI_Only_9!mQ2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: search-ui/package-lock.json
+      - name: Prepare secured OpenSearch
+        run: |
+          set -euo pipefail
+          sudo sysctl -w vm.max_map_count=262144
+          docker start "${{ job.services.opensearch.id }}" || true
+          for _ in $(seq 1 90); do
+            if curl -fsS -u "admin:$OPENSEARCH_INITIAL_ADMIN_PASSWORD" "$OPENSEARCH_URL/_cluster/health" >/dev/null 2>&1; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs "${{ job.services.opensearch.id }}"
+          exit 1
+      - name: Install search-ui
+        working-directory: search-ui
+        run: npm ci
+      - name: Test analytics with production permissions
+        working-directory: search-ui
+        run: npx tsx scripts/test-analytics-security.ts
+
   search-ui:
     name: search-ui
     runs-on: ubuntu-latest
