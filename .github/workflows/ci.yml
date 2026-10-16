@@ -67,7 +67,7 @@ jobs:
     timeout-minutes: 25
     services:
       opensearch:
-        image: opensearchproject/opensearch:2.19.5
+        image: opensearchproject/opensearch:2.19.6
         env:
           discovery.type: single-node
           DISABLE_SECURITY_PLUGIN: "true"
@@ -165,7 +165,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.15"
           cache: pip
           cache-dependency-path: |
             scripts/requirements-ingest.txt
