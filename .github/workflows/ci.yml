@@ -67,7 +67,7 @@ jobs:
     timeout-minutes: 25
     services:
       opensearch:
-        image: opensearchproject/opensearch:2.19.6
+        image: opensearchproject/opensearch:2.19.5
         env:
           discovery.type: single-node
           DISABLE_SECURITY_PLUGIN: "true"
