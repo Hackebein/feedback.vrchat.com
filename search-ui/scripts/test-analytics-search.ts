@@ -48,5 +48,10 @@ try {
     assert.deepEqual(Object.fromEntries(report.current.map((row) => [row.status, row.count])), counts, `${test.name}: membership by status`);
     assert.equal(report.current.reduce((sum, row) => sum + row.count, 0), report.total);
   }
-  console.info("analytics / Posts filter parity passed against OpenSearch (11 cases, 610 tickets)");
+  const additional = Array.from({ length: 10_001 }, (_, i) => ({ post_id: `count-${i}`, status: "open", created: "2020-01-01T00:00:00.000Z" }));
+  await bulkIndex(index, additional);
+  const exact = await search.search(false, [{ indexName: index, params: { hitsPerPage: 0, facets: [] } }]);
+  const exactResults = exact.body as unknown as { results: Array<{ nbHits: number }> };
+  assert.equal(exactResults.results[0]?.nbHits, docs.length + additional.length, "Posts totals must remain exact above OpenSearch's default 10,000-hit threshold");
+  console.info("analytics / Posts filter parity passed against OpenSearch (11 cases, 610 tickets); exact totals verified above 10,000 tickets");
 } finally { await deleteIndex(index); }

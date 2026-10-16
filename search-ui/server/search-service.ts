@@ -32,7 +32,7 @@ export function createSearchService(target: OpenSearchTarget) {
           // Full comments/voters are already retrieved from _source. Searchkit's
           // unnamed inner_hits collide when several filters use the same nested path.
           const filtered = applyExcludeFacets(requests).map((request) => ({
-            ...request, body: { ...request.body, query: withoutInnerHits(request.body.query) as ElasticsearchQuery },
+            ...request, body: { ...request.body, track_total_hits: true, query: withoutInnerHits(request.body.query) as ElasticsearchQuery },
           }));
           return transform ? transform(filtered) : filtered;
         },
