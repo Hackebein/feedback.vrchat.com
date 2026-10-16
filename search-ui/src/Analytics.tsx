@@ -92,8 +92,8 @@ export function Analytics({ luceneMode }: { luceneMode: boolean }) {
     const timer = setTimeout(async () => {
       try {
         const response = await fetch(luceneMode ? "/api/analytics?mode=lucene" : "/api/analytics", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ params: JSON.parse(key) }), signal: controller.signal });
-        const body = await response.json();
-        if (!response.ok) throw new Error(body.message ?? "Analytics failed");
+        const body = await response.json().catch(() => null);
+        if (!response.ok || !body) throw new Error(body?.message ?? "Analytics unavailable; please retry");
         if (!controller.signal.aborted) setReport(body as AnalyticsReport);
       } catch (error) {
         if (!controller.signal.aborted) setError(error instanceof Error ? error.message : "Analytics failed");

@@ -24,7 +24,7 @@ await recreateIndex(index);
 try {
   await bulkIndex(index, docs);
   const cases: Array<{ name: string; params: Record<string, unknown>; lucene?: boolean }> = [
-    { name: "all matches, including more than one scroll page", params: {} },
+    { name: "all matches, including more than one search page", params: {} },
     { name: "plain text", params: { query: "avatar" } },
     { name: "board, OR statuses, and score range", params: { facetFilters: ["board_slug:bugs", ["status:tracked", "status:complete"]], numericFilters: ["score >= 100", "score <= 500"] } },
     { name: "nested voter", params: { facetFilters: ["voter_name:Selected Voter"] } },

@@ -42,6 +42,10 @@ try {
   await admin("/_aliases", "POST", { actions: [{ add: { index, alias } }] });
   // Production explicitly disables server-side scroll contexts.
   await admin("/_cluster/settings", "PUT", { persistent: { "search.max_open_scroll_context": 0 } });
+  const blockedScroll = await originalFetch(`${base}/${index}/_search?scroll=1m`, { method: "POST", headers: auth("admin", password), body: JSON.stringify({ size: 1, query: { match_all: {} } }) });
+  assert.equal(blockedScroll.ok, false, "production settings must reject scroll searches");
+  assert.match(await blockedScroll.text(), /scroll contexts/i);
+  console.info("production scroll restriction reproduced");
   const target = { opensearchUrl: base, opensearchUser: user, opensearchPassword: readerPassword, index: alias };
   const search = createSearchService(target);
   const resolveIndex = createIndexGenerationResolver({ ...target, alias });

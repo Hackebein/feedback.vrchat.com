@@ -42,45 +42,42 @@ export async function scanAnalyticsPosts(target: OpenSearchTarget, query: Elasti
   const base = target.opensearchUrl.replace(/\/$/, "");
   const headers = { "Content-Type": "application/json", Authorization: "Basic " + Buffer.from(`${target.opensearchUser}:${target.opensearchPassword}`).toString("base64") };
   const signal = AbortSignal.timeout(60_000);
-  let scroll: string | undefined;
   const posts: HistoryPost[] = [];
+  const seen = new Set<string>();
   let expected: number | undefined;
-  async function request(path: string, body: unknown) {
-    const response = await fetch(`${base}${path}`, { method: "POST", headers, body: JSON.stringify(body), signal });
+  let cursor: string[] | undefined;
+  // Published backing indices are immutable. A fixed index and unique post_id sort
+  // give a consistent scan without scroll/PIT contexts, which production disables.
+  while (true) {
+    const body = { query: withoutInnerHits(query), size: 500, sort: [{ post_id: "asc" }], track_total_hits: expected === undefined, _source: SOURCE, ...(cursor ? { search_after: cursor } : {}) };
+    const response = await fetch(`${base}/${encodeURIComponent(target.index)}/_search`, { method: "POST", headers, body: JSON.stringify(body), signal });
     if (!response.ok) throw new AnalyticsError(`Analytics search failed (${response.status})`);
     const data = await response.json() as {
-      _scroll_id?: string; timed_out?: boolean; _shards?: { failed?: number };
-      hits?: { total?: number | { value: number; relation: string }; hits?: Array<{ _source?: HistoryPost }> };
+      timed_out?: boolean; _shards?: { failed?: number };
+      hits?: { total?: number | { value: number; relation: string }; hits?: Array<{ _source?: HistoryPost; sort?: unknown[] }> };
     };
-    if (data._scroll_id) scroll = data._scroll_id;
     if (data.timed_out || (data._shards?.failed ?? 0) > 0) throw new AnalyticsError("Analytics search was incomplete; please retry");
-    return data;
-  }
-  try {
-    let data = await request(`/${encodeURIComponent(target.index)}/_search?scroll=1m`, { query: withoutInnerHits(query), size: 500, sort: ["_doc"], track_total_hits: true, _source: SOURCE });
-    const total = data.hits?.total;
-    if (typeof total === "object" && total.relation !== "eq") throw new AnalyticsError("Analytics search did not return an exact total");
-    expected = typeof total === "number" ? total : total?.value;
-    if (expected === undefined) throw new AnalyticsError("Analytics search returned no total");
-    if (expected > MAX_POSTS) throw new AnalyticsError(`Analytics supports up to ${MAX_POSTS.toLocaleString("en-US")} tickets per filter; narrow the current filter`, 422);
-    while (true) {
-      const hits = data.hits?.hits;
-      if (!Array.isArray(hits)) throw new AnalyticsError("Analytics search returned no hits");
-      for (const hit of hits) {
-        if (!hit._source) throw new AnalyticsError("Analytics search returned an incomplete ticket");
-        posts.push(hit._source);
-      }
-      if (posts.length > MAX_POSTS || posts.length > expected) throw new AnalyticsError("Analytics search returned an inconsistent total");
-      if (posts.length === expected) break;
-      if (!hits.length || !scroll) throw new AnalyticsError("Analytics search was incomplete; please retry");
-      data = await request("/_search/scroll", { scroll: "1m", scroll_id: scroll });
+    if (expected === undefined) {
+      const total = data.hits?.total;
+      if (typeof total === "object" && total !== null && total.relation !== "eq") throw new AnalyticsError("Analytics search did not return an exact total");
+      expected = typeof total === "number" ? total : total?.value;
+      if (expected === undefined) throw new AnalyticsError("Analytics search returned no total");
+      if (expected > MAX_POSTS) throw new AnalyticsError(`Analytics supports up to ${MAX_POSTS.toLocaleString("en-US")} tickets per filter; narrow the current filter`, 422);
     }
-    return posts;
-  } finally {
-    if (scroll) {
-      // Cleanup has its own deadline: the scan's deadline may already have expired.
-      await fetch(`${base}/_search/scroll`, { method: "DELETE", headers, body: JSON.stringify({ scroll_id: [scroll] }), signal: AbortSignal.timeout(5000) }).catch(() => undefined);
+    const hits = data.hits?.hits;
+    if (!Array.isArray(hits)) throw new AnalyticsError("Analytics search returned no hits");
+    for (const hit of hits) {
+      const id = hit._source?.post_id;
+      if (!hit._source || !id || seen.has(id)) throw new AnalyticsError("Analytics search returned an incomplete or repeated ticket");
+      seen.add(id);
+      posts.push(hit._source);
     }
+    if (posts.length > MAX_POSTS || posts.length > expected) throw new AnalyticsError("Analytics search returned an inconsistent total");
+    if (posts.length === expected) return posts;
+    if (!hits.length) throw new AnalyticsError("Analytics search was incomplete; please retry");
+    const next = hits[hits.length - 1]!.sort;
+    if (!next || next.length !== 1 || typeof next[0] !== "string" || next[0] === cursor?.[0]) throw new AnalyticsError("Analytics search returned no advancing pagination cursor");
+    cursor = [next[0]];
   }
 }
 

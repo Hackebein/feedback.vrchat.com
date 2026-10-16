@@ -145,13 +145,11 @@ JSON
 )"
 
   # Gateway: reads the published alias and pins analytics scans to its backing index.
-  # Scroll/clear also require cluster-level permissions; index permissions stay read-only.
   os_put "/_plugins/_security/api/roles/${PROXY_USER}-readonly" "$(cat <<JSON
 {
   "cluster_permissions": [
     "cluster:monitor/health",
-    "indices:data/read/scroll",
-    "indices:data/read/scroll/clear"
+    "indices:data/read/msearch"
   ],
   "index_permissions": [
     {
