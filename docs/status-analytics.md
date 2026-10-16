@@ -66,7 +66,7 @@ scans fail instead of returning misleading partial totals.
 
 Results are cached for up to two minutes by filter, mode, and index generation;
 identical concurrent requests share the scan. At most two scans run concurrently,
-with a 90-second scan deadline and a 100,000-ticket per-filter limit. Narrow the
+with a 60-second scan deadline and a 100,000-ticket per-filter limit. Narrow the
 filter if that limit is exceeded. Cached `asOf` remains visible in the UI.
 
 No mapping change, data migration, or archive rewrite is required. The normal

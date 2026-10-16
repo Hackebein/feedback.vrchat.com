@@ -25,7 +25,7 @@ export type AnalyticsReport = {
 
 const statusName = (value: unknown): string => typeof value === "string" && value.trim() ? value.trim().toLowerCase() : "unknown";
 function timestamp(value: unknown): number | null {
-  if (typeof value !== "string" || !/^\d{4}-\d\d-\d\dT/.test(value)) return null;
+  if (typeof value !== "string" || !/^\d{4}-\d\d-\d\dT.*(?:Z|[+-]\d\d:\d\d)$/i.test(value)) return null;
   const time = Date.parse(value);
   return Number.isFinite(time) && time >= Date.UTC(2000, 0, 1) ? time : null;
 }
@@ -58,6 +58,7 @@ export function normalizeHistory(post: HistoryPost, asOf: number) {
     } else events.push({ ...event });
   }
   const recorded = events.filter((event) => event.recorded && event.status !== "unknown").map((event) => ({ ...event }));
+  const sequence = events.map((event) => ({ ...event }));
   const since = timestamp(post.statusChanged);
   const validSince = since !== null && since <= asOf && created !== null && since >= created;
   let currentSince: number | null = null;
@@ -85,12 +86,15 @@ export function normalizeHistory(post: HistoryPost, asOf: number) {
   const firstComplete = firstTracked === null ? null : evidence.find((event) => event.at >= firstTracked && event.status === "complete")?.at ?? null;
   // The current snapshot is known now even if its start date is unavailable.
   events.push({ at: asOf, status: current, recorded: false });
-  return { created, current, events, firstTracked, firstComplete, currentSince, invalid, recorded };
+  return { created, current, events, firstTracked, firstComplete, currentSince, invalid, recorded, sequence };
 }
 
 const AGE = [30, 90, 180, 365, 730, 1095, 1825, Infinity];
 const AGE_LABELS = ["Under 1 month", "1–3 months", "3–6 months", "6–12 months", "1–2 years", "2–3 years", "3–5 years", "5+ years"];
-const increment = (counts: Record<string, number>, key: string, amount = 1) => { counts[key] = (counts[key] ?? 0) + amount; };
+const increment = (counts: Record<string, number>, key: string, amount = 1) => {
+  const previous = Object.hasOwn(counts, key) ? counts[key]! : 0;
+  Object.defineProperty(counts, key, { value: previous + amount, writable: true, enumerable: true, configurable: true });
+};
 function percentile(values: number[], p: number): number | null {
   if (!values.length) return null;
   const position = (values.length - 1) * p;
@@ -155,7 +159,8 @@ export function buildAnalytics(posts: Iterable<HistoryPost>, asOf: number, index
       if (history.firstComplete !== null) completed.push((history.firstComplete - history.firstTracked) / DAY);
     }
     let previous: string | null = null;
-    for (const event of history.recorded) {
+    for (const event of history.sequence) {
+      if (!event.recorded || event.status === "unknown") { previous = null; continue; }
       if (previous !== event.status) {
         const month = new Date(event.at).toISOString().slice(0, 7);
         const counts = transitions.get(month) ?? {};

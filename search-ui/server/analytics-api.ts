@@ -41,7 +41,7 @@ export function withoutInnerHits(value: unknown): unknown {
 export async function scanAnalyticsPosts(target: OpenSearchTarget, query: ElasticsearchQuery): Promise<HistoryPost[]> {
   const base = target.opensearchUrl.replace(/\/$/, "");
   const headers = { "Content-Type": "application/json", Authorization: "Basic " + Buffer.from(`${target.opensearchUser}:${target.opensearchPassword}`).toString("base64") };
-  const signal = AbortSignal.timeout(90_000);
+  const signal = AbortSignal.timeout(60_000);
   let scroll: string | undefined;
   const posts: HistoryPost[] = [];
   let expected: number | undefined;

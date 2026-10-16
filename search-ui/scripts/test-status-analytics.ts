@@ -59,6 +59,10 @@ const zero = buildAnalytics([], now, "test");
 assert.equal(zero.total, 0);
 assert.equal(zero.completion.p90Days, null);
 assert.equal(zero.cohorts.length, 0);
+const gap = buildAnalytics([{ ...tracked, statusChanged: at("2020-02-11"), comments: [event("first", "2020-01-11", "tracked"), event("gap", "2020-02-01", ""), event("again", "2020-02-11", "tracked")] }], now, "test");
+assert.equal(gap.transitions[1]?.counts.tracked, 1, "an unresolved state breaks consecutive-status deduplication");
+const noZone = buildAnalytics([{ ...open, created: "2020-01-01T00:00:00" }], now, "test");
+assert.equal(noZone.coverage.undatedTickets, 1, "timezone-less timestamps must not depend on the server timezone");
 
 const exactNow = buildAnalytics([{ ...complete, statusChanged: at("2020-03-01"), comments: [event("a", "2020-01-11", "tracked"), event("b", "2020-03-01", "complete")] }], now, "test");
 assert.equal(exactNow.completion.count, 1, "events exactly at the snapshot are included");

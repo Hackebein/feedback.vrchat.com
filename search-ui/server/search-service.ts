@@ -1,7 +1,7 @@
 import API from "@searchkit/api";
-import type { ElasticsearchQuery, MultipleQueriesQuery, SearchAttribute, SearchRequest } from "searchkit";
+import type { ElasticsearchQuery, ElasticsearchResponseBody, MultipleQueriesQuery, SearchAttribute, SearchRequest } from "searchkit";
 import type { OpenSearchTarget } from "./agent-api";
-import { AnalyticsError } from "./analytics-api";
+import { AnalyticsError, withoutInnerHits } from "./analytics-api";
 import { applyExcludeFacets } from "./facet-exclusion";
 import { buildLuceneQueryBody } from "./lucene-query";
 import { type PhraseMode, withPhraseFallback } from "./phrase-mode";
@@ -29,10 +29,14 @@ export function createSearchService(target: OpenSearchTarget) {
         : (query: string, attributes: SearchAttribute[]) => degraded ? degradedPlainQuery(query, attributes, mode) : instantSearchStrictQuery(query, attributes, undefined, mode),
       hooks: {
         beforeSearch: async (requests: SearchRequest[]) => {
-          const filtered = applyExcludeFacets(requests);
+          // Full comments/voters are already retrieved from _source. Searchkit's
+          // unnamed inner_hits collide when several filters use the same nested path.
+          const filtered = applyExcludeFacets(requests).map((request) => ({
+            ...request, body: { ...request.body, query: withoutInnerHits(request.body.query) as ElasticsearchQuery },
+          }));
           return transform ? transform(filtered) : filtered;
         },
-        afterSearch: async (_requests: SearchRequest[], responses: any[]) => rejectTooManyNestedClauses(responses),
+        afterSearch: async (_requests: SearchRequest[], responses: ElasticsearchResponseBody[]) => rejectTooManyNestedClauses(responses),
       },
     };
   }
