@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 1
@@ -54,7 +54,7 @@ jobs:
           fi
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -62,7 +62,7 @@ jobs:
         run: pip install jinja2 pyotp
 
       - name: Restore VRChat session cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .vrchat-session/cookies.jar
           # Unique primary key so a refreshed jar is saved after every run.

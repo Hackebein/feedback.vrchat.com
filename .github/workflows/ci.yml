@@ -33,12 +33,12 @@ jobs:
       OPENSEARCH_URL: http://127.0.0.1:9200
       OPENSEARCH_INITIAL_ADMIN_PASSWORD: Analytics_CI_Only_9!mQ2
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
           cache-dependency-path: search-ui/package-lock.json
       - name: Prepare secured OpenSearch
@@ -67,7 +67,7 @@ jobs:
     timeout-minutes: 25
     services:
       opensearch:
-        image: opensearchproject/opensearch:2.19.5
+        image: opensearchproject/opensearch:3.9.0
         env:
           discovery.type: single-node
           DISABLE_SECURITY_PLUGIN: "true"
@@ -79,14 +79,14 @@ jobs:
       OPENSEARCH_URL: http://127.0.0.1:9200
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
           cache-dependency-path: search-ui/package-lock.json
 
@@ -125,14 +125,14 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
           cache-dependency-path: feedback-search-bridge/package-lock.json
 
@@ -158,12 +158,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -198,15 +198,19 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v7
         with:
           go-version-file: notify/go.mod
           cache: true
+          cache-dependency-path: |
+            notify/go.mod
+            notify/go.sum
+            search-canny/go.mod
 
       - name: gofmt
         run: |
@@ -241,18 +245,18 @@ jobs:
         working-directory: deploy/terraform
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: 1.16.6
           terraform_wrapper: false
 
       - name: Cache Terraform providers
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ${{ runner.temp }}/terraform-plugin-cache
           key: terraform-${{ hashFiles('deploy/terraform/.terraform.lock.hcl') }}

@@ -1,6 +1,6 @@
 /**
  * Prints latency and clause estimates for worst-case searches.
- * `npm run bench:search` from search-ui. Needs OpenSearch 2.19.5 at
+ * `npm run bench:search` from search-ui. Needs OpenSearch 3.9.0 at
  * OPENSEARCH_URL (default http://127.0.0.1:9200). The CI check is
  * scripts/test-search-perf.ts.
  */
