@@ -207,6 +207,10 @@ jobs:
         with:
           go-version-file: notify/go.mod
           cache: true
+          cache-dependency-path: |
+            notify/go.mod
+            notify/go.sum
+            search-canny/go.mod
 
       - name: gofmt
         run: |
