@@ -132,7 +132,7 @@ async function main(): Promise<void> {
       bool: { must: fatTokens.map((token) => instantSearchStrictQuery(token, textSearchAttributes)) },
     };
     const fatResult = await searchQuery(index, fat, 1);
-    assert.equal(fatResult.status, 500, fatResult.error);
+    assert.equal(fatResult.status, 400, fatResult.error);
     assert.equal(fatResult.error.includes("too_many_nested_clauses"), true);
     const gateway = API(searchkitConfig(searchUrl(), "admin", "admin"));
     let attempts = 0;
