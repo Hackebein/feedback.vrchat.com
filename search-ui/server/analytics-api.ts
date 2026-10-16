@@ -62,13 +62,13 @@ export async function scanAnalyticsPosts(target: OpenSearchTarget, query: Elasti
       if (typeof total === "object" && total !== null && total.relation !== "eq") throw new AnalyticsError("Analytics search did not return an exact total");
       expected = typeof total === "number" ? total : total?.value;
       if (expected === undefined) throw new AnalyticsError("Analytics search returned no total");
-      if (expected > MAX_POSTS) throw new AnalyticsError(`Analytics supports up to ${MAX_POSTS.toLocaleString("en-US")} tickets per filter; narrow the current filter`, 422);
+      if (expected > MAX_POSTS) throw new AnalyticsError(`Analytics supports up to ${MAX_POSTS.toLocaleString("en-US")} posts per filter; narrow the current filter`, 422);
     }
     const hits = data.hits?.hits;
     if (!Array.isArray(hits)) throw new AnalyticsError("Analytics search returned no hits");
     for (const hit of hits) {
       const id = hit._source?.post_id;
-      if (!hit._source || !id || seen.has(id)) throw new AnalyticsError("Analytics search returned an incomplete or repeated ticket");
+      if (!hit._source || !id || seen.has(id)) throw new AnalyticsError("Analytics search returned an incomplete or repeated post");
       seen.add(id);
       posts.push(hit._source);
     }

@@ -32,7 +32,7 @@
     },
     {
       "name": "Analytics",
-      "description": "Status history of tickets matching the current search filter."
+      "description": "Status history of posts matching the current search filter."
     }
   ],
   "paths": {
@@ -619,7 +619,7 @@
         "tags": [
           "Analytics"
         ],
-        "description": "Status charts and timings for tickets matching the current search and filters. Historical charts show those tickets' past states; missing history stays Unknown. Supports up to 100,000 tickets per filter.",
+        "description": "Status charts and timings for posts matching the current search and filters. Historical charts show those posts' past states; missing history stays Unknown. Supports up to 100,000 posts per filter.",
         "parameters": [
           {
             "name": "mode",
@@ -741,7 +741,7 @@
             }
           },
           "422": {
-            "description": "More than 100,000 tickets; narrow the filter.",
+            "description": "More than 100,000 posts; narrow the filter.",
             "content": {
               "application/json": {
                 "schema": {
