@@ -40,6 +40,8 @@ try {
   const indexed = await admin(`/${index}/_bulk?refresh=true`, "POST", bulk.join("\n") + "\n", "application/x-ndjson");
   assert.equal(indexed.errors, false);
   await admin("/_aliases", "POST", { actions: [{ add: { index, alias } }] });
+  // Production explicitly disables server-side scroll contexts.
+  await admin("/_cluster/settings", "PUT", { persistent: { "search.max_open_scroll_context": 0 } });
   const target = { opensearchUrl: base, opensearchUser: user, opensearchPassword: readerPassword, index: alias };
   const search = createSearchService(target);
   const resolveIndex = createIndexGenerationResolver({ ...target, alias });
