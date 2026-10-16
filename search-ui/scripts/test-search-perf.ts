@@ -72,7 +72,7 @@ function fuzzyTerms(query: unknown): Array<{ text: string; expansions: number }>
 async function main(): Promise<void> {
   const root = await fetch(searchUrl());
   const version = ((await root.json()) as { version?: { number?: string } }).version?.number;
-  assert.equal(version, "2.19.5");
+  assert.equal(version, "3.9.0");
 
   const { bases, docs } = saturatedCorpus();
   const sample = docs[0];

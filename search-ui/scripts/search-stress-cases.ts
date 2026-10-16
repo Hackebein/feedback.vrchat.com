@@ -1,5 +1,5 @@
 /**
- * Worst-case searches measured against OpenSearch 2.19.5.
+ * Worst-case searches measured against OpenSearch 3.9.0.
  * Before the clause and depth caps, saturated fuzzy terms and long camelCase
  * identifiers were slow or returned 500, and a few thousand parentheses threw.
  */

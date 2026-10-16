@@ -2,7 +2,7 @@
  * Property tests for the gateway query builder and the private-board matcher.
  *
  * Building a query never throws. A plain query stays inside the clause budget
- * and OpenSearch 2.19.5 does not answer 400 or 500. Swapping unquoted terms
+ * and OpenSearch 3.9.0 does not answer 400 or 500. Swapping unquoted terms
  * does not change the query or the ranking. Where the two matchers are
  * comparable (no stemming, no synonym expansion), they return the same posts.
  *
@@ -227,7 +227,7 @@ async function assertUnquotedOrder(left: string, right: string): Promise<void> {
 async function main(): Promise<void> {
   const root = await fetch(searchUrl());
   const version = ((await root.json()) as { version?: { number?: string } }).version?.number;
-  assert.equal(version, "2.19.5", "fuzz tests run against OpenSearch 2.19.5");
+  assert.equal(version, "3.9.0", "fuzz tests run against OpenSearch 3.9.0");
 
   const { bases, docs: rich } = saturatedCorpus();
   await recreateIndex(index);
