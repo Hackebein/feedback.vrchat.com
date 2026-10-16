@@ -619,7 +619,7 @@
         "tags": [
           "Analytics"
         ],
-        "description": "Uses the same text/Lucene query and facet, numeric, voter, and comment filters as Posts. Filters select tickets using current metadata; histories are not trimmed by post/comment date filters. Pagination, sorting, and display fields are ignored. Reads all matches (maximum 100,000) from one backing-index snapshot; never returns a partial cohort. Cached for up to two minutes per filter and index generation. Unknown historical periods are explicit. Deleted/unavailable tickets are absent. Only public, non-deleted, non-spam status events are used. See docs/status-analytics.md for metric definitions.",
+        "description": "Status charts and timings for tickets matching the current search and filters. Historical charts show those tickets' past states; missing history stays Unknown. Supports up to 100,000 tickets per filter.",
         "parameters": [
           {
             "name": "mode",
