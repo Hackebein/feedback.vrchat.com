@@ -1,6 +1,6 @@
-import API from "@searchkit/api";
 import express from "express";
-import type { MultipleQueriesQuery, SearchAttribute, SearchRequest } from "searchkit";
+import type { MultipleQueriesQuery } from "searchkit";
+import { AnalyticsError, createAnalyticsService, parseAnalyticsParams } from "./analytics-api";
 import {
   buildAgentPostBody,
   buildAgentSearchBody,
@@ -10,19 +10,13 @@ import {
   queryOpenSearch,
   SERVICE_LINK,
 } from "./agent-api";
-import { applyExcludeFacets } from "./facet-exclusion";
+import { createSearchService, extractElasticsearchBadRequestDetail } from "./search-service";
 import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
 import { createIndexGenerationResolver } from "./index-generation";
-import { buildLuceneQueryBody } from "./lucene-query";
-import { type PhraseMode, withPhraseFallback, withPhraseResultFallback } from "./phrase-mode";
+import { withPhraseResultFallback } from "./phrase-mode";
 import {
-  degradedPlainQuery,
   gatewayEnv,
-  instantSearchStrictQuery,
   isTooManyNestedClauses,
-  rejectTooManyNestedClauses,
-  retryWithoutNestedClauses,
-  searchkitConfig,
   withOmittedTerms,
 } from "./searchkit-config";
 
@@ -31,7 +25,6 @@ const INDEX_NAME = "feedback-posts";
 const { opensearchUrl, opensearchUser, opensearchPassword, bind, port } =
   gatewayEnv();
 
-const apiClient = API(searchkitConfig(opensearchUrl, opensearchUser, opensearchPassword));
 const resolveIndexGeneration = createIndexGenerationResolver({
   opensearchUrl,
   opensearchUser,
@@ -62,64 +55,6 @@ function queryTexts(requests: MultipleQueriesQuery[]): string[] {
   });
 }
 
-function searchRequestOptions(lucene: boolean, mode: PhraseMode, degraded: boolean) {
-  return {
-    getQuery: lucene
-      ? (query: string) => buildLuceneQueryBody(query.trim(), mode)
-      : (query: string, attributes: SearchAttribute[]) =>
-          degraded
-            ? degradedPlainQuery(query, attributes, mode)
-            : instantSearchStrictQuery(query, attributes, undefined, mode),
-    hooks: {
-      beforeSearch: async (requests: SearchRequest[]) => applyExcludeFacets(requests),
-      afterSearch: async (_requests, responses) => rejectTooManyNestedClauses(responses),
-    },
-  };
-}
-
-async function searchWithRecovery(
-  lucene: boolean,
-  requests: MultipleQueriesQuery[],
-): Promise<{ body: unknown; degraded: boolean }> {
-  let degraded = false;
-  const body = await retryWithoutNestedClauses(lucene, (nextDegraded) => {
-    degraded = nextDegraded;
-    return withPhraseFallback(
-      (mode) => apiClient.handleRequest(requests, searchRequestOptions(lucene, mode, nextDegraded)),
-      extractElasticsearchBadRequestDetail,
-    );
-  });
-  return { body, degraded };
-}
-
-function extractElasticsearchBadRequestDetail(err: unknown): string | undefined {
-  if (!(err instanceof Error)) {
-    return undefined;
-  }
-  const msg = err.message;
-  try {
-    const parsed = JSON.parse(msg) as {
-      responses?: Array<{ status?: number; error?: unknown }>;
-      status?: number;
-    };
-    const first = parsed.responses?.[0];
-    if (parsed.status === 400 || first?.status === 400) {
-      if (first?.error !== undefined && first.error !== null) {
-        return typeof first.error === "string"
-          ? first.error
-          : JSON.stringify(first.error);
-      }
-      return msg;
-    }
-  } catch {
-    /* not Searchkit JSON error */
-  }
-  if (/Elasticsearch request failed with status 400\b/.test(msg)) {
-    return msg;
-  }
-  return undefined;
-}
-
 function getDiscoveryJson() {
   return {
     endpoints: {
@@ -128,6 +63,7 @@ function getDiscoveryJson() {
       agentSearch: "/api/agent/search?q=terms&limit=10&page=0",
       agentPost: "/api/agent/posts/{board}/{urlName}",
       index: "/api/index",
+      analytics: "POST /api/analytics (current search params)",
       openapi: "/openapi.json",
     },
     description:
@@ -148,6 +84,23 @@ const openSearchTarget = {
   opensearchPassword,
   index: INDEX_NAME,
 };
+
+const { search: searchWithRecovery, compile } = createSearchService(openSearchTarget);
+const analytics = createAnalyticsService({ target: openSearchTarget, resolveIndex: resolveIndexGeneration, compile });
+
+app.post("/api/analytics", async (req, res) => {
+  try {
+    const params = parseAnalyticsParams(req.body);
+    res.setHeader("Cache-Control", "no-store");
+    res.json(await analytics(params, isLuceneMode(req)));
+  } catch (error) {
+    const detail = extractElasticsearchBadRequestDetail(error);
+    const invalidFilter = error instanceof Error && /Facet .*not found|Attribute .*not defined|Numeric filter .*could not be parsed/.test(error.message);
+    const status = error instanceof AnalyticsError ? error.status : detail !== undefined || invalidFilter ? 400 : 500;
+    if (status >= 500) console.error("[analytics]", error);
+    res.status(status).json({ message: error instanceof AnalyticsError ? error.message : status === 400 ? "Invalid search filter" : "Analytics failed; please retry" });
+  }
+});
 
 app.get("/health", (_req, res) => {
   res.type("text/plain").send("ok");

@@ -144,15 +144,18 @@ JSON
 JSON
 )"
 
-  # Gateway: reads the published alias plus mapping metadata required by SearchKit.
+  # Gateway: reads the published alias and pins analytics scans to its backing index.
+  # Scroll/clear also require cluster-level permissions; index permissions stay read-only.
   os_put "/_plugins/_security/api/roles/${PROXY_USER}-readonly" "$(cat <<JSON
 {
   "cluster_permissions": [
-    "cluster:monitor/health"
+    "cluster:monitor/health",
+    "indices:data/read/scroll",
+    "indices:data/read/scroll/clear"
   ],
   "index_permissions": [
     {
-      "index_patterns": ["${OS_INDEX_ALIAS}"],
+      "index_patterns": ["${OS_INDEX_ALIAS}", "${OS_BACKING_PATTERN}"],
       "allowed_actions": [
         "read",
         "indices:admin/mappings/get"

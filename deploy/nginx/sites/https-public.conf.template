@@ -59,6 +59,8 @@ server {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
         include /etc/nginx/conf.d/feedback-search-http-proxy-defaults.inc;
         proxy_pass http://feedback_search_gateway;
+        # Allow filter compilation and a bounded full-cohort analytics scan.
+        proxy_read_timeout 110s;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
