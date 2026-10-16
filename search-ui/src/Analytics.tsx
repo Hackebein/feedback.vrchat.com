@@ -6,6 +6,7 @@ import { getCurrentSearchFilterKey, subscribeCurrentSearchParams } from "./searc
 const number = (n: number) => n.toLocaleString(undefined, { maximumFractionDigits: 1 });
 const days = (n: number | null) => n === null ? "—" : `${number(n)} days`;
 const label = (status: string) => status === "complete" ? "Completed" : status.replace(/\b\w/g, (letter) => letter.toUpperCase());
+const cohortStatus = (status: string) => status === "open" ? "reopened" : status;
 const COLORS: Record<string, string> = { tracked: "#74b9ff", complete: "#6ed5a4", closed: "#f39aaf", open: "#b9a1f7", unknown: "#768299", "needs more information": "#f5cc79", "available in future release": "#6dd8d4", "in progress": "#ffab76" };
 function color(status: string): string {
   const palette = ["#cc9be7", "#85cab3", "#d9bb86", "#9ea9e9", "#a8c878"];
@@ -51,9 +52,9 @@ function Timeline({ rows, description, unit }: { rows: MonthCounts[]; descriptio
 function Cohorts({ rows }: { rows: AnalyticsReport["cohorts"] }) {
   const statuses = [...new Set(rows.flatMap((row) => Object.keys(row.counts)))].sort();
   return <>
-    {rows.map((row) => <div className="analytics-cohort" key={row.year}><strong>{row.year}</strong><div className="analytics-cohort-stack" role="img" aria-label={`${row.year}: ${row.total} tickets; ${statuses.map((status) => `${label(status)} ${row.counts[status] ?? 0}`).join(", ")}`}>{statuses.map((status) => <span key={status} style={{ width: `${100 * (row.counts[status] ?? 0) / row.total}%`, background: color(status) }} title={`${label(status)}: ${row.counts[status] ?? 0}`} />)}</div><span>{number(row.total)} tickets</span></div>)}
-    <div className="analytics-legend">{statuses.map((status) => <span key={status}><i style={{ background: color(status) }} />{label(status)}</span>)}</div>
-    <details className="analytics-data"><summary>View yearly data</summary><div className="analytics-table-scroll"><table><caption>Outcomes by first recorded Tracked year</caption><thead><tr><th scope="col">Year</th><th scope="col">Tickets</th><th scope="col">Completed</th><th scope="col">Closed</th><th scope="col">Other</th><th scope="col">Completed share</th></tr></thead><tbody>{rows.map((row) => <tr key={row.year}><th scope="row">{row.year}</th><td>{number(row.total)}</td><td>{number(row.counts.complete ?? 0)}</td><td>{number(row.counts.closed ?? 0)}</td><td>{number(row.total - (row.counts.complete ?? 0) - (row.counts.closed ?? 0))}</td><td>{number(100 * (row.counts.complete ?? 0) / row.total)}%</td></tr>)}</tbody></table></div></details>
+    {rows.map((row) => <div className="analytics-cohort" key={row.year}><strong>{row.year}</strong><div className="analytics-cohort-stack" role="img" aria-label={`${row.year}: ${row.total} tickets; ${statuses.map((status) => `${label(cohortStatus(status))} ${row.counts[status] ?? 0}`).join(", ")}`}>{statuses.map((status) => <span key={status} style={{ width: `${100 * (row.counts[status] ?? 0) / row.total}%`, background: color(status) }} title={`${label(cohortStatus(status))}: ${row.counts[status] ?? 0}`} />)}</div><span>{number(row.total)} tickets</span></div>)}
+    <div className="analytics-legend">{statuses.map((status) => <span key={status}><i style={{ background: color(status) }} />{label(cohortStatus(status))}</span>)}</div>
+    <details className="analytics-data"><summary>View yearly data</summary><div className="analytics-table-scroll"><table><caption>Outcomes by first recorded Tracked year</caption><thead><tr><th scope="col">Year</th><th scope="col">Tickets</th><th scope="col">Completed</th><th scope="col">Closed</th><th scope="col">Reopened</th><th scope="col">Other</th><th scope="col">Completed share</th></tr></thead><tbody>{rows.map((row) => <tr key={row.year}><th scope="row">{row.year}</th><td>{number(row.total)}</td><td>{number(row.counts.complete ?? 0)}</td><td>{number(row.counts.closed ?? 0)}</td><td>{number(row.counts.open ?? 0)}</td><td>{number(row.total - (row.counts.complete ?? 0) - (row.counts.closed ?? 0) - (row.counts.open ?? 0))}</td><td>{number(100 * (row.counts.complete ?? 0) / row.total)}%</td></tr>)}</tbody></table></div></details>
   </>;
 }
 
@@ -68,7 +69,7 @@ function downloadCsv(report: AnalyticsReport) {
     add("changed_unique_tickets", row.month, "", row.tickets ?? 0);
   });
   report.dwell.forEach((row) => add("recorded_dwell", "", row.status, row.tickets, row.days));
-  report.cohorts.forEach((row) => Object.entries(row.counts).forEach(([status, count]) => add("first_recorded_tracked_year", String(row.year), status, count)));
+  report.cohorts.forEach((row) => Object.entries(row.counts).forEach(([status, count]) => add("first_recorded_tracked_year", String(row.year), cohortStatus(status), count)));
   report.completion.buckets.forEach((row) => add("first_tracked_to_completed", "", row.label, row.count));
   for (const [metric, duration] of [["mean", report.completion.meanDays], ["median", report.completion.medianDays], ["p90", report.completion.p90Days]] as const) add(`completion_${metric}`, "", "", report.completion.count, duration ?? "");
   const csv = rows.map((row) => row.map((cell) => {
