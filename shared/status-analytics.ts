@@ -153,7 +153,7 @@ export function buildAnalytics(posts: Iterable<HistoryPost>, asOf: number, index
       else {
         const days = (asOf - history.currentSince) / DAY;
         report.trackedAge[AGE.findIndex((bound) => days < bound)]!.count++;
-        report.oldestTracked.push({ id: post.post_id ?? "", title: post.title || "Untitled ticket", url: `https://feedback.vrchat.com/${encodeURIComponent(post.board?.urlName ?? "")}/p/${encodeURIComponent(post.urlName ?? "")}`, since: new Date(history.currentSince).toISOString(), days });
+        report.oldestTracked.push({ id: post.post_id ?? "", title: post.title || "Untitled post", url: `https://feedback.vrchat.com/${encodeURIComponent(post.board?.urlName ?? "")}/p/${encodeURIComponent(post.urlName ?? "")}`, since: new Date(history.currentSince).toISOString(), days });
       }
     }
     if (history.firstTracked !== null) {
