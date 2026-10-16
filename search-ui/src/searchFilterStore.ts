@@ -18,6 +18,8 @@ const FILTER_KEYS = [
 ] as const;
 
 let lastSearchParams: Record<string, unknown> | null = null;
+let filterKey = "{}";
+const listeners = new Set<() => void>();
 
 export function setCurrentSearchParams(params: Record<string, unknown>): void {
   const normalized: Record<string, unknown> = {};
@@ -28,7 +30,19 @@ export function setCurrentSearchParams(params: Record<string, unknown>): void {
     }
   }
   lastSearchParams = normalized;
+  const nextKey = JSON.stringify(normalized);
+  if (nextKey !== filterKey) {
+    filterKey = nextKey;
+    for (const listener of listeners) listener();
+  }
 }
+
+export function subscribeCurrentSearchParams(listener: () => void): () => void {
+  listeners.add(listener);
+  return () => { listeners.delete(listener); };
+}
+
+export function getCurrentSearchFilterKey(): string { return filterKey; }
 
 export function getCurrentSearchParams(): Record<string, unknown> {
   return lastSearchParams ? { ...lastSearchParams } : {};

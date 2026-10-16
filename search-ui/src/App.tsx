@@ -54,6 +54,7 @@ import {
 import { aiCategoryDescription, aiCategoryName } from "./featureTree";
 import { MarkdownText } from "./MarkdownText";
 import { Notifications } from "./Notifications";
+import { Analytics } from "./Analytics";
 import {
   captureVisiblePost,
   restoreVisiblePost,
@@ -1703,6 +1704,8 @@ export function App() {
     };
   }, [filtersOpen]);
 
+  const [resultsView, setResultsView] = useState<"posts" | "analytics">("posts");
+
   const routing = useMemo(
     () => ({
       router: makeSearchHistoryRouter(),
@@ -2034,6 +2037,12 @@ export function App() {
             ) : null}
           </aside>
           <section className="results">
+            <div className="results-view-switch" role="group" aria-label="Results view">
+              <button type="button" aria-pressed={resultsView === "posts"} onClick={() => setResultsView("posts")}>Posts</button>
+              <button type="button" aria-pressed={resultsView === "analytics"} onClick={() => setResultsView("analytics")}>Analytics</button>
+            </div>
+            {resultsView === "analytics" && <Analytics luceneMode={luceneMode} />}
+            <div hidden={resultsView !== "posts"}>
             <Hits
               hitComponent={FeedbackHit}
               classNames={{
@@ -2052,6 +2061,7 @@ export function App() {
                 selectedItem: "pagination-selected",
               }}
             />
+            </div>
           </section>
         </div>
       </main>
