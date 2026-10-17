@@ -5,7 +5,7 @@
     "sdk.vrcsdk",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-10-16T15:36:17.350806Z",
+  "aiTaggedAt": "2026-10-17T09:39:32.098904Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
@@ -89,7 +89,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Following up https://feedback.vrchat.com/sdk-bug-reports/p/freeze-to-world-on-constraints-will-always-bake-offsets-if-there-are-0-sources\n\nA parent constraint with \"Freeze to world\" enabled before the object containing it is on is turned off will not properly snap back when \"Freeze to world\" is disabled if it happens on the same frame that the object is turned back on, if \"Freeze to world\" is re-enabled a frame later.\n\nRepro:\n\n1. Two objects, X (i.e. the avatar's armature) and Y (droppable)\n\n2. Parent constraint on object Y has a single source to X, zeroed.\n\n3. A toggle is linked to two animations:\n\n  * False = Object Y is turned off (2 keyframes, both are the same, animation duration is 0.017).\n\n  * True = Object Y is turned on, \"Freeze to world\" is disabled on keyframe 0, enabled on keyframe 1 (animation duration is also 0.017)\n\nAssumption would be that because the parent constraint \"freeze to world\" is turned off, it would make object Y snap back to object X. This works **in the editor**, but does NOT work in game.\n\nA further observation was then made - adding a 3rd keyframe (\"keyframe 2\", animation duration 0.033) that is a copy of \"keyframe 1\" (object on, freeze on) made it work in game, but removing \"keyframe 1\" (so the animation duration is simply longer) did **not** solve it, it appears that for whatever reason the duplicated keyframe is necessary for the expected unfreeze/freeze snap to work in game.",
+  "details": "Following up https://feedback.vrchat.com/sdk-bug-reports/p/freeze-to-world-on-constraints-will-always-bake-offsets-if-there-are-0-sources\n\nA parent constraint with \"Freeze to world\" enabled before the object containing it is turned off will not properly snap back when \"Freeze to world\" is disabled and the object is turned back on (on the same frame), if \"Freeze to world\" is re-enabled a frame later.\n\nRepro:\n\n1. Two objects, X (i.e. the avatar's armature) and Y (droppable)\n\n2. Parent constraint on object Y has a single source to X, activated via \"Zero\".\n\n3. A toggle is linked to two animations:\n\n  * False = Object Y is turned off (2 keyframes, both are the same, animation duration is 0.017).\n\n  * True = Object Y is turned on, \"Freeze to world\" is disabled on keyframe 0, enabled on keyframe 1 (animation duration is also 0.017)\n\nAssumption would be that because the parent constraint \"freeze to world\" is turned off, it would make object Y snap back to object X. This works **in the editor**, but does NOT work in game.\n\nA further observation was then made - adding a 3rd keyframe (\"keyframe 2\", animation duration 0.033) that is a copy of \"keyframe 1\" (object on, freeze on) made it work in game, but removing \"keyframe 1\" (so the animation duration is simply longer) did **not** solve it, it appears that for whatever reason the duplicated keyframe is necessary for the expected unfreeze/freeze snap to work in game.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -113,7 +113,7 @@
   "subCategoryID": null,
   "title": "\"Freeze to world\" on constraints won't turn off and on again correctly if the constraint was turned on in the same frame",
   "trendingScore": 2964.4378786172856,
-  "updatedBy": null,
+  "updatedBy": "63c9760ef519ef0b8ce99165",
   "urlName": "freeze-to-world-on-constraints-wont-turn-off-and-on-again-correctly-if-the-const",
   "viewerIsAuthor": false,
   "viewerVote": 0,
