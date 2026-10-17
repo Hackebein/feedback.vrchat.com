@@ -3,9 +3,10 @@
   "_id": "63dd895f9419b05ff334ab89",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon"
+    "sdk.udon",
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-10-15T10:42:44.528949Z",
+  "aiTaggedAt": "2026-10-17T23:49:34.892367Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fca5df4d58780532024a52b",
@@ -35,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
-  "commentCount": 24,
+  "commentCount": 25,
   "commentingDisabled": false,
   "comments": [
     {
@@ -71,51 +72,6 @@
       "statusChangeID": "66db2a445a4a3feac944c6a6",
       "statusChangeNewStatus": "tracked",
       "value": "",
-      "viewerReactions": null,
-      "voteID": null
-    },
-    {
-      "__v": 0,
-      "_id": "66dd328b5b05ea8d3e9fce70",
-      "aiGenerated": false,
-      "author": {
-        "_id": "6443a06382ac9e0912532701",
-        "alias": "High Salmon",
-        "aliasID": "65c297eded6eefce4ce58306",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/afa1db4b91385f2e0f5443b178246b20.png",
-        "created": "2023-04-22T08:52:51.925Z",
-        "name": "vavassor",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "5df404cc2072644ac4b5e385",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2024-09-08T05:13:47.158Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "63dd895f9419b05ff334ab89",
-      "private": false,
-      "reactions": {
-        "like": 1
-      },
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "Visemes could be fun for something like a singing or karaoke game. Or a puppet or possession mechanic, where a character mimics the player's speech.",
       "viewerReactions": null,
       "voteID": null
     },
@@ -478,7 +434,7 @@
       "postID": "63dd895f9419b05ff334ab89",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -486,6 +442,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I had a world where I managed to check if a player was talking watching the microphone icon because it was rendered on a plane. With the last update, the icon is now rendered on the screen, so the world is now broken.\n\nSo I'm waiting for this to be developed to fix my world.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad40875275b224476196773",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6050972e03276b03f63ca0b8",
+        "alias": "Iced lavender Crow",
+        "aliasID": "65c28083ed6eefce4c570d77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/90b0e9c55adaccaec8a48f8747c4f5f3.png",
+        "created": "2021-03-16T11:31:58.052Z",
+        "name": "Tran Fox",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-17T23:44:53.682Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/dece0c4d27b105e9105cd3cf7566ed04.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "63dd895f9419b05ff334ab89",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Flare mentioned that part of this will be a upcoming SDK feature in the #vrchat-jams channel of the Discord \n\nhttps://discord.com/channels/189511567539306508/847243121837998091/1561005093405462732",
       "viewerReactions": null,
       "voteID": null
     }
@@ -632,7 +634,7 @@
       "alias": "Intimate Otter",
       "aliasID": "6a5f9e9bd4058d953b392a73",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c37ce3c7ed5169b70ba7b3781b29366b.png",
+      "avatarURL": "https://canny-assets.io/images/70d5c5f2d91b344aa2c17ed9cbc8fea8.png",
       "companies": [],
       "name": "HackebeinsBot",
       "urlName": null,
