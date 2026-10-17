@@ -1,0 +1,93 @@
+{
+  "_id": "6ad38dc42bf20637993466c8",
+  "aiCategories": [
+    "loc.main-menu",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-10-17T15:05:30.014667Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "623bdf64fe2fbc3e0445374e",
+    "alias": "Thorough Cricket",
+    "aliasID": "65c26da3ed6eefce4c4d09db",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/879921210a2a4293c9f9489aeb887750.png",
+    "created": "2022-03-24T03:03:00.422Z",
+    "name": "PhonixL",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "623bdf64fe2fbc3e0445374e",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-17T15:01:24.434Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is more of a request than an actual feedback, since this issues only affects the Simplified Chinese localization. \n\nCurrently, string #34396 `Good` is used both as a performance rating and as an account standing rating. In SC, we localized the performace ratings (good, poor, very poor) with contextual words (as something akin to \"low load\"), rather than using the word `good` directly. The current mixed use case makes this method impossible.\n\nThus, although I understanding this is not an actual issue, I sincerely ask \"Good\" to be split. (Pretty please)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad38dc42bf20637993466a7",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-17T15:01:24.434Z",
+  "subCategoryID": null,
+  "title": "Request to Split  #34396 \"Good\"",
+  "trendingScore": 2964.0682866638604,
+  "updatedBy": "623bdf64fe2fbc3e0445374e",
+  "urlName": "request-to-split-34396-good",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "623bdf64fe2fbc3e0445374e",
+      "alias": "Thorough Cricket",
+      "aliasID": "65c26da3ed6eefce4c4d09db",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/879921210a2a4293c9f9489aeb887750.png",
+      "companies": [],
+      "name": "PhonixL",
+      "urlName": null,
+      "voteID": "6ad38dc4169b5b9033df0479"
+    }
+  ]
+}
