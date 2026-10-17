@@ -73,7 +73,7 @@
       "postID": "69394c9fc5298714aea325e5",
       "private": false,
       "reactions": {
-        "like": 8
+        "like": 9
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -257,7 +257,7 @@
       "postID": "69394c9fc5298714aea325e5",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -405,7 +405,7 @@
       "postID": "69394c9fc5298714aea325e5",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -462,7 +462,9 @@
       "postDeleted": false,
       "postID": "69394c9fc5298714aea325e5",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -487,20 +489,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 153,
+  "maxScore": 154,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/69394c9fc5298714aea325e5/36448474.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 153,
+  "score": 154,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2025-12-10T10:34:07.944Z",
   "subCategoryID": null,
   "title": "Add Steam Audio to Worlds SDK",
-  "trendingScore": 2963.218439092048,
+  "trendingScore": 2964.0160556709693,
   "updatedBy": null,
   "urlName": "add-steam-audio-to-worlds-sdk",
   "viewerIsAuthor": false,
@@ -513,6 +515,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5d30f3b50d404b67f6775842",
+      "alias": "Raisin Manatee",
+      "aliasID": "65c2a212ed6eefce4c61ba05",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4ee13192e84c41f41dd8e62d8eb1f127.png",
+      "companies": [],
+      "name": "Starkstruck",
+      "urlName": null,
+      "voteID": "6ad3f1d1169b5b9033e041d4"
+    },
     {
       "_id": "6251e0efbd42d33382835984",
       "alias": "Digital Parrotfish",
@@ -540,7 +553,7 @@
       "alias": "Cautious Minnow",
       "aliasID": "67a0ed8eafacf378f12ca236",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2e89dfeb9965574f25cb21c430c2aa8f.png",
+      "avatarURL": "https://canny-assets.io/images/9b137a5b13ebd4b419ec401f15b027eb.png",
       "companies": [],
       "name": "Uzer Tekton",
       "urlName": null,
@@ -1051,17 +1064,6 @@
       "name": "Tran Fox",
       "urlName": null,
       "voteID": "6945a6e7f85d59c66db35ca2"
-    },
-    {
-      "_id": "643a163c4841a3092345f4a3",
-      "alias": "Tangerine Warbler",
-      "aliasID": "65c28339ed6eefce4cc2dd86",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/fdd04b3396582653663332348d64be37.png",
-      "companies": [],
-      "name": "DnutCfe-Obscura",
-      "urlName": null,
-      "voteID": "6945a543f85d59c66d386756"
     }
   ]
 }
