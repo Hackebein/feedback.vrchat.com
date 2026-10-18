@@ -1,38 +1,38 @@
 # VRChat Feedback Board Data
 
-Collected: **38,311** posts.<br>
+Collected: **38,312** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (88d ago)** to now.<br>
-Scrape horizon: **2026-09-25 14:06 UTC (22d ago)**.
+Scrape horizon: **2026-09-25 15:51 UTC (22d ago)**.
 
 ## Boards
 
 | Board | Posts |
 |-------|------:|
-| `age-verification` | 218 / 218 (100.0%) |
-| `android` | 353 / 353 (100.0%) |
-| `avatar-30` | 888 / 888 (100.0%) |
+| `age-verification` | 218 / 211 (100.0%) |
+| `android` | 353 / 220 (100.0%) |
+| `avatar-30` | 888 |
 | `avatar-accessories` | 12 / 12 (100.0%) |
-| `avatar-marketplace` | 80 / 80 (100.0%) |
-| `bug-reports` | 12,760 / 12,759 (100.0%) |
+| `avatar-marketplace` | 80 / 59 (100.0%) |
+| `bug-reports` | 12,761 |
 | `client-bug-reporting` | 179 |
-| `creator-companion` | 290 / 290 (100.0%) |
-| `creator-economy` | 86 / 86 (100.0%) |
-| `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,287 / 14,288 (99.99%) |
-| `impostors` | 91 / 91 (100.0%) |
-| `ios-mobile-beta` | 265 / 265 (100.0%) |
-| `localization` | 659 / 659 (100.0%) |
-| `merch` | 37 / 37 (100.0%) |
+| `creator-companion` | 290 / 124 (100.0%) |
+| `creator-economy` | 86 / 58 (100.0%) |
+| `example-central` | 7 / 6 (100.0%) |
+| `feature-requests` | 14,287 |
+| `impostors` | 91 / 39 (100.0%) |
+| `ios-mobile-beta` | 265 / 179 (100.0%) |
+| `localization` | 659 / 297 (100.0%) |
+| `merch` | 37 / 36 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,300 / 3,299 (100.0%) |
-| `persistence` | 74 / 74 (100.0%) |
-| `sdk-bug-reports` | 1,436 / 1,436 (100.0%) |
-| `third-person-view` | 85 / 85 (100.0%) |
-| `udon` | 1,889 / 1,889 (100.0%) |
-| `vrchat-ik-20` | 286 / 286 (100.0%) |
-| `vrchat-plus-feature-ideas` | 133 / 133 (100.0%) |
-| `website` | 890 / 890 (100.0%) |
-| **Total** | **38,311** / **38,131** (100.0%) |
+| `open-beta` | 3,300 |
+| `persistence` | 74 / 54 (100.0%) |
+| `sdk-bug-reports` | 1,436 |
+| `third-person-view` | 85 / 64 (100.0%) |
+| `udon` | 1,889 |
+| `vrchat-ik-20` | 286 / 206 (100.0%) |
+| `vrchat-plus-feature-ideas` | 133 / 131 (100.0%) |
+| `website` | 890 |
+| **Total** | **38,312** / **1,702** (100.0%) |
 
 ## OpenSearch
 
