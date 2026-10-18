@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.settings"
+    "avatars.expressions",
+    "client.camera"
   ],
-  "aiTaggedAt": "2026-10-18T08:31:53.166962Z",
+  "aiTaggedAt": "2026-10-18T08:44:20.432641Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ad47f87169b5b9033e9c724",
@@ -37,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nThe game keeps Freezing periodically. I have tried Emptying the caches, I checked if it was the beta, I even restarted my PC thinking it was a RAM issue. Nothing worked. Edit: Just tested if it happens in VR aswell. It only happens on desktop. VR is doing fine for no apparent reason.\n\nReproduction Steps\n\nIt just appeared. I havent changed the settings in years. There are no reproduction steps as I dont know how this started.\n\nDetails\n\n- Category: Performance\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3p2-1921-15c4a824b2-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-18_10-02-49.txt](https://api.vrchat.cloud/api/1/file/file_232adbf8-bfd7-4f15-a262-704eb1cafb03/1/file)",
+  "details": "Description\n\nThe game keeps Freezing periodically. I have tried Emptying the caches, I checked if it was the beta, I even restarted my PC thinking it was a RAM issue. Nothing worked.\n\nReproduction Steps\n\nIt just appeared. I havent changed the settings in years. There are no reproduction steps as I dont know how this started.\n\nEdit: Found the cause. it was the Selfie Camera Expressions. When it didnt find a camera it lagged the ENTIRE GAME.\n\nI turned the Selfie Expressions off and the issue stopped.\n\nI turned it back on with a Camera plugged into my PC and the lag wasnt there either.\n\nBUT as soon as I plugged the camera out and still had selfie expressions on, the entire game started to lag again.\n\nThanks to the log i found the Issue.\n\nDetails\n\n- Category: Performance\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.3.3p2-1921-15c4a824b2-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-18_10-02-49.txt](https://api.vrchat.cloud/api/1/file/file_232adbf8-bfd7-4f15-a262-704eb1cafb03/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
