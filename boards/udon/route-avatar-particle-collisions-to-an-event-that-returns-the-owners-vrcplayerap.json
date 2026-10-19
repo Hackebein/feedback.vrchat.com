@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-10-15T00:53:35.089747Z",
+  "aiTaggedAt": "2026-10-19T00:14:06.376699Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ad022fba9a58d167a43393f",
@@ -89,7 +89,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When a particle from an avatar's ParticleSystem collides with a world collider,\n\nOnParticleCollision(GameObject other) fires, but `other` is null because avatar\n\nobjects are protected. World creators therefore cannot tell which player the\n\nparticle came from.\n\nTest (SDK 3.10.5, live client, local avatar, collision module + Send Collision Messages):\n\n- Two world targets, 5 shots each from an avatar gun\n\n- Raw events: 10, other == null: 10, non-null: 0\n\n- The existing Player-routing path did not trigger (Player events: 0)\n\nUse case: PvP worlds where players bring their own avatar guns. Hits can be\n\ndetected, but kills cannot be attributed to a shooter. Workarounds (estimating\n\ntrajectories from hand bone poses) break down for arcing or exploding projectiles.\n\nProposal: when an avatar's particle collides with a world object, keep `other`\n\nhidden as it is now, but raise a new event such as\n\nOnAvatarParticleCollision(VRCPlayerApi owner) that only exposes the owning player.\n\nThis follows the same approach already used for player triggers and collisions:\n\nhttps://feedback.vrchat.com/udon/p/ontriggerenter-event-gives-a-null-reference-if-a-player-enters-the-collider\n\nNo avatar objects or components are exposed, so it should not create ripping\n\nor manipulation risks.",
+  "details": "When a particle from an avatar's ParticleSystem collides with a world collider, OnParticleCollision(GameObject other) fires, but `other` is null because avatar objects are protected. World creators therefore cannot tell which player the particle came from.\n\nTest (SDK 3.10.5, live client, local avatar, collision module + Send Collision Messages):\n\n- Two world targets, 5 shots each from an avatar gun\n\n- Raw events: 10, other == null: 10, non-null: 0\n\n- The existing Player-routing path did not trigger (Player events: 0)\n\nUse case: PvP worlds where players bring their own avatar guns. Hits can be detected, but kills cannot be attributed to a shooter. Workarounds (estimating trajectories from hand bone poses) break down for arcing or exploding projectiles.\n\nProposal: when an avatar's particle collides with a world object, keep `other` hidden as it is now, but raise a new event such as OnAvatarParticleCollision(VRCPlayerApi owner) that only exposes the owning player.\n\nThis follows the same approach already used for player triggers and collisions:\n\nhttps://feedback.vrchat.com/udon/p/ontriggerenter-event-gives-a-null-reference-if-a-player-enters-the-collider\n\nNo avatar objects or components are exposed, so it should not create ripping or manipulation risks.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -113,7 +113,7 @@
   "subCategoryID": null,
   "title": "Route avatar particle collisions to an event that returns the owner's VRCPlayerApi",
   "trendingScore": 2964.103744906324,
-  "updatedBy": null,
+  "updatedBy": "6ad022fba9a58d167a43393f",
   "urlName": "route-avatar-particle-collisions-to-an-event-that-returns-the-owners-vrcplayerap",
   "viewerIsAuthor": false,
   "viewerVote": 0,
