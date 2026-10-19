@@ -1,9 +1,11 @@
 {
   "_id": "6acfc2d6e62a468248bc2ca2",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-10-18T16:56:53.140995Z",
+  "aiTaggedAt": "2026-10-19T07:42:57.338081Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df117d465d5152bc5d38a8",
@@ -27,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -65,7 +67,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -111,7 +113,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -157,7 +159,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -248,13 +250,59 @@
       "postDeleted": false,
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "This is also something that concerns me. I don't want to move over to Resonite because of this.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad5c5ddd1a0a8256622ebaa",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df013246e66844a84a8ef1",
+        "alias": "Conceptual Harrier",
+        "aliasID": "65c26ed9ed6eefce4c854f77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/46a8f244a8b8846cb9b37bd3d3c6be5f.png",
+        "created": "2022-07-25T20:46:42.667Z",
+        "name": "DarkSwordsman",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-19T07:25:17.916Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acfc2d6e62a468248bc2ca2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I am currently enjoying using VRChat on CachyOS and I definitely hope I don't have to deal with these limitations. We know already that plenty of people have figured out ways to get around EAC. I am not convinced that those who are motivated will be stopped with measures like this.\n\nI understand securing the client or the server to some degree, but I'd prefer if the platform that I use to fundamentally interact with the people who matter most to me wasn't so hostile towards its users.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -274,20 +322,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 16,
+  "maxScore": 17,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6acfc2d6e62a468248bc2ca2/1869700405.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 16,
+  "score": 17,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-14T17:58:46.553Z",
   "subCategoryID": null,
   "title": "Do not require EasyAntiCheat v2 for Linux - Secure Boot/TPM attestation/root lockdown/etc",
-  "trendingScore": 2965.961571963818,
+  "trendingScore": 2966.052986171755,
   "updatedBy": null,
   "urlName": "do-not-require-easyanticheat-v2-for-linux-secure-boot-tpm-attestation-root-lockd",
   "viewerIsAuthor": false,
@@ -300,6 +348,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62df013246e66844a84a8ef1",
+      "alias": "Conceptual Harrier",
+      "aliasID": "65c26ed9ed6eefce4c854f77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/46a8f244a8b8846cb9b37bd3d3c6be5f.png",
+      "companies": [],
+      "name": "DarkSwordsman",
+      "urlName": null,
+      "voteID": "6ad5c515169b5b9033ec90fd"
+    },
     {
       "_id": "69d75e6d35a0fd856433f17f",
       "alias": "Persistent Silverfish",
