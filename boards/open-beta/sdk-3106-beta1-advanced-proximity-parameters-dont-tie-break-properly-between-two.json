@@ -2,10 +2,10 @@
   "_id": "6ad6a6fab82cf5b12fbab358",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "avatars.dynamics"
+    "open-beta",
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-10-19T23:38:41.010193Z",
+  "aiTaggedAt": "2026-10-19T23:57:51.593880Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "If two senders have both saturated a receiver (proximity 1.0), the closest one center-to-center should \"win\" for Advanced Proximity / Material Contact Parameters. Currently, the result is non-deterministic.",
+  "details": "If two senders have both saturated a receiver (proximity 1.0), the closest one center-to-center should \"win\" for Advanced Proximity / Material Contact Parameters. Currently, the result is non-deterministic.\n\nPreviously, this order didn't matter, as the result was always 1.0. However, now that additional information comes from the \"nearest\" sender, the selected winner is more important.",
   "error": null,
   "eta": null,
   "etaPublic": true,
