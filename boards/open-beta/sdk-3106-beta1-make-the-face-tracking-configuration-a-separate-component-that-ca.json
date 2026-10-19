@@ -5,7 +5,7 @@
     "sdk.vrcsdk",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-19T20:36:27.170379Z",
+  "aiTaggedAt": "2026-10-19T20:42:15.565525Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f30ecee654cd4491456a82f",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Currently all the face tracking configuration must be done on the avatar descriptor. This will be very difficult to maintain long-term. It also doesn't make that much sense, given that it's using the Unified Expressions standard, which will be more or less the same across every avatar, and has historically in the case of generic driver prefabs such as Jerry's and Pawlygon's. This also makes it incredibly difficult to maintain variants where the FT is sold separately and/or by an entirely different creator. Applying a product that is a face tracking add-on to an existing customized avatar is difficult to impossible with the ft config being part of the avatar descriptor.\n\nPlease split the FT configuration out to a separate component that is allowed to be on a child object of the avatar, that way it can be prefabbed. The only reference to an external object is the mesh, which can be assigned and saved as a string path like audio sources are in VRCPlayAudio.",
+  "details": "Currently all the face tracking configuration must be done on the avatar descriptor. This will be very difficult to maintain long-term. It also doesn't make that much sense, given that it's using the Unified Expressions standard, which will be more or less the same across every avatar, and has historically in the case of generic driver prefabs such as Jerry's and Pawlygon's. This also makes it incredibly difficult to maintain variants where the FT is sold separately and/or by an entirely different creator. Applying a product that is a face tracking add-on to an existing customized avatar is difficult to impossible with the ft config being part of the avatar descriptor.\n\nThis is exacerbated by the current lack of support for Simplified Parameters (https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/parameters#more-simplified-tracking-parameters) and Blended Shapes (https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/unified-blendshapes#ue-blended-shapes) which will need many custom expressions configured to support existing avatars.\n\nPlease split the FT configuration out to a separate component that is allowed to be on a child object of the avatar, that way it can be prefabbed. The only reference to an external object is the mesh, which can be assigned and saved as a string path like audio sources are in VRCPlayAudio.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -67,7 +67,7 @@
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.1] Make the face tracking configuration a separate component that can be prefabbed",
   "trendingScore": 2964.387111521665,
-  "updatedBy": null,
+  "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "sdk-3106-beta1-make-the-face-tracking-configuration-a-separate-component-that-ca",
   "viewerIsAuthor": false,
   "viewerVote": 0,
