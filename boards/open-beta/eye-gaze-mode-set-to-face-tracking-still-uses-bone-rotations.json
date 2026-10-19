@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.unity-sdk",
     "sdk.vrcsdk",
-    "avatars.tracking"
+    "avatars.tracking",
+    "avatars.descriptor"
   ],
-  "aiTaggedAt": "2026-10-19T22:40:17.157221Z",
+  "aiTaggedAt": "2026-10-19T22:47:52.084608Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ff39d9fe22cc0618bebbd7d",
@@ -43,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "SDK 3.10.6-beta.1\n\nI noticed when messing with this setting, the following behaviors is as follows:\n\nEye Gaze Mode set to Bone Rotations works as expected, with rotation states simply rotating the eyes.\n\nEye Gaze Mode set to Both works as expected, with rotation states rotating the eyes, Face Tracking rotating the eyes, and Face Tracking blendshapes for eyes are being utilized as expected.\n\nEye Gaze Mode set to **Face Tracking** doesn't work as expected. It looks exactly like \"Bone Rotations\" where the rotation states still affect the eyes, and Face Tracking blendshapes for eyes are NOT being utilized. Also when viewing the eye bones while previewing the bones in the armature, it does confirm the eyes are still being rotated.\n\n  - Notably, zeroing all the rotation states when this is set to \"Both\" probably looks like how it should look when set to \"Face Tracking\"",
+  "details": "SDK 3.10.6-beta.1\n\nI noticed when messing with this setting, the following behaviors is as follows:\n\nEye Gaze Mode set to Bone Rotations works as expected, with rotation states simply rotating the eyes.\n\nEye Gaze Mode set to Both works as expected, with rotation states rotating the eyes, Face Tracking rotating the eyes, and Face Tracking blendshapes for eyes are being utilized as expected.\n\nEye Gaze Mode set to **Face Tracking** doesn't work as expected. It looks exactly like \"Bone Rotations\" where the rotation states still affect the eyes, and Face Tracking blendshapes for eyes are NOT being utilized. Also when viewing the eye bones while previewing the bones in the armature, it does confirm the eyes are still being rotated.\n\nThe following blendshapes do not work as expected when Eye Gaze Mode = Face Tracking, but works when Eye Gaze Mode = Both:\n\n - `EyeLookUpLeft` and `EyeLookUpRight`\n\n - `EyeLookDownLeft` and `EyeLookDownRight`\n\n - `EyeLookOutLeft` and `EyeLookInRight`\n\n - `EyeLookinLeft` and `EyeLookOutRight`\n\n  - Notably, zeroing all the rotation states when this is set to \"Both\" probably looks like how it should look when set to \"Face Tracking\"",
   "error": null,
   "eta": null,
   "etaPublic": true,
