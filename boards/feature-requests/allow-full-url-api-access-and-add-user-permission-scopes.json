@@ -1,0 +1,91 @@
+{
+  "_id": "6ad6a2c6fa8161627173b810",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.unity-sdk",
+    "sdk.udon",
+    "worlds.content-gating"
+  ],
+  "aiTaggedAt": "2026-10-19T23:12:22.033612Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df013246e66844a84a8ef1",
+    "alias": "Conceptual Harrier",
+    "aliasID": "65c26ed9ed6eefce4c854f77",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/46a8f244a8b8846cb9b37bd3d3c6be5f.png",
+    "created": "2022-07-25T20:46:42.667Z",
+    "name": "DarkSwordsman",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df013246e66844a84a8ef1",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-19T23:07:50.577Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This feedback request is multiple in one, but I see all of these as part of the same feature release and required for each one to work together.\n\nThis is a feedback request asking to **reduce the 5 second requests, allow runtime URL generation, and allow all types of requests** (POST, PUT, PATCH, DELETE, etc) for worlds.\n\nHowever, this is combined with a request for VRChat to allow the **VRC API in Worlds to be locked down further** and gated behind user permissions. For example, web requests can be unrestricted, but world API access (usernames, player data, etc.) will be restricted as a result.\n\nThis is brought up because of this recent post showing that **Popcorn Palace was previously exporting usernames one request at a time**.\n\nhttps://bsky.app/profile/arti.gay/post/3my6uhjxoas2n\n\nThis is also something I've hypothesized about before of how I can export information from VRChat by preemptively baking tens or hundreds of thousands of URLs for combos of data.\n\nIf something as visible as Popcorn Palace was doing this, I can only imagine all the other worlds that have figured out how to do this type of thing. And it's not even necessarily for malicious purposes. Apparently the Popcorn Palace one was done to improve a feature in the world that was intended to improve user experience.\n\nIf VRChat simply allowed worlds to do web requests however they want, but also had a feature to disable parts of the VRC API if users do not want to share that information, All of these problems would basically be solved. Especially if VRChat had an easier way to view web requests instead of relying on the logs or external apps like VRCX.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad6a2c6fa8161627173b80f",
+  "imageURLs": [
+    "https://canny-assets.io/images/542cb1b2b168368a03ca1d004490ca24.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-19T23:07:50.577Z",
+  "subCategoryID": null,
+  "title": "Allow Full URL API Access and Add User Permission Scopes",
+  "trendingScore": 2964.402258418986,
+  "updatedBy": null,
+  "urlName": "allow-full-url-api-access-and-add-user-permission-scopes",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "62df013246e66844a84a8ef1",
+      "alias": "Conceptual Harrier",
+      "aliasID": "65c26ed9ed6eefce4c854f77",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/46a8f244a8b8846cb9b37bd3d3c6be5f.png",
+      "companies": [],
+      "name": "DarkSwordsman",
+      "urlName": null,
+      "voteID": "6ad6a2c6169b5b9033f2ec16"
+    }
+  ]
+}
