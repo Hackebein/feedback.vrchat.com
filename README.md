@@ -24,9 +24,9 @@ Scrape horizon: **2026-09-27 03:14 UTC (22d ago)**.
 | `localization` | 659 / 659 (100.0%) |
 | `merch` | 37 / 37 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,303 / 3,302 (100.0%) |
+| `open-beta` | 3,304 / 3,303 (100.0%) |
 | `persistence` | 74 / 74 (100.0%) |
-| `sdk-bug-reports` | 1,438 / 1,438 (100.0%) |
+| `sdk-bug-reports` | 1,437 / 1,437 (100.0%) |
 | `third-person-view` | 85 / 85 (100.0%) |
 | `udon` | 1,891 / 1,891 (100.0%) |
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
