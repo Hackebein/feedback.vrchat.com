@@ -1,11 +1,11 @@
 {
-  "_id": "6ad6a6fab82cf5b12fbab358",
+  "_id": "6ad6a2663c52e633963aa23b",
   "aiCategories": [
-    "loc.in-world",
-    "open-beta",
-    "avatars.tracking"
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-10-19T23:31:17.545155Z",
+  "aiTaggedAt": "2026-10-19T23:38:41.011350Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -28,57 +28,68 @@
   "by": null,
   "byID": null,
   "category": {
-    "_id": "6317f3226fccd444a7af6064",
-    "created": "2022-09-07T01:25:54.001Z",
-    "name": "Bug Report",
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
     "parentID": null,
-    "urlName": "bug-report"
+    "urlName": "feature-requests"
   },
-  "categoryID": "6317f3226fccd444a7af6064",
+  "categoryID": "6317ed8c023c7b5ec9566d28",
   "commentCount": 0,
   "commentingDisabled": false,
   "comments": [],
   "companyID": "58c62e995865713647a7115d",
-  "created": "2026-10-19T23:25:46.125Z",
+  "created": "2026-10-19T23:06:14.036Z",
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "If two senders have both saturated a receiver (proximity 1.0), the closest one center-to-center should \"win\" for Advanced Proximity / Material Contact Parameters. Currently, the result is non-deterministic.",
+  "details": "This information is already being exposed to materials in _VRChatContact_Transforms. Currently, receiving this information in the controller requires using multiple sets of active contacts, plus a bunch of additional blendtree math.",
   "error": null,
   "eta": null,
   "etaPublic": true,
   "fileURLs": [],
   "files": [],
-  "ideaID": "6ad6a6f9b82cf5b12fbab349",
+  "ideaID": "6ad6a2653c52e633963aa23a",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad6a6fab82cf5b12fbab358/271223800.jpeg",
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad6a2663c52e633963aa23b/333677605.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
-  "statusChanged": "2026-10-19T23:25:46.125Z",
+  "statusChanged": "2026-10-19T23:06:14.036Z",
   "subCategoryID": null,
-  "title": "Advanced Proximity Parameters don't tie-break properly between two saturated senders",
-  "trendingScore": 2964.4040368589663,
-  "updatedBy": null,
-  "urlName": "advanced-proximity-parameters-dont-tie-break-properly-between-two-saturated-send",
+  "title": "[SDK 3.10.6-beta.1] Expose sender x/y/z scale in Advanced Proximity Parameters",
+  "trendingScore": 2964.8078303429597,
+  "updatedBy": "5fa08ddb2644fb4c5a3dfe75",
+  "urlName": "sdk-3106-beta1-expose-sender-x-y-z-scale-in-advanced-proximity-parameters",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/70d5c5f2d91b344aa2c17ed9cbc8fea8.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6ad6a449169b5b9033f2f7ce"
+    },
     {
       "_id": "5fa08ddb2644fb4c5a3dfe75",
       "alias": "Toffee Coyote",
@@ -88,7 +99,7 @@
       "companies": [],
       "name": "SenkyDragon",
       "urlName": null,
-      "voteID": "6ad6a6fa169b5b9033f305a0"
+      "voteID": "6ad6a266169b5b9033f2eab6"
     }
   ]
 }
