@@ -5,7 +5,7 @@
     "sdk.vrcsdk",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-19T22:15:33.315546Z",
+  "aiTaggedAt": "2026-10-19T22:40:17.157221Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ff39d9fe22cc0618bebbd7d",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "SDK 3.10.6-beta.1\n\nI noticed when messing with this setting, the following behaviors is as follows:\n\nEye Gaze Mode set to Bone Rotations works as expected, with rotation states simply rotating the eyes.\n\nEye Gaze Mode set to Both works as expected, with rotation states rotating the eyes, Face Tracking rotating the eyes, and Face Tracking blendshapes like for upper/lower lid being utilized. \n\nEye Gaze Mode set to **Face Tracking** doesn't work as expected. It looks exactly like \"Bone Rotations\" where the rotation states still affect the eyes, and blend shapes like for upper/lower lid are NOT being utilized. Also when viewing the eye bones while previewing the bones in the armature, it does confirm the eyes are still being rotated.\n\n  - Notably, zeroing all the rotation states when this is set to \"Both\" probably looks like how it should look when set to \"Face Tracking\"",
+  "details": "SDK 3.10.6-beta.1\n\nI noticed when messing with this setting, the following behaviors is as follows:\n\nEye Gaze Mode set to Bone Rotations works as expected, with rotation states simply rotating the eyes.\n\nEye Gaze Mode set to Both works as expected, with rotation states rotating the eyes, Face Tracking rotating the eyes, and Face Tracking blendshapes for eyes are being utilized as expected.\n\nEye Gaze Mode set to **Face Tracking** doesn't work as expected. It looks exactly like \"Bone Rotations\" where the rotation states still affect the eyes, and Face Tracking blendshapes for eyes are NOT being utilized. Also when viewing the eye bones while previewing the bones in the armature, it does confirm the eyes are still being rotated.\n\n  - Notably, zeroing all the rotation states when this is set to \"Both\" probably looks like how it should look when set to \"Face Tracking\"",
   "error": null,
   "eta": null,
   "etaPublic": true,
