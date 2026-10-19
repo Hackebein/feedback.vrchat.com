@@ -3,10 +3,9 @@
   "_id": "67ab400790ec07b9583da871",
   "aiCategories": [
     "loc.in-world",
-    "loc.unity-sdk",
     "avatars.fbt"
   ],
-  "aiTaggedAt": "2026-06-10T15:58:27.193456Z",
+  "aiTaggedAt": "2026-10-19T15:06:25.950785Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62e00907b2870d468cc19a22",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -128,6 +127,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Here you can see the misalignment in the proxy_stand_still animation file itself. This is definitely not a user error thing.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad5ce25ff23dcae1c81b104",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a66552512d9cf9762aa93f5",
+        "alias": "Whispering Marten",
+        "aliasID": "6a66552512d9cf9762aa93fd",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/532e7667627f07e9a7230c038840eb82.png",
+        "created": "2026-07-26T18:42:45.283Z",
+        "name": "Maxwilso",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-19T08:00:37.337Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67ab400790ec07b9583da871",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This bug is still active almost 2 years later. The only fix is using an older version of GoGoLoco version 1.8.3 that released 3 years ago.",
       "viewerReactions": null,
       "voteID": null
     }
