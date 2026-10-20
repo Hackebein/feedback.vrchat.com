@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.in-world",
     "loc.loading-screen",
+    "social.instances",
     "groups.instances"
   ],
-  "aiTaggedAt": "2026-10-19T22:56:51.027836Z",
+  "aiTaggedAt": "2026-10-20T12:48:14.362160Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6e61f03043eb78f8fa3b88",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -174,6 +175,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{64873f159cf028090ce2c2e2|full_name} I think i managed to get something.\n\nHere is my ID# #745106",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad761dc40bd019ca10fa254",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f6e61f03043eb78f8fa3b88",
+        "alias": "Sable Giraffe",
+        "aliasID": "65c27af3ed6eefce4c78ca32",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1498258716d451a4a5d13449428beaed.png",
+        "created": "2020-09-25T21:32:32.684Z",
+        "name": "DragonAsh",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-20T12:43:08.455Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6ad630aed1a0a8256638c339",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad2832b6301ca0b50590836",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "In addition, it doesnt seem to be leaving any crash logs. The only crash info is from the crashdumps folder and the output files",
       "viewerReactions": null,
       "voteID": null
     }
