@@ -1,11 +1,14 @@
 {
   "_id": "6ad7b74a0fc7fc60d9d006ba",
   "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
     "loc.pc-client",
     "platforms.pc.steam",
+    "avatars.upload-performance",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-20T20:28:52.090835Z",
+  "aiTaggedAt": "2026-10-20T21:28:40.942325Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ab58c295a0588e09c2e69e6",
@@ -29,7 +32,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -205,6 +208,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Fix this problem",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad7dbc83f206cd8a3dc5600",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-20T21:23:20.817Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/fa63ff85bea36b312f69a507e0851298.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad7b74a0fc7fc60d9d006ba",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "[The Great Pug](https://vrchat.com/home/world/wrld_6caf5200-70e1-46c2-b043-e3c4abe69e0f/info) world (`wrld_6caf5200-70e1-46c2-b043-e3c4abe69e0f`) hosted by Pug Dwellers group was affected by this since 2026-10-13, no known cause. I've suggested Marlon to submit a crash dump too.\n\nThe crashes I experienced in The Great Pug fit the description of the above, from output logs I analyzed. It didn't seem to be any specific avatar that caused it with any consistency, and it wasn't anything like an EasyAntiCheat closing the client on an audio codec library or similar.",
       "viewerReactions": null,
       "voteID": null
     }
