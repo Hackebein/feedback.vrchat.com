@@ -2,10 +2,9 @@
   "_id": "6ad687c11bad798ed1ae74c4",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "avatars.expressions"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-10-19T21:16:32.072169Z",
+  "aiTaggedAt": "2026-10-20T04:12:32.219272Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f30ecee654cd4491456a82f",
@@ -43,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The current Parameter Behavior system is fairly powerful, however it would save me a lot of code duplication and make it easier to maintain a large number of expressions If I could re-use the result of already evaluated expressions.\n\nFor instance, if I have an expression like:\n\n `MouthCornerPullRight * 0.8 + MouthCornerSlantRight * 0.2` \n\nthat runs a blendhshape or parameter MouthSmileRight, then I could re-use that calculation in another expression like this:\n\n`MouthSmileRight - MouthFrownRight` and output that to a parameter or shape SmileFrownRight. \n\nIdeally either the animator parameter name or blendshape name could be used as the token to reference its value in subsequent expressions.",
+  "details": "The current Parameter Behavior system is fairly powerful, however it would save me a lot of code duplication and make it easier to maintain a large number of expressions If I could re-use the result of already evaluated expressions.\n\nFor instance, if I have an expression like:\n\n `MouthCornerPullRight * 0.8 + MouthCornerSlantRight * 0.2` \n\nthat runs a blendhshape or parameter `MouthSmileRight`, then I could re-use that calculation in another expression like this:\n\n`MouthSmileRight - MouthFrownRight` and output that to a parameter or shape `SmileFrownRight`. \n\nIdeally either the animator parameter name or blendshape name could be used as the token to reference its value in subsequent expressions.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -57,7 +56,7 @@
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": null,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad687c11bad798ed1ae74c4/1809466236.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 2,
@@ -67,7 +66,7 @@
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.1] Allow using already evaluated Parameter Behaviors in other Parameter Behaviors",
   "trendingScore": 2964.7964676713914,
-  "updatedBy": null,
+  "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "sdk-3106-beta1-allow-using-already-evaluated-parameter-behaviors-in-other-parame",
   "viewerIsAuthor": false,
   "viewerVote": 0,
