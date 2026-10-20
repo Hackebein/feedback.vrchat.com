@@ -1,0 +1,95 @@
+{
+  "_id": "6ad7fea6acdc5f9727fa15c5",
+  "aiCategories": [
+    "loc.pc-client",
+    "open-beta"
+  ],
+  "aiTaggedAt": "2026-10-20T23:58:34.559191Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "65a0ffa5c328db94191aa829",
+    "alias": "Pretty Peafowl",
+    "aliasID": "65c72e64ed6eefce4c6b64f9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e52f1a7077f63e640a68bc8ce7bce7f1.png",
+    "created": "2024-01-12T09:00:21.808Z",
+    "name": "peterfab",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "65a0ffa5c328db94191aa829",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-20T23:52:06.228Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Open VRChat\n\n2. Wait a while for some WebSocket connection problems to occur\n\n3. Open the WebSocket debug view\n\nThe recent events in the attached image are rather confusing - the latest event is a Close, but the connection is open and working fine as seen at the top of the window. I suspect the Close event might be for an older connection that was given up on before starting the new connection a064a2f8.\n\nI suggest including some kind of connection ID as a separate column to make the log clearer.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad7fea6acdc5f9727fa15be",
+  "imageURLs": [
+    "https://canny-assets.io/images/bfd0deb4af303381335ee177bb550fa8.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-20T23:52:06.228Z",
+  "subCategoryID": null,
+  "title": "[1933] WebSocket debug doesn't distinguish between connections",
+  "trendingScore": 2964.5495065993764,
+  "updatedBy": null,
+  "urlName": "1933-websocket-debug-doesnt-distinguish-between-connections",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "65a0ffa5c328db94191aa829",
+      "alias": "Pretty Peafowl",
+      "aliasID": "65c72e64ed6eefce4c6b64f9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e52f1a7077f63e640a68bc8ce7bce7f1.png",
+      "companies": [],
+      "name": "peterfab",
+      "urlName": null,
+      "voteID": "6ad7fea6169b5b9033faf1b6"
+    }
+  ]
+}
