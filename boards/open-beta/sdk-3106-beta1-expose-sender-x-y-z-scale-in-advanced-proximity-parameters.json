@@ -2,9 +2,10 @@
   "_id": "6ad6a2663c52e633963aa23b",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.fbt"
+    "sdk.vrcsdk",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-10-20T12:11:12.989999Z",
+  "aiTaggedAt": "2026-10-20T17:51:07.478718Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -34,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -79,6 +80,62 @@
       "statusChangeID": "6ad759127ce92d185ee4cc96",
       "statusChangeNewStatus": "needs more information",
       "value": "This could be interpreted as either the local scale of the transform the sender is attached to relative to that transform's parent, or the lossy scale of the sender transform divided by the lossy scale of the receiver transform. Could you confirm which of those you're asking for here please, or if you meant something else entirely?\n\nFor reference, `_VRChatContact_Transforms` is an array of 4x4 matrices giving the local-to-world matrices of each transform.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad7a763dddae0f3ca94d0c2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5fa08ddb2644fb4c5a3dfe75",
+        "alias": "Toffee Coyote",
+        "aliasID": "65c2824ced6eefce4c9ed424",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5c8cf7e14be4a40152eaccd5b0521080.png",
+        "created": "2020-11-02T22:53:15.373Z",
+        "name": "SenkyDragon",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-20T17:39:47.644Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "65f4b1a3d0a7a0c657a7d3a8",
+          "alias": "Deliberate Salamander",
+          "aliasID": "65f4b1a4a63714bcb30cf144",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+          "created": "2024-03-15T20:37:55.984Z",
+          "name": "Dexvoid",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ad759127ce92d185ee4cc97",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad6a2663c52e633963aa23b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{65f4b1a3d0a7a0c657a7d3a8|full_name} Lossy world scale of the sender transform (not divided by anything) would be best in my opinion, as that would match the information that can be extracted from the _VRChatContact_Transforms matrix.",
       "viewerReactions": null,
       "voteID": null
     }
