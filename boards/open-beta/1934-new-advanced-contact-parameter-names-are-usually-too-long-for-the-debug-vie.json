@@ -1,0 +1,95 @@
+{
+  "_id": "6ad90bd89cb64e386f712e2a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-10-21T19:10:24.203227Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df2c865968ab44bca883ce",
+    "alias": "Whisper pink Fish",
+    "aliasID": "65c2c0bced6eefce4c74c766",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1555367a3a61650e7cfe674cde77659c.png",
+    "created": "2022-07-25T23:51:34.230Z",
+    "name": "RuneFox237",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df2c865968ab44bca883ce",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-21T19:00:40.631Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The new Advanced Contact Parameters are almost all cutoff when viewed in the debug window due to their long names. This makes debugging them kind of annoying. For example, in the included screenshot at a glance I have no idea which of the collision tag parameters is which unless I remember the order I assigned them on the contact itself.\n\nLong parameter names already had this issue and I'm not sure what a solution to this problem would be, just wanted to raise awareness of this as it has been slightly annoying.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad90bd89cb64e386f712dc5",
+  "imageURLs": [
+    "https://canny-assets.io/images/b1a0ed2d1e42aea02775599fd68b6cb4.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-21T19:00:40.631Z",
+  "subCategoryID": null,
+  "title": "[1934] New Advanced Contact Parameter names are usually too long for the debug view.",
+  "trendingScore": 2964.6634521822134,
+  "updatedBy": null,
+  "urlName": "1934-new-advanced-contact-parameter-names-are-usually-too-long-for-the-debug-vie",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "62df2c865968ab44bca883ce",
+      "alias": "Whisper pink Fish",
+      "aliasID": "65c2c0bced6eefce4c74c766",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1555367a3a61650e7cfe674cde77659c.png",
+      "companies": [],
+      "name": "RuneFox237",
+      "urlName": null,
+      "voteID": "6ad90bd8169b5b90330183aa"
+    }
+  ]
+}
