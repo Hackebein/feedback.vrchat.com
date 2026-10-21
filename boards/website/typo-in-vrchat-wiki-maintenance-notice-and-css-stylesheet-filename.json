@@ -2,9 +2,9 @@
   "_id": "6ad9039b5a939dfda7887ca5",
   "aiCategories": [
     "loc.website",
-    "web.home"
+    "web.docs"
   ],
-  "aiTaggedAt": "2026-10-21T18:30:10.614742Z",
+  "aiTaggedAt": "2026-10-21T18:40:20.831875Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -42,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "https://en.wiktionary.org/wiki/maintenence\n\nNoun: **maintenence**\n\n1. Misspelling of **maintenance**.\n\n# Status page\n\nAffected URL: https://status.vrchat.com/incidents/xg3n4y6875w6\n\nExpected text: Wiki Maintenance\n\nActual text: Wiki Maintenence\n\n# CSS stylesheet\n\nAffected URL: https://assets.vrchat.com/www/css/under-maintainence-page.css, included from https://wiki.vrchat.com/ during the above maintenance.\n\nExpected filename: `under-maintainance-page.css`\n\nActual filename: `under-maintainence-page.css`",
+  "details": "# Status page\n\nAffected URL: https://status.vrchat.com/incidents/xg3n4y6875w6\n\nExpected text: Wiki Maintenance\n\nActual text: Wiki Maintenence\n\nhttps://en.wiktionary.org/wiki/maintenence\n\nNoun: **maintenence**\n\n1. Misspelling of **maintenance**.\n\n# CSS stylesheet\n\nhttps://en.wiktionary.org/wiki/maintainence\n\nNoun: **maintainence**\n\n1. Misspelling of **maintenance**.\n\nAffected URL: https://assets.vrchat.com/www/css/under-maintainence-page.css, included from https://wiki.vrchat.com/ during the above maintenance.\n\nExpected filename: `under-maintenance-page.css`\n\nActual filename: `under-maintainence-page.css`",
   "error": null,
   "eta": null,
   "etaPublic": true,
