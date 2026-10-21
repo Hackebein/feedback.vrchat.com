@@ -1,0 +1,97 @@
+{
+  "_id": "6ad913a95a939dfda78c9a33",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "open-beta",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-10-21T19:45:33.440558Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-21T19:34:01.832Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When wearing an avatar that uses the new FT system, other players that are on the beta will see you sunk partially in the floor. The eyeline does not line up between wearer and observer. Players on live do not see the avatar sunk down. The local wearer does not see the avatar sunk down. How far the avatar is sunk down seems to depend on the avatar's height, some are only a very subtle amount. \n\n1. Get an avatar that works works fine on live and beta\n\n2. Go to the avatar descriptor and press the Enable button in the Face Tracking section.\n\n3. Upload and wear the avatar, have someone on beta 1934 view you.\n\n4. They will see you sunk in the ground\n\nSame avatar with FT button enabled/disabled, respectively:\n\n- Repro: avtr_a03379b5-9c41-4c1f-a785-b352a79d5733\n\n- Non-Repro: avtr_bfa6d206-620d-4650-a885-a851364ca8c7",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad913a95a939dfda78c9a14",
+  "imageURLs": [
+    "https://canny-assets.io/images/816bb0c78c3f545b14d3616c65634a4d.png",
+    "https://canny-assets.io/images/4ac589feca42b2ecb73fc84f5801dce0.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad913a95a939dfda78c9a33/866857661.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-21T19:34:01.832Z",
+  "subCategoryID": null,
+  "title": "[1934] [SDK 3.10.6-beta.2] Avatars using new FT are sunk in the floor when viewed on beta",
+  "trendingScore": 2964.666761205031,
+  "updatedBy": "5f30ecee654cd4491456a82f",
+  "urlName": "1934-sdk-3106-beta2-avatars-using-new-ft-are-sunk-in-the-floor-when-viewed-on-be",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": null,
+      "voteID": "6ad913a9169b5b903301c834"
+    }
+  ]
+}
