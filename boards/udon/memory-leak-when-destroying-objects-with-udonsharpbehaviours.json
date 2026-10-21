@@ -1,0 +1,93 @@
+{
+  "_id": "6ad8d4a8f25b18e88706dba9",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-10-21T15:12:19.946710Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f8870764027ce1b387d2da6",
+    "alias": "Polite Goldfish",
+    "aliasID": "65c26ed9ed6eefce4c854f4a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/411a0e83bede2b4252eb0e571bd76705.png",
+    "created": "2020-10-15T15:53:26.758Z",
+    "name": "ShingenPizza",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f8870764027ce1b387d2da6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-21T15:05:12.818Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "While spending time in my (private) world with a bunch of friends, some started crashing, and we noticed that VRC is using huge amounts of RAM.\n\nI traced the issue to a script that frequently recreates a UI list, where every entry is an instantiated object with an UdonSharpBehaviour script controlling the UI contents.\n\nAs it turns out, using Destroy() on an object with an UdonSharpBehaviour does not seem to free the memory - my guess is that the overarching Udon system is still keeping references to every instance of a script that ever existed (for example to run their Update()s?).\n\nThe memory gets freed shortly after leaving the world, so it's not the end of the world, but i would still appreciate fixing it.\n\nAs a workaround (and, frankly, just a better/more performant solution) i no longer destroy the entries, but reuse the old ones, and just hide the ones that are not needed, but that doesn't change the fact that it's a bug that other people may be affected by. It may be the reason behind many other unspecified memory leak reports here.\n\nI created a world that presents the issue\n\nhttps://vrchat.com/home/world/wrld_edc6dd3e-f111-48c8-a907-7da43a98b9fb\n\nFunctionally, it just performs `Destroy(Instantiate(template));` 100 times per an execution of a FixedUpdate() when the cube/button gets activated (green).\n\nThe template of the left button is just an empty GameObject, while of the one on the right contains an additional empty UdonSharpBehaviour.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad8d4a8f25b18e88706dba0",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad8d4a8f25b18e88706dba9/446850989.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-21T15:05:12.818Z",
+  "subCategoryID": null,
+  "title": "Memory leak when destroying objects with UdonSharpBehaviours",
+  "trendingScore": 2964.6400928452426,
+  "updatedBy": "5f8870764027ce1b387d2da6",
+  "urlName": "memory-leak-when-destroying-objects-with-udonsharpbehaviours",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f8870764027ce1b387d2da6",
+      "alias": "Polite Goldfish",
+      "aliasID": "65c26ed9ed6eefce4c854f4a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/411a0e83bede2b4252eb0e571bd76705.png",
+      "companies": [],
+      "name": "ShingenPizza",
+      "urlName": null,
+      "voteID": "6ad8d4a8169b5b9033ffc502"
+    }
+  ]
+}
