@@ -1,0 +1,104 @@
+{
+  "_id": "6ad909eeecbaf2ee55c2409d",
+  "aiCategories": [
+    "loc.website",
+    "web.docs"
+  ],
+  "aiTaggedAt": "2026-10-21T18:56:52.341020Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c3580b3d9b44b26d3fbf",
+    "created": "2022-08-25T18:45:44.822Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6307c3580b3d9b44b26d3fbf",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-21T18:52:30.507Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "A minor accessibility / usability annoyance with the visual typewriter indicator at https://wiki.vrchat.com/ during a maintenance, depending on screen reader software and settings used.\n\nExpected markup (line 24):\n\n```\n\n          <p class=\"p with-before output new-output uppercase\" aria-hidden=\"true\"></p>\n\n```\n\nActual markup:\n\n```\n\n          <p class=\"p with-before output new-output uppercase\"></p>\n\n```\n\nAlternatively, the whole block could be replaced with CSS with `::before` and `::after`, but the details of the implementation are out of scope.\n\nExpected result: Always skipped by screen reader software as silent.\n\nActual result: Sometimes read aloud as a \"blank\" line (in NVDA and JAWS according to GLM-5.3-Flash), if not skipped.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/947a9f5675bf730635159016f267ddc2.mp4"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/947a9f5675bf730635159016f267ddc2.mp4",
+      "mimeType": "video/mp4",
+      "name": "2026-10-21 18-53-53",
+      "url": "https://canny-assets.io/files/947a9f5675bf730635159016f267ddc2.mp4"
+    }
+  ],
+  "ideaID": "6ad909eeecbaf2ee55c24098",
+  "imageURLs": [
+    "https://canny-assets.io/images/44e9f3e668fe80fc23195d353b82d201.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-21T18:52:30.507Z",
+  "subCategoryID": null,
+  "title": "The visual typewriter in a maintenance notice (as seen on VRChat Wiki) may be read as \"blank\" by screen reader software",
+  "trendingScore": 2964.6626418101896,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "the-visual-typewriter-in-a-maintenance-notice-as-seen-on-vrchat-wiki-may-be-read",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ad909ee169b5b9033017632"
+    }
+  ]
+}
