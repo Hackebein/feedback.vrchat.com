@@ -1,0 +1,96 @@
+{
+  "_id": "6ad90f1ecb62547055f71316",
+  "aiCategories": [
+    "loc.website",
+    "web.docs"
+  ],
+  "aiTaggedAt": "2026-10-21T19:25:35.227258Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c361aff81444bd7bb6ca",
+    "created": "2022-08-25T18:45:53.752Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6307c361aff81444bd7bb6ca",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-21T19:14:38.100Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "A minor accessibility / usability annoyance for screen reader users. Please set the expectations correct when loading a page for the first time.\n\nAffected URL: https://wiki.vrchat.com/ during a maintenance.\n\nExpected result: Set the expectation right from the beginning with `<title>VRChat  — Under maintenance</title>`, before the page contents are read.\n\nActual result: The first thing read out loud is the page title \"VRChat\" (`<title>VRChat</title>`, indicating no error), followed by reading aloud [\"underscore underscore forward slash forward slash backwards slash V forward slash\" noise from the incorrectly marked up ASCII logo](https://feedback.vrchat.com/website/p/the-ascii-logo-in-vrchat-maintenance-notice-as-seen-on-vrchat-wiki-is-not-access), before getting to the actual content which says the page is unavailable.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad90f1dcb62547055f712f1",
+  "imageURLs": [
+    "https://canny-assets.io/images/225c824677ec31de8dd7309652cbb735.png",
+    "https://canny-assets.io/images/17d6324c80b72fe28612efc3032b7d3f.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-21T19:14:38.100Z",
+  "subCategoryID": null,
+  "title": "Change the title of maintenance notice page to include \"Under maintenance\"",
+  "trendingScore": 2964.6648369813206,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "change-the-title-of-maintenance-notice-page-to-include-under-maintenance",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ad90f1e169b5b9033019678"
+    }
+  ]
+}
