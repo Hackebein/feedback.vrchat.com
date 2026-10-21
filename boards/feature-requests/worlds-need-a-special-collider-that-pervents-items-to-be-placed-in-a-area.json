@@ -2,17 +2,18 @@
   "__v": 0,
   "_id": "688848046101a1d1e5b0ffbd",
   "aiCategories": [
-    "loc.in-world",
-    "worlds.persistence"
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "worlds.content-gating"
   ],
-  "aiTaggedAt": "2026-10-20T03:55:44.348224Z",
+  "aiTaggedAt": "2026-10-21T11:28:07.350058Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f5eec74c160f3643296c32b",
     "alias": "Fairy tale Falcon",
     "aliasID": "65c27af3ed6eefce4c78ca5d",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/c70430d801ac96c0a4f4ae7d6b672890.png",
+    "avatarURL": "https://canny-assets.io/images/aeaeccb16fd27134d97f21d63be4ae9c.png",
     "created": "2020-09-14T04:07:16.172Z",
     "name": "Cattuccino",
     "serviceAccount": false,
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -66,13 +67,71 @@
       "postDeleted": false,
       "postID": "688848046101a1d1e5b0ffbd",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "You're gonna like the newest SDK Beta!\n\nhttps://vrc-beta-docs.netlify.app/worlds/components/vrc_placementzone/",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad89f980de14898aea31038",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f5eec74c160f3643296c32b",
+        "alias": "Fairy tale Falcon",
+        "aliasID": "65c27af3ed6eefce4c78ca5d",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/aeaeccb16fd27134d97f21d63be4ae9c.png",
+        "created": "2020-09-14T04:07:16.172Z",
+        "name": "Cattuccino",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-21T11:18:48.129Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "58c6cbcffd04b1785f747b6c",
+          "alias": "Huge Cat",
+          "aliasID": "65ba012ced6eefce4cea0f7d",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/d507f53db80e7351083467a447bf5959.png",
+          "created": "2017-03-13T16:41:51.683Z",
+          "name": "owlboy",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ad69dcc40bd019ca1f3a278",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "688848046101a1d1e5b0ffbd",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{58c6cbcffd04b1785f747b6c|full_name} thats epic thanks for sharing",
       "viewerReactions": null,
       "voteID": null
     }
@@ -144,7 +203,7 @@
       "alias": "Fairy tale Falcon",
       "aliasID": "65c27af3ed6eefce4c78ca5d",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c70430d801ac96c0a4f4ae7d6b672890.png",
+      "avatarURL": "https://canny-assets.io/images/aeaeccb16fd27134d97f21d63be4ae9c.png",
       "companies": [],
       "name": "Cattuccino",
       "urlName": null,
