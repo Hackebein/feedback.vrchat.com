@@ -1,0 +1,93 @@
+{
+  "_id": "6ad90d6aa6856994149c6d77",
+  "aiCategories": [
+    "loc.website",
+    "web.docs"
+  ],
+  "aiTaggedAt": "2026-10-21T19:14:43.176669Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c361aff81444bd7bb6ca",
+    "created": "2022-08-25T18:45:53.752Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6307c361aff81444bd7bb6ca",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-21T19:07:22.523Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "A best practice is to include the charset meta definition in a HTML page, but this is missing in the maintenance notice shown on VRChat Wiki at https://wiki.vrchat.com/ during a maintenance.\n\nExpected markup: `<meta charset=\"utf-8\">` inside the `<head>` element, placed on line immediately before or after the `<title>` element (but within the first 1024 bytes of the document).\n\nActual markup: Missing.\n\nSee:\n\n- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta#charset\n\n- https://html.spec.whatwg.org/multipage/semantics.html#charset\n\nNote: The charset must be `charset=\"utf-8\"`, not `charset=\"UTF-8\"`! The RFC 3629 standard name is a hyphenated UTF-8, but the web markup is lowercase hyphenated.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad90d6aa6856994149c6d66",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-21T19:07:22.523Z",
+  "subCategoryID": null,
+  "title": "Missing meta charset in VRChat maintenance notice (as seen on VRChat Wiki)",
+  "trendingScore": 2964.6641167845614,
+  "updatedBy": null,
+  "urlName": "missing-meta-charset-in-vrchat-maintenance-notice-as-seen-on-vrchat-wiki",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ad90d6a169b5b9033018cd4"
+    }
+  ]
+}
