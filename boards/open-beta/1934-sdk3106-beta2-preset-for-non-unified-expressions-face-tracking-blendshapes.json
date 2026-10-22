@@ -2,10 +2,10 @@
   "_id": "6ad9a06729036ba84eaca98d",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.tracking",
-    "open-beta"
+    "sdk.vrcsdk",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-22T05:39:09.586824Z",
+  "aiTaggedAt": "2026-10-22T07:35:09.072002Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66c7f83ba2fca0a622090327",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Unified Expressions is designed to bridge \"ARKit / PerfectSync, SRanipal, FACS, and others.\". It's indeed in the end VRCFT will convert the parameters to the UE, but the issue is many facetracking blendshape sets are designed in things other than the UE(like commonly ARKits/PerfectSync) on the avatars.\n\nWhich will make those users(include me) being a little confuse. And I don't think filling everything blindly will give good results since this thing was dealt with things like VRCFaceTracking-Templates(Adjerry91) or custom controllers in the past.\n\nAdditionally, And for VRoid, the famous editor tool 'HANA_Tool' also adds ARKit. And some avatars are designed to allow Vtubering with softwares like Warudo, VseeFace or so, those avatars are come with the ARKit blendshapes with no FT preset(animator/controller), and now they can be sort of consider as naturally support of the in-game facetracking avatars by adding built-in FT component(doesn't mean it will looks good, though, but you can fine adjust it with the new system).\n\nBy allowing Auto-Fill things correctly it will be tons of easier for many people, or at least it will be easier to convert older FT avatars",
+  "details": "Unified Expressions is designed to bridge \"ARKit / PerfectSync, SRanipal, FACS, and others.\". It's indeed in the end VRCFT will convert the parameters to the UE, but the issue is many facetracking blendshape sets are designed in things other than the UE(like commonly ARKits/PerfectSync) on the avatars.\n\nWhich will make those users(include me) being a little confuse. And I don't think filling everything blindly will give good results since this thing was dealt with things like VRCFaceTracking-Templates(Adjerry91) or custom controllers in the past.\n\nAdditionally, for VRoid, the famous editor tool 'HANA_Tool' also adds ARKit. And some avatars are designed to allow Vtubering with softwares like Warudo, VseeFace or so, those avatars are come with the ARKit blendshapes with no FT preset(animator/controller), and now they can be sort of consider as naturally support of the in-game facetracking avatars by adding built-in FT component(doesn't mean it will looks good, though, but you can fine adjust it with the new system).\n\nBy allowing Auto-Fill things correctly it will be tons of easier for many people, or at least it will be easier to convert older FT avatars",
   "error": null,
   "eta": null,
   "etaPublic": true,
