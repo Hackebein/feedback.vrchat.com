@@ -2,10 +2,10 @@
   "_id": "6ad67ad5ee05eaf2df354aa9",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.expressions",
-    "sdk.vrcsdk"
+    "avatars.tracking",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-10-20T02:35:29.114182Z",
+  "aiTaggedAt": "2026-10-22T04:57:04.343500Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f30ecee654cd4491456a82f",
@@ -35,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -81,6 +81,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I should also add that the calculations for most of the blended shapes and simplified parameters are already calculated and provided by the VRCFT software over OSC: https://github.com/benaclejames/VRCFaceTracking/blob/master/VRCFaceTracking.Core/Params/Expressions/UnifiedExpressionsParameters.cs You'd just need to add functionality to the new FT system to receive and sync them.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ad996a3791cffdcead98312",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6074413eb2699d0dae05d4f7",
+        "alias": "Decent Blackbird",
+        "aliasID": "65e0160ea6e3ea79dd19dfe2",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2021-04-12T12:46:54.477Z",
+        "name": "Mike Da Bird",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-22T04:52:51.499Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad67ad5ee05eaf2df354aa9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I shall add, currently converting my own avatar base to Native FT, it supports pupil dilation (when using something like a rooted Quest Pro, or Steam Frame in the near future) and works on Jerry's / Pawlygon's templates but not using Native FT. Reason is that Native FT, as mentioned here, does not send Simplified Parameters (pupil dilation on QPro uses the PupilDilation shape on both eyes, being unsupported here, and does not send either EyeDilation or EyeConstrict per eye shapes). I can confirm this through the debug menu. Adding support for the well established Simplified Shapes would save a LOT of effort for everyone instead of doing manual redundant math and praying your headset can send all the raw shape data through VRCFT.",
       "viewerReactions": null,
       "voteID": null
     }
