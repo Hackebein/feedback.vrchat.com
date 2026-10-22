@@ -2,10 +2,11 @@
   "_id": "6ad67ad5ee05eaf2df354aa9",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.fbt",
+    "open-beta",
+    "avatars.tracking",
     "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-10-22T11:09:07.130976Z",
+  "aiTaggedAt": "2026-10-22T19:00:51.653323Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f30ecee654cd4491456a82f",
@@ -35,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -118,7 +119,9 @@
       "postDeleted": false,
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -169,6 +172,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Would be nice to add on to this where it disables eye blink (if animation driven) when eye tracking is active, so be able to disable certain animation/parameters when either face tracking or eye tracking is active.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ada5b32c647c2a4b6cd208b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f30ecee654cd4491456a82f",
+        "alias": "Confident Albatross",
+        "aliasID": "65c26da3ed6eefce4c4d0730",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+        "created": "2020-08-10T06:45:02.264Z",
+        "name": "lackofbindings",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-22T18:51:30.035Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "61aaa869ce67b5447b2ab6dd",
+          "alias": "Ultimate Parrotfish",
+          "aliasID": "65c2ba03ed6eefce4c95cc75",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/a9526a5ad359373935e4e4a54db68fe9.png",
+          "created": "2021-12-03T23:29:45.023Z",
+          "name": "Surami",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ad9eda5cb5b49134814d40f",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad67ad5ee05eaf2df354aa9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{61aaa869ce67b5447b2ab6dd|full_name} Agreed! VRCFT also already provides EyeTrackingActive and LipTrackingActive over OSC for /v2/, it would be nice if VRChat could add those too. Ideally the same parameters could also be activated by Selfie Expression.",
       "viewerReactions": null,
       "voteID": null
     }
