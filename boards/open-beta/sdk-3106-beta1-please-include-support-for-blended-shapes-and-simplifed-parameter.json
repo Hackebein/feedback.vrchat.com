@@ -165,7 +165,9 @@
       "postDeleted": false,
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -241,7 +243,7 @@
         "alias": "Rosewood Orca",
         "aliasID": "65c28396ed6eefce4cd16ac0",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/2a7f657b525e750cb7d784823523d183.png",
+        "avatarURL": "https://canny-assets.io/images/484fb536e0f0c5ae790c8cc0794b52ff.png",
         "created": "2023-06-28T00:51:09.973Z",
         "name": "Purpzie",
         "serviceAccount": false,
@@ -268,7 +270,7 @@
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -287,7 +289,7 @@
         "alias": "Rosewood Orca",
         "aliasID": "65c28396ed6eefce4cd16ac0",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/2a7f657b525e750cb7d784823523d183.png",
+        "avatarURL": "https://canny-assets.io/images/484fb536e0f0c5ae790c8cc0794b52ff.png",
         "created": "2023-06-28T00:51:09.973Z",
         "name": "Purpzie",
         "serviceAccount": false,
@@ -313,13 +315,15 @@
       "postDeleted": false,
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Apparently custom expressions are limited to 512 instructions TOTAL, for the whole avatar, and it's a hard limit. This makes it extremely difficult to emulate the missing shapes. Yikes",
+      "value": "Apparently custom expressions are limited to 512 instructions TOTAL, for the whole avatar, and it's a hard limit. This makes it extremely difficult to emulate the missing shapes. Yikes.\n\nPlease add the missing names so we don't have to use up so much of that 512 limit just to bring them back ;_;",
       "viewerReactions": null,
       "voteID": null
     }
@@ -341,20 +345,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 77,
+  "maxScore": 78,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad67ad5ee05eaf2df354aa9/523841484.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 77,
+  "score": 78,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-19T20:17:25.301Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.1] Please include support for blended shapes and simplifed parameters in the new native FT",
-  "trendingScore": 2968.2075488978126,
+  "trendingScore": 2968.22710747837,
   "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "sdk-3106-beta1-please-include-support-for-blended-shapes-and-simplifed-parameter",
   "viewerIsAuthor": false,
@@ -367,6 +371,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "63009a74fbe72d44aeb89553",
+      "alias": "Optimistic Wallaby",
+      "aliasID": "65ce97410129d7ae441db0ab",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b5d043ef4da83db89efeb3045d126949.png",
+      "companies": [],
+      "name": "ShalkorLeonidas",
+      "urlName": null,
+      "voteID": "6adbee98c7e052262d60f9e2"
+    },
     {
       "_id": "60cad0b6a648c034e070e9e9",
       "alias": "Dutch white Wildcat",
@@ -905,17 +920,6 @@
       "name": "Talarubi",
       "urlName": null,
       "voteID": "6ad6a602169b5b9033f301c3"
-    },
-    {
-      "_id": "623cf46719e9e1527e6d0314",
-      "alias": "Ivory Basilisk",
-      "aliasID": "65c36d1ded6eefce4c3fd996",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/521c32d47f87aaee37112cac4ff4fb61.png",
-      "companies": [],
-      "name": "Bedmonster",
-      "urlName": null,
-      "voteID": "6ad6a4a8169b5b9033f2fb67"
     }
   ]
 }
