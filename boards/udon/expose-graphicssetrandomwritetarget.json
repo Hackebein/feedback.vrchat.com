@@ -72,7 +72,9 @@
       "postDeleted": false,
       "postID": "66034fba867eb3caadca6f16",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -97,20 +99,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 51,
+  "maxScore": 53,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66034fba867eb3caadca6f16/1390803503.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 51,
+  "score": 53,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2024-03-26T22:44:10.909Z",
   "subCategoryID": null,
   "title": "Expose Graphics.SetRandomWriteTarget",
-  "trendingScore": 2966.0636179490084,
+  "trendingScore": 2966.352168671269,
   "updatedBy": "5fee2a5e4749b21a206646a9",
   "urlName": "expose-graphicssetrandomwritetarget",
   "viewerIsAuthor": false,
@@ -123,6 +125,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5f2e0a4e8464150716ffd322",
+      "alias": "Aegean blue Kangaroo",
+      "aliasID": "65c26da3ed6eefce4c4d0953",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d38f0bdb7eb40aa9203789d4fe4183e2.png",
+      "companies": [],
+      "name": "ZenithVal",
+      "urlName": null,
+      "voteID": "6adbdd88c7e052262d60aa06"
+    },
+    {
+      "_id": "5ae14b192f26cf1a6d66ba79",
+      "alias": "Different Halibut",
+      "aliasID": "65ba09e7ed6eefce4cccd990",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/56e97fb8aac5057197aa7f4593b6827a.png",
+      "companies": [],
+      "name": "rollthered",
+      "urlName": null,
+      "voteID": "6adbdb64c7e052262d60a4d8"
+    },
     {
       "_id": "62df3a55f6fa434679f836fa",
       "alias": "Patient Marlin",
@@ -650,28 +674,6 @@
       "name": "IssueNest-Bot",
       "urlName": null,
       "voteID": "66035129a63714bcb3af291a"
-    },
-    {
-      "_id": "5f36b82c9ec59c0d1272ffe2",
-      "alias": "Skilled Halibut",
-      "aliasID": "65c28a12ed6eefce4cca58b4",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/26a211b44f428bb0218a25c598957e36.png",
-      "companies": [],
-      "name": "Nestorboy",
-      "urlName": null,
-      "voteID": "6603510ca63714bcb3a95bc7"
-    },
-    {
-      "_id": "5bd36bbc45613e4c30e48922",
-      "alias": "Informal Guppy",
-      "aliasID": "65c2f342ed6eefce4c607a03",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/ba7f04d7e2954855e88bee8d9617abd5.png",
-      "companies": [],
-      "name": "d4rkpl4y3r",
-      "urlName": null,
-      "voteID": "660350fba63714bcb3a5d8f8"
     }
   ]
 }
