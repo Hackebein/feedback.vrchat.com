@@ -1,11 +1,10 @@
 {
   "_id": "6adb1c6e1d2800d9aadc4f93",
   "aiCategories": [
-    "loc.in-world",
     "loc.quick-menu",
     "groups.instances"
   ],
-  "aiTaggedAt": "2026-10-23T08:55:48.783638Z",
+  "aiTaggedAt": "2026-10-23T09:04:56.545591Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -91,7 +90,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "VRChat clients may not receive synchronized data about queue status or information about leaving a queue even after refreshing instance details, leaving clients with stale cached data about queue status in memory until restart.\n\n1. Launch a VRChat client.\n\n2. Queue to a full Group Public/Group+/Group instance.\n\n3. Launch a second VRChat client using `launch.exe` from the VRChat install directory, login with the same account.\n\n4. In the second client, leave the queue to the full Group Public/Group+/Group instance.\n\n5. Wait for the instance to become empty. (Several hours later.)\n\n6. In the first client, open Quick Menu, click on \"Instance Queue\" text to view the instance details.\n\nExpected result: Leave the queue in all clients, or refresh queue status after viewing the instance details.\n\nActual result: Instance is displayed to be empty (0/10 users), queued 1/1 in a client indefinitely, with an option to leave the queue.\n\nI was unable to determine if the server is still reporting queued 1/1 or if it's client-side stale data only.\n\n`grp_646628f9-7df2-475d-997b-2052cf88ec89`, `wrld_0fb88df3-2057-4c2f-8e06-e948864378fd`, US West, Group+. Instance ID #676767?\n\nA partial log file is available and attached, for environment information only.",
+  "details": "VRChat clients may not receive synchronized data about queue status or information about leaving a queue even after refreshing instance details, leaving clients with stale cached data about queue status in memory until restart.\n\n1. Launch a VRChat client.\n\n2. Queue to a full Group Public/Group+/Group instance.\n\n3. Launch a second VRChat client using `launch.exe` from the VRChat install directory, login with the same account.\n\n4. In the second client, leave the queue to the full Group Public/Group+/Group instance.\n\n5. Wait for the instance to become empty. (Several hours later.)\n\n6. In the first client, open Quick Menu, click on \"Instance Queue\" text to view the instance details.\n\nExpected result: Leave the queue in all clients, or refresh queue status after viewing the instance details. No queue is expected.\n\nActual result: Instance is displayed to be empty (0/10 users), queued 1/1 in a client indefinitely, with an option to leave the queue.\n\nI was unable to determine if the server is still reporting queued 1/1 or if it's client-side stale data only.\n\n`grp_646628f9-7df2-475d-997b-2052cf88ec89`, `wrld_0fb88df3-2057-4c2f-8e06-e948864378fd`, US West, Group+. Instance ID #676767?\n\nA partial log file is available and attached, for environment information only. The attached screenshot shows 0/10 users in the instance, with myself queued as 1/1 indefinitely.",
   "error": null,
   "eta": null,
   "etaPublic": true,
