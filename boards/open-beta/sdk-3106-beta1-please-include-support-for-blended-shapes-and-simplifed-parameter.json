@@ -268,7 +268,9 @@
       "postDeleted": false,
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -296,20 +298,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 68,
+  "maxScore": 69,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad67ad5ee05eaf2df354aa9/523841484.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 68,
+  "score": 69,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-19T20:17:25.301Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.1] Please include support for blended shapes and simplifed parameters in the new native FT",
-  "trendingScore": 2968.032090513013,
+  "trendingScore": 2968.0525504257735,
   "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "sdk-3106-beta1-please-include-support-for-blended-shapes-and-simplifed-parameter",
   "viewerIsAuthor": false,
@@ -322,6 +324,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "640bda39a2437e452ed23b4f",
+      "alias": "Amaranth Bison",
+      "aliasID": "65f5d063a63714bcb33de77b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b09dba56c769469f47e6d7dbeaec1c85.png",
+      "companies": [],
+      "name": "SmugWolf",
+      "urlName": null,
+      "voteID": "6adabb94169b5b90330bd1f4"
+    },
     {
       "_id": "61cc77426b455b597061148e",
       "alias": "Umbral green Mollusk",
@@ -860,17 +873,6 @@
       "name": "TheBlackParrot",
       "urlName": null,
       "voteID": "6ad68f34169b5b9033f28a27"
-    },
-    {
-      "_id": "60ae8aab043d6e47775449db",
-      "alias": "Old lace Haddock",
-      "aliasID": "65cc7eaced6eefce4c63b7ca",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/04a232bc70437a0bf044cc91de509399.png",
-      "companies": [],
-      "name": "Toastador",
-      "urlName": null,
-      "voteID": "6ad68ec0169b5b9033f288a4"
     }
   ]
 }
