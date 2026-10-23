@@ -3,7 +3,7 @@
   "aiCategories": [
     "user-support"
   ],
-  "aiTaggedAt": "2026-10-23T01:47:33.358919Z",
+  "aiTaggedAt": "2026-10-23T07:57:36.146413Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6adab376169b5b90330bb846",
@@ -27,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -64,13 +64,59 @@
       "postDeleted": false,
       "postID": "6adab4873a4af223962035b9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "For this type of request, open a ticket at https://help.vrchat.com and name the world and timestamps",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adb11f73a4af223962a92ee",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-23T07:51:19.708Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6adab4873a4af223962035b9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Hello!\n\nIt seems like you may have submitted a user support request to an incorrect channel.\n\nThis Canny board is for bug reports, for user support or assistance with lost persistence data submit a user support request within 30 days of the incident with world + timestamps to https://vrch.at/support in a ticket.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -94,7 +140,7 @@
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
-  "ogImageURL": null,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6adab4873a4af223962035b9/1551279225.jpeg",
   "opportunities": [],
   "pinnedComment": null,
   "score": 2,
