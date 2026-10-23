@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.quick-menu",
     "loc.in-world",
+    "platforms.standalone-vr.quest",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-23T02:10:20.911306Z",
+  "aiTaggedAt": "2026-10-23T02:59:22.423960Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6239a8ce8636e1084c6455ee",
@@ -37,12 +38,21 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1) In VR mode use any overlay software that displays your FPS, so you can see it without opening the Quick Menu.\n\n2) Put some load on the system so that your FPS isn't constantly capped at maximum - like go to a populated world, show a bunch of avatars, enable the personal mirror, etc.\n\n3) Hide nameplates by default.\n\n4) Compare your FPS with the Quick Menu open and closed.\n\nIn the example screenshots, I get 13 fps with the menu open, and 22 with it closed.\n\nHere's the video the screenshots were taken from. I repeatedly open and close the menu to demonstrate that the FPS changes depending on whether it's open or closed.\n\nhttps://youtu.be/ABYQgv7VdBI",
+  "details": "1) In VR mode use any overlay software that displays your FPS, so you can see it without opening the Quick Menu.\n\n2) Put some load on the system so that your FPS isn't constantly capped at maximum - like go to a populated world, show a bunch of avatars, enable the personal mirror, etc.\n\n3) Hide nameplates by default.\n\n4) Compare your FPS with the Quick Menu open and closed.\n\nIn the example screenshots, I get 13 fps with the menu open, and 22 with it closed.\n\nHere's the video the screenshots were taken from. I repeatedly open and close the menu to demonstrate that the FPS changes depending on whether it's open or closed.\n\nhttps://youtu.be/ABYQgv7VdBI\n\nEdit: added logfile. The timestamps in the logfile match the time on the clock.",
   "error": null,
   "eta": null,
   "etaPublic": true,
-  "fileURLs": [],
-  "files": [],
+  "fileURLs": [
+    "https://canny-assets.io/files/f0c4acf460c6db0f8033309b595a1700.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/f0c4acf460c6db0f8033309b595a1700.txt",
+      "mimeType": "text/plain",
+      "name": "output_log_2026-10-20_17-58-24",
+      "url": "https://canny-assets.io/files/f0c4acf460c6db0f8033309b595a1700.txt"
+    }
+  ],
   "ideaID": "6adac15b8fdcf65c3b0b7a85",
   "imageURLs": [
     "https://canny-assets.io/images/9426db2e14297044fbd298aefb082779.png",
