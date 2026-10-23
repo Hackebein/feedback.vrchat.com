@@ -2,10 +2,10 @@
   "_id": "6ac00d12b6c0c0bda8210aae",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
+    "sdk.world-building",
     "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-10-20T21:39:41.636437Z",
+  "aiTaggedAt": "2026-10-23T22:39:43.225536Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61665e3e7448d57ed9eb49da",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -67,7 +67,7 @@
       "postID": "6ac00d12b6c0c0bda8210aae",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -113,7 +113,7 @@
       "postID": "6ac00d12b6c0c0bda8210aae",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -337,6 +337,65 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{64f8e8d313b550392ac6b63b|full_name} I don't understand where Avatar/World SDK's working perfectly together came in? I said I think having a \"Chair\" component that lets you define where the edge of the seat is and other similar chair-specific features without relying on a custom U# script would be nice to have, then for the technical people who are using stations for things that may not exactly be a stool/chair/recliner/booth/etc (ie: custom movement systems) to construct their systems using more abstract things.\n\nPerhaps maybe instead of a separate component, a function call with DX like registering/unregistering a Billboard?\n\nSorry if I sound ignorant, I'm still learning!",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adbe102873fc1f4e95fa72f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "61665e3e7448d57ed9eb49da",
+        "alias": "Olive Vole",
+        "aliasID": "65c26da3ed6eefce4c4d091c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/017df8e6ae4567afbc647784175ca43d.png",
+        "created": "2021-10-13T04:19:10.295Z",
+        "name": "4Bakers",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-23T22:34:42.371Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/0a33ff78e3ed0b7c455180b129c24431.png",
+        "https://canny-assets.io/images/b8eb697d912cefa895665f5ffc38503d.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "67a0ed8d6e7354cc8f8c7acd",
+          "alias": "Cautious Minnow",
+          "aliasID": "67a0ed8eafacf378f12ca236",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/9b137a5b13ebd4b419ec401f15b027eb.png",
+          "created": "2025-02-03T16:23:41.681Z",
+          "name": "Uzer Tekton",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac0be7ef708c850f9c40128",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac00d12b6c0c0bda8210aae",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{67a0ed8d6e7354cc8f8c7acd|full_name} I agree almost entirely. However, I think also having a \"VRC Chair\" component for just the expected normal \"literal chair\" use-case is good for developer experience. It could have Chair interaction settings specific to chairs that would be otherwise very frustrating for the UGC creator to do themselves, and would unify a 'standard experience' across the platform.\n\nFor example, what if the seated position animation was generated using the avatar's proportions in combination with user-defined chair proportions (seat depth, back angle, leg angle... maybe togglable floor depth too)?\n\nAnd another thing I proposed: lines/polylines/splines for 'Long Seats' that let you sit anywhere along them (even in people's laps)\n\nThese are things that would revolutionize chairs in VRChat overnight but would also be terrible to implement as a user using atomic components and doesn't make sense to put in anything other than a dedicated Chair component, right?",
       "viewerReactions": null,
       "voteID": null
     }
