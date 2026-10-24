@@ -4,7 +4,7 @@
     "loc.website",
     "web.feedback"
   ],
-  "aiTaggedAt": "2026-10-24T20:32:20.266298Z",
+  "aiTaggedAt": "2026-10-24T20:40:05.365789Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -101,42 +101,62 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I preferred viewing attachments (log files, videos) from VRChat Feedback inline in browser (previous behavior), instead of downloading the attachments to view those (current behavior).\n\nThis change occurred when VRChat Feedback switched attachment URLs from the `canny-assets.io` domain to an API end-point under the `feedback.vrchat.com` domain.\n\nCompare:\n\n- https://canny-assets.io/files/57104cf0d4a15d214625c849d769531d.txt (behaves like `Content-Disposition: inline`)\n\n- https://feedback.vrchat.com/api/files/download/57104cf0d4a15d214625c849d769531d.txt (`Content-Disposition: attachment`, currently used)",
+  "details": "I preferred viewing attachments (log files, videos) from VRChat Feedback inline in browser (previous behavior), instead of downloading the attachments to view those (current behavior).\n\nThis change occurred when VRChat Feedback switched attachment URLs from the `canny-assets.io` domain to an API end-point under the `feedback.vrchat.com` domain.\n\nCompare:\n\n- https://canny-assets.io/files/57104cf0d4a15d214625c849d769531d.txt (behaves like `Content-Disposition: inline`, previous behavior)\n\n- https://feedback.vrchat.com/api/files/download/57104cf0d4a15d214625c849d769531d.txt (`Content-Disposition: attachment`, currently used)\n\nExpected behavior: Opening `test.txt` from this topic should be displayed inline in browser.\n\nActual behavior: Opening `test.txt` from this topic is downloaded  as an attachment (in my configuration, by default to the Downloads directory), adding friction.\n\nAdditional info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Disposition",
   "error": null,
   "eta": null,
   "etaPublic": true,
-  "fileURLs": [],
-  "files": [],
+  "fileURLs": [
+    "https://canny-assets.io/files/bc83c22f1652cd39750c5434ccde3d4f.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/bc83c22f1652cd39750c5434ccde3d4f.txt",
+      "mimeType": "text/plain",
+      "name": "test",
+      "url": "https://canny-assets.io/files/bc83c22f1652cd39750c5434ccde3d4f.txt"
+    }
+  ],
   "ideaID": "6add150c19d69be1bd8a54d6",
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-24T20:29:00.420Z",
   "subCategoryID": null,
   "title": "Content-Disposition regression on VRChat Feedback",
-  "trendingScore": 2965.1007865944157,
-  "updatedBy": null,
+  "trendingScore": 2965.5064480232954,
+  "updatedBy": "68098a4626271974ef4d2775",
   "urlName": "content-disposition-regression-on-vrchat-feedback",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/70d5c5f2d91b344aa2c17ed9cbc8fea8.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6add1670c7e052262d94adf7"
+    },
     {
       "_id": "68098a4626271974ef4d2775",
       "alias": "Extraordinary Peacock",
