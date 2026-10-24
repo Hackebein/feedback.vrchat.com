@@ -20,7 +20,7 @@ jobs:
     timeout-minutes: 15
     services:
       opensearch:
-        image: opensearchproject/opensearch:latest
+        image: opensearchproject/opensearch:3.9.0
         env:
           discovery.type: single-node
           OPENSEARCH_INITIAL_ADMIN_PASSWORD: Analytics_CI_Only_9!mQ2
