@@ -1,11 +1,12 @@
 {
   "_id": "697023f2c4c1da02d3b88240",
   "aiCategories": [
-    "loc.in-world",
-    "client.settings",
-    "platforms.cross-platform"
+    "loc.pc-client",
+    "loc.standalone-vr",
+    "platforms.cross-platform",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-10-08T23:52:41.701218Z",
+  "aiTaggedAt": "2026-10-24T23:07:48.747084Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67fbfac43e95e06f171a9940",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -67,7 +68,7 @@
       "postID": "697023f2c4c1da02d3b88240",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -284,7 +285,9 @@
       "postDeleted": false,
       "postID": "697023f2c4c1da02d3b88240",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -328,13 +331,59 @@
       "postDeleted": false,
       "postID": "697023f2c4c1da02d3b88240",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Especially with the rising cost of PC hardware, even fixed foveated rendering (eye-tracking not needed, just renders the edges of the screen lower resolution within the peripheral view outside of the binocular overlap) could f****** seriously save so many people's experience by slashing up to 40% of computational resources for the GPU.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adc76d7873fc1f4e96de428",
+      "aiGenerated": false,
+      "author": {
+        "_id": "646b46f5e67dc809215ad295",
+        "alias": "Stable Dolphin",
+        "aliasID": "6957138af85d59c66d7fbbf5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/fda1a2a57ccec5ebd466661718d6063f.png",
+        "created": "2023-05-22T10:41:57.422Z",
+        "name": "Okatsumo",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-24T09:13:59.691Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "697023f2c4c1da02d3b88240",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Up!",
       "viewerReactions": null,
       "voteID": null
     }
@@ -353,20 +402,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 36,
+  "maxScore": 37,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/697023f2c4c1da02d3b88240/995199394.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 36,
+  "score": 37,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-01-21T00:55:14.342Z",
   "subCategoryID": null,
   "title": "Dynamic Foveated Rendering (DFR) + Quad-Views Support (Eye-Tracked Rendering)",
-  "trendingScore": 2964.4832090307577,
+  "trendingScore": 2965.107522212904,
   "updatedBy": null,
   "urlName": "dynamic-foveated-rendering-dfr-quad-views-support-eye-tracked-rendering",
   "viewerIsAuthor": false,
@@ -379,6 +428,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "646b46f5e67dc809215ad295",
+      "alias": "Stable Dolphin",
+      "aliasID": "6957138af85d59c66d7fbbf5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/fda1a2a57ccec5ebd466661718d6063f.png",
+      "companies": [],
+      "name": "Okatsumo",
+      "urlName": null,
+      "voteID": "6adc7650c7e052262d934aa0"
+    },
     {
       "_id": "6adc294be0fc141e007b0a84",
       "alias": "Jasmine green Grasshopper",
