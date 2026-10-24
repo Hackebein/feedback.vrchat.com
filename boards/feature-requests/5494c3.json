@@ -113,7 +113,7 @@
       "postID": "6acc404f70875364d4d74fb1",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -170,7 +170,9 @@
       "postDeleted": false,
       "postID": "6acc404f70875364d4d74fb1",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -196,20 +198,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 293,
+  "maxScore": 294,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 293,
+  "score": 294,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-12T02:05:03.274Z",
   "subCategoryID": null,
   "title": "グループインスタンス内にて投票キックの対象に出来ない権限をロールに付与できる機能の実装",
-  "trendingScore": 2968.4462879570974,
+  "trendingScore": 2968.462679216088,
   "updatedBy": null,
   "urlName": "5494c3",
   "viewerIsAuthor": false,
@@ -222,6 +224,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5d2e156b8b641f47af4b344a",
+      "alias": "Bellflower Ptarmigan",
+      "aliasID": "65e119cba6e3ea79dd80df31",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/43ec156d0de2ba1e1328a85626fbb23c.png",
+      "companies": [],
+      "name": "P4n24",
+      "urlName": null,
+      "voteID": "6adc7d7dc7e052262d935b66"
+    },
     {
       "_id": "5f3df2f75af9f322b0f66e1b",
       "alias": "Eggplant Swordfish",
@@ -760,17 +773,6 @@
       "name": "ねぶい_nebui",
       "urlName": null,
       "voteID": "6acdc69e6fe99c84f2a82f83"
-    },
-    {
-      "_id": "5f3dfb088f11d7499fe4c224",
-      "alias": "Relaxed Tuna",
-      "aliasID": "65c9e697ed6eefce4c3e03aa",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/2883601225de4dc5786c0d27def5e4a3.png",
-      "companies": [],
-      "name": "アスタルテ",
-      "urlName": null,
-      "voteID": "6acdc4546fe99c84f2a82af6"
     }
   ]
 }
