@@ -80,7 +80,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Here's a mockup. They'd only calculate once, and you could use them across multiple parameter behaviors, saving a ton of instructions.",
+      "value": "Here's a mockup. They'd only calculate once, and you could use them across multiple parameter behaviors, saving a ton of instructions. Importantly, they could build on top of each other too (like having a variable reference a different variable).",
       "viewerReactions": null,
       "voteID": null
     }
@@ -100,20 +100,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 22,
+  "maxScore": 23,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad687c11bad798ed1ae74c4/1809466236.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 22,
+  "score": 23,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-19T21:12:33.577Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.1] Allow using already evaluated Parameter Behaviors in other Parameter Behaviors",
-  "trendingScore": 2967.424787997897,
+  "trendingScore": 2967.4728197785826,
   "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "sdk-3106-beta1-allow-using-already-evaluated-parameter-behaviors-in-other-parame",
   "viewerIsAuthor": false,
@@ -126,6 +126,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62257650af76933036b8c3a2",
+      "alias": "Lichen Pheasant",
+      "aliasID": "65c2ef28ed6eefce4ce872a1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/dda740a877e01daa520c91f70c30a428.png",
+      "companies": [],
+      "name": "Matrices",
+      "urlName": null,
+      "voteID": "6add21bac7e052262d94c2d8"
+    },
     {
       "_id": "5cfb491476b5b77800e860ec",
       "alias": "Papaya whip Echidna",
