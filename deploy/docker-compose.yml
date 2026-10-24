@@ -1,7 +1,7 @@
 # OpenSearch backing store. HTTP listens on loopback; ingest / gateway hit 127.0.0.1:9200.
 services:
   opensearch:
-    image: opensearchproject/opensearch:latest
+    image: opensearchproject/opensearch:3.9.0
     env_file:
       - /etc/feedback-search/admin.env
     environment:
