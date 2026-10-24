@@ -118,7 +118,9 @@
       "postDeleted": false,
       "postID": "66034fba867eb3caadca6f16",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -143,20 +145,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 77,
+  "maxScore": 78,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/66034fba867eb3caadca6f16/1390803503.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 77,
+  "score": 78,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2024-03-26T22:44:10.909Z",
   "subCategoryID": null,
   "title": "Expose Graphics.SetRandomWriteTarget",
-  "trendingScore": 2967.805881262972,
+  "trendingScore": 2967.8390688657564,
   "updatedBy": "5fee2a5e4749b21a206646a9",
   "urlName": "expose-graphicssetrandomwritetarget",
   "viewerIsAuthor": false,
@@ -169,6 +171,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "639e468235cad333ec7830d8",
+      "alias": "Coral Pike",
+      "aliasID": "65c3e6e6ed6eefce4ccb24a3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d6cd4f0ca9b7dc0ddec3fb1abb710da6.png",
+      "companies": [],
+      "name": "valenvrc",
+      "urlName": null,
+      "voteID": "6add2b06c7e052262d94d3f3"
+    },
     {
       "_id": "605ebb87b493c31833eb9bc8",
       "alias": "Spontaneous Pelican",
@@ -707,17 +720,6 @@
       "name": "Torvid",
       "urlName": null,
       "voteID": "66acdd64f66f1f693afea384"
-    },
-    {
-      "_id": "5c65e1590b9d061480ef7637",
-      "alias": "Gold Swift",
-      "aliasID": "65c535e6ed6eefce4ca18576",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/15f4693f7e5ed855072f3d38c3dfca52.png",
-      "companies": [],
-      "name": "mitsukaki",
-      "urlName": null,
-      "voteID": "667773c4d5dd336a20433a3e"
     }
   ]
 }
