@@ -417,7 +417,9 @@
       "postDeleted": false,
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -501,20 +503,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 81,
+  "maxScore": 82,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad67ad5ee05eaf2df354aa9/523841484.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 81,
+  "score": 82,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-19T20:17:25.301Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.1] Please include support for blended shapes and simplifed parameters in the new native FT",
-  "trendingScore": 2968.285256653717,
+  "trendingScore": 2968.3050672667573,
   "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "sdk-3106-beta1-please-include-support-for-blended-shapes-and-simplifed-parameter",
   "viewerIsAuthor": false,
@@ -527,6 +529,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62def0d835c37a55faae4539",
+      "alias": "Vivid Partridge",
+      "aliasID": "65c3fa1aed6eefce4c6d2f18",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0292baf1f402ed127bc0755c872d42c1.png",
+      "companies": [],
+      "name": "Flonky",
+      "urlName": null,
+      "voteID": "6adcc4b9c7e052262d93e90c"
+    },
     {
       "_id": "5f312bb396384e4a1b23218a",
       "alias": "Liable Muskox",
@@ -1065,17 +1078,6 @@
       "name": "emperorofmars",
       "urlName": null,
       "voteID": "6ad6b56e169b5b9033f34b1d"
-    },
-    {
-      "_id": "6227f8e4ceeec65ac8555990",
-      "alias": "Broad Stingray",
-      "aliasID": "66007e57a63714bcb309128c",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/d6f6a6a63bb25ffe3b6d298c7b0d529a.png",
-      "companies": [],
-      "name": "Ien⠀",
-      "urlName": null,
-      "voteID": "6ad6a6dd169b5b9033f304fc"
     }
   ]
 }
