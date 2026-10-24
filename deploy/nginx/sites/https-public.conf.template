@@ -85,7 +85,7 @@ server {
     }
 
     # Outside /api/ so file responses do not inherit no-store or Access-Control-Allow-Origin *.
-    location ~ ^/files/[0-9a-f]{32}\.[a-z0-9]+$ {
+    location ~ '^/files/[0-9a-f]{32}\.[a-z0-9]+$' {
         proxy_pass http://feedback_search_gateway;
         proxy_http_version 1.1;
         proxy_buffering off;
