@@ -61,6 +61,7 @@ import {
   type VisiblePostAnchor,
 } from "./preserveVisiblePost";
 import { setCurrentSearchParams } from "./searchFilterStore";
+import { absoluteFileProxyURL } from "./fileUrl";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
 
@@ -1141,7 +1142,7 @@ function readImageUrls(raw: unknown): string[] {
   return out;
 }
 
-type AttachmentFile = { name: string; url: string };
+type AttachmentFile = { name: string; url: string; downloadURL?: string };
 
 function readFileAttachments(raw: unknown): AttachmentFile[] {
   if (!Array.isArray(raw)) return [];
@@ -1149,9 +1150,10 @@ function readFileAttachments(raw: unknown): AttachmentFile[] {
   for (const f of raw) {
     if (!f || typeof f !== "object" || Array.isArray(f)) continue;
     const url = readString(f, "url");
-    if (!url) continue;
-    const name = readString(f, "name") || url;
-    out.push({ name, url });
+    const downloadURL = readString(f, "downloadURL");
+    if (!url && !downloadURL) continue;
+    const name = readString(f, "name") || url || downloadURL;
+    out.push(downloadURL ? { name, url, downloadURL } : { name, url });
   }
   return out;
 }
@@ -1178,7 +1180,11 @@ function readPositiveInt(raw: unknown): number | undefined {
 }
 
 function isTextFile(f: AttachmentFile): boolean {
-  return /\.txt(\?|#|$)/i.test(f.url) || /\.txt$/i.test(f.name);
+  return (
+    /\.txt(\?|#|$)/i.test(f.url) ||
+    /\.txt(\?|#|$)/i.test(f.downloadURL ?? "") ||
+    /\.txt$/i.test(f.name)
+  );
 }
 
 function Attachments({
@@ -1213,7 +1219,8 @@ function Attachments({
   }
 
   for (const f of files) {
-    const embed = detectVideoEmbed(f.url);
+    const src = absoluteFileProxyURL(f.url, f.downloadURL) ?? (f.url || f.downloadURL || "");
+    const embed = detectVideoEmbed(src);
     let body: ReactNode;
     if (embed) {
       body = (
@@ -1224,12 +1231,12 @@ function Attachments({
         />
       );
     } else if (isTextFile(f)) {
-      body = <AttachmentTextView name={f.name} url={f.url} />;
+      body = <AttachmentTextView name={f.name} url={src} />;
     } else {
       body = (
         <a
           className="attachment-file-link"
-          href={f.url}
+          href={src}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -1238,7 +1245,7 @@ function Attachments({
       );
     }
     tiles.push(
-      <li key={`file-${f.url}`} className="attachment-tile">
+      <li key={`file-${f.url || f.downloadURL}`} className="attachment-tile">
         {body}
       </li>,
     );
