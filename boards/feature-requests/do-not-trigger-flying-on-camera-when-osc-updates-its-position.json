@@ -1,12 +1,11 @@
 {
   "_id": "6adc58fb6d5618329b91a96f",
   "aiCategories": [
-    "loc.pc-client",
     "loc.in-world",
     "client.osc",
     "client.camera"
   ],
-  "aiTaggedAt": "2026-10-24T13:36:42.201143Z",
+  "aiTaggedAt": "2026-10-24T13:45:42.854331Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6adc57d8acccdc12703cd96c",
@@ -38,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When i control my camera externally, when i push new transform with \"/usercamera/Pose\", it forces \"Flying\" thing, stealing my avatar's world movement controls, like controller's thumbsticks. \n\nBut that makes no sense, i already control camera via osc and i want to move freely in world, not to fight my own osc input while being completely unable to traverse... \n\nI tried to force /usercamera/Flying false with it, but it stops working then, tried to push camera position at 10fps, turing off Flying next frame and it kinda worked (i will say nothing about what happened with my ui while doing so), i was able to move, but since vrchat have zero character movement smoothing for inertia, it interrupted my moves so it felt laggy... x.x\n\n For now have give up idea on using native camera and switch to rendertarges...",
+  "details": "When i control my camera externally, when i push new transform with \"/usercamera/Pose\", it forces \"Flying\" thing, stealing my avatar's world movement controls, like controller's thumbsticks. \n\nBut that makes no sense, i already control camera via osc and i want to move freely in world, not to fight my own osc input while being completely unable to traverse... \n\nI tried to force /usercamera/Flying false with it, but it stops working then, tried to push camera position at 10fps, turning off Flying next frame and it kinda worked (i will say nothing about what happened with my ui while doing so), i was able to move, but since vrchat has zero character movement smoothing for inertia, it interrupted my moves for a brief moments so it felt laggy... x.x\n\n For now have give up on idea of using native camera and use rendertarget instead...",
   "error": null,
   "eta": null,
   "etaPublic": true,
