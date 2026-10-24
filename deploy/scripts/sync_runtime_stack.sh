@@ -134,8 +134,6 @@ install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-static-cache-immutable.inc"
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.conf" /etc/nginx/conf.d/feedback-search-gateway-upstream.conf
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-notify-upstream.conf" /etc/nginx/conf.d/feedback-notify-upstream.conf
 
-bash "${REPO}/deploy/scripts/install_cloudflare_real_ip.sh"
-
 if [[ ! -f /etc/feedback-search/gateway.env ]]; then
   echo "Missing /etc/feedback-search/gateway.env." >&2
   exit 1
@@ -143,6 +141,8 @@ fi
 
 sed "s/@FEEDBACK_PUBLIC_DOMAIN@/${DOMAIN}/g" "${NGINX_SRC}/sites/https-public.conf.template" >"/etc/nginx/sites-available/${DOMAIN}"
 ln -sf "/etc/nginx/sites-available/${DOMAIN}" "/etc/nginx/sites-enabled/${DOMAIN}"
+
+bash "${REPO}/deploy/scripts/install_cloudflare_real_ip.sh"
 
 nginx -t
 systemctl reload nginx
