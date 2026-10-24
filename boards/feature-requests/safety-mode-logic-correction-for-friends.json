@@ -2,11 +2,9 @@
   "_id": "6adc87e0e985c8788ac10354",
   "aiCategories": [
     "loc.quick-menu",
-    "client.settings",
-    "client.controls",
-    "social.nameplates"
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-10-24T10:31:28.053878Z",
+  "aiTaggedAt": "2026-10-24T11:22:15.090730Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d2e156b8b641f47af4b344a",
@@ -38,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Right now if Safe Mode is enabled it set the shield settings on a pre-set setting for Safe Mode. This means that every Friend avatar will be shown fully, even if the user set a custom shield setting for Friends. \n\nIssue:\n\nThis is a major issues if the instance consists of Friends only and for egxample the User panics and enables Safe Mode from a shield level of Maximum or bellow, making this even worse. \n\nFix:\n\nA good way of fixing this is to leave the Safe Mode in the shield setting always visible and accesable to the user with the posibility to toggle settings for Friends. In this case there is also room to add a keybind to change how the user enables the Safe Mode and a description of this Feature. \n\nThis Feature is requested on Build 1921",
+  "details": "Right now if Safe Mode is enabled it set the shield settings on a pre-set setting for Safe Mode. This means that every Friend avatar will be shown fully, even if the user set a custom shield setting for Friends. \n\nIssue:\n\nThis is a major issues if the instance consists of Friends only and for example the User panics and enables Safe Mode from a shield level of Maximum or bellow, making this even worse. \n\nFix:\n\nA good way of fixing this is to leave the Safe Mode in the shield setting always visible and accesable to the user with the posibility to toggle settings for Friends. In this case there is also room to add a keybind to change how the user enables the Safe Mode and a description of this Feature. \n\nThis Feature is requested on Build 1921",
   "error": null,
   "eta": null,
   "etaPublic": true,
