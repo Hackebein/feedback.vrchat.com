@@ -2,10 +2,11 @@
   "_id": "6adc58fb6d5618329b91a96f",
   "aiCategories": [
     "loc.pc-client",
-    "client.osc",
-    "client.camera"
+    "platforms.cross-platform",
+    "client.camera",
+    "client.osc"
   ],
-  "aiTaggedAt": "2026-10-24T07:27:47.758164Z",
+  "aiTaggedAt": "2026-10-24T07:57:27.643961Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6adc57d8acccdc12703cd96c",
@@ -37,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When i control my camera externally, when i push new position, it forces flying, stealing my avatar's world movement controls. \n\nBut that makes no sense, i already control camera via osc and i want to move freely in world, not to fight my own osc input with my controller input.",
+  "details": "When i control my camera externally, when i push new position, it forces \"Flying\" thing, stealing my avatar's world movement controls. \n\nBut that makes no sense, i already control camera via osc and i want to move freely in world, not to fight my own osc input with my controller input.",
   "error": null,
   "eta": null,
   "etaPublic": true,
