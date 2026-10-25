@@ -1,0 +1,123 @@
+{
+  "_id": "6add03196d5618329ba4e716",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.in-world",
+    "open-beta",
+    "client.settings",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-10-24T19:19:26.619122Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-24T19:12:25.603Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "An accessibility issue. People can get medically sick from motion effects. The goal is to make sure users are not harmed or distracted by motion.\n\nSteps to reproduce:\n\n1. Switch into an avatar with a long parameter name or state name.\n\n2. Enable \"Reduce Menu Animations\" in settings.\n\n3. Open the debug UI from the Quick Menu or by pressing RShift + ½ (~) + 2 twice.\n\n4. Switch to Local Avatar. Observe if the long labels are scrolling.\n\nExpected result: No scrolling when this setting is enabled. Alternatively a UI redesign where the labels are shown on cursor hover on a tooltip, or with wider margins for long labels.\n\nActual result: The labels are scrolling with Reduce Menu Animations enabled.\n\nAvatar used in the attached video: `avtr_8a33bffc-c9dd-45a5-a18e-55a18a31c0ef` (private)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/6a736ffb1e42f77bfce50cfcde45d2d7.txt",
+    "https://canny-assets.io/files/2a88c92a70008fad555e4795c2b19ed1.mp4"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/6a736ffb1e42f77bfce50cfcde45d2d7.txt",
+      "mimeType": "text/plain",
+      "name": "output_log_2026-10-24_19-06-52",
+      "url": "https://canny-assets.io/files/6a736ffb1e42f77bfce50cfcde45d2d7.txt"
+    },
+    {
+      "downloadURL": "/api/files/download/2a88c92a70008fad555e4795c2b19ed1.mp4",
+      "mimeType": "video/mp4",
+      "name": "2026-10-24 19-07-43",
+      "url": "https://canny-assets.io/files/2a88c92a70008fad555e4795c2b19ed1.mp4"
+    }
+  ],
+  "ideaID": "6add03196d5618329ba4e705",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-24T19:12:25.603Z",
+  "subCategoryID": null,
+  "title": "[1935] Label scrolling on debug pages (long parameter names) does not respect the Reduce Menu Animations setting",
+  "trendingScore": 2965.4987731311394,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "1935-label-scrolling-on-debug-pages-long-parameter-names-does-not-respect-the-re",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/70d5c5f2d91b344aa2c17ed9cbc8fea8.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6add03f0c7e052262d94896e"
+    },
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6add0319c7e052262d948776"
+    }
+  ]
+}

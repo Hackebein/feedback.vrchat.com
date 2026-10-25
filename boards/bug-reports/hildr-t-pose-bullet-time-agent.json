@@ -1,10 +1,9 @@
 {
   "_id": "6acbca014f03e82fcbc7cad1",
   "aiCategories": [
-    "loc.in-world",
-    "worlds.persistence"
+    "off-topic"
   ],
-  "aiTaggedAt": "2026-10-11T23:58:50.777647Z",
+  "aiTaggedAt": "2026-10-22T21:45:10.812889Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6acbca006fe99c84f29ea99b",
@@ -28,7 +27,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -86,6 +85,50 @@
       "value": "@{5a53d331a7e3bd02f10244ba|full_name} I think this was meant to be addressed at you.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ada832d73a11882ee7ed2e3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6ada830c169b5b90330aeb55",
+        "alias": "Semantic Bison",
+        "aliasID": "6ada830c169b5b90330aeb59",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/99a25fba50bc5773bfe4486f3451a57f.png",
+        "created": "2026-10-22T21:41:32.305Z",
+        "name": "GraniteStorm82O",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-22T21:42:05.352Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acbca014f03e82fcbc7cad1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "having the same issue except mine is a softlock at 2/3 health.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -103,20 +146,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 4,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6acbca014f03e82fcbc7cad1/199963612.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 4,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-11T17:40:17.167Z",
   "subCategoryID": null,
   "title": "Hildr T Pose (Bullet Time Agent)",
-  "trendingScore": 2963.632573136531,
+  "trendingScore": 2965.1019981514805,
   "updatedBy": null,
   "urlName": "hildr-t-pose-bullet-time-agent",
   "viewerIsAuthor": false,
@@ -129,6 +172,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6adad8ab169b5b90330c3c50",
+      "alias": "Innovative Crab",
+      "aliasID": "6adad8ab169b5b90330c3c63",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0d075ae65089805d986ad3084dfa1352.png",
+      "companies": [],
+      "name": "Nepixsss",
+      "urlName": null,
+      "voteID": "6adad8ae169b5b90330c3ce1"
+    },
+    {
+      "_id": "6ada830c169b5b90330aeb55",
+      "alias": "Semantic Bison",
+      "aliasID": "6ada830c169b5b90330aeb59",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/99a25fba50bc5773bfe4486f3451a57f.png",
+      "companies": [],
+      "name": "GraniteStorm82O",
+      "urlName": null,
+      "voteID": "6ada830f169b5b90330aeb66"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
