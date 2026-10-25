@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -11,6 +12,7 @@ import (
 	"net/http"
 	neturl "net/url"
 	"path"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -21,9 +23,10 @@ import (
 
 // FileAttachment is a file/image shipped with a post or comment.
 type FileAttachment struct {
-	Name string `json:"name"`
-	URL  string `json:"url"`
-	Mime string `json:"mime,omitempty"`
+	Name        string `json:"name"`
+	URL         string `json:"url"`
+	Mime        string `json:"mime,omitempty"`
+	DownloadURL string `json:"-"`
 }
 
 // NotificationEvent is the normalized payload sent to browsers and webhooks.
@@ -129,14 +132,23 @@ func categoryName(hit gwHit) string {
 func convFiles(files []gwFile) []FileAttachment {
 	out := make([]FileAttachment, 0, len(files))
 	for _, f := range files {
-		if f.URL == "" {
+		if f.URL == "" && f.DownloadURL == "" {
 			continue
 		}
 		name := f.Name
 		if name == "" {
-			name = urlBasename(f.URL)
+			if f.URL != "" {
+				name = urlBasename(f.URL)
+			} else {
+				name = urlBasename(f.DownloadURL)
+			}
 		}
-		out = append(out, FileAttachment{Name: name, URL: f.URL, Mime: f.MimeType})
+		out = append(out, FileAttachment{
+			Name:        name,
+			URL:         f.URL,
+			Mime:        f.MimeType,
+			DownloadURL: f.DownloadURL,
+		})
 	}
 	return out
 }
@@ -834,25 +846,38 @@ func buildWebhookRequest(ctx context.Context, webhookURL string, payload discord
 // maxAttachments and maxAttachmentSize each. Oversized or failing downloads are
 // skipped.
 func (d *Dispatcher) collectAttachments(ctx context.Context, events []NotificationEvent) []webhookAttachment {
-	type ref struct{ name, url string }
+	type ref struct{ name, url, downloadURL string }
 	var refs []ref
 	seen := map[string]bool{}
 	for _, ev := range events {
 		for _, img := range ev.Images {
 			if img != "" && !seen[img] {
 				seen[img] = true
-				refs = append(refs, ref{urlBasename(img), img})
+				refs = append(refs, ref{name: urlBasename(img), url: img})
 			}
 		}
 		for _, f := range ev.Files {
-			if f.URL != "" && !seen[f.URL] {
-				seen[f.URL] = true
-				name := f.Name
-				if name == "" {
-					name = urlBasename(f.URL)
-				}
-				refs = append(refs, ref{filenameWithMimeExt(name, f.Mime, f.URL), f.URL})
+			key := f.URL
+			if key == "" {
+				key = f.DownloadURL
 			}
+			if key == "" || seen[key] {
+				continue
+			}
+			seen[key] = true
+			name := f.Name
+			if name == "" {
+				name = urlBasename(key)
+			}
+			source := f.URL
+			if source == "" {
+				source = f.DownloadURL
+			}
+			refs = append(refs, ref{
+				name:        filenameWithMimeExt(name, f.Mime, source),
+				url:         f.URL,
+				downloadURL: f.DownloadURL,
+			})
 		}
 	}
 
@@ -862,7 +887,7 @@ func (d *Dispatcher) collectAttachments(ctx context.Context, events []Notificati
 		if len(out) >= maxAttachments {
 			break
 		}
-		data, ok := d.downloadCapped(ctx, r.url, maxAttachmentSize)
+		data, ok := d.downloadFile(ctx, r.url, r.downloadURL, maxAttachmentSize)
 		if !ok {
 			continue
 		}
@@ -877,29 +902,137 @@ func (d *Dispatcher) collectAttachments(ctx context.Context, events []Notificati
 	return out
 }
 
+const notifyFileUserAgent = "vrchat-feedback-search-notify"
+
+var errAttachmentRedirect = errors.New("attachment redirect rejected")
+
+var (
+	attachmentFileName  = regexp.MustCompile(`^[0-9a-f]{32}\.(?:txt|csv|json|pdf|mp4|m4v|webm|mov|avi|docx|png|jpg|jpeg|gif|webp)$`)
+	attachmentImageName = regexp.MustCompile(`^[0-9a-f]{32}\.(?:png|jpg|jpeg|gif|webp|avif)$`)
+	attachmentS3Hosts   = map[string]struct{}{
+		"product-pains-images.s3.us-east-1.amazonaws.com": {},
+		"canny-private-assets.s3.us-east-1.amazonaws.com": {},
+	}
+)
+
+func allowedAttachmentURL(raw string) bool {
+	u, err := neturl.Parse(raw)
+	if err != nil || u.Scheme != "https" || u.User != nil {
+		return false
+	}
+	if port := u.Port(); port != "" && port != "443" {
+		return false
+	}
+	base := path.Base(u.Path)
+	switch strings.ToLower(u.Hostname()) {
+	case "canny-assets.io", "canny.io":
+		if u.Path == "/files/"+base && attachmentFileName.MatchString(base) {
+			return true
+		}
+		return u.Path == "/images/"+base && attachmentImageName.MatchString(base)
+	case "feedback.vrchat.com":
+		return u.Path == "/api/files/download/"+base && attachmentFileName.MatchString(base)
+	default:
+		return false
+	}
+}
+
+func absoluteDownloadURL(raw string) string {
+	raw = strings.TrimSpace(raw)
+	if raw == "" {
+		return ""
+	}
+	u, err := neturl.Parse(raw)
+	if err != nil || u.User != nil {
+		return ""
+	}
+	if strings.HasPrefix(raw, "/") {
+		if u.Host != "" || u.Scheme != "" {
+			return ""
+		}
+	} else if u.Scheme != "https" || strings.ToLower(u.Hostname()) != "feedback.vrchat.com" {
+		return ""
+	} else if port := u.Port(); port != "" && port != "443" {
+		return ""
+	}
+	base := path.Base(u.Path)
+	if u.Path != "/api/files/download/"+base || !attachmentFileName.MatchString(base) {
+		return ""
+	}
+	return "https://feedback.vrchat.com" + u.Path
+}
+
+func attachmentCheckRedirect(req *http.Request, via []*http.Request) error {
+	if len(via) != 1 || req == nil || req.URL == nil || via[0] == nil || via[0].URL == nil {
+		return errAttachmentRedirect
+	}
+	name := path.Base(via[0].URL.Path)
+	if !attachmentFileName.MatchString(name) && !attachmentImageName.MatchString(name) {
+		return errAttachmentRedirect
+	}
+	loc := req.URL
+	if loc.Scheme != "https" || loc.User != nil {
+		return errAttachmentRedirect
+	}
+	if port := loc.Port(); port != "" && port != "443" {
+		return errAttachmentRedirect
+	}
+	if _, ok := attachmentS3Hosts[strings.ToLower(loc.Hostname())]; !ok {
+		return errAttachmentRedirect
+	}
+	if loc.Path != "/files/"+name {
+		return errAttachmentRedirect
+	}
+	return nil
+}
+
+func (d *Dispatcher) downloadFile(ctx context.Context, rawURL, downloadURL string, limit int64) ([]byte, bool) {
+	if rawURL != "" {
+		data, status, ok := d.downloadCapped(ctx, rawURL, limit)
+		if ok {
+			return data, true
+		}
+		if status >= 200 && status < 300 {
+			return nil, false
+		}
+	}
+	fallback := absoluteDownloadURL(downloadURL)
+	if fallback == "" || fallback == rawURL {
+		return nil, false
+	}
+	data, _, ok := d.downloadCapped(ctx, fallback, limit)
+	return data, ok
+}
+
 // downloadCapped fetches up to limit bytes; returns false if the request fails
-// or the body exceeds the limit.
-func (d *Dispatcher) downloadCapped(ctx context.Context, rawURL string, limit int64) ([]byte, bool) {
+// or the body exceeds the limit. status is 0 when no final response was read.
+func (d *Dispatcher) downloadCapped(ctx context.Context, rawURL string, limit int64) ([]byte, int, bool) {
+	if d.fileClient == nil || !allowedAttachmentURL(rawURL) {
+		return nil, 0, false
+	}
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, rawURL, nil)
 	if err != nil {
-		return nil, false
+		return nil, 0, false
 	}
-	resp, err := d.client.Do(req)
-	if err != nil {
-		return nil, false
+	req.Header.Set("User-Agent", notifyFileUserAgent)
+	resp, err := d.fileClient.Do(req)
+	if resp != nil && resp.Body != nil {
+		defer resp.Body.Close()
 	}
-	defer resp.Body.Close()
+	if err != nil || resp == nil {
+		return nil, 0, false
+	}
 	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
-		return nil, false
+		return nil, resp.StatusCode, false
 	}
 	data, err := io.ReadAll(io.LimitReader(resp.Body, limit+1))
 	if err != nil {
-		return nil, false
+		return nil, resp.StatusCode, false
 	}
 	if int64(len(data)) > limit {
-		return nil, false // too large to attach
+		return nil, resp.StatusCode, false
 	}
-	return data, true
+	return data, resp.StatusCode, true
 }
 
 // recordWebhookFailure starts (or continues) the error streak for a webhook and

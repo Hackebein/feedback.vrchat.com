@@ -5,6 +5,7 @@ import type { PluggableList } from "react-markdown/lib";
 import remarkGfm from "remark-gfm";
 import { SKIP, visit } from "unist-util-visit";
 import { EmbeddedImageView } from "./EmbeddedImageView";
+import { absoluteFileProxyURL } from "./fileUrl";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
 
@@ -87,13 +88,14 @@ const components: Components = {
     if (!safe) {
       return <span className="markdown-disabled-link">{children}</span>;
     }
-    const embed = detectVideoEmbed(safe);
+    const display = absoluteFileProxyURL(safe) ?? safe;
+    const embed = detectVideoEmbed(display);
     if (embed) {
       const linkText = typeof children === "string" ? children : undefined;
       return <VideoEmbedView embed={embed} title={linkText} />;
     }
     return (
-      <a {...rest} href={safe} target="_blank" rel="noopener noreferrer">
+      <a {...rest} href={display} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
@@ -102,15 +104,16 @@ const components: Components = {
     if (typeof src !== "string" || !src.trim()) {
       return null;
     }
-    const embed = detectVideoEmbed(src);
+    const safe = safeHref(src);
+    if (!safe) return null;
+    const display = absoluteFileProxyURL(safe) ?? safe;
+    const embed = detectVideoEmbed(display);
     if (embed) {
       return <VideoEmbedView embed={embed} title={alt || title} />;
     }
-    const safe = safeHref(src);
-    if (!safe) return null;
     return (
       <EmbeddedImageView
-        src={safe}
+        src={display}
         alt={alt || ""}
         title={title || undefined}
       />

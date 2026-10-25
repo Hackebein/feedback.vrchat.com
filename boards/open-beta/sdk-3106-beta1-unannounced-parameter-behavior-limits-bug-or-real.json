@@ -2,9 +2,11 @@
   "_id": "6ad784183e50288285a31882",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.expressions"
+    "open-beta",
+    "sdk.vrcsdk",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-21T17:26:39.127127Z",
+  "aiTaggedAt": "2026-10-23T21:02:31.465822Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ad77265169b5b9033f6bc85",
@@ -34,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -127,7 +129,9 @@
       "postDeleted": false,
       "postID": "6ad784183e50288285a31882",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -169,6 +173,62 @@
       "statusChangeID": "6ad8f4e7cd134643404a92aa",
       "statusChangeNewStatus": "available in future release",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adbc9d04717a4ad267689bd",
+      "aiGenerated": false,
+      "author": {
+        "_id": "649b83fd8ca61609383735ec",
+        "alias": "Rosewood Orca",
+        "aliasID": "65c28396ed6eefce4cd16ac0",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6326ba0ac485a3e6afe8eeedb88948c3.png",
+        "created": "2023-06-28T00:51:09.973Z",
+        "name": "Purpzie",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-23T20:55:44.045Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6161a61a2c0de966b4e43486",
+          "alias": "Razzmatazz Eagle",
+          "aliasID": "65c2b7efed6eefce4c4dceae",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/f9b909781ec10a9c42837d9eafdd9561.png",
+          "created": "2021-10-09T14:24:26.758Z",
+          "name": "Kung",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ad8bb36c826f850ea415d52",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad784183e50288285a31882",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6161a61a2c0de966b4e43486|full_name} Oh, yikes, this is really bad. We need quite a lot of instructions to get the simplified and blended UE shapes that most avatars use, since those are still missing from VRC's system. If this other suggestion got implemented then 512 instructions wouldn't be as terrible. https://feedback.vrchat.com/open-beta/p/sdk-3106-beta1-please-include-support-for-blended-shapes-and-simplifed-parameter",
       "viewerReactions": null,
       "voteID": null
     }
