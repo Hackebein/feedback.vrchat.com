@@ -243,6 +243,39 @@ def gen_bulk(new_index: str, pairs: Iterable[tuple[str, dict[str, Any]]]) -> Ite
         yield {"_index": new_index, "_id": pid, "_op_type": "index", "_source": doc}
 
 
+BULK_CHUNK_SIZE = 100
+BULK_MAX_CHUNK_BYTES = 8 * 1024 * 1024
+BULK_MAX_RETRIES = 5
+BULK_INITIAL_BACKOFF = 2
+BULK_MAX_BACKOFF = 30
+
+
+def bulk_index(
+    client: Any,
+    actions: Iterable[dict[str, Any]],
+    *,
+    chunk_size: int = BULK_CHUNK_SIZE,
+    max_chunk_bytes: int = BULK_MAX_CHUNK_BYTES,
+    max_retries: int = BULK_MAX_RETRIES,
+    initial_backoff: int = BULK_INITIAL_BACKOFF,
+    max_backoff: int = BULK_MAX_BACKOFF,
+) -> int:
+    _, bulk = _import_opensearch()
+    n_ok, _ = bulk(
+        client,
+        actions,
+        stats_only=False,
+        raise_on_error=True,
+        request_timeout=300,
+        chunk_size=chunk_size,
+        max_chunk_bytes=max_chunk_bytes,
+        max_retries=max_retries,
+        initial_backoff=initial_backoff,
+        max_backoff=max_backoff,
+    )
+    return int(n_ok)
+
+
 _BACKING_SUFFIX = r"-(?P<suf>\d{12})$"
 
 
@@ -362,7 +395,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--url", default=os.environ.get("OPENSEARCH_URL"))
     parser.add_argument("--dry-run", action="store_true", help="print actions only")
-    parser.add_argument("--bulk-chunks", type=int, default=320, help="helpers.bulk chunk size")
+    parser.add_argument("--bulk-chunks", type=int, default=BULK_CHUNK_SIZE, help="max documents per bulk request")
+    parser.add_argument("--bulk-max-bytes", type=int, default=BULK_MAX_CHUNK_BYTES, help="max bytes per bulk request")
     parser.add_argument(
         "--keep-prev",
         type=int,
@@ -447,14 +481,11 @@ def main() -> int:
         yield from iter_board_documents(boards_root, scraper_id=scraper_id)
 
     bulk_start = time.perf_counter()
-    _, bulk = _import_opensearch()
-    n_ok, _ = bulk(
+    n_ok = bulk_index(
         client,
         gen_bulk(new_idx, docs()),
-        stats_only=False,
-        raise_on_error=True,
-        request_timeout=300,
         chunk_size=args.bulk_chunks,
+        max_chunk_bytes=args.bulk_max_bytes,
     )
     client.indices.refresh(index=new_idx)
     bulk_elapsed = time.perf_counter() - bulk_start
