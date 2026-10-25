@@ -5,7 +5,7 @@
     "platforms.pc.desktop",
     "avatars.fbt"
   ],
-  "aiTaggedAt": "2026-10-25T21:29:23.272769Z",
+  "aiTaggedAt": "2026-10-25T21:50:12.819860Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "672dbffcd36aa06c0095310e",
@@ -37,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "In Desktop Mode, the avatar's legs suddenly move forward or bend into unnatural positions when switching to crouch or prone poses.\n\nThe legs sometimes become severely distorted before the avatar transitions into the intended pose.\n\nSteps to reproduce:\n\nLaunch VRChat in Desktop Mode.\n\nUse an avatar and switch to a crouch or prone pose.\n\nObserve the position of the legs during the transition.\n\nExpected behavior:\n\nThe avatar should transition smoothly into the pose without unnatural leg movements.\n\nActual behavior:\n\nThe legs move to incorrect positions, sometimes folding or twisting unnaturally.\n\nAdditional information:\n\nThis issue has been occurring for several months.\n\nIt affects multiple avatars.\n\nIt also occurs with sample avatars that do not have custom pose systems installed.\n\nIt occurs in multiple worlds.\n\nAll screenshots were taken using sample avatars provided by their respective creators.\n\nScreenshots are attached showing the issue.",
+  "details": "In Desktop Mode, the avatar's legs suddenly move forward or bend into unnatural positions when entering the prone pose.\n\nThe legs sometimes become severely distorted before the avatar transitions into the intended prone position.\n\nSteps to reproduce:\n\nLaunch VRChat in Desktop Mode.\n\nUse an avatar and switch to a crouch or prone pose.\n\nObserve the position of the legs during the transition.\n\nExpected behavior:\n\nThe avatar should transition smoothly into the pose without unnatural leg movements.\n\nActual behavior:\n\nThe legs move to incorrect positions, sometimes folding or twisting unnaturally.\n\nAdditional information:\n\nThis issue has been occurring for several months.\n\nIt affects multiple avatars.\n\nIt also occurs with sample avatars that do not have custom pose systems installed.\n\nIt occurs in multiple worlds.\n\nAll screenshots were taken using sample avatars provided by their respective creators.\n\nScreenshots are attached showing the issue.",
   "error": null,
   "eta": null,
   "etaPublic": true,
