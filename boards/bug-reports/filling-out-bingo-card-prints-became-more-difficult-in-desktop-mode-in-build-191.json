@@ -2,11 +2,11 @@
   "_id": "6aca3882c3c7c14b45a519cd",
   "aiCategories": [
     "loc.pc-client",
-    "loc.quick-menu",
+    "loc.in-world",
     "platforms.pc.desktop",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-10-25T18:08:45.304848Z",
+  "aiTaggedAt": "2026-10-25T18:26:31.705612Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -301,8 +301,8 @@
       "fileURLs": [
         "https://canny-assets.io/files/ef91e52570e3ea7f65a26283a1c21afe.mp4",
         "https://canny-assets.io/files/fe57f133ae6b94946efa5d30df036a00.mp4",
-        "https://canny-assets.io/files/2a3a22e307dfa7d13502619b26926182.txt",
-        "https://canny-assets.io/files/2a3c509364cbe7ce655bfda025c5faf9.txt"
+        "https://canny-assets.io/files/2c180dd5fd5cb88244fb0cf8257d9259.txt",
+        "https://canny-assets.io/files/a9c6e497a96423daed726f2939c4ce12.txt"
       ],
       "files": [
         {
@@ -318,16 +318,16 @@
           "url": "https://canny-assets.io/files/fe57f133ae6b94946efa5d30df036a00.mp4"
         },
         {
-          "downloadURL": "/api/files/download/2a3a22e307dfa7d13502619b26926182.txt",
+          "downloadURL": "/api/files/download/2c180dd5fd5cb88244fb0cf8257d9259.txt",
           "mimeType": "text/plain",
-          "name": "output_log_2026-10-25_17-52-54",
-          "url": "https://canny-assets.io/files/2a3a22e307dfa7d13502619b26926182.txt"
+          "name": "output_log_2026-10-25_17-55-02",
+          "url": "https://canny-assets.io/files/2c180dd5fd5cb88244fb0cf8257d9259.txt"
         },
         {
-          "downloadURL": "/api/files/download/2a3c509364cbe7ce655bfda025c5faf9.txt",
+          "downloadURL": "/api/files/download/a9c6e497a96423daed726f2939c4ce12.txt",
           "mimeType": "text/plain",
-          "name": "output_log_2026-10-25_17-53-46",
-          "url": "https://canny-assets.io/files/2a3c509364cbe7ce655bfda025c5faf9.txt"
+          "name": "output_log_2026-10-25_17-35-31",
+          "url": "https://canny-assets.io/files/a9c6e497a96423daed726f2939c4ce12.txt"
         }
       ],
       "imageURLs": [],
@@ -348,7 +348,51 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Triaged: Working as intended in Build `1903`, broken in Build `1912`.\n\nBuilds in between these versions are not public for further triage. VRChat 2026.3.2p2 Build `1903` is the last build in the 2026.3.2 series, and Build `1912` is the first build in VRChat 2026.3.3 (OPEN BETA) that was made available publicly after Build `1903`.",
+      "value": "Triaged: Working as expected in Build `1903`, broken in Build `1912`.\n\nBuilds in between these versions are not public for further triage. VRChat 2026.3.2p2 Build `1903` is the last build in the 2026.3.2 series, and Build `1912` is the first build in VRChat 2026.3.3 (OPEN BETA) that was made available publicly after Build `1903`.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ade46210aa0c0ed81cb4998",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-25T18:10:41.141Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6ade4386d741ffb8269090a6",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aca3882c3c7c14b45a519cd",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "[VRChat 2026.3.3 (OPEN BETA)](https://docs.vrchat.com/docs/vrchat-202633-open-beta) - September 9 - Build 1912:\n\n> Holding TAB while in first person mode will release your mouse cursor and allow you to interact with the HUD. You can also hold TAB to select players, portals, props and prints.\n\nSo it was intended. Thanks, I hate it.",
       "viewerReactions": null,
       "voteID": null
     }
