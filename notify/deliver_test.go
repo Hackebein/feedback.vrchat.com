@@ -4,7 +4,9 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
+	neturl "net/url"
 	"strings"
 	"testing"
 	"time"
@@ -403,4 +405,266 @@ func TestFilenameWithMimeExt(t *testing.T) {
 			t.Errorf("filenameWithMimeExt(%q, %q, %q) = %q, want %q", tc.name, tc.mime, tc.url, got, tc.want)
 		}
 	}
+}
+
+const notifyTestFile = "bc83c22f1652cd39750c5434ccde3d4f.txt"
+const notifyTestImage = "772b654d959aaa899ebf97b3f889a986.png"
+
+func TestFileClientLeavesGatewayRedirectsAlone(t *testing.T) {
+	d := newDispatcher(Config{}, nil)
+	if d.client == nil || d.client.CheckRedirect != nil {
+		t.Fatal("gateway client redirect policy changed")
+	}
+	if d.fileClient == nil || d.fileClient.CheckRedirect == nil {
+		t.Fatal("file client missing redirect policy")
+	}
+}
+
+func TestConvFilesOmitsDownloadURL(t *testing.T) {
+	files := convFiles([]gwFile{{
+		Name:        "note.txt",
+		URL:         "https://canny-assets.io/files/" + notifyTestFile,
+		DownloadURL: "/api/files/download/" + notifyTestFile,
+	}, {
+		DownloadURL: "/api/files/download/" + notifyTestFile,
+	}})
+	if len(files) != 2 {
+		t.Fatalf("convFiles len = %d, want 2", len(files))
+	}
+	if files[1].URL != "" || files[1].DownloadURL == "" {
+		t.Fatal("download-only file was dropped")
+	}
+	body, err := json.Marshal(NotificationEvent{Files: files})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if strings.Contains(string(body), "download") {
+		t.Fatal("notification JSON leaked download URL")
+	}
+}
+
+func TestAbsoluteDownloadURL(t *testing.T) {
+	want := "https://feedback.vrchat.com/api/files/download/" + notifyTestFile
+	if got := absoluteDownloadURL("/api/files/download/" + notifyTestFile + "?sig=test"); got != want {
+		t.Fatalf("relative download URL = %q", got)
+	}
+	if got := absoluteDownloadURL(want + "?sig=test"); got != want {
+		t.Fatalf("absolute download URL = %q", got)
+	}
+	for _, raw := range []string{
+		"https://evil.example/api/files/download/" + notifyTestFile,
+		"https://user:pass@feedback.vrchat.com/api/files/download/" + notifyTestFile,
+		"https://canny.io/login",
+		"/api/files/download/not-a-hash.txt",
+		"/api/files/download/" + strings.Repeat("a", 32) + ".html",
+	} {
+		if got := absoluteDownloadURL(raw); got != "" {
+			t.Fatalf("absoluteDownloadURL accepted %q", raw)
+		}
+	}
+}
+
+type notifyTripFunc func(*http.Request) (*http.Response, error)
+
+func (f notifyTripFunc) RoundTrip(r *http.Request) (*http.Response, error) { return f(r) }
+
+func notifyResponse(code int, body string, header http.Header) *http.Response {
+	if header == nil {
+		header = http.Header{}
+	}
+	return &http.Response{
+		StatusCode:    code,
+		Header:        header,
+		Body:          io.NopCloser(strings.NewReader(body)),
+		ContentLength: int64(len(body)),
+		Proto:         "HTTP/1.1",
+		ProtoMajor:    1,
+		ProtoMinor:    1,
+	}
+}
+
+func hostPath(u *neturl.URL) string {
+	return u.Hostname() + u.Path
+}
+
+func TestDownloadFileFallbackAndRedirects(t *testing.T) {
+	ctx := context.Background()
+	cdn := "https://canny-assets.io/files/" + notifyTestFile
+	download := "/api/files/download/" + notifyTestFile
+	s3Host := "canny-private-assets.s3.us-east-1.amazonaws.com"
+	s3Path := "/files/" + notifyTestFile
+
+	t.Run("cdn 404 then s3", func(t *testing.T) {
+		var got []string
+		d := &Dispatcher{fileClient: &http.Client{
+			Transport: notifyTripFunc(func(r *http.Request) (*http.Response, error) {
+				got = append(got, hostPath(r.URL))
+				if r.Header.Get("User-Agent") != notifyFileUserAgent {
+					t.Fatal("missing notify user agent")
+				}
+				switch hostPath(r.URL) {
+				case "canny-assets.io/files/" + notifyTestFile:
+					return notifyResponse(http.StatusNotFound, "", nil), nil
+				case "feedback.vrchat.com/api/files/download/" + notifyTestFile:
+					h := http.Header{}
+					h.Set("Location", "https://"+s3Host+s3Path+"?sig=test")
+					return notifyResponse(http.StatusFound, "", h), nil
+				case s3Host + s3Path:
+					if r.URL.RawQuery == "" {
+						t.Fatal("s3 request dropped its query")
+					}
+					return notifyResponse(http.StatusOK, "Hello!", nil), nil
+				default:
+					t.Fatalf("unexpected hop %s", hostPath(r.URL))
+					return nil, nil
+				}
+			}),
+			CheckRedirect: attachmentCheckRedirect,
+		}}
+		data, ok := d.downloadFile(ctx, cdn, download, maxAttachmentSize)
+		if !ok || string(data) != "Hello!" {
+			t.Fatalf("download = %q ok=%v", data, ok)
+		}
+		if len(got) != 3 || got[2] != s3Host+s3Path {
+			t.Fatalf("hops = %v", got)
+		}
+	})
+
+	t.Run("login redirect is not followed", func(t *testing.T) {
+		var got []string
+		d := &Dispatcher{fileClient: &http.Client{
+			Transport: notifyTripFunc(func(r *http.Request) (*http.Response, error) {
+				got = append(got, hostPath(r.URL))
+				if r.URL.Hostname() == "canny.io" {
+					t.Fatal("followed login redirect")
+				}
+				if r.URL.Hostname() == "canny-assets.io" {
+					return notifyResponse(http.StatusNotFound, "missing", nil), nil
+				}
+				h := http.Header{}
+				h.Set("Location", "https://canny.io/login")
+				return notifyResponse(http.StatusFound, "<html>login</html>", h), nil
+			}),
+			CheckRedirect: attachmentCheckRedirect,
+		}}
+		data, ok := d.downloadFile(ctx, cdn, download, maxAttachmentSize)
+		if ok || len(data) != 0 {
+			t.Fatal("login page was attached")
+		}
+		if strings.Join(got, ",") != "canny-assets.io/files/"+notifyTestFile+",feedback.vrchat.com/api/files/download/"+notifyTestFile {
+			t.Fatalf("hops = %v", got)
+		}
+	})
+
+	t.Run("second s3 redirect rejected", func(t *testing.T) {
+		var got []string
+		d := &Dispatcher{fileClient: &http.Client{
+			Transport: notifyTripFunc(func(r *http.Request) (*http.Response, error) {
+				got = append(got, hostPath(r.URL))
+				switch r.URL.Hostname() {
+				case "canny-assets.io":
+					return notifyResponse(http.StatusNotFound, "", nil), nil
+				case "feedback.vrchat.com":
+					h := http.Header{}
+					h.Set("Location", "https://"+s3Host+s3Path+"?sig=test")
+					return notifyResponse(http.StatusFound, "", h), nil
+				case s3Host:
+					h := http.Header{}
+					h.Set("Location", "https://"+s3Host+"/files/other.txt?sig=test")
+					return notifyResponse(http.StatusFound, "", h), nil
+				default:
+					t.Fatalf("unexpected hop %s", hostPath(r.URL))
+					return nil, nil
+				}
+			}),
+			CheckRedirect: attachmentCheckRedirect,
+		}}
+		if _, ok := d.downloadFile(ctx, cdn, download, maxAttachmentSize); ok {
+			t.Fatal("extra redirect was accepted")
+		}
+		if len(got) != 3 {
+			t.Fatalf("hops = %v", got)
+		}
+	})
+
+	t.Run("disallowed primary is not requested", func(t *testing.T) {
+		called := false
+		d := &Dispatcher{fileClient: &http.Client{
+			Transport: notifyTripFunc(func(*http.Request) (*http.Response, error) {
+				called = true
+				return notifyResponse(http.StatusOK, "nope", nil), nil
+			}),
+			CheckRedirect: attachmentCheckRedirect,
+		}}
+		if _, ok := d.downloadFile(ctx, "http://169.254.169.254/latest/meta-data", "", maxAttachmentSize); ok || called {
+			t.Fatal("metadata host was requested")
+		}
+	})
+
+	t.Run("image still downloads", func(t *testing.T) {
+		imageURL := "https://canny-assets.io/images/" + notifyTestImage
+		var got []string
+		d := &Dispatcher{fileClient: &http.Client{
+			Transport: notifyTripFunc(func(r *http.Request) (*http.Response, error) {
+				got = append(got, hostPath(r.URL))
+				if hostPath(r.URL) != "canny-assets.io/images/"+notifyTestImage {
+					t.Fatalf("unexpected hop %s", hostPath(r.URL))
+				}
+				return notifyResponse(http.StatusOK, "png", nil), nil
+			}),
+			CheckRedirect: attachmentCheckRedirect,
+		}}
+		out := d.collectAttachments(ctx, []NotificationEvent{{Images: []string{imageURL}}})
+		if len(got) != 1 || len(out) != 1 || string(out[0].data) != "png" {
+			t.Fatalf("image download hops=%v attachments=%d", got, len(out))
+		}
+	})
+
+	t.Run("collect falls back after cdn 404", func(t *testing.T) {
+		d := &Dispatcher{fileClient: &http.Client{
+			Transport: notifyTripFunc(func(r *http.Request) (*http.Response, error) {
+				switch hostPath(r.URL) {
+				case "canny-assets.io/files/" + notifyTestFile:
+					return notifyResponse(http.StatusNotFound, "", nil), nil
+				case "feedback.vrchat.com/api/files/download/" + notifyTestFile:
+					h := http.Header{}
+					h.Set("Location", "https://"+s3Host+s3Path+"?sig=test")
+					return notifyResponse(http.StatusFound, "", h), nil
+				case s3Host + s3Path:
+					return notifyResponse(http.StatusOK, "Hello!", nil), nil
+				default:
+					t.Fatalf("unexpected hop %s", hostPath(r.URL))
+					return nil, nil
+				}
+			}),
+			CheckRedirect: attachmentCheckRedirect,
+		}}
+		out := d.collectAttachments(ctx, []NotificationEvent{{
+			Files: []FileAttachment{{
+				Name:        "note.txt",
+				URL:         cdn,
+				DownloadURL: download,
+			}},
+		}})
+		if len(out) != 1 || string(out[0].data) != "Hello!" || out[0].filename != "note.txt" {
+			t.Fatalf("fallback attachment missing (%d)", len(out))
+		}
+	})
+
+	t.Run("oversized cdn does not fall back", func(t *testing.T) {
+		var got []string
+		d := &Dispatcher{fileClient: &http.Client{
+			Transport: notifyTripFunc(func(r *http.Request) (*http.Response, error) {
+				got = append(got, hostPath(r.URL))
+				return notifyResponse(http.StatusOK, "abcdef", nil), nil
+			}),
+			CheckRedirect: attachmentCheckRedirect,
+		}}
+		if _, ok := d.downloadFile(ctx, cdn, download, 4); ok {
+			t.Fatal("oversized file attached")
+		}
+		if len(got) != 1 {
+			t.Fatalf("hops = %v", got)
+		}
+	})
 }

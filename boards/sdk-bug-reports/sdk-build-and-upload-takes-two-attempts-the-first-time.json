@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-06-14T23:34:14.522591Z",
+  "aiTaggedAt": "2026-10-24T22:58:23.063055Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d23cd6220d3ad1f2b3ee7b1",
@@ -34,7 +34,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -69,6 +69,52 @@
       "statusChangeID": "69de67b2d2a52238c203e9ac",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6add35eb4717a4ad269f8e2e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "652e26e01cda70bc81b06213",
+        "alias": "Compact Harrier",
+        "aliasID": "67623688a367fa63925c4583",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a1d5aa748e5a9662a6cc32bb1e59675f.png",
+        "created": "2023-10-17T06:17:04.780Z",
+        "name": "『Gecko』",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-24T22:49:15.412Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/632e9b85174755ae13984063c9f2253d.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69d83ffff6b6572d8815601b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Can confirm this. I am working on a World for over 1 year now, I am getting to a state where I am finishing it. It started with a world size of around 90-110 MB, over the months, it accumulated, ofc, more data, and raised its overall Size to 160-205 MB. It fluctuates between those values, as I am compressing and changing stuff every time, to make things in terms of quality and usability excellent. I had a few times where I shoot temporarily over 200 MB just by a few up to 10-30 MB and it triggers this bug of uploading the world twice.\n\nThere is only this one error, and nothing else so far.\n\nThis has been an issue for over 8 months now (ever since I had this noticed while uploading a world size over 200 MB the first time).\n\nReducing the size down to 199.99 MB or more gets rid off that issue.\n\nCurrent used SDK versions, World & Base: 3.10.5",
       "viewerReactions": null,
       "voteID": null
     }

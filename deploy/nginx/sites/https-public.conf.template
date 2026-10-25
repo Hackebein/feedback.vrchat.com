@@ -84,6 +84,26 @@ server {
         try_files $uri =404;
     }
 
+    # Outside /api/ so file responses do not inherit no-store or Access-Control-Allow-Origin *.
+    location ~ '^/files/[0-9a-f]{32}\.[a-z0-9]+$' {
+        proxy_pass http://feedback_search_gateway;
+        proxy_http_version 1.1;
+        proxy_buffering off;
+        proxy_request_buffering off;
+        proxy_read_timeout 300s;
+        proxy_send_timeout 300s;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Range $http_range;
+        proxy_set_header Connection "";
+    }
+
+    location ~ ^/files/ {
+        return 404;
+    }
+
     location = / {
         include /etc/nginx/conf.d/feedback-search-public-cors.inc;
         include /etc/nginx/conf.d/feedback-search-static-cache-short.inc;

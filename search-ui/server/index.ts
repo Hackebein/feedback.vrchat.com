@@ -10,6 +10,7 @@ import {
   queryOpenSearch,
   SERVICE_LINK,
 } from "./agent-api";
+import { createFileProxy } from "./file-proxy";
 import { createSearchService, extractElasticsearchBadRequestDetail } from "./search-service";
 import { parseNonNegativeInt, parsePositiveInt } from "./http-params";
 import { createIndexGenerationResolver } from "./index-generation";
@@ -105,6 +106,8 @@ app.post("/api/analytics", async (req, res) => {
 app.get("/health", (_req, res) => {
   res.type("text/plain").send("ok");
 });
+
+app.get("/files/:name", createFileProxy());
 
 app.get("/api/index", async (_req, res) => {
   try {
