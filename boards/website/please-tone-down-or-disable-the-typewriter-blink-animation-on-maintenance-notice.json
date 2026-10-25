@@ -1,0 +1,161 @@
+{
+  "_id": "6ad915dd5ac85db0362bd0b9",
+  "aiCategories": [
+    "loc.website",
+    "web.docs"
+  ],
+  "aiTaggedAt": "2026-10-22T16:25:31.947039Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c361aff81444bd7bb6ca",
+    "created": "2022-08-25T18:45:53.752Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6307c361aff81444bd7bb6ca",
+  "commentCount": 1,
+  "commentingDisabled": false,
+  "comments": [
+    {
+      "_id": "6ada381369c0575aeafcdf79",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5acad9ecc9dba010c9c3ec68",
+        "alias": "Evolutionary Vicuna",
+        "aliasID": "65ba088fed6eefce4ca8dc62",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/a96149971e91f0ceb638e9e86cef2b08.gif",
+        "created": "2018-04-09T03:11:40.225Z",
+        "name": "Tupper - VRChat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d142650329e7856f7f7b664",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-22T16:21:39.785Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad915dd5ac85db0362bd0b9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6ada381369c0575aeafcdf78",
+      "statusChangeNewStatus": "closed",
+      "value": "Thank you for the feedback. Marking as WONTFIX.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-21T19:43:25.827Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The typewriter CSS animation on the maintenance page displayed at https://wiki.vrchat.com/ can be an accessibility problem, a vestibular motion trigger for migraine or other medical symptoms.\n\nSteps to reproduce (or watch the attached video):\n\n1. Enable a reduced motion setting on your device or in your browser. In Microsoft Edge, you can emulate this with according to the instructions there: https://learn.microsoft.com/en-us/microsoft-edge/devtools/accessibility/reduced-motion-simulation\n\n2. Visit https://wiki.vrchat.com/ during a maintenance and check the typewriter at the bottom.\n\nExpected behavior: No blinking or vestibular motion triggers, when reduced motion setting is enabled or simulated.\n\nActual behavior: A blinking visual typewriter.\n\nOffending CSS stylesheet rules:\n\n```\n\n.t .new-output:after {\n\n    /* ... */\n\n    -webkit-animation:1.25s steps(1) infinite cursor-blink;\n\n    -moz-animation: 1.25s steps(1) infinite cursor-blink;\n\n    animation:1.25s steps(1) infinite cursor-blink;\n\n    content: ''\n\n}\n\n```\n\nAffected URLs:\n\n- https://assets.vrchat.com/www/css/under-maintainence-page.css\n\n- https://wiki.vrchat.com/ (during a maintenance)\n\nA proposed solution is to add to the CSS stylesheet:\n\n```\n\n@media (prefers-reduced-motion: reduce) {\n\n    .t .new-output:after {\n\n        -webkit-animation: none;\n\n        -moz-animation: none;\n\n        animation: none;\n\n    }\n\n}\n\n```\n\nI hereby release the above proposed changes into the public domain. This applies worldwide. If this is not legally possible: I grant any entity the right to use this work for any purpose, without any conditions, unless such conditions are required by law.\n\nAdditional info: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/54fc1bc3d5d3592ce99a9e9d8a624e6d.mp4"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/54fc1bc3d5d3592ce99a9e9d8a624e6d.mp4",
+      "mimeType": "video/mp4",
+      "name": "2026-10-21 19-50-23",
+      "url": "https://canny-assets.io/files/54fc1bc3d5d3592ce99a9e9d8a624e6d.mp4"
+    }
+  ],
+  "ideaID": "6ad915dd5ac85db0362bd092",
+  "imageURLs": [
+    "https://canny-assets.io/images/8907c8145f4ada866343fbc944292ef4.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad915dd5ac85db0362bd0b9/461908392.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "closed",
+  "statusChanged": "2026-10-22T16:21:39.765Z",
+  "subCategoryID": null,
+  "title": "Please tone down or disable the typewriter blink animation on maintenance notice page (as seen on VRChat Wiki) with CSS @media prefers-reduced-motion based on user preference",
+  "trendingScore": 2965.0735245321944,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "please-tone-down-or-disable-the-typewriter-blink-animation-on-maintenance-notice",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/70d5c5f2d91b344aa2c17ed9cbc8fea8.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6ad91875169b5b903301f2ac"
+    },
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6ad915dd169b5b903301e003"
+    }
+  ]
+}

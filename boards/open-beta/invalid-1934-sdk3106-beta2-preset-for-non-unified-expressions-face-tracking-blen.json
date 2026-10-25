@@ -1,0 +1,107 @@
+{
+  "_id": "6ad9a06729036ba84eaca98d",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "open-beta",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-10-22T08:57:49.490046Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66c7f83ba2fca0a622090327",
+    "alias": "Right Hoverfly",
+    "aliasID": "66c7f83b3e088c8d6b0e1c00",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+    "created": "2024-08-23T02:47:23.348Z",
+    "name": "Usemame",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66c7f83ba2fca0a622090327",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-22T05:34:31.664Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Oops, sorry I messed up and assigned wrong mesh to check the auto-filling. Although I didn't test it in the game yet, but the new system already auto assign the ARKit blendshapes to the slots, I can't delete the report, only edit, so I guess I can only leave it like this.\n\n-----------\n\nUnified Expressions is designed to bridge \"ARKit / PerfectSync, SRanipal, FACS, and others.\". It's indeed in the end VRCFT will convert the parameters to the UE, but the issue is many facetracking blendshape sets are designed in things other than the UE(like commonly ARKits/PerfectSync) on the avatars.\n\nWhich will make those users(include me) being a little confuse. And I don't think filling everything blindly will give good results since this thing was dealt with things like VRCFaceTracking-Templates(Adjerry91) or custom controllers in the past.\n\nAdditionally, for VRoid, the famous editor tool 'HANA_Tool' also adds ARKit. And some avatars are designed to allow Vtubering with softwares like Warudo, VseeFace or so, those avatars are come with the ARKit blendshapes with no FT preset(animator/controller), and now they can be sort of consider as naturally support of the in-game facetracking avatars by adding built-in FT component(doesn't mean it will looks good, though, but you can fine adjust it with the new system).\n\nBy allowing Auto-Fill things correctly it will be tons of easier for many people, or at least it will be easier to convert older FT avatars",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ad9a06729036ba84eaca98c",
+  "imageURLs": [
+    "https://canny-assets.io/images/18e7eaea480ac30e09e4cf336f19d18a.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad9a06729036ba84eaca98d/461722115.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-22T05:34:31.664Z",
+  "subCategoryID": null,
+  "title": "[invalid] [1934/SDK3.10.6-beta.2] Preset for non-Unified Expressions face tracking blendshapes",
+  "trendingScore": 2965.1319718697778,
+  "updatedBy": "66c7f83ba2fca0a622090327",
+  "urlName": "invalid-1934-sdk3106-beta2-preset-for-non-unified-expressions-face-tracking-blen",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/70d5c5f2d91b344aa2c17ed9cbc8fea8.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6ad9a1a0169b5b9033050f6b"
+    },
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6ad9a067169b5b903305090e"
+    }
+  ]
+}

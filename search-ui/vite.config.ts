@@ -27,6 +27,10 @@ export default defineConfig({
         target: "http://127.0.0.1:3333",
         changeOrigin: true,
       },
+      "/files": {
+        target: "http://127.0.0.1:3333",
+        changeOrigin: true,
+      },
     },
   },
 });
