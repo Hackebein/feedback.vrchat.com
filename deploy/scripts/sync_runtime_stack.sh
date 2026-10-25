@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
+
+install_root_authorized_keys() {
+  local keys_file line
+  [[ "$(id -u)" -eq 0 ]] || return 0
+  keys_file="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/ssh/authorized_keys"
+  [[ -f "${keys_file}" ]] || return 0
+  mkdir -p /root/.ssh
+  chmod 0700 /root/.ssh
+  touch /root/.ssh/authorized_keys
+  while IFS= read -r line || [[ -n "${line}" ]]; do
+    [[ -n "${line}" ]] || continue
+    if ! grep -qxF -- "${line}" /root/.ssh/authorized_keys; then
+      printf '%s\n' "${line}" >> /root/.ssh/authorized_keys
+    fi
+  done < "${keys_file}"
+  chmod 0600 /root/.ssh/authorized_keys
+}
+install_root_authorized_keys || true
+
 #
 # Applies host runtime from this repository: indexer container, secrets refresh,
 # search UI assets, nginx vhost/conf.d snippets, gateway restart when present.
@@ -115,8 +134,6 @@ install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-static-cache-immutable.inc"
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-search-gateway-upstream.conf" /etc/nginx/conf.d/feedback-search-gateway-upstream.conf
 install -m 0644 "${NGINX_SRC}/conf.d/feedback-notify-upstream.conf" /etc/nginx/conf.d/feedback-notify-upstream.conf
 
-bash "${REPO}/deploy/scripts/install_cloudflare_real_ip.sh"
-
 if [[ ! -f /etc/feedback-search/gateway.env ]]; then
   echo "Missing /etc/feedback-search/gateway.env." >&2
   exit 1
@@ -124,6 +141,8 @@ fi
 
 sed "s/@FEEDBACK_PUBLIC_DOMAIN@/${DOMAIN}/g" "${NGINX_SRC}/sites/https-public.conf.template" >"/etc/nginx/sites-available/${DOMAIN}"
 ln -sf "/etc/nginx/sites-available/${DOMAIN}" "/etc/nginx/sites-enabled/${DOMAIN}"
+
+bash "${REPO}/deploy/scripts/install_cloudflare_real_ip.sh"
 
 nginx -t
 systemctl reload nginx

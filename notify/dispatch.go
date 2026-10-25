@@ -20,10 +20,11 @@ import (
 // notifications for any new posts/comments that match each subscription, plus
 // vote/status/deletion changes detected by diffing per-post snapshots.
 type Dispatcher struct {
-	cfg    Config
-	store  *Store
-	client *http.Client
-	tick   atomic.Int64
+	cfg        Config
+	store      *Store
+	client     *http.Client
+	fileClient *http.Client
+	tick       atomic.Int64
 
 	// snapCache memoizes the full snapshot scan within a single tick so
 	// subscriptions sharing an identical filter (e.g. several "all posts"
@@ -46,6 +47,10 @@ func newDispatcher(cfg Config, store *Store) *Dispatcher {
 		cfg:    cfg,
 		store:  store,
 		client: &http.Client{Timeout: 30 * time.Second},
+		fileClient: &http.Client{
+			Timeout:       30 * time.Second,
+			CheckRedirect: attachmentCheckRedirect,
+		},
 	}
 }
 
@@ -234,9 +239,10 @@ type gwUser struct {
 }
 
 type gwFile struct {
-	Name     string `json:"name"`
-	URL      string `json:"url"`
-	MimeType string `json:"mimeType"`
+	Name        string `json:"name"`
+	URL         string `json:"url"`
+	MimeType    string `json:"mimeType"`
+	DownloadURL string `json:"downloadURL"`
 }
 
 type gwComment struct {

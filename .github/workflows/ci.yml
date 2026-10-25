@@ -20,7 +20,7 @@ jobs:
     timeout-minutes: 15
     services:
       opensearch:
-        image: opensearchproject/opensearch:latest
+        image: opensearchproject/opensearch:3.9.0
         env:
           discovery.type: single-node
           OPENSEARCH_INITIAL_ADMIN_PASSWORD: Analytics_CI_Only_9!mQ2
@@ -270,3 +270,31 @@ jobs:
           terraform fmt -check -recursive
           terraform init -backend=false -input=false
           terraform validate
+
+  nginx:
+    name: nginx
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Render templates and nginx -t
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          mkdir -p "${work}/conf.d" "${work}/certs"
+          cp deploy/nginx/conf.d/* "${work}/conf.d/"
+          sed 's/@FEEDBACK_PUBLIC_DOMAIN@/vrchat-canny.hackebein.dev/g' \
+            deploy/nginx/sites/https-public.conf.template > "${work}/conf.d/https-public.conf"
+          openssl req -x509 -nodes -newkey rsa:2048 -days 1 \
+            -keyout "${work}/certs/key.pem" \
+            -out "${work}/certs/cert.pem" \
+            -subj "/CN=vrchat-canny.hackebein.dev"
+          docker run --rm \
+            -v "${work}/conf.d:/etc/nginx/conf.d:ro" \
+            -v "${work}/certs:/certs:ro" \
+            nginx:1.24.0 \
+            sh -c 'mkdir -p /etc/ssl/cloudflare/origin && cp /certs/cert.pem /etc/ssl/cloudflare/origin/cert.pem && cp /certs/key.pem /etc/ssl/cloudflare/origin/key.pem && nginx -t'
