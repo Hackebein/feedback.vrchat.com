@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import json
 import unittest
+
+from opensearchpy.exceptions import TransportError
 
 import opensearch_bulk
 
@@ -162,6 +165,87 @@ class TransformInClientTagsTest(unittest.TestCase):
         self.assertIn("platforms.pc.steam", cats)
         self.assertIn("inclient.category.user-interface", cats)
         self.assertNotIn("loc.standalone-vr", cats)
+
+
+class _Serializer:
+    def dumps(self, data: object) -> str:
+        return json.dumps(data, separators=(",", ":"), default=str)
+
+
+class _FakeClient:
+    def __init__(self, fail_status: int | None = None, failures: int = 0) -> None:
+        self.bodies: list[str] = []
+        self.calls = 0
+        self.fail_status = fail_status
+        self.failures = failures
+        self.transport = type("T", (), {"serializer": _Serializer()})()
+
+    def bulk(self, body: str, **_kwargs: object) -> dict[str, object]:
+        self.calls += 1
+        if self.fail_status is not None and self.calls <= self.failures:
+            raise TransportError(self.fail_status, "circuit_breaking_exception", {})
+        self.bodies.append(body)
+        lines = [line for line in body.split("\n") if line]
+        items = [{"index": {"status": 201}} for _ in range(len(lines) // 2)]
+        return {"errors": False, "items": items}
+
+
+def _actions(count: int, payload: int) -> list[dict[str, object]]:
+    return [
+        {
+            "_index": "feedback-posts",
+            "_id": str(i),
+            "_op_type": "index",
+            "_source": {"post_id": str(i), "details": "x" * payload},
+        }
+        for i in range(count)
+    ]
+
+
+class BulkChunkTests(unittest.TestCase):
+    def test_requests_stay_within_count_and_bytes(self) -> None:
+        client = _FakeClient()
+        n_ok = opensearch_bulk.bulk_index(
+            client,
+            _actions(5, 400),
+            chunk_size=2,
+            max_chunk_bytes=900,
+            max_retries=0,
+        )
+        self.assertEqual(n_ok, 5)
+        self.assertGreater(len(client.bodies), 1)
+        for body in client.bodies:
+            lines = [line for line in body.split("\n") if line]
+            self.assertLessEqual(len(lines) // 2, 2)
+            self.assertLessEqual(len(body.encode("utf-8")), 900)
+
+    def test_retries_429_then_indexes(self) -> None:
+        client = _FakeClient(fail_status=429, failures=1)
+        n_ok = opensearch_bulk.bulk_index(
+            client,
+            _actions(3, 8),
+            chunk_size=10,
+            max_chunk_bytes=1_000_000,
+            max_retries=2,
+            initial_backoff=0,
+            max_backoff=0,
+        )
+        self.assertEqual(n_ok, 3)
+        self.assertEqual(client.calls, 2)
+
+    def test_other_status_is_not_retried(self) -> None:
+        client = _FakeClient(fail_status=500, failures=1)
+        with self.assertRaises(TransportError):
+            opensearch_bulk.bulk_index(
+                client,
+                _actions(2, 8),
+                chunk_size=10,
+                max_chunk_bytes=1_000_000,
+                max_retries=3,
+                initial_backoff=0,
+                max_backoff=0,
+            )
+        self.assertEqual(client.calls, 1)
 
 
 if __name__ == "__main__":
