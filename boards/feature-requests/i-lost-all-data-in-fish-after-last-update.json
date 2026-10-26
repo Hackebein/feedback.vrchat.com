@@ -1,9 +1,10 @@
 {
   "_id": "6ade6d9f873fc1f4e9a10b37",
   "aiCategories": [
-    "user-support"
+    "loc.in-world",
+    "worlds.persistence"
   ],
-  "aiTaggedAt": "2026-10-25T21:24:43.684972Z",
+  "aiTaggedAt": "2026-10-26T02:12:00.209675Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ade6c9de0fc141e00b6f73f",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -64,7 +65,9 @@
       "postDeleted": false,
       "postID": "6ade6d9f873fc1f4e9a10b37",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -127,6 +130,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{60e65f577ae9d0492b0f2a75|full_name} yeah, i already do this, but its been two days ago =(",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adeb590b119b9dbcff7543c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-26T02:06:08.393Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6ade6c9de0fc141e00b6f73f",
+          "alias": "Thistle Hare",
+          "aliasID": "6ade6c9dc7e052262dadc299",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/29ecd13a390a09e486238ada8a63bea0.png",
+          "created": "2026-10-25T20:54:53.494Z",
+          "name": "Ivory Yokai",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ade71fa824c171aca363111",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ade6d9f873fc1f4e9a10b37",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6ade6c9de0fc141e00b6f73f|full_name} This VRChat Feedback (Canny) board is for bug reports. The intent of this board does not change even if the consequences of temporarily losing access to persistence data are uncomfortable. The time taken by user support team to respond to your individual case is not an acceptable explanation, in my opinion.\n\nYou'll have to submit your user support requests to the correct venue to be acted upon and wait patiently.\n\nYou can help yourself by providing exact date of the incidence and world ID in the ticket, within 30 days of the incident.",
       "viewerReactions": null,
       "voteID": null
     }
