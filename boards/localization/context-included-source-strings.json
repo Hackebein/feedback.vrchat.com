@@ -1,0 +1,93 @@
+{
+  "_id": "6adfc471275c988a8b57c67d",
+  "aiCategories": [
+    "loc.main-menu",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-10-26T21:27:39.753858Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "651ee4c59bd9ae5010c127e1",
+    "alias": "Rose Seahorse",
+    "aliasID": "65c6799fed6eefce4c011ce3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/bb8f3e158f8191ed78c565a5622e2bdd.png",
+    "created": "2023-10-05T16:31:01.250Z",
+    "name": "French Fox",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "651ee4c59bd9ae5010c127e1",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-26T21:21:53.466Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Some strings contains context text in the translatable part of them and should be removed:\n\n- 148202\n\n- 48174\n\n- 148212",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6adfc471275c988a8b57c674",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-26T21:21:53.466Z",
+  "subCategoryID": null,
+  "title": "Context included source strings",
+  "trendingScore": 2965.391747266539,
+  "updatedBy": null,
+  "urlName": "context-included-source-strings",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "651ee4c59bd9ae5010c127e1",
+      "alias": "Rose Seahorse",
+      "aliasID": "65c6799fed6eefce4c011ce3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/bb8f3e158f8191ed78c565a5622e2bdd.png",
+      "companies": [],
+      "name": "French Fox",
+      "urlName": null,
+      "voteID": "6adfc471c7e052262dbd4e48"
+    }
+  ]
+}
