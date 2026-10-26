@@ -2,9 +2,10 @@
   "_id": "6ad7458078f80258f6f4fb3d",
   "aiCategories": [
     "loc.quick-menu",
+    "client.settings",
     "localization"
   ],
-  "aiTaggedAt": "2026-10-21T15:21:35.075954Z",
+  "aiTaggedAt": "2026-10-26T22:42:53.594330Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "623bdf64fe2fbc3e0445374e",
@@ -34,7 +35,7 @@
     "urlName": "english-string-issue"
   },
   "categoryID": "651440f55c54a9094114edce",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -81,6 +82,41 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6adfd4b82d246633dd5d2548",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "65143dfbc129a609b921bbbd",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-26T22:31:20.467Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ad7458078f80258f6f4fb3d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6adfd4b82d246633dd5d2547",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -109,8 +145,8 @@
   "pinnedComment": null,
   "score": 2,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-10-21T15:20:41.331Z",
+  "status": "available in future release",
+  "statusChanged": "2026-10-26T22:31:20.444Z",
   "subCategoryID": null,
   "title": "\"Hide Player Namplate\" and \"Hide Desktop HUD\" String Missing",
   "trendingScore": 2964.8767552708728,
