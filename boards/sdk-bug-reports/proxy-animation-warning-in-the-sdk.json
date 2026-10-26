@@ -2,9 +2,9 @@
   "_id": "6adf727b4a9874dff73d2c2a",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.expressions"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-10-26T15:37:14.865275Z",
+  "aiTaggedAt": "2026-10-26T15:49:32.365041Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64e28d3731f1b80974319758",
@@ -42,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "TL;DR: If you don't rename the hand gesture animations after copying them from the VRChat SDK, VRChat will keep using the default ones\n\nHow to reproduce:\n\nIn a fresh Unity Avatar 2022 project\n\n1 - Copy the demo asset VRChat SDK animations and Gesture controller into the project (without copying the .meta, only the animation so that Unity recreates a fresh meta and id)\n\n-> vrc_AvatarV3HandsLayer\n\n-> proxy_hands_idle\n\n-> proxy_hands_open\n\n-> etc...\n\n2 - Customize the animations the way you want (bend the fingers, in a different way for example)\n\n3 - Replace all the animations with yours in the Gesture controller\n\n4 - Put your new Gesture controller in your avatar and upload it\n\n-> Your custom Gesture animations won't work and VRChat will still use the default Gesture animations\n\n6 - Rename your animations to anything else (custom_proxy_hands_idle, custom_proxy_hands_open)\n\n7 - Upload the avatar again\n\n-> The custom Gesture animations work again",
+  "details": "If you don't rename the hand gesture animations after copying them from the VRChat SDK, VRChat will keep using the default ones\n\nThere should be a warning about that in the SDK when you use an animation with a name that starts with proxy_!",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -64,10 +64,10 @@
   "status": "open",
   "statusChanged": "2026-10-26T15:32:11.667Z",
   "subCategoryID": null,
-  "title": "Hands gesture animation file naming causes VRChat to not use them",
+  "title": "proxy_ animation warning in the SDK",
   "trendingScore": 2965.7627176163815,
-  "updatedBy": null,
-  "urlName": "hands-gesture-animation-file-naming-causes-vrchat-to-not-use-them",
+  "updatedBy": "64e28d3731f1b80974319758",
+  "urlName": "proxy-animation-warning-in-the-sdk",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
