@@ -2,11 +2,11 @@
   "_id": "6adedf5ce0fc141e00c5644c",
   "aiCategories": [
     "loc.in-world",
+    "avatars.upload-performance",
     "social.instances",
-    "account.trust",
-    "moderation.safety-system"
+    "account.trust"
   ],
-  "aiTaggedAt": "2026-10-26T14:25:38.554981Z",
+  "aiTaggedAt": "2026-10-26T15:01:28.138963Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6adedb7c873fc1f4e9aeafd7",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +74,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate of:\n\n- https://vrchat.canny.io/feature-requests/p/world-filter-for-user-rank\n\n- https://feedback.vrchat.com/feature-requests/p/trust-level-public-instances\n\n- https://feedback.vrchat.com/feature-requests/p/lock-instance-by-trust-rank\n\n- https://feedback.vrchat.com/feature-requests/p/group-instance-minimum-trusted-rank\n\n- https://feedback.vrchat.com/feature-requests/p/rank-gated-instances\n\n- https://feedback.vrchat.com/feature-requests/p/rank-gated-instances-1\n\n- https://feedback.vrchat.com/feature-requests/p/trust-rank-limits-for-group-instances\n\n- https://feedback.vrchat.com/feature-requests/p/group-lobbies-user-rank-filter\n\n- https://feedback.vrchat.com/feature-requests/p/vrchat-needs-better-instance-protection-against-data-collecting-bots-hexed",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adf6a87dad47ebdff6ff05e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6adedb7c873fc1f4e9aeafd7",
+        "alias": "Strange Roadrunner",
+        "aliasID": "6adedb7cc7e052262d20cb4f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/d9adefab53a012314a5e79db386e6b2c.png",
+        "created": "2026-10-26T04:47:56.063Z",
+        "name": "503࿇",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-26T14:58:15.643Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6adedf5ce0fc141e00c5644c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Similar but not duplicates, it's not instance based.\n\nThis is implementing the avatar performance system on remote users instead of only locally.\n\nhttps://feedback.vrchat.com/feature-requests/p/vrchat-needs-better-instance-protection-against-data-collecting-bots-hexed\n\nThat one is the most similar based on the title. But they all suggest Worlds locked down based on ranking. This is adding some server side guard - I do not mean to sound like I know anything but it could perhaps reuse the block system and autoblock these people for the user based on ranks.",
       "viewerReactions": null,
       "voteID": null
     }
