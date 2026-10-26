@@ -13,12 +13,12 @@ Scrape horizon: **2026-10-02 21:06 UTC (23d ago)**.
 | `avatar-30` | 891 / 891 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 80 / 80 (100.0%) |
-| `bug-reports` | 12,870 / 12,869 (100.0%) |
+| `bug-reports` | 12,871 / 12,870 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,366 / 14,367 (99.99%) |
+| `feature-requests` | 14,365 / 14,366 (99.99%) |
 | `impostors` | 91 / 91 (100.0%) |
 | `ios-mobile-beta` | 269 / 269 (100.0%) |
 | `localization` | 661 / 661 (100.0%) |
