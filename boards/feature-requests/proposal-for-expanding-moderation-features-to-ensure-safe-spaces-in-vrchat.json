@@ -5,7 +5,7 @@
     "moderation.safety-system",
     "groups.instances"
   ],
-  "aiTaggedAt": "2026-10-26T14:25:38.557136Z",
+  "aiTaggedAt": "2026-10-26T15:23:42.629988Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67528d96a9f0ca8a017491dd",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 82,
+  "commentCount": 83,
   "commentingDisabled": false,
   "comments": [
     {
@@ -3950,6 +3950,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Jarnefeldt\n\n(2/2)\n\nI fully understand your primary concern—that expanding group features to the world level could risk cutting off access to the general Public environment.\n\nHowever, if a world creator applies bans or moderation in an unfair or arbitrary manner, users will naturally push back and choose not to visit that space. As a result, that world will lose its demand and users will migrate to healthier, more welcoming environments. I believe this market-like evaluation mechanism will force world managers to carefully balance their moderation practices, even if this proposal is adopted.\n\nAdditionally, as I have previously discussed with another user as a way to ease these concerns, we could consider an optional interface design:\"By default, only the designated instance type (Group) is shown, but an optional button—such as [Show Public Instances]—is added to ensure a clear pathway for anyone who wishes to access 'non-banned Public' instances.\"\n\n(I hope this nuance conveys well.)\n\nFor me, the most important objective is ensuring that \"dangerous instances are not forced as the primary, default choice.\" Therefore, even with a compromise of this kind, the core purpose of the proposal can still be largely achieved.\n\nUltimately, the key difference between adopting this proposal (even in part) and keeping the status quo comes down to this:\n\n\"Continuously relying on uncertain vote-kicks against recurring trolls in every single session\" versus \"Preventing repeated misconduct by allowing group-level bans.\"",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adf6738873fc1f4e9c974b4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6262d19417c3c26b15a9a40a",
+        "alias": "Violet Cattle",
+        "aliasID": "66096f4ce5d26962aa391b71",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/599af092ebe2d4d560b5dffea4d1ff5d.png",
+        "created": "2022-04-22T16:02:28.026Z",
+        "name": "Jarnefeldt",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-26T14:44:08.049Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "67528d96a9f0ca8a017491dd",
+          "alias": "Heather Reindeer",
+          "aliasID": "67528d96a367fa63921299ea",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/0144b3d306cfd8e5ae20a56b93a117b1.png",
+          "created": "2024-12-06T05:37:26.050Z",
+          "name": "やがて捨てられる補助輪",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ad3e9871d00d6bbda584994",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a3a798248e024a58d77f24d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{67528d96a9f0ca8a017491dd|full_name}\n\nRegarding the new TOS, the extensive list of permitted and prohibited behaviours is largely due to the previous version being too lax and not fully aligned with regulatory requirements from organisations such as the UK's OFCOM and similar bodies in other countries. Had VRChat failed to comply with these requirements, it likely would have faced significant regulatory challenges.\n\nThe language is also intentionally broad enough to cover a wide range of issues. From what I've read, this appears to be a fairly standard TOS realignment in response to evolving online safety regulations, particularly around R18 content and age-restricted spaces. This follows developments such as the UK's Online Safety Act and similar digital safety initiatives in other regions.\n\nThis is somewhat off-topic, but I think it adds useful context.\n\nGroup moderation systems have faced criticism on other platforms. Roblox, for example, has been criticised for situations where group structures were allegedly used to manipulate or pressure minors into inappropriate activities. VRChat has also faced criticism over cases where community groups and social structures were reportedly used in organised harassment campaigns, contributing to severe mental health consequences and eventually sucide for some individuals .\n\nThis is partially where my perspective on moderation tools comes from. I don't think it would necessarily change your stance, but I wanted to provide that context.\n\nI also wanted to point out that vote counts do not determine whether VRChat investigates or tracks a topic. For example, I submitted an animation synchronisation bug last year that received only 5-10 votes, yet it was acknowledged and tracked the following day. Meanwhile, there are topics with over 1,000 votes that remain untracked. In my experience, the deciding factor is whether an issue is presented in a way that clearly communicates its impact and technical relevance to VRChat's developers.\n\nThere is certainly some bias in what gets tracked, but that's a separate discussion.\n\nI think your intentions are good, but you also need to demonstrate to VRChat that the proposed tools cannot be easily abused by bad actors. In an ideal world I would probably agree with you, but unfortunately systems need to be designed with the assumption that some people are simply evil.",
       "viewerReactions": null,
       "voteID": null
     }
