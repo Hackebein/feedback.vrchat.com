@@ -1,0 +1,93 @@
+{
+  "_id": "6adf727b4a9874dff73d2c2a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-10-26T15:37:14.865275Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "64e28d3731f1b80974319758",
+    "alias": "Linear Pinniped",
+    "aliasID": "65f9eb96a63714bcb3da297b",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/189b13844781adef85283423ecbbffea.png",
+    "created": "2023-08-20T22:01:27.330Z",
+    "name": "jojos38",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "64e28d3731f1b80974319758",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-26T15:32:11.667Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "TL;DR: If you don't rename the hand gesture animations after copying them from the VRChat SDK, VRChat will keep using the default ones\n\nHow to reproduce:\n\nIn a fresh Unity Avatar 2022 project\n\n1 - Copy the demo asset VRChat SDK animations and Gesture controller into the project (without copying the .meta, only the animation so that Unity recreates a fresh meta and id)\n\n-> vrc_AvatarV3HandsLayer\n\n-> proxy_hands_idle\n\n-> proxy_hands_open\n\n-> etc...\n\n2 - Customize the animations the way you want (bend the fingers, in a different way for example)\n\n3 - Replace all the animations with yours in the Gesture controller\n\n4 - Put your new Gesture controller in your avatar and upload it\n\n-> Your custom Gesture animations won't work and VRChat will still use the default Gesture animations\n\n6 - Rename your animations to anything else (custom_proxy_hands_idle, custom_proxy_hands_open)\n\n7 - Upload the avatar again\n\n-> The custom Gesture animations work again",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6adf727b4a9874dff73d2c19",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-26T15:32:11.667Z",
+  "subCategoryID": null,
+  "title": "Hands gesture animation file naming causes VRChat to not use them",
+  "trendingScore": 2965.3570552137944,
+  "updatedBy": null,
+  "urlName": "hands-gesture-animation-file-naming-causes-vrchat-to-not-use-them",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "64e28d3731f1b80974319758",
+      "alias": "Linear Pinniped",
+      "aliasID": "65f9eb96a63714bcb3da297b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/189b13844781adef85283423ecbbffea.png",
+      "companies": [],
+      "name": "jojos38",
+      "urlName": null,
+      "voteID": "6adf727bc7e052262db9cbec"
+    }
+  ]
+}
