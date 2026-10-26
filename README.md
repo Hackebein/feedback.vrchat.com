@@ -2,7 +2,7 @@
 
 Collected: **38,577** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (96d ago)** to now.<br>
-Scrape horizon: **2026-10-02 22:43 UTC (23d ago)**.
+Scrape horizon: **2026-10-02 22:33 UTC (23d ago)**.
 
 ## Boards
 
@@ -24,7 +24,7 @@ Scrape horizon: **2026-10-02 22:43 UTC (23d ago)**.
 | `localization` | 661 / 661 (100.0%) |
 | `merch` | 37 / 37 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,340 / 3,339 (100.0%) |
+| `open-beta` | 3,340 / 3,338 (100.0%) |
 | `persistence` | 74 / 74 (100.0%) |
 | `sdk-bug-reports` | 1,442 / 1,442 (100.0%) |
 | `third-person-view` | 85 / 85 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-10-02 22:43 UTC (23d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 134 / 134 (100.0%) |
 | `website` | 907 / 907 (100.0%) |
-| **Total** | **38,577** / **38,397** (100.0%) |
+| **Total** | **38,577** / **38,396** (100.0%) |
 
 ## OpenSearch
 
