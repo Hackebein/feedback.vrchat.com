@@ -2,10 +2,10 @@
   "_id": "6ade8e0ffb4e9630b2f085ee",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "avatars.dynamics"
+    "avatars.accessories",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-10-26T06:12:57.408014Z",
+  "aiTaggedAt": "2026-10-26T12:40:53.778794Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Currently, advanced parameter ContactTags do not have much utility because they are at odds with the \"matching\" purpose that tags are also used for. For instance, if you have different groups of contacts that interact with senders from their own group, they cannot have ANY tag overlap for \"data\" tags used by advanced parameters because then the different groups would interact with each other.\n\nI'd suggest that we could optionally override the \"matching\" tags for \"self\", and the \"matching\" tags for others (giving us three lists if the overrides are enabled). In this case, the first list would be used for advanced parameters CollisionTag / material parameter tag bitflags, the second list would be used for collision matching against self senders, and the third list would be used for collision matching against other senders.\n\nThis would halve the number of receiver contacts and eliminate the complex animator logic needed for self vs other receivers with different tags (which currently requires two separate receivers and complex dbt merging), and would greatly increase the utility of advanced parameter tag matching, presumably without much of any performance impact since it's just changing which list is used in each of these existing situations.",
+  "details": "Currently, advanced parameter ContactTags do not have much utility because they are at odds with the \"matching\" purpose that tags are also used for. For instance, if you have different groups of contacts that interact with senders from their own group, they cannot have ANY tag overlap for \"data\" tags used by advanced parameters because then the different groups would interact with each other.\n\nI'd suggest that we could optionally override the \"matching\" tags for \"self\", and the \"matching\" tags for others (giving us three lists if the overrides are enabled). In this case, the first list would be used for advanced parameters CollisionTag / material parameter tag bitflags, the second list would be used for collision matching against self senders, and the third list would be used for collision matching against other senders.\n\nThe current workaround to this issue is to use multiple receivers (some for self and some for olthers) with complex dbt animator logic (to \"proxy\" the data from those multiple contacts into a single usable set), increasing the performance burden of the avatar for little reason. With this feature added, it would cut down the number of receiver contacts by 50% (or even 75% in some cases!), eliminate the complex animator logic, and greatly increase the utility of advanced parameter tag matching. All of this presumably without much of any performance impact since it's just changing which list is used in each of these existing situations.",
   "error": null,
   "eta": null,
   "etaPublic": true,
