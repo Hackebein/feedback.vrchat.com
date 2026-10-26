@@ -2,9 +2,9 @@
   "_id": "6ac59d0eb8decdc0626c2d35",
   "aiCategories": [
     "loc.in-world",
-    "avatars"
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-10-07T14:28:53.276639Z",
+  "aiTaggedAt": "2026-10-26T08:10:35.410964Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d2e156b8b641f47af4b344a",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +73,54 @@
       "statusChangeID": "6ac6567ad94892836f297da5",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6adf08a30aa0c0ed81e4414b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "648820f1f6d3580916364b79",
+        "alias": "Inkwell Ox",
+        "aliasID": "66c66c6d3e088c8d6b5cf460",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3218955ed5d672dd40e204c8e557db59.png",
+        "created": "2023-06-13T07:55:29.795Z",
+        "name": "楓（Kaede）",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-26T08:00:35.068Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/8c2b45e8f53cf7ac0a65f9af9b5d502e.jpeg",
+        "https://canny-assets.io/images/794033e4a9c6d774836c7d8ac1c1799f.jpeg",
+        "https://canny-assets.io/images/e62fb7e294465c6db05f8f752c248876.jpeg"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac59d0eb8decdc0626c2d35",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I can reproduce this issue when switching from a small avatar to a normal-height avatar that uses the Unity Cloth component.\n\n**Reproduction steps:**\n\n1. Switch to a small avatar.\n\n2. Switch to a normal-height avatar with a Cloth-based skirt.\n\n3. The skirt becomes significantly shorter than its intended length.\n\n**Expected behavior:**\n\nThe Cloth mesh should maintain its correct dimensions regardless of the previously used avatar.\n\n**Actual behavior:**\n\nThe Cloth mesh appears to inherit scaling information from the previously used avatar, causing the skirt to shrink.\n\n**Possible regression:**\n\nSimilar Cloth scaling issues were previously fixed in VRChat 2023.3.2 and 2023.4.2. A related Unity 2022 Open Beta report was also marked Complete in April 2024.\n\nThis may be a regression of those previous fixes, potentially related to the Unity 6 upgrade.\n\nI've attached comparison screenshots showing the incorrect and correct skirt lengths.\n\nCould the developers investigate whether the previous Cloth scaling fixes are still functioning correctly?",
       "viewerReactions": null,
       "voteID": null
     }
