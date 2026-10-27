@@ -1,0 +1,90 @@
+{
+  "_id": "6adff25a9e67fb1cb5eec8b3",
+  "aiCategories": [
+    "loc.in-world",
+    "client.camera"
+  ],
+  "aiTaggedAt": "2026-10-27T00:42:16.775382Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62def30ca02f6f44b01782dc",
+    "alias": "Determined Panther",
+    "aliasID": "65fcc66da63714bcb3a86582",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5b65808850ce8d52d8a7dbf19ca96da5.png",
+    "created": "2022-07-25T19:46:20.410Z",
+    "name": "NMPopsicle",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62def30ca02f6f44b01782dc",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-27T00:37:46.317Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Taking a picture in Multi-Layer mode with the 'Items' mask toggled to 'OFF' results in an 'Environment' output image that still includes all Items. When taking a standard (non-multi-layer) image, 'Items' Mask OFF works as intended. This bug only occurs in Multi-layer camera mode.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6adff2589e67fb1cb5eec87a",
+  "imageURLs": [
+    "https://canny-assets.io/images/aefb5dfea170e8e58789a46974244696.png",
+    "https://canny-assets.io/images/e2a8affa5971642e93c7a9affb6eba13.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-27T00:37:46.317Z",
+  "subCategoryID": null,
+  "title": "Items cannot be masked in Multi-Layer Camera Mode",
+  "trendingScore": 2965.411178808372,
+  "updatedBy": null,
+  "urlName": "items-cannot-be-masked-in-multi-layer-camera-mode",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "62def30ca02f6f44b01782dc",
+      "alias": "Determined Panther",
+      "aliasID": "65fcc66da63714bcb3a86582",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5b65808850ce8d52d8a7dbf19ca96da5.png",
+      "companies": [],
+      "name": "NMPopsicle",
+      "urlName": null,
+      "voteID": "6adff25ac7e052262dbeaca1"
+    }
+  ]
+}
