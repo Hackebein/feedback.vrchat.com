@@ -4,9 +4,10 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.camera"
+    "client.camera",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-06-15T07:57:32.548502Z",
+  "aiTaggedAt": "2026-10-27T16:41:05.285111Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62def3250543f144ab70355f",
@@ -36,7 +37,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -84,6 +85,50 @@
       "statusChangeID": "67d82179aca2f3d4d54835f0",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae057fb84304472c063c8ae",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6ae057987c3ff1e44ab2f143",
+        "alias": "Xenon grey Dragonfly",
+        "aliasID": "6ae05798c7e052262dc0d576",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8662c4f4fec6a61e1bc2e6f9095a53f1.png",
+        "created": "2026-10-27T07:49:44.073Z",
+        "name": "TickyTack_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-27T07:51:23.344Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "67d46b10fb67e87145cedf94",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Can I suggest a feature toggle to turn VRSL light projections off on the cameras, so at least all 4 cameras are consistent. Bit of a temporary fix as it lowers the intended quality, but it helps with consistency when video editing.",
       "viewerReactions": null,
       "voteID": null
     }
