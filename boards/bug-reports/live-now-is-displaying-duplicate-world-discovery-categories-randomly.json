@@ -4,7 +4,7 @@
     "loc.website",
     "web.worlds"
   ],
-  "aiTaggedAt": "2026-10-27T18:25:17.250440Z",
+  "aiTaggedAt": "2026-10-27T18:37:20.733184Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -209,7 +209,9 @@
       "deletedAt": null,
       "fileURLs": [],
       "files": [],
-      "imageURLs": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/5055363d227157e32f3749752ce331d0.png"
+      ],
       "integrationSourceType": null,
       "internal": false,
       "itemSourceType": null,
@@ -239,7 +241,53 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "If it matters for this bug, I have also formerly objected to world personalization with General Data Protection Regulation (\"GDPR\"). My objection was implemented. The algorithm is suggesting me generic worlds instead of personalized ones.\n\nIn other words, I'm on the opt-out list for world discovery. @{64873f159cf028090ce2c2e2|full_name}",
+      "value": "If it matters for this bug, I became exempted from world discovery personalization with a legal right to object under General Data Protection Regulation (\"GDPR\") in support tickets [#699784](https://help.vrchat.com/hc/en-us/requests/699784) and [#713959](https://help.vrchat.com/hc/en-us/requests/713959) two months prior. The algorithm is supposedly suggesting me generic worlds instead of personalized ones based on historical data.\n\nIn other words, I'm on the opt-out list for world discovery. @{64873f159cf028090ce2c2e2|full_name}",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae0edb988c7b1e38a69a3c2",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-27T18:30:17.177Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/ca21df2b36a6bc7b62f068129e47d499.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6ae0bd8e5359be91ad4900c9",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6adfc6102d246633dd599e76",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "27 minutes later, reproduced again.",
       "viewerReactions": null,
       "voteID": null
     }
