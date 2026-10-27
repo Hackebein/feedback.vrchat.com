@@ -21,7 +21,7 @@ Scrape horizon: **2026-10-03 00:28 UTC (24d ago)**.
 | `feature-requests` | 14,366 / 14,367 (99.99%) |
 | `impostors` | 91 / 91 (100.0%) |
 | `ios-mobile-beta` | 269 / 269 (100.0%) |
-| `localization` | 662 / 662 (100.0%) |
+| `localization` | 662 / 663 (99.8%) |
 | `merch` | 37 / 37 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
 | `open-beta` | 3,341 / 3,340 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-10-03 00:28 UTC (24d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 134 / 134 (100.0%) |
 | `website` | 908 / 908 (100.0%) |
-| **Total** | **38,592** / **38,411** (100.0%) |
+| **Total** | **38,592** / **38,412** (100.0%) |
 
 ## OpenSearch
 
