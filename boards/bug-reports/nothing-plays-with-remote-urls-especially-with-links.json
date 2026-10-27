@@ -7,7 +7,7 @@
     "worlds.video",
     "worlds.content-gating"
   ],
-  "aiTaggedAt": "2026-10-27T05:32:16.413522Z",
+  "aiTaggedAt": "2026-10-27T05:53:20.743859Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6093237ccb7cbb5328930daf",
@@ -39,7 +39,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nVideo and audio doesnt play with remote links/ untrusted urls, except from links used by specific worlds, expected it to work\n\nReproduction Steps\n\nUse a url of a video from youtube or other streaming service in a world with remote urls/ video player\n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: Quest (platform: Android - Quest, store: Oculus, headset: None)\n\nrawPlatform: Android\n\nclientVersion: 2026.3.3p2-1921-15c4a824b2-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-26_20-51-30.txt](https://api.vrchat.cloud/api/1/file/file_decbde6a-7486-4509-b668-49fdd0c4024e/1/file)",
+  "details": "Description\n\nVideo and audio doesnt play with remote links/ untrusted urls, except from links used by specific worlds, expected it to work\n\nReproduction Steps\n\nUse a url of a video from youtube or other streaming service in a world with remote urls/ video player\n\nDetails\n\n- Category: Other\n\n- Frequency: Always\n\n---\n\nplatform: Quest (platform: Android - Quest, store: Oculus, headset: None)\n\nrawPlatform: Android\n\nclientVersion: 2026.3.3p2-1921-15c4a824b2-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-10-26_20-51-30.txt](https://api.vrchat.cloud/api/1/file/file_decbde6a-7486-4509-b668-49fdd0c4024e/1/file)\n\nExtra Note: Only recent updates seem to cause this",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -63,7 +63,7 @@
   "subCategoryID": null,
   "title": "Nothing Plays With Remote Urls, Especially with links",
   "trendingScore": 2965.845632478262,
-  "updatedBy": null,
+  "updatedBy": "6093237ccb7cbb5328930daf",
   "urlName": "nothing-plays-with-remote-urls-especially-with-links",
   "viewerIsAuthor": false,
   "viewerVote": 0,
