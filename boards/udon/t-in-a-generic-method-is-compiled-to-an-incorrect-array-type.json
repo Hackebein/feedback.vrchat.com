@@ -1,0 +1,93 @@
+{
+  "_id": "6ae12a9b4ad8d39b3c5c1517",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-10-27T22:53:37.065556Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6676aab35888b7d0c3551251",
+    "alias": "Neutral Puffin",
+    "aliasID": "6676aab3d5dd336a2082821a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/caca744062bfc81fd48ea07f652f50c4.png",
+    "created": "2024-06-22T10:42:59.858Z",
+    "name": "Reimbo",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6676aab35888b7d0c3551251",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-27T22:50:03.434Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Summary\n\nThe UdonSharp compiler compiles `T[]` declarations inside generic methods to an incorrect array type instead of the array type corresponding to the type argument.\n\nThis issue occurs when `T[]` is used only within the method body and does not appear in the method's return type or parameters.\n\nSteps to Reproduce\n\n1. Create a UdonSharp script using the code below.\n\n2. Compile the script and inspect the generated Udon assembly, focusing on the code corresponding to each generic method invocation.\n\nExpected Result\n\nThe array type should correspond to the specified type argument:\n\n- `GenericMethod<int>()`: `SystemInt32Array`\n\n- `GenericMethod<float>()`: `SystemSingleArray`\n\n- `GenericMethod<string>()`: `SystemStringArray`\n\nActual Result\n\n`SystemInt32Array` is used for all invocations. The corresponding array types for `float[]` and `string[]` are not generated.\n\nReproduction Code\n\n```\n\nusing UdonSharp;\n\npublic class GenericsArrayTypeBug : UdonSharpBehaviour\n\n{\n\n    void Start()\n\n    {\n\n        GenericMethod<int>();\n\n        GenericMethod<float>();\n\n        GenericMethod<string>();\n\n    }\n\n    public static void GenericMethod<T>()\n\n    {\n\n        T[] array = new T[0];\n\n    }\n\n}\n\n```\n\nGenerated Udon Assembly\n\nWith SDK 3.10.5, the generated assembly uses `SystemInt32Array` for all three invocations, as shown in the following variable declarations:\n\n```\n\n__lcl_array_SystemInt32Array_0: %SystemInt32Array, null\n\n__lcl_array_SystemInt32Array_1: %SystemInt32Array, null\n\n__lcl_array_SystemInt32Array_2: %SystemInt32Array, null\n\n```\n\nThe array constructor calls also use `SystemInt32Array` in all three cases:\n\n```\n\nEXTERN, \"SystemInt32Array.__ctor__SystemInt32__SystemInt32Array\"\n\n```\n\nTherefore, even when `float` or `string` is specified as the type argument, the array is compiled as the equivalent of `int[]`.\n\nAdditional Observation\n\nWhen `T[]` is included in the method's return type or parameters, this issue does not occur, and the array type is generated correctly.\n\nEnvironment\n\n- VRChat Worlds SDK: 3.10.5\n\n- Unity: 2022.3.22f1",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae12a9b4ad8d39b3c5c14f4",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-27T22:50:03.434Z",
+  "subCategoryID": null,
+  "title": "T[] in a generic method is compiled to an incorrect array type",
+  "trendingScore": 2965.5433510355533,
+  "updatedBy": "6676aab35888b7d0c3551251",
+  "urlName": "t-in-a-generic-method-is-compiled-to-an-incorrect-array-type",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6676aab35888b7d0c3551251",
+      "alias": "Neutral Puffin",
+      "aliasID": "6676aab3d5dd336a2082821a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/caca744062bfc81fd48ea07f652f50c4.png",
+      "companies": [],
+      "name": "Reimbo",
+      "urlName": null,
+      "voteID": "6ae12a9bc7e052262dc81783"
+    }
+  ]
+}
