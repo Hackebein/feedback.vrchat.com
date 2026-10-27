@@ -4,7 +4,7 @@
     "loc.in-world",
     "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-10-26T08:43:22.885572Z",
+  "aiTaggedAt": "2026-10-27T05:03:28.617679Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d2e156b8b641f47af4b344a",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -160,13 +160,71 @@
       "postDeleted": false,
       "postID": "6ac59d0eb8decdc0626c2d35",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "I would also like to point out a potentially related regression involving Unity Cloth scaling.\n\nIn addition to the avatar-switching issue reported here, there is another reproducible issue where changing the current avatar's height using VRChat's built-in Avatar Height adjustment causes the Cloth mesh to scale incorrectly.\n\nImportantly, this second issue occurs without switching avatars.\n\nThe existing report for that issue is here:\n\nhttps://feedback.vrchat.com/bug-reports/p/cloth-applied-mesh-does-not-scale-when-avatar-scale-is-changed\n\nA related Cloth scaling issue was previously marked as fixed in the Unity 2022 Open Beta:\n\nhttps://feedback.vrchat.com/open-beta/p/cloth-applied-mesh-does-not-scale-when-avatar-scale-is-changed\n\nSince both issues involve incorrect Cloth scaling, I wonder whether they could share a common problem with Cloth initialization or scale handling after the Unity 6 migration.\n\nThe root cause is not confirmed, but I hope these reports can be investigated together.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae02f2fa2db4b56698e41e3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f3640fb06dcf51467239ddc",
+        "alias": "Wild strawberry Ocelot",
+        "aliasID": "65c26df1ed6eefce4c5aac29",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c3b8b4ca1452544b70f78f0f7a3c3527.png",
+        "created": "2020-08-14T07:44:59.380Z",
+        "name": "S a c r e d",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-27T04:57:19.948Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "648820f1f6d3580916364b79",
+          "alias": "Inkwell Ox",
+          "aliasID": "66c66c6d3e088c8d6b5cf460",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/3218955ed5d672dd40e204c8e557db59.png",
+          "created": "2023-06-13T07:55:29.795Z",
+          "name": "楓（Kaede）",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6adf0d97873fc1f4e9b4f403",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac59d0eb8decdc0626c2d35",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{648820f1f6d3580916364b79|full_name} I also started noticing this as well.",
       "viewerReactions": null,
       "voteID": null
     }
