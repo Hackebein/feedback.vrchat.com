@@ -1,0 +1,109 @@
+{
+  "_id": "6ae1389a99f91947a4bb7a0e",
+  "aiCategories": [
+    "loc.login",
+    "loc.pc-client",
+    "open-beta",
+    "platforms.pc.steam",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-10-27T23:54:23.048432Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6078597a713ae019380ecc58",
+    "alias": "Raffia Catshark",
+    "aliasID": "65c27bd8ed6eefce4c9b5259",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/0773acc4aaed136447e830910a581a10.png",
+    "created": "2021-04-15T15:19:22.923Z",
+    "name": "Nidonocu",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6078597a713ae019380ecc58",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-27T23:49:46.084Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When getting the new Terms of Service and Privacy Policy prompts in the new login UI, the new panels have now changed significantly from their old login flow versions, however they have several problems:\n\n1. The link text doesn't have an underline or other more obvious indicator (such as an icon) that it is a hyperlink, which might make it hard for some colour blind users.\n\n2. The link text is part of the label for the agreement checkbox, under standard UI rules in most platforms, clicking the text of a checkbox should just check and uncheck the text box, not perform a secondary action by also being a hyperlink. This hyperlink should be a seperate UI element with a clearer display text such as: 'View the <document> in your web browser'.\n\n3. There was no notification or even UI noise as far as I could tell when clicking the hyperlink to indicate that Vrchat had opened my web browser on my desktop meaing I clicked it several times and opened several tabs. The standard VRChat notification UI or similar should be used if the user to tell them a new tab has opened in their default browser for them to go read the documents.\n\n4. Given there was an update to both the ToS and PP at the same time, the dialog should let users know there are multiple documents to review and accept from the start. For someone being conscientious and taking time to take off their headset, review the changes before putting their headset back on and clicking accept, only to then have a second document to do that again! If there had also been an update to the Code of Conduct as well that would be really annoying! If multiple documents have updated, expand the size of the dialog as needed to display a link for each one and a checkbox for each one given all need to be accepted to continue into VRChat.\n\n5. Finally, a general comment on the policy document pages, a 'Diff' like view should be provided if someone accesses them from VRChat or the VRChat web panel like this, showing the changes between the last version they accepted and the current version (maybe with 'human-friendly' explainers as well). This way someone can easily review what parts have changed and not need to re-read the entire document and play 'spot the difference' on them. Various community members took it upon themselves to create diff-like views and this is something VRChat should do themselves as it would help give a better impression of honesty and transparency about what is changing and why.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae1389999f91947a4bb7a09",
+  "imageURLs": [
+    "https://canny-assets.io/images/0c52355c0feb2523d83d2d43b517a9fb.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae1389a99f91947a4bb7a0e/1545941844.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-27T23:49:46.084Z",
+  "subCategoryID": null,
+  "title": "[1935] ToS/Privacy Policy prompts in new login screens have several UI/UX issues",
+  "trendingScore": 2965.9548357347962,
+  "updatedBy": null,
+  "urlName": "1935-tos-privacy-policy-prompts-in-new-login-screens-have-several-ui-ux-issues",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "63e70d70f1684e450d14723f",
+      "alias": "Top Lizard",
+      "aliasID": "65c5aef0ed6eefce4cebd8a5",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a7fcb9878699ff82473f37abb6e24fc1.png",
+      "companies": [],
+      "name": "kazin138",
+      "urlName": null,
+      "voteID": "6ae13947c7e052262dc86409"
+    },
+    {
+      "_id": "6078597a713ae019380ecc58",
+      "alias": "Raffia Catshark",
+      "aliasID": "65c27bd8ed6eefce4c9b5259",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0773acc4aaed136447e830910a581a10.png",
+      "companies": [],
+      "name": "Nidonocu",
+      "urlName": null,
+      "voteID": "6ae1389ac7e052262dc85e4f"
+    }
+  ]
+}
