@@ -5,7 +5,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-06-11T01:52:10.379151Z",
+  "aiTaggedAt": "2026-10-27T16:09:48.367465Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63691297469f06772579fe6f",
@@ -35,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6509f35d0d1490098b820396",
-  "commentCount": 49,
+  "commentCount": 50,
   "commentingDisabled": false,
   "comments": [
     {
@@ -166,7 +166,7 @@
       "postID": "6615bd06a7a4c0b0983bd09e",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -780,6 +780,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Soba news update: [VRChat Creators Roadmap (March 2026)](https://ask.vrchat.com/t/vrchat-creators-roadmap-march-2026/48077#p-88159-soba-3).",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae0cb29831eae0e189f99d3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "628680e25b91bf0b6529f157",
+        "alias": "Traditional Limpet",
+        "aliasID": "6ad07fd2a9a58d167a4491f4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/dee2806d396294482f19f927f4e8b8fd.png",
+        "created": "2022-05-19T17:39:46.214Z",
+        "name": "GyztorMizirath",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-27T16:02:49.235Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5fcd676570b59138e6ef0271",
+          "alias": "Unlikely Emu",
+          "aliasID": "65c282bbed6eefce4caf92a4",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/89711696e2b573a62aea01cebfa51e8a.png",
+          "created": "2020-12-06T23:21:09.190Z",
+          "name": "Smash-ter",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "69390cd6588072a789ef0228",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6615bd06a7a4c0b0983bd09e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5fcd676570b59138e6ef0271|full_name} Would honestly love to see stuff come to avatars, Especially since Resonite has kinda been pushing me away from really wanting to make stuff on there as of late. So having this stuff on avatars would allow people to make more preformant stuff on their avatars. Instead of having to animate stuff that runs on a frame based clock and evaluates every time you can just, set something to be off on your avatar as just a script that only runs when it needs to. And since its node based anyways they can just check on its compile for performance metrics based on how many branching paths it does and what nodes it uses. i.e. add a number to each node for \"complexity\" and just add it up in the end for preformance metrics or something.",
       "viewerReactions": null,
       "voteID": null
     }
