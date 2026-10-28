@@ -2,9 +2,10 @@
   "_id": "6aac9f2236054aec58898034",
   "aiCategories": [
     "loc.website",
-    "web.social"
+    "web.profiles",
+    "web.api"
   ],
-  "aiTaggedAt": "2026-10-15T17:22:42.378449Z",
+  "aiTaggedAt": "2026-10-28T21:30:47.329959Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5ff39d9fe22cc0618bebbd7d",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -254,6 +255,50 @@
       "statusChangeID": "6ad10abfeec74b9970c6a6d9",
       "statusChangeNewStatus": "available in future release",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae266cd7a18333f27380455",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-28T21:19:09.157Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6ad10abfeec74b9970c6a6da",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aac9f2236054aec58898034",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "[VRChat 2026.4.1](https://docs.vrchat.com/docs/vrchat-202641) - October 28 - Build 1936 - Live:\n\n> Removed the deprecated \"Search By Bio\" option from the refine user search menu.",
       "viewerReactions": null,
       "voteID": null
     }
