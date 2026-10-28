@@ -32,7 +32,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -277,52 +277,6 @@
       "spam": false,
       "statusChangeID": null,
       "value": "[1934] this still happens",
-      "viewerReactions": null,
-      "voteID": null
-    },
-    {
-      "_id": "6ae252241b34b9fc673b100a",
-      "aiGenerated": false,
-      "author": {
-        "_id": "5daa427508fc447e9300e730",
-        "alias": "Respectable Narwhal",
-        "aliasID": "6aa0d988250b281ba80448a8",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/1f33c353c5bd911c913b0863fd94f15a.png",
-        "created": "2019-10-18T22:53:41.856Z",
-        "name": "LaSameGem",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-10-28T19:51:00.683Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [
-        "https://canny-assets.io/images/8a8ae9289658c63ff7ce616448fe721c.png"
-      ],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6ac9eb52604357f6929ce45e",
-      "private": false,
-      "reactions": null,
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "[1936] (latest stable as of 10/28/26) still happens \n\nThis is the most likely cause of broken FT for avatars - VRCFT (and other OSC apps) will have to release a fix to handle this until the patch gets released.",
       "viewerReactions": null,
       "voteID": null
     }
