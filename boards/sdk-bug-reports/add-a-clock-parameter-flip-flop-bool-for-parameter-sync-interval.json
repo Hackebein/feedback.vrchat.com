@@ -1,0 +1,93 @@
+{
+  "_id": "6ae27f199c366e8afac66b02",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor"
+  ],
+  "aiTaggedAt": "2026-10-28T23:08:43.776187Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63c9760ef519ef0b8ce99165",
+    "alias": "Quince Pike",
+    "aliasID": "65c2bff3ed6eefce4c5e37e4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/73062090ec9e43d73cb4deaf08305697.png",
+    "created": "2023-01-19T16:55:42.346Z",
+    "name": "Dor․",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63c9760ef519ef0b8ce99165",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-28T23:02:49.103Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Context: Parameter multiplexing systems have become widely used to support an ever-increasing number of features on avatars, and to make room for more than a handful of options once the VRCFT template was added.\n\nThese systems have depended on the fairly consistent update rate of 10 times a second (0.1s interval) and so have been built with that (documented)[https://creators.vrchat.com/avatars/animator-parameters/#sync-types] behavior.\n\nRecent changes to how parameters are synced have made these systems less consistent, it was stated that these systems were never supported (despite the docs and consistent in-game behavior for years) but efforts are being made to not break these systems.\n\nI suggested versioning the Expression Parameters (just like physbones/raycast) so that new features (like bit width, signed/unsigned, etc) would only apply on new uploads, and that expression parameters \"1.0\" would sync as they have before, in my opinion that's still the best approach (guarantees that existing uploads would remain functional), that was unfortunately shut down (\"There will not be a compatibility shim, as we are making these changes to guarantee server stability and cost.\" -@pi)[https://discord.com/channels/189511567539306508/449386885299830794/1564804942940741643].\n\nRegardless of expression parameter versioning or not, the multiplexing systems are unlikely to be going anywhere since many modern avatars often use 400-600 bits for their base features (VRCFT aside), and so we'd be encountering the same inconsistent interval issues (be it on all uploads, or only on \"1.1\" uploads if versioning is accepted as a solution) since the local avatar cannot tell when parameters are sent to remote, as our 0.1s interval no longer holds true, and for the lack of a better timing mechanism.\n\nSo a parameter update clock is needed, for example `ParameterUpdate` as a bool, that simply flip/flops it's state once current parameter values are sent to remote users, the interval should be dictated by the \"fastest\" update a remote user sees (if one user is very close and should see the update in 0.1 seconds and another is very far and only receives an update in 1 sec intervals, it should be based on the closer user's 0.1 interval) as that's been what we've been operating on, though I would not oppose additional options like `ParameterUpdateLast` for the latest update and `ParameterUpdateMedian` for when most people would see the updated values.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae27f189c366e8afac66af1",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae27f199c366e8afac66b02/219131258.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-28T23:02:49.103Z",
+  "subCategoryID": null,
+  "title": "Add a \"clock\" parameter (flip/flop bool) for parameter sync interval",
+  "trendingScore": 2965.687474256453,
+  "updatedBy": null,
+  "urlName": "add-a-clock-parameter-flip-flop-bool-for-parameter-sync-interval",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "63c9760ef519ef0b8ce99165",
+      "alias": "Quince Pike",
+      "aliasID": "65c2bff3ed6eefce4c5e37e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/73062090ec9e43d73cb4deaf08305697.png",
+      "companies": [],
+      "name": "Dor․",
+      "urlName": null,
+      "voteID": "6ae27f19c7e052262dcfa4ef"
+    }
+  ]
+}
