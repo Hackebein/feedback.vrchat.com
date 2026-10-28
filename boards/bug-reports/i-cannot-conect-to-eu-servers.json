@@ -4,10 +4,9 @@
     "loc.pc-client",
     "platforms.pc.steam",
     "worlds.travel",
-    "audio.voice",
-    "platforms.standalone-vr.quest"
+    "account.auth"
   ],
-  "aiTaggedAt": "2026-10-28T18:50:36.510357Z",
+  "aiTaggedAt": "2026-10-28T19:23:38.892820Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ae2425119ba12e6c6270a0f",
@@ -31,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -75,6 +74,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "i'll try to clean all vrchat cashe",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae24a4eb8e7b91c7ecaeaec",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6ae2425119ba12e6c6270a0f",
+        "alias": "Nectarine Pinniped",
+        "aliasID": "6ae24251c7e052262dce1717",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/95fa5e0df7b8479a25459850f7c8bece.png",
+        "created": "2026-10-28T18:43:29.885Z",
+        "name": "Аutismo",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-28T19:17:34.345Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae24252862cf4acf28e2bf7",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Every attempt to join these existing instances displays the following error (translated from Russian):\n\n“That instance is using an outdated version of VRChat. You won't be able to join them until they update!”\n\nHowever, I can create and successfully join new private instances in both US East and Europe. Therefore, the problem is specifically with joining existing instances.\n\nRelevant events from output_log_2026-10-28_20-00-57.txt:\n\n20:01:47 — Successfully joined a new private instance of “Just A Cabin” in US East.\n\n20:03:05 and 20:03:08 — Existing public EU instance rejected with the outdated-version error.\n\n20:03:25 — Successfully joined a new private instance of “POLAND” in Europe.\n\n20:05:12 and 20:05:13 — Existing US East instance rejected with the same outdated-version error.\n\nEarlier EU connection attempts also produced “Operation timed out” and “Failed to connect to network region,” although creating and joining a new EU instance later succeeded.\n\nI have restarted VRChat multiple times. The logs show “AntiCheat Session Begin: Success.”",
       "viewerReactions": null,
       "voteID": null
     }
