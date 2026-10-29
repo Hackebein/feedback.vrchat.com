@@ -3,10 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "worlds.travel",
-    "audio.voice"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-10-28T20:24:45.345098Z",
+  "aiTaggedAt": "2026-10-29T16:08:53.344114Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ae2425119ba12e6c6270a0f",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -162,6 +161,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Not a bug, this is documented in the [VRChat 2026.4.1](https://docs.vrchat.com/docs/vrchat-202641) - October 28 - Build 1936 release notes.\n\n> ⚠️ This release is NOT network compatible! You will be unable to join users that have not updated their client! If you see, \"Can't Join Instance,\" that's why!⚠",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae36cb3ae89c699d1288df9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6ae2425119ba12e6c6270a0f",
+        "alias": "Nectarine Pinniped",
+        "aliasID": "6ae24251c7e052262dce1717",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/95fa5e0df7b8479a25459850f7c8bece.png",
+        "created": "2026-10-28T18:43:29.885Z",
+        "name": "Аutismo",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-29T15:56:35.796Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ae2579814e4c7a448e40b1a",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae24252862cf4acf28e2bf7",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}  the problem is I got ClientTimeout when joining EU instances, including newly created private ones. US East works, and other online games work normally.\n\nWindows PC, Steam default branch, VRChat 2026.4.1, build 1936.\n\nThe log shows a connection to EU server gcams1183.exitgames.com:27001, followed by ClientTimeout during room entry. The API remains reachable.",
       "viewerReactions": null,
       "voteID": null
     }
