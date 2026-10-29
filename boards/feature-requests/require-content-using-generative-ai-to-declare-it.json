@@ -702,7 +702,9 @@
       "postDeleted": false,
       "postID": "6836129ba478d14504f26450",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -727,20 +729,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1539,
+  "maxScore": 1540,
   "mergeCount": 3,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6836129ba478d14504f26450/1222097147.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1539,
+  "score": 1540,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2025-05-27T19:29:31.299Z",
   "subCategoryID": null,
   "title": "Require content using generative AI to declare it",
-  "trendingScore": 2968.3645421331175,
+  "trendingScore": 2968.4012516738776,
   "updatedBy": null,
   "urlName": "require-content-using-generative-ai-to-declare-it",
   "viewerIsAuthor": false,
@@ -753,6 +755,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6293f180c3b9f80b783918e8",
+      "alias": "Purple Crab",
+      "aliasID": "65caf64fed6eefce4ccfa942",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f95ff94b0399a75f17b732a9a59e85f5.png",
+      "companies": [],
+      "name": "koboldAnxiety",
+      "urlName": null,
+      "voteID": "6ae34554a29633a6de06d1e0"
+    },
     {
       "_id": "5c4bd9bca31c1d6ef9355351",
       "alias": "Jonquil Stingray",
@@ -1291,17 +1304,6 @@
       "name": "StormShadow_64",
       "urlName": null,
       "voteID": "6ac65d9cb987445a69dea932"
-    },
-    {
-      "_id": "5f2e786a8c253106b02c424e",
-      "alias": "Yellow green Lemur",
-      "aliasID": "65c2b5a8ed6eefce4c040fe5",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/c18c19f93568395b42e538f8b9ffe16e.png",
-      "companies": [],
-      "name": "Smaddy",
-      "urlName": null,
-      "voteID": "6ac651c1b987445a69de5497"
     }
   ]
 }
