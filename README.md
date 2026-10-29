@@ -9,11 +9,11 @@ Scrape horizon: **2026-10-03 18:19 UTC (25d ago)**.
 | Board | Posts |
 |-------|------:|
 | `age-verification` | 219 / 219 (100.0%) |
-| `android` | 354 / 353 (100.0%) |
+| `android` | 353 / 353 (100.0%) |
 | `avatar-30` | 892 / 892 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 80 / 80 (100.0%) |
-| `bug-reports` | 12,929 / 12,928 (100.0%) |
+| `bug-reports` | 12,930 / 12,928 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
