@@ -1,0 +1,93 @@
+{
+  "_id": "6ae351da88dc7d058defd88c",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-10-29T14:04:34.095232Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6a3c8351f51f79a5db00f09d",
+    "alias": "Well Chameleon",
+    "aliasID": "6a3c8352f51f79a5db00f0a1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/73a58c117c5548dde1f7fa61f6763502.png",
+    "created": "2026-06-25T01:24:33.929Z",
+    "name": "oikki",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6a3c8351f51f79a5db00f09d",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-29T14:02:02.802Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In my scene, I have two InputFields: one with the default settings and the other set to Read Only.\n\nWhen I interact with the normal InputField (open and close it) and then change the text of the Read Only InputField in U#, the output gets truncated to 200 characters.\n\nIf I interact with the Read Only InputField itself and then try changing its text through U#, it works as expected. This issue only occurs when another InputField is interacted with first.\n\nThis bug appeared recently and only occurs in VRChat. Everything works normally in Unity Play Mode.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae351da88dc7d058defd878",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-29T14:02:02.802Z",
+  "subCategoryID": null,
+  "title": "InputField text truncated to 200 characters after interacting with another InputField",
+  "trendingScore": 2965.7766833495416,
+  "updatedBy": null,
+  "urlName": "inputfield-text-truncated-to-200-characters-after-interacting-with-another-input",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6a3c8351f51f79a5db00f09d",
+      "alias": "Well Chameleon",
+      "aliasID": "6a3c8352f51f79a5db00f0a1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/73a58c117c5548dde1f7fa61f6763502.png",
+      "companies": [],
+      "name": "oikki",
+      "urlName": null,
+      "voteID": "6ae351daa29633a6de072068"
+    }
+  ]
+}
