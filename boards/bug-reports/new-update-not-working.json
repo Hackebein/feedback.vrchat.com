@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
-    "client.controls"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-10-29T01:50:28.843685Z",
+  "aiTaggedAt": "2026-10-29T05:01:41.222905Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ae2937c57957edd2c3c5da8",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,6 +73,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "this new update sucks",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae2d16c8fa773e95053c0f5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-29T04:54:04.594Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae2937c5c2d2f885f301619",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Not a bug, this is documented in the [VRChat 2026.4.1](https://docs.vrchat.com/docs/vrchat-202641) - October 28 - Build 1936 release notes.\n\n> ⚠️ This release is NOT network compatible! You will be unable to join users that have not updated their client! If you see, \"Can't Join Instance,\" that's why!⚠\n\nThe missing Steam Frame update has been previously reported: https://feedback.vrchat.com/bug-reports/p/forgotten-apk-update-upload-on-steam",
       "viewerReactions": null,
       "voteID": null
     }
