@@ -2,9 +2,10 @@
   "_id": "6addfcfc19d69be1bda0a99c",
   "aiCategories": [
     "loc.in-world",
-    "avatars.expressions"
+    "avatars.expressions",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-29T12:09:48.739089Z",
+  "aiTaggedAt": "2026-10-29T14:21:16.791583Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "65bd10d77df56e6937d54111",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -237,6 +238,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{65bd10d77df56e6937d54111|full_name} There you go, you've answered your own statement. The avatar is working as designed/documented by VRChat.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae35458a04b34c89b617a18",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65bd10d77df56e6937d54111",
+        "alias": "Kobi Raven",
+        "aliasID": "65c282efed6eefce4cb76e9c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0c23d1b59a424bbdaa193e08621dcc93.png",
+        "created": "2024-02-02T15:57:11.533Z",
+        "name": "Cautіon",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-29T14:12:40.357Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/e3a2ae95c13f6a59967e2417a42c660f.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ade2d43873fc1f4e999cbb8",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6addfcfc19d69be1bda0a99c",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} Just seems very odd to me that out of the blue, the use of the Animator Tracking Control is necessary. \n\nI never had issues before this with expressions and never used the Animator Tracking Control",
       "viewerReactions": null,
       "voteID": null
     }
