@@ -6,7 +6,7 @@
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-29T12:24:13.393158Z",
+  "aiTaggedAt": "2026-10-29T12:31:52.494358Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ae339b388dc7d058dea3973",
@@ -34,7 +34,7 @@
   "commentingDisabled": false,
   "comments": [
     {
-      "_id": "6ae33a9e9ba9114749e48171",
+      "_id": "6ae33adbddb751d19432aeb9",
       "aiGenerated": false,
       "author": {
         "_id": "6ae339b388dc7d058dea3973",
@@ -50,7 +50,7 @@
       "authorID": null,
       "boardID": "58c62f2b3cf8f8367753b2f0",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-10-29T12:22:54.768Z",
+      "created": "2026-10-29T12:23:55.196Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -73,7 +73,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "Additional software and driver information:\n\n- GPU: NVIDIA GeForce RTX 5070 Ti\n\n- NVIDIA driver: 621.01 (Windows driver version 32.0.16.2101)\n\n- VRChat: Steam public/release branch, version 2026.4.1, build 1936\n\n- Unity version: 6000.0.67f1-DWR\n\n- Graphics API: Direct3D 11\n\nThe issue also reproduces in desktop mode with no CPU affinity launch arguments. The launch log shows --no-vr and the automatically generated startup timestamp argument. SteamVR's vrserver and vrcompositor processes were not running during this test.\n\nNo RTSS, MSI Afterburner, OBS, Discord, or NVIDIA Overlay/Share processes were detected when the environment was inspected.\n\nBackground applications still running included Steam, VRCX, Virtual Desktop Streamer/Service, Process Lasso, Listary, Oopz, UU Accelerator, Clash, GameViewer, and local Python/Node.js/NapCat services. Virtual display adapters from Virtual Desktop, GameViewer, ToDesk, and MuMu are also installed.\n\nThis was not a clean-boot test, so background software interactions have not been fully ruled out. Process Lasso was running, and its active rules have not yet been independently verified.\n\nThe same PC is currently not showing this csrss.exe memory growth in other Easy Anti-Cheat games, according to my testing.",
+      "value": "Additional software and driver information:\n\n- GPU: NVIDIA GeForce RTX 5070 Ti\n\n- NVIDIA driver: 621.01 (Windows driver version 32.0.16.2101)\n\n- VRChat: Steam public/release branch, version 2026.4.1, build 1936\n\n- Unity version: 6000.0.67f1-DWR\n\n- Graphics API: Direct3D 11\n\nThe issue also reproduces in desktop mode with no CPU affinity launch arguments. The launch log shows --no-vr and the automatically generated startup timestamp argument. SteamVR's vrserver and vrcompositor processes were not running during this test.\n\nNo RTSS, MSI Afterburner, OBS, Discord, or NVIDIA Overlay/Share processes were detected when the environment was inspected.\n\nThis was not a clean-boot test, so background software interactions have not been fully ruled out. Process Lasso was running, and its active rules have not yet been independently verified.\n\nThe same PC is currently not showing this csrss.exe memory growth in other Easy Anti-Cheat games, according to my testing.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -93,32 +93,43 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-29T12:18:59.946Z",
   "subCategoryID": null,
   "title": "csrss.exe memory usage continuously increases after joining a world",
-  "trendingScore": 2965.766460476691,
+  "trendingScore": 2966.172153078387,
   "updatedBy": null,
   "urlName": "csrssexe-memory-usage-continuously-increases-after-joining-a-world",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/70d5c5f2d91b344aa2c17ed9cbc8fea8.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6ae33b50a29633a6de069e13"
+    },
     {
       "_id": "6ae339b388dc7d058dea3973",
       "alias": "Fascinating Mink",
