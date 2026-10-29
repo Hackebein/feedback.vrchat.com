@@ -1,0 +1,93 @@
+{
+  "_id": "6ae291948a227465c1e59744",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-10-29T00:26:42.967944Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "63c9760ef519ef0b8ce99165",
+    "alias": "Quince Pike",
+    "aliasID": "65c2bff3ed6eefce4c5e37e4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/73062090ec9e43d73cb4deaf08305697.png",
+    "created": "2023-01-19T16:55:42.346Z",
+    "name": "Dor․",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "63c9760ef519ef0b8ce99165",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-29T00:21:40.545Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Parameter interpolation allows us to avoid blendtree smoothing setups for parameters that share the same local/remote smoothing rates, but not for more advanced uses, so I'd like to request a few things:\n\n1. The option to set local/remote interpolation times independently\n\n2. The option to control interpolation times dynamically at runtime, through another parameter's value\n\n3. The option to define interpolated parameters for contact parameters (without adding them to expression parameters)\n\n4. The option to skip interpolation when a parameter is driven by parameter drivers (new toggle, default to true)\n\nAlternatively to adding the above to the interface which can add complexity, give us a parameter \"namespace\" that gives us access to interpolated values without having to manually configure them in expression parameters, for example `Lerp/<duration>/<originalParameter>`:\n\n- Float parameter `Val` is changed from 0.5 to 1.0 (immediately)\n\n- Float parameter `Lerp/1.5/Val` interpolates that change over `1.5` seconds\n\n- Allow `Lerp/1.5/Val` to be driven by parameter drivers - if it does not match `Val` then interpolate from the new value to `Val` over `1.5` seconds. Driving the interpolation parameter and the `<originalParameter>` to the same value at the same time would skip the interpolation.\n\n- Multiple interpolated parameters could be defined for one parameter, like `Lerp/0.5/Val` to interpolate the same parameter over `0.5` seconds, giving us the option to use one locally and one remotely, and for various other uses.\n\nTo support point #2, special non-duration definitions could be added too:\n\n- `Lerp/<originalParameter>` used locally/remotely with different rates, dictated by:\n\n- `Lerp/LocalRate/<originalParameter>` to set the local interpolation rate for the parameter\n\n- `Lerp/RemoteRate/<originalParameter>` to set the remote interpolation rate for the parameter\n\n- Optionally support `Lerp/LocalRate` and `Lerp/RemoteRate` without a parameter, to act as a \"default\" interpolation rate when an explicit override for a parameter isn't set.\n\n- When rates aren't set, default to the current interpolation rate (I believe that's 0.1 seconds if I'm not mistaken?)\n\n- Interpolation rate of `0` should be acting as a mirror of the original parameter (no frame buffer), if someone desires a frame buffer they can use `0.0001` or some other impossibly low value that is greater than `0`.\n\nOriginally posted on the forums [here](https://ask.vrchat.com/t/developer-update-8-october-2026/49095/38), corrected for local parameters being supported and adjusted `Inter` namespace to `Lerp`, in case you'd like to support additional interpolation modes with different \"namespaces\", though `Inter` works if you'd add `Inter/<originalParameter>/Mode` int or suffix the `<duration>` with the mode like `Inter/0.5E/Val` for exponential.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae291948a227465c1e59729",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae291948a227465c1e59744/587725899.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-29T00:21:40.545Z",
+  "subCategoryID": null,
+  "title": "Additional parameter interpolation uses",
+  "trendingScore": 2965.6952974062547,
+  "updatedBy": "63c9760ef519ef0b8ce99165",
+  "urlName": "additional-parameter-interpolation-uses",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "63c9760ef519ef0b8ce99165",
+      "alias": "Quince Pike",
+      "aliasID": "65c2bff3ed6eefce4c5e37e4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/73062090ec9e43d73cb4deaf08305697.png",
+      "companies": [],
+      "name": "Dor․",
+      "urlName": null,
+      "voteID": "6ae29194b21371c388e8f76b"
+    }
+  ]
+}
