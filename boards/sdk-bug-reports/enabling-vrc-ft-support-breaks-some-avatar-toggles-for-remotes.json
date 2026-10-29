@@ -1,12 +1,12 @@
 {
   "_id": "6ae3c21f8cd804f45f16deba",
   "aiCategories": [
-    "loc.in-world",
     "loc.unity-sdk",
-    "avatars.expressions",
+    "loc.in-world",
+    "avatars.accessories",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-29T22:09:21.413734Z",
+  "aiTaggedAt": "2026-10-29T22:22:16.347819Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f2d19d0a2990547bfc05f3a",
@@ -89,7 +89,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Affected avatar (Private)\n\navtr_ddf6704e-bfb2-4c04-b8fc-1a8483876073\n\n1. Load into avatar and enable Clothing/Select Clothing/Shirts/Mips Shirt\n\n2. Switch out and then back into avatar\n\n3. Have an observer join\n\n4. Enable Clothing/Select Clothing/Haku (which disables the other outfit)\n\nLocal will see the outfit switch to the Haku, remote (the observer) will see both outfits remain enabled.\n\nNotably, this avatar worked fine in live until I copied the native face tracking setup from another avatar.\n\nI have heard reports of my toggles breaking like this in other worlds, but the world I tested in was https://vrchat.com/home/world/wrld_3641b8d9-04da-4ee4-8b06-966ca097b1a3",
+  "details": "Affected avatar (Private)\n\navtr_ddf6704e-bfb2-4c04-b8fc-1a8483876073\n\n1. Load into avatar and enable Clothing/Select Clothing/Shirts/Mips Shirt\n\n2. Switch out and then back into avatar\n\n3. Have an observer join\n\n4. Enable Clothing/Select Clothing/Haku (which disables the other outfit)\n\nLocal will see the outfit switch to the Haku, remote (the observer) will see both outfits remain enabled.\n\nNotably, this avatar worked fine in live until I copied the native face tracking setup from another avatar.\n\nEdit: It may also just be from uploading with the beta SDK, since I did those steps in one go\n\nI have heard reports of my toggles breaking like this in other worlds, but the world I tested in was https://vrchat.com/home/world/wrld_3641b8d9-04da-4ee4-8b06-966ca097b1a3",
   "error": null,
   "eta": null,
   "etaPublic": true,
