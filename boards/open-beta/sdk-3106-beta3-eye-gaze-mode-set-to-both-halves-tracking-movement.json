@@ -4,10 +4,9 @@
     "loc.unity-sdk",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
-    "avatars.tracking",
-    "open-beta"
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-26T14:47:16.751526Z",
+  "aiTaggedAt": "2026-10-29T21:22:03.628160Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d458c2bce0d0218577b8c24",
@@ -37,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -82,6 +81,50 @@
       "statusChangeID": "6adf670a117292fff42bbd9d",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae3b6e1380b791f2826f35e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64c6d294cf63f90945128834",
+        "alias": "Preferred Whitefish",
+        "aliasID": "6740bcc8c66e81bbd4c5b211",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b64701d35f23c6880f979e3377e7a08f.png",
+        "created": "2023-07-30T21:13:56.404Z",
+        "name": "santafip",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-29T21:13:05.282Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ade12a2dad47ebdff3a9575",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Same issue but it's also happening whether its set to both or bone rotation. Using psvr2",
       "viewerReactions": null,
       "voteID": null
     }
