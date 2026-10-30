@@ -5,7 +5,7 @@
     "web.worlds",
     "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-10-08T23:52:41.702393Z",
+  "aiTaggedAt": "2026-10-30T03:41:37.454223Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f67899159b0841fe0d3891b",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "commentingDisabled": false,
   "comments": [
     {
@@ -113,7 +113,7 @@
       "postID": "6ab5be072c33702dbd9f173b",
       "private": false,
       "reactions": {
-        "like": 9
+        "like": 10
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -430,6 +430,62 @@
       "spam": false,
       "synthetic": true,
       "value": ""
+    },
+    {
+      "_id": "6ae41013b51039db054d784f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62613be0280aee5296da2ad6",
+        "alias": "Amber Peacock",
+        "aliasID": "65c36fefed6eefce4ca3ede0",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/5e799d287d1ba7547e20d31935a9f241.png",
+        "created": "2022-04-21T11:11:28.141Z",
+        "name": "るいざ・しゃーろっと",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-10-30T03:33:39.133Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "69f133774a48bed189d0b81b",
+          "alias": "Spontaneous Hedgehog",
+          "aliasID": "69f133774a48bed189d0b81f",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ac69105c2985654cdd554209c9dd7bc2.png",
+          "created": "2026-04-28T22:23:51.414Z",
+          "name": "Vince_Borzoi",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ab6a04efead18d4908029b3",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab5be072c33702dbd9f173b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{69f133774a48bed189d0b81b|full_name} \n\nWorld blocking should be independent of user blocking. I may want to avoid someone's worlds without cutting off communication with that person. Likewise, automatically hiding all worlds created by a blocked user could unnecessarily extend personal disputes or misunderstandings to their creative work.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
