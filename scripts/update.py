@@ -163,8 +163,17 @@ class RateLimiter:
         with self._lock:
             self._base_delay = max(0.0, self._base_delay - 0.05)
 
+    def reset(self):
+        with self._lock:
+            self._cooldown_until = 0.0
+            self._base_delay = 0.0
+
 
 _LIMITER = RateLimiter()
+
+
+class CannyBlocked(RuntimeError):
+    pass
 
 
 # ---------------------------------------------------------------------------
@@ -182,12 +191,32 @@ _http_stats = {
     "bytes": 0,
     "time": 0.0,
 }
+_canny_403_streak = 0
+CANNY_403_ABORT_AFTER = 3
 
 
 def reset_http_stats():
+    global _canny_403_streak
     with _http_lock:
         for k in _http_stats:
             _http_stats[k] = 0 if k != "time" else 0.0
+        _canny_403_streak = 0
+    _LIMITER.reset()
+
+
+def observe_http_status(code):
+    global _canny_403_streak
+    with _http_lock:
+        if code == 403:
+            _canny_403_streak += 1
+            streak = _canny_403_streak
+        else:
+            _canny_403_streak = 0
+            streak = 0
+    if streak >= CANNY_403_ABORT_AFTER:
+        raise CannyBlocked(
+            f"Canny returned HTTP 403 {streak} times in a row; aborting"
+        )
 
 
 def _record_http(code, body, elapsed):
@@ -242,6 +271,8 @@ def format_http_stats(prefix="[HTTP]"):
 def _curl_get(url, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
     t0 = time.perf_counter()
+    code = 0
+    body = ""
     try:
         r = subprocess.run(
             ["curl", "-sS", "-L", "-w", "\n__HTTP_CODE__:%{http_code}",
@@ -252,35 +283,46 @@ def _curl_get(url, timeout=15):
         out = r.stdout
         m = re.search(r"\n__HTTP_CODE__:(\d+)\s*$", out)
         if not m:
-            _record_http(0, out, time.perf_counter() - t0)
-            return 0, out
-        code = int(m.group(1))
-        body = out[:m.start()]
-        _record_http(code, body, time.perf_counter() - t0)
-        return code, body
+            body = out
+        else:
+            code = int(m.group(1))
+            body = out[:m.start()]
     except Exception:
-        _record_http(0, "", time.perf_counter() - t0)
-        return 0, ""
+        code = 0
+        body = ""
+    _record_http(code, body, time.perf_counter() - t0)
+    observe_http_status(code)
+    return code, body
 
 
 def _curl_post_json(url, payload, timeout=15):
+    """Returns (http_code, body). http_code is an int (0 on transport error)."""
     t0 = time.perf_counter()
+    code = 0
+    body = ""
     try:
         r = subprocess.run(
             ["curl", "-sS", "-X", "POST", url,
              "-H", "Content-Type: application/json",
              "-H", f"User-Agent: {USER_AGENT}",
              "--data-binary", json.dumps(payload),
+             "-w", "\n__HTTP_CODE__:%{http_code}",
              "-m", str(timeout)],
             capture_output=True, text=True, timeout=timeout + 5,
         )
         out = r.stdout
-        code = 200 if out.strip() else 0
-        _record_http(code, out, time.perf_counter() - t0)
-        return out
+        m = re.search(r"\n__HTTP_CODE__:(\d+)\s*$", out)
+        if not m:
+            body = out
+        else:
+            code = int(m.group(1))
+            body = out[:m.start()]
     except Exception:
-        _record_http(0, "", time.perf_counter() - t0)
-        return ""
+        code = 0
+        body = ""
+    _record_http(code, body, time.perf_counter() - t0)
+    observe_http_status(code)
+    return code, body
 
 
 # ---------------------------------------------------------------------------
@@ -331,7 +373,10 @@ def fetch_board_posts(board_slug, sort="newest"):
         "sort": sort,
         "status": "",
     }
-    raw = _curl_post_json(API_URL, body, timeout=15)
+    code, raw = _curl_post_json(API_URL, body, timeout=15)
+    if code == 403:
+        print(f"[WARN] {board_slug}: posts/get HTTP 403")
+        return [], set(), None, "HTTP 403"
     if not raw.strip():
         return [], set(), None, None
     try:
@@ -470,6 +515,9 @@ def fetch_post_page(board_slug, url_slug, retries=3):
             continue
         if code == 404:
             return None, [], True, False
+        if code == 403:
+            print(f"[WARN] {board_slug}/{url_slug}: HTTP 403")
+            return None, [], False, True
         if code == 0 or code >= 500:
             _LIMITER.hit_429()
             last_err = f"http={code}"
@@ -554,22 +602,27 @@ def fetch_voters(post_id, retries=3):
     }
     for attempt in range(retries):
         _LIMITER.wait()
-        raw = _curl_post_json(VOTERS_URL, payload, timeout=30)
-        if raw.strip():
-            try:
-                data = json.loads(raw)
-            except Exception:
-                record_http_retry()
-                time.sleep(1.0 + attempt)
-                continue
-            result = data.get("result")
-            if isinstance(result, dict) and isinstance(result.get("voters"), list):
-                _LIMITER.ok()
-                return result["voters"]
-            # An {"error": ...} payload is a hard failure, not transient.
+        code, raw = _curl_post_json(VOTERS_URL, payload, timeout=30)
+        if code == 403:
             return None
-        record_http_retry()
-        time.sleep(1.0 + attempt)
+        if code == 429 or code == 0 or code >= 500 or not raw.strip():
+            if code == 429 or code >= 500:
+                _LIMITER.hit_429()
+            record_http_retry()
+            time.sleep(1.0 + attempt)
+            continue
+        try:
+            data = json.loads(raw)
+        except Exception:
+            record_http_retry()
+            time.sleep(1.0 + attempt)
+            continue
+        result = data.get("result")
+        if isinstance(result, dict) and isinstance(result.get("voters"), list):
+            _LIMITER.ok()
+            return result["voters"]
+        # An {"error": ...} payload is a hard failure, not transient.
+        return None
     return None
 
 
@@ -618,8 +671,9 @@ def fetch_newest_all(boards):
     single_page_totals = {}
     denied_slugs = set()
     print(f"[UPDATE] Fetching newest from {len(boards)} board(s)...")
-    with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
-        futures = {ex.submit(fetch_board_posts, b, "newest"): b for b in boards}
+    ex = ThreadPoolExecutor(max_workers=_fetch_workers())
+    futures = {ex.submit(fetch_board_posts, b, "newest"): b for b in boards}
+    try:
         for fut in as_completed(futures):
             slug = futures[fut]
             try:
@@ -633,9 +687,17 @@ def fetch_newest_all(boards):
                 if has_next is False:
                     single_page_totals[slug] = len(posts)
                 print(f"[UPDATE] {slug}: {len(posts)} from API")
+            except CannyBlocked:
+                raise
             except Exception as e:
                 print(f"[ERROR] {slug} newest fetch failed: {e}")
                 fresh_by_board[slug] = []
+    except CannyBlocked:
+        for fut in futures:
+            fut.cancel()
+        raise
+    finally:
+        ex.shutdown(wait=True, cancel_futures=True)
     return fresh_by_board, single_page_totals, denied_slugs
 
 
@@ -844,15 +906,18 @@ def fetch_all_pages(scan_targets):
     total = len(scan_targets)
     done = 0
     found = missing = transient_n = 0
-    with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
-        futures = {
-            ex.submit(fetch_post_page, b, slug): pid
-            for b, pid, slug in scan_targets
-        }
+    ex = ThreadPoolExecutor(max_workers=_fetch_workers())
+    futures = {
+        ex.submit(fetch_post_page, b, slug): pid
+        for b, pid, slug in scan_targets
+    }
+    try:
         for fut in as_completed(futures):
             pid = futures[fut]
             try:
                 results[pid] = fut.result()
+            except CannyBlocked:
+                raise
             except Exception as e:
                 print(f"[ERROR] page fetch crashed for {pid}: {e}")
                 results[pid] = (None, [], False, True)
@@ -869,6 +934,12 @@ def fetch_all_pages(scan_targets):
                     f"[UPDATE] fetched {done}/{total} pages "
                     f"(found={found}, 404={missing}, transient={transient_n})..."
                 )
+    except CannyBlocked:
+        for fut in futures:
+            fut.cancel()
+        raise
+    finally:
+        ex.shutdown(wait=True, cancel_futures=True)
     return results
 
 
@@ -887,6 +958,7 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
     eff_key = (os.environ.get("MINIMAX_API_KEY") or "").strip() or (api_key or "").strip()
     tag_jobs: list[tuple[dict, str, dict | None]] = []
     voter_jobs: list[tuple[str, dict]] = []
+    pending_deletes: list[tuple[str, str]] = []
     pending_writes: list[tuple[str, dict]] = []
     ai_rate_limited = False
     if scraped_at is None:
@@ -950,11 +1022,11 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
             tag_jobs.append((post, actual_board, prev_post))
 
         if original and original_url and original != actual_board:
-            board_store.delete_post(original, original_url)
+            pending_deletes.append((original, original_url))
             moved += 1
             print(f"[UPDATE] {original}/{url_slug} -> moved to {actual_board}")
         elif original and original_url and original_url != url_slug:
-            board_store.delete_post(original, original_url)
+            pending_deletes.append((original, original_url))
 
         if pid in stored:
             refreshed += 1
@@ -977,16 +1049,25 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
             print(f"[UPDATE] AI tagged {tagged} post(s)")
 
     if voter_jobs:
-        with ThreadPoolExecutor(max_workers=_fetch_workers()) as ex:
-            futures = {ex.submit(fetch_voters, pid): post for pid, post in voter_jobs}
+        ex = ThreadPoolExecutor(max_workers=_fetch_workers())
+        futures = {ex.submit(fetch_voters, pid): post for pid, post in voter_jobs}
+        try:
             for fut in as_completed(futures):
                 post = futures[fut]
                 voters = fut.result()
                 if voters is not None:
                     post["voters"] = voters
                     voters_refreshed += 1
+        except CannyBlocked:
+            for fut in futures:
+                fut.cancel()
+            raise
+        finally:
+            ex.shutdown(wait=True, cancel_futures=True)
         print(f"[UPDATE] Refreshed voters on {voters_refreshed}/{len(voter_jobs)} post(s)")
 
+    for original, original_url in pending_deletes:
+        board_store.delete_post(original, original_url)
     for board_slug, post in pending_writes:
         board_store.write_post(board_slug, post)
 
@@ -1605,18 +1686,16 @@ def main():
     scraped_at = dict(state.get("scrapedAt") or {})
     session = None
     notify_pids = []
-    auth_failed = False
     if not args.skip_auth:
         try:
             session = canny_auth.login_canny_session()
         except canny_auth.CannyAuthError as e:
-            auth_failed = True
             print(f"[ERROR] Canny SSO failed: {e}", file=sys.stderr)
             print(
-                "[WARN] Continuing without SSO (no notifications/votes); "
-                "public board scrape will still run",
+                "[ERROR] Aborting; no further Canny requests will be made",
                 file=sys.stderr,
             )
+            sys.exit(1)
         if session is not None:
             if session.scraper_user_id:
                 state["scraperUserId"] = session.scraper_user_id
@@ -1778,10 +1857,15 @@ def main():
         print("[UPDATE] Stopped early due to MiniMax rate limit (partial success)")
         sys.exit(0)
 
-    if auth_failed:
-        print("[ERROR] Canny SSO failed earlier; scrape finished without auth", file=sys.stderr)
-        sys.exit(2)
+
+def _exit_on_canny_block():
+    try:
+        main()
+    except CannyBlocked as exc:
+        print(f"[ERROR] {exc}", file=sys.stderr)
+        print("[ERROR] Aborting; board data was not written", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
-    main()
+    _exit_on_canny_block()

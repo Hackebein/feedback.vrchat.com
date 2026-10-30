@@ -102,7 +102,7 @@ jobs:
             --vote-batch 0
 
       - name: Commit and push main
-        if: steps.update.outcome == 'success' || steps.update.outcome == 'failure'
+        if: steps.update.outcome == 'success'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -121,7 +121,7 @@ jobs:
           fi
 
       - name: Commit and push scrape-state
-        if: steps.update.outcome == 'success' || steps.update.outcome == 'failure'
+        if: steps.update.outcome == 'success'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -153,6 +153,6 @@ jobs:
       - name: Fail job if update failed
         if: steps.update.outcome == 'failure'
         run: |
-          echo "Update step failed (often Canny SSO / VRChat session limit)." >&2
-          echo "Board/scrape-state commits above still ran when there was work to push." >&2
+          echo "Update step failed (often Canny SSO or Canny HTTP 403)." >&2
+          echo "Board and scrape-state changes were not committed." >&2
           exit 1
