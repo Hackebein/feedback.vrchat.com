@@ -1,0 +1,93 @@
+{
+  "_id": "6ae49026a4960234c52f4642",
+  "aiCategories": [
+    "loc.in-world",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-10-31T19:54:41.834424Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "64c9244a939b840946a5abbb",
+    "alias": "Hilarious Meadowlark",
+    "aliasID": "6ad9acdb169b5b90330534c7",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3800a06331d12ef4565d07ffcf991309.png",
+    "created": "2023-08-01T15:27:06.433Z",
+    "name": "march-maruマーチマル",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "64c9244a939b840946a5abbb",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-30T12:40:06.545Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "NavMeshAgent-controlled NPCs are unable to traverse NavMesh Links in the live VRChat client.\n\nThe NPCs approach the beginning of the link, walk in place for a while, and eventually abandon their movement.\n\nThe issue occurs even with a single NPC, so it does not appear to be caused by crowd avoidance.\n\nThe same behavior was observed with the legacy OffMeshLink component.\n\nThe issue has also been reported by another user following the October 2026 VRChat update.\n\nEnvironment\n\nUnity Editor: 2022.3.22f1\n\nVRChat Worlds SDK: Updated to the latest available version\n\nClientSim: Works correctly\n\nLive VRChat client: Traversal fails\n\nSteps to Reproduce\n\nCreate two NavMesh surfaces at different heights.\n\nConnect them using a NavMesh Link.\n\nConfigure a NavMeshAgent to move between the surfaces.\n\nTest in ClientSim: The NPC traverses the link successfully.\n\nUpload the world and test in VRChat: The NPC gets stuck at the beginning of the link.\n\nExpected Behavior\n\nNavMeshAgents should traverse NavMesh Links in the live VRChat client, as they do in ClientSim.\n\nActual Behavior\n\nNavMeshAgents get stuck at the link entrance, walking in place without traversing it.\n\nAdditional Information\n\nI have tried adjusting the link positions and width, enabling Auto Traverse Off Mesh Link, and updating the Worlds SDK, but the issue persists.\n\nSince the same issue occurs with both the legacy OffMeshLink and the newer NavMesh Link, this may be related to changes in the VRChat runtime following the Unity 6 migration.\n\nI would appreciate it if this could be investigated.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae49026a4960234c52f4640",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae49026a4960234c52f4642/1531551201.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-30T12:40:06.545Z",
+  "subCategoryID": null,
+  "title": "NavMesh Link traversal fails in VRChat after the October 2026 update",
+  "trendingScore": 2965.9114118250704,
+  "updatedBy": null,
+  "urlName": "navmesh-link-traversal-fails-in-vrchat-after-the-october-2026-update",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "64c9244a939b840946a5abbb",
+      "alias": "Hilarious Meadowlark",
+      "aliasID": "6ad9acdb169b5b90330534c7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3800a06331d12ef4565d07ffcf991309.png",
+      "companies": [],
+      "name": "march-maruマーチマル",
+      "urlName": null,
+      "voteID": "6ae49026778fcc8c3ae59678"
+    }
+  ]
+}

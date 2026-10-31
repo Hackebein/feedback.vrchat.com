@@ -1,0 +1,93 @@
+{
+  "_id": "6ae5d99afc497249e451e16f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-10-31T19:54:41.772303Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5e8487f1fd13be66cecc227b",
+    "alias": "Parental Pelican",
+    "aliasID": "65c27264ed6eefce4c1809f0",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/f377a8b41bac3b55b61ee226ba5f2023.png",
+    "created": "2020-04-01T12:24:17.131Z",
+    "name": "みみー／Mimy",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5e8487f1fd13be66cecc227b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-10-31T12:05:46.983Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In the world (Udon), the `DynamicsUsage` enum for contacts only includes \"Avatar\" or \"World\"—it does not include \"Item.\" Please add an \"Item\" enum value.\n\nFor avatar parameters, I can use `{parameter}_SenderType` [Int] to determine whether the sender involved in a contact originated from an item.\n\nhttps://creators.vrchat.com/common-components/contacts/#advanced-parameters",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae5d99afc497249e451e122",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae5d99afc497249e451e16f/427755969.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-10-31T12:05:46.983Z",
+  "subCategoryID": null,
+  "title": "Add \"Item\" to the DynamicsUsage enumerator for Contact.",
+  "trendingScore": 2966.050863596731,
+  "updatedBy": null,
+  "urlName": "add-item-to-the-dynamicsusage-enumerator-for-contact",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5e8487f1fd13be66cecc227b",
+      "alias": "Parental Pelican",
+      "aliasID": "65c27264ed6eefce4c1809f0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f377a8b41bac3b55b61ee226ba5f2023.png",
+      "companies": [],
+      "name": "みみー／Mimy",
+      "urlName": null,
+      "voteID": "6ae5d99bd6c79204dc6e618d"
+    }
+  ]
+}
