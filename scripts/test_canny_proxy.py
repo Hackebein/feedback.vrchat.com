@@ -410,11 +410,14 @@ class ProxyHostTest(unittest.TestCase):
                 Path(cmd[cmd.index("-D") + 1]).write_text("HTTP/1.1 200\n", encoding="utf-8")
                 baked = Path(cmd[cmd.index("-b") + 1]).read_text(encoding="utf-8")
                 body = Path(cmd[cmd.index("-o") + 1])
+                ua = cmd[cmd.index("-H") + 1]
                 if "api.vrchat.cloud" in url:
                     self.assertIn("/sso/canny", url)
                     self.assertNotIn("--socks5-hostname", cmd)
                     self.assertNotIn("--proxy-user", cmd)
                     self.assertFalse(any(PASSWORD in part for part in cmd))
+                    self.assertIn(canny_auth.USER_AGENT, ua)
+                    self.assertNotIn(canny_auth.CANNY_USER_AGENT, ua)
                     self.assertIn(auth_cookie, baked)
                     body.write_text(f'{{"token":"{token}"}}', encoding="utf-8")
                 else:
@@ -425,10 +428,19 @@ class ProxyHostTest(unittest.TestCase):
                         cmd[cmd.index("--proxy-user") + 1],
                         f"hackebein.feedbackvrchat:{PASSWORD}",
                     )
+                    self.assertIn(canny_auth.CANNY_USER_AGENT, ua)
+                    self.assertNotIn("VRChatFeedbackArchiver", ua)
                     self.assertNotIn(auth_cookie, baked)
+                    trace = cmd[cmd.index("--trace-ascii") + 1]
+                    Path(trace).write_text(
+                        "SOCKS5 request granted.\n203.0.113.9\n"
+                        f"ssoToken={token}\n",
+                        encoding="utf-8",
+                    )
                     body.write_text(viewer_html, encoding="utf-8")
                 return subprocess.CompletedProcess(cmd, 0, stdout="200", stderr="")
 
+            out = io.StringIO()
             with (
                 patch.dict(
                     "os.environ",
@@ -436,13 +448,118 @@ class ProxyHostTest(unittest.TestCase):
                     clear=False,
                 ),
                 patch.object(canny_auth.subprocess, "run", side_effect=run),
+                redirect_stdout(out),
             ):
                 viewer = canny_auth.sso_to_canny(jar)
+            logged = out.getvalue()
             self.assertEqual(viewer["_id"], "usr_1")
             self.assertEqual(viewer["csrfToken"], "csrf_1")
             self.assertEqual(len(seen), 2)
             self.assertIn(auth_cookie, jar.read_text(encoding="utf-8"))
             self.assertNotIn("41040527302", seen[1][seen[1].index("--proxy-user") + 1])
+            self.assertIn("[proxy] sso-board via=socks5h http=200", logged)
+            self.assertNotIn(token, logged)
+            self.assertNotIn(auth_cookie, logged)
+            self.assertNotIn(PASSWORD, logged)
+            self.assertNotIn("203.0.113.9", logged)
+
+
+class CannyFingerprintTest(unittest.TestCase):
+    def setUp(self) -> None:
+        canny_proxy.reset_state()
+
+    def tearDown(self) -> None:
+        canny_proxy.reset_state()
+
+    def test_diag_line_reports_socks_without_trace_secrets(self) -> None:
+        trace = (
+            "SOCKS5 connect to canny.io:443 (remotely resolved)\n"
+            "SOCKS5 request granted.\n"
+            "Connected to 203.0.113.50 port 443\n"
+            "GET /api/redirects/sso?ssoToken=SECRETTOKEN HTTP/1.1\n"
+            "Proxy-Authorization: Basic c2VjcmV0\n"
+        )
+        line = canny_proxy.proxy_diag_line(
+            "sso-redirect", trace, configured=True, http_code=403,
+        )
+        self.assertEqual(line, "[proxy] sso-redirect via=socks5h http=403")
+        self.assertNotIn("203.0.113.50", line)
+        self.assertNotIn("SECRETTOKEN", line)
+        self.assertNotIn("c2VjcmV0", line)
+
+    def test_diag_line_unconfirmed_when_proxy_configured_but_trace_is_direct(self) -> None:
+        line = canny_proxy.proxy_diag_line(
+            "sso-board", "Connected to example port 443\n", configured=True, http_code=200,
+        )
+        self.assertEqual(line, "[proxy] sso-board via=unconfirmed http=200")
+
+    def test_diag_line_direct_without_proxy(self) -> None:
+        line = canny_proxy.proxy_diag_line("sso-home", "", configured=False, http_code=200)
+        self.assertEqual(line, "[proxy] sso-home via=direct http=200")
+
+    def test_poisoned_label_is_not_logged(self) -> None:
+        line = canny_proxy.proxy_diag_line(
+            "sso-redirect\n203.0.113.50 SECRETTOKEN", "", configured=False, http_code=0,
+        )
+        self.assertEqual(line, "[proxy] request via=direct http=0")
+
+    def _curl_headers(self, url: str, diag: str | None = None) -> tuple[list[str], str]:
+        seen: dict[str, list[str]] = {}
+
+        def run(cmd, **kwargs):
+            seen["cmd"] = list(cmd)
+            if "--trace-ascii" in cmd:
+                path = cmd[cmd.index("--trace-ascii") + 1]
+                seen["trace"] = path
+                Path(path).write_text(
+                    "SOCKS5 request granted.\n203.0.113.9\nssoToken=SECRETTOKEN\n",
+                    encoding="utf-8",
+                )
+            return subprocess.CompletedProcess(cmd, 0, stdout="200", stderr="")
+
+        buf = io.StringIO()
+        kwargs = {"diag_label": diag} if diag else {}
+        with patch.object(canny_auth.subprocess, "run", side_effect=run), redirect_stdout(buf):
+            canny_auth._curl(url, **kwargs)
+        trace = seen.get("trace")
+        if trace is not None:
+            self.assertFalse(Path(trace).exists())
+        return seen["cmd"], buf.getvalue()
+
+    def test_canny_requests_use_browser_ua_and_vrchat_keeps_archiver(self) -> None:
+        canny_cmd, _ = self._curl_headers("https://canny.io/api/redirects/sso?ssoToken=SECRET")
+        board_cmd, _ = self._curl_headers("https://feedback.vrchat.com/?ssoToken=SECRET")
+        vrchat_cmd, _ = self._curl_headers("https://api.vrchat.cloud/api/1/auth/user")
+        for cmd in (canny_cmd, board_cmd):
+            ua = cmd[cmd.index("-H") + 1]
+            self.assertIn(canny_auth.CANNY_USER_AGENT, ua)
+            self.assertNotIn("VRChatFeedbackArchiver", ua)
+            self.assertNotIn("SECRET", ua)
+        vr_ua = vrchat_cmd[vrchat_cmd.index("-H") + 1]
+        self.assertIn("VRChatFeedbackArchiver", vr_ua)
+        self.assertEqual(update.USER_AGENT, canny_auth.CANNY_USER_AGENT)
+
+    def test_sso_curl_logs_proxied_without_token_or_ip(self) -> None:
+        _cmd, out = self._curl_headers(
+            "https://canny.io/api/redirects/sso?ssoToken=SECRETTOKEN",
+            diag="sso-redirect",
+        )
+        self.assertIn("[proxy] sso-redirect via=socks5h http=200", out)
+        self.assertNotIn("SECRETTOKEN", out)
+        self.assertNotIn("203.0.113.9", out)
+
+    def test_scrape_curl_uses_browser_ua(self) -> None:
+        seen: dict[str, list[str]] = {}
+
+        def run(cmd, **kwargs):
+            seen["cmd"] = list(cmd)
+            return subprocess.CompletedProcess(cmd, 0, stdout="\n__HTTP_CODE__:200", stderr="")
+
+        with patch.object(update.subprocess, "run", side_effect=run), patch.object(update.time, "sleep"):
+            update._curl_get("https://feedback.vrchat.com/bug-reports/p/slug")
+        ua = seen["cmd"][seen["cmd"].index("-H") + 1]
+        self.assertIn(canny_auth.CANNY_USER_AGENT, ua)
+        self.assertNotIn("VRChatFeedbackArchiver", ua)
 
 
 if __name__ == "__main__":

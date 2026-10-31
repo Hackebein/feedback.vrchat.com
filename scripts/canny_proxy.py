@@ -127,6 +127,23 @@ def require_proxy() -> None:
     print(f"[proxy] {cfg.scheme} connected")
 
 
+def transport_from_trace(trace: str) -> str:
+    if "SOCKS5 request granted" in trace:
+        return "socks5h"
+    if "CONNECT tunnel established" in trace:
+        return "http"
+    return "direct"
+
+
+def proxy_diag_line(label: str, trace: str, *, configured: bool, http_code: int) -> str:
+    via = transport_from_trace(trace)
+    if configured and via == "direct":
+        via = "unconfirmed"
+    if not re.fullmatch(r"[a-z0-9-]{1,32}", label or ""):
+        label = "request"
+    return f"[proxy] {label} via={via} http={int(http_code)}"
+
+
 def redact(text: str) -> str:
     if not text:
         return text

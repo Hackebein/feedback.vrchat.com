@@ -51,7 +51,7 @@ CANNY_HOST           = "feedback.vrchat.com"
 API_URL              = f"https://{CANNY_HOST}/api/posts/get"
 VOTERS_URL           = f"https://{CANNY_HOST}/api/posts/getVoters"
 SITE_URL             = f"https://{CANNY_HOST}"
-USER_AGENT           = "Mozilla/5.0 (compatible; VRChatFeedbackArchiver/1.0)"
+USER_AGENT           = canny_auth.CANNY_USER_AGENT
 
 BOARD_DIR.mkdir(parents=True, exist_ok=True)
 

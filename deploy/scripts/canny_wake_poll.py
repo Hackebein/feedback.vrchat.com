@@ -46,7 +46,7 @@ _sso_blocked_until = 0.0
 DEFAULT_REPO = "Hackebein/feedback.vrchat.com"
 CANNY_HOST = "feedback.vrchat.com"
 API_URL = f"https://{CANNY_HOST}/api/posts/get"
-USER_AGENT = canny_auth.USER_AGENT
+USER_AGENT = canny_auth.CANNY_USER_AGENT
 NOTIFY_PAGES = int(os.environ.get("CANNY_WAKE_NOTIFY_PAGES") or "10")
 NEWEST_PAGES = int(os.environ.get("CANNY_WAKE_NEWEST_PAGES") or "50")
 
