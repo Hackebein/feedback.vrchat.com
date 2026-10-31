@@ -252,7 +252,7 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v4
         with:
-          terraform_version: v1.17.0
+          terraform_version: v1.17.1
           terraform_wrapper: false
 
       - name: Cache Terraform providers
