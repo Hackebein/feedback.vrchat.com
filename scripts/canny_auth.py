@@ -34,6 +34,10 @@ USER_AGENT = (
     "VRChatFeedbackArchiver/1.0 "
     "(+https://github.com/Hackebein/feedback.vrchat.com; canny-scraper@hackebein.dev)"
 )
+CANNY_USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
 
 
 class CannyAuthError(RuntimeError):
@@ -130,6 +134,17 @@ def drop_vrchat_suffix_cookies(cookie_jar: Path) -> None:
     )
 
 
+def _is_canny_url(url: str) -> bool:
+    host = (urllib.parse.urlparse(url).hostname or "").lower().rstrip(".")
+    return host == CANNY_HOST or host == "canny.io" or host.endswith(".canny.io")
+
+
+def _user_agent_for(url: str) -> str:
+    if _is_canny_url(url):
+        return CANNY_USER_AGENT
+    return USER_AGENT
+
+
 def _curl(
     url: str,
     *,
@@ -139,6 +154,7 @@ def _curl(
     cookie_jar: Path | None = None,
     follow: bool = False,
     timeout: int = 30,
+    diag_label: str | None = None,
 ) -> tuple[int, str, str]:
     """Run curl; return (http_code, body, response_headers)."""
     with tempfile.NamedTemporaryFile(prefix="curl-body-", delete=False) as bf:
@@ -146,15 +162,26 @@ def _curl(
     with tempfile.NamedTemporaryFile(prefix="curl-hdr-", delete=False) as hf:
         hdr_path = Path(hf.name)
     jar_out: Path | None = None
+    trace_path: Path | None = None
+    code = 0
     try:
         cmd = [
             "curl", *canny_proxy.curl_args_for(url), "-sS", "-X", method, url,
             "-D", str(hdr_path),
             "-o", str(body_path),
             "-w", "%{http_code}",
-            "-H", f"User-Agent: {USER_AGENT}",
+            "-H", f"User-Agent: {_user_agent_for(url)}",
             "-m", str(timeout),
         ]
+        if diag_label:
+            fd, name = tempfile.mkstemp(prefix="curl-trace-")
+            os.close(fd)
+            trace_path = Path(name)
+            try:
+                os.chmod(trace_path, 0o600)
+            except OSError:
+                pass
+            cmd.extend(["--trace-ascii", str(trace_path)])
         if follow:
             cmd.append("-L")
         if cookie_jar is not None:
@@ -182,6 +209,24 @@ def _curl(
         hdr = hdr_path.read_text(encoding="utf-8", errors="replace")
         return code, body, hdr
     finally:
+        try:
+            if diag_label:
+                trace = ""
+                if trace_path is not None and trace_path.is_file():
+                    try:
+                        trace = trace_path.read_text(encoding="utf-8", errors="replace")
+                    except OSError:
+                        trace = ""
+                try:
+                    configured = canny_proxy.load_config() is not None
+                except canny_proxy.CannyProxyError:
+                    configured = False
+                print(canny_proxy.proxy_diag_line(
+                    diag_label, trace, configured=configured, http_code=code,
+                ))
+        finally:
+            if trace_path is not None:
+                trace_path.unlink(missing_ok=True)
         if jar_out is not None and cookie_jar is not None:
             try:
                 merge_netscape_jars(cookie_jar, jar_out)
@@ -734,6 +779,7 @@ def sso_to_canny(cookie_jar: Path) -> dict[str, Any] | None:
             follow=True,
             timeout=60,
             headers=["Accept: text/html,application/xhtml+xml"],
+            diag_label="sso-board",
         )
         viewer = _parse_viewer(html) if code == 200 else None
         if code != 200:
@@ -753,6 +799,7 @@ def sso_to_canny(cookie_jar: Path) -> dict[str, Any] | None:
                 follow=True,
                 timeout=60,
                 headers=["Accept: text/html,application/xhtml+xml"],
+                diag_label="sso-redirect",
             )
             if code != 200:
                 last_err = f"Canny SSO redirect failed HTTP {code}: {html[:300]}"
@@ -765,6 +812,7 @@ def sso_to_canny(cookie_jar: Path) -> dict[str, Any] | None:
                         follow=True,
                         timeout=30,
                         headers=["Accept: text/html,application/xhtml+xml"],
+                        diag_label="sso-home",
                     )
                     if code2 != 200:
                         last_err = f"Canny home after SSO HTTP {code2}"
