@@ -74,7 +74,7 @@
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -120,7 +120,7 @@
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -139,7 +139,7 @@
         "alias": "Ultimate Parrotfish",
         "aliasID": "65c2ba03ed6eefce4c95cc75",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/a9526a5ad359373935e4e4a54db68fe9.png",
+        "avatarURL": "https://canny-assets.io/images/2f95808cd9f467f4989b94e60684016c.png",
         "created": "2021-12-03T23:29:45.023Z",
         "name": "Surami",
         "serviceAccount": false,
@@ -210,7 +210,7 @@
           "alias": "Ultimate Parrotfish",
           "aliasID": "65c2ba03ed6eefce4c95cc75",
           "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/a9526a5ad359373935e4e4a54db68fe9.png",
+          "avatarURL": "https://canny-assets.io/images/2f95808cd9f467f4989b94e60684016c.png",
           "created": "2021-12-03T23:29:45.023Z",
           "name": "Surami",
           "serviceAccount": false,
@@ -360,7 +360,7 @@
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -475,7 +475,9 @@
       "postDeleted": false,
       "postID": "6ad67ad5ee05eaf2df354aa9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -503,20 +505,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 90,
+  "maxScore": 91,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ad67ad5ee05eaf2df354aa9/523841484.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 90,
+  "score": 91,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-19T20:17:25.301Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.1] Please include support for blended shapes and simplifed parameters in the new native FT",
-  "trendingScore": 2968.53216407703,
+  "trendingScore": 2968.5758840962185,
   "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "sdk-3106-beta1-please-include-support-for-blended-shapes-and-simplifed-parameter",
   "viewerIsAuthor": false,
@@ -529,6 +531,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "69dfa0e5da2ea486f4db5015",
+      "alias": "Immediate Guppy",
+      "aliasID": "69dfa0e5da2ea486f4db501a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/177df999462c0525927e986a8cbeaf8e.png",
+      "companies": [],
+      "name": "Alice-Mimi",
+      "urlName": null,
+      "voteID": "6ae67690d6c79204dc6f5899"
+    },
     {
       "_id": "614d1ea67f4d2b19d3ea931d",
       "alias": "High Reptile",
@@ -842,7 +855,7 @@
       "alias": "Ultimate Parrotfish",
       "aliasID": "65c2ba03ed6eefce4c95cc75",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a9526a5ad359373935e4e4a54db68fe9.png",
+      "avatarURL": "https://canny-assets.io/images/2f95808cd9f467f4989b94e60684016c.png",
       "companies": [],
       "name": "Surami",
       "urlName": null,
@@ -1067,17 +1080,6 @@
       "name": "dracogen",
       "urlName": null,
       "voteID": "6ad6e548169b5b9033f41395"
-    },
-    {
-      "_id": "62df16955968ab44bc99ebf5",
-      "alias": "Sudden Lemming",
-      "aliasID": "6607c41ae5d26962aadd5b98",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/a54f56e19a77567fa2ed31067f4eb80f.png",
-      "companies": [],
-      "name": "Myriadtail",
-      "urlName": null,
-      "voteID": "6ad6e02c169b5b9033f40452"
     }
   ]
 }
