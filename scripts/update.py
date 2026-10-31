@@ -29,12 +29,14 @@ try:
     import board_store
     import scrape_state
     import canny_auth
+    import canny_proxy
 except ImportError:  # when run as script
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import categorize  # type: ignore
     import board_store  # type: ignore
     import scrape_state  # type: ignore
     import canny_auth  # type: ignore
+    import canny_proxy  # type: ignore
 
 # --------------------------------------------------------------------------
 # Config
@@ -270,12 +272,13 @@ def format_http_stats(prefix="[HTTP]"):
 # ---------------------------------------------------------------------------
 def _curl_get(url, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
+    proxy_args = canny_proxy.curl_args()
     t0 = time.perf_counter()
     code = 0
     body = ""
     try:
         r = subprocess.run(
-            ["curl", "-sS", "-L", "-w", "\n__HTTP_CODE__:%{http_code}",
+            ["curl", "-sS", "-L", *proxy_args, "-w", "\n__HTTP_CODE__:%{http_code}",
              "-H", f"User-Agent: {USER_AGENT}",
              "-m", str(timeout), url],
             capture_output=True, text=True, timeout=timeout + 5,
@@ -297,12 +300,13 @@ def _curl_get(url, timeout=15):
 
 def _curl_post_json(url, payload, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
+    proxy_args = canny_proxy.curl_args()
     t0 = time.perf_counter()
     code = 0
     body = ""
     try:
         r = subprocess.run(
-            ["curl", "-sS", "-X", "POST", url,
+            ["curl", "-sS", "-X", "POST", *proxy_args, url,
              "-H", "Content-Type: application/json",
              "-H", f"User-Agent: {USER_AGENT}",
              "--data-binary", json.dumps(payload),
@@ -1686,6 +1690,15 @@ def main():
     scraped_at = dict(state.get("scrapedAt") or {})
     session = None
     notify_pids = []
+    try:
+        canny_proxy.require_proxy()
+    except canny_proxy.CannyProxyError as e:
+        print(f"[ERROR] Canny proxy failed: {e}", file=sys.stderr)
+        print(
+            "[ERROR] Aborting; no further Canny requests will be made",
+            file=sys.stderr,
+        )
+        sys.exit(1)
     if not args.skip_auth:
         try:
             session = canny_auth.login_canny_session()

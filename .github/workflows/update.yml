@@ -83,6 +83,11 @@ jobs:
           VRCHAT_USERNAME: ${{ secrets.VRCHAT_USERNAME }}
           VRCHAT_PASSWORD: ${{ secrets.VRCHAT_PASSWORD }}
           VRCHAT_TOTP_SECRET: ${{ secrets.VRCHAT_TOTP_SECRET }}
+          CANNY_PROXY_HOST: proxyproxy.arpa.li
+          CANNY_PROXY_PORT: "1088"
+          CANNY_PROXY_SCHEME: socks5
+          CANNY_PROXY_USER_PREFIX: hackebein
+          CANNY_PROXY_PASSWORD: ${{ secrets.CANNY_PROXY_PASSWORD }}
         run: |
           set -euo pipefail
           if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
@@ -153,6 +158,6 @@ jobs:
       - name: Fail job if update failed
         if: steps.update.outcome == 'failure'
         run: |
-          echo "Update step failed (often Canny SSO or Canny HTTP 403)." >&2
+          echo "Update step failed (often Canny proxy, Canny SSO, or Canny HTTP 403)." >&2
           echo "Board and scrape-state changes were not committed." >&2
           exit 1

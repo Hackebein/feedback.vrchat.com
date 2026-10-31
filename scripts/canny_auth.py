@@ -20,6 +20,8 @@ try:
 except ImportError:  # pragma: no cover
     pyotp = None  # type: ignore
 
+import canny_proxy
+
 VRCHAT_API = "https://api.vrchat.cloud/api/1"
 CANNY_HOST = "feedback.vrchat.com"
 SSO_URL = (
@@ -146,7 +148,7 @@ def _curl(
     jar_out: Path | None = None
     try:
         cmd = [
-            "curl", "-sS", "-X", method, url,
+            "curl", *canny_proxy.curl_args(), "-sS", "-X", method, url,
             "-D", str(hdr_path),
             "-o", str(body_path),
             "-w", "%{http_code}",
@@ -170,7 +172,8 @@ def _curl(
             cmd.extend(["--data-binary", data])
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout + 15)
         if r.returncode != 0 and not (r.stdout or "").strip().isdigit():
-            raise CannyAuthError(f"curl failed for {url}: {r.stderr or r.stdout}")
+            detail = canny_proxy.redact(r.stderr or r.stdout or "")
+            raise CannyAuthError(f"curl failed for {url}: {detail}")
         try:
             code = int((r.stdout or "0").strip() or "0")
         except ValueError:
