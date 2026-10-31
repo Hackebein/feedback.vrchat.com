@@ -1,18 +1,19 @@
-"""Optional sticky proxy for the Canny/VRChat scrape."""
+"""Optional sticky proxy for Canny hosts."""
 
 from __future__ import annotations
 
 import base64
 import os
 import re
-import secrets
 import socket
+import urllib.parse
 from dataclasses import dataclass
 
 DEFAULT_HOST = "proxyproxy.arpa.li"
 DEFAULT_PORT = 1088
 DEFAULT_SCHEME = "socks5"
 DEFAULT_USER_PREFIX = "hackebein"
+DEFAULT_SESSION = "feedbackvrchat"
 _CHECK_HOST = "feedback.vrchat.com"
 _CHECK_PORT = 443
 _SESSION_RE = re.compile(r"[^A-Za-z0-9_-]")
@@ -97,6 +98,17 @@ def curl_args() -> list[str]:
     raise CannyProxyError("unsupported proxy scheme")
 
 
+def proxied_url(url: str) -> bool:
+    host = (urllib.parse.urlparse(url).hostname or "").lower().rstrip(".")
+    return host == _CHECK_HOST or host == "canny.io" or host.endswith(".canny.io")
+
+
+def curl_args_for(url: str) -> list[str]:
+    if not proxied_url(url):
+        return []
+    return curl_args()
+
+
 def require_proxy() -> None:
     cfg = load_config()
     if cfg is None:
@@ -151,11 +163,8 @@ def _port() -> int:
 
 
 def _session_from_env() -> str:
-    for key in ("CANNY_PROXY_SESSION", "GITHUB_RUN_ID"):
-        safe = _SESSION_RE.sub("", os.environ.get(key) or "")[:64]
-        if safe:
-            return safe
-    return secrets.token_hex(8)
+    safe = _SESSION_RE.sub("", os.environ.get("CANNY_PROXY_SESSION") or "")[:64]
+    return safe or DEFAULT_SESSION
 
 
 def _recv_exact(sock: socket.socket, n: int) -> bytes:

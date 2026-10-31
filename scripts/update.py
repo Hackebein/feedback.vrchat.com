@@ -272,7 +272,7 @@ def format_http_stats(prefix="[HTTP]"):
 # ---------------------------------------------------------------------------
 def _curl_get(url, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
-    proxy_args = canny_proxy.curl_args()
+    proxy_args = canny_proxy.curl_args_for(url)
     t0 = time.perf_counter()
     code = 0
     body = ""
@@ -300,7 +300,7 @@ def _curl_get(url, timeout=15):
 
 def _curl_post_json(url, payload, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
-    proxy_args = canny_proxy.curl_args()
+    proxy_args = canny_proxy.curl_args_for(url)
     t0 = time.perf_counter()
     code = 0
     body = ""

@@ -148,7 +148,7 @@ def _curl(
     jar_out: Path | None = None
     try:
         cmd = [
-            "curl", *canny_proxy.curl_args(), "-sS", "-X", method, url,
+            "curl", *canny_proxy.curl_args_for(url), "-sS", "-X", method, url,
             "-D", str(hdr_path),
             "-o", str(body_path),
             "-w", "%{http_code}",

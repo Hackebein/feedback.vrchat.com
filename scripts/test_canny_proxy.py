@@ -5,8 +5,10 @@ from __future__ import annotations
 import io
 import subprocess
 import sys
+import tempfile
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
+from pathlib import Path
 from unittest.mock import patch
 
 import canny_auth
@@ -78,14 +80,17 @@ class ProxyConfigTest(unittest.TestCase):
                 canny_proxy.require_proxy()
         connect.assert_not_called()
 
-    def test_sticky_session_from_run_id(self) -> None:
+    def test_default_session_ignores_run_id(self) -> None:
         with patch.dict(
             "os.environ",
             _env(CANNY_PROXY_PASSWORD=PASSWORD, GITHUB_RUN_ID="41040527302"),
             clear=False,
         ):
             first = canny_proxy.curl_args()
-            second = canny_proxy.curl_args()
+            canny_proxy.reset_state()
+            os_run = "999999"
+            with patch.dict("os.environ", {"GITHUB_RUN_ID": os_run}, clear=False):
+                second = canny_proxy.curl_args()
         self.assertEqual(first, second)
         self.assertEqual(
             first,
@@ -93,9 +98,11 @@ class ProxyConfigTest(unittest.TestCase):
                 "--socks5-hostname",
                 "proxyproxy.arpa.li:1088",
                 "--proxy-user",
-                f"hackebein.41040527302:{PASSWORD}",
+                f"hackebein.feedbackvrchat:{PASSWORD}",
             ],
         )
+        self.assertNotIn("41040527302", first[3])
+        self.assertNotIn(os_run, second[3])
 
     def test_session_string_is_sanitized(self) -> None:
         with patch.dict(
@@ -106,14 +113,15 @@ class ProxyConfigTest(unittest.TestCase):
             args = canny_proxy.curl_args()
         self.assertEqual(args[3], f"hackebein.Run99:{PASSWORD}")
 
-    def test_generated_session_stays_constant(self) -> None:
+    def test_default_session_stays_constant_across_resets(self) -> None:
         with patch.dict("os.environ", _env(CANNY_PROXY_PASSWORD=PASSWORD), clear=False):
             first = canny_proxy.curl_args()[3]
             second = canny_proxy.curl_args()[3]
-        user = first.split(":", 1)[0]
+            canny_proxy.reset_state()
+            third = canny_proxy.curl_args()[3]
+        self.assertEqual(first, f"hackebein.feedbackvrchat:{PASSWORD}")
         self.assertEqual(first, second)
-        self.assertTrue(user.startswith("hackebein."))
-        self.assertRegex(user.removeprefix("hackebein."), r"[0-9a-f]{16}")
+        self.assertEqual(first, third)
 
     def test_http_scheme_curl_args(self) -> None:
         with patch.dict(
@@ -135,7 +143,7 @@ class ProxyConfigTest(unittest.TestCase):
                 "--proxy",
                 "http://proxy.example:1080",
                 "--proxy-user",
-                f"hackebein.42:{PASSWORD}",
+                f"hackebein.feedbackvrchat:{PASSWORD}",
             ],
         )
 
@@ -188,8 +196,10 @@ class ProxyConfigTest(unittest.TestCase):
         self.assertIn("[proxy] socks5 connected", text)
         self.assertNotIn(PASSWORD, text)
         self.assertNotIn("hackebein.99", text)
+        self.assertNotIn("hackebein.feedbackvrchat", text)
         self.assertNotIn("203.0.113.9", text)
-        self.assertIn(b"hackebein.99", bytes(sock.sent))
+        self.assertIn(b"hackebein.feedbackvrchat", bytes(sock.sent))
+        self.assertNotIn(b"hackebein.99", bytes(sock.sent))
         self.assertIn(PASSWORD.encode(), bytes(sock.sent))
         self.assertIn(b"feedback.vrchat.com", bytes(sock.sent))
 
@@ -251,10 +261,10 @@ class ProxyConfigTest(unittest.TestCase):
             _env(CANNY_PROXY_PASSWORD=PASSWORD, GITHUB_RUN_ID="15"),
             clear=False,
         ):
-            raw = f"auth failed for hackebein.15:{PASSWORD}"
+            raw = f"auth failed for hackebein.feedbackvrchat:{PASSWORD}"
             cleaned = canny_proxy.redact(raw)
         self.assertNotIn(PASSWORD, cleaned)
-        self.assertNotIn("hackebein.15", cleaned)
+        self.assertNotIn("hackebein.feedbackvrchat", cleaned)
 
 
 class ProxyCurlTest(unittest.TestCase):
@@ -282,17 +292,25 @@ class ProxyCurlTest(unittest.TestCase):
             patch.dict("os.environ", env, clear=False),
             patch.object(update.subprocess, "run", side_effect=run),
             patch.object(update.time, "sleep"),
+            patch.object(canny_auth.subprocess, "run", side_effect=run),
         ):
             update._curl_get("https://feedback.vrchat.com/bug-reports/p/slug")
             update._curl_post_json("https://feedback.vrchat.com/api/posts/get", {"a": 1})
             canny_auth._curl("https://api.vrchat.cloud/api/1/auth/user")
-        users = []
-        for cmd in cmds:
+            canny_auth._curl(canny_auth.SSO_URL)
+        sticky = f"hackebein.feedbackvrchat:{PASSWORD}"
+        for cmd in cmds[:2]:
             self.assertIn("--socks5-hostname", cmd)
             self.assertIn("proxyproxy.arpa.li:1088", cmd)
-            users.append(cmd[cmd.index("--proxy-user") + 1])
-        self.assertEqual(users, [f"hackebein.41040527302:{PASSWORD}"] * 3)
+            self.assertEqual(cmd[cmd.index("--proxy-user") + 1], sticky)
+            self.assertNotIn("41040527302", cmd[cmd.index("--proxy-user") + 1])
+        for cmd in cmds[2:]:
+            self.assertNotIn("--socks5-hostname", cmd)
+            self.assertNotIn("--proxy", cmd)
+            self.assertNotIn("--proxy-user", cmd)
+            self.assertFalse(any(PASSWORD in part for part in cmd))
         self.assertIn("https://api.vrchat.cloud/api/1/auth/user", cmds[2])
+        self.assertIn(canny_auth.SSO_URL, cmds[3])
         self.assertIn("https://feedback.vrchat.com/api/posts/get", cmds[1])
 
     def test_proxy_failure_stops_before_login(self) -> None:
@@ -319,6 +337,112 @@ class ProxyCurlTest(unittest.TestCase):
         login.assert_not_called()
         newest.assert_not_called()
         pages.assert_not_called()
+
+
+class ProxyHostTest(unittest.TestCase):
+    def setUp(self) -> None:
+        canny_proxy.reset_state()
+
+    def tearDown(self) -> None:
+        canny_proxy.reset_state()
+
+    def test_only_canny_hosts_are_proxied(self) -> None:
+        sticky = f"hackebein.feedbackvrchat:{PASSWORD}"
+        proxied = [
+            "https://feedback.vrchat.com/",
+            "https://Feedback.VRChat.com/p/slug",
+            "https://canny.io/api/redirects/sso?companyID=1",
+            "https://status.canny.io/x",
+        ]
+        direct = [
+            "https://api.vrchat.cloud/api/1/auth/user",
+            "https://api.vrchat.cloud/api/1/sso/canny",
+            canny_auth.SSO_URL,
+            "https://www.vrchat.com/",
+            "https://notcanny.io/",
+            "https://feedback.vrchat.com.evil.example/",
+            "https://canny.io.evil.example/",
+        ]
+        with patch.dict(
+            "os.environ",
+            _env(CANNY_PROXY_PASSWORD=PASSWORD, GITHUB_RUN_ID="41040527302"),
+            clear=False,
+        ):
+            for url in proxied:
+                args = canny_proxy.curl_args_for(url)
+                self.assertEqual(args[0], "--socks5-hostname", url)
+                self.assertEqual(args[3], sticky, url)
+            for url in direct:
+                self.assertEqual(canny_proxy.curl_args_for(url), [], url)
+        with patch.dict("os.environ", _env(), clear=False):
+            self.assertEqual(canny_proxy.curl_args_for("https://canny.io/"), [])
+
+    def test_blank_session_override_keeps_the_fixed_default(self) -> None:
+        with patch.dict(
+            "os.environ",
+            _env(
+                CANNY_PROXY_PASSWORD=PASSWORD,
+                CANNY_PROXY_SESSION="!!!",
+                GITHUB_RUN_ID="12",
+            ),
+            clear=False,
+        ):
+            user = canny_proxy.curl_args()[3]
+        self.assertEqual(user, f"hackebein.feedbackvrchat:{PASSWORD}")
+
+    def test_direct_vrchat_cookie_reaches_proxied_canny_sso(self) -> None:
+        auth_cookie = "vrchat-auth-cookie"
+        token = "sso-token-value"
+        viewer_html = 'window.__data = {"viewer":{"_id":"usr_1","csrfToken":"csrf_1"}}'
+        with tempfile.TemporaryDirectory() as td:
+            jar = Path(td) / "cookies.jar"
+            jar.write_text(
+                "# Netscape HTTP Cookie File\n"
+                f"api.vrchat.cloud\tFALSE\t/\tTRUE\t0\tauth\t{auth_cookie}\n",
+                encoding="utf-8",
+            )
+            seen: list[list[str]] = []
+
+            def run(cmd, **kwargs):
+                cmd = list(cmd)
+                seen.append(cmd)
+                url = next(part for part in cmd if part.startswith("http"))
+                Path(cmd[cmd.index("-D") + 1]).write_text("HTTP/1.1 200\n", encoding="utf-8")
+                baked = Path(cmd[cmd.index("-b") + 1]).read_text(encoding="utf-8")
+                body = Path(cmd[cmd.index("-o") + 1])
+                if "api.vrchat.cloud" in url:
+                    self.assertIn("/sso/canny", url)
+                    self.assertNotIn("--socks5-hostname", cmd)
+                    self.assertNotIn("--proxy-user", cmd)
+                    self.assertFalse(any(PASSWORD in part for part in cmd))
+                    self.assertIn(auth_cookie, baked)
+                    body.write_text(f'{{"token":"{token}"}}', encoding="utf-8")
+                else:
+                    self.assertTrue(url.startswith("https://feedback.vrchat.com/?"))
+                    self.assertIn("ssoToken=" + token, url)
+                    self.assertIn("--socks5-hostname", cmd)
+                    self.assertEqual(
+                        cmd[cmd.index("--proxy-user") + 1],
+                        f"hackebein.feedbackvrchat:{PASSWORD}",
+                    )
+                    self.assertNotIn(auth_cookie, baked)
+                    body.write_text(viewer_html, encoding="utf-8")
+                return subprocess.CompletedProcess(cmd, 0, stdout="200", stderr="")
+
+            with (
+                patch.dict(
+                    "os.environ",
+                    _env(CANNY_PROXY_PASSWORD=PASSWORD, GITHUB_RUN_ID="41040527302"),
+                    clear=False,
+                ),
+                patch.object(canny_auth.subprocess, "run", side_effect=run),
+            ):
+                viewer = canny_auth.sso_to_canny(jar)
+            self.assertEqual(viewer["_id"], "usr_1")
+            self.assertEqual(viewer["csrfToken"], "csrf_1")
+            self.assertEqual(len(seen), 2)
+            self.assertIn(auth_cookie, jar.read_text(encoding="utf-8"))
+            self.assertNotIn("41040527302", seen[1][seen[1].index("--proxy-user") + 1])
 
 
 if __name__ == "__main__":
