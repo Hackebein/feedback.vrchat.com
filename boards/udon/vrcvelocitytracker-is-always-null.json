@@ -1,0 +1,95 @@
+{
+  "_id": "6ae709f0bf255d922b620b7a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-11-01T09:59:15.562746Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "620a5d1fe252983eec300b4c",
+    "alias": "Eastern Whitefish",
+    "aliasID": "65e4b9eaa6e3ea79dd44eed1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/d50bb129b7c55173e5009a5ca04c7f47.png",
+    "created": "2022-02-14T13:46:07.367Z",
+    "name": "하루룽짱harunadev",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "620a5d1fe252983eec300b4c",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-01T09:44:16.383Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Using latest client (1937) and latest SDK (3.10.6), a newly added component, VRCVelocityTracker, is always null, no matter how it's accessed or not.\n\nBoth from Udon Graph and UdonSharp, the script is failing to access to VRCVelocityTracker.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae709f0bf255d922b620b79",
+  "imageURLs": [
+    "https://canny-assets.io/images/2363b1b6b5b4b8ef0acded94715d539a.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-01T09:44:16.383Z",
+  "subCategoryID": null,
+  "title": "VRCVelocityTracker is always null",
+  "trendingScore": 2966.179682073913,
+  "updatedBy": null,
+  "urlName": "vrcvelocitytracker-is-always-null",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "620a5d1fe252983eec300b4c",
+      "alias": "Eastern Whitefish",
+      "aliasID": "65e4b9eaa6e3ea79dd44eed1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d50bb129b7c55173e5009a5ca04c7f47.png",
+      "companies": [],
+      "name": "하루룽짱harunadev",
+      "urlName": null,
+      "voteID": "6ae709f0d6c79204dcf3d9e4"
+    }
+  ]
+}

@@ -2,10 +2,10 @@
   "_id": "6ac00d12b6c0c0bda8210aae",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.world-building",
-    "worlds.persistence"
+    "sdk.vrcsdk",
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-10-23T22:39:43.225536Z",
+  "aiTaggedAt": "2026-11-01T09:59:15.563683Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "61665e3e7448d57ed9eb49da",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "commentingDisabled": false,
   "comments": [
     {
@@ -40,7 +40,7 @@
         "alias": "Cautious Minnow",
         "aliasID": "67a0ed8eafacf378f12ca236",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/9b137a5b13ebd4b419ec401f15b027eb.png",
+        "avatarURL": "https://canny-assets.io/images/8be2a580a95eda210a66e6bb06bbe879.png",
         "created": "2025-02-03T16:23:41.681Z",
         "name": "Uzer Tekton",
         "serviceAccount": false,
@@ -376,7 +376,7 @@
           "alias": "Cautious Minnow",
           "aliasID": "67a0ed8eafacf378f12ca236",
           "anonymized": false,
-          "avatarURL": "https://canny-assets.io/images/9b137a5b13ebd4b419ec401f15b027eb.png",
+          "avatarURL": "https://canny-assets.io/images/8be2a580a95eda210a66e6bb06bbe879.png",
           "created": "2025-02-03T16:23:41.681Z",
           "name": "Uzer Tekton",
           "serviceAccount": false,
@@ -396,6 +396,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{67a0ed8d6e7354cc8f8c7acd|full_name} I agree almost entirely. However, I think also having a \"VRC Chair\" component for just the expected normal \"literal chair\" use-case is good for developer experience. It could have Chair interaction settings specific to chairs that would be otherwise very frustrating for the UGC creator to do themselves, and would unify a 'standard experience' across the platform.\n\nFor example, what if the seated position animation was generated using the avatar's proportions in combination with user-defined chair proportions (seat depth, back angle, leg angle... maybe togglable floor depth too)?\n\nAnd another thing I proposed: lines/polylines/splines for 'Long Seats' that let you sit anywhere along them (even in people's laps)\n\nThese are things that would revolutionize chairs in VRChat overnight but would also be terrible to implement as a user using atomic components and doesn't make sense to put in anything other than a dedicated Chair component, right?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae709d63808947eeb71f718",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67a0ed8d6e7354cc8f8c7acd",
+        "alias": "Cautious Minnow",
+        "aliasID": "67a0ed8eafacf378f12ca236",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8be2a580a95eda210a66e6bb06bbe879.png",
+        "created": "2025-02-03T16:23:41.681Z",
+        "name": "Uzer Tekton",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-01T09:43:50.979Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "61665e3e7448d57ed9eb49da",
+          "alias": "Olive Vole",
+          "aliasID": "65c26da3ed6eefce4c4d091c",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/017df8e6ae4567afbc647784175ca43d.png",
+          "created": "2021-10-13T04:19:10.295Z",
+          "name": "4Bakers",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ac0be7ef708c850f9c40128",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ac00d12b6c0c0bda8210aae",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{61665e3e7448d57ed9eb49da|full_name} These can be done by UGC, there are some prefabs that is close to what you are describing e.g. AutoPosChair and Flek Sit (both are on booth.pm)\n\nThe problem with \"built-in\" prefabs is that it doesn't allow flexibility and improvement, take the video players for example, the SDK example is just really basic, and almost all worlds use some sort of UGC video player. Chairs can go in a similar path.\n\nExposing these internal functions will allow \"chair technology\" to innovate and evolve similar to the video players, and truly let UGC flourish. You can innovate and do exactly what you describe, plus an infinite amount of possible other solutions e.g. moving platforms, sitting in different pose or sleeping or anything else anyone can possible think of.",
       "viewerReactions": null,
       "voteID": null
     }
