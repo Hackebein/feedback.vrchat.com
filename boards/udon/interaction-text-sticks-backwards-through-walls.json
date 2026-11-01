@@ -1,0 +1,96 @@
+{
+  "_id": "6ae681918f5fa40fb19222f8",
+  "aiCategories": [
+    "loc.in-world",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-11-01T00:10:14.023314Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "603b04282fa90e5c53608eb6",
+    "alias": "Variable Turtle",
+    "aliasID": "65c27d10ed6eefce4cc8cf32",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/9219413be12af9f6e411673f17a39cc2.png",
+    "created": "2021-02-28T02:47:04.064Z",
+    "name": "RavenWorks",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "603b04282fa90e5c53608eb6",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-01T00:02:25.987Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "This is hard to demonstrate in a screenshot, but:  if you put a button on a wall, and then point your cursor at it, the \"interaction text\" tooltip that appears will always be *behind* the wall, causing an uncomfortable stereoscopic depth conflict (because it's drawn on top even though its position would be hidden behind the wall if it respected the Z buffer).\n\nLooking at this, my assumption would be that the tooltip is meant to hover *above* the button, rather than behind it?   Or possibly even hovering in *front* of the button, precisely to avoid any possibility of it awkwardly sinking into the wall depending on the view angle....   but the current state, where it's like the interaction text is trying to get away from you, and will always cause a depth conflict as it does so, seems like it can't be intentional.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae681918f5fa40fb19222f7",
+  "imageURLs": [
+    "https://canny-assets.io/images/8ed46a311975bd73c25655fb89b90a5a.jpeg",
+    "https://canny-assets.io/images/35c3c83f3712d5e8e30e9893978675e9.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-01T00:02:25.987Z",
+  "subCategoryID": null,
+  "title": "Interaction text sticks backwards through walls",
+  "trendingScore": 2966.121959764059,
+  "updatedBy": null,
+  "urlName": "interaction-text-sticks-backwards-through-walls",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "603b04282fa90e5c53608eb6",
+      "alias": "Variable Turtle",
+      "aliasID": "65c27d10ed6eefce4cc8cf32",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9219413be12af9f6e411673f17a39cc2.png",
+      "companies": [],
+      "name": "RavenWorks",
+      "urlName": null,
+      "voteID": "6ae68192d6c79204dc6f62cb"
+    }
+  ]
+}
