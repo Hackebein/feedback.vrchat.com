@@ -1,12 +1,13 @@
 {
   "_id": "6ae5b9adbf255d922b476640",
   "aiCategories": [
-    "loc.pc-client",
+    "loc.login",
     "loc.loading-screen",
+    "loc.pc-client",
     "platforms.cross-platform",
     "worlds.travel"
   ],
-  "aiTaggedAt": "2026-10-31T22:50:46.795054Z",
+  "aiTaggedAt": "2026-11-01T20:15:51.777690Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "628f8e455f3da20b6f94cfd0",
@@ -30,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +75,71 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Can you provide [output logs](https://help.vrchat.com/hc/en-us/articles/9521522810899-Where-do-I-find-my-Output-Logs-and-Crash-Dumps)?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae7997feee74cf25f27376c",
+      "aiGenerated": false,
+      "author": {
+        "_id": "628f8e455f3da20b6f94cfd0",
+        "alias": "Eucalyptus Badger",
+        "aliasID": "65c2a219ed6eefce4c62c43f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/56e83f21044ef5e42093e8dfccb2e265.png",
+        "created": "2022-05-26T14:27:17.598Z",
+        "name": "WalooW",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-01T19:56:47.447Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/dd860bfc92947f4bc8bae91bc1986ad6.txt"
+      ],
+      "files": [
+        {
+          "downloadURL": "/api/files/download/dd860bfc92947f4bc8bae91bc1986ad6.txt",
+          "mimeType": "text/plain",
+          "name": "output_log_2026-11-01_20-45-09",
+          "url": "https://canny-assets.io/files/dd860bfc92947f4bc8bae91bc1986ad6.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ae669efdf81fcf66c414163",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae5b9adbf255d922b476640",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}",
       "viewerReactions": null,
       "voteID": null
     }
