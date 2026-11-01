@@ -342,7 +342,9 @@
       "postDeleted": false,
       "postID": "6ae3a6ee3cad73c1fe03cce6",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -386,7 +388,9 @@
       "postDeleted": false,
       "postID": "6ae3a6ee3cad73c1fe03cce6",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -412,20 +416,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 100,
+  "maxScore": 101,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae3a6ee3cad73c1fe03cce6/122013805.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 100,
+  "score": 101,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-29T20:05:02.338Z",
   "subCategoryID": null,
   "title": "Allow users to \"Block\" worlds",
-  "trendingScore": 2969.8474553266974,
+  "trendingScore": 2969.8610870767625,
   "updatedBy": null,
   "urlName": "allow-users-to-block-worlds",
   "viewerIsAuthor": false,
@@ -438,6 +442,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5f3cf6b624a63b5139e3ca9e",
+      "alias": "Coral Lemur",
+      "aliasID": "65d5bd800129d7ae44c1c246",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/7400ca92dae64ffd4439f4e85553a44e.png",
+      "companies": [],
+      "name": "RockFannel_JP",
+      "urlName": null,
+      "voteID": "6ae7b4f6da302d926d1d63db"
+    },
     {
       "_id": "655cff29c42180388ae8d862",
       "alias": "Obvious Lark",
@@ -718,7 +733,7 @@
       "alias": "Recent Cheetah",
       "aliasID": "69388e974927a96e58bfe383",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/37efa7f79ca01d3b5fd6185832213339.png",
+      "avatarURL": "https://canny-assets.io/images/2c7a5b63846c8c3b0efa6a2f741beef2.png",
       "companies": [],
       "name": "batwolves",
       "urlName": null,
@@ -976,17 +991,6 @@
       "name": "Salty Tangerine",
       "urlName": null,
       "voteID": "6ae4aa0d778fcc8c3ae5f8f7"
-    },
-    {
-      "_id": "5cb0e62414ddd360bbe1ac29",
-      "alias": "Elaborate Swordtail",
-      "aliasID": "65c26ed9ed6eefce4c854ff1",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/76d584a58bbb6a2eca29ddfc76815d46.png",
-      "companies": [],
-      "name": "Jasper Raine",
-      "urlName": null,
-      "voteID": "6ae4a8ed778fcc8c3ae5f39a"
     }
   ]
 }
