@@ -6,7 +6,7 @@
     "platforms.pc.steam",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-11-01T08:04:34.088732Z",
+  "aiTaggedAt": "2026-11-01T09:00:38.874875Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68a68562d2f94455f0fc3965",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -250,7 +250,63 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{68a68562d2f94455f0fc3965|full_name}\n\nI have spotted one more incorrect statement from your Claude:\n\n> replacing the bundled yt-dlp.exe with the newer one does not help, because VRChat restores version 2026.08.19 on launch (verified with --version after replacement). Making the file read-only breaks playback entirely\n\nThis is a side-effect of Windows not allowing to create temp files in `%LocalAppdata%Low` by default. VRChat's yt-dlp doesn't experience this issue, but upstream yt-dlp does. When you replace `%LocalAppdata%Low\\VRChat\\VRChat\\Tools\\yt-dlp.exe`, you will receive the following error:\n\n```\n\n[PYI-32476:ERROR] Could not create temporary directory!\n\n```\n\nIt can be worked around with `icacls \"%LocalAppdata%Low\\VRChat\\VRChat\\Tools\\yt-dlp.exe\" /setintegritylevel medium` for testing/debugging upstream yt-dlp behavior, but it's best to be left alone at low integrity ACE.",
+      "value": "@{68a68562d2f94455f0fc3965|full_name}\n\nI have spotted one more incorrect statement from your Claude:\n\n> replacing the bundled yt-dlp.exe with the newer one does not help, because VRChat restores version 2026.08.19 on launch (verified with --version after replacement). Making the file read-only breaks playback entirely\n\nThe playback breakage you're describing is a side-effect of your attempt to replace VRChat's `yt-dlp.exe` with an upstream yt-dlp executable at `%LocalAppdata%Low\\VRChat\\VRChat\\Tools\\yt-dlp.exe` without setting the appropriate access control entry (ACE) in that directory. Windows blocks temp file creation in low integrity directories such as `%LocalAppdata%Low` by default, so after replacing VRChat's `yt-dlp.exe` in this directory with an upstream yt-dlp executable you will encounter the following error:\n\n```\n\n[PYI-32476:ERROR] Could not create temporary directory!\n\n```\n\nFor dangerous testing/debugging purposes, it can be worked around with `icacls \"$env:USERPROFILE\\AppData\\LocalLow\\VRChat\\VRChat\\Tools\\yt-dlp.exe\" /setintegritylevel medium` with an upstream yt-dlp executable to test upstream yt-dlp behavior in a VRChat client. It's best to be left alone at low integrity ACE (`/setintegritylevel low`) for regular users.\n\nVRChat's yt-dlp is unaffected by marking the executable as read-only, it'll avoid creating temp files and it will work fine.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae6fc0feee74cf25f1aaaaa",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-01T08:45:03.279Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68a68562d2f94455f0fc3965",
+          "alias": "Peacock blue Gorilla",
+          "aliasID": "68a68562d2f94455f0fc56a9",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/f644afada53263f4b78dac0e59b8f4a4.png",
+          "created": "2025-08-21T02:33:06.056Z",
+          "name": "如月璃音",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ae6e060df81fcf66c48a3ac",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae6c07feee74cf25f16868f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68a68562d2f94455f0fc3965|full_name}\n\nThe test URL in your bug report, https://youtu.be/voi2apZTJXs, is also non-existent or hallucinated by a generative AI/LLM: \"This video isn't available anymore\".\n\nIn the end, I ended up testing against another test URL (A soothing AI reads stories to you in Thad Tiny Library) instead: https://youtu.be/kEAC8eeQWcg",
       "viewerReactions": null,
       "voteID": null
     }
