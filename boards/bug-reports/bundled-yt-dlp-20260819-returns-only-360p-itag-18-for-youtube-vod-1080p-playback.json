@@ -1,12 +1,12 @@
 {
   "_id": "6ae6c07feee74cf25f16868f",
   "aiCategories": [
-    "loc.in-world",
     "loc.pc-client",
+    "loc.in-world",
     "platforms.pc.steam",
     "worlds.video"
   ],
-  "aiTaggedAt": "2026-11-01T11:23:29.916714Z",
+  "aiTaggedAt": "2026-11-01T11:40:14.624787Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68a68562d2f94455f0fc3965",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "commentingDisabled": false,
   "comments": [
     {
@@ -451,6 +451,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{68a68562d2f94455f0fc3965|full_name} The upstream 2026.10.26 returning the full format list is not important here, only format 18 will be playable from it in VRChat regardless. The full list you're seeing consists of separate video or audio formats (not digestible by video players in VRChat, you'd end up with video only but no audio), or other pre-muxed 1080p that are not playable for other reasons in VRChat (\"Possible MPEG-TS in MP4 container or malformed AAC timestamps\").\n\nVRChat's yt-dlp 2026.08.19 from command line will return only storyboard + format 18 using `android_vr` or `web_embedded`. If you try to download with `android_vr`, you will find out you will get 403 Forbidden.\n\nIt's a surprising finding that `android_vr` may still be found in VRChat's yt-dlp 2026.08.19 on the command line. The actual video playback in VRChat will use `web_embedded` for format 18 however, from what I understand reading the logs. This is intended.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae71e7c8f5fa40fb19ca3a6",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68a68562d2f94455f0fc3965",
+        "alias": "Peacock blue Gorilla",
+        "aliasID": "68a68562d2f94455f0fc56a9",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6b1a2046f3282f676737c92ba1e7eb7d.png",
+        "created": "2025-08-21T02:33:06.056Z",
+        "name": "如月璃音",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-01T11:11:56.076Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae6c07feee74cf25f16868f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Thank you for testing again with the corrected URL, and for the detailed follow-up.\n\nThe android_vr presence in the bundled CLI matches what we observed on our side as well (that is where the -F output in the report came from), so I am glad that detail was worth noting.\n\nI understand your point that the full format list from upstream does not translate into formats VRChat can actually play, and that playback currently goes through web_embedded to format 18. The user-facing issue remains that regular videos are stuck at 360p in worlds, so if a route to a playable HD format appears in a future yt-dlp or on VRChat's side, an update would still be very welcome.\n\nThanks again for the careful corrections.",
       "viewerReactions": null,
       "voteID": null
     }
