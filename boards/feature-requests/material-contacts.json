@@ -2,9 +2,9 @@
   "_id": "6a91cdbb8bcd80cd69fcfa87",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.dynamics"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-09-28T19:25:22.661706Z",
+  "aiTaggedAt": "2026-11-01T22:22:18.048752Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63691297469f06772579fe6f",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -201,7 +201,7 @@
       "postID": "6a91cdbb8bcd80cd69fcfa87",
       "private": false,
       "reactions": {
-        "like": 0
+        "like": 1
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -209,6 +209,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Please also allow sending a little additional data along with the transform, could even be packed into the last row of the transform matrix if there's a technical limitation against otherwise.\n\nWhile position allows for proximity based effects (and workarounds), it leaves a gap for contact 'property' based animatable effects. The tag system will likely be abused for workarounds regarding this, but I think allowing even just a few animatable floats along with the position will lead to significantly more possibilities and less abuse of other properties of existing systems.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae7b9748ddcb322f8a8383e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5c8d5542f56d32290a6ed4a3",
+        "alias": "Brick red Bee",
+        "aliasID": "65c36fe8ed6eefce4ca2ba13",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2dad9bc4a8621e731f75a318c36ade45.png",
+        "created": "2019-03-16T19:57:54.803Z",
+        "name": "DocMe",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-01T22:13:08.943Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a91cdbb8bcd80cd69fcfa87",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "The shape data would be important as well.",
       "viewerReactions": null,
       "voteID": null
     }
