@@ -1,9 +1,10 @@
 {
   "_id": "6ae35e50f427a4ecc8e30f28",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.in-world",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-10-31T21:43:34.894409Z",
+  "aiTaggedAt": "2026-11-01T07:15:36.383471Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b68fbeec52d7b606b4182ec",
@@ -27,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "commentingDisabled": false,
   "comments": [
     {
@@ -409,6 +410,50 @@
       "value": "@{5cb0e62414ddd360bbe1ac29|full_name} Wholeheartedly agree with this. Private instances let users exclude people before those people have even done anything wrong. An entire group can agree to spend time together somewhere a particular person cannot join, without giving that person any say in the decision. Calling it \"privacy\" doesn't change the outcome. Someone is being denied access to a conversation they might want to participate in, simply because the people having it would prefer they weren't there. They don't even get a chance to demonstrate why they should have been invited. All instances should therefore be public. Users could still choose who they spend time with, provided that choice never prevents anyone else from joining them. This would preserve freedom of association without the unfair expectation that other people need your consent to associate with you.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6ae6e084df81fcf66c48a61d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "643ff3451e7aae7abf6ae780",
+        "alias": "Umber brown Puma",
+        "aliasID": "665991f8b9e8e8fe66a24176",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/eb0729bfb06e64d94144b99b1b6ec75e.png",
+        "created": "2023-04-19T13:57:25.737Z",
+        "name": "Undeadleader",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-01T06:47:32.513Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae35e50f427a4ecc8e30f28",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I fully agree. I also suggest we have everyone already added to our friends list to prevent exclusion and remove the ability to unfriend to avoid targeted harassment and singling individuals out.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -426,20 +471,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 39,
+  "maxScore": 40,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae35e50f427a4ecc8e30f28/262059572.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 39,
+  "score": 40,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-29T14:55:12.589Z",
   "subCategoryID": null,
   "title": "remove the user block feature",
-  "trendingScore": 2968.9837399473354,
+  "trendingScore": 2969.04150258948,
   "updatedBy": null,
   "urlName": "remove-the-user-block-feature",
   "viewerIsAuthor": false,
@@ -452,6 +497,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "643ff3451e7aae7abf6ae780",
+      "alias": "Umber brown Puma",
+      "aliasID": "665991f8b9e8e8fe66a24176",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/eb0729bfb06e64d94144b99b1b6ec75e.png",
+      "companies": [],
+      "name": "Undeadleader",
+      "urlName": null,
+      "voteID": "6ae6e043d6c79204dcc520e0"
+    },
     {
       "_id": "62b6538d3a163924c2f78ebd",
       "alias": "Graceful Dingo",
