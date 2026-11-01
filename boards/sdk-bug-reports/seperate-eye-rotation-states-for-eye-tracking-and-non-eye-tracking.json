@@ -2,10 +2,9 @@
   "_id": "6ae78b4e8f5fa40fb1a4dc23",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.tracking",
-    "avatars.descriptor"
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-01T19:13:06.470976Z",
+  "aiTaggedAt": "2026-11-01T19:28:19.266871Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64c6d294cf63f90945128834",
@@ -43,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Right now we have to set the eye rotation values quite high to get decent eye movement using eye-tracking after the recent native face tracking update. Due to having high values, now players without eye tracking have to deal with somewhat extreme movement which can go against the creators intent for the avatar.\n\nIt would be good if we could instead be able to decide separately the values for when eye tracking is enabled and disabled.",
+  "details": "Right now we have to set the eye rotation values quite high to get decent eye movement using eye-tracking after the recent native face tracking update. Due to having high values, now players without eye tracking have to deal with somewhat extreme movement which can go against the creators intent for the avatar.\n\nIt would be good if we could instead be able to decide separately the rotation values for when eye tracking is enabled and disabled.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -53,20 +52,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 4,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae78b4e8f5fa40fb1a4dc23/886127059.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 4,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-01T18:56:14.025Z",
   "subCategoryID": null,
   "title": "Seperate Eye Rotation States for Eye tracking and Non-Eye tracking",
-  "trendingScore": 2966.639952721379,
+  "trendingScore": 2967.15120806029,
   "updatedBy": "64c6d294cf63f90945128834",
   "urlName": "seperate-eye-rotation-states-for-eye-tracking-and-non-eye-tracking",
   "viewerIsAuthor": false,
@@ -79,6 +78,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f0ff94af57dde90479845a9be15ac215.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6ae78f80d6c79204dc806ab4"
+    },
+    {
+      "_id": "5f2ad6e350ef561e59c6da11",
+      "alias": "Raffia Tapir",
+      "aliasID": "6ae78c64d6c79204dc7d491e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9e434dbf62c5e0a1f739560877e27d2b.png",
+      "companies": [],
+      "name": "Gremzie1",
+      "urlName": null,
+      "voteID": "6ae78c67d6c79204dc7d4bb8"
+    },
     {
       "_id": "6175d8b265467942b0fccd2a",
       "alias": "Organisational Platypus",
