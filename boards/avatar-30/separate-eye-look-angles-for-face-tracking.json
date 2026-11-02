@@ -1,10 +1,11 @@
 {
   "_id": "6ae8b3041a35ff613191e1ab",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.tracking"
+    "loc.unity-sdk",
+    "avatars.tracking",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-11-02T16:49:36.945552Z",
+  "aiTaggedAt": "2026-11-02T18:25:00.258751Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649b83fd8ca61609383735ec",
@@ -34,9 +35,54 @@
     "urlName": "feature-requests"
   },
   "categoryID": "650db8783d561e5922d89ac4",
-  "commentCount": 0,
+  "commentCount": 1,
   "commentingDisabled": false,
-  "comments": [],
+  "comments": [
+    {
+      "_id": "6ae8d014e9718937b2ea6b3f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "649b83fd8ca61609383735ec",
+        "alias": "Rosewood Orca",
+        "aliasID": "65c28396ed6eefce4cd16ac0",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/64ea6d403c8578fd1561ccd7c7ee27f1.png",
+        "created": "2023-06-28T00:51:09.973Z",
+        "name": "Purpzie",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-02T18:01:56.068Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae8b3041a35ff613191e1ab",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "In the meantime, the only fix for this is convoluted. Forward eye directions to the animator, and when UserEyeTracking is true, rotation constrain the eye bones to extra objects that you animate. It's not possible to use humanoid animations since you'd have to disable eye/blink tracking and that disables *everything* related to the eyes.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-11-02T15:57:56.802Z",
   "deleteID": null,
