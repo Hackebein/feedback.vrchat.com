@@ -1,0 +1,91 @@
+{
+  "_id": "6ae861fe47ac9ab919c2add5",
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "avatars.tracking",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-11-02T10:33:10.683179Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5ec0c50908530011b605027e",
+    "alias": "Blush Weasel",
+    "aliasID": "65cc7eaced6eefce4c63ba11",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/1bd0f7d6241977558ed42cd4f9348da9.png",
+    "created": "2020-05-17T05:00:57.945Z",
+    "name": "OtogiSiori",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5ec0c50908530011b605027e",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-02T10:12:14.671Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When using VRChat's built-in webcam face tracking (Selfie Expression), tongue tracking values remain at 0 even when users visibly stick out or move their tongues.\n\nSeveral users have tested this, and all observed the same behavior. Other facial tracking inputs respond, but the tongue inputs remain at 0 in the avatar debug display.\n\nThis report concerns built-in webcam tracking only. No OSC or external face tracking software is being used.\n\nSteps to reproduce:\n\n1. Enable Selfie Expression with a webcam.\n\n2. Use an avatar configured for native Face Tracking with tongue blendshapes mapped.\n\n3. Open the avatar debug display and observe the tongue tracking inputs.\n\n4. Stick out and move your tongue in view of the camera.\n\nActual result:\n\nThe tongue tracking inputs remain at 0.\n\nExpected result:\n\nIf tongue tracking is supported by Selfie Expression, the corresponding inputs should respond.\n\nCould you confirm whether tongue tracking is currently supported by Selfie Expression, or whether this is a bug or a known limitation?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6ae861fe47ac9ab919c2add4",
+  "imageURLs": [
+    "https://canny-assets.io/images/c5887937061dc2cd0551d89e861f6dce.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-02T10:12:14.671Z",
+  "subCategoryID": null,
+  "title": "Selfie Expression does not produce tongue tracking values",
+  "trendingScore": 2966.325314167167,
+  "updatedBy": null,
+  "urlName": "selfie-expression-does-not-produce-tongue-tracking-values",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5ec0c50908530011b605027e",
+      "alias": "Blush Weasel",
+      "aliasID": "65cc7eaced6eefce4c63ba11",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1bd0f7d6241977558ed42cd4f9348da9.png",
+      "companies": [],
+      "name": "OtogiSiori",
+      "urlName": null,
+      "voteID": "6ae861feda302d926d1ebe22"
+    }
+  ]
+}
