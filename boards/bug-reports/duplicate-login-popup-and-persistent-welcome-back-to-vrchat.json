@@ -1,0 +1,97 @@
+{
+  "_id": "6ae7da597fcb812ef3261a87",
+  "aiCategories": [
+    "loc.login",
+    "loc.in-world",
+    "account.auth"
+  ],
+  "aiTaggedAt": "2026-11-02T00:53:34.424537Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "64db5fa7ab48431f25a4afe5",
+    "alias": "Viridian Sloth",
+    "aliasID": "65c2b1cbed6eefce4c8373a2",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/077246c4eeea576b0a40d8adea40c39c.png",
+    "created": "2023-08-15T11:21:11.110Z",
+    "name": "NotAChance",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "64db5fa7ab48431f25a4afe5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-02T00:33:29.237Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "There isn't exactly a condition you can control this though with VRChat's recent login issues, this wouldn't be difficult to randomly reproduce (or if you have a way to consistently reproduce, that works too).\n\nHowever, whenever you are logged out mid-session (usually with a \"ServerDisconnectReasonUnknown\" placeholder text (or something similar)), it's possible for the login modal to be duplicated.\n\nThey usually spawn in separate positions, but once you turn your head they synchronize their position but they tend to flicker a lot due to z-fighting.\n\nMost notably, the login modal will not go away once you re-login into the client, and persists across world jumps/reloads until you fully restart the game.\n\n-# Always invading your face when you look away like SCP-137.\n\nBe warned the provided video is a bit \"flickery\".",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/4ffb28adf9be9181de93666a515c324e.mp4"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/4ffb28adf9be9181de93666a515c324e.mp4",
+      "mimeType": "video/mp4",
+      "name": "WelcomeToVRChat-canny",
+      "url": "https://canny-assets.io/files/4ffb28adf9be9181de93666a515c324e.mp4"
+    }
+  ],
+  "ideaID": "6ae7da587fcb812ef3261a4c",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-02T00:33:29.237Z",
+  "subCategoryID": null,
+  "title": "Duplicate login popup and persistent \"Welcome Back to VRChat\"",
+  "trendingScore": 2966.2678977683577,
+  "updatedBy": null,
+  "urlName": "duplicate-login-popup-and-persistent-welcome-back-to-vrchat",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "64db5fa7ab48431f25a4afe5",
+      "alias": "Viridian Sloth",
+      "aliasID": "65c2b1cbed6eefce4c8373a2",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/077246c4eeea576b0a40d8adea40c39c.png",
+      "companies": [],
+      "name": "NotAChance",
+      "urlName": null,
+      "voteID": "6ae7da59da302d926d1dcd88"
+    }
+  ]
+}
