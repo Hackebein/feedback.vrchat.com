@@ -120,7 +120,9 @@
       "postDeleted": false,
       "postID": "6ae401c6c10cf0b5ba064dcc",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -146,20 +148,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 3,
+  "maxScore": 4,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 3,
+  "score": 4,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-30T02:32:38.981Z",
   "subCategoryID": null,
   "title": "Add a way to filter out AI content from human made art",
-  "trendingScore": 2966.573117753875,
+  "trendingScore": 2966.9115704560213,
   "updatedBy": null,
   "urlName": "add-a-way-to-filter-out-ai-content-from-human-made-art",
   "viewerIsAuthor": false,
@@ -172,6 +174,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5cb0e62414ddd360bbe1ac29",
+      "alias": "Elaborate Swordtail",
+      "aliasID": "65c26ed9ed6eefce4c854ff1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/76d584a58bbb6a2eca29ddfc76815d46.png",
+      "companies": [],
+      "name": "Jasper Raine",
+      "urlName": null,
+      "voteID": "6ae8ac96da302d926d204bf5"
+    },
     {
       "_id": "603b04282fa90e5c53608eb6",
       "alias": "Variable Turtle",
