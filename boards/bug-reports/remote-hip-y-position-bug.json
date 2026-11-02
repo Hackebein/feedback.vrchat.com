@@ -2,10 +2,11 @@
   "_id": "6ae7c2f17fcb812ef3241067",
   "aiCategories": [
     "loc.in-world",
-    "avatars.dynamics",
+    "loc.pc-client",
+    "platforms.pc.steam",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-01T23:04:22.237368Z",
+  "aiTaggedAt": "2026-11-02T18:32:43.801328Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64ea24405078cea2a7cf9980",
@@ -37,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\non the latest sdk version my avatar is underground for remote users, my friend has the same issue but he's floating for other users, seems the hip position is not being synced properly, zero idea on how to reproduce\n\nReproduction Steps\n\ni don't know what's csusing this, all i know that noth me and my friend have resized armatures and use vrcfury\n\nDetails\n\n- Category: Avatar\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.4.1p1-1937-299983b13b-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-11-01_22-47-14.txt](https://api.vrchat.cloud/api/1/file/file_952ed112-fd26-48ab-9861-a4ff7c4b03ca/1/file)",
+  "details": "Description\n\nOn the latest sdk version my avatar is underground for remote users, my friend has the same issue but he's floating for other users, seems the hip position is not being synced properly, zero idea on how to reproduce, but the bug is definitely pretty bad because now my eye tracking is looking now where I'm looking for other people, and contacts don't work on my side, because people are touching in the wrong location(same goes for headpats and all that of course)\n\nReproduction Steps\n\nI don't know what's causing this, all i know that both me and my friend have resized armatures and use VRCFury, however, this issue occurs even without VRCFury\n\nDetails\n\n- Category: Avatar\n\n- Frequency: Always\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.4.1p1-1937-299983b13b-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-11-01_22-47-14.txt](https://api.vrchat.cloud/api/1/file/file_952ed112-fd26-48ab-9861-a4ff7c4b03ca/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,7 +62,7 @@
   "subCategoryID": null,
   "title": "Remote hip y position bug",
   "trendingScore": 2966.66385023045,
-  "updatedBy": null,
+  "updatedBy": "64ea24405078cea2a7cf9980",
   "urlName": "remote-hip-y-position-bug",
   "viewerIsAuthor": false,
   "viewerVote": 0,
