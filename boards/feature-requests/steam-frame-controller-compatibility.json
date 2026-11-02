@@ -1,12 +1,12 @@
 {
   "_id": "6abda740b33362ed0253c031",
   "aiCategories": [
-    "loc.standalone-vr",
-    "platforms.standalone-vr.quest",
-    "avatars.tracking",
-    "client.controls"
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.controls",
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-10-01T22:40:32.911363Z",
+  "aiTaggedAt": "2026-11-02T22:08:31.011074Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "658479358d3b1941f15ac0b2",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -75,6 +75,50 @@
       "statusChangeID": "6abedfd3d81391667bf14358",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6ae90469fd9bd260218b6d27",
+      "aiGenerated": false,
+      "author": {
+        "_id": "674638b40dc14db08f8c1ee9",
+        "alias": "Joyous Nightingale",
+        "aliasID": "6ae90325da302d926d220342",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6f4e7d09b83d7771738eddf081ac9446.png",
+        "created": "2024-11-26T21:08:04.160Z",
+        "name": "miauing",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-02T21:45:13.998Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6abda740b33362ed0253c031",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Here about the finger resting issue as well. Seems like a strange misconfiguration that could be fixed with a simple repositioning. It affects all users and avatars on this device, so I'm hoping we're not expected to compensate manually and individually...",
       "viewerReactions": null,
       "voteID": null
     }
