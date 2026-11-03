@@ -1,0 +1,89 @@
+{
+  "_id": "6aea0433a93e37b27026223f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-11-03T16:11:15.695343Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5fca5df4d58780532024a52b",
+    "alias": "Toffee Tortoise",
+    "aliasID": "65c26da3ed6eefce4c4d0863",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/719b7fa82bfdf1aa43e0809608929735.png",
+    "created": "2020-12-04T16:04:04.984Z",
+    "name": "DrBlackRat",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5fca5df4d58780532024a52b",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-03T15:56:35.386Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "# Issue:\n\nI currently use the `UserEyeTracking` bool to enable or disable my \"Ear Tracking\", which moves my ears in the direction that I'm looking. \n\nAs I don't have eye tracking at the moment, I turned on **Disable Eye Look Tracking** and **Disable Eye Lid Tracking** which sets this value to false locally. For remote clients how ever the value stays true.\n\nThis results in my ears moving around with VRChat's automated eye look / gaze feature for remote clients.\n\n**Reproduction Steps:**\n\n1. On an Avatar with native face tracking add a simple toggle that uses the `UserEyeTracking` parameter.\n\n2. Launch the game with 2 clients in one instance.\n\n3. Switch into the Avatar an enable self Expression.\n\n3. Go to the Main Menu > Settings > Tracking and IK and turn on  **Disable Eye Look Tracking** and **Disable Eye Lid Tracking**.\n\nIf you do this, locally your created toggle turns off, while it stays on for remote.\n\n# Expected Behaviour:\n\nWhen turning on **Disable Eye Look Tracking** and **Disable Eye Lid Tracking** no eye look or eye lid data should be sent. Thus in return `UserEyeTracking` should also be false.\n\nI understand that `UserEyeTracking` on remote is calculated based on if Eye Look or Eye Lid data is received, but since I turned off the tracking for it in the settings I would expect it to also be false.\n\n# Attachments\n\nIn this screenshot I have a cube attached to my avatar that is either on or off based on `UserEyeTracking`. While it's off locally, you can see that it's on for remote.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aea0432a93e37b270262200",
+  "imageURLs": [
+    "https://canny-assets.io/images/c8d96a54ed365cfd5e4963b61edda5ce.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aea0433a93e37b27026223f/1859765705.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-03T15:56:35.386Z",
+  "subCategoryID": null,
+  "title": "\"UserEyeTracking\" doesn't turn false for remote players when eye tracking is disabled",
+  "trendingScore": 2966.5023318804615,
+  "updatedBy": null,
+  "urlName": "usereyetracking-doesnt-turn-false-for-remote-players-when-eye-tracking-is-disabl",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5fca5df4d58780532024a52b",
+      "alias": "Toffee Tortoise",
+      "aliasID": "65c26da3ed6eefce4c4d0863",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/719b7fa82bfdf1aa43e0809608929735.png",
+      "companies": [],
+      "name": "DrBlackRat",
+      "urlName": null,
+      "voteID": "6aea0433da302d926d250cb1"
+    }
+  ]
+}
