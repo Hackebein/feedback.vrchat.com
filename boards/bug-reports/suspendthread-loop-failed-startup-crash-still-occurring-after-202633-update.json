@@ -1,0 +1,91 @@
+{
+  "_id": "6aea53a291785ca78c0a9347",
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.desktop",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-11-03T22:04:44.381691Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6ae7a793a4b3454366d4c670",
+    "alias": "Rising Walrus",
+    "aliasID": "6ae7a793da302d926d1d4b98",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4240d5157cfbeb7b040b3ba682c5f0d6.png",
+    "created": "2026-11-01T20:56:51.186Z",
+    "name": "ΔSTRΔLIX",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6ae7a793a4b3454366d4c670",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-03T21:35:30.458Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I am aware that this issue is a duplicate of the existing bug report:\n\nhttps://feedback.vrchat.com/bug-reports/p/fatal-error-in-gc-suspendthread-loop-failed\n\nHowever, I am submitting another report because the VRChat 2026.3.3 patch notes specifically mentioned that a possible fix for the \"SuspendThread Loop failed\" startup crash had been included, and requested that users submit another bug report if they were still experiencing the issue after updating.\n\nUnfortunately, I am still experiencing the exact same problem. The update has not resolved it on my system.\n\nIssue :\n\nVRChat suddenly stopped launching on my PC. Whenever I attempt to open the game, it launches to a completely white screen, becomes Not Responding, and eventually just crashes with a SuspendThread error and no matter how many times i restart my pc etc just still crashes.\n\nSystem Specifications:\n\nCPU: AMD Ryzen 7 5800XT\n\nGPU: NVIDIA RTX 5070\n\nOperating System: Windows 11\n\nPlatform: PC\n\nBuild Number: 1937\n\nError Details:\n\nFaulting Module: GameAssembly.dll\n\nException Code: 0x80000003\n\nError: SuspendThread Loop failed\n\nTroubleshooting Already Attempted:\n\n- Completely reinstalling VRChat.\n\n- Updating GPU drivers.\n\n- Updating Windows.\n\n- Clearing VRChat's game data and cache.\n\n- Testing the beta version and older versions of VRChat.\n\n- Performing clean boots.\n\n- Resetting Windows entirely.\n\nDespite all of these attempts, the issue persists. VRChat previously worked perfectly fine on this exact same PC, and I have not been able to get it launching again i have tried a different desktop i have and it starts up no issues so shrugg.\n\nAdditional Information:\n\nI understand that this is a duplicate of an existing report, but since the developers specifically requested additional reports from users who continued experiencing this issue after the proposed fix, I wanted to provide an update and confirm that the problem is still affecting my system.\n\nHopefully, this additional report and system information can help identify why the proposed fix has not resolved the issue for everyone.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aea53a291785ca78c0a9346",
+  "imageURLs": [
+    "https://canny-assets.io/images/81919e640c118c7a6db7c7245ab10309.png",
+    "https://canny-assets.io/images/67ff94d122ea7e652c151fcb3041eacd.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-03T21:35:30.458Z",
+  "subCategoryID": null,
+  "title": "SuspendThread Loop failed startup crash still occurring after 2026.3.3 update",
+  "trendingScore": 2966.535955346896,
+  "updatedBy": null,
+  "urlName": "suspendthread-loop-failed-startup-crash-still-occurring-after-202633-update",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6ae7a793a4b3454366d4c670",
+      "alias": "Rising Walrus",
+      "aliasID": "6ae7a793da302d926d1d4b98",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4240d5157cfbeb7b040b3ba682c5f0d6.png",
+      "companies": [],
+      "name": "ΔSTRΔLIX",
+      "urlName": null,
+      "voteID": "6aea53a2da302d926d2650e8"
+    }
+  ]
+}
