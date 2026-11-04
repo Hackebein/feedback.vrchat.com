@@ -3,9 +3,11 @@
   "aiCategories": [
     "loc.unity-sdk",
     "open-beta",
-    "avatars.tracking"
+    "sdk.vrcsdk",
+    "avatars.tracking",
+    "platforms.standalone-vr.quest"
   ],
-  "aiTaggedAt": "2026-11-04T13:24:42.813897Z",
+  "aiTaggedAt": "2026-11-04T13:40:30.554364Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d458c2bce0d0218577b8c24",
@@ -128,7 +130,7 @@
       "voteID": null
     },
     {
-      "_id": "6aeb2e767c66c2284de2415d",
+      "_id": "6aeb2fe9ba595e348fc294b8",
       "aiGenerated": false,
       "author": {
         "_id": "62231b445a32390981d9e523",
@@ -144,7 +146,7 @@
       "authorID": null,
       "boardID": "5b0746088fa72313783e3269",
       "companyID": "58c62e995865713647a7115d",
-      "created": "2026-11-04T13:09:10.194Z",
+      "created": "2026-11-04T13:15:21.459Z",
       "deleted": false,
       "deletedAt": null,
       "fileURLs": [],
@@ -167,7 +169,7 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "The amount of eye rotation has decreased on the Quest Pro. I'm having trouble because I now need to change the RotationStates depending on whether tracking is enabled or not.\n\nQuest Proでは、目の回転の量が減少しました。トラッキングが有効か無効かによってRotationStatesを変更する必要が出てきたため、困っています。",
+      "value": "Quest Proを使用しています。目の回転量が少なくなり、視線が合わなくなりました。トラッキングが有効か無効かによってアバターの目のウェイトなどの調整が必要になり、困っています。\n\nI'm using Quest Pro. My eye movements have become more limited, and my gaze no longer aligns properly. Depending on whether tracking is enabled or disabled, I have to adjust my avatar's eye weights and other settings, which is causing me trouble.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -189,20 +191,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 6,
+  "maxScore": 7,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ade12a2dad47ebdff3a9575/1680348685.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 6,
+  "score": 7,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-10-26T14:43:22.130Z",
   "subCategoryID": null,
   "title": "[SDK 3.10.6-beta.3] Eye Gaze Mode set to Both halves tracking movement",
-  "trendingScore": 2966.9677710556493,
+  "trendingScore": 2967.272938583804,
   "updatedBy": null,
   "urlName": "sdk-3106-beta3-eye-gaze-mode-set-to-both-halves-tracking-movement",
   "viewerIsAuthor": false,
@@ -215,6 +217,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a1697345a52cb2df0a0edeb",
+      "alias": "Atomic tangerine Bird",
+      "aliasID": "6a1697355a52cb2df0a0edee",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d68c288d707f5cac77ad3c169aa924b4.png",
+      "companies": [],
+      "name": "椿姫_tsubaki",
+      "urlName": null,
+      "voteID": "6aeb32f5da302d926d298834"
+    },
     {
       "_id": "62231b445a32390981d9e523",
       "alias": "Corresponding Chickadee",
