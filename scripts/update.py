@@ -196,6 +196,7 @@ _http_stats = {
     "time": 0.0,
 }
 _canny_403_streak = 0
+_canny_blocked = threading.Event()
 CANNY_403_ABORT_AFTER = 3
 
 
@@ -205,6 +206,7 @@ def reset_http_stats():
         for k in _http_stats:
             _http_stats[k] = 0 if k != "time" else 0.0
         _canny_403_streak = 0
+        _canny_blocked.clear()
     _LIMITER.reset()
     canny_http.reset_stats()
 
@@ -212,16 +214,24 @@ def reset_http_stats():
 def observe_http_status(code):
     global _canny_403_streak
     with _http_lock:
+        if _canny_blocked.is_set():
+            raise CannyBlocked("Canny returned repeated HTTP 403; aborting")
         if code == 403:
             _canny_403_streak += 1
             streak = _canny_403_streak
         else:
             _canny_403_streak = 0
             streak = 0
-    if streak >= CANNY_403_ABORT_AFTER:
-        raise CannyBlocked(
-            f"Canny returned HTTP 403 {streak} times in a row; aborting"
-        )
+        if streak >= CANNY_403_ABORT_AFTER:
+            _canny_blocked.set()
+            raise CannyBlocked(
+                f"Canny returned HTTP 403 {streak} times in a row; aborting"
+            )
+
+
+def _check_canny_blocked():
+    if _canny_blocked.is_set():
+        raise CannyBlocked("Canny returned repeated HTTP 403; aborting")
 
 
 def _record_http(code, body, elapsed):
@@ -276,6 +286,7 @@ def format_http_stats(prefix="[HTTP]"):
 # ---------------------------------------------------------------------------
 def _curl_get(url, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
+    _check_canny_blocked()
     t0 = time.perf_counter()
     code, body = canny_http.request("GET", url, timeout=timeout, user_agent=USER_AGENT)
     _record_http(code, body, time.perf_counter() - t0)
@@ -285,6 +296,7 @@ def _curl_get(url, timeout=15):
 
 def _curl_post_json(url, payload, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
+    _check_canny_blocked()
     t0 = time.perf_counter()
     code, body = canny_http.request("POST", url, data=json.dumps(payload).encode("utf-8"),
                                    timeout=timeout, user_agent=USER_AGENT)
