@@ -20,7 +20,7 @@ import subprocess
 import sys
 import threading
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -30,6 +30,7 @@ try:
     import scrape_state
     import canny_auth
     import canny_proxy
+    import canny_http
 except ImportError:  # when run as script
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import categorize  # type: ignore
@@ -37,6 +38,7 @@ except ImportError:  # when run as script
     import scrape_state  # type: ignore
     import canny_auth  # type: ignore
     import canny_proxy  # type: ignore
+    import canny_http  # type: ignore
 
 # --------------------------------------------------------------------------
 # Config
@@ -204,6 +206,7 @@ def reset_http_stats():
             _http_stats[k] = 0 if k != "time" else 0.0
         _canny_403_streak = 0
     _LIMITER.reset()
+    canny_http.reset_stats()
 
 
 def observe_http_status(code):
@@ -262,7 +265,8 @@ def format_http_stats(prefix="[HTTP]"):
     return (
         f"{prefix} requests={reqs} ok={s['ok']} 404={s['not_found']} "
         f"429={s['rate_limited']} 5xx={s['server_err']} err={s['errors']} "
-        f"retries={s['retries']} bytes={_format_bytes(s['bytes'])} "
+        f"retries={s['retries']} connections={canny_http.new_connections()} "
+        f"bytes={_format_bytes(s['bytes'])} "
         f"total={total_time:.1f}s avg={avg_ms}ms"
     )
 
@@ -272,27 +276,8 @@ def format_http_stats(prefix="[HTTP]"):
 # ---------------------------------------------------------------------------
 def _curl_get(url, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
-    proxy_args = canny_proxy.curl_args_for(url)
     t0 = time.perf_counter()
-    code = 0
-    body = ""
-    try:
-        r = subprocess.run(
-            ["curl", "-sS", "-L", *proxy_args, "-w", "\n__HTTP_CODE__:%{http_code}",
-             "-H", f"User-Agent: {USER_AGENT}",
-             "-m", str(timeout), url],
-            capture_output=True, text=True, timeout=timeout + 5,
-        )
-        out = r.stdout
-        m = re.search(r"\n__HTTP_CODE__:(\d+)\s*$", out)
-        if not m:
-            body = out
-        else:
-            code = int(m.group(1))
-            body = out[:m.start()]
-    except Exception:
-        code = 0
-        body = ""
+    code, body = canny_http.request("GET", url, timeout=timeout, user_agent=USER_AGENT)
     _record_http(code, body, time.perf_counter() - t0)
     observe_http_status(code)
     return code, body
@@ -300,30 +285,9 @@ def _curl_get(url, timeout=15):
 
 def _curl_post_json(url, payload, timeout=15):
     """Returns (http_code, body). http_code is an int (0 on transport error)."""
-    proxy_args = canny_proxy.curl_args_for(url)
     t0 = time.perf_counter()
-    code = 0
-    body = ""
-    try:
-        r = subprocess.run(
-            ["curl", "-sS", "-X", "POST", *proxy_args, url,
-             "-H", "Content-Type: application/json",
-             "-H", f"User-Agent: {USER_AGENT}",
-             "--data-binary", json.dumps(payload),
-             "-w", "\n__HTTP_CODE__:%{http_code}",
-             "-m", str(timeout)],
-            capture_output=True, text=True, timeout=timeout + 5,
-        )
-        out = r.stdout
-        m = re.search(r"\n__HTTP_CODE__:(\d+)\s*$", out)
-        if not m:
-            body = out
-        else:
-            code = int(m.group(1))
-            body = out[:m.start()]
-    except Exception:
-        code = 0
-        body = ""
+    code, body = canny_http.request("POST", url, data=json.dumps(payload).encode("utf-8"),
+                                   timeout=timeout, user_agent=USER_AGENT)
     _record_http(code, body, time.perf_counter() - t0)
     observe_http_status(code)
     return code, body
@@ -675,9 +639,10 @@ def fetch_newest_all(boards):
     single_page_totals = {}
     denied_slugs = set()
     print(f"[UPDATE] Fetching newest from {len(boards)} board(s)...")
-    ex = ThreadPoolExecutor(max_workers=_fetch_workers())
-    futures = {ex.submit(fetch_board_posts, b, "newest"): b for b in boards}
+    ex = canny_http.FetchExecutor(max_workers=_fetch_workers())
+    futures = {}
     try:
+        futures = {ex.submit(fetch_board_posts, b, "newest"): b for b in boards}
         for fut in as_completed(futures):
             slug = futures[fut]
             try:
@@ -910,12 +875,13 @@ def fetch_all_pages(scan_targets):
     total = len(scan_targets)
     done = 0
     found = missing = transient_n = 0
-    ex = ThreadPoolExecutor(max_workers=_fetch_workers())
-    futures = {
-        ex.submit(fetch_post_page, b, slug): pid
-        for b, pid, slug in scan_targets
-    }
+    ex = canny_http.FetchExecutor(max_workers=_fetch_workers())
+    futures = {}
     try:
+        futures = {
+            ex.submit(fetch_post_page, b, slug): pid
+            for b, pid, slug in scan_targets
+        }
         for fut in as_completed(futures):
             pid = futures[fut]
             try:
@@ -1053,9 +1019,10 @@ def apply_results(stored, results, now, tree, system_prompt, api_key, scraped_at
             print(f"[UPDATE] AI tagged {tagged} post(s)")
 
     if voter_jobs:
-        ex = ThreadPoolExecutor(max_workers=_fetch_workers())
-        futures = {ex.submit(fetch_voters, pid): post for pid, post in voter_jobs}
+        ex = canny_http.FetchExecutor(max_workers=_fetch_workers())
+        futures = {}
         try:
+            futures = {ex.submit(fetch_voters, pid): post for pid, post in voter_jobs}
             for fut in as_completed(futures):
                 post = futures[fut]
                 voters = fut.result()
@@ -1596,6 +1563,11 @@ def _upvote_backlog(session, stored, state) -> int:
 
 
 def main():
+    with canny_http.client_scope():
+        return _main()
+
+
+def _main():
     parser = argparse.ArgumentParser(description="VRChat Canny Feedback Archiver")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--refresh-oldest", type=int, default=500,

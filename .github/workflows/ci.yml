@@ -38,7 +38,7 @@ jobs:
           fetch-depth: 1
       - uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
           cache: npm
           cache-dependency-path: search-ui/package-lock.json
       - name: Prepare secured OpenSearch
@@ -86,7 +86,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
           cache: npm
           cache-dependency-path: search-ui/package-lock.json
 
@@ -132,7 +132,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
           cache: npm
           cache-dependency-path: feedback-search-bridge/package-lock.json
 
@@ -170,13 +170,14 @@ jobs:
           cache-dependency-path: |
             scripts/requirements-ingest.txt
             scripts/requirements-canny-wake.txt
+            scripts/requirements-update.txt
 
       - name: Install dependencies
         run: |
           python3 -m pip install \
             -r scripts/requirements-ingest.txt \
             -r scripts/requirements-canny-wake.txt \
-            jinja2
+            -r scripts/requirements-update.txt
 
       - name: Run scripts/test_*.py
         run: |
@@ -252,7 +253,7 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v4
         with:
-          terraform_version: v1.17.0
+          terraform_version: v1.17.1
           terraform_wrapper: false
 
       - name: Cache Terraform providers

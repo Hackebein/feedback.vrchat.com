@@ -9,6 +9,25 @@
 
 See [`credentials.local.md`](credentials.local.md) for required env vars.
 
+## Scraper HTTP connections
+
+Install the updater dependencies with `python3 -m pip install -r scripts/requirements-update.txt`.
+Bulk board, post and voter reads use PycURL with a reusable connection cache per
+fetch worker. Each worker stage closes its connections after joining all workers;
+main-thread requests close at the end of the run, including early exits.
+
+`CANNY_HTTP_TRANSPORT=pooled` is the default. Set `CANNY_HTTP_TRANSPORT=curl` before
+starting the updater to temporarily restore per-request curl subprocesses. Both
+paths apply the same Canny proxy configuration and sticky session. A failed proxy
+does not trigger direct requests. Authentication, SSO and voting retain their
+separate cookie-aware curl transport.
+
+The `[HTTP]` summary includes `connections`, the number of successful new
+connections created by bulk requests. Compare it with `requests` and elapsed time;
+redirects can create extra connections, so this is not an exact reuse percentage.
+Run `python3 scripts/test_canny_http.py` for loopback HTTP, SOCKS5 and HTTP proxy
+checks. The TLS fixture generates a temporary self-signed certificate using OpenSSL.
+
 ## Canny host daemon (notifications + new posts + upvotes)
 
 Long-running `feedback-canny-wake.service` SSO-polls Canny every **30s**

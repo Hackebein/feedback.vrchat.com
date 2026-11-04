@@ -1,0 +1,117 @@
+{
+  "_id": "6aeaf2196901ad44b83dfeaf",
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "avatars.tracking",
+    "client.osc"
+  ],
+  "aiTaggedAt": "2026-11-04T09:22:51.591835Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "66c7f83ba2fca0a622090327",
+    "alias": "Right Hoverfly",
+    "aliasID": "66c7f83b3e088c8d6b0e1c00",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+    "created": "2024-08-23T02:47:23.348Z",
+    "name": "Usemame",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "66c7f83ba2fca0a622090327",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-04T08:51:37.145Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Since the new native face tracking that's enabling older non-support avatars to work in the VisemesBlendShape mode, I only noticed my NoseSneer never zeroed in for somehow, and it resulted my mouth never fully closed for older avatars. Yes it's manageable on the third party App by increasing the lower bar, I'm sure some other people that have no slightly idea to the making of the face tracking will be more confuse than me.\n\nPlus each avatar creators have different definition to the visemes, I'm sure some sort of in-game customs to assign the parameters to the visemes you want(or don't want) will help a lot, I think it should also be saved in the OSC configs for each avatars for the same reason, and since you can upload same avatars, guess it better be able to export/import maybe?\n\n--\n\nCanny can't load the attached picture today so I'm not sure if it's attached correctly, but the video do works",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/2a9cedcc9114ed3624a90156e9c70f39.mp4"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/2a9cedcc9114ed3624a90156e9c70f39.mp4",
+      "mimeType": "video/mp4",
+      "name": "output",
+      "url": "https://canny-assets.io/files/2a9cedcc9114ed3624a90156e9c70f39.mp4"
+    }
+  ],
+  "ideaID": "6aeaf2186901ad44b83dfea2",
+  "imageURLs": [
+    "https://canny-assets.io/images/fa2faa913c16d4fffeb87dbebd93d525.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-04T08:51:37.145Z",
+  "subCategoryID": null,
+  "title": "[1937] Customable Face Tracking visemes behaviors",
+  "trendingScore": 2967.009081221012,
+  "updatedBy": "66c7f83ba2fca0a622090327",
+  "urlName": "1937-customable-face-tracking-visemes-behaviors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f0ff94af57dde90479845a9be15ac215.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6aeaf640da302d926d27e71b"
+    },
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6aeaf219da302d926d27d4ac"
+    }
+  ]
+}
