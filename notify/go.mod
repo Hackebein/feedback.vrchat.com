@@ -4,7 +4,7 @@ go 1.26.4
 
 require (
 	github.com/SherClockHolmes/webpush-go v1.4.0
-	modernc.org/sqlite v1.61.0
+	modernc.org/sqlite v1.61.1
 )
 
 require (
