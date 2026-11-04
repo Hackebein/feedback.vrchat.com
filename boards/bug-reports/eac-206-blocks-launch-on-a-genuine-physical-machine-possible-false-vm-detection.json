@@ -1,0 +1,90 @@
+{
+  "_id": "6aea9d1ecf28934b074454bf",
+  "aiCategories": [
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-11-04T03:00:10.972172Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6aea92f53da490751d799cb4",
+    "alias": "Julep green Muskox",
+    "aliasID": "6aea92f6da302d926d26f32e",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/11bba1b6bee249cd64cabb859f65b2ff.png",
+    "created": "2026-11-04T02:05:41.962Z",
+    "name": "茉白white",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6aea92f53da490751d799cb4",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-04T02:49:02.885Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Steps to reproduce:\n\n1. Start VRChat from the Steam library (Play button).\n\n2. The Easy Anti-Cheat bootstrapper downloads the 38.5 MB module and initialises normally.\n\n3. The bootstrapper then shows \"Startup error - Cannot run under Virtual Machine\" and exits\n\n   with code 206. VRChat.exe is never created, so no game output log is produced for the\n\n   attempt.\n\nIn my case the game does not launch at all, and I have seen the same result on every attempt\n\nsince 2026-11-01.\n\nWhy I think it may be a false positive:\n\n- Intel NUC X15 (LAPKC71E), i7-11800H, RTX 3060 Laptop, Windows 11 25H2 build 26200.9711.\n\n- TPM 2.0 ready and Secure Boot enabled.\n\n- Win32_ComputerSystem.HypervisorPresent = False; VBS disabled; Hyper-V, Virtual Machine\n\n  Platform, WSL and Windows Sandbox are not installed.\n\n- CoreInfo v4.02 at CPUID level reports \"HYPERVISOR -\" (no hypervisor present), with VT-x and\n\n  EPT present.\n\n- VirtualBox and VMware software, kernel drivers and virtual devices have all been removed,\n\n  and I verified they are gone. No VM drivers are loaded and no VM devices remain.\n\nThings I have already tried, all with the same result: a full EAC uninstall and reinstall\n\n(services, program folder and %APPDATA% removed first), Steam file revalidation, running the\n\nlauncher as administrator, fully removing the third-party antivirus, removing all\n\nVirtualBox/VMware components, and several reboots.\n\nI did contact VRChat support first (ticket 2Z7XJ0-XG37V). They were kind enough to check the\n\nlauncher log and confirmed it shows 206, and they explained that support is not able to clear\n\ndevice-side verdicts. That is why I am posting here: as far as I can tell, this looks like the\n\nVM check returning the wrong result for a physical machine, and I would be grateful if someone\n\ncould take a look. I am happy to provide any logs or captures that would help.\n\nEAC bootstrapper log, service.log and a directory listing are available on request.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aea9d1ecf28934b074454be",
+  "imageURLs": [
+    "https://canny-assets.io/images/c8376ee543261817b054831a581c4790.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-04T02:49:02.885Z",
+  "subCategoryID": null,
+  "title": "EAC 206 blocks launch on a genuine physical machine (possible false VM detection)",
+  "trendingScore": 2966.567060314654,
+  "updatedBy": null,
+  "urlName": "eac-206-blocks-launch-on-a-genuine-physical-machine-possible-false-vm-detection",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6aea92f53da490751d799cb4",
+      "alias": "Julep green Muskox",
+      "aliasID": "6aea92f6da302d926d26f32e",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/11bba1b6bee249cd64cabb859f65b2ff.png",
+      "companies": [],
+      "name": "茉白white",
+      "urlName": null,
+      "voteID": "6aea9d1fda302d926d270816"
+    }
+  ]
+}
