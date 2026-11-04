@@ -50,8 +50,8 @@ class EchoHandler(BaseHTTPRequestHandler):
     def handle(self):
         try:
             super().handle()
-        except (ConnectionResetError, ConnectionAbortedError):
-            pass  # Closing a pooled socket can produce a reset on Windows.
+        except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
+            pass  # Deadline and rejected-certificate tests deliberately disconnect.
 
     def do_GET(self):
         self.echo()
