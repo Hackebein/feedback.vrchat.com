@@ -1,0 +1,98 @@
+{
+  "_id": "6aeb10c67c66c2284dde965b",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-11-04T11:29:36.545619Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6aeb10807c66c2284dde87c5",
+    "alias": "Straight Chinchilla",
+    "aliasID": "6aeb1080da302d926d28c143",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/5580eb637eeff78b15d2674135b37ee9.png",
+    "created": "2026-11-04T11:01:20.088Z",
+    "name": "覆屋／Fukuya",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6aeb10807c66c2284dde87c5",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-04T11:02:30.383Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Since around 16:00-18:30 JST on Nov 4, 2026, every avatar fails to load for me, including my own avatars and all other players in public instances. They all appear as the Error robot.\n\nThe output log shows this for every avatar:\n\n- \"The response was null. State: Error / Remote server closed the connection before sending response header!\"\n\n- \"[AnalysisReport] Failed to get avatar analysis report.\"\n\n- \"[AssetBundleDownloadManager] Avatar 'avtr_...' did not pass initial checks and won't be downloaded: AssetBundleFailedServerSideChecks\"\n\nWorlds, login and social features work normally. Avatars loaded fine earlier the same day (the log from 12:33-16:02 JST shows normal avatar loading).\n\nWhat I tried (no change):\n\n- Restarting VRChat and the PC\n\n- Deleting the Cache-WindowsPlayer folder\n\n- Flushing DNS\n\n- Switching to a different network (mobile tethering)\n\n- No VPN, no third-party antivirus (Windows Defender only, nothing blocked), hosts file is default\n\nPlatform: Windows PC (Steam)\n\nLog attached: output_log_2026-11-04_18-56-55.txt",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/6a108ff6783646c2351d8b25bfed2134.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/6a108ff6783646c2351d8b25bfed2134.txt",
+      "mimeType": "text/plain",
+      "name": "output_log_2026-11-04_18-56-55",
+      "url": "https://canny-assets.io/files/6a108ff6783646c2351d8b25bfed2134.txt"
+    }
+  ],
+  "ideaID": "6aeb10c57c66c2284dde965a",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-04T11:02:30.383Z",
+  "subCategoryID": null,
+  "title": "All avatars (own and others) show as Error robot - AnalysisReport fails with \"Remote server closed the connection\"",
+  "trendingScore": 2966.6160146921343,
+  "updatedBy": null,
+  "urlName": "all-avatars-own-and-others-show-as-error-robot-analysisreport-fails-with-remote",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6aeb10807c66c2284dde87c5",
+      "alias": "Straight Chinchilla",
+      "aliasID": "6aeb1080da302d926d28c143",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5580eb637eeff78b15d2674135b37ee9.png",
+      "companies": [],
+      "name": "覆屋／Fukuya",
+      "urlName": null,
+      "voteID": "6aeb10c6da302d926d28c297"
+    }
+  ]
+}
