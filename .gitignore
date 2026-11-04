@@ -18,7 +18,6 @@ boards/**/*.json.tmp
 *.local.*
 *.txt
 !scripts/requirements-update.txt
-.cursor/
 
 # Scrape bookkeeping worktree (lives on orphan branch scrape-state)
 .scrape-state/
