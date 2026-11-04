@@ -44,6 +44,23 @@ class ObserveHttpStatusTest(unittest.TestCase):
         update.observe_http_status(403)
         update.observe_http_status(403)
 
+    def test_block_stops_new_requests_until_explicit_reset(self) -> None:
+        for _ in range(update.CANNY_403_ABORT_AFTER - 1):
+            update.observe_http_status(403)
+        with self.assertRaises(update.CannyBlocked):
+            update.observe_http_status(403)
+        # A late success from an already-active worker must not clear the stop.
+        with self.assertRaises(update.CannyBlocked):
+            update.observe_http_status(200)
+        with patch.object(update.canny_http, "request", return_value=(200, "ok")) as request:
+            with self.assertRaises(update.CannyBlocked):
+                update._curl_get(update.SITE_URL)
+            with self.assertRaises(update.CannyBlocked):
+                update._curl_post_json(update.API_URL, {})
+            request.assert_not_called()
+            update.reset_http_stats()
+            self.assertEqual(update._curl_get(update.SITE_URL), (200, "ok"))
+
 
 class FetchStatusTest(unittest.TestCase):
     def setUp(self) -> None:
