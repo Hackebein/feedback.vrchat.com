@@ -170,13 +170,14 @@ jobs:
           cache-dependency-path: |
             scripts/requirements-ingest.txt
             scripts/requirements-canny-wake.txt
+            scripts/requirements-update.txt
 
       - name: Install dependencies
         run: |
           python3 -m pip install \
             -r scripts/requirements-ingest.txt \
             -r scripts/requirements-canny-wake.txt \
-            jinja2
+            -r scripts/requirements-update.txt
 
       - name: Run scripts/test_*.py
         run: |

@@ -12,6 +12,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import canny_auth
+import canny_http
 import canny_proxy
 import update
 
@@ -281,8 +282,8 @@ class ProxyCurlTest(unittest.TestCase):
 
         def run(cmd, **kwargs):
             cmds.append(list(cmd))
-            if cmd[1:3] == ["-sS", "-L"] or "--data-binary" in cmd:
-                body = "\n__HTTP_CODE__:200"
+            if "__NEW_CONNECTIONS__" in " ".join(cmd):
+                body = "\n__HTTP_CODE__:200\n__NEW_CONNECTIONS__:1"
             else:
                 body = "200"
             return subprocess.CompletedProcess(cmd, 0, stdout=body, stderr="")
@@ -290,9 +291,9 @@ class ProxyCurlTest(unittest.TestCase):
         env = _env(CANNY_PROXY_PASSWORD=PASSWORD, GITHUB_RUN_ID="41040527302")
         with (
             patch.dict("os.environ", env, clear=False),
-            patch.object(update.subprocess, "run", side_effect=run),
+            canny_http.client_scope("curl"),
+            patch.object(canny_http.subprocess, "run", side_effect=run),
             patch.object(update.time, "sleep"),
-            patch.object(canny_auth.subprocess, "run", side_effect=run),
         ):
             update._curl_get("https://feedback.vrchat.com/bug-reports/p/slug")
             update._curl_post_json("https://feedback.vrchat.com/api/posts/get", {"a": 1})
@@ -316,6 +317,7 @@ class ProxyCurlTest(unittest.TestCase):
     def test_proxy_failure_stops_before_login(self) -> None:
         buf = io.StringIO()
         with (
+            patch.object(update, "get_boards", return_value=["bug-reports"]),
             patch.object(sys, "argv", ["update.py", "--refresh-oldest", "0", "--refresh-newest", "0"]),
             patch.object(
                 update.canny_proxy,
@@ -548,16 +550,10 @@ class CannyFingerprintTest(unittest.TestCase):
         self.assertNotIn("SECRETTOKEN", out)
         self.assertNotIn("203.0.113.9", out)
 
-    def test_scrape_curl_uses_browser_ua(self) -> None:
-        seen: dict[str, list[str]] = {}
-
-        def run(cmd, **kwargs):
-            seen["cmd"] = list(cmd)
-            return subprocess.CompletedProcess(cmd, 0, stdout="\n__HTTP_CODE__:200", stderr="")
-
-        with patch.object(update.subprocess, "run", side_effect=run), patch.object(update.time, "sleep"):
+    def test_scrape_requests_use_browser_ua(self) -> None:
+        with patch.object(canny_http, "request", return_value=(200, "")) as request:
             update._curl_get("https://feedback.vrchat.com/bug-reports/p/slug")
-        ua = seen["cmd"][seen["cmd"].index("-H") + 1]
+        ua = request.call_args.kwargs["user_agent"]
         self.assertIn(canny_auth.CANNY_USER_AGENT, ua)
         self.assertNotIn("VRChatFeedbackArchiver", ua)
 

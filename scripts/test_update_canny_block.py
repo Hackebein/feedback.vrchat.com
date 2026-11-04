@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import io
-import subprocess
 import sys
 import unittest
 from contextlib import redirect_stderr
@@ -13,12 +12,8 @@ import canny_auth
 import update
 
 
-def _completed(stdout: str) -> subprocess.CompletedProcess[str]:
-    return subprocess.CompletedProcess(args=["curl"], returncode=0, stdout=stdout, stderr="")
-
-
-def _http(code: int, body: str = "x") -> subprocess.CompletedProcess[str]:
-    return _completed(f"{body}\n__HTTP_CODE__:{code}")
+def _http(code: int, body: str = "x") -> tuple[int, str]:
+    return code, body
 
 
 class ObserveHttpStatusTest(unittest.TestCase):
@@ -60,11 +55,11 @@ class FetchStatusTest(unittest.TestCase):
     def test_post_page_does_not_retry_403(self) -> None:
         calls: list[int] = []
 
-        def run(cmd, **kwargs):
+        def run(*args, **kwargs):
             calls.append(1)
             return _http(403, "blocked")
 
-        with patch.object(update.subprocess, "run", side_effect=run), patch.object(update.time, "sleep"):
+        with patch.object(update.canny_http, "request", side_effect=run), patch.object(update.time, "sleep"):
             post, _comments, not_found, transient = update.fetch_post_page(
                 "bug-reports", "slug", retries=3,
             )
@@ -80,14 +75,12 @@ class FetchStatusTest(unittest.TestCase):
                 update.reset_http_stats()
                 calls: list[int] = []
 
-                def run(cmd, **kwargs):
+                def run(*args, **kwargs):
                     calls.append(code)
-                    if code == 0:
-                        raise OSError("network down")
                     return _http(code, "")
 
                 with (
-                    patch.object(update.subprocess, "run", side_effect=run),
+                    patch.object(update.canny_http, "request", side_effect=run),
                     patch.object(update.time, "sleep"),
                 ):
                     post, _comments, not_found, transient = update.fetch_post_page(
@@ -102,12 +95,12 @@ class FetchStatusTest(unittest.TestCase):
     def test_page_scan_aborts_without_scanning_every_post(self) -> None:
         calls: list[int] = []
 
-        def run(cmd, **kwargs):
+        def run(*args, **kwargs):
             calls.append(1)
             return _http(403, "blocked")
 
         targets = [("bug-reports", f"p{i}", f"s{i}") for i in range(20)]
-        with patch.object(update.subprocess, "run", side_effect=run), patch.object(update.time, "sleep"):
+        with patch.object(update.canny_http, "request", side_effect=run), patch.object(update.time, "sleep"):
             with self.assertRaises(update.CannyBlocked):
                 update.fetch_all_pages(targets)
         self.assertGreaterEqual(len(calls), update.CANNY_403_ABORT_AFTER)
@@ -207,6 +200,7 @@ class SsoAbortTest(unittest.TestCase):
     def test_sso_failure_exits_before_any_fetch(self) -> None:
         buf = io.StringIO()
         with (
+            patch.object(update, "get_boards", return_value=["bug-reports"]),
             patch.object(sys, "argv", ["update.py", "--refresh-oldest", "0", "--refresh-newest", "0"]),
             patch.object(
                 update.canny_auth,

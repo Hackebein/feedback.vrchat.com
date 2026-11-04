@@ -59,7 +59,7 @@ jobs:
           python-version: "3.15"
 
       - name: Install dependencies
-        run: pip install jinja2 pyotp
+        run: pip install -r scripts/requirements-update.txt
 
       - name: Restore VRChat session cache
         uses: actions/cache@v6
