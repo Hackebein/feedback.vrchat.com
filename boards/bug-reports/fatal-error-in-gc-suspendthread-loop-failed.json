@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.controls"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-11-02T05:31:18.132338Z",
+  "aiTaggedAt": "2026-11-04T17:25:44.666923Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5da73c95c8133a48b8a0b711",
@@ -29,53 +29,9 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 78,
+  "commentCount": 79,
   "commentingDisabled": false,
   "comments": [
-    {
-      "_id": "6ac14b5dca2b5dab3c7896db",
-      "aiGenerated": false,
-      "author": {
-        "_id": "6ac14ac3b987445a69c7383c",
-        "alias": "Architectural Gecko",
-        "aliasID": "6ac14ac3b987445a69c73840",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/85c1afe0ce0e1d3a058bb25bf1f8df14.png",
-        "created": "2026-10-03T18:34:43.242Z",
-        "name": "'SELICA'",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-10-03T18:37:17.366Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6a1e364cec4cc3e215c99ac5",
-      "private": false,
-      "reactions": null,
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "had this problem that crashed my game after two minutes after launchin game and just alt tab from game on another app on Debian 13 on Laptop with Ryzen 7 5800u",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "6ac1652a19431c41778954e6",
       "aiGenerated": false,
@@ -597,6 +553,59 @@
       "spam": false,
       "statusChangeID": null,
       "value": "VRChat suddenly stopped launching on my PC. It opens to a white screen, becomes Not Responding, and then crashes with a SuspendThread error.\n\nSpecs:\n\nCPU: Ryzen 7 5800XT\n\nGPU: RTX 5070\n\nOS: Windows 11\n\nError details:\n\nFaulting module: GameAssembly.dll\n\nException code: 0x80000003\n\nI’ve tried reinstalling VRChat, updating drivers and Windows, clearing game data, testing beta and older versions, clean boots, and even resetting Windows. Nothing has fixed it.\n\nVRChat used to work perfectly on this same PC. Any ideas what could be causing this?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aeb6201d2faa448beeb35a4",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6aeb60f4911fe2548ccf4084",
+        "alias": "Lively Possum",
+        "aliasID": "6aeb60f4da302d926d2ab362",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0efc932733eb95f4b1b92cba18231398.png",
+        "created": "2026-11-04T16:44:36.279Z",
+        "name": "木头木风",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-04T16:49:05.189Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/ec5531c0374320c456359b0ad39d831b.txt"
+      ],
+      "files": [
+        {
+          "downloadURL": "/api/files/download/ec5531c0374320c456359b0ad39d831b.txt",
+          "mimeType": "text/plain",
+          "name": "output_log_2026-11-04_00-13-24",
+          "url": "https://canny-assets.io/files/ec5531c0374320c456359b0ad39d831b.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a1e364cec4cc3e215c99ac5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Native Windows 11 (no Proton). ~1 in 3 launches succeeds. Measurements:\n\nENV: Xeon E5-2698 v3 (16C/32T), 32GB, RTX 3080 (617.14), Win11 22631.4112, Unity 6000.0.67f1-DWR (VRChat.exe 6000.0.67.59584), launched via Steam/EAC. No antivirus (Defender realtime OFF), no mods or injected DLLs (WER module list only contains Steam overlay, NVIDIA drivers, Defender AMSI).\n\nSYMPTOM: freezes ~13.5s after process start, then either recovers after 17-19s, or aborts with \"Fatal error in GC - SuspendThread loop failed\". VRChat.gc.log contains only that line. WER: GameAssembly.dll, exception 0x80000003 (Mono's deliberate breakpoint), offset 0xc3eb25.\n\nThis machine's WER archive holds 36 AppCrash entries for VRChat.exe since 2026-09-16.\n\nNOTE: the process keeps showing the dialog until OK is clicked, so WER/AppCrash timestamps = click time, not crash time.\n\nTIMING (sampled every 100-250ms from launch):\n\n- t~13.4s: 15-19 threads created in one ~10ms batch (priority Idle, CPU 0), from ProcessThread.StartTime\n\n- t~13.5-14.5s: window Not Responding, process CPU time frozen at 13.69s and flat for 30s+ => retry loop is sleeping, not spinning\n\n- thread count at freeze: 165 -> 175-178\n\n- success: logging resumes 17-19s later\n\n- 2nd stall of 10-18s at \"Found 141 time zones\" -> \"Loaded HRTF\"\n\n- failure: dialog appears ~30s after the freeze\n\n- both stalls also occur in sessions that succeed, so they are a constant, not the trigger\n\nFREQUENCY: ~25 launches, 4 succeeded / ~21 aborted, interleaved within minutes. Once in, stable (6h session). Always before login: the log never gets past \"OvrLipSync Awake\", so not account/network/server.\n\nRULED OUT (each tested): reinstall + EAC repair; default audio device (VRChat only selects its mic at t~40s, after both stalls); Steam overlay (verified NOT injected via gameoverlay_renderer.txt); CPU affinity 0xFF and 0xFFFF confirmed applied, thread count unchanged; SteamVR running vs not; the older Unity 2022 client also crashes (since 2026-09-16).\n\nLooks like a race in Mono/Boehm GC stop-the-world at startup. Nothing local changes the outcome, only timing. WER reports, output_log and gc.log available.",
       "viewerReactions": null,
       "voteID": null
     }
