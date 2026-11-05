@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.main-menu",
     "loc.action-menu",
-    "localization"
+    "localization",
+    "monetization.vrc-plus"
   ],
-  "aiTaggedAt": "2026-11-05T00:11:37.023730Z",
+  "aiTaggedAt": "2026-11-05T04:10:41.473812Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6aebc676f1ad9977788e5c24",
@@ -43,7 +44,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The label “VRC+ Exclusive” in the item filter panel is currently displayed in English, but it cannot be localized because there is no corresponding text key in Crowdin.\n\nOther related terms, such as “Exclusive Emoji” and “Exclusive Stickers,” are properly configured in Crowdin and have been localized into Japanese (“限定絵文字” / “限定ステッカー”). Only “VRC+ Exclusive” remains in English, which is difficult for users to read. I am reporting this to confirm whether this is an unmapped text key or an unintentional oversight.\n\nCould you please make this label localizable and add the key to the Crowdin database?\n\n[Affected UI Locations]\n\nLocation 1:\n\nMenu (ESC) → Wing Menu → Items → Filter icon\n\nLocation 2:\n\nExpression Menu → Items → Edit → Select [+] from the Action Menu Management",
+  "details": "language:ja\n\nThe label “VRC+ Exclusive” in the item filter panel is currently displayed in English, but it cannot be localized because there is no corresponding text key in Crowdin.\n\nOther related terms, such as “Exclusive Emoji” and “Exclusive Stickers,” are properly configured in Crowdin and have been localized into Japanese (“限定絵文字” / “限定ステッカー”). Only “VRC+ Exclusive” remains in English, which is difficult for users to read. I am reporting this to confirm whether this is an unmapped text key or an unintentional oversight.\n\nCould you please make this label localizable and add the key to the Crowdin database?\n\n[Affected UI Locations]\n\nLocation 1:\n\nMenu (ESC) → Wing Menu → Items → Filter icon\n\nLocation 2:\n\nExpression Menu → Items → Edit → Select [+] from the Action Menu Management",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -69,7 +70,7 @@
   "subCategoryID": null,
   "title": "Missing localization key for \"VRC+ Exclusive\" label",
   "trendingScore": 2967.0995806264395,
-  "updatedBy": null,
+  "updatedBy": "6aebc676f1ad9977788e5c24",
   "urlName": "missing-localization-key-for-vrc-exclusive-label",
   "viewerIsAuthor": false,
   "viewerVote": 0,
