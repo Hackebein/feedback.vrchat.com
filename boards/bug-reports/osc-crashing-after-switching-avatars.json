@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.osc"
+    "client.osc",
+    "avatars.descriptor"
   ],
-  "aiTaggedAt": "2026-11-04T15:45:10.389868Z",
+  "aiTaggedAt": "2026-11-05T04:54:19.885694Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69f23a514a48bed189d88cad",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -118,6 +119,50 @@
       "statusChangeID": "6aeb511e0a9b1ee79b85887a",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aec0aab188e30e734c61045",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66074cd408ea45a9487141c1",
+        "alias": "Kobalt Seahorse",
+        "aliasID": "66074cd4e5d26962aa694574",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/25969403ee80a3b0887be96a977303fc.png",
+        "created": "2024-03-29T23:20:52.856Z",
+        "name": "AzureCatalyst",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-05T04:48:43.779Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae79684df81fcf66c565bcf",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I've also experienced this issue myself personally. Though I have narrowed it down to specific cases with apps that have OSC enabled features even if they are not actively being used. In my case, XSOverlay and OVR Toolkit being used only for their wrist overlay and other features non-OSC contributed to my issue.\n\nAdditionally after much trial and error, I found that an asset that was located on a few of my models that was configured with VRCFury toggles, part of the path included brackets ( [ and ] ) in the naming convention was ultimately what caused my issue. Simply removing every bracket or abnormal special character from any pathing from that particular asset seemed to have fixed my problem.\n\nThe fact is that the OSC path itself for any avatar parameter path should not contain special characters as they are used for special functions within a path. It could be possible that this may have broke OSC for VRChat for a long time.",
       "viewerReactions": null,
       "voteID": null
     }
