@@ -1,0 +1,96 @@
+{
+  "_id": "6aebc8c6188e30e734c1b71f",
+  "aiCategories": [
+    "loc.main-menu",
+    "loc.action-menu",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-11-05T00:11:37.023730Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6aebc676f1ad9977788e5c24",
+    "alias": "Net Mole",
+    "aliasID": "6aebc677da302d926d2d4875",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6e31db81ae48df9a59465124fe1ceefd.png",
+    "created": "2026-11-04T23:57:42.797Z",
+    "name": "Ԙ ɌᴇᴇƝ",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6aebc676f1ad9977788e5c24",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-05T00:07:34.701Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The label “VRC+ Exclusive” in the item filter panel is currently displayed in English, but it cannot be localized because there is no corresponding text key in Crowdin.\n\nOther related terms, such as “Exclusive Emoji” and “Exclusive Stickers,” are properly configured in Crowdin and have been localized into Japanese (“限定絵文字” / “限定ステッカー”). Only “VRC+ Exclusive” remains in English, which is difficult for users to read. I am reporting this to confirm whether this is an unmapped text key or an unintentional oversight.\n\nCould you please make this label localizable and add the key to the Crowdin database?\n\n[Affected UI Locations]\n\nLocation 1:\n\nMenu (ESC) → Wing Menu → Items → Filter icon\n\nLocation 2:\n\nExpression Menu → Items → Edit → Select [+] from the Action Menu Management",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aebc8c6188e30e734c1b70d",
+  "imageURLs": [
+    "https://canny-assets.io/images/2509afafd558bd4144f6916abd75e4f2.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-05T00:07:34.701Z",
+  "subCategoryID": null,
+  "title": "Missing localization key for \"VRC+ Exclusive\" label",
+  "trendingScore": 2966.693898970408,
+  "updatedBy": null,
+  "urlName": "missing-localization-key-for-vrc-exclusive-label",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6aebc676f1ad9977788e5c24",
+      "alias": "Net Mole",
+      "aliasID": "6aebc677da302d926d2d4875",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6e31db81ae48df9a59465124fe1ceefd.png",
+      "companies": [],
+      "name": "Ԙ ɌᴇᴇƝ",
+      "urlName": null,
+      "voteID": "6aebc8c6da302d926d2d4fce"
+    }
+  ]
+}
