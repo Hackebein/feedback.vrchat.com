@@ -9,11 +9,11 @@ Scrape horizon: **2026-10-09 01:30 UTC (27d ago)**.
 | Board | Posts |
 |-------|------:|
 | `age-verification` | 219 / 219 (100.0%) |
-| `android` | 355 / 355 (100.0%) |
+| `android` | 355 / 356 (99.7%) |
 | `avatar-30` | 900 / 900 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 81 / 81 (100.0%) |
-| `bug-reports` | 13,078 / 13,077 (100.0%) |
+| `bug-reports` | 13,078 / 13,078 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-10-09 01:30 UTC (27d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 136 / 136 (100.0%) |
 | `website` | 919 / 919 (100.0%) |
-| **Total** | **38,920** / **38,741** (100.0%) |
+| **Total** | **38,920** / **38,743** (99.99%) |
 
 ## OpenSearch
 
