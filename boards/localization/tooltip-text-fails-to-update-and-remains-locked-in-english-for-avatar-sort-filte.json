@@ -1,0 +1,103 @@
+{
+  "_id": "6aec0066f1ad99777892b3a1",
+  "aiCategories": [
+    "loc.quick-menu",
+    "localization"
+  ],
+  "aiTaggedAt": "2026-11-05T04:07:25.004157Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6aebc676f1ad9977788e5c24",
+    "alias": "Net Mole",
+    "aliasID": "6aebc677da302d926d2d4875",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6e31db81ae48df9a59465124fe1ceefd.png",
+    "created": "2026-11-04T23:57:42.797Z",
+    "name": "Ԙ ɌᴇᴇƝ",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6aebc676f1ad9977788e5c24",
+  "board": {
+    "_id": "65143dfbc129a609b921bbbd",
+    "name": "Localization",
+    "urlName": "localization"
+  },
+  "boardID": "65143dfbc129a609b921bbbd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "651440f55c54a9094114edce",
+    "created": "2023-09-27T14:49:25.538Z",
+    "name": "English String Issue",
+    "parentID": null,
+    "urlName": "english-string-issue"
+  },
+  "categoryID": "651440f55c54a9094114edce",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-05T04:04:54.885Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "In the wing menu's Avatars -> Sort & Filter panel, hovering over different items (e.g., \"最終更新\", \"名前\", \"最近の使用\", \"アップロードしたもの\") causes the tooltip text at the bottom to remain fixed on a single English string (such as \"Sort avatars by the date they were created\" or \"View avatars you've uploaded\") instead of updating to the corresponding Japanese translation.\n\nFurthermore, the same English text is applied to all items, including “最終更新,” “最近の使用,” and “アップロードしたもの”\n\nThe Japanese translations for these tooltip strings have already been translated and approved on Crowdin. However, the UI components appear to lack the proper settings or mappings to load these localized strings.\n\n[Affected UI Areas]\n\nWing Menu → Avatars → Sort & View (Filter) Panel\n\n[Attached Screenshots and Evidence]\n\n1. An in-game screenshot showing Japanese UI elements where the tooltips remain fixed in English.\n\n2. Evidence that translations are present in menus other than the Avatars menu. (Green circle)\n\n3. A screenshot from Crowdin showing that the Japanese translations have already been approved.\n\nTranslated with DeepL.com (free version)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aec0066f1ad99777892b3a0",
+  "imageURLs": [
+    "https://canny-assets.io/images/6ed99b345721860c1a296634ae4a8764.png",
+    "https://canny-assets.io/images/3eb9c8dbd6d8b77ba48dfff998bb18c4.png",
+    "https://canny-assets.io/images/74b739216d4c482c33837fc677edb59e.png",
+    "https://canny-assets.io/images/8af938e3e6c60da34d585daff5507f57.png",
+    "https://canny-assets.io/images/023941a41ee56c64cb7ea05ecb0aebab.png",
+    "https://canny-assets.io/images/4746ef40fd9a9b0c268215fe25a24e9b.png",
+    "https://canny-assets.io/images/efcc4725c61c15ae206a418912d63d94.png",
+    "https://canny-assets.io/images/8f5f81218fc9b13c46870d20ef84b78a.png",
+    "https://canny-assets.io/images/603a554b5b1dcc82e9216847652ca1ce.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-05T04:04:54.885Z",
+  "subCategoryID": null,
+  "title": "Tooltip text fails to update and remains locked in English for Avatar Sort & Filter menus",
+  "trendingScore": 2966.7174441605534,
+  "updatedBy": null,
+  "urlName": "tooltip-text-fails-to-update-and-remains-locked-in-english-for-avatar-sort-filte",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6aebc676f1ad9977788e5c24",
+      "alias": "Net Mole",
+      "aliasID": "6aebc677da302d926d2d4875",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6e31db81ae48df9a59465124fe1ceefd.png",
+      "companies": [],
+      "name": "Ԙ ɌᴇᴇƝ",
+      "urlName": null,
+      "voteID": "6aec0067da302d926d2e7252"
+    }
+  ]
+}
