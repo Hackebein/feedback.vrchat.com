@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.udon"
   ],
-  "aiTaggedAt": "2026-11-05T19:31:11.660137Z",
+  "aiTaggedAt": "2026-11-05T20:20:51.074079Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "631a2053a6c75444bf9a4f30",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Currently Contacts allow for you to get Local Position on the XYZ axis, currently this mean the range of the float parameters is dependent on the radius of the contact and the scale of its parent object. For example if the contact radius is 1 then the range of the X axis is: -1 to 1, but if the contact radius is 0.5 or the parent object scale is 0.5 then the X axis range is: -0.5 to 0.5. This is current setup is useful for certain applications however there are a number of prefabs that rely on the user being able to scale the prefab object, and consequently all of the contacts too, this current arrangement is completely useless in those cases since the range of the contact would change whenever the user scaled the prefab. For this reason another optional set of advanced parameters should be added. These would be Global Position parameters following the same structure as the local ones, but they would have a fixed range of -1 to 1 for all axis and the range would remain constant regardless of the radius of the contact or the scale of the parent object, acting more as a percent rather than an actual distance value.",
+  "details": "Currently Contacts allow for you to get Local Position on the XYZ axis, currently this mean the range of the float parameters is dependent on the radius of the contact and the scale of its parent object. For example if the contact radius is 1 then the range of the X axis is: -1 to 1, but if the contact radius is 0.5 or the parent object scale is 0.5 then the X axis range is: -0.5 to 0.5. This is current setup is useful for certain applications however there are a number of prefabs that rely on the user being able to scale the prefab object, and consequently all of the contacts too, this current arrangement is completely useless in those cases since the range of the contact would change whenever the user scaled the prefab. For this reason another optional set of advanced parameters should be added. These would be Percentage Position parameters following the same structure as the local ones, but they would have a fixed range of -1 to 1 for all axis and the range would remain constant regardless of the radius of the contact or the scale of the parent object, acting more as a percent rather than a distance value.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -58,10 +58,10 @@
   "status": "open",
   "statusChanged": "2026-11-05T19:23:23.649Z",
   "subCategoryID": null,
-  "title": "Add Global Position (XYZ) Parameters for Contacts",
+  "title": "Add Percentage Position (XYZ) Parameters for Contacts",
   "trendingScore": 2967.726134794096,
-  "updatedBy": null,
-  "urlName": "add-global-position-xyz-parameters-for-contacts",
+  "updatedBy": "631a2053a6c75444bf9a4f30",
+  "urlName": "add-percentage-position-xyz-parameters-for-contacts",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
