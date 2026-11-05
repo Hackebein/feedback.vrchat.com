@@ -30,9 +30,9 @@ Scrape horizon: **2026-10-09 02:46 UTC (27d ago)**.
 | `third-person-view` | 85 / 85 (100.0%) |
 | `udon` | 1,901 / 1,901 (100.0%) |
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
-| `vrchat-plus-feature-ideas` | 135 / 135 (100.0%) |
+| `vrchat-plus-feature-ideas` | 135 / 136 (99.3%) |
 | `website` | 919 / 919 (100.0%) |
-| **Total** | **38,916** / **38,737** (100.0%) |
+| **Total** | **38,916** / **38,738** (99.997%) |
 
 ## OpenSearch
 
