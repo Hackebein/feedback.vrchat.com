@@ -2,11 +2,12 @@
   "_id": "6ae9951720303f0aa72f9bbe",
   "aiCategories": [
     "loc.in-world",
+    "loc.unity-sdk",
     "avatars.tracking",
     "avatars.expressions",
-    "avatars.descriptor"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-11-05T06:28:07.600443Z",
+  "aiTaggedAt": "2026-11-05T17:00:22.703534Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -30,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 9,
+  "commentCount": 10,
   "commentingDisabled": false,
   "comments": [
     {
@@ -439,6 +440,50 @@
       "value": "unfortunately this is very widespread and quite critical",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6aecb5dec55bdd9d52587775",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6074413eb2699d0dae05d4f7",
+        "alias": "Decent Blackbird",
+        "aliasID": "65e0160ea6e3ea79dd19dfe2",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2021-04-12T12:46:54.477Z",
+        "name": "Mike Da Bird",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-05T16:59:10.139Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae9951720303f0aa72f9bbe",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Yep, I can confirm this on my end. Extremely critical issue as many said. I am updating my avatar base to use Native FT and save on hundreds of parameter bits, however ever since I turned the feature on it catastrophically broke only for remote players. Gesture animations get stuck for them on whichever one was active on avatar load. It also broke some puppet features it has. I even had a mental breakdown trying to figure out what was wrong, until I saw this post and suddenly it all made sense.\n\nI am forced to do many workarounds just to get around this game breaking bug, which I would love to avoid doing (adds quite some unnecessary complexity). Please fix this!",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -456,20 +501,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 67,
+  "maxScore": 68,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae9951720303f0aa72f9bbe/2025460771.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 67,
+  "score": 68,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-11-04T15:21:15.779Z",
   "subCategoryID": null,
   "title": "Animator Defaults are improperly changed, only on remote clients, when native FT is configured",
-  "trendingScore": 2970.125503031781,
+  "trendingScore": 2970.1432191989798,
   "updatedBy": "5fa08ddb2644fb4c5a3dfe75",
   "urlName": "animator-defaults-are-improperly-changed-only-on-remote-clients-when-native-ft-i",
   "viewerIsAuthor": false,
@@ -482,6 +527,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "61aac8a9de50114e6485a254",
+      "alias": "Ginger Crab",
+      "aliasID": "65c2b40fed6eefce4cccc7a1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/d0a5ab0b9b07999f13cd5787f649f059.png",
+      "companies": [],
+      "name": "Atomiklan",
+      "urlName": null,
+      "voteID": "6aecb5d7da302d926d3b5169"
+    },
     {
       "_id": "626f3aa14fe13f5294864742",
       "alias": "Narrow Jay",
@@ -1020,17 +1076,6 @@
       "name": "Beanthusiast",
       "urlName": null,
       "voteID": "6aea44f5da302d926d260797"
-    },
-    {
-      "_id": "649b83fd8ca61609383735ec",
-      "alias": "Rosewood Orca",
-      "aliasID": "65c28396ed6eefce4cd16ac0",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/64ea6d403c8578fd1561ccd7c7ee27f1.png",
-      "companies": [],
-      "name": "Purpzie",
-      "urlName": null,
-      "voteID": "6aea43d8da302d926d260401"
     }
   ]
 }
