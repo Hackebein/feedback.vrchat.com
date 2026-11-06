@@ -5,7 +5,7 @@
     "open-beta",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-05T08:03:05.020316Z",
+  "aiTaggedAt": "2026-11-06T10:20:11.682681Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d458c2bce0d0218577b8c24",
@@ -35,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -117,7 +117,9 @@
       "postDeleted": false,
       "postID": "6ade12a2dad47ebdff3a9575",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -258,6 +260,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I noticed this, and was going to try to switch it to bone only.\n\nI don't have any eye gaze blend shapes, but the SDK implied that Both was better anyway.\n\nWhat is the actual effect of setting it to Bone only?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aeda7a38bd968d6583602ec",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62def8416d6050449f879121",
+        "alias": "Technological Lark",
+        "aliasID": "66521fffb9e8e8fe66179a92",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b3aa57f946c909c4334ec2a0517c45b1.png",
+        "created": "2022-07-25T20:08:33.155Z",
+        "name": "zig13",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-06T10:10:43.936Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6aec36aa188e30e734c981be",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ade12a2dad47ebdff3a9575",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I switched to Bone Only, and it didn't resolve.\n\nStill very limited eye movement from eye tracking.\n\nThis is super obvious - I don't understand how it didn't get caught before coming out of Beta?\n\nAre we doing something wrong?",
       "viewerReactions": null,
       "voteID": null
     }
