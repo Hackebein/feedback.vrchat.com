@@ -1,0 +1,93 @@
+{
+  "_id": "6aed81e109d1ca73317d981a",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-11-06T07:34:49.446315Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f3df2f75af9f322b0f66e1b",
+    "alias": "Eggplant Swordfish",
+    "aliasID": "65c27264ed6eefce4c180a06",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/72831d842128428cc1508b45b904ade7.png",
+    "created": "2020-08-20T03:50:15.808Z",
+    "name": "narazaka",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f3df2f75af9f322b0f66e1b",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35d0d1490098b820396",
+    "created": "2023-09-19T19:15:41.243Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6509f35d0d1490098b820396",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-06T07:29:37.671Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I saw in the Dev Update that the person who creates a Public instance will become its moderator. However, I suspect this means that checking whether the instance owner is null to determine if an instance is Public will no longer work.\n\nI believe there are some situations where the distinction between Public and Private instances matters, so ideally, I'd like to see a Udon API that allows us to retrieve the instance's visibility type (Public, Friends+, Invite, etc.).\n\n(Actually, why isn't such an API available already?)\n\nja:\n\nPublicインスタンスを作成した人がモデレーターとなるというDev updateを見ましたが、これによっておそらく「インスタンスオーナーがnullならPublicである」という判定が効かなくなると思います。\n\nPublic/Privateインスタンスの別が意味を持つことは往々にしてあると認識しているので、ワールドの可視性（Public/Friends+/Invite etc.）が取得できるUdon APIがあると理想的だと思います（逆に今は何故ないのでしょうか？）。",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aed81e109d1ca73317d9819",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aed81e109d1ca73317d981a/454320732.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-06T07:29:37.671Z",
+  "subCategoryID": null,
+  "title": "Udon API to Retrieve Instance Visibility (Public / Friends+ / Invite, etc.)",
+  "trendingScore": 2966.8806102286753,
+  "updatedBy": null,
+  "urlName": "udon-api-to-retrieve-instance-visibility-public-friends-invite-etc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f3df2f75af9f322b0f66e1b",
+      "alias": "Eggplant Swordfish",
+      "aliasID": "65c27264ed6eefce4c180a06",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/72831d842128428cc1508b45b904ade7.png",
+      "companies": [],
+      "name": "narazaka",
+      "urlName": null,
+      "voteID": "6aed81e1da302d926d4a6629"
+    }
+  ]
+}
