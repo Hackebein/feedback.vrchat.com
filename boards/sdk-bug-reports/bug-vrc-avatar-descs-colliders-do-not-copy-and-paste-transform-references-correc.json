@@ -1,0 +1,103 @@
+{
+  "_id": "6aee24e4ff54ae367e796996",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.descriptor",
+    "avatars.dynamics"
+  ],
+  "aiTaggedAt": "2026-11-06T19:09:09.989166Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f30e7eb5170ee2d02954e8a",
+    "alias": "Marvellous Dragonfly",
+    "aliasID": "6606c391d90e5057634022fa",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/63abc80d2b8f37e282c4da0a74be3ae8.png",
+    "created": "2020-08-10T06:23:39.456Z",
+    "name": "Sable7",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f30e7eb5170ee2d02954e8a",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-06T19:05:08.891Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When copying and pasting a whole VRC Avatar Descriptor component to a different avatar, the colliders transform references (hands, fingers, torso, feet, head) do not update to reference the new avatar's transforms for Custom-set colliders.\n\nI had an issue where I wanted to quickly transfer all the NativeFT work I did to another one of my avatars in a different outfit. So I copied and pasted the updated VRC Avi Desc. from the finished avatar to another avatar. Uploaded that new avatar, and found out I couldn't interact with any PhysBones. Found out it was because the colliders failed to copy over the correct transform references as expected when I copied and pasted the descriptor.\n\nIf a collider is set to Custom, the internal transform reference to where that collider is supposed to be, maintains the previous avatar transform's reference instead of the new avatar's respective transform.\n\nIf the collider is set to Automatic, the copy and pasting works just fine.\n\nThis happens to both VRC Avi Desc components being copied and pasted as a new component, or pasting values into a pre-existing component.\n\nSteps to recreate:\n\n- Create an avatar that uses at least one VRC Avatar Descriptor collider set to Custom.\n\n- Copy the VRC Avatar Descriptor component off that avatar.\n\n- Paste that VRC Avatar Descriptor component to a new avatar.\n\n- Move the new avatar to observe that the Custom collider does not follow the new avatar, only the old copied-from, avatar.\n\nSee included video where, in a fresh project with no extra plug-ins (other than VRC Light Volume's), I copy and paste a VRC Avatar Descriptor component onto a fresh new avatar.  But, when I select and move that new avatar, the colliders set to Custom (head, hands, feet, fingers) are stuck to the old avatar. The Torso collider was set to Automatic, and correctly follows my avatar after being copied over.\n\nIt might just require updating each `ColliderConfig`'s `transform` by calling `Animator.GetBoneTransform(<insert correct humanoid bone>)`, on the descriptor's `OnValidate()` or `Reset()` or whatever better method there is to detect copying and pasting. (Though this might break collider stealing features of Modular Avatar or Dark's Avatar Optimizer... maybe not, idk)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/25857ea441d3ddc273491b9879a4996b.mp4"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/25857ea441d3ddc273491b9879a4996b.mp4",
+      "mimeType": "video/mp4",
+      "name": "VRCAvatarDescriptorColliderCopyFail",
+      "url": "https://canny-assets.io/files/25857ea441d3ddc273491b9879a4996b.mp4"
+    }
+  ],
+  "ideaID": "6aee24e4ff54ae367e796988",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-06T19:05:08.891Z",
+  "subCategoryID": null,
+  "title": "[Bug] VRC Avatar Desc.'s Colliders do not copy and paste transform references correctly.",
+  "trendingScore": 2966.9496100839992,
+  "updatedBy": null,
+  "urlName": "bug-vrc-avatar-descs-colliders-do-not-copy-and-paste-transform-references-correc",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f30e7eb5170ee2d02954e8a",
+      "alias": "Marvellous Dragonfly",
+      "aliasID": "6606c391d90e5057634022fa",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/63abc80d2b8f37e282c4da0a74be3ae8.png",
+      "companies": [],
+      "name": "Sable7",
+      "urlName": null,
+      "voteID": "6aee24e554bfbdee45a7820b"
+    }
+  ]
+}
