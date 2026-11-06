@@ -1,11 +1,12 @@
 {
   "_id": "6ae339b38fa773e950632642",
   "aiCategories": [
+    "loc.in-world",
     "loc.pc-client",
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-11-04T18:40:16.997581Z",
+  "aiTaggedAt": "2026-11-06T07:30:50.481263Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ae339b388dc7d058dea3973",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -84,7 +85,7 @@
         "alias": "Midnight blue Anglerfish",
         "aliasID": "65c294b7ed6eefce4c685517",
         "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/36f4edd4736895746c5efd895ac10dcc.png",
+        "avatarURL": "https://canny-assets.io/images/41e95eb0992c36dcaa1a00488af91bd0.png",
         "created": "2023-10-31T00:06:13.491Z",
         "name": "Kazunori",
         "serviceAccount": false,
@@ -117,6 +118,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I also noticed recently in Task Manager that for csrss.exe, the \"Working set\" is ~10MB (10,088K), but the \"Commit Size\" is up to a massive 2GB! (2,113,488K).\n\nSince the \"Working set\" is the actual physical memory being used, which is a tiny ~10MB, there might be less of an immediate concern.\n\nSince \"Commit Size\" is virtual memory space, just ensure you don't have a tiny page file and if you do, either make it bigger or try to restart the computer daily, if you play VRChat a lot.\n\nI'm on Win 11 26H2 (26300.9711), AMD GPU 26.10.2, AMD CPU.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aed7f808bd968d65832203f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "63364e27f03a4344bb05c545",
+        "alias": "Flame Porpoise",
+        "aliasID": "6aed7da0da302d926d4a547c",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/280ab4471fe96f9a2d8d39e076903de1.png",
+        "created": "2022-09-30T02:02:15.401Z",
+        "name": "twixee",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-06T07:19:28.980Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae339b38fa773e950632642",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Same issue, mine went up to 15GB eventually without restarting my pc in days. All info from the other 2 posts are consistent with my findings too.\n\nopen beta steam client with build 1937\n\nWindows 11 Pro 25H2\n\nintel i7-12700k\n\nnvidia 5080 with driver 617.14",
       "viewerReactions": null,
       "voteID": null
     }
