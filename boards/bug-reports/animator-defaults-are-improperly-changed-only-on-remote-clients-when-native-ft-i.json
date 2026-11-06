@@ -2,12 +2,9 @@
   "_id": "6ae9951720303f0aa72f9bbe",
   "aiCategories": [
     "loc.in-world",
-    "loc.unity-sdk",
-    "avatars.tracking",
-    "avatars.expressions",
-    "sdk.vrcsdk"
+    "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-05T17:00:22.703534Z",
+  "aiTaggedAt": "2026-11-06T03:54:42.968426Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -31,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "commentingDisabled": false,
   "comments": [
     {
@@ -484,6 +481,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Yep, I can confirm this on my end. Extremely critical issue as many said. I am updating my avatar base to use Native FT and save on hundreds of parameter bits, however ever since I turned the feature on it catastrophically broke only for remote players. Gesture animations get stuck for them on whichever one was active on avatar load. It also broke some puppet features it has. I even had a mental breakdown trying to figure out what was wrong, until I saw this post and suddenly it all made sense.\n\nI am forced to do many workarounds just to get around this game breaking bug, which I would love to avoid doing (adds quite some unnecessary complexity). Please fix this!",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aed4c489b9068174440ec00",
+      "aiGenerated": false,
+      "author": {
+        "_id": "611cd0b979e6a21134f8c400",
+        "alias": "Gainsboro Gerbil",
+        "aliasID": "65d7eed30129d7ae445c313e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/63e0d9564b6d4a748aed35902aa00fb3.png",
+        "created": "2021-08-18T09:19:53.847Z",
+        "name": "kevybevy",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-06T03:40:56.395Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae9951720303f0aa72f9bbe",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "a lot of people have been seeing things toggled differently on my avatar since i changed to native face tracking, can confirm",
       "viewerReactions": null,
       "voteID": null
     }
