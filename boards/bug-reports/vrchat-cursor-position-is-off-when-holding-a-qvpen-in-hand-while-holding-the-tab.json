@@ -1,11 +1,12 @@
 {
   "_id": "6aca40f757044b4ef405c0ac",
   "aiCategories": [
+    "loc.in-world",
     "loc.pc-client",
     "platforms.pc.desktop",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-11-06T17:04:18.533604Z",
+  "aiTaggedAt": "2026-11-07T00:05:34.656713Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -117,6 +118,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Is this bug FOV dependent?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aee6a003d1f618fc55641f5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-07T00:00:00.322Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "61665e3e7448d57ed9eb49da",
+          "alias": "Olive Vole",
+          "aliasID": "65c26da3ed6eefce4c4d091c",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/017df8e6ae4567afbc647784175ca43d.png",
+          "created": "2021-10-13T04:19:10.295Z",
+          "name": "4Bakers",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aee074afdcd65526c8a8c7b",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aca40f757044b4ef405c0ac",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{61665e3e7448d57ed9eb49da|full_name} The bug occurs with all FOVs, including 50, 60 (default) and 100.",
       "viewerReactions": null,
       "voteID": null
     }
