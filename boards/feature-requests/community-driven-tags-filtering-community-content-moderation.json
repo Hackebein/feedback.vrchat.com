@@ -1,0 +1,88 @@
+{
+  "_id": "6aef39fa86397eb259a9363e",
+  "aiCategories": [
+    "vrchat-meta"
+  ],
+  "aiTaggedAt": "2026-11-07T14:54:32.024297Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "69c194c6bcda4ee632fdb004",
+    "alias": "Industrial Albatross",
+    "aliasID": "69c194c6bcda4ee632fdcd93",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/55da847410d0e6ae1b8f5fbe9085a9c4.png",
+    "created": "2026-03-23T19:30:14.514Z",
+    "name": "UnintellyJellie",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "69c194c6bcda4ee632fdb004",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-07T14:47:22.025Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Before anything, I know this is a duplicate post but I wanted to go much more into depth on it.\n\nDuplicates:\n\nhttps://feedback.vrchat.com/feature-requests/p/community-tags-for-worlds-like-steam\n\nhttps://feedback.vrchat.com/feature-requests/p/community-tagging\n\nAs you all know, VRChat has a huge AI content issue. While the developers are scrambling to find a solution, to put it simply: nobody likes the current conclusion. Here is my idea on how to solve that specific issue, along with a much broader system design that would benefit the community.\n\nSo a quick background: VRChat currently lacks any AI content filtering and the proposed solution was to add likes and dislikes as a method of community-driven moderation. While this does work, it fails to tell user WHY a world isn't well-liked, and it completely fails to let users filter out worlds based on specific content reasons. Now a tag would be great but the opt-in nature of them makes it just not possible to keep up with bad actors. So I, along with a few others who I've discussed with, propose a solution!\n\nCommunity-Driven Tags! \n\nCommunity-Driven Tags are a perfect middle ground between the proposed \"Like/Dislike\" system and an actionable search filter. Instead of relying on staff to manually add tags to a project, let the community come to those conclusions! This keeps the author-specified tags clean and simple based on author opt-in, while also allowing the community to \"vote\" for the content of the world amongst themselves.\n\nHow I think it should work:\n\nTags should only display on the \"Community Applied Tags\" section if there is an agreed upon consensus. To ensure that occurs the tags should be applied only when those who applied the tag reaches a specific percentage of those who have applied tags in general and ONLY users who have played can apply tags. On top of that it should also filter by Trust level. \n\n(Trusted = 1, Known = 0.75, User = 0.5, New User = 0.25, and Visitor = 0.0 )\n\nFor example: say we have a project and 200 users have played and applied tags. Say there are 100 Visitors, New Users, and Users who are trying to bomb the project with AI tags, but the rest of the 100 applied them semi-honestly.\n\nThe Bad-Faith Group (100 Users Bombing with AI Tags):\n\n• 34 Visitors (0.0) -> 34 x 0.0 = 0 points\n\n• 33 New Users (0.25) -> 33 x 0.25 = 8.25 points\n\n• 33 Users (0.50) -> 33 x 0.50 = 16.50 points\n\n• Total \"AI Tag\" Vote Value: 24.75 points\n\nThe Honest Group (100 Users Not Bombing Tags):\n\n• 50 Known Users (0.75) -> 50 x 0.75 = 37.50 points\n\n• 50 Trusted Users (1.00) -> 50 x 1.00 = 50.00 points\n\n• Total Honest Vote Value: 87.50 points\n\nFinal Consensus:\n\nThe Total Combined Points in the Pool (24.75 + 87.50) is 112.25 points meaning the percentage that want to add an AI tag are 24.75/112.25 = ~22%. Because the trust-weighted system drops the final consensus for the false tag down to a mere 22%, it completely fails to hit a required consensus threshold, which should be set closer to 30%.\n\nThis will obviously need testing for weights but you get the gist!\n\nIN CONCLUSION:\n\nThe system solves the exact bottleneck the mods are worried about. It is entirely automated by math and community consensus, requiring zero manual auditing by VRChat staff (other than maybe mass false reports if the system is overwhelmed).\n\nON TOP OF THAT, while this solves the immediate AI filtering issue, the system can be expanded to include other requested community tags such as \"Quest Optimized,\" \"Cozy/Chill,\" \"Jumpscares,\" \"NSFW Content,\" or \"Flashing Lights,\" etc.\n\nThis can be much larger than a simple AI solve as it allows the community to give each other short consensus of worlds for far more than a like and dislike will do and certainly far more than we can currently!",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6aef39f986397eb259a9361a",
+  "imageURLs": [
+    "https://canny-assets.io/images/c83d9d79494e9f6e0da2607c82819597.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6aef39fa86397eb259a9363e/1683829147.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-07T14:47:22.025Z",
+  "subCategoryID": null,
+  "title": "Community-Driven Tags & Filtering (Community Content Moderation)",
+  "trendingScore": 2967.0668936388934,
+  "updatedBy": null,
+  "urlName": "community-driven-tags-filtering-community-content-moderation",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "69c194c6bcda4ee632fdb004",
+      "alias": "Industrial Albatross",
+      "aliasID": "69c194c6bcda4ee632fdcd93",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/55da847410d0e6ae1b8f5fbe9085a9c4.png",
+      "companies": [],
+      "name": "UnintellyJellie",
+      "urlName": null,
+      "voteID": "6aef39fa54bfbdee45e931a0"
+    }
+  ]
+}
