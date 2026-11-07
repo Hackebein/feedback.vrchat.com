@@ -2,10 +2,11 @@
   "_id": "6aa2cad7a026cebd7838821f",
   "aiCategories": [
     "loc.pc-client",
+    "loc.loading-screen",
     "platforms.pc.steam",
     "client.settings"
   ],
-  "aiTaggedAt": "2026-10-28T09:09:29.269888Z",
+  "aiTaggedAt": "2026-11-07T03:53:31.022857Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60e8741d632085014a24b879",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "commentingDisabled": false,
   "comments": [
     {
@@ -452,6 +453,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6adcfe6d873fc1f4e97da6eb|full_name} It's still tracked, and right know we doesn't know if they are working on the issue or not.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aee9f939a0165f6d98f6f52",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6aee8fc8c71c263ae79eb1e1",
+        "alias": "Fern green Sparrow",
+        "aliasID": "6aee8fc854bfbdee45b4a49f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/bef635084353c2ae95d118690214b26f.png",
+        "created": "2026-11-07T02:41:12.484Z",
+        "name": "Krystal_cloud",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-07T03:48:35.185Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aa2cad7a026cebd7838821f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I’m experiencing a very similar issue on my ASUS Vivobook S 15 (S5507 series) with a Qualcomm Snapdragon X-series processor, integrated Adreno graphics, and Windows 11 ARM64.\n\nOn my system, the Steam version of VRChat frequently freezes on startup, showing a white screen and becoming “Not Responding.” I strongly suspect this is related to the Easy Anti-Cheat protected launch process on Windows on ARM.\n\nWhat makes this more confusing is that I have occasionally managed to get the PC version to launch successfully, but not reliably. On one occasion it ran for about 3 hours, but I have not been able to reproduce that consistently.\n\nI spent 2 days troubleshooting and tried many suggested fixes, but none resolved the problem. I was also able to confirm that the issue seems tied to the protected launch path rather than VRChat being completely unable to run on the hardware.\n\nAs a workaround, I started using the Android/mobile version of VRChat through MuMu Player Pro on my Snapdragon laptop. Since this uses ARM-native Android emulation, it runs surprisingly well for me.\n\nIn my experience, the emulated mobile version gives me:\n\n- consistent smooth 60 FPS\n\n- reliable first-try launching\n\n- working multiplayer access\n\n- PS4 controller support\n\nThere are downsides:\n\n- worse graphics than PC\n\n- no access to some PC-only worlds\n\n- some avatars are incompatible\n\n- many avatar toggles/emotes are missing on some avatars\n\nEven so, it has honestly been a much better experience than the unstable Steam version on this device.\n\nFor example, when I rarely got the Steam version working, I also experienced weird gameplay bugs, including a movement/jump glitch that could launch my avatar across the map. I do not get that issue on the emulated mobile version.\n\nI’m posting this in case it helps confirm that Windows-on-ARM / Snapdragon users are having similar startup problems, and that the issue may be connected to the EAC-protected launch process.",
       "viewerReactions": null,
       "voteID": null
     }
