@@ -2,10 +2,10 @@
   "_id": "6ae41844814a3b2b6c1d211d",
   "aiCategories": [
     "loc.pc-client",
-    "loc.in-world",
-    "platforms.pc.steam"
+    "platforms.pc.steam",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-10-30T04:15:17.614372Z",
+  "aiTaggedAt": "2026-11-08T07:18:20.794485Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ae416fcd35ab9d24b1160c4",
@@ -37,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Launch game and be in world\n\n2. have 0.5 seconds of playtime\n\n2. lag for about 1 second\n\n3. goto step 2\n\nThis is my current experience on VRChat right now.\n\nI am using NixOS Unstable, latest Proton Experimental, an Intel Arc B580, and WiVRn to stream.\n\nMy Overlay (wayvr) is running at full speed, even while VRChat gets reprojected by the OpenXR runtime during the 1 second lag period.",
+  "details": "1. Launch game and be in world\n\n2. have 0.5 seconds of playtime\n\n2. lag for about 1 second\n\n3. goto step 2\n\nThis is my current experience on VRChat right now.\n\nI am using NixOS Unstable, latest Proton Experimental, an Intel Arc B580, and WiVRn to stream.\n\nMy Overlay (wayvr) is running at full speed, even while VRChat gets reprojected by the OpenXR runtime during the 1 second lag period.\n\nEDIT: fixed by reinstalling vrchat.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -61,7 +61,7 @@
   "subCategoryID": null,
   "title": "Repeated consistent lagspikes with roughly 1.5 second duty cycle",
   "trendingScore": 2966.266401266904,
-  "updatedBy": null,
+  "updatedBy": "6ae416fcd35ab9d24b1160c4",
   "urlName": "repeated-consistent-lagspikes-with-roughly-15-second-duty-cycle",
   "viewerIsAuthor": false,
   "viewerVote": 0,
