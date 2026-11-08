@@ -1,10 +1,11 @@
 {
   "_id": "6af06924f59c020963aeed2b",
   "aiCategories": [
-    "loc.main-menu",
-    "moderation.safety-system"
+    "loc.in-world",
+    "moderation.safety-system",
+    "moderation.bans"
   ],
-  "aiTaggedAt": "2026-11-08T12:26:09.310197Z",
+  "aiTaggedAt": "2026-11-08T12:34:45.985716Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68a3fdf1d2f94455f010bb46",
@@ -36,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Since hexed cc info scrapers are becoming an actual problem and most of them are already Nuisance, please jsut atuomatically ban anyone and everyone that becomes a Nuisance (fully Nuisance, not \"Almost Nuisance\"). Or at the very least, make them unable to join any type or public or group instances. Thank you",
+  "details": "Since hexed cc info scrapers are becoming an actual problem and most of them are already Nuisance, please jsut atuomatically ban anyone and everyone that becomes a Nuisance (fully Nuisance, not \"Almost Nuisance\"). Or at the very least, make them unable to join any type or public or group instances. Thank you\n\nFurther explenation of those info scrapers (from what I know): They scrape all the information possible and rip every avatar in a single instance in a few milliseconds. They join an instance and usually leave quickly after, depending on the amount of people in an instance. This usually happens most in Publics and Group Publics.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -46,20 +47,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 3,
+  "maxScore": 5,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af06924f59c020963aeed2b/1940075999.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 3,
+  "score": 5,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-08T12:20:52.981Z",
   "subCategoryID": null,
   "title": "Autoban Nuisance",
-  "trendingScore": 2967.888464901062,
+  "trendingScore": 2968.29411998519,
   "updatedBy": "68a3fdf1d2f94455f010bb46",
   "urlName": "autoban-nuisance",
   "viewerIsAuthor": false,
@@ -72,6 +73,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0e2bfacc4d5317a6e35ea5efd6f6ba21.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6af06ac354bfbdee452d59ab"
+    },
+    {
+      "_id": "6064d021466d3f6922a4b271",
+      "alias": "Cloudy Rook",
+      "aliasID": "65c915d0ed6eefce4cadce2b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f9f28ca7a7442560588a26a5f7c9ea62.png",
+      "companies": [],
+      "name": "Humi 歩心",
+      "urlName": null,
+      "voteID": "6af06aaf54bfbdee452d4654"
+    },
     {
       "_id": "6af069c369a7f4f5f4467127",
       "alias": "Mandarin Chipmunk",
