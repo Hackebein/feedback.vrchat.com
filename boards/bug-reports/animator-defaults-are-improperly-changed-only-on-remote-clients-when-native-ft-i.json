@@ -5,7 +5,7 @@
     "avatars.tracking",
     "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-11-09T18:22:11.152216Z",
+  "aiTaggedAt": "2026-11-09T23:09:25.006157Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 12,
+  "commentCount": 13,
   "commentingDisabled": false,
   "comments": [
     {
@@ -570,6 +570,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Heyyyyy more types of issues with Native FT now. I have an avi where it is half way in the ground only for remote players, which immediately made me think of this bug. The moment I disabled Native FT it went back to normal. How is that even possible?\n\nI sometimes question if they actually tested the feature properly before shipping it. There's no way that an update can manage to critically break so many avis simply by enabling a new feature that looks completely unrelated to said issues. The feature currently feels like they've coded it, then simply tested the face tracking alone without ensuring that the rest of the avatar works for both local and remote players (the latter can be hard to troubleshoot for the typical player without the right equipment) and threw it immediately to the live branch.\n\nI will be honest, you might want to bring back the feature to cook for a little longer. This is clearly not production ready.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af252159afc01f005a9af09",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6074413eb2699d0dae05d4f7",
+        "alias": "Decent Blackbird",
+        "aliasID": "65e0160ea6e3ea79dd19dfe2",
+        "anonymized": false,
+        "avatarURL": null,
+        "created": "2021-04-12T12:46:54.477Z",
+        "name": "Mike Da Bird",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-09T23:07:01.731Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae9951720303f0aa72f9bbe",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "UPDATE: Just saw the Open Beta with a supposed patch for this bug (at least that's what it eludes to). Unfortunately the avi I mentioned in my last comment still sinks in the floor for remote clients only, and only when Native FT is enabled. Keep digging, something serious broke with this new feature.",
       "viewerReactions": null,
       "voteID": null
     }
