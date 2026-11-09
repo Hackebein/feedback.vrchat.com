@@ -1,0 +1,108 @@
+{
+  "_id": "6af1fd7d5058d2d5d3fe384e",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-11-09T17:09:52.135308Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5e4ca2145f9b3726b3b389e7",
+    "alias": "Wild strawberry Canidae",
+    "aliasID": "65c26ed9ed6eefce4c854f57",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/032f03ba3dc3b6cd930c4d97ab158ee5.png",
+    "created": "2020-02-19T02:48:52.222Z",
+    "name": "anatawa12",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5e4ca2145f9b3726b3b389e7",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-09T17:06:05.071Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "**What happens**\n\nTwo related problems occur under certain conditions:\n\n1) The \"Use All Tracking Keys\" checkbox works only at certain Inspector widths.\n\n2) The left half of each field value does not respond to clicks when the Inspector is wide. See the attached image 1.\n\n**Conditions**\n\nThis happens when the inspector of components placed below the VRCAvatarDescriptor assigns to `EditorGUIUtility.labelWidth`.\n\nThis typically happens when a component has some multi-value fields (Vector, Rect, Quaternion and others) or fields with a custom PropertyDrawer or DecoratorDrawer since Unity internal code for them assigns that, but custom inspector code can also do it.\n\nIn some cases, the issue does not occur even when these conditions are met, so there may be additional factors, such as Unity Editor internal timing or internal Inspector ordering.\n\nI have not been able to find reliable reproduction steps. It seems most likely to happen right after adding such a component to the Avatar Root, but I don't know whether this always reproduces it.\n\nKnown components that meet this condition and are likely to be added to the Avatar Root:\n\n- All AAO: Avatar Optimizer components (PropertyDrawer)\n\n- VQT Avatar Converter Settings (PropertyDrawer)\n\n- MA Mesh Settings (multi-value field)\n\nComponents that also meet this condition but are unlikely to be added to the Avatar Root:\n\n- Unity Collider components (multi-value field)\n\n**Workarounds**\n\na) Collapse inspector for components below VRCAvatarDescriptor. See the attached image 2.\n\nb) Move the VRCAvatarDescriptor component to the bottom of the component list.\n\nc) Click the horizontal position where checkboxes on other components are drawn, rather than the position where this checkbox is drawn. See the attached image 3.\n\nd) Component inspector developers can prevent this problem by setting `EditorGUIUtility.labelWidth = 0;` after drawing their component. Note that this does not work in `PropertyDrawer`s, because Unity's internal code sets `EditorGUIUtility.labelWidth` after your `PropertyDrawer` runs [4].\n\n**Cause**\n\nVRCSDK 3.10.6 added `AvatarDescriptorEditor3.CreateInspectorGUI`, which simply wraps `OnInspectorGUI` in an `IMGUIContainer`, and this causes the problem.\n\nWhen Unity creates its own `IMGUIContainer` for an inspector, it uses a closure that does many things before and after calling `OnInspectorGUI` [1].\n\nThe most important of these are `EditorGUIUtility.ResetGUIState();` [2] and `EditorGUIUtility.hierarchyMode = true;` [3].\n\nThe missing `ResetGUIState()` call causes the unclickable checkbox and the unresponsive left half of field values.\n\n**Additional Notes**\n\nVRCSDK 3.10.6 has problem that label area is narrower than that of other components.\n\nThe cause of this problem is the missing `hierarchyMode = true`.\n\n[1] https://github.com/Unity-Technologies/UnityCsReference/blob/2022.3.22f1/Editor/Mono/UIElements/Inspector/InspectorElement.cs#L623\n\n[2] https://github.com/Unity-Technologies/UnityCsReference/blob/2022.3.22f1/Editor/Mono/UIElements/Inspector/InspectorElement.cs#L659\n\n[3] https://github.com/Unity-Technologies/UnityCsReference/blob/2022.3.22f1/Editor/Mono/UIElements/Inspector/InspectorElement.cs#L667\n\n[4] https://github.com/Unity-Technologies/UnityCsReference/blob/2022.3.22f1/Editor/Mono/ScriptAttributeGUI/PropertyHandler.cs#L191",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af1fd7c5058d2d5d3fe384d",
+  "imageURLs": [
+    "https://canny-assets.io/images/054420c9265eede0eedc50508147e02b.png",
+    "https://canny-assets.io/images/1788809be8c6b891ac3fd31d06851bfb.png",
+    "https://canny-assets.io/images/1c20bb883b08657ba8b59fedee95f7da.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 2,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af1fd7d5058d2d5d3fe384e/1848141384.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 2,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-09T17:06:05.071Z",
+  "subCategoryID": null,
+  "title": "[3.10.6] \"Use All Tracking Keys\" toggle may be unclickable, and the left half of field values may not respond to input",
+  "trendingScore": 2967.771860182291,
+  "updatedBy": null,
+  "urlName": "3106-use-all-tracking-keys-toggle-may-be-unclickable-and-the-left-half-of-field",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5fca5df4d58780532024a52b",
+      "alias": "Toffee Tortoise",
+      "aliasID": "65c26da3ed6eefce4c4d0863",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/719b7fa82bfdf1aa43e0809608929735.png",
+      "companies": [],
+      "name": "DrBlackRat",
+      "urlName": null,
+      "voteID": "6af1fdab54bfbdee4597bd7f"
+    },
+    {
+      "_id": "5e4ca2145f9b3726b3b389e7",
+      "alias": "Wild strawberry Canidae",
+      "aliasID": "65c26ed9ed6eefce4c854f57",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/032f03ba3dc3b6cd930c4d97ab158ee5.png",
+      "companies": [],
+      "name": "anatawa12",
+      "urlName": null,
+      "voteID": "6af1fd7d54bfbdee4597bb0f"
+    }
+  ]
+}
