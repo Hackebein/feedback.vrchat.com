@@ -2,9 +2,10 @@
   "_id": "6ae6b2f8a133c21e0a77d079",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.vrcsdk",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-11-06T15:47:14.637117Z",
+  "aiTaggedAt": "2026-11-09T12:38:27.571351Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f04ccd86dd7706aba03bbdf",
@@ -34,7 +35,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6616d2d2a2e6663fc0beca36",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -81,6 +82,51 @@
       "value": "",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6af1bb20488498278122d48b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-09T12:22:56.788Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae6b2f8a133c21e0a77d079",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6af1bb20488498278122d48a",
+      "statusChangeNewStatus": "closed",
+      "value": "VRChat is not responsible for maintaining SDK packages made by the community. The officially recommended way to test an in-progress avatar is to build and test it in the client.\n\nIn an SDK project containing no community packages, your repro steps display the values changing in the contact receiver even while no animator is assigned. These are passed on to the animator controller once one has been assigned to the avatar's animator.\n\nIf you have a repro case for the proximity parameter and advanced parameters behaving differently in a project with no community packages in it, please feel free to report this to us.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -107,8 +153,8 @@
   "pinnedComment": null,
   "score": 4,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-11-06T15:44:02.075Z",
+  "status": "closed",
+  "statusChanged": "2026-11-09T12:22:56.733Z",
   "subCategoryID": null,
   "title": "Advanced Contact Parameters silently fail in emulators (E.G Gesture Manager) unless the avatar root Animator has a controller",
   "trendingScore": 2967.3656080669375,
