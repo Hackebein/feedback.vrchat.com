@@ -1,11 +1,11 @@
 {
   "_id": "6af2508cf85ac417a39bd727",
   "aiCategories": [
-    "loc.main-menu",
-    "groups.instances",
-    "open-beta"
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "groups.instances"
   ],
-  "aiTaggedAt": "2026-11-09T23:19:47.197176Z",
+  "aiTaggedAt": "2026-11-09T23:23:29.225841Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5dab35051e14847e6f1cd15e",
@@ -88,7 +88,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "1. Click new instance\n\n2. Open the menu\n\nCan't see a group button in the list.",
+  "details": "1. Click new instance\n\n2. Open the menu\n\nCan't see a group button in the list.\n\n---\n\nAs this is a change to how group instances are classed by VRChat.\n\nCan we have a small temporary hint that tells us group instances have moved else where? To help with peoples muscle memory and how they think of instances.\n\nWe think of group Instances as a type of Instance. Giving us a one time notification for older players, that can be easily removed 10 updates down the line, helps those with muscle memory and makes this a less jarring experience for older players.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -114,7 +114,7 @@
   "subCategoryID": null,
   "title": "[1948] Can't create group instances in the new create instance flow",
   "trendingScore": 2968.095117049437,
-  "updatedBy": null,
+  "updatedBy": "5dab35051e14847e6f1cd15e",
   "urlName": "1948-cant-create-group-instances-in-the-new-create-instance-flow",
   "viewerIsAuthor": false,
   "viewerVote": 0,
