@@ -5,7 +5,7 @@
     "platforms.pc.desktop",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-11-10T01:59:22.306040Z",
+  "aiTaggedAt": "2026-11-10T02:13:10.225064Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5e41a2339fd8a250987927d3",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -117,6 +117,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Can you provide an affected world ID and device details?\n\nI seem to be unable to reproduce with pens from the [ORBITAL GENESIS V4․0․0](https://feedback.vrchat.com/bug-reports/p/ijkluo-to-rotate-items-stops-working-when-using-the-keys-to-turn-the-player) world on Build 1937, using a full key rollover keyboard.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af27cce948cb0755c1d249a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-10T02:09:18.511Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6af279e65dff3379b2e50048",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af25debb1ace89e4dec6a07",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I retested in Build 1938 and I was still unable to reproduce this, after waiting out a brief delay caused by another bug.",
       "viewerReactions": null,
       "voteID": null
     }
