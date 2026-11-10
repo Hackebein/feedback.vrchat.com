@@ -1,0 +1,100 @@
+{
+  "_id": "6af297065dff3379b2e778fe",
+  "aiCategories": [
+    "loc.in-world",
+    "loc.loading-screen",
+    "platforms.cross-platform",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-11-10T04:10:20.315921Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6af293b4c2db4f1c0b110c38",
+    "alias": "Continuous Mastodon",
+    "aliasID": "6af293b554bfbdee459c9c79",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/60e037cfc299d02b67ed78659eb2cb4f.png",
+    "created": "2026-11-10T03:47:00.724Z",
+    "name": "zblackcat",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6af293b4c2db4f1c0b110c38",
+  "board": {
+    "_id": "58c62efae9868f3662e9d9a1",
+    "name": "Feature Requests",
+    "urlName": "feature-requests"
+  },
+  "boardID": "58c62efae9868f3662e9d9a1",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-10T04:01:10.551Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I’m running the Steam (Android) build of VRChat on an Apple Vision Pro using AVP Play (https://github.com/myMartek/avp-play), a compatibility layer that translates Android VR games to visionOS. I own the game on Steam and I’m signed in to my own VRChat account.\n\nIt boots, logs in, and downloads and loads my home world. It then stops at “Waiting for network limits”, times out after two minutes with “Could not enter room in time”, and logs “Received executive message: Anti-Cheat Error”.\n\nAVP Play has to translate the game’s native code to run on Apple hardware, so I assume your integrity check is seeing that. I’m not asking how to get around it. I wanted you to have the details in case supporting this kind of client, or a native visionOS build, is something you’d consider.\n\nAttached: a scrubbed output log (build 2026.4.1-1936, session of 9 Nov 2026, about 21:39–21:41 US Central) and a screenshot from the headset.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/03088f88026fe01f4db7738cf094f33c.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/03088f88026fe01f4db7738cf094f33c.txt",
+      "mimeType": "text/plain",
+      "name": "vrchat-avp-output_log-scrubbed",
+      "url": "https://canny-assets.io/files/03088f88026fe01f4db7738cf094f33c.txt"
+    }
+  ],
+  "ideaID": "6af297055dff3379b2e778fb",
+  "imageURLs": [
+    "https://canny-assets.io/images/976c1bdba2c5d2a4db20fe959bb4add7.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-10T04:01:10.551Z",
+  "subCategoryID": null,
+  "title": "VRChat running on Apple Vision Pro via AVP Play: blocked at instance join by anti-cheat",
+  "trendingScore": 2967.431358643027,
+  "updatedBy": null,
+  "urlName": "vrchat-running-on-apple-vision-pro-via-avp-play-blocked-at-instance-join-by-anti",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6af293b4c2db4f1c0b110c38",
+      "alias": "Continuous Mastodon",
+      "aliasID": "6af293b554bfbdee459c9c79",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/60e037cfc299d02b67ed78659eb2cb4f.png",
+      "companies": [],
+      "name": "zblackcat",
+      "urlName": null,
+      "voteID": "6af2970654bfbdee459ca7ce"
+    }
+  ]
+}
