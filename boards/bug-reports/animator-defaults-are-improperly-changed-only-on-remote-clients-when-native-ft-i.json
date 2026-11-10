@@ -2,9 +2,11 @@
   "_id": "6ae9951720303f0aa72f9bbe",
   "aiCategories": [
     "loc.in-world",
-    "avatars.tracking"
+    "avatars.tracking",
+    "avatars.expressions",
+    "avatars.dynamics"
   ],
-  "aiTaggedAt": "2026-11-10T05:52:42.537527Z",
+  "aiTaggedAt": "2026-11-10T12:36:11.912694Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -28,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 15,
+  "commentCount": 16,
   "commentingDisabled": false,
   "comments": [
     {
@@ -725,6 +727,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6161a61a2c0de966b4e43486|full_name} The affected avatar's TOS forbids distributing as a public, and also contains a yet to be released DLC asset for it (they cannot be separated). So unfortunately I cannot give the ID specific to this one. I might have some theories though since it's an expanded version of a base where it has some extra non-humanoid bones for an updated mesh and a different Blender FBX export scale (100x instead of 1x), all reconfigured in a new unique Prefab. Everything else is the exact same.\n\nIf I just take the FBX, scale it correctly (Scale Factor 1 + Convert Units OFF in FBX settings, scale 1 prefab root object and the armature root inside it), put the Descriptor with correct View Position and turn Native FT on, it goes in the floor in-game only for remote players. If I turn it off, it's fine again. In comparison, the original non-edited base doesn't have this specific issue.\n\nIt's midnight here, so won't be able to try and make a demo with a replica of the issue just yet. If I do I will ping again (maybe what I provided here could be enough to troubleshoot on your end)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af30d95c2db4f1c0b1f1797",
+      "aiGenerated": false,
+      "author": {
+        "_id": "65f4b1a3d0a7a0c657a7d3a8",
+        "alias": "Deliberate Salamander",
+        "aliasID": "65f4b1a4a63714bcb30cf144",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/4fed24a231f639b2d91d2974added056.png",
+        "created": "2024-03-15T20:37:55.984Z",
+        "name": "Dexvoid",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-10T12:27:01.363Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6074413eb2699d0dae05d4f7",
+          "alias": "Decent Blackbird",
+          "aliasID": "65e0160ea6e3ea79dd19dfe2",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2021-04-12T12:46:54.477Z",
+          "name": "Mike Da Bird",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6af252159afc01f005a9af09",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae9951720303f0aa72f9bbe",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6074413eb2699d0dae05d4f7|full_name} Thank you for the added detail, however the ID of an avatar that reproduces the problem would still be really useful to have to help confirm we've solved the issue for you. The avatar doesn't need to be marked as public - we can look at private avatars internally for investigating problems.\n\nIf you're not comfortable sharing the avatar ID here, feel free to send it to us via a support ticket referencing this Canny report instead. Thanks very much.",
       "viewerReactions": null,
       "voteID": null
     }

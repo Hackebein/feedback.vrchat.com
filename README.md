@@ -26,13 +26,13 @@ Scrape horizon: **2026-10-12 17:38 UTC (28d ago)**.
 | `noise-beta` | 6 / 6 (100.0%) |
 | `open-beta` | 3,384 / 3,384 (100.0%) |
 | `persistence` | 74 / 74 (100.0%) |
-| `sdk-bug-reports` | 1,458 / 1,458 (100.0%) |
+| `sdk-bug-reports` | 1,458 / 1,459 (99.9%) |
 | `third-person-view` | 85 / 85 (100.0%) |
 | `udon` | 1,900 / 1,900 (100.0%) |
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 136 / 136 (100.0%) |
 | `website` | 925 / 925 (100.0%) |
-| **Total** | **39,108** / **38,929** (100.0%) |
+| **Total** | **39,108** / **38,930** (99.997%) |
 
 ## OpenSearch
 
