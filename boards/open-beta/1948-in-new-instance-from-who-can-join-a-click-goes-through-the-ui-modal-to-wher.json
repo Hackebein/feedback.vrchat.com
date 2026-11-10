@@ -1,0 +1,103 @@
+{
+  "_id": "6af2a4dbab99ae4bfbc9c569",
+  "aiCategories": [
+    "loc.pc-client",
+    "open-beta",
+    "client.settings"
+  ],
+  "aiTaggedAt": "2026-11-10T05:07:52.208870Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-10T05:00:11.384Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "1. Open a world page in the client.\n\n2. Click \"New Instance\".\n\n3. Edit \"Who can join?\", while \"Who's hosting?\" is set to yourself.\n\n4. Click the empty area below the \"Invite\" instance type option, where the \"Drop Portal\" and \"Create & Join\" buttons would be.\n\nSee the attached video.\n\nExpected behavior: The buttons should be there, or the click shouldn't go through to something underneath the UI.\n\nActual behavior: Clicking on an empty space in the UI does unprompted actions such as dropping a portal or joining a world, when it's not anticipated.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/dd44b53d3a2a729f474d7318fec29546.mp4"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/dd44b53d3a2a729f474d7318fec29546.mp4",
+      "mimeType": "video/mp4",
+      "name": "2026-11-10 04-55-17",
+      "url": "https://canny-assets.io/files/dd44b53d3a2a729f474d7318fec29546.mp4"
+    }
+  ],
+  "ideaID": "6af2a4daab99ae4bfbc9c568",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-10T05:00:11.384Z",
+  "subCategoryID": null,
+  "title": "[1948] In \"New Instance\", from \"Who can join?\" a click goes through the UI modal to where \"Drop Portal\" and \"Create & Join\" buttons would be",
+  "trendingScore": 2967.4372131238474,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "1948-in-new-instance-from-who-can-join-a-click-goes-through-the-ui-modal-to-wher",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6af2a4db54bfbdee459ce852"
+    }
+  ]
+}
