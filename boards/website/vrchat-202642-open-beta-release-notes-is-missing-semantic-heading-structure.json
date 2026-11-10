@@ -1,0 +1,93 @@
+{
+  "_id": "6af290c35dff3379b2e7243e",
+  "aiCategories": [
+    "loc.website",
+    "web.docs"
+  ],
+  "aiTaggedAt": "2026-11-10T03:37:27.439392Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d142650329e7856f7f7b664",
+    "name": "Website",
+    "urlName": "website"
+  },
+  "boardID": "5d142650329e7856f7f7b664",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6307c36bc22b1844b7e1425c",
+    "created": "2022-08-25T18:46:03.389Z",
+    "name": "General Feedback",
+    "parentID": null,
+    "urlName": "general-feedback"
+  },
+  "categoryID": "6307c36bc22b1844b7e1425c",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-10T03:34:27.815Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "A minor accessibility annoyance.\n\nAffected URL: https://docs.vrchat.com/docs/vrchat-202642-open-beta\n\n\"Live Now Overhaul\", \"Public Instance Ownership\", \"Updated Here Menu\", \"Color Palettes Update\", \"World Upvotes\" and \"Analog Arm\" are `<p>` and `<strong>`, when those should actually be `<h3>`.\n\nSee:\n\n- https://www.w3.org/WAI/WCAG21/Techniques/general/G115.html\n\n- https://www.w3.org/WAI/WCAG21/Techniques/html/H42",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af290c35dff3379b2e72433",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-10T03:34:27.815Z",
+  "subCategoryID": null,
+  "title": "VRChat 2026.4.2 (OPEN BETA) release notes is missing semantic heading structure",
+  "trendingScore": 2967.4287086777495,
+  "updatedBy": null,
+  "urlName": "vrchat-202642-open-beta-release-notes-is-missing-semantic-heading-structure",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6af290c454bfbdee459c9138"
+    }
+  ]
+}
