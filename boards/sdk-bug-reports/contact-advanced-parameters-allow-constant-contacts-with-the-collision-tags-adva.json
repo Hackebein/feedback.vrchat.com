@@ -1,0 +1,95 @@
+{
+  "_id": "6af30f115dff3379b2f61a2b",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-11-10T12:40:15.999806Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "62df2c865968ab44bca883ce",
+    "alias": "Whisper pink Fish",
+    "aliasID": "65c2c0bced6eefce4c74c766",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/88d75a666c6c6d829247848b84ea7c30.png",
+    "created": "2022-07-25T23:51:34.230Z",
+    "name": "RuneFox237",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "62df2c865968ab44bca883ce",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-10T12:33:21.098Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "# Issue:\n\nThe current Advanced Parameters are set based on the sender with the closest proximity to the receiver. This makes sense for most of the advanced parameters but I would like to argue that Constant Contacts could benefit from being able to return a combination of matching tags from all currently contacting senders, not just the one with the closest proximity. \n\nSpecifically, there are cases where you may have multiple senders in contact range you want to get the tags from but the limitation of only grabbing the tags from the closest sender forces you to continue to use multiple stacked receivers the old fashioned way.\n\n# Usecase:\n\nIn the attached screenshot is an example of where this could be useful. Multiple Receivers are needed in order to detect multiple contacts within range. i.e. all the fingers and hand contacts on a hand. A single Advanced Parameter Reciever would only detect and return the tags one of the 6 contacts on a hand.\n\nAnother usecase I've seen in the past was a Contact based PVP system where each damage zone needed an additional receiver for each damage type. Multiple damage sources could be affecting a damage zone at a time so the new Advanced Parameters would also fail here as again they would only prioritize the closest sender.\n\nHypothetical Usecase. Say a user has a sword that can switch elements. They have a SharpWeapon contact that is always active cause it is a sword, but also have fire, water, etc. contacts that they toggle on/off as they switch elements. A receiver with the Collision Tags Advanced Parameter currently will likely only return either the SharpWeapon or the Element contact but not both. (In this case it be solved by including the SharpWeapon tag on each of the element tags but the underlying problem still remains)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af30f105dff3379b2f61a2a",
+  "imageURLs": [
+    "https://canny-assets.io/images/66e3b78b33a497fc15220a7630ad0375.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-10T12:33:21.098Z",
+  "subCategoryID": null,
+  "title": "[Contact Advanced Parameters] Allow Constant Contacts with the Collision Tags Advanced Parameters to return a combination of the tags of all contacting senders.",
+  "trendingScore": 2967.4821698144888,
+  "updatedBy": null,
+  "urlName": "contact-advanced-parameters-allow-constant-contacts-with-the-collision-tags-adva",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "62df2c865968ab44bca883ce",
+      "alias": "Whisper pink Fish",
+      "aliasID": "65c2c0bced6eefce4c74c766",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/88d75a666c6c6d829247848b84ea7c30.png",
+      "companies": [],
+      "name": "RuneFox237",
+      "urlName": null,
+      "voteID": "6af30f1154bfbdee45a06047"
+    }
+  ]
+}
