@@ -13,18 +13,18 @@ Scrape horizon: **2026-10-11 17:03 UTC (29d ago)**.
 | `avatar-30` | 901 / 901 (100.0%) |
 | `avatar-accessories` | 12 / 12 (100.0%) |
 | `avatar-marketplace` | 81 / 81 (100.0%) |
-| `bug-reports` | 13,162 / 13,161 (100.0%) |
+| `bug-reports` | 13,162 / 13,162 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,467 / 14,468 (99.99%) |
+| `feature-requests` | 14,467 / 14,469 (99.99%) |
 | `impostors` | 91 / 91 (100.0%) |
 | `ios-mobile-beta` | 269 / 269 (100.0%) |
 | `localization` | 668 / 668 (100.0%) |
 | `merch` | 37 / 37 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,358 / 3,358 (100.0%) |
+| `open-beta` | 3,358 / 3,359 (99.97%) |
 | `persistence` | 74 / 74 (100.0%) |
 | `sdk-bug-reports` | 1,458 / 1,458 (100.0%) |
 | `third-person-view` | 85 / 85 (100.0%) |
@@ -32,7 +32,7 @@ Scrape horizon: **2026-10-11 17:03 UTC (29d ago)**.
 | `vrchat-ik-20` | 286 / 286 (100.0%) |
 | `vrchat-plus-feature-ideas` | 136 / 136 (100.0%) |
 | `website` | 919 / 919 (100.0%) |
-| **Total** | **39,047** / **38,868** (100.0%) |
+| **Total** | **39,047** / **38,871** (99.99%) |
 
 ## OpenSearch
 
