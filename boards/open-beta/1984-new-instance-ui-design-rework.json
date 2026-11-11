@@ -1,0 +1,100 @@
+{
+  "_id": "6af4594bbd8263f0317d6487",
+  "aiCategories": [
+    "loc.pc-client",
+    "open-beta",
+    "platforms.pc.steam",
+    "worlds.travel",
+    "groups.instances"
+  ],
+  "aiTaggedAt": "2026-11-11T12:04:31.344341Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6222df9d759f2e2d1469e0ce",
+    "alias": "Fuchsia Eagle",
+    "aliasID": "65ce5c9e0129d7ae44c761c3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/73141142f4f6dd37cde6de6d10fd932e.png",
+    "created": "2022-03-05T03:57:17.959Z",
+    "name": "Boxofbiscuits97",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6222df9d759f2e2d1469e0ce",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317ed8c023c7b5ec9566d28",
+    "created": "2022-09-07T01:02:04.302Z",
+    "name": "Feature Requests",
+    "parentID": null,
+    "urlName": "feature-requests"
+  },
+  "categoryID": "6317ed8c023c7b5ec9566d28",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-11T12:02:19.795Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I want to start off by saying that I really like the attempt at what the new UI changes are going for overall. Giving users more power to add information to their instances is a good thing. However, in its current state in the beta, things didn't land too well with the \"Create New Instance\" UI.\n\nLet's look at the old UI first to discern what's going on. In the old UI flow, the user is prompted to choose their instance type and region, they were then taken to a second menu where they could choose the instance name and drop a portal or join directly. It's important we keep this common functionality easy to access and make sure we are improving it when we add new features or move something around.\n\nThe most important thing in this rework mockup is user flow. We want the users to be able to quickly get things done and a world made. The main \"overview\" should be enough for the user to take in all of the important information about the instance at a glance and then they can go deeper if they choose something that needs to be changed.\n\nMore detail-oriented users will go and add extra information for their meetups and events but the average user just wants to create a world and go. Think about the 99% of the time that you are making a new instance, what are you changing? \n\nThe first thing we can do is eliminate the scroll bar. While scrolling is a good way to show more information, it's a pain for fast menuing, especially whilst in VR so we want to reduce the amount of scrolling a user has to do. With this, the UI will also become a lot more digestible to view all information about your instance at a glance. Particularly the “save these settings” and “drop as a friends only portal” checkboxes are now a lot more visible to a user so they know the options are actually there. With the current beta UI, those settings really fall through the cracks as you have to scroll all the way to the bottom to find them. Also putting them next to one another instead of stacking them reduces the amount of wasted space. Flipping the join and drop portal buttons around is also a must as it’s currently backwards in the open beta which is a regression. (It also maps nicely putting the place portal for friends only right above the drop portal button)\n\nPutting things behind a minimal amount of submenus should be more than enough for a comprehensive design. Beyond this we want to communicate the actively selected options in the user directly from the main \"overview\" menu instead of just descriptions. This can effectively communicate what is within these menus whilst also allowing users to skip over them if things are already configured to their liking. The best way to do this in this new UI flow is probably with the chips being used in many places already.\n\nIt's important that we keep Instance Type and Region accessible in the updated UI as these are likely the two most common things changed by the average user. You want to be able to easily change where the instance is hosted each time you create a new one so people can have the best possible ping. Having it pushed into the \"Advanced Options\" that most of the time will have nothing else in it doesn't particularly make sense so we're going to move it out of there and have it stand on its own. All of the other options are exclusive to the group instance flow so we're going to keep them with that.\n\nOn the topic of group instances, the flow of making them now needing the \"who's hosting\" to be changed has more friction than the original UI. This is directly linked with group instances and has no real reason being a separate option. Moving it back into the to be with group instance permissions would make more sense as it's what users would expect and are already used to. We're going to be pretty much entirely reverting back to the old functionality on this front but making some important changes to reduce the amount of menus people have to switch back and forth between.\n\nGroup Instance Flow now looks similar with a cleaner UI. You select the instance type as group. You go into a submenu where you choose the represented group, the group type (group, group+, group public) and then the related group instance only permissions. Once users are done selecting these options, they will have a “confirm” button to bring them back to the “overview” page. This “confirm” button change is important as it skips having to go back to the instance types menu and just brings the users straight to the “overview”. This allows them to see their group details and settings chosen as little chips in the “instance type” section and also look at the world details and region set to make sure that everything looks correct before creating the instance.\n\nNow onto the new additional world details. This is all going to be compressed into a single widget in the overview panel that shows the user, the instance name, a truncated description and chips for any other information. This allows the user making the world to see all of the most important information at a glance without having to go into a menu to edit any of it. It compresses it all so that it fits on one page that does not need to be scrolled through. While this information is helpful to let your friends know what the instance is about, using your saved settings is going to work for the majority of the time so you only actually need to edit the information for when you’re hosting an event or gathering.\n\nIn terms of the titles for everything. I understand the attempt that is being made with the who, what, when, where to be more friendly and appealing to users. However this just makes the UI feel more cluttered and repetitive. If I’m going through a details or settings menu I just want a direct description of what each thing is. This is why all of the titles are being reverted/changed in this mockup. It makes it a whole lot more readable at a glance.\n\nSee the images below on how all of these changes come together. Users can at a glance see all of the important information about their instance and easily click into a section to edit it. The example instance here is a Group Public with queuing, 18+ Verified accounts only, and medium performance avatars or better. We can see the name of the instance, a short description of the event and the tags for what the vibes are. The region is easily selected and now we can create the instance or drop a portal.\n\nApologies for such a long writeup about this whole UI situation but it becomes a lot more complex than it seems at a glance. I hope my in depth explanation and reasoning gives more insight to what needs to be changed and why. While I think the mockup below is the best visual example I can give, I hope whoever is working on the UI can take a look at it in addition to all of the explanation and use the understanding of why each change “works” to make something that actually gets shipped.\n\nP.S. VRChat plz hire me for UI/UX….. jkjk…. unless?",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af4594abd8263f0317d6462",
+  "imageURLs": [
+    "https://canny-assets.io/images/f31197116aec7646835d231bae804354.png",
+    "https://canny-assets.io/images/bf21f64cc583a0d010c5dd7f6af78992.png",
+    "https://canny-assets.io/images/15e8a11335976c7c3d08237cbc237ff2.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af4594bbd8263f0317d6487/1308996610.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-11T12:02:19.795Z",
+  "subCategoryID": null,
+  "title": "[1984] New Instance UI Design Rework",
+  "trendingScore": 2967.6219492076766,
+  "updatedBy": null,
+  "urlName": "1984-new-instance-ui-design-rework",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6222df9d759f2e2d1469e0ce",
+      "alias": "Fuchsia Eagle",
+      "aliasID": "65ce5c9e0129d7ae44c761c3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/73141142f4f6dd37cde6de6d10fd932e.png",
+      "companies": [],
+      "name": "Boxofbiscuits97",
+      "urlName": null,
+      "voteID": "6af4594b54bfbdee45eef176"
+    }
+  ]
+}
