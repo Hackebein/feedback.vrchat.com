@@ -6,7 +6,7 @@
     "platforms.pc.steam",
     "account.auth"
   ],
-  "aiTaggedAt": "2026-11-11T08:46:11.161232Z",
+  "aiTaggedAt": "2026-11-11T08:53:38.070359Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6af4249dbe59eeb74604e470",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +74,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Biggest way to tell the bug just happened and it logged you out is try view someones Profile, it its a huge blank page the bug happened and you are logged out.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af42b3c95c12a56bc99e76e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-11T08:45:48.579Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af42771be59eeb746052d5f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "There is no incompatibility with VPNs. Tying session IDs to an IP-address is a security feature to prevent session hijacking, and I'm opposed to removing that security feature.",
       "viewerReactions": null,
       "voteID": null
     }
