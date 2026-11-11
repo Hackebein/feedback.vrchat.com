@@ -481,7 +481,9 @@
       "postDeleted": false,
       "postID": "6ae3a6ee3cad73c1fe03cce6",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -507,20 +509,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 166,
+  "maxScore": 167,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae3a6ee3cad73c1fe03cce6/122013805.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 166,
+  "score": 167,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-29T20:05:02.338Z",
   "subCategoryID": null,
   "title": "Allow users to \"Block\" worlds",
-  "trendingScore": 2970.6976892135467,
+  "trendingScore": 2970.7192545277157,
   "updatedBy": null,
   "urlName": "allow-users-to-block-worlds",
   "viewerIsAuthor": false,
@@ -533,6 +535,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5f25e05544df0a7147c57b5f",
+      "alias": "Dahlia Wildfowl",
+      "aliasID": "65c270b7ed6eefce4cd260b9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/0681d26422a5ec805bedada65666cdfd.png",
+      "companies": [],
+      "name": "Nullmatic",
+      "urlName": null,
+      "voteID": "6af3d2ae54bfbdee45a90307"
+    },
     {
       "_id": "6af39a7d61bfe6e5b338d232",
       "alias": "Graceful Yak",
@@ -1071,17 +1084,6 @@
       "name": "ErikaSupreme",
       "urlName": null,
       "voteID": "6ae81197da302d926d1e3735"
-    },
-    {
-      "_id": "6ae805eb47ac9ab919b9f687",
-      "alias": "Flame Python",
-      "aliasID": "6ae805ecda302d926d1e1bbc",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/48221a552d4a9237e53ef6b81ab39e6c.png",
-      "companies": [],
-      "name": "KF-16-65",
-      "urlName": null,
-      "voteID": "6ae805efda302d926d1e1bc3"
     }
   ]
 }
