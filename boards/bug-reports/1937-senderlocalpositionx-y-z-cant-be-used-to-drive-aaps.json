@@ -2,10 +2,9 @@
   "_id": "6ae64acafc497249e45b80fa",
   "aiCategories": [
     "loc.unity-sdk",
-    "avatars.expressions",
-    "client.settings"
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-11-10T20:00:50.671221Z",
+  "aiTaggedAt": "2026-11-11T22:48:50.545211Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649b83fd8ca61609383735ec",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 7,
+  "commentCount": 8,
   "commentingDisabled": false,
   "comments": [
     {
@@ -358,7 +357,9 @@
       "postDeleted": false,
       "postID": "6ae64acafc497249e45b80fa",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -366,6 +367,50 @@
       "statusChangeID": "6af3761df764e140a74124c0",
       "statusChangeNewStatus": "available in future release",
       "value": "No further information has been given, so we're aiming to resolve this by fixing the readouts shown in the avatar debug UI. The sample avatar giving in the description appears to show its AAP values correctly with this change.\n\nAs noted below, please respond here if there are further details that were missed and we'll reopen this report.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af4eec1aadf25183a192f62",
+      "aiGenerated": false,
+      "author": {
+        "_id": "649b83fd8ca61609383735ec",
+        "alias": "Rosewood Orca",
+        "aliasID": "65c28396ed6eefce4cd16ac0",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/e8badc5390323bb5330ace051a5d290f.png",
+        "created": "2023-06-28T00:51:09.973Z",
+        "name": "Purpzie",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-11T22:40:01.501Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae64acafc497249e45b80fa",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I'm honestly not sure what was happening before. I gave it another shot today and now it's working. Either there was an error on my end, or perhaps the FT animator bug (which is now fixed) was what was causing this issue. Apologies for the late response.\n\nI really appreciate that we'll be able to see AAPs in the inspector!! Thank you!",
       "viewerReactions": null,
       "voteID": null
     }
