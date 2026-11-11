@@ -2,13 +2,14 @@
   "_id": "6af49e41b9336cee5fbfe854",
   "aiCategories": [
     "loc.pc-client",
-    "open-beta",
     "platforms.pc.steam",
+    "open-beta",
+    "client.chatbox",
     "worlds.travel",
     "social.instances",
-    "client.chatbox"
+    "social.nameplates"
   ],
-  "aiTaggedAt": "2026-11-11T18:02:13.910076Z",
+  "aiTaggedAt": "2026-11-11T18:43:15.814657Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66c7f83ba2fca0a622090327",
@@ -46,7 +47,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "①The clickable: The picture 1, clicking the upper part should bring you to the instance details, clicking the instance of should show author and bring you to the author(since it's instance of? It should show the author icon and name btw). Clicking friend icons should bring you to the friend(guess it should not bring you to the users), and finally, scrolling for this bit seems odd?\n\n②The count: As the picture 1, there are two friends in the instance, and 3+53 users in the instance, which I assume the '+53' is included the 2 friends in the instance, which is not wrong, but clearly confusing\n\n③The languages: The picture 2, I know it's Russia language, but I thinks it should display like 「Pyccknn(Russian)、中文(Chinese)、日本語(Japanese)」, so the joiner will have some idea of the instance. There should be also be something 'All language welcome', in case of someone don't care language that much wants to express it to the possible joiner(to encourage the join)\n\n④The world name: The picture 1, not sure if it's the same issue to the https://feedback.vrchat.com/bug-reports/p/event-calendar-display-issue-when-the-event-name-is-in-japanese , it should display the full name anyhow, I mean, it should display the \"Instance name\" for better understand to the world, since joiner will have no idea or consent to the world if all they did just click join. while it should also display the PC/Quest icon and the rest infos, since when people consider to drop portals to bring friends, there might have quest friends exist, yes you can click into the world details, but that will against the quick button design in the first place isn't it?\n\n⑤The privacy: Finally, I think the non-friend should have option to opt-out on the display while not forced to go orange or red status, plus there are avatar scanning b-o-t hunting the avatars actively recently, this is bad time to have the data open since I'm sure it will make obtaining the specific user data way easier",
+  "details": "①The clickable: The picture 1, clicking the upper part should bring you to the instance details, clicking the instance of should show author and bring you to the author(since it's instance of? It should show the author icon and name btw). Clicking friend icons should bring you to the friend(guess it should not bring you to the users), and finally, scrolling for this bit seems odd?\n\n②The count: As the picture 1, there are two friends in the instance, and 3+53 users in the instance, which I assume the '+53' is included the 2 friends in the instance, which is not wrong, but clearly confusing\n\n③The languages: The picture 2, I know it's Russia language, but I thinks it should display like 「Pyccknn(Russian)、中文(Chinese)、日本語(Japanese)」, so the joiner will have some idea of the instance. There should be also be something 'All language welcome', in case of someone don't care language that much wants to express it to the possible joiner(to encourage the join)\n\n④The world name: The picture 1, not sure if it's the same issue to the https://feedback.vrchat.com/bug-reports/p/event-calendar-display-issue-when-the-event-name-is-in-japanese , it should display the full name anyhow, I mean, it should display the \"Instance name\" for better understand to the world, since joiner will have no idea or consent to the world if all they did just click join. while it should also display the PC/Quest icon and the rest info on the thumbnail, since when people consider to drop portals to bring friends, there might have quest friends exist, yes you can click into the world details, but that will against the quick button design in the first place isn't it?\n\n⑤The privacy: Finally, I think the non-friend should have option to opt-out on the display while not forced to go orange or red status, plus there are avatar scanning b-o-t hunting the avatars actively recently, this is bad time to have the data open since I'm sure it will make obtaining the specific user data way easier",
   "error": null,
   "eta": null,
   "etaPublic": true,
