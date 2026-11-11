@@ -280,7 +280,9 @@
       "postDeleted": false,
       "postID": "6ae954d72d3bb3d5ea6603a9",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -394,20 +396,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 104,
+  "maxScore": 105,
   "mergeCount": 73,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6ae954d72d3bb3d5ea6603a9/1793356067.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 104,
+  "score": 105,
   "sourceFeatureExtractionItem": null,
   "status": "tracked",
   "statusChanged": "2026-11-03T15:28:35.164Z",
   "subCategoryID": null,
   "title": "Audio Cut, all sound",
-  "trendingScore": 2970.816310964078,
+  "trendingScore": 2970.837905307652,
   "updatedBy": null,
   "urlName": "audio-cut-all-sound",
   "viewerIsAuthor": false,
@@ -420,6 +422,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "697999a96cefe3c238c437e0",
+      "alias": "Respective Marlin",
+      "aliasID": "697999aa6cefe3c238c45070",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/608c2c0aa060773f6814a70d71743891.png",
+      "companies": [],
+      "name": "_NikoTheMessiah",
+      "urlName": null,
+      "voteID": "6af4ee2254bfbdee45f56007"
+    },
     {
       "_id": "6af4e6dc4fdd5d45e14c984b",
       "alias": "Gunmetal Mongoose",
@@ -958,17 +971,6 @@
       "name": "SolarCyberClaw",
       "urlName": null,
       "voteID": "6aedf4d754bfbdee458c02a2"
-    },
-    {
-      "_id": "69827fe84e32484d29d838f8",
-      "alias": "Late Grasshopper",
-      "aliasID": "69827fe94e32484d29d85afd",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/6b0c6728a9fc8fd161e5a12678d23c8e.png",
-      "companies": [],
-      "name": "sοught",
-      "urlName": null,
-      "voteID": "6aebcbe4da302d926d2d68bd"
     }
   ]
 }
