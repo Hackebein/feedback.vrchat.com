@@ -2,11 +2,10 @@
   "_id": "6af46499d129918eaf54b336",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
-    "client.controls",
-    "open-beta"
+    "open-beta",
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-11-11T21:03:40.938662Z",
+  "aiTaggedAt": "2026-11-11T22:32:01.747951Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a883aa3523ad16133625348",
@@ -36,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -73,13 +72,59 @@
       "postDeleted": false,
       "postID": "6af46499d129918eaf54b336",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "You can hold ALT to rotate objects like before. Or use U,I,O,J,K,L keys.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af4eb6df76c0cabae5411fe",
+      "aiGenerated": false,
+      "author": {
+        "_id": "684160de4d1b7d9d940aa72e",
+        "alias": "Quince Crow",
+        "aliasID": "684160dfb25ebd7219eba9df",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6ecc510fd064d7c8ee24b1c67c8a25ad.png",
+        "created": "2025-06-05T09:18:22.296Z",
+        "name": "Lis_e",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-11T22:25:49.031Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af46499d129918eaf54b336",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I agree that this is inconvenient. While it's an experimental feature in build 1948 and rollouts are limited, having a toggle setting to turn Direct Arm Control on and off would be very helpful.\n\n不便である、という点に関しては同意します。1948では試験的な導入のため、使える場合と使えない場合がありますが、最終的にはDirect Arm Controlのオンオフを切り替えられるようになれば便利だと思いました。",
       "viewerReactions": null,
       "voteID": null
     }
