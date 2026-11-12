@@ -1,11 +1,11 @@
 {
   "_id": "6af3579173b398580ca2bf47",
   "aiCategories": [
-    "loc.action-menu",
+    "loc.quick-menu",
     "open-beta",
-    "worlds.travel"
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-11-10T22:10:32.851943Z",
+  "aiTaggedAt": "2026-11-12T02:10:35.306304Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62dfb2587ad24c46bcb39715",
@@ -35,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -125,6 +125,50 @@
       "value": "Oh. I mislicked and didn't connect these two. Thank you for pointing out.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6af51f995dea03d10c9168a9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62def1df6d6050449f81a538",
+        "alias": "Azure Jaguar",
+        "aliasID": "65e0d15aa6e3ea79dd7a7b2f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/3016e54afb2da76c789430719f83697d.png",
+        "created": "2022-07-25T19:41:19.958Z",
+        "name": "Kurt _",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-12T02:08:25.140Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af3579173b398580ca2bf47",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Definitely should be addressed",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -145,20 +189,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 10,
+  "maxScore": 12,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af3579173b398580ca2bf47/772655386.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 10,
+  "score": 12,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-10T17:42:41.661Z",
   "subCategoryID": null,
   "title": "[1948] Please swap the positions of the Join and Place Portal buttons",
-  "trendingScore": 2969.242822344885,
+  "trendingScore": 2969.437517132117,
   "updatedBy": null,
   "urlName": "1948-please-swap-the-positions-of-the-join-and-place-portal-buttons",
   "viewerIsAuthor": false,
@@ -171,6 +215,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62def1df6d6050449f81a538",
+      "alias": "Azure Jaguar",
+      "aliasID": "65e0d15aa6e3ea79dd7a7b2f",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3016e54afb2da76c789430719f83697d.png",
+      "companies": [],
+      "name": "Kurt _",
+      "urlName": null,
+      "voteID": "6af51ec154bfbdee45f66c79"
+    },
+    {
+      "_id": "69f42b864a48bed189ec5caf",
+      "alias": "Alabaster Galliform",
+      "aliasID": "69f42b864a48bed189ec5cb7",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/e76f03ad34fc1b4ad058a347bd5a7e43.png",
+      "companies": [],
+      "name": "AtTheCafe",
+      "urlName": null,
+      "voteID": "6af51e4354bfbdee45f66949"
+    },
     {
       "_id": "6a883aa3523ad16133625348",
       "alias": "Coral reef Duck",
