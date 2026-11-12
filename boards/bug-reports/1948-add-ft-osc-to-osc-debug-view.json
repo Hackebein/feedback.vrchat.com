@@ -2,9 +2,10 @@
   "_id": "6af3b09c573dd7b8182514ed",
   "aiCategories": [
     "loc.pc-client",
-    "client.osc"
+    "client.osc",
+    "client.settings"
   ],
-  "aiTaggedAt": "2026-11-11T17:30:21.281569Z",
+  "aiTaggedAt": "2026-11-12T08:44:55.776051Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60e65f577ae9d0492b0f2a75",
@@ -28,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -65,13 +66,71 @@
       "postDeleted": false,
       "postID": "6af3b09c573dd7b8182514ed",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "The OSC Debug View also quite badly needs to be moved to the new debug menu in general...",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af579d5b6f0645de2c0b2b0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "60e65f577ae9d0492b0f2a75",
+        "alias": "Just Wildcat",
+        "aliasID": "65c26de3ed6eefce4c583d87",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0ad322a67ea8874dadfbd596f0dfc4f1.png",
+        "created": "2021-07-08T02:13:43.618Z",
+        "name": "Hackebein",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-12T08:33:25.996Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5fca5df4d58780532024a52b",
+          "alias": "Toffee Tortoise",
+          "aliasID": "65c26da3ed6eefce4c4d0863",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/719b7fa82bfdf1aa43e0809608929735.png",
+          "created": "2020-12-04T16:04:04.984Z",
+          "name": "DrBlackRat",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6af4a51513e5466d71a05461",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af3b09c573dd7b8182514ed",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5fca5df4d58780532024a52b|full_name} That would also be great",
       "viewerReactions": null,
       "voteID": null
     }
@@ -81,7 +140,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The FT OSC data isn't visulized in the OSC Debug pannel.\n\nToday i figured that my Frame (from the device itself, so i couldn't see any program on my end running and a PC restart didn't solve it either) in Standby were still sending OSC FT data, which was blocking selfie expression input. While the Frame shouldn't have send data in the first place, it would have helped to solve the situation a lot.",
+  "details": "The FT OSC data isn't visulized in the OSC Debug pannel.\n\nToday i figured that my Frame (from the device itself, so i couldn't see any program on my PC running and a PC restart didn't solve it either) in Standby were still sending OSC FT data, which was blocking selfie expression input. While the Frame shouldn't have send data in the first place, it would have helped to solve the situation a lot.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -105,7 +164,7 @@
   "subCategoryID": null,
   "title": "[1948] Add FT OSC to OSC Debug view",
   "trendingScore": 2968.677593633154,
-  "updatedBy": null,
+  "updatedBy": "60e65f577ae9d0492b0f2a75",
   "urlName": "1948-add-ft-osc-to-osc-debug-view",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -155,7 +214,7 @@
       "alias": "Intimate Otter",
       "aliasID": "6a5f9e9bd4058d953b392a73",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/e0a8d6ac0c03d99e34581025b8a17195.png",
+      "avatarURL": "https://canny-assets.io/images/2d757c646effb9ca3104c3c9a2b357e2.png",
       "companies": [],
       "name": "HackebeinsBot",
       "urlName": null,
