@@ -5,7 +5,7 @@
     "avatars.tracking",
     "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-11-12T16:42:51.267318Z",
+  "aiTaggedAt": "2026-11-12T23:25:29.041364Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62257650af76933036b8c3a2",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -118,6 +118,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Does setting the eyelid type to Face Tracking instead of Blendshapes fix this issue?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af648df6667c96d56ba2c0f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62257650af76933036b8c3a2",
+        "alias": "Lichen Pheasant",
+        "aliasID": "65c2ef28ed6eefce4ce872a1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/dda740a877e01daa520c91f70c30a428.png",
+        "created": "2022-03-07T03:04:48.914Z",
+        "name": "Matrices",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-12T23:16:47.376Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6161a61a2c0de966b4e43486",
+          "alias": "Razzmatazz Eagle",
+          "aliasID": "65c2b7efed6eefce4c4dceae",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/f9b909781ec10a9c42837d9eafdd9561.png",
+          "created": "2021-10-09T14:24:26.758Z",
+          "name": "Kung",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6af5ebb5fd0cdbf548e98741",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af2a575ad3334b6c013e13f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6161a61a2c0de966b4e43486|full_name} Oh good! It looks like that timing issue does not happen with Face Tracking set instead of Blendshapes. Here's that same avatar with the 1 change. \n\nhttps://vrchat.com/home/avatar/avtr_5b02f71f-032a-40fb-89b4-8608d1ca1190 (private)\n\nI hope that helps nail down this problem. \n\nHowever I am not as jazzed to use the Face Tracking setting for the eyelids. So hope support can still be made for the VRC Animator Tracking control timing. \n\nI should note the reason I don't prefer Face Tracking for the setting is it turns out there is not an \"eye sync\" type setting in VRC (that i can tell. i searched settings for symmerty, symmetrize, sync, etc). It is something originally found in the Jerry's face tracking packages that allows the eyelids to close in unison. (or be operated with one eye? Or weight the average or something? I am not sure the technical details of it, but the result is similar to choosing to use the Blendshapes option setting). This is preferred because the eyes on my avatar are so large it seems best to choose to have them blink in unison (using Blendshapes mode solved this) otherwise one eye often closes sooner due to my (human) facial anatomy. I tried turning the Disable Eye Lid Tracking off, but that isn't preferred either, because now I am unblinking and also unsquinting and other related stuff.",
       "viewerReactions": null,
       "voteID": null
     }
