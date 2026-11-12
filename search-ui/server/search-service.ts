@@ -5,7 +5,15 @@ import { AnalyticsError, withoutInnerHits } from "./analytics-api";
 import { applyExcludeFacets } from "./facet-exclusion";
 import { buildLuceneQueryBody } from "./lucene-query";
 import { type PhraseMode, withPhraseFallback } from "./phrase-mode";
-import { degradedPlainQuery, instantSearchStrictQuery, rejectTooManyNestedClauses, retryWithoutNestedClauses, searchkitConfig, withPostAuthorFacetCount } from "./searchkit-config";
+import {
+  degradedPlainQuery,
+  instantSearchStrictQuery,
+  rejectTooManyNestedClauses,
+  restorePostAuthorBuckets,
+  retryWithoutNestedClauses,
+  searchkitConfig,
+  withPostAuthorFacetCount,
+} from "./searchkit-config";
 
 export function extractElasticsearchBadRequestDetail(err: unknown): string | undefined {
   if (!(err instanceof Error)) return undefined;
@@ -36,7 +44,10 @@ export function createSearchService(target: OpenSearchTarget) {
           }));
           return transform ? transform(filtered) : filtered;
         },
-        afterSearch: async (_requests: SearchRequest[], responses: ElasticsearchResponseBody[]) => rejectTooManyNestedClauses(responses),
+        afterSearch: async (_requests: SearchRequest[], responses: ElasticsearchResponseBody[]) => {
+          const checked = await rejectTooManyNestedClauses(responses);
+          return checked.map(restorePostAuthorBuckets);
+        },
       },
     };
   }

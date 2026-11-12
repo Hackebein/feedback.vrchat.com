@@ -1,5 +1,6 @@
 import type {
   ElasticsearchQuery,
+  ElasticsearchResponseBody,
   SearchAttribute,
   SearchRequest,
   SearchSettingsConfig,
@@ -68,16 +69,25 @@ export function withPostAuthorFacetCount(request: SearchRequest): SearchRequest 
 
 type AuthorBucket = { key: string; doc_count: number };
 
-function postAuthorFacetResponse(aggregation: {
-  buckets?: AuthorBucket[];
-  authors?: { buckets: AuthorBucket[] };
-  missingAuthor?: { doc_count: number };
-}): Record<string, number> {
-  const buckets = aggregation.authors?.buckets ?? aggregation.buckets ?? [];
-  const counts = Object.fromEntries(buckets.map(({ key, doc_count }) => [key, doc_count]));
-  const missingCount = aggregation.missingAuthor?.doc_count;
-  if (missingCount) counts[NO_AUTHOR_VALUE] = missingCount;
-  return counts;
+export function restorePostAuthorBuckets(response: ElasticsearchResponseBody): ElasticsearchResponseBody {
+  const aggregation = response.aggregations?.[POST_AUTHOR_FACET] as {
+    authors?: { buckets: AuthorBucket[] };
+    missingAuthor?: { doc_count: number };
+  } | undefined;
+  if (!aggregation?.authors || !aggregation.missingAuthor) return response;
+
+  // Searchkit's response adapter only reads top-level buckets for a terms facet.
+  const buckets = aggregation.authors.buckets.filter(({ key }) => key !== NO_AUTHOR_VALUE);
+  const missingCount = aggregation.missingAuthor.doc_count;
+  if (missingCount > 0) buckets.push({ key: NO_AUTHOR_VALUE, doc_count: missingCount });
+
+  return {
+    ...response,
+    aggregations: {
+      ...response.aggregations,
+      [POST_AUTHOR_FACET]: { ...aggregation.authors, buckets },
+    },
+  };
 }
 
 function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
@@ -1301,7 +1311,6 @@ export const facetAttributes = [
     field: "postAuthorFacet",
     type: "string" as const,
     facetQuery: postAuthorFacetQuery,
-    facetResponse: postAuthorFacetResponse,
   },
   {
     attribute: "aiCategories",
