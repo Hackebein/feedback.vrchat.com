@@ -1,0 +1,92 @@
+{
+  "_id": "6af581a7aadf25183a2561e4",
+  "aiCategories": [
+    "loc.website",
+    "loc.pc-client",
+    "web.social",
+    "client.chatbox"
+  ],
+  "aiTaggedAt": "2026-11-12T09:08:06.139551Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-12T09:06:47.510Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "The following notification is displayed as \"1 hour ago\" in VRChat client, but \"2 hours ago\" on VRChat Home website, when viewed 1 hour 48 minutes after receiving the notification:\n\n```\n\n2026.11.12 07:00:43 Debug      -  Received Notification: <Notification from username:***, sender user id:usr_*** to usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c of type: boop, id: not_d1fe0375-26de-4ec0-af08-4bd9a0ccf3c0, created at: 11/12/2026 07:00:40 UTC, details: {{emojiId=default_heart, emojiVersion=, inventoryItemId=}}, type:boop, m seen:False, message: \"*** Booped You!\">\n\n```\n\nExpected result: The time shown should be either floored or rounded to the nearest hour in both places. I'm not sure which one is more appropriate.\n\nActual result: \"hours ago\" is floored in client, but rounded to the nearest hour on the VRChat Home website.\n\nDuplicate of: https://feedback.vrchat.com/website/p/vrchat-home-and-the-vrchat-client-display-hours-ago-in-notifications-inconsisten",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af581a6aadf25183a2561e3",
+  "imageURLs": [
+    "https://canny-assets.io/images/11e6e754a570d42fdbecb291efb8bd2e.png",
+    "https://canny-assets.io/images/4f4216825bf0853d24768c144853ac68.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-12T09:06:47.510Z",
+  "subCategoryID": null,
+  "title": "VRChat Home and the VRChat client display \"hours ago\" in notifications inconsistently with different flooring/rounding",
+  "trendingScore": 2967.7473920309244,
+  "updatedBy": null,
+  "urlName": "vrchat-home-and-the-vrchat-client-display-hours-ago-in-notifications-inconsisten",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6af581a754bfbdee45f8dcbe"
+    }
+  ]
+}
