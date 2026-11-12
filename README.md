@@ -2,7 +2,7 @@
 
 Collected: **39,214** posts.<br>
 Freshness: From **2026-07-21 15:34 UTC (113d ago)** to now.<br>
-Scrape horizon: **2026-10-15 20:25 UTC (27d ago)**.
+Scrape horizon: **2026-10-15 20:11 UTC (27d ago)**.
 
 ## Boards
 
