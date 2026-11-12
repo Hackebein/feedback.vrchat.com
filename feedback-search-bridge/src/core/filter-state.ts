@@ -1,3 +1,4 @@
+import { POST_AUTHOR_FACET } from "../../../shared/post-author-facet";
 import type { FilterState, RangeValue } from "./types";
 
 /**
@@ -9,7 +10,7 @@ export const REFINEMENT_ATTRS = [
   "status",
   "category_name",
   "aiCategories",
-  "author_name",
+  POST_AUTHOR_FACET,
   "voter_name",
   "comment_author_name",
 ] as const;

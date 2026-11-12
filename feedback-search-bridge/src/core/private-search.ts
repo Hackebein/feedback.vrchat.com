@@ -1,5 +1,6 @@
 import { ENGLISH_STOP } from "../../../shared/english-stop";
 import { splitSearchIdentifier } from "../../../shared/identifier-split";
+import { POST_AUTHOR_FACET, postAuthorFacetValue } from "../../../shared/post-author-facet";
 import {
   RANGE_ATTRS,
   REFINEMENT_ATTRS,
@@ -806,10 +807,8 @@ function refinementValues(
         .map((entry) => (typeof entry === "string" ? entry.trim() : ""))
         .filter(Boolean);
     }
-    case "author_name": {
-      const name = readString(nestedRecord(payload.author)?.name);
-      return name ? [name] : [];
-    }
+    case POST_AUTHOR_FACET:
+      return [postAuthorFacetValue(nestedRecord(payload.author)?.name)];
     case "voter_name": {
       const voters = payload.voters;
       if (!Array.isArray(voters)) {

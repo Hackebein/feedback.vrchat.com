@@ -1,4 +1,4 @@
-"""Unit tests for in-client template board remapping and tag merge at index time."""
+"""Unit tests for post transforms and bulk indexing."""
 
 from __future__ import annotations
 
@@ -65,6 +65,28 @@ def _post(
         },
         "aiCategories": list(ai_categories or []),
     }
+
+
+class TransformPostAuthorFacetTest(unittest.TestCase):
+    def test_missing_names_keep_the_source_author_and_get_a_single_bucket(self) -> None:
+        for fields in ({}, {"author": None}, {"author": {}}, {"author": {"name": None}},
+                       {"author": {"name": ""}}, {"author": {"name": " \t\u00a0"}}):
+            with self.subTest(fields=fields):
+                doc = opensearch_bulk.transform_post({**_post(details=UNRELATED), **fields})
+                assert doc is not None
+                self.assertEqual(doc["postAuthorFacet"], "No author")
+                self.assertEqual("author" in doc, "author" in fields)
+                self.assertEqual(doc.get("author"), fields.get("author"))
+                self.assertNotIn("No author", doc["combined_text"])
+
+    def test_a_display_name_equal_to_the_label_is_a_distinct_bucket(self) -> None:
+        for name in ("No author", "/No author", " Alice "):
+            with self.subTest(name=name):
+                doc = opensearch_bulk.transform_post({**_post(details=UNRELATED), "author": {"name": name}})
+                assert doc is not None
+                self.assertEqual(doc["postAuthorFacet"], f"/{name}")
+                self.assertEqual(doc["author"], {"name": name})
+                self.assertTrue(doc["combined_text"].endswith(name.strip()))
 
 
 class TransformVirtualInClientBoardTest(unittest.TestCase):

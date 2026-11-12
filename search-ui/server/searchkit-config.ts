@@ -6,6 +6,7 @@ import type {
 import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
 import { ENGLISH_STOP } from "../../shared/english-stop";
 import { splitSearchIdentifier } from "../../shared/identifier-split";
+import { NO_AUTHOR_VALUE, POST_AUTHOR_FACET, POST_AUTHOR_NAME_PREFIX } from "../../shared/post-author-facet";
 import { buildLuceneQueryBody } from "./lucene-query";
 import { phraseAnalyzer, phraseSearchFields, type PhraseMode } from "./phrase-mode";
 
@@ -26,6 +27,17 @@ function slugSafeFacetQuery(
     )
     .join("");
   return { terms: { field, size, include: `.*${ci}.*` } };
+}
+
+function postAuthorFacetQuery(field: string, size: number, search?: string) {
+  const { terms } = slugSafeFacetQuery(field, size, search);
+  if (search && terms.include) {
+    const names = `${POST_AUTHOR_NAME_PREFIX}${terms.include}`;
+    terms.include = NO_AUTHOR_VALUE.toLowerCase().includes(search.toLowerCase())
+      ? `(${names}|${NO_AUTHOR_VALUE})`
+      : names;
+  }
+  return { terms };
 }
 
 function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
@@ -1243,6 +1255,12 @@ export const facetAttributes = [
     field: "author.name.keyword",
     type: "string" as const,
     facetQuery: slugSafeFacetQuery,
+  },
+  {
+    attribute: POST_AUTHOR_FACET,
+    field: "postAuthorFacet",
+    type: "string" as const,
+    facetQuery: postAuthorFacetQuery,
   },
   {
     attribute: "aiCategories",

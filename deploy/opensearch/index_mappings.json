@@ -191,6 +191,7 @@
       "subCategoryID": { "type": "keyword" },
       "companyID": { "type": "keyword" },
       "authorID": { "type": "keyword" },
+      "postAuthorFacet": { "type": "keyword", "ignore_above": 513 },
       "deleteID": { "type": "keyword" },
       "deletedBy": { "type": "keyword" },
       "updatedBy": { "type": "keyword" },

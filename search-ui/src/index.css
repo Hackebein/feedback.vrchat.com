@@ -1638,6 +1638,10 @@ mark {
   font-size: 0.85rem;
 }
 
+.post-author-refinements .ais-RefinementList-label:has(input[value="No author"]) .ais-RefinementList-labelText {
+  font-style: italic;
+}
+
 .facets .ais-RefinementList-showMore {
   margin-top: 0.35rem;
   padding: 0.35rem 0.55rem;

@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import qs from "qs";
+import { NO_AUTHOR_VALUE, POST_AUTHOR_FACET, postAuthorFacetValue } from "../../shared/post-author-facet";
 import {
   FEEDBACK_INDEX,
   RANGE_ATTRS,
@@ -7,10 +8,12 @@ import {
   TOGGLE_ATTRS,
   rangesFromRoute,
   refinementListsFromRoute,
+  refinementListsToRoute,
   routeParamToSortBy,
   sortByToRouteParam,
   togglesFromRoute,
 } from "../src/searchRoute";
+import { getCurrentSearchParams, setCurrentSearchParams } from "../src/searchFilterStore";
 
 const relevance = `${FEEDBACK_INDEX}_relevance_desc`;
 
@@ -52,5 +55,26 @@ assert.deepEqual(
   togglesFromRoute(statusFirst, TOGGLE_ATTRS),
   togglesFromRoute(boardFirst, TOGGLE_ATTRS),
 );
+
+const namedAuthor = postAuthorFacetValue("No author");
+assert.notEqual(namedAuthor, NO_AUTHOR_VALUE);
+assert.deepEqual(refinementListsFromRoute(qs.parse("author.name=No%20author"), REFINEMENT_LIST_ATTRS), {
+  [POST_AUTHOR_FACET]: [namedAuthor],
+});
+const authorRoute = refinementListsToRoute({ [POST_AUTHOR_FACET]: [namedAuthor, NO_AUTHOR_VALUE] });
+assert.deepEqual(authorRoute, { "author.name": ["No author"], "author.missing": "1" });
+assert.deepEqual(refinementListsFromRoute(qs.parse(qs.stringify(authorRoute)), REFINEMENT_LIST_ATTRS), {
+  [POST_AUTHOR_FACET]: [namedAuthor, NO_AUTHOR_VALUE],
+});
+assert.deepEqual(refinementListsFromRoute({ "author.missing": "1" }, REFINEMENT_LIST_ATTRS), {
+  [POST_AUTHOR_FACET]: [NO_AUTHOR_VALUE],
+});
+
+const namedFilter = `${POST_AUTHOR_FACET}:${namedAuthor}`;
+const missingFilter = `${POST_AUTHOR_FACET}:${NO_AUTHOR_VALUE}`;
+setCurrentSearchParams({ facetFilters: [[namedFilter], "status:open"] });
+assert.deepEqual(getCurrentSearchParams().facetFilters, [["author_name:No author"], "status:open"]);
+setCurrentSearchParams({ facetFilters: [[namedFilter, missingFilter]] });
+assert.deepEqual(getCurrentSearchParams().facetFilters, [[namedFilter, missingFilter]]);
 
 console.info("search route tests passed");
