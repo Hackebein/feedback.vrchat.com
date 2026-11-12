@@ -1,3 +1,5 @@
+import { NO_AUTHOR_VALUE, POST_AUTHOR_FACET, postAuthorFacetLabel, postAuthorFacetValue } from "../../shared/post-author-facet";
+
 export const FEEDBACK_INDEX = "feedback-posts";
 
 export type RouteAttr = { urlKey: string; attr: string };
@@ -8,7 +10,7 @@ export const REFINEMENT_LIST_ATTRS: readonly RouteAttr[] = [
   { urlKey: "status", attr: "status" },
   { urlKey: "category.name", attr: "category_name" },
   { urlKey: "aiCategories", attr: "aiCategories" },
-  { urlKey: "author.name", attr: "author_name" },
+  { urlKey: "author.name", attr: POST_AUTHOR_FACET },
   { urlKey: "voters.name", attr: "voter_name" },
   { urlKey: "comments.author.name", attr: "comment_author_name" },
 ];
@@ -41,14 +43,28 @@ export function refinementListsFromRoute(
   const lists: Record<string, string[]> = {};
   for (const { urlKey, attr } of attrs) {
     const raw = route[urlKey];
-    if (Array.isArray(raw)) {
-      const list = raw.map(String).filter(Boolean);
-      if (list.length > 0) lists[attr] = list;
-    } else if (typeof raw === "string" && raw) {
-      lists[attr] = [raw];
+    let list = Array.isArray(raw) ? raw.map(String).filter(Boolean) : [];
+    if (typeof raw === "string" && raw) list = [raw];
+    if (attr === POST_AUTHOR_FACET) {
+      list = list.map(postAuthorFacetValue).filter((value) => value !== NO_AUTHOR_VALUE);
+      if (route["author.missing"] === "1") list.push(NO_AUTHOR_VALUE);
     }
+    if (list.length > 0) lists[attr] = list;
   }
   return lists;
+}
+
+export function refinementListsToRoute(lists: Record<string, string[]>): Record<string, string | string[]> {
+  const route: Record<string, string | string[]> = {};
+  for (const { urlKey, attr } of REFINEMENT_LIST_ATTRS) {
+    let values = lists[attr] ?? [];
+    if (attr === POST_AUTHOR_FACET) {
+      if (values.includes(NO_AUTHOR_VALUE)) route["author.missing"] = "1";
+      values = values.filter((value) => value !== NO_AUTHOR_VALUE).map(postAuthorFacetLabel);
+    }
+    if (values.length > 0) route[urlKey] = values;
+  }
+  return route;
 }
 
 export function rangesFromRoute(

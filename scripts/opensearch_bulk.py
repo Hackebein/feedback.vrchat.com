@@ -198,10 +198,13 @@ def transform_post(line: dict[str, Any], *, scraper_id: str | None = None) -> di
     parts: list[str] = [str(title), str(details)]
 
     author = safe.get("author")
-    if isinstance(author, dict):
-        nm = author.get("name")
-        if isinstance(nm, str) and nm.strip():
-            parts.append(nm.strip())
+    name = author.get("name") if isinstance(author, dict) else None
+    # Prefix every real name so even an account named "No author" has its own bucket.
+    if isinstance(name, str) and name.strip():
+        safe["postAuthorFacet"] = f"/{name}"
+        parts.append(name.strip())
+    else:
+        safe["postAuthorFacet"] = "No author"
 
     comments_in = safe.get("comments") or []
     if isinstance(comments_in, list):

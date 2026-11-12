@@ -14,7 +14,6 @@ import {
 import {
   ClearRefinements,
   Configure,
-  CurrentRefinements,
   Highlight,
   Hits,
   InstantSearch,
@@ -25,6 +24,7 @@ import {
   SortBy,
   Stats,
   ToggleRefinement,
+  useCurrentRefinements,
   useInstantSearch,
   useRange,
   useRefinementList,
@@ -34,6 +34,7 @@ import type { Hit, StateMapping, UiState } from "instantsearch.js/es/types";
 import type { RefinementListItem } from "instantsearch.js/es/connectors/refinement-list/connectRefinementList";
 import qs from "qs";
 import historyRouter from "instantsearch.js/es/lib/routers/history";
+import { NO_AUTHOR_VALUE, POST_AUTHOR_FACET, POST_AUTHOR_NAME_PREFIX, postAuthorFacetLabel } from "../../shared/post-author-facet";
 import { AttachmentTextView } from "./AttachmentTextView";
 import {
   FEEDBACK_INDEX,
@@ -42,6 +43,7 @@ import {
   TOGGLE_ATTRS,
   rangesFromRoute,
   refinementListsFromRoute,
+  refinementListsToRoute,
   routeParamToSortBy,
   sortByToRouteParam,
   togglesFromRoute,
@@ -369,6 +371,47 @@ const ATTR_DISPLAY_LABEL: Record<string, string> = Object.fromEntries([
   ...TOGGLE_ATTRS.map((e) => [e.attr, e.urlKey]),
 ]);
 
+function ActiveRefinements() {
+  const { items } = useCurrentRefinements();
+  return (
+    <div className="current-refinements-root">
+      <ul className="current-refinements-list">
+        {items.map((item) => {
+          const label = ATTR_DISPLAY_LABEL[item.attribute] ?? item.label;
+          return (
+            <li className="current-refinements-item" key={`${item.indexName}/${item.attribute}`}>
+              <span className="current-refinements-label">{label.charAt(0).toUpperCase() + label.slice(1)}: </span>
+              {item.refinements.map((refinement) => {
+                const value = String(refinement.value);
+                const isPostAuthor = item.attribute === POST_AUTHOR_FACET;
+                const missingAuthor = isPostAuthor && value === NO_AUTHOR_VALUE;
+                let text = refinement.label;
+                if (isPostAuthor) text = postAuthorFacetLabel(value);
+                if (item.attribute === "aiCategories") text = aiCategoryName(value);
+                return (
+                  <span className="current-refinements-category" key={`${refinement.type}/${refinement.operator}/${value}`}>
+                    <span className="current-refinements-category-label">{missingAuthor ? <em>{text}</em> : text}</span>
+                    <button
+                      type="button"
+                      className="current-refinements-delete"
+                      aria-label={missingAuthor ? "Remove missing author filter" : `Remove ${label} ${text} filter`}
+                      onClick={(event) => {
+                        if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) item.refine(refinement);
+                      }}
+                    >
+                      ✕
+                    </button>
+                  </span>
+                );
+              })}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
 function makeFeedbackStateMapping(
   luceneMode: boolean,
 ): StateMapping<UiState, RouteState> {
@@ -384,11 +427,7 @@ function makeFeedbackStateMapping(
       if (luceneMode) {
         return route;
       }
-      const rl = idx.refinementList ?? {};
-      for (const { urlKey, attr } of REFINEMENT_LIST_ATTRS) {
-        const v = rl[attr];
-        if (Array.isArray(v) && v.length > 0) route[urlKey] = v;
-      }
+      Object.assign(route, refinementListsToRoute(idx.refinementList ?? {}));
       const rg = idx.range ?? {};
       for (const { urlKey, attr } of RANGE_ATTRS) {
         const v = rg[attr];
@@ -1424,6 +1463,24 @@ function readAiCategories(hit: Record<string, unknown>): string[] {
 
 const BOARD_FACET_COLLAPSED_LIMIT = 20;
 
+type AuthorFacetEntry = { isRefined: boolean; count: number; name: string };
+
+function compareAuthorFacetEntries(a: AuthorFacetEntry, b: AuthorFacetEntry): number {
+  return Number(Boolean(b.isRefined)) - Number(Boolean(a.isRefined))
+    || b.count - a.count
+    || postAuthorFacetLabel(a.name).localeCompare(postAuthorFacetLabel(b.name));
+}
+
+function labelAuthorFacetItems(items: RefinementListItem[]): RefinementListItem[] {
+  return items.map((item) => ({
+    ...item,
+    label: postAuthorFacetLabel(item.value),
+    highlighted: item.value.startsWith(POST_AUTHOR_NAME_PREFIX)
+      ? item.highlighted?.replace(POST_AUTHOR_NAME_PREFIX, "")
+      : item.highlighted,
+  })).sort((a, b) => compareAuthorFacetEntries({ ...a, name: a.value }, { ...b, name: b.value }));
+}
+
 function BoardRefinement() {
   const [q, setQ] = useState("");
   const [showingMore, setShowingMore] = useState(false);
@@ -1853,33 +1910,7 @@ export function App() {
                 </p>
               </div>
               {luceneMode ? <LuceneSearchError /> : null}
-              {luceneMode ? null : (
-                <CurrentRefinements
-                  transformItems={(items) =>
-                    items.map((it) => ({
-                      ...it,
-                      label:
-                        ATTR_DISPLAY_LABEL[it.attribute] ?? it.label,
-                      refinements:
-                        it.attribute === "aiCategories"
-                          ? it.refinements.map((r) => ({
-                              ...r,
-                              label: aiCategoryName(String(r.value)),
-                            }))
-                          : it.refinements,
-                    }))
-                  }
-                  classNames={{
-                    root: "current-refinements-root",
-                    list: "current-refinements-list",
-                    item: "current-refinements-item",
-                    label: "current-refinements-label",
-                    category: "current-refinements-category",
-                    categoryLabel: "current-refinements-category-label",
-                    delete: "current-refinements-delete",
-                  }}
-                />
-              )}
+              {luceneMode ? null : <ActiveRefinements />}
             </div>
             <div
               className={
@@ -1938,12 +1969,15 @@ export function App() {
                   <section className="facet-section">
                     <h2 className="facet-heading">Author</h2>
                     <RefinementList
-                      attribute="author_name"
+                      attribute={POST_AUTHOR_FACET}
+                      className="post-author-refinements"
                       searchable
                       searchablePlaceholder="Filter authors…"
                       showMore
                       limit={10}
                       showMoreLimit={500}
+                      sortBy={compareAuthorFacetEntries}
+                      transformItems={labelAuthorFacetItems}
                     />
                   </section>
                   <section className="facet-section">

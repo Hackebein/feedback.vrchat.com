@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { NO_AUTHOR_VALUE, POST_AUTHOR_FACET, postAuthorFacetValue } from "../../shared/post-author-facet";
 import {
   additionalFacetCounts,
   buildCombinedText,
@@ -171,6 +172,26 @@ const localFacets = facetsFromPosts([internal, sellers]);
 assert.equal(localFacets.facets.board_name?.["Internal Roadmap Posts"], 1);
 assert.equal(localFacets.facets.status?.open, 1);
 assert.equal(localFacets.stats.score?.max, 20);
+
+const literalAuthor = postAuthorFacetValue("No author");
+const authorPosts = [
+  stored({ _id: "null-author", author: null }),
+  stored({ _id: "absent-author", author: undefined }),
+  stored({ _id: "blank-author", author: { name: " \t\u00a0" } }),
+  stored({ _id: "named-author", author: { name: "No author" } }),
+];
+assert.deepEqual(facetsFromPosts(authorPosts).facets[POST_AUTHOR_FACET], {
+  [NO_AUTHOR_VALUE]: 3,
+  [literalAuthor]: 1,
+});
+const missingAuthorBody: CannySearchBody = {
+  textSearch: "",
+  filters: { refinements: { [POST_AUTHOR_FACET]: [NO_AUTHOR_VALUE] }, ranges: {}, toggles: {}, sort: "newest" },
+};
+assert.deepEqual(filterPrivatePosts(authorPosts, missingAuthorBody, { luceneMode: false }).map((post) => post._id), [
+  "null-author", "absent-author", "blank-author",
+]);
+assert.deepEqual(additionalFacetCounts(authorPosts, missingAuthorBody, false)[POST_AUTHOR_FACET], { [literalAuthor]: 1 });
 
 assert.deepEqual(
   mergeFacetCounts(

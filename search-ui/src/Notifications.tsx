@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { getCurrentSearchParams } from "./searchFilterStore";
+import { POST_AUTHOR_FACET, postAuthorFacetLabel } from "../../shared/post-author-facet";
 
 const NOTIFY_BASE = "/api/notify";
 
@@ -53,7 +54,8 @@ function describeFilter(params: Record<string, unknown>): string {
   }
   for (const f of flat) {
     const idx = f.indexOf(":");
-    parts.push(idx > -1 ? f.slice(idx + 1) : f);
+    const value = idx > -1 ? f.slice(idx + 1) : f;
+    parts.push(f.slice(0, idx) === POST_AUTHOR_FACET ? postAuthorFacetLabel(value) : value);
   }
 
   if (parts.length === 0) {

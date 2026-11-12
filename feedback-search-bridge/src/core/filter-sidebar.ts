@@ -1,3 +1,4 @@
+import { NO_AUTHOR_VALUE, POST_AUTHOR_FACET, postAuthorFacetLabel, postAuthorFacetValue } from "../../../shared/post-author-facet";
 import { createCannyDropdown } from "./canny-dropdown";
 import {
   DATE_ATTRS,
@@ -27,11 +28,11 @@ import { installSearchQueryWatch, readActiveSearchQuery } from "./search-refresh
 import { viewerLoggedIn, viewerName } from "./viewer-votes";
 import type { FacetStats, SearchFacets } from "./types";
 
-/** Display label for a facet value (AI categories map internal ids to names). */
 function valueLabel(attr: string, value: string): string {
   if (attr === "aiCategories") {
     return aiCategoryName(value);
   }
+  if (attr === POST_AUTHOR_FACET) return postAuthorFacetLabel(value);
   return value;
 }
 
@@ -58,7 +59,7 @@ const SECTIONS: Section[] = [
   { kind: "list", attr: "status", label: "Status", searchable: false },
   { kind: "list", attr: "category_name", label: "Category", searchable: true },
   { kind: "list", attr: "aiCategories", label: "AI category", searchable: true },
-  { kind: "list", attr: "author_name", label: "Author", searchable: true },
+  { kind: "list", attr: POST_AUTHOR_FACET, label: "Author", searchable: true },
   { kind: "list", attr: "voter_name", label: "Voted by", searchable: true },
   {
     kind: "group",
@@ -407,12 +408,16 @@ function facetEntries(attr: string): FacetEntry[] {
       entries.push({ value, count: 0 });
     }
   }
-  entries.sort((a, b) => b.count - a.count || a.value.localeCompare(b.value));
+  entries.sort((a, b) => {
+    const aName = attr === POST_AUTHOR_FACET ? postAuthorFacetLabel(a.value) : a.value;
+    const bName = attr === POST_AUTHOR_FACET ? postAuthorFacetLabel(b.value) : b.value;
+    return b.count - a.count || aName.localeCompare(bName);
+  });
   // Pin the logged-in viewer to the top of name lists so they can filter to
   // themselves without searching. Insert with count 0 if the current facet
   // response omitted them (same as selected-value seeding).
   if (
-    (attr === "author_name" ||
+    (attr === POST_AUTHOR_FACET ||
       attr === "voter_name" ||
       attr === "comment_author_name") &&
     bridgeWindow &&
@@ -420,15 +425,16 @@ function facetEntries(attr: string): FacetEntry[] {
   ) {
     const name = viewerName(bridgeWindow);
     if (name) {
-      const index = entries.findIndex((entry) => entry.value === name);
+      const value = attr === POST_AUTHOR_FACET ? postAuthorFacetValue(name) : name;
+      const index = entries.findIndex((entry) => entry.value === value);
       if (index > 0) {
         const [viewer] = entries.splice(index, 1);
         entries.unshift(viewer);
       } else if (index < 0) {
         entries.unshift({
-          value: name,
+          value,
           count: 0,
-          additional: hasSelection && !selectedSet.has(name),
+          additional: hasSelection && !selectedSet.has(value),
         });
       }
     }
@@ -453,7 +459,9 @@ function renderFacetRow(
     refresh();
   });
   const displayLabel = valueLabel(attr, entry.value);
-  const label = el(doc, "span", "vrcfb-row-label", displayLabel || "(empty)");
+  const missingAuthor = attr === POST_AUTHOR_FACET && entry.value === NO_AUTHOR_VALUE;
+  if (missingAuthor) input.setAttribute("aria-label", "Posts with no author");
+  const label = el(doc, missingAuthor ? "em" : "span", "vrcfb-row-label", displayLabel || "(empty)");
   label.title = displayLabel;
   const count = el(
     doc,
@@ -707,12 +715,12 @@ function buildSort(
 function buildChips(doc: Document, refresh: Refresher): HTMLElement {
   const wrap = el(doc, "div", "vrcfb-chips");
 
-  const addChip = (label: string, onRemove: () => void): void => {
+  const addChip = (label: string, onRemove: () => void, missingAuthor = false): void => {
     const chip = el(doc, "span", "vrcfb-chip-active");
-    chip.appendChild(el(doc, "span", undefined, label));
+    chip.appendChild(el(doc, missingAuthor ? "em" : "span", undefined, label));
     const remove = el(doc, "button", undefined, "×");
     remove.type = "button";
-    remove.setAttribute("aria-label", `Remove ${label}`);
+    remove.setAttribute("aria-label", missingAuthor ? "Remove missing author filter" : `Remove ${label}`);
     remove.addEventListener("click", () => {
       onRemove();
       refresh();
@@ -723,8 +731,10 @@ function buildChips(doc: Document, refresh: Refresher): HTMLElement {
 
   for (const attr of ATTR_LABEL.keys()) {
     for (const value of getRefinementValues(attr)) {
-      addChip(`${ATTR_LABEL.get(attr)}: ${valueLabel(attr, value)}`, () =>
-        toggleRefinement(attr, value),
+      addChip(
+        `${ATTR_LABEL.get(attr)}: ${valueLabel(attr, value)}`,
+        () => toggleRefinement(attr, value),
+        attr === POST_AUTHOR_FACET && value === NO_AUTHOR_VALUE,
       );
     }
   }
