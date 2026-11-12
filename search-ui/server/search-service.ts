@@ -5,7 +5,7 @@ import { AnalyticsError, withoutInnerHits } from "./analytics-api";
 import { applyExcludeFacets } from "./facet-exclusion";
 import { buildLuceneQueryBody } from "./lucene-query";
 import { type PhraseMode, withPhraseFallback } from "./phrase-mode";
-import { degradedPlainQuery, instantSearchStrictQuery, rejectTooManyNestedClauses, retryWithoutNestedClauses, searchkitConfig } from "./searchkit-config";
+import { degradedPlainQuery, instantSearchStrictQuery, rejectTooManyNestedClauses, retryWithoutNestedClauses, searchkitConfig, withPostAuthorFacetCount } from "./searchkit-config";
 
 export function extractElasticsearchBadRequestDetail(err: unknown): string | undefined {
   if (!(err instanceof Error)) return undefined;
@@ -31,7 +31,7 @@ export function createSearchService(target: OpenSearchTarget) {
         beforeSearch: async (requests: SearchRequest[]) => {
           // Full comments/voters are already retrieved from _source. Searchkit's
           // unnamed inner_hits collide when several filters use the same nested path.
-          const filtered = applyExcludeFacets(requests).map((request) => ({
+          const filtered = applyExcludeFacets(requests).map((request) => withPostAuthorFacetCount({
             ...request, body: { ...request.body, track_total_hits: true, query: withoutInnerHits(request.body.query) as ElasticsearchQuery },
           }));
           return transform ? transform(filtered) : filtered;

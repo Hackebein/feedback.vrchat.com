@@ -1,6 +1,7 @@
 import type {
   ElasticsearchQuery,
   SearchAttribute,
+  SearchRequest,
   SearchSettingsConfig,
 } from "searchkit";
 import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
@@ -38,6 +39,45 @@ function postAuthorFacetQuery(field: string, size: number, search?: string) {
       : names;
   }
   return { terms };
+}
+
+/** The Canny sidebar searches the returned author buckets, which can omit rare values. */
+export function withPostAuthorFacetCount(request: SearchRequest): SearchRequest {
+  const aggs = request.body.aggs;
+  const authors = aggs?.[POST_AUTHOR_FACET];
+  const field = authors?.terms?.field;
+  if (!field || request.request.params?.facetName) return request;
+
+  return {
+    ...request,
+    body: {
+      ...request.body,
+      aggs: {
+        ...aggs,
+        [POST_AUTHOR_FACET]: {
+          filter: { match_all: {} },
+          aggs: {
+            authors,
+            missingAuthor: { filter: { term: { [field]: NO_AUTHOR_VALUE } } },
+          },
+        },
+      },
+    },
+  };
+}
+
+type AuthorBucket = { key: string; doc_count: number };
+
+function postAuthorFacetResponse(aggregation: {
+  buckets?: AuthorBucket[];
+  authors?: { buckets: AuthorBucket[] };
+  missingAuthor?: { doc_count: number };
+}): Record<string, number> {
+  const buckets = aggregation.authors?.buckets ?? aggregation.buckets ?? [];
+  const counts = Object.fromEntries(buckets.map(({ key, doc_count }) => [key, doc_count]));
+  const missingCount = aggregation.missingAuthor?.doc_count;
+  if (missingCount) counts[NO_AUTHOR_VALUE] = missingCount;
+  return counts;
 }
 
 function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {
@@ -1261,6 +1301,7 @@ export const facetAttributes = [
     field: "postAuthorFacet",
     type: "string" as const,
     facetQuery: postAuthorFacetQuery,
+    facetResponse: postAuthorFacetResponse,
   },
   {
     attribute: "aiCategories",
