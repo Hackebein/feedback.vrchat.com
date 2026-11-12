@@ -3,9 +3,10 @@
   "_id": "5c38e2be2c01050b6e272443",
   "aiCategories": [
     "loc.in-world",
-    "avatars"
+    "avatars.accessories",
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-06-14T14:52:09.780584Z",
+  "aiTaggedAt": "2026-11-12T13:17:47.078970Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5c38e1ce1da75c0be68c4867",
@@ -28,7 +29,7 @@
   "by": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 20,
+  "commentCount": 21,
   "commentingDisabled": false,
   "comments": [
     {
@@ -866,6 +867,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Now with the Groups implementation, we could have Group cloning too, for just sharing your creations with your community",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af56bfffd0cdbf548dc0379",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-12T07:34:23.489Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5bb671964fe53149c4a6496c",
+          "alias": "Zinc grey Lemur",
+          "aliasID": "65c7141ded6eefce4c4f10ca",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/9fc5998052b3ac2ec027dc3fbe70b897.png",
+          "created": "2018-10-04T20:01:26.570Z",
+          "name": "Caffeinated_weeb",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "68494f3689602261186b6c46",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "5c38e2be2c01050b6e272443",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5bb671964fe53149c4a6496c|full_name} Public avatars are public (meaning they can be changed into) and the avatar IDs are logged to output logs, so the presence of Easy Anti-Cheat is irrelevant.",
       "viewerReactions": null,
       "voteID": null
     }
