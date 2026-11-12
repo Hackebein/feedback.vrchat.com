@@ -1,0 +1,97 @@
+{
+  "_id": "6af5c609aadf25183a2d45f7",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.persistence",
+    "open-beta",
+    "platforms.cross-platform"
+  ],
+  "aiTaggedAt": "2026-11-12T14:06:29.516682Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5e80645c82edb3758aa01214",
+    "alias": "Brass Lamprey",
+    "aliasID": "65c2a219ed6eefce4c62c1bd",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/3769c1333a4d5b494e7c75f597d21269.png",
+    "created": "2020-03-29T09:03:24.013Z",
+    "name": "satsuki（桜月）",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5e80645c82edb3758aa01214",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-12T13:58:33.327Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Japanese:\n\nVRC_Stationに座っているプレイヤーの位置の同期が壊れています。\n\n具体的には、オープンベータ（1948）のプレイヤーからVRC_Stationに座っているLive版（1938）のプレイヤーを見た場合に遅れてずれた位置に見え、逆にLive版（1938）のプレイヤーからVRC_Stationに座っているオープンベータ（1948）のプレイヤーを見た場合にも同じように遅れてずれた位置に見えます。これにより、乗り物に乗っている人を見た場合、人が乗り物から外に放り出されているように見えます。\n\nEnglish Translation:\n\nThe position synchronization for players sitting at VRC_Station is broken.\n\nSpecifically, when a player in the Open Beta (1948) looks at a player in the Live version (1938) sitting at VRC_Station, that player appears to be in a delayed and misaligned position; conversely, when a player in the Live version (1938) looks at a player in the Open Beta (1948) sitting at VRC_Station, that player also appears to be in a delayed and misaligned position. As a result, when you see someone inside a vehicle, it looks as if they are being thrown out of it.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af5c608aadf25183a2d45ec",
+  "imageURLs": [
+    "https://canny-assets.io/images/1076fa3c72b4ae382b0af89b748d014f.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af5c609aadf25183a2d45f7/1291627145.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-12T13:58:33.327Z",
+  "subCategoryID": null,
+  "title": "[1948] VRC_Station's position synchronization is broken",
+  "trendingScore": 2967.7763369383315,
+  "updatedBy": null,
+  "urlName": "1948-vrc-stations-position-synchronization-is-broken",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5e80645c82edb3758aa01214",
+      "alias": "Brass Lamprey",
+      "aliasID": "65c2a219ed6eefce4c62c1bd",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/3769c1333a4d5b494e7c75f597d21269.png",
+      "companies": [],
+      "name": "satsuki（桜月）",
+      "urlName": null,
+      "voteID": "6af5c60954bfbdee45149d13"
+    }
+  ]
+}
