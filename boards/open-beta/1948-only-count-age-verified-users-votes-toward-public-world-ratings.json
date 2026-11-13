@@ -223,7 +223,9 @@
       "postDeleted": false,
       "postID": "6af26d65b1ace89e4dedc445",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -249,20 +251,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 16,
+  "maxScore": 17,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af26d65b1ace89e4dedc445/1203334204.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 16,
+  "score": 17,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-10T01:03:33.766Z",
   "subCategoryID": null,
   "title": "[1948] Only count age-verified users' votes toward public world ratings",
-  "trendingScore": 2969.732843154937,
+  "trendingScore": 2969.8052667137886,
   "updatedBy": null,
   "urlName": "1948-only-count-age-verified-users-votes-toward-public-world-ratings",
   "viewerIsAuthor": false,
@@ -275,6 +277,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6af38fcb365861a0af1d032e",
+      "alias": "Nectar Sloth",
+      "aliasID": "6af38fcc54bfbdee45a7564b",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/f4dd24cacbc3660b07da49f92109bc31.png",
+      "companies": [],
+      "name": "Cybrstrrs",
+      "urlName": null,
+      "voteID": "6af655d154bfbdee4571f5dc"
+    },
     {
       "_id": "67a7a794c9467977e8b07090",
       "alias": "Gradual Aardvark",
