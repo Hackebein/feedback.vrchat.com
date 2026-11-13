@@ -1,0 +1,98 @@
+{
+  "_id": "6af6e6ba9538c430d1f1cd05",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-11-13T10:34:57.177895Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6097bf04b93e6410ea4d8607",
+    "alias": "Satisfactory Antelope",
+    "aliasID": "66ed537c7d32abb6ca885624",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/58ca431d806b6433692b2bb1f7810d04.png",
+    "created": "2021-05-09T10:52:52.602Z",
+    "name": "ヴェイン様",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6097bf04b93e6410ea4d8607",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-13T10:30:18.431Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Unity version [2022.3.22f1]\n\nVRChat SDK - Base [3.10.6]\n\nVRChat SDK -Avatars [3.10.6]\n\nWhen multiple ContactReceivers with different CollisionTags settings are selected simultaneously, a bug occurs in which the CollisionTags settings of the last selected ContactReceiver overwrite the CollisionTags settings of all other selected ContactReceivers.\n\nThis bug does not occur with ContactSenders.\n\nI tested this issue in an environment where no other tools were being used.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af6e6b99538c430d1f1ccf2",
+  "imageURLs": [
+    "https://canny-assets.io/images/318b6bd11f531f7d4f999f3862ff430a.png",
+    "https://canny-assets.io/images/26cc47d9464974dc1af65f7d2123cd70.png",
+    "https://canny-assets.io/images/55d4cc64801ff365266b7a2db15a5ff5.png",
+    "https://canny-assets.io/images/243cce710b4e4d9adbb33e622932fb80.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-13T10:30:18.431Z",
+  "subCategoryID": null,
+  "title": "[SDK3.10.6]CollisionTags Are Overwritten When Multiple ContactReceivers Are Selected",
+  "trendingScore": 2967.8985344383314,
+  "updatedBy": null,
+  "urlName": "sdk3106collisiontags-are-overwritten-when-multiple-contactreceivers-are-selected",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6097bf04b93e6410ea4d8607",
+      "alias": "Satisfactory Antelope",
+      "aliasID": "66ed537c7d32abb6ca885624",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/58ca431d806b6433692b2bb1f7810d04.png",
+      "companies": [],
+      "name": "ヴェイン様",
+      "urlName": null,
+      "voteID": "6af6e6ba54bfbdee4574d8bf"
+    }
+  ]
+}
