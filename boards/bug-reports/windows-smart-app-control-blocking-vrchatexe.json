@@ -5,7 +5,7 @@
     "platforms.pc.steam",
     "client.controls"
   ],
-  "aiTaggedAt": "2026-11-12T15:20:14.685925Z",
+  "aiTaggedAt": "2026-11-13T15:17:30.904422Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5d8fcdfc3bdbea11e40f2ab5",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -165,6 +165,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I am experiencing the same issue on the stable version of VRChat.\n\nSystem information:\n\nOS: Windows 11, Version 25H2\n\nPlatform: PC (Steam)\n\nSmart App Control: ON\n\nVRChat branch: Stable\n\nProblem:\n\nWhen I launch VRChat through Steam, Easy Anti-Cheat starts, but VRChat.exe is blocked by Windows Code Integrity. The game does not launch.\n\nSteam's \"Verify integrity of game files\" completed successfully, but the issue persists.\n\nWindows Event Viewer findings:\n\nI found matching Code Integrity events (3033, 3077, and 3089) with the same Correlation ActivityID.\n\nPolicyName: VerifiedAndReputableDesktop\n\nStatus: 0xc0e90002\n\nRequestedSigningLevel: 2\n\nValidatedSigningLevel: 1\n\nTotalSignatureCount: 0\n\nPublisherName: Unknown\n\nI also checked VRChat.exe using PowerShell's Get-AuthenticodeSignature command, which returned:\n\nStatus: NotSigned\n\nThe SHA256 hash of VRChat.exe is:\n\n82786AF2CD9296FD3CF92E5E359105A1FDAF0BEBEF8840FD6CBC87EB4F5E0C18\n\nSmart App Control is enabled, and I have not disabled it.\n\nCould you investigate whether the current stable build of VRChat is missing a required digital signature or is otherwise incompatible with Windows Smart App Control?\n\nThank you for your help.\n\nTransparency note: This entire report was written by ChatGPT based on the information I provided to it about my situation.\n\n**Update: Additional troubleshooting results**\n\nI tried deleting the `Cache-WindowsPlayer` folder and restarting my PC, following another user's suggestion. However, this did not resolve the issue.\n\nAfter restarting, I launched VRChat again, but the same error message appeared.\n\nI checked Windows Event Viewer again and found that Code Integrity was still blocking VRChat.exe (Event ID 3077).\n\nThe new event showed the same information as before:\n\n- PolicyName: VerifiedAndReputableDesktop\n\n- Status: 0xc0e90002\n\n- RequestedSigningLevel: 2\n\n- ValidatedSigningLevel: 1\n\n- SHA256 Hash: 82786AF2CD9296FD3CF92E5E359105A1FDAF0BEBEF8840FD6CBC87EB4F5E0C18\n\nThe SHA256 hash is exactly the same as the one recorded before deleting the cache.\n\nThis suggests that deleting the cache did not change the underlying issue, and Windows Smart App Control is still blocking the same VRChat.exe file.\n\nSmart App Control remains enabled on my PC.\n\nI hope these additional details help with investigating this issue.\n\n**Transparency note:** This update was also written by ChatGPT based on the additional troubleshooting results I provided.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af725bfd5abd8e6558f0e11",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6af725674aa904920b03697c",
+        "alias": "Surprised Coyote",
+        "aliasID": "6af72568a5c66397892f0961",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/0df6297da29176a7ab27caae4ce22ba7.png",
+        "created": "2026-11-13T14:57:43.761Z",
+        "name": "暇人な非魔人",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-13T14:59:11.711Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae91c234a2cb61aef850a45",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Hello VRChat Team,\n\nI am experiencing the same issue described in this report.\n\nMy system information:\n\n- OS: Windows 11 Home, Version 25H2\n\n- OS Build: 26200.9974\n\n- Platform: PC (Steam)\n\n- Smart App Control: ON\n\nProblem:\n\nWhen I try to launch VRChat through Steam, I receive an error saying:\n\n\"Invalid game executable path:\n\nC:\\Program Files (x86)\\Steam\\steamapps\\common\\VRChat\\VRChat.exe\"\n\nWindows Smart App Control also blocks VRChat.exe, stating that the publisher could not be verified.\n\nTroubleshooting already attempted:\n\n- Verified the integrity of VRChat game files through Steam.\n\n- Confirmed that VRChat.exe exists in the installation folder.\n\n- Tried launching VRChat.exe directly, but Windows blocked it.\n\n- Deleted the Cache-WindowsPlayer folder.\n\n- Restarted my PC.\n\n- Installed all available Windows updates.\n\nUnfortunately, the issue still persists.\n\nI would prefer to keep Windows Smart App Control enabled while playing VRChat.\n\nCould you please investigate this issue and provide a safe solution?\n\nThank you for your help!",
       "viewerReactions": null,
       "voteID": null
     }
