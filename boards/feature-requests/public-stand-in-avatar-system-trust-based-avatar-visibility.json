@@ -1,15 +1,13 @@
 {
   "_id": "6ae55ba9bf255d922b41605e",
   "aiCategories": [
-    "loc.in-world",
-    "loc.hud",
+    "loc.main-menu",
     "avatars.upload-performance",
     "avatars.impostors",
-    "client.settings",
-    "moderation.safety-system",
-    "social.nameplates"
+    "social.nameplates",
+    "web.profiles"
   ],
-  "aiTaggedAt": "2026-11-01T15:24:34.863012Z",
+  "aiTaggedAt": "2026-11-13T05:11:35.971113Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64c8c2d65162b70976f1034b",
@@ -33,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -167,6 +165,50 @@
       "value": "Related:\n\nhttps://feedback.vrchat.com/feature-requests/p/verbose-avatar-tagging-system\n\nhttps://feedback.vrchat.com/feature-requests/p/only-friends-see-your-avatar-prevent-avatar-theft\n\nhttps://feedback.vrchat.com/feature-requests/p/make-your-private-avatar-only-show-to-you-friends-only-and-have-a-public-avatar\n\nhttps://feedback.vrchat.com/feature-requests/p/anti-rip-show-private-avatar-only-to-friendsvips",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6af69b030f7e111b5c86a50a",
+      "aiGenerated": false,
+      "author": {
+        "_id": "648a8952e1893308fa0e9552",
+        "alias": "Coherent Llama",
+        "aliasID": "66dcd5477d32abb6ca579781",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f201d2c060131db89d365b41574734f3.png",
+        "created": "2023-06-15T03:45:22.244Z",
+        "name": "F1dg3t",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-13T05:07:15.886Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae55ba9bf255d922b41605e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Currently, the only way to have a public facing fallback is to have already uploaded and set one when they were available, I still have mine and the avatar ID associated with it, so as long as I upload a valid fallback to that 1 ID, I can change my fallback at will, but yeah, giving creators the ability to upload fallbacks again will force them to learn avatar optimization, which is just going to be good for everyone.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -215,7 +257,7 @@
       "alias": "Coherent Llama",
       "aliasID": "66dcd5477d32abb6ca579781",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/f8ecdd58cac64e062b8519fd4e6a4056.png",
+      "avatarURL": "https://canny-assets.io/images/f201d2c060131db89d365b41574734f3.png",
       "companies": [],
       "name": "F1dg3t",
       "urlName": null,
