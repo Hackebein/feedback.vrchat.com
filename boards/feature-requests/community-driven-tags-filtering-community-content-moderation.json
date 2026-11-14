@@ -3,10 +3,9 @@
   "aiCategories": [
     "loc.website",
     "web.worlds",
-    "moderation.safety-system",
-    "worlds.content-gating"
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-11-14T00:52:27.669002Z",
+  "aiTaggedAt": "2026-11-14T02:54:34.836499Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "69c194c6bcda4ee632fdb004",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -67,13 +66,71 @@
       "postDeleted": false,
       "postID": "6aef39fa86397eb259a9363e",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "As long as the Community tags are clearly, clearly marked as not submitted by the author, and a community thing, I want this.\n\nIf it's ambiguous if the author or the community made a tag, that can cause issues.\n\n\"NSFW Content\" hm thats already a thing in the content warnings feature whatever it's called. some of this should be moved there, like Flashing Lights and Loud Audio should be content warning options like Sexual Content is",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af7cb97ddbf0c265ccdde70",
+      "aiGenerated": false,
+      "author": {
+        "_id": "69c194c6bcda4ee632fdb004",
+        "alias": "Industrial Albatross",
+        "aliasID": "69c194c6bcda4ee632fdcd93",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/55da847410d0e6ae1b8f5fbe9085a9c4.png",
+        "created": "2026-03-23T19:30:14.514Z",
+        "name": "UnintellyJellie",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-14T02:46:47.318Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "61665e3e7448d57ed9eb49da",
+          "alias": "Olive Vole",
+          "aliasID": "65c26da3ed6eefce4c4d091c",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/8b66d188f35dec6fb645a252fbc4a561.png",
+          "created": "2021-10-13T04:19:10.295Z",
+          "name": "4Bakers",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6af7af2f70a15834e82166e1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aef39fa86397eb259a9363e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{61665e3e7448d57ed9eb49da|full_name} I recommended it as a way to sort of have an insinuated tag while the moderators take the time to update the tags manually. Kinda like if the project is reported enough for having missing tags, they'll appear as community tags until a conclusion is met.",
       "viewerReactions": null,
       "voteID": null
     }
