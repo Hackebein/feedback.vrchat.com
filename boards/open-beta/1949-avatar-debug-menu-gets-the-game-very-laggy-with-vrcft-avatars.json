@@ -1,19 +1,19 @@
 {
   "_id": "6af838073fdf19bbb740abf5",
   "aiCategories": [
-    "loc.pc-client",
-    "platforms.pc.steam",
+    "loc.in-world",
+    "loc.action-menu",
     "avatars.tracking",
     "avatars.descriptor"
   ],
-  "aiTaggedAt": "2026-11-14T16:00:49.868459Z",
+  "aiTaggedAt": "2026-11-14T21:53:21.943658Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6274f8a39b105d528a695506",
     "alias": "Quicksand Wildcat",
     "aliasID": "65c2a1fced6eefce4c5e900f",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/32821ea68add2724d11f027e1a4efb3f.png",
+    "avatarURL": "https://canny-assets.io/images/bca9992faa74a9a69e0a2001a67e127d.png",
     "created": "2022-05-06T10:29:55.387Z",
     "name": "HΛSH",
     "serviceAccount": false,
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -124,6 +124,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "This may not be a new bug, this has been an issue previously when the avatar debug menu was separate from the debug menu too. The gist of it is to have lots of parameters, and lots of values changing for each one of those parameters every tick.\n\nThe framerate drops are caused by the values changing in the debug menu.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af8d5da90a3a46c2b5865b7",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6274f8a39b105d528a695506",
+        "alias": "Quicksand Wildcat",
+        "aliasID": "65c2a1fced6eefce4c5e900f",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/bca9992faa74a9a69e0a2001a67e127d.png",
+        "created": "2022-05-06T10:29:55.387Z",
+        "name": "HΛSH",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-14T21:42:50.749Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5f2d19d0a2990547bfc05f3a",
+          "alias": "Cadmium red Eagle",
+          "aliasID": "65c2a212ed6eefce4c61cb5a",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/ce7dad7fcb30371eaaf1e9cb53d0074b.png",
+          "created": "2020-08-07T09:07:28.872Z",
+          "name": "AirGamer",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6af85ec68e7aad93e938b165",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af838073fdf19bbb740abf5",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5f2d19d0a2990547bfc05f3a|full_name} yeah realized it happend with other avatars after the fact, sometimes it seems to be fine even on avatars where it wasn't after a re-upload\n\nI guess I was just lucky for it to only happens on those ones 😅",
       "viewerReactions": null,
       "voteID": null
     }
@@ -229,7 +285,7 @@
       "alias": "Quicksand Wildcat",
       "aliasID": "65c2a1fced6eefce4c5e900f",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/32821ea68add2724d11f027e1a4efb3f.png",
+      "avatarURL": "https://canny-assets.io/images/bca9992faa74a9a69e0a2001a67e127d.png",
       "companies": [],
       "name": "HΛSH",
       "urlName": null,
