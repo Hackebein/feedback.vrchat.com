@@ -2,9 +2,12 @@
   "_id": "6af817d2ddbf0c265cd2c584",
   "aiCategories": [
     "loc.in-world",
-    "avatars.dynamics"
+    "loc.standalone-vr",
+    "platforms.standalone-vr.quest",
+    "worlds.persistence",
+    "avatars.accessories"
   ],
-  "aiTaggedAt": "2026-11-14T08:16:23.841690Z",
+  "aiTaggedAt": "2026-11-14T12:10:10.316610Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df2c865968ab44bca883ce",
@@ -34,9 +37,63 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 0,
+  "commentCount": 1,
   "commentingDisabled": false,
-  "comments": [],
+  "comments": [
+    {
+      "_id": "6af84e8790a3a46c2b4de12b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df2c865968ab44bca883ce",
+        "alias": "Whisper pink Fish",
+        "aliasID": "65c2c0bced6eefce4c74c766",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/71f541891e21c56e3921f8dfa48b3a56.png",
+        "created": "2022-07-25T23:51:34.230Z",
+        "name": "RuneFox237",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-14T12:05:27.346Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/b7a57e7944954187100f287181f23f11.mp4"
+      ],
+      "files": [
+        {
+          "downloadURL": "/api/files/download/b7a57e7944954187100f287181f23f11.mp4",
+          "mimeType": "video/mp4",
+          "name": "StationBug",
+          "url": "https://canny-assets.io/files/b7a57e7944954187100f287181f23f11.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af817d2ddbf0c265cd2c584",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Upon further testing this seems to specifically be an issue when Live users are in a station and being viewed by a Beta user. So this likely will be 'fixed' once the beta goes live.\n\n* if the viewer and the person sitting in the station are on Live, stations behave as normal\n\n* if the viewer and the person sitting in the station are on the Beta, stations behave as normal\n\n* if a Live user sits in an avatar station then Beta viewers see them lagging behind the station. This seems to happen regardless of whether the user with the station on their avatar is on the Beta or Live. \n\nAttachment:\n\nStationBug.mp4 - A video showcasing the bug. Each side is annotated with the version the recording is on. The user wearing the avatar with a station is on the Beta. The user sitting in the station is on Live.",
+      "viewerReactions": null,
+      "voteID": null
+    }
+  ],
   "companyID": "58c62e995865713647a7115d",
   "created": "2026-11-14T08:12:02.028Z",
   "deleteID": null,
@@ -52,20 +109,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 2,
+  "maxScore": 3,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 2,
+  "score": 3,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-14T08:12:02.028Z",
   "subCategoryID": null,
   "title": "[1949] Users on avatar stations lag behind the station when it moves.",
-  "trendingScore": 2968.433361378457,
+  "trendingScore": 2968.7267533664126,
   "updatedBy": null,
   "urlName": "1949-users-on-avatar-stations-lag-behind-the-station-when-it-moves",
   "viewerIsAuthor": false,
@@ -78,6 +135,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "65564de989aa2b9e7ba85d17",
+      "alias": "Integral Wolf",
+      "aliasID": "65cecee20129d7ae44daee58",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/9d1e6cc177f6c13522bd1793fe26fd39.png",
+      "companies": [],
+      "name": "Ner0kun",
+      "urlName": null,
+      "voteID": "6af84dd8a5c6639789705458"
+    },
     {
       "_id": "6a5f9e9bd4058d953b392a6f",
       "alias": "Intimate Otter",
