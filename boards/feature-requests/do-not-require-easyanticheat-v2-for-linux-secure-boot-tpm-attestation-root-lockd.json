@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.settings"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-11-03T17:33:09.774229Z",
+  "aiTaggedAt": "2026-11-14T01:31:55.913723Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df117d465d5152bc5d38a8",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 8,
+  "commentCount": 9,
   "commentingDisabled": false,
   "comments": [
     {
@@ -67,7 +67,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 6
+        "like": 7
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -113,7 +113,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -159,7 +159,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 5
+        "like": 6
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -205,7 +205,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 4
+        "like": 5
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -251,7 +251,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -343,7 +343,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -389,7 +389,7 @@
       "postID": "6acfc2d6e62a468248bc2ca2",
       "private": false,
       "reactions": {
-        "like": 2
+        "like": 3
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -397,6 +397,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Requiring things like a signed kernel would go entirely contrary to the creative spirit of the community. Especially when it comes to things like hardware tinkering or enablement on Linux, there's a lot of hardware that would get locked out by this sort if change.\n\nJust as an example, the bigscreen beyond still requires a kernel patch to work. There's a couple distros that ship the patch, but the community has had a hard time getting it upstreamed despite multiple attempts. \n\nhttps://vronlinux.org/docs/hardware/bigscreen-beyond/",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af7b85b70a15834e821f184",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5e59bc346312bf2d549f33ab",
+        "alias": "Beryl Wallaby",
+        "aliasID": "65c2aceaed6eefce4ce242b4",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a61691e6660dd80eaa2e4d2480e1bee7.png",
+        "created": "2020-02-29T01:19:48.358Z",
+        "name": "peq42",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-14T01:24:43.316Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6acfc2d6e62a468248bc2ca2",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "If vrchat does this, I'm moving to resonite permanently.",
       "viewerReactions": null,
       "voteID": null
     }
@@ -416,20 +460,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 50,
+  "maxScore": 51,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6acfc2d6e62a468248bc2ca2/1869700405.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 50,
+  "score": 51,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-10-14T17:58:46.553Z",
   "subCategoryID": null,
   "title": "Do not require EasyAntiCheat v2 for Linux - Secure Boot/TPM attestation/root lockdown/etc",
-  "trendingScore": 2969.3781091872643,
+  "trendingScore": 2969.4953612803192,
   "updatedBy": null,
   "urlName": "do-not-require-easyanticheat-v2-for-linux-secure-boot-tpm-attestation-root-lockd",
   "viewerIsAuthor": false,
@@ -442,6 +486,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "5e59bc346312bf2d549f33ab",
+      "alias": "Beryl Wallaby",
+      "aliasID": "65c2aceaed6eefce4ce242b4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a61691e6660dd80eaa2e4d2480e1bee7.png",
+      "companies": [],
+      "name": "peq42",
+      "urlName": null,
+      "voteID": "6af7b7c9a5c6639789406bea"
+    },
     {
       "_id": "67635bef8ae542206c1dc009",
       "alias": "Pewter Caterpillar",
@@ -513,7 +568,7 @@
       "alias": "Gradual Aardvark",
       "aliasID": "67a7a794afacf378f1ae500b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/9ad9d9ac61f4cc03c45aea6346d2f763.png",
+      "avatarURL": "https://canny-assets.io/images/f5742122369c494a8bf0eca9f3d6e977.png",
       "companies": [],
       "name": "BruceKnight",
       "urlName": null,
@@ -980,17 +1035,6 @@
       "name": "regalialong",
       "urlName": null,
       "voteID": "6acfc4736fe99c84f2b5243f"
-    },
-    {
-      "_id": "62df117d465d5152bc5d38a8",
-      "alias": "Continuing Parrot",
-      "aliasID": "65c319eaed6eefce4c72e532",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/886a34e0cf901c451fb4e9292803770d.png",
-      "companies": [],
-      "name": "digitalf0x",
-      "urlName": null,
-      "voteID": "6acfc2d66fe99c84f2b51512"
     }
   ]
 }
