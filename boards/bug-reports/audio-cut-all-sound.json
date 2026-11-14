@@ -2,10 +2,11 @@
   "_id": "6ae954d72d3bb3d5ea6603a9",
   "aiCategories": [
     "loc.standalone-vr",
+    "loc.in-world",
     "platforms.standalone-vr.quest",
     "audio.voice"
   ],
-  "aiTaggedAt": "2026-11-14T20:51:55.646277Z",
+  "aiTaggedAt": "2026-11-14T22:43:22.893079Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6ae954d6db45c1da4f3e4e0e",
@@ -29,40 +30,9 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 123,
+  "commentCount": 124,
   "commentingDisabled": false,
   "comments": [
-    {
-      "_id": "6af734fc9538c430d1f99c3f",
-      "author": {
-        "_id": "64873f159cf028090ce2c2e2",
-        "alias": "Papaya Python",
-        "aliasID": "65c26df7ed6eefce4c5bafd9",
-        "anonymized": false,
-        "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
-        "created": "2023-06-12T15:51:49.320Z",
-        "name": "StormRel",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "boardID": "58c62f2b3cf8f8367753b2f0",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-11-13T16:04:12.692Z",
-      "deleted": false,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "internal": false,
-      "mergeID": "6af734fc9538c430d1f99c3f",
-      "mergedPostDetails": "Description\n\naudio cuts out every 5 mins click app to get it working again                                       \n\nReproduction Steps\n\n                                                                                                    \n\nDetails\n\n- Category: Audio\n\n- Frequency: Always\n\n---\n\nplatform: Quest (platform: Android - Quest, store: Oculus, headset: None)\n\nrawPlatform: Android\n\nclientVersion: 2026.4.1p2-1938-565822d00a-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-11-13_03-28-57.txt](https://api.vrchat.cloud/api/1/file/file_8cc484a6-5c4f-434b-aab6-2260a8dca592/1/file)",
-      "mergedPostTitle": "audio going out",
-      "pinned": false,
-      "postID": "6ae954d72d3bb3d5ea6603a9",
-      "private": false,
-      "spam": false,
-      "synthetic": true,
-      "value": ""
-    },
     {
       "_id": "6af735051733e3d52e129619",
       "author": {
@@ -352,6 +322,59 @@
       "spam": false,
       "statusChangeID": null,
       "value": "The 2026.4.1p2 still has the same issue",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6af8e2cf51fc4ac132d66cd3",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6af8e0c970a15834e836eb2d",
+        "alias": "Distant Pony",
+        "aliasID": "6af8e0c9a5c663978972139e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c88f8c3cf455da5ac83c3274611eced5.png",
+        "created": "2026-11-14T22:29:29.095Z",
+        "name": "miscu",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-14T22:38:07.792Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/276dc312ef8f9f8b31a8ae0bc381e43d.txt"
+      ],
+      "files": [
+        {
+          "downloadURL": "/api/files/download/276dc312ef8f9f8b31a8ae0bc381e43d.txt",
+          "mimeType": "text/plain",
+          "name": "output_log_2026-11-14_13-49-35",
+          "url": "https://canny-assets.io/files/276dc312ef8f9f8b31a8ae0bc381e43d.txt"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae954d72d3bb3d5ea6603a9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I'm experiencing audio issues similar to what Not Sean described. The game audio is fine, but other player's voices are coming through garbled and static-y to the point of being just barely comprehensible. This has occurred in both large and small groups. I've attempted switching to the beta branch and clearing out the cache without any success, and it occurs regardless of if I'm in VR or desktop mode.\n\nThis only started occurring a few weeks ago. I've attached a session log of the issue occurring today. Here is my hardware info:\n\nProcessor - AMD Ryzen 7 7800X3D 8-Core Processor (4.20 GHz)\n\nInstalled RAM - 32.0 GB (31.5 GB usable)\n\nGraphics card - AMD Radeon RX 9070 XT (16 GB)\n\nStorage - 8.85 TB of 14.08 TB used\n\nSystem type - 64-bit operating system, x64-based processor\n\nSpeedtest Results - 940.01 Up, 118.43 Down",
       "viewerReactions": null,
       "voteID": null
     }
