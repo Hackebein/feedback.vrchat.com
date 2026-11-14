@@ -1,0 +1,93 @@
+{
+  "_id": "6af8dee790a3a46c2b596015",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk"
+  ],
+  "aiTaggedAt": "2026-11-14T22:25:47.437137Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6af8de6170a15834e836ab04",
+    "alias": "Elated Gerbil",
+    "aliasID": "6af8de61a5c6639789720e51",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/4ce6b5caf870e3c3058544f0a0116968.png",
+    "created": "2026-11-14T22:19:13.496Z",
+    "name": "McDudeMan",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6af8de6170a15834e836ab04",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-14T22:21:27.604Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "**Summary**\n\nWhen a Multi-Platform Build & Publish for a world is started from the platform that is last in the SDK's platform order (for example Android, with Windows and Android ticked), it never finishes. It builds and uploads Android, builds and uploads Windows, then switches back to Android and builds and uploads it again, and keeps repeating until the user stops it.\n\nThe cause is `VRCMultiPlatformBuild.ShouldContinueMPB`. When the starting platform is also the last in the list, it returns `true` on every return to that platform, because that branch assumes the platform has not been built yet (as in the avatar flow). The world builder has already built it at the start, so the end-of-run check in `SetUpNextMPBTarget` (`MPBBuiltCount + 1 == MPBPlatformsList.Count`) can never become true.\n\n**Environment**\n\n- Unity: 2022.3.22f1\n\n- VRChat Worlds SDK: com.vrchat.worlds 3.10.3\n\n- VRChat Base SDK: com.vrchat.base 3.10.3\n\n- Content type: World (Udon / UdonSharp)\n\n- Platforms ticked: Windows and Android (PC + Quest)\n\n- Editor open on: Android. The loop only happens when the run is started while on Android.\n\n- Files involved: `VRCMultiPlatformBuild.cs` (com.vrchat.base, Editor/VRCSDK/Dependencies/VRChat) and `VRCSdkControlPanelWorldBuilder.cs` (com.vrchat.worlds, Editor/VRCSDK/SDK3)\n\n**Steps to reproduce**\n\n1. Open a world project with the Editor's active build target set to Android.\n\n2. Open the VRChat SDK Control Panel, Builder tab, and tick both Windows and Android for a multi-platform build.\n\n3. Press Build & Publish.\n\n4. Wait while the SDK builds and uploads Android, switches to Windows, builds and uploads Windows, and switches back to Android.\n\n**Expected:** the run ends when it arrives back on the starting platform, and the \"Multi-Platform Upload Finished\" notification shows.\n\n**Actual:** the SDK builds and uploads Android a second time, then Windows again, and so on until the user cancels.\n\n**Root cause**\n\nThe platform list is `[Windows, Android]` and `MPBInitialPlatform` is Android, so the starting platform is also `MPBPlatformsList.Last()`. Tracing the session state through the run:\n\n1. Android (start), count 0: `StartMPB` sees initial == last, so it does not enter Building. `BuildAndUploadMultiPlatform` still builds and uploads Android because Android is in the list.\n\n2. Android, count 1: `SetUpNextMPBTarget` picks Windows, increments the count, state = Switching, switches platform.\n\n3. Windows, count 2: `ShouldContinueMPB` returns true (initial != current). Windows is built and uploaded. `SetUpNextMPBTarget` picks Android and increments.\n\n4. Android (back at start), count 2: `ShouldContinueMPB` reaches `if (MPBInitialPlatform == MPBPlatformsList.Last()) return true;` and returns true instead of finishing. Android is built and uploaded again.\n\n5. Android, count 3: the `SetUpNextMPBTarget` end check needs `MPBBuiltCount + 1 == MPBPlatformsList.Count`, which is 3 == 2 and false. It switches to Windows and increments again.\n\nFrom step 5 the count only grows past the list length, so neither exit is ever reached: not the `isMPBFinished = true` path in `ShouldContinueMPB`, and not the early `return false` in `SetUpNextMPBTarget`.\n\nThe `initial == last` branch in `ShouldContinueMPB` and the `BuiltCount + 1 == Count` check in `SetUpNextMPBTarget` look designed as a pair for a flow where the starting platform is skipped at the beginning and built last (the code comment says this \"can happen for Avatar builds\"). In `VRCSdkControlPanelWorldBuilder.BuildAndUploadMultiPlatform` the only skip condition is `!_selectedBuildTargets.Contains(EditorUserBuildSettings.activeBuildTarget)`, so a starting platform that is in the list is built immediately. That leaves the count one ahead of what the end check expects. This pairing is an inference from reading the code, not something confirmed by running the avatar flow.\n\n**Suggested fix**\n\nEnd the run when it returns to the starting platform and every platform in the list has already been built. In `ShouldContinueMPB`, the `initial == last` branch should only return true while the starting platform has not been built yet:\n\n```csharp\n\n// If the initial platform is last in the list, only build it again if it has not been built yet\n\nif (MPBInitialPlatform == MPBPlatformsList.Last() && MPBBuiltCount < MPBPlatformsList.Count)\n\n{\n\n    return true;\n\n}\n\n```\n\nWith `[Windows, Android]` started on Android this gives `MPBBuiltCount == 2` on the return trip, so the run falls through to `isMPBFinished = true` and `ReportMPBDone()`. If the avatar flow counts differently (it may build the starting platform last and reach this point with a count of `Count - 1`), the same condition keeps that behaviour, but that is unverified.\n\nA second option is to make `BuildAndUploadMultiPlatform` skip the starting platform when it is last in the list and call `SetUpNextMPBTarget(cancellationToken, false)`, so the count lines up with the existing end check.\n\n**Local patch used while waiting for an official fix:** an early exit at the top of `StartMultiPlatformBuild` in `VRCSdkControlPanelWorldBuilder.cs`. When `MPB` is true, the list has more than one platform, the initial platform is the last in the list and is the active target, and `MPBBuiltCount >= MPBPlatformsList.Count`, it calls `VRCMultiPlatformBuild.ReportMPBDone()`, re-enables the UI, shows the \"Multi-Platform Upload Finished\" notification and returns. This only touches the world builder, so avatar builds are unaffected. Tested: this patch was run in Unity on a real multi-platform publish started from Android, and worked. The run now finishes normally instead of looping. The one-condition change to `ShouldContinueMPB` above has not been run itself; the tested patch applies the same end-of-run rule from the world builder.\n\n**Workaround and evidence**\n\n**Workaround without changing the SDK:** start the multi-platform publish while the Editor is on Windows, the first platform in the list. The run then goes Windows, Android, back to Windows, and the existing finish check works. After cancelling a looping run, use VRChat SDK > Utilities > Clear Multi Platform Build State, because the state lives in `SessionState` and survives script reloads.\n\n**Evidence from the Unity Editor.log of an affected run:**\n\n- A platform switch to Windows was requested (`Requested script compilation because: Switching to platform Windows, Mac, Linux`), followed later by a switch to Android (`Switching to platform Android`).\n\n- Stack traces in the same log pass through `VRCSdkControlPanelWorldBuilder.BuildAndUploadMultiPlatform` (`VRCSdkControlPanelWorldBuilder.cs`, line 3312), confirming the build and upload ran from the multi-platform path.\n\n- The log covers a run that the user cancelled, so it shows the switch order but not a final repeat cycle. The repeat was observed directly in the Editor and is described above.\n\nHappy to provide the full Editor.log, the Console output, or a screen recording of the loop if useful.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af8dee790a3a46c2b596014",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-14T22:21:27.604Z",
+  "subCategoryID": null,
+  "title": "VRChat Worlds SDK: Multi-Platform Build & Publish loops forever when the starting platform is last in the list",
+  "trendingScore": 2968.1119425658117,
+  "updatedBy": null,
+  "urlName": "vrchat-worlds-sdk-multi-platform-build-publish-loops-forever-when-the-starting-p",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6af8de6170a15834e836ab04",
+      "alias": "Elated Gerbil",
+      "aliasID": "6af8de61a5c6639789720e51",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4ce6b5caf870e3c3058544f0a0116968.png",
+      "companies": [],
+      "name": "McDudeMan",
+      "urlName": null,
+      "voteID": "6af8dee7a5c6639789720f80"
+    }
+  ]
+}
