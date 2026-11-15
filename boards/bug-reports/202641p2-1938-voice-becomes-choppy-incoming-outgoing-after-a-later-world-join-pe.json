@@ -1,0 +1,96 @@
+{
+  "_id": "6af9450c3fdf19bbb754a231",
+  "aiCategories": [
+    "loc.in-world",
+    "audio.voice"
+  ],
+  "aiTaggedAt": "2026-11-15T05:42:56.803739Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6af9438ffefe4445e7c0bce0",
+    "alias": "Midnight blue Mole",
+    "aliasID": "6af94390a5c663978972f015",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/6c2357ee2f7fa602a09418bd71cc4a07.png",
+    "created": "2026-11-15T05:30:55.802Z",
+    "name": "-ᴼᵛᵁ-",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6af9438ffefe4445e7c0bce0",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-15T05:37:16.403Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "What happens:\n\nAfter launching, joining worlds works fine at first. After a later world join, every player's voice becomes choppy/chopped up for me, and other players report that I sound choppy too. It stays broken in every world afterward, including worlds that worked earlier in the session, until I fully restart VRChat.\n\nSteps to reproduce (from attached log):\n\n1. Launch VRChat → Home\n\n2. Join World A (Midnight Rooftop): voice fine\n\n3. Join World B (The Black Cat): voice fine\n\n4. Join World C (The Mafia Bar): voice choppy\n\n5. Rejoin World A: still choppy\n\n6. Restart VRChat → fixed\n\nObservations:\n\n- Debug menu shows 0 Loss by CRC Check, 0 Loss by Challenge, round trip variance ~5, Suffering 0. The network is clean.\n\n- In the Players debug panel, Intrvl Q turns red for almost every player once the problem starts (mostly green/yellow before).\n\n- In the log, the join where it broke shows \"LocalPlayerObject is null, retrying in 2 seconds\" (22:18:46). Right after that, departing players start being \"Moved to recovery list\". This doesn't happen in the earlier worlds, and on leaving World C every player was moved to the recovery list.\n\n- Not hardware-related: other apps sound fine, and a VRChat restart fixes it every time.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/f235468cc4aa52c033c276a46a5a0316.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/f235468cc4aa52c033c276a46a5a0316.txt",
+      "mimeType": "text/plain",
+      "name": "output_log_2026-11-14_22-08-55_redacted",
+      "url": "https://canny-assets.io/files/f235468cc4aa52c033c276a46a5a0316.txt"
+    }
+  ],
+  "ideaID": "6af9450b3fdf19bbb754a230",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-15T05:37:16.403Z",
+  "subCategoryID": null,
+  "title": "[2026.4.1p2-1938] Voice becomes choppy (incoming + outgoing) after a later world join, persists until restart. No packet loss",
+  "trendingScore": 2968.155177921301,
+  "updatedBy": null,
+  "urlName": "202641p2-1938-voice-becomes-choppy-incoming-outgoing-after-a-later-world-join-pe",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6af9438ffefe4445e7c0bce0",
+      "alias": "Midnight blue Mole",
+      "aliasID": "6af94390a5c663978972f015",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6c2357ee2f7fa602a09418bd71cc4a07.png",
+      "companies": [],
+      "name": "-ᴼᵛᵁ-",
+      "urlName": null,
+      "voteID": "6af9450ca5c663978972f1e9"
+    }
+  ]
+}
