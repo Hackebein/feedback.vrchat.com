@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-11-14T04:49:08.005429Z",
+  "aiTaggedAt": "2026-11-15T05:31:18.205496Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63c9760ef519ef0b8ce99165",
@@ -42,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "I'm aware this is not part of the public API, but this is used by several tools to check whether the SDK build is running or if another tool triggered avatar preprocessors (play mode testing with VRCFury).\n\nThe property is set for the first (current) platform as it is set by `RunBuildAndPublish` which triggers the first call to `StartMultiPlatformBuild`, but unlike the normal build process via `BuildAndUpload`, it is not set again before the call to `Build` (after `CheckCopyrightAgreement`), that means that after a platform switch, the property value resets and remains set to `None`, since further platform builds begin from `StartMultiPlatformBuild`.",
+  "details": "I'm aware this is not part of the public API, but this is used by several tools to check whether the SDK build is running or if another tool triggered avatar preprocessors (play mode testing with VRCFury).\n\nThe property is set for the first (current) platform as it is set by `RunBuildAndPublish` which triggers the first call to `StartMultiPlatformBuild`, but unlike the normal build process via `BuildAndUpload`, it is not set again before the call to `Build` (after `CheckCopyrightAgreement`), that means that after a platform switch, the property value resets and remains set to `None`, since further platform builds begin from `StartMultiPlatformBuild`.\n\nEdit: `VRCSdkControlPanel.window != null && VRCSdkControlPanel.TryGetBuilder(out IVRCSdkAvatarBuilderApi builder) && builder.BuildState == SdkBuildState.Building` is a working public API alternative, but feels extremely excessive (why do we need an instance reference to get the build state?), we have to check the window field since `TryGetBuilder` prints an error to the console if it's null, and it feels wholly unnecessary for the build process to be dependent on the SDK window being open, that means that builds and uploads cannot be triggered programmatically without also forcing the SDK window to open.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -66,7 +66,7 @@
   "subCategoryID": null,
   "title": "Multi-platform build does not set VRC_SdkBuilder.ActiveBuildType after the first platform",
   "trendingScore": 2968.412958025388,
-  "updatedBy": null,
+  "updatedBy": "63c9760ef519ef0b8ce99165",
   "urlName": "multi-platform-build-does-not-set-vrc-sdkbuilderactivebuildtype-after-the-first",
   "viewerIsAuthor": false,
   "viewerVote": 0,
