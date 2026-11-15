@@ -1,0 +1,93 @@
+{
+  "_id": "6af94325ddbf0c265ce7de8f",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-11-15T05:34:41.577609Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6754f95e9278647fc03d58a3",
+    "alias": "Emerald Hummingbird",
+    "aliasID": "6754f95ea367fa63927cf0c4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/302cecbea7f9358e06cebf8db2d1aea4.png",
+    "created": "2024-12-08T01:41:50.532Z",
+    "name": "Hawkley",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6754f95e9278647fc03d58a3",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2ceedd9a0e35fce972c",
+    "created": "2024-04-10T17:56:30.034Z",
+    "name": "Feature Request",
+    "parentID": null,
+    "urlName": "feature-request"
+  },
+  "categoryID": "6616d2ceedd9a0e35fce972c",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-15T05:29:09.534Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Requesting a function for facetracking parameter behaviors to simplify mapping a tracking key from one range to another.\n\nArity-5 version allows specifying both the input and output ranges:\n\n`map(key, in_start, in_stop, out_start, out_stop)`\n\nArity-3 version assumes `0` and `1` as the input range (basically the same as `lerp`):\n\n`map(key, out_start, out_stop)`\n\nPerforms this equivalent operation:\n\n`out_start + (out_stop - out_start) * ((key - in_start) / (in_stop - in_start))`\n\nI'd also suggest providing a version which additionally clamps the result to the output range, maybe called `cmap`.\n\nOne use-case for this is to be able to easily remap tracking keys to bias them in certain ways while allowing the user's facial movements to still contribute to the expression's livliness.  For instance, in a \"Sad\" blendshape set, you might want to remap the \"BrowInnerUp*\" tracking keys to the range of `0.7` to `1.0` to force a sadder look.\n\nHow this function would be used to accomplish this example:\n\nApply to Blendshape, \"BrowInnerUpRight\", Custom\n\nBlendshapes Set: \"Sad\"\n\nExpression: `map(BrowInnerUpRight, 0.7, 1)`\n\nIt reads a lot better than `(BrowInnerUpRight * 0.3) + 0.7` to get the same result and I don't have to work out the math for each range I'm trying to target.  I foresee this also being used a lot to bias eye dilation/constriction for a lot of different emotions.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6af94324ddbf0c265ce7de8e",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-15T05:29:09.534Z",
+  "subCategoryID": null,
+  "title": "Add \"map\" function to Facetracking Parameter Behaviors",
+  "trendingScore": 2968.1543728435895,
+  "updatedBy": null,
+  "urlName": "add-map-function-to-facetracking-parameter-behaviors",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6754f95e9278647fc03d58a3",
+      "alias": "Emerald Hummingbird",
+      "aliasID": "6754f95ea367fa63927cf0c4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/302cecbea7f9358e06cebf8db2d1aea4.png",
+      "companies": [],
+      "name": "Hawkley",
+      "urlName": null,
+      "voteID": "6af94325a5c663978972ef81"
+    }
+  ]
+}

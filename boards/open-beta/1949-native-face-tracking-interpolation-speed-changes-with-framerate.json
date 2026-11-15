@@ -1,10 +1,11 @@
 {
   "_id": "6af93d6f8e7aad93e94a923d",
   "aiCategories": [
-    "loc.in-world",
+    "loc.pc-client",
+    "platforms.pc.steam",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-15T05:31:18.204704Z",
+  "aiTaggedAt": "2026-11-15T05:34:41.578474Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649b83fd8ca61609383735ec",
@@ -42,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Native face tracking has faster interpolation with higher fps and vice versa. This means it will become unstable if your fps is unstable, and your face gets extremely slow if you're lagging.\n\nThis avatar's entire head moves with eye tracking. It moves much slower in the packed club instance than it does in my empty home world, even though I'm darting my eyes around at the same speed. https://www.youtube.com/watch?v=iw9QRYQAq04\n\nAnd here's a more normal avatar with the same issue, except I scaled my eye bones to make it more obvious: https://youtu.be/6waGn5xm3P8 (Can't believe my goofy toggle finally gets to be part of a bug report lmfao)\n\nApparently this issue doesn't happen if you're forwarding parameters and rotating the eyes manually in the animator.",
+  "details": "Native face tracking has faster interpolation with higher fps and vice versa. This means it will become unstable if your fps is unstable, and your face gets extremely slow if you're lagging.\n\nThis avatar's entire head moves with eye tracking. It moves much slower in the packed club instance than it does in my empty home world, even though I'm darting my eyes around at the same speed. https://www.youtube.com/watch?v=iw9QRYQAq04\n\nAnd here's a more normal avatar with the same issue, except I scaled my eye bones to make it more obvious: https://youtu.be/6waGn5xm3P8 (I can't believe this goofy toggle gets to be part of a bug report lmfao)\n\nApparently this issue doesn't happen if you're forwarding parameters and rotating the eyes manually in the animator.",
   "error": null,
   "eta": null,
   "etaPublic": true,
