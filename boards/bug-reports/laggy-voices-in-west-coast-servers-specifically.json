@@ -2,10 +2,9 @@
   "_id": "6af63e47ba3835258290706d",
   "aiCategories": [
     "loc.in-world",
-    "audio.voice",
-    "platforms.cross-platform"
+    "audio.voice"
   ],
-  "aiTaggedAt": "2026-11-15T19:15:07.579984Z",
+  "aiTaggedAt": "2026-11-15T23:45:14.611847Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "621977f970781570a49950a2",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -207,6 +206,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Just tested a new router and still have the same issues. Is this issue ever going to get looked at or am i just locked out of all west coast instances? Its been almost a month",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6afa412b90a3a46c2b733d91",
+      "aiGenerated": false,
+      "author": {
+        "_id": "655bb02561ab28ce4aa1c72e",
+        "alias": "Sunny Newt",
+        "aliasID": "6604aa07a63714bcb30fe46a",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/6d49d614d81be996c756291611f2b7fb.png",
+        "created": "2023-11-20T19:14:45.994Z",
+        "name": "Chancecat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-15T23:32:59.304Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af63e47ba3835258290706d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Same situation here, east coaster, EU and USE servers are still fine, problem's only on west coast.  It started sometime earlier this week, roughly the 9th to 12th but I can't pinpoint it, I don't think there was an VRC update that caused it, but with Steam's autoupdate, I'm not positive.\n\nThe problem's intermittent, usually several minutes of nothing wrong then everyone's audio and movement start to chop, bursts of lag of under a quarter of a second several times, so short I couldn't even tell the movement problem was related until asking someone to circlestrafe around me, letting me see the lagging in their motion always taking place with the audio drops.  After a few minutes it'll clear up again, fine until the next choke.\n\nSame song and dance troubleshooting, thought it was my own stuff with various equipment resets, testing my other PC, speed, VOIP, RTC, and ping tests to other west coast websites, everything seems fine so my only current conclusion's that it's further upstream or the program's choking somehow only on west coast.",
       "viewerReactions": null,
       "voteID": null
     }
