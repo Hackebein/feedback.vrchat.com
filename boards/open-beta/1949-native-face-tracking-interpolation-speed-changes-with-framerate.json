@@ -1,11 +1,10 @@
 {
   "_id": "6af93d6f8e7aad93e94a923d",
   "aiCategories": [
-    "loc.in-world",
-    "open-beta",
+    "loc.unity-sdk",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-15T05:08:37.320574Z",
+  "aiTaggedAt": "2026-11-15T05:23:20.222852Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "649b83fd8ca61609383735ec",
@@ -43,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Native face tracking has faster interpolation with higher fps and vice versa. This means it will become unstable if your fps is unstable, and your face gets extremely slow if you're lagging.\n\nThis avatar's entire head moves with eye tracking. It moves much slower in the packed club instance than it does in my empty home world, even though I'm darting my eyes around at the same speed. https://www.youtube.com/watch?v=iw9QRYQAq04",
+  "details": "Native face tracking has faster interpolation with higher fps and vice versa. This means it will become unstable if your fps is unstable, and your face gets extremely slow if you're lagging.\n\nThis avatar's entire head moves with eye tracking. It moves much slower in the packed club instance than it does in my empty home world, even though I'm darting my eyes around at the same speed. https://www.youtube.com/watch?v=iw9QRYQAq04\n\nAnd here's a more normal avatar with the same issue, except I scaled my eye bones to make it more obvious: https://youtu.be/6waGn5xm3P8\n\nApparently this issue doesn't happen if you're forwarding parameters and rotating the eyes manually in the animator.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -67,7 +66,7 @@
   "subCategoryID": null,
   "title": "[1949] Native face tracking interpolation speed changes with framerate",
   "trendingScore": 2968.8453802633035,
-  "updatedBy": null,
+  "updatedBy": "649b83fd8ca61609383735ec",
   "urlName": "1949-native-face-tracking-interpolation-speed-changes-with-framerate",
   "viewerIsAuthor": false,
   "viewerVote": 0,
