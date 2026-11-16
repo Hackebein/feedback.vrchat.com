@@ -2,9 +2,10 @@
   "_id": "6afaa38f70a15834e85872ee",
   "aiCategories": [
     "loc.website",
-    "web.worlds"
+    "web.worlds",
+    "web.auth"
   ],
-  "aiTaggedAt": "2026-11-16T06:37:34.139256Z",
+  "aiTaggedAt": "2026-11-16T06:50:11.938176Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "66c7f83ba2fca0a622090327",
@@ -42,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Picture 1. If you click the website button on the world details, it will bring you to the fallback&launch site(you can see the site without login), which is good since it's annoying when you want to share a world and all they seeing just ask for login or make account. But if you want to do other things(like seeing Active Instances, open new instances, favorite or so), you will need to click the 'View world details'(the naming is confuse btw, people will think it's the web element to expand details, rather than going official site). Anyway, if you click the 'View world details' button, it will try to bring you to the detail site, but if you are not in the login stats, the site will manage to refresh itself(loopback), that's all, no message, no warning, no clues, just think the details didn't 'expand'(like most websites). Was confused for a bit, think it's my plugins for the Chrome browser, but I also tried the button on the android Chrome, so I think the issue do exist.(TL;DR, it should tell you world details require to login)\n\nPicture 2. If you click the button when you were login, it will show the world detail page, but tbh, the site logs you out all the time by itselves, most people won't be in the login stats when they click the button, there's also another issue which I will open another report",
+  "details": "Picture 1. If you click the website button on the world details, it will bring you to the fallback&launch site(you can see the site without login), which is good since it's annoying when you want to share a world and all they seeing just ask for login or make account. But if you want to do other things(like seeing Active Instances, open new instances, favorite or so), you will need to click the 'View world details'(the naming is confuse btw, people will think it's the web element to expand details, rather than going official site). Anyway, if you click the 'View world details' button, it will try to bring you to the detail site, but if you are not in the login stats, the site will manage to refresh itself(loopback), that's all, no message, no warning, no clues, just think the details didn't 'expand'(like most websites). Was confused for a bit, think it's my plugins for the Chrome browser, but I also tried the button on the android Chrome, so I think the issue do exist.(TL;DR, it should tell you world details require to login)\n\nPicture 2. If you click the button when you were login, it will show the world detail page, but tbh, the site logs you out all the time by itselves, most people won't be in the login stats when they click the button, there's also another issue which I will open another report(which is here: https://feedback.vrchat.com/open-beta/p/1949-view-on-website-button-work-incorrectly)",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -69,7 +70,7 @@
   "subCategoryID": null,
   "title": "View world details button loopback without login",
   "trendingScore": 2968.7092045349323,
-  "updatedBy": null,
+  "updatedBy": "66c7f83ba2fca0a622090327",
   "urlName": "view-world-details-button-loopback-without-login",
   "viewerIsAuthor": false,
   "viewerVote": 0,
