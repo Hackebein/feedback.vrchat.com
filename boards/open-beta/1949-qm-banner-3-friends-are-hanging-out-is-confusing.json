@@ -2,12 +2,10 @@
   "_id": "6afb572e4821636fefd9dd27",
   "aiCategories": [
     "loc.quick-menu",
-    "loc.pc-client",
     "open-beta",
-    "platforms.pc.steam",
     "social.friends"
   ],
-  "aiTaggedAt": "2026-11-16T19:23:27.669939Z",
+  "aiTaggedAt": "2026-11-16T19:34:29.129061Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f30ecee654cd4491456a82f",
@@ -45,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "On my QM in this new beta, there is a banner that says \"3 friends are hanging out, Join Them\" and shows the user icons of 3 friends. However I cant seem to figure out what it is referring to. Looking at the social menu, I have more than 3 friends online, and only one of them is joinable. And the three users shown are definitely not together, as the wording of the banner seems to imply.\n\nSurely it should either say \"1 friend is online, Join Them\", or \"9 friends are online, Take a Look\", or something.\n\nAs I was writing this, 2 more friends came online and joinable, however the banner in the QM doesnt show those people, and instead still shows icons from friends who are in private instances.",
+  "details": "On my QM in this new beta, there is a banner that says \"3 friends are hanging out, Join Them\" and shows the user icons of 3 friends. However I cant seem to figure out what it is referring to. Looking at the social menu, I have more than 3 friends online, and only one of them is joinable. And the three users shown are definitely not together, as the wording of the banner seems to imply.\n\nSurely it should either say \"1 friend is online, Join Them\", or \"9 friends are online, Take a Look\", or something. \"Hanging Out\" implies the are all together, and \"Join Them\" further implies they are in the same place, as well as implies that they can be joined. Which is more than likely not the case given that it seems to choose randomly.\n\nAs I was writing this, 2 more friends came online and joinable, however the banner in the QM doesnt show those people, and instead still shows icons from friends who are in private instances.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -69,7 +67,7 @@
   "subCategoryID": null,
   "title": "[1949] QM banner \"3 friends are hanging out\" is confusing",
   "trendingScore": 2968.7852635312383,
-  "updatedBy": null,
+  "updatedBy": "5f30ecee654cd4491456a82f",
   "urlName": "1949-qm-banner-3-friends-are-hanging-out-is-confusing",
   "viewerIsAuthor": false,
   "viewerVote": 0,
