@@ -2,11 +2,11 @@
   "_id": "6afa6bfa51fc4ac132f3fbb3",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
-    "open-beta",
-    "client.controls"
+    "platforms.pc.desktop",
+    "client.controls",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-11-16T05:34:37.332908Z",
+  "aiTaggedAt": "2026-11-16T05:46:00.911249Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a18bbc05a52cb2df0b295e1",
@@ -36,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -82,6 +82,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "You can hold ALT to rotate objects like before. Or use U,I,O,J,K,L keys.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6afa973c64a7ed5a2785bfaf",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a18bbc05a52cb2df0b295e1",
+        "alias": "Marine Gopher",
+        "aliasID": "6a18bbc05a52cb2df0b295e5",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/14bfb31c6ce1edec298332dfd301988c.png",
+        "created": "2026-05-28T22:03:44.110Z",
+        "name": "K-KAZUNO",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-16T05:40:12.696Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6afa92db70a15834e855e096",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6afa6bfa51fc4ac132f3fbb3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}\n\nThank you! I hadn't realized that I could rotate objects by holding Alt.\n\nIt would be really helpful if the desktop HUD could also mention the Alt key, since it currently only explains that you can move your arms with the middle mouse button.\n\nAlso, I usually use VRChat's official webcam tracking feature, so I expect that I'll use this new feature much less often than I rotate held objects. Because of that, I honestly wouldn't mind having the option to turn it off. I'd still appreciate some additional customization options, such as being able to swap the behavior of the middle mouse button with and without holding Alt.\n\nThat said, I think this is a great update for desktop users who don't have access to tracking or similar features, and I'm sure many of them will really appreciate it!",
       "viewerReactions": null,
       "voteID": null
     }
