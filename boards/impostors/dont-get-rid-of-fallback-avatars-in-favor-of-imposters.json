@@ -3,9 +3,10 @@
   "_id": "683e1143b4fd55bcb6114b91",
   "aiCategories": [
     "loc.in-world",
-    "avatars.impostors"
+    "avatars.impostors",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-11-17T09:59:31.094567Z",
+  "aiTaggedAt": "2026-11-17T20:31:46.101440Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df1f8e409a3144a98a948f",
@@ -35,7 +36,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "651f01e56cd5864320c2c5b2",
-  "commentCount": 42,
+  "commentCount": 43,
   "commentingDisabled": false,
   "comments": [
     {
@@ -550,6 +551,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{649520bdbec709090d4453cd|full_name} In what way do you think imposters provide a better experience than fallbacks for those that don't upload their own avatars?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6afcb88d64a7ed5a27c0a3c1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "649520bdbec709090d4453cd",
+        "alias": "Sharp Lobster",
+        "aliasID": "65c5b834ed6eefce4cd9b2af",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/7b8b8bf839d7aa5e6e8e70bec11f290d.png",
+        "created": "2023-06-23T04:34:05.758Z",
+        "name": "Slone Fallion",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "651f00c29b934e9c99db0b22",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-17T20:26:53.303Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "60dfbd18b7bf4e7e3001b97c",
+          "alias": "Golden poppy Salamander",
+          "aliasID": "66ee13b07d32abb6ca9879f8",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/4f6a1291238eac0acf089e908c09904d.png",
+          "created": "2021-07-03T01:27:52.988Z",
+          "name": "illgenerate",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6931f8b98930e04d5d0b6fba",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "683e1143b4fd55bcb6114b91",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{60dfbd18b7bf4e7e3001b97c|full_name} I don't understand why you pinged me to ask this irrelevant question. It's the same as asking why custom uploaded content provides a better experience over the marketplace. This is beneficial for those that have the ability to upload their own content and the fact that others do not doesn't void the validity of custom fallbacks.",
       "viewerReactions": null,
       "voteID": null
     }
