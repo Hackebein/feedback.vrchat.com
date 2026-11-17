@@ -3,10 +3,10 @@
   "_id": "683e1143b4fd55bcb6114b91",
   "aiCategories": [
     "loc.in-world",
-    "avatars.upload-performance",
-    "avatars.impostors"
+    "avatars.impostors",
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-10-15T20:50:57.993798Z",
+  "aiTaggedAt": "2026-11-17T09:55:12.818658Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62df1f8e409a3144a98a948f",
@@ -36,56 +36,9 @@
     "urlName": "feature-requests"
   },
   "categoryID": "651f01e56cd5864320c2c5b2",
-  "commentCount": 40,
+  "commentCount": 41,
   "commentingDisabled": false,
   "comments": [
-    {
-      "__v": 0,
-      "_id": "687ff40f2404fbfc68421831",
-      "aiGenerated": false,
-      "author": {
-        "_id": "61819fe14132d32e13a78f60",
-        "alias": "Toffee Mastodon",
-        "aliasID": "65c2a1fbed6eefce4c5e70dd",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/23264ed88d0711d07fd341e31575e456.png",
-        "created": "2021-11-02T20:30:25.495Z",
-        "name": "Ravioli_",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "651f00c29b934e9c99db0b22",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2025-07-22T20:26:55.659Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "683e1143b4fd55bcb6114b91",
-      "private": false,
-      "reactions": {
-        "like": 2
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "yea i dont wanna see this gone too",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "__v": 0,
       "_id": "6880500bd48c1cf6b89be2c4",
@@ -500,6 +453,50 @@
       "value": "It seems that creating custom fallbacks is no longer possible, despite docs.vrchat.com still outlining the process, and the SDK still providing a notice of whether an avatar is elligible as a fallback or not.\n\nAdditionally, the creative possibilities with custom fallbacks far outweigh their removal in my opinion. Although I am not aware of VRC's tech, I don't see how the removal of this system simplifies anything given the existing complexity and reuse of similar systems (presumably) by impostors. Impostors are a great low-effort workaround to performance blocking, however, on all platform, enough effort from an avatar creator can pretty much always lead to something 90% of the way to the full-spec avatar, while fitting in the Good ranks.\n\nI've just discovered it's now impossible to select a custom avatar that satisfies the fallback requirements of good or better on all platforms, and spent time searching why the button to select it was unavailable. I cannot find anywhere saying this feature was removed; only that it's not possible to select them from the in-game UI.",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6afc22e451fc4ac13220be82",
+      "aiGenerated": false,
+      "author": {
+        "_id": "60dfbd18b7bf4e7e3001b97c",
+        "alias": "Golden poppy Salamander",
+        "aliasID": "66ee13b07d32abb6ca9879f8",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/4f6a1291238eac0acf089e908c09904d.png",
+        "created": "2021-07-03T01:27:52.988Z",
+        "name": "illgenerate",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "651f00c29b934e9c99db0b22",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-17T09:48:20.070Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "683e1143b4fd55bcb6114b91",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Yeah, I absolutely hate the imposter system. I would rather watch grey robots than those weird horror-shows they call imposters. I would very much like to have the old fallback system restored, and have an added feature to turn off imposters for all avatars. It actually makes me sick to my stomach to look at a room full of imposters. It was an interesting idea, but it didn't work in-practice, and it's totally not anywhere near good enough to replace fallbacks.",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -516,20 +513,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 241,
+  "maxScore": 242,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/683e1143b4fd55bcb6114b91/984601535.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 241,
+  "score": 242,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2025-06-02T21:01:55.449Z",
   "subCategoryID": null,
   "title": "Don't get rid of Fallback Avatars in favor of Imposters",
-  "trendingScore": 2968.2851017594985,
+  "trendingScore": 2968.754331216824,
   "updatedBy": null,
   "urlName": "dont-get-rid-of-fallback-avatars-in-favor-of-imposters",
   "viewerIsAuthor": false,
@@ -542,6 +539,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "60dfbd18b7bf4e7e3001b97c",
+      "alias": "Golden poppy Salamander",
+      "aliasID": "66ee13b07d32abb6ca9879f8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/4f6a1291238eac0acf089e908c09904d.png",
+      "companies": [],
+      "name": "illgenerate",
+      "urlName": null,
+      "voteID": "6afc21d8a5c6639789813f33"
+    },
     {
       "_id": "6388c4d531031257a3b73df5",
       "alias": "Dry Ocelot",
@@ -1080,17 +1088,6 @@
       "name": "Leeksy",
       "urlName": null,
       "voteID": "68b62600ce2ca2b5204f19c2"
-    },
-    {
-      "_id": "60bb4c7d80af9e6f190f3c3f",
-      "alias": "Chief Walrus",
-      "aliasID": "65e0d15aa6e3ea79dd7a6a2e",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/fa1b89cffd3abeb43ba7b229f4f0eda9.png",
-      "companies": [],
-      "name": "̶̋̄Gully",
-      "urlName": null,
-      "voteID": "68aec9e99b8a25d17e924d24"
     }
   ]
 }
