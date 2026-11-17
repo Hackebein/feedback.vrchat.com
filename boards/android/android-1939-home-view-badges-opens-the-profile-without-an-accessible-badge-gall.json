@@ -1,0 +1,100 @@
+{
+  "_id": "6afc6829c8971e3fcb700f9a",
+  "aiCategories": [
+    "loc.mobile-app",
+    "platforms.mobile.android",
+    "web.profiles"
+  ],
+  "aiTaggedAt": "2026-11-17T14:48:28.359200Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6afc670464a7ed5a27b8b77b",
+    "alias": "Nutmeg Stork",
+    "aliasID": "6afc6705a5c66397898607e1",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/386606315025b6ff84a1a8a53c45fff2.png",
+    "created": "2026-11-17T14:39:00.706Z",
+    "name": "モナカ",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6afc670464a7ed5a27b8b77b",
+  "board": {
+    "_id": "6466ab9cd0071b0936f27dcd",
+    "name": "Android",
+    "urlName": "android"
+  },
+  "boardID": "6466ab9cd0071b0936f27dcd",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "649b325d67df6d7addaccd2f",
+    "created": "2023-06-27T19:02:53.242Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "649b325d67df6d7addaccd2f",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-17T14:43:53.582Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Summary\n\nOn the Android 2D Home screen, tapping バッジを見る (View Badges) under Your Challenges opens my regular self-profile. I could not find a Badges section or gallery entry after scrolling through that profile to its bottom. The same account can view six owned badges on the website via Badges > View All.\n\nEnvironment\n\nVRChat: 2026.4.1p3-1939-4803d92ede-Release, updated from Google Play immediately before testing.\n\nDevice: Samsung SC-52C. Android OS version not collected. UI language: Japanese.\n\nPhysical device controlled through USB scrcpy mirroring; direct finger input has not been compared.\n\nSteps\n\n1. Launch the Android app and sign in.\n\n2. Open Home.\n\n3. Under あなたのチャレンジ (Your Challenges), tap バッジを見る (View Badges).\n\n4. Observe the destination and scroll through the profile to its bottom.\n\n5. Return to Home and repeat the tap.\n\nExpected\n\nAn accessible view of owned badges, or navigation to a clearly available badge section.\n\nActual\n\nThe regular self-profile opens. No badge gallery or gallery entry was found in the inspected profile.\n\nReproducibility\n\nThe regular-profile destination occurred on 2 of 2 taps. The full profile was inspected from top to bottom in the first attempt. Website comparison succeeded for the same account.\n\nScope\n\nOne device and account; English UI and another account/device have not been tested. No logs collected. This is about navigation/accessibility, not badges being deleted. The expected result is based on the button label; please confirm whether this destination is intentional.\n\nI searched Canny for badges and view badges and did not find an exact match in the inspected results; that search may not be exhaustive.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6afc6829c8971e3fcb700f85",
+  "imageURLs": [
+    "https://canny-assets.io/images/012d0e2ad01bafcf6837c942db82c20a.jpeg",
+    "https://canny-assets.io/images/c8fdba361bd0525a3e3ddd3b94dfd6ce.jpeg",
+    "https://canny-assets.io/images/84ba2b37243100851926e3c56414790b.jpeg",
+    "https://canny-assets.io/images/b6eb5a4a346ac39fd0c9c7842bc2a71b.jpeg",
+    "https://canny-assets.io/images/1af3a460bc79da4e4ec5e98dc5c94bdc.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6afc6829c8971e3fcb700f9a/1798056303.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-17T14:43:53.582Z",
+  "subCategoryID": null,
+  "title": "[Android 1939] Home \"View Badges\" opens the profile without an accessible badge gallery",
+  "trendingScore": 2968.4951204923987,
+  "updatedBy": null,
+  "urlName": "android-1939-home-view-badges-opens-the-profile-without-an-accessible-badge-gall",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6afc670464a7ed5a27b8b77b",
+      "alias": "Nutmeg Stork",
+      "aliasID": "6afc6705a5c66397898607e1",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/386606315025b6ff84a1a8a53c45fff2.png",
+      "companies": [],
+      "name": "モナカ",
+      "urlName": null,
+      "voteID": "6afc6829a5c6639789863574"
+    }
+  ]
+}
