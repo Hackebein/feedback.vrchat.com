@@ -74,7 +74,9 @@
       "postDeleted": false,
       "postID": "6af4594bbd8263f0317d6487",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -119,7 +121,7 @@
       "postID": "6af4594bbd8263f0317d6487",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -232,7 +234,9 @@
       "postDeleted": false,
       "postID": "6af4594bbd8263f0317d6487",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -306,20 +310,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 34,
+  "maxScore": 35,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af4594bbd8263f0317d6487/1308996610.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 34,
+  "score": 35,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-11T12:02:19.795Z",
   "subCategoryID": null,
   "title": "[1984] New Instance UI Design Rework",
-  "trendingScore": 2970.9129403862553,
+  "trendingScore": 2970.955696229113,
   "updatedBy": null,
   "urlName": "1984-new-instance-ui-design-rework",
   "viewerIsAuthor": false,
@@ -332,6 +336,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6afbe3cf327fd424a1240117",
+      "alias": "Very Flamingo",
+      "aliasID": "6afbe3d0a5c66397898046f0",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/6463a6a06c31319fb0c7c1e34d17087e.png",
+      "companies": [],
+      "name": "Elswere",
+      "urlName": null,
+      "voteID": "6afc3951a5c663978981c369"
+    },
     {
       "_id": "621aba0e9eb8e97f7fa1384f",
       "alias": "Ink Dragonfly",
