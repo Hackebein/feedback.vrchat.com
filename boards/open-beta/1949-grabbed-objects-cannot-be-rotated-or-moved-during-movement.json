@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.desktop",
-    "open-beta"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-11-17T00:52:47.946717Z",
+  "aiTaggedAt": "2026-11-17T01:20:33.260293Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "62deee74a02f6f44b012a3ca",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Currently cannot rotate or move any grabbed/held objects while moving in Desktop mode.\n\nAttempting to move, while rotating or moving (i.e via scroll wheel), a held object will result in the held object freezing and no longer rotate/move until player movement has stopped.\n\nSome quick testing looks like it might be any form of player velocity, as it also happening during vertical movement despite not holding any movement keys.\n\nAlso, this seems to be inconsistent, as some seem to have this issue and others do not?",
+  "details": "Currently cannot rotate or move any grabbed/held objects while moving in Desktop mode.\n\nAttempting to move, while rotating or moving (i.e via scroll wheel), a held object will result in the held object freezing and no longer rotate/move until player movement has stopped.\n\nSome quick testing looks like it might be any form of player velocity, as it's also happening during vertical movement despite not holding any movement keys.\n\nAlso, this seems to be inconsistent, as some seem to have this issue and others do not?",
   "error": null,
   "eta": null,
   "etaPublic": true,
