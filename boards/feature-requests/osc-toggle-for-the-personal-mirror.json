@@ -4,7 +4,7 @@
     "loc.in-world",
     "client.osc"
   ],
-  "aiTaggedAt": "2026-11-18T03:01:19.445015Z",
+  "aiTaggedAt": "2026-11-18T03:34:52.198223Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6222b4dba0f2e531dd5dfe06",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Currently, the Personal Mirror can only be enabled or disabled through the in-game menus. There is no OSC endpoint for the Personal Mirror.\n\nPlease add an OSC input that toggles the Personal Mirror, e.g. /input/PersonalMirrorToggle.\n\nUse cases:\n\n- Toggling the mirror from external controllers (macro pads, Stream Deck, TouchOSC) while in VR, without opening menus in the middle of an activity\n\n- Automation tools that turn the mirror off when it is not needed (for performance) and back on when checking an avatar's appearance or outfit\n\n- Accessibility: users who find menu navigation difficult could bind the mirror to a single physical button\n\nThe Personal Mirror is a purely local, client-side feature, so exposing it via OSC would not affect other players. Thank you for considering this!",
+  "details": "Currently, the Personal Mirror can only be enabled or disabled through the in-game menus. There is no OSC endpoint for the Personal Mirror.\n\nPlease add an OSC input that toggles the Personal Mirror, e.g. /input/PersonalMirrorToggle.\n\nUse cases:\n\n- Toggling the mirror from external controllers (macro pads, Stream Deck, etc..) while in VR, without opening menus in the middle of an activity\n\n- Automation tools that turn the mirror off when it is not needed (for performance) and back on when checking an avatar's appearance or outfit\n\n- Accessibility: users who find menu navigation difficult could bind the mirror to a single physical button\n\nThe Personal Mirror is a purely local, client-side feature, so exposing it via OSC would not affect other players. Thank you for considering this!",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,7 +60,7 @@
   "subCategoryID": null,
   "title": "OSC toggle for the Personal Mirror",
   "trendingScore": 2968.9735778116533,
-  "updatedBy": null,
+  "updatedBy": "6222b4dba0f2e531dd5dfe06",
   "urlName": "osc-toggle-for-the-personal-mirror",
   "viewerIsAuthor": false,
   "viewerVote": 0,
