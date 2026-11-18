@@ -4,10 +4,10 @@
     "loc.in-world",
     "groups.instances",
     "groups.roles",
-    "moderation.safety-system",
-    "avatars.upload-performance"
+    "avatars.impostors",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-11-17T22:55:40.622980Z",
+  "aiTaggedAt": "2026-11-18T05:54:31.744718Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6015a8dedd548068697b6112",
@@ -31,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 10,
+  "commentCount": 11,
   "commentingDisabled": false,
   "comments": [
     {
@@ -561,6 +561,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{62df013246e66844a84a8ef1|full_name}I understand the concern about private groups, and I agree that a feature like this shouldn't reveal whether someone is a member of a hidden or private group.\n\nWhere I disagree is that this makes the idea fundamentally unworkable. I'm not proposing that membership in another group automatically means someone is a bad actor or deserves punishment. I'm proposing an optional access-control tool for group owners who are responsible for moderating their own group instances.\n\nReporting a problematic group and restricting access to your own instances also serve two different purposes. Reporting is appropriate when something violates VRChat's rules, while an instance restriction would be preventative. A community shouldn't necessarily have to wait for the same problems to happen inside their instance before moderators can respond.\n\nI think the privacy concern could potentially be handled without telling the group owner or moderators why a particular user is restricted or exposing any private membership information.\n\nI definitely understand the potential for misuse, though. I think that argues for safeguards and limitations around the feature rather than ruling out the concept entirely.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6afd3bb87085c28c344e44d5",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62df013246e66844a84a8ef1",
+        "alias": "Conceptual Harrier",
+        "aliasID": "65c26ed9ed6eefce4c854f77",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/46a8f244a8b8846cb9b37bd3d3c6be5f.png",
+        "created": "2022-07-25T20:46:42.667Z",
+        "name": "DarkSwordsman",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-18T05:46:32.998Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6015a8dedd548068697b6112",
+          "alias": "Ultimate Zebra",
+          "aliasID": "65c282bbed6eefce4caf92fc",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c897577bc2ecdbe23a48ea68323ed873.png",
+          "created": "2021-01-30T18:43:42.944Z",
+          "name": "Loppy The Bunny",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6ab5c06b2c33702dbd9f478c",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ab43fafba589e2eb6999bf9",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6015a8dedd548068697b6112|full_name} Right. I see where you're coming from and I agree. I guess I just have a feeling that this feature will be misused from it's original intent and can degrade the social experience of VRChat as a whole. I think it really only serves to divide people further than it would ultimately help in the long run.",
       "viewerReactions": null,
       "voteID": null
     }
