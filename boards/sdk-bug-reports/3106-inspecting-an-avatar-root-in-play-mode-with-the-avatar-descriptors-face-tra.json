@@ -6,7 +6,7 @@
     "avatars.descriptor",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-18T06:32:28.482175Z",
+  "aiTaggedAt": "2026-11-18T06:48:07.390349Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60283c7c4c9a9639a694c668",
@@ -177,7 +177,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "There is an AWFUL refresh loop happening in the Avatar Descriptor if inspecting your Avatar in Play Mode, specifically with Face Tracking section expanded with many mapping rows exposed (all ~102).\n\n**My Findings:**\n\n- `FaceTrackingEditorContext.Tick` increments every `EditorApplication.update;`, the `ParameterBehavior` and `BlendshapesSet` drawers treat a new Tick as invalidation, so their per-element state and validation refresh on every editor frame.\n\n- `FaceTrackingBlendshapesSetDrawer` draws ALL ~102 mapping rows insaide a 280px scroll view with no visibility culling.\n\n- Every `EditorApplication.hierarchyChanged` bumps `HierarchyRevision`, causing `CollectAmbiguousMeshPaths` to run `GetComponentsInChildren<Transform>(true)` and `CalculateTransformPath` on EVERY transform of the Avatar on the next repaint.\n\n- Cost scales with the number of Parameter Behaviors (in my testing, I had 38). Tools that add Parameter Behaviors in Play Mode like VRCFury or NDMF make this behavior much worse.\n\nThis is a severe performance issue that should be patched.",
+  "details": "There is an AWFUL refresh loop happening in the Avatar Descriptor if inspecting your Avatar in Editor Mode or Play Mode, specifically with Face Tracking section expanded with many mapping rows exposed (all ~102).\n\n**My Findings:**\n\n- `FaceTrackingEditorContext.Tick` increments every `EditorApplication.update;`, the `ParameterBehavior` and `BlendshapesSet` drawers treat a new Tick as invalidation, so their per-element state and validation refresh on every editor frame.\n\n- `FaceTrackingBlendshapesSetDrawer` draws ALL ~102 mapping rows insaide a 280px scroll view with no visibility culling.\n\n- Every `EditorApplication.hierarchyChanged` bumps `HierarchyRevision`, causing `CollectAmbiguousMeshPaths` to run `GetComponentsInChildren<Transform>(true)` and `CalculateTransformPath` on EVERY transform of the Avatar on the next repaint.\n\n- Cost scales with the number of Parameter Behaviors (in my testing, I had 38). Tools that add Parameter Behaviors in Play Mode like VRCFury or NDMF make this behavior much worse.\n\nMy suspicions believe this has gone unnoticed since most users utilize non-destructive tools like VRCFury or NDMF to add the Parameter Behaviors and Face Tracking instructions at upload time. Either way, if this scenario is caused normally, it is a severe performance issue that should be addressed.",
   "error": null,
   "eta": null,
   "etaPublic": true,
