@@ -3,9 +3,10 @@
   "aiCategories": [
     "loc.in-world",
     "moderation.safety-system",
-    "platforms.pc.steam"
+    "social.nameplates",
+    "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-11-18T20:04:27.893207Z",
+  "aiTaggedAt": "2026-11-18T20:17:41.735095Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "674163b31461829c27244c08",
@@ -82,7 +83,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Looking at old cannys, it seems this was a previous issue that was solved in 2020. Well, its back. \n\nThey have blocked me. When I join an instance they are in, I can see them. I cannot hear them. They cannot see or hear me. Sometimes, their avatar will not load and I will see them as the Error Bot, sometimes the avatar even loads. I can select their bubble and view their profile. One thing that is missing on the profile is the mutual connections (we have mutual friends and groups, this is why I end up joining instances they are in). \n\nMe and the player who blocked me play on PCVR, but this bug could be cross platform. I will put my current build down in the build section, but this issue has persisted through multiple updates.",
+  "details": "Looking at old cannys, it seems this was a previous issue that was solved in 2020. Well, its back. \n\nThey have blocked me. When I join an instance they are in, I can see them. I cannot hear them. They cannot see or hear me. Sometimes, their avatar will not load and I will see them as the Error Bot, sometimes the avatar even loads. I can select their bubble and view their profile. One thing that is missing on the profile is the mutual connections (we have mutual friends and groups, this is why I end up joining instances they are in). \n\nMe and the player who blocked me play on PCVR, but this bug could be cross platform. I will put my current build down in the build section, but this issue has persisted through multiple updates.\n\nI submitted a support ticket with the user's specific information, if that helps. Ticket ID: #753986",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -106,7 +107,7 @@
   "subCategoryID": null,
   "title": "A user has blocked me, and I can still see them.",
   "trendingScore": 2969.362085568681,
-  "updatedBy": null,
+  "updatedBy": "674163b31461829c27244c08",
   "urlName": "a-user-has-blocked-me-and-i-can-still-see-them",
   "viewerIsAuthor": false,
   "viewerVote": 0,
