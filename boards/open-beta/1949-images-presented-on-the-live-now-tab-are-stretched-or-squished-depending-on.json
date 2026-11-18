@@ -1,11 +1,12 @@
 {
   "_id": "6af919a251fc4ac132da2702",
   "aiCategories": [
-    "loc.quick-menu",
-    "loc.main-menu",
-    "open-beta"
+    "loc.pc-client",
+    "platforms.pc.steam",
+    "open-beta",
+    "web.home"
   ],
-  "aiTaggedAt": "2026-11-17T06:28:37.341864Z",
+  "aiTaggedAt": "2026-11-18T18:44:11.457053Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "58c6cbcffd04b1785f747b6c",
@@ -35,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -174,6 +175,41 @@
       "value": "Some might have changed since my old post. But not having consistency on how images are shown is basically the design. \n\nhttps://feedback.vrchat.com/feature-requests/p/how-avatars-and-world-thumbnails-are-viewed",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6afdf0df15ef52e27c296488",
+      "aiGenerated": false,
+      "author": null,
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-18T18:39:27.857Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af919a251fc4ac132da2702",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6afdf0df15ef52e27c296487",
+      "statusChangeNewStatus": "available in future release",
+      "value": "",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -203,8 +239,8 @@
   "pinnedComment": null,
   "score": 9,
   "sourceFeatureExtractionItem": null,
-  "status": "tracked",
-  "statusChanged": "2026-11-16T16:12:12.803Z",
+  "status": "available in future release",
+  "statusChanged": "2026-11-18T18:39:27.840Z",
   "subCategoryID": null,
   "title": "[1949] Images presented on the Live Now tab are stretched or squished depending on the view. None are correctly scaled",
   "trendingScore": 2969.8743597591774,
