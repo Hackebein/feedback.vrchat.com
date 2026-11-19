@@ -1,13 +1,51 @@
 import { useMemo } from "react";
+import type { Code, Extension, Tokenizer } from "micromark-util-types";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import type { PluggableList } from "react-markdown/lib";
 import remarkGfm from "remark-gfm";
+import type {} from "remark-parse";
+import type { Processor } from "unified";
 import { SKIP, visit } from "unist-util-visit";
 import { EmbeddedImageView } from "./EmbeddedImageView";
 import { absoluteFileProxyURL } from "./fileUrl";
 import { detectVideoEmbed } from "./videoEmbed";
 import { VideoEmbedView } from "./VideoEmbedView";
+
+function isHandleCharacter(code: Code): boolean {
+  return code !== null && code >= 0 && /[\p{L}\p{M}\p{N}_-]/u.test(String.fromCharCode(code));
+}
+
+const tokenizeMention: Tokenizer = (effects, ok, nok) => {
+  function handle(code: Code) {
+    if (isHandleCharacter(code)) {
+      effects.consume(code);
+      return handle;
+    }
+    effects.exit("data");
+    return ok(code);
+  }
+
+  return (code) => {
+    // Read the whole handle as text before Markdown processes underscores.
+    effects.enter("data");
+    effects.consume(code);
+    return (first) => (isHandleCharacter(first) ? handle(first) : nok(first));
+  };
+};
+
+const mentionExtension: Extension = {
+  text: {
+    ["@".charCodeAt(0)]: {
+      previous: (code) => !isHandleCharacter(code),
+      tokenize: tokenizeMention,
+    },
+  },
+};
+
+function remarkMentions(this: Processor) {
+  (this.data().micromarkExtensions ??= []).push(mentionExtension);
+}
 
 function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -139,7 +177,7 @@ export function MarkdownText({
   return (
     <div className="markdown-body">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkMentions]}
         rehypePlugins={rehypePlugins}
         components={components}
       >
