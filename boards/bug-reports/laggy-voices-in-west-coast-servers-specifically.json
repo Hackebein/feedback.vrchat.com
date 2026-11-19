@@ -225,7 +225,7 @@
       "postID": "6af63e47ba3835258290706d",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -270,7 +270,9 @@
       "postDeleted": false,
       "postID": "6af63e47ba3835258290706d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -434,20 +436,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 48,
+  "maxScore": 50,
   "mergeCount": 3,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af63e47ba3835258290706d/2031573392.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 48,
+  "score": 50,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-12T22:31:35.496Z",
   "subCategoryID": null,
   "title": "Laggy voices in West coast servers specifically",
-  "trendingScore": 2971.4602030358774,
+  "trendingScore": 2971.523935391089,
   "updatedBy": null,
   "urlName": "laggy-voices-in-west-coast-servers-specifically",
   "viewerIsAuthor": false,
@@ -460,6 +462,28 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "62def0f0a02f6f44b015422d",
+      "alias": "Fellow Marsupial",
+      "aliasID": "6969ad1df85d59c66d5ddfc8",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/1fe5d33cd844fe4c6d6bce51df32fe05.png",
+      "companies": [],
+      "name": "KiyoEventide",
+      "urlName": null,
+      "voteID": "6afea97ba5c66397897a48bb"
+    },
+    {
+      "_id": "6afea7fa7fbea9c664c14c7e",
+      "alias": "Xenia silver Squid",
+      "aliasID": "6afea7fba5c66397897a3604",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a5f43ffa489f5558cb8182010258e61b.png",
+      "companies": [],
+      "name": "NotHunterPayne",
+      "urlName": null,
+      "voteID": "6afea800a5c66397897a360e"
+    },
     {
       "_id": "6afe8e2b2ed73126e5982c3c",
       "alias": "Everyday Grasshopper",
