@@ -1,0 +1,96 @@
+{
+  "_id": "6aff2d6f2ed73126e5a8b08f",
+  "aiCategories": [
+    "loc.in-world",
+    "worlds.video"
+  ],
+  "aiTaggedAt": "2026-11-19T17:17:34.307161Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6aff2b8a2ed73126e5a88288",
+    "alias": "Glorious Pheasant",
+    "aliasID": "6aff2b8ba5c66397897d1e7a",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/2b33f26a985d2163b01413b688672ddb.png",
+    "created": "2026-11-19T17:02:02.862Z",
+    "name": "小聂来啦",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6aff2b8a2ed73126e5a88288",
+  "board": {
+    "_id": "58c62f2b3cf8f8367753b2f0",
+    "name": "Bug Reports",
+    "urlName": "bug-reports"
+  },
+  "boardID": "58c62f2b3cf8f8367753b2f0",
+  "by": null,
+  "byID": null,
+  "category": null,
+  "categoryID": null,
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-19T17:10:07.664Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "【问题】\n\nVRChat 所有世界内的视频播放器（AVPro，API MediaFoundation）无法打开任何网络媒体地址，\n\n视频和纯音频都一样。载入约 30 秒后报 Video Error / PlayerError。\n\n日志每次固定两步，失败在 2 秒内：\n\n  [AVProVideo] Opening <URL> (offset 0) with API MediaFoundation\n\n  [AVProVideo] Failed to open <URL>\n\n播放器没进入解码阶段，是在\"取流/建源\"这一步就失败了。\n\n【复现版本】\n\n正式版 build 26309255 —— 复现\n\nopen-beta build 26742869 —— 同样复现\n\n【环境】\n\nWindows 11 25H2 (Build 26200)\n\nVRChat Unity 6000.0.67f1-DWR, Release 环境\n\nGPU: NVIDIA RTX 3060, 驱动 591.74 / 32.0.15.9174\n\nCPU: i5-12400F / 主板 HUANANZHI H610M-ITX (H610) / 内存 16GB\n\n区域: 中国 / 简体中文\n\n【核心对照实验：同一台机器、同一 URL、同一分钟内】\n\n实验 A - MP4 视频 (W3C 官方测试文件 https://media.w3.org/2010/05/sintel/trailer.mp4)\n\n  1) 直接 HTTP 请求        => 200 OK, 452 ms, 6,408,161 字节, Content-Type: video/mp4\n\n  2) Media Foundation      => MFCreateSourceReaderFromURL 返回 S_OK, 664 ms\n\n  3) VRChat AVPro          => Failed to open, 2 秒\n\n实验 B - 纯音频 MP3 (网易云 CDN, Content-Type: audio/mpeg)\n\n  1) 直接 HTTP 请求        => 200 OK, 322 ms, 6,057,645 字节\n\n  2) Media Foundation      => MFCreateSourceReaderFromURL 返回 S_OK, 261 ms\n\n  3) VRChat AVPro          => Failed to open, 2 秒\n\n→ 关键点：连没有任何视频流的纯 MP3 都打不开，说明问题与视频编码/分辨率/硬件解码无关，\n\n  纯粹发生在建立媒体源 (HTTP byte stream -> source reader) 阶段。\n\nMedia Foundation 侧其他配置也全部成功：\n\n  普通模式 874ms / ENABLE_VIDEO_PROCESSING 459ms /\n\n  ENABLE_ADVANCED_VIDEO_PROCESSING 496ms / MFSTARTUP_LITE 491ms / LITE+advanced 465ms\n\n媒体文件本身：视频 H.264 (avc1) + AAC (mp4a) faststart MP4；音频 MP3。均为最通用组合。\n\n【复现步骤】\n\n1. 启动 VRChat（正式版或 open-beta 均可）\n\n2. 进入任意带 AVPro 播放器的世界（ProTV 等）\n\n3. 粘贴 https://media.w3.org/2010/05/sintel/trailer.mp4\n\n4. 现象：载入 30 秒 -> Video Error\n\n【已排除】\n\n- 地址不可达：本机 HTTP 200，不需要 Referer\n\n- 编码不支持：H.264+AAC / MP3\n\n- Media Foundation 损坏：直接调用 API 成功 (261-874ms)\n\n- 缺少解码器 MFT：H.264/AAC/MP3/MP4 注册与文件均正常\n\n- 第三方解码器冲突：无已注册第三方 MFT，无解码包\n\n- 媒体栈注册损坏：Windows Media Foundation 下 http:/https: SchemeHandler、.mp3/.mp4 ByteStreamHandler 均正常\n\n- 组策略限制：Policies\\Microsoft\\WindowsMediaFoundation 不存在\n\n- 硬件解码：HW Video Decoding 开关、启动参数 --disable-hw-video-decoding，两种都试过，均失败\n\n- 版本回归：切到 open-beta (build 26742869) 同样复现\n\n- 显卡驱动：无 TDR (Event 4101)\n\n- 显卡识别异常：VRChat 曾把 GPU 识别为 GTX 1050 Ti（显存显示 12GB），已修正为 RTX 3060，问题依旧\n\n- 游戏文件损坏：Steam 验证文件完整性通过\n\n- DNS 问题：改用公共 DNS (223.5.5.5 / 119.29.29.29)，解析正确且更快，问题依旧\n\n- 代理/VPN：无系统代理，VRChat 为直连\n\n- 硬件错误：近期无 WHEA、无 BugCheck、无磁盘错误\n\n- 进程缓解策略：Get-ProcessMitigation -System 全部未启用\n\n【日志片段】\n\nMP4 测试（正式版）：\n\n2026.11.09 23:21:53  [AVProHQ] loading URL by user: https://media.w3.org/2010/05/sintel/trailer.mp4\n\n2026.11.09 23:21:56  [AVProVideo] Opening https://media.w3.org/2010/05/sintel/trailer.mp4 (offset 0) with API MediaFoundation\n\n2026.11.09 23:21:56  [AVProVideo] Failed to open https://media.w3.org/2010/05/sintel/trailer.mp4\n\nMP3 测试（open-beta）：\n\n2026.11.20 00:51:00  [AVProVideo] Opening http://m801.music.126.net/...mp3 (offset 0) with API MediaFoundation\n\n2026.11.20 00:51:02  [AVProVideo] Failed to open http://m801.music.126.net/...mp3\n\n2026.11.20 00:51:26  Loading timeout of 30s reached.\n\n2026.11.20 00:51:26  Video Error: PlayerError\n\n对照（本机直接调用 Media Foundation）：\n\nMFCreateSourceReaderFromURL(\"https://media.w3.org/2010/05/sintel/trailer.mp4\") => S_OK, 874 ms\n\nMFCreateSourceReaderFromURL(\"http://m801.music.126.net/...mp3\")              => S_OK, 261 ms\n\n【补充说明 - 避免误导】\n\n在同一世界内把播放器切换为 UnityVideo（Unity 内置 VideoPlayer）后也报 PlayerError，\n\n但该世界会把用户输入包装成代理页面 https://biliplayer.91vrchat.com/player/?url=... 再交给播放器，\n\n那是 HTML 页面而不是媒体文件，因此该结果不能作为对照，本报告不据此下结论。\n\n【希望得到的信息】\n\n1. AVPro Failed to open 时，能否输出底层 Media Foundation 的 HRESULT 错误码？\n\n   目前只有一句笼统失败，无法区分是 source reader 创建失败、byte stream handler 创建失败，还是流选择失败。\n\n2. 是否有视频播放相关的详细日志开关？\n\n3. 是否已知 Windows 11 25H2 或特定芯片组平台下，AVPro 的 MediaFoundation 后端存在兼容问题？\n\n4. 是否有可测试的、直接使用 DirectShow 后端的官方世界，用于判断是 MF 后端单独失效还是整个播放链路失效？",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/608daf8ba779a745fe2371130012be74.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/608daf8ba779a745fe2371130012be74.txt",
+      "mimeType": "text/plain",
+      "name": "output_log_2026-11-20_00-48-36",
+      "url": "https://canny-assets.io/files/608daf8ba779a745fe2371130012be74.txt"
+    }
+  ],
+  "ideaID": "6aff2d6f2ed73126e5a8b076",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-19T17:10:07.664Z",
+  "subCategoryID": null,
+  "title": "VRChat 视频播放器打不开任何网络视频",
+  "trendingScore": 2968.795342049939,
+  "updatedBy": null,
+  "urlName": "vrchat-20",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6aff2b8a2ed73126e5a88288",
+      "alias": "Glorious Pheasant",
+      "aliasID": "6aff2b8ba5c66397897d1e7a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/2b33f26a985d2163b01413b688672ddb.png",
+      "companies": [],
+      "name": "小聂来啦",
+      "urlName": null,
+      "voteID": "6aff2d6fa5c66397897d2d32"
+    }
+  ]
+}
