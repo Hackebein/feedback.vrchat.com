@@ -5,7 +5,7 @@
     "social.instances",
     "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-11-19T12:27:36.055167Z",
+  "aiTaggedAt": "2026-11-19T17:20:48.083505Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f4ba617a657d93390b5364b",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 27,
+  "commentCount": 28,
   "commentingDisabled": false,
   "comments": [
     {
@@ -759,7 +759,9 @@
       "postDeleted": false,
       "postID": "6aed2372571041a70d721c55",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -822,6 +824,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{639e468235cad333ec7830d8|full_name} Points of view like this make me think you don't actually play the game. Not trying to be rude and i'm sorry if it sounds like that, but it just does not make sense based on my experience.\n\n(I'm talking about this part: \"if instance owners are trully abusing their power the rest of the users will likely just change to another instance.\")\n\nFor example, there is a group here in Brazil where the owner thinks he is the protagonist. He bans everyone for literally ANYTHING. His reputation is the worst, but still, his instance is one of the most populated ones.\n\nPeople don't care about the instance, people care about being with their friends, that's what VRChat is about for mostly all of us. You just open Social, find somebody you want to join and go. It's not the world or the instance, it's your friend.\n\nA high portion of the active Brazilian players are banned from that specific group i mentioned, and things are so bad to a point where if you say just the group name in public, somebody will join you to share his bad experience there or how he got banned too. Does that matter? No, his instances still always get populated, even besides his deserved terrible reputation.\n\nSo, where do i want to get saying this? I mean, things are already bad with the paywall preventing most of bad people from moderating public instances. Giving mod powers to the one who opens a instance is just going to make an existing power abuse issue even worse, since anyone will be able to do it.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aff2f517fbea9c664cfb48b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "639e468235cad333ec7830d8",
+        "alias": "Coral Pike",
+        "aliasID": "65c3e6e6ed6eefce4ccb24a3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/76afcd85d098ad6e84a4df5982f0a888.png",
+        "created": "2022-12-17T22:45:22.254Z",
+        "name": "valenvrc",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-19T17:18:09.748Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "5f4ba617a657d93390b5364b",
+          "alias": "Amber Panda",
+          "aliasID": "65c5784ced6eefce4cd9c6e2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/c4b580e88dad8f388119cb146e621692.png",
+          "created": "2020-08-30T13:13:59.825Z",
+          "name": "Sһinobu",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6afe2d6760ca9ff62d51097d",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6aed2372571041a70d721c55",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{5f4ba617a657d93390b5364b|full_name} it may be i spend my time in group instances and im a bit disconnected on how the behaviour is in normal publics, they paywall on groups is a real concern that must be adressed asap too, good point",
       "viewerReactions": null,
       "voteID": null
     }
