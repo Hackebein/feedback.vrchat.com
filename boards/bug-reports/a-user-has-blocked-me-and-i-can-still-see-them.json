@@ -5,7 +5,7 @@
     "moderation.safety-system",
     "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-11-19T16:05:41.106597Z",
+  "aiTaggedAt": "2026-11-19T18:20:34.239983Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "674163b31461829c27244c08",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -264,6 +264,62 @@
       "statusChangeID": "6aff1caea7cdfb6b0a00b6d0",
       "statusChangeNewStatus": "needs more information",
       "value": "Did you send logs in with your support ticket?  Unfortunately this kind of issue is hard for us to hunt down without a repro or some extra information to go on.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aff39d6a20ffec2c7271b86",
+      "aiGenerated": false,
+      "author": {
+        "_id": "674163b31461829c27244c08",
+        "alias": "Nutty Swift",
+        "aliasID": "674163b3c66e81bbd493955b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c6356eea06eb5352e4b706d672585036.png",
+        "created": "2024-11-23T05:10:11.206Z",
+        "name": "LunnaBug",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-19T18:03:02.963Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6aff1caea7cdfb6b0a00b6d1",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6afe02302ed73126e58ca83b",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} I have to wait until I see them again to get logs of us in the same instance. I plan on giving logs in the ticket though.",
       "viewerReactions": null,
       "voteID": null
     }
