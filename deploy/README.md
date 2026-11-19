@@ -9,6 +9,41 @@
 
 See [`credentials.local.md`](credentials.local.md) for required env vars.
 
+## NGINX security updates
+
+Connect to the Ubuntu origin with root or sudo access. Allow for a brief NGINX
+restart. Refresh APT and check that the candidate for both packages includes the
+fix listed in Canonical’s advisory. [Ubuntu security notices](https://ubuntu.com/security/notices)
+
+```bash
+sudo nginx -t
+sudo apt-get -o APT::Update::Error-Mode=any update
+apt-cache policy nginx nginx-common
+sudo apt-get -s --only-upgrade --no-remove --no-install-recommends install nginx nginx-common
+```
+
+If the simulation upgrades only those two packages, apply the update and check
+that NGINX is active and its master process is running the installed binary.
+
+```bash
+sudo env NEEDRESTART_MODE=l apt-get --only-upgrade --no-remove --no-install-recommends \
+  install nginx nginx-common
+dpkg-query -W nginx nginx-common
+sudo nginx -t
+systemctl is-active nginx
+sudo test "/proc/$(systemctl show -p MainPID --value nginx)/exe" -ef /usr/sbin/nginx
+```
+
+If the executable check fails and `nginx -t` passes, run
+`sudo systemctl restart nginx` and repeat the checks. From outside the origin,
+confirm that the public gateway returns `ok` and a search returns one hit.
+
+```bash
+curl -fsS --max-time 10 https://vrchat-canny.hackebein.dev/healthz
+curl -fsS --max-time 10 'https://vrchat-canny.hackebein.dev/api/search?q=avatar&hitsPerPage=1' \
+  | jq -e '.results[0].hits | length == 1'
+```
+
 ## Scraper HTTP connections
 
 Install the updater dependencies with `python3 -m pip install -r scripts/requirements-update.txt`.
