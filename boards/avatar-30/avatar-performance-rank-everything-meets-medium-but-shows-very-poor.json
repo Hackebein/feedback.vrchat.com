@@ -5,7 +5,7 @@
     "loc.in-world",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-06-10T13:45:36.329527Z",
+  "aiTaggedAt": "2026-11-19T21:43:40.086357Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6516edb124fd540e0b46c3eb",
@@ -35,7 +35,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "650db8715336b321c3150440",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -93,6 +93,50 @@
       "statusChangeID": "68907f46e52f67f5ab854d03",
       "statusChangeNewStatus": "needs more information",
       "value": "Hi @{6516edb124fd540e0b46c3eb|full_name}! Thanks for the report.\n\nDoes your avatar use multiple materials or shaders and switch between them while VRChat is running?\n\nThe performance stats display is usually unable to accurately calculate the VRAM usage of material switches, but the performance rank should be accurate.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6aff69ca0bdce529596d2779",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62d9e1390acfc147b90e3dbb",
+        "alias": "Olive drab Bovid",
+        "aliasID": "65c427e7ed6eefce4ca025d3",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/edb652fc14b3cc4faf47c7ff8b6dfb9f.png",
+        "created": "2022-07-21T23:28:57.969Z",
+        "name": "Rycia",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-19T21:27:38.845Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "68862534f0e32eba3feec2db",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I've had this issue as well, strangely enough.",
       "viewerReactions": null,
       "voteID": null
     }
