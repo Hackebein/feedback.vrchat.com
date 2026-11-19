@@ -1,11 +1,10 @@
 {
   "_id": "6a66d15fde7302721e1d5785",
   "aiCategories": [
-    "loc.in-world",
-    "avatars.tracking",
+    "loc.unity-sdk",
     "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-07-30T14:47:24.725501Z",
+  "aiTaggedAt": "2026-11-19T10:52:58.839327Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6a631fbdd4058d953b53034c",
@@ -29,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -233,6 +232,50 @@
       "statusChangeID": "6a6b626d8b5f4f5812571121",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6afe9e9e4b36ba1f277d7a22",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a631fbdd4058d953b53034c",
+        "alias": "Daffodil yellow Sheep",
+        "aliasID": "6a631fbed4058d953b530350",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/f7c2c21357c1f5220be5c23caf8ab826.png",
+        "created": "2026-07-24T08:18:05.710Z",
+        "name": "yamagoat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-19T07:00:46.478Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a66d15fde7302721e1d5785",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "This issue no longer occurs as of version 2026.4.1.\n\nThank you for fixing it!",
       "viewerReactions": null,
       "voteID": null
     }
