@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 14,
+  "commentCount": 13,
   "commentingDisabled": false,
   "comments": [
     {
@@ -130,7 +130,9 @@
       "postDeleted": false,
       "postID": "6af63e47ba3835258290706d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -313,7 +315,7 @@
       "postID": "6af63e47ba3835258290706d",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -359,7 +361,7 @@
       "postID": "6af63e47ba3835258290706d",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -404,7 +406,9 @@
       "postDeleted": false,
       "postID": "6af63e47ba3835258290706d",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -430,20 +434,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 45,
+  "maxScore": 46,
   "mergeCount": 3,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6af63e47ba3835258290706d/2031573392.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 45,
+  "score": 46,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-12T22:31:35.496Z",
   "subCategoryID": null,
   "title": "Laggy voices in West coast servers specifically",
-  "trendingScore": 2971.357501624333,
+  "trendingScore": 2971.392918418422,
   "updatedBy": null,
   "urlName": "laggy-voices-in-west-coast-servers-specifically",
   "viewerIsAuthor": false,
@@ -456,6 +460,39 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6afe8e2b2ed73126e5982c3c",
+      "alias": "Everyday Grasshopper",
+      "aliasID": "6afe8e2ca5c663978979f99a",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/439436845e30c25b28ff234b23ba0bbd.png",
+      "companies": [],
+      "name": "beetledog",
+      "urlName": null,
+      "voteID": "6afe8e2ea5c663978979f9a1"
+    },
+    {
+      "_id": "6afe8dcaa3e69c06e2d20a55",
+      "alias": "Recent Wildebeest",
+      "aliasID": "6afe8dcaa5c663978979f889",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/5687fee5d37cdccd21f550256d5b4283.png",
+      "companies": [],
+      "name": "Genbu'",
+      "urlName": null,
+      "voteID": "6afe8e25a5c663978979f983"
+    },
+    {
+      "_id": "6afe8dea7e7ee5f145f6e0fc",
+      "alias": "Xenia silver Shrew",
+      "aliasID": "6afe8deaa5c663978979f8f6",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/09ddd0af72aa65bdecb64a6615d06866.png",
+      "companies": [],
+      "name": "Dolinare",
+      "urlName": null,
+      "voteID": "6afe8df6a5c663978979f919"
+    },
     {
       "_id": "5fb73a1eea850753021f6c1c",
       "alias": "Intensive Orangutan",
