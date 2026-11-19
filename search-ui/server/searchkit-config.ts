@@ -1,6 +1,8 @@
 import type {
   ElasticsearchQuery,
+  ElasticsearchResponseBody,
   SearchAttribute,
+  SearchRequest,
   SearchSettingsConfig,
 } from "searchkit";
 import indexMappings from "../../deploy/opensearch/index_mappings.json" with { type: "json" };
@@ -38,6 +40,54 @@ function postAuthorFacetQuery(field: string, size: number, search?: string) {
       : names;
   }
   return { terms };
+}
+
+/** The Canny sidebar searches the returned author buckets, which can omit rare values. */
+export function withPostAuthorFacetCount(request: SearchRequest): SearchRequest {
+  const aggs = request.body.aggs;
+  const authors = aggs?.[POST_AUTHOR_FACET];
+  const field = authors?.terms?.field;
+  if (!field || request.request.params?.facetName) return request;
+
+  return {
+    ...request,
+    body: {
+      ...request.body,
+      aggs: {
+        ...aggs,
+        [POST_AUTHOR_FACET]: {
+          filter: { match_all: {} },
+          aggs: {
+            authors,
+            missingAuthor: { filter: { term: { [field]: NO_AUTHOR_VALUE } } },
+          },
+        },
+      },
+    },
+  };
+}
+
+type AuthorBucket = { key: string; doc_count: number };
+
+export function restorePostAuthorBuckets(response: ElasticsearchResponseBody): ElasticsearchResponseBody {
+  const aggregation = response.aggregations?.[POST_AUTHOR_FACET] as {
+    authors?: { buckets: AuthorBucket[] };
+    missingAuthor?: { doc_count: number };
+  } | undefined;
+  if (!aggregation?.authors || !aggregation.missingAuthor) return response;
+
+  // Searchkit's response adapter only reads top-level buckets for a terms facet.
+  const buckets = aggregation.authors.buckets.filter(({ key }) => key !== NO_AUTHOR_VALUE);
+  const missingCount = aggregation.missingAuthor.doc_count;
+  if (missingCount > 0) buckets.push({ key: NO_AUTHOR_VALUE, doc_count: missingCount });
+
+  return {
+    ...response,
+    aggregations: {
+      ...response.aggregations,
+      [POST_AUTHOR_FACET]: { ...aggregation.authors, buckets },
+    },
+  };
 }
 
 function fieldsWithBoost(attrs: SearchAttribute[], mult: number): string[] {

@@ -63,6 +63,7 @@ try {
     { ...authorPost, post_id: "author-absent", status: "tracked", postAuthorFacet: NO_AUTHOR_VALUE },
     { ...authorPost, post_id: "author-literal", author: { name: "No author" }, postAuthorFacet: literalAuthor },
     { ...authorPost, post_id: "author-alice", author: { name: "Alice" }, postAuthorFacet: postAuthorFacetValue("Alice") },
+    { ...authorPost, post_id: "author-alice-2", author: { name: "Alice" }, postAuthorFacet: postAuthorFacetValue("Alice") },
     { ...authorPost, post_id: "author-other-board", board: { urlName: "another-board" }, postAuthorFacet: NO_AUTHOR_VALUE },
   ]);
   const boardFilter = "board_slug:author-fixtures";
@@ -78,6 +79,15 @@ try {
     { indexName: index, params: { facetName: POST_AUTHOR_FACET, facetQuery: "NO AUTHOR", facetFilters: [boardFilter] } },
     { indexName: index, params: { facetName: POST_AUTHOR_FACET, facetQuery: "/", facetFilters: [boardFilter] } },
     { indexName: index, params: { hitsPerPage: 0, facetFilters: [boardFilter, "status:open"], facets: [POST_AUTHOR_FACET], excludeFacet: { attribute: POST_AUTHOR_FACET, values: [NO_AUTHOR_VALUE] } } },
+    {
+      indexName: index,
+      params: {
+        hitsPerPage: 0,
+        facetFilters: [boardFilter, "status:open"],
+        facets: [POST_AUTHOR_FACET],
+        maxValuesPerFacet: 1,
+      },
+    },
   ]);
   const authorResults = (authorResponse.body as unknown as { results: Array<{
     hits: Array<{ post_id: string }>;
@@ -85,9 +95,9 @@ try {
     facetHits: Array<{ value: string; count: number }>;
   }> }).results;
   assert.deepEqual(authorResults[0]?.facets[POST_AUTHOR_FACET], {
-    [NO_AUTHOR_VALUE]: 2, [literalAuthor]: 1, [postAuthorFacetValue("Alice")]: 1,
+    [NO_AUTHOR_VALUE]: 2, [literalAuthor]: 1, [postAuthorFacetValue("Alice")]: 2,
   });
-  assert.deepEqual(authorResults[0]?.facets.author_name, { "No author": 1, Alice: 1 });
+  assert.deepEqual(authorResults[0]?.facets.author_name, { "No author": 1, Alice: 2 });
   assert.deepEqual(authorResults[1]?.hits.map((hit) => hit.post_id), ["author-null"]);
   assert.deepEqual(authorResults[2]?.hits.map((hit) => hit.post_id).sort(), ["author-literal", "author-null"]);
   assert.deepEqual(authorResults[3]?.hits.map((hit) => hit.post_id), ["author-literal"]);
@@ -95,7 +105,10 @@ try {
     { value: NO_AUTHOR_VALUE, count: 2 }, { value: literalAuthor, count: 1 },
   ]);
   assert.deepEqual(authorResults[5]?.facetHits, []);
-  assert.deepEqual(authorResults[6]?.facets[POST_AUTHOR_FACET], { [literalAuthor]: 1, [postAuthorFacetValue("Alice")]: 1 });
+  assert.deepEqual(authorResults[6]?.facets[POST_AUTHOR_FACET], { [literalAuthor]: 1, [postAuthorFacetValue("Alice")]: 2 });
+  assert.deepEqual(authorResults[7]?.facets[POST_AUTHOR_FACET], {
+    [postAuthorFacetValue("Alice")]: 2, [NO_AUTHOR_VALUE]: 1,
+  }, "Keep the exact missing-author count when the board and status facets push it below the bucket limit");
   assert.equal((await analytics({ query: "fixture", facetFilters: combinedScope }, false)).total, 2);
   console.info("Post author facets passed against OpenSearch, including literal names, facet search and analytics");
   console.info("analytics / Posts filter parity passed against OpenSearch (11 cases, 610 tickets); exact totals verified above 10,000 tickets");
