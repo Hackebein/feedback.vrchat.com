@@ -1,9 +1,11 @@
 {
   "_id": "6ae35e50f427a4ecc8e30f28",
   "aiCategories": [
-    "vrchat-meta"
+    "loc.main-menu",
+    "moderation.safety-system",
+    "social.friends"
   ],
-  "aiTaggedAt": "2026-11-03T02:55:35.866923Z",
+  "aiTaggedAt": "2026-11-20T13:52:30.645416Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5b68fbeec52d7b606b4182ec",
@@ -27,55 +29,9 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 15,
+  "commentCount": 16,
   "commentingDisabled": false,
   "comments": [
-    {
-      "_id": "6ae5c3cfdf81fcf66c31a9bf",
-      "aiGenerated": false,
-      "author": {
-        "_id": "66b233a72f5b55a89c628a61",
-        "alias": "Spontaneous Manatee",
-        "aliasID": "66b233a7f66f1f693aed4c8e",
-        "anonymized": false,
-        "avatarURL": "https://canny-assets.io/images/181be6f0cc5cc2e98f1c2e818fb8ebe3.png",
-        "created": "2024-08-06T14:31:03.093Z",
-        "name": "KutayX7",
-        "serviceAccount": false,
-        "urlName": null
-      },
-      "authorID": null,
-      "boardID": "58c62efae9868f3662e9d9a1",
-      "companyID": "58c62e995865713647a7115d",
-      "created": "2026-10-31T10:32:47.961Z",
-      "deleted": false,
-      "deletedAt": null,
-      "fileURLs": [],
-      "files": [],
-      "imageURLs": [],
-      "integrationSourceType": null,
-      "internal": false,
-      "itemSourceType": null,
-      "mentionedUserIDs": null,
-      "mentionedUsers": [],
-      "mergeID": null,
-      "parentID": null,
-      "pinned": false,
-      "postDeleted": false,
-      "postID": "6ae35e50f427a4ecc8e30f28",
-      "private": false,
-      "reactions": {
-        "like": 9
-      },
-      "restoredAt": null,
-      "sourceFeatureExtractionItemID": null,
-      "sourceLink": null,
-      "spam": false,
-      "statusChangeID": null,
-      "value": "Let's get rid of avatar safety filters too! Interactions can go really weird when you forget to turn on avatar models, animations, and shaders.\n\nOh wait... we also have a toggle for avatar interactions...\n\n(if it wasn't clear, this is sarcasm/joke so please don't)",
-      "viewerReactions": null,
-      "voteID": null
-    },
     {
       "_id": "6ae64f028f5fa40fb18cf597",
       "aiGenerated": false,
@@ -249,7 +205,7 @@
       "postID": "6ae35e50f427a4ecc8e30f28",
       "private": false,
       "reactions": {
-        "like": 15
+        "like": 16
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -385,7 +341,7 @@
       "postID": "6ae35e50f427a4ecc8e30f28",
       "private": false,
       "reactions": {
-        "like": 3
+        "like": 4
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -599,6 +555,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6ae9076282cbcb702b062ab2|full_name}they didnt take their own poll seriously, theres no way they would take this so.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b004d798bf73c549517e637",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f67899159b0841fe0d3891b",
+        "alias": "Amaranth Llama",
+        "aliasID": "65c26da3ed6eefce4c4d09df",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/da79c9ef4e711ba67accc007a2c81ca6.png",
+        "created": "2020-09-20T16:55:45.186Z",
+        "name": "Patroll",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-20T13:39:05.074Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae35e50f427a4ecc8e30f28",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I quickly surveyed multiple communities and only 95% of people want to keep the block feature, so let's just remove it already",
       "viewerReactions": null,
       "voteID": null
     }
