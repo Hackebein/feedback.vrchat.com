@@ -1,13 +1,13 @@
 {
   "_id": "6ae55ba9bf255d922b41605e",
   "aiCategories": [
-    "loc.main-menu",
+    "loc.in-world",
+    "loc.website",
     "avatars.upload-performance",
-    "avatars.impostors",
     "social.nameplates",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-11-13T05:11:35.971113Z",
+  "aiTaggedAt": "2026-11-20T16:01:06.876896Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64c8c2d65162b70976f1034b",
@@ -31,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -207,6 +207,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Currently, the only way to have a public facing fallback is to have already uploaded and set one when they were available, I still have mine and the avatar ID associated with it, so as long as I upload a valid fallback to that 1 ID, I can change my fallback at will, but yeah, giving creators the ability to upload fallbacks again will force them to learn avatar optimization, which is just going to be good for everyone.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b006c366f74270f0194f0e1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "67114f74fb43558c4795ab40",
+        "alias": "Quinacridone magenta Amphibian",
+        "aliasID": "67114f750f7e723d6eff2aa8",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8a070515b1e045d974de715952040cbf.png",
+        "created": "2024-10-17T17:55:00.970Z",
+        "name": "橘花【きつか】",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-20T15:50:14.042Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae55ba9bf255d922b41605e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I don't see the need for a second fallback avatar system. It introduces unnecessary complexity and could make this feature less likely to be implemented.\n\nIf a viewer isn't authorized to receive your avatar, they should simply see their existing fallback or impostor instead.",
       "viewerReactions": null,
       "voteID": null
     }
