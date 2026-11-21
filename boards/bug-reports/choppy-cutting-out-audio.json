@@ -2,10 +2,11 @@
   "_id": "6afe90944e1eaf9d3ec075c3",
   "aiCategories": [
     "loc.pc-client",
+    "loc.in-world",
     "platforms.pc.steam",
     "audio.voice"
   ],
-  "aiTaggedAt": "2026-11-20T15:36:18.318947Z",
+  "aiTaggedAt": "2026-11-21T04:55:56.308723Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "618c36a83049e7015292c656",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 5,
+  "commentCount": 6,
   "commentingDisabled": false,
   "comments": [
     {
@@ -259,7 +260,7 @@
       "postID": "6afe90944e1eaf9d3ec075c3",
       "private": false,
       "reactions": {
-        "like": 1
+        "like": 2
       },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
@@ -268,6 +269,62 @@
       "statusChangeID": "6b0066078bf73c54951b05ea",
       "statusChangeNewStatus": "needs more information",
       "value": "Does the audio cut out totally after a while like this post https://feedback.vrchat.com/bug-reports/p/audio-cut-all-sound\n\nOr is this different?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b0122790c87c5a39e24a771",
+      "aiGenerated": false,
+      "author": {
+        "_id": "618c36a83049e7015292c656",
+        "alias": "Sweet Clownfish",
+        "aliasID": "6afe9094a5c66397897a06ba",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/2f3b7c4be4fc9de3dc9a159e0f2eae99.png",
+        "created": "2021-11-10T21:16:24.776Z",
+        "name": "SupremeAnubis",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-21T04:47:53.244Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64873f159cf028090ce2c2e2",
+          "alias": "Papaya Python",
+          "aliasID": "65c26df7ed6eefce4c5bafd9",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/0cc52fe8eefdb02dd977f85433f98936.png",
+          "created": "2023-06-12T15:51:49.320Z",
+          "name": "StormRel",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6b0066078bf73c54951b05eb",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6afe90944e1eaf9d3ec075c3",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64873f159cf028090ce2c2e2|full_name} No, I never lose audio fully, it just starts getting really choppy, to the point I cant understand a word anyone says. It starts immediately when I open vrchat, and just gets worst and worst over time.",
       "viewerReactions": null,
       "voteID": null
     }
