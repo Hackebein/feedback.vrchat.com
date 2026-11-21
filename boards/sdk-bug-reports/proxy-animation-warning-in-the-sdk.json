@@ -2,16 +2,17 @@
   "_id": "6adf727b4a9874dff73d2c2a",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.vrcsdk",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-10-26T16:30:03.706284Z",
+  "aiTaggedAt": "2026-11-21T16:30:44.527568Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64e28d3731f1b80974319758",
     "alias": "Linear Pinniped",
     "aliasID": "65f9eb96a63714bcb3da297b",
     "anonymized": false,
-    "avatarURL": "https://canny-assets.io/images/189b13844781adef85283423ecbbffea.png",
+    "avatarURL": "https://canny-assets.io/images/23e66a30ea9ce829bf0b788f686219fb.png",
     "created": "2023-08-20T22:01:27.330Z",
     "name": "jojos38",
     "serviceAccount": false,
@@ -34,7 +35,7 @@
     "urlName": "feature-request"
   },
   "categoryID": "6616d2ceedd9a0e35fce972c",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -71,13 +72,71 @@
       "postDeleted": false,
       "postID": "6adf727b4a9874dff73d2c2a",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "Not a bug, the behavior is documented: https://creators.vrchat.com/avatars/#proxy-animations\n\nThis may be a feature request. There are legitimate use cases to have built-in proxy animations in animators too, and something like `proxy_foobar` will not be replaced if a built-in animation with that name doesn't exist.\n\nAre you proposing the SDK to display a warning when a built-in proxy animation name (based on a static list) with a mismatching GUID is used?",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b01c4bc0c87c5a39e2f3c0f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64e28d3731f1b80974319758",
+        "alias": "Linear Pinniped",
+        "aliasID": "65f9eb96a63714bcb3da297b",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/23e66a30ea9ce829bf0b788f686219fb.png",
+        "created": "2023-08-20T22:01:27.330Z",
+        "name": "jojos38",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5d09629c3511d825c8e56214",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-21T16:20:12.822Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6adf7dd137913c316be7564e",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6adf727b4a9874dff73d2c2a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} yes absolutely, I copied the animation from the sdk with the filename and it took me quite some time to find the info in the documentation and understand why it wasn't working",
       "viewerReactions": null,
       "voteID": null
     }
@@ -139,7 +198,7 @@
       "alias": "Linear Pinniped",
       "aliasID": "65f9eb96a63714bcb3da297b",
       "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/189b13844781adef85283423ecbbffea.png",
+      "avatarURL": "https://canny-assets.io/images/23e66a30ea9ce829bf0b788f686219fb.png",
       "companies": [],
       "name": "jojos38",
       "urlName": null,
