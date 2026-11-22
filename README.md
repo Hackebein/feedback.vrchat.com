@@ -8,32 +8,32 @@ Scrape horizon: **2026-10-28 02:20 UTC (25d ago)**.
 
 | Board | Posts |
 |-------|------:|
-| `age-verification` | 222 / 222 (100.0%) |
-| `android` | 358 / 358 (100.0%) |
-| `avatar-30` | 903 / 903 (100.0%) |
+| `age-verification` | 222 / 215 (100.0%) |
+| `android` | 358 / 224 (100.0%) |
+| `avatar-30` | 903 |
 | `avatar-accessories` | 12 / 12 (100.0%) |
-| `avatar-marketplace` | 82 / 82 (100.0%) |
-| `bug-reports` | 13,415 / 13,414 (100.0%) |
+| `avatar-marketplace` | 82 / 61 (100.0%) |
+| `bug-reports` | 13,415 |
 | `client-bug-reporting` | 179 |
-| `creator-companion` | 290 / 290 (100.0%) |
-| `creator-economy` | 86 / 86 (100.0%) |
-| `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,543 / 14,544 (99.99%) |
-| `impostors` | 92 / 92 (100.0%) |
-| `ios-mobile-beta` | 271 / 271 (100.0%) |
-| `localization` | 668 / 668 (100.0%) |
-| `merch` | 37 / 37 (100.0%) |
+| `creator-companion` | 290 / 124 (100.0%) |
+| `creator-economy` | 86 / 58 (100.0%) |
+| `example-central` | 7 / 6 (100.0%) |
+| `feature-requests` | 14,543 |
+| `impostors` | 92 / 40 (100.0%) |
+| `ios-mobile-beta` | 271 / 185 (100.0%) |
+| `localization` | 668 / 291 (100.0%) |
+| `merch` | 37 / 36 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,433 / 3,433 (100.0%) |
-| `persistence` | 74 / 74 (100.0%) |
-| `sdk-bug-reports` | 1,481 / 1,481 (100.0%) |
-| `third-person-view` | 85 / 85 (100.0%) |
-| `udon` | 1,903 / 1,903 (100.0%) |
-| `unity-6-sdk` | 6 / 14 (42.9%) |
-| `vrchat-ik-20` | 287 / 287 (100.0%) |
-| `vrchat-plus-feature-ideas` | 136 / 136 (100.0%) |
-| `website` | 933 / 933 (100.0%) |
-| **Total** | **39,509** / **39,338** (99.98%) |
+| `open-beta` | 3,433 |
+| `persistence` | 74 / 54 (100.0%) |
+| `sdk-bug-reports` | 1,481 |
+| `third-person-view` | 85 / 64 (100.0%) |
+| `udon` | 1,903 |
+| `unity-6-sdk` | 6 / 6 (100.0%) |
+| `vrchat-ik-20` | 287 / 207 (100.0%) |
+| `vrchat-plus-feature-ideas` | 136 / 134 (100.0%) |
+| `website` | 933 |
+| **Total** | **39,509** / **1,723** (100.0%) |
 
 ## OpenSearch
 
