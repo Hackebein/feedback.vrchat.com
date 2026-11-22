@@ -1,0 +1,96 @@
+{
+  "_id": "6b0307f271ce4ee2fa656649",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.vrcsdk",
+    "avatars.upload-performance"
+  ],
+  "aiTaggedAt": "2026-11-22T15:26:36.917596Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-22T15:19:14.249Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Instead of \"VRChat for Quest\", the build alert should refer to mobile platforms.\n\nSteps to reproduce:\n\n1. Add any avatar that's VeryPoor on mobile platforms.\n\n2. Switch the builder to Android or iOS.\n\n3. Check the builder alerts and notice the VeryPoor performance estimate alert.\n\nActual text: Overall Performance Estimate: VeryPoor - This avatar does not meet the minimum performance requirements for VRChat. It will be blocked by default on VRChat for Quest, and will not show unless a user chooses to show your avatar. [...]\n\nExpected text: Overall Performance Estimate: VeryPoor - This avatar does not meet the minimum performance requirements for VRChat. It will be blocked by default on standalone VR and mobile platforms, and will not show unless a user chooses to show your avatar. [...]\n\nVRChat SDK - Avatars 3.10.6.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6b0307f171ce4ee2fa65663e",
+  "imageURLs": [
+    "https://canny-assets.io/images/071af06c3efa4ccb7c0eb2ed5c0de5cb.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-22T15:19:14.249Z",
+  "subCategoryID": null,
+  "title": "The VeryPoor performance estimation alert uses deprecated terminology \"VRChat for Quest\" instead of referring to standalone VR/mobile platforms",
+  "trendingScore": 2969.2129125476235,
+  "updatedBy": "68098a4626271974ef4d2775",
+  "urlName": "the-verypoor-performance-estimation-alert-uses-deprecated-terminology-vrchat-for",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6b0307f26ce332078d433b06"
+    }
+  ]
+}
