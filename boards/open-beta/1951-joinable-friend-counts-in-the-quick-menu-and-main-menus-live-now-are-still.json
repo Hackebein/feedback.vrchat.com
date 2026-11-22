@@ -1,0 +1,110 @@
+{
+  "_id": "6b02c1bcfc6e223ebf011dc7",
+  "aiCategories": [
+    "loc.quick-menu",
+    "loc.main-menu",
+    "open-beta",
+    "client.settings",
+    "social.friends",
+    "platforms.pc.steam"
+  ],
+  "aiTaggedAt": "2026-11-22T10:22:35.079084Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "68098a4626271974ef4d2775",
+    "alias": "Extraordinary Peacock",
+    "aliasID": "68098a468ccc1d8b3bb09eda",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+    "created": "2025-04-24T00:48:06.176Z",
+    "name": "WubTheCaptain",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "68098a4626271974ef4d2775",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-22T10:19:40.072Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Quick Menu shows 12 friends joinable, Main Menu shows 9 friends joinable, and Social tab shows 38 friends locations.\n\nOn first launch, the QM and MM were synced to 12 friends joinable but it got out of sync within minutes. It was never in sync with Social tab.\n\n1. Have lots of friends online? (110 friends online, 38 friends locations in social tab)\n\n2. Compare the numbers from Social tab and Quick Menu launchpad to Live Now.\n\nExpected result: Approximately \"38 friends you can join\".\n\nActual result: Quick Menu \"12 friends you can join\", Main Menu \"9 friends you can join\".\n\nPrevious report: https://feedback.vrchat.com/open-beta/p/1948-live-now-displays-a-different-11-friends-you-can-join-while-social-tab-disp",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/32566b0c6fc17664284e0fb7a9da633d.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/32566b0c6fc17664284e0fb7a9da633d.txt",
+      "mimeType": "text/plain",
+      "name": "output_log_2026-11-22_10-11-42",
+      "url": "https://canny-assets.io/files/32566b0c6fc17664284e0fb7a9da633d.txt"
+    }
+  ],
+  "ideaID": "6b02c1bbfc6e223ebf011dc6",
+  "imageURLs": [
+    "https://canny-assets.io/images/2354e63d2e5d1a554dba12108c875fa5.png",
+    "https://canny-assets.io/images/5d1aaede414084740e11a653192afbce.png",
+    "https://canny-assets.io/images/b3765df2ad0e57ec49f51714ae9288af.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-22T10:19:40.072Z",
+  "subCategoryID": null,
+  "title": "[1951] Joinable friend counts in the Quick Menu and Main Menu's Live Now are still desynced",
+  "trendingScore": 2969.1831931999054,
+  "updatedBy": null,
+  "urlName": "1951-joinable-friend-counts-in-the-quick-menu-and-main-menus-live-now-are-still",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "68098a4626271974ef4d2775",
+      "alias": "Extraordinary Peacock",
+      "aliasID": "68098a468ccc1d8b3bb09eda",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+      "companies": [],
+      "name": "WubTheCaptain",
+      "urlName": null,
+      "voteID": "6b02c1bc6ce332078d194982"
+    }
+  ]
+}
