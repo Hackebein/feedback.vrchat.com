@@ -2,9 +2,9 @@
   "_id": "68fb8159bd33395638e46b57",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.udon"
+    "sdk.world-building"
   ],
-  "aiTaggedAt": "2026-06-11T01:57:17.413162Z",
+  "aiTaggedAt": "2026-11-22T21:56:13.023885Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "67ad43caa208a6b8e7799a0e",
@@ -34,7 +34,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -159,6 +159,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "replace \n\nreturn OUT;\n\nwith \n\n#ifndef UNITY_COLORSPACE_GAMMA\n\n    OUT.color.rgb = GammaToLinearSpace(OUT.color.rgb);\n\n#endif\n\nreturn OUT;\n\nin the supersampled shader\n\nnot sure if this fixes it for all platforms",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b036344eeecbd810bf1a083",
+      "aiGenerated": false,
+      "author": {
+        "_id": "678fd947b51d3c4f77851d07",
+        "alias": "Recent Platypus",
+        "aliasID": "68363f0bb25ebd72193c0ccb",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/7c5f138ab25a2bde2727ba2eab8d736f.png",
+        "created": "2025-01-21T17:28:39.945Z",
+        "name": "Zevya",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-22T21:48:52.069Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "68fb8159bd33395638e46b57",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "https://feedback.vrchat.com/bug-reports/p/supersampled-ui-auto-swap-gives-every-ui-graphic-that-is-inactive-at-world-load",
       "viewerReactions": null,
       "voteID": null
     }
