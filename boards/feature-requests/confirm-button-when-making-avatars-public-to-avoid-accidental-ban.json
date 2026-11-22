@@ -2,10 +2,11 @@
   "_id": "6a2d35893310dabeebe2fd8a",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "avatars.upload-performance"
+    "loc.website",
+    "avatars.marketplace",
+    "web.profiles"
   ],
-  "aiTaggedAt": "2026-06-13T14:47:37.706974Z",
+  "aiTaggedAt": "2026-11-22T19:02:49.484669Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "632267dc3680d7237de98d50",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -211,6 +212,52 @@
       "value": "https://feedback.vrchat.com/sdk-bug-reports/p/sdk-make-public-private-button-within-content-manager-needs-confirmation",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6b027b1671ce4ee2fa5c405d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "66c7f83ba2fca0a622090327",
+        "alias": "Right Hoverfly",
+        "aliasID": "66c7f83b3e088c8d6b0e1c00",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+        "created": "2024-08-23T02:47:23.348Z",
+        "name": "Usemame",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-22T05:18:14.983Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/77490a8b524d453ceea8fced7b8b612a.jpeg"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6a2d35893310dabeebe2fd8a",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "There's also no filter on the site and the VRCSDK to check what's being public(the only way is to scrolls a lot), I once mis-clicked on the site and only noticed 'something different' and then realized it's my avatar was in public stats(since I never clicked the button before, I never saw the part of the UI). It's almost like the system is encouraging people to public-ing the avatars, which is something I believe 99.999% of the playerbase never did",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -228,20 +275,20 @@
   "imageURLs": [],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 12,
+  "maxScore": 13,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6a2d35893310dabeebe2fd8a/320297576.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 12,
+  "score": 13,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-06-13T10:48:41.067Z",
   "subCategoryID": null,
   "title": "Confirm button when making avatars public to avoid accidental ban",
-  "trendingScore": 2968.3714546287065,
+  "trendingScore": 2969.1094461103044,
   "updatedBy": "632267dc3680d7237de98d50",
   "urlName": "confirm-button-when-making-avatars-public-to-avoid-accidental-ban",
   "viewerIsAuthor": false,
@@ -254,6 +301,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "66c7f83ba2fca0a622090327",
+      "alias": "Right Hoverfly",
+      "aliasID": "66c7f83b3e088c8d6b0e1c00",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/c91fe1e75927c5041601a78f62f7e56d.png",
+      "companies": [],
+      "name": "Usemame",
+      "urlName": null,
+      "voteID": "6b0278e76ce332078d18e9a4"
+    },
     {
       "_id": "68c034a0ce2ca2b52099ffb2",
       "alias": "Subtle Narwhal",
