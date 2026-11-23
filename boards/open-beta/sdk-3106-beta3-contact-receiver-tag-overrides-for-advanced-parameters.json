@@ -2,10 +2,10 @@
   "_id": "6ade8e0ffb4e9630b2f085ee",
   "aiCategories": [
     "loc.unity-sdk",
-    "open-beta",
-    "sdk.udon"
+    "sdk.udon",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-10-29T21:12:09.961828Z",
+  "aiTaggedAt": "2026-11-23T08:40:08.852865Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -35,7 +35,7 @@
     "urlName": "feature-requests"
   },
   "categoryID": "6317ed8c023c7b5ec9566d28",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -70,6 +70,50 @@
       "statusChangeID": "6ae3b5844244a05bb4ba18ef",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b03fa6ce3ba48f9007a88ca",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5fa08ddb2644fb4c5a3dfe75",
+        "alias": "Toffee Coyote",
+        "aliasID": "65c2824ced6eefce4c9ed424",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a4c4bf6d228a5156ff79081ddbfb626b.png",
+        "created": "2020-11-02T22:53:15.373Z",
+        "name": "SenkyDragon",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-23T08:33:48.152Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ade8e0ffb4e9630b2f085ee",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I don't personally need this anymore, since we're locked in on using scale flags now due to implementation delay.",
       "viewerReactions": null,
       "voteID": null
     }
