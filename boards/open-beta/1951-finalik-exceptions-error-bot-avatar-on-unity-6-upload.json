@@ -1,0 +1,105 @@
+{
+  "_id": "6b04c3b2b29b8870b6fe9078",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "loc.in-world",
+    "loc.pc-client",
+    "avatars.upload-performance",
+    "platforms.pc.steam"
+  ],
+  "aiTaggedAt": "2026-11-23T22:56:34.555993Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6b04c17b87ce2bd6bc0ca6bc",
+    "alias": "Persian blue Bear",
+    "aliasID": "6b04c17b6ce332078dbd0cc3",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/95a85413e6e99ee26cadcb5d193d7c13.png",
+    "created": "2026-11-23T22:43:07.328Z",
+    "name": "cbdg",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6b04c17b87ce2bd6bc0ca6bc",
+  "board": {
+    "_id": "5b0746088fa72313783e3269",
+    "name": "Open Beta",
+    "urlName": "open-beta"
+  },
+  "boardID": "5b0746088fa72313783e3269",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6317f3226fccd444a7af6064",
+    "created": "2022-09-07T01:25:54.001Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6317f3226fccd444a7af6064",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-23T22:52:34.317Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I have uploaded two avatars on Unity 6 with no issues, but today while uploading a test outfit variant of a working avatar things broke (no special steps taken, just: updated FBX, recreated Humanoid definition, detach in Pipeline Manager, Build & Publish).\n\nThe avatar fails to load (error bot) and the log is spammed with FinalIK solver NullReferenceExceptions. Switching out of the avatar loads the new avatar but also (!) loads the non-working avatar meshes, rendering both avatars at the same time. Rejoining the world fixes that.  It fails this way on both desktop and in VR.\n\nThe avatar doesn't do anything strange in the editor/with GestureManager.\n\nReuploading the avatar does not change this behavior.\n\nUnity:  6000.0.67f1 \n\nSDK: 3.11.0-beta.1\n\nAvatar: avtr_7f698170-f83b-4b10-8bc3-4bb6c2011278\n\n(I've truncated the log since it's quite big and there is an 8MB upload limit)",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [
+    "https://canny-assets.io/files/4451c91f0e90e5b1346e8f8621dd6c41.txt"
+  ],
+  "files": [
+    {
+      "downloadURL": "/api/files/download/4451c91f0e90e5b1346e8f8621dd6c41.txt",
+      "mimeType": "text/plain",
+      "name": "output_log_2026-11-23_19-53-09 - part",
+      "url": "https://canny-assets.io/files/4451c91f0e90e5b1346e8f8621dd6c41.txt"
+    }
+  ],
+  "ideaID": "6b04c3b1b29b8870b6fe9069",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6b04c3b2b29b8870b6fe9078/856510535.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-23T22:52:34.317Z",
+  "subCategoryID": null,
+  "title": "[1951] FinalIK exceptions + error bot avatar on Unity 6 upload",
+  "trendingScore": 2969.4007433280467,
+  "updatedBy": null,
+  "urlName": "1951-finalik-exceptions-error-bot-avatar-on-unity-6-upload",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6b04c17b87ce2bd6bc0ca6bc",
+      "alias": "Persian blue Bear",
+      "aliasID": "6b04c17b6ce332078dbd0cc3",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/95a85413e6e99ee26cadcb5d193d7c13.png",
+      "companies": [],
+      "name": "cbdg",
+      "urlName": null,
+      "voteID": "6b04c3b26ce332078dbd1590"
+    }
+  ]
+}
