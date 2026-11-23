@@ -2,10 +2,9 @@
   "_id": "6b0425b426fd596eecb5dbad",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk",
-    "avatars.upload-performance"
+    "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-11-23T11:53:18.439934Z",
+  "aiTaggedAt": "2026-11-23T12:02:24.998771Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -43,7 +42,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "EditorOnly objects are inconsistently excluded from different performance rank checks. For instance, the contact count does not exclude EditorOnly objects at all.\n\nAdditionally, components flagged as DontSaveInBuild should not be counted, as they will not be included in the upload, and are commonly added by emulator systems like gesture manager and av3emu (when adding the \"built-in\" finger / body contacts for play mode)",
+  "details": "The contact count performance rank check improperly does not exclude EditorOnly objects like the other count checks do.\n\nAdditionally, components flagged as DontSaveInBuild should not be counted, as they will not be included in the upload, and are commonly added by emulator systems like gesture manager and av3emu (when adding the \"built-in\" finger / body contacts for play mode)",
   "error": null,
   "eta": null,
   "etaPublic": true,
