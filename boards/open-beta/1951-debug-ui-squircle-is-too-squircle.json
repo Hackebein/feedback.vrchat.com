@@ -2,11 +2,11 @@
   "_id": "6b013a81c2666fa09122c7ff",
   "aiCategories": [
     "loc.pc-client",
-    "platforms.pc.steam",
     "open-beta",
-    "client.settings"
+    "platforms.pc.steam",
+    "platforms.pc.desktop"
   ],
-  "aiTaggedAt": "2026-11-23T15:08:15.744681Z",
+  "aiTaggedAt": "2026-11-23T15:17:28.093779Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "63180cda10858444c1b3cc5b",
@@ -36,7 +36,7 @@
     "urlName": "bug-report"
   },
   "categoryID": "6317f3226fccd444a7af6064",
-  "commentCount": 6,
+  "commentCount": 8,
   "commentingDisabled": false,
   "comments": [
     {
@@ -317,6 +317,120 @@
       "statusChangeID": "6b0455f5dc66f02417f889eb",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b0457039ea20655dbaf0e3d",
+      "aiGenerated": false,
+      "author": {
+        "_id": "654a7d1f1870ff9faf0911e8",
+        "alias": "Peacock blue Emu",
+        "aliasID": "6615a164e5d26962aabce722",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/53018074ce6df5449c6c10ba3cd8f48f.png",
+        "created": "2023-11-07T18:08:31.263Z",
+        "name": "Truce",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-23T15:08:51.756Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "64db5fa7ab48431f25a4afe5",
+          "alias": "Viridian Sloth",
+          "aliasID": "65c2b1cbed6eefce4c8373a2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/077246c4eeea576b0a40d8adea40c39c.png",
+          "created": "2023-08-15T11:21:11.110Z",
+          "name": "NotAChance",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6b0351a9f66c13f42f682b77",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b013a81c2666fa09122c7ff",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{64db5fa7ab48431f25a4afe5|full_name}: \n\nUnity homies will understand: \n\n1. Nine-sliced sprite imported too big\n\n2. Time passes, it's reused in many places\n\n3. Debug UI uses it, doesn't set it to sliced but no one notices (it's big)\n\n4. More time passes, someone notices the sprite's too big, fixes it\n\n5. Profit",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b04576b38730c136d1755d1",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5fca5df4d58780532024a52b",
+        "alias": "Toffee Tortoise",
+        "aliasID": "65c26da3ed6eefce4c4d0863",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/719b7fa82bfdf1aa43e0809608929735.png",
+        "created": "2020-12-04T16:04:04.984Z",
+        "name": "DrBlackRat",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5b0746088fa72313783e3269",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-23T15:10:35.263Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "654a7d1f1870ff9faf0911e8",
+          "alias": "Peacock blue Emu",
+          "aliasID": "6615a164e5d26962aabce722",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/53018074ce6df5449c6c10ba3cd8f48f.png",
+          "created": "2023-11-07T18:08:31.263Z",
+          "name": "Truce",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6b0351a9f66c13f42f682b77",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b013a81c2666fa09122c7ff",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{654a7d1f1870ff9faf0911e8|full_name} I feel that wayyyy tooo much ._.",
       "viewerReactions": null,
       "voteID": null
     }
