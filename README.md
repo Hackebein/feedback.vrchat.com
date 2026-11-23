@@ -18,7 +18,7 @@ Scrape horizon: **2026-10-29 02:38 UTC (25d ago)**.
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 86 / 86 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,553 / 14,555 (99.99%) |
+| `feature-requests` | 14,554 / 14,555 (99.99%) |
 | `impostors` | 92 / 92 (100.0%) |
 | `ios-mobile-beta` | 272 / 272 (100.0%) |
 | `localization` | 668 / 668 (100.0%) |
@@ -28,7 +28,7 @@ Scrape horizon: **2026-10-29 02:38 UTC (25d ago)**.
 | `persistence` | 74 / 74 (100.0%) |
 | `sdk-bug-reports` | 1,485 / 1,485 (100.0%) |
 | `third-person-view` | 85 / 85 (100.0%) |
-| `udon` | 1,903 / 1,902 (100.0%) |
+| `udon` | 1,902 / 1,902 (100.0%) |
 | `unity-6-sdk` | 6 / 14 (42.9%) |
 | `vrchat-ik-20` | 287 / 287 (100.0%) |
 | `vrchat-plus-feature-ideas` | 136 / 136 (100.0%) |
