@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "sdk.vrcsdk"
   ],
-  "aiTaggedAt": "2026-11-23T14:45:24.417698Z",
+  "aiTaggedAt": "2026-11-24T19:55:40.846940Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5fa08ddb2644fb4c5a3dfe75",
@@ -81,7 +81,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "While in play mode:\n\n* The top tab buttons are disabled for seemingly no reason (since you can change tabs before entering play mode)\n\n* It attempts to change to the authentication tab, but that code doesn't work because SelectTab short circuits while in play mode\n\n* The content manager, authentication, and settings pages are disabled (for seemingly no reason, since they do work)\n\n* The upload button is not disabled, so if you enter play mode with the builder tab selected and domain reload disabled, it attempts to build and then just crashes.\n\nUsing the vrcsdk builder panel in play mode is a common technique to check how performance rank is impacted by non-destructive tools such as VRCFury / NDMF.\n\nMy suggestion: Remove all of the VRCSdkControlPanel isPlaying guards entirely, and just disable the upload / build button while in play mode.",
+  "details": "While in play mode:\n\n* The top tab buttons are disabled for seemingly no reason (since you can change tabs before entering play mode)\n\n* It attempts to change to the authentication tab, but that code doesn't work because SelectTab short circuits while in play mode\n\n* The content manager, authentication, and settings pages are disabled (for seemingly no reason, since they do work)\n\n* The upload button is not disabled, so if you enter play mode with the builder tab selected and domain reload disabled, then click build, it attempts to build and then just crashes.\n\nUsing the vrcsdk builder panel in play mode is a common technique to check how performance rank is impacted by non-destructive tools such as VRCFury / NDMF.\n\nMy suggestion: Remove all of the VRCSdkControlPanel isPlaying guards entirely, and just disable the upload / build button while in play mode.",
   "error": null,
   "eta": null,
   "etaPublic": true,
