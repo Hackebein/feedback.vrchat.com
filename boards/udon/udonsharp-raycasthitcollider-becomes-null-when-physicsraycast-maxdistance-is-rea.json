@@ -1,0 +1,95 @@
+{
+  "_id": "6b05c34a9762ef108eab43cf",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "sdk.udon"
+  ],
+  "aiTaggedAt": "2026-11-24T17:07:13.972178Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "69ba46c9ed082c9981cdcc0f",
+    "alias": "Mantis Vole",
+    "aliasID": "69ba46caed082c9981cde1a9",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/094f2b7e2107b8b93769b44bad8453a9.png",
+    "created": "2026-03-18T06:31:37.684Z",
+    "name": "Guff-ppp",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "69ba46c9ed082c9981cdcc0f",
+  "board": {
+    "_id": "5df404cc2072644ac4b5e385",
+    "name": "World/Udon Bugs & Feature Requests",
+    "urlName": "udon"
+  },
+  "boardID": "5df404cc2072644ac4b5e385",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6509f35642501809348ecb06",
+    "created": "2023-09-19T19:15:34.467Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "6509f35642501809348ecb06",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-24T17:03:06.441Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "When a custom property is used directly as the `maxDistance` argument of `Physics.Raycast`, the method returns `true`, but `hit.collider` is `null`.\n\nAssigning the property value to a local `float` before the call avoids the issue. Both versions cast the same ray against the same Collider, so they should return the same `RaycastHit`.\n\nThe issue occurs with both auto-properties (`{ get; private set; }`) and non-serialized getter-only properties.\n\nA property getter appearing after an `out` argument may be related, but I have not confirmed the exact trigger.\n\nThe full reproduction code is attached as a screenshot.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6b05c3499762ef108eab43ce",
+  "imageURLs": [
+    "https://canny-assets.io/images/7a15658c05cf28f0ac82f1d58640bef5.png"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-24T17:03:06.441Z",
+  "subCategoryID": null,
+  "title": "UdonSharp: RaycastHit.collider becomes null when Physics.Raycast maxDistance is read from a custom property",
+  "trendingScore": 2969.5089313182916,
+  "updatedBy": null,
+  "urlName": "udonsharp-raycasthitcollider-becomes-null-when-physicsraycast-maxdistance-is-rea",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "69ba46c9ed082c9981cdcc0f",
+      "alias": "Mantis Vole",
+      "aliasID": "69ba46caed082c9981cde1a9",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/094f2b7e2107b8b93769b44bad8453a9.png",
+      "companies": [],
+      "name": "Guff-ppp",
+      "urlName": null,
+      "voteID": "6b05c34a6ce332078dc21628"
+    }
+  ]
+}
