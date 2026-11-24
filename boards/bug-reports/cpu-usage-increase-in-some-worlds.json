@@ -2,12 +2,11 @@
   "_id": "6b02cd6771ce4ee2fa6114c8",
   "aiCategories": [
     "loc.pc-client",
-    "loc.in-world",
     "platforms.pc.steam",
     "open-beta",
-    "client.settings"
+    "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-11-22T11:52:19.431981Z",
+  "aiTaggedAt": "2026-11-24T15:03:12.401751Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6b02cd66fc6e223ebf01c444",
@@ -39,7 +38,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "Description\n\nWhen I was in the open beta, I noticed that some worlds, my fps drops from 72fps, to around 40-50fps, and lower with quick menu on. My CPU isnt full in any of the logcial processors or overall utilisation graphs according to Task Manager. However, looking in SteamVR's Advanced Frame Timing shows its a CPU thing. I mostly notice it in the Fish! Game world. This doesn't happen in the regular game branch, that's why I am making a bug report for it, just in case it is something important.\n\nMy Specs:\n\nRadeon RX 9060XT\n\nRyzen 5 9600x\n\n32GB DDR5\n\nUsing Quest 3 128GB, connected through Virtual Desktop on Medium Graphics Quality\n\nReproduction Steps\n\nJoin The Open Beta\n\nLaunch VRChat\n\nGo to any of these worlds:\n\n- Fish!\n\n- Orbital Genesis\n\n- A Game About Crates\n\n- Break-n-Haul\n\nThere could be more but these are the ones I've noticed.\n\nWorkarounds:\n\nI am unsure of any other workarounds other than being on the default branch.\n\nDetails\n\n- Category: Performance\n\n- Frequency: Often\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.4.2-1951-3ef0ba72ab-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-11-22_21-16-06.txt](https://api.vrchat.cloud/api/1/file/file_316a0977-a654-4167-a237-49970e11717a/1/file)",
+  "details": "Description\n\nWhen I was in the open beta, I noticed that some worlds, my fps drops from 72fps, to around 40-50fps, and lower with quick menu on. My CPU isnt full in any of the logcial processors or overall utilisation graphs according to Task Manager. However, looking in SteamVR's Advanced Frame Timing shows its a CPU thing. I mostly notice it in the Fish! Game world. This doesn't happen in the regular game branch, that's why I am making a bug report for it, just in case it is something important.\n\nWhen checking the worlds, I was the only one in the instance.\n\nMy Specs:\n\nRadeon RX 9060XT\n\nRyzen 5 9600x\n\n32GB DDR5\n\nUsing Quest 3 128GB, connected through Virtual Desktop on Medium Graphics Quality\n\nReproduction Steps\n\nJoin The Open Beta\n\nLaunch VRChat\n\nGo to any of these worlds:\n\n- Fish!\n\n- Orbital Genesis\n\n- A Game About Crates\n\n- Break-n-Haul\n\nThere could be more but these are the ones I've noticed.\n\nWorkarounds:\n\nI am unsure of any other workarounds other than being on the default branch.\n\nDetails\n\n- Category: Performance\n\n- Frequency: Often\n\n---\n\nplatform: PC (platform: Windows, store: Steam, headset: None)\n\nrawPlatform: WindowsPlayer\n\nclientVersion: 2026.4.2-1951-3ef0ba72ab-Release\n\nunityVersion: 6000.0.67f1-DWR\n\nIn-Client Report\n\n---\n\n**Log file:** [output_log_2026-11-22_21-16-06.txt](https://api.vrchat.cloud/api/1/file/file_316a0977-a654-4167-a237-49970e11717a/1/file)",
   "error": null,
   "eta": null,
   "etaPublic": true,
