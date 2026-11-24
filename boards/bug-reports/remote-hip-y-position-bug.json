@@ -1,13 +1,12 @@
 {
   "_id": "6ae7c2f17fcb812ef3241067",
   "aiCategories": [
-    "loc.in-world",
-    "loc.pc-client",
-    "platforms.pc.steam",
+    "loc.unity-sdk",
     "avatars.tracking",
-    "avatars.descriptor"
+    "avatars.dynamics",
+    "open-beta"
   ],
-  "aiTaggedAt": "2026-11-11T22:01:45.671341Z",
+  "aiTaggedAt": "2026-11-24T14:53:34.088392Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64ea24405078cea2a7cf9980",
@@ -31,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -187,6 +186,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6161a61a2c0de966b4e43486|full_name} Hello again, I have found out that disabling the new face tracking options in the VRC SDK gets rid of this bug, however, I much prefer this face tracking than the other animator based face tracking, so I hope it is possible to fix this somehow",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b05a2ef0adad87e4af74c8f",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64ea24405078cea2a7cf9980",
+        "alias": "Merlot Moth",
+        "aliasID": "6648d820b9e8e8fe66871324",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/20b7c8e524138de6b79f11127819edda.png",
+        "created": "2023-08-26T16:11:44.102Z",
+        "name": "poproх",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-24T14:45:03.031Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "6161a61a2c0de966b4e43486",
+          "alias": "Razzmatazz Eagle",
+          "aliasID": "65c2b7efed6eefce4c4dceae",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/f9b909781ec10a9c42837d9eafdd9561.png",
+          "created": "2021-10-09T14:24:26.758Z",
+          "name": "Kung",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae7c2f17fcb812ef3241067",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{6161a61a2c0de966b4e43486|full_name} This was fixed in one of the latest open-beta updates, however, I would say it's worse than before, because now some people are on open-beta and some are not, so when people who are not on the open-beta headpat me or such, it looks to people on the open-beta as if they're putting their hand into my face, or booping me on my chest as an example. When will the fix be pushed to stable?",
       "viewerReactions": null,
       "voteID": null
     }
