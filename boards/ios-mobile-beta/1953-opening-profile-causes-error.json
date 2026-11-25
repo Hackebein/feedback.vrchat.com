@@ -5,7 +5,7 @@
     "platforms.mobile.ios",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-11-25T21:38:36.200708Z",
+  "aiTaggedAt": "2026-11-25T21:44:47.404281Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "60dd2a998871d03e7f3806ae",
@@ -43,7 +43,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "When opening your profile, a popup saying \"An error occurred\" appears, with the error code \"VRC.xmUbg\"\n\nMaybe related to the \"Groups\" section not showcasing any groups?",
+  "details": "When opening your profile, a popup saying \"An error occurred\" appears, with the error code \"VRC.xmUbg\"\n\nMaybe related to the \"Groups\" section not showcasing any groups OR the uploaded worlds section displaying \"Unknown error.\"?",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -60,36 +60,48 @@
   ],
   "ideaID": "6b075434aba1f357ed1191f4",
   "imageURLs": [
-    "https://canny-assets.io/images/7742f5eea8d3b2bd9801c61fdac0eee2.png"
+    "https://canny-assets.io/images/7742f5eea8d3b2bd9801c61fdac0eee2.png",
+    "https://canny-assets.io/images/8d37ba21aa8e3175444f4301ed7e368e.png"
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 1,
+  "maxScore": 2,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": null,
   "opportunities": [],
   "pinnedComment": null,
-  "score": 1,
+  "score": 2,
   "sourceFeatureExtractionItem": null,
   "status": "open",
   "statusChanged": "2026-11-25T21:33:41.069Z",
   "subCategoryID": null,
   "title": "[1953] Opening Profile causes error",
-  "trendingScore": 2969.6786314464334,
-  "updatedBy": null,
+  "trendingScore": 2970.0843296671733,
+  "updatedBy": "60dd2a998871d03e7f3806ae",
   "urlName": "1953-opening-profile-causes-error",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
     "highEngagement": false,
-    "lowEngagement": true,
-    "moderateEngagement": false,
+    "lowEngagement": false,
+    "moderateEngagement": true,
     "votesHidden": false,
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6a5f9e9bd4058d953b392a6f",
+      "alias": "Intimate Otter",
+      "aliasID": "6a5f9e9bd4058d953b392a73",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/cf862016db56130d41abf11d11825c1d.png",
+      "companies": [],
+      "name": "HackebeinsBot",
+      "urlName": null,
+      "voteID": "6b0755db6ce332078dca0ee4"
+    },
     {
       "_id": "60dd2a998871d03e7f3806ae",
       "alias": "Thoughtful Cobra",
