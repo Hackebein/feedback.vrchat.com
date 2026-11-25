@@ -1,12 +1,12 @@
 {
   "_id": "6b06f74d7a58d54cbbd597c9",
   "aiCategories": [
-    "loc.in-world",
     "loc.pc-client",
+    "platforms.pc.steam",
     "worlds.travel",
-    "platforms.pc.steam"
+    "groups.instances"
   ],
-  "aiTaggedAt": "2026-11-25T23:16:50.719547Z",
+  "aiTaggedAt": "2026-11-25T23:30:38.073536Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6b06f74d54e79eedc9973ac6",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -121,6 +121,64 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Duplicate of: https://feedback.vrchat.com/bug-reports/p/unable-to-generate-unlocked-group-world-link",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b076ca61b095977cce3d8ce",
+      "aiGenerated": false,
+      "author": {
+        "_id": "62f82742e7f60944a04953d8",
+        "alias": "Legal Lynx",
+        "aliasID": "65c49f9aed6eefce4c9d7b63",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a7bb8cd75a69164d4ee6b137139a877d.png",
+        "created": "2022-08-13T22:35:46.959Z",
+        "name": "Mogusha",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-25T23:17:58.535Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6b076a64fde23a2116b67948",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b06f74d7a58d54cbbd597c9",
+      "private": false,
+      "reactions": {
+        "like": 1
+      },
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name} Likely related, but not the same issue, the other indicates the link is generated from the website, this one is specific to the creation of an unlocked portal from within vrchat.",
       "viewerReactions": null,
       "voteID": null
     }
