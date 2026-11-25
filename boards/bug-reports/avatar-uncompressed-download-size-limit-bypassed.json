@@ -4,7 +4,7 @@
     "loc.unity-sdk",
     "avatars.upload-performance"
   ],
-  "aiTaggedAt": "2026-07-21T20:29:09.873241Z",
+  "aiTaggedAt": "2026-11-25T22:30:55.205294Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6604261ebe83f2c66c183264",
@@ -28,7 +28,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 11,
+  "commentCount": 12,
   "commentingDisabled": false,
   "comments": [
     {
@@ -621,6 +621,52 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Over the past months I've reflected on what I've written in this thread. It seems clear to me that VRChat cannot afford certain server-side solutions, and that is understandable.\n\nI’ve noted _tau_ (Aug 1, 2024) mentioning plans to disable animators for hidden avatars to reduce CPU cost. While optimizations for culled avatars is a revolutionary solution that should have been implemented already, we need to address the core issue of creator education and in game troubleshooting regarding Animation Layer Count.\n\nThe amount of frame time (fps) a controller (FX, Action, Gesture) steals is absurd and currently unrestricted. Every layer is evaluated by the CPU every single frame, regardless of whether its weight is 1 or 0. Whether an avatar is shown or hidden, this calculation is forced upon every user in the scene (World/Instance) at all times. \n\nBy not capping or even displaying layer counts, VRChat is actively teaching creators that animator complexity is 'free' -- It is not.\n\nImplementing a 'Animation Layer Count' metric should be trivial and adding 'Animation Layer Count' as a gray (unranked) statistic in the avatar stats would be an enormous win and a word of mouth miracle. \n\nIt could be implemented immediately without the PR fallout of retroactive ranking, providing the transparency needed for users to diagnose performance drops.\n\nIf the goal is platform stability, I fail to see why this is slept on.\n\nsidenote: While Unity 6 introduces some optimizations for Animators, VRChat is locked into the 2022 LTS architecture for the foreseeable future. Even when they move, the millions of existing avatars built on the 2022 standard will still have the same \"unoptimized\" layer logic.\n\nThe fact that VRChat refuses to move on and break older things is why we can't have nice things, and i think this will be VRChats downfall in the future.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b0716ced21f0aac207f6cb9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-25T17:11:42.309Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [
+        "https://canny-assets.io/images/5429a85d14e36e57ceaf13685092438f.png"
+      ],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69cf35b4c963f18b467220fc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "A minimal 0.02 MB download with 21.12 MB uncompressed size expands to nearly 1.2 GB texture memory usage.\n\nIn theory this means an avatar with approximately 27.4 GB texture memory utilization may be possible on Windows?",
       "viewerReactions": null,
       "voteID": null
     }
