@@ -2,12 +2,13 @@
   "_id": "6afcc6c9aa3800e7d6195922",
   "aiCategories": [
     "loc.in-world",
+    "loc.action-menu",
     "loc.standalone-vr",
     "platforms.standalone-vr.quest",
     "avatars.expressions",
     "open-beta"
   ],
-  "aiTaggedAt": "2026-11-25T18:57:29.039139Z",
+  "aiTaggedAt": "2026-11-25T21:17:59.067234Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6afcc6c83fdf19bbb7a9f4eb",
@@ -31,7 +32,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -405,6 +406,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{6ae057987c3ff1e44ab2f143|full_name}: The server side networking change was re-enabled after the beta was updated to include a fix during which the issue temporarily re-appeared to those on the open beta branch who did not update their client. Saying that if you are still experiencing this issue now please provide an example avatar id along with reproduction steps in a new post and we can investigate.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b074cb3c314ccaeaf685113",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6ae057987c3ff1e44ab2f143",
+        "alias": "Xenon grey Dragonfly",
+        "aliasID": "6ae05798c7e052262dc0d576",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/8662c4f4fec6a61e1bc2e6f9095a53f1.png",
+        "created": "2026-10-27T07:49:44.073Z",
+        "name": "TickyTack_",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-25T21:01:39.560Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "667353ba8663454809d39116",
+          "alias": "Effective Lark",
+          "aliasID": "667353bbd5dd336a20ffb258",
+          "anonymized": false,
+          "avatarURL": null,
+          "created": "2024-06-19T21:55:06.923Z",
+          "name": "euan",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6afcdfcffa3b55ccce8acd35",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6afcc6c9aa3800e7d6195922",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{667353ba8663454809d39116|full_name} The issue has been resolved after running a file integrity check on open-beta client. Thank you for the follow up.",
       "viewerReactions": null,
       "voteID": null
     }
