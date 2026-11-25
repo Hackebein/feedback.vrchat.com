@@ -1,10 +1,12 @@
 {
   "_id": "69825315b8ff8070eb120d58",
   "aiCategories": [
-    "loc.hud",
-    "client.chatbox"
+    "loc.in-world",
+    "client.chatbox",
+    "client.controls",
+    "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-07-20T00:09:45.760326Z",
+  "aiTaggedAt": "2026-11-25T12:40:25.012049Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "651ee4c59bd9ae5010c127e1",
@@ -28,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -72,6 +74,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "It is especially difficult for Russian-speaking users",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b0614ebb97ec9c3e04f9d88",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6ab58c295a0588e09c2e69e6",
+        "alias": "Abundant Otter",
+        "aliasID": "6ab58c295a0588e09c2e69ea",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1860c2960d3c77cb495499ce7c3236b7.png",
+        "created": "2026-09-24T20:46:33.047Z",
+        "name": "JusteRYT",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-24T22:51:23.749Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "69825315b8ff8070eb120d58",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Could you add a 🌐 button to switch keyboard layouts directly on VRChat’s built-in VR keyboard, including English and Russian (Cyrillic)? It would be great to have it in both Chatbox and text fields inside worlds.\n\nI’m building a word game in VRChat, and right now I have to limit answers to A–Z so headset and desktop players can use the same alphabet. A Russian layout would let us play with Russian words, even on standalone headsets without a physical keyboard.",
       "viewerReactions": null,
       "voteID": null
     }
