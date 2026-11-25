@@ -1,12 +1,11 @@
 {
   "_id": "6ae7c2f17fcb812ef3241067",
   "aiCategories": [
-    "loc.unity-sdk",
+    "loc.in-world",
     "avatars.tracking",
-    "avatars.dynamics",
-    "open-beta"
+    "avatars.descriptor"
   ],
-  "aiTaggedAt": "2026-11-24T14:53:34.088392Z",
+  "aiTaggedAt": "2026-11-25T18:18:25.082425Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64ea24405078cea2a7cf9980",
@@ -30,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -244,6 +243,50 @@
       "value": "@{6161a61a2c0de966b4e43486|full_name} This was fixed in one of the latest open-beta updates, however, I would say it's worse than before, because now some people are on open-beta and some are not, so when people who are not on the open-beta headpat me or such, it looks to people on the open-beta as if they're putting their hand into my face, or booping me on my chest as an example. When will the fix be pushed to stable?",
       "viewerReactions": null,
       "voteID": null
+    },
+    {
+      "_id": "6b0722354e577ac699ce8f65",
+      "aiGenerated": false,
+      "author": {
+        "_id": "64ea24405078cea2a7cf9980",
+        "alias": "Merlot Moth",
+        "aliasID": "6648d820b9e8e8fe66871324",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/20b7c8e524138de6b79f11127819edda.png",
+        "created": "2023-08-26T16:11:44.102Z",
+        "name": "poproх",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-25T18:00:21.699Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae7c2f17fcb812ef3241067",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "What timing... I post this and a few hours after it was fixed on main too, this issue is solved now",
+      "viewerReactions": null,
+      "voteID": null
     }
   ],
   "companyID": "58c62e995865713647a7115d",
@@ -273,10 +316,10 @@
   "status": "open",
   "statusChanged": "2026-11-01T22:53:37.645Z",
   "subCategoryID": null,
-  "title": "Remote hip y position bug",
+  "title": "[FIXED] Remote hip y position bug",
   "trendingScore": 2966.66385023045,
   "updatedBy": "64ea24405078cea2a7cf9980",
-  "urlName": "remote-hip-y-position-bug",
+  "urlName": "fixed-remote-hip-y-position-bug",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
