@@ -18,13 +18,13 @@ Scrape horizon: **2026-10-31 03:50 UTC (25d ago)**.
 | `creator-companion` | 290 / 290 (100.0%) |
 | `creator-economy` | 88 / 88 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,570 / 14,571 (99.99%) |
+| `feature-requests` | 14,571 / 14,572 (99.99%) |
 | `impostors` | 92 / 92 (100.0%) |
 | `ios-mobile-beta` | 273 / 273 (100.0%) |
 | `localization` | 668 / 668 (100.0%) |
 | `merch` | 37 / 37 (100.0%) |
 | `noise-beta` | 6 / 6 (100.0%) |
-| `open-beta` | 3,442 / 3,442 (100.0%) |
+| `open-beta` | 3,441 / 3,441 (100.0%) |
 | `persistence` | 74 / 74 (100.0%) |
 | `sdk-bug-reports` | 1,478 / 1,477 (100.0%) |
 | `third-person-view` | 85 / 85 (100.0%) |
