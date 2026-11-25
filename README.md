@@ -16,9 +16,9 @@ Scrape horizon: **2026-10-31 03:58 UTC (25d ago)**.
 | `bug-reports` | 13,486 / 13,485 (100.0%) |
 | `client-bug-reporting` | 179 |
 | `creator-companion` | 290 / 290 (100.0%) |
-| `creator-economy` | 88 / 88 (100.0%) |
+| `creator-economy` | 88 / 87 (100.0%) |
 | `example-central` | 7 / 7 (100.0%) |
-| `feature-requests` | 14,572 / 14,573 (99.99%) |
+| `feature-requests` | 14,572 / 14,574 (99.99%) |
 | `impostors` | 92 / 92 (100.0%) |
 | `ios-mobile-beta` | 273 / 273 (100.0%) |
 | `localization` | 668 / 668 (100.0%) |
