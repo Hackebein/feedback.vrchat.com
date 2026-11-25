@@ -2,10 +2,12 @@
   "_id": "6af3e5bcd129918eaf48cff1",
   "aiCategories": [
     "loc.in-world",
-    "worlds.persistence",
-    "open-beta"
+    "loc.unity-sdk",
+    "sdk.udon",
+    "open-beta",
+    "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-11-25T06:26:30.602375Z",
+  "aiTaggedAt": "2026-11-25T14:14:33.189293Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6e61f03043eb78f8fa3b88",
@@ -35,7 +37,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -341,13 +343,60 @@
       "postDeleted": false,
       "postID": "6af3e5bcd129918eaf48cff1",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
       "value": "@{654a7d1f1870ff9faf0911e8|full_name} I can confirm I'm no longer seeing the problem with the Nov 24 update. I'm on Open Beta build 1953 and my friend is on the public build. MMD animations working fine. (The issue before was when I was on the Nov 9th open beta, and my friend was on the public build at that time)",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b06ec22a8fc444bb4b16b22",
+      "aiGenerated": false,
+      "author": {
+        "_id": "654a7d1f1870ff9faf0911e8",
+        "alias": "Peacock blue Emu",
+        "aliasID": "6615a164e5d26962aabce722",
+        "anonymized": false,
+        "avatarURL": "https://canny.io/images/53018074ce6df5449c6c10ba3cd8f48f.png",
+        "created": "2023-11-07T18:08:31.263Z",
+        "name": "Truce",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-25T14:09:38.182Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af3e5bcd129918eaf48cff1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": "6b06ec22a8fc444bb4b16b21",
+      "statusChangeNewStatus": "complete",
+      "value": "",
       "viewerReactions": null,
       "voteID": null
     }
@@ -376,8 +425,8 @@
   "pinnedComment": null,
   "score": 6,
   "sourceFeatureExtractionItem": null,
-  "status": "open",
-  "statusChanged": "2026-11-11T03:49:16.264Z",
+  "status": "complete",
+  "statusChanged": "2026-11-25T14:09:38.153Z",
   "subCategoryID": null,
   "title": "VRCStation is not sitting/locking players on remote clients Pt.2",
   "trendingScore": 2969.4047872147676,
