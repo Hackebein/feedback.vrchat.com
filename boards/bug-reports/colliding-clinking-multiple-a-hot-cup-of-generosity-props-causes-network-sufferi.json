@@ -2,9 +2,11 @@
   "_id": "6b0777a9fde23a2116b74e3d",
   "aiCategories": [
     "loc.in-world",
-    "worlds.persistence"
+    "content-official-events",
+    "avatars.accessories",
+    "client.osc"
   ],
-  "aiTaggedAt": "2026-11-26T00:30:19.400457Z",
+  "aiTaggedAt": "2026-11-26T21:52:45.314286Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -28,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -127,6 +129,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "The instance affected also had lots (30+) of other items spawned, especially reference cubes.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b08a90482f9bd57abd706af",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6b08a672dbeb497f0a006430",
+        "alias": "Multiple Frog",
+        "aliasID": "6b08a6726ce332078dcf76e1",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/02bf4bd7a85a9978884db6b4f4870199.png",
+        "created": "2026-11-26T21:36:50.157Z",
+        "name": "Kalsa",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-26T21:47:48.782Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b0777a9fde23a2116b74e3d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "+1 to this. It spams collisions since there's no cooldown timer and floods the audio channel for world audio. It can kill video players and break other items audio from working local side. \n\nIt's fixable by having a moderator turn off all items in world and then resyncing the player.\n\nThe items need collision timers, like 5 seconds in-between so they don't spam and cause issues.",
       "viewerReactions": null,
       "voteID": null
     }
