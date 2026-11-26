@@ -2,10 +2,12 @@
   "_id": "6b08268e5b72207aec2a477d",
   "aiCategories": [
     "loc.pc-client",
+    "loc.main-menu",
     "platforms.pc.steam",
-    "worlds.travel"
+    "worlds.travel",
+    "social.instances"
   ],
-  "aiTaggedAt": "2026-11-26T13:18:11.816236Z",
+  "aiTaggedAt": "2026-11-26T13:31:53.073922Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6b08268ef82b66a8e50e6e61",
@@ -29,7 +31,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 3,
+  "commentCount": 4,
   "commentingDisabled": false,
   "comments": [
     {
@@ -200,7 +202,60 @@
       "sourceLink": null,
       "spam": false,
       "statusChangeID": null,
-      "value": "@{6b08268ef82b66a8e50e6e61|full_name} Previously in 2026.4.1, clicking on a world thumbnail absolutely creates a new Public instance if no public instance is available.\n\nSee the attached video and logs.\n\n```\n\n2026.11.26 13:10:27 Debug      -  [API] POST initiated for destination \n\n2026.11.26 13:10:27 Debug      -  [API] Creating world instance \n\n{  worldId: wrld_60809368-e953-4d33-8026-191c1f8a3f5d,\n\n  type: public,\n\n  region: eu,\n\n  ageGate: False,\n\n  ownerId: usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c,\n\n  playerPersistenceEnabled: True,\n\n  minimumAvatarPerformance: null}\n\n2026.11.26 13:10:27 Debug      -  [API] Requesting Post instances {{\"worldId\":\"wrld_60809368-e953-4d33-8026-191c1f8a3f5d\", \"type\":\"public\", \"region\":\"eu\", \"ageGate\":false, \"ownerId\":\"usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c\", \"playerPersistenceEnabled\":true, \"minimumAvatarPerformance\":\"None\"}} retryCount: 2\n\n2026.11.26 13:10:27 Debug      -  [API] [276] Sending Post request to https://api.vrchat.cloud/api/1/instances\n\n2026.11.26 13:10:27 Debug      -  [API] Post request for wrld_60809368-e953-4d33-8026-191c1f8a3f5d:89562~region(eu) completed\n\n```",
+      "value": "@{6b08268ef82b66a8e50e6e61|full_name} Previously in VRChat 2026.4.1p3 (Build `1939`), clicking on a world thumbnail absolutely creates a new Public instance if no public instance is available.\n\nSee the attached video and logs.\n\n```\n\n2026.11.26 13:10:27 Debug      -  [API] POST initiated for destination \n\n2026.11.26 13:10:27 Debug      -  [API] Creating world instance \n\n{  worldId: wrld_60809368-e953-4d33-8026-191c1f8a3f5d,\n\n  type: public,\n\n  region: eu,\n\n  ageGate: False,\n\n  ownerId: usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c,\n\n  playerPersistenceEnabled: True,\n\n  minimumAvatarPerformance: null}\n\n2026.11.26 13:10:27 Debug      -  [API] Requesting Post instances {{\"worldId\":\"wrld_60809368-e953-4d33-8026-191c1f8a3f5d\", \"type\":\"public\", \"region\":\"eu\", \"ageGate\":false, \"ownerId\":\"usr_6fa4abc5-9952-4a0a-97de-b3598fbf6a5c\", \"playerPersistenceEnabled\":true, \"minimumAvatarPerformance\":\"None\"}} retryCount: 2\n\n2026.11.26 13:10:27 Debug      -  [API] [276] Sending Post request to https://api.vrchat.cloud/api/1/instances\n\n2026.11.26 13:10:27 Debug      -  [API] Post request for wrld_60809368-e953-4d33-8026-191c1f8a3f5d:89562~region(eu) completed\n\n```",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b08318ec102cb9fa2e77775",
+      "aiGenerated": false,
+      "author": {
+        "_id": "68098a4626271974ef4d2775",
+        "alias": "Extraordinary Peacock",
+        "aliasID": "68098a468ccc1d8b3bb09eda",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+        "created": "2025-04-24T00:48:06.176Z",
+        "name": "WubTheCaptain",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-26T13:18:06.244Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/f2f1a68e8da5f35bbb61d7fe75f0d4d1.mp4"
+      ],
+      "files": [
+        {
+          "downloadURL": "/api/files/download/f2f1a68e8da5f35bbb61d7fe75f0d4d1.mp4",
+          "mimeType": "video/mp4",
+          "name": "2026-11-26 13-17-11",
+          "url": "https://canny-assets.io/files/f2f1a68e8da5f35bbb61d7fe75f0d4d1.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": "6b082891f82b66a8e50e92f6",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b08268e5b72207aec2a477d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "A re-recording to be more explicit.",
       "viewerReactions": null,
       "voteID": null
     }
