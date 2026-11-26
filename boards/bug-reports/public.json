@@ -1,12 +1,12 @@
 {
   "_id": "6b08268e5b72207aec2a477d",
   "aiCategories": [
-    "loc.main-menu",
     "loc.pc-client",
+    "loc.main-menu",
     "platforms.pc.steam",
-    "social.instances"
+    "worlds.travel"
   ],
-  "aiTaggedAt": "2026-11-26T12:51:30.771406Z",
+  "aiTaggedAt": "2026-11-26T13:00:08.274996Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6b08268ef82b66a8e50e6e61",
@@ -30,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -74,6 +74,62 @@
       "spam": false,
       "statusChangeID": null,
       "value": "I doubt this is a bug, the behavior hasn't changed in VRChat 2026.4.2 as far as I understand it.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b082b0f80a958e8f37b42e9",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6b08268ef82b66a8e50e6e61",
+        "alias": "Bare Muskox",
+        "aliasID": "6b08268e6ce332078dcd5191",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/bc7843e4d0391c7061e48e5e644f08b7.png",
+        "created": "2026-11-26T12:31:10.109Z",
+        "name": "ひふみンクル",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-26T12:50:23.481Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "68098a4626271974ef4d2775",
+          "alias": "Extraordinary Peacock",
+          "aliasID": "68098a468ccc1d8b3bb09eda",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/51ee6f4a7d9bdf3030ed2d4e13438654.png",
+          "created": "2025-04-24T00:48:06.176Z",
+          "name": "WubTheCaptain",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6b082891f82b66a8e50e92f6",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b08268e5b72207aec2a477d",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{68098a4626271974ef4d2775|full_name}\n\nThanks for your response.\n\nHowever, this behavior did not occur in previous versions of VRChat.\n\nPreviously, clicking on a world thumbnail simply opened the world details page. It did not automatically create a new Public instance.\n\nSince yesterday, a new Public instance owned by me has been created every time I open a world details page. This happens with multiple different worlds, and the instance remains even if I immediately close the details page without joining.\n\nI also restarted VRChat, but the issue persists.",
       "viewerReactions": null,
       "voteID": null
     }
