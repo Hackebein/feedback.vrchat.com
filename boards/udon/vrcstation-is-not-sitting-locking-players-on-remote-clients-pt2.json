@@ -2,12 +2,11 @@
   "_id": "6af3e5bcd129918eaf48cff1",
   "aiCategories": [
     "loc.in-world",
-    "loc.unity-sdk",
-    "sdk.udon",
     "open-beta",
-    "platforms.cross-platform"
+    "worlds.persistence",
+    "avatars.expressions"
   ],
-  "aiTaggedAt": "2026-11-25T14:14:33.189293Z",
+  "aiTaggedAt": "2026-11-26T16:01:22.804156Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f6e61f03043eb78f8fa3b88",
@@ -37,7 +36,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "6509f35642501809348ecb06",
-  "commentCount": 7,
+  "commentCount": 8,
   "commentingDisabled": false,
   "comments": [
     {
@@ -397,6 +396,73 @@
       "statusChangeID": "6b06ec22a8fc444bb4b16b21",
       "statusChangeNewStatus": "complete",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b0854e6c1fdf4b6db1a67d0",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f6e61f03043eb78f8fa3b88",
+        "alias": "Sable Giraffe",
+        "aliasID": "65c27af3ed6eefce4c78ca32",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1498258716d451a4a5d13449428beaed.png",
+        "created": "2020-09-25T21:32:32.684Z",
+        "name": "DragonAsh",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5df404cc2072644ac4b5e385",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-26T15:48:54.031Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [
+        {
+          "_id": "654a7d1f1870ff9faf0911e8",
+          "alias": "Peacock blue Emu",
+          "aliasID": "6615a164e5d26962aabce722",
+          "anonymized": false,
+          "avatarURL": "https://canny.io/images/53018074ce6df5449c6c10ba3cd8f48f.png",
+          "created": "2023-11-07T18:08:31.263Z",
+          "name": "Truce",
+          "serviceAccount": false,
+          "urlName": null
+        },
+        {
+          "_id": "6ad1daf55265ae61613f21ce",
+          "alias": "Passive Kiwi",
+          "aliasID": "6ad1daf65265ae61613f21d2",
+          "anonymized": false,
+          "avatarURL": "https://canny-assets.io/images/48e55bc43003b450999813a61e653767.png",
+          "created": "2026-10-16T08:06:13.723Z",
+          "name": "Spaceguy5",
+          "serviceAccount": false,
+          "urlName": null
+        }
+      ],
+      "mergeID": null,
+      "parentID": "6b0450c2b0de39b7bcf63c3f",
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af3e5bcd129918eaf48cff1",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "@{654a7d1f1870ff9faf0911e8|full_name} I defer to @{6ad1daf55265ae61613f21ce|full_name} :) He was originally the one who found it and told me about it",
       "viewerReactions": null,
       "voteID": null
     }
