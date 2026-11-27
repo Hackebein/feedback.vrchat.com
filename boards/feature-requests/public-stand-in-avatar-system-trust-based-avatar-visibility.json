@@ -1,13 +1,16 @@
 {
   "_id": "6ae55ba9bf255d922b41605e",
   "aiCategories": [
+    "loc.main-menu",
     "loc.in-world",
+    "loc.website",
     "avatars.upload-performance",
-    "moderation.safety-system",
+    "avatars.impostors",
     "social.nameplates",
-    "account.trust"
+    "web.profiles",
+    "moderation.safety-system"
   ],
-  "aiTaggedAt": "2026-11-26T02:04:26.117921Z",
+  "aiTaggedAt": "2026-11-27T19:35:38.235719Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "64c8c2d65162b70976f1034b",
@@ -31,7 +34,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 6,
+  "commentCount": 7,
   "commentingDisabled": false,
   "comments": [
     {
@@ -307,6 +310,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "@{67114f74fb43558c4795ab40|full_name}\n\nThis is not a fallback system. The two concepts are fundamentally different.\n\nThe Fallback System replaces avatars that exceed the observer's performance limits. It is an adjustment based on hardware capabilities and the observer's own experience.\n\nThe Public Stand-in Avatar System, on the other hand, is based on the avatar owner's trust requirements. It ensures that untrusted observers can only see a designated stand-in avatar. This is a proactive measure to protect one's avatar assets based on social relationships and trust.\n\nThe two systems serve different purposes and are fully compatible with each other.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b09daba03c6a85e79a3934e",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6a7cece9c92bc8aa59e73914",
+        "alias": "External Blackbird",
+        "aliasID": "6a7cece9c92bc8aa59e7391a",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/b3956d6d758d8fa39302de0417e68f1e.png",
+        "created": "2026-08-12T22:00:09.224Z",
+        "name": "pclmulqdq",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62efae9868f3662e9d9a1",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-27T19:32:10.777Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6ae55ba9bf255d922b41605e",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "If I'm understanding your suggestion correctly, this would actually open up a lot of potential for abuse.\n\nA malicious user could wear an inappropriate (NSFW) avatar or a crasher avatar and hide it from instance moderation or target specific users with your proposed suggestion.",
       "viewerReactions": null,
       "voteID": null
     }
