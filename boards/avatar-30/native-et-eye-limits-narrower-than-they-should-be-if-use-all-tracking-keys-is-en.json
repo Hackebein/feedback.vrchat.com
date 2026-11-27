@@ -4,7 +4,7 @@
     "loc.in-world",
     "avatars.tracking"
   ],
-  "aiTaggedAt": "2026-11-27T20:05:50.627044Z",
+  "aiTaggedAt": "2026-11-27T20:20:33.876729Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5f30ecee654cd4491456a82f",
@@ -34,7 +34,7 @@
     "urlName": "bug-reports"
   },
   "categoryID": "650db8715336b321c3150440",
-  "commentCount": 1,
+  "commentCount": 2,
   "commentingDisabled": false,
   "comments": [
     {
@@ -78,6 +78,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Oh and here's the test avatar: avtr_5e5922fc-6c4e-483f-9318-b6766053095b",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b09e4749bfebfd060b75e79",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f30ecee654cd4491456a82f",
+        "alias": "Confident Albatross",
+        "aliasID": "65c26da3ed6eefce4c4d0730",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+        "created": "2020-08-10T06:45:02.264Z",
+        "name": "lackofbindings",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "5ed571497ee72a2434704a15",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-27T20:13:40.915Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b09dff682f9bd57abe9ddc0",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Side note, earlier I noticed an issue with the debug visuals https://feedback.vrchat.com/avatar-30/p/eyetracking-debug-visuals-broken-with-native-ft which seems to be related, since turning off Use All Tracking Keys also fixes that. Testing again with the debug visuals I also noticed this issue also causes my gaze to not quite line up with what I'm looking at quite as well as it does with it off, it feels like there's some sort of offset and/or multiplier.",
       "viewerReactions": null,
       "voteID": null
     }
