@@ -2,9 +2,9 @@
   "_id": "6b0a13b99bfebfd060bb1e61",
   "aiCategories": [
     "loc.unity-sdk",
-    "sdk.vrcsdk"
+    "sdk.udon"
   ],
-  "aiTaggedAt": "2026-11-27T23:45:03.450443Z",
+  "aiTaggedAt": "2026-11-27T23:53:13.279960Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6222c8bd759f2e2d1462eca6",
@@ -36,7 +36,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The upcoming VRCPlayerApi.AttachTransformToBone is great! It would be nice though to attach to more things on players than just humanoid bones.\n\nFor example, any of the tracking points: Origin, AvatarRoot, Head, LeftHand, RightHand. For example, attaching to Hand tracking points would be great for holding weapons in game worlds where you shouldn't ever drop the weapon. I already know of worlds that do that.\n\nAlso, attaching to the point returned by GetPosition(), which is a little different than all the tracking points. (Which I think is the position of the player capsule??? Maybe???)\n\nI could imagine this API:\n\n    AttachTransformToBone\n\n    AttachTransformToTrackingPoint\n\n    AttachTransformToCapsule   (attaches to GetPosition()/GetRotation())\n\n    DetachTransform\n\nI'm suggesting this now while the feature is still in beta, because the current function name \"DetachTransformFromBone\" is limiting. A more generic \"DetachTransform\" name will allow for expansion to more attachment points in the future without needing to make more Detach functions.",
+  "details": "The upcoming VRCPlayerApi.AttachTransformToBone is great! It would be nice though to attach to more things on players than just humanoid bones.\n\nFor example, any of the tracking points: Origin, AvatarRoot, Head, LeftHand, RightHand. For example, attaching to Hand tracking points would be great for holding weapons in game worlds where you shouldn't ever drop the weapon. I already know of worlds that do that.\n\nAlso, attaching to the point returned by GetPosition(), which is a little different Origin or AvatarRoot. (I think it's the position of the player capsule??? Maybe???)\n\nI could imagine this API:\n\n    AttachTransformToBone\n\n    AttachTransformToTrackingPoint\n\n    AttachTransformToCapsule   (attaches to GetPosition()/GetRotation())\n\n    DetachTransform\n\nI'm suggesting this now while the feature is still in beta, because the current function name \"DetachTransformFromBone\" is limiting. A more generic \"DetachTransform\" name will allow for expansion to more attachment points in the future without needing to make more Detach functions.",
   "error": null,
   "eta": null,
   "etaPublic": true,
