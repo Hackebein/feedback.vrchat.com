@@ -2,10 +2,11 @@
   "_id": "6b0667a4c8e2fec38869a83f",
   "aiCategories": [
     "loc.in-world",
+    "loc.unity-sdk",
     "sdk.udon",
     "platforms.cross-platform"
   ],
-  "aiTaggedAt": "2026-11-25T17:27:21.203536Z",
+  "aiTaggedAt": "2026-11-27T23:56:17.539928Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "5cdea371135e175781d9a260",
@@ -29,7 +30,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 4,
+  "commentCount": 5,
   "commentingDisabled": false,
   "comments": [
     {
@@ -212,6 +213,66 @@
       "statusChangeID": "6b0719b18d50df40b584406b",
       "statusChangeNewStatus": "tracked",
       "value": "",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b0a17a39f942250d5b71f6b",
+      "aiGenerated": false,
+      "author": {
+        "_id": "5f43ddcc453bab0ff2a0c75e",
+        "alias": "Sensitive Salamander",
+        "aliasID": "65f0f491a6e3ea79dde0906e",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/092c652801f33bc490873753171dbf2b.png",
+        "created": "2020-08-24T15:33:32.208Z",
+        "name": "Kinix~",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-27T23:52:03.441Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [
+        "https://canny-assets.io/files/4b6441ac0af23515a78b3e8d6c9ea864.mp4",
+        "https://canny-assets.io/files/7d47f61691eac0fb7ddcded6dd12de09.mp4"
+      ],
+      "files": [
+        {
+          "downloadURL": "/api/files/download/4b6441ac0af23515a78b3e8d6c9ea864.mp4",
+          "mimeType": "video/mp4",
+          "name": "Desktop 20261127  14551906Dvr_crunched",
+          "url": "https://canny-assets.io/files/4b6441ac0af23515a78b3e8d6c9ea864.mp4"
+        },
+        {
+          "downloadURL": "/api/files/download/7d47f61691eac0fb7ddcded6dd12de09.mp4",
+          "mimeType": "video/mp4",
+          "name": "Desktop 20261127  15063307Dvr_crunched",
+          "url": "https://canny-assets.io/files/7d47f61691eac0fb7ddcded6dd12de09.mp4"
+        }
+      ],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6b0667a4c8e2fec38869a83f",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "I noticed something similar like this, but the 'desync' was more noticeable when a player held two objects on their own. It caused network suffering on their end while in my own view the suffering never went up, but I could clearly see the weapons lagging behind by seconds or even a full minute at a times.",
       "viewerReactions": null,
       "voteID": null
     }
