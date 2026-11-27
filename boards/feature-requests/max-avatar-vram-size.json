@@ -683,7 +683,9 @@
       "postDeleted": false,
       "postID": "63c41a5158a1e93faf838b1a",
       "private": false,
-      "reactions": null,
+      "reactions": {
+        "like": 1
+      },
       "restoredAt": null,
       "sourceFeatureExtractionItemID": null,
       "sourceLink": null,
@@ -709,20 +711,20 @@
   ],
   "linkedEntry": null,
   "loading": false,
-  "maxScore": 790,
+  "maxScore": 791,
   "mergeCount": 0,
   "notAuthorized": false,
   "notFound": false,
   "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/63c41a5158a1e93faf838b1a/2018052243.jpeg",
   "opportunities": [],
   "pinnedComment": null,
-  "score": 790,
+  "score": 791,
   "sourceFeatureExtractionItem": null,
   "status": "interested",
   "statusChanged": "2024-01-17T19:09:46.412Z",
   "subCategoryID": null,
   "title": "Max Avatar VRAM size",
-  "trendingScore": 2968.792975600437,
+  "trendingScore": 2969.6682091831103,
   "urlName": "max-avatar-vram-size",
   "viewerIsAuthor": false,
   "viewerVote": 0,
@@ -734,6 +736,17 @@
     "votingDisabled": false
   },
   "voters": [
+    {
+      "_id": "6896b4762eba8cb5ed755dd0",
+      "alias": "Nutty Mockingbird",
+      "aliasID": "6896b4772eba8cb5ed756c1d",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/925035deb3c55c4b923971e218574921.png",
+      "companies": [],
+      "name": "~Raine",
+      "urlName": null,
+      "voteID": "6b08a75e6ce332078dcf78ce"
+    },
     {
       "_id": "6b01ef45ac8f03e9e7c90241",
       "alias": "Respective Cod",
@@ -1272,17 +1285,6 @@
       "name": "Clover_0916",
       "urlName": null,
       "voteID": "6a500e1af51f79a5db35ab12"
-    },
-    {
-      "_id": "67afe1623771d0327e3bcf68",
-      "alias": "Friendly Bass",
-      "aliasID": "67afe163b324a96209ed34e1",
-      "anonymized": false,
-      "avatarURL": "https://canny-assets.io/images/52e4be41a4019dd01ce57cdba3dd293c.png",
-      "companies": [],
-      "name": "HeadlessDull",
-      "urlName": null,
-      "voteID": "6a4eaf39f51f79a5db2c1bd1"
     }
   ]
 }
