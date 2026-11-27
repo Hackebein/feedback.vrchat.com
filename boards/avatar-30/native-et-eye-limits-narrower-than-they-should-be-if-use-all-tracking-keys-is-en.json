@@ -1,0 +1,96 @@
+{
+  "_id": "6b09dff682f9bd57abe9ddc0",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-11-27T19:59:07.431890Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-27T19:54:30.629Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "For this test I set up an avatar with a gauge constrained to the eye bones for measuring the rotation angle. I set up the avatar with all descriptor options set to FT, Eye Gaze Mode set to Both and Use All Tracking Keys enabled. I set the eye rotation limits to 25deg, and then went in-game to measure. Looking as far as my eyes will go in each direction, I can see that the Eye Tracking Debug Beams stop rotating before my irl eyes reach full rotation, but more importantly the rotation stops before getting to the 25deg limit set on the descriptor, and you can see this reflected on the protractors stopping at about 17deg. I double checked again with the limits set to 90deg and the beams followed my eyes all the way to the furthest my eye can physically rotate without hitting the limit, so clearly it is not a limitation of my tracking hardware or any intermediate software, and I can also conclude that the error is proportional to the set limits.\n\nI then checked again changing various settings on the avatar descriptor until I realized that having Use All Tracking Keys enabled causes this limitation, disabling it allows the eyes to rotate fully to 25deg.\n\nThis confirms mine and many other's suspicions that the Native ET system is limiting the eye rotation more than it should be, and may address issues such as https://feedback.vrchat.com/avatar-30/p/separate-eye-look-angles-for-face-tracking\n\nVRChat Build: 2026.4.2-1953-d52354d5be-Release\n\nVRCFT 6.0.0.0 (Live) - Virtual Desktop Module 1.5\n\nVirtual Desktop 1.34.22\n\nQuest Pro 207",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6b09dff682f9bd57abe9ddbf",
+  "imageURLs": [
+    "https://canny-assets.io/images/fcc2f225664040deabba13cd520cef9a.jpeg",
+    "https://canny-assets.io/images/128667696ba7a1cd395e452055f7b651.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": "https://canny-assets.io/images/og/58c62e995865713647a7115d/posts/6b09dff682f9bd57abe9ddc0/580276084.jpeg",
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-27T19:54:30.629Z",
+  "subCategoryID": null,
+  "title": "Native ET Eye Limits narrower than they should be if Use All Tracking Keys is enabled",
+  "trendingScore": 2969.954507066473,
+  "updatedBy": null,
+  "urlName": "native-et-eye-limits-narrower-than-they-should-be-if-use-all-tracking-keys-is-en",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": null,
+      "voteID": "6b09dff66ce332078dd3d31b"
+    }
+  ]
+}
