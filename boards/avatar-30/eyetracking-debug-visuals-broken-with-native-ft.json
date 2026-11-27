@@ -1,0 +1,95 @@
+{
+  "_id": "6b09c84923562d467c83f490",
+  "aiCategories": [
+    "loc.in-world",
+    "avatars.tracking"
+  ],
+  "aiTaggedAt": "2026-11-27T18:20:00.306427Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "5f30ecee654cd4491456a82f",
+    "alias": "Confident Albatross",
+    "aliasID": "65c26da3ed6eefce4c4d0730",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+    "created": "2020-08-10T06:45:02.264Z",
+    "name": "lackofbindings",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "5f30ecee654cd4491456a82f",
+  "board": {
+    "_id": "5ed571497ee72a2434704a15",
+    "name": "Avatar Bugs & Feature Requests",
+    "urlName": "avatar-30"
+  },
+  "boardID": "5ed571497ee72a2434704a15",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "650db8715336b321c3150440",
+    "created": "2023-09-22T15:53:21.188Z",
+    "name": "Bug Reports",
+    "parentID": null,
+    "urlName": "bug-reports"
+  },
+  "categoryID": "650db8715336b321c3150440",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-27T18:13:29.451Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "I recently updated one of my avatars to the new native ft and realized that the Eye Tracking Debug Visuals are messed up. The yellow beams still move with the avatar's eyes, but the blue sphere thats supposed to be a raycast where youre looking is stuck offset up and to the left. I unfortunately couldn't get a screenshot with the blue sphere in frame because the SteamVR screenshot FOV is so narrow and in the bottom left. \n\nThe avatar in question has everything set to FT, with eye bone rotation set to both, and use all tracking keys enabled.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6b09c84823562d467c83f48f",
+  "imageURLs": [
+    "https://canny-assets.io/images/eddc1a47d3ed8b4bddd7d6135d328f5e.jpeg"
+  ],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-27T18:13:29.451Z",
+  "subCategoryID": null,
+  "title": "Eyetracking Debug Visuals broken with native FT",
+  "trendingScore": 2969.944485103014,
+  "updatedBy": null,
+  "urlName": "eyetracking-debug-visuals-broken-with-native-ft",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "5f30ecee654cd4491456a82f",
+      "alias": "Confident Albatross",
+      "aliasID": "65c26da3ed6eefce4c4d0730",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/a90a0c1c9a8181940117158786eed270.png",
+      "companies": [],
+      "name": "lackofbindings",
+      "urlName": null,
+      "voteID": "6b09c8496ce332078dd37b7f"
+    }
+  ]
+}
