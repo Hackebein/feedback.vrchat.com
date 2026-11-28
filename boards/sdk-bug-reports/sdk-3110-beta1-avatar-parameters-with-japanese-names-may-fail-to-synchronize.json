@@ -1,0 +1,93 @@
+{
+  "_id": "6b0a442a82f9bd57abef2ac8",
+  "aiCategories": [
+    "loc.unity-sdk",
+    "avatars.expressions"
+  ],
+  "aiTaggedAt": "2026-11-28T03:08:31.462911Z",
+  "aiTaxonomyVersion": 3,
+  "author": {
+    "_id": "6b0a42a245f782751c6cafb4",
+    "alias": "Joyous Impala",
+    "aliasID": "6b0a42a26ce332078de0aef4",
+    "anonymized": false,
+    "avatarURL": "https://canny-assets.io/images/b91c9e969aefc1635e98667c248c66a9.png",
+    "created": "2026-11-28T02:55:30.580Z",
+    "name": "五香ことり",
+    "serviceAccount": false,
+    "urlName": null
+  },
+  "authorID": "6b0a42a245f782751c6cafb4",
+  "board": {
+    "_id": "5d09629c3511d825c8e56214",
+    "name": "SDK Bug & Feature Requests",
+    "urlName": "sdk-bug-reports"
+  },
+  "boardID": "5d09629c3511d825c8e56214",
+  "by": null,
+  "byID": null,
+  "category": {
+    "_id": "6616d2d2a2e6663fc0beca36",
+    "created": "2024-04-10T17:56:34.317Z",
+    "name": "Bug Report",
+    "parentID": null,
+    "urlName": "bug-report"
+  },
+  "categoryID": "6616d2d2a2e6663fc0beca36",
+  "commentCount": 0,
+  "commentingDisabled": false,
+  "comments": [],
+  "companyID": "58c62e995865713647a7115d",
+  "created": "2026-11-28T03:02:02.517Z",
+  "deleteID": null,
+  "deletedAt": null,
+  "deletedBy": null,
+  "details": "Avatar expression parameters containing Japanese characters in their names appear to fail to synchronize with remote players when the avatar is uploaded using SDK 3.11.0-beta.1.\n\nEnvironment\n\nVRChat SDK: 3.11.0-beta.1\n\nAffected feature: Avatar Expression Parameters synchronization\n\nAffected characters: Japanese / non-ASCII characters\n\nSteps to Reproduce\n\n1.Create an avatar using SDK 3.11.0-beta.1.\n\n2.Add the following Bool parameters to the Expression Parameters asset:\n\nTest\n\nテスト\n\n衣装\n\nTest_衣装\n\n3.Enable network synchronization for all parameters.\n\n4.Create Expression Menu toggles and corresponding Animator transitions for each parameter.\n\n5.Upload the avatar to VRChat.\n\n6.Join an instance with another player.\n\n7.Toggle each parameter and compare the local and remote avatar states.\n\nExpected Behavior\n\nAll network-synchronized parameters should synchronize correctly with remote players, regardless of whether their names contain ASCII or Japanese characters.\n\nActual Behavior\n\nParameters containing Japanese characters in their names appear to fail to synchronize with remote players.",
+  "error": null,
+  "eta": null,
+  "etaPublic": true,
+  "fileURLs": [],
+  "files": [],
+  "ideaID": "6b0a442982f9bd57abef2ac7",
+  "imageURLs": [],
+  "linkedEntry": null,
+  "loading": false,
+  "maxScore": 1,
+  "mergeCount": 0,
+  "notAuthorized": false,
+  "notFound": false,
+  "ogImageURL": null,
+  "opportunities": [],
+  "pinnedComment": null,
+  "score": 1,
+  "sourceFeatureExtractionItem": null,
+  "status": "open",
+  "statusChanged": "2026-11-28T03:02:02.517Z",
+  "subCategoryID": null,
+  "title": "[SDK 3.11.0-beta.1] Avatar parameters with Japanese names may fail to synchronize",
+  "trendingScore": 2969.9969207528156,
+  "updatedBy": "6b0a42a245f782751c6cafb4",
+  "urlName": "sdk-3110-beta1-avatar-parameters-with-japanese-names-may-fail-to-synchronize",
+  "viewerIsAuthor": false,
+  "viewerVote": 0,
+  "voteSettings": {
+    "highEngagement": false,
+    "lowEngagement": true,
+    "moderateEngagement": false,
+    "votesHidden": false,
+    "votingDisabled": false
+  },
+  "voters": [
+    {
+      "_id": "6b0a42a245f782751c6cafb4",
+      "alias": "Joyous Impala",
+      "aliasID": "6b0a42a26ce332078de0aef4",
+      "anonymized": false,
+      "avatarURL": "https://canny-assets.io/images/b91c9e969aefc1635e98667c248c66a9.png",
+      "companies": [],
+      "name": "五香ことり",
+      "urlName": null,
+      "voteID": "6b0a442a6ce332078de0b866"
+    }
+  ]
+}
