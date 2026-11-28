@@ -5,7 +5,7 @@
     "platforms.pc.desktop",
     "web.profiles"
   ],
-  "aiTaggedAt": "2026-11-16T21:02:27.784547Z",
+  "aiTaggedAt": "2026-11-28T08:34:06.292866Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "68098a4626271974ef4d2775",
@@ -37,7 +37,7 @@
   "deleteID": null,
   "deletedAt": null,
   "deletedBy": null,
-  "details": "The note feature on users' profiles allows input of up to 256 characters. Sometimes when clicking in-client to edit an existing note with > 64 characters on a user profile, the note in the text input is truncated to the first 64 characters (shown as 64/256). As a workaround, clicking \"X\" to close the text input and clicking to edit the note again brings back all the characters (up to 256 characters) in the text input as intended.\n\nThere are no reliable reproduction steps; I don't know what triggers this. More information may be provided at a later date.\n\nOccurrence: Rare.\n\nAdditional info: This issue started around VRChat 2026.4.1 (Build `1936`). I've lost a few user notes to this bug with Build `1938` on Windows.",
+  "details": "The note feature on users' profiles allows input of up to 256 characters. Sometimes when clicking in-client to edit an existing note with > 32 characters on a user profile, the note in the text input is truncated to the first 32 characters (shown as 32/256). As a workaround, clicking \"X\" to close the text input and clicking to edit the note again brings back all the characters (up to 256 characters) in the text input as intended.\n\nThere are no reliable reproduction steps; I don't know what triggers this. More information may be provided at a later date.\n\nOccurrence: Rare.\n\nAdditional info: This issue started around VRChat 2026.4.1 (Build `1936`). I've lost a few user notes to this bug with Build `1938` on Windows.",
   "error": null,
   "eta": null,
   "etaPublic": true,
@@ -59,10 +59,10 @@
   "status": "open",
   "statusChanged": "2026-11-16T20:21:24.132Z",
   "subCategoryID": null,
-  "title": "Text input for a user profile note is truncated to the first 64 characters rarely while editing the note",
+  "title": "Text input for a user profile note is truncated to the first 32 characters rarely while editing the note",
   "trendingScore": 2968.792604422864,
   "updatedBy": "68098a4626271974ef4d2775",
-  "urlName": "text-input-for-a-user-profile-note-is-truncated-to-the-first-64-characters-rarel",
+  "urlName": "text-input-for-a-user-profile-note-is-truncated-to-the-first-32-characters-rarel",
   "viewerIsAuthor": false,
   "viewerVote": 0,
   "voteSettings": {
