@@ -3,9 +3,9 @@
   "aiCategories": [
     "loc.pc-client",
     "platforms.pc.steam",
-    "client.settings"
+    "client.controls"
   ],
-  "aiTaggedAt": "2026-11-12T20:30:54.353156Z",
+  "aiTaggedAt": "2026-11-28T11:31:28.919501Z",
   "aiTaxonomyVersion": 3,
   "author": {
     "_id": "6af60c070062595900f0deb3",
@@ -29,7 +29,7 @@
   "byID": null,
   "category": null,
   "categoryID": null,
-  "commentCount": 2,
+  "commentCount": 3,
   "commentingDisabled": false,
   "comments": [
     {
@@ -126,6 +126,50 @@
       "spam": false,
       "statusChangeID": null,
       "value": "Additional diagnostic checks were performed after the initial report and are attached: crash dump locations, Visual C++ redistributables, Defender settings and Windows updates. All results are clean, with one notable finding — after 10+ reproductions there is no crash dump anywhere on the system, which suggests the game exits gracefully when SteamAPI_Init fails rather than hard-crashing.",
+      "viewerReactions": null,
+      "voteID": null
+    },
+    {
+      "_id": "6b0ab93003c6a85e79aeb123",
+      "aiGenerated": false,
+      "author": {
+        "_id": "6b0ab91045f782751c710a98",
+        "alias": "Ochre Elk",
+        "aliasID": "6b0ab9106ce332078d37cc63",
+        "anonymized": false,
+        "avatarURL": "https://canny-assets.io/images/1bbf767f64fc43a5519e48c9567e6c40.png",
+        "created": "2026-11-28T11:20:48.547Z",
+        "name": "传奇机长佐巴杨",
+        "serviceAccount": false,
+        "urlName": null
+      },
+      "authorID": null,
+      "boardID": "58c62f2b3cf8f8367753b2f0",
+      "companyID": "58c62e995865713647a7115d",
+      "created": "2026-11-28T11:21:20.985Z",
+      "deleted": false,
+      "deletedAt": null,
+      "fileURLs": [],
+      "files": [],
+      "imageURLs": [],
+      "integrationSourceType": null,
+      "internal": false,
+      "itemSourceType": null,
+      "mentionedUserIDs": null,
+      "mentionedUsers": [],
+      "mergeID": null,
+      "parentID": null,
+      "pinned": false,
+      "postDeleted": false,
+      "postID": "6af6109f05ea45571f84aafc",
+      "private": false,
+      "reactions": null,
+      "restoredAt": null,
+      "sourceFeatureExtractionItemID": null,
+      "sourceLink": null,
+      "spam": false,
+      "statusChangeID": null,
+      "value": "Have you fix this? I have the same problem",
       "viewerReactions": null,
       "voteID": null
     }
